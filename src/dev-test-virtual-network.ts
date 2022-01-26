@@ -26,7 +26,7 @@ export interface DevTestVirtualNetworkConfig extends cdktf.TerraformMetaArgument
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_virtual_network#tags DevTestVirtualNetwork#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * subnet block
   * 
@@ -52,7 +52,7 @@ export interface DevTestVirtualNetworkSubnet {
 }
 
 export function devTestVirtualNetworkSubnetToTerraform(struct?: DevTestVirtualNetworkSubnetOutputReference | DevTestVirtualNetworkSubnet): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -70,7 +70,7 @@ export class DevTestVirtualNetworkSubnetOutputReference extends cdktf.ComplexObj
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -99,6 +99,11 @@ export class DevTestVirtualNetworkSubnetOutputReference extends cdktf.ComplexObj
       this._useInVirtualMachineCreation = value.useInVirtualMachineCreation;
       this._usePublicIpAddress = value.usePublicIpAddress;
     }
+  }
+
+  // name - computed: true, optional: false, required: false
+  public get name() {
+    return this.getStringAttribute('name');
   }
 
   // use_in_virtual_machine_creation - computed: false, optional: true, required: false
@@ -152,8 +157,8 @@ export interface DevTestVirtualNetworkTimeouts {
   readonly update?: string;
 }
 
-export function devTestVirtualNetworkTimeoutsToTerraform(struct?: DevTestVirtualNetworkTimeoutsOutputReference | DevTestVirtualNetworkTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function devTestVirtualNetworkTimeoutsToTerraform(struct?: DevTestVirtualNetworkTimeoutsOutputReference | DevTestVirtualNetworkTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -173,7 +178,7 @@ export class DevTestVirtualNetworkTimeoutsOutputReference extends cdktf.ComplexO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -387,12 +392,11 @@ export class DevTestVirtualNetwork extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -409,7 +413,7 @@ export class DevTestVirtualNetwork extends cdktf.TerraformResource {
   }
 
   // subnet - computed: false, optional: true, required: false
-  private _subnet = new DevTestVirtualNetworkSubnetOutputReference(this as any, "subnet", true);
+  private _subnet = new DevTestVirtualNetworkSubnetOutputReference(this, "subnet", true);
   public get subnet() {
     return this._subnet;
   }
@@ -425,7 +429,7 @@ export class DevTestVirtualNetwork extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DevTestVirtualNetworkTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DevTestVirtualNetworkTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -450,7 +454,7 @@ export class DevTestVirtualNetwork extends cdktf.TerraformResource {
       lab_name: cdktf.stringToTerraform(this._labName),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       subnet: devTestVirtualNetworkSubnetToTerraform(this._subnet.internalValue),
       timeouts: devTestVirtualNetworkTimeoutsToTerraform(this._timeouts.internalValue),
     };

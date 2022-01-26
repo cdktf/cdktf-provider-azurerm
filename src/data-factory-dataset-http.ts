@@ -10,7 +10,7 @@ export interface DataFactoryDatasetHttpConfig extends cdktf.TerraformMetaArgumen
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_http#additional_properties DataFactoryDatasetHttp#additional_properties}
   */
-  readonly additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
+  readonly additionalProperties?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_http#annotations DataFactoryDatasetHttp#annotations}
   */
@@ -42,7 +42,7 @@ export interface DataFactoryDatasetHttpConfig extends cdktf.TerraformMetaArgumen
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_http#parameters DataFactoryDatasetHttp#parameters}
   */
-  readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
+  readonly parameters?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_http#relative_url DataFactoryDatasetHttp#relative_url}
   */
@@ -64,7 +64,7 @@ export interface DataFactoryDatasetHttpConfig extends cdktf.TerraformMetaArgumen
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_http#schema_column DataFactoryDatasetHttp#schema_column}
   */
-  readonly schemaColumn?: DataFactoryDatasetHttpSchemaColumn[];
+  readonly schemaColumn?: DataFactoryDatasetHttpSchemaColumn[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -87,8 +87,8 @@ export interface DataFactoryDatasetHttpSchemaColumn {
   readonly type?: string;
 }
 
-export function dataFactoryDatasetHttpSchemaColumnToTerraform(struct?: DataFactoryDatasetHttpSchemaColumn): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataFactoryDatasetHttpSchemaColumnToTerraform(struct?: DataFactoryDatasetHttpSchemaColumn | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -118,8 +118,8 @@ export interface DataFactoryDatasetHttpTimeouts {
   readonly update?: string;
 }
 
-export function dataFactoryDatasetHttpTimeoutsToTerraform(struct?: DataFactoryDatasetHttpTimeoutsOutputReference | DataFactoryDatasetHttpTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataFactoryDatasetHttpTimeoutsToTerraform(struct?: DataFactoryDatasetHttpTimeoutsOutputReference | DataFactoryDatasetHttpTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -139,7 +139,7 @@ export class DataFactoryDatasetHttpTimeoutsOutputReference extends cdktf.Complex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -301,12 +301,11 @@ export class DataFactoryDatasetHttp extends cdktf.TerraformResource {
   // ==========
 
   // additional_properties - computed: false, optional: true, required: false
-  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable; 
+  private _additionalProperties?: { [key: string]: string }; 
   public get additionalProperties() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('additional_properties') as any;
+    return this.getStringMapAttribute('additional_properties');
   }
-  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set additionalProperties(value: { [key: string]: string }) {
     this._additionalProperties = value;
   }
   public resetAdditionalProperties() {
@@ -429,12 +428,11 @@ export class DataFactoryDatasetHttp extends cdktf.TerraformResource {
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string } | cdktf.IResolvable; 
+  private _parameters?: { [key: string]: string }; 
   public get parameters() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('parameters') as any;
+    return this.getStringMapAttribute('parameters');
   }
-  public set parameters(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set parameters(value: { [key: string]: string }) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -507,12 +505,12 @@ export class DataFactoryDatasetHttp extends cdktf.TerraformResource {
   }
 
   // schema_column - computed: false, optional: true, required: false
-  private _schemaColumn?: DataFactoryDatasetHttpSchemaColumn[]; 
+  private _schemaColumn?: DataFactoryDatasetHttpSchemaColumn[] | cdktf.IResolvable; 
   public get schemaColumn() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('schema_column') as any;
+    return this.interpolationForAttribute('schema_column');
   }
-  public set schemaColumn(value: DataFactoryDatasetHttpSchemaColumn[]) {
+  public set schemaColumn(value: DataFactoryDatasetHttpSchemaColumn[] | cdktf.IResolvable) {
     this._schemaColumn = value;
   }
   public resetSchemaColumn() {
@@ -524,7 +522,7 @@ export class DataFactoryDatasetHttp extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataFactoryDatasetHttpTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataFactoryDatasetHttpTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -545,7 +543,7 @@ export class DataFactoryDatasetHttp extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      additional_properties: cdktf.hashMapper(cdktf.anyToTerraform)(this._additionalProperties),
+      additional_properties: cdktf.hashMapper(cdktf.stringToTerraform)(this._additionalProperties),
       annotations: cdktf.listMapper(cdktf.stringToTerraform)(this._annotations),
       data_factory_id: cdktf.stringToTerraform(this._dataFactoryId),
       data_factory_name: cdktf.stringToTerraform(this._dataFactoryName),
@@ -553,7 +551,7 @@ export class DataFactoryDatasetHttp extends cdktf.TerraformResource {
       folder: cdktf.stringToTerraform(this._folder),
       linked_service_name: cdktf.stringToTerraform(this._linkedServiceName),
       name: cdktf.stringToTerraform(this._name),
-      parameters: cdktf.hashMapper(cdktf.anyToTerraform)(this._parameters),
+      parameters: cdktf.hashMapper(cdktf.stringToTerraform)(this._parameters),
       relative_url: cdktf.stringToTerraform(this._relativeUrl),
       request_body: cdktf.stringToTerraform(this._requestBody),
       request_method: cdktf.stringToTerraform(this._requestMethod),

@@ -57,8 +57,8 @@ export interface SentinelDataConnectorOffice365Timeouts {
   readonly update?: string;
 }
 
-export function sentinelDataConnectorOffice365TimeoutsToTerraform(struct?: SentinelDataConnectorOffice365TimeoutsOutputReference | SentinelDataConnectorOffice365Timeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function sentinelDataConnectorOffice365TimeoutsToTerraform(struct?: SentinelDataConnectorOffice365TimeoutsOutputReference | SentinelDataConnectorOffice365Timeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -78,7 +78,7 @@ export class SentinelDataConnectorOffice365TimeoutsOutputReference extends cdktf
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -234,7 +234,7 @@ export class SentinelDataConnectorOffice365 extends cdktf.TerraformResource {
   // exchange_enabled - computed: false, optional: true, required: false
   private _exchangeEnabled?: boolean | cdktf.IResolvable; 
   public get exchangeEnabled() {
-    return this.getBooleanAttribute('exchange_enabled') as any;
+    return this.getBooleanAttribute('exchange_enabled');
   }
   public set exchangeEnabled(value: boolean | cdktf.IResolvable) {
     this._exchangeEnabled = value;
@@ -281,7 +281,7 @@ export class SentinelDataConnectorOffice365 extends cdktf.TerraformResource {
   // sharepoint_enabled - computed: false, optional: true, required: false
   private _sharepointEnabled?: boolean | cdktf.IResolvable; 
   public get sharepointEnabled() {
-    return this.getBooleanAttribute('sharepoint_enabled') as any;
+    return this.getBooleanAttribute('sharepoint_enabled');
   }
   public set sharepointEnabled(value: boolean | cdktf.IResolvable) {
     this._sharepointEnabled = value;
@@ -297,7 +297,7 @@ export class SentinelDataConnectorOffice365 extends cdktf.TerraformResource {
   // teams_enabled - computed: false, optional: true, required: false
   private _teamsEnabled?: boolean | cdktf.IResolvable; 
   public get teamsEnabled() {
-    return this.getBooleanAttribute('teams_enabled') as any;
+    return this.getBooleanAttribute('teams_enabled');
   }
   public set teamsEnabled(value: boolean | cdktf.IResolvable) {
     this._teamsEnabled = value;
@@ -327,7 +327,7 @@ export class SentinelDataConnectorOffice365 extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new SentinelDataConnectorOffice365TimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new SentinelDataConnectorOffice365TimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

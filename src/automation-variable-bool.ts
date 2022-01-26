@@ -57,8 +57,8 @@ export interface AutomationVariableBoolTimeouts {
   readonly update?: string;
 }
 
-export function automationVariableBoolTimeoutsToTerraform(struct?: AutomationVariableBoolTimeoutsOutputReference | AutomationVariableBoolTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function automationVariableBoolTimeoutsToTerraform(struct?: AutomationVariableBoolTimeoutsOutputReference | AutomationVariableBoolTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -78,7 +78,7 @@ export class AutomationVariableBoolTimeoutsOutputReference extends cdktf.Complex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -263,7 +263,7 @@ export class AutomationVariableBool extends cdktf.TerraformResource {
   // encrypted - computed: false, optional: true, required: false
   private _encrypted?: boolean | cdktf.IResolvable; 
   public get encrypted() {
-    return this.getBooleanAttribute('encrypted') as any;
+    return this.getBooleanAttribute('encrypted');
   }
   public set encrypted(value: boolean | cdktf.IResolvable) {
     this._encrypted = value;
@@ -310,7 +310,7 @@ export class AutomationVariableBool extends cdktf.TerraformResource {
   // value - computed: false, optional: true, required: false
   private _value?: boolean | cdktf.IResolvable; 
   public get value() {
-    return this.getBooleanAttribute('value') as any;
+    return this.getBooleanAttribute('value');
   }
   public set value(value: boolean | cdktf.IResolvable) {
     this._value = value;
@@ -324,7 +324,7 @@ export class AutomationVariableBool extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AutomationVariableBoolTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new AutomationVariableBoolTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

@@ -51,8 +51,8 @@ export interface DataAzurermAppServiceCertificateOrderTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermAppServiceCertificateOrderTimeoutsToTerraform(struct?: DataAzurermAppServiceCertificateOrderTimeoutsOutputReference | DataAzurermAppServiceCertificateOrderTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermAppServiceCertificateOrderTimeoutsToTerraform(struct?: DataAzurermAppServiceCertificateOrderTimeoutsOutputReference | DataAzurermAppServiceCertificateOrderTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -69,7 +69,7 @@ export class DataAzurermAppServiceCertificateOrderTimeoutsOutputReference extend
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -159,12 +159,12 @@ export class DataAzurermAppServiceCertificateOrder extends cdktf.TerraformDataSo
 
   // auto_renew - computed: true, optional: false, required: false
   public get autoRenew() {
-    return this.getBooleanAttribute('auto_renew') as any;
+    return this.getBooleanAttribute('auto_renew');
   }
 
   // certificates - computed: true, optional: false, required: false
   public certificates(index: string) {
-    return new DataAzurermAppServiceCertificateOrderCertificates(this, 'certificates', index);
+    return new DataAzurermAppServiceCertificateOrderCertificates(this, 'certificates', index, false);
   }
 
   // csr - computed: true, optional: false, required: false
@@ -199,7 +199,7 @@ export class DataAzurermAppServiceCertificateOrder extends cdktf.TerraformDataSo
 
   // is_private_key_external - computed: true, optional: false, required: false
   public get isPrivateKeyExternal() {
-    return this.getBooleanAttribute('is_private_key_external') as any;
+    return this.getBooleanAttribute('is_private_key_external');
   }
 
   // key_size - computed: true, optional: false, required: false
@@ -259,7 +259,7 @@ export class DataAzurermAppServiceCertificateOrder extends cdktf.TerraformDataSo
   }
 
   // tags - computed: true, optional: false, required: false
-  public tags(key: string): string {
+  public tags(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
@@ -269,7 +269,7 @@ export class DataAzurermAppServiceCertificateOrder extends cdktf.TerraformDataSo
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermAppServiceCertificateOrderTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermAppServiceCertificateOrderTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

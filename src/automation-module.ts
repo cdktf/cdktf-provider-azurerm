@@ -44,7 +44,7 @@ export interface AutomationModuleModuleLinkHash {
 }
 
 export function automationModuleModuleLinkHashToTerraform(struct?: AutomationModuleModuleLinkHashOutputReference | AutomationModuleModuleLinkHash): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -62,7 +62,7 @@ export class AutomationModuleModuleLinkHashOutputReference extends cdktf.Complex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -133,7 +133,7 @@ export interface AutomationModuleModuleLink {
 }
 
 export function automationModuleModuleLinkToTerraform(struct?: AutomationModuleModuleLinkOutputReference | AutomationModuleModuleLink): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -151,7 +151,7 @@ export class AutomationModuleModuleLinkOutputReference extends cdktf.ComplexObje
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -196,7 +196,7 @@ export class AutomationModuleModuleLinkOutputReference extends cdktf.ComplexObje
   }
 
   // hash - computed: false, optional: true, required: false
-  private _hash = new AutomationModuleModuleLinkHashOutputReference(this as any, "hash", true);
+  private _hash = new AutomationModuleModuleLinkHashOutputReference(this, "hash", true);
   public get hash() {
     return this._hash;
   }
@@ -230,8 +230,8 @@ export interface AutomationModuleTimeouts {
   readonly update?: string;
 }
 
-export function automationModuleTimeoutsToTerraform(struct?: AutomationModuleTimeoutsOutputReference | AutomationModuleTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function automationModuleTimeoutsToTerraform(struct?: AutomationModuleTimeoutsOutputReference | AutomationModuleTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -251,7 +251,7 @@ export class AutomationModuleTimeoutsOutputReference extends cdktf.ComplexObject
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -447,7 +447,7 @@ export class AutomationModule extends cdktf.TerraformResource {
   }
 
   // module_link - computed: false, optional: false, required: true
-  private _moduleLink = new AutomationModuleModuleLinkOutputReference(this as any, "module_link", true);
+  private _moduleLink = new AutomationModuleModuleLinkOutputReference(this, "module_link", true);
   public get moduleLink() {
     return this._moduleLink;
   }
@@ -460,7 +460,7 @@ export class AutomationModule extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AutomationModuleTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new AutomationModuleTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

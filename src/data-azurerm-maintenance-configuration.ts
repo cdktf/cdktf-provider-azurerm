@@ -56,8 +56,8 @@ export interface DataAzurermMaintenanceConfigurationTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermMaintenanceConfigurationTimeoutsToTerraform(struct?: DataAzurermMaintenanceConfigurationTimeoutsOutputReference | DataAzurermMaintenanceConfigurationTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermMaintenanceConfigurationTimeoutsToTerraform(struct?: DataAzurermMaintenanceConfigurationTimeoutsOutputReference | DataAzurermMaintenanceConfigurationTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -74,7 +74,7 @@ export class DataAzurermMaintenanceConfigurationTimeoutsOutputReference extends 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -181,7 +181,7 @@ export class DataAzurermMaintenanceConfiguration extends cdktf.TerraformDataSour
   }
 
   // properties - computed: true, optional: false, required: false
-  public properties(key: string): string {
+  public properties(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'properties').lookup(key);
   }
 
@@ -204,7 +204,7 @@ export class DataAzurermMaintenanceConfiguration extends cdktf.TerraformDataSour
   }
 
   // tags - computed: true, optional: false, required: false
-  public tags(key: string): string {
+  public tags(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
@@ -215,11 +215,11 @@ export class DataAzurermMaintenanceConfiguration extends cdktf.TerraformDataSour
 
   // window - computed: true, optional: false, required: false
   public window(index: string) {
-    return new DataAzurermMaintenanceConfigurationWindow(this, 'window', index);
+    return new DataAzurermMaintenanceConfigurationWindow(this, 'window', index, false);
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermMaintenanceConfigurationTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermMaintenanceConfigurationTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

@@ -58,7 +58,7 @@ export interface DevTestWindowsVirtualMachineConfig extends cdktf.TerraformMetaA
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_windows_virtual_machine#tags DevTestWindowsVirtualMachine#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_windows_virtual_machine#username DevTestWindowsVirtualMachine#username}
   */
@@ -74,7 +74,7 @@ export interface DevTestWindowsVirtualMachineConfig extends cdktf.TerraformMetaA
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_windows_virtual_machine#inbound_nat_rule DevTestWindowsVirtualMachine#inbound_nat_rule}
   */
-  readonly inboundNatRule?: DevTestWindowsVirtualMachineInboundNatRule[];
+  readonly inboundNatRule?: DevTestWindowsVirtualMachineInboundNatRule[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -102,7 +102,7 @@ export interface DevTestWindowsVirtualMachineGalleryImageReference {
 }
 
 export function devTestWindowsVirtualMachineGalleryImageReferenceToTerraform(struct?: DevTestWindowsVirtualMachineGalleryImageReferenceOutputReference | DevTestWindowsVirtualMachineGalleryImageReference): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -122,7 +122,7 @@ export class DevTestWindowsVirtualMachineGalleryImageReferenceOutputReference ex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -228,8 +228,8 @@ export interface DevTestWindowsVirtualMachineInboundNatRule {
   readonly protocol: string;
 }
 
-export function devTestWindowsVirtualMachineInboundNatRuleToTerraform(struct?: DevTestWindowsVirtualMachineInboundNatRule): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function devTestWindowsVirtualMachineInboundNatRuleToTerraform(struct?: DevTestWindowsVirtualMachineInboundNatRule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -258,8 +258,8 @@ export interface DevTestWindowsVirtualMachineTimeouts {
   readonly update?: string;
 }
 
-export function devTestWindowsVirtualMachineTimeoutsToTerraform(struct?: DevTestWindowsVirtualMachineTimeoutsOutputReference | DevTestWindowsVirtualMachineTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function devTestWindowsVirtualMachineTimeoutsToTerraform(struct?: DevTestWindowsVirtualMachineTimeoutsOutputReference | DevTestWindowsVirtualMachineTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -279,7 +279,7 @@ export class DevTestWindowsVirtualMachineTimeoutsOutputReference extends cdktf.C
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -445,7 +445,7 @@ export class DevTestWindowsVirtualMachine extends cdktf.TerraformResource {
   // allow_claim - computed: false, optional: true, required: false
   private _allowClaim?: boolean | cdktf.IResolvable; 
   public get allowClaim() {
-    return this.getBooleanAttribute('allow_claim') as any;
+    return this.getBooleanAttribute('allow_claim');
   }
   public set allowClaim(value: boolean | cdktf.IResolvable) {
     this._allowClaim = value;
@@ -461,7 +461,7 @@ export class DevTestWindowsVirtualMachine extends cdktf.TerraformResource {
   // disallow_public_ip_address - computed: false, optional: true, required: false
   private _disallowPublicIpAddress?: boolean | cdktf.IResolvable; 
   public get disallowPublicIpAddress() {
-    return this.getBooleanAttribute('disallow_public_ip_address') as any;
+    return this.getBooleanAttribute('disallow_public_ip_address');
   }
   public set disallowPublicIpAddress(value: boolean | cdktf.IResolvable) {
     this._disallowPublicIpAddress = value;
@@ -618,12 +618,11 @@ export class DevTestWindowsVirtualMachine extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -653,7 +652,7 @@ export class DevTestWindowsVirtualMachine extends cdktf.TerraformResource {
   }
 
   // gallery_image_reference - computed: false, optional: false, required: true
-  private _galleryImageReference = new DevTestWindowsVirtualMachineGalleryImageReferenceOutputReference(this as any, "gallery_image_reference", true);
+  private _galleryImageReference = new DevTestWindowsVirtualMachineGalleryImageReferenceOutputReference(this, "gallery_image_reference", true);
   public get galleryImageReference() {
     return this._galleryImageReference;
   }
@@ -666,12 +665,12 @@ export class DevTestWindowsVirtualMachine extends cdktf.TerraformResource {
   }
 
   // inbound_nat_rule - computed: false, optional: true, required: false
-  private _inboundNatRule?: DevTestWindowsVirtualMachineInboundNatRule[]; 
+  private _inboundNatRule?: DevTestWindowsVirtualMachineInboundNatRule[] | cdktf.IResolvable; 
   public get inboundNatRule() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('inbound_nat_rule') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('inbound_nat_rule')));
   }
-  public set inboundNatRule(value: DevTestWindowsVirtualMachineInboundNatRule[]) {
+  public set inboundNatRule(value: DevTestWindowsVirtualMachineInboundNatRule[] | cdktf.IResolvable) {
     this._inboundNatRule = value;
   }
   public resetInboundNatRule() {
@@ -683,7 +682,7 @@ export class DevTestWindowsVirtualMachine extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DevTestWindowsVirtualMachineTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DevTestWindowsVirtualMachineTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -716,7 +715,7 @@ export class DevTestWindowsVirtualMachine extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       size: cdktf.stringToTerraform(this._size),
       storage_type: cdktf.stringToTerraform(this._storageType),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       username: cdktf.stringToTerraform(this._username),
       gallery_image_reference: devTestWindowsVirtualMachineGalleryImageReferenceToTerraform(this._galleryImageReference.internalValue),
       inbound_nat_rule: cdktf.listMapper(devTestWindowsVirtualMachineInboundNatRuleToTerraform)(this._inboundNatRule),

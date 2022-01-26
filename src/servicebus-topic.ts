@@ -93,8 +93,8 @@ export interface ServicebusTopicTimeouts {
   readonly update?: string;
 }
 
-export function servicebusTopicTimeoutsToTerraform(struct?: ServicebusTopicTimeoutsOutputReference | ServicebusTopicTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function servicebusTopicTimeoutsToTerraform(struct?: ServicebusTopicTimeoutsOutputReference | ServicebusTopicTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -114,7 +114,7 @@ export class ServicebusTopicTimeoutsOutputReference extends cdktf.ComplexObject 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -327,7 +327,7 @@ export class ServicebusTopic extends cdktf.TerraformResource {
   // enable_batched_operations - computed: false, optional: true, required: false
   private _enableBatchedOperations?: boolean | cdktf.IResolvable; 
   public get enableBatchedOperations() {
-    return this.getBooleanAttribute('enable_batched_operations') as any;
+    return this.getBooleanAttribute('enable_batched_operations');
   }
   public set enableBatchedOperations(value: boolean | cdktf.IResolvable) {
     this._enableBatchedOperations = value;
@@ -343,7 +343,7 @@ export class ServicebusTopic extends cdktf.TerraformResource {
   // enable_express - computed: false, optional: true, required: false
   private _enableExpress?: boolean | cdktf.IResolvable; 
   public get enableExpress() {
-    return this.getBooleanAttribute('enable_express') as any;
+    return this.getBooleanAttribute('enable_express');
   }
   public set enableExpress(value: boolean | cdktf.IResolvable) {
     this._enableExpress = value;
@@ -359,7 +359,7 @@ export class ServicebusTopic extends cdktf.TerraformResource {
   // enable_partitioning - computed: false, optional: true, required: false
   private _enablePartitioning?: boolean | cdktf.IResolvable; 
   public get enablePartitioning() {
-    return this.getBooleanAttribute('enable_partitioning') as any;
+    return this.getBooleanAttribute('enable_partitioning');
   }
   public set enablePartitioning(value: boolean | cdktf.IResolvable) {
     this._enablePartitioning = value;
@@ -457,7 +457,7 @@ export class ServicebusTopic extends cdktf.TerraformResource {
   // requires_duplicate_detection - computed: false, optional: true, required: false
   private _requiresDuplicateDetection?: boolean | cdktf.IResolvable; 
   public get requiresDuplicateDetection() {
-    return this.getBooleanAttribute('requires_duplicate_detection') as any;
+    return this.getBooleanAttribute('requires_duplicate_detection');
   }
   public set requiresDuplicateDetection(value: boolean | cdktf.IResolvable) {
     this._requiresDuplicateDetection = value;
@@ -505,7 +505,7 @@ export class ServicebusTopic extends cdktf.TerraformResource {
   // support_ordering - computed: false, optional: true, required: false
   private _supportOrdering?: boolean | cdktf.IResolvable; 
   public get supportOrdering() {
-    return this.getBooleanAttribute('support_ordering') as any;
+    return this.getBooleanAttribute('support_ordering');
   }
   public set supportOrdering(value: boolean | cdktf.IResolvable) {
     this._supportOrdering = value;
@@ -519,7 +519,7 @@ export class ServicebusTopic extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ServicebusTopicTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ServicebusTopicTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

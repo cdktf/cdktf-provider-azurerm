@@ -30,13 +30,13 @@ export interface MonitorActivityLogAlertConfig extends cdktf.TerraformMetaArgume
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_activity_log_alert#tags MonitorActivityLogAlert#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * action block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_activity_log_alert#action MonitorActivityLogAlert#action}
   */
-  readonly action?: MonitorActivityLogAlertAction[];
+  readonly action?: MonitorActivityLogAlertAction[] | cdktf.IResolvable;
   /**
   * criteria block
   * 
@@ -58,17 +58,17 @@ export interface MonitorActivityLogAlertAction {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_activity_log_alert#webhook_properties MonitorActivityLogAlert#webhook_properties}
   */
-  readonly webhookProperties?: { [key: string]: string } | cdktf.IResolvable;
+  readonly webhookProperties?: { [key: string]: string };
 }
 
-export function monitorActivityLogAlertActionToTerraform(struct?: MonitorActivityLogAlertAction): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function monitorActivityLogAlertActionToTerraform(struct?: MonitorActivityLogAlertAction | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
     action_group_id: cdktf.stringToTerraform(struct!.actionGroupId),
-    webhook_properties: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.webhookProperties),
+    webhook_properties: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.webhookProperties),
   }
 }
 
@@ -87,8 +87,8 @@ export interface MonitorActivityLogAlertCriteriaServiceHealth {
   readonly services?: string[];
 }
 
-export function monitorActivityLogAlertCriteriaServiceHealthToTerraform(struct?: MonitorActivityLogAlertCriteriaServiceHealth): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function monitorActivityLogAlertCriteriaServiceHealthToTerraform(struct?: MonitorActivityLogAlertCriteriaServiceHealth | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -157,11 +157,11 @@ export interface MonitorActivityLogAlertCriteria {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_activity_log_alert#service_health MonitorActivityLogAlert#service_health}
   */
-  readonly serviceHealth?: MonitorActivityLogAlertCriteriaServiceHealth[];
+  readonly serviceHealth?: MonitorActivityLogAlertCriteriaServiceHealth[] | cdktf.IResolvable;
 }
 
 export function monitorActivityLogAlertCriteriaToTerraform(struct?: MonitorActivityLogAlertCriteriaOutputReference | MonitorActivityLogAlertCriteria): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -191,7 +191,7 @@ export class MonitorActivityLogAlertCriteriaOutputReference extends cdktf.Comple
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -500,12 +500,12 @@ export class MonitorActivityLogAlertCriteriaOutputReference extends cdktf.Comple
   }
 
   // service_health - computed: false, optional: true, required: false
-  private _serviceHealth?: MonitorActivityLogAlertCriteriaServiceHealth[]; 
+  private _serviceHealth?: MonitorActivityLogAlertCriteriaServiceHealth[] | cdktf.IResolvable; 
   public get serviceHealth() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('service_health') as any;
+    return this.interpolationForAttribute('service_health');
   }
-  public set serviceHealth(value: MonitorActivityLogAlertCriteriaServiceHealth[]) {
+  public set serviceHealth(value: MonitorActivityLogAlertCriteriaServiceHealth[] | cdktf.IResolvable) {
     this._serviceHealth = value;
   }
   public resetServiceHealth() {
@@ -535,8 +535,8 @@ export interface MonitorActivityLogAlertTimeouts {
   readonly update?: string;
 }
 
-export function monitorActivityLogAlertTimeoutsToTerraform(struct?: MonitorActivityLogAlertTimeoutsOutputReference | MonitorActivityLogAlertTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function monitorActivityLogAlertTimeoutsToTerraform(struct?: MonitorActivityLogAlertTimeoutsOutputReference | MonitorActivityLogAlertTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -556,7 +556,7 @@ export class MonitorActivityLogAlertTimeoutsOutputReference extends cdktf.Comple
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -730,7 +730,7 @@ export class MonitorActivityLogAlert extends cdktf.TerraformResource {
   // enabled - computed: false, optional: true, required: false
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
@@ -777,7 +777,7 @@ export class MonitorActivityLogAlert extends cdktf.TerraformResource {
   // scopes - computed: false, optional: false, required: true
   private _scopes?: string[]; 
   public get scopes() {
-    return this.getListAttribute('scopes');
+    return cdktf.Fn.tolist(this.getListAttribute('scopes'));
   }
   public set scopes(value: string[]) {
     this._scopes = value;
@@ -788,12 +788,11 @@ export class MonitorActivityLogAlert extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -805,12 +804,12 @@ export class MonitorActivityLogAlert extends cdktf.TerraformResource {
   }
 
   // action - computed: false, optional: true, required: false
-  private _action?: MonitorActivityLogAlertAction[]; 
+  private _action?: MonitorActivityLogAlertAction[] | cdktf.IResolvable; 
   public get action() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('action') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('action')));
   }
-  public set action(value: MonitorActivityLogAlertAction[]) {
+  public set action(value: MonitorActivityLogAlertAction[] | cdktf.IResolvable) {
     this._action = value;
   }
   public resetAction() {
@@ -822,7 +821,7 @@ export class MonitorActivityLogAlert extends cdktf.TerraformResource {
   }
 
   // criteria - computed: false, optional: false, required: true
-  private _criteria = new MonitorActivityLogAlertCriteriaOutputReference(this as any, "criteria", true);
+  private _criteria = new MonitorActivityLogAlertCriteriaOutputReference(this, "criteria", true);
   public get criteria() {
     return this._criteria;
   }
@@ -835,7 +834,7 @@ export class MonitorActivityLogAlert extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new MonitorActivityLogAlertTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new MonitorActivityLogAlertTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -861,7 +860,7 @@ export class MonitorActivityLogAlert extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       scopes: cdktf.listMapper(cdktf.stringToTerraform)(this._scopes),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       action: cdktf.listMapper(monitorActivityLogAlertActionToTerraform)(this._action),
       criteria: monitorActivityLogAlertCriteriaToTerraform(this._criteria.internalValue),
       timeouts: monitorActivityLogAlertTimeoutsToTerraform(this._timeouts.internalValue),

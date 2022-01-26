@@ -32,7 +32,7 @@ export interface LighthouseDefinitionConfig extends cdktf.TerraformMetaArguments
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_definition#authorization LighthouseDefinition#authorization}
   */
-  readonly authorization: LighthouseDefinitionAuthorization[];
+  readonly authorization: LighthouseDefinitionAuthorization[] | cdktf.IResolvable;
   /**
   * plan block
   * 
@@ -65,8 +65,8 @@ export interface LighthouseDefinitionAuthorization {
   readonly roleDefinitionId: string;
 }
 
-export function lighthouseDefinitionAuthorizationToTerraform(struct?: LighthouseDefinitionAuthorization): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function lighthouseDefinitionAuthorizationToTerraform(struct?: LighthouseDefinitionAuthorization | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -98,7 +98,7 @@ export interface LighthouseDefinitionPlan {
 }
 
 export function lighthouseDefinitionPlanToTerraform(struct?: LighthouseDefinitionPlanOutputReference | LighthouseDefinitionPlan): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -118,7 +118,7 @@ export class LighthouseDefinitionPlanOutputReference extends cdktf.ComplexObject
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -232,8 +232,8 @@ export interface LighthouseDefinitionTimeouts {
   readonly update?: string;
 }
 
-export function lighthouseDefinitionTimeoutsToTerraform(struct?: LighthouseDefinitionTimeoutsOutputReference | LighthouseDefinitionTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function lighthouseDefinitionTimeoutsToTerraform(struct?: LighthouseDefinitionTimeoutsOutputReference | LighthouseDefinitionTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -253,7 +253,7 @@ export class LighthouseDefinitionTimeoutsOutputReference extends cdktf.ComplexOb
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -484,12 +484,12 @@ export class LighthouseDefinition extends cdktf.TerraformResource {
   }
 
   // authorization - computed: false, optional: false, required: true
-  private _authorization?: LighthouseDefinitionAuthorization[]; 
+  private _authorization?: LighthouseDefinitionAuthorization[] | cdktf.IResolvable; 
   public get authorization() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('authorization') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('authorization')));
   }
-  public set authorization(value: LighthouseDefinitionAuthorization[]) {
+  public set authorization(value: LighthouseDefinitionAuthorization[] | cdktf.IResolvable) {
     this._authorization = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -498,7 +498,7 @@ export class LighthouseDefinition extends cdktf.TerraformResource {
   }
 
   // plan - computed: false, optional: true, required: false
-  private _plan = new LighthouseDefinitionPlanOutputReference(this as any, "plan", true);
+  private _plan = new LighthouseDefinitionPlanOutputReference(this, "plan", true);
   public get plan() {
     return this._plan;
   }
@@ -514,7 +514,7 @@ export class LighthouseDefinition extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new LighthouseDefinitionTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new LighthouseDefinitionTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

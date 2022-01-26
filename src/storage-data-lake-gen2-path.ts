@@ -36,7 +36,7 @@ export interface StorageDataLakeGen2PathConfig extends cdktf.TerraformMetaArgume
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_data_lake_gen2_path#ace StorageDataLakeGen2Path#ace}
   */
-  readonly ace?: StorageDataLakeGen2PathAce[];
+  readonly ace?: StorageDataLakeGen2PathAce[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -63,8 +63,8 @@ export interface StorageDataLakeGen2PathAce {
   readonly type: string;
 }
 
-export function storageDataLakeGen2PathAceToTerraform(struct?: StorageDataLakeGen2PathAce): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function storageDataLakeGen2PathAceToTerraform(struct?: StorageDataLakeGen2PathAce | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -95,8 +95,8 @@ export interface StorageDataLakeGen2PathTimeouts {
   readonly update?: string;
 }
 
-export function storageDataLakeGen2PathTimeoutsToTerraform(struct?: StorageDataLakeGen2PathTimeoutsOutputReference | StorageDataLakeGen2PathTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function storageDataLakeGen2PathTimeoutsToTerraform(struct?: StorageDataLakeGen2PathTimeoutsOutputReference | StorageDataLakeGen2PathTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -116,7 +116,7 @@ export class StorageDataLakeGen2PathTimeoutsOutputReference extends cdktf.Comple
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -360,12 +360,12 @@ export class StorageDataLakeGen2Path extends cdktf.TerraformResource {
   }
 
   // ace - computed: false, optional: true, required: false
-  private _ace?: StorageDataLakeGen2PathAce[]; 
+  private _ace?: StorageDataLakeGen2PathAce[] | cdktf.IResolvable; 
   public get ace() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('ace') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('ace')));
   }
-  public set ace(value: StorageDataLakeGen2PathAce[]) {
+  public set ace(value: StorageDataLakeGen2PathAce[] | cdktf.IResolvable) {
     this._ace = value;
   }
   public resetAce() {
@@ -377,7 +377,7 @@ export class StorageDataLakeGen2Path extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new StorageDataLakeGen2PathTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new StorageDataLakeGen2PathTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

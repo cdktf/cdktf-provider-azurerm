@@ -34,7 +34,7 @@ export interface AppServiceEnvironmentV3Config extends cdktf.TerraformMetaArgume
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment_v3#tags AppServiceEnvironmentV3#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment_v3#zone_redundant AppServiceEnvironmentV3#zone_redundant}
   */
@@ -44,7 +44,7 @@ export interface AppServiceEnvironmentV3Config extends cdktf.TerraformMetaArgume
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment_v3#cluster_setting AppServiceEnvironmentV3#cluster_setting}
   */
-  readonly clusterSetting?: AppServiceEnvironmentV3ClusterSetting[];
+  readonly clusterSetting?: AppServiceEnvironmentV3ClusterSetting[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -80,8 +80,8 @@ export interface AppServiceEnvironmentV3ClusterSetting {
   readonly value: string;
 }
 
-export function appServiceEnvironmentV3ClusterSettingToTerraform(struct?: AppServiceEnvironmentV3ClusterSetting): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function appServiceEnvironmentV3ClusterSettingToTerraform(struct?: AppServiceEnvironmentV3ClusterSetting | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -110,8 +110,8 @@ export interface AppServiceEnvironmentV3Timeouts {
   readonly update?: string;
 }
 
-export function appServiceEnvironmentV3TimeoutsToTerraform(struct?: AppServiceEnvironmentV3TimeoutsOutputReference | AppServiceEnvironmentV3Timeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function appServiceEnvironmentV3TimeoutsToTerraform(struct?: AppServiceEnvironmentV3TimeoutsOutputReference | AppServiceEnvironmentV3Timeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -131,7 +131,7 @@ export class AppServiceEnvironmentV3TimeoutsOutputReference extends cdktf.Comple
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -290,7 +290,7 @@ export class AppServiceEnvironmentV3 extends cdktf.TerraformResource {
   // allow_new_private_endpoint_connections - computed: false, optional: true, required: false
   private _allowNewPrivateEndpointConnections?: boolean | cdktf.IResolvable; 
   public get allowNewPrivateEndpointConnections() {
-    return this.getBooleanAttribute('allow_new_private_endpoint_connections') as any;
+    return this.getBooleanAttribute('allow_new_private_endpoint_connections');
   }
   public set allowNewPrivateEndpointConnections(value: boolean | cdktf.IResolvable) {
     this._allowNewPrivateEndpointConnections = value;
@@ -336,7 +336,7 @@ export class AppServiceEnvironmentV3 extends cdktf.TerraformResource {
 
   // inbound_network_dependencies - computed: true, optional: false, required: false
   public inboundNetworkDependencies(index: string) {
-    return new AppServiceEnvironmentV3InboundNetworkDependencies(this, 'inbound_network_dependencies', index);
+    return new AppServiceEnvironmentV3InboundNetworkDependencies(this, 'inbound_network_dependencies', index, false);
   }
 
   // internal_inbound_ip_addresses - computed: true, optional: false, required: false
@@ -420,12 +420,11 @@ export class AppServiceEnvironmentV3 extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -444,7 +443,7 @@ export class AppServiceEnvironmentV3 extends cdktf.TerraformResource {
   // zone_redundant - computed: false, optional: true, required: false
   private _zoneRedundant?: boolean | cdktf.IResolvable; 
   public get zoneRedundant() {
-    return this.getBooleanAttribute('zone_redundant') as any;
+    return this.getBooleanAttribute('zone_redundant');
   }
   public set zoneRedundant(value: boolean | cdktf.IResolvable) {
     this._zoneRedundant = value;
@@ -458,12 +457,12 @@ export class AppServiceEnvironmentV3 extends cdktf.TerraformResource {
   }
 
   // cluster_setting - computed: false, optional: true, required: false
-  private _clusterSetting?: AppServiceEnvironmentV3ClusterSetting[]; 
+  private _clusterSetting?: AppServiceEnvironmentV3ClusterSetting[] | cdktf.IResolvable; 
   public get clusterSetting() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('cluster_setting') as any;
+    return this.interpolationForAttribute('cluster_setting');
   }
-  public set clusterSetting(value: AppServiceEnvironmentV3ClusterSetting[]) {
+  public set clusterSetting(value: AppServiceEnvironmentV3ClusterSetting[] | cdktf.IResolvable) {
     this._clusterSetting = value;
   }
   public resetClusterSetting() {
@@ -475,7 +474,7 @@ export class AppServiceEnvironmentV3 extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AppServiceEnvironmentV3TimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new AppServiceEnvironmentV3TimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -502,7 +501,7 @@ export class AppServiceEnvironmentV3 extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       subnet_id: cdktf.stringToTerraform(this._subnetId),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       zone_redundant: cdktf.booleanToTerraform(this._zoneRedundant),
       cluster_setting: cdktf.listMapper(appServiceEnvironmentV3ClusterSettingToTerraform)(this._clusterSetting),
       timeouts: appServiceEnvironmentV3TimeoutsToTerraform(this._timeouts.internalValue),

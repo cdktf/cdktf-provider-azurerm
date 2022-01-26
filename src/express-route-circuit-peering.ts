@@ -78,7 +78,7 @@ export interface ExpressRouteCircuitPeeringIpv6MicrosoftPeering {
 }
 
 export function expressRouteCircuitPeeringIpv6MicrosoftPeeringToTerraform(struct?: ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference | ExpressRouteCircuitPeeringIpv6MicrosoftPeering): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -97,7 +97,7 @@ export class ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference exten
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -204,7 +204,7 @@ export interface ExpressRouteCircuitPeeringIpv6 {
 }
 
 export function expressRouteCircuitPeeringIpv6ToTerraform(struct?: ExpressRouteCircuitPeeringIpv6OutputReference | ExpressRouteCircuitPeeringIpv6): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -224,7 +224,7 @@ export class ExpressRouteCircuitPeeringIpv6OutputReference extends cdktf.Complex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -310,7 +310,7 @@ export class ExpressRouteCircuitPeeringIpv6OutputReference extends cdktf.Complex
   }
 
   // microsoft_peering - computed: false, optional: false, required: true
-  private _microsoftPeering = new ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference(this as any, "microsoft_peering", true);
+  private _microsoftPeering = new ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference(this, "microsoft_peering", true);
   public get microsoftPeering() {
     return this._microsoftPeering;
   }
@@ -338,7 +338,7 @@ export interface ExpressRouteCircuitPeeringMicrosoftPeeringConfig {
 }
 
 export function expressRouteCircuitPeeringMicrosoftPeeringConfigToTerraform(struct?: ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference | ExpressRouteCircuitPeeringMicrosoftPeeringConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -357,7 +357,7 @@ export class ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference ext
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -458,8 +458,8 @@ export interface ExpressRouteCircuitPeeringTimeouts {
   readonly update?: string;
 }
 
-export function expressRouteCircuitPeeringTimeoutsToTerraform(struct?: ExpressRouteCircuitPeeringTimeoutsOutputReference | ExpressRouteCircuitPeeringTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function expressRouteCircuitPeeringTimeoutsToTerraform(struct?: ExpressRouteCircuitPeeringTimeoutsOutputReference | ExpressRouteCircuitPeeringTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -479,7 +479,7 @@ export class ExpressRouteCircuitPeeringTimeoutsOutputReference extends cdktf.Com
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -784,7 +784,7 @@ export class ExpressRouteCircuitPeering extends cdktf.TerraformResource {
   }
 
   // ipv6 - computed: false, optional: true, required: false
-  private _ipv6 = new ExpressRouteCircuitPeeringIpv6OutputReference(this as any, "ipv6", true);
+  private _ipv6 = new ExpressRouteCircuitPeeringIpv6OutputReference(this, "ipv6", true);
   public get ipv6() {
     return this._ipv6;
   }
@@ -800,7 +800,7 @@ export class ExpressRouteCircuitPeering extends cdktf.TerraformResource {
   }
 
   // microsoft_peering_config - computed: false, optional: true, required: false
-  private _microsoftPeeringConfig = new ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference(this as any, "microsoft_peering_config", true);
+  private _microsoftPeeringConfig = new ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference(this, "microsoft_peering_config", true);
   public get microsoftPeeringConfig() {
     return this._microsoftPeeringConfig;
   }
@@ -816,7 +816,7 @@ export class ExpressRouteCircuitPeering extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ExpressRouteCircuitPeeringTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ExpressRouteCircuitPeeringTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

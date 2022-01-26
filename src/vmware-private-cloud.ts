@@ -38,7 +38,7 @@ export interface VmwarePrivateCloudConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_private_cloud#tags VmwarePrivateCloud#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_private_cloud#vcenter_password VmwarePrivateCloud#vcenter_password}
   */
@@ -86,7 +86,7 @@ export interface VmwarePrivateCloudManagementCluster {
 }
 
 export function vmwarePrivateCloudManagementClusterToTerraform(struct?: VmwarePrivateCloudManagementClusterOutputReference | VmwarePrivateCloudManagementCluster): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -103,7 +103,7 @@ export class VmwarePrivateCloudManagementClusterOutputReference extends cdktf.Co
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -126,6 +126,16 @@ export class VmwarePrivateCloudManagementClusterOutputReference extends cdktf.Co
       this.isEmptyObject = Object.keys(value).length === 0;
       this._size = value.size;
     }
+  }
+
+  // hosts - computed: true, optional: false, required: false
+  public get hosts() {
+    return this.getListAttribute('hosts');
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getNumberAttribute('id');
   }
 
   // size - computed: false, optional: false, required: true
@@ -160,8 +170,8 @@ export interface VmwarePrivateCloudTimeouts {
   readonly update?: string;
 }
 
-export function vmwarePrivateCloudTimeoutsToTerraform(struct?: VmwarePrivateCloudTimeoutsOutputReference | VmwarePrivateCloudTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function vmwarePrivateCloudTimeoutsToTerraform(struct?: VmwarePrivateCloudTimeoutsOutputReference | VmwarePrivateCloudTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -181,7 +191,7 @@ export class VmwarePrivateCloudTimeoutsOutputReference extends cdktf.ComplexObje
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -340,7 +350,7 @@ export class VmwarePrivateCloud extends cdktf.TerraformResource {
 
   // circuit - computed: true, optional: false, required: false
   public circuit(index: string) {
-    return new VmwarePrivateCloudCircuit(this, 'circuit', index);
+    return new VmwarePrivateCloudCircuit(this, 'circuit', index, false);
   }
 
   // hcx_cloud_manager_endpoint - computed: true, optional: false, required: false
@@ -356,7 +366,7 @@ export class VmwarePrivateCloud extends cdktf.TerraformResource {
   // internet_connection_enabled - computed: false, optional: true, required: false
   private _internetConnectionEnabled?: boolean | cdktf.IResolvable; 
   public get internetConnectionEnabled() {
-    return this.getBooleanAttribute('internet_connection_enabled') as any;
+    return this.getBooleanAttribute('internet_connection_enabled');
   }
   public set internetConnectionEnabled(value: boolean | cdktf.IResolvable) {
     this._internetConnectionEnabled = value;
@@ -471,12 +481,11 @@ export class VmwarePrivateCloud extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -519,7 +528,7 @@ export class VmwarePrivateCloud extends cdktf.TerraformResource {
   }
 
   // management_cluster - computed: false, optional: false, required: true
-  private _managementCluster = new VmwarePrivateCloudManagementClusterOutputReference(this as any, "management_cluster", true);
+  private _managementCluster = new VmwarePrivateCloudManagementClusterOutputReference(this, "management_cluster", true);
   public get managementCluster() {
     return this._managementCluster;
   }
@@ -532,7 +541,7 @@ export class VmwarePrivateCloud extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new VmwarePrivateCloudTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new VmwarePrivateCloudTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -560,7 +569,7 @@ export class VmwarePrivateCloud extends cdktf.TerraformResource {
       nsxt_password: cdktf.stringToTerraform(this._nsxtPassword),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku_name: cdktf.stringToTerraform(this._skuName),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       vcenter_password: cdktf.stringToTerraform(this._vcenterPassword),
       management_cluster: vmwarePrivateCloudManagementClusterToTerraform(this._managementCluster.internalValue),
       timeouts: vmwarePrivateCloudTimeoutsToTerraform(this._timeouts.internalValue),

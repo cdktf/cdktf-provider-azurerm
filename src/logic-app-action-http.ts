@@ -14,7 +14,7 @@ export interface LogicAppActionHttpConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http#headers LogicAppActionHttp#headers}
   */
-  readonly headers?: { [key: string]: string } | cdktf.IResolvable;
+  readonly headers?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http#logic_app_id LogicAppActionHttp#logic_app_id}
   */
@@ -36,7 +36,7 @@ export interface LogicAppActionHttpConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http#run_after LogicAppActionHttp#run_after}
   */
-  readonly runAfter?: LogicAppActionHttpRunAfter[];
+  readonly runAfter?: LogicAppActionHttpRunAfter[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -55,8 +55,8 @@ export interface LogicAppActionHttpRunAfter {
   readonly actionResult: string;
 }
 
-export function logicAppActionHttpRunAfterToTerraform(struct?: LogicAppActionHttpRunAfter): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function logicAppActionHttpRunAfterToTerraform(struct?: LogicAppActionHttpRunAfter | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -85,8 +85,8 @@ export interface LogicAppActionHttpTimeouts {
   readonly update?: string;
 }
 
-export function logicAppActionHttpTimeoutsToTerraform(struct?: LogicAppActionHttpTimeoutsOutputReference | LogicAppActionHttpTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function logicAppActionHttpTimeoutsToTerraform(struct?: LogicAppActionHttpTimeoutsOutputReference | LogicAppActionHttpTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -106,7 +106,7 @@ export class LogicAppActionHttpTimeoutsOutputReference extends cdktf.ComplexObje
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -277,12 +277,11 @@ export class LogicAppActionHttp extends cdktf.TerraformResource {
   }
 
   // headers - computed: false, optional: true, required: false
-  private _headers?: { [key: string]: string } | cdktf.IResolvable; 
+  private _headers?: { [key: string]: string }; 
   public get headers() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('headers') as any;
+    return this.getStringMapAttribute('headers');
   }
-  public set headers(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set headers(value: { [key: string]: string }) {
     this._headers = value;
   }
   public resetHeaders() {
@@ -351,12 +350,12 @@ export class LogicAppActionHttp extends cdktf.TerraformResource {
   }
 
   // run_after - computed: false, optional: true, required: false
-  private _runAfter?: LogicAppActionHttpRunAfter[]; 
+  private _runAfter?: LogicAppActionHttpRunAfter[] | cdktf.IResolvable; 
   public get runAfter() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('run_after') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('run_after')));
   }
-  public set runAfter(value: LogicAppActionHttpRunAfter[]) {
+  public set runAfter(value: LogicAppActionHttpRunAfter[] | cdktf.IResolvable) {
     this._runAfter = value;
   }
   public resetRunAfter() {
@@ -368,7 +367,7 @@ export class LogicAppActionHttp extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new LogicAppActionHttpTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new LogicAppActionHttpTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -390,7 +389,7 @@ export class LogicAppActionHttp extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       body: cdktf.stringToTerraform(this._body),
-      headers: cdktf.hashMapper(cdktf.anyToTerraform)(this._headers),
+      headers: cdktf.hashMapper(cdktf.stringToTerraform)(this._headers),
       logic_app_id: cdktf.stringToTerraform(this._logicAppId),
       method: cdktf.stringToTerraform(this._method),
       name: cdktf.stringToTerraform(this._name),

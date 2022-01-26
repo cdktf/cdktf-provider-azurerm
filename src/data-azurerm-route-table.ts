@@ -51,8 +51,8 @@ export interface DataAzurermRouteTableTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermRouteTableTimeoutsToTerraform(struct?: DataAzurermRouteTableTimeoutsOutputReference | DataAzurermRouteTableTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermRouteTableTimeoutsToTerraform(struct?: DataAzurermRouteTableTimeoutsOutputReference | DataAzurermRouteTableTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -69,7 +69,7 @@ export class DataAzurermRouteTableTimeoutsOutputReference extends cdktf.ComplexO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -190,21 +190,21 @@ export class DataAzurermRouteTable extends cdktf.TerraformDataSource {
 
   // route - computed: true, optional: false, required: false
   public route(index: string) {
-    return new DataAzurermRouteTableRoute(this, 'route', index);
+    return new DataAzurermRouteTableRoute(this, 'route', index, false);
   }
 
   // subnets - computed: true, optional: false, required: false
   public get subnets() {
-    return this.getListAttribute('subnets');
+    return cdktf.Fn.tolist(this.getListAttribute('subnets'));
   }
 
   // tags - computed: true, optional: false, required: false
-  public tags(key: string): string {
+  public tags(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermRouteTableTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermRouteTableTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

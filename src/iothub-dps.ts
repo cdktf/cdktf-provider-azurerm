@@ -26,13 +26,13 @@ export interface IothubDpsConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps#tags IothubDps#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * linked_hub block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps#linked_hub IothubDps#linked_hub}
   */
-  readonly linkedHub?: IothubDpsLinkedHub[];
+  readonly linkedHub?: IothubDpsLinkedHub[] | cdktf.IResolvable;
   /**
   * sku block
   * 
@@ -65,8 +65,8 @@ export interface IothubDpsLinkedHub {
   readonly location: string;
 }
 
-export function iothubDpsLinkedHubToTerraform(struct?: IothubDpsLinkedHub): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function iothubDpsLinkedHubToTerraform(struct?: IothubDpsLinkedHub | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -90,7 +90,7 @@ export interface IothubDpsSku {
 }
 
 export function iothubDpsSkuToTerraform(struct?: IothubDpsSkuOutputReference | IothubDpsSku): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -108,7 +108,7 @@ export class IothubDpsSkuOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -184,8 +184,8 @@ export interface IothubDpsTimeouts {
   readonly update?: string;
 }
 
-export function iothubDpsTimeoutsToTerraform(struct?: IothubDpsTimeoutsOutputReference | IothubDpsTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function iothubDpsTimeoutsToTerraform(struct?: IothubDpsTimeoutsOutputReference | IothubDpsTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -205,7 +205,7 @@ export class IothubDpsTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -435,12 +435,11 @@ export class IothubDps extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -452,12 +451,12 @@ export class IothubDps extends cdktf.TerraformResource {
   }
 
   // linked_hub - computed: false, optional: true, required: false
-  private _linkedHub?: IothubDpsLinkedHub[]; 
+  private _linkedHub?: IothubDpsLinkedHub[] | cdktf.IResolvable; 
   public get linkedHub() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('linked_hub') as any;
+    return this.interpolationForAttribute('linked_hub');
   }
-  public set linkedHub(value: IothubDpsLinkedHub[]) {
+  public set linkedHub(value: IothubDpsLinkedHub[] | cdktf.IResolvable) {
     this._linkedHub = value;
   }
   public resetLinkedHub() {
@@ -469,7 +468,7 @@ export class IothubDps extends cdktf.TerraformResource {
   }
 
   // sku - computed: false, optional: false, required: true
-  private _sku = new IothubDpsSkuOutputReference(this as any, "sku", true);
+  private _sku = new IothubDpsSkuOutputReference(this, "sku", true);
   public get sku() {
     return this._sku;
   }
@@ -482,7 +481,7 @@ export class IothubDps extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new IothubDpsTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new IothubDpsTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -507,7 +506,7 @@ export class IothubDps extends cdktf.TerraformResource {
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       linked_hub: cdktf.listMapper(iothubDpsLinkedHubToTerraform)(this._linkedHub),
       sku: iothubDpsSkuToTerraform(this._sku.internalValue),
       timeouts: iothubDpsTimeoutsToTerraform(this._timeouts.internalValue),

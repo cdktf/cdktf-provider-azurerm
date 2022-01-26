@@ -18,7 +18,7 @@ export interface PrivateDnsZoneConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_zone#tags PrivateDnsZone#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * soa_record block
   * 
@@ -56,7 +56,7 @@ export interface PrivateDnsZoneSoaRecord {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_zone#tags PrivateDnsZone#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_zone#ttl PrivateDnsZone#ttl}
   */
@@ -64,7 +64,7 @@ export interface PrivateDnsZoneSoaRecord {
 }
 
 export function privateDnsZoneSoaRecordToTerraform(struct?: PrivateDnsZoneSoaRecordOutputReference | PrivateDnsZoneSoaRecord): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -74,7 +74,7 @@ export function privateDnsZoneSoaRecordToTerraform(struct?: PrivateDnsZoneSoaRec
     minimum_ttl: cdktf.numberToTerraform(struct!.minimumTtl),
     refresh_time: cdktf.numberToTerraform(struct!.refreshTime),
     retry_time: cdktf.numberToTerraform(struct!.retryTime),
-    tags: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.tags),
+    tags: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.tags),
     ttl: cdktf.numberToTerraform(struct!.ttl),
   }
 }
@@ -87,7 +87,7 @@ export class PrivateDnsZoneSoaRecordOutputReference extends cdktf.ComplexObject 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -177,6 +177,16 @@ export class PrivateDnsZoneSoaRecordOutputReference extends cdktf.ComplexObject 
     return this._expireTime;
   }
 
+  // fqdn - computed: true, optional: false, required: false
+  public get fqdn() {
+    return this.getStringAttribute('fqdn');
+  }
+
+  // host_name - computed: true, optional: false, required: false
+  public get hostName() {
+    return this.getStringAttribute('host_name');
+  }
+
   // minimum_ttl - computed: false, optional: true, required: false
   private _minimumTtl?: number; 
   public get minimumTtl() {
@@ -225,13 +235,17 @@ export class PrivateDnsZoneSoaRecordOutputReference extends cdktf.ComplexObject 
     return this._retryTime;
   }
 
-  // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
-  public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+  // serial_number - computed: true, optional: false, required: false
+  public get serialNumber() {
+    return this.getNumberAttribute('serial_number');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -277,8 +291,8 @@ export interface PrivateDnsZoneTimeouts {
   readonly update?: string;
 }
 
-export function privateDnsZoneTimeoutsToTerraform(struct?: PrivateDnsZoneTimeoutsOutputReference | PrivateDnsZoneTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function privateDnsZoneTimeoutsToTerraform(struct?: PrivateDnsZoneTimeoutsOutputReference | PrivateDnsZoneTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -298,7 +312,7 @@ export class PrivateDnsZoneTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -501,12 +515,11 @@ export class PrivateDnsZone extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -518,7 +531,7 @@ export class PrivateDnsZone extends cdktf.TerraformResource {
   }
 
   // soa_record - computed: false, optional: true, required: false
-  private _soaRecord = new PrivateDnsZoneSoaRecordOutputReference(this as any, "soa_record", true);
+  private _soaRecord = new PrivateDnsZoneSoaRecordOutputReference(this, "soa_record", true);
   public get soaRecord() {
     return this._soaRecord;
   }
@@ -534,7 +547,7 @@ export class PrivateDnsZone extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new PrivateDnsZoneTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new PrivateDnsZoneTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -557,7 +570,7 @@ export class PrivateDnsZone extends cdktf.TerraformResource {
     return {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       soa_record: privateDnsZoneSoaRecordToTerraform(this._soaRecord.internalValue),
       timeouts: privateDnsZoneTimeoutsToTerraform(this._timeouts.internalValue),
     };

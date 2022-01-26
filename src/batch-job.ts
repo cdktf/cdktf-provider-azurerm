@@ -14,7 +14,7 @@ export interface BatchJobConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_job#common_environment_properties BatchJob#common_environment_properties}
   */
-  readonly commonEnvironmentProperties?: { [key: string]: string } | cdktf.IResolvable;
+  readonly commonEnvironmentProperties?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_job#display_name BatchJob#display_name}
   */
@@ -57,8 +57,8 @@ export interface BatchJobTimeouts {
   readonly update?: string;
 }
 
-export function batchJobTimeoutsToTerraform(struct?: BatchJobTimeoutsOutputReference | BatchJobTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function batchJobTimeoutsToTerraform(struct?: BatchJobTimeoutsOutputReference | BatchJobTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -78,7 +78,7 @@ export class BatchJobTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -245,12 +245,11 @@ export class BatchJob extends cdktf.TerraformResource {
   }
 
   // common_environment_properties - computed: false, optional: true, required: false
-  private _commonEnvironmentProperties?: { [key: string]: string } | cdktf.IResolvable; 
+  private _commonEnvironmentProperties?: { [key: string]: string }; 
   public get commonEnvironmentProperties() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('common_environment_properties') as any;
+    return this.getStringMapAttribute('common_environment_properties');
   }
-  public set commonEnvironmentProperties(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set commonEnvironmentProperties(value: { [key: string]: string }) {
     this._commonEnvironmentProperties = value;
   }
   public resetCommonEnvironmentProperties() {
@@ -328,7 +327,7 @@ export class BatchJob extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new BatchJobTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new BatchJobTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -350,7 +349,7 @@ export class BatchJob extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       batch_pool_id: cdktf.stringToTerraform(this._batchPoolId),
-      common_environment_properties: cdktf.hashMapper(cdktf.anyToTerraform)(this._commonEnvironmentProperties),
+      common_environment_properties: cdktf.hashMapper(cdktf.stringToTerraform)(this._commonEnvironmentProperties),
       display_name: cdktf.stringToTerraform(this._displayName),
       name: cdktf.stringToTerraform(this._name),
       priority: cdktf.numberToTerraform(this._priority),

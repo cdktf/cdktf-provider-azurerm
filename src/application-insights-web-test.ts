@@ -54,7 +54,7 @@ export interface ApplicationInsightsWebTestConfig extends cdktf.TerraformMetaArg
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_web_test#tags ApplicationInsightsWebTest#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_web_test#timeout ApplicationInsightsWebTest#timeout}
   */
@@ -85,8 +85,8 @@ export interface ApplicationInsightsWebTestTimeouts {
   readonly update?: string;
 }
 
-export function applicationInsightsWebTestTimeoutsToTerraform(struct?: ApplicationInsightsWebTestTimeoutsOutputReference | ApplicationInsightsWebTestTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function applicationInsightsWebTestTimeoutsToTerraform(struct?: ApplicationInsightsWebTestTimeoutsOutputReference | ApplicationInsightsWebTestTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -106,7 +106,7 @@ export class ApplicationInsightsWebTestTimeoutsOutputReference extends cdktf.Com
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -311,7 +311,7 @@ export class ApplicationInsightsWebTest extends cdktf.TerraformResource {
   // enabled - computed: false, optional: true, required: false
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
@@ -413,7 +413,7 @@ export class ApplicationInsightsWebTest extends cdktf.TerraformResource {
   // retry_enabled - computed: false, optional: true, required: false
   private _retryEnabled?: boolean | cdktf.IResolvable; 
   public get retryEnabled() {
-    return this.getBooleanAttribute('retry_enabled') as any;
+    return this.getBooleanAttribute('retry_enabled');
   }
   public set retryEnabled(value: boolean | cdktf.IResolvable) {
     this._retryEnabled = value;
@@ -432,12 +432,11 @@ export class ApplicationInsightsWebTest extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -465,7 +464,7 @@ export class ApplicationInsightsWebTest extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ApplicationInsightsWebTestTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ApplicationInsightsWebTestTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -497,7 +496,7 @@ export class ApplicationInsightsWebTest extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       retry_enabled: cdktf.booleanToTerraform(this._retryEnabled),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       timeout: cdktf.numberToTerraform(this._timeout),
       timeouts: applicationInsightsWebTestTimeoutsToTerraform(this._timeouts.internalValue),
     };

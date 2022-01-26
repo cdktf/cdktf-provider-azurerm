@@ -26,12 +26,12 @@ export class DataAzurermNetworkInterfaceIpConfiguration extends cdktf.ComplexCom
 
   // application_gateway_backend_address_pools_ids - computed: true, optional: false, required: false
   public get applicationGatewayBackendAddressPoolsIds() {
-    return this.getListAttribute('application_gateway_backend_address_pools_ids');
+    return cdktf.Fn.tolist(this.getListAttribute('application_gateway_backend_address_pools_ids'));
   }
 
   // application_security_group_ids - computed: true, optional: false, required: false
   public get applicationSecurityGroupIds() {
-    return this.getListAttribute('application_security_group_ids');
+    return cdktf.Fn.tolist(this.getListAttribute('application_security_group_ids'));
   }
 
   // gateway_load_balancer_frontend_ip_configuration_id - computed: true, optional: false, required: false
@@ -41,12 +41,12 @@ export class DataAzurermNetworkInterfaceIpConfiguration extends cdktf.ComplexCom
 
   // load_balancer_backend_address_pools_ids - computed: true, optional: false, required: false
   public get loadBalancerBackendAddressPoolsIds() {
-    return this.getListAttribute('load_balancer_backend_address_pools_ids');
+    return cdktf.Fn.tolist(this.getListAttribute('load_balancer_backend_address_pools_ids'));
   }
 
   // load_balancer_inbound_nat_rules_ids - computed: true, optional: false, required: false
   public get loadBalancerInboundNatRulesIds() {
-    return this.getListAttribute('load_balancer_inbound_nat_rules_ids');
+    return cdktf.Fn.tolist(this.getListAttribute('load_balancer_inbound_nat_rules_ids'));
   }
 
   // name - computed: true, optional: false, required: false
@@ -56,7 +56,7 @@ export class DataAzurermNetworkInterfaceIpConfiguration extends cdktf.ComplexCom
 
   // primary - computed: true, optional: false, required: false
   public get primary() {
-    return this.getBooleanAttribute('primary') as any;
+    return this.getBooleanAttribute('primary');
   }
 
   // private_ip_address - computed: true, optional: false, required: false
@@ -91,8 +91,8 @@ export interface DataAzurermNetworkInterfaceTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermNetworkInterfaceTimeoutsToTerraform(struct?: DataAzurermNetworkInterfaceTimeoutsOutputReference | DataAzurermNetworkInterfaceTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermNetworkInterfaceTimeoutsToTerraform(struct?: DataAzurermNetworkInterfaceTimeoutsOutputReference | DataAzurermNetworkInterfaceTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -109,7 +109,7 @@ export class DataAzurermNetworkInterfaceTimeoutsOutputReference extends cdktf.Co
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -194,22 +194,22 @@ export class DataAzurermNetworkInterface extends cdktf.TerraformDataSource {
 
   // applied_dns_servers - computed: true, optional: false, required: false
   public get appliedDnsServers() {
-    return this.getListAttribute('applied_dns_servers');
+    return cdktf.Fn.tolist(this.getListAttribute('applied_dns_servers'));
   }
 
   // dns_servers - computed: true, optional: false, required: false
   public get dnsServers() {
-    return this.getListAttribute('dns_servers');
+    return cdktf.Fn.tolist(this.getListAttribute('dns_servers'));
   }
 
   // enable_accelerated_networking - computed: true, optional: false, required: false
   public get enableAcceleratedNetworking() {
-    return this.getBooleanAttribute('enable_accelerated_networking') as any;
+    return this.getBooleanAttribute('enable_accelerated_networking');
   }
 
   // enable_ip_forwarding - computed: true, optional: false, required: false
   public get enableIpForwarding() {
-    return this.getBooleanAttribute('enable_ip_forwarding') as any;
+    return this.getBooleanAttribute('enable_ip_forwarding');
   }
 
   // id - computed: true, optional: true, required: false
@@ -224,7 +224,7 @@ export class DataAzurermNetworkInterface extends cdktf.TerraformDataSource {
 
   // ip_configuration - computed: true, optional: false, required: false
   public ipConfiguration(index: string) {
-    return new DataAzurermNetworkInterfaceIpConfiguration(this, 'ip_configuration', index);
+    return new DataAzurermNetworkInterfaceIpConfiguration(this, 'ip_configuration', index, false);
   }
 
   // location - computed: true, optional: false, required: false
@@ -279,7 +279,7 @@ export class DataAzurermNetworkInterface extends cdktf.TerraformDataSource {
   }
 
   // tags - computed: true, optional: false, required: false
-  public tags(key: string): string {
+  public tags(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
@@ -289,7 +289,7 @@ export class DataAzurermNetworkInterface extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermNetworkInterfaceTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermNetworkInterfaceTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

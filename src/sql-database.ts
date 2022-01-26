@@ -26,7 +26,7 @@ export interface SqlDatabaseConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#extended_auditing_policy SqlDatabase#extended_auditing_policy}
   */
-  readonly extendedAuditingPolicy?: SqlDatabaseExtendedAuditingPolicy[];
+  readonly extendedAuditingPolicy?: SqlDatabaseExtendedAuditingPolicy[] | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#location SqlDatabase#location}
   */
@@ -78,7 +78,7 @@ export interface SqlDatabaseConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#tags SqlDatabase#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#zone_redundant SqlDatabase#zone_redundant}
   */
@@ -125,8 +125,8 @@ export interface SqlDatabaseExtendedAuditingPolicy {
   readonly storageEndpoint?: string;
 }
 
-export function sqlDatabaseExtendedAuditingPolicyToTerraform(struct?: SqlDatabaseExtendedAuditingPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function sqlDatabaseExtendedAuditingPolicyToTerraform(struct?: SqlDatabaseExtendedAuditingPolicy | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -171,7 +171,7 @@ export interface SqlDatabaseImport {
 }
 
 export function sqlDatabaseImportToTerraform(struct?: SqlDatabaseImportOutputReference | SqlDatabaseImport): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -194,7 +194,7 @@ export class SqlDatabaseImportOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -385,7 +385,7 @@ export interface SqlDatabaseThreatDetectionPolicy {
 }
 
 export function sqlDatabaseThreatDetectionPolicyToTerraform(struct?: SqlDatabaseThreatDetectionPolicyOutputReference | SqlDatabaseThreatDetectionPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -409,7 +409,7 @@ export class SqlDatabaseThreatDetectionPolicyOutputReference extends cdktf.Compl
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -479,7 +479,7 @@ export class SqlDatabaseThreatDetectionPolicyOutputReference extends cdktf.Compl
   // disabled_alerts - computed: false, optional: true, required: false
   private _disabledAlerts?: string[]; 
   public get disabledAlerts() {
-    return this.getListAttribute('disabled_alerts');
+    return cdktf.Fn.tolist(this.getListAttribute('disabled_alerts'));
   }
   public set disabledAlerts(value: string[]) {
     this._disabledAlerts = value;
@@ -511,7 +511,7 @@ export class SqlDatabaseThreatDetectionPolicyOutputReference extends cdktf.Compl
   // email_addresses - computed: false, optional: true, required: false
   private _emailAddresses?: string[]; 
   public get emailAddresses() {
-    return this.getListAttribute('email_addresses');
+    return cdktf.Fn.tolist(this.getListAttribute('email_addresses'));
   }
   public set emailAddresses(value: string[]) {
     this._emailAddresses = value;
@@ -623,8 +623,8 @@ export interface SqlDatabaseTimeouts {
   readonly update?: string;
 }
 
-export function sqlDatabaseTimeoutsToTerraform(struct?: SqlDatabaseTimeoutsOutputReference | SqlDatabaseTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function sqlDatabaseTimeoutsToTerraform(struct?: SqlDatabaseTimeoutsOutputReference | SqlDatabaseTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -644,7 +644,7 @@ export class SqlDatabaseTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -892,12 +892,12 @@ export class SqlDatabase extends cdktf.TerraformResource {
   }
 
   // extended_auditing_policy - computed: true, optional: true, required: false
-  private _extendedAuditingPolicy?: SqlDatabaseExtendedAuditingPolicy[]; 
+  private _extendedAuditingPolicy?: SqlDatabaseExtendedAuditingPolicy[] | cdktf.IResolvable; 
   public get extendedAuditingPolicy() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('extended_auditing_policy') as any;
+    return this.interpolationForAttribute('extended_auditing_policy');
   }
-  public set extendedAuditingPolicy(value: SqlDatabaseExtendedAuditingPolicy[]) {
+  public set extendedAuditingPolicy(value: SqlDatabaseExtendedAuditingPolicy[] | cdktf.IResolvable) {
     this._extendedAuditingPolicy = value;
   }
   public resetExtendedAuditingPolicy() {
@@ -974,7 +974,7 @@ export class SqlDatabase extends cdktf.TerraformResource {
   // read_scale - computed: false, optional: true, required: false
   private _readScale?: boolean | cdktf.IResolvable; 
   public get readScale() {
-    return this.getBooleanAttribute('read_scale') as any;
+    return this.getBooleanAttribute('read_scale');
   }
   public set readScale(value: boolean | cdktf.IResolvable) {
     this._readScale = value;
@@ -1094,12 +1094,11 @@ export class SqlDatabase extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -1113,7 +1112,7 @@ export class SqlDatabase extends cdktf.TerraformResource {
   // zone_redundant - computed: false, optional: true, required: false
   private _zoneRedundant?: boolean | cdktf.IResolvable; 
   public get zoneRedundant() {
-    return this.getBooleanAttribute('zone_redundant') as any;
+    return this.getBooleanAttribute('zone_redundant');
   }
   public set zoneRedundant(value: boolean | cdktf.IResolvable) {
     this._zoneRedundant = value;
@@ -1127,7 +1126,7 @@ export class SqlDatabase extends cdktf.TerraformResource {
   }
 
   // import - computed: false, optional: true, required: false
-  private _import = new SqlDatabaseImportOutputReference(this as any, "import", true);
+  private _import = new SqlDatabaseImportOutputReference(this, "import", true);
   public get import() {
     return this._import;
   }
@@ -1143,7 +1142,7 @@ export class SqlDatabase extends cdktf.TerraformResource {
   }
 
   // threat_detection_policy - computed: false, optional: true, required: false
-  private _threatDetectionPolicy = new SqlDatabaseThreatDetectionPolicyOutputReference(this as any, "threat_detection_policy", true);
+  private _threatDetectionPolicy = new SqlDatabaseThreatDetectionPolicyOutputReference(this, "threat_detection_policy", true);
   public get threatDetectionPolicy() {
     return this._threatDetectionPolicy;
   }
@@ -1159,7 +1158,7 @@ export class SqlDatabase extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new SqlDatabaseTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new SqlDatabaseTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -1197,7 +1196,7 @@ export class SqlDatabase extends cdktf.TerraformResource {
       server_name: cdktf.stringToTerraform(this._serverName),
       source_database_deletion_date: cdktf.stringToTerraform(this._sourceDatabaseDeletionDate),
       source_database_id: cdktf.stringToTerraform(this._sourceDatabaseId),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       zone_redundant: cdktf.booleanToTerraform(this._zoneRedundant),
       import: sqlDatabaseImportToTerraform(this._import.internalValue),
       threat_detection_policy: sqlDatabaseThreatDetectionPolicyToTerraform(this._threatDetectionPolicy.internalValue),

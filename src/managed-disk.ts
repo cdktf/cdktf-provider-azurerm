@@ -106,7 +106,7 @@ export interface ManagedDiskConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk#tags ManagedDisk#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk#tier ManagedDisk#tier}
   */
@@ -144,7 +144,7 @@ export interface ManagedDiskEncryptionSettingsDiskEncryptionKey {
 }
 
 export function managedDiskEncryptionSettingsDiskEncryptionKeyToTerraform(struct?: ManagedDiskEncryptionSettingsDiskEncryptionKeyOutputReference | ManagedDiskEncryptionSettingsDiskEncryptionKey): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -162,7 +162,7 @@ export class ManagedDiskEncryptionSettingsDiskEncryptionKeyOutputReference exten
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -231,7 +231,7 @@ export interface ManagedDiskEncryptionSettingsKeyEncryptionKey {
 }
 
 export function managedDiskEncryptionSettingsKeyEncryptionKeyToTerraform(struct?: ManagedDiskEncryptionSettingsKeyEncryptionKeyOutputReference | ManagedDiskEncryptionSettingsKeyEncryptionKey): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -249,7 +249,7 @@ export class ManagedDiskEncryptionSettingsKeyEncryptionKeyOutputReference extend
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -326,7 +326,7 @@ export interface ManagedDiskEncryptionSettings {
 }
 
 export function managedDiskEncryptionSettingsToTerraform(struct?: ManagedDiskEncryptionSettingsOutputReference | ManagedDiskEncryptionSettings): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -345,7 +345,7 @@ export class ManagedDiskEncryptionSettingsOutputReference extends cdktf.ComplexO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -385,7 +385,7 @@ export class ManagedDiskEncryptionSettingsOutputReference extends cdktf.ComplexO
   // enabled - computed: false, optional: false, required: true
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
@@ -396,7 +396,7 @@ export class ManagedDiskEncryptionSettingsOutputReference extends cdktf.ComplexO
   }
 
   // disk_encryption_key - computed: false, optional: true, required: false
-  private _diskEncryptionKey = new ManagedDiskEncryptionSettingsDiskEncryptionKeyOutputReference(this as any, "disk_encryption_key", true);
+  private _diskEncryptionKey = new ManagedDiskEncryptionSettingsDiskEncryptionKeyOutputReference(this, "disk_encryption_key", true);
   public get diskEncryptionKey() {
     return this._diskEncryptionKey;
   }
@@ -412,7 +412,7 @@ export class ManagedDiskEncryptionSettingsOutputReference extends cdktf.ComplexO
   }
 
   // key_encryption_key - computed: false, optional: true, required: false
-  private _keyEncryptionKey = new ManagedDiskEncryptionSettingsKeyEncryptionKeyOutputReference(this as any, "key_encryption_key", true);
+  private _keyEncryptionKey = new ManagedDiskEncryptionSettingsKeyEncryptionKeyOutputReference(this, "key_encryption_key", true);
   public get keyEncryptionKey() {
     return this._keyEncryptionKey;
   }
@@ -446,8 +446,8 @@ export interface ManagedDiskTimeouts {
   readonly update?: string;
 }
 
-export function managedDiskTimeoutsToTerraform(struct?: ManagedDiskTimeoutsOutputReference | ManagedDiskTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function managedDiskTimeoutsToTerraform(struct?: ManagedDiskTimeoutsOutputReference | ManagedDiskTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -467,7 +467,7 @@ export class ManagedDiskTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -898,7 +898,7 @@ export class ManagedDisk extends cdktf.TerraformResource {
   // on_demand_bursting_enabled - computed: false, optional: true, required: false
   private _onDemandBurstingEnabled?: boolean | cdktf.IResolvable; 
   public get onDemandBurstingEnabled() {
-    return this.getBooleanAttribute('on_demand_bursting_enabled') as any;
+    return this.getBooleanAttribute('on_demand_bursting_enabled');
   }
   public set onDemandBurstingEnabled(value: boolean | cdktf.IResolvable) {
     this._onDemandBurstingEnabled = value;
@@ -930,7 +930,7 @@ export class ManagedDisk extends cdktf.TerraformResource {
   // public_network_access_enabled - computed: false, optional: true, required: false
   private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable; 
   public get publicNetworkAccessEnabled() {
-    return this.getBooleanAttribute('public_network_access_enabled') as any;
+    return this.getBooleanAttribute('public_network_access_enabled');
   }
   public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable) {
     this._publicNetworkAccessEnabled = value;
@@ -1018,12 +1018,11 @@ export class ManagedDisk extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -1053,7 +1052,7 @@ export class ManagedDisk extends cdktf.TerraformResource {
   // trusted_launch_enabled - computed: false, optional: true, required: false
   private _trustedLaunchEnabled?: boolean | cdktf.IResolvable; 
   public get trustedLaunchEnabled() {
-    return this.getBooleanAttribute('trusted_launch_enabled') as any;
+    return this.getBooleanAttribute('trusted_launch_enabled');
   }
   public set trustedLaunchEnabled(value: boolean | cdktf.IResolvable) {
     this._trustedLaunchEnabled = value;
@@ -1083,7 +1082,7 @@ export class ManagedDisk extends cdktf.TerraformResource {
   }
 
   // encryption_settings - computed: false, optional: true, required: false
-  private _encryptionSettings = new ManagedDiskEncryptionSettingsOutputReference(this as any, "encryption_settings", true);
+  private _encryptionSettings = new ManagedDiskEncryptionSettingsOutputReference(this, "encryption_settings", true);
   public get encryptionSettings() {
     return this._encryptionSettings;
   }
@@ -1099,7 +1098,7 @@ export class ManagedDisk extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ManagedDiskTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ManagedDiskTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -1144,7 +1143,7 @@ export class ManagedDisk extends cdktf.TerraformResource {
       source_uri: cdktf.stringToTerraform(this._sourceUri),
       storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
       storage_account_type: cdktf.stringToTerraform(this._storageAccountType),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       tier: cdktf.stringToTerraform(this._tier),
       trusted_launch_enabled: cdktf.booleanToTerraform(this._trustedLaunchEnabled),
       zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),

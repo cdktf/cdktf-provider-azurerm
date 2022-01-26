@@ -56,7 +56,7 @@ export interface VirtualHubConnectionRoutingPropagatedRouteTable {
 }
 
 export function virtualHubConnectionRoutingPropagatedRouteTableToTerraform(struct?: VirtualHubConnectionRoutingPropagatedRouteTableOutputReference | VirtualHubConnectionRoutingPropagatedRouteTable): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -74,7 +74,7 @@ export class VirtualHubConnectionRoutingPropagatedRouteTableOutputReference exte
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -108,7 +108,7 @@ export class VirtualHubConnectionRoutingPropagatedRouteTableOutputReference exte
   // labels - computed: true, optional: true, required: false
   private _labels?: string[]; 
   public get labels() {
-    return this.getListAttribute('labels');
+    return cdktf.Fn.tolist(this.getListAttribute('labels'));
   }
   public set labels(value: string[]) {
     this._labels = value;
@@ -152,8 +152,8 @@ export interface VirtualHubConnectionRoutingStaticVnetRoute {
   readonly nextHopIpAddress?: string;
 }
 
-export function virtualHubConnectionRoutingStaticVnetRouteToTerraform(struct?: VirtualHubConnectionRoutingStaticVnetRoute): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function virtualHubConnectionRoutingStaticVnetRouteToTerraform(struct?: VirtualHubConnectionRoutingStaticVnetRoute | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -180,11 +180,11 @@ export interface VirtualHubConnectionRouting {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_connection#static_vnet_route VirtualHubConnection#static_vnet_route}
   */
-  readonly staticVnetRoute?: VirtualHubConnectionRoutingStaticVnetRoute[];
+  readonly staticVnetRoute?: VirtualHubConnectionRoutingStaticVnetRoute[] | cdktf.IResolvable;
 }
 
 export function virtualHubConnectionRoutingToTerraform(struct?: VirtualHubConnectionRoutingOutputReference | VirtualHubConnectionRouting): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -203,7 +203,7 @@ export class VirtualHubConnectionRoutingOutputReference extends cdktf.ComplexObj
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -257,7 +257,7 @@ export class VirtualHubConnectionRoutingOutputReference extends cdktf.ComplexObj
   }
 
   // propagated_route_table - computed: false, optional: true, required: false
-  private _propagatedRouteTable = new VirtualHubConnectionRoutingPropagatedRouteTableOutputReference(this as any, "propagated_route_table", true);
+  private _propagatedRouteTable = new VirtualHubConnectionRoutingPropagatedRouteTableOutputReference(this, "propagated_route_table", true);
   public get propagatedRouteTable() {
     return this._propagatedRouteTable;
   }
@@ -273,12 +273,12 @@ export class VirtualHubConnectionRoutingOutputReference extends cdktf.ComplexObj
   }
 
   // static_vnet_route - computed: false, optional: true, required: false
-  private _staticVnetRoute?: VirtualHubConnectionRoutingStaticVnetRoute[]; 
+  private _staticVnetRoute?: VirtualHubConnectionRoutingStaticVnetRoute[] | cdktf.IResolvable; 
   public get staticVnetRoute() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('static_vnet_route') as any;
+    return this.interpolationForAttribute('static_vnet_route');
   }
-  public set staticVnetRoute(value: VirtualHubConnectionRoutingStaticVnetRoute[]) {
+  public set staticVnetRoute(value: VirtualHubConnectionRoutingStaticVnetRoute[] | cdktf.IResolvable) {
     this._staticVnetRoute = value;
   }
   public resetStaticVnetRoute() {
@@ -308,8 +308,8 @@ export interface VirtualHubConnectionTimeouts {
   readonly update?: string;
 }
 
-export function virtualHubConnectionTimeoutsToTerraform(struct?: VirtualHubConnectionTimeoutsOutputReference | VirtualHubConnectionTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function virtualHubConnectionTimeoutsToTerraform(struct?: VirtualHubConnectionTimeoutsOutputReference | VirtualHubConnectionTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -329,7 +329,7 @@ export class VirtualHubConnectionTimeoutsOutputReference extends cdktf.ComplexOb
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -486,7 +486,7 @@ export class VirtualHubConnection extends cdktf.TerraformResource {
   // hub_to_vitual_network_traffic_allowed - computed: false, optional: true, required: false
   private _hubToVitualNetworkTrafficAllowed?: boolean | cdktf.IResolvable; 
   public get hubToVitualNetworkTrafficAllowed() {
-    return this.getBooleanAttribute('hub_to_vitual_network_traffic_allowed') as any;
+    return this.getBooleanAttribute('hub_to_vitual_network_traffic_allowed');
   }
   public set hubToVitualNetworkTrafficAllowed(value: boolean | cdktf.IResolvable) {
     this._hubToVitualNetworkTrafficAllowed = value;
@@ -507,7 +507,7 @@ export class VirtualHubConnection extends cdktf.TerraformResource {
   // internet_security_enabled - computed: false, optional: true, required: false
   private _internetSecurityEnabled?: boolean | cdktf.IResolvable; 
   public get internetSecurityEnabled() {
-    return this.getBooleanAttribute('internet_security_enabled') as any;
+    return this.getBooleanAttribute('internet_security_enabled');
   }
   public set internetSecurityEnabled(value: boolean | cdktf.IResolvable) {
     this._internetSecurityEnabled = value;
@@ -562,7 +562,7 @@ export class VirtualHubConnection extends cdktf.TerraformResource {
   // vitual_network_to_hub_gateways_traffic_allowed - computed: false, optional: true, required: false
   private _vitualNetworkToHubGatewaysTrafficAllowed?: boolean | cdktf.IResolvable; 
   public get vitualNetworkToHubGatewaysTrafficAllowed() {
-    return this.getBooleanAttribute('vitual_network_to_hub_gateways_traffic_allowed') as any;
+    return this.getBooleanAttribute('vitual_network_to_hub_gateways_traffic_allowed');
   }
   public set vitualNetworkToHubGatewaysTrafficAllowed(value: boolean | cdktf.IResolvable) {
     this._vitualNetworkToHubGatewaysTrafficAllowed = value;
@@ -576,7 +576,7 @@ export class VirtualHubConnection extends cdktf.TerraformResource {
   }
 
   // routing - computed: false, optional: true, required: false
-  private _routing = new VirtualHubConnectionRoutingOutputReference(this as any, "routing", true);
+  private _routing = new VirtualHubConnectionRoutingOutputReference(this, "routing", true);
   public get routing() {
     return this._routing;
   }
@@ -592,7 +592,7 @@ export class VirtualHubConnection extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new VirtualHubConnectionTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new VirtualHubConnectionTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

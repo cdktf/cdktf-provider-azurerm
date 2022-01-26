@@ -30,7 +30,7 @@ export interface LogicAppIntegrationAccountAgreementConfig extends cdktf.Terrafo
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_agreement#metadata LogicAppIntegrationAccountAgreement#metadata}
   */
-  readonly metadata?: { [key: string]: string } | cdktf.IResolvable;
+  readonly metadata?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_agreement#name LogicAppIntegrationAccountAgreement#name}
   */
@@ -70,7 +70,7 @@ export interface LogicAppIntegrationAccountAgreementGuestIdentity {
 }
 
 export function logicAppIntegrationAccountAgreementGuestIdentityToTerraform(struct?: LogicAppIntegrationAccountAgreementGuestIdentityOutputReference | LogicAppIntegrationAccountAgreementGuestIdentity): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -88,7 +88,7 @@ export class LogicAppIntegrationAccountAgreementGuestIdentityOutputReference ext
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -157,7 +157,7 @@ export interface LogicAppIntegrationAccountAgreementHostIdentity {
 }
 
 export function logicAppIntegrationAccountAgreementHostIdentityToTerraform(struct?: LogicAppIntegrationAccountAgreementHostIdentityOutputReference | LogicAppIntegrationAccountAgreementHostIdentity): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -175,7 +175,7 @@ export class LogicAppIntegrationAccountAgreementHostIdentityOutputReference exte
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -251,8 +251,8 @@ export interface LogicAppIntegrationAccountAgreementTimeouts {
   readonly update?: string;
 }
 
-export function logicAppIntegrationAccountAgreementTimeoutsToTerraform(struct?: LogicAppIntegrationAccountAgreementTimeoutsOutputReference | LogicAppIntegrationAccountAgreementTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function logicAppIntegrationAccountAgreementTimeoutsToTerraform(struct?: LogicAppIntegrationAccountAgreementTimeoutsOutputReference | LogicAppIntegrationAccountAgreementTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -272,7 +272,7 @@ export class LogicAppIntegrationAccountAgreementTimeoutsOutputReference extends 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -500,12 +500,11 @@ export class LogicAppIntegrationAccountAgreement extends cdktf.TerraformResource
   }
 
   // metadata - computed: false, optional: true, required: false
-  private _metadata?: { [key: string]: string } | cdktf.IResolvable; 
+  private _metadata?: { [key: string]: string }; 
   public get metadata() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('metadata') as any;
+    return this.getStringMapAttribute('metadata');
   }
-  public set metadata(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set metadata(value: { [key: string]: string }) {
     this._metadata = value;
   }
   public resetMetadata() {
@@ -543,7 +542,7 @@ export class LogicAppIntegrationAccountAgreement extends cdktf.TerraformResource
   }
 
   // guest_identity - computed: false, optional: false, required: true
-  private _guestIdentity = new LogicAppIntegrationAccountAgreementGuestIdentityOutputReference(this as any, "guest_identity", true);
+  private _guestIdentity = new LogicAppIntegrationAccountAgreementGuestIdentityOutputReference(this, "guest_identity", true);
   public get guestIdentity() {
     return this._guestIdentity;
   }
@@ -556,7 +555,7 @@ export class LogicAppIntegrationAccountAgreement extends cdktf.TerraformResource
   }
 
   // host_identity - computed: false, optional: false, required: true
-  private _hostIdentity = new LogicAppIntegrationAccountAgreementHostIdentityOutputReference(this as any, "host_identity", true);
+  private _hostIdentity = new LogicAppIntegrationAccountAgreementHostIdentityOutputReference(this, "host_identity", true);
   public get hostIdentity() {
     return this._hostIdentity;
   }
@@ -569,7 +568,7 @@ export class LogicAppIntegrationAccountAgreement extends cdktf.TerraformResource
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new LogicAppIntegrationAccountAgreementTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new LogicAppIntegrationAccountAgreementTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -595,7 +594,7 @@ export class LogicAppIntegrationAccountAgreement extends cdktf.TerraformResource
       guest_partner_name: cdktf.stringToTerraform(this._guestPartnerName),
       host_partner_name: cdktf.stringToTerraform(this._hostPartnerName),
       integration_account_name: cdktf.stringToTerraform(this._integrationAccountName),
-      metadata: cdktf.hashMapper(cdktf.anyToTerraform)(this._metadata),
+      metadata: cdktf.hashMapper(cdktf.stringToTerraform)(this._metadata),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       guest_identity: logicAppIntegrationAccountAgreementGuestIdentityToTerraform(this._guestIdentity.internalValue),

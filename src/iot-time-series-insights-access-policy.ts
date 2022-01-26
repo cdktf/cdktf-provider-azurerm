@@ -53,8 +53,8 @@ export interface IotTimeSeriesInsightsAccessPolicyTimeouts {
   readonly update?: string;
 }
 
-export function iotTimeSeriesInsightsAccessPolicyTimeoutsToTerraform(struct?: IotTimeSeriesInsightsAccessPolicyTimeoutsOutputReference | IotTimeSeriesInsightsAccessPolicyTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function iotTimeSeriesInsightsAccessPolicyTimeoutsToTerraform(struct?: IotTimeSeriesInsightsAccessPolicyTimeoutsOutputReference | IotTimeSeriesInsightsAccessPolicyTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -74,7 +74,7 @@ export class IotTimeSeriesInsightsAccessPolicyTimeoutsOutputReference extends cd
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -276,7 +276,7 @@ export class IotTimeSeriesInsightsAccessPolicy extends cdktf.TerraformResource {
   // roles - computed: false, optional: false, required: true
   private _roles?: string[]; 
   public get roles() {
-    return this.getListAttribute('roles');
+    return cdktf.Fn.tolist(this.getListAttribute('roles'));
   }
   public set roles(value: string[]) {
     this._roles = value;
@@ -300,7 +300,7 @@ export class IotTimeSeriesInsightsAccessPolicy extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new IotTimeSeriesInsightsAccessPolicyTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new IotTimeSeriesInsightsAccessPolicyTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

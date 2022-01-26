@@ -58,7 +58,7 @@ export interface NetappVolumeConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_volume#tags NetappVolume#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_volume#throughput_in_mibps NetappVolume#throughput_in_mibps}
   */
@@ -84,7 +84,7 @@ export interface NetappVolumeConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_volume#export_policy_rule NetappVolume#export_policy_rule}
   */
-  readonly exportPolicyRule?: NetappVolumeExportPolicyRule[];
+  readonly exportPolicyRule?: NetappVolumeExportPolicyRule[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -112,7 +112,7 @@ export interface NetappVolumeDataProtectionReplication {
 }
 
 export function netappVolumeDataProtectionReplicationToTerraform(struct?: NetappVolumeDataProtectionReplicationOutputReference | NetappVolumeDataProtectionReplication): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -132,7 +132,7 @@ export class NetappVolumeDataProtectionReplicationOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -238,7 +238,7 @@ export interface NetappVolumeDataProtectionSnapshotPolicy {
 }
 
 export function netappVolumeDataProtectionSnapshotPolicyToTerraform(struct?: NetappVolumeDataProtectionSnapshotPolicyOutputReference | NetappVolumeDataProtectionSnapshotPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -255,7 +255,7 @@ export class NetappVolumeDataProtectionSnapshotPolicyOutputReference extends cdk
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -332,8 +332,8 @@ export interface NetappVolumeExportPolicyRule {
   readonly unixReadWrite?: boolean | cdktf.IResolvable;
 }
 
-export function netappVolumeExportPolicyRuleToTerraform(struct?: NetappVolumeExportPolicyRule): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function netappVolumeExportPolicyRuleToTerraform(struct?: NetappVolumeExportPolicyRule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -369,8 +369,8 @@ export interface NetappVolumeTimeouts {
   readonly update?: string;
 }
 
-export function netappVolumeTimeoutsToTerraform(struct?: NetappVolumeTimeoutsOutputReference | NetappVolumeTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function netappVolumeTimeoutsToTerraform(struct?: NetappVolumeTimeoutsOutputReference | NetappVolumeTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -390,7 +390,7 @@ export class NetappVolumeTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -636,7 +636,7 @@ export class NetappVolume extends cdktf.TerraformResource {
   // protocols - computed: true, optional: true, required: false
   private _protocols?: string[]; 
   public get protocols() {
-    return this.getListAttribute('protocols');
+    return cdktf.Fn.tolist(this.getListAttribute('protocols'));
   }
   public set protocols(value: string[]) {
     this._protocols = value;
@@ -694,7 +694,7 @@ export class NetappVolume extends cdktf.TerraformResource {
   // snapshot_directory_visible - computed: true, optional: true, required: false
   private _snapshotDirectoryVisible?: boolean | cdktf.IResolvable; 
   public get snapshotDirectoryVisible() {
-    return this.getBooleanAttribute('snapshot_directory_visible') as any;
+    return this.getBooleanAttribute('snapshot_directory_visible');
   }
   public set snapshotDirectoryVisible(value: boolean | cdktf.IResolvable) {
     this._snapshotDirectoryVisible = value;
@@ -734,12 +734,11 @@ export class NetappVolume extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -780,7 +779,7 @@ export class NetappVolume extends cdktf.TerraformResource {
   }
 
   // data_protection_replication - computed: false, optional: true, required: false
-  private _dataProtectionReplication = new NetappVolumeDataProtectionReplicationOutputReference(this as any, "data_protection_replication", true);
+  private _dataProtectionReplication = new NetappVolumeDataProtectionReplicationOutputReference(this, "data_protection_replication", true);
   public get dataProtectionReplication() {
     return this._dataProtectionReplication;
   }
@@ -796,7 +795,7 @@ export class NetappVolume extends cdktf.TerraformResource {
   }
 
   // data_protection_snapshot_policy - computed: false, optional: true, required: false
-  private _dataProtectionSnapshotPolicy = new NetappVolumeDataProtectionSnapshotPolicyOutputReference(this as any, "data_protection_snapshot_policy", true);
+  private _dataProtectionSnapshotPolicy = new NetappVolumeDataProtectionSnapshotPolicyOutputReference(this, "data_protection_snapshot_policy", true);
   public get dataProtectionSnapshotPolicy() {
     return this._dataProtectionSnapshotPolicy;
   }
@@ -812,12 +811,12 @@ export class NetappVolume extends cdktf.TerraformResource {
   }
 
   // export_policy_rule - computed: false, optional: true, required: false
-  private _exportPolicyRule?: NetappVolumeExportPolicyRule[]; 
+  private _exportPolicyRule?: NetappVolumeExportPolicyRule[] | cdktf.IResolvable; 
   public get exportPolicyRule() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('export_policy_rule') as any;
+    return this.interpolationForAttribute('export_policy_rule');
   }
-  public set exportPolicyRule(value: NetappVolumeExportPolicyRule[]) {
+  public set exportPolicyRule(value: NetappVolumeExportPolicyRule[] | cdktf.IResolvable) {
     this._exportPolicyRule = value;
   }
   public resetExportPolicyRule() {
@@ -829,7 +828,7 @@ export class NetappVolume extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new NetappVolumeTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new NetappVolumeTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -862,7 +861,7 @@ export class NetappVolume extends cdktf.TerraformResource {
       snapshot_directory_visible: cdktf.booleanToTerraform(this._snapshotDirectoryVisible),
       storage_quota_in_gb: cdktf.numberToTerraform(this._storageQuotaInGb),
       subnet_id: cdktf.stringToTerraform(this._subnetId),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       throughput_in_mibps: cdktf.numberToTerraform(this._throughputInMibps),
       volume_path: cdktf.stringToTerraform(this._volumePath),
       data_protection_replication: netappVolumeDataProtectionReplicationToTerraform(this._dataProtectionReplication.internalValue),

@@ -33,8 +33,8 @@ export interface DataAzurermApiManagementProductTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermApiManagementProductTimeoutsToTerraform(struct?: DataAzurermApiManagementProductTimeoutsOutputReference | DataAzurermApiManagementProductTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermApiManagementProductTimeoutsToTerraform(struct?: DataAzurermApiManagementProductTimeoutsOutputReference | DataAzurermApiManagementProductTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -51,7 +51,7 @@ export class DataAzurermApiManagementProductTimeoutsOutputReference extends cdkt
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -150,7 +150,7 @@ export class DataAzurermApiManagementProduct extends cdktf.TerraformDataSource {
 
   // approval_required - computed: true, optional: false, required: false
   public get approvalRequired() {
-    return this.getBooleanAttribute('approval_required') as any;
+    return this.getBooleanAttribute('approval_required');
   }
 
   // description - computed: true, optional: false, required: false
@@ -183,7 +183,7 @@ export class DataAzurermApiManagementProduct extends cdktf.TerraformDataSource {
 
   // published - computed: true, optional: false, required: false
   public get published() {
-    return this.getBooleanAttribute('published') as any;
+    return this.getBooleanAttribute('published');
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -201,7 +201,7 @@ export class DataAzurermApiManagementProduct extends cdktf.TerraformDataSource {
 
   // subscription_required - computed: true, optional: false, required: false
   public get subscriptionRequired() {
-    return this.getBooleanAttribute('subscription_required') as any;
+    return this.getBooleanAttribute('subscription_required');
   }
 
   // subscriptions_limit - computed: true, optional: false, required: false
@@ -215,7 +215,7 @@ export class DataAzurermApiManagementProduct extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermApiManagementProductTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermApiManagementProductTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

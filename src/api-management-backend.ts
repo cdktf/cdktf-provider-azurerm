@@ -82,7 +82,7 @@ export interface ApiManagementBackendCredentialsAuthorization {
 }
 
 export function apiManagementBackendCredentialsAuthorizationToTerraform(struct?: ApiManagementBackendCredentialsAuthorizationOutputReference | ApiManagementBackendCredentialsAuthorization): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -100,7 +100,7 @@ export class ApiManagementBackendCredentialsAuthorizationOutputReference extends
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -171,11 +171,11 @@ export interface ApiManagementBackendCredentials {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend#header ApiManagementBackend#header}
   */
-  readonly header?: { [key: string]: string } | cdktf.IResolvable;
+  readonly header?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend#query ApiManagementBackend#query}
   */
-  readonly query?: { [key: string]: string } | cdktf.IResolvable;
+  readonly query?: { [key: string]: string };
   /**
   * authorization block
   * 
@@ -185,14 +185,14 @@ export interface ApiManagementBackendCredentials {
 }
 
 export function apiManagementBackendCredentialsToTerraform(struct?: ApiManagementBackendCredentialsOutputReference | ApiManagementBackendCredentials): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
     certificate: cdktf.listMapper(cdktf.stringToTerraform)(struct!.certificate),
-    header: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.header),
-    query: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.query),
+    header: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.header),
+    query: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.query),
     authorization: apiManagementBackendCredentialsAuthorizationToTerraform(struct!.authorization),
   }
 }
@@ -205,7 +205,7 @@ export class ApiManagementBackendCredentialsOutputReference extends cdktf.Comple
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -265,12 +265,11 @@ export class ApiManagementBackendCredentialsOutputReference extends cdktf.Comple
   }
 
   // header - computed: false, optional: true, required: false
-  private _header?: { [key: string]: string } | cdktf.IResolvable; 
+  private _header?: { [key: string]: string }; 
   public get header() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('header') as any;
+    return this.getStringMapAttribute('header');
   }
-  public set header(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set header(value: { [key: string]: string }) {
     this._header = value;
   }
   public resetHeader() {
@@ -282,12 +281,11 @@ export class ApiManagementBackendCredentialsOutputReference extends cdktf.Comple
   }
 
   // query - computed: false, optional: true, required: false
-  private _query?: { [key: string]: string } | cdktf.IResolvable; 
+  private _query?: { [key: string]: string }; 
   public get query() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('query') as any;
+    return this.getStringMapAttribute('query');
   }
-  public set query(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set query(value: { [key: string]: string }) {
     this._query = value;
   }
   public resetQuery() {
@@ -299,7 +297,7 @@ export class ApiManagementBackendCredentialsOutputReference extends cdktf.Comple
   }
 
   // authorization - computed: false, optional: true, required: false
-  private _authorization = new ApiManagementBackendCredentialsAuthorizationOutputReference(this as any, "authorization", true);
+  private _authorization = new ApiManagementBackendCredentialsAuthorizationOutputReference(this, "authorization", true);
   public get authorization() {
     return this._authorization;
   }
@@ -330,7 +328,7 @@ export interface ApiManagementBackendProxy {
 }
 
 export function apiManagementBackendProxyToTerraform(struct?: ApiManagementBackendProxyOutputReference | ApiManagementBackendProxy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -349,7 +347,7 @@ export class ApiManagementBackendProxyOutputReference extends cdktf.ComplexObjec
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -439,8 +437,8 @@ export interface ApiManagementBackendServiceFabricClusterServerX509Name {
   readonly name: string;
 }
 
-export function apiManagementBackendServiceFabricClusterServerX509NameToTerraform(struct?: ApiManagementBackendServiceFabricClusterServerX509Name): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function apiManagementBackendServiceFabricClusterServerX509NameToTerraform(struct?: ApiManagementBackendServiceFabricClusterServerX509Name | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -476,11 +474,11 @@ export interface ApiManagementBackendServiceFabricCluster {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend#server_x509_name ApiManagementBackend#server_x509_name}
   */
-  readonly serverX509Name?: ApiManagementBackendServiceFabricClusterServerX509Name[];
+  readonly serverX509Name?: ApiManagementBackendServiceFabricClusterServerX509Name[] | cdktf.IResolvable;
 }
 
 export function apiManagementBackendServiceFabricClusterToTerraform(struct?: ApiManagementBackendServiceFabricClusterOutputReference | ApiManagementBackendServiceFabricCluster): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -502,7 +500,7 @@ export class ApiManagementBackendServiceFabricClusterOutputReference extends cdk
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -592,7 +590,7 @@ export class ApiManagementBackendServiceFabricClusterOutputReference extends cdk
   // management_endpoints - computed: false, optional: false, required: true
   private _managementEndpoints?: string[]; 
   public get managementEndpoints() {
-    return this.getListAttribute('management_endpoints');
+    return cdktf.Fn.tolist(this.getListAttribute('management_endpoints'));
   }
   public set managementEndpoints(value: string[]) {
     this._managementEndpoints = value;
@@ -618,7 +616,7 @@ export class ApiManagementBackendServiceFabricClusterOutputReference extends cdk
   // server_certificate_thumbprints - computed: false, optional: true, required: false
   private _serverCertificateThumbprints?: string[]; 
   public get serverCertificateThumbprints() {
-    return this.getListAttribute('server_certificate_thumbprints');
+    return cdktf.Fn.tolist(this.getListAttribute('server_certificate_thumbprints'));
   }
   public set serverCertificateThumbprints(value: string[]) {
     this._serverCertificateThumbprints = value;
@@ -632,12 +630,12 @@ export class ApiManagementBackendServiceFabricClusterOutputReference extends cdk
   }
 
   // server_x509_name - computed: false, optional: true, required: false
-  private _serverX509Name?: ApiManagementBackendServiceFabricClusterServerX509Name[]; 
+  private _serverX509Name?: ApiManagementBackendServiceFabricClusterServerX509Name[] | cdktf.IResolvable; 
   public get serverX509Name() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('server_x509_name') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('server_x509_name')));
   }
-  public set serverX509Name(value: ApiManagementBackendServiceFabricClusterServerX509Name[]) {
+  public set serverX509Name(value: ApiManagementBackendServiceFabricClusterServerX509Name[] | cdktf.IResolvable) {
     this._serverX509Name = value;
   }
   public resetServerX509Name() {
@@ -667,8 +665,8 @@ export interface ApiManagementBackendTimeouts {
   readonly update?: string;
 }
 
-export function apiManagementBackendTimeoutsToTerraform(struct?: ApiManagementBackendTimeoutsOutputReference | ApiManagementBackendTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function apiManagementBackendTimeoutsToTerraform(struct?: ApiManagementBackendTimeoutsOutputReference | ApiManagementBackendTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -688,7 +686,7 @@ export class ApiManagementBackendTimeoutsOutputReference extends cdktf.ComplexOb
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -807,7 +805,7 @@ export interface ApiManagementBackendTls {
 }
 
 export function apiManagementBackendTlsToTerraform(struct?: ApiManagementBackendTlsOutputReference | ApiManagementBackendTls): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -825,7 +823,7 @@ export class ApiManagementBackendTlsOutputReference extends cdktf.ComplexObject 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -859,7 +857,7 @@ export class ApiManagementBackendTlsOutputReference extends cdktf.ComplexObject 
   // validate_certificate_chain - computed: false, optional: true, required: false
   private _validateCertificateChain?: boolean | cdktf.IResolvable; 
   public get validateCertificateChain() {
-    return this.getBooleanAttribute('validate_certificate_chain') as any;
+    return this.getBooleanAttribute('validate_certificate_chain');
   }
   public set validateCertificateChain(value: boolean | cdktf.IResolvable) {
     this._validateCertificateChain = value;
@@ -875,7 +873,7 @@ export class ApiManagementBackendTlsOutputReference extends cdktf.ComplexObject 
   // validate_certificate_name - computed: false, optional: true, required: false
   private _validateCertificateName?: boolean | cdktf.IResolvable; 
   public get validateCertificateName() {
-    return this.getBooleanAttribute('validate_certificate_name') as any;
+    return this.getBooleanAttribute('validate_certificate_name');
   }
   public set validateCertificateName(value: boolean | cdktf.IResolvable) {
     this._validateCertificateName = value;
@@ -1059,7 +1057,7 @@ export class ApiManagementBackend extends cdktf.TerraformResource {
   }
 
   // credentials - computed: false, optional: true, required: false
-  private _credentials = new ApiManagementBackendCredentialsOutputReference(this as any, "credentials", true);
+  private _credentials = new ApiManagementBackendCredentialsOutputReference(this, "credentials", true);
   public get credentials() {
     return this._credentials;
   }
@@ -1075,7 +1073,7 @@ export class ApiManagementBackend extends cdktf.TerraformResource {
   }
 
   // proxy - computed: false, optional: true, required: false
-  private _proxy = new ApiManagementBackendProxyOutputReference(this as any, "proxy", true);
+  private _proxy = new ApiManagementBackendProxyOutputReference(this, "proxy", true);
   public get proxy() {
     return this._proxy;
   }
@@ -1091,7 +1089,7 @@ export class ApiManagementBackend extends cdktf.TerraformResource {
   }
 
   // service_fabric_cluster - computed: false, optional: true, required: false
-  private _serviceFabricCluster = new ApiManagementBackendServiceFabricClusterOutputReference(this as any, "service_fabric_cluster", true);
+  private _serviceFabricCluster = new ApiManagementBackendServiceFabricClusterOutputReference(this, "service_fabric_cluster", true);
   public get serviceFabricCluster() {
     return this._serviceFabricCluster;
   }
@@ -1107,7 +1105,7 @@ export class ApiManagementBackend extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ApiManagementBackendTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ApiManagementBackendTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -1123,7 +1121,7 @@ export class ApiManagementBackend extends cdktf.TerraformResource {
   }
 
   // tls - computed: false, optional: true, required: false
-  private _tls = new ApiManagementBackendTlsOutputReference(this as any, "tls", true);
+  private _tls = new ApiManagementBackendTlsOutputReference(this, "tls", true);
   public get tls() {
     return this._tls;
   }

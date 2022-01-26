@@ -14,7 +14,7 @@ export interface DataAzurermResourcesConfig extends cdktf.TerraformMetaArguments
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/resources#required_tags DataAzurermResources#required_tags}
   */
-  readonly requiredTags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly requiredTags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/resources#resource_group_name DataAzurermResources#resource_group_name}
   */
@@ -49,8 +49,7 @@ export class DataAzurermResourcesResources extends cdktf.ComplexComputedList {
 
   // tags - computed: true, optional: false, required: false
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
 
   // type - computed: true, optional: false, required: false
@@ -65,8 +64,8 @@ export interface DataAzurermResourcesTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermResourcesTimeoutsToTerraform(struct?: DataAzurermResourcesTimeoutsOutputReference | DataAzurermResourcesTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermResourcesTimeoutsToTerraform(struct?: DataAzurermResourcesTimeoutsOutputReference | DataAzurermResourcesTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -83,7 +82,7 @@ export class DataAzurermResourcesTimeoutsOutputReference extends cdktf.ComplexOb
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -190,12 +189,11 @@ export class DataAzurermResources extends cdktf.TerraformDataSource {
   }
 
   // required_tags - computed: false, optional: true, required: false
-  private _requiredTags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _requiredTags?: { [key: string]: string }; 
   public get requiredTags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('required_tags') as any;
+    return this.getStringMapAttribute('required_tags');
   }
-  public set requiredTags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set requiredTags(value: { [key: string]: string }) {
     this._requiredTags = value;
   }
   public resetRequiredTags() {
@@ -224,7 +222,7 @@ export class DataAzurermResources extends cdktf.TerraformDataSource {
 
   // resources - computed: true, optional: false, required: false
   public resources(index: string) {
-    return new DataAzurermResourcesResources(this, 'resources', index);
+    return new DataAzurermResourcesResources(this, 'resources', index, false);
   }
 
   // type - computed: true, optional: true, required: false
@@ -244,7 +242,7 @@ export class DataAzurermResources extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermResourcesTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermResourcesTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -266,7 +264,7 @@ export class DataAzurermResources extends cdktf.TerraformDataSource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       name: cdktf.stringToTerraform(this._name),
-      required_tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._requiredTags),
+      required_tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._requiredTags),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       type: cdktf.stringToTerraform(this._type),
       timeouts: dataAzurermResourcesTimeoutsToTerraform(this._timeouts.internalValue),

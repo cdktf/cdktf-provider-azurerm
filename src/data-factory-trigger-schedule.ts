@@ -50,7 +50,7 @@ export interface DataFactoryTriggerScheduleConfig extends cdktf.TerraformMetaArg
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_schedule#pipeline_parameters DataFactoryTriggerSchedule#pipeline_parameters}
   */
-  readonly pipelineParameters?: { [key: string]: string } | cdktf.IResolvable;
+  readonly pipelineParameters?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_schedule#resource_group_name DataFactoryTriggerSchedule#resource_group_name}
   */
@@ -83,8 +83,8 @@ export interface DataFactoryTriggerScheduleScheduleMonthly {
   readonly weekday: string;
 }
 
-export function dataFactoryTriggerScheduleScheduleMonthlyToTerraform(struct?: DataFactoryTriggerScheduleScheduleMonthly): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataFactoryTriggerScheduleScheduleMonthlyToTerraform(struct?: DataFactoryTriggerScheduleScheduleMonthly | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -116,11 +116,11 @@ export interface DataFactoryTriggerScheduleSchedule {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_schedule#monthly DataFactoryTriggerSchedule#monthly}
   */
-  readonly monthly?: DataFactoryTriggerScheduleScheduleMonthly[];
+  readonly monthly?: DataFactoryTriggerScheduleScheduleMonthly[] | cdktf.IResolvable;
 }
 
 export function dataFactoryTriggerScheduleScheduleToTerraform(struct?: DataFactoryTriggerScheduleScheduleOutputReference | DataFactoryTriggerScheduleSchedule): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -141,7 +141,7 @@ export class DataFactoryTriggerScheduleScheduleOutputReference extends cdktf.Com
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -193,8 +193,7 @@ export class DataFactoryTriggerScheduleScheduleOutputReference extends cdktf.Com
   // days_of_month - computed: false, optional: true, required: false
   private _daysOfMonth?: number[]; 
   public get daysOfMonth() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('days_of_month') as any;
+    return this.getNumberListAttribute('days_of_month');
   }
   public set daysOfMonth(value: number[]) {
     this._daysOfMonth = value;
@@ -226,8 +225,7 @@ export class DataFactoryTriggerScheduleScheduleOutputReference extends cdktf.Com
   // hours - computed: false, optional: true, required: false
   private _hours?: number[]; 
   public get hours() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('hours') as any;
+    return this.getNumberListAttribute('hours');
   }
   public set hours(value: number[]) {
     this._hours = value;
@@ -243,8 +241,7 @@ export class DataFactoryTriggerScheduleScheduleOutputReference extends cdktf.Com
   // minutes - computed: false, optional: true, required: false
   private _minutes?: number[]; 
   public get minutes() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('minutes') as any;
+    return this.getNumberListAttribute('minutes');
   }
   public set minutes(value: number[]) {
     this._minutes = value;
@@ -258,12 +255,12 @@ export class DataFactoryTriggerScheduleScheduleOutputReference extends cdktf.Com
   }
 
   // monthly - computed: false, optional: true, required: false
-  private _monthly?: DataFactoryTriggerScheduleScheduleMonthly[]; 
+  private _monthly?: DataFactoryTriggerScheduleScheduleMonthly[] | cdktf.IResolvable; 
   public get monthly() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('monthly') as any;
+    return this.interpolationForAttribute('monthly');
   }
-  public set monthly(value: DataFactoryTriggerScheduleScheduleMonthly[]) {
+  public set monthly(value: DataFactoryTriggerScheduleScheduleMonthly[] | cdktf.IResolvable) {
     this._monthly = value;
   }
   public resetMonthly() {
@@ -293,8 +290,8 @@ export interface DataFactoryTriggerScheduleTimeouts {
   readonly update?: string;
 }
 
-export function dataFactoryTriggerScheduleTimeoutsToTerraform(struct?: DataFactoryTriggerScheduleTimeoutsOutputReference | DataFactoryTriggerScheduleTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataFactoryTriggerScheduleTimeoutsToTerraform(struct?: DataFactoryTriggerScheduleTimeoutsOutputReference | DataFactoryTriggerScheduleTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -314,7 +311,7 @@ export class DataFactoryTriggerScheduleTimeoutsOutputReference extends cdktf.Com
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -478,7 +475,7 @@ export class DataFactoryTriggerSchedule extends cdktf.TerraformResource {
   // activated - computed: true, optional: true, required: false
   private _activated?: boolean | cdktf.IResolvable; 
   public get activated() {
-    return this.getBooleanAttribute('activated') as any;
+    return this.getBooleanAttribute('activated');
   }
   public set activated(value: boolean | cdktf.IResolvable) {
     this._activated = value;
@@ -635,12 +632,11 @@ export class DataFactoryTriggerSchedule extends cdktf.TerraformResource {
   }
 
   // pipeline_parameters - computed: false, optional: true, required: false
-  private _pipelineParameters?: { [key: string]: string } | cdktf.IResolvable; 
+  private _pipelineParameters?: { [key: string]: string }; 
   public get pipelineParameters() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('pipeline_parameters') as any;
+    return this.getStringMapAttribute('pipeline_parameters');
   }
-  public set pipelineParameters(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set pipelineParameters(value: { [key: string]: string }) {
     this._pipelineParameters = value;
   }
   public resetPipelineParameters() {
@@ -681,7 +677,7 @@ export class DataFactoryTriggerSchedule extends cdktf.TerraformResource {
   }
 
   // schedule - computed: false, optional: true, required: false
-  private _schedule = new DataFactoryTriggerScheduleScheduleOutputReference(this as any, "schedule", true);
+  private _schedule = new DataFactoryTriggerScheduleScheduleOutputReference(this, "schedule", true);
   public get schedule() {
     return this._schedule;
   }
@@ -697,7 +693,7 @@ export class DataFactoryTriggerSchedule extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataFactoryTriggerScheduleTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataFactoryTriggerScheduleTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -728,7 +724,7 @@ export class DataFactoryTriggerSchedule extends cdktf.TerraformResource {
       interval: cdktf.numberToTerraform(this._interval),
       name: cdktf.stringToTerraform(this._name),
       pipeline_name: cdktf.stringToTerraform(this._pipelineName),
-      pipeline_parameters: cdktf.hashMapper(cdktf.anyToTerraform)(this._pipelineParameters),
+      pipeline_parameters: cdktf.hashMapper(cdktf.stringToTerraform)(this._pipelineParameters),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       start_time: cdktf.stringToTerraform(this._startTime),
       schedule: dataFactoryTriggerScheduleScheduleToTerraform(this._schedule.internalValue),

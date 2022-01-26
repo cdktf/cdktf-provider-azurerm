@@ -60,8 +60,7 @@ export class DataboxEdgeOrderShipmentHistory extends cdktf.ComplexComputedList {
 
   // additional_details - computed: true, optional: false, required: false
   public get additionalDetails() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('additional_details') as any;
+    return this.getStringMapAttribute('additional_details');
   }
 
   // comments - computed: true, optional: false, required: false
@@ -100,8 +99,7 @@ export class DataboxEdgeOrderStatus extends cdktf.ComplexComputedList {
 
   // additional_details - computed: true, optional: false, required: false
   public get additionalDetails() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('additional_details') as any;
+    return this.getStringMapAttribute('additional_details');
   }
 
   // comments - computed: true, optional: false, required: false
@@ -139,7 +137,7 @@ export interface DataboxEdgeOrderContact {
 }
 
 export function databoxEdgeOrderContactToTerraform(struct?: DataboxEdgeOrderContactOutputReference | DataboxEdgeOrderContact): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -159,7 +157,7 @@ export class DataboxEdgeOrderContactOutputReference extends cdktf.ComplexObject 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -218,7 +216,7 @@ export class DataboxEdgeOrderContactOutputReference extends cdktf.ComplexObject 
   // emails - computed: false, optional: false, required: true
   private _emails?: string[]; 
   public get emails() {
-    return this.getListAttribute('emails');
+    return cdktf.Fn.tolist(this.getListAttribute('emails'));
   }
   public set emails(value: string[]) {
     this._emails = value;
@@ -278,7 +276,7 @@ export interface DataboxEdgeOrderShipmentAddress {
 }
 
 export function databoxEdgeOrderShipmentAddressToTerraform(struct?: DataboxEdgeOrderShipmentAddressOutputReference | DataboxEdgeOrderShipmentAddress): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -299,7 +297,7 @@ export class DataboxEdgeOrderShipmentAddressOutputReference extends cdktf.Comple
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -432,8 +430,8 @@ export interface DataboxEdgeOrderTimeouts {
   readonly update?: string;
 }
 
-export function databoxEdgeOrderTimeoutsToTerraform(struct?: DataboxEdgeOrderTimeoutsOutputReference | DataboxEdgeOrderTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function databoxEdgeOrderTimeoutsToTerraform(struct?: DataboxEdgeOrderTimeoutsOutputReference | DataboxEdgeOrderTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -453,7 +451,7 @@ export class DataboxEdgeOrderTimeoutsOutputReference extends cdktf.ComplexObject
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -642,7 +640,7 @@ export class DataboxEdgeOrder extends cdktf.TerraformResource {
 
   // return_tracking - computed: true, optional: false, required: false
   public returnTracking(index: string) {
-    return new DataboxEdgeOrderReturnTracking(this, 'return_tracking', index);
+    return new DataboxEdgeOrderReturnTracking(this, 'return_tracking', index, true);
   }
 
   // serial_number - computed: true, optional: false, required: false
@@ -652,21 +650,21 @@ export class DataboxEdgeOrder extends cdktf.TerraformResource {
 
   // shipment_history - computed: true, optional: false, required: false
   public shipmentHistory(index: string) {
-    return new DataboxEdgeOrderShipmentHistory(this, 'shipment_history', index);
+    return new DataboxEdgeOrderShipmentHistory(this, 'shipment_history', index, true);
   }
 
   // shipment_tracking - computed: true, optional: false, required: false
   public shipmentTracking(index: string) {
-    return new DataboxEdgeOrderShipmentTracking(this, 'shipment_tracking', index);
+    return new DataboxEdgeOrderShipmentTracking(this, 'shipment_tracking', index, true);
   }
 
   // status - computed: true, optional: false, required: false
   public status(index: string) {
-    return new DataboxEdgeOrderStatus(this, 'status', index);
+    return new DataboxEdgeOrderStatus(this, 'status', index, false);
   }
 
   // contact - computed: false, optional: false, required: true
-  private _contact = new DataboxEdgeOrderContactOutputReference(this as any, "contact", true);
+  private _contact = new DataboxEdgeOrderContactOutputReference(this, "contact", true);
   public get contact() {
     return this._contact;
   }
@@ -679,7 +677,7 @@ export class DataboxEdgeOrder extends cdktf.TerraformResource {
   }
 
   // shipment_address - computed: false, optional: false, required: true
-  private _shipmentAddress = new DataboxEdgeOrderShipmentAddressOutputReference(this as any, "shipment_address", true);
+  private _shipmentAddress = new DataboxEdgeOrderShipmentAddressOutputReference(this, "shipment_address", true);
   public get shipmentAddress() {
     return this._shipmentAddress;
   }
@@ -692,7 +690,7 @@ export class DataboxEdgeOrder extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataboxEdgeOrderTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataboxEdgeOrderTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

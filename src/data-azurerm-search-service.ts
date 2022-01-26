@@ -58,8 +58,8 @@ export interface DataAzurermSearchServiceTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermSearchServiceTimeoutsToTerraform(struct?: DataAzurermSearchServiceTimeoutsOutputReference | DataAzurermSearchServiceTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermSearchServiceTimeoutsToTerraform(struct?: DataAzurermSearchServiceTimeoutsOutputReference | DataAzurermSearchServiceTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -76,7 +76,7 @@ export class DataAzurermSearchServiceTimeoutsOutputReference extends cdktf.Compl
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -166,7 +166,7 @@ export class DataAzurermSearchService extends cdktf.TerraformDataSource {
 
   // identity - computed: true, optional: false, required: false
   public identity(index: string) {
-    return new DataAzurermSearchServiceIdentity(this, 'identity', index);
+    return new DataAzurermSearchServiceIdentity(this, 'identity', index, false);
   }
 
   // name - computed: false, optional: false, required: true
@@ -194,12 +194,12 @@ export class DataAzurermSearchService extends cdktf.TerraformDataSource {
 
   // public_network_access_enabled - computed: true, optional: false, required: false
   public get publicNetworkAccessEnabled() {
-    return this.getBooleanAttribute('public_network_access_enabled') as any;
+    return this.getBooleanAttribute('public_network_access_enabled');
   }
 
   // query_keys - computed: true, optional: false, required: false
   public queryKeys(index: string) {
-    return new DataAzurermSearchServiceQueryKeys(this, 'query_keys', index);
+    return new DataAzurermSearchServiceQueryKeys(this, 'query_keys', index, false);
   }
 
   // replica_count - computed: true, optional: false, required: false
@@ -226,7 +226,7 @@ export class DataAzurermSearchService extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermSearchServiceTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermSearchServiceTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

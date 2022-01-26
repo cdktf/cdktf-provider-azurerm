@@ -14,7 +14,7 @@ export interface ContainerGroupConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#exposed_port ContainerGroup#exposed_port}
   */
-  readonly exposedPort?: ContainerGroupExposedPort[];
+  readonly exposedPort?: ContainerGroupExposedPort[] | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#ip_address_type ContainerGroup#ip_address_type}
   */
@@ -46,13 +46,13 @@ export interface ContainerGroupConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#tags ContainerGroup#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * container block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#container ContainerGroup#container}
   */
-  readonly container: ContainerGroupContainer[];
+  readonly container: ContainerGroupContainer[] | cdktf.IResolvable;
   /**
   * diagnostics block
   * 
@@ -76,7 +76,7 @@ export interface ContainerGroupConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#image_registry_credential ContainerGroup#image_registry_credential}
   */
-  readonly imageRegistryCredential?: ContainerGroupImageRegistryCredential[];
+  readonly imageRegistryCredential?: ContainerGroupImageRegistryCredential[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -95,8 +95,8 @@ export interface ContainerGroupExposedPort {
   readonly protocol?: string;
 }
 
-export function containerGroupExposedPortToTerraform(struct?: ContainerGroupExposedPort): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function containerGroupExposedPortToTerraform(struct?: ContainerGroupExposedPort | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -118,7 +118,7 @@ export interface ContainerGroupContainerGpu {
 }
 
 export function containerGroupContainerGpuToTerraform(struct?: ContainerGroupContainerGpuOutputReference | ContainerGroupContainerGpu): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -136,7 +136,7 @@ export class ContainerGroupContainerGpuOutputReference extends cdktf.ComplexObje
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -214,8 +214,8 @@ export interface ContainerGroupContainerLivenessProbeHttpGet {
   readonly scheme?: string;
 }
 
-export function containerGroupContainerLivenessProbeHttpGetToTerraform(struct?: ContainerGroupContainerLivenessProbeHttpGet): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function containerGroupContainerLivenessProbeHttpGetToTerraform(struct?: ContainerGroupContainerLivenessProbeHttpGet | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -256,11 +256,11 @@ export interface ContainerGroupContainerLivenessProbe {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#http_get ContainerGroup#http_get}
   */
-  readonly httpGet?: ContainerGroupContainerLivenessProbeHttpGet[];
+  readonly httpGet?: ContainerGroupContainerLivenessProbeHttpGet[] | cdktf.IResolvable;
 }
 
 export function containerGroupContainerLivenessProbeToTerraform(struct?: ContainerGroupContainerLivenessProbeOutputReference | ContainerGroupContainerLivenessProbe): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -283,7 +283,7 @@ export class ContainerGroupContainerLivenessProbeOutputReference extends cdktf.C
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -441,12 +441,12 @@ export class ContainerGroupContainerLivenessProbeOutputReference extends cdktf.C
   }
 
   // http_get - computed: false, optional: true, required: false
-  private _httpGet?: ContainerGroupContainerLivenessProbeHttpGet[]; 
+  private _httpGet?: ContainerGroupContainerLivenessProbeHttpGet[] | cdktf.IResolvable; 
   public get httpGet() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('http_get') as any;
+    return this.interpolationForAttribute('http_get');
   }
-  public set httpGet(value: ContainerGroupContainerLivenessProbeHttpGet[]) {
+  public set httpGet(value: ContainerGroupContainerLivenessProbeHttpGet[] | cdktf.IResolvable) {
     this._httpGet = value;
   }
   public resetHttpGet() {
@@ -468,8 +468,8 @@ export interface ContainerGroupContainerPorts {
   readonly protocol?: string;
 }
 
-export function containerGroupContainerPortsToTerraform(struct?: ContainerGroupContainerPorts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function containerGroupContainerPortsToTerraform(struct?: ContainerGroupContainerPorts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -494,8 +494,8 @@ export interface ContainerGroupContainerReadinessProbeHttpGet {
   readonly scheme?: string;
 }
 
-export function containerGroupContainerReadinessProbeHttpGetToTerraform(struct?: ContainerGroupContainerReadinessProbeHttpGet): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function containerGroupContainerReadinessProbeHttpGetToTerraform(struct?: ContainerGroupContainerReadinessProbeHttpGet | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -536,11 +536,11 @@ export interface ContainerGroupContainerReadinessProbe {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#http_get ContainerGroup#http_get}
   */
-  readonly httpGet?: ContainerGroupContainerReadinessProbeHttpGet[];
+  readonly httpGet?: ContainerGroupContainerReadinessProbeHttpGet[] | cdktf.IResolvable;
 }
 
 export function containerGroupContainerReadinessProbeToTerraform(struct?: ContainerGroupContainerReadinessProbeOutputReference | ContainerGroupContainerReadinessProbe): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -563,7 +563,7 @@ export class ContainerGroupContainerReadinessProbeOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -721,12 +721,12 @@ export class ContainerGroupContainerReadinessProbeOutputReference extends cdktf.
   }
 
   // http_get - computed: false, optional: true, required: false
-  private _httpGet?: ContainerGroupContainerReadinessProbeHttpGet[]; 
+  private _httpGet?: ContainerGroupContainerReadinessProbeHttpGet[] | cdktf.IResolvable; 
   public get httpGet() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('http_get') as any;
+    return this.interpolationForAttribute('http_get');
   }
-  public set httpGet(value: ContainerGroupContainerReadinessProbeHttpGet[]) {
+  public set httpGet(value: ContainerGroupContainerReadinessProbeHttpGet[] | cdktf.IResolvable) {
     this._httpGet = value;
   }
   public resetHttpGet() {
@@ -753,7 +753,7 @@ export interface ContainerGroupContainerVolumeGitRepo {
 }
 
 export function containerGroupContainerVolumeGitRepoToTerraform(struct?: ContainerGroupContainerVolumeGitRepoOutputReference | ContainerGroupContainerVolumeGitRepo): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -772,7 +772,7 @@ export class ContainerGroupContainerVolumeGitRepoOutputReference extends cdktf.C
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -874,7 +874,7 @@ export interface ContainerGroupContainerVolume {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#secret ContainerGroup#secret}
   */
-  readonly secret?: { [key: string]: string } | cdktf.IResolvable;
+  readonly secret?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#share_name ContainerGroup#share_name}
   */
@@ -895,8 +895,8 @@ export interface ContainerGroupContainerVolume {
   readonly gitRepo?: ContainerGroupContainerVolumeGitRepo;
 }
 
-export function containerGroupContainerVolumeToTerraform(struct?: ContainerGroupContainerVolume): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function containerGroupContainerVolumeToTerraform(struct?: ContainerGroupContainerVolume | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -905,7 +905,7 @@ export function containerGroupContainerVolumeToTerraform(struct?: ContainerGroup
     mount_path: cdktf.stringToTerraform(struct!.mountPath),
     name: cdktf.stringToTerraform(struct!.name),
     read_only: cdktf.booleanToTerraform(struct!.readOnly),
-    secret: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.secret),
+    secret: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.secret),
     share_name: cdktf.stringToTerraform(struct!.shareName),
     storage_account_key: cdktf.stringToTerraform(struct!.storageAccountKey),
     storage_account_name: cdktf.stringToTerraform(struct!.storageAccountName),
@@ -925,7 +925,7 @@ export interface ContainerGroupContainer {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#environment_variables ContainerGroup#environment_variables}
   */
-  readonly environmentVariables?: { [key: string]: string } | cdktf.IResolvable;
+  readonly environmentVariables?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#image ContainerGroup#image}
   */
@@ -941,7 +941,7 @@ export interface ContainerGroupContainer {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#secure_environment_variables ContainerGroup#secure_environment_variables}
   */
-  readonly secureEnvironmentVariables?: { [key: string]: string } | cdktf.IResolvable;
+  readonly secureEnvironmentVariables?: { [key: string]: string };
   /**
   * gpu block
   * 
@@ -959,7 +959,7 @@ export interface ContainerGroupContainer {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#ports ContainerGroup#ports}
   */
-  readonly ports?: ContainerGroupContainerPorts[];
+  readonly ports?: ContainerGroupContainerPorts[] | cdktf.IResolvable;
   /**
   * readiness_probe block
   * 
@@ -971,22 +971,22 @@ export interface ContainerGroupContainer {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#volume ContainerGroup#volume}
   */
-  readonly volume?: ContainerGroupContainerVolume[];
+  readonly volume?: ContainerGroupContainerVolume[] | cdktf.IResolvable;
 }
 
-export function containerGroupContainerToTerraform(struct?: ContainerGroupContainer): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function containerGroupContainerToTerraform(struct?: ContainerGroupContainer | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
     commands: cdktf.listMapper(cdktf.stringToTerraform)(struct!.commands),
     cpu: cdktf.numberToTerraform(struct!.cpu),
-    environment_variables: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.environmentVariables),
+    environment_variables: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.environmentVariables),
     image: cdktf.stringToTerraform(struct!.image),
     memory: cdktf.numberToTerraform(struct!.memory),
     name: cdktf.stringToTerraform(struct!.name),
-    secure_environment_variables: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.secureEnvironmentVariables),
+    secure_environment_variables: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.secureEnvironmentVariables),
     gpu: containerGroupContainerGpuToTerraform(struct!.gpu),
     liveness_probe: containerGroupContainerLivenessProbeToTerraform(struct!.livenessProbe),
     ports: cdktf.listMapper(containerGroupContainerPortsToTerraform)(struct!.ports),
@@ -1003,7 +1003,7 @@ export interface ContainerGroupDiagnosticsLogAnalytics {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#metadata ContainerGroup#metadata}
   */
-  readonly metadata?: { [key: string]: string } | cdktf.IResolvable;
+  readonly metadata?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#workspace_id ContainerGroup#workspace_id}
   */
@@ -1015,13 +1015,13 @@ export interface ContainerGroupDiagnosticsLogAnalytics {
 }
 
 export function containerGroupDiagnosticsLogAnalyticsToTerraform(struct?: ContainerGroupDiagnosticsLogAnalyticsOutputReference | ContainerGroupDiagnosticsLogAnalytics): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
     log_type: cdktf.stringToTerraform(struct!.logType),
-    metadata: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.metadata),
+    metadata: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.metadata),
     workspace_id: cdktf.stringToTerraform(struct!.workspaceId),
     workspace_key: cdktf.stringToTerraform(struct!.workspaceKey),
   }
@@ -1035,7 +1035,7 @@ export class ContainerGroupDiagnosticsLogAnalyticsOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1095,12 +1095,11 @@ export class ContainerGroupDiagnosticsLogAnalyticsOutputReference extends cdktf.
   }
 
   // metadata - computed: false, optional: true, required: false
-  private _metadata?: { [key: string]: string } | cdktf.IResolvable; 
+  private _metadata?: { [key: string]: string }; 
   public get metadata() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('metadata') as any;
+    return this.getStringMapAttribute('metadata');
   }
-  public set metadata(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set metadata(value: { [key: string]: string }) {
     this._metadata = value;
   }
   public resetMetadata() {
@@ -1147,7 +1146,7 @@ export interface ContainerGroupDiagnostics {
 }
 
 export function containerGroupDiagnosticsToTerraform(struct?: ContainerGroupDiagnosticsOutputReference | ContainerGroupDiagnostics): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1164,7 +1163,7 @@ export class ContainerGroupDiagnosticsOutputReference extends cdktf.ComplexObjec
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1190,7 +1189,7 @@ export class ContainerGroupDiagnosticsOutputReference extends cdktf.ComplexObjec
   }
 
   // log_analytics - computed: false, optional: false, required: true
-  private _logAnalytics = new ContainerGroupDiagnosticsLogAnalyticsOutputReference(this as any, "log_analytics", true);
+  private _logAnalytics = new ContainerGroupDiagnosticsLogAnalyticsOutputReference(this, "log_analytics", true);
   public get logAnalytics() {
     return this._logAnalytics;
   }
@@ -1218,7 +1217,7 @@ export interface ContainerGroupDnsConfig {
 }
 
 export function containerGroupDnsConfigToTerraform(struct?: ContainerGroupDnsConfigOutputReference | ContainerGroupDnsConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1237,7 +1236,7 @@ export class ContainerGroupDnsConfigOutputReference extends cdktf.ComplexObject 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1290,7 +1289,7 @@ export class ContainerGroupDnsConfigOutputReference extends cdktf.ComplexObject 
   // options - computed: false, optional: true, required: false
   private _options?: string[]; 
   public get options() {
-    return this.getListAttribute('options');
+    return cdktf.Fn.tolist(this.getListAttribute('options'));
   }
   public set options(value: string[]) {
     this._options = value;
@@ -1306,7 +1305,7 @@ export class ContainerGroupDnsConfigOutputReference extends cdktf.ComplexObject 
   // search_domains - computed: false, optional: true, required: false
   private _searchDomains?: string[]; 
   public get searchDomains() {
-    return this.getListAttribute('search_domains');
+    return cdktf.Fn.tolist(this.getListAttribute('search_domains'));
   }
   public set searchDomains(value: string[]) {
     this._searchDomains = value;
@@ -1331,7 +1330,7 @@ export interface ContainerGroupIdentity {
 }
 
 export function containerGroupIdentityToTerraform(struct?: ContainerGroupIdentityOutputReference | ContainerGroupIdentity): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1349,7 +1348,7 @@ export class ContainerGroupIdentityOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1396,6 +1395,11 @@ export class ContainerGroupIdentityOutputReference extends cdktf.ComplexObject {
     return this._identityIds;
   }
 
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+
   // type - computed: false, optional: false, required: true
   private _type?: string; 
   public get type() {
@@ -1424,8 +1428,8 @@ export interface ContainerGroupImageRegistryCredential {
   readonly username: string;
 }
 
-export function containerGroupImageRegistryCredentialToTerraform(struct?: ContainerGroupImageRegistryCredential): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function containerGroupImageRegistryCredentialToTerraform(struct?: ContainerGroupImageRegistryCredential | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1455,8 +1459,8 @@ export interface ContainerGroupTimeouts {
   readonly update?: string;
 }
 
-export function containerGroupTimeoutsToTerraform(struct?: ContainerGroupTimeoutsOutputReference | ContainerGroupTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function containerGroupTimeoutsToTerraform(struct?: ContainerGroupTimeoutsOutputReference | ContainerGroupTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1476,7 +1480,7 @@ export class ContainerGroupTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1655,12 +1659,12 @@ export class ContainerGroup extends cdktf.TerraformResource {
   }
 
   // exposed_port - computed: true, optional: true, required: false
-  private _exposedPort?: ContainerGroupExposedPort[]; 
+  private _exposedPort?: ContainerGroupExposedPort[] | cdktf.IResolvable; 
   public get exposedPort() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('exposed_port') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('exposed_port')));
   }
-  public set exposedPort(value: ContainerGroupExposedPort[]) {
+  public set exposedPort(value: ContainerGroupExposedPort[] | cdktf.IResolvable) {
     this._exposedPort = value;
   }
   public resetExposedPort() {
@@ -1787,12 +1791,11 @@ export class ContainerGroup extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -1804,12 +1807,12 @@ export class ContainerGroup extends cdktf.TerraformResource {
   }
 
   // container - computed: false, optional: false, required: true
-  private _container?: ContainerGroupContainer[]; 
+  private _container?: ContainerGroupContainer[] | cdktf.IResolvable; 
   public get container() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('container') as any;
+    return this.interpolationForAttribute('container');
   }
-  public set container(value: ContainerGroupContainer[]) {
+  public set container(value: ContainerGroupContainer[] | cdktf.IResolvable) {
     this._container = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -1818,7 +1821,7 @@ export class ContainerGroup extends cdktf.TerraformResource {
   }
 
   // diagnostics - computed: false, optional: true, required: false
-  private _diagnostics = new ContainerGroupDiagnosticsOutputReference(this as any, "diagnostics", true);
+  private _diagnostics = new ContainerGroupDiagnosticsOutputReference(this, "diagnostics", true);
   public get diagnostics() {
     return this._diagnostics;
   }
@@ -1834,7 +1837,7 @@ export class ContainerGroup extends cdktf.TerraformResource {
   }
 
   // dns_config - computed: false, optional: true, required: false
-  private _dnsConfig = new ContainerGroupDnsConfigOutputReference(this as any, "dns_config", true);
+  private _dnsConfig = new ContainerGroupDnsConfigOutputReference(this, "dns_config", true);
   public get dnsConfig() {
     return this._dnsConfig;
   }
@@ -1850,7 +1853,7 @@ export class ContainerGroup extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity = new ContainerGroupIdentityOutputReference(this as any, "identity", true);
+  private _identity = new ContainerGroupIdentityOutputReference(this, "identity", true);
   public get identity() {
     return this._identity;
   }
@@ -1866,12 +1869,12 @@ export class ContainerGroup extends cdktf.TerraformResource {
   }
 
   // image_registry_credential - computed: false, optional: true, required: false
-  private _imageRegistryCredential?: ContainerGroupImageRegistryCredential[]; 
+  private _imageRegistryCredential?: ContainerGroupImageRegistryCredential[] | cdktf.IResolvable; 
   public get imageRegistryCredential() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('image_registry_credential') as any;
+    return this.interpolationForAttribute('image_registry_credential');
   }
-  public set imageRegistryCredential(value: ContainerGroupImageRegistryCredential[]) {
+  public set imageRegistryCredential(value: ContainerGroupImageRegistryCredential[] | cdktf.IResolvable) {
     this._imageRegistryCredential = value;
   }
   public resetImageRegistryCredential() {
@@ -1883,7 +1886,7 @@ export class ContainerGroup extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ContainerGroupTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ContainerGroupTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -1913,7 +1916,7 @@ export class ContainerGroup extends cdktf.TerraformResource {
       os_type: cdktf.stringToTerraform(this._osType),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       restart_policy: cdktf.stringToTerraform(this._restartPolicy),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       container: cdktf.listMapper(containerGroupContainerToTerraform)(this._container),
       diagnostics: containerGroupDiagnosticsToTerraform(this._diagnostics.internalValue),
       dns_config: containerGroupDnsConfigToTerraform(this._dnsConfig.internalValue),

@@ -93,8 +93,8 @@ export interface ApiManagementApiDiagnosticBackendRequestDataMaskingHeaders {
   readonly value: string;
 }
 
-export function apiManagementApiDiagnosticBackendRequestDataMaskingHeadersToTerraform(struct?: ApiManagementApiDiagnosticBackendRequestDataMaskingHeaders): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function apiManagementApiDiagnosticBackendRequestDataMaskingHeadersToTerraform(struct?: ApiManagementApiDiagnosticBackendRequestDataMaskingHeaders | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -115,8 +115,8 @@ export interface ApiManagementApiDiagnosticBackendRequestDataMaskingQueryParams 
   readonly value: string;
 }
 
-export function apiManagementApiDiagnosticBackendRequestDataMaskingQueryParamsToTerraform(struct?: ApiManagementApiDiagnosticBackendRequestDataMaskingQueryParams): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function apiManagementApiDiagnosticBackendRequestDataMaskingQueryParamsToTerraform(struct?: ApiManagementApiDiagnosticBackendRequestDataMaskingQueryParams | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -132,17 +132,17 @@ export interface ApiManagementApiDiagnosticBackendRequestDataMasking {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_diagnostic#headers ApiManagementApiDiagnostic#headers}
   */
-  readonly headers?: ApiManagementApiDiagnosticBackendRequestDataMaskingHeaders[];
+  readonly headers?: ApiManagementApiDiagnosticBackendRequestDataMaskingHeaders[] | cdktf.IResolvable;
   /**
   * query_params block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_diagnostic#query_params ApiManagementApiDiagnostic#query_params}
   */
-  readonly queryParams?: ApiManagementApiDiagnosticBackendRequestDataMaskingQueryParams[];
+  readonly queryParams?: ApiManagementApiDiagnosticBackendRequestDataMaskingQueryParams[] | cdktf.IResolvable;
 }
 
 export function apiManagementApiDiagnosticBackendRequestDataMaskingToTerraform(struct?: ApiManagementApiDiagnosticBackendRequestDataMaskingOutputReference | ApiManagementApiDiagnosticBackendRequestDataMasking): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -160,7 +160,7 @@ export class ApiManagementApiDiagnosticBackendRequestDataMaskingOutputReference 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -192,12 +192,12 @@ export class ApiManagementApiDiagnosticBackendRequestDataMaskingOutputReference 
   }
 
   // headers - computed: false, optional: true, required: false
-  private _headers?: ApiManagementApiDiagnosticBackendRequestDataMaskingHeaders[]; 
+  private _headers?: ApiManagementApiDiagnosticBackendRequestDataMaskingHeaders[] | cdktf.IResolvable; 
   public get headers() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('headers') as any;
+    return this.interpolationForAttribute('headers');
   }
-  public set headers(value: ApiManagementApiDiagnosticBackendRequestDataMaskingHeaders[]) {
+  public set headers(value: ApiManagementApiDiagnosticBackendRequestDataMaskingHeaders[] | cdktf.IResolvable) {
     this._headers = value;
   }
   public resetHeaders() {
@@ -209,12 +209,12 @@ export class ApiManagementApiDiagnosticBackendRequestDataMaskingOutputReference 
   }
 
   // query_params - computed: false, optional: true, required: false
-  private _queryParams?: ApiManagementApiDiagnosticBackendRequestDataMaskingQueryParams[]; 
+  private _queryParams?: ApiManagementApiDiagnosticBackendRequestDataMaskingQueryParams[] | cdktf.IResolvable; 
   public get queryParams() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('query_params') as any;
+    return this.interpolationForAttribute('query_params');
   }
-  public set queryParams(value: ApiManagementApiDiagnosticBackendRequestDataMaskingQueryParams[]) {
+  public set queryParams(value: ApiManagementApiDiagnosticBackendRequestDataMaskingQueryParams[] | cdktf.IResolvable) {
     this._queryParams = value;
   }
   public resetQueryParams() {
@@ -243,7 +243,7 @@ export interface ApiManagementApiDiagnosticBackendRequest {
 }
 
 export function apiManagementApiDiagnosticBackendRequestToTerraform(struct?: ApiManagementApiDiagnosticBackendRequestOutputReference | ApiManagementApiDiagnosticBackendRequest): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -262,7 +262,7 @@ export class ApiManagementApiDiagnosticBackendRequestOutputReference extends cdk
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -318,7 +318,7 @@ export class ApiManagementApiDiagnosticBackendRequestOutputReference extends cdk
   // headers_to_log - computed: false, optional: true, required: false
   private _headersToLog?: string[]; 
   public get headersToLog() {
-    return this.getListAttribute('headers_to_log');
+    return cdktf.Fn.tolist(this.getListAttribute('headers_to_log'));
   }
   public set headersToLog(value: string[]) {
     this._headersToLog = value;
@@ -332,7 +332,7 @@ export class ApiManagementApiDiagnosticBackendRequestOutputReference extends cdk
   }
 
   // data_masking - computed: false, optional: true, required: false
-  private _dataMasking = new ApiManagementApiDiagnosticBackendRequestDataMaskingOutputReference(this as any, "data_masking", true);
+  private _dataMasking = new ApiManagementApiDiagnosticBackendRequestDataMaskingOutputReference(this, "data_masking", true);
   public get dataMasking() {
     return this._dataMasking;
   }
@@ -358,8 +358,8 @@ export interface ApiManagementApiDiagnosticBackendResponseDataMaskingHeaders {
   readonly value: string;
 }
 
-export function apiManagementApiDiagnosticBackendResponseDataMaskingHeadersToTerraform(struct?: ApiManagementApiDiagnosticBackendResponseDataMaskingHeaders): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function apiManagementApiDiagnosticBackendResponseDataMaskingHeadersToTerraform(struct?: ApiManagementApiDiagnosticBackendResponseDataMaskingHeaders | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -380,8 +380,8 @@ export interface ApiManagementApiDiagnosticBackendResponseDataMaskingQueryParams
   readonly value: string;
 }
 
-export function apiManagementApiDiagnosticBackendResponseDataMaskingQueryParamsToTerraform(struct?: ApiManagementApiDiagnosticBackendResponseDataMaskingQueryParams): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function apiManagementApiDiagnosticBackendResponseDataMaskingQueryParamsToTerraform(struct?: ApiManagementApiDiagnosticBackendResponseDataMaskingQueryParams | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -397,17 +397,17 @@ export interface ApiManagementApiDiagnosticBackendResponseDataMasking {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_diagnostic#headers ApiManagementApiDiagnostic#headers}
   */
-  readonly headers?: ApiManagementApiDiagnosticBackendResponseDataMaskingHeaders[];
+  readonly headers?: ApiManagementApiDiagnosticBackendResponseDataMaskingHeaders[] | cdktf.IResolvable;
   /**
   * query_params block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_diagnostic#query_params ApiManagementApiDiagnostic#query_params}
   */
-  readonly queryParams?: ApiManagementApiDiagnosticBackendResponseDataMaskingQueryParams[];
+  readonly queryParams?: ApiManagementApiDiagnosticBackendResponseDataMaskingQueryParams[] | cdktf.IResolvable;
 }
 
 export function apiManagementApiDiagnosticBackendResponseDataMaskingToTerraform(struct?: ApiManagementApiDiagnosticBackendResponseDataMaskingOutputReference | ApiManagementApiDiagnosticBackendResponseDataMasking): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -425,7 +425,7 @@ export class ApiManagementApiDiagnosticBackendResponseDataMaskingOutputReference
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -457,12 +457,12 @@ export class ApiManagementApiDiagnosticBackendResponseDataMaskingOutputReference
   }
 
   // headers - computed: false, optional: true, required: false
-  private _headers?: ApiManagementApiDiagnosticBackendResponseDataMaskingHeaders[]; 
+  private _headers?: ApiManagementApiDiagnosticBackendResponseDataMaskingHeaders[] | cdktf.IResolvable; 
   public get headers() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('headers') as any;
+    return this.interpolationForAttribute('headers');
   }
-  public set headers(value: ApiManagementApiDiagnosticBackendResponseDataMaskingHeaders[]) {
+  public set headers(value: ApiManagementApiDiagnosticBackendResponseDataMaskingHeaders[] | cdktf.IResolvable) {
     this._headers = value;
   }
   public resetHeaders() {
@@ -474,12 +474,12 @@ export class ApiManagementApiDiagnosticBackendResponseDataMaskingOutputReference
   }
 
   // query_params - computed: false, optional: true, required: false
-  private _queryParams?: ApiManagementApiDiagnosticBackendResponseDataMaskingQueryParams[]; 
+  private _queryParams?: ApiManagementApiDiagnosticBackendResponseDataMaskingQueryParams[] | cdktf.IResolvable; 
   public get queryParams() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('query_params') as any;
+    return this.interpolationForAttribute('query_params');
   }
-  public set queryParams(value: ApiManagementApiDiagnosticBackendResponseDataMaskingQueryParams[]) {
+  public set queryParams(value: ApiManagementApiDiagnosticBackendResponseDataMaskingQueryParams[] | cdktf.IResolvable) {
     this._queryParams = value;
   }
   public resetQueryParams() {
@@ -508,7 +508,7 @@ export interface ApiManagementApiDiagnosticBackendResponse {
 }
 
 export function apiManagementApiDiagnosticBackendResponseToTerraform(struct?: ApiManagementApiDiagnosticBackendResponseOutputReference | ApiManagementApiDiagnosticBackendResponse): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -527,7 +527,7 @@ export class ApiManagementApiDiagnosticBackendResponseOutputReference extends cd
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -583,7 +583,7 @@ export class ApiManagementApiDiagnosticBackendResponseOutputReference extends cd
   // headers_to_log - computed: false, optional: true, required: false
   private _headersToLog?: string[]; 
   public get headersToLog() {
-    return this.getListAttribute('headers_to_log');
+    return cdktf.Fn.tolist(this.getListAttribute('headers_to_log'));
   }
   public set headersToLog(value: string[]) {
     this._headersToLog = value;
@@ -597,7 +597,7 @@ export class ApiManagementApiDiagnosticBackendResponseOutputReference extends cd
   }
 
   // data_masking - computed: false, optional: true, required: false
-  private _dataMasking = new ApiManagementApiDiagnosticBackendResponseDataMaskingOutputReference(this as any, "data_masking", true);
+  private _dataMasking = new ApiManagementApiDiagnosticBackendResponseDataMaskingOutputReference(this, "data_masking", true);
   public get dataMasking() {
     return this._dataMasking;
   }
@@ -623,8 +623,8 @@ export interface ApiManagementApiDiagnosticFrontendRequestDataMaskingHeaders {
   readonly value: string;
 }
 
-export function apiManagementApiDiagnosticFrontendRequestDataMaskingHeadersToTerraform(struct?: ApiManagementApiDiagnosticFrontendRequestDataMaskingHeaders): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function apiManagementApiDiagnosticFrontendRequestDataMaskingHeadersToTerraform(struct?: ApiManagementApiDiagnosticFrontendRequestDataMaskingHeaders | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -645,8 +645,8 @@ export interface ApiManagementApiDiagnosticFrontendRequestDataMaskingQueryParams
   readonly value: string;
 }
 
-export function apiManagementApiDiagnosticFrontendRequestDataMaskingQueryParamsToTerraform(struct?: ApiManagementApiDiagnosticFrontendRequestDataMaskingQueryParams): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function apiManagementApiDiagnosticFrontendRequestDataMaskingQueryParamsToTerraform(struct?: ApiManagementApiDiagnosticFrontendRequestDataMaskingQueryParams | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -662,17 +662,17 @@ export interface ApiManagementApiDiagnosticFrontendRequestDataMasking {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_diagnostic#headers ApiManagementApiDiagnostic#headers}
   */
-  readonly headers?: ApiManagementApiDiagnosticFrontendRequestDataMaskingHeaders[];
+  readonly headers?: ApiManagementApiDiagnosticFrontendRequestDataMaskingHeaders[] | cdktf.IResolvable;
   /**
   * query_params block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_diagnostic#query_params ApiManagementApiDiagnostic#query_params}
   */
-  readonly queryParams?: ApiManagementApiDiagnosticFrontendRequestDataMaskingQueryParams[];
+  readonly queryParams?: ApiManagementApiDiagnosticFrontendRequestDataMaskingQueryParams[] | cdktf.IResolvable;
 }
 
 export function apiManagementApiDiagnosticFrontendRequestDataMaskingToTerraform(struct?: ApiManagementApiDiagnosticFrontendRequestDataMaskingOutputReference | ApiManagementApiDiagnosticFrontendRequestDataMasking): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -690,7 +690,7 @@ export class ApiManagementApiDiagnosticFrontendRequestDataMaskingOutputReference
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -722,12 +722,12 @@ export class ApiManagementApiDiagnosticFrontendRequestDataMaskingOutputReference
   }
 
   // headers - computed: false, optional: true, required: false
-  private _headers?: ApiManagementApiDiagnosticFrontendRequestDataMaskingHeaders[]; 
+  private _headers?: ApiManagementApiDiagnosticFrontendRequestDataMaskingHeaders[] | cdktf.IResolvable; 
   public get headers() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('headers') as any;
+    return this.interpolationForAttribute('headers');
   }
-  public set headers(value: ApiManagementApiDiagnosticFrontendRequestDataMaskingHeaders[]) {
+  public set headers(value: ApiManagementApiDiagnosticFrontendRequestDataMaskingHeaders[] | cdktf.IResolvable) {
     this._headers = value;
   }
   public resetHeaders() {
@@ -739,12 +739,12 @@ export class ApiManagementApiDiagnosticFrontendRequestDataMaskingOutputReference
   }
 
   // query_params - computed: false, optional: true, required: false
-  private _queryParams?: ApiManagementApiDiagnosticFrontendRequestDataMaskingQueryParams[]; 
+  private _queryParams?: ApiManagementApiDiagnosticFrontendRequestDataMaskingQueryParams[] | cdktf.IResolvable; 
   public get queryParams() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('query_params') as any;
+    return this.interpolationForAttribute('query_params');
   }
-  public set queryParams(value: ApiManagementApiDiagnosticFrontendRequestDataMaskingQueryParams[]) {
+  public set queryParams(value: ApiManagementApiDiagnosticFrontendRequestDataMaskingQueryParams[] | cdktf.IResolvable) {
     this._queryParams = value;
   }
   public resetQueryParams() {
@@ -773,7 +773,7 @@ export interface ApiManagementApiDiagnosticFrontendRequest {
 }
 
 export function apiManagementApiDiagnosticFrontendRequestToTerraform(struct?: ApiManagementApiDiagnosticFrontendRequestOutputReference | ApiManagementApiDiagnosticFrontendRequest): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -792,7 +792,7 @@ export class ApiManagementApiDiagnosticFrontendRequestOutputReference extends cd
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -848,7 +848,7 @@ export class ApiManagementApiDiagnosticFrontendRequestOutputReference extends cd
   // headers_to_log - computed: false, optional: true, required: false
   private _headersToLog?: string[]; 
   public get headersToLog() {
-    return this.getListAttribute('headers_to_log');
+    return cdktf.Fn.tolist(this.getListAttribute('headers_to_log'));
   }
   public set headersToLog(value: string[]) {
     this._headersToLog = value;
@@ -862,7 +862,7 @@ export class ApiManagementApiDiagnosticFrontendRequestOutputReference extends cd
   }
 
   // data_masking - computed: false, optional: true, required: false
-  private _dataMasking = new ApiManagementApiDiagnosticFrontendRequestDataMaskingOutputReference(this as any, "data_masking", true);
+  private _dataMasking = new ApiManagementApiDiagnosticFrontendRequestDataMaskingOutputReference(this, "data_masking", true);
   public get dataMasking() {
     return this._dataMasking;
   }
@@ -888,8 +888,8 @@ export interface ApiManagementApiDiagnosticFrontendResponseDataMaskingHeaders {
   readonly value: string;
 }
 
-export function apiManagementApiDiagnosticFrontendResponseDataMaskingHeadersToTerraform(struct?: ApiManagementApiDiagnosticFrontendResponseDataMaskingHeaders): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function apiManagementApiDiagnosticFrontendResponseDataMaskingHeadersToTerraform(struct?: ApiManagementApiDiagnosticFrontendResponseDataMaskingHeaders | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -910,8 +910,8 @@ export interface ApiManagementApiDiagnosticFrontendResponseDataMaskingQueryParam
   readonly value: string;
 }
 
-export function apiManagementApiDiagnosticFrontendResponseDataMaskingQueryParamsToTerraform(struct?: ApiManagementApiDiagnosticFrontendResponseDataMaskingQueryParams): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function apiManagementApiDiagnosticFrontendResponseDataMaskingQueryParamsToTerraform(struct?: ApiManagementApiDiagnosticFrontendResponseDataMaskingQueryParams | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -927,17 +927,17 @@ export interface ApiManagementApiDiagnosticFrontendResponseDataMasking {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_diagnostic#headers ApiManagementApiDiagnostic#headers}
   */
-  readonly headers?: ApiManagementApiDiagnosticFrontendResponseDataMaskingHeaders[];
+  readonly headers?: ApiManagementApiDiagnosticFrontendResponseDataMaskingHeaders[] | cdktf.IResolvable;
   /**
   * query_params block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_diagnostic#query_params ApiManagementApiDiagnostic#query_params}
   */
-  readonly queryParams?: ApiManagementApiDiagnosticFrontendResponseDataMaskingQueryParams[];
+  readonly queryParams?: ApiManagementApiDiagnosticFrontendResponseDataMaskingQueryParams[] | cdktf.IResolvable;
 }
 
 export function apiManagementApiDiagnosticFrontendResponseDataMaskingToTerraform(struct?: ApiManagementApiDiagnosticFrontendResponseDataMaskingOutputReference | ApiManagementApiDiagnosticFrontendResponseDataMasking): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -955,7 +955,7 @@ export class ApiManagementApiDiagnosticFrontendResponseDataMaskingOutputReferenc
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -987,12 +987,12 @@ export class ApiManagementApiDiagnosticFrontendResponseDataMaskingOutputReferenc
   }
 
   // headers - computed: false, optional: true, required: false
-  private _headers?: ApiManagementApiDiagnosticFrontendResponseDataMaskingHeaders[]; 
+  private _headers?: ApiManagementApiDiagnosticFrontendResponseDataMaskingHeaders[] | cdktf.IResolvable; 
   public get headers() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('headers') as any;
+    return this.interpolationForAttribute('headers');
   }
-  public set headers(value: ApiManagementApiDiagnosticFrontendResponseDataMaskingHeaders[]) {
+  public set headers(value: ApiManagementApiDiagnosticFrontendResponseDataMaskingHeaders[] | cdktf.IResolvable) {
     this._headers = value;
   }
   public resetHeaders() {
@@ -1004,12 +1004,12 @@ export class ApiManagementApiDiagnosticFrontendResponseDataMaskingOutputReferenc
   }
 
   // query_params - computed: false, optional: true, required: false
-  private _queryParams?: ApiManagementApiDiagnosticFrontendResponseDataMaskingQueryParams[]; 
+  private _queryParams?: ApiManagementApiDiagnosticFrontendResponseDataMaskingQueryParams[] | cdktf.IResolvable; 
   public get queryParams() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('query_params') as any;
+    return this.interpolationForAttribute('query_params');
   }
-  public set queryParams(value: ApiManagementApiDiagnosticFrontendResponseDataMaskingQueryParams[]) {
+  public set queryParams(value: ApiManagementApiDiagnosticFrontendResponseDataMaskingQueryParams[] | cdktf.IResolvable) {
     this._queryParams = value;
   }
   public resetQueryParams() {
@@ -1038,7 +1038,7 @@ export interface ApiManagementApiDiagnosticFrontendResponse {
 }
 
 export function apiManagementApiDiagnosticFrontendResponseToTerraform(struct?: ApiManagementApiDiagnosticFrontendResponseOutputReference | ApiManagementApiDiagnosticFrontendResponse): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1057,7 +1057,7 @@ export class ApiManagementApiDiagnosticFrontendResponseOutputReference extends c
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1113,7 +1113,7 @@ export class ApiManagementApiDiagnosticFrontendResponseOutputReference extends c
   // headers_to_log - computed: false, optional: true, required: false
   private _headersToLog?: string[]; 
   public get headersToLog() {
-    return this.getListAttribute('headers_to_log');
+    return cdktf.Fn.tolist(this.getListAttribute('headers_to_log'));
   }
   public set headersToLog(value: string[]) {
     this._headersToLog = value;
@@ -1127,7 +1127,7 @@ export class ApiManagementApiDiagnosticFrontendResponseOutputReference extends c
   }
 
   // data_masking - computed: false, optional: true, required: false
-  private _dataMasking = new ApiManagementApiDiagnosticFrontendResponseDataMaskingOutputReference(this as any, "data_masking", true);
+  private _dataMasking = new ApiManagementApiDiagnosticFrontendResponseDataMaskingOutputReference(this, "data_masking", true);
   public get dataMasking() {
     return this._dataMasking;
   }
@@ -1161,8 +1161,8 @@ export interface ApiManagementApiDiagnosticTimeouts {
   readonly update?: string;
 }
 
-export function apiManagementApiDiagnosticTimeoutsToTerraform(struct?: ApiManagementApiDiagnosticTimeoutsOutputReference | ApiManagementApiDiagnosticTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function apiManagementApiDiagnosticTimeoutsToTerraform(struct?: ApiManagementApiDiagnosticTimeoutsOutputReference | ApiManagementApiDiagnosticTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1182,7 +1182,7 @@ export class ApiManagementApiDiagnosticTimeoutsOutputReference extends cdktf.Com
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1347,7 +1347,7 @@ export class ApiManagementApiDiagnostic extends cdktf.TerraformResource {
   // always_log_errors - computed: true, optional: true, required: false
   private _alwaysLogErrors?: boolean | cdktf.IResolvable; 
   public get alwaysLogErrors() {
-    return this.getBooleanAttribute('always_log_errors') as any;
+    return this.getBooleanAttribute('always_log_errors');
   }
   public set alwaysLogErrors(value: boolean | cdktf.IResolvable) {
     this._alwaysLogErrors = value;
@@ -1436,7 +1436,7 @@ export class ApiManagementApiDiagnostic extends cdktf.TerraformResource {
   // log_client_ip - computed: true, optional: true, required: false
   private _logClientIp?: boolean | cdktf.IResolvable; 
   public get logClientIp() {
-    return this.getBooleanAttribute('log_client_ip') as any;
+    return this.getBooleanAttribute('log_client_ip');
   }
   public set logClientIp(value: boolean | cdktf.IResolvable) {
     this._logClientIp = value;
@@ -1511,7 +1511,7 @@ export class ApiManagementApiDiagnostic extends cdktf.TerraformResource {
   }
 
   // backend_request - computed: false, optional: true, required: false
-  private _backendRequest = new ApiManagementApiDiagnosticBackendRequestOutputReference(this as any, "backend_request", true);
+  private _backendRequest = new ApiManagementApiDiagnosticBackendRequestOutputReference(this, "backend_request", true);
   public get backendRequest() {
     return this._backendRequest;
   }
@@ -1527,7 +1527,7 @@ export class ApiManagementApiDiagnostic extends cdktf.TerraformResource {
   }
 
   // backend_response - computed: false, optional: true, required: false
-  private _backendResponse = new ApiManagementApiDiagnosticBackendResponseOutputReference(this as any, "backend_response", true);
+  private _backendResponse = new ApiManagementApiDiagnosticBackendResponseOutputReference(this, "backend_response", true);
   public get backendResponse() {
     return this._backendResponse;
   }
@@ -1543,7 +1543,7 @@ export class ApiManagementApiDiagnostic extends cdktf.TerraformResource {
   }
 
   // frontend_request - computed: false, optional: true, required: false
-  private _frontendRequest = new ApiManagementApiDiagnosticFrontendRequestOutputReference(this as any, "frontend_request", true);
+  private _frontendRequest = new ApiManagementApiDiagnosticFrontendRequestOutputReference(this, "frontend_request", true);
   public get frontendRequest() {
     return this._frontendRequest;
   }
@@ -1559,7 +1559,7 @@ export class ApiManagementApiDiagnostic extends cdktf.TerraformResource {
   }
 
   // frontend_response - computed: false, optional: true, required: false
-  private _frontendResponse = new ApiManagementApiDiagnosticFrontendResponseOutputReference(this as any, "frontend_response", true);
+  private _frontendResponse = new ApiManagementApiDiagnosticFrontendResponseOutputReference(this, "frontend_response", true);
   public get frontendResponse() {
     return this._frontendResponse;
   }
@@ -1575,7 +1575,7 @@ export class ApiManagementApiDiagnostic extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ApiManagementApiDiagnosticTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ApiManagementApiDiagnosticTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

@@ -74,19 +74,19 @@ export class DataAzurermStorageManagementPolicyRuleActions extends cdktf.Complex
   // base_blob - computed: true, optional: false, required: false
   public get baseBlob() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('base_blob') as any;
+    return this.interpolationForAttribute('base_blob');
   }
 
   // snapshot - computed: true, optional: false, required: false
   public get snapshot() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('snapshot') as any;
+    return this.interpolationForAttribute('snapshot');
   }
 
   // version - computed: true, optional: false, required: false
   public get version() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('version') as any;
+    return this.interpolationForAttribute('version');
   }
 }
 export class DataAzurermStorageManagementPolicyRuleFiltersMatchBlobIndexTag extends cdktf.ComplexComputedList {
@@ -110,18 +110,18 @@ export class DataAzurermStorageManagementPolicyRuleFilters extends cdktf.Complex
 
   // blob_types - computed: true, optional: false, required: false
   public get blobTypes() {
-    return this.getListAttribute('blob_types');
+    return cdktf.Fn.tolist(this.getListAttribute('blob_types'));
   }
 
   // match_blob_index_tag - computed: true, optional: false, required: false
   public get matchBlobIndexTag() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('match_blob_index_tag') as any;
+    return this.interpolationForAttribute('match_blob_index_tag');
   }
 
   // prefix_match - computed: true, optional: false, required: false
   public get prefixMatch() {
-    return this.getListAttribute('prefix_match');
+    return cdktf.Fn.tolist(this.getListAttribute('prefix_match'));
   }
 }
 export class DataAzurermStorageManagementPolicyRule extends cdktf.ComplexComputedList {
@@ -129,18 +129,18 @@ export class DataAzurermStorageManagementPolicyRule extends cdktf.ComplexCompute
   // actions - computed: true, optional: false, required: false
   public get actions() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('actions') as any;
+    return this.interpolationForAttribute('actions');
   }
 
   // enabled - computed: true, optional: false, required: false
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
 
   // filters - computed: true, optional: false, required: false
   public get filters() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('filters') as any;
+    return this.interpolationForAttribute('filters');
   }
 
   // name - computed: true, optional: false, required: false
@@ -155,8 +155,8 @@ export interface DataAzurermStorageManagementPolicyTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermStorageManagementPolicyTimeoutsToTerraform(struct?: DataAzurermStorageManagementPolicyTimeoutsOutputReference | DataAzurermStorageManagementPolicyTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermStorageManagementPolicyTimeoutsToTerraform(struct?: DataAzurermStorageManagementPolicyTimeoutsOutputReference | DataAzurermStorageManagementPolicyTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -173,7 +173,7 @@ export class DataAzurermStorageManagementPolicyTimeoutsOutputReference extends c
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -262,7 +262,7 @@ export class DataAzurermStorageManagementPolicy extends cdktf.TerraformDataSourc
 
   // rule - computed: true, optional: false, required: false
   public rule(index: string) {
-    return new DataAzurermStorageManagementPolicyRule(this, 'rule', index);
+    return new DataAzurermStorageManagementPolicyRule(this, 'rule', index, false);
   }
 
   // storage_account_id - computed: false, optional: false, required: true
@@ -279,7 +279,7 @@ export class DataAzurermStorageManagementPolicy extends cdktf.TerraformDataSourc
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermStorageManagementPolicyTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermStorageManagementPolicyTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

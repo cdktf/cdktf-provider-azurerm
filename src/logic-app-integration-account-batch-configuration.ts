@@ -18,7 +18,7 @@ export interface LogicAppIntegrationAccountBatchConfigurationConfig extends cdkt
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_batch_configuration#metadata LogicAppIntegrationAccountBatchConfiguration#metadata}
   */
-  readonly metadata?: { [key: string]: string } | cdktf.IResolvable;
+  readonly metadata?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_batch_configuration#name LogicAppIntegrationAccountBatchConfiguration#name}
   */
@@ -51,8 +51,8 @@ export interface LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecu
   readonly weekday: string;
 }
 
-export function logicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleMonthlyToTerraform(struct?: LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleMonthly): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function logicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleMonthlyToTerraform(struct?: LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleMonthly | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -84,11 +84,11 @@ export interface LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecu
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_batch_configuration#monthly LogicAppIntegrationAccountBatchConfiguration#monthly}
   */
-  readonly monthly?: LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleMonthly[];
+  readonly monthly?: LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleMonthly[] | cdktf.IResolvable;
 }
 
 export function logicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleToTerraform(struct?: LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleOutputReference | LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceSchedule): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -109,7 +109,7 @@ export class LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurren
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -161,8 +161,7 @@ export class LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurren
   // hours - computed: false, optional: true, required: false
   private _hours?: number[]; 
   public get hours() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('hours') as any;
+    return cdktf.Token.asNumberList(cdktf.Fn.tolist(this.getNumberListAttribute('hours')));
   }
   public set hours(value: number[]) {
     this._hours = value;
@@ -178,8 +177,7 @@ export class LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurren
   // minutes - computed: false, optional: true, required: false
   private _minutes?: number[]; 
   public get minutes() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('minutes') as any;
+    return cdktf.Token.asNumberList(cdktf.Fn.tolist(this.getNumberListAttribute('minutes')));
   }
   public set minutes(value: number[]) {
     this._minutes = value;
@@ -195,8 +193,7 @@ export class LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurren
   // month_days - computed: false, optional: true, required: false
   private _monthDays?: number[]; 
   public get monthDays() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('month_days') as any;
+    return cdktf.Token.asNumberList(cdktf.Fn.tolist(this.getNumberListAttribute('month_days')));
   }
   public set monthDays(value: number[]) {
     this._monthDays = value;
@@ -212,7 +209,7 @@ export class LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurren
   // week_days - computed: false, optional: true, required: false
   private _weekDays?: string[]; 
   public get weekDays() {
-    return this.getListAttribute('week_days');
+    return cdktf.Fn.tolist(this.getListAttribute('week_days'));
   }
   public set weekDays(value: string[]) {
     this._weekDays = value;
@@ -226,12 +223,12 @@ export class LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurren
   }
 
   // monthly - computed: false, optional: true, required: false
-  private _monthly?: LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleMonthly[]; 
+  private _monthly?: LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleMonthly[] | cdktf.IResolvable; 
   public get monthly() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('monthly') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('monthly')));
   }
-  public set monthly(value: LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleMonthly[]) {
+  public set monthly(value: LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleMonthly[] | cdktf.IResolvable) {
     this._monthly = value;
   }
   public resetMonthly() {
@@ -272,7 +269,7 @@ export interface LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecu
 }
 
 export function logicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceToTerraform(struct?: LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceOutputReference | LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrence): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -294,7 +291,7 @@ export class LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurren
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -424,7 +421,7 @@ export class LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurren
   }
 
   // schedule - computed: false, optional: true, required: false
-  private _schedule = new LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleOutputReference(this as any, "schedule", true);
+  private _schedule = new LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleOutputReference(this, "schedule", true);
   public get schedule() {
     return this._schedule;
   }
@@ -457,7 +454,7 @@ export interface LogicAppIntegrationAccountBatchConfigurationReleaseCriteria {
 }
 
 export function logicAppIntegrationAccountBatchConfigurationReleaseCriteriaToTerraform(struct?: LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaOutputReference | LogicAppIntegrationAccountBatchConfigurationReleaseCriteria): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -476,7 +473,7 @@ export class LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaOutputRe
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -546,7 +543,7 @@ export class LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaOutputRe
   }
 
   // recurrence - computed: false, optional: true, required: false
-  private _recurrence = new LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceOutputReference(this as any, "recurrence", true);
+  private _recurrence = new LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceOutputReference(this, "recurrence", true);
   public get recurrence() {
     return this._recurrence;
   }
@@ -580,8 +577,8 @@ export interface LogicAppIntegrationAccountBatchConfigurationTimeouts {
   readonly update?: string;
 }
 
-export function logicAppIntegrationAccountBatchConfigurationTimeoutsToTerraform(struct?: LogicAppIntegrationAccountBatchConfigurationTimeoutsOutputReference | LogicAppIntegrationAccountBatchConfigurationTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function logicAppIntegrationAccountBatchConfigurationTimeoutsToTerraform(struct?: LogicAppIntegrationAccountBatchConfigurationTimeoutsOutputReference | LogicAppIntegrationAccountBatchConfigurationTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -601,7 +598,7 @@ export class LogicAppIntegrationAccountBatchConfigurationTimeoutsOutputReference
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -786,12 +783,11 @@ export class LogicAppIntegrationAccountBatchConfiguration extends cdktf.Terrafor
   }
 
   // metadata - computed: false, optional: true, required: false
-  private _metadata?: { [key: string]: string } | cdktf.IResolvable; 
+  private _metadata?: { [key: string]: string }; 
   public get metadata() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('metadata') as any;
+    return this.getStringMapAttribute('metadata');
   }
-  public set metadata(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set metadata(value: { [key: string]: string }) {
     this._metadata = value;
   }
   public resetMetadata() {
@@ -829,7 +825,7 @@ export class LogicAppIntegrationAccountBatchConfiguration extends cdktf.Terrafor
   }
 
   // release_criteria - computed: false, optional: false, required: true
-  private _releaseCriteria = new LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaOutputReference(this as any, "release_criteria", true);
+  private _releaseCriteria = new LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaOutputReference(this, "release_criteria", true);
   public get releaseCriteria() {
     return this._releaseCriteria;
   }
@@ -842,7 +838,7 @@ export class LogicAppIntegrationAccountBatchConfiguration extends cdktf.Terrafor
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new LogicAppIntegrationAccountBatchConfigurationTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new LogicAppIntegrationAccountBatchConfigurationTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -865,7 +861,7 @@ export class LogicAppIntegrationAccountBatchConfiguration extends cdktf.Terrafor
     return {
       batch_group_name: cdktf.stringToTerraform(this._batchGroupName),
       integration_account_name: cdktf.stringToTerraform(this._integrationAccountName),
-      metadata: cdktf.hashMapper(cdktf.anyToTerraform)(this._metadata),
+      metadata: cdktf.hashMapper(cdktf.stringToTerraform)(this._metadata),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       release_criteria: logicAppIntegrationAccountBatchConfigurationReleaseCriteriaToTerraform(this._releaseCriteria.internalValue),

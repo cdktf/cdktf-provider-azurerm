@@ -22,11 +22,11 @@ export interface NetworkSecurityGroupConfig extends cdktf.TerraformMetaArguments
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_group#security_rule NetworkSecurityGroup#security_rule}
   */
-  readonly securityRule?: NetworkSecurityGroupSecurityRule[];
+  readonly securityRule?: NetworkSecurityGroupSecurityRule[] | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_group#tags NetworkSecurityGroup#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   * 
@@ -101,8 +101,8 @@ export interface NetworkSecurityGroupSecurityRule {
   readonly sourcePortRanges?: string[];
 }
 
-export function networkSecurityGroupSecurityRuleToTerraform(struct?: NetworkSecurityGroupSecurityRule): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function networkSecurityGroupSecurityRuleToTerraform(struct?: NetworkSecurityGroupSecurityRule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -145,8 +145,8 @@ export interface NetworkSecurityGroupTimeouts {
   readonly update?: string;
 }
 
-export function networkSecurityGroupTimeoutsToTerraform(struct?: NetworkSecurityGroupTimeoutsOutputReference | NetworkSecurityGroupTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function networkSecurityGroupTimeoutsToTerraform(struct?: NetworkSecurityGroupTimeoutsOutputReference | NetworkSecurityGroupTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -166,7 +166,7 @@ export class NetworkSecurityGroupTimeoutsOutputReference extends cdktf.ComplexOb
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -363,12 +363,12 @@ export class NetworkSecurityGroup extends cdktf.TerraformResource {
   }
 
   // security_rule - computed: true, optional: true, required: false
-  private _securityRule?: NetworkSecurityGroupSecurityRule[]; 
+  private _securityRule?: NetworkSecurityGroupSecurityRule[] | cdktf.IResolvable; 
   public get securityRule() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('security_rule') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('security_rule')));
   }
-  public set securityRule(value: NetworkSecurityGroupSecurityRule[]) {
+  public set securityRule(value: NetworkSecurityGroupSecurityRule[] | cdktf.IResolvable) {
     this._securityRule = value;
   }
   public resetSecurityRule() {
@@ -380,12 +380,11 @@ export class NetworkSecurityGroup extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -397,7 +396,7 @@ export class NetworkSecurityGroup extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new NetworkSecurityGroupTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new NetworkSecurityGroupTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -422,7 +421,7 @@ export class NetworkSecurityGroup extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       security_rule: cdktf.listMapper(networkSecurityGroupSecurityRuleToTerraform)(this._securityRule),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       timeouts: networkSecurityGroupTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

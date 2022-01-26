@@ -18,7 +18,7 @@ export interface DataAzurermWebApplicationFirewallPolicyConfig extends cdktf.Ter
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/web_application_firewall_policy#tags DataAzurermWebApplicationFirewallPolicy#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   * 
@@ -33,8 +33,8 @@ export interface DataAzurermWebApplicationFirewallPolicyTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermWebApplicationFirewallPolicyTimeoutsToTerraform(struct?: DataAzurermWebApplicationFirewallPolicyTimeoutsOutputReference | DataAzurermWebApplicationFirewallPolicyTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermWebApplicationFirewallPolicyTimeoutsToTerraform(struct?: DataAzurermWebApplicationFirewallPolicyTimeoutsOutputReference | DataAzurermWebApplicationFirewallPolicyTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -51,7 +51,7 @@ export class DataAzurermWebApplicationFirewallPolicyTimeoutsOutputReference exte
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -172,12 +172,11 @@ export class DataAzurermWebApplicationFirewallPolicy extends cdktf.TerraformData
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -189,7 +188,7 @@ export class DataAzurermWebApplicationFirewallPolicy extends cdktf.TerraformData
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermWebApplicationFirewallPolicyTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermWebApplicationFirewallPolicyTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -212,7 +211,7 @@ export class DataAzurermWebApplicationFirewallPolicy extends cdktf.TerraformData
     return {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       timeouts: dataAzurermWebApplicationFirewallPolicyTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

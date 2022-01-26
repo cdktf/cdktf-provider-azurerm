@@ -14,7 +14,7 @@ export interface FunctionAppConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app#app_settings FunctionApp#app_settings}
   */
-  readonly appSettings?: { [key: string]: string } | cdktf.IResolvable;
+  readonly appSettings?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app#client_affinity_enabled FunctionApp#client_affinity_enabled}
   */
@@ -74,7 +74,7 @@ export interface FunctionAppConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app#tags FunctionApp#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app#version FunctionApp#version}
   */
@@ -90,7 +90,7 @@ export interface FunctionAppConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app#connection_string FunctionApp#connection_string}
   */
-  readonly connectionString?: FunctionAppConnectionString[];
+  readonly connectionString?: FunctionAppConnectionString[] | cdktf.IResolvable;
   /**
   * identity block
   * 
@@ -144,7 +144,7 @@ export interface FunctionAppAuthSettingsActiveDirectory {
 }
 
 export function functionAppAuthSettingsActiveDirectoryToTerraform(struct?: FunctionAppAuthSettingsActiveDirectoryOutputReference | FunctionAppAuthSettingsActiveDirectory): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -163,7 +163,7 @@ export class FunctionAppAuthSettingsActiveDirectoryOutputReference extends cdktf
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -261,7 +261,7 @@ export interface FunctionAppAuthSettingsFacebook {
 }
 
 export function functionAppAuthSettingsFacebookToTerraform(struct?: FunctionAppAuthSettingsFacebookOutputReference | FunctionAppAuthSettingsFacebook): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -280,7 +280,7 @@ export class FunctionAppAuthSettingsFacebookOutputReference extends cdktf.Comple
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -375,7 +375,7 @@ export interface FunctionAppAuthSettingsGoogle {
 }
 
 export function functionAppAuthSettingsGoogleToTerraform(struct?: FunctionAppAuthSettingsGoogleOutputReference | FunctionAppAuthSettingsGoogle): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -394,7 +394,7 @@ export class FunctionAppAuthSettingsGoogleOutputReference extends cdktf.ComplexO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -489,7 +489,7 @@ export interface FunctionAppAuthSettingsMicrosoft {
 }
 
 export function functionAppAuthSettingsMicrosoftToTerraform(struct?: FunctionAppAuthSettingsMicrosoftOutputReference | FunctionAppAuthSettingsMicrosoft): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -508,7 +508,7 @@ export class FunctionAppAuthSettingsMicrosoftOutputReference extends cdktf.Compl
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -599,7 +599,7 @@ export interface FunctionAppAuthSettingsTwitter {
 }
 
 export function functionAppAuthSettingsTwitterToTerraform(struct?: FunctionAppAuthSettingsTwitterOutputReference | FunctionAppAuthSettingsTwitter): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -617,7 +617,7 @@ export class FunctionAppAuthSettingsTwitterOutputReference extends cdktf.Complex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -678,7 +678,7 @@ export interface FunctionAppAuthSettings {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app#additional_login_params FunctionApp#additional_login_params}
   */
-  readonly additionalLoginParams?: { [key: string]: string } | cdktf.IResolvable;
+  readonly additionalLoginParams?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app#allowed_external_redirect_urls FunctionApp#allowed_external_redirect_urls}
   */
@@ -744,12 +744,12 @@ export interface FunctionAppAuthSettings {
 }
 
 export function functionAppAuthSettingsToTerraform(struct?: FunctionAppAuthSettingsOutputReference | FunctionAppAuthSettings): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    additional_login_params: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.additionalLoginParams),
+    additional_login_params: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.additionalLoginParams),
     allowed_external_redirect_urls: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedExternalRedirectUrls),
     default_provider: cdktf.stringToTerraform(struct!.defaultProvider),
     enabled: cdktf.booleanToTerraform(struct!.enabled),
@@ -774,7 +774,7 @@ export class FunctionAppAuthSettingsOutputReference extends cdktf.ComplexObject 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -878,12 +878,11 @@ export class FunctionAppAuthSettingsOutputReference extends cdktf.ComplexObject 
   }
 
   // additional_login_params - computed: false, optional: true, required: false
-  private _additionalLoginParams?: { [key: string]: string } | cdktf.IResolvable; 
+  private _additionalLoginParams?: { [key: string]: string }; 
   public get additionalLoginParams() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('additional_login_params') as any;
+    return this.getStringMapAttribute('additional_login_params');
   }
-  public set additionalLoginParams(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set additionalLoginParams(value: { [key: string]: string }) {
     this._additionalLoginParams = value;
   }
   public resetAdditionalLoginParams() {
@@ -929,7 +928,7 @@ export class FunctionAppAuthSettingsOutputReference extends cdktf.ComplexObject 
   // enabled - computed: false, optional: false, required: true
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
@@ -990,7 +989,7 @@ export class FunctionAppAuthSettingsOutputReference extends cdktf.ComplexObject 
   // token_store_enabled - computed: false, optional: true, required: false
   private _tokenStoreEnabled?: boolean | cdktf.IResolvable; 
   public get tokenStoreEnabled() {
-    return this.getBooleanAttribute('token_store_enabled') as any;
+    return this.getBooleanAttribute('token_store_enabled');
   }
   public set tokenStoreEnabled(value: boolean | cdktf.IResolvable) {
     this._tokenStoreEnabled = value;
@@ -1020,7 +1019,7 @@ export class FunctionAppAuthSettingsOutputReference extends cdktf.ComplexObject 
   }
 
   // active_directory - computed: false, optional: true, required: false
-  private _activeDirectory = new FunctionAppAuthSettingsActiveDirectoryOutputReference(this as any, "active_directory", true);
+  private _activeDirectory = new FunctionAppAuthSettingsActiveDirectoryOutputReference(this, "active_directory", true);
   public get activeDirectory() {
     return this._activeDirectory;
   }
@@ -1036,7 +1035,7 @@ export class FunctionAppAuthSettingsOutputReference extends cdktf.ComplexObject 
   }
 
   // facebook - computed: false, optional: true, required: false
-  private _facebook = new FunctionAppAuthSettingsFacebookOutputReference(this as any, "facebook", true);
+  private _facebook = new FunctionAppAuthSettingsFacebookOutputReference(this, "facebook", true);
   public get facebook() {
     return this._facebook;
   }
@@ -1052,7 +1051,7 @@ export class FunctionAppAuthSettingsOutputReference extends cdktf.ComplexObject 
   }
 
   // google - computed: false, optional: true, required: false
-  private _google = new FunctionAppAuthSettingsGoogleOutputReference(this as any, "google", true);
+  private _google = new FunctionAppAuthSettingsGoogleOutputReference(this, "google", true);
   public get google() {
     return this._google;
   }
@@ -1068,7 +1067,7 @@ export class FunctionAppAuthSettingsOutputReference extends cdktf.ComplexObject 
   }
 
   // microsoft - computed: false, optional: true, required: false
-  private _microsoft = new FunctionAppAuthSettingsMicrosoftOutputReference(this as any, "microsoft", true);
+  private _microsoft = new FunctionAppAuthSettingsMicrosoftOutputReference(this, "microsoft", true);
   public get microsoft() {
     return this._microsoft;
   }
@@ -1084,7 +1083,7 @@ export class FunctionAppAuthSettingsOutputReference extends cdktf.ComplexObject 
   }
 
   // twitter - computed: false, optional: true, required: false
-  private _twitter = new FunctionAppAuthSettingsTwitterOutputReference(this as any, "twitter", true);
+  private _twitter = new FunctionAppAuthSettingsTwitterOutputReference(this, "twitter", true);
   public get twitter() {
     return this._twitter;
   }
@@ -1114,8 +1113,8 @@ export interface FunctionAppConnectionString {
   readonly value: string;
 }
 
-export function functionAppConnectionStringToTerraform(struct?: FunctionAppConnectionString): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function functionAppConnectionStringToTerraform(struct?: FunctionAppConnectionString | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1138,7 +1137,7 @@ export interface FunctionAppIdentity {
 }
 
 export function functionAppIdentityToTerraform(struct?: FunctionAppIdentityOutputReference | FunctionAppIdentity): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1156,7 +1155,7 @@ export class FunctionAppIdentityOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1203,6 +1202,16 @@ export class FunctionAppIdentityOutputReference extends cdktf.ComplexObject {
     return this._identityIds;
   }
 
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
+  }
+
   // type - computed: false, optional: false, required: true
   private _type?: string; 
   public get type() {
@@ -1235,8 +1244,8 @@ export interface FunctionAppSiteConfigIpRestrictionHeaders {
   readonly xForwardedHost?: string[];
 }
 
-export function functionAppSiteConfigIpRestrictionHeadersToTerraform(struct?: FunctionAppSiteConfigIpRestrictionHeaders): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function functionAppSiteConfigIpRestrictionHeadersToTerraform(struct?: FunctionAppSiteConfigIpRestrictionHeaders | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1256,7 +1265,7 @@ export interface FunctionAppSiteConfigIpRestriction {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app#headers FunctionApp#headers}
   */
-  readonly headers?: FunctionAppSiteConfigIpRestrictionHeaders[];
+  readonly headers?: FunctionAppSiteConfigIpRestrictionHeaders[] | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app#ip_address FunctionApp#ip_address}
   */
@@ -1279,8 +1288,8 @@ export interface FunctionAppSiteConfigIpRestriction {
   readonly virtualNetworkSubnetId?: string;
 }
 
-export function functionAppSiteConfigIpRestrictionToTerraform(struct?: FunctionAppSiteConfigIpRestriction): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function functionAppSiteConfigIpRestrictionToTerraform(struct?: FunctionAppSiteConfigIpRestriction | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1314,8 +1323,8 @@ export interface FunctionAppSiteConfigScmIpRestrictionHeaders {
   readonly xForwardedHost?: string[];
 }
 
-export function functionAppSiteConfigScmIpRestrictionHeadersToTerraform(struct?: FunctionAppSiteConfigScmIpRestrictionHeaders): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function functionAppSiteConfigScmIpRestrictionHeadersToTerraform(struct?: FunctionAppSiteConfigScmIpRestrictionHeaders | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1335,7 +1344,7 @@ export interface FunctionAppSiteConfigScmIpRestriction {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app#headers FunctionApp#headers}
   */
-  readonly headers?: FunctionAppSiteConfigScmIpRestrictionHeaders[];
+  readonly headers?: FunctionAppSiteConfigScmIpRestrictionHeaders[] | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app#ip_address FunctionApp#ip_address}
   */
@@ -1358,8 +1367,8 @@ export interface FunctionAppSiteConfigScmIpRestriction {
   readonly virtualNetworkSubnetId?: string;
 }
 
-export function functionAppSiteConfigScmIpRestrictionToTerraform(struct?: FunctionAppSiteConfigScmIpRestriction): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function functionAppSiteConfigScmIpRestrictionToTerraform(struct?: FunctionAppSiteConfigScmIpRestriction | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1386,7 +1395,7 @@ export interface FunctionAppSiteConfigCors {
 }
 
 export function functionAppSiteConfigCorsToTerraform(struct?: FunctionAppSiteConfigCorsOutputReference | FunctionAppSiteConfigCors): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1404,7 +1413,7 @@ export class FunctionAppSiteConfigCorsOutputReference extends cdktf.ComplexObjec
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1438,7 +1447,7 @@ export class FunctionAppSiteConfigCorsOutputReference extends cdktf.ComplexObjec
   // allowed_origins - computed: false, optional: false, required: true
   private _allowedOrigins?: string[]; 
   public get allowedOrigins() {
-    return this.getListAttribute('allowed_origins');
+    return cdktf.Fn.tolist(this.getListAttribute('allowed_origins'));
   }
   public set allowedOrigins(value: string[]) {
     this._allowedOrigins = value;
@@ -1451,7 +1460,7 @@ export class FunctionAppSiteConfigCorsOutputReference extends cdktf.ComplexObjec
   // support_credentials - computed: false, optional: true, required: false
   private _supportCredentials?: boolean | cdktf.IResolvable; 
   public get supportCredentials() {
-    return this.getBooleanAttribute('support_credentials') as any;
+    return this.getBooleanAttribute('support_credentials');
   }
   public set supportCredentials(value: boolean | cdktf.IResolvable) {
     this._supportCredentials = value;
@@ -1500,7 +1509,7 @@ export interface FunctionAppSiteConfig {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app#ip_restriction FunctionApp#ip_restriction}
   */
-  readonly ipRestriction?: FunctionAppSiteConfigIpRestriction[];
+  readonly ipRestriction?: FunctionAppSiteConfigIpRestriction[] | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app#java_version FunctionApp#java_version}
   */
@@ -1524,7 +1533,7 @@ export interface FunctionAppSiteConfig {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app#scm_ip_restriction FunctionApp#scm_ip_restriction}
   */
-  readonly scmIpRestriction?: FunctionAppSiteConfigScmIpRestriction[];
+  readonly scmIpRestriction?: FunctionAppSiteConfigScmIpRestriction[] | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app#scm_type FunctionApp#scm_type}
   */
@@ -1554,7 +1563,7 @@ export interface FunctionAppSiteConfig {
 }
 
 export function functionAppSiteConfigToTerraform(struct?: FunctionAppSiteConfigOutputReference | FunctionAppSiteConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1591,7 +1600,7 @@ export class FunctionAppSiteConfigOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1739,7 +1748,7 @@ export class FunctionAppSiteConfigOutputReference extends cdktf.ComplexObject {
   // always_on - computed: false, optional: true, required: false
   private _alwaysOn?: boolean | cdktf.IResolvable; 
   public get alwaysOn() {
-    return this.getBooleanAttribute('always_on') as any;
+    return this.getBooleanAttribute('always_on');
   }
   public set alwaysOn(value: boolean | cdktf.IResolvable) {
     this._alwaysOn = value;
@@ -1851,7 +1860,7 @@ export class FunctionAppSiteConfigOutputReference extends cdktf.ComplexObject {
   // http2_enabled - computed: false, optional: true, required: false
   private _http2Enabled?: boolean | cdktf.IResolvable; 
   public get http2Enabled() {
-    return this.getBooleanAttribute('http2_enabled') as any;
+    return this.getBooleanAttribute('http2_enabled');
   }
   public set http2Enabled(value: boolean | cdktf.IResolvable) {
     this._http2Enabled = value;
@@ -1865,12 +1874,12 @@ export class FunctionAppSiteConfigOutputReference extends cdktf.ComplexObject {
   }
 
   // ip_restriction - computed: true, optional: true, required: false
-  private _ipRestriction?: FunctionAppSiteConfigIpRestriction[]; 
+  private _ipRestriction?: FunctionAppSiteConfigIpRestriction[] | cdktf.IResolvable; 
   public get ipRestriction() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('ip_restriction') as any;
+    return this.interpolationForAttribute('ip_restriction');
   }
-  public set ipRestriction(value: FunctionAppSiteConfigIpRestriction[]) {
+  public set ipRestriction(value: FunctionAppSiteConfigIpRestriction[] | cdktf.IResolvable) {
     this._ipRestriction = value;
   }
   public resetIpRestriction() {
@@ -1948,7 +1957,7 @@ export class FunctionAppSiteConfigOutputReference extends cdktf.ComplexObject {
   // runtime_scale_monitoring_enabled - computed: false, optional: true, required: false
   private _runtimeScaleMonitoringEnabled?: boolean | cdktf.IResolvable; 
   public get runtimeScaleMonitoringEnabled() {
-    return this.getBooleanAttribute('runtime_scale_monitoring_enabled') as any;
+    return this.getBooleanAttribute('runtime_scale_monitoring_enabled');
   }
   public set runtimeScaleMonitoringEnabled(value: boolean | cdktf.IResolvable) {
     this._runtimeScaleMonitoringEnabled = value;
@@ -1962,12 +1971,12 @@ export class FunctionAppSiteConfigOutputReference extends cdktf.ComplexObject {
   }
 
   // scm_ip_restriction - computed: true, optional: true, required: false
-  private _scmIpRestriction?: FunctionAppSiteConfigScmIpRestriction[]; 
+  private _scmIpRestriction?: FunctionAppSiteConfigScmIpRestriction[] | cdktf.IResolvable; 
   public get scmIpRestriction() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('scm_ip_restriction') as any;
+    return this.interpolationForAttribute('scm_ip_restriction');
   }
-  public set scmIpRestriction(value: FunctionAppSiteConfigScmIpRestriction[]) {
+  public set scmIpRestriction(value: FunctionAppSiteConfigScmIpRestriction[] | cdktf.IResolvable) {
     this._scmIpRestriction = value;
   }
   public resetScmIpRestriction() {
@@ -1997,7 +2006,7 @@ export class FunctionAppSiteConfigOutputReference extends cdktf.ComplexObject {
   // scm_use_main_ip_restriction - computed: false, optional: true, required: false
   private _scmUseMainIpRestriction?: boolean | cdktf.IResolvable; 
   public get scmUseMainIpRestriction() {
-    return this.getBooleanAttribute('scm_use_main_ip_restriction') as any;
+    return this.getBooleanAttribute('scm_use_main_ip_restriction');
   }
   public set scmUseMainIpRestriction(value: boolean | cdktf.IResolvable) {
     this._scmUseMainIpRestriction = value;
@@ -2013,7 +2022,7 @@ export class FunctionAppSiteConfigOutputReference extends cdktf.ComplexObject {
   // use_32_bit_worker_process - computed: false, optional: true, required: false
   private _use32BitWorkerProcess?: boolean | cdktf.IResolvable; 
   public get use32BitWorkerProcess() {
-    return this.getBooleanAttribute('use_32_bit_worker_process') as any;
+    return this.getBooleanAttribute('use_32_bit_worker_process');
   }
   public set use32BitWorkerProcess(value: boolean | cdktf.IResolvable) {
     this._use32BitWorkerProcess = value;
@@ -2029,7 +2038,7 @@ export class FunctionAppSiteConfigOutputReference extends cdktf.ComplexObject {
   // vnet_route_all_enabled - computed: true, optional: true, required: false
   private _vnetRouteAllEnabled?: boolean | cdktf.IResolvable; 
   public get vnetRouteAllEnabled() {
-    return this.getBooleanAttribute('vnet_route_all_enabled') as any;
+    return this.getBooleanAttribute('vnet_route_all_enabled');
   }
   public set vnetRouteAllEnabled(value: boolean | cdktf.IResolvable) {
     this._vnetRouteAllEnabled = value;
@@ -2045,7 +2054,7 @@ export class FunctionAppSiteConfigOutputReference extends cdktf.ComplexObject {
   // websockets_enabled - computed: false, optional: true, required: false
   private _websocketsEnabled?: boolean | cdktf.IResolvable; 
   public get websocketsEnabled() {
-    return this.getBooleanAttribute('websockets_enabled') as any;
+    return this.getBooleanAttribute('websockets_enabled');
   }
   public set websocketsEnabled(value: boolean | cdktf.IResolvable) {
     this._websocketsEnabled = value;
@@ -2059,7 +2068,7 @@ export class FunctionAppSiteConfigOutputReference extends cdktf.ComplexObject {
   }
 
   // cors - computed: false, optional: true, required: false
-  private _cors = new FunctionAppSiteConfigCorsOutputReference(this as any, "cors", true);
+  private _cors = new FunctionAppSiteConfigCorsOutputReference(this, "cors", true);
   public get cors() {
     return this._cors;
   }
@@ -2098,7 +2107,7 @@ export interface FunctionAppSourceControl {
 }
 
 export function functionAppSourceControlToTerraform(struct?: FunctionAppSourceControlOutputReference | FunctionAppSourceControl): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -2119,7 +2128,7 @@ export class FunctionAppSourceControlOutputReference extends cdktf.ComplexObject
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -2187,7 +2196,7 @@ export class FunctionAppSourceControlOutputReference extends cdktf.ComplexObject
   // manual_integration - computed: true, optional: true, required: false
   private _manualIntegration?: boolean | cdktf.IResolvable; 
   public get manualIntegration() {
-    return this.getBooleanAttribute('manual_integration') as any;
+    return this.getBooleanAttribute('manual_integration');
   }
   public set manualIntegration(value: boolean | cdktf.IResolvable) {
     this._manualIntegration = value;
@@ -2219,7 +2228,7 @@ export class FunctionAppSourceControlOutputReference extends cdktf.ComplexObject
   // rollback_enabled - computed: true, optional: true, required: false
   private _rollbackEnabled?: boolean | cdktf.IResolvable; 
   public get rollbackEnabled() {
-    return this.getBooleanAttribute('rollback_enabled') as any;
+    return this.getBooleanAttribute('rollback_enabled');
   }
   public set rollbackEnabled(value: boolean | cdktf.IResolvable) {
     this._rollbackEnabled = value;
@@ -2235,7 +2244,7 @@ export class FunctionAppSourceControlOutputReference extends cdktf.ComplexObject
   // use_mercurial - computed: true, optional: true, required: false
   private _useMercurial?: boolean | cdktf.IResolvable; 
   public get useMercurial() {
-    return this.getBooleanAttribute('use_mercurial') as any;
+    return this.getBooleanAttribute('use_mercurial');
   }
   public set useMercurial(value: boolean | cdktf.IResolvable) {
     this._useMercurial = value;
@@ -2267,8 +2276,8 @@ export interface FunctionAppTimeouts {
   readonly update?: string;
 }
 
-export function functionAppTimeoutsToTerraform(struct?: FunctionAppTimeoutsOutputReference | FunctionAppTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function functionAppTimeoutsToTerraform(struct?: FunctionAppTimeoutsOutputReference | FunctionAppTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -2288,7 +2297,7 @@ export class FunctionAppTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -2472,12 +2481,11 @@ export class FunctionApp extends cdktf.TerraformResource {
   }
 
   // app_settings - computed: true, optional: true, required: false
-  private _appSettings?: { [key: string]: string } | cdktf.IResolvable; 
+  private _appSettings?: { [key: string]: string }; 
   public get appSettings() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('app_settings') as any;
+    return this.getStringMapAttribute('app_settings');
   }
-  public set appSettings(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set appSettings(value: { [key: string]: string }) {
     this._appSettings = value;
   }
   public resetAppSettings() {
@@ -2491,7 +2499,7 @@ export class FunctionApp extends cdktf.TerraformResource {
   // client_affinity_enabled - computed: true, optional: true, required: false
   private _clientAffinityEnabled?: boolean | cdktf.IResolvable; 
   public get clientAffinityEnabled() {
-    return this.getBooleanAttribute('client_affinity_enabled') as any;
+    return this.getBooleanAttribute('client_affinity_enabled');
   }
   public set clientAffinityEnabled(value: boolean | cdktf.IResolvable) {
     this._clientAffinityEnabled = value;
@@ -2549,7 +2557,7 @@ export class FunctionApp extends cdktf.TerraformResource {
   // enable_builtin_logging - computed: false, optional: true, required: false
   private _enableBuiltinLogging?: boolean | cdktf.IResolvable; 
   public get enableBuiltinLogging() {
-    return this.getBooleanAttribute('enable_builtin_logging') as any;
+    return this.getBooleanAttribute('enable_builtin_logging');
   }
   public set enableBuiltinLogging(value: boolean | cdktf.IResolvable) {
     this._enableBuiltinLogging = value;
@@ -2565,7 +2573,7 @@ export class FunctionApp extends cdktf.TerraformResource {
   // enabled - computed: false, optional: true, required: false
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
@@ -2581,7 +2589,7 @@ export class FunctionApp extends cdktf.TerraformResource {
   // https_only - computed: false, optional: true, required: false
   private _httpsOnly?: boolean | cdktf.IResolvable; 
   public get httpsOnly() {
-    return this.getBooleanAttribute('https_only') as any;
+    return this.getBooleanAttribute('https_only');
   }
   public set httpsOnly(value: boolean | cdktf.IResolvable) {
     this._httpsOnly = value;
@@ -2687,7 +2695,7 @@ export class FunctionApp extends cdktf.TerraformResource {
 
   // site_credential - computed: true, optional: false, required: false
   public siteCredential(index: string) {
-    return new FunctionAppSiteCredential(this, 'site_credential', index);
+    return new FunctionAppSiteCredential(this, 'site_credential', index, false);
   }
 
   // storage_account_access_key - computed: true, optional: true, required: false
@@ -2739,12 +2747,11 @@ export class FunctionApp extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -2772,7 +2779,7 @@ export class FunctionApp extends cdktf.TerraformResource {
   }
 
   // auth_settings - computed: false, optional: true, required: false
-  private _authSettings = new FunctionAppAuthSettingsOutputReference(this as any, "auth_settings", true);
+  private _authSettings = new FunctionAppAuthSettingsOutputReference(this, "auth_settings", true);
   public get authSettings() {
     return this._authSettings;
   }
@@ -2788,12 +2795,12 @@ export class FunctionApp extends cdktf.TerraformResource {
   }
 
   // connection_string - computed: false, optional: true, required: false
-  private _connectionString?: FunctionAppConnectionString[]; 
+  private _connectionString?: FunctionAppConnectionString[] | cdktf.IResolvable; 
   public get connectionString() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('connection_string') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('connection_string')));
   }
-  public set connectionString(value: FunctionAppConnectionString[]) {
+  public set connectionString(value: FunctionAppConnectionString[] | cdktf.IResolvable) {
     this._connectionString = value;
   }
   public resetConnectionString() {
@@ -2805,7 +2812,7 @@ export class FunctionApp extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity = new FunctionAppIdentityOutputReference(this as any, "identity", true);
+  private _identity = new FunctionAppIdentityOutputReference(this, "identity", true);
   public get identity() {
     return this._identity;
   }
@@ -2821,7 +2828,7 @@ export class FunctionApp extends cdktf.TerraformResource {
   }
 
   // site_config - computed: false, optional: true, required: false
-  private _siteConfig = new FunctionAppSiteConfigOutputReference(this as any, "site_config", true);
+  private _siteConfig = new FunctionAppSiteConfigOutputReference(this, "site_config", true);
   public get siteConfig() {
     return this._siteConfig;
   }
@@ -2837,7 +2844,7 @@ export class FunctionApp extends cdktf.TerraformResource {
   }
 
   // source_control - computed: false, optional: true, required: false
-  private _sourceControl = new FunctionAppSourceControlOutputReference(this as any, "source_control", true);
+  private _sourceControl = new FunctionAppSourceControlOutputReference(this, "source_control", true);
   public get sourceControl() {
     return this._sourceControl;
   }
@@ -2853,7 +2860,7 @@ export class FunctionApp extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new FunctionAppTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new FunctionAppTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -2875,7 +2882,7 @@ export class FunctionApp extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       app_service_plan_id: cdktf.stringToTerraform(this._appServicePlanId),
-      app_settings: cdktf.hashMapper(cdktf.anyToTerraform)(this._appSettings),
+      app_settings: cdktf.hashMapper(cdktf.stringToTerraform)(this._appSettings),
       client_affinity_enabled: cdktf.booleanToTerraform(this._clientAffinityEnabled),
       client_cert_mode: cdktf.stringToTerraform(this._clientCertMode),
       daily_memory_time_quota: cdktf.numberToTerraform(this._dailyMemoryTimeQuota),
@@ -2890,7 +2897,7 @@ export class FunctionApp extends cdktf.TerraformResource {
       storage_account_access_key: cdktf.stringToTerraform(this._storageAccountAccessKey),
       storage_account_name: cdktf.stringToTerraform(this._storageAccountName),
       storage_connection_string: cdktf.stringToTerraform(this._storageConnectionString),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       version: cdktf.stringToTerraform(this._version),
       auth_settings: functionAppAuthSettingsToTerraform(this._authSettings.internalValue),
       connection_string: cdktf.listMapper(functionAppConnectionStringToTerraform)(this._connectionString),

@@ -18,7 +18,7 @@ export interface DataFactoryLinkedServiceAzureDatabricksConfig extends cdktf.Ter
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_databricks#additional_properties DataFactoryLinkedServiceAzureDatabricks#additional_properties}
   */
-  readonly additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
+  readonly additionalProperties?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_databricks#annotations DataFactoryLinkedServiceAzureDatabricks#annotations}
   */
@@ -54,7 +54,7 @@ export interface DataFactoryLinkedServiceAzureDatabricksConfig extends cdktf.Ter
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_databricks#parameters DataFactoryLinkedServiceAzureDatabricks#parameters}
   */
-  readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
+  readonly parameters?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_databricks#resource_group_name DataFactoryLinkedServiceAzureDatabricks#resource_group_name}
   */
@@ -104,7 +104,7 @@ export interface DataFactoryLinkedServiceAzureDatabricksInstancePool {
 }
 
 export function dataFactoryLinkedServiceAzureDatabricksInstancePoolToTerraform(struct?: DataFactoryLinkedServiceAzureDatabricksInstancePoolOutputReference | DataFactoryLinkedServiceAzureDatabricksInstancePool): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -124,7 +124,7 @@ export class DataFactoryLinkedServiceAzureDatabricksInstancePoolOutputReference 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -237,7 +237,7 @@ export interface DataFactoryLinkedServiceAzureDatabricksKeyVaultPassword {
 }
 
 export function dataFactoryLinkedServiceAzureDatabricksKeyVaultPasswordToTerraform(struct?: DataFactoryLinkedServiceAzureDatabricksKeyVaultPasswordOutputReference | DataFactoryLinkedServiceAzureDatabricksKeyVaultPassword): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -255,7 +255,7 @@ export class DataFactoryLinkedServiceAzureDatabricksKeyVaultPasswordOutputRefere
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -320,7 +320,7 @@ export interface DataFactoryLinkedServiceAzureDatabricksNewClusterConfig {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_databricks#custom_tags DataFactoryLinkedServiceAzureDatabricks#custom_tags}
   */
-  readonly customTags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly customTags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_databricks#driver_node_type DataFactoryLinkedServiceAzureDatabricks#driver_node_type}
   */
@@ -348,29 +348,29 @@ export interface DataFactoryLinkedServiceAzureDatabricksNewClusterConfig {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_databricks#spark_config DataFactoryLinkedServiceAzureDatabricks#spark_config}
   */
-  readonly sparkConfig?: { [key: string]: string } | cdktf.IResolvable;
+  readonly sparkConfig?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_databricks#spark_environment_variables DataFactoryLinkedServiceAzureDatabricks#spark_environment_variables}
   */
-  readonly sparkEnvironmentVariables?: { [key: string]: string } | cdktf.IResolvable;
+  readonly sparkEnvironmentVariables?: { [key: string]: string };
 }
 
 export function dataFactoryLinkedServiceAzureDatabricksNewClusterConfigToTerraform(struct?: DataFactoryLinkedServiceAzureDatabricksNewClusterConfigOutputReference | DataFactoryLinkedServiceAzureDatabricksNewClusterConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
     cluster_version: cdktf.stringToTerraform(struct!.clusterVersion),
-    custom_tags: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.customTags),
+    custom_tags: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.customTags),
     driver_node_type: cdktf.stringToTerraform(struct!.driverNodeType),
     init_scripts: cdktf.listMapper(cdktf.stringToTerraform)(struct!.initScripts),
     log_destination: cdktf.stringToTerraform(struct!.logDestination),
     max_number_of_workers: cdktf.numberToTerraform(struct!.maxNumberOfWorkers),
     min_number_of_workers: cdktf.numberToTerraform(struct!.minNumberOfWorkers),
     node_type: cdktf.stringToTerraform(struct!.nodeType),
-    spark_config: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.sparkConfig),
-    spark_environment_variables: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.sparkEnvironmentVariables),
+    spark_config: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.sparkConfig),
+    spark_environment_variables: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.sparkEnvironmentVariables),
   }
 }
 
@@ -382,7 +382,7 @@ export class DataFactoryLinkedServiceAzureDatabricksNewClusterConfigOutputRefere
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -475,12 +475,11 @@ export class DataFactoryLinkedServiceAzureDatabricksNewClusterConfigOutputRefere
   }
 
   // custom_tags - computed: false, optional: true, required: false
-  private _customTags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _customTags?: { [key: string]: string }; 
   public get customTags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('custom_tags') as any;
+    return this.getStringMapAttribute('custom_tags');
   }
-  public set customTags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set customTags(value: { [key: string]: string }) {
     this._customTags = value;
   }
   public resetCustomTags() {
@@ -585,12 +584,11 @@ export class DataFactoryLinkedServiceAzureDatabricksNewClusterConfigOutputRefere
   }
 
   // spark_config - computed: false, optional: true, required: false
-  private _sparkConfig?: { [key: string]: string } | cdktf.IResolvable; 
+  private _sparkConfig?: { [key: string]: string }; 
   public get sparkConfig() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('spark_config') as any;
+    return this.getStringMapAttribute('spark_config');
   }
-  public set sparkConfig(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set sparkConfig(value: { [key: string]: string }) {
     this._sparkConfig = value;
   }
   public resetSparkConfig() {
@@ -602,12 +600,11 @@ export class DataFactoryLinkedServiceAzureDatabricksNewClusterConfigOutputRefere
   }
 
   // spark_environment_variables - computed: false, optional: true, required: false
-  private _sparkEnvironmentVariables?: { [key: string]: string } | cdktf.IResolvable; 
+  private _sparkEnvironmentVariables?: { [key: string]: string }; 
   public get sparkEnvironmentVariables() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('spark_environment_variables') as any;
+    return this.getStringMapAttribute('spark_environment_variables');
   }
-  public set sparkEnvironmentVariables(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set sparkEnvironmentVariables(value: { [key: string]: string }) {
     this._sparkEnvironmentVariables = value;
   }
   public resetSparkEnvironmentVariables() {
@@ -637,8 +634,8 @@ export interface DataFactoryLinkedServiceAzureDatabricksTimeouts {
   readonly update?: string;
 }
 
-export function dataFactoryLinkedServiceAzureDatabricksTimeoutsToTerraform(struct?: DataFactoryLinkedServiceAzureDatabricksTimeoutsOutputReference | DataFactoryLinkedServiceAzureDatabricksTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataFactoryLinkedServiceAzureDatabricksTimeoutsToTerraform(struct?: DataFactoryLinkedServiceAzureDatabricksTimeoutsOutputReference | DataFactoryLinkedServiceAzureDatabricksTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -658,7 +655,7 @@ export class DataFactoryLinkedServiceAzureDatabricksTimeoutsOutputReference exte
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -851,12 +848,11 @@ export class DataFactoryLinkedServiceAzureDatabricks extends cdktf.TerraformReso
   }
 
   // additional_properties - computed: false, optional: true, required: false
-  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable; 
+  private _additionalProperties?: { [key: string]: string }; 
   public get additionalProperties() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('additional_properties') as any;
+    return this.getStringMapAttribute('additional_properties');
   }
-  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set additionalProperties(value: { [key: string]: string }) {
     this._additionalProperties = value;
   }
   public resetAdditionalProperties() {
@@ -998,12 +994,11 @@ export class DataFactoryLinkedServiceAzureDatabricks extends cdktf.TerraformReso
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string } | cdktf.IResolvable; 
+  private _parameters?: { [key: string]: string }; 
   public get parameters() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('parameters') as any;
+    return this.getStringMapAttribute('parameters');
   }
-  public set parameters(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set parameters(value: { [key: string]: string }) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -1028,7 +1023,7 @@ export class DataFactoryLinkedServiceAzureDatabricks extends cdktf.TerraformReso
   }
 
   // instance_pool - computed: false, optional: true, required: false
-  private _instancePool = new DataFactoryLinkedServiceAzureDatabricksInstancePoolOutputReference(this as any, "instance_pool", true);
+  private _instancePool = new DataFactoryLinkedServiceAzureDatabricksInstancePoolOutputReference(this, "instance_pool", true);
   public get instancePool() {
     return this._instancePool;
   }
@@ -1044,7 +1039,7 @@ export class DataFactoryLinkedServiceAzureDatabricks extends cdktf.TerraformReso
   }
 
   // key_vault_password - computed: false, optional: true, required: false
-  private _keyVaultPassword = new DataFactoryLinkedServiceAzureDatabricksKeyVaultPasswordOutputReference(this as any, "key_vault_password", true);
+  private _keyVaultPassword = new DataFactoryLinkedServiceAzureDatabricksKeyVaultPasswordOutputReference(this, "key_vault_password", true);
   public get keyVaultPassword() {
     return this._keyVaultPassword;
   }
@@ -1060,7 +1055,7 @@ export class DataFactoryLinkedServiceAzureDatabricks extends cdktf.TerraformReso
   }
 
   // new_cluster_config - computed: false, optional: true, required: false
-  private _newClusterConfig = new DataFactoryLinkedServiceAzureDatabricksNewClusterConfigOutputReference(this as any, "new_cluster_config", true);
+  private _newClusterConfig = new DataFactoryLinkedServiceAzureDatabricksNewClusterConfigOutputReference(this, "new_cluster_config", true);
   public get newClusterConfig() {
     return this._newClusterConfig;
   }
@@ -1076,7 +1071,7 @@ export class DataFactoryLinkedServiceAzureDatabricks extends cdktf.TerraformReso
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataFactoryLinkedServiceAzureDatabricksTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataFactoryLinkedServiceAzureDatabricksTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -1099,7 +1094,7 @@ export class DataFactoryLinkedServiceAzureDatabricks extends cdktf.TerraformReso
     return {
       access_token: cdktf.stringToTerraform(this._accessToken),
       adb_domain: cdktf.stringToTerraform(this._adbDomain),
-      additional_properties: cdktf.hashMapper(cdktf.anyToTerraform)(this._additionalProperties),
+      additional_properties: cdktf.hashMapper(cdktf.stringToTerraform)(this._additionalProperties),
       annotations: cdktf.listMapper(cdktf.stringToTerraform)(this._annotations),
       data_factory_id: cdktf.stringToTerraform(this._dataFactoryId),
       data_factory_name: cdktf.stringToTerraform(this._dataFactoryName),
@@ -1108,7 +1103,7 @@ export class DataFactoryLinkedServiceAzureDatabricks extends cdktf.TerraformReso
       integration_runtime_name: cdktf.stringToTerraform(this._integrationRuntimeName),
       msi_work_space_resource_id: cdktf.stringToTerraform(this._msiWorkSpaceResourceId),
       name: cdktf.stringToTerraform(this._name),
-      parameters: cdktf.hashMapper(cdktf.anyToTerraform)(this._parameters),
+      parameters: cdktf.hashMapper(cdktf.stringToTerraform)(this._parameters),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       instance_pool: dataFactoryLinkedServiceAzureDatabricksInstancePoolToTerraform(this._instancePool.internalValue),
       key_vault_password: dataFactoryLinkedServiceAzureDatabricksKeyVaultPasswordToTerraform(this._keyVaultPassword.internalValue),

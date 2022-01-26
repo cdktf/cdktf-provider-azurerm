@@ -31,12 +31,12 @@ export class DataAzurermActiveDirectoryDomainServiceNotifications extends cdktf.
 
   // notify_dc_admins - computed: true, optional: false, required: false
   public get notifyDcAdmins() {
-    return this.getBooleanAttribute('notify_dc_admins') as any;
+    return this.getBooleanAttribute('notify_dc_admins');
   }
 
   // notify_global_admins - computed: true, optional: false, required: false
   public get notifyGlobalAdmins() {
-    return this.getBooleanAttribute('notify_global_admins') as any;
+    return this.getBooleanAttribute('notify_global_admins');
   }
 }
 export class DataAzurermActiveDirectoryDomainServiceReplicaSets extends cdktf.ComplexComputedList {
@@ -85,12 +85,12 @@ export class DataAzurermActiveDirectoryDomainServiceSecureLdap extends cdktf.Com
 
   // enabled - computed: true, optional: false, required: false
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
 
   // external_access_enabled - computed: true, optional: false, required: false
   public get externalAccessEnabled() {
-    return this.getBooleanAttribute('external_access_enabled') as any;
+    return this.getBooleanAttribute('external_access_enabled');
   }
 
   // public_certificate - computed: true, optional: false, required: false
@@ -102,27 +102,27 @@ export class DataAzurermActiveDirectoryDomainServiceSecurity extends cdktf.Compl
 
   // ntlm_v1_enabled - computed: true, optional: false, required: false
   public get ntlmV1Enabled() {
-    return this.getBooleanAttribute('ntlm_v1_enabled') as any;
+    return this.getBooleanAttribute('ntlm_v1_enabled');
   }
 
   // sync_kerberos_passwords - computed: true, optional: false, required: false
   public get syncKerberosPasswords() {
-    return this.getBooleanAttribute('sync_kerberos_passwords') as any;
+    return this.getBooleanAttribute('sync_kerberos_passwords');
   }
 
   // sync_ntlm_passwords - computed: true, optional: false, required: false
   public get syncNtlmPasswords() {
-    return this.getBooleanAttribute('sync_ntlm_passwords') as any;
+    return this.getBooleanAttribute('sync_ntlm_passwords');
   }
 
   // sync_on_prem_passwords - computed: true, optional: false, required: false
   public get syncOnPremPasswords() {
-    return this.getBooleanAttribute('sync_on_prem_passwords') as any;
+    return this.getBooleanAttribute('sync_on_prem_passwords');
   }
 
   // tls_v1_enabled - computed: true, optional: false, required: false
   public get tlsV1Enabled() {
-    return this.getBooleanAttribute('tls_v1_enabled') as any;
+    return this.getBooleanAttribute('tls_v1_enabled');
   }
 }
 export interface DataAzurermActiveDirectoryDomainServiceTimeouts {
@@ -132,8 +132,8 @@ export interface DataAzurermActiveDirectoryDomainServiceTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermActiveDirectoryDomainServiceTimeoutsToTerraform(struct?: DataAzurermActiveDirectoryDomainServiceTimeoutsOutputReference | DataAzurermActiveDirectoryDomainServiceTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermActiveDirectoryDomainServiceTimeoutsToTerraform(struct?: DataAzurermActiveDirectoryDomainServiceTimeoutsOutputReference | DataAzurermActiveDirectoryDomainServiceTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -150,7 +150,7 @@ export class DataAzurermActiveDirectoryDomainServiceTimeoutsOutputReference exte
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -250,7 +250,7 @@ export class DataAzurermActiveDirectoryDomainService extends cdktf.TerraformData
 
   // filtered_sync_enabled - computed: true, optional: false, required: false
   public get filteredSyncEnabled() {
-    return this.getBooleanAttribute('filtered_sync_enabled') as any;
+    return this.getBooleanAttribute('filtered_sync_enabled');
   }
 
   // id - computed: true, optional: true, required: false
@@ -278,12 +278,12 @@ export class DataAzurermActiveDirectoryDomainService extends cdktf.TerraformData
 
   // notifications - computed: true, optional: false, required: false
   public notifications(index: string) {
-    return new DataAzurermActiveDirectoryDomainServiceNotifications(this, 'notifications', index);
+    return new DataAzurermActiveDirectoryDomainServiceNotifications(this, 'notifications', index, false);
   }
 
   // replica_sets - computed: true, optional: false, required: false
   public replicaSets(index: string) {
-    return new DataAzurermActiveDirectoryDomainServiceReplicaSets(this, 'replica_sets', index);
+    return new DataAzurermActiveDirectoryDomainServiceReplicaSets(this, 'replica_sets', index, false);
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -306,12 +306,12 @@ export class DataAzurermActiveDirectoryDomainService extends cdktf.TerraformData
 
   // secure_ldap - computed: true, optional: false, required: false
   public secureLdap(index: string) {
-    return new DataAzurermActiveDirectoryDomainServiceSecureLdap(this, 'secure_ldap', index);
+    return new DataAzurermActiveDirectoryDomainServiceSecureLdap(this, 'secure_ldap', index, false);
   }
 
   // security - computed: true, optional: false, required: false
   public security(index: string) {
-    return new DataAzurermActiveDirectoryDomainServiceSecurity(this, 'security', index);
+    return new DataAzurermActiveDirectoryDomainServiceSecurity(this, 'security', index, false);
   }
 
   // sku - computed: true, optional: false, required: false
@@ -325,7 +325,7 @@ export class DataAzurermActiveDirectoryDomainService extends cdktf.TerraformData
   }
 
   // tags - computed: true, optional: false, required: false
-  public tags(key: string): string {
+  public tags(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
@@ -340,7 +340,7 @@ export class DataAzurermActiveDirectoryDomainService extends cdktf.TerraformData
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermActiveDirectoryDomainServiceTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermActiveDirectoryDomainServiceTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

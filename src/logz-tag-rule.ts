@@ -28,7 +28,7 @@ export interface LogzTagRuleConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_tag_rule#tag_filter LogzTagRule#tag_filter}
   */
-  readonly tagFilter?: LogzTagRuleTagFilter[];
+  readonly tagFilter?: LogzTagRuleTagFilter[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -51,8 +51,8 @@ export interface LogzTagRuleTagFilter {
   readonly value?: string;
 }
 
-export function logzTagRuleTagFilterToTerraform(struct?: LogzTagRuleTagFilter): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function logzTagRuleTagFilterToTerraform(struct?: LogzTagRuleTagFilter | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -82,8 +82,8 @@ export interface LogzTagRuleTimeouts {
   readonly update?: string;
 }
 
-export function logzTagRuleTimeoutsToTerraform(struct?: LogzTagRuleTimeoutsOutputReference | LogzTagRuleTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function logzTagRuleTimeoutsToTerraform(struct?: LogzTagRuleTimeoutsOutputReference | LogzTagRuleTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -103,7 +103,7 @@ export class LogzTagRuleTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -276,7 +276,7 @@ export class LogzTagRule extends cdktf.TerraformResource {
   // send_aad_logs - computed: false, optional: true, required: false
   private _sendAadLogs?: boolean | cdktf.IResolvable; 
   public get sendAadLogs() {
-    return this.getBooleanAttribute('send_aad_logs') as any;
+    return this.getBooleanAttribute('send_aad_logs');
   }
   public set sendAadLogs(value: boolean | cdktf.IResolvable) {
     this._sendAadLogs = value;
@@ -292,7 +292,7 @@ export class LogzTagRule extends cdktf.TerraformResource {
   // send_activity_logs - computed: false, optional: true, required: false
   private _sendActivityLogs?: boolean | cdktf.IResolvable; 
   public get sendActivityLogs() {
-    return this.getBooleanAttribute('send_activity_logs') as any;
+    return this.getBooleanAttribute('send_activity_logs');
   }
   public set sendActivityLogs(value: boolean | cdktf.IResolvable) {
     this._sendActivityLogs = value;
@@ -308,7 +308,7 @@ export class LogzTagRule extends cdktf.TerraformResource {
   // send_subscription_logs - computed: false, optional: true, required: false
   private _sendSubscriptionLogs?: boolean | cdktf.IResolvable; 
   public get sendSubscriptionLogs() {
-    return this.getBooleanAttribute('send_subscription_logs') as any;
+    return this.getBooleanAttribute('send_subscription_logs');
   }
   public set sendSubscriptionLogs(value: boolean | cdktf.IResolvable) {
     this._sendSubscriptionLogs = value;
@@ -322,12 +322,12 @@ export class LogzTagRule extends cdktf.TerraformResource {
   }
 
   // tag_filter - computed: false, optional: true, required: false
-  private _tagFilter?: LogzTagRuleTagFilter[]; 
+  private _tagFilter?: LogzTagRuleTagFilter[] | cdktf.IResolvable; 
   public get tagFilter() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tag_filter') as any;
+    return this.interpolationForAttribute('tag_filter');
   }
-  public set tagFilter(value: LogzTagRuleTagFilter[]) {
+  public set tagFilter(value: LogzTagRuleTagFilter[] | cdktf.IResolvable) {
     this._tagFilter = value;
   }
   public resetTagFilter() {
@@ -339,7 +339,7 @@ export class LogzTagRule extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new LogzTagRuleTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new LogzTagRuleTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

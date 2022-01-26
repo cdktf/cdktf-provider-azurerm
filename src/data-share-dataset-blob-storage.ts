@@ -56,7 +56,7 @@ export interface DataShareDatasetBlobStorageStorageAccount {
 }
 
 export function dataShareDatasetBlobStorageStorageAccountToTerraform(struct?: DataShareDatasetBlobStorageStorageAccountOutputReference | DataShareDatasetBlobStorageStorageAccount): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -75,7 +75,7 @@ export class DataShareDatasetBlobStorageStorageAccountOutputReference extends cd
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -166,8 +166,8 @@ export interface DataShareDatasetBlobStorageTimeouts {
   readonly read?: string;
 }
 
-export function dataShareDatasetBlobStorageTimeoutsToTerraform(struct?: DataShareDatasetBlobStorageTimeoutsOutputReference | DataShareDatasetBlobStorageTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataShareDatasetBlobStorageTimeoutsToTerraform(struct?: DataShareDatasetBlobStorageTimeoutsOutputReference | DataShareDatasetBlobStorageTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -186,7 +186,7 @@ export class DataShareDatasetBlobStorageTimeoutsOutputReference extends cdktf.Co
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -399,7 +399,7 @@ export class DataShareDatasetBlobStorage extends cdktf.TerraformResource {
   }
 
   // storage_account - computed: false, optional: false, required: true
-  private _storageAccount = new DataShareDatasetBlobStorageStorageAccountOutputReference(this as any, "storage_account", true);
+  private _storageAccount = new DataShareDatasetBlobStorageStorageAccountOutputReference(this, "storage_account", true);
   public get storageAccount() {
     return this._storageAccount;
   }
@@ -412,7 +412,7 @@ export class DataShareDatasetBlobStorage extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataShareDatasetBlobStorageTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataShareDatasetBlobStorageTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

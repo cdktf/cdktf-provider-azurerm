@@ -42,7 +42,7 @@ export interface MediaJobConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_job#output_asset MediaJob#output_asset}
   */
-  readonly outputAsset: MediaJobOutputAsset[];
+  readonly outputAsset: MediaJobOutputAsset[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -62,7 +62,7 @@ export interface MediaJobInputAsset {
 }
 
 export function mediaJobInputAssetToTerraform(struct?: MediaJobInputAssetOutputReference | MediaJobInputAsset): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -80,7 +80,7 @@ export class MediaJobInputAssetOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -151,8 +151,8 @@ export interface MediaJobOutputAsset {
   readonly name: string;
 }
 
-export function mediaJobOutputAssetToTerraform(struct?: MediaJobOutputAsset): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function mediaJobOutputAssetToTerraform(struct?: MediaJobOutputAsset | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -181,8 +181,8 @@ export interface MediaJobTimeouts {
   readonly update?: string;
 }
 
-export function mediaJobTimeoutsToTerraform(struct?: MediaJobTimeoutsOutputReference | MediaJobTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function mediaJobTimeoutsToTerraform(struct?: MediaJobTimeoutsOutputReference | MediaJobTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -202,7 +202,7 @@ export class MediaJobTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -447,7 +447,7 @@ export class MediaJob extends cdktf.TerraformResource {
   }
 
   // input_asset - computed: false, optional: false, required: true
-  private _inputAsset = new MediaJobInputAssetOutputReference(this as any, "input_asset", true);
+  private _inputAsset = new MediaJobInputAssetOutputReference(this, "input_asset", true);
   public get inputAsset() {
     return this._inputAsset;
   }
@@ -460,12 +460,12 @@ export class MediaJob extends cdktf.TerraformResource {
   }
 
   // output_asset - computed: false, optional: false, required: true
-  private _outputAsset?: MediaJobOutputAsset[]; 
+  private _outputAsset?: MediaJobOutputAsset[] | cdktf.IResolvable; 
   public get outputAsset() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('output_asset') as any;
+    return this.interpolationForAttribute('output_asset');
   }
-  public set outputAsset(value: MediaJobOutputAsset[]) {
+  public set outputAsset(value: MediaJobOutputAsset[] | cdktf.IResolvable) {
     this._outputAsset = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -474,7 +474,7 @@ export class MediaJob extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new MediaJobTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new MediaJobTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

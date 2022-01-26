@@ -22,11 +22,11 @@ export interface RouteFilterConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_filter#rule RouteFilter#rule}
   */
-  readonly rule?: RouteFilterRule[];
+  readonly rule?: RouteFilterRule[] | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_filter#tags RouteFilter#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   * 
@@ -53,8 +53,8 @@ export interface RouteFilterRule {
   readonly ruleType?: string;
 }
 
-export function routeFilterRuleToTerraform(struct?: RouteFilterRule): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function routeFilterRuleToTerraform(struct?: RouteFilterRule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -85,8 +85,8 @@ export interface RouteFilterTimeouts {
   readonly update?: string;
 }
 
-export function routeFilterTimeoutsToTerraform(struct?: RouteFilterTimeoutsOutputReference | RouteFilterTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function routeFilterTimeoutsToTerraform(struct?: RouteFilterTimeoutsOutputReference | RouteFilterTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -106,7 +106,7 @@ export class RouteFilterTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -303,12 +303,12 @@ export class RouteFilter extends cdktf.TerraformResource {
   }
 
   // rule - computed: true, optional: true, required: false
-  private _rule?: RouteFilterRule[]; 
+  private _rule?: RouteFilterRule[] | cdktf.IResolvable; 
   public get rule() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('rule') as any;
+    return this.interpolationForAttribute('rule');
   }
-  public set rule(value: RouteFilterRule[]) {
+  public set rule(value: RouteFilterRule[] | cdktf.IResolvable) {
     this._rule = value;
   }
   public resetRule() {
@@ -320,12 +320,11 @@ export class RouteFilter extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -337,7 +336,7 @@ export class RouteFilter extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new RouteFilterTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new RouteFilterTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -362,7 +361,7 @@ export class RouteFilter extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       rule: cdktf.listMapper(routeFilterRuleToTerraform)(this._rule),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       timeouts: routeFilterTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

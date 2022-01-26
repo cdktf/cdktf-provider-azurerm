@@ -34,7 +34,7 @@ export interface BackupProtectedVmConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_protected_vm#tags BackupProtectedVm#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   * 
@@ -61,8 +61,8 @@ export interface BackupProtectedVmTimeouts {
   readonly update?: string;
 }
 
-export function backupProtectedVmTimeoutsToTerraform(struct?: BackupProtectedVmTimeoutsOutputReference | BackupProtectedVmTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function backupProtectedVmTimeoutsToTerraform(struct?: BackupProtectedVmTimeoutsOutputReference | BackupProtectedVmTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -82,7 +82,7 @@ export class BackupProtectedVmTimeoutsOutputReference extends cdktf.ComplexObjec
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -252,8 +252,7 @@ export class BackupProtectedVm extends cdktf.TerraformResource {
   // exclude_disk_luns - computed: false, optional: true, required: false
   private _excludeDiskLuns?: number[]; 
   public get excludeDiskLuns() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('exclude_disk_luns') as any;
+    return cdktf.Token.asNumberList(cdktf.Fn.tolist(this.getNumberListAttribute('exclude_disk_luns')));
   }
   public set excludeDiskLuns(value: number[]) {
     this._excludeDiskLuns = value;
@@ -274,8 +273,7 @@ export class BackupProtectedVm extends cdktf.TerraformResource {
   // include_disk_luns - computed: false, optional: true, required: false
   private _includeDiskLuns?: number[]; 
   public get includeDiskLuns() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('include_disk_luns') as any;
+    return cdktf.Token.asNumberList(cdktf.Fn.tolist(this.getNumberListAttribute('include_disk_luns')));
   }
   public set includeDiskLuns(value: number[]) {
     this._includeDiskLuns = value;
@@ -328,12 +326,11 @@ export class BackupProtectedVm extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -345,7 +342,7 @@ export class BackupProtectedVm extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new BackupProtectedVmTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new BackupProtectedVmTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -372,7 +369,7 @@ export class BackupProtectedVm extends cdktf.TerraformResource {
       recovery_vault_name: cdktf.stringToTerraform(this._recoveryVaultName),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       source_vm_id: cdktf.stringToTerraform(this._sourceVmId),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       timeouts: backupProtectedVmTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

@@ -85,8 +85,8 @@ export interface KustoEventgridDataConnectionTimeouts {
   readonly update?: string;
 }
 
-export function kustoEventgridDataConnectionTimeoutsToTerraform(struct?: KustoEventgridDataConnectionTimeoutsOutputReference | KustoEventgridDataConnectionTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function kustoEventgridDataConnectionTimeoutsToTerraform(struct?: KustoEventgridDataConnectionTimeoutsOutputReference | KustoEventgridDataConnectionTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -106,7 +106,7 @@ export class KustoEventgridDataConnectionTimeoutsOutputReference extends cdktf.C
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -413,7 +413,7 @@ export class KustoEventgridDataConnection extends cdktf.TerraformResource {
   // skip_first_record - computed: false, optional: true, required: false
   private _skipFirstRecord?: boolean | cdktf.IResolvable; 
   public get skipFirstRecord() {
-    return this.getBooleanAttribute('skip_first_record') as any;
+    return this.getBooleanAttribute('skip_first_record');
   }
   public set skipFirstRecord(value: boolean | cdktf.IResolvable) {
     this._skipFirstRecord = value;
@@ -456,7 +456,7 @@ export class KustoEventgridDataConnection extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new KustoEventgridDataConnectionTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new KustoEventgridDataConnectionTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

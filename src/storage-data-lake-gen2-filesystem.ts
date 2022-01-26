@@ -14,7 +14,7 @@ export interface StorageDataLakeGen2FilesystemConfig extends cdktf.TerraformMeta
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_data_lake_gen2_filesystem#properties StorageDataLakeGen2Filesystem#properties}
   */
-  readonly properties?: { [key: string]: string } | cdktf.IResolvable;
+  readonly properties?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_data_lake_gen2_filesystem#storage_account_id StorageDataLakeGen2Filesystem#storage_account_id}
   */
@@ -24,7 +24,7 @@ export interface StorageDataLakeGen2FilesystemConfig extends cdktf.TerraformMeta
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_data_lake_gen2_filesystem#ace StorageDataLakeGen2Filesystem#ace}
   */
-  readonly ace?: StorageDataLakeGen2FilesystemAce[];
+  readonly ace?: StorageDataLakeGen2FilesystemAce[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -51,8 +51,8 @@ export interface StorageDataLakeGen2FilesystemAce {
   readonly type: string;
 }
 
-export function storageDataLakeGen2FilesystemAceToTerraform(struct?: StorageDataLakeGen2FilesystemAce): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function storageDataLakeGen2FilesystemAceToTerraform(struct?: StorageDataLakeGen2FilesystemAce | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -83,8 +83,8 @@ export interface StorageDataLakeGen2FilesystemTimeouts {
   readonly update?: string;
 }
 
-export function storageDataLakeGen2FilesystemTimeoutsToTerraform(struct?: StorageDataLakeGen2FilesystemTimeoutsOutputReference | StorageDataLakeGen2FilesystemTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function storageDataLakeGen2FilesystemTimeoutsToTerraform(struct?: StorageDataLakeGen2FilesystemTimeoutsOutputReference | StorageDataLakeGen2FilesystemTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -104,7 +104,7 @@ export class StorageDataLakeGen2FilesystemTimeoutsOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -274,12 +274,11 @@ export class StorageDataLakeGen2Filesystem extends cdktf.TerraformResource {
   }
 
   // properties - computed: false, optional: true, required: false
-  private _properties?: { [key: string]: string } | cdktf.IResolvable; 
+  private _properties?: { [key: string]: string }; 
   public get properties() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('properties') as any;
+    return this.getStringMapAttribute('properties');
   }
-  public set properties(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set properties(value: { [key: string]: string }) {
     this._properties = value;
   }
   public resetProperties() {
@@ -304,12 +303,12 @@ export class StorageDataLakeGen2Filesystem extends cdktf.TerraformResource {
   }
 
   // ace - computed: false, optional: true, required: false
-  private _ace?: StorageDataLakeGen2FilesystemAce[]; 
+  private _ace?: StorageDataLakeGen2FilesystemAce[] | cdktf.IResolvable; 
   public get ace() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('ace') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('ace')));
   }
-  public set ace(value: StorageDataLakeGen2FilesystemAce[]) {
+  public set ace(value: StorageDataLakeGen2FilesystemAce[] | cdktf.IResolvable) {
     this._ace = value;
   }
   public resetAce() {
@@ -321,7 +320,7 @@ export class StorageDataLakeGen2Filesystem extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new StorageDataLakeGen2FilesystemTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new StorageDataLakeGen2FilesystemTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -343,7 +342,7 @@ export class StorageDataLakeGen2Filesystem extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       name: cdktf.stringToTerraform(this._name),
-      properties: cdktf.hashMapper(cdktf.anyToTerraform)(this._properties),
+      properties: cdktf.hashMapper(cdktf.stringToTerraform)(this._properties),
       storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
       ace: cdktf.listMapper(storageDataLakeGen2FilesystemAceToTerraform)(this._ace),
       timeouts: storageDataLakeGen2FilesystemTimeoutsToTerraform(this._timeouts.internalValue),

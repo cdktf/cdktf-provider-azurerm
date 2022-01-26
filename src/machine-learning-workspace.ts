@@ -62,7 +62,7 @@ export interface MachineLearningWorkspaceConfig extends cdktf.TerraformMetaArgum
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_workspace#tags MachineLearningWorkspace#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * encryption block
   * 
@@ -94,7 +94,7 @@ export interface MachineLearningWorkspaceEncryption {
 }
 
 export function machineLearningWorkspaceEncryptionToTerraform(struct?: MachineLearningWorkspaceEncryptionOutputReference | MachineLearningWorkspaceEncryption): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -112,7 +112,7 @@ export class MachineLearningWorkspaceEncryptionOutputReference extends cdktf.Com
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -177,7 +177,7 @@ export interface MachineLearningWorkspaceIdentity {
 }
 
 export function machineLearningWorkspaceIdentityToTerraform(struct?: MachineLearningWorkspaceIdentityOutputReference | MachineLearningWorkspaceIdentity): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -194,7 +194,7 @@ export class MachineLearningWorkspaceIdentityOutputReference extends cdktf.Compl
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -217,6 +217,16 @@ export class MachineLearningWorkspaceIdentityOutputReference extends cdktf.Compl
       this.isEmptyObject = Object.keys(value).length === 0;
       this._type = value.type;
     }
+  }
+
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
   }
 
   // type - computed: false, optional: false, required: true
@@ -251,8 +261,8 @@ export interface MachineLearningWorkspaceTimeouts {
   readonly update?: string;
 }
 
-export function machineLearningWorkspaceTimeoutsToTerraform(struct?: MachineLearningWorkspaceTimeoutsOutputReference | MachineLearningWorkspaceTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function machineLearningWorkspaceTimeoutsToTerraform(struct?: MachineLearningWorkspaceTimeoutsOutputReference | MachineLearningWorkspaceTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -272,7 +282,7 @@ export class MachineLearningWorkspaceTimeoutsOutputReference extends cdktf.Compl
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -504,7 +514,7 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
   // high_business_impact - computed: false, optional: true, required: false
   private _highBusinessImpact?: boolean | cdktf.IResolvable; 
   public get highBusinessImpact() {
-    return this.getBooleanAttribute('high_business_impact') as any;
+    return this.getBooleanAttribute('high_business_impact');
   }
   public set highBusinessImpact(value: boolean | cdktf.IResolvable) {
     this._highBusinessImpact = value;
@@ -580,7 +590,7 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
   // public_network_access_enabled - computed: false, optional: true, required: false
   private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable; 
   public get publicNetworkAccessEnabled() {
-    return this.getBooleanAttribute('public_network_access_enabled') as any;
+    return this.getBooleanAttribute('public_network_access_enabled');
   }
   public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable) {
     this._publicNetworkAccessEnabled = value;
@@ -636,12 +646,11 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -653,7 +662,7 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
   }
 
   // encryption - computed: false, optional: true, required: false
-  private _encryption = new MachineLearningWorkspaceEncryptionOutputReference(this as any, "encryption", true);
+  private _encryption = new MachineLearningWorkspaceEncryptionOutputReference(this, "encryption", true);
   public get encryption() {
     return this._encryption;
   }
@@ -669,7 +678,7 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: false, required: true
-  private _identity = new MachineLearningWorkspaceIdentityOutputReference(this as any, "identity", true);
+  private _identity = new MachineLearningWorkspaceIdentityOutputReference(this, "identity", true);
   public get identity() {
     return this._identity;
   }
@@ -682,7 +691,7 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new MachineLearningWorkspaceTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new MachineLearningWorkspaceTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -716,7 +725,7 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku_name: cdktf.stringToTerraform(this._skuName),
       storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       encryption: machineLearningWorkspaceEncryptionToTerraform(this._encryption.internalValue),
       identity: machineLearningWorkspaceIdentityToTerraform(this._identity.internalValue),
       timeouts: machineLearningWorkspaceTimeoutsToTerraform(this._timeouts.internalValue),

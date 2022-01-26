@@ -58,13 +58,13 @@ export interface IotSecuritySolutionConfig extends cdktf.TerraformMetaArguments 
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution#tags IotSecuritySolution#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * additional_workspace block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution#additional_workspace IotSecuritySolution#additional_workspace}
   */
-  readonly additionalWorkspace?: IotSecuritySolutionAdditionalWorkspace[];
+  readonly additionalWorkspace?: IotSecuritySolutionAdditionalWorkspace[] | cdktf.IResolvable;
   /**
   * recommendations_enabled block
   * 
@@ -89,8 +89,8 @@ export interface IotSecuritySolutionAdditionalWorkspace {
   readonly workspaceId: string;
 }
 
-export function iotSecuritySolutionAdditionalWorkspaceToTerraform(struct?: IotSecuritySolutionAdditionalWorkspace): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function iotSecuritySolutionAdditionalWorkspaceToTerraform(struct?: IotSecuritySolutionAdditionalWorkspace | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -168,7 +168,7 @@ export interface IotSecuritySolutionRecommendationsEnabled {
 }
 
 export function iotSecuritySolutionRecommendationsEnabledToTerraform(struct?: IotSecuritySolutionRecommendationsEnabledOutputReference | IotSecuritySolutionRecommendationsEnabled): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -200,7 +200,7 @@ export class IotSecuritySolutionRecommendationsEnabledOutputReference extends cd
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -318,7 +318,7 @@ export class IotSecuritySolutionRecommendationsEnabledOutputReference extends cd
   // acr_authentication - computed: false, optional: true, required: false
   private _acrAuthentication?: boolean | cdktf.IResolvable; 
   public get acrAuthentication() {
-    return this.getBooleanAttribute('acr_authentication') as any;
+    return this.getBooleanAttribute('acr_authentication');
   }
   public set acrAuthentication(value: boolean | cdktf.IResolvable) {
     this._acrAuthentication = value;
@@ -334,7 +334,7 @@ export class IotSecuritySolutionRecommendationsEnabledOutputReference extends cd
   // agent_send_unutilized_msg - computed: false, optional: true, required: false
   private _agentSendUnutilizedMsg?: boolean | cdktf.IResolvable; 
   public get agentSendUnutilizedMsg() {
-    return this.getBooleanAttribute('agent_send_unutilized_msg') as any;
+    return this.getBooleanAttribute('agent_send_unutilized_msg');
   }
   public set agentSendUnutilizedMsg(value: boolean | cdktf.IResolvable) {
     this._agentSendUnutilizedMsg = value;
@@ -350,7 +350,7 @@ export class IotSecuritySolutionRecommendationsEnabledOutputReference extends cd
   // baseline - computed: false, optional: true, required: false
   private _baseline?: boolean | cdktf.IResolvable; 
   public get baseline() {
-    return this.getBooleanAttribute('baseline') as any;
+    return this.getBooleanAttribute('baseline');
   }
   public set baseline(value: boolean | cdktf.IResolvable) {
     this._baseline = value;
@@ -366,7 +366,7 @@ export class IotSecuritySolutionRecommendationsEnabledOutputReference extends cd
   // edge_hub_mem_optimize - computed: false, optional: true, required: false
   private _edgeHubMemOptimize?: boolean | cdktf.IResolvable; 
   public get edgeHubMemOptimize() {
-    return this.getBooleanAttribute('edge_hub_mem_optimize') as any;
+    return this.getBooleanAttribute('edge_hub_mem_optimize');
   }
   public set edgeHubMemOptimize(value: boolean | cdktf.IResolvable) {
     this._edgeHubMemOptimize = value;
@@ -382,7 +382,7 @@ export class IotSecuritySolutionRecommendationsEnabledOutputReference extends cd
   // edge_logging_option - computed: false, optional: true, required: false
   private _edgeLoggingOption?: boolean | cdktf.IResolvable; 
   public get edgeLoggingOption() {
-    return this.getBooleanAttribute('edge_logging_option') as any;
+    return this.getBooleanAttribute('edge_logging_option');
   }
   public set edgeLoggingOption(value: boolean | cdktf.IResolvable) {
     this._edgeLoggingOption = value;
@@ -398,7 +398,7 @@ export class IotSecuritySolutionRecommendationsEnabledOutputReference extends cd
   // inconsistent_module_settings - computed: false, optional: true, required: false
   private _inconsistentModuleSettings?: boolean | cdktf.IResolvable; 
   public get inconsistentModuleSettings() {
-    return this.getBooleanAttribute('inconsistent_module_settings') as any;
+    return this.getBooleanAttribute('inconsistent_module_settings');
   }
   public set inconsistentModuleSettings(value: boolean | cdktf.IResolvable) {
     this._inconsistentModuleSettings = value;
@@ -414,7 +414,7 @@ export class IotSecuritySolutionRecommendationsEnabledOutputReference extends cd
   // install_agent - computed: false, optional: true, required: false
   private _installAgent?: boolean | cdktf.IResolvable; 
   public get installAgent() {
-    return this.getBooleanAttribute('install_agent') as any;
+    return this.getBooleanAttribute('install_agent');
   }
   public set installAgent(value: boolean | cdktf.IResolvable) {
     this._installAgent = value;
@@ -430,7 +430,7 @@ export class IotSecuritySolutionRecommendationsEnabledOutputReference extends cd
   // ip_filter_deny_all - computed: false, optional: true, required: false
   private _ipFilterDenyAll?: boolean | cdktf.IResolvable; 
   public get ipFilterDenyAll() {
-    return this.getBooleanAttribute('ip_filter_deny_all') as any;
+    return this.getBooleanAttribute('ip_filter_deny_all');
   }
   public set ipFilterDenyAll(value: boolean | cdktf.IResolvable) {
     this._ipFilterDenyAll = value;
@@ -446,7 +446,7 @@ export class IotSecuritySolutionRecommendationsEnabledOutputReference extends cd
   // ip_filter_permissive_rule - computed: false, optional: true, required: false
   private _ipFilterPermissiveRule?: boolean | cdktf.IResolvable; 
   public get ipFilterPermissiveRule() {
-    return this.getBooleanAttribute('ip_filter_permissive_rule') as any;
+    return this.getBooleanAttribute('ip_filter_permissive_rule');
   }
   public set ipFilterPermissiveRule(value: boolean | cdktf.IResolvable) {
     this._ipFilterPermissiveRule = value;
@@ -462,7 +462,7 @@ export class IotSecuritySolutionRecommendationsEnabledOutputReference extends cd
   // open_ports - computed: false, optional: true, required: false
   private _openPorts?: boolean | cdktf.IResolvable; 
   public get openPorts() {
-    return this.getBooleanAttribute('open_ports') as any;
+    return this.getBooleanAttribute('open_ports');
   }
   public set openPorts(value: boolean | cdktf.IResolvable) {
     this._openPorts = value;
@@ -478,7 +478,7 @@ export class IotSecuritySolutionRecommendationsEnabledOutputReference extends cd
   // permissive_firewall_policy - computed: false, optional: true, required: false
   private _permissiveFirewallPolicy?: boolean | cdktf.IResolvable; 
   public get permissiveFirewallPolicy() {
-    return this.getBooleanAttribute('permissive_firewall_policy') as any;
+    return this.getBooleanAttribute('permissive_firewall_policy');
   }
   public set permissiveFirewallPolicy(value: boolean | cdktf.IResolvable) {
     this._permissiveFirewallPolicy = value;
@@ -494,7 +494,7 @@ export class IotSecuritySolutionRecommendationsEnabledOutputReference extends cd
   // permissive_input_firewall_rules - computed: false, optional: true, required: false
   private _permissiveInputFirewallRules?: boolean | cdktf.IResolvable; 
   public get permissiveInputFirewallRules() {
-    return this.getBooleanAttribute('permissive_input_firewall_rules') as any;
+    return this.getBooleanAttribute('permissive_input_firewall_rules');
   }
   public set permissiveInputFirewallRules(value: boolean | cdktf.IResolvable) {
     this._permissiveInputFirewallRules = value;
@@ -510,7 +510,7 @@ export class IotSecuritySolutionRecommendationsEnabledOutputReference extends cd
   // permissive_output_firewall_rules - computed: false, optional: true, required: false
   private _permissiveOutputFirewallRules?: boolean | cdktf.IResolvable; 
   public get permissiveOutputFirewallRules() {
-    return this.getBooleanAttribute('permissive_output_firewall_rules') as any;
+    return this.getBooleanAttribute('permissive_output_firewall_rules');
   }
   public set permissiveOutputFirewallRules(value: boolean | cdktf.IResolvable) {
     this._permissiveOutputFirewallRules = value;
@@ -526,7 +526,7 @@ export class IotSecuritySolutionRecommendationsEnabledOutputReference extends cd
   // privileged_docker_options - computed: false, optional: true, required: false
   private _privilegedDockerOptions?: boolean | cdktf.IResolvable; 
   public get privilegedDockerOptions() {
-    return this.getBooleanAttribute('privileged_docker_options') as any;
+    return this.getBooleanAttribute('privileged_docker_options');
   }
   public set privilegedDockerOptions(value: boolean | cdktf.IResolvable) {
     this._privilegedDockerOptions = value;
@@ -542,7 +542,7 @@ export class IotSecuritySolutionRecommendationsEnabledOutputReference extends cd
   // shared_credentials - computed: false, optional: true, required: false
   private _sharedCredentials?: boolean | cdktf.IResolvable; 
   public get sharedCredentials() {
-    return this.getBooleanAttribute('shared_credentials') as any;
+    return this.getBooleanAttribute('shared_credentials');
   }
   public set sharedCredentials(value: boolean | cdktf.IResolvable) {
     this._sharedCredentials = value;
@@ -558,7 +558,7 @@ export class IotSecuritySolutionRecommendationsEnabledOutputReference extends cd
   // vulnerable_tls_cipher_suite - computed: false, optional: true, required: false
   private _vulnerableTlsCipherSuite?: boolean | cdktf.IResolvable; 
   public get vulnerableTlsCipherSuite() {
-    return this.getBooleanAttribute('vulnerable_tls_cipher_suite') as any;
+    return this.getBooleanAttribute('vulnerable_tls_cipher_suite');
   }
   public set vulnerableTlsCipherSuite(value: boolean | cdktf.IResolvable) {
     this._vulnerableTlsCipherSuite = value;
@@ -590,8 +590,8 @@ export interface IotSecuritySolutionTimeouts {
   readonly update?: string;
 }
 
-export function iotSecuritySolutionTimeoutsToTerraform(struct?: IotSecuritySolutionTimeoutsOutputReference | IotSecuritySolutionTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function iotSecuritySolutionTimeoutsToTerraform(struct?: IotSecuritySolutionTimeoutsOutputReference | IotSecuritySolutionTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -611,7 +611,7 @@ export class IotSecuritySolutionTimeoutsOutputReference extends cdktf.ComplexObj
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -776,7 +776,7 @@ export class IotSecuritySolution extends cdktf.TerraformResource {
   // disabled_data_sources - computed: false, optional: true, required: false
   private _disabledDataSources?: string[]; 
   public get disabledDataSources() {
-    return this.getListAttribute('disabled_data_sources');
+    return cdktf.Fn.tolist(this.getListAttribute('disabled_data_sources'));
   }
   public set disabledDataSources(value: string[]) {
     this._disabledDataSources = value;
@@ -805,7 +805,7 @@ export class IotSecuritySolution extends cdktf.TerraformResource {
   // enabled - computed: false, optional: true, required: false
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
@@ -821,7 +821,7 @@ export class IotSecuritySolution extends cdktf.TerraformResource {
   // events_to_export - computed: false, optional: true, required: false
   private _eventsToExport?: string[]; 
   public get eventsToExport() {
-    return this.getListAttribute('events_to_export');
+    return cdktf.Fn.tolist(this.getListAttribute('events_to_export'));
   }
   public set eventsToExport(value: string[]) {
     this._eventsToExport = value;
@@ -842,7 +842,7 @@ export class IotSecuritySolution extends cdktf.TerraformResource {
   // iothub_ids - computed: false, optional: false, required: true
   private _iothubIds?: string[]; 
   public get iothubIds() {
-    return this.getListAttribute('iothub_ids');
+    return cdktf.Fn.tolist(this.getListAttribute('iothub_ids'));
   }
   public set iothubIds(value: string[]) {
     this._iothubIds = value;
@@ -884,7 +884,7 @@ export class IotSecuritySolution extends cdktf.TerraformResource {
   // log_unmasked_ips_enabled - computed: false, optional: true, required: false
   private _logUnmaskedIpsEnabled?: boolean | cdktf.IResolvable; 
   public get logUnmaskedIpsEnabled() {
-    return this.getBooleanAttribute('log_unmasked_ips_enabled') as any;
+    return this.getBooleanAttribute('log_unmasked_ips_enabled');
   }
   public set logUnmaskedIpsEnabled(value: boolean | cdktf.IResolvable) {
     this._logUnmaskedIpsEnabled = value;
@@ -929,7 +929,7 @@ export class IotSecuritySolution extends cdktf.TerraformResource {
   // query_subscription_ids - computed: true, optional: true, required: false
   private _querySubscriptionIds?: string[]; 
   public get querySubscriptionIds() {
-    return this.getListAttribute('query_subscription_ids');
+    return cdktf.Fn.tolist(this.getListAttribute('query_subscription_ids'));
   }
   public set querySubscriptionIds(value: string[]) {
     this._querySubscriptionIds = value;
@@ -956,12 +956,11 @@ export class IotSecuritySolution extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -973,12 +972,12 @@ export class IotSecuritySolution extends cdktf.TerraformResource {
   }
 
   // additional_workspace - computed: false, optional: true, required: false
-  private _additionalWorkspace?: IotSecuritySolutionAdditionalWorkspace[]; 
+  private _additionalWorkspace?: IotSecuritySolutionAdditionalWorkspace[] | cdktf.IResolvable; 
   public get additionalWorkspace() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('additional_workspace') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('additional_workspace')));
   }
-  public set additionalWorkspace(value: IotSecuritySolutionAdditionalWorkspace[]) {
+  public set additionalWorkspace(value: IotSecuritySolutionAdditionalWorkspace[] | cdktf.IResolvable) {
     this._additionalWorkspace = value;
   }
   public resetAdditionalWorkspace() {
@@ -990,7 +989,7 @@ export class IotSecuritySolution extends cdktf.TerraformResource {
   }
 
   // recommendations_enabled - computed: false, optional: true, required: false
-  private _recommendationsEnabled = new IotSecuritySolutionRecommendationsEnabledOutputReference(this as any, "recommendations_enabled", true);
+  private _recommendationsEnabled = new IotSecuritySolutionRecommendationsEnabledOutputReference(this, "recommendations_enabled", true);
   public get recommendationsEnabled() {
     return this._recommendationsEnabled;
   }
@@ -1006,7 +1005,7 @@ export class IotSecuritySolution extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new IotSecuritySolutionTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new IotSecuritySolutionTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -1039,7 +1038,7 @@ export class IotSecuritySolution extends cdktf.TerraformResource {
       query_for_resources: cdktf.stringToTerraform(this._queryForResources),
       query_subscription_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._querySubscriptionIds),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       additional_workspace: cdktf.listMapper(iotSecuritySolutionAdditionalWorkspaceToTerraform)(this._additionalWorkspace),
       recommendations_enabled: iotSecuritySolutionRecommendationsEnabledToTerraform(this._recommendationsEnabled.internalValue),
       timeouts: iotSecuritySolutionTimeoutsToTerraform(this._timeouts.internalValue),

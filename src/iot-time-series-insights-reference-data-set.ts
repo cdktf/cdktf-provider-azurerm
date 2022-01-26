@@ -22,7 +22,7 @@ export interface IotTimeSeriesInsightsReferenceDataSetConfig extends cdktf.Terra
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_reference_data_set#tags IotTimeSeriesInsightsReferenceDataSet#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_reference_data_set#time_series_insights_environment_id IotTimeSeriesInsightsReferenceDataSet#time_series_insights_environment_id}
   */
@@ -32,7 +32,7 @@ export interface IotTimeSeriesInsightsReferenceDataSetConfig extends cdktf.Terra
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_reference_data_set#key_property IotTimeSeriesInsightsReferenceDataSet#key_property}
   */
-  readonly keyProperty: IotTimeSeriesInsightsReferenceDataSetKeyProperty[];
+  readonly keyProperty: IotTimeSeriesInsightsReferenceDataSetKeyProperty[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -51,8 +51,8 @@ export interface IotTimeSeriesInsightsReferenceDataSetKeyProperty {
   readonly type: string;
 }
 
-export function iotTimeSeriesInsightsReferenceDataSetKeyPropertyToTerraform(struct?: IotTimeSeriesInsightsReferenceDataSetKeyProperty): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function iotTimeSeriesInsightsReferenceDataSetKeyPropertyToTerraform(struct?: IotTimeSeriesInsightsReferenceDataSetKeyProperty | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -81,8 +81,8 @@ export interface IotTimeSeriesInsightsReferenceDataSetTimeouts {
   readonly update?: string;
 }
 
-export function iotTimeSeriesInsightsReferenceDataSetTimeoutsToTerraform(struct?: IotTimeSeriesInsightsReferenceDataSetTimeoutsOutputReference | IotTimeSeriesInsightsReferenceDataSetTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function iotTimeSeriesInsightsReferenceDataSetTimeoutsToTerraform(struct?: IotTimeSeriesInsightsReferenceDataSetTimeoutsOutputReference | IotTimeSeriesInsightsReferenceDataSetTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -102,7 +102,7 @@ export class IotTimeSeriesInsightsReferenceDataSetTimeoutsOutputReference extend
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -303,12 +303,11 @@ export class IotTimeSeriesInsightsReferenceDataSet extends cdktf.TerraformResour
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -333,12 +332,12 @@ export class IotTimeSeriesInsightsReferenceDataSet extends cdktf.TerraformResour
   }
 
   // key_property - computed: false, optional: false, required: true
-  private _keyProperty?: IotTimeSeriesInsightsReferenceDataSetKeyProperty[]; 
+  private _keyProperty?: IotTimeSeriesInsightsReferenceDataSetKeyProperty[] | cdktf.IResolvable; 
   public get keyProperty() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('key_property') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('key_property')));
   }
-  public set keyProperty(value: IotTimeSeriesInsightsReferenceDataSetKeyProperty[]) {
+  public set keyProperty(value: IotTimeSeriesInsightsReferenceDataSetKeyProperty[] | cdktf.IResolvable) {
     this._keyProperty = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -347,7 +346,7 @@ export class IotTimeSeriesInsightsReferenceDataSet extends cdktf.TerraformResour
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new IotTimeSeriesInsightsReferenceDataSetTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new IotTimeSeriesInsightsReferenceDataSetTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -371,7 +370,7 @@ export class IotTimeSeriesInsightsReferenceDataSet extends cdktf.TerraformResour
       data_string_comparison_behavior: cdktf.stringToTerraform(this._dataStringComparisonBehavior),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       time_series_insights_environment_id: cdktf.stringToTerraform(this._timeSeriesInsightsEnvironmentId),
       key_property: cdktf.listMapper(iotTimeSeriesInsightsReferenceDataSetKeyPropertyToTerraform)(this._keyProperty),
       timeouts: iotTimeSeriesInsightsReferenceDataSetTimeoutsToTerraform(this._timeouts.internalValue),

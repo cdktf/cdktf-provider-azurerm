@@ -30,7 +30,7 @@ export interface HdinsightSparkClusterConfig extends cdktf.TerraformMetaArgument
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_spark_cluster#tags HdinsightSparkCluster#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_spark_cluster#tier HdinsightSparkCluster#tier}
   */
@@ -86,7 +86,7 @@ export interface HdinsightSparkClusterConfig extends cdktf.TerraformMetaArgument
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_spark_cluster#storage_account HdinsightSparkCluster#storage_account}
   */
-  readonly storageAccount?: HdinsightSparkClusterStorageAccount[];
+  readonly storageAccount?: HdinsightSparkClusterStorageAccount[] | cdktf.IResolvable;
   /**
   * storage_account_gen2 block
   * 
@@ -108,7 +108,7 @@ export interface HdinsightSparkClusterComponentVersion {
 }
 
 export function hdinsightSparkClusterComponentVersionToTerraform(struct?: HdinsightSparkClusterComponentVersionOutputReference | HdinsightSparkClusterComponentVersion): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -125,7 +125,7 @@ export class HdinsightSparkClusterComponentVersionOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -179,7 +179,7 @@ export interface HdinsightSparkClusterGateway {
 }
 
 export function hdinsightSparkClusterGatewayToTerraform(struct?: HdinsightSparkClusterGatewayOutputReference | HdinsightSparkClusterGateway): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -198,7 +198,7 @@ export class HdinsightSparkClusterGatewayOutputReference extends cdktf.ComplexOb
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -238,7 +238,7 @@ export class HdinsightSparkClusterGatewayOutputReference extends cdktf.ComplexOb
   // enabled - computed: false, optional: true, required: false
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
@@ -297,7 +297,7 @@ export interface HdinsightSparkClusterMetastoresAmbari {
 }
 
 export function hdinsightSparkClusterMetastoresAmbariToTerraform(struct?: HdinsightSparkClusterMetastoresAmbariOutputReference | HdinsightSparkClusterMetastoresAmbari): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -317,7 +317,7 @@ export class HdinsightSparkClusterMetastoresAmbariOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -432,7 +432,7 @@ export interface HdinsightSparkClusterMetastoresHive {
 }
 
 export function hdinsightSparkClusterMetastoresHiveToTerraform(struct?: HdinsightSparkClusterMetastoresHiveOutputReference | HdinsightSparkClusterMetastoresHive): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -452,7 +452,7 @@ export class HdinsightSparkClusterMetastoresHiveOutputReference extends cdktf.Co
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -567,7 +567,7 @@ export interface HdinsightSparkClusterMetastoresOozie {
 }
 
 export function hdinsightSparkClusterMetastoresOozieToTerraform(struct?: HdinsightSparkClusterMetastoresOozieOutputReference | HdinsightSparkClusterMetastoresOozie): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -587,7 +587,7 @@ export class HdinsightSparkClusterMetastoresOozieOutputReference extends cdktf.C
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -704,7 +704,7 @@ export interface HdinsightSparkClusterMetastores {
 }
 
 export function hdinsightSparkClusterMetastoresToTerraform(struct?: HdinsightSparkClusterMetastoresOutputReference | HdinsightSparkClusterMetastores): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -723,7 +723,7 @@ export class HdinsightSparkClusterMetastoresOutputReference extends cdktf.Comple
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -761,7 +761,7 @@ export class HdinsightSparkClusterMetastoresOutputReference extends cdktf.Comple
   }
 
   // ambari - computed: false, optional: true, required: false
-  private _ambari = new HdinsightSparkClusterMetastoresAmbariOutputReference(this as any, "ambari", true);
+  private _ambari = new HdinsightSparkClusterMetastoresAmbariOutputReference(this, "ambari", true);
   public get ambari() {
     return this._ambari;
   }
@@ -777,7 +777,7 @@ export class HdinsightSparkClusterMetastoresOutputReference extends cdktf.Comple
   }
 
   // hive - computed: false, optional: true, required: false
-  private _hive = new HdinsightSparkClusterMetastoresHiveOutputReference(this as any, "hive", true);
+  private _hive = new HdinsightSparkClusterMetastoresHiveOutputReference(this, "hive", true);
   public get hive() {
     return this._hive;
   }
@@ -793,7 +793,7 @@ export class HdinsightSparkClusterMetastoresOutputReference extends cdktf.Comple
   }
 
   // oozie - computed: false, optional: true, required: false
-  private _oozie = new HdinsightSparkClusterMetastoresOozieOutputReference(this as any, "oozie", true);
+  private _oozie = new HdinsightSparkClusterMetastoresOozieOutputReference(this, "oozie", true);
   public get oozie() {
     return this._oozie;
   }
@@ -820,7 +820,7 @@ export interface HdinsightSparkClusterMonitor {
 }
 
 export function hdinsightSparkClusterMonitorToTerraform(struct?: HdinsightSparkClusterMonitorOutputReference | HdinsightSparkClusterMonitor): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -838,7 +838,7 @@ export class HdinsightSparkClusterMonitorOutputReference extends cdktf.ComplexOb
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -907,7 +907,7 @@ export interface HdinsightSparkClusterNetwork {
 }
 
 export function hdinsightSparkClusterNetworkToTerraform(struct?: HdinsightSparkClusterNetworkOutputReference | HdinsightSparkClusterNetwork): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -925,7 +925,7 @@ export class HdinsightSparkClusterNetworkOutputReference extends cdktf.ComplexOb
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -975,7 +975,7 @@ export class HdinsightSparkClusterNetworkOutputReference extends cdktf.ComplexOb
   // private_link_enabled - computed: false, optional: true, required: false
   private _privateLinkEnabled?: boolean | cdktf.IResolvable; 
   public get privateLinkEnabled() {
-    return this.getBooleanAttribute('private_link_enabled') as any;
+    return this.getBooleanAttribute('private_link_enabled');
   }
   public set privateLinkEnabled(value: boolean | cdktf.IResolvable) {
     this._privateLinkEnabled = value;
@@ -1016,7 +1016,7 @@ export interface HdinsightSparkClusterRolesHeadNode {
 }
 
 export function hdinsightSparkClusterRolesHeadNodeToTerraform(struct?: HdinsightSparkClusterRolesHeadNodeOutputReference | HdinsightSparkClusterRolesHeadNode): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1038,7 +1038,7 @@ export class HdinsightSparkClusterRolesHeadNodeOutputReference extends cdktf.Com
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1112,7 +1112,7 @@ export class HdinsightSparkClusterRolesHeadNodeOutputReference extends cdktf.Com
   // ssh_keys - computed: false, optional: true, required: false
   private _sshKeys?: string[]; 
   public get sshKeys() {
-    return this.getListAttribute('ssh_keys');
+    return cdktf.Fn.tolist(this.getListAttribute('ssh_keys'));
   }
   public set sshKeys(value: string[]) {
     this._sshKeys = value;
@@ -1195,7 +1195,7 @@ export interface HdinsightSparkClusterRolesWorkerNodeAutoscaleCapacity {
 }
 
 export function hdinsightSparkClusterRolesWorkerNodeAutoscaleCapacityToTerraform(struct?: HdinsightSparkClusterRolesWorkerNodeAutoscaleCapacityOutputReference | HdinsightSparkClusterRolesWorkerNodeAutoscaleCapacity): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1213,7 +1213,7 @@ export class HdinsightSparkClusterRolesWorkerNodeAutoscaleCapacityOutputReferenc
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1285,8 +1285,8 @@ export interface HdinsightSparkClusterRolesWorkerNodeAutoscaleRecurrenceSchedule
   readonly time: string;
 }
 
-export function hdinsightSparkClusterRolesWorkerNodeAutoscaleRecurrenceScheduleToTerraform(struct?: HdinsightSparkClusterRolesWorkerNodeAutoscaleRecurrenceSchedule): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function hdinsightSparkClusterRolesWorkerNodeAutoscaleRecurrenceScheduleToTerraform(struct?: HdinsightSparkClusterRolesWorkerNodeAutoscaleRecurrenceSchedule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1307,11 +1307,11 @@ export interface HdinsightSparkClusterRolesWorkerNodeAutoscaleRecurrence {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_spark_cluster#schedule HdinsightSparkCluster#schedule}
   */
-  readonly schedule: HdinsightSparkClusterRolesWorkerNodeAutoscaleRecurrenceSchedule[];
+  readonly schedule: HdinsightSparkClusterRolesWorkerNodeAutoscaleRecurrenceSchedule[] | cdktf.IResolvable;
 }
 
 export function hdinsightSparkClusterRolesWorkerNodeAutoscaleRecurrenceToTerraform(struct?: HdinsightSparkClusterRolesWorkerNodeAutoscaleRecurrenceOutputReference | HdinsightSparkClusterRolesWorkerNodeAutoscaleRecurrence): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1329,7 +1329,7 @@ export class HdinsightSparkClusterRolesWorkerNodeAutoscaleRecurrenceOutputRefere
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1374,12 +1374,12 @@ export class HdinsightSparkClusterRolesWorkerNodeAutoscaleRecurrenceOutputRefere
   }
 
   // schedule - computed: false, optional: false, required: true
-  private _schedule?: HdinsightSparkClusterRolesWorkerNodeAutoscaleRecurrenceSchedule[]; 
+  private _schedule?: HdinsightSparkClusterRolesWorkerNodeAutoscaleRecurrenceSchedule[] | cdktf.IResolvable; 
   public get schedule() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('schedule') as any;
+    return this.interpolationForAttribute('schedule');
   }
-  public set schedule(value: HdinsightSparkClusterRolesWorkerNodeAutoscaleRecurrenceSchedule[]) {
+  public set schedule(value: HdinsightSparkClusterRolesWorkerNodeAutoscaleRecurrenceSchedule[] | cdktf.IResolvable) {
     this._schedule = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -1403,7 +1403,7 @@ export interface HdinsightSparkClusterRolesWorkerNodeAutoscale {
 }
 
 export function hdinsightSparkClusterRolesWorkerNodeAutoscaleToTerraform(struct?: HdinsightSparkClusterRolesWorkerNodeAutoscaleOutputReference | HdinsightSparkClusterRolesWorkerNodeAutoscale): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1421,7 +1421,7 @@ export class HdinsightSparkClusterRolesWorkerNodeAutoscaleOutputReference extend
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1453,7 +1453,7 @@ export class HdinsightSparkClusterRolesWorkerNodeAutoscaleOutputReference extend
   }
 
   // capacity - computed: false, optional: true, required: false
-  private _capacity = new HdinsightSparkClusterRolesWorkerNodeAutoscaleCapacityOutputReference(this as any, "capacity", true);
+  private _capacity = new HdinsightSparkClusterRolesWorkerNodeAutoscaleCapacityOutputReference(this, "capacity", true);
   public get capacity() {
     return this._capacity;
   }
@@ -1469,7 +1469,7 @@ export class HdinsightSparkClusterRolesWorkerNodeAutoscaleOutputReference extend
   }
 
   // recurrence - computed: false, optional: true, required: false
-  private _recurrence = new HdinsightSparkClusterRolesWorkerNodeAutoscaleRecurrenceOutputReference(this as any, "recurrence", true);
+  private _recurrence = new HdinsightSparkClusterRolesWorkerNodeAutoscaleRecurrenceOutputReference(this, "recurrence", true);
   public get recurrence() {
     return this._recurrence;
   }
@@ -1526,7 +1526,7 @@ export interface HdinsightSparkClusterRolesWorkerNode {
 }
 
 export function hdinsightSparkClusterRolesWorkerNodeToTerraform(struct?: HdinsightSparkClusterRolesWorkerNodeOutputReference | HdinsightSparkClusterRolesWorkerNode): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1551,7 +1551,7 @@ export class HdinsightSparkClusterRolesWorkerNodeOutputReference extends cdktf.C
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1659,7 +1659,7 @@ export class HdinsightSparkClusterRolesWorkerNodeOutputReference extends cdktf.C
   // ssh_keys - computed: false, optional: true, required: false
   private _sshKeys?: string[]; 
   public get sshKeys() {
-    return this.getListAttribute('ssh_keys');
+    return cdktf.Fn.tolist(this.getListAttribute('ssh_keys'));
   }
   public set sshKeys(value: string[]) {
     this._sshKeys = value;
@@ -1744,7 +1744,7 @@ export class HdinsightSparkClusterRolesWorkerNodeOutputReference extends cdktf.C
   }
 
   // autoscale - computed: false, optional: true, required: false
-  private _autoscale = new HdinsightSparkClusterRolesWorkerNodeAutoscaleOutputReference(this as any, "autoscale", true);
+  private _autoscale = new HdinsightSparkClusterRolesWorkerNodeAutoscaleOutputReference(this, "autoscale", true);
   public get autoscale() {
     return this._autoscale;
   }
@@ -1787,7 +1787,7 @@ export interface HdinsightSparkClusterRolesZookeeperNode {
 }
 
 export function hdinsightSparkClusterRolesZookeeperNodeToTerraform(struct?: HdinsightSparkClusterRolesZookeeperNodeOutputReference | HdinsightSparkClusterRolesZookeeperNode): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1809,7 +1809,7 @@ export class HdinsightSparkClusterRolesZookeeperNodeOutputReference extends cdkt
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1883,7 +1883,7 @@ export class HdinsightSparkClusterRolesZookeeperNodeOutputReference extends cdkt
   // ssh_keys - computed: false, optional: true, required: false
   private _sshKeys?: string[]; 
   public get sshKeys() {
-    return this.getListAttribute('ssh_keys');
+    return cdktf.Fn.tolist(this.getListAttribute('ssh_keys'));
   }
   public set sshKeys(value: string[]) {
     this._sshKeys = value;
@@ -1976,7 +1976,7 @@ export interface HdinsightSparkClusterRoles {
 }
 
 export function hdinsightSparkClusterRolesToTerraform(struct?: HdinsightSparkClusterRolesOutputReference | HdinsightSparkClusterRoles): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1995,7 +1995,7 @@ export class HdinsightSparkClusterRolesOutputReference extends cdktf.ComplexObje
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -2033,7 +2033,7 @@ export class HdinsightSparkClusterRolesOutputReference extends cdktf.ComplexObje
   }
 
   // head_node - computed: false, optional: false, required: true
-  private _headNode = new HdinsightSparkClusterRolesHeadNodeOutputReference(this as any, "head_node", true);
+  private _headNode = new HdinsightSparkClusterRolesHeadNodeOutputReference(this, "head_node", true);
   public get headNode() {
     return this._headNode;
   }
@@ -2046,7 +2046,7 @@ export class HdinsightSparkClusterRolesOutputReference extends cdktf.ComplexObje
   }
 
   // worker_node - computed: false, optional: false, required: true
-  private _workerNode = new HdinsightSparkClusterRolesWorkerNodeOutputReference(this as any, "worker_node", true);
+  private _workerNode = new HdinsightSparkClusterRolesWorkerNodeOutputReference(this, "worker_node", true);
   public get workerNode() {
     return this._workerNode;
   }
@@ -2059,7 +2059,7 @@ export class HdinsightSparkClusterRolesOutputReference extends cdktf.ComplexObje
   }
 
   // zookeeper_node - computed: false, optional: false, required: true
-  private _zookeeperNode = new HdinsightSparkClusterRolesZookeeperNodeOutputReference(this as any, "zookeeper_node", true);
+  private _zookeeperNode = new HdinsightSparkClusterRolesZookeeperNodeOutputReference(this, "zookeeper_node", true);
   public get zookeeperNode() {
     return this._zookeeperNode;
   }
@@ -2103,7 +2103,7 @@ export interface HdinsightSparkClusterSecurityProfile {
 }
 
 export function hdinsightSparkClusterSecurityProfileToTerraform(struct?: HdinsightSparkClusterSecurityProfileOutputReference | HdinsightSparkClusterSecurityProfile): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -2126,7 +2126,7 @@ export class HdinsightSparkClusterSecurityProfileOutputReference extends cdktf.C
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -2203,7 +2203,7 @@ export class HdinsightSparkClusterSecurityProfileOutputReference extends cdktf.C
   // cluster_users_group_dns - computed: false, optional: true, required: false
   private _clusterUsersGroupDns?: string[]; 
   public get clusterUsersGroupDns() {
-    return this.getListAttribute('cluster_users_group_dns');
+    return cdktf.Fn.tolist(this.getListAttribute('cluster_users_group_dns'));
   }
   public set clusterUsersGroupDns(value: string[]) {
     this._clusterUsersGroupDns = value;
@@ -2258,7 +2258,7 @@ export class HdinsightSparkClusterSecurityProfileOutputReference extends cdktf.C
   // ldaps_urls - computed: false, optional: false, required: true
   private _ldapsUrls?: string[]; 
   public get ldapsUrls() {
-    return this.getListAttribute('ldaps_urls');
+    return cdktf.Fn.tolist(this.getListAttribute('ldaps_urls'));
   }
   public set ldapsUrls(value: string[]) {
     this._ldapsUrls = value;
@@ -2296,8 +2296,8 @@ export interface HdinsightSparkClusterStorageAccount {
   readonly storageContainerId: string;
 }
 
-export function hdinsightSparkClusterStorageAccountToTerraform(struct?: HdinsightSparkClusterStorageAccount): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function hdinsightSparkClusterStorageAccountToTerraform(struct?: HdinsightSparkClusterStorageAccount | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -2328,7 +2328,7 @@ export interface HdinsightSparkClusterStorageAccountGen2 {
 }
 
 export function hdinsightSparkClusterStorageAccountGen2ToTerraform(struct?: HdinsightSparkClusterStorageAccountGen2OutputReference | HdinsightSparkClusterStorageAccountGen2): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -2348,7 +2348,7 @@ export class HdinsightSparkClusterStorageAccountGen2OutputReference extends cdkt
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -2407,7 +2407,7 @@ export class HdinsightSparkClusterStorageAccountGen2OutputReference extends cdkt
   // is_default - computed: false, optional: false, required: true
   private _isDefault?: boolean | cdktf.IResolvable; 
   public get isDefault() {
-    return this.getBooleanAttribute('is_default') as any;
+    return this.getBooleanAttribute('is_default');
   }
   public set isDefault(value: boolean | cdktf.IResolvable) {
     this._isDefault = value;
@@ -2462,8 +2462,8 @@ export interface HdinsightSparkClusterTimeouts {
   readonly update?: string;
 }
 
-export function hdinsightSparkClusterTimeoutsToTerraform(struct?: HdinsightSparkClusterTimeoutsOutputReference | HdinsightSparkClusterTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function hdinsightSparkClusterTimeoutsToTerraform(struct?: HdinsightSparkClusterTimeoutsOutputReference | HdinsightSparkClusterTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -2483,7 +2483,7 @@ export class HdinsightSparkClusterTimeoutsOutputReference extends cdktf.ComplexO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -2663,7 +2663,7 @@ export class HdinsightSparkCluster extends cdktf.TerraformResource {
   // encryption_in_transit_enabled - computed: true, optional: true, required: false
   private _encryptionInTransitEnabled?: boolean | cdktf.IResolvable; 
   public get encryptionInTransitEnabled() {
-    return this.getBooleanAttribute('encryption_in_transit_enabled') as any;
+    return this.getBooleanAttribute('encryption_in_transit_enabled');
   }
   public set encryptionInTransitEnabled(value: boolean | cdktf.IResolvable) {
     this._encryptionInTransitEnabled = value;
@@ -2731,12 +2731,11 @@ export class HdinsightSparkCluster extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -2777,7 +2776,7 @@ export class HdinsightSparkCluster extends cdktf.TerraformResource {
   }
 
   // component_version - computed: false, optional: false, required: true
-  private _componentVersion = new HdinsightSparkClusterComponentVersionOutputReference(this as any, "component_version", true);
+  private _componentVersion = new HdinsightSparkClusterComponentVersionOutputReference(this, "component_version", true);
   public get componentVersion() {
     return this._componentVersion;
   }
@@ -2790,7 +2789,7 @@ export class HdinsightSparkCluster extends cdktf.TerraformResource {
   }
 
   // gateway - computed: false, optional: false, required: true
-  private _gateway = new HdinsightSparkClusterGatewayOutputReference(this as any, "gateway", true);
+  private _gateway = new HdinsightSparkClusterGatewayOutputReference(this, "gateway", true);
   public get gateway() {
     return this._gateway;
   }
@@ -2803,7 +2802,7 @@ export class HdinsightSparkCluster extends cdktf.TerraformResource {
   }
 
   // metastores - computed: false, optional: true, required: false
-  private _metastores = new HdinsightSparkClusterMetastoresOutputReference(this as any, "metastores", true);
+  private _metastores = new HdinsightSparkClusterMetastoresOutputReference(this, "metastores", true);
   public get metastores() {
     return this._metastores;
   }
@@ -2819,7 +2818,7 @@ export class HdinsightSparkCluster extends cdktf.TerraformResource {
   }
 
   // monitor - computed: false, optional: true, required: false
-  private _monitor = new HdinsightSparkClusterMonitorOutputReference(this as any, "monitor", true);
+  private _monitor = new HdinsightSparkClusterMonitorOutputReference(this, "monitor", true);
   public get monitor() {
     return this._monitor;
   }
@@ -2835,7 +2834,7 @@ export class HdinsightSparkCluster extends cdktf.TerraformResource {
   }
 
   // network - computed: false, optional: true, required: false
-  private _network = new HdinsightSparkClusterNetworkOutputReference(this as any, "network", true);
+  private _network = new HdinsightSparkClusterNetworkOutputReference(this, "network", true);
   public get network() {
     return this._network;
   }
@@ -2851,7 +2850,7 @@ export class HdinsightSparkCluster extends cdktf.TerraformResource {
   }
 
   // roles - computed: false, optional: false, required: true
-  private _roles = new HdinsightSparkClusterRolesOutputReference(this as any, "roles", true);
+  private _roles = new HdinsightSparkClusterRolesOutputReference(this, "roles", true);
   public get roles() {
     return this._roles;
   }
@@ -2864,7 +2863,7 @@ export class HdinsightSparkCluster extends cdktf.TerraformResource {
   }
 
   // security_profile - computed: false, optional: true, required: false
-  private _securityProfile = new HdinsightSparkClusterSecurityProfileOutputReference(this as any, "security_profile", true);
+  private _securityProfile = new HdinsightSparkClusterSecurityProfileOutputReference(this, "security_profile", true);
   public get securityProfile() {
     return this._securityProfile;
   }
@@ -2880,12 +2879,12 @@ export class HdinsightSparkCluster extends cdktf.TerraformResource {
   }
 
   // storage_account - computed: false, optional: true, required: false
-  private _storageAccount?: HdinsightSparkClusterStorageAccount[]; 
+  private _storageAccount?: HdinsightSparkClusterStorageAccount[] | cdktf.IResolvable; 
   public get storageAccount() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('storage_account') as any;
+    return this.interpolationForAttribute('storage_account');
   }
-  public set storageAccount(value: HdinsightSparkClusterStorageAccount[]) {
+  public set storageAccount(value: HdinsightSparkClusterStorageAccount[] | cdktf.IResolvable) {
     this._storageAccount = value;
   }
   public resetStorageAccount() {
@@ -2897,7 +2896,7 @@ export class HdinsightSparkCluster extends cdktf.TerraformResource {
   }
 
   // storage_account_gen2 - computed: false, optional: true, required: false
-  private _storageAccountGen2 = new HdinsightSparkClusterStorageAccountGen2OutputReference(this as any, "storage_account_gen2", true);
+  private _storageAccountGen2 = new HdinsightSparkClusterStorageAccountGen2OutputReference(this, "storage_account_gen2", true);
   public get storageAccountGen2() {
     return this._storageAccountGen2;
   }
@@ -2913,7 +2912,7 @@ export class HdinsightSparkCluster extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new HdinsightSparkClusterTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new HdinsightSparkClusterTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -2939,7 +2938,7 @@ export class HdinsightSparkCluster extends cdktf.TerraformResource {
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       tier: cdktf.stringToTerraform(this._tier),
       tls_min_version: cdktf.stringToTerraform(this._tlsMinVersion),
       component_version: hdinsightSparkClusterComponentVersionToTerraform(this._componentVersion.internalValue),

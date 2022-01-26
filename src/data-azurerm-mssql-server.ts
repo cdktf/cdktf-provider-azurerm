@@ -51,8 +51,8 @@ export interface DataAzurermMssqlServerTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermMssqlServerTimeoutsToTerraform(struct?: DataAzurermMssqlServerTimeoutsOutputReference | DataAzurermMssqlServerTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermMssqlServerTimeoutsToTerraform(struct?: DataAzurermMssqlServerTimeoutsOutputReference | DataAzurermMssqlServerTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -69,7 +69,7 @@ export class DataAzurermMssqlServerTimeoutsOutputReference extends cdktf.Complex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -169,7 +169,7 @@ export class DataAzurermMssqlServer extends cdktf.TerraformDataSource {
 
   // identity - computed: true, optional: false, required: false
   public identity(index: string) {
-    return new DataAzurermMssqlServerIdentity(this, 'identity', index);
+    return new DataAzurermMssqlServerIdentity(this, 'identity', index, false);
   }
 
   // location - computed: true, optional: false, required: false
@@ -209,7 +209,7 @@ export class DataAzurermMssqlServer extends cdktf.TerraformDataSource {
   }
 
   // tags - computed: true, optional: false, required: false
-  public tags(key: string): string {
+  public tags(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
@@ -219,7 +219,7 @@ export class DataAzurermMssqlServer extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermMssqlServerTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermMssqlServerTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

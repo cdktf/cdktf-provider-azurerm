@@ -53,8 +53,8 @@ export interface SentinelDataConnectorMicrosoftCloudAppSecurityTimeouts {
   readonly update?: string;
 }
 
-export function sentinelDataConnectorMicrosoftCloudAppSecurityTimeoutsToTerraform(struct?: SentinelDataConnectorMicrosoftCloudAppSecurityTimeoutsOutputReference | SentinelDataConnectorMicrosoftCloudAppSecurityTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function sentinelDataConnectorMicrosoftCloudAppSecurityTimeoutsToTerraform(struct?: SentinelDataConnectorMicrosoftCloudAppSecurityTimeoutsOutputReference | SentinelDataConnectorMicrosoftCloudAppSecurityTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -74,7 +74,7 @@ export class SentinelDataConnectorMicrosoftCloudAppSecurityTimeoutsOutputReferen
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -229,7 +229,7 @@ export class SentinelDataConnectorMicrosoftCloudAppSecurity extends cdktf.Terraf
   // alerts_enabled - computed: false, optional: true, required: false
   private _alertsEnabled?: boolean | cdktf.IResolvable; 
   public get alertsEnabled() {
-    return this.getBooleanAttribute('alerts_enabled') as any;
+    return this.getBooleanAttribute('alerts_enabled');
   }
   public set alertsEnabled(value: boolean | cdktf.IResolvable) {
     this._alertsEnabled = value;
@@ -245,7 +245,7 @@ export class SentinelDataConnectorMicrosoftCloudAppSecurity extends cdktf.Terraf
   // discovery_logs_enabled - computed: false, optional: true, required: false
   private _discoveryLogsEnabled?: boolean | cdktf.IResolvable; 
   public get discoveryLogsEnabled() {
-    return this.getBooleanAttribute('discovery_logs_enabled') as any;
+    return this.getBooleanAttribute('discovery_logs_enabled');
   }
   public set discoveryLogsEnabled(value: boolean | cdktf.IResolvable) {
     this._discoveryLogsEnabled = value;
@@ -306,7 +306,7 @@ export class SentinelDataConnectorMicrosoftCloudAppSecurity extends cdktf.Terraf
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new SentinelDataConnectorMicrosoftCloudAppSecurityTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new SentinelDataConnectorMicrosoftCloudAppSecurityTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

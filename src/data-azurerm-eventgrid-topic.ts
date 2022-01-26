@@ -18,7 +18,7 @@ export interface DataAzurermEventgridTopicConfig extends cdktf.TerraformMetaArgu
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventgrid_topic#tags DataAzurermEventgridTopic#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   * 
@@ -33,8 +33,8 @@ export interface DataAzurermEventgridTopicTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermEventgridTopicTimeoutsToTerraform(struct?: DataAzurermEventgridTopicTimeoutsOutputReference | DataAzurermEventgridTopicTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermEventgridTopicTimeoutsToTerraform(struct?: DataAzurermEventgridTopicTimeoutsOutputReference | DataAzurermEventgridTopicTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -51,7 +51,7 @@ export class DataAzurermEventgridTopicTimeoutsOutputReference extends cdktf.Comp
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -187,12 +187,11 @@ export class DataAzurermEventgridTopic extends cdktf.TerraformDataSource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -204,7 +203,7 @@ export class DataAzurermEventgridTopic extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermEventgridTopicTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermEventgridTopicTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -227,7 +226,7 @@ export class DataAzurermEventgridTopic extends cdktf.TerraformDataSource {
     return {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       timeouts: dataAzurermEventgridTopicTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

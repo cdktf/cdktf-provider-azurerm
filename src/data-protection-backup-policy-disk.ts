@@ -28,7 +28,7 @@ export interface DataProtectionBackupPolicyDiskConfig extends cdktf.TerraformMet
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_disk#retention_rule DataProtectionBackupPolicyDisk#retention_rule}
   */
-  readonly retentionRule?: DataProtectionBackupPolicyDiskRetentionRule[];
+  readonly retentionRule?: DataProtectionBackupPolicyDiskRetentionRule[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -44,7 +44,7 @@ export interface DataProtectionBackupPolicyDiskRetentionRuleCriteria {
 }
 
 export function dataProtectionBackupPolicyDiskRetentionRuleCriteriaToTerraform(struct?: DataProtectionBackupPolicyDiskRetentionRuleCriteriaOutputReference | DataProtectionBackupPolicyDiskRetentionRuleCriteria): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -61,7 +61,7 @@ export class DataProtectionBackupPolicyDiskRetentionRuleCriteriaOutputReference 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -123,8 +123,8 @@ export interface DataProtectionBackupPolicyDiskRetentionRule {
   readonly criteria: DataProtectionBackupPolicyDiskRetentionRuleCriteria;
 }
 
-export function dataProtectionBackupPolicyDiskRetentionRuleToTerraform(struct?: DataProtectionBackupPolicyDiskRetentionRule): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataProtectionBackupPolicyDiskRetentionRuleToTerraform(struct?: DataProtectionBackupPolicyDiskRetentionRule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -155,8 +155,8 @@ export interface DataProtectionBackupPolicyDiskTimeouts {
   readonly update?: string;
 }
 
-export function dataProtectionBackupPolicyDiskTimeoutsToTerraform(struct?: DataProtectionBackupPolicyDiskTimeoutsOutputReference | DataProtectionBackupPolicyDiskTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataProtectionBackupPolicyDiskTimeoutsToTerraform(struct?: DataProtectionBackupPolicyDiskTimeoutsOutputReference | DataProtectionBackupPolicyDiskTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -176,7 +176,7 @@ export class DataProtectionBackupPolicyDiskTimeoutsOutputReference extends cdktf
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -386,12 +386,12 @@ export class DataProtectionBackupPolicyDisk extends cdktf.TerraformResource {
   }
 
   // retention_rule - computed: false, optional: true, required: false
-  private _retentionRule?: DataProtectionBackupPolicyDiskRetentionRule[]; 
+  private _retentionRule?: DataProtectionBackupPolicyDiskRetentionRule[] | cdktf.IResolvable; 
   public get retentionRule() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('retention_rule') as any;
+    return this.interpolationForAttribute('retention_rule');
   }
-  public set retentionRule(value: DataProtectionBackupPolicyDiskRetentionRule[]) {
+  public set retentionRule(value: DataProtectionBackupPolicyDiskRetentionRule[] | cdktf.IResolvable) {
     this._retentionRule = value;
   }
   public resetRetentionRule() {
@@ -403,7 +403,7 @@ export class DataProtectionBackupPolicyDisk extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataProtectionBackupPolicyDiskTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataProtectionBackupPolicyDiskTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

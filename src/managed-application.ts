@@ -34,7 +34,7 @@ export interface ManagedApplicationConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application#parameters ManagedApplication#parameters}
   */
-  readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
+  readonly parameters?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application#resource_group_name ManagedApplication#resource_group_name}
   */
@@ -42,7 +42,7 @@ export interface ManagedApplicationConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application#tags ManagedApplication#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * plan block
   * 
@@ -80,7 +80,7 @@ export interface ManagedApplicationPlan {
 }
 
 export function managedApplicationPlanToTerraform(struct?: ManagedApplicationPlanOutputReference | ManagedApplicationPlan): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -101,7 +101,7 @@ export class ManagedApplicationPlanOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -237,8 +237,8 @@ export interface ManagedApplicationTimeouts {
   readonly update?: string;
 }
 
-export function managedApplicationTimeoutsToTerraform(struct?: ManagedApplicationTimeoutsOutputReference | ManagedApplicationTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function managedApplicationTimeoutsToTerraform(struct?: ManagedApplicationTimeoutsOutputReference | ManagedApplicationTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -258,7 +258,7 @@ export class ManagedApplicationTimeoutsOutputReference extends cdktf.ComplexObje
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -489,7 +489,7 @@ export class ManagedApplication extends cdktf.TerraformResource {
   }
 
   // outputs - computed: true, optional: false, required: false
-  public outputs(key: string): string {
+  public outputs(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'outputs').lookup(key);
   }
 
@@ -510,12 +510,11 @@ export class ManagedApplication extends cdktf.TerraformResource {
   }
 
   // parameters - computed: true, optional: true, required: false
-  private _parameters?: { [key: string]: string } | cdktf.IResolvable; 
+  private _parameters?: { [key: string]: string }; 
   public get parameters() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('parameters') as any;
+    return this.getStringMapAttribute('parameters');
   }
-  public set parameters(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set parameters(value: { [key: string]: string }) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -540,12 +539,11 @@ export class ManagedApplication extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -557,7 +555,7 @@ export class ManagedApplication extends cdktf.TerraformResource {
   }
 
   // plan - computed: false, optional: true, required: false
-  private _plan = new ManagedApplicationPlanOutputReference(this as any, "plan", true);
+  private _plan = new ManagedApplicationPlanOutputReference(this, "plan", true);
   public get plan() {
     return this._plan;
   }
@@ -573,7 +571,7 @@ export class ManagedApplication extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ManagedApplicationTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ManagedApplicationTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -600,9 +598,9 @@ export class ManagedApplication extends cdktf.TerraformResource {
       managed_resource_group_name: cdktf.stringToTerraform(this._managedResourceGroupName),
       name: cdktf.stringToTerraform(this._name),
       parameter_values: cdktf.stringToTerraform(this._parameterValues),
-      parameters: cdktf.hashMapper(cdktf.anyToTerraform)(this._parameters),
+      parameters: cdktf.hashMapper(cdktf.stringToTerraform)(this._parameters),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       plan: managedApplicationPlanToTerraform(this._plan.internalValue),
       timeouts: managedApplicationTimeoutsToTerraform(this._timeouts.internalValue),
     };

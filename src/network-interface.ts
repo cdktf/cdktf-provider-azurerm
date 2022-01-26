@@ -38,13 +38,13 @@ export interface NetworkInterfaceConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface#tags NetworkInterface#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * ip_configuration block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface#ip_configuration NetworkInterface#ip_configuration}
   */
-  readonly ipConfiguration: NetworkInterfaceIpConfiguration[];
+  readonly ipConfiguration: NetworkInterfaceIpConfiguration[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -87,8 +87,8 @@ export interface NetworkInterfaceIpConfiguration {
   readonly subnetId?: string;
 }
 
-export function networkInterfaceIpConfigurationToTerraform(struct?: NetworkInterfaceIpConfiguration): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function networkInterfaceIpConfigurationToTerraform(struct?: NetworkInterfaceIpConfiguration | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -123,8 +123,8 @@ export interface NetworkInterfaceTimeouts {
   readonly update?: string;
 }
 
-export function networkInterfaceTimeoutsToTerraform(struct?: NetworkInterfaceTimeoutsOutputReference | NetworkInterfaceTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function networkInterfaceTimeoutsToTerraform(struct?: NetworkInterfaceTimeoutsOutputReference | NetworkInterfaceTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -144,7 +144,7 @@ export class NetworkInterfaceTimeoutsOutputReference extends cdktf.ComplexObject
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -324,7 +324,7 @@ export class NetworkInterface extends cdktf.TerraformResource {
   // enable_accelerated_networking - computed: false, optional: true, required: false
   private _enableAcceleratedNetworking?: boolean | cdktf.IResolvable; 
   public get enableAcceleratedNetworking() {
-    return this.getBooleanAttribute('enable_accelerated_networking') as any;
+    return this.getBooleanAttribute('enable_accelerated_networking');
   }
   public set enableAcceleratedNetworking(value: boolean | cdktf.IResolvable) {
     this._enableAcceleratedNetworking = value;
@@ -340,7 +340,7 @@ export class NetworkInterface extends cdktf.TerraformResource {
   // enable_ip_forwarding - computed: false, optional: true, required: false
   private _enableIpForwarding?: boolean | cdktf.IResolvable; 
   public get enableIpForwarding() {
-    return this.getBooleanAttribute('enable_ip_forwarding') as any;
+    return this.getBooleanAttribute('enable_ip_forwarding');
   }
   public set enableIpForwarding(value: boolean | cdktf.IResolvable) {
     this._enableIpForwarding = value;
@@ -434,12 +434,11 @@ export class NetworkInterface extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -456,12 +455,12 @@ export class NetworkInterface extends cdktf.TerraformResource {
   }
 
   // ip_configuration - computed: false, optional: false, required: true
-  private _ipConfiguration?: NetworkInterfaceIpConfiguration[]; 
+  private _ipConfiguration?: NetworkInterfaceIpConfiguration[] | cdktf.IResolvable; 
   public get ipConfiguration() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('ip_configuration') as any;
+    return this.interpolationForAttribute('ip_configuration');
   }
-  public set ipConfiguration(value: NetworkInterfaceIpConfiguration[]) {
+  public set ipConfiguration(value: NetworkInterfaceIpConfiguration[] | cdktf.IResolvable) {
     this._ipConfiguration = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -470,7 +469,7 @@ export class NetworkInterface extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new NetworkInterfaceTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new NetworkInterfaceTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -498,7 +497,7 @@ export class NetworkInterface extends cdktf.TerraformResource {
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       ip_configuration: cdktf.listMapper(networkInterfaceIpConfigurationToTerraform)(this._ipConfiguration),
       timeouts: networkInterfaceTimeoutsToTerraform(this._timeouts.internalValue),
     };

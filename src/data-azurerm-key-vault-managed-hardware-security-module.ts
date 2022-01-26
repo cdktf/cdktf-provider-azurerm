@@ -29,8 +29,8 @@ export interface DataAzurermKeyVaultManagedHardwareSecurityModuleTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermKeyVaultManagedHardwareSecurityModuleTimeoutsToTerraform(struct?: DataAzurermKeyVaultManagedHardwareSecurityModuleTimeoutsOutputReference | DataAzurermKeyVaultManagedHardwareSecurityModuleTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermKeyVaultManagedHardwareSecurityModuleTimeoutsToTerraform(struct?: DataAzurermKeyVaultManagedHardwareSecurityModuleTimeoutsOutputReference | DataAzurermKeyVaultManagedHardwareSecurityModuleTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -47,7 +47,7 @@ export class DataAzurermKeyVaultManagedHardwareSecurityModuleTimeoutsOutputRefer
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -165,7 +165,7 @@ export class DataAzurermKeyVaultManagedHardwareSecurityModule extends cdktf.Terr
 
   // purge_protection_enabled - computed: true, optional: false, required: false
   public get purgeProtectionEnabled() {
-    return this.getBooleanAttribute('purge_protection_enabled') as any;
+    return this.getBooleanAttribute('purge_protection_enabled');
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -192,7 +192,7 @@ export class DataAzurermKeyVaultManagedHardwareSecurityModule extends cdktf.Terr
   }
 
   // tags - computed: true, optional: false, required: false
-  public tags(key: string): string {
+  public tags(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
@@ -202,7 +202,7 @@ export class DataAzurermKeyVaultManagedHardwareSecurityModule extends cdktf.Terr
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermKeyVaultManagedHardwareSecurityModuleTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermKeyVaultManagedHardwareSecurityModuleTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

@@ -20,7 +20,7 @@ export interface SignalrServiceNetworkAclConfig extends cdktf.TerraformMetaArgum
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service_network_acl#private_endpoint SignalrServiceNetworkAcl#private_endpoint}
   */
-  readonly privateEndpoint?: SignalrServiceNetworkAclPrivateEndpoint[];
+  readonly privateEndpoint?: SignalrServiceNetworkAclPrivateEndpoint[] | cdktf.IResolvable;
   /**
   * public_network block
   * 
@@ -49,8 +49,8 @@ export interface SignalrServiceNetworkAclPrivateEndpoint {
   readonly id: string;
 }
 
-export function signalrServiceNetworkAclPrivateEndpointToTerraform(struct?: SignalrServiceNetworkAclPrivateEndpoint): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function signalrServiceNetworkAclPrivateEndpointToTerraform(struct?: SignalrServiceNetworkAclPrivateEndpoint | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -73,7 +73,7 @@ export interface SignalrServiceNetworkAclPublicNetwork {
 }
 
 export function signalrServiceNetworkAclPublicNetworkToTerraform(struct?: SignalrServiceNetworkAclPublicNetworkOutputReference | SignalrServiceNetworkAclPublicNetwork): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -91,7 +91,7 @@ export class SignalrServiceNetworkAclPublicNetworkOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -125,7 +125,7 @@ export class SignalrServiceNetworkAclPublicNetworkOutputReference extends cdktf.
   // allowed_request_types - computed: false, optional: true, required: false
   private _allowedRequestTypes?: string[]; 
   public get allowedRequestTypes() {
-    return this.getListAttribute('allowed_request_types');
+    return cdktf.Fn.tolist(this.getListAttribute('allowed_request_types'));
   }
   public set allowedRequestTypes(value: string[]) {
     this._allowedRequestTypes = value;
@@ -141,7 +141,7 @@ export class SignalrServiceNetworkAclPublicNetworkOutputReference extends cdktf.
   // denied_request_types - computed: false, optional: true, required: false
   private _deniedRequestTypes?: string[]; 
   public get deniedRequestTypes() {
-    return this.getListAttribute('denied_request_types');
+    return cdktf.Fn.tolist(this.getListAttribute('denied_request_types'));
   }
   public set deniedRequestTypes(value: string[]) {
     this._deniedRequestTypes = value;
@@ -173,8 +173,8 @@ export interface SignalrServiceNetworkAclTimeouts {
   readonly update?: string;
 }
 
-export function signalrServiceNetworkAclTimeoutsToTerraform(struct?: SignalrServiceNetworkAclTimeoutsOutputReference | SignalrServiceNetworkAclTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function signalrServiceNetworkAclTimeoutsToTerraform(struct?: SignalrServiceNetworkAclTimeoutsOutputReference | SignalrServiceNetworkAclTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -194,7 +194,7 @@ export class SignalrServiceNetworkAclTimeoutsOutputReference extends cdktf.Compl
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -377,12 +377,12 @@ export class SignalrServiceNetworkAcl extends cdktf.TerraformResource {
   }
 
   // private_endpoint - computed: false, optional: true, required: false
-  private _privateEndpoint?: SignalrServiceNetworkAclPrivateEndpoint[]; 
+  private _privateEndpoint?: SignalrServiceNetworkAclPrivateEndpoint[] | cdktf.IResolvable; 
   public get privateEndpoint() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('private_endpoint') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('private_endpoint')));
   }
-  public set privateEndpoint(value: SignalrServiceNetworkAclPrivateEndpoint[]) {
+  public set privateEndpoint(value: SignalrServiceNetworkAclPrivateEndpoint[] | cdktf.IResolvable) {
     this._privateEndpoint = value;
   }
   public resetPrivateEndpoint() {
@@ -394,7 +394,7 @@ export class SignalrServiceNetworkAcl extends cdktf.TerraformResource {
   }
 
   // public_network - computed: false, optional: false, required: true
-  private _publicNetwork = new SignalrServiceNetworkAclPublicNetworkOutputReference(this as any, "public_network", true);
+  private _publicNetwork = new SignalrServiceNetworkAclPublicNetworkOutputReference(this, "public_network", true);
   public get publicNetwork() {
     return this._publicNetwork;
   }
@@ -407,7 +407,7 @@ export class SignalrServiceNetworkAcl extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new SignalrServiceNetworkAclTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new SignalrServiceNetworkAclTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

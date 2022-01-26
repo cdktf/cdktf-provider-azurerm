@@ -58,7 +58,7 @@ export interface ApiManagementLoggerApplicationInsights {
 }
 
 export function apiManagementLoggerApplicationInsightsToTerraform(struct?: ApiManagementLoggerApplicationInsightsOutputReference | ApiManagementLoggerApplicationInsights): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -75,7 +75,7 @@ export class ApiManagementLoggerApplicationInsightsOutputReference extends cdktf
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -125,7 +125,7 @@ export interface ApiManagementLoggerEventhub {
 }
 
 export function apiManagementLoggerEventhubToTerraform(struct?: ApiManagementLoggerEventhubOutputReference | ApiManagementLoggerEventhub): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -143,7 +143,7 @@ export class ApiManagementLoggerEventhubOutputReference extends cdktf.ComplexObj
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -219,8 +219,8 @@ export interface ApiManagementLoggerTimeouts {
   readonly update?: string;
 }
 
-export function apiManagementLoggerTimeoutsToTerraform(struct?: ApiManagementLoggerTimeoutsOutputReference | ApiManagementLoggerTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function apiManagementLoggerTimeoutsToTerraform(struct?: ApiManagementLoggerTimeoutsOutputReference | ApiManagementLoggerTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -240,7 +240,7 @@ export class ApiManagementLoggerTimeoutsOutputReference extends cdktf.ComplexObj
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -411,7 +411,7 @@ export class ApiManagementLogger extends cdktf.TerraformResource {
   // buffered - computed: false, optional: true, required: false
   private _buffered?: boolean | cdktf.IResolvable; 
   public get buffered() {
-    return this.getBooleanAttribute('buffered') as any;
+    return this.getBooleanAttribute('buffered');
   }
   public set buffered(value: boolean | cdktf.IResolvable) {
     this._buffered = value;
@@ -488,7 +488,7 @@ export class ApiManagementLogger extends cdktf.TerraformResource {
   }
 
   // application_insights - computed: false, optional: true, required: false
-  private _applicationInsights = new ApiManagementLoggerApplicationInsightsOutputReference(this as any, "application_insights", true);
+  private _applicationInsights = new ApiManagementLoggerApplicationInsightsOutputReference(this, "application_insights", true);
   public get applicationInsights() {
     return this._applicationInsights;
   }
@@ -504,7 +504,7 @@ export class ApiManagementLogger extends cdktf.TerraformResource {
   }
 
   // eventhub - computed: false, optional: true, required: false
-  private _eventhub = new ApiManagementLoggerEventhubOutputReference(this as any, "eventhub", true);
+  private _eventhub = new ApiManagementLoggerEventhubOutputReference(this, "eventhub", true);
   public get eventhub() {
     return this._eventhub;
   }
@@ -520,7 +520,7 @@ export class ApiManagementLogger extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ApiManagementLoggerTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ApiManagementLoggerTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

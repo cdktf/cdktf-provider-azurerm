@@ -40,7 +40,7 @@ export interface DataAzurermEventgridSystemTopicIdentity {
 }
 
 export function dataAzurermEventgridSystemTopicIdentityToTerraform(struct?: DataAzurermEventgridSystemTopicIdentityOutputReference | DataAzurermEventgridSystemTopicIdentity): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -58,7 +58,7 @@ export class DataAzurermEventgridSystemTopicIdentityOutputReference extends cdkt
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -92,7 +92,7 @@ export class DataAzurermEventgridSystemTopicIdentityOutputReference extends cdkt
   // identity_ids - computed: false, optional: true, required: false
   private _identityIds?: string[]; 
   public get identityIds() {
-    return this.getListAttribute('identity_ids');
+    return cdktf.Fn.tolist(this.getListAttribute('identity_ids'));
   }
   public set identityIds(value: string[]) {
     this._identityIds = value;
@@ -103,6 +103,16 @@ export class DataAzurermEventgridSystemTopicIdentityOutputReference extends cdkt
   // Temporarily expose input value. Use with caution.
   public get identityIdsInput() {
     return this._identityIds;
+  }
+
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
   }
 
   // type - computed: false, optional: false, required: true
@@ -125,8 +135,8 @@ export interface DataAzurermEventgridSystemTopicTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermEventgridSystemTopicTimeoutsToTerraform(struct?: DataAzurermEventgridSystemTopicTimeoutsOutputReference | DataAzurermEventgridSystemTopicTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermEventgridSystemTopicTimeoutsToTerraform(struct?: DataAzurermEventgridSystemTopicTimeoutsOutputReference | DataAzurermEventgridSystemTopicTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -143,7 +153,7 @@ export class DataAzurermEventgridSystemTopicTimeoutsOutputReference extends cdkt
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -274,7 +284,7 @@ export class DataAzurermEventgridSystemTopic extends cdktf.TerraformDataSource {
   }
 
   // tags - computed: true, optional: false, required: false
-  public tags(key: string): string {
+  public tags(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
@@ -284,7 +294,7 @@ export class DataAzurermEventgridSystemTopic extends cdktf.TerraformDataSource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity = new DataAzurermEventgridSystemTopicIdentityOutputReference(this as any, "identity", true);
+  private _identity = new DataAzurermEventgridSystemTopicIdentityOutputReference(this, "identity", true);
   public get identity() {
     return this._identity;
   }
@@ -300,7 +310,7 @@ export class DataAzurermEventgridSystemTopic extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermEventgridSystemTopicTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermEventgridSystemTopicTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

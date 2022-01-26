@@ -24,7 +24,7 @@ export interface BotChannelDirectlineConfig extends cdktf.TerraformMetaArguments
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_directline#site BotChannelDirectline#site}
   */
-  readonly site: BotChannelDirectlineSite[];
+  readonly site: BotChannelDirectlineSite[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -59,8 +59,8 @@ export interface BotChannelDirectlineSite {
   readonly v3Allowed?: boolean | cdktf.IResolvable;
 }
 
-export function botChannelDirectlineSiteToTerraform(struct?: BotChannelDirectlineSite): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function botChannelDirectlineSiteToTerraform(struct?: BotChannelDirectlineSite | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -93,8 +93,8 @@ export interface BotChannelDirectlineTimeouts {
   readonly update?: string;
 }
 
-export function botChannelDirectlineTimeoutsToTerraform(struct?: BotChannelDirectlineTimeoutsOutputReference | BotChannelDirectlineTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function botChannelDirectlineTimeoutsToTerraform(struct?: BotChannelDirectlineTimeoutsOutputReference | BotChannelDirectlineTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -114,7 +114,7 @@ export class BotChannelDirectlineTimeoutsOutputReference extends cdktf.ComplexOb
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -310,12 +310,12 @@ export class BotChannelDirectline extends cdktf.TerraformResource {
   }
 
   // site - computed: false, optional: false, required: true
-  private _site?: BotChannelDirectlineSite[]; 
+  private _site?: BotChannelDirectlineSite[] | cdktf.IResolvable; 
   public get site() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('site') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('site')));
   }
-  public set site(value: BotChannelDirectlineSite[]) {
+  public set site(value: BotChannelDirectlineSite[] | cdktf.IResolvable) {
     this._site = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -324,7 +324,7 @@ export class BotChannelDirectline extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new BotChannelDirectlineTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new BotChannelDirectlineTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

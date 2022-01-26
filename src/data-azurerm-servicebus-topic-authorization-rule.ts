@@ -37,8 +37,8 @@ export interface DataAzurermServicebusTopicAuthorizationRuleTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermServicebusTopicAuthorizationRuleTimeoutsToTerraform(struct?: DataAzurermServicebusTopicAuthorizationRuleTimeoutsOutputReference | DataAzurermServicebusTopicAuthorizationRuleTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermServicebusTopicAuthorizationRuleTimeoutsToTerraform(struct?: DataAzurermServicebusTopicAuthorizationRuleTimeoutsOutputReference | DataAzurermServicebusTopicAuthorizationRuleTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -55,7 +55,7 @@ export class DataAzurermServicebusTopicAuthorizationRuleTimeoutsOutputReference 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -147,12 +147,12 @@ export class DataAzurermServicebusTopicAuthorizationRule extends cdktf.Terraform
 
   // listen - computed: true, optional: false, required: false
   public get listen() {
-    return this.getBooleanAttribute('listen') as any;
+    return this.getBooleanAttribute('listen');
   }
 
   // manage - computed: true, optional: false, required: false
   public get manage() {
-    return this.getBooleanAttribute('manage') as any;
+    return this.getBooleanAttribute('manage');
   }
 
   // name - computed: false, optional: false, required: true
@@ -226,7 +226,7 @@ export class DataAzurermServicebusTopicAuthorizationRule extends cdktf.Terraform
 
   // send - computed: true, optional: false, required: false
   public get send() {
-    return this.getBooleanAttribute('send') as any;
+    return this.getBooleanAttribute('send');
   }
 
   // topic_name - computed: false, optional: false, required: true
@@ -243,7 +243,7 @@ export class DataAzurermServicebusTopicAuthorizationRule extends cdktf.Terraform
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermServicebusTopicAuthorizationRuleTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermServicebusTopicAuthorizationRuleTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

@@ -30,7 +30,7 @@ export interface MssqlDatabaseConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database#extended_auditing_policy MssqlDatabase#extended_auditing_policy}
   */
-  readonly extendedAuditingPolicy?: MssqlDatabaseExtendedAuditingPolicy[];
+  readonly extendedAuditingPolicy?: MssqlDatabaseExtendedAuditingPolicy[] | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database#geo_backup_enabled MssqlDatabase#geo_backup_enabled}
   */
@@ -90,7 +90,7 @@ export interface MssqlDatabaseConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database#tags MssqlDatabase#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database#zone_redundant MssqlDatabase#zone_redundant}
   */
@@ -147,8 +147,8 @@ export interface MssqlDatabaseExtendedAuditingPolicy {
   readonly storageEndpoint?: string;
 }
 
-export function mssqlDatabaseExtendedAuditingPolicyToTerraform(struct?: MssqlDatabaseExtendedAuditingPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function mssqlDatabaseExtendedAuditingPolicyToTerraform(struct?: MssqlDatabaseExtendedAuditingPolicy | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -182,7 +182,7 @@ export interface MssqlDatabaseLongTermRetentionPolicy {
 }
 
 export function mssqlDatabaseLongTermRetentionPolicyToTerraform(struct?: MssqlDatabaseLongTermRetentionPolicyOutputReference | MssqlDatabaseLongTermRetentionPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -202,7 +202,7 @@ export class MssqlDatabaseLongTermRetentionPolicyOutputReference extends cdktf.C
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -317,7 +317,7 @@ export interface MssqlDatabaseShortTermRetentionPolicy {
 }
 
 export function mssqlDatabaseShortTermRetentionPolicyToTerraform(struct?: MssqlDatabaseShortTermRetentionPolicyOutputReference | MssqlDatabaseShortTermRetentionPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -334,7 +334,7 @@ export class MssqlDatabaseShortTermRetentionPolicyOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -408,7 +408,7 @@ export interface MssqlDatabaseThreatDetectionPolicy {
 }
 
 export function mssqlDatabaseThreatDetectionPolicyToTerraform(struct?: MssqlDatabaseThreatDetectionPolicyOutputReference | MssqlDatabaseThreatDetectionPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -432,7 +432,7 @@ export class MssqlDatabaseThreatDetectionPolicyOutputReference extends cdktf.Com
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -502,7 +502,7 @@ export class MssqlDatabaseThreatDetectionPolicyOutputReference extends cdktf.Com
   // disabled_alerts - computed: false, optional: true, required: false
   private _disabledAlerts?: string[]; 
   public get disabledAlerts() {
-    return this.getListAttribute('disabled_alerts');
+    return cdktf.Fn.tolist(this.getListAttribute('disabled_alerts'));
   }
   public set disabledAlerts(value: string[]) {
     this._disabledAlerts = value;
@@ -534,7 +534,7 @@ export class MssqlDatabaseThreatDetectionPolicyOutputReference extends cdktf.Com
   // email_addresses - computed: false, optional: true, required: false
   private _emailAddresses?: string[]; 
   public get emailAddresses() {
-    return this.getListAttribute('email_addresses');
+    return cdktf.Fn.tolist(this.getListAttribute('email_addresses'));
   }
   public set emailAddresses(value: string[]) {
     this._emailAddresses = value;
@@ -646,8 +646,8 @@ export interface MssqlDatabaseTimeouts {
   readonly update?: string;
 }
 
-export function mssqlDatabaseTimeoutsToTerraform(struct?: MssqlDatabaseTimeoutsOutputReference | MssqlDatabaseTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function mssqlDatabaseTimeoutsToTerraform(struct?: MssqlDatabaseTimeoutsOutputReference | MssqlDatabaseTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -667,7 +667,7 @@ export class MssqlDatabaseTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -920,12 +920,12 @@ export class MssqlDatabase extends cdktf.TerraformResource {
   }
 
   // extended_auditing_policy - computed: true, optional: true, required: false
-  private _extendedAuditingPolicy?: MssqlDatabaseExtendedAuditingPolicy[]; 
+  private _extendedAuditingPolicy?: MssqlDatabaseExtendedAuditingPolicy[] | cdktf.IResolvable; 
   public get extendedAuditingPolicy() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('extended_auditing_policy') as any;
+    return this.interpolationForAttribute('extended_auditing_policy');
   }
-  public set extendedAuditingPolicy(value: MssqlDatabaseExtendedAuditingPolicy[]) {
+  public set extendedAuditingPolicy(value: MssqlDatabaseExtendedAuditingPolicy[] | cdktf.IResolvable) {
     this._extendedAuditingPolicy = value;
   }
   public resetExtendedAuditingPolicy() {
@@ -939,7 +939,7 @@ export class MssqlDatabase extends cdktf.TerraformResource {
   // geo_backup_enabled - computed: false, optional: true, required: false
   private _geoBackupEnabled?: boolean | cdktf.IResolvable; 
   public get geoBackupEnabled() {
-    return this.getBooleanAttribute('geo_backup_enabled') as any;
+    return this.getBooleanAttribute('geo_backup_enabled');
   }
   public set geoBackupEnabled(value: boolean | cdktf.IResolvable) {
     this._geoBackupEnabled = value;
@@ -1037,7 +1037,7 @@ export class MssqlDatabase extends cdktf.TerraformResource {
   // read_scale - computed: true, optional: true, required: false
   private _readScale?: boolean | cdktf.IResolvable; 
   public get readScale() {
-    return this.getBooleanAttribute('read_scale') as any;
+    return this.getBooleanAttribute('read_scale');
   }
   public set readScale(value: boolean | cdktf.IResolvable) {
     this._readScale = value;
@@ -1160,12 +1160,11 @@ export class MssqlDatabase extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -1179,7 +1178,7 @@ export class MssqlDatabase extends cdktf.TerraformResource {
   // zone_redundant - computed: true, optional: true, required: false
   private _zoneRedundant?: boolean | cdktf.IResolvable; 
   public get zoneRedundant() {
-    return this.getBooleanAttribute('zone_redundant') as any;
+    return this.getBooleanAttribute('zone_redundant');
   }
   public set zoneRedundant(value: boolean | cdktf.IResolvable) {
     this._zoneRedundant = value;
@@ -1193,7 +1192,7 @@ export class MssqlDatabase extends cdktf.TerraformResource {
   }
 
   // long_term_retention_policy - computed: false, optional: true, required: false
-  private _longTermRetentionPolicy = new MssqlDatabaseLongTermRetentionPolicyOutputReference(this as any, "long_term_retention_policy", true);
+  private _longTermRetentionPolicy = new MssqlDatabaseLongTermRetentionPolicyOutputReference(this, "long_term_retention_policy", true);
   public get longTermRetentionPolicy() {
     return this._longTermRetentionPolicy;
   }
@@ -1209,7 +1208,7 @@ export class MssqlDatabase extends cdktf.TerraformResource {
   }
 
   // short_term_retention_policy - computed: false, optional: true, required: false
-  private _shortTermRetentionPolicy = new MssqlDatabaseShortTermRetentionPolicyOutputReference(this as any, "short_term_retention_policy", true);
+  private _shortTermRetentionPolicy = new MssqlDatabaseShortTermRetentionPolicyOutputReference(this, "short_term_retention_policy", true);
   public get shortTermRetentionPolicy() {
     return this._shortTermRetentionPolicy;
   }
@@ -1225,7 +1224,7 @@ export class MssqlDatabase extends cdktf.TerraformResource {
   }
 
   // threat_detection_policy - computed: false, optional: true, required: false
-  private _threatDetectionPolicy = new MssqlDatabaseThreatDetectionPolicyOutputReference(this as any, "threat_detection_policy", true);
+  private _threatDetectionPolicy = new MssqlDatabaseThreatDetectionPolicyOutputReference(this, "threat_detection_policy", true);
   public get threatDetectionPolicy() {
     return this._threatDetectionPolicy;
   }
@@ -1241,7 +1240,7 @@ export class MssqlDatabase extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new MssqlDatabaseTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new MssqlDatabaseTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -1282,7 +1281,7 @@ export class MssqlDatabase extends cdktf.TerraformResource {
       server_id: cdktf.stringToTerraform(this._serverId),
       sku_name: cdktf.stringToTerraform(this._skuName),
       storage_account_type: cdktf.stringToTerraform(this._storageAccountType),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       zone_redundant: cdktf.booleanToTerraform(this._zoneRedundant),
       long_term_retention_policy: mssqlDatabaseLongTermRetentionPolicyToTerraform(this._longTermRetentionPolicy.internalValue),
       short_term_retention_policy: mssqlDatabaseShortTermRetentionPolicyToTerraform(this._shortTermRetentionPolicy.internalValue),

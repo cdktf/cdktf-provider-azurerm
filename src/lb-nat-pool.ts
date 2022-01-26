@@ -77,8 +77,8 @@ export interface LbNatPoolTimeouts {
   readonly update?: string;
 }
 
-export function lbNatPoolTimeoutsToTerraform(struct?: LbNatPoolTimeoutsOutputReference | LbNatPoolTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function lbNatPoolTimeoutsToTerraform(struct?: LbNatPoolTimeoutsOutputReference | LbNatPoolTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -98,7 +98,7 @@ export class LbNatPoolTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -272,7 +272,7 @@ export class LbNatPool extends cdktf.TerraformResource {
   // floating_ip_enabled - computed: false, optional: true, required: false
   private _floatingIpEnabled?: boolean | cdktf.IResolvable; 
   public get floatingIpEnabled() {
-    return this.getBooleanAttribute('floating_ip_enabled') as any;
+    return this.getBooleanAttribute('floating_ip_enabled');
   }
   public set floatingIpEnabled(value: boolean | cdktf.IResolvable) {
     this._floatingIpEnabled = value;
@@ -405,7 +405,7 @@ export class LbNatPool extends cdktf.TerraformResource {
   // tcp_reset_enabled - computed: false, optional: true, required: false
   private _tcpResetEnabled?: boolean | cdktf.IResolvable; 
   public get tcpResetEnabled() {
-    return this.getBooleanAttribute('tcp_reset_enabled') as any;
+    return this.getBooleanAttribute('tcp_reset_enabled');
   }
   public set tcpResetEnabled(value: boolean | cdktf.IResolvable) {
     this._tcpResetEnabled = value;
@@ -419,7 +419,7 @@ export class LbNatPool extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new LbNatPoolTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new LbNatPoolTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

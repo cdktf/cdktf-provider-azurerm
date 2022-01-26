@@ -69,8 +69,8 @@ export interface MssqlServerSecurityAlertPolicyTimeouts {
   readonly update?: string;
 }
 
-export function mssqlServerSecurityAlertPolicyTimeoutsToTerraform(struct?: MssqlServerSecurityAlertPolicyTimeoutsOutputReference | MssqlServerSecurityAlertPolicyTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function mssqlServerSecurityAlertPolicyTimeoutsToTerraform(struct?: MssqlServerSecurityAlertPolicyTimeoutsOutputReference | MssqlServerSecurityAlertPolicyTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -90,7 +90,7 @@ export class MssqlServerSecurityAlertPolicyTimeoutsOutputReference extends cdktf
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -249,7 +249,7 @@ export class MssqlServerSecurityAlertPolicy extends cdktf.TerraformResource {
   // disabled_alerts - computed: false, optional: true, required: false
   private _disabledAlerts?: string[]; 
   public get disabledAlerts() {
-    return this.getListAttribute('disabled_alerts');
+    return cdktf.Fn.tolist(this.getListAttribute('disabled_alerts'));
   }
   public set disabledAlerts(value: string[]) {
     this._disabledAlerts = value;
@@ -265,7 +265,7 @@ export class MssqlServerSecurityAlertPolicy extends cdktf.TerraformResource {
   // email_account_admins - computed: false, optional: true, required: false
   private _emailAccountAdmins?: boolean | cdktf.IResolvable; 
   public get emailAccountAdmins() {
-    return this.getBooleanAttribute('email_account_admins') as any;
+    return this.getBooleanAttribute('email_account_admins');
   }
   public set emailAccountAdmins(value: boolean | cdktf.IResolvable) {
     this._emailAccountAdmins = value;
@@ -281,7 +281,7 @@ export class MssqlServerSecurityAlertPolicy extends cdktf.TerraformResource {
   // email_addresses - computed: false, optional: true, required: false
   private _emailAddresses?: string[]; 
   public get emailAddresses() {
-    return this.getListAttribute('email_addresses');
+    return cdktf.Fn.tolist(this.getListAttribute('email_addresses'));
   }
   public set emailAddresses(value: string[]) {
     this._emailAddresses = value;
@@ -387,7 +387,7 @@ export class MssqlServerSecurityAlertPolicy extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new MssqlServerSecurityAlertPolicyTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new MssqlServerSecurityAlertPolicyTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

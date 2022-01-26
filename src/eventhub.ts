@@ -64,7 +64,7 @@ export interface EventhubCaptureDescriptionDestination {
 }
 
 export function eventhubCaptureDescriptionDestinationToTerraform(struct?: EventhubCaptureDescriptionDestinationOutputReference | EventhubCaptureDescriptionDestination): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -84,7 +84,7 @@ export class EventhubCaptureDescriptionDestinationOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -209,7 +209,7 @@ export interface EventhubCaptureDescription {
 }
 
 export function eventhubCaptureDescriptionToTerraform(struct?: EventhubCaptureDescriptionOutputReference | EventhubCaptureDescription): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -231,7 +231,7 @@ export class EventhubCaptureDescriptionOutputReference extends cdktf.ComplexObje
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -289,7 +289,7 @@ export class EventhubCaptureDescriptionOutputReference extends cdktf.ComplexObje
   // enabled - computed: false, optional: false, required: true
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
@@ -347,7 +347,7 @@ export class EventhubCaptureDescriptionOutputReference extends cdktf.ComplexObje
   // skip_empty_archives - computed: false, optional: true, required: false
   private _skipEmptyArchives?: boolean | cdktf.IResolvable; 
   public get skipEmptyArchives() {
-    return this.getBooleanAttribute('skip_empty_archives') as any;
+    return this.getBooleanAttribute('skip_empty_archives');
   }
   public set skipEmptyArchives(value: boolean | cdktf.IResolvable) {
     this._skipEmptyArchives = value;
@@ -361,7 +361,7 @@ export class EventhubCaptureDescriptionOutputReference extends cdktf.ComplexObje
   }
 
   // destination - computed: false, optional: false, required: true
-  private _destination = new EventhubCaptureDescriptionDestinationOutputReference(this as any, "destination", true);
+  private _destination = new EventhubCaptureDescriptionDestinationOutputReference(this, "destination", true);
   public get destination() {
     return this._destination;
   }
@@ -392,8 +392,8 @@ export interface EventhubTimeouts {
   readonly update?: string;
 }
 
-export function eventhubTimeoutsToTerraform(struct?: EventhubTimeoutsOutputReference | EventhubTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function eventhubTimeoutsToTerraform(struct?: EventhubTimeoutsOutputReference | EventhubTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -413,7 +413,7 @@ export class EventhubTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -626,7 +626,7 @@ export class Eventhub extends cdktf.TerraformResource {
 
   // partition_ids - computed: true, optional: false, required: false
   public get partitionIds() {
-    return this.getListAttribute('partition_ids');
+    return cdktf.Fn.tolist(this.getListAttribute('partition_ids'));
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -659,7 +659,7 @@ export class Eventhub extends cdktf.TerraformResource {
   }
 
   // capture_description - computed: false, optional: true, required: false
-  private _captureDescription = new EventhubCaptureDescriptionOutputReference(this as any, "capture_description", true);
+  private _captureDescription = new EventhubCaptureDescriptionOutputReference(this, "capture_description", true);
   public get captureDescription() {
     return this._captureDescription;
   }
@@ -675,7 +675,7 @@ export class Eventhub extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new EventhubTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new EventhubTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

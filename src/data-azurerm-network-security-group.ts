@@ -41,12 +41,12 @@ export class DataAzurermNetworkSecurityGroupSecurityRule extends cdktf.ComplexCo
 
   // destination_address_prefixes - computed: true, optional: false, required: false
   public get destinationAddressPrefixes() {
-    return this.getListAttribute('destination_address_prefixes');
+    return cdktf.Fn.tolist(this.getListAttribute('destination_address_prefixes'));
   }
 
   // destination_application_security_group_ids - computed: true, optional: false, required: false
   public get destinationApplicationSecurityGroupIds() {
-    return this.getListAttribute('destination_application_security_group_ids');
+    return cdktf.Fn.tolist(this.getListAttribute('destination_application_security_group_ids'));
   }
 
   // destination_port_range - computed: true, optional: false, required: false
@@ -56,7 +56,7 @@ export class DataAzurermNetworkSecurityGroupSecurityRule extends cdktf.ComplexCo
 
   // destination_port_ranges - computed: true, optional: false, required: false
   public get destinationPortRanges() {
-    return this.getListAttribute('destination_port_ranges');
+    return cdktf.Fn.tolist(this.getListAttribute('destination_port_ranges'));
   }
 
   // direction - computed: true, optional: false, required: false
@@ -86,12 +86,12 @@ export class DataAzurermNetworkSecurityGroupSecurityRule extends cdktf.ComplexCo
 
   // source_address_prefixes - computed: true, optional: false, required: false
   public get sourceAddressPrefixes() {
-    return this.getListAttribute('source_address_prefixes');
+    return cdktf.Fn.tolist(this.getListAttribute('source_address_prefixes'));
   }
 
   // source_application_security_group_ids - computed: true, optional: false, required: false
   public get sourceApplicationSecurityGroupIds() {
-    return this.getListAttribute('source_application_security_group_ids');
+    return cdktf.Fn.tolist(this.getListAttribute('source_application_security_group_ids'));
   }
 
   // source_port_range - computed: true, optional: false, required: false
@@ -101,7 +101,7 @@ export class DataAzurermNetworkSecurityGroupSecurityRule extends cdktf.ComplexCo
 
   // source_port_ranges - computed: true, optional: false, required: false
   public get sourcePortRanges() {
-    return this.getListAttribute('source_port_ranges');
+    return cdktf.Fn.tolist(this.getListAttribute('source_port_ranges'));
   }
 }
 export interface DataAzurermNetworkSecurityGroupTimeouts {
@@ -111,8 +111,8 @@ export interface DataAzurermNetworkSecurityGroupTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermNetworkSecurityGroupTimeoutsToTerraform(struct?: DataAzurermNetworkSecurityGroupTimeoutsOutputReference | DataAzurermNetworkSecurityGroupTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermNetworkSecurityGroupTimeoutsToTerraform(struct?: DataAzurermNetworkSecurityGroupTimeoutsOutputReference | DataAzurermNetworkSecurityGroupTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -129,7 +129,7 @@ export class DataAzurermNetworkSecurityGroupTimeoutsOutputReference extends cdkt
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -250,16 +250,16 @@ export class DataAzurermNetworkSecurityGroup extends cdktf.TerraformDataSource {
 
   // security_rule - computed: true, optional: false, required: false
   public securityRule(index: string) {
-    return new DataAzurermNetworkSecurityGroupSecurityRule(this, 'security_rule', index);
+    return new DataAzurermNetworkSecurityGroupSecurityRule(this, 'security_rule', index, false);
   }
 
   // tags - computed: true, optional: false, required: false
-  public tags(key: string): string {
+  public tags(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermNetworkSecurityGroupTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermNetworkSecurityGroupTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

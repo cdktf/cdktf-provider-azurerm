@@ -22,7 +22,7 @@ export interface DataAzurermSharedImageVersionsConfig extends cdktf.TerraformMet
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image_versions#tags_filter DataAzurermSharedImageVersions#tags_filter}
   */
-  readonly tagsFilter?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tagsFilter?: { [key: string]: string };
   /**
   * timeouts block
   * 
@@ -51,7 +51,7 @@ export class DataAzurermSharedImageVersionsImages extends cdktf.ComplexComputedL
 
   // exclude_from_latest - computed: true, optional: false, required: false
   public get excludeFromLatest() {
-    return this.getBooleanAttribute('exclude_from_latest') as any;
+    return this.getBooleanAttribute('exclude_from_latest');
   }
 
   // location - computed: true, optional: false, required: false
@@ -71,14 +71,13 @@ export class DataAzurermSharedImageVersionsImages extends cdktf.ComplexComputedL
 
   // tags - computed: true, optional: false, required: false
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
 
   // target_region - computed: true, optional: false, required: false
   public get targetRegion() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('target_region') as any;
+    return this.interpolationForAttribute('target_region');
   }
 }
 export interface DataAzurermSharedImageVersionsTimeouts {
@@ -88,8 +87,8 @@ export interface DataAzurermSharedImageVersionsTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermSharedImageVersionsTimeoutsToTerraform(struct?: DataAzurermSharedImageVersionsTimeoutsOutputReference | DataAzurermSharedImageVersionsTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermSharedImageVersionsTimeoutsToTerraform(struct?: DataAzurermSharedImageVersionsTimeoutsOutputReference | DataAzurermSharedImageVersionsTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -106,7 +105,7 @@ export class DataAzurermSharedImageVersionsTimeoutsOutputReference extends cdktf
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -224,7 +223,7 @@ export class DataAzurermSharedImageVersions extends cdktf.TerraformDataSource {
 
   // images - computed: true, optional: false, required: false
   public images(index: string) {
-    return new DataAzurermSharedImageVersionsImages(this, 'images', index);
+    return new DataAzurermSharedImageVersionsImages(this, 'images', index, false);
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -241,12 +240,11 @@ export class DataAzurermSharedImageVersions extends cdktf.TerraformDataSource {
   }
 
   // tags_filter - computed: false, optional: true, required: false
-  private _tagsFilter?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tagsFilter?: { [key: string]: string }; 
   public get tagsFilter() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags_filter') as any;
+    return this.getStringMapAttribute('tags_filter');
   }
-  public set tagsFilter(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tagsFilter(value: { [key: string]: string }) {
     this._tagsFilter = value;
   }
   public resetTagsFilter() {
@@ -258,7 +256,7 @@ export class DataAzurermSharedImageVersions extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermSharedImageVersionsTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermSharedImageVersionsTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -282,7 +280,7 @@ export class DataAzurermSharedImageVersions extends cdktf.TerraformDataSource {
       gallery_name: cdktf.stringToTerraform(this._galleryName),
       image_name: cdktf.stringToTerraform(this._imageName),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      tags_filter: cdktf.hashMapper(cdktf.anyToTerraform)(this._tagsFilter),
+      tags_filter: cdktf.hashMapper(cdktf.stringToTerraform)(this._tagsFilter),
       timeouts: dataAzurermSharedImageVersionsTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

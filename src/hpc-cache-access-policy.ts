@@ -20,7 +20,7 @@ export interface HpcCacheAccessPolicyConfig extends cdktf.TerraformMetaArguments
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_access_policy#access_rule HpcCacheAccessPolicy#access_rule}
   */
-  readonly accessRule: HpcCacheAccessPolicyAccessRule[];
+  readonly accessRule: HpcCacheAccessPolicyAccessRule[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -63,8 +63,8 @@ export interface HpcCacheAccessPolicyAccessRule {
   readonly suidEnabled?: boolean | cdktf.IResolvable;
 }
 
-export function hpcCacheAccessPolicyAccessRuleToTerraform(struct?: HpcCacheAccessPolicyAccessRule): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function hpcCacheAccessPolicyAccessRuleToTerraform(struct?: HpcCacheAccessPolicyAccessRule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -99,8 +99,8 @@ export interface HpcCacheAccessPolicyTimeouts {
   readonly update?: string;
 }
 
-export function hpcCacheAccessPolicyTimeoutsToTerraform(struct?: HpcCacheAccessPolicyTimeoutsOutputReference | HpcCacheAccessPolicyTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function hpcCacheAccessPolicyTimeoutsToTerraform(struct?: HpcCacheAccessPolicyTimeoutsOutputReference | HpcCacheAccessPolicyTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -120,7 +120,7 @@ export class HpcCacheAccessPolicyTimeoutsOutputReference extends cdktf.ComplexOb
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -302,12 +302,12 @@ export class HpcCacheAccessPolicy extends cdktf.TerraformResource {
   }
 
   // access_rule - computed: false, optional: false, required: true
-  private _accessRule?: HpcCacheAccessPolicyAccessRule[]; 
+  private _accessRule?: HpcCacheAccessPolicyAccessRule[] | cdktf.IResolvable; 
   public get accessRule() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('access_rule') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('access_rule')));
   }
-  public set accessRule(value: HpcCacheAccessPolicyAccessRule[]) {
+  public set accessRule(value: HpcCacheAccessPolicyAccessRule[] | cdktf.IResolvable) {
     this._accessRule = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -316,7 +316,7 @@ export class HpcCacheAccessPolicy extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new HpcCacheAccessPolicyTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new HpcCacheAccessPolicyTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

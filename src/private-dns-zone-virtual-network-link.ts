@@ -26,7 +26,7 @@ export interface PrivateDnsZoneVirtualNetworkLinkConfig extends cdktf.TerraformM
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_zone_virtual_network_link#tags PrivateDnsZoneVirtualNetworkLink#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_zone_virtual_network_link#virtual_network_id PrivateDnsZoneVirtualNetworkLink#virtual_network_id}
   */
@@ -57,8 +57,8 @@ export interface PrivateDnsZoneVirtualNetworkLinkTimeouts {
   readonly update?: string;
 }
 
-export function privateDnsZoneVirtualNetworkLinkTimeoutsToTerraform(struct?: PrivateDnsZoneVirtualNetworkLinkTimeoutsOutputReference | PrivateDnsZoneVirtualNetworkLinkTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function privateDnsZoneVirtualNetworkLinkTimeoutsToTerraform(struct?: PrivateDnsZoneVirtualNetworkLinkTimeoutsOutputReference | PrivateDnsZoneVirtualNetworkLinkTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -78,7 +78,7 @@ export class PrivateDnsZoneVirtualNetworkLinkTimeoutsOutputReference extends cdk
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -265,7 +265,7 @@ export class PrivateDnsZoneVirtualNetworkLink extends cdktf.TerraformResource {
   // registration_enabled - computed: false, optional: true, required: false
   private _registrationEnabled?: boolean | cdktf.IResolvable; 
   public get registrationEnabled() {
-    return this.getBooleanAttribute('registration_enabled') as any;
+    return this.getBooleanAttribute('registration_enabled');
   }
   public set registrationEnabled(value: boolean | cdktf.IResolvable) {
     this._registrationEnabled = value;
@@ -292,12 +292,11 @@ export class PrivateDnsZoneVirtualNetworkLink extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -322,7 +321,7 @@ export class PrivateDnsZoneVirtualNetworkLink extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new PrivateDnsZoneVirtualNetworkLinkTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new PrivateDnsZoneVirtualNetworkLinkTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -347,7 +346,7 @@ export class PrivateDnsZoneVirtualNetworkLink extends cdktf.TerraformResource {
       private_dns_zone_name: cdktf.stringToTerraform(this._privateDnsZoneName),
       registration_enabled: cdktf.booleanToTerraform(this._registrationEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       virtual_network_id: cdktf.stringToTerraform(this._virtualNetworkId),
       timeouts: privateDnsZoneVirtualNetworkLinkTimeoutsToTerraform(this._timeouts.internalValue),
     };

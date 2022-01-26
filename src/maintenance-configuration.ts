@@ -18,7 +18,7 @@ export interface MaintenanceConfigurationConfig extends cdktf.TerraformMetaArgum
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/maintenance_configuration#properties MaintenanceConfiguration#properties}
   */
-  readonly properties?: { [key: string]: string } | cdktf.IResolvable;
+  readonly properties?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/maintenance_configuration#resource_group_name MaintenanceConfiguration#resource_group_name}
   */
@@ -30,7 +30,7 @@ export interface MaintenanceConfigurationConfig extends cdktf.TerraformMetaArgum
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/maintenance_configuration#tags MaintenanceConfiguration#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/maintenance_configuration#visibility MaintenanceConfiguration#visibility}
   */
@@ -67,8 +67,8 @@ export interface MaintenanceConfigurationTimeouts {
   readonly update?: string;
 }
 
-export function maintenanceConfigurationTimeoutsToTerraform(struct?: MaintenanceConfigurationTimeoutsOutputReference | MaintenanceConfigurationTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function maintenanceConfigurationTimeoutsToTerraform(struct?: MaintenanceConfigurationTimeoutsOutputReference | MaintenanceConfigurationTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -88,7 +88,7 @@ export class MaintenanceConfigurationTimeoutsOutputReference extends cdktf.Compl
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -219,7 +219,7 @@ export interface MaintenanceConfigurationWindow {
 }
 
 export function maintenanceConfigurationWindowToTerraform(struct?: MaintenanceConfigurationWindowOutputReference | MaintenanceConfigurationWindow): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -240,7 +240,7 @@ export class MaintenanceConfigurationWindowOutputReference extends cdktf.Complex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -443,12 +443,11 @@ export class MaintenanceConfiguration extends cdktf.TerraformResource {
   }
 
   // properties - computed: false, optional: true, required: false
-  private _properties?: { [key: string]: string } | cdktf.IResolvable; 
+  private _properties?: { [key: string]: string }; 
   public get properties() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('properties') as any;
+    return this.getStringMapAttribute('properties');
   }
-  public set properties(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set properties(value: { [key: string]: string }) {
     this._properties = value;
   }
   public resetProperties() {
@@ -489,12 +488,11 @@ export class MaintenanceConfiguration extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -522,7 +520,7 @@ export class MaintenanceConfiguration extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new MaintenanceConfigurationTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new MaintenanceConfigurationTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -538,7 +536,7 @@ export class MaintenanceConfiguration extends cdktf.TerraformResource {
   }
 
   // window - computed: false, optional: true, required: false
-  private _window = new MaintenanceConfigurationWindowOutputReference(this as any, "window", true);
+  private _window = new MaintenanceConfigurationWindowOutputReference(this, "window", true);
   public get window() {
     return this._window;
   }
@@ -561,10 +559,10 @@ export class MaintenanceConfiguration extends cdktf.TerraformResource {
     return {
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
-      properties: cdktf.hashMapper(cdktf.anyToTerraform)(this._properties),
+      properties: cdktf.hashMapper(cdktf.stringToTerraform)(this._properties),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       scope: cdktf.stringToTerraform(this._scope),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       visibility: cdktf.stringToTerraform(this._visibility),
       timeouts: maintenanceConfigurationTimeoutsToTerraform(this._timeouts.internalValue),
       window: maintenanceConfigurationWindowToTerraform(this._window.internalValue),

@@ -42,7 +42,7 @@ export interface IotTimeSeriesInsightsEventSourceIothubConfig extends cdktf.Terr
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_event_source_iothub#tags IotTimeSeriesInsightsEventSourceIothub#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_event_source_iothub#timestamp_property_name IotTimeSeriesInsightsEventSourceIothub#timestamp_property_name}
   */
@@ -73,8 +73,8 @@ export interface IotTimeSeriesInsightsEventSourceIothubTimeouts {
   readonly update?: string;
 }
 
-export function iotTimeSeriesInsightsEventSourceIothubTimeoutsToTerraform(struct?: IotTimeSeriesInsightsEventSourceIothubTimeoutsOutputReference | IotTimeSeriesInsightsEventSourceIothubTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function iotTimeSeriesInsightsEventSourceIothubTimeoutsToTerraform(struct?: IotTimeSeriesInsightsEventSourceIothubTimeoutsOutputReference | IotTimeSeriesInsightsEventSourceIothubTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -94,7 +94,7 @@ export class IotTimeSeriesInsightsEventSourceIothubTimeoutsOutputReference exten
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -361,12 +361,11 @@ export class IotTimeSeriesInsightsEventSourceIothub extends cdktf.TerraformResou
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -394,7 +393,7 @@ export class IotTimeSeriesInsightsEventSourceIothub extends cdktf.TerraformResou
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new IotTimeSeriesInsightsEventSourceIothubTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new IotTimeSeriesInsightsEventSourceIothubTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -423,7 +422,7 @@ export class IotTimeSeriesInsightsEventSourceIothub extends cdktf.TerraformResou
       name: cdktf.stringToTerraform(this._name),
       shared_access_key: cdktf.stringToTerraform(this._sharedAccessKey),
       shared_access_key_name: cdktf.stringToTerraform(this._sharedAccessKeyName),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       timestamp_property_name: cdktf.stringToTerraform(this._timestampPropertyName),
       timeouts: iotTimeSeriesInsightsEventSourceIothubTimeoutsToTerraform(this._timeouts.internalValue),
     };

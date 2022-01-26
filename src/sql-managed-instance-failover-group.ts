@@ -68,7 +68,7 @@ export interface SqlManagedInstanceFailoverGroupReadWriteEndpointFailoverPolicy 
 }
 
 export function sqlManagedInstanceFailoverGroupReadWriteEndpointFailoverPolicyToTerraform(struct?: SqlManagedInstanceFailoverGroupReadWriteEndpointFailoverPolicyOutputReference | SqlManagedInstanceFailoverGroupReadWriteEndpointFailoverPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -86,7 +86,7 @@ export class SqlManagedInstanceFailoverGroupReadWriteEndpointFailoverPolicyOutpu
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -165,8 +165,8 @@ export interface SqlManagedInstanceFailoverGroupTimeouts {
   readonly update?: string;
 }
 
-export function sqlManagedInstanceFailoverGroupTimeoutsToTerraform(struct?: SqlManagedInstanceFailoverGroupTimeoutsOutputReference | SqlManagedInstanceFailoverGroupTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function sqlManagedInstanceFailoverGroupTimeoutsToTerraform(struct?: SqlManagedInstanceFailoverGroupTimeoutsOutputReference | SqlManagedInstanceFailoverGroupTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -186,7 +186,7 @@ export class SqlManagedInstanceFailoverGroupTimeoutsOutputReference extends cdkt
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -399,13 +399,13 @@ export class SqlManagedInstanceFailoverGroup extends cdktf.TerraformResource {
 
   // partner_region - computed: true, optional: false, required: false
   public partnerRegion(index: string) {
-    return new SqlManagedInstanceFailoverGroupPartnerRegion(this, 'partner_region', index);
+    return new SqlManagedInstanceFailoverGroupPartnerRegion(this, 'partner_region', index, false);
   }
 
   // readonly_endpoint_failover_policy_enabled - computed: false, optional: true, required: false
   private _readonlyEndpointFailoverPolicyEnabled?: boolean | cdktf.IResolvable; 
   public get readonlyEndpointFailoverPolicyEnabled() {
-    return this.getBooleanAttribute('readonly_endpoint_failover_policy_enabled') as any;
+    return this.getBooleanAttribute('readonly_endpoint_failover_policy_enabled');
   }
   public set readonlyEndpointFailoverPolicyEnabled(value: boolean | cdktf.IResolvable) {
     this._readonlyEndpointFailoverPolicyEnabled = value;
@@ -437,7 +437,7 @@ export class SqlManagedInstanceFailoverGroup extends cdktf.TerraformResource {
   }
 
   // read_write_endpoint_failover_policy - computed: false, optional: false, required: true
-  private _readWriteEndpointFailoverPolicy = new SqlManagedInstanceFailoverGroupReadWriteEndpointFailoverPolicyOutputReference(this as any, "read_write_endpoint_failover_policy", true);
+  private _readWriteEndpointFailoverPolicy = new SqlManagedInstanceFailoverGroupReadWriteEndpointFailoverPolicyOutputReference(this, "read_write_endpoint_failover_policy", true);
   public get readWriteEndpointFailoverPolicy() {
     return this._readWriteEndpointFailoverPolicy;
   }
@@ -450,7 +450,7 @@ export class SqlManagedInstanceFailoverGroup extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new SqlManagedInstanceFailoverGroupTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new SqlManagedInstanceFailoverGroupTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

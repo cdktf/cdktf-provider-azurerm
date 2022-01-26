@@ -10,7 +10,7 @@ export interface DataAzurermStorageContainerConfig extends cdktf.TerraformMetaAr
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_container#metadata DataAzurermStorageContainer#metadata}
   */
-  readonly metadata?: { [key: string]: string } | cdktf.IResolvable;
+  readonly metadata?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_container#name DataAzurermStorageContainer#name}
   */
@@ -33,8 +33,8 @@ export interface DataAzurermStorageContainerTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermStorageContainerTimeoutsToTerraform(struct?: DataAzurermStorageContainerTimeoutsOutputReference | DataAzurermStorageContainerTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermStorageContainerTimeoutsToTerraform(struct?: DataAzurermStorageContainerTimeoutsOutputReference | DataAzurermStorageContainerTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -51,7 +51,7 @@ export class DataAzurermStorageContainerTimeoutsOutputReference extends cdktf.Co
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -142,12 +142,12 @@ export class DataAzurermStorageContainer extends cdktf.TerraformDataSource {
 
   // has_immutability_policy - computed: true, optional: false, required: false
   public get hasImmutabilityPolicy() {
-    return this.getBooleanAttribute('has_immutability_policy') as any;
+    return this.getBooleanAttribute('has_immutability_policy');
   }
 
   // has_legal_hold - computed: true, optional: false, required: false
   public get hasLegalHold() {
-    return this.getBooleanAttribute('has_legal_hold') as any;
+    return this.getBooleanAttribute('has_legal_hold');
   }
 
   // id - computed: true, optional: true, required: false
@@ -156,12 +156,11 @@ export class DataAzurermStorageContainer extends cdktf.TerraformDataSource {
   }
 
   // metadata - computed: true, optional: true, required: false
-  private _metadata?: { [key: string]: string } | cdktf.IResolvable; 
+  private _metadata?: { [key: string]: string }; 
   public get metadata() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('metadata') as any;
+    return this.getStringMapAttribute('metadata');
   }
-  public set metadata(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set metadata(value: { [key: string]: string }) {
     this._metadata = value;
   }
   public resetMetadata() {
@@ -204,7 +203,7 @@ export class DataAzurermStorageContainer extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermStorageContainerTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermStorageContainerTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -225,7 +224,7 @@ export class DataAzurermStorageContainer extends cdktf.TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      metadata: cdktf.hashMapper(cdktf.anyToTerraform)(this._metadata),
+      metadata: cdktf.hashMapper(cdktf.stringToTerraform)(this._metadata),
       name: cdktf.stringToTerraform(this._name),
       storage_account_name: cdktf.stringToTerraform(this._storageAccountName),
       timeouts: dataAzurermStorageContainerTimeoutsToTerraform(this._timeouts.internalValue),

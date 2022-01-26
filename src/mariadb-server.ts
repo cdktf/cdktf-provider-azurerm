@@ -74,7 +74,7 @@ export interface MariadbServerConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server#tags MariadbServer#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server#version MariadbServer#version}
   */
@@ -112,7 +112,7 @@ export interface MariadbServerStorageProfile {
 }
 
 export function mariadbServerStorageProfileToTerraform(struct?: MariadbServerStorageProfileOutputReference | MariadbServerStorageProfile): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -132,7 +132,7 @@ export class MariadbServerStorageProfileOutputReference extends cdktf.ComplexObj
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -258,8 +258,8 @@ export interface MariadbServerTimeouts {
   readonly update?: string;
 }
 
-export function mariadbServerTimeoutsToTerraform(struct?: MariadbServerTimeoutsOutputReference | MariadbServerTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function mariadbServerTimeoutsToTerraform(struct?: MariadbServerTimeoutsOutputReference | MariadbServerTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -279,7 +279,7 @@ export class MariadbServerTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -480,7 +480,7 @@ export class MariadbServer extends cdktf.TerraformResource {
   // auto_grow_enabled - computed: true, optional: true, required: false
   private _autoGrowEnabled?: boolean | cdktf.IResolvable; 
   public get autoGrowEnabled() {
-    return this.getBooleanAttribute('auto_grow_enabled') as any;
+    return this.getBooleanAttribute('auto_grow_enabled');
   }
   public set autoGrowEnabled(value: boolean | cdktf.IResolvable) {
     this._autoGrowEnabled = value;
@@ -549,7 +549,7 @@ export class MariadbServer extends cdktf.TerraformResource {
   // geo_redundant_backup_enabled - computed: true, optional: true, required: false
   private _geoRedundantBackupEnabled?: boolean | cdktf.IResolvable; 
   public get geoRedundantBackupEnabled() {
-    return this.getBooleanAttribute('geo_redundant_backup_enabled') as any;
+    return this.getBooleanAttribute('geo_redundant_backup_enabled');
   }
   public set geoRedundantBackupEnabled(value: boolean | cdktf.IResolvable) {
     this._geoRedundantBackupEnabled = value;
@@ -596,7 +596,7 @@ export class MariadbServer extends cdktf.TerraformResource {
   // public_network_access_enabled - computed: false, optional: true, required: false
   private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable; 
   public get publicNetworkAccessEnabled() {
-    return this.getBooleanAttribute('public_network_access_enabled') as any;
+    return this.getBooleanAttribute('public_network_access_enabled');
   }
   public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable) {
     this._publicNetworkAccessEnabled = value;
@@ -670,7 +670,7 @@ export class MariadbServer extends cdktf.TerraformResource {
   // ssl_enforcement_enabled - computed: false, optional: true, required: false
   private _sslEnforcementEnabled?: boolean | cdktf.IResolvable; 
   public get sslEnforcementEnabled() {
-    return this.getBooleanAttribute('ssl_enforcement_enabled') as any;
+    return this.getBooleanAttribute('ssl_enforcement_enabled');
   }
   public set sslEnforcementEnabled(value: boolean | cdktf.IResolvable) {
     this._sslEnforcementEnabled = value;
@@ -700,12 +700,11 @@ export class MariadbServer extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -730,7 +729,7 @@ export class MariadbServer extends cdktf.TerraformResource {
   }
 
   // storage_profile - computed: false, optional: true, required: false
-  private _storageProfile = new MariadbServerStorageProfileOutputReference(this as any, "storage_profile", true);
+  private _storageProfile = new MariadbServerStorageProfileOutputReference(this, "storage_profile", true);
   public get storageProfile() {
     return this._storageProfile;
   }
@@ -746,7 +745,7 @@ export class MariadbServer extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new MariadbServerTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new MariadbServerTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -783,7 +782,7 @@ export class MariadbServer extends cdktf.TerraformResource {
       ssl_enforcement: cdktf.stringToTerraform(this._sslEnforcement),
       ssl_enforcement_enabled: cdktf.booleanToTerraform(this._sslEnforcementEnabled),
       storage_mb: cdktf.numberToTerraform(this._storageMb),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       version: cdktf.stringToTerraform(this._version),
       storage_profile: mariadbServerStorageProfileToTerraform(this._storageProfile.internalValue),
       timeouts: mariadbServerTimeoutsToTerraform(this._timeouts.internalValue),

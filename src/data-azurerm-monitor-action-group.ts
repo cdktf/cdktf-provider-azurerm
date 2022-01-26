@@ -20,7 +20,7 @@ export interface DataAzurermMonitorActionGroupConfig extends cdktf.TerraformMeta
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_action_group#event_hub_receiver DataAzurermMonitorActionGroup#event_hub_receiver}
   */
-  readonly eventHubReceiver?: DataAzurermMonitorActionGroupEventHubReceiver[];
+  readonly eventHubReceiver?: DataAzurermMonitorActionGroupEventHubReceiver[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -42,7 +42,7 @@ export class DataAzurermMonitorActionGroupArmRoleReceiver extends cdktf.ComplexC
 
   // use_common_alert_schema - computed: true, optional: false, required: false
   public get useCommonAlertSchema() {
-    return this.getBooleanAttribute('use_common_alert_schema') as any;
+    return this.getBooleanAttribute('use_common_alert_schema');
   }
 }
 export class DataAzurermMonitorActionGroupAutomationRunbookReceiver extends cdktf.ComplexComputedList {
@@ -54,7 +54,7 @@ export class DataAzurermMonitorActionGroupAutomationRunbookReceiver extends cdkt
 
   // is_global_runbook - computed: true, optional: false, required: false
   public get isGlobalRunbook() {
-    return this.getBooleanAttribute('is_global_runbook') as any;
+    return this.getBooleanAttribute('is_global_runbook');
   }
 
   // name - computed: true, optional: false, required: false
@@ -74,7 +74,7 @@ export class DataAzurermMonitorActionGroupAutomationRunbookReceiver extends cdkt
 
   // use_common_alert_schema - computed: true, optional: false, required: false
   public get useCommonAlertSchema() {
-    return this.getBooleanAttribute('use_common_alert_schema') as any;
+    return this.getBooleanAttribute('use_common_alert_schema');
   }
 
   // webhook_resource_id - computed: true, optional: false, required: false
@@ -118,7 +118,7 @@ export class DataAzurermMonitorActionGroupAzureFunctionReceiver extends cdktf.Co
 
   // use_common_alert_schema - computed: true, optional: false, required: false
   public get useCommonAlertSchema() {
-    return this.getBooleanAttribute('use_common_alert_schema') as any;
+    return this.getBooleanAttribute('use_common_alert_schema');
   }
 }
 export class DataAzurermMonitorActionGroupEmailReceiver extends cdktf.ComplexComputedList {
@@ -135,7 +135,7 @@ export class DataAzurermMonitorActionGroupEmailReceiver extends cdktf.ComplexCom
 
   // use_common_alert_schema - computed: true, optional: false, required: false
   public get useCommonAlertSchema() {
-    return this.getBooleanAttribute('use_common_alert_schema') as any;
+    return this.getBooleanAttribute('use_common_alert_schema');
   }
 }
 export class DataAzurermMonitorActionGroupItsmReceiver extends cdktf.ComplexComputedList {
@@ -184,7 +184,7 @@ export class DataAzurermMonitorActionGroupLogicAppReceiver extends cdktf.Complex
 
   // use_common_alert_schema - computed: true, optional: false, required: false
   public get useCommonAlertSchema() {
-    return this.getBooleanAttribute('use_common_alert_schema') as any;
+    return this.getBooleanAttribute('use_common_alert_schema');
   }
 }
 export class DataAzurermMonitorActionGroupSmsReceiver extends cdktf.ComplexComputedList {
@@ -243,7 +243,7 @@ export class DataAzurermMonitorActionGroupWebhookReceiver extends cdktf.ComplexC
   // aad_auth - computed: true, optional: false, required: false
   public get aadAuth() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('aad_auth') as any;
+    return this.interpolationForAttribute('aad_auth');
   }
 
   // name - computed: true, optional: false, required: false
@@ -258,7 +258,7 @@ export class DataAzurermMonitorActionGroupWebhookReceiver extends cdktf.ComplexC
 
   // use_common_alert_schema - computed: true, optional: false, required: false
   public get useCommonAlertSchema() {
-    return this.getBooleanAttribute('use_common_alert_schema') as any;
+    return this.getBooleanAttribute('use_common_alert_schema');
   }
 }
 export interface DataAzurermMonitorActionGroupEventHubReceiver {
@@ -280,8 +280,8 @@ export interface DataAzurermMonitorActionGroupEventHubReceiver {
   readonly useCommonAlertSchema?: boolean | cdktf.IResolvable;
 }
 
-export function dataAzurermMonitorActionGroupEventHubReceiverToTerraform(struct?: DataAzurermMonitorActionGroupEventHubReceiver): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermMonitorActionGroupEventHubReceiverToTerraform(struct?: DataAzurermMonitorActionGroupEventHubReceiver | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -300,8 +300,8 @@ export interface DataAzurermMonitorActionGroupTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermMonitorActionGroupTimeoutsToTerraform(struct?: DataAzurermMonitorActionGroupTimeoutsOutputReference | DataAzurermMonitorActionGroupTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermMonitorActionGroupTimeoutsToTerraform(struct?: DataAzurermMonitorActionGroupTimeoutsOutputReference | DataAzurermMonitorActionGroupTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -318,7 +318,7 @@ export class DataAzurermMonitorActionGroupTimeoutsOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -404,32 +404,32 @@ export class DataAzurermMonitorActionGroup extends cdktf.TerraformDataSource {
 
   // arm_role_receiver - computed: true, optional: false, required: false
   public armRoleReceiver(index: string) {
-    return new DataAzurermMonitorActionGroupArmRoleReceiver(this, 'arm_role_receiver', index);
+    return new DataAzurermMonitorActionGroupArmRoleReceiver(this, 'arm_role_receiver', index, false);
   }
 
   // automation_runbook_receiver - computed: true, optional: false, required: false
   public automationRunbookReceiver(index: string) {
-    return new DataAzurermMonitorActionGroupAutomationRunbookReceiver(this, 'automation_runbook_receiver', index);
+    return new DataAzurermMonitorActionGroupAutomationRunbookReceiver(this, 'automation_runbook_receiver', index, false);
   }
 
   // azure_app_push_receiver - computed: true, optional: false, required: false
   public azureAppPushReceiver(index: string) {
-    return new DataAzurermMonitorActionGroupAzureAppPushReceiver(this, 'azure_app_push_receiver', index);
+    return new DataAzurermMonitorActionGroupAzureAppPushReceiver(this, 'azure_app_push_receiver', index, false);
   }
 
   // azure_function_receiver - computed: true, optional: false, required: false
   public azureFunctionReceiver(index: string) {
-    return new DataAzurermMonitorActionGroupAzureFunctionReceiver(this, 'azure_function_receiver', index);
+    return new DataAzurermMonitorActionGroupAzureFunctionReceiver(this, 'azure_function_receiver', index, false);
   }
 
   // email_receiver - computed: true, optional: false, required: false
   public emailReceiver(index: string) {
-    return new DataAzurermMonitorActionGroupEmailReceiver(this, 'email_receiver', index);
+    return new DataAzurermMonitorActionGroupEmailReceiver(this, 'email_receiver', index, false);
   }
 
   // enabled - computed: true, optional: false, required: false
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
 
   // id - computed: true, optional: true, required: false
@@ -439,12 +439,12 @@ export class DataAzurermMonitorActionGroup extends cdktf.TerraformDataSource {
 
   // itsm_receiver - computed: true, optional: false, required: false
   public itsmReceiver(index: string) {
-    return new DataAzurermMonitorActionGroupItsmReceiver(this, 'itsm_receiver', index);
+    return new DataAzurermMonitorActionGroupItsmReceiver(this, 'itsm_receiver', index, false);
   }
 
   // logic_app_receiver - computed: true, optional: false, required: false
   public logicAppReceiver(index: string) {
-    return new DataAzurermMonitorActionGroupLogicAppReceiver(this, 'logic_app_receiver', index);
+    return new DataAzurermMonitorActionGroupLogicAppReceiver(this, 'logic_app_receiver', index, false);
   }
 
   // name - computed: false, optional: false, required: true
@@ -480,26 +480,26 @@ export class DataAzurermMonitorActionGroup extends cdktf.TerraformDataSource {
 
   // sms_receiver - computed: true, optional: false, required: false
   public smsReceiver(index: string) {
-    return new DataAzurermMonitorActionGroupSmsReceiver(this, 'sms_receiver', index);
+    return new DataAzurermMonitorActionGroupSmsReceiver(this, 'sms_receiver', index, false);
   }
 
   // voice_receiver - computed: true, optional: false, required: false
   public voiceReceiver(index: string) {
-    return new DataAzurermMonitorActionGroupVoiceReceiver(this, 'voice_receiver', index);
+    return new DataAzurermMonitorActionGroupVoiceReceiver(this, 'voice_receiver', index, false);
   }
 
   // webhook_receiver - computed: true, optional: false, required: false
   public webhookReceiver(index: string) {
-    return new DataAzurermMonitorActionGroupWebhookReceiver(this, 'webhook_receiver', index);
+    return new DataAzurermMonitorActionGroupWebhookReceiver(this, 'webhook_receiver', index, false);
   }
 
   // event_hub_receiver - computed: false, optional: true, required: false
-  private _eventHubReceiver?: DataAzurermMonitorActionGroupEventHubReceiver[]; 
+  private _eventHubReceiver?: DataAzurermMonitorActionGroupEventHubReceiver[] | cdktf.IResolvable; 
   public get eventHubReceiver() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('event_hub_receiver') as any;
+    return this.interpolationForAttribute('event_hub_receiver');
   }
-  public set eventHubReceiver(value: DataAzurermMonitorActionGroupEventHubReceiver[]) {
+  public set eventHubReceiver(value: DataAzurermMonitorActionGroupEventHubReceiver[] | cdktf.IResolvable) {
     this._eventHubReceiver = value;
   }
   public resetEventHubReceiver() {
@@ -511,7 +511,7 @@ export class DataAzurermMonitorActionGroup extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermMonitorActionGroupTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermMonitorActionGroupTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

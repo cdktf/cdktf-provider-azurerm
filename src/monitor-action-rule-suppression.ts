@@ -26,7 +26,7 @@ export interface MonitorActionRuleSuppressionConfig extends cdktf.TerraformMetaA
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_rule_suppression#tags MonitorActionRuleSuppression#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * condition block
   * 
@@ -64,7 +64,7 @@ export interface MonitorActionRuleSuppressionConditionAlertContext {
 }
 
 export function monitorActionRuleSuppressionConditionAlertContextToTerraform(struct?: MonitorActionRuleSuppressionConditionAlertContextOutputReference | MonitorActionRuleSuppressionConditionAlertContext): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -82,7 +82,7 @@ export class MonitorActionRuleSuppressionConditionAlertContextOutputReference ex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -129,7 +129,7 @@ export class MonitorActionRuleSuppressionConditionAlertContextOutputReference ex
   // values - computed: false, optional: false, required: true
   private _values?: string[]; 
   public get values() {
-    return this.getListAttribute('values');
+    return cdktf.Fn.tolist(this.getListAttribute('values'));
   }
   public set values(value: string[]) {
     this._values = value;
@@ -151,7 +151,7 @@ export interface MonitorActionRuleSuppressionConditionAlertRuleId {
 }
 
 export function monitorActionRuleSuppressionConditionAlertRuleIdToTerraform(struct?: MonitorActionRuleSuppressionConditionAlertRuleIdOutputReference | MonitorActionRuleSuppressionConditionAlertRuleId): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -169,7 +169,7 @@ export class MonitorActionRuleSuppressionConditionAlertRuleIdOutputReference ext
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -216,7 +216,7 @@ export class MonitorActionRuleSuppressionConditionAlertRuleIdOutputReference ext
   // values - computed: false, optional: false, required: true
   private _values?: string[]; 
   public get values() {
-    return this.getListAttribute('values');
+    return cdktf.Fn.tolist(this.getListAttribute('values'));
   }
   public set values(value: string[]) {
     this._values = value;
@@ -238,7 +238,7 @@ export interface MonitorActionRuleSuppressionConditionDescription {
 }
 
 export function monitorActionRuleSuppressionConditionDescriptionToTerraform(struct?: MonitorActionRuleSuppressionConditionDescriptionOutputReference | MonitorActionRuleSuppressionConditionDescription): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -256,7 +256,7 @@ export class MonitorActionRuleSuppressionConditionDescriptionOutputReference ext
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -303,7 +303,7 @@ export class MonitorActionRuleSuppressionConditionDescriptionOutputReference ext
   // values - computed: false, optional: false, required: true
   private _values?: string[]; 
   public get values() {
-    return this.getListAttribute('values');
+    return cdktf.Fn.tolist(this.getListAttribute('values'));
   }
   public set values(value: string[]) {
     this._values = value;
@@ -325,7 +325,7 @@ export interface MonitorActionRuleSuppressionConditionMonitor {
 }
 
 export function monitorActionRuleSuppressionConditionMonitorToTerraform(struct?: MonitorActionRuleSuppressionConditionMonitorOutputReference | MonitorActionRuleSuppressionConditionMonitor): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -343,7 +343,7 @@ export class MonitorActionRuleSuppressionConditionMonitorOutputReference extends
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -390,7 +390,7 @@ export class MonitorActionRuleSuppressionConditionMonitorOutputReference extends
   // values - computed: false, optional: false, required: true
   private _values?: string[]; 
   public get values() {
-    return this.getListAttribute('values');
+    return cdktf.Fn.tolist(this.getListAttribute('values'));
   }
   public set values(value: string[]) {
     this._values = value;
@@ -412,7 +412,7 @@ export interface MonitorActionRuleSuppressionConditionMonitorService {
 }
 
 export function monitorActionRuleSuppressionConditionMonitorServiceToTerraform(struct?: MonitorActionRuleSuppressionConditionMonitorServiceOutputReference | MonitorActionRuleSuppressionConditionMonitorService): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -430,7 +430,7 @@ export class MonitorActionRuleSuppressionConditionMonitorServiceOutputReference 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -477,7 +477,7 @@ export class MonitorActionRuleSuppressionConditionMonitorServiceOutputReference 
   // values - computed: false, optional: false, required: true
   private _values?: string[]; 
   public get values() {
-    return this.getListAttribute('values');
+    return cdktf.Fn.tolist(this.getListAttribute('values'));
   }
   public set values(value: string[]) {
     this._values = value;
@@ -499,7 +499,7 @@ export interface MonitorActionRuleSuppressionConditionSeverity {
 }
 
 export function monitorActionRuleSuppressionConditionSeverityToTerraform(struct?: MonitorActionRuleSuppressionConditionSeverityOutputReference | MonitorActionRuleSuppressionConditionSeverity): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -517,7 +517,7 @@ export class MonitorActionRuleSuppressionConditionSeverityOutputReference extend
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -564,7 +564,7 @@ export class MonitorActionRuleSuppressionConditionSeverityOutputReference extend
   // values - computed: false, optional: false, required: true
   private _values?: string[]; 
   public get values() {
-    return this.getListAttribute('values');
+    return cdktf.Fn.tolist(this.getListAttribute('values'));
   }
   public set values(value: string[]) {
     this._values = value;
@@ -586,7 +586,7 @@ export interface MonitorActionRuleSuppressionConditionTargetResourceType {
 }
 
 export function monitorActionRuleSuppressionConditionTargetResourceTypeToTerraform(struct?: MonitorActionRuleSuppressionConditionTargetResourceTypeOutputReference | MonitorActionRuleSuppressionConditionTargetResourceType): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -604,7 +604,7 @@ export class MonitorActionRuleSuppressionConditionTargetResourceTypeOutputRefere
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -651,7 +651,7 @@ export class MonitorActionRuleSuppressionConditionTargetResourceTypeOutputRefere
   // values - computed: false, optional: false, required: true
   private _values?: string[]; 
   public get values() {
-    return this.getListAttribute('values');
+    return cdktf.Fn.tolist(this.getListAttribute('values'));
   }
   public set values(value: string[]) {
     this._values = value;
@@ -707,7 +707,7 @@ export interface MonitorActionRuleSuppressionCondition {
 }
 
 export function monitorActionRuleSuppressionConditionToTerraform(struct?: MonitorActionRuleSuppressionConditionOutputReference | MonitorActionRuleSuppressionCondition): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -730,7 +730,7 @@ export class MonitorActionRuleSuppressionConditionOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -792,7 +792,7 @@ export class MonitorActionRuleSuppressionConditionOutputReference extends cdktf.
   }
 
   // alert_context - computed: false, optional: true, required: false
-  private _alertContext = new MonitorActionRuleSuppressionConditionAlertContextOutputReference(this as any, "alert_context", true);
+  private _alertContext = new MonitorActionRuleSuppressionConditionAlertContextOutputReference(this, "alert_context", true);
   public get alertContext() {
     return this._alertContext;
   }
@@ -808,7 +808,7 @@ export class MonitorActionRuleSuppressionConditionOutputReference extends cdktf.
   }
 
   // alert_rule_id - computed: false, optional: true, required: false
-  private _alertRuleId = new MonitorActionRuleSuppressionConditionAlertRuleIdOutputReference(this as any, "alert_rule_id", true);
+  private _alertRuleId = new MonitorActionRuleSuppressionConditionAlertRuleIdOutputReference(this, "alert_rule_id", true);
   public get alertRuleId() {
     return this._alertRuleId;
   }
@@ -824,7 +824,7 @@ export class MonitorActionRuleSuppressionConditionOutputReference extends cdktf.
   }
 
   // description - computed: false, optional: true, required: false
-  private _description = new MonitorActionRuleSuppressionConditionDescriptionOutputReference(this as any, "description", true);
+  private _description = new MonitorActionRuleSuppressionConditionDescriptionOutputReference(this, "description", true);
   public get description() {
     return this._description;
   }
@@ -840,7 +840,7 @@ export class MonitorActionRuleSuppressionConditionOutputReference extends cdktf.
   }
 
   // monitor - computed: false, optional: true, required: false
-  private _monitor = new MonitorActionRuleSuppressionConditionMonitorOutputReference(this as any, "monitor", true);
+  private _monitor = new MonitorActionRuleSuppressionConditionMonitorOutputReference(this, "monitor", true);
   public get monitor() {
     return this._monitor;
   }
@@ -856,7 +856,7 @@ export class MonitorActionRuleSuppressionConditionOutputReference extends cdktf.
   }
 
   // monitor_service - computed: false, optional: true, required: false
-  private _monitorService = new MonitorActionRuleSuppressionConditionMonitorServiceOutputReference(this as any, "monitor_service", true);
+  private _monitorService = new MonitorActionRuleSuppressionConditionMonitorServiceOutputReference(this, "monitor_service", true);
   public get monitorService() {
     return this._monitorService;
   }
@@ -872,7 +872,7 @@ export class MonitorActionRuleSuppressionConditionOutputReference extends cdktf.
   }
 
   // severity - computed: false, optional: true, required: false
-  private _severity = new MonitorActionRuleSuppressionConditionSeverityOutputReference(this as any, "severity", true);
+  private _severity = new MonitorActionRuleSuppressionConditionSeverityOutputReference(this, "severity", true);
   public get severity() {
     return this._severity;
   }
@@ -888,7 +888,7 @@ export class MonitorActionRuleSuppressionConditionOutputReference extends cdktf.
   }
 
   // target_resource_type - computed: false, optional: true, required: false
-  private _targetResourceType = new MonitorActionRuleSuppressionConditionTargetResourceTypeOutputReference(this as any, "target_resource_type", true);
+  private _targetResourceType = new MonitorActionRuleSuppressionConditionTargetResourceTypeOutputReference(this, "target_resource_type", true);
   public get targetResourceType() {
     return this._targetResourceType;
   }
@@ -915,7 +915,7 @@ export interface MonitorActionRuleSuppressionScope {
 }
 
 export function monitorActionRuleSuppressionScopeToTerraform(struct?: MonitorActionRuleSuppressionScopeOutputReference | MonitorActionRuleSuppressionScope): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -933,7 +933,7 @@ export class MonitorActionRuleSuppressionScopeOutputReference extends cdktf.Comp
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -967,7 +967,7 @@ export class MonitorActionRuleSuppressionScopeOutputReference extends cdktf.Comp
   // resource_ids - computed: false, optional: false, required: true
   private _resourceIds?: string[]; 
   public get resourceIds() {
-    return this.getListAttribute('resource_ids');
+    return cdktf.Fn.tolist(this.getListAttribute('resource_ids'));
   }
   public set resourceIds(value: string[]) {
     this._resourceIds = value;
@@ -1010,7 +1010,7 @@ export interface MonitorActionRuleSuppressionSuppressionSchedule {
 }
 
 export function monitorActionRuleSuppressionSuppressionScheduleToTerraform(struct?: MonitorActionRuleSuppressionSuppressionScheduleOutputReference | MonitorActionRuleSuppressionSuppressionSchedule): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1030,7 +1030,7 @@ export class MonitorActionRuleSuppressionSuppressionScheduleOutputReference exte
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1089,8 +1089,7 @@ export class MonitorActionRuleSuppressionSuppressionScheduleOutputReference exte
   // recurrence_monthly - computed: false, optional: true, required: false
   private _recurrenceMonthly?: number[]; 
   public get recurrenceMonthly() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('recurrence_monthly') as any;
+    return cdktf.Token.asNumberList(cdktf.Fn.tolist(this.getNumberListAttribute('recurrence_monthly')));
   }
   public set recurrenceMonthly(value: number[]) {
     this._recurrenceMonthly = value;
@@ -1106,7 +1105,7 @@ export class MonitorActionRuleSuppressionSuppressionScheduleOutputReference exte
   // recurrence_weekly - computed: false, optional: true, required: false
   private _recurrenceWeekly?: string[]; 
   public get recurrenceWeekly() {
-    return this.getListAttribute('recurrence_weekly');
+    return cdktf.Fn.tolist(this.getListAttribute('recurrence_weekly'));
   }
   public set recurrenceWeekly(value: string[]) {
     this._recurrenceWeekly = value;
@@ -1146,7 +1145,7 @@ export interface MonitorActionRuleSuppressionSuppression {
 }
 
 export function monitorActionRuleSuppressionSuppressionToTerraform(struct?: MonitorActionRuleSuppressionSuppressionOutputReference | MonitorActionRuleSuppressionSuppression): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1164,7 +1163,7 @@ export class MonitorActionRuleSuppressionSuppressionOutputReference extends cdkt
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1209,7 +1208,7 @@ export class MonitorActionRuleSuppressionSuppressionOutputReference extends cdkt
   }
 
   // schedule - computed: false, optional: true, required: false
-  private _schedule = new MonitorActionRuleSuppressionSuppressionScheduleOutputReference(this as any, "schedule", true);
+  private _schedule = new MonitorActionRuleSuppressionSuppressionScheduleOutputReference(this, "schedule", true);
   public get schedule() {
     return this._schedule;
   }
@@ -1243,8 +1242,8 @@ export interface MonitorActionRuleSuppressionTimeouts {
   readonly update?: string;
 }
 
-export function monitorActionRuleSuppressionTimeoutsToTerraform(struct?: MonitorActionRuleSuppressionTimeoutsOutputReference | MonitorActionRuleSuppressionTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function monitorActionRuleSuppressionTimeoutsToTerraform(struct?: MonitorActionRuleSuppressionTimeoutsOutputReference | MonitorActionRuleSuppressionTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1264,7 +1263,7 @@ export class MonitorActionRuleSuppressionTimeoutsOutputReference extends cdktf.C
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1438,7 +1437,7 @@ export class MonitorActionRuleSuppression extends cdktf.TerraformResource {
   // enabled - computed: false, optional: true, required: false
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
@@ -1483,12 +1482,11 @@ export class MonitorActionRuleSuppression extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -1500,7 +1498,7 @@ export class MonitorActionRuleSuppression extends cdktf.TerraformResource {
   }
 
   // condition - computed: false, optional: true, required: false
-  private _condition = new MonitorActionRuleSuppressionConditionOutputReference(this as any, "condition", true);
+  private _condition = new MonitorActionRuleSuppressionConditionOutputReference(this, "condition", true);
   public get condition() {
     return this._condition;
   }
@@ -1516,7 +1514,7 @@ export class MonitorActionRuleSuppression extends cdktf.TerraformResource {
   }
 
   // scope - computed: false, optional: true, required: false
-  private _scope = new MonitorActionRuleSuppressionScopeOutputReference(this as any, "scope", true);
+  private _scope = new MonitorActionRuleSuppressionScopeOutputReference(this, "scope", true);
   public get scope() {
     return this._scope;
   }
@@ -1532,7 +1530,7 @@ export class MonitorActionRuleSuppression extends cdktf.TerraformResource {
   }
 
   // suppression - computed: false, optional: false, required: true
-  private _suppression = new MonitorActionRuleSuppressionSuppressionOutputReference(this as any, "suppression", true);
+  private _suppression = new MonitorActionRuleSuppressionSuppressionOutputReference(this, "suppression", true);
   public get suppression() {
     return this._suppression;
   }
@@ -1545,7 +1543,7 @@ export class MonitorActionRuleSuppression extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new MonitorActionRuleSuppressionTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new MonitorActionRuleSuppressionTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -1570,7 +1568,7 @@ export class MonitorActionRuleSuppression extends cdktf.TerraformResource {
       enabled: cdktf.booleanToTerraform(this._enabled),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       condition: monitorActionRuleSuppressionConditionToTerraform(this._condition.internalValue),
       scope: monitorActionRuleSuppressionScopeToTerraform(this._scope.internalValue),
       suppression: monitorActionRuleSuppressionSuppressionToTerraform(this._suppression.internalValue),

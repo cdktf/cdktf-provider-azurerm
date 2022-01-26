@@ -53,8 +53,8 @@ export interface SpringCloudAppRedisAssociationTimeouts {
   readonly update?: string;
 }
 
-export function springCloudAppRedisAssociationTimeoutsToTerraform(struct?: SpringCloudAppRedisAssociationTimeoutsOutputReference | SpringCloudAppRedisAssociationTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function springCloudAppRedisAssociationTimeoutsToTerraform(struct?: SpringCloudAppRedisAssociationTimeoutsOutputReference | SpringCloudAppRedisAssociationTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -74,7 +74,7 @@ export class SpringCloudAppRedisAssociationTimeoutsOutputReference extends cdktf
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -286,7 +286,7 @@ export class SpringCloudAppRedisAssociation extends cdktf.TerraformResource {
   // ssl_enabled - computed: false, optional: true, required: false
   private _sslEnabled?: boolean | cdktf.IResolvable; 
   public get sslEnabled() {
-    return this.getBooleanAttribute('ssl_enabled') as any;
+    return this.getBooleanAttribute('ssl_enabled');
   }
   public set sslEnabled(value: boolean | cdktf.IResolvable) {
     this._sslEnabled = value;
@@ -300,7 +300,7 @@ export class SpringCloudAppRedisAssociation extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new SpringCloudAppRedisAssociationTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new SpringCloudAppRedisAssociationTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

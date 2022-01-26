@@ -18,7 +18,7 @@ export interface TemplateDeploymentConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/template_deployment#parameters TemplateDeployment#parameters}
   */
-  readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
+  readonly parameters?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/template_deployment#parameters_body TemplateDeployment#parameters_body}
   */
@@ -57,8 +57,8 @@ export interface TemplateDeploymentTimeouts {
   readonly update?: string;
 }
 
-export function templateDeploymentTimeoutsToTerraform(struct?: TemplateDeploymentTimeoutsOutputReference | TemplateDeploymentTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function templateDeploymentTimeoutsToTerraform(struct?: TemplateDeploymentTimeoutsOutputReference | TemplateDeploymentTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -78,7 +78,7 @@ export class TemplateDeploymentTimeoutsOutputReference extends cdktf.ComplexObje
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -263,17 +263,16 @@ export class TemplateDeployment extends cdktf.TerraformResource {
   }
 
   // outputs - computed: true, optional: false, required: false
-  public outputs(key: string): string {
+  public outputs(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'outputs').lookup(key);
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string } | cdktf.IResolvable; 
+  private _parameters?: { [key: string]: string }; 
   public get parameters() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('parameters') as any;
+    return this.getStringMapAttribute('parameters');
   }
-  public set parameters(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set parameters(value: { [key: string]: string }) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -330,7 +329,7 @@ export class TemplateDeployment extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TemplateDeploymentTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new TemplateDeploymentTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -353,7 +352,7 @@ export class TemplateDeployment extends cdktf.TerraformResource {
     return {
       deployment_mode: cdktf.stringToTerraform(this._deploymentMode),
       name: cdktf.stringToTerraform(this._name),
-      parameters: cdktf.hashMapper(cdktf.anyToTerraform)(this._parameters),
+      parameters: cdktf.hashMapper(cdktf.stringToTerraform)(this._parameters),
       parameters_body: cdktf.stringToTerraform(this._parametersBody),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       template_body: cdktf.stringToTerraform(this._templateBody),

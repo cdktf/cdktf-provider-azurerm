@@ -34,7 +34,7 @@ export interface EventhubNamespaceConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace#network_rulesets EventhubNamespace#network_rulesets}
   */
-  readonly networkRulesets?: EventhubNamespaceNetworkRulesets[];
+  readonly networkRulesets?: EventhubNamespaceNetworkRulesets[] | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace#resource_group_name EventhubNamespace#resource_group_name}
   */
@@ -46,7 +46,7 @@ export interface EventhubNamespaceConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace#tags EventhubNamespace#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace#zone_redundant EventhubNamespace#zone_redundant}
   */
@@ -75,8 +75,8 @@ export interface EventhubNamespaceNetworkRulesetsIpRule {
   readonly ipMask?: string;
 }
 
-export function eventhubNamespaceNetworkRulesetsIpRuleToTerraform(struct?: EventhubNamespaceNetworkRulesetsIpRule): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function eventhubNamespaceNetworkRulesetsIpRuleToTerraform(struct?: EventhubNamespaceNetworkRulesetsIpRule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -97,8 +97,8 @@ export interface EventhubNamespaceNetworkRulesetsVirtualNetworkRule {
   readonly subnetId?: string;
 }
 
-export function eventhubNamespaceNetworkRulesetsVirtualNetworkRuleToTerraform(struct?: EventhubNamespaceNetworkRulesetsVirtualNetworkRule): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function eventhubNamespaceNetworkRulesetsVirtualNetworkRuleToTerraform(struct?: EventhubNamespaceNetworkRulesetsVirtualNetworkRule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -116,7 +116,7 @@ export interface EventhubNamespaceNetworkRulesets {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace#ip_rule EventhubNamespace#ip_rule}
   */
-  readonly ipRule?: EventhubNamespaceNetworkRulesetsIpRule[];
+  readonly ipRule?: EventhubNamespaceNetworkRulesetsIpRule[] | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace#trusted_service_access_enabled EventhubNamespace#trusted_service_access_enabled}
   */
@@ -124,11 +124,11 @@ export interface EventhubNamespaceNetworkRulesets {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace#virtual_network_rule EventhubNamespace#virtual_network_rule}
   */
-  readonly virtualNetworkRule?: EventhubNamespaceNetworkRulesetsVirtualNetworkRule[];
+  readonly virtualNetworkRule?: EventhubNamespaceNetworkRulesetsVirtualNetworkRule[] | cdktf.IResolvable;
 }
 
-export function eventhubNamespaceNetworkRulesetsToTerraform(struct?: EventhubNamespaceNetworkRulesets): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function eventhubNamespaceNetworkRulesetsToTerraform(struct?: EventhubNamespaceNetworkRulesets | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -148,7 +148,7 @@ export interface EventhubNamespaceIdentity {
 }
 
 export function eventhubNamespaceIdentityToTerraform(struct?: EventhubNamespaceIdentityOutputReference | EventhubNamespaceIdentity): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -165,7 +165,7 @@ export class EventhubNamespaceIdentityOutputReference extends cdktf.ComplexObjec
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -188,6 +188,16 @@ export class EventhubNamespaceIdentityOutputReference extends cdktf.ComplexObjec
       this.isEmptyObject = Object.keys(value).length === 0;
       this._type = value.type;
     }
+  }
+
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
   }
 
   // type - computed: false, optional: true, required: false
@@ -225,8 +235,8 @@ export interface EventhubNamespaceTimeouts {
   readonly update?: string;
 }
 
-export function eventhubNamespaceTimeoutsToTerraform(struct?: EventhubNamespaceTimeoutsOutputReference | EventhubNamespaceTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function eventhubNamespaceTimeoutsToTerraform(struct?: EventhubNamespaceTimeoutsOutputReference | EventhubNamespaceTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -246,7 +256,7 @@ export class EventhubNamespaceTimeoutsOutputReference extends cdktf.ComplexObjec
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -408,7 +418,7 @@ export class EventhubNamespace extends cdktf.TerraformResource {
   // auto_inflate_enabled - computed: false, optional: true, required: false
   private _autoInflateEnabled?: boolean | cdktf.IResolvable; 
   public get autoInflateEnabled() {
-    return this.getBooleanAttribute('auto_inflate_enabled') as any;
+    return this.getBooleanAttribute('auto_inflate_enabled');
   }
   public set autoInflateEnabled(value: boolean | cdktf.IResolvable) {
     this._autoInflateEnabled = value;
@@ -531,12 +541,12 @@ export class EventhubNamespace extends cdktf.TerraformResource {
   }
 
   // network_rulesets - computed: true, optional: true, required: false
-  private _networkRulesets?: EventhubNamespaceNetworkRulesets[]; 
+  private _networkRulesets?: EventhubNamespaceNetworkRulesets[] | cdktf.IResolvable; 
   public get networkRulesets() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('network_rulesets') as any;
+    return this.interpolationForAttribute('network_rulesets');
   }
-  public set networkRulesets(value: EventhubNamespaceNetworkRulesets[]) {
+  public set networkRulesets(value: EventhubNamespaceNetworkRulesets[] | cdktf.IResolvable) {
     this._networkRulesets = value;
   }
   public resetNetworkRulesets() {
@@ -574,12 +584,11 @@ export class EventhubNamespace extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -593,7 +602,7 @@ export class EventhubNamespace extends cdktf.TerraformResource {
   // zone_redundant - computed: false, optional: true, required: false
   private _zoneRedundant?: boolean | cdktf.IResolvable; 
   public get zoneRedundant() {
-    return this.getBooleanAttribute('zone_redundant') as any;
+    return this.getBooleanAttribute('zone_redundant');
   }
   public set zoneRedundant(value: boolean | cdktf.IResolvable) {
     this._zoneRedundant = value;
@@ -607,7 +616,7 @@ export class EventhubNamespace extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity = new EventhubNamespaceIdentityOutputReference(this as any, "identity", true);
+  private _identity = new EventhubNamespaceIdentityOutputReference(this, "identity", true);
   public get identity() {
     return this._identity;
   }
@@ -623,7 +632,7 @@ export class EventhubNamespace extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new EventhubNamespaceTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new EventhubNamespaceTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -653,7 +662,7 @@ export class EventhubNamespace extends cdktf.TerraformResource {
       network_rulesets: cdktf.listMapper(eventhubNamespaceNetworkRulesetsToTerraform)(this._networkRulesets),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku: cdktf.stringToTerraform(this._sku),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       zone_redundant: cdktf.booleanToTerraform(this._zoneRedundant),
       identity: eventhubNamespaceIdentityToTerraform(this._identity.internalValue),
       timeouts: eventhubNamespaceTimeoutsToTerraform(this._timeouts.internalValue),

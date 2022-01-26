@@ -14,7 +14,7 @@ export interface DataFactoryTriggerTumblingWindowConfig extends cdktf.TerraformM
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_tumbling_window#additional_properties DataFactoryTriggerTumblingWindow#additional_properties}
   */
-  readonly additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
+  readonly additionalProperties?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_tumbling_window#annotations DataFactoryTriggerTumblingWindow#annotations}
   */
@@ -78,7 +78,7 @@ export interface DataFactoryTriggerTumblingWindowConfig extends cdktf.TerraformM
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_tumbling_window#trigger_dependency DataFactoryTriggerTumblingWindow#trigger_dependency}
   */
-  readonly triggerDependency?: DataFactoryTriggerTumblingWindowTriggerDependency[];
+  readonly triggerDependency?: DataFactoryTriggerTumblingWindowTriggerDependency[] | cdktf.IResolvable;
 }
 export interface DataFactoryTriggerTumblingWindowPipeline {
   /**
@@ -88,17 +88,17 @@ export interface DataFactoryTriggerTumblingWindowPipeline {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_tumbling_window#parameters DataFactoryTriggerTumblingWindow#parameters}
   */
-  readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
+  readonly parameters?: { [key: string]: string };
 }
 
 export function dataFactoryTriggerTumblingWindowPipelineToTerraform(struct?: DataFactoryTriggerTumblingWindowPipelineOutputReference | DataFactoryTriggerTumblingWindowPipeline): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
     name: cdktf.stringToTerraform(struct!.name),
-    parameters: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.parameters),
+    parameters: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.parameters),
   }
 }
 
@@ -110,7 +110,7 @@ export class DataFactoryTriggerTumblingWindowPipelineOutputReference extends cdk
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -155,12 +155,11 @@ export class DataFactoryTriggerTumblingWindowPipelineOutputReference extends cdk
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string } | cdktf.IResolvable; 
+  private _parameters?: { [key: string]: string }; 
   public get parameters() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('parameters') as any;
+    return this.getStringMapAttribute('parameters');
   }
-  public set parameters(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set parameters(value: { [key: string]: string }) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -183,7 +182,7 @@ export interface DataFactoryTriggerTumblingWindowRetry {
 }
 
 export function dataFactoryTriggerTumblingWindowRetryToTerraform(struct?: DataFactoryTriggerTumblingWindowRetryOutputReference | DataFactoryTriggerTumblingWindowRetry): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -201,7 +200,7 @@ export class DataFactoryTriggerTumblingWindowRetryOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -280,8 +279,8 @@ export interface DataFactoryTriggerTumblingWindowTimeouts {
   readonly update?: string;
 }
 
-export function dataFactoryTriggerTumblingWindowTimeoutsToTerraform(struct?: DataFactoryTriggerTumblingWindowTimeoutsOutputReference | DataFactoryTriggerTumblingWindowTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataFactoryTriggerTumblingWindowTimeoutsToTerraform(struct?: DataFactoryTriggerTumblingWindowTimeoutsOutputReference | DataFactoryTriggerTumblingWindowTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -301,7 +300,7 @@ export class DataFactoryTriggerTumblingWindowTimeoutsOutputReference extends cdk
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -423,8 +422,8 @@ export interface DataFactoryTriggerTumblingWindowTriggerDependency {
   readonly triggerName?: string;
 }
 
-export function dataFactoryTriggerTumblingWindowTriggerDependencyToTerraform(struct?: DataFactoryTriggerTumblingWindowTriggerDependency): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataFactoryTriggerTumblingWindowTriggerDependencyToTerraform(struct?: DataFactoryTriggerTumblingWindowTriggerDependency | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -493,7 +492,7 @@ export class DataFactoryTriggerTumblingWindow extends cdktf.TerraformResource {
   // activated - computed: false, optional: true, required: false
   private _activated?: boolean | cdktf.IResolvable; 
   public get activated() {
-    return this.getBooleanAttribute('activated') as any;
+    return this.getBooleanAttribute('activated');
   }
   public set activated(value: boolean | cdktf.IResolvable) {
     this._activated = value;
@@ -507,12 +506,11 @@ export class DataFactoryTriggerTumblingWindow extends cdktf.TerraformResource {
   }
 
   // additional_properties - computed: false, optional: true, required: false
-  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable; 
+  private _additionalProperties?: { [key: string]: string }; 
   public get additionalProperties() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('additional_properties') as any;
+    return this.getStringMapAttribute('additional_properties');
   }
-  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set additionalProperties(value: { [key: string]: string }) {
     this._additionalProperties = value;
   }
   public resetAdditionalProperties() {
@@ -674,7 +672,7 @@ export class DataFactoryTriggerTumblingWindow extends cdktf.TerraformResource {
   }
 
   // pipeline - computed: false, optional: false, required: true
-  private _pipeline = new DataFactoryTriggerTumblingWindowPipelineOutputReference(this as any, "pipeline", true);
+  private _pipeline = new DataFactoryTriggerTumblingWindowPipelineOutputReference(this, "pipeline", true);
   public get pipeline() {
     return this._pipeline;
   }
@@ -687,7 +685,7 @@ export class DataFactoryTriggerTumblingWindow extends cdktf.TerraformResource {
   }
 
   // retry - computed: false, optional: true, required: false
-  private _retry = new DataFactoryTriggerTumblingWindowRetryOutputReference(this as any, "retry", true);
+  private _retry = new DataFactoryTriggerTumblingWindowRetryOutputReference(this, "retry", true);
   public get retry() {
     return this._retry;
   }
@@ -703,7 +701,7 @@ export class DataFactoryTriggerTumblingWindow extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataFactoryTriggerTumblingWindowTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataFactoryTriggerTumblingWindowTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -719,12 +717,12 @@ export class DataFactoryTriggerTumblingWindow extends cdktf.TerraformResource {
   }
 
   // trigger_dependency - computed: false, optional: true, required: false
-  private _triggerDependency?: DataFactoryTriggerTumblingWindowTriggerDependency[]; 
+  private _triggerDependency?: DataFactoryTriggerTumblingWindowTriggerDependency[] | cdktf.IResolvable; 
   public get triggerDependency() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('trigger_dependency') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('trigger_dependency')));
   }
-  public set triggerDependency(value: DataFactoryTriggerTumblingWindowTriggerDependency[]) {
+  public set triggerDependency(value: DataFactoryTriggerTumblingWindowTriggerDependency[] | cdktf.IResolvable) {
     this._triggerDependency = value;
   }
   public resetTriggerDependency() {
@@ -742,7 +740,7 @@ export class DataFactoryTriggerTumblingWindow extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       activated: cdktf.booleanToTerraform(this._activated),
-      additional_properties: cdktf.hashMapper(cdktf.anyToTerraform)(this._additionalProperties),
+      additional_properties: cdktf.hashMapper(cdktf.stringToTerraform)(this._additionalProperties),
       annotations: cdktf.listMapper(cdktf.stringToTerraform)(this._annotations),
       data_factory_id: cdktf.stringToTerraform(this._dataFactoryId),
       delay: cdktf.stringToTerraform(this._delay),

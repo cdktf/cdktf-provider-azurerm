@@ -29,8 +29,8 @@ export interface DataAzurermEventhubNamespaceTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermEventhubNamespaceTimeoutsToTerraform(struct?: DataAzurermEventhubNamespaceTimeoutsOutputReference | DataAzurermEventhubNamespaceTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermEventhubNamespaceTimeoutsToTerraform(struct?: DataAzurermEventhubNamespaceTimeoutsOutputReference | DataAzurermEventhubNamespaceTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -47,7 +47,7 @@ export class DataAzurermEventhubNamespaceTimeoutsOutputReference extends cdktf.C
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -132,7 +132,7 @@ export class DataAzurermEventhubNamespace extends cdktf.TerraformDataSource {
 
   // auto_inflate_enabled - computed: true, optional: false, required: false
   public get autoInflateEnabled() {
-    return this.getBooleanAttribute('auto_inflate_enabled') as any;
+    return this.getBooleanAttribute('auto_inflate_enabled');
   }
 
   // capacity - computed: true, optional: false, required: false
@@ -182,7 +182,7 @@ export class DataAzurermEventhubNamespace extends cdktf.TerraformDataSource {
 
   // kafka_enabled - computed: true, optional: false, required: false
   public get kafkaEnabled() {
-    return this.getBooleanAttribute('kafka_enabled') as any;
+    return this.getBooleanAttribute('kafka_enabled');
   }
 
   // location - computed: true, optional: false, required: false
@@ -227,17 +227,17 @@ export class DataAzurermEventhubNamespace extends cdktf.TerraformDataSource {
   }
 
   // tags - computed: true, optional: false, required: false
-  public tags(key: string): string {
+  public tags(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // zone_redundant - computed: true, optional: false, required: false
   public get zoneRedundant() {
-    return this.getBooleanAttribute('zone_redundant') as any;
+    return this.getBooleanAttribute('zone_redundant');
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermEventhubNamespaceTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermEventhubNamespaceTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

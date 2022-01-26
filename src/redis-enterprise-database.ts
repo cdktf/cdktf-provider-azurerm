@@ -40,7 +40,7 @@ export interface RedisEnterpriseDatabaseConfig extends cdktf.TerraformMetaArgume
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_enterprise_database#module RedisEnterpriseDatabase#module}
   */
-  readonly module?: RedisEnterpriseDatabaseModule[];
+  readonly module?: RedisEnterpriseDatabaseModule[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -59,8 +59,8 @@ export interface RedisEnterpriseDatabaseModule {
   readonly name: string;
 }
 
-export function redisEnterpriseDatabaseModuleToTerraform(struct?: RedisEnterpriseDatabaseModule): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function redisEnterpriseDatabaseModuleToTerraform(struct?: RedisEnterpriseDatabaseModule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -85,8 +85,8 @@ export interface RedisEnterpriseDatabaseTimeouts {
   readonly read?: string;
 }
 
-export function redisEnterpriseDatabaseTimeoutsToTerraform(struct?: RedisEnterpriseDatabaseTimeoutsOutputReference | RedisEnterpriseDatabaseTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function redisEnterpriseDatabaseTimeoutsToTerraform(struct?: RedisEnterpriseDatabaseTimeoutsOutputReference | RedisEnterpriseDatabaseTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -105,7 +105,7 @@ export class RedisEnterpriseDatabaseTimeoutsOutputReference extends cdktf.Comple
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -360,12 +360,12 @@ export class RedisEnterpriseDatabase extends cdktf.TerraformResource {
   }
 
   // module - computed: false, optional: true, required: false
-  private _module?: RedisEnterpriseDatabaseModule[]; 
+  private _module?: RedisEnterpriseDatabaseModule[] | cdktf.IResolvable; 
   public get module() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('module') as any;
+    return this.interpolationForAttribute('module');
   }
-  public set module(value: RedisEnterpriseDatabaseModule[]) {
+  public set module(value: RedisEnterpriseDatabaseModule[] | cdktf.IResolvable) {
     this._module = value;
   }
   public resetModule() {
@@ -377,7 +377,7 @@ export class RedisEnterpriseDatabase extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new RedisEnterpriseDatabaseTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new RedisEnterpriseDatabaseTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

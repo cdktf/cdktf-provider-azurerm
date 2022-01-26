@@ -34,7 +34,7 @@ export interface VpnSiteConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_site#tags VpnSite#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_site#virtual_wan_id VpnSite#virtual_wan_id}
   */
@@ -44,7 +44,7 @@ export interface VpnSiteConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_site#link VpnSite#link}
   */
-  readonly link?: VpnSiteLink[];
+  readonly link?: VpnSiteLink[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -64,7 +64,7 @@ export interface VpnSiteLinkBgp {
 }
 
 export function vpnSiteLinkBgpToTerraform(struct?: VpnSiteLinkBgpOutputReference | VpnSiteLinkBgp): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -82,7 +82,7 @@ export class VpnSiteLinkBgpOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -168,8 +168,8 @@ export interface VpnSiteLink {
   readonly bgp?: VpnSiteLinkBgp;
 }
 
-export function vpnSiteLinkToTerraform(struct?: VpnSiteLink): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function vpnSiteLinkToTerraform(struct?: VpnSiteLink | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -202,8 +202,8 @@ export interface VpnSiteTimeouts {
   readonly update?: string;
 }
 
-export function vpnSiteTimeoutsToTerraform(struct?: VpnSiteTimeoutsOutputReference | VpnSiteTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function vpnSiteTimeoutsToTerraform(struct?: VpnSiteTimeoutsOutputReference | VpnSiteTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -223,7 +223,7 @@ export class VpnSiteTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -382,7 +382,7 @@ export class VpnSite extends cdktf.TerraformResource {
   // address_cidrs - computed: false, optional: true, required: false
   private _addressCidrs?: string[]; 
   public get addressCidrs() {
-    return this.getListAttribute('address_cidrs');
+    return cdktf.Fn.tolist(this.getListAttribute('address_cidrs'));
   }
   public set addressCidrs(value: string[]) {
     this._addressCidrs = value;
@@ -472,12 +472,11 @@ export class VpnSite extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -502,12 +501,12 @@ export class VpnSite extends cdktf.TerraformResource {
   }
 
   // link - computed: false, optional: true, required: false
-  private _link?: VpnSiteLink[]; 
+  private _link?: VpnSiteLink[] | cdktf.IResolvable; 
   public get link() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('link') as any;
+    return this.interpolationForAttribute('link');
   }
-  public set link(value: VpnSiteLink[]) {
+  public set link(value: VpnSiteLink[] | cdktf.IResolvable) {
     this._link = value;
   }
   public resetLink() {
@@ -519,7 +518,7 @@ export class VpnSite extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new VpnSiteTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new VpnSiteTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -546,7 +545,7 @@ export class VpnSite extends cdktf.TerraformResource {
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       virtual_wan_id: cdktf.stringToTerraform(this._virtualWanId),
       link: cdktf.listMapper(vpnSiteLinkToTerraform)(this._link),
       timeouts: vpnSiteTimeoutsToTerraform(this._timeouts.internalValue),

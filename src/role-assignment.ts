@@ -73,8 +73,8 @@ export interface RoleAssignmentTimeouts {
   readonly update?: string;
 }
 
-export function roleAssignmentTimeoutsToTerraform(struct?: RoleAssignmentTimeoutsOutputReference | RoleAssignmentTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function roleAssignmentTimeoutsToTerraform(struct?: RoleAssignmentTimeoutsOutputReference | RoleAssignmentTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -94,7 +94,7 @@ export class RoleAssignmentTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -402,7 +402,7 @@ export class RoleAssignment extends cdktf.TerraformResource {
   // skip_service_principal_aad_check - computed: true, optional: true, required: false
   private _skipServicePrincipalAadCheck?: boolean | cdktf.IResolvable; 
   public get skipServicePrincipalAadCheck() {
-    return this.getBooleanAttribute('skip_service_principal_aad_check') as any;
+    return this.getBooleanAttribute('skip_service_principal_aad_check');
   }
   public set skipServicePrincipalAadCheck(value: boolean | cdktf.IResolvable) {
     this._skipServicePrincipalAadCheck = value;
@@ -416,7 +416,7 @@ export class RoleAssignment extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new RoleAssignmentTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new RoleAssignmentTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

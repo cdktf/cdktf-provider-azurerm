@@ -10,7 +10,7 @@ export interface DataFactoryDatasetBinaryConfig extends cdktf.TerraformMetaArgum
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary#additional_properties DataFactoryDatasetBinary#additional_properties}
   */
-  readonly additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
+  readonly additionalProperties?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary#annotations DataFactoryDatasetBinary#annotations}
   */
@@ -42,7 +42,7 @@ export interface DataFactoryDatasetBinaryConfig extends cdktf.TerraformMetaArgum
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary#parameters DataFactoryDatasetBinary#parameters}
   */
-  readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
+  readonly parameters?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary#resource_group_name DataFactoryDatasetBinary#resource_group_name}
   */
@@ -102,7 +102,7 @@ export interface DataFactoryDatasetBinaryAzureBlobStorageLocation {
 }
 
 export function dataFactoryDatasetBinaryAzureBlobStorageLocationToTerraform(struct?: DataFactoryDatasetBinaryAzureBlobStorageLocationOutputReference | DataFactoryDatasetBinaryAzureBlobStorageLocation): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -123,7 +123,7 @@ export class DataFactoryDatasetBinaryAzureBlobStorageLocationOutputReference ext
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -188,7 +188,7 @@ export class DataFactoryDatasetBinaryAzureBlobStorageLocationOutputReference ext
   // dynamic_filename_enabled - computed: false, optional: true, required: false
   private _dynamicFilenameEnabled?: boolean | cdktf.IResolvable; 
   public get dynamicFilenameEnabled() {
-    return this.getBooleanAttribute('dynamic_filename_enabled') as any;
+    return this.getBooleanAttribute('dynamic_filename_enabled');
   }
   public set dynamicFilenameEnabled(value: boolean | cdktf.IResolvable) {
     this._dynamicFilenameEnabled = value;
@@ -204,7 +204,7 @@ export class DataFactoryDatasetBinaryAzureBlobStorageLocationOutputReference ext
   // dynamic_path_enabled - computed: false, optional: true, required: false
   private _dynamicPathEnabled?: boolean | cdktf.IResolvable; 
   public get dynamicPathEnabled() {
-    return this.getBooleanAttribute('dynamic_path_enabled') as any;
+    return this.getBooleanAttribute('dynamic_path_enabled');
   }
   public set dynamicPathEnabled(value: boolean | cdktf.IResolvable) {
     this._dynamicPathEnabled = value;
@@ -261,7 +261,7 @@ export interface DataFactoryDatasetBinaryCompression {
 }
 
 export function dataFactoryDatasetBinaryCompressionToTerraform(struct?: DataFactoryDatasetBinaryCompressionOutputReference | DataFactoryDatasetBinaryCompression): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -279,7 +279,7 @@ export class DataFactoryDatasetBinaryCompressionOutputReference extends cdktf.Co
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -363,7 +363,7 @@ export interface DataFactoryDatasetBinaryHttpServerLocation {
 }
 
 export function dataFactoryDatasetBinaryHttpServerLocationToTerraform(struct?: DataFactoryDatasetBinaryHttpServerLocationOutputReference | DataFactoryDatasetBinaryHttpServerLocation): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -384,7 +384,7 @@ export class DataFactoryDatasetBinaryHttpServerLocationOutputReference extends c
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -436,7 +436,7 @@ export class DataFactoryDatasetBinaryHttpServerLocationOutputReference extends c
   // dynamic_filename_enabled - computed: false, optional: true, required: false
   private _dynamicFilenameEnabled?: boolean | cdktf.IResolvable; 
   public get dynamicFilenameEnabled() {
-    return this.getBooleanAttribute('dynamic_filename_enabled') as any;
+    return this.getBooleanAttribute('dynamic_filename_enabled');
   }
   public set dynamicFilenameEnabled(value: boolean | cdktf.IResolvable) {
     this._dynamicFilenameEnabled = value;
@@ -452,7 +452,7 @@ export class DataFactoryDatasetBinaryHttpServerLocationOutputReference extends c
   // dynamic_path_enabled - computed: false, optional: true, required: false
   private _dynamicPathEnabled?: boolean | cdktf.IResolvable; 
   public get dynamicPathEnabled() {
-    return this.getBooleanAttribute('dynamic_path_enabled') as any;
+    return this.getBooleanAttribute('dynamic_path_enabled');
   }
   public set dynamicPathEnabled(value: boolean | cdktf.IResolvable) {
     this._dynamicPathEnabled = value;
@@ -524,7 +524,7 @@ export interface DataFactoryDatasetBinarySftpServerLocation {
 }
 
 export function dataFactoryDatasetBinarySftpServerLocationToTerraform(struct?: DataFactoryDatasetBinarySftpServerLocationOutputReference | DataFactoryDatasetBinarySftpServerLocation): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -544,7 +544,7 @@ export class DataFactoryDatasetBinarySftpServerLocationOutputReference extends c
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -590,7 +590,7 @@ export class DataFactoryDatasetBinarySftpServerLocationOutputReference extends c
   // dynamic_filename_enabled - computed: false, optional: true, required: false
   private _dynamicFilenameEnabled?: boolean | cdktf.IResolvable; 
   public get dynamicFilenameEnabled() {
-    return this.getBooleanAttribute('dynamic_filename_enabled') as any;
+    return this.getBooleanAttribute('dynamic_filename_enabled');
   }
   public set dynamicFilenameEnabled(value: boolean | cdktf.IResolvable) {
     this._dynamicFilenameEnabled = value;
@@ -606,7 +606,7 @@ export class DataFactoryDatasetBinarySftpServerLocationOutputReference extends c
   // dynamic_path_enabled - computed: false, optional: true, required: false
   private _dynamicPathEnabled?: boolean | cdktf.IResolvable; 
   public get dynamicPathEnabled() {
-    return this.getBooleanAttribute('dynamic_path_enabled') as any;
+    return this.getBooleanAttribute('dynamic_path_enabled');
   }
   public set dynamicPathEnabled(value: boolean | cdktf.IResolvable) {
     this._dynamicPathEnabled = value;
@@ -664,8 +664,8 @@ export interface DataFactoryDatasetBinaryTimeouts {
   readonly update?: string;
 }
 
-export function dataFactoryDatasetBinaryTimeoutsToTerraform(struct?: DataFactoryDatasetBinaryTimeoutsOutputReference | DataFactoryDatasetBinaryTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataFactoryDatasetBinaryTimeoutsToTerraform(struct?: DataFactoryDatasetBinaryTimeoutsOutputReference | DataFactoryDatasetBinaryTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -685,7 +685,7 @@ export class DataFactoryDatasetBinaryTimeoutsOutputReference extends cdktf.Compl
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -847,12 +847,11 @@ export class DataFactoryDatasetBinary extends cdktf.TerraformResource {
   // ==========
 
   // additional_properties - computed: false, optional: true, required: false
-  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable; 
+  private _additionalProperties?: { [key: string]: string }; 
   public get additionalProperties() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('additional_properties') as any;
+    return this.getStringMapAttribute('additional_properties');
   }
-  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set additionalProperties(value: { [key: string]: string }) {
     this._additionalProperties = value;
   }
   public resetAdditionalProperties() {
@@ -975,12 +974,11 @@ export class DataFactoryDatasetBinary extends cdktf.TerraformResource {
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string } | cdktf.IResolvable; 
+  private _parameters?: { [key: string]: string }; 
   public get parameters() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('parameters') as any;
+    return this.getStringMapAttribute('parameters');
   }
-  public set parameters(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set parameters(value: { [key: string]: string }) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -1005,7 +1003,7 @@ export class DataFactoryDatasetBinary extends cdktf.TerraformResource {
   }
 
   // azure_blob_storage_location - computed: false, optional: true, required: false
-  private _azureBlobStorageLocation = new DataFactoryDatasetBinaryAzureBlobStorageLocationOutputReference(this as any, "azure_blob_storage_location", true);
+  private _azureBlobStorageLocation = new DataFactoryDatasetBinaryAzureBlobStorageLocationOutputReference(this, "azure_blob_storage_location", true);
   public get azureBlobStorageLocation() {
     return this._azureBlobStorageLocation;
   }
@@ -1021,7 +1019,7 @@ export class DataFactoryDatasetBinary extends cdktf.TerraformResource {
   }
 
   // compression - computed: false, optional: true, required: false
-  private _compression = new DataFactoryDatasetBinaryCompressionOutputReference(this as any, "compression", true);
+  private _compression = new DataFactoryDatasetBinaryCompressionOutputReference(this, "compression", true);
   public get compression() {
     return this._compression;
   }
@@ -1037,7 +1035,7 @@ export class DataFactoryDatasetBinary extends cdktf.TerraformResource {
   }
 
   // http_server_location - computed: false, optional: true, required: false
-  private _httpServerLocation = new DataFactoryDatasetBinaryHttpServerLocationOutputReference(this as any, "http_server_location", true);
+  private _httpServerLocation = new DataFactoryDatasetBinaryHttpServerLocationOutputReference(this, "http_server_location", true);
   public get httpServerLocation() {
     return this._httpServerLocation;
   }
@@ -1053,7 +1051,7 @@ export class DataFactoryDatasetBinary extends cdktf.TerraformResource {
   }
 
   // sftp_server_location - computed: false, optional: true, required: false
-  private _sftpServerLocation = new DataFactoryDatasetBinarySftpServerLocationOutputReference(this as any, "sftp_server_location", true);
+  private _sftpServerLocation = new DataFactoryDatasetBinarySftpServerLocationOutputReference(this, "sftp_server_location", true);
   public get sftpServerLocation() {
     return this._sftpServerLocation;
   }
@@ -1069,7 +1067,7 @@ export class DataFactoryDatasetBinary extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataFactoryDatasetBinaryTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataFactoryDatasetBinaryTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -1090,7 +1088,7 @@ export class DataFactoryDatasetBinary extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      additional_properties: cdktf.hashMapper(cdktf.anyToTerraform)(this._additionalProperties),
+      additional_properties: cdktf.hashMapper(cdktf.stringToTerraform)(this._additionalProperties),
       annotations: cdktf.listMapper(cdktf.stringToTerraform)(this._annotations),
       data_factory_id: cdktf.stringToTerraform(this._dataFactoryId),
       data_factory_name: cdktf.stringToTerraform(this._dataFactoryName),
@@ -1098,7 +1096,7 @@ export class DataFactoryDatasetBinary extends cdktf.TerraformResource {
       folder: cdktf.stringToTerraform(this._folder),
       linked_service_name: cdktf.stringToTerraform(this._linkedServiceName),
       name: cdktf.stringToTerraform(this._name),
-      parameters: cdktf.hashMapper(cdktf.anyToTerraform)(this._parameters),
+      parameters: cdktf.hashMapper(cdktf.stringToTerraform)(this._parameters),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       azure_blob_storage_location: dataFactoryDatasetBinaryAzureBlobStorageLocationToTerraform(this._azureBlobStorageLocation.internalValue),
       compression: dataFactoryDatasetBinaryCompressionToTerraform(this._compression.internalValue),

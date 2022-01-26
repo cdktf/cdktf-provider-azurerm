@@ -38,7 +38,7 @@ export interface AppServiceEnvironmentConfig extends cdktf.TerraformMetaArgument
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment#tags AppServiceEnvironment#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment#user_whitelisted_ip_ranges AppServiceEnvironment#user_whitelisted_ip_ranges}
   */
@@ -48,7 +48,7 @@ export interface AppServiceEnvironmentConfig extends cdktf.TerraformMetaArgument
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment#cluster_setting AppServiceEnvironment#cluster_setting}
   */
-  readonly clusterSetting?: AppServiceEnvironmentClusterSetting[];
+  readonly clusterSetting?: AppServiceEnvironmentClusterSetting[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -67,8 +67,8 @@ export interface AppServiceEnvironmentClusterSetting {
   readonly value: string;
 }
 
-export function appServiceEnvironmentClusterSettingToTerraform(struct?: AppServiceEnvironmentClusterSetting): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function appServiceEnvironmentClusterSettingToTerraform(struct?: AppServiceEnvironmentClusterSetting | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -97,8 +97,8 @@ export interface AppServiceEnvironmentTimeouts {
   readonly update?: string;
 }
 
-export function appServiceEnvironmentTimeoutsToTerraform(struct?: AppServiceEnvironmentTimeoutsOutputReference | AppServiceEnvironmentTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function appServiceEnvironmentTimeoutsToTerraform(struct?: AppServiceEnvironmentTimeoutsOutputReference | AppServiceEnvironmentTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -118,7 +118,7 @@ export class AppServiceEnvironmentTimeoutsOutputReference extends cdktf.ComplexO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -278,7 +278,7 @@ export class AppServiceEnvironment extends cdktf.TerraformResource {
   // allowed_user_ip_cidrs - computed: true, optional: true, required: false
   private _allowedUserIpCidrs?: string[]; 
   public get allowedUserIpCidrs() {
-    return this.getListAttribute('allowed_user_ip_cidrs');
+    return cdktf.Fn.tolist(this.getListAttribute('allowed_user_ip_cidrs'));
   }
   public set allowedUserIpCidrs(value: string[]) {
     this._allowedUserIpCidrs = value;
@@ -407,12 +407,11 @@ export class AppServiceEnvironment extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -426,7 +425,7 @@ export class AppServiceEnvironment extends cdktf.TerraformResource {
   // user_whitelisted_ip_ranges - computed: true, optional: true, required: false
   private _userWhitelistedIpRanges?: string[]; 
   public get userWhitelistedIpRanges() {
-    return this.getListAttribute('user_whitelisted_ip_ranges');
+    return cdktf.Fn.tolist(this.getListAttribute('user_whitelisted_ip_ranges'));
   }
   public set userWhitelistedIpRanges(value: string[]) {
     this._userWhitelistedIpRanges = value;
@@ -440,12 +439,12 @@ export class AppServiceEnvironment extends cdktf.TerraformResource {
   }
 
   // cluster_setting - computed: false, optional: true, required: false
-  private _clusterSetting?: AppServiceEnvironmentClusterSetting[]; 
+  private _clusterSetting?: AppServiceEnvironmentClusterSetting[] | cdktf.IResolvable; 
   public get clusterSetting() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('cluster_setting') as any;
+    return this.interpolationForAttribute('cluster_setting');
   }
-  public set clusterSetting(value: AppServiceEnvironmentClusterSetting[]) {
+  public set clusterSetting(value: AppServiceEnvironmentClusterSetting[] | cdktf.IResolvable) {
     this._clusterSetting = value;
   }
   public resetClusterSetting() {
@@ -457,7 +456,7 @@ export class AppServiceEnvironment extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AppServiceEnvironmentTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new AppServiceEnvironmentTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -485,7 +484,7 @@ export class AppServiceEnvironment extends cdktf.TerraformResource {
       pricing_tier: cdktf.stringToTerraform(this._pricingTier),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       subnet_id: cdktf.stringToTerraform(this._subnetId),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       user_whitelisted_ip_ranges: cdktf.listMapper(cdktf.stringToTerraform)(this._userWhitelistedIpRanges),
       cluster_setting: cdktf.listMapper(appServiceEnvironmentClusterSettingToTerraform)(this._clusterSetting),
       timeouts: appServiceEnvironmentTimeoutsToTerraform(this._timeouts.internalValue),

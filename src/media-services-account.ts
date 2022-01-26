@@ -26,7 +26,7 @@ export interface MediaServicesAccountConfig extends cdktf.TerraformMetaArguments
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_services_account#tags MediaServicesAccount#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * identity block
   * 
@@ -44,7 +44,7 @@ export interface MediaServicesAccountConfig extends cdktf.TerraformMetaArguments
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_services_account#storage_account MediaServicesAccount#storage_account}
   */
-  readonly storageAccount: MediaServicesAccountStorageAccount[];
+  readonly storageAccount: MediaServicesAccountStorageAccount[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -60,7 +60,7 @@ export interface MediaServicesAccountIdentity {
 }
 
 export function mediaServicesAccountIdentityToTerraform(struct?: MediaServicesAccountIdentityOutputReference | MediaServicesAccountIdentity): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -77,7 +77,7 @@ export class MediaServicesAccountIdentityOutputReference extends cdktf.ComplexOb
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -100,6 +100,16 @@ export class MediaServicesAccountIdentityOutputReference extends cdktf.ComplexOb
       this.isEmptyObject = Object.keys(value).length === 0;
       this._type = value.type;
     }
+  }
+
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
   }
 
   // type - computed: false, optional: true, required: false
@@ -130,7 +140,7 @@ export interface MediaServicesAccountKeyDeliveryAccessControl {
 }
 
 export function mediaServicesAccountKeyDeliveryAccessControlToTerraform(struct?: MediaServicesAccountKeyDeliveryAccessControlOutputReference | MediaServicesAccountKeyDeliveryAccessControl): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -148,7 +158,7 @@ export class MediaServicesAccountKeyDeliveryAccessControlOutputReference extends
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -198,7 +208,7 @@ export class MediaServicesAccountKeyDeliveryAccessControlOutputReference extends
   // ip_allow_list - computed: false, optional: true, required: false
   private _ipAllowList?: string[]; 
   public get ipAllowList() {
-    return this.getListAttribute('ip_allow_list');
+    return cdktf.Fn.tolist(this.getListAttribute('ip_allow_list'));
   }
   public set ipAllowList(value: string[]) {
     this._ipAllowList = value;
@@ -222,8 +232,8 @@ export interface MediaServicesAccountStorageAccount {
   readonly isPrimary?: boolean | cdktf.IResolvable;
 }
 
-export function mediaServicesAccountStorageAccountToTerraform(struct?: MediaServicesAccountStorageAccount): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function mediaServicesAccountStorageAccountToTerraform(struct?: MediaServicesAccountStorageAccount | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -252,8 +262,8 @@ export interface MediaServicesAccountTimeouts {
   readonly update?: string;
 }
 
-export function mediaServicesAccountTimeoutsToTerraform(struct?: MediaServicesAccountTimeoutsOutputReference | MediaServicesAccountTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function mediaServicesAccountTimeoutsToTerraform(struct?: MediaServicesAccountTimeoutsOutputReference | MediaServicesAccountTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -273,7 +283,7 @@ export class MediaServicesAccountTimeoutsOutputReference extends cdktf.ComplexOb
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -489,12 +499,11 @@ export class MediaServicesAccount extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -506,7 +515,7 @@ export class MediaServicesAccount extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity = new MediaServicesAccountIdentityOutputReference(this as any, "identity", true);
+  private _identity = new MediaServicesAccountIdentityOutputReference(this, "identity", true);
   public get identity() {
     return this._identity;
   }
@@ -522,7 +531,7 @@ export class MediaServicesAccount extends cdktf.TerraformResource {
   }
 
   // key_delivery_access_control - computed: false, optional: true, required: false
-  private _keyDeliveryAccessControl = new MediaServicesAccountKeyDeliveryAccessControlOutputReference(this as any, "key_delivery_access_control", true);
+  private _keyDeliveryAccessControl = new MediaServicesAccountKeyDeliveryAccessControlOutputReference(this, "key_delivery_access_control", true);
   public get keyDeliveryAccessControl() {
     return this._keyDeliveryAccessControl;
   }
@@ -538,12 +547,12 @@ export class MediaServicesAccount extends cdktf.TerraformResource {
   }
 
   // storage_account - computed: false, optional: false, required: true
-  private _storageAccount?: MediaServicesAccountStorageAccount[]; 
+  private _storageAccount?: MediaServicesAccountStorageAccount[] | cdktf.IResolvable; 
   public get storageAccount() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('storage_account') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('storage_account')));
   }
-  public set storageAccount(value: MediaServicesAccountStorageAccount[]) {
+  public set storageAccount(value: MediaServicesAccountStorageAccount[] | cdktf.IResolvable) {
     this._storageAccount = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -552,7 +561,7 @@ export class MediaServicesAccount extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new MediaServicesAccountTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new MediaServicesAccountTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -577,7 +586,7 @@ export class MediaServicesAccount extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       storage_authentication_type: cdktf.stringToTerraform(this._storageAuthenticationType),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       identity: mediaServicesAccountIdentityToTerraform(this._identity.internalValue),
       key_delivery_access_control: mediaServicesAccountKeyDeliveryAccessControlToTerraform(this._keyDeliveryAccessControl.internalValue),
       storage_account: cdktf.listMapper(mediaServicesAccountStorageAccountToTerraform)(this._storageAccount),

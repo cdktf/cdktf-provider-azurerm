@@ -41,8 +41,8 @@ export interface DataAzurermAppServiceEnvironmentTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermAppServiceEnvironmentTimeoutsToTerraform(struct?: DataAzurermAppServiceEnvironmentTimeoutsOutputReference | DataAzurermAppServiceEnvironmentTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermAppServiceEnvironmentTimeoutsToTerraform(struct?: DataAzurermAppServiceEnvironmentTimeoutsOutputReference | DataAzurermAppServiceEnvironmentTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -59,7 +59,7 @@ export class DataAzurermAppServiceEnvironmentTimeoutsOutputReference extends cdk
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -144,7 +144,7 @@ export class DataAzurermAppServiceEnvironment extends cdktf.TerraformDataSource 
 
   // cluster_setting - computed: true, optional: false, required: false
   public clusterSetting(index: string) {
-    return new DataAzurermAppServiceEnvironmentClusterSetting(this, 'cluster_setting', index);
+    return new DataAzurermAppServiceEnvironmentClusterSetting(this, 'cluster_setting', index, false);
   }
 
   // front_end_scale_factor - computed: true, optional: false, required: false
@@ -209,12 +209,12 @@ export class DataAzurermAppServiceEnvironment extends cdktf.TerraformDataSource 
   }
 
   // tags - computed: true, optional: false, required: false
-  public tags(key: string): string {
+  public tags(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermAppServiceEnvironmentTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermAppServiceEnvironmentTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

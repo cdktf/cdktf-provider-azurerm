@@ -38,7 +38,7 @@ export interface SynapseSqlPoolConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool#tags SynapseSqlPool#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * restore block
   * 
@@ -64,7 +64,7 @@ export interface SynapseSqlPoolRestore {
 }
 
 export function synapseSqlPoolRestoreToTerraform(struct?: SynapseSqlPoolRestoreOutputReference | SynapseSqlPoolRestore): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -82,7 +82,7 @@ export class SynapseSqlPoolRestoreOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -158,8 +158,8 @@ export interface SynapseSqlPoolTimeouts {
   readonly update?: string;
 }
 
-export function synapseSqlPoolTimeoutsToTerraform(struct?: SynapseSqlPoolTimeoutsOutputReference | SynapseSqlPoolTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function synapseSqlPoolTimeoutsToTerraform(struct?: SynapseSqlPoolTimeoutsOutputReference | SynapseSqlPoolTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -179,7 +179,7 @@ export class SynapseSqlPoolTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -370,7 +370,7 @@ export class SynapseSqlPool extends cdktf.TerraformResource {
   // data_encrypted - computed: false, optional: true, required: false
   private _dataEncrypted?: boolean | cdktf.IResolvable; 
   public get dataEncrypted() {
-    return this.getBooleanAttribute('data_encrypted') as any;
+    return this.getBooleanAttribute('data_encrypted');
   }
   public set dataEncrypted(value: boolean | cdktf.IResolvable) {
     this._dataEncrypted = value;
@@ -444,12 +444,11 @@ export class SynapseSqlPool extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -461,7 +460,7 @@ export class SynapseSqlPool extends cdktf.TerraformResource {
   }
 
   // restore - computed: false, optional: true, required: false
-  private _restore = new SynapseSqlPoolRestoreOutputReference(this as any, "restore", true);
+  private _restore = new SynapseSqlPoolRestoreOutputReference(this, "restore", true);
   public get restore() {
     return this._restore;
   }
@@ -477,7 +476,7 @@ export class SynapseSqlPool extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new SynapseSqlPoolTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new SynapseSqlPoolTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -505,7 +504,7 @@ export class SynapseSqlPool extends cdktf.TerraformResource {
       recovery_database_id: cdktf.stringToTerraform(this._recoveryDatabaseId),
       sku_name: cdktf.stringToTerraform(this._skuName),
       synapse_workspace_id: cdktf.stringToTerraform(this._synapseWorkspaceId),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       restore: synapseSqlPoolRestoreToTerraform(this._restore.internalValue),
       timeouts: synapseSqlPoolTimeoutsToTerraform(this._timeouts.internalValue),
     };

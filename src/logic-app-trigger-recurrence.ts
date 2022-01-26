@@ -60,7 +60,7 @@ export interface LogicAppTriggerRecurrenceSchedule {
 }
 
 export function logicAppTriggerRecurrenceScheduleToTerraform(struct?: LogicAppTriggerRecurrenceScheduleOutputReference | LogicAppTriggerRecurrenceSchedule): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -79,7 +79,7 @@ export class LogicAppTriggerRecurrenceScheduleOutputReference extends cdktf.Comp
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -119,8 +119,7 @@ export class LogicAppTriggerRecurrenceScheduleOutputReference extends cdktf.Comp
   // at_these_hours - computed: false, optional: true, required: false
   private _atTheseHours?: number[]; 
   public get atTheseHours() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('at_these_hours') as any;
+    return cdktf.Token.asNumberList(cdktf.Fn.tolist(this.getNumberListAttribute('at_these_hours')));
   }
   public set atTheseHours(value: number[]) {
     this._atTheseHours = value;
@@ -136,8 +135,7 @@ export class LogicAppTriggerRecurrenceScheduleOutputReference extends cdktf.Comp
   // at_these_minutes - computed: false, optional: true, required: false
   private _atTheseMinutes?: number[]; 
   public get atTheseMinutes() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('at_these_minutes') as any;
+    return cdktf.Token.asNumberList(cdktf.Fn.tolist(this.getNumberListAttribute('at_these_minutes')));
   }
   public set atTheseMinutes(value: number[]) {
     this._atTheseMinutes = value;
@@ -153,7 +151,7 @@ export class LogicAppTriggerRecurrenceScheduleOutputReference extends cdktf.Comp
   // on_these_days - computed: false, optional: true, required: false
   private _onTheseDays?: string[]; 
   public get onTheseDays() {
-    return this.getListAttribute('on_these_days');
+    return cdktf.Fn.tolist(this.getListAttribute('on_these_days'));
   }
   public set onTheseDays(value: string[]) {
     this._onTheseDays = value;
@@ -185,8 +183,8 @@ export interface LogicAppTriggerRecurrenceTimeouts {
   readonly update?: string;
 }
 
-export function logicAppTriggerRecurrenceTimeoutsToTerraform(struct?: LogicAppTriggerRecurrenceTimeoutsOutputReference | LogicAppTriggerRecurrenceTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function logicAppTriggerRecurrenceTimeoutsToTerraform(struct?: LogicAppTriggerRecurrenceTimeoutsOutputReference | LogicAppTriggerRecurrenceTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -206,7 +204,7 @@ export class LogicAppTriggerRecurrenceTimeoutsOutputReference extends cdktf.Comp
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -450,7 +448,7 @@ export class LogicAppTriggerRecurrence extends cdktf.TerraformResource {
   }
 
   // schedule - computed: false, optional: true, required: false
-  private _schedule = new LogicAppTriggerRecurrenceScheduleOutputReference(this as any, "schedule", true);
+  private _schedule = new LogicAppTriggerRecurrenceScheduleOutputReference(this, "schedule", true);
   public get schedule() {
     return this._schedule;
   }
@@ -466,7 +464,7 @@ export class LogicAppTriggerRecurrence extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new LogicAppTriggerRecurrenceTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new LogicAppTriggerRecurrenceTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

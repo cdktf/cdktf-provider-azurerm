@@ -22,19 +22,19 @@ export interface CustomProviderConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/custom_provider#tags CustomProvider#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * action block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/custom_provider#action CustomProvider#action}
   */
-  readonly action?: CustomProviderAction[];
+  readonly action?: CustomProviderAction[] | cdktf.IResolvable;
   /**
   * resource_type block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/custom_provider#resource_type CustomProvider#resource_type}
   */
-  readonly resourceType?: CustomProviderResourceType[];
+  readonly resourceType?: CustomProviderResourceType[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -46,7 +46,7 @@ export interface CustomProviderConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/custom_provider#validation CustomProvider#validation}
   */
-  readonly validation?: CustomProviderValidation[];
+  readonly validation?: CustomProviderValidation[] | cdktf.IResolvable;
 }
 export interface CustomProviderAction {
   /**
@@ -59,8 +59,8 @@ export interface CustomProviderAction {
   readonly name: string;
 }
 
-export function customProviderActionToTerraform(struct?: CustomProviderAction): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function customProviderActionToTerraform(struct?: CustomProviderAction | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -85,8 +85,8 @@ export interface CustomProviderResourceType {
   readonly routingType?: string;
 }
 
-export function customProviderResourceTypeToTerraform(struct?: CustomProviderResourceType): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function customProviderResourceTypeToTerraform(struct?: CustomProviderResourceType | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -116,8 +116,8 @@ export interface CustomProviderTimeouts {
   readonly update?: string;
 }
 
-export function customProviderTimeoutsToTerraform(struct?: CustomProviderTimeoutsOutputReference | CustomProviderTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function customProviderTimeoutsToTerraform(struct?: CustomProviderTimeoutsOutputReference | CustomProviderTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -137,7 +137,7 @@ export class CustomProviderTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -251,8 +251,8 @@ export interface CustomProviderValidation {
   readonly specification: string;
 }
 
-export function customProviderValidationToTerraform(struct?: CustomProviderValidation): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function customProviderValidationToTerraform(struct?: CustomProviderValidation | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -353,12 +353,11 @@ export class CustomProvider extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -370,12 +369,12 @@ export class CustomProvider extends cdktf.TerraformResource {
   }
 
   // action - computed: false, optional: true, required: false
-  private _action?: CustomProviderAction[]; 
+  private _action?: CustomProviderAction[] | cdktf.IResolvable; 
   public get action() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('action') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('action')));
   }
-  public set action(value: CustomProviderAction[]) {
+  public set action(value: CustomProviderAction[] | cdktf.IResolvable) {
     this._action = value;
   }
   public resetAction() {
@@ -387,12 +386,12 @@ export class CustomProvider extends cdktf.TerraformResource {
   }
 
   // resource_type - computed: false, optional: true, required: false
-  private _resourceType?: CustomProviderResourceType[]; 
+  private _resourceType?: CustomProviderResourceType[] | cdktf.IResolvable; 
   public get resourceType() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('resource_type') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('resource_type')));
   }
-  public set resourceType(value: CustomProviderResourceType[]) {
+  public set resourceType(value: CustomProviderResourceType[] | cdktf.IResolvable) {
     this._resourceType = value;
   }
   public resetResourceType() {
@@ -404,7 +403,7 @@ export class CustomProvider extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new CustomProviderTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new CustomProviderTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -420,12 +419,12 @@ export class CustomProvider extends cdktf.TerraformResource {
   }
 
   // validation - computed: false, optional: true, required: false
-  private _validation?: CustomProviderValidation[]; 
+  private _validation?: CustomProviderValidation[] | cdktf.IResolvable; 
   public get validation() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('validation') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('validation')));
   }
-  public set validation(value: CustomProviderValidation[]) {
+  public set validation(value: CustomProviderValidation[] | cdktf.IResolvable) {
     this._validation = value;
   }
   public resetValidation() {
@@ -445,7 +444,7 @@ export class CustomProvider extends cdktf.TerraformResource {
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       action: cdktf.listMapper(customProviderActionToTerraform)(this._action),
       resource_type: cdktf.listMapper(customProviderResourceTypeToTerraform)(this._resourceType),
       timeouts: customProviderTimeoutsToTerraform(this._timeouts.internalValue),

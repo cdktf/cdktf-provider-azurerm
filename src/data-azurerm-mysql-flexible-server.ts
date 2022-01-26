@@ -55,7 +55,7 @@ export class DataAzurermMysqlFlexibleServerStorage extends cdktf.ComplexComputed
 
   // auto_grow_enabled - computed: true, optional: false, required: false
   public get autoGrowEnabled() {
-    return this.getBooleanAttribute('auto_grow_enabled') as any;
+    return this.getBooleanAttribute('auto_grow_enabled');
   }
 
   // iops - computed: true, optional: false, required: false
@@ -75,8 +75,8 @@ export interface DataAzurermMysqlFlexibleServerTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermMysqlFlexibleServerTimeoutsToTerraform(struct?: DataAzurermMysqlFlexibleServerTimeoutsOutputReference | DataAzurermMysqlFlexibleServerTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermMysqlFlexibleServerTimeoutsToTerraform(struct?: DataAzurermMysqlFlexibleServerTimeoutsOutputReference | DataAzurermMysqlFlexibleServerTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -93,7 +93,7 @@ export class DataAzurermMysqlFlexibleServerTimeoutsOutputReference extends cdktf
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -198,12 +198,12 @@ export class DataAzurermMysqlFlexibleServer extends cdktf.TerraformDataSource {
 
   // geo_redundant_backup_enabled - computed: true, optional: false, required: false
   public get geoRedundantBackupEnabled() {
-    return this.getBooleanAttribute('geo_redundant_backup_enabled') as any;
+    return this.getBooleanAttribute('geo_redundant_backup_enabled');
   }
 
   // high_availability - computed: true, optional: false, required: false
   public highAvailability(index: string) {
-    return new DataAzurermMysqlFlexibleServerHighAvailability(this, 'high_availability', index);
+    return new DataAzurermMysqlFlexibleServerHighAvailability(this, 'high_availability', index, false);
   }
 
   // id - computed: true, optional: true, required: false
@@ -218,7 +218,7 @@ export class DataAzurermMysqlFlexibleServer extends cdktf.TerraformDataSource {
 
   // maintenance_window - computed: true, optional: false, required: false
   public maintenanceWindow(index: string) {
-    return new DataAzurermMysqlFlexibleServerMaintenanceWindow(this, 'maintenance_window', index);
+    return new DataAzurermMysqlFlexibleServerMaintenanceWindow(this, 'maintenance_window', index, false);
   }
 
   // name - computed: false, optional: false, required: true
@@ -241,7 +241,7 @@ export class DataAzurermMysqlFlexibleServer extends cdktf.TerraformDataSource {
 
   // public_network_access_enabled - computed: true, optional: false, required: false
   public get publicNetworkAccessEnabled() {
-    return this.getBooleanAttribute('public_network_access_enabled') as any;
+    return this.getBooleanAttribute('public_network_access_enabled');
   }
 
   // replica_capacity - computed: true, optional: false, required: false
@@ -279,11 +279,11 @@ export class DataAzurermMysqlFlexibleServer extends cdktf.TerraformDataSource {
 
   // storage - computed: true, optional: false, required: false
   public storage(index: string) {
-    return new DataAzurermMysqlFlexibleServerStorage(this, 'storage', index);
+    return new DataAzurermMysqlFlexibleServerStorage(this, 'storage', index, false);
   }
 
   // tags - computed: true, optional: false, required: false
-  public tags(key: string): string {
+  public tags(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
@@ -298,7 +298,7 @@ export class DataAzurermMysqlFlexibleServer extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermMysqlFlexibleServerTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermMysqlFlexibleServerTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

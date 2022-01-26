@@ -26,7 +26,7 @@ export interface StorageShareFileConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share_file#metadata StorageShareFile#metadata}
   */
-  readonly metadata?: { [key: string]: string } | cdktf.IResolvable;
+  readonly metadata?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share_file#name StorageShareFile#name}
   */
@@ -69,8 +69,8 @@ export interface StorageShareFileTimeouts {
   readonly update?: string;
 }
 
-export function storageShareFileTimeoutsToTerraform(struct?: StorageShareFileTimeoutsOutputReference | StorageShareFileTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function storageShareFileTimeoutsToTerraform(struct?: StorageShareFileTimeoutsOutputReference | StorageShareFileTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -90,7 +90,7 @@ export class StorageShareFileTimeoutsOutputReference extends cdktf.ComplexObject
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -321,12 +321,11 @@ export class StorageShareFile extends cdktf.TerraformResource {
   }
 
   // metadata - computed: false, optional: true, required: false
-  private _metadata?: { [key: string]: string } | cdktf.IResolvable; 
+  private _metadata?: { [key: string]: string }; 
   public get metadata() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('metadata') as any;
+    return this.getStringMapAttribute('metadata');
   }
-  public set metadata(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set metadata(value: { [key: string]: string }) {
     this._metadata = value;
   }
   public resetMetadata() {
@@ -396,7 +395,7 @@ export class StorageShareFile extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new StorageShareFileTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new StorageShareFileTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -421,7 +420,7 @@ export class StorageShareFile extends cdktf.TerraformResource {
       content_encoding: cdktf.stringToTerraform(this._contentEncoding),
       content_md5: cdktf.stringToTerraform(this._contentMd5),
       content_type: cdktf.stringToTerraform(this._contentType),
-      metadata: cdktf.hashMapper(cdktf.anyToTerraform)(this._metadata),
+      metadata: cdktf.hashMapper(cdktf.stringToTerraform)(this._metadata),
       name: cdktf.stringToTerraform(this._name),
       path: cdktf.stringToTerraform(this._path),
       source: cdktf.stringToTerraform(this._source),

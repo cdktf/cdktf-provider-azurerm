@@ -68,8 +68,8 @@ export interface DataAzurermPublicIpsTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermPublicIpsTimeoutsToTerraform(struct?: DataAzurermPublicIpsTimeoutsOutputReference | DataAzurermPublicIpsTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermPublicIpsTimeoutsToTerraform(struct?: DataAzurermPublicIpsTimeoutsOutputReference | DataAzurermPublicIpsTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -86,7 +86,7 @@ export class DataAzurermPublicIpsTimeoutsOutputReference extends cdktf.ComplexOb
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -191,7 +191,7 @@ export class DataAzurermPublicIps extends cdktf.TerraformDataSource {
   // attached - computed: false, optional: true, required: false
   private _attached?: boolean | cdktf.IResolvable; 
   public get attached() {
-    return this.getBooleanAttribute('attached') as any;
+    return this.getBooleanAttribute('attached');
   }
   public set attached(value: boolean | cdktf.IResolvable) {
     this._attached = value;
@@ -243,7 +243,7 @@ export class DataAzurermPublicIps extends cdktf.TerraformDataSource {
 
   // public_ips - computed: true, optional: false, required: false
   public publicIps(index: string) {
-    return new DataAzurermPublicIpsPublicIps(this, 'public_ips', index);
+    return new DataAzurermPublicIpsPublicIps(this, 'public_ips', index, false);
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -260,7 +260,7 @@ export class DataAzurermPublicIps extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermPublicIpsTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermPublicIpsTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

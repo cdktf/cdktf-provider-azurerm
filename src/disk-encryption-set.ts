@@ -34,7 +34,7 @@ export interface DiskEncryptionSetConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_encryption_set#tags DiskEncryptionSet#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * identity block
   * 
@@ -56,7 +56,7 @@ export interface DiskEncryptionSetIdentity {
 }
 
 export function diskEncryptionSetIdentityToTerraform(struct?: DiskEncryptionSetIdentityOutputReference | DiskEncryptionSetIdentity): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -73,7 +73,7 @@ export class DiskEncryptionSetIdentityOutputReference extends cdktf.ComplexObjec
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -96,6 +96,16 @@ export class DiskEncryptionSetIdentityOutputReference extends cdktf.ComplexObjec
       this.isEmptyObject = Object.keys(value).length === 0;
       this._type = value.type;
     }
+  }
+
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
   }
 
   // type - computed: false, optional: false, required: true
@@ -130,8 +140,8 @@ export interface DiskEncryptionSetTimeouts {
   readonly update?: string;
 }
 
-export function diskEncryptionSetTimeoutsToTerraform(struct?: DiskEncryptionSetTimeoutsOutputReference | DiskEncryptionSetTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function diskEncryptionSetTimeoutsToTerraform(struct?: DiskEncryptionSetTimeoutsOutputReference | DiskEncryptionSetTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -151,7 +161,7 @@ export class DiskEncryptionSetTimeoutsOutputReference extends cdktf.ComplexObjec
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -309,7 +319,7 @@ export class DiskEncryptionSet extends cdktf.TerraformResource {
   // auto_key_rotation_enabled - computed: false, optional: true, required: false
   private _autoKeyRotationEnabled?: boolean | cdktf.IResolvable; 
   public get autoKeyRotationEnabled() {
-    return this.getBooleanAttribute('auto_key_rotation_enabled') as any;
+    return this.getBooleanAttribute('auto_key_rotation_enabled');
   }
   public set autoKeyRotationEnabled(value: boolean | cdktf.IResolvable) {
     this._autoKeyRotationEnabled = value;
@@ -396,12 +406,11 @@ export class DiskEncryptionSet extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -413,7 +422,7 @@ export class DiskEncryptionSet extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: false, required: true
-  private _identity = new DiskEncryptionSetIdentityOutputReference(this as any, "identity", true);
+  private _identity = new DiskEncryptionSetIdentityOutputReference(this, "identity", true);
   public get identity() {
     return this._identity;
   }
@@ -426,7 +435,7 @@ export class DiskEncryptionSet extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DiskEncryptionSetTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DiskEncryptionSetTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -453,7 +462,7 @@ export class DiskEncryptionSet extends cdktf.TerraformResource {
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       identity: diskEncryptionSetIdentityToTerraform(this._identity.internalValue),
       timeouts: diskEncryptionSetTimeoutsToTerraform(this._timeouts.internalValue),
     };

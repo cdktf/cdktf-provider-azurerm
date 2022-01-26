@@ -44,7 +44,7 @@ export interface CosmosdbMongoDatabaseAutoscaleSettings {
 }
 
 export function cosmosdbMongoDatabaseAutoscaleSettingsToTerraform(struct?: CosmosdbMongoDatabaseAutoscaleSettingsOutputReference | CosmosdbMongoDatabaseAutoscaleSettings): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -61,7 +61,7 @@ export class CosmosdbMongoDatabaseAutoscaleSettingsOutputReference extends cdktf
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -121,8 +121,8 @@ export interface CosmosdbMongoDatabaseTimeouts {
   readonly update?: string;
 }
 
-export function cosmosdbMongoDatabaseTimeoutsToTerraform(struct?: CosmosdbMongoDatabaseTimeoutsOutputReference | CosmosdbMongoDatabaseTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function cosmosdbMongoDatabaseTimeoutsToTerraform(struct?: CosmosdbMongoDatabaseTimeoutsOutputReference | CosmosdbMongoDatabaseTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -142,7 +142,7 @@ export class CosmosdbMongoDatabaseTimeoutsOutputReference extends cdktf.ComplexO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -355,7 +355,7 @@ export class CosmosdbMongoDatabase extends cdktf.TerraformResource {
   }
 
   // autoscale_settings - computed: false, optional: true, required: false
-  private _autoscaleSettings = new CosmosdbMongoDatabaseAutoscaleSettingsOutputReference(this as any, "autoscale_settings", true);
+  private _autoscaleSettings = new CosmosdbMongoDatabaseAutoscaleSettingsOutputReference(this, "autoscale_settings", true);
   public get autoscaleSettings() {
     return this._autoscaleSettings;
   }
@@ -371,7 +371,7 @@ export class CosmosdbMongoDatabase extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new CosmosdbMongoDatabaseTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new CosmosdbMongoDatabaseTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

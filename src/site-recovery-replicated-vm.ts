@@ -10,7 +10,7 @@ export interface SiteRecoveryReplicatedVmConfig extends cdktf.TerraformMetaArgum
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm#managed_disk SiteRecoveryReplicatedVm#managed_disk}
   */
-  readonly managedDisk?: SiteRecoveryReplicatedVmManagedDisk[];
+  readonly managedDisk?: SiteRecoveryReplicatedVmManagedDisk[] | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm#name SiteRecoveryReplicatedVm#name}
   */
@@ -18,7 +18,7 @@ export interface SiteRecoveryReplicatedVmConfig extends cdktf.TerraformMetaArgum
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm#network_interface SiteRecoveryReplicatedVm#network_interface}
   */
-  readonly networkInterface?: SiteRecoveryReplicatedVmNetworkInterface[];
+  readonly networkInterface?: SiteRecoveryReplicatedVmNetworkInterface[] | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm#recovery_replication_policy_id SiteRecoveryReplicatedVm#recovery_replication_policy_id}
   */
@@ -97,8 +97,8 @@ export interface SiteRecoveryReplicatedVmManagedDisk {
   readonly targetResourceGroupId?: string;
 }
 
-export function siteRecoveryReplicatedVmManagedDiskToTerraform(struct?: SiteRecoveryReplicatedVmManagedDisk): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function siteRecoveryReplicatedVmManagedDiskToTerraform(struct?: SiteRecoveryReplicatedVmManagedDisk | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -131,8 +131,8 @@ export interface SiteRecoveryReplicatedVmNetworkInterface {
   readonly targetSubnetName?: string;
 }
 
-export function siteRecoveryReplicatedVmNetworkInterfaceToTerraform(struct?: SiteRecoveryReplicatedVmNetworkInterface): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function siteRecoveryReplicatedVmNetworkInterfaceToTerraform(struct?: SiteRecoveryReplicatedVmNetworkInterface | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -163,8 +163,8 @@ export interface SiteRecoveryReplicatedVmTimeouts {
   readonly update?: string;
 }
 
-export function siteRecoveryReplicatedVmTimeoutsToTerraform(struct?: SiteRecoveryReplicatedVmTimeoutsOutputReference | SiteRecoveryReplicatedVmTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function siteRecoveryReplicatedVmTimeoutsToTerraform(struct?: SiteRecoveryReplicatedVmTimeoutsOutputReference | SiteRecoveryReplicatedVmTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -184,7 +184,7 @@ export class SiteRecoveryReplicatedVmTimeoutsOutputReference extends cdktf.Compl
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -351,12 +351,12 @@ export class SiteRecoveryReplicatedVm extends cdktf.TerraformResource {
   }
 
   // managed_disk - computed: false, optional: true, required: false
-  private _managedDisk?: SiteRecoveryReplicatedVmManagedDisk[]; 
+  private _managedDisk?: SiteRecoveryReplicatedVmManagedDisk[] | cdktf.IResolvable; 
   public get managedDisk() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('managed_disk') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('managed_disk')));
   }
-  public set managedDisk(value: SiteRecoveryReplicatedVmManagedDisk[]) {
+  public set managedDisk(value: SiteRecoveryReplicatedVmManagedDisk[] | cdktf.IResolvable) {
     this._managedDisk = value;
   }
   public resetManagedDisk() {
@@ -381,12 +381,12 @@ export class SiteRecoveryReplicatedVm extends cdktf.TerraformResource {
   }
 
   // network_interface - computed: true, optional: true, required: false
-  private _networkInterface?: SiteRecoveryReplicatedVmNetworkInterface[]; 
+  private _networkInterface?: SiteRecoveryReplicatedVmNetworkInterface[] | cdktf.IResolvable; 
   public get networkInterface() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('network_interface') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('network_interface')));
   }
-  public set networkInterface(value: SiteRecoveryReplicatedVmNetworkInterface[]) {
+  public set networkInterface(value: SiteRecoveryReplicatedVmNetworkInterface[] | cdktf.IResolvable) {
     this._networkInterface = value;
   }
   public resetNetworkInterface() {
@@ -547,7 +547,7 @@ export class SiteRecoveryReplicatedVm extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new SiteRecoveryReplicatedVmTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new SiteRecoveryReplicatedVmTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

@@ -16,7 +16,7 @@ export interface ResourceProviderRegistrationConfig extends cdktf.TerraformMetaA
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_provider_registration#feature ResourceProviderRegistration#feature}
   */
-  readonly feature?: ResourceProviderRegistrationFeature[];
+  readonly feature?: ResourceProviderRegistrationFeature[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -35,8 +35,8 @@ export interface ResourceProviderRegistrationFeature {
   readonly registered: boolean | cdktf.IResolvable;
 }
 
-export function resourceProviderRegistrationFeatureToTerraform(struct?: ResourceProviderRegistrationFeature): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function resourceProviderRegistrationFeatureToTerraform(struct?: ResourceProviderRegistrationFeature | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -65,8 +65,8 @@ export interface ResourceProviderRegistrationTimeouts {
   readonly update?: string;
 }
 
-export function resourceProviderRegistrationTimeoutsToTerraform(struct?: ResourceProviderRegistrationTimeoutsOutputReference | ResourceProviderRegistrationTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function resourceProviderRegistrationTimeoutsToTerraform(struct?: ResourceProviderRegistrationTimeoutsOutputReference | ResourceProviderRegistrationTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -86,7 +86,7 @@ export class ResourceProviderRegistrationTimeoutsOutputReference extends cdktf.C
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -254,12 +254,12 @@ export class ResourceProviderRegistration extends cdktf.TerraformResource {
   }
 
   // feature - computed: false, optional: true, required: false
-  private _feature?: ResourceProviderRegistrationFeature[]; 
+  private _feature?: ResourceProviderRegistrationFeature[] | cdktf.IResolvable; 
   public get feature() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('feature') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('feature')));
   }
-  public set feature(value: ResourceProviderRegistrationFeature[]) {
+  public set feature(value: ResourceProviderRegistrationFeature[] | cdktf.IResolvable) {
     this._feature = value;
   }
   public resetFeature() {
@@ -271,7 +271,7 @@ export class ResourceProviderRegistration extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ResourceProviderRegistrationTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ResourceProviderRegistrationTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

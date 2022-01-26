@@ -72,7 +72,7 @@ export interface CosmosdbSqlContainerConfig extends cdktf.TerraformMetaArguments
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_container#unique_key CosmosdbSqlContainer#unique_key}
   */
-  readonly uniqueKey?: CosmosdbSqlContainerUniqueKey[];
+  readonly uniqueKey?: CosmosdbSqlContainerUniqueKey[] | cdktf.IResolvable;
 }
 export interface CosmosdbSqlContainerAutoscaleSettings {
   /**
@@ -82,7 +82,7 @@ export interface CosmosdbSqlContainerAutoscaleSettings {
 }
 
 export function cosmosdbSqlContainerAutoscaleSettingsToTerraform(struct?: CosmosdbSqlContainerAutoscaleSettingsOutputReference | CosmosdbSqlContainerAutoscaleSettings): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -99,7 +99,7 @@ export class CosmosdbSqlContainerAutoscaleSettingsOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -156,7 +156,7 @@ export interface CosmosdbSqlContainerConflictResolutionPolicy {
 }
 
 export function cosmosdbSqlContainerConflictResolutionPolicyToTerraform(struct?: CosmosdbSqlContainerConflictResolutionPolicyOutputReference | CosmosdbSqlContainerConflictResolutionPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -175,7 +175,7 @@ export class CosmosdbSqlContainerConflictResolutionPolicyOutputReference extends
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -268,8 +268,8 @@ export interface CosmosdbSqlContainerIndexingPolicyCompositeIndexIndex {
   readonly path: string;
 }
 
-export function cosmosdbSqlContainerIndexingPolicyCompositeIndexIndexToTerraform(struct?: CosmosdbSqlContainerIndexingPolicyCompositeIndexIndex): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function cosmosdbSqlContainerIndexingPolicyCompositeIndexIndexToTerraform(struct?: CosmosdbSqlContainerIndexingPolicyCompositeIndexIndex | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -285,11 +285,11 @@ export interface CosmosdbSqlContainerIndexingPolicyCompositeIndex {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_container#index CosmosdbSqlContainer#index}
   */
-  readonly index: CosmosdbSqlContainerIndexingPolicyCompositeIndexIndex[];
+  readonly index: CosmosdbSqlContainerIndexingPolicyCompositeIndexIndex[] | cdktf.IResolvable;
 }
 
-export function cosmosdbSqlContainerIndexingPolicyCompositeIndexToTerraform(struct?: CosmosdbSqlContainerIndexingPolicyCompositeIndex): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function cosmosdbSqlContainerIndexingPolicyCompositeIndexToTerraform(struct?: CosmosdbSqlContainerIndexingPolicyCompositeIndex | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -305,8 +305,8 @@ export interface CosmosdbSqlContainerIndexingPolicyExcludedPath {
   readonly path: string;
 }
 
-export function cosmosdbSqlContainerIndexingPolicyExcludedPathToTerraform(struct?: CosmosdbSqlContainerIndexingPolicyExcludedPath): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function cosmosdbSqlContainerIndexingPolicyExcludedPathToTerraform(struct?: CosmosdbSqlContainerIndexingPolicyExcludedPath | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -322,8 +322,8 @@ export interface CosmosdbSqlContainerIndexingPolicyIncludedPath {
   readonly path: string;
 }
 
-export function cosmosdbSqlContainerIndexingPolicyIncludedPathToTerraform(struct?: CosmosdbSqlContainerIndexingPolicyIncludedPath): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function cosmosdbSqlContainerIndexingPolicyIncludedPathToTerraform(struct?: CosmosdbSqlContainerIndexingPolicyIncludedPath | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -339,8 +339,8 @@ export interface CosmosdbSqlContainerIndexingPolicySpatialIndex {
   readonly path: string;
 }
 
-export function cosmosdbSqlContainerIndexingPolicySpatialIndexToTerraform(struct?: CosmosdbSqlContainerIndexingPolicySpatialIndex): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function cosmosdbSqlContainerIndexingPolicySpatialIndexToTerraform(struct?: CosmosdbSqlContainerIndexingPolicySpatialIndex | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -359,29 +359,29 @@ export interface CosmosdbSqlContainerIndexingPolicy {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_container#composite_index CosmosdbSqlContainer#composite_index}
   */
-  readonly compositeIndex?: CosmosdbSqlContainerIndexingPolicyCompositeIndex[];
+  readonly compositeIndex?: CosmosdbSqlContainerIndexingPolicyCompositeIndex[] | cdktf.IResolvable;
   /**
   * excluded_path block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_container#excluded_path CosmosdbSqlContainer#excluded_path}
   */
-  readonly excludedPath?: CosmosdbSqlContainerIndexingPolicyExcludedPath[];
+  readonly excludedPath?: CosmosdbSqlContainerIndexingPolicyExcludedPath[] | cdktf.IResolvable;
   /**
   * included_path block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_container#included_path CosmosdbSqlContainer#included_path}
   */
-  readonly includedPath?: CosmosdbSqlContainerIndexingPolicyIncludedPath[];
+  readonly includedPath?: CosmosdbSqlContainerIndexingPolicyIncludedPath[] | cdktf.IResolvable;
   /**
   * spatial_index block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_container#spatial_index CosmosdbSqlContainer#spatial_index}
   */
-  readonly spatialIndex?: CosmosdbSqlContainerIndexingPolicySpatialIndex[];
+  readonly spatialIndex?: CosmosdbSqlContainerIndexingPolicySpatialIndex[] | cdktf.IResolvable;
 }
 
 export function cosmosdbSqlContainerIndexingPolicyToTerraform(struct?: CosmosdbSqlContainerIndexingPolicyOutputReference | CosmosdbSqlContainerIndexingPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -402,7 +402,7 @@ export class CosmosdbSqlContainerIndexingPolicyOutputReference extends cdktf.Com
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -468,12 +468,12 @@ export class CosmosdbSqlContainerIndexingPolicyOutputReference extends cdktf.Com
   }
 
   // composite_index - computed: false, optional: true, required: false
-  private _compositeIndex?: CosmosdbSqlContainerIndexingPolicyCompositeIndex[]; 
+  private _compositeIndex?: CosmosdbSqlContainerIndexingPolicyCompositeIndex[] | cdktf.IResolvable; 
   public get compositeIndex() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('composite_index') as any;
+    return this.interpolationForAttribute('composite_index');
   }
-  public set compositeIndex(value: CosmosdbSqlContainerIndexingPolicyCompositeIndex[]) {
+  public set compositeIndex(value: CosmosdbSqlContainerIndexingPolicyCompositeIndex[] | cdktf.IResolvable) {
     this._compositeIndex = value;
   }
   public resetCompositeIndex() {
@@ -485,12 +485,12 @@ export class CosmosdbSqlContainerIndexingPolicyOutputReference extends cdktf.Com
   }
 
   // excluded_path - computed: false, optional: true, required: false
-  private _excludedPath?: CosmosdbSqlContainerIndexingPolicyExcludedPath[]; 
+  private _excludedPath?: CosmosdbSqlContainerIndexingPolicyExcludedPath[] | cdktf.IResolvable; 
   public get excludedPath() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('excluded_path') as any;
+    return this.interpolationForAttribute('excluded_path');
   }
-  public set excludedPath(value: CosmosdbSqlContainerIndexingPolicyExcludedPath[]) {
+  public set excludedPath(value: CosmosdbSqlContainerIndexingPolicyExcludedPath[] | cdktf.IResolvable) {
     this._excludedPath = value;
   }
   public resetExcludedPath() {
@@ -502,12 +502,12 @@ export class CosmosdbSqlContainerIndexingPolicyOutputReference extends cdktf.Com
   }
 
   // included_path - computed: false, optional: true, required: false
-  private _includedPath?: CosmosdbSqlContainerIndexingPolicyIncludedPath[]; 
+  private _includedPath?: CosmosdbSqlContainerIndexingPolicyIncludedPath[] | cdktf.IResolvable; 
   public get includedPath() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('included_path') as any;
+    return this.interpolationForAttribute('included_path');
   }
-  public set includedPath(value: CosmosdbSqlContainerIndexingPolicyIncludedPath[]) {
+  public set includedPath(value: CosmosdbSqlContainerIndexingPolicyIncludedPath[] | cdktf.IResolvable) {
     this._includedPath = value;
   }
   public resetIncludedPath() {
@@ -519,12 +519,12 @@ export class CosmosdbSqlContainerIndexingPolicyOutputReference extends cdktf.Com
   }
 
   // spatial_index - computed: false, optional: true, required: false
-  private _spatialIndex?: CosmosdbSqlContainerIndexingPolicySpatialIndex[]; 
+  private _spatialIndex?: CosmosdbSqlContainerIndexingPolicySpatialIndex[] | cdktf.IResolvable; 
   public get spatialIndex() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('spatial_index') as any;
+    return this.interpolationForAttribute('spatial_index');
   }
-  public set spatialIndex(value: CosmosdbSqlContainerIndexingPolicySpatialIndex[]) {
+  public set spatialIndex(value: CosmosdbSqlContainerIndexingPolicySpatialIndex[] | cdktf.IResolvable) {
     this._spatialIndex = value;
   }
   public resetSpatialIndex() {
@@ -554,8 +554,8 @@ export interface CosmosdbSqlContainerTimeouts {
   readonly update?: string;
 }
 
-export function cosmosdbSqlContainerTimeoutsToTerraform(struct?: CosmosdbSqlContainerTimeoutsOutputReference | CosmosdbSqlContainerTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function cosmosdbSqlContainerTimeoutsToTerraform(struct?: CosmosdbSqlContainerTimeoutsOutputReference | CosmosdbSqlContainerTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -575,7 +575,7 @@ export class CosmosdbSqlContainerTimeoutsOutputReference extends cdktf.ComplexOb
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -689,8 +689,8 @@ export interface CosmosdbSqlContainerUniqueKey {
   readonly paths: string[];
 }
 
-export function cosmosdbSqlContainerUniqueKeyToTerraform(struct?: CosmosdbSqlContainerUniqueKey): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function cosmosdbSqlContainerUniqueKeyToTerraform(struct?: CosmosdbSqlContainerUniqueKey | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -887,7 +887,7 @@ export class CosmosdbSqlContainer extends cdktf.TerraformResource {
   }
 
   // autoscale_settings - computed: false, optional: true, required: false
-  private _autoscaleSettings = new CosmosdbSqlContainerAutoscaleSettingsOutputReference(this as any, "autoscale_settings", true);
+  private _autoscaleSettings = new CosmosdbSqlContainerAutoscaleSettingsOutputReference(this, "autoscale_settings", true);
   public get autoscaleSettings() {
     return this._autoscaleSettings;
   }
@@ -903,7 +903,7 @@ export class CosmosdbSqlContainer extends cdktf.TerraformResource {
   }
 
   // conflict_resolution_policy - computed: false, optional: true, required: false
-  private _conflictResolutionPolicy = new CosmosdbSqlContainerConflictResolutionPolicyOutputReference(this as any, "conflict_resolution_policy", true);
+  private _conflictResolutionPolicy = new CosmosdbSqlContainerConflictResolutionPolicyOutputReference(this, "conflict_resolution_policy", true);
   public get conflictResolutionPolicy() {
     return this._conflictResolutionPolicy;
   }
@@ -919,7 +919,7 @@ export class CosmosdbSqlContainer extends cdktf.TerraformResource {
   }
 
   // indexing_policy - computed: false, optional: true, required: false
-  private _indexingPolicy = new CosmosdbSqlContainerIndexingPolicyOutputReference(this as any, "indexing_policy", true);
+  private _indexingPolicy = new CosmosdbSqlContainerIndexingPolicyOutputReference(this, "indexing_policy", true);
   public get indexingPolicy() {
     return this._indexingPolicy;
   }
@@ -935,7 +935,7 @@ export class CosmosdbSqlContainer extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new CosmosdbSqlContainerTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new CosmosdbSqlContainerTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -951,12 +951,12 @@ export class CosmosdbSqlContainer extends cdktf.TerraformResource {
   }
 
   // unique_key - computed: false, optional: true, required: false
-  private _uniqueKey?: CosmosdbSqlContainerUniqueKey[]; 
+  private _uniqueKey?: CosmosdbSqlContainerUniqueKey[] | cdktf.IResolvable; 
   public get uniqueKey() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('unique_key') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('unique_key')));
   }
-  public set uniqueKey(value: CosmosdbSqlContainerUniqueKey[]) {
+  public set uniqueKey(value: CosmosdbSqlContainerUniqueKey[] | cdktf.IResolvable) {
     this._uniqueKey = value;
   }
   public resetUniqueKey() {

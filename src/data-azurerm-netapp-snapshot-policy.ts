@@ -59,8 +59,7 @@ export class DataAzurermNetappSnapshotPolicyMonthlySchedule extends cdktf.Comple
 
   // days_of_month - computed: true, optional: false, required: false
   public get daysOfMonth() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('days_of_month') as any;
+    return cdktf.Token.asNumberList(cdktf.Fn.tolist(this.getNumberListAttribute('days_of_month')));
   }
 
   // hour - computed: true, optional: false, required: false
@@ -82,7 +81,7 @@ export class DataAzurermNetappSnapshotPolicyWeeklySchedule extends cdktf.Complex
 
   // days_of_week - computed: true, optional: false, required: false
   public get daysOfWeek() {
-    return this.getListAttribute('days_of_week');
+    return cdktf.Fn.tolist(this.getListAttribute('days_of_week'));
   }
 
   // hour - computed: true, optional: false, required: false
@@ -107,8 +106,8 @@ export interface DataAzurermNetappSnapshotPolicyTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermNetappSnapshotPolicyTimeoutsToTerraform(struct?: DataAzurermNetappSnapshotPolicyTimeoutsOutputReference | DataAzurermNetappSnapshotPolicyTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermNetappSnapshotPolicyTimeoutsToTerraform(struct?: DataAzurermNetappSnapshotPolicyTimeoutsOutputReference | DataAzurermNetappSnapshotPolicyTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -125,7 +124,7 @@ export class DataAzurermNetappSnapshotPolicyTimeoutsOutputReference extends cdkt
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -224,17 +223,17 @@ export class DataAzurermNetappSnapshotPolicy extends cdktf.TerraformDataSource {
 
   // daily_schedule - computed: true, optional: false, required: false
   public dailySchedule(index: string) {
-    return new DataAzurermNetappSnapshotPolicyDailySchedule(this, 'daily_schedule', index);
+    return new DataAzurermNetappSnapshotPolicyDailySchedule(this, 'daily_schedule', index, false);
   }
 
   // enabled - computed: true, optional: false, required: false
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
 
   // hourly_schedule - computed: true, optional: false, required: false
   public hourlySchedule(index: string) {
-    return new DataAzurermNetappSnapshotPolicyHourlySchedule(this, 'hourly_schedule', index);
+    return new DataAzurermNetappSnapshotPolicyHourlySchedule(this, 'hourly_schedule', index, false);
   }
 
   // id - computed: true, optional: true, required: false
@@ -249,7 +248,7 @@ export class DataAzurermNetappSnapshotPolicy extends cdktf.TerraformDataSource {
 
   // monthly_schedule - computed: true, optional: false, required: false
   public monthlySchedule(index: string) {
-    return new DataAzurermNetappSnapshotPolicyMonthlySchedule(this, 'monthly_schedule', index);
+    return new DataAzurermNetappSnapshotPolicyMonthlySchedule(this, 'monthly_schedule', index, false);
   }
 
   // name - computed: false, optional: false, required: true
@@ -279,17 +278,17 @@ export class DataAzurermNetappSnapshotPolicy extends cdktf.TerraformDataSource {
   }
 
   // tags - computed: true, optional: false, required: false
-  public tags(key: string): string {
+  public tags(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // weekly_schedule - computed: true, optional: false, required: false
   public weeklySchedule(index: string) {
-    return new DataAzurermNetappSnapshotPolicyWeeklySchedule(this, 'weekly_schedule', index);
+    return new DataAzurermNetappSnapshotPolicyWeeklySchedule(this, 'weekly_schedule', index, false);
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermNetappSnapshotPolicyTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermNetappSnapshotPolicyTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

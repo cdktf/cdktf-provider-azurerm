@@ -66,7 +66,7 @@ export interface MysqlFlexibleServerConfig extends cdktf.TerraformMetaArguments 
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_flexible_server#tags MysqlFlexibleServer#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_flexible_server#version MysqlFlexibleServer#version}
   */
@@ -112,7 +112,7 @@ export interface MysqlFlexibleServerHighAvailability {
 }
 
 export function mysqlFlexibleServerHighAvailabilityToTerraform(struct?: MysqlFlexibleServerHighAvailabilityOutputReference | MysqlFlexibleServerHighAvailability): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -130,7 +130,7 @@ export class MysqlFlexibleServerHighAvailabilityOutputReference extends cdktf.Co
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -206,7 +206,7 @@ export interface MysqlFlexibleServerMaintenanceWindow {
 }
 
 export function mysqlFlexibleServerMaintenanceWindowToTerraform(struct?: MysqlFlexibleServerMaintenanceWindowOutputReference | MysqlFlexibleServerMaintenanceWindow): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -225,7 +225,7 @@ export class MysqlFlexibleServerMaintenanceWindowOutputReference extends cdktf.C
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -326,7 +326,7 @@ export interface MysqlFlexibleServerStorage {
 }
 
 export function mysqlFlexibleServerStorageToTerraform(struct?: MysqlFlexibleServerStorageOutputReference | MysqlFlexibleServerStorage): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -345,7 +345,7 @@ export class MysqlFlexibleServerStorageOutputReference extends cdktf.ComplexObje
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -385,7 +385,7 @@ export class MysqlFlexibleServerStorageOutputReference extends cdktf.ComplexObje
   // auto_grow_enabled - computed: false, optional: true, required: false
   private _autoGrowEnabled?: boolean | cdktf.IResolvable; 
   public get autoGrowEnabled() {
-    return this.getBooleanAttribute('auto_grow_enabled') as any;
+    return this.getBooleanAttribute('auto_grow_enabled');
   }
   public set autoGrowEnabled(value: boolean | cdktf.IResolvable) {
     this._autoGrowEnabled = value;
@@ -449,8 +449,8 @@ export interface MysqlFlexibleServerTimeouts {
   readonly update?: string;
 }
 
-export function mysqlFlexibleServerTimeoutsToTerraform(struct?: MysqlFlexibleServerTimeoutsOutputReference | MysqlFlexibleServerTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function mysqlFlexibleServerTimeoutsToTerraform(struct?: MysqlFlexibleServerTimeoutsOutputReference | MysqlFlexibleServerTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -470,7 +470,7 @@ export class MysqlFlexibleServerTimeoutsOutputReference extends cdktf.ComplexObj
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -725,7 +725,7 @@ export class MysqlFlexibleServer extends cdktf.TerraformResource {
   // geo_redundant_backup_enabled - computed: false, optional: true, required: false
   private _geoRedundantBackupEnabled?: boolean | cdktf.IResolvable; 
   public get geoRedundantBackupEnabled() {
-    return this.getBooleanAttribute('geo_redundant_backup_enabled') as any;
+    return this.getBooleanAttribute('geo_redundant_backup_enabled');
   }
   public set geoRedundantBackupEnabled(value: boolean | cdktf.IResolvable) {
     this._geoRedundantBackupEnabled = value;
@@ -803,7 +803,7 @@ export class MysqlFlexibleServer extends cdktf.TerraformResource {
 
   // public_network_access_enabled - computed: true, optional: false, required: false
   public get publicNetworkAccessEnabled() {
-    return this.getBooleanAttribute('public_network_access_enabled') as any;
+    return this.getBooleanAttribute('public_network_access_enabled');
   }
 
   // replica_capacity - computed: true, optional: false, required: false
@@ -873,12 +873,11 @@ export class MysqlFlexibleServer extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -922,7 +921,7 @@ export class MysqlFlexibleServer extends cdktf.TerraformResource {
   }
 
   // high_availability - computed: false, optional: true, required: false
-  private _highAvailability = new MysqlFlexibleServerHighAvailabilityOutputReference(this as any, "high_availability", true);
+  private _highAvailability = new MysqlFlexibleServerHighAvailabilityOutputReference(this, "high_availability", true);
   public get highAvailability() {
     return this._highAvailability;
   }
@@ -938,7 +937,7 @@ export class MysqlFlexibleServer extends cdktf.TerraformResource {
   }
 
   // maintenance_window - computed: false, optional: true, required: false
-  private _maintenanceWindow = new MysqlFlexibleServerMaintenanceWindowOutputReference(this as any, "maintenance_window", true);
+  private _maintenanceWindow = new MysqlFlexibleServerMaintenanceWindowOutputReference(this, "maintenance_window", true);
   public get maintenanceWindow() {
     return this._maintenanceWindow;
   }
@@ -954,7 +953,7 @@ export class MysqlFlexibleServer extends cdktf.TerraformResource {
   }
 
   // storage - computed: false, optional: true, required: false
-  private _storage = new MysqlFlexibleServerStorageOutputReference(this as any, "storage", true);
+  private _storage = new MysqlFlexibleServerStorageOutputReference(this, "storage", true);
   public get storage() {
     return this._storage;
   }
@@ -970,7 +969,7 @@ export class MysqlFlexibleServer extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new MysqlFlexibleServerTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new MysqlFlexibleServerTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -1005,7 +1004,7 @@ export class MysqlFlexibleServer extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku_name: cdktf.stringToTerraform(this._skuName),
       source_server_id: cdktf.stringToTerraform(this._sourceServerId),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       version: cdktf.stringToTerraform(this._version),
       zone: cdktf.stringToTerraform(this._zone),
       high_availability: mysqlFlexibleServerHighAvailabilityToTerraform(this._highAvailability.internalValue),

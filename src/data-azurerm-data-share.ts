@@ -46,8 +46,8 @@ export interface DataAzurermDataShareTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermDataShareTimeoutsToTerraform(struct?: DataAzurermDataShareTimeoutsOutputReference | DataAzurermDataShareTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermDataShareTimeoutsToTerraform(struct?: DataAzurermDataShareTimeoutsOutputReference | DataAzurermDataShareTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -64,7 +64,7 @@ export class DataAzurermDataShareTimeoutsOutputReference extends cdktf.ComplexOb
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -190,7 +190,7 @@ export class DataAzurermDataShare extends cdktf.TerraformDataSource {
 
   // snapshot_schedule - computed: true, optional: false, required: false
   public snapshotSchedule(index: string) {
-    return new DataAzurermDataShareSnapshotSchedule(this, 'snapshot_schedule', index);
+    return new DataAzurermDataShareSnapshotSchedule(this, 'snapshot_schedule', index, false);
   }
 
   // terms - computed: true, optional: false, required: false
@@ -199,7 +199,7 @@ export class DataAzurermDataShare extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermDataShareTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermDataShareTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

@@ -50,13 +50,13 @@ export interface ApiManagementApiOperationConfig extends cdktf.TerraformMetaArgu
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#response ApiManagementApiOperation#response}
   */
-  readonly response?: ApiManagementApiOperationResponse[];
+  readonly response?: ApiManagementApiOperationResponse[] | cdktf.IResolvable;
   /**
   * template_parameter block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#template_parameter ApiManagementApiOperation#template_parameter}
   */
-  readonly templateParameter?: ApiManagementApiOperationTemplateParameter[];
+  readonly templateParameter?: ApiManagementApiOperationTemplateParameter[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -91,8 +91,8 @@ export interface ApiManagementApiOperationRequestHeader {
   readonly values?: string[];
 }
 
-export function apiManagementApiOperationRequestHeaderToTerraform(struct?: ApiManagementApiOperationRequestHeader): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function apiManagementApiOperationRequestHeaderToTerraform(struct?: ApiManagementApiOperationRequestHeader | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -133,8 +133,8 @@ export interface ApiManagementApiOperationRequestQueryParameter {
   readonly values?: string[];
 }
 
-export function apiManagementApiOperationRequestQueryParameterToTerraform(struct?: ApiManagementApiOperationRequestQueryParameter): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function apiManagementApiOperationRequestQueryParameterToTerraform(struct?: ApiManagementApiOperationRequestQueryParameter | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -171,8 +171,8 @@ export interface ApiManagementApiOperationRequestRepresentationExample {
   readonly value?: string;
 }
 
-export function apiManagementApiOperationRequestRepresentationExampleToTerraform(struct?: ApiManagementApiOperationRequestRepresentationExample): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function apiManagementApiOperationRequestRepresentationExampleToTerraform(struct?: ApiManagementApiOperationRequestRepresentationExample | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -212,8 +212,8 @@ export interface ApiManagementApiOperationRequestRepresentationFormParameter {
   readonly values?: string[];
 }
 
-export function apiManagementApiOperationRequestRepresentationFormParameterToTerraform(struct?: ApiManagementApiOperationRequestRepresentationFormParameter): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function apiManagementApiOperationRequestRepresentationFormParameterToTerraform(struct?: ApiManagementApiOperationRequestRepresentationFormParameter | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -249,17 +249,17 @@ export interface ApiManagementApiOperationRequestRepresentation {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#example ApiManagementApiOperation#example}
   */
-  readonly example?: ApiManagementApiOperationRequestRepresentationExample[];
+  readonly example?: ApiManagementApiOperationRequestRepresentationExample[] | cdktf.IResolvable;
   /**
   * form_parameter block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#form_parameter ApiManagementApiOperation#form_parameter}
   */
-  readonly formParameter?: ApiManagementApiOperationRequestRepresentationFormParameter[];
+  readonly formParameter?: ApiManagementApiOperationRequestRepresentationFormParameter[] | cdktf.IResolvable;
 }
 
-export function apiManagementApiOperationRequestRepresentationToTerraform(struct?: ApiManagementApiOperationRequestRepresentation): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function apiManagementApiOperationRequestRepresentationToTerraform(struct?: ApiManagementApiOperationRequestRepresentation | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -283,23 +283,23 @@ export interface ApiManagementApiOperationRequest {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#header ApiManagementApiOperation#header}
   */
-  readonly header?: ApiManagementApiOperationRequestHeader[];
+  readonly header?: ApiManagementApiOperationRequestHeader[] | cdktf.IResolvable;
   /**
   * query_parameter block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#query_parameter ApiManagementApiOperation#query_parameter}
   */
-  readonly queryParameter?: ApiManagementApiOperationRequestQueryParameter[];
+  readonly queryParameter?: ApiManagementApiOperationRequestQueryParameter[] | cdktf.IResolvable;
   /**
   * representation block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#representation ApiManagementApiOperation#representation}
   */
-  readonly representation?: ApiManagementApiOperationRequestRepresentation[];
+  readonly representation?: ApiManagementApiOperationRequestRepresentation[] | cdktf.IResolvable;
 }
 
 export function apiManagementApiOperationRequestToTerraform(struct?: ApiManagementApiOperationRequestOutputReference | ApiManagementApiOperationRequest): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -319,7 +319,7 @@ export class ApiManagementApiOperationRequestOutputReference extends cdktf.Compl
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -379,12 +379,12 @@ export class ApiManagementApiOperationRequestOutputReference extends cdktf.Compl
   }
 
   // header - computed: false, optional: true, required: false
-  private _header?: ApiManagementApiOperationRequestHeader[]; 
+  private _header?: ApiManagementApiOperationRequestHeader[] | cdktf.IResolvable; 
   public get header() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('header') as any;
+    return this.interpolationForAttribute('header');
   }
-  public set header(value: ApiManagementApiOperationRequestHeader[]) {
+  public set header(value: ApiManagementApiOperationRequestHeader[] | cdktf.IResolvable) {
     this._header = value;
   }
   public resetHeader() {
@@ -396,12 +396,12 @@ export class ApiManagementApiOperationRequestOutputReference extends cdktf.Compl
   }
 
   // query_parameter - computed: false, optional: true, required: false
-  private _queryParameter?: ApiManagementApiOperationRequestQueryParameter[]; 
+  private _queryParameter?: ApiManagementApiOperationRequestQueryParameter[] | cdktf.IResolvable; 
   public get queryParameter() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('query_parameter') as any;
+    return this.interpolationForAttribute('query_parameter');
   }
-  public set queryParameter(value: ApiManagementApiOperationRequestQueryParameter[]) {
+  public set queryParameter(value: ApiManagementApiOperationRequestQueryParameter[] | cdktf.IResolvable) {
     this._queryParameter = value;
   }
   public resetQueryParameter() {
@@ -413,12 +413,12 @@ export class ApiManagementApiOperationRequestOutputReference extends cdktf.Compl
   }
 
   // representation - computed: false, optional: true, required: false
-  private _representation?: ApiManagementApiOperationRequestRepresentation[]; 
+  private _representation?: ApiManagementApiOperationRequestRepresentation[] | cdktf.IResolvable; 
   public get representation() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('representation') as any;
+    return this.interpolationForAttribute('representation');
   }
-  public set representation(value: ApiManagementApiOperationRequestRepresentation[]) {
+  public set representation(value: ApiManagementApiOperationRequestRepresentation[] | cdktf.IResolvable) {
     this._representation = value;
   }
   public resetRepresentation() {
@@ -456,8 +456,8 @@ export interface ApiManagementApiOperationResponseHeader {
   readonly values?: string[];
 }
 
-export function apiManagementApiOperationResponseHeaderToTerraform(struct?: ApiManagementApiOperationResponseHeader): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function apiManagementApiOperationResponseHeaderToTerraform(struct?: ApiManagementApiOperationResponseHeader | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -494,8 +494,8 @@ export interface ApiManagementApiOperationResponseRepresentationExample {
   readonly value?: string;
 }
 
-export function apiManagementApiOperationResponseRepresentationExampleToTerraform(struct?: ApiManagementApiOperationResponseRepresentationExample): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function apiManagementApiOperationResponseRepresentationExampleToTerraform(struct?: ApiManagementApiOperationResponseRepresentationExample | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -535,8 +535,8 @@ export interface ApiManagementApiOperationResponseRepresentationFormParameter {
   readonly values?: string[];
 }
 
-export function apiManagementApiOperationResponseRepresentationFormParameterToTerraform(struct?: ApiManagementApiOperationResponseRepresentationFormParameter): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function apiManagementApiOperationResponseRepresentationFormParameterToTerraform(struct?: ApiManagementApiOperationResponseRepresentationFormParameter | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -572,17 +572,17 @@ export interface ApiManagementApiOperationResponseRepresentation {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#example ApiManagementApiOperation#example}
   */
-  readonly example?: ApiManagementApiOperationResponseRepresentationExample[];
+  readonly example?: ApiManagementApiOperationResponseRepresentationExample[] | cdktf.IResolvable;
   /**
   * form_parameter block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#form_parameter ApiManagementApiOperation#form_parameter}
   */
-  readonly formParameter?: ApiManagementApiOperationResponseRepresentationFormParameter[];
+  readonly formParameter?: ApiManagementApiOperationResponseRepresentationFormParameter[] | cdktf.IResolvable;
 }
 
-export function apiManagementApiOperationResponseRepresentationToTerraform(struct?: ApiManagementApiOperationResponseRepresentation): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function apiManagementApiOperationResponseRepresentationToTerraform(struct?: ApiManagementApiOperationResponseRepresentation | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -610,17 +610,17 @@ export interface ApiManagementApiOperationResponse {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#header ApiManagementApiOperation#header}
   */
-  readonly header?: ApiManagementApiOperationResponseHeader[];
+  readonly header?: ApiManagementApiOperationResponseHeader[] | cdktf.IResolvable;
   /**
   * representation block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#representation ApiManagementApiOperation#representation}
   */
-  readonly representation?: ApiManagementApiOperationResponseRepresentation[];
+  readonly representation?: ApiManagementApiOperationResponseRepresentation[] | cdktf.IResolvable;
 }
 
-export function apiManagementApiOperationResponseToTerraform(struct?: ApiManagementApiOperationResponse): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function apiManagementApiOperationResponseToTerraform(struct?: ApiManagementApiOperationResponse | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -659,8 +659,8 @@ export interface ApiManagementApiOperationTemplateParameter {
   readonly values?: string[];
 }
 
-export function apiManagementApiOperationTemplateParameterToTerraform(struct?: ApiManagementApiOperationTemplateParameter): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function apiManagementApiOperationTemplateParameterToTerraform(struct?: ApiManagementApiOperationTemplateParameter | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -693,8 +693,8 @@ export interface ApiManagementApiOperationTimeouts {
   readonly update?: string;
 }
 
-export function apiManagementApiOperationTimeoutsToTerraform(struct?: ApiManagementApiOperationTimeoutsOutputReference | ApiManagementApiOperationTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function apiManagementApiOperationTimeoutsToTerraform(struct?: ApiManagementApiOperationTimeoutsOutputReference | ApiManagementApiOperationTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -714,7 +714,7 @@ export class ApiManagementApiOperationTimeoutsOutputReference extends cdktf.Comp
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -985,7 +985,7 @@ export class ApiManagementApiOperation extends cdktf.TerraformResource {
   }
 
   // request - computed: false, optional: true, required: false
-  private _request = new ApiManagementApiOperationRequestOutputReference(this as any, "request", true);
+  private _request = new ApiManagementApiOperationRequestOutputReference(this, "request", true);
   public get request() {
     return this._request;
   }
@@ -1001,12 +1001,12 @@ export class ApiManagementApiOperation extends cdktf.TerraformResource {
   }
 
   // response - computed: false, optional: true, required: false
-  private _response?: ApiManagementApiOperationResponse[]; 
+  private _response?: ApiManagementApiOperationResponse[] | cdktf.IResolvable; 
   public get response() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('response') as any;
+    return this.interpolationForAttribute('response');
   }
-  public set response(value: ApiManagementApiOperationResponse[]) {
+  public set response(value: ApiManagementApiOperationResponse[] | cdktf.IResolvable) {
     this._response = value;
   }
   public resetResponse() {
@@ -1018,12 +1018,12 @@ export class ApiManagementApiOperation extends cdktf.TerraformResource {
   }
 
   // template_parameter - computed: false, optional: true, required: false
-  private _templateParameter?: ApiManagementApiOperationTemplateParameter[]; 
+  private _templateParameter?: ApiManagementApiOperationTemplateParameter[] | cdktf.IResolvable; 
   public get templateParameter() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('template_parameter') as any;
+    return this.interpolationForAttribute('template_parameter');
   }
-  public set templateParameter(value: ApiManagementApiOperationTemplateParameter[]) {
+  public set templateParameter(value: ApiManagementApiOperationTemplateParameter[] | cdktf.IResolvable) {
     this._templateParameter = value;
   }
   public resetTemplateParameter() {
@@ -1035,7 +1035,7 @@ export class ApiManagementApiOperation extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ApiManagementApiOperationTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ApiManagementApiOperationTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

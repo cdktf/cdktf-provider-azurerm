@@ -14,7 +14,7 @@ export interface SpringCloudJavaDeploymentConfig extends cdktf.TerraformMetaArgu
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_java_deployment#environment_variables SpringCloudJavaDeployment#environment_variables}
   */
-  readonly environmentVariables?: { [key: string]: string } | cdktf.IResolvable;
+  readonly environmentVariables?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_java_deployment#instance_count SpringCloudJavaDeployment#instance_count}
   */
@@ -64,7 +64,7 @@ export interface SpringCloudJavaDeploymentQuota {
 }
 
 export function springCloudJavaDeploymentQuotaToTerraform(struct?: SpringCloudJavaDeploymentQuotaOutputReference | SpringCloudJavaDeploymentQuota): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -82,7 +82,7 @@ export class SpringCloudJavaDeploymentQuotaOutputReference extends cdktf.Complex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -164,8 +164,8 @@ export interface SpringCloudJavaDeploymentTimeouts {
   readonly update?: string;
 }
 
-export function springCloudJavaDeploymentTimeoutsToTerraform(struct?: SpringCloudJavaDeploymentTimeoutsOutputReference | SpringCloudJavaDeploymentTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function springCloudJavaDeploymentTimeoutsToTerraform(struct?: SpringCloudJavaDeploymentTimeoutsOutputReference | SpringCloudJavaDeploymentTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -185,7 +185,7 @@ export class SpringCloudJavaDeploymentTimeoutsOutputReference extends cdktf.Comp
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -358,12 +358,11 @@ export class SpringCloudJavaDeployment extends cdktf.TerraformResource {
   }
 
   // environment_variables - computed: false, optional: true, required: false
-  private _environmentVariables?: { [key: string]: string } | cdktf.IResolvable; 
+  private _environmentVariables?: { [key: string]: string }; 
   public get environmentVariables() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('environment_variables') as any;
+    return this.getStringMapAttribute('environment_variables');
   }
-  public set environmentVariables(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set environmentVariables(value: { [key: string]: string }) {
     this._environmentVariables = value;
   }
   public resetEnvironmentVariables() {
@@ -470,7 +469,7 @@ export class SpringCloudJavaDeployment extends cdktf.TerraformResource {
   }
 
   // quota - computed: false, optional: true, required: false
-  private _quota = new SpringCloudJavaDeploymentQuotaOutputReference(this as any, "quota", true);
+  private _quota = new SpringCloudJavaDeploymentQuotaOutputReference(this, "quota", true);
   public get quota() {
     return this._quota;
   }
@@ -486,7 +485,7 @@ export class SpringCloudJavaDeployment extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new SpringCloudJavaDeploymentTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new SpringCloudJavaDeploymentTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -508,7 +507,7 @@ export class SpringCloudJavaDeployment extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       cpu: cdktf.numberToTerraform(this._cpu),
-      environment_variables: cdktf.hashMapper(cdktf.anyToTerraform)(this._environmentVariables),
+      environment_variables: cdktf.hashMapper(cdktf.stringToTerraform)(this._environmentVariables),
       instance_count: cdktf.numberToTerraform(this._instanceCount),
       jvm_options: cdktf.stringToTerraform(this._jvmOptions),
       memory_in_gb: cdktf.numberToTerraform(this._memoryInGb),

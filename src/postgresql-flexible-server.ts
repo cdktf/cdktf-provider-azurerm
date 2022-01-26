@@ -66,7 +66,7 @@ export interface PostgresqlFlexibleServerConfig extends cdktf.TerraformMetaArgum
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server#tags PostgresqlFlexibleServer#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server#version PostgresqlFlexibleServer#version}
   */
@@ -106,7 +106,7 @@ export interface PostgresqlFlexibleServerHighAvailability {
 }
 
 export function postgresqlFlexibleServerHighAvailabilityToTerraform(struct?: PostgresqlFlexibleServerHighAvailabilityOutputReference | PostgresqlFlexibleServerHighAvailability): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -124,7 +124,7 @@ export class PostgresqlFlexibleServerHighAvailabilityOutputReference extends cdk
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -200,7 +200,7 @@ export interface PostgresqlFlexibleServerMaintenanceWindow {
 }
 
 export function postgresqlFlexibleServerMaintenanceWindowToTerraform(struct?: PostgresqlFlexibleServerMaintenanceWindowOutputReference | PostgresqlFlexibleServerMaintenanceWindow): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -219,7 +219,7 @@ export class PostgresqlFlexibleServerMaintenanceWindowOutputReference extends cd
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -323,8 +323,8 @@ export interface PostgresqlFlexibleServerTimeouts {
   readonly update?: string;
 }
 
-export function postgresqlFlexibleServerTimeoutsToTerraform(struct?: PostgresqlFlexibleServerTimeoutsOutputReference | PostgresqlFlexibleServerTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function postgresqlFlexibleServerTimeoutsToTerraform(struct?: PostgresqlFlexibleServerTimeoutsOutputReference | PostgresqlFlexibleServerTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -344,7 +344,7 @@ export class PostgresqlFlexibleServerTimeoutsOutputReference extends cdktf.Compl
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -603,7 +603,7 @@ export class PostgresqlFlexibleServer extends cdktf.TerraformResource {
   // geo_redundant_backup_enabled - computed: false, optional: true, required: false
   private _geoRedundantBackupEnabled?: boolean | cdktf.IResolvable; 
   public get geoRedundantBackupEnabled() {
-    return this.getBooleanAttribute('geo_redundant_backup_enabled') as any;
+    return this.getBooleanAttribute('geo_redundant_backup_enabled');
   }
   public set geoRedundantBackupEnabled(value: boolean | cdktf.IResolvable) {
     this._geoRedundantBackupEnabled = value;
@@ -681,7 +681,7 @@ export class PostgresqlFlexibleServer extends cdktf.TerraformResource {
 
   // public_network_access_enabled - computed: true, optional: false, required: false
   public get publicNetworkAccessEnabled() {
-    return this.getBooleanAttribute('public_network_access_enabled') as any;
+    return this.getBooleanAttribute('public_network_access_enabled');
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -746,12 +746,11 @@ export class PostgresqlFlexibleServer extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -795,7 +794,7 @@ export class PostgresqlFlexibleServer extends cdktf.TerraformResource {
   }
 
   // high_availability - computed: false, optional: true, required: false
-  private _highAvailability = new PostgresqlFlexibleServerHighAvailabilityOutputReference(this as any, "high_availability", true);
+  private _highAvailability = new PostgresqlFlexibleServerHighAvailabilityOutputReference(this, "high_availability", true);
   public get highAvailability() {
     return this._highAvailability;
   }
@@ -811,7 +810,7 @@ export class PostgresqlFlexibleServer extends cdktf.TerraformResource {
   }
 
   // maintenance_window - computed: false, optional: true, required: false
-  private _maintenanceWindow = new PostgresqlFlexibleServerMaintenanceWindowOutputReference(this as any, "maintenance_window", true);
+  private _maintenanceWindow = new PostgresqlFlexibleServerMaintenanceWindowOutputReference(this, "maintenance_window", true);
   public get maintenanceWindow() {
     return this._maintenanceWindow;
   }
@@ -827,7 +826,7 @@ export class PostgresqlFlexibleServer extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new PostgresqlFlexibleServerTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new PostgresqlFlexibleServerTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -862,7 +861,7 @@ export class PostgresqlFlexibleServer extends cdktf.TerraformResource {
       sku_name: cdktf.stringToTerraform(this._skuName),
       source_server_id: cdktf.stringToTerraform(this._sourceServerId),
       storage_mb: cdktf.numberToTerraform(this._storageMb),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       version: cdktf.stringToTerraform(this._version),
       zone: cdktf.stringToTerraform(this._zone),
       high_availability: postgresqlFlexibleServerHighAvailabilityToTerraform(this._highAvailability.internalValue),

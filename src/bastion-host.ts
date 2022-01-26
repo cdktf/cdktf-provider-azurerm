@@ -46,7 +46,7 @@ export interface BastionHostConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bastion_host#tags BastionHost#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bastion_host#tunneling_enabled BastionHost#tunneling_enabled}
   */
@@ -80,7 +80,7 @@ export interface BastionHostIpConfiguration {
 }
 
 export function bastionHostIpConfigurationToTerraform(struct?: BastionHostIpConfigurationOutputReference | BastionHostIpConfiguration): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -99,7 +99,7 @@ export class BastionHostIpConfigurationOutputReference extends cdktf.ComplexObje
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -194,8 +194,8 @@ export interface BastionHostTimeouts {
   readonly update?: string;
 }
 
-export function bastionHostTimeoutsToTerraform(struct?: BastionHostTimeoutsOutputReference | BastionHostTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function bastionHostTimeoutsToTerraform(struct?: BastionHostTimeoutsOutputReference | BastionHostTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -215,7 +215,7 @@ export class BastionHostTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -377,7 +377,7 @@ export class BastionHost extends cdktf.TerraformResource {
   // copy_paste_enabled - computed: false, optional: true, required: false
   private _copyPasteEnabled?: boolean | cdktf.IResolvable; 
   public get copyPasteEnabled() {
-    return this.getBooleanAttribute('copy_paste_enabled') as any;
+    return this.getBooleanAttribute('copy_paste_enabled');
   }
   public set copyPasteEnabled(value: boolean | cdktf.IResolvable) {
     this._copyPasteEnabled = value;
@@ -398,7 +398,7 @@ export class BastionHost extends cdktf.TerraformResource {
   // file_copy_enabled - computed: false, optional: true, required: false
   private _fileCopyEnabled?: boolean | cdktf.IResolvable; 
   public get fileCopyEnabled() {
-    return this.getBooleanAttribute('file_copy_enabled') as any;
+    return this.getBooleanAttribute('file_copy_enabled');
   }
   public set fileCopyEnabled(value: boolean | cdktf.IResolvable) {
     this._fileCopyEnabled = value;
@@ -419,7 +419,7 @@ export class BastionHost extends cdktf.TerraformResource {
   // ip_connect_enabled - computed: false, optional: true, required: false
   private _ipConnectEnabled?: boolean | cdktf.IResolvable; 
   public get ipConnectEnabled() {
-    return this.getBooleanAttribute('ip_connect_enabled') as any;
+    return this.getBooleanAttribute('ip_connect_enabled');
   }
   public set ipConnectEnabled(value: boolean | cdktf.IResolvable) {
     this._ipConnectEnabled = value;
@@ -490,7 +490,7 @@ export class BastionHost extends cdktf.TerraformResource {
   // shareable_link_enabled - computed: false, optional: true, required: false
   private _shareableLinkEnabled?: boolean | cdktf.IResolvable; 
   public get shareableLinkEnabled() {
-    return this.getBooleanAttribute('shareable_link_enabled') as any;
+    return this.getBooleanAttribute('shareable_link_enabled');
   }
   public set shareableLinkEnabled(value: boolean | cdktf.IResolvable) {
     this._shareableLinkEnabled = value;
@@ -520,12 +520,11 @@ export class BastionHost extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -539,7 +538,7 @@ export class BastionHost extends cdktf.TerraformResource {
   // tunneling_enabled - computed: false, optional: true, required: false
   private _tunnelingEnabled?: boolean | cdktf.IResolvable; 
   public get tunnelingEnabled() {
-    return this.getBooleanAttribute('tunneling_enabled') as any;
+    return this.getBooleanAttribute('tunneling_enabled');
   }
   public set tunnelingEnabled(value: boolean | cdktf.IResolvable) {
     this._tunnelingEnabled = value;
@@ -553,7 +552,7 @@ export class BastionHost extends cdktf.TerraformResource {
   }
 
   // ip_configuration - computed: false, optional: true, required: false
-  private _ipConfiguration = new BastionHostIpConfigurationOutputReference(this as any, "ip_configuration", true);
+  private _ipConfiguration = new BastionHostIpConfigurationOutputReference(this, "ip_configuration", true);
   public get ipConfiguration() {
     return this._ipConfiguration;
   }
@@ -569,7 +568,7 @@ export class BastionHost extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new BastionHostTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new BastionHostTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -599,7 +598,7 @@ export class BastionHost extends cdktf.TerraformResource {
       scale_units: cdktf.numberToTerraform(this._scaleUnits),
       shareable_link_enabled: cdktf.booleanToTerraform(this._shareableLinkEnabled),
       sku: cdktf.stringToTerraform(this._sku),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       tunneling_enabled: cdktf.booleanToTerraform(this._tunnelingEnabled),
       ip_configuration: bastionHostIpConfigurationToTerraform(this._ipConfiguration.internalValue),
       timeouts: bastionHostTimeoutsToTerraform(this._timeouts.internalValue),

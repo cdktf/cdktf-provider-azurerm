@@ -16,31 +16,31 @@ export interface ApiManagementCustomDomainConfig extends cdktf.TerraformMetaArgu
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain#developer_portal ApiManagementCustomDomain#developer_portal}
   */
-  readonly developerPortal?: ApiManagementCustomDomainDeveloperPortal[];
+  readonly developerPortal?: ApiManagementCustomDomainDeveloperPortal[] | cdktf.IResolvable;
   /**
   * management block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain#management ApiManagementCustomDomain#management}
   */
-  readonly management?: ApiManagementCustomDomainManagement[];
+  readonly management?: ApiManagementCustomDomainManagement[] | cdktf.IResolvable;
   /**
   * portal block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain#portal ApiManagementCustomDomain#portal}
   */
-  readonly portal?: ApiManagementCustomDomainPortal[];
+  readonly portal?: ApiManagementCustomDomainPortal[] | cdktf.IResolvable;
   /**
   * proxy block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain#proxy ApiManagementCustomDomain#proxy}
   */
-  readonly proxy?: ApiManagementCustomDomainProxy[];
+  readonly proxy?: ApiManagementCustomDomainProxy[] | cdktf.IResolvable;
   /**
   * scm block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain#scm ApiManagementCustomDomain#scm}
   */
-  readonly scm?: ApiManagementCustomDomainScm[];
+  readonly scm?: ApiManagementCustomDomainScm[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -75,8 +75,8 @@ export interface ApiManagementCustomDomainDeveloperPortal {
   readonly sslKeyvaultIdentityClientId?: string;
 }
 
-export function apiManagementCustomDomainDeveloperPortalToTerraform(struct?: ApiManagementCustomDomainDeveloperPortal): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function apiManagementCustomDomainDeveloperPortalToTerraform(struct?: ApiManagementCustomDomainDeveloperPortal | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -117,8 +117,8 @@ export interface ApiManagementCustomDomainManagement {
   readonly sslKeyvaultIdentityClientId?: string;
 }
 
-export function apiManagementCustomDomainManagementToTerraform(struct?: ApiManagementCustomDomainManagement): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function apiManagementCustomDomainManagementToTerraform(struct?: ApiManagementCustomDomainManagement | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -159,8 +159,8 @@ export interface ApiManagementCustomDomainPortal {
   readonly sslKeyvaultIdentityClientId?: string;
 }
 
-export function apiManagementCustomDomainPortalToTerraform(struct?: ApiManagementCustomDomainPortal): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function apiManagementCustomDomainPortalToTerraform(struct?: ApiManagementCustomDomainPortal | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -205,8 +205,8 @@ export interface ApiManagementCustomDomainProxy {
   readonly sslKeyvaultIdentityClientId?: string;
 }
 
-export function apiManagementCustomDomainProxyToTerraform(struct?: ApiManagementCustomDomainProxy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function apiManagementCustomDomainProxyToTerraform(struct?: ApiManagementCustomDomainProxy | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -248,8 +248,8 @@ export interface ApiManagementCustomDomainScm {
   readonly sslKeyvaultIdentityClientId?: string;
 }
 
-export function apiManagementCustomDomainScmToTerraform(struct?: ApiManagementCustomDomainScm): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function apiManagementCustomDomainScmToTerraform(struct?: ApiManagementCustomDomainScm | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -282,8 +282,8 @@ export interface ApiManagementCustomDomainTimeouts {
   readonly update?: string;
 }
 
-export function apiManagementCustomDomainTimeoutsToTerraform(struct?: ApiManagementCustomDomainTimeoutsOutputReference | ApiManagementCustomDomainTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function apiManagementCustomDomainTimeoutsToTerraform(struct?: ApiManagementCustomDomainTimeoutsOutputReference | ApiManagementCustomDomainTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -303,7 +303,7 @@ export class ApiManagementCustomDomainTimeoutsOutputReference extends cdktf.Comp
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -475,12 +475,12 @@ export class ApiManagementCustomDomain extends cdktf.TerraformResource {
   }
 
   // developer_portal - computed: false, optional: true, required: false
-  private _developerPortal?: ApiManagementCustomDomainDeveloperPortal[]; 
+  private _developerPortal?: ApiManagementCustomDomainDeveloperPortal[] | cdktf.IResolvable; 
   public get developerPortal() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('developer_portal') as any;
+    return this.interpolationForAttribute('developer_portal');
   }
-  public set developerPortal(value: ApiManagementCustomDomainDeveloperPortal[]) {
+  public set developerPortal(value: ApiManagementCustomDomainDeveloperPortal[] | cdktf.IResolvable) {
     this._developerPortal = value;
   }
   public resetDeveloperPortal() {
@@ -492,12 +492,12 @@ export class ApiManagementCustomDomain extends cdktf.TerraformResource {
   }
 
   // management - computed: false, optional: true, required: false
-  private _management?: ApiManagementCustomDomainManagement[]; 
+  private _management?: ApiManagementCustomDomainManagement[] | cdktf.IResolvable; 
   public get management() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('management') as any;
+    return this.interpolationForAttribute('management');
   }
-  public set management(value: ApiManagementCustomDomainManagement[]) {
+  public set management(value: ApiManagementCustomDomainManagement[] | cdktf.IResolvable) {
     this._management = value;
   }
   public resetManagement() {
@@ -509,12 +509,12 @@ export class ApiManagementCustomDomain extends cdktf.TerraformResource {
   }
 
   // portal - computed: false, optional: true, required: false
-  private _portal?: ApiManagementCustomDomainPortal[]; 
+  private _portal?: ApiManagementCustomDomainPortal[] | cdktf.IResolvable; 
   public get portal() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('portal') as any;
+    return this.interpolationForAttribute('portal');
   }
-  public set portal(value: ApiManagementCustomDomainPortal[]) {
+  public set portal(value: ApiManagementCustomDomainPortal[] | cdktf.IResolvable) {
     this._portal = value;
   }
   public resetPortal() {
@@ -526,12 +526,12 @@ export class ApiManagementCustomDomain extends cdktf.TerraformResource {
   }
 
   // proxy - computed: false, optional: true, required: false
-  private _proxy?: ApiManagementCustomDomainProxy[]; 
+  private _proxy?: ApiManagementCustomDomainProxy[] | cdktf.IResolvable; 
   public get proxy() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('proxy') as any;
+    return this.interpolationForAttribute('proxy');
   }
-  public set proxy(value: ApiManagementCustomDomainProxy[]) {
+  public set proxy(value: ApiManagementCustomDomainProxy[] | cdktf.IResolvable) {
     this._proxy = value;
   }
   public resetProxy() {
@@ -543,12 +543,12 @@ export class ApiManagementCustomDomain extends cdktf.TerraformResource {
   }
 
   // scm - computed: false, optional: true, required: false
-  private _scm?: ApiManagementCustomDomainScm[]; 
+  private _scm?: ApiManagementCustomDomainScm[] | cdktf.IResolvable; 
   public get scm() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('scm') as any;
+    return this.interpolationForAttribute('scm');
   }
-  public set scm(value: ApiManagementCustomDomainScm[]) {
+  public set scm(value: ApiManagementCustomDomainScm[] | cdktf.IResolvable) {
     this._scm = value;
   }
   public resetScm() {
@@ -560,7 +560,7 @@ export class ApiManagementCustomDomain extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ApiManagementCustomDomainTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ApiManagementCustomDomainTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

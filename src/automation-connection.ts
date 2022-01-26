@@ -30,7 +30,7 @@ export interface AutomationConnectionConfig extends cdktf.TerraformMetaArguments
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection#values AutomationConnection#values}
   */
-  readonly values: { [key: string]: string } | cdktf.IResolvable;
+  readonly values: { [key: string]: string };
   /**
   * timeouts block
   * 
@@ -57,8 +57,8 @@ export interface AutomationConnectionTimeouts {
   readonly update?: string;
 }
 
-export function automationConnectionTimeoutsToTerraform(struct?: AutomationConnectionTimeoutsOutputReference | AutomationConnectionTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function automationConnectionTimeoutsToTerraform(struct?: AutomationConnectionTimeoutsOutputReference | AutomationConnectionTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -78,7 +78,7 @@ export class AutomationConnectionTimeoutsOutputReference extends cdktf.ComplexOb
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -305,12 +305,11 @@ export class AutomationConnection extends cdktf.TerraformResource {
   }
 
   // values - computed: false, optional: false, required: true
-  private _values?: { [key: string]: string } | cdktf.IResolvable; 
+  private _values?: { [key: string]: string }; 
   public get values() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('values') as any;
+    return this.getStringMapAttribute('values');
   }
-  public set values(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set values(value: { [key: string]: string }) {
     this._values = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -319,7 +318,7 @@ export class AutomationConnection extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AutomationConnectionTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new AutomationConnectionTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -345,7 +344,7 @@ export class AutomationConnection extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       type: cdktf.stringToTerraform(this._type),
-      values: cdktf.hashMapper(cdktf.anyToTerraform)(this._values),
+      values: cdktf.hashMapper(cdktf.stringToTerraform)(this._values),
       timeouts: automationConnectionTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

@@ -26,7 +26,7 @@ export interface IotSecurityDeviceGroupConfig extends cdktf.TerraformMetaArgumen
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_device_group#range_rule IotSecurityDeviceGroup#range_rule}
   */
-  readonly rangeRule?: IotSecurityDeviceGroupRangeRule[];
+  readonly rangeRule?: IotSecurityDeviceGroupRangeRule[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -66,7 +66,7 @@ export interface IotSecurityDeviceGroupAllowRule {
 }
 
 export function iotSecurityDeviceGroupAllowRuleToTerraform(struct?: IotSecurityDeviceGroupAllowRuleOutputReference | IotSecurityDeviceGroupAllowRule): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -89,7 +89,7 @@ export class IotSecurityDeviceGroupAllowRuleOutputReference extends cdktf.Comple
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -153,7 +153,7 @@ export class IotSecurityDeviceGroupAllowRuleOutputReference extends cdktf.Comple
   // connection_from_ips_not_allowed - computed: false, optional: true, required: false
   private _connectionFromIpsNotAllowed?: string[]; 
   public get connectionFromIpsNotAllowed() {
-    return this.getListAttribute('connection_from_ips_not_allowed');
+    return cdktf.Fn.tolist(this.getListAttribute('connection_from_ips_not_allowed'));
   }
   public set connectionFromIpsNotAllowed(value: string[]) {
     this._connectionFromIpsNotAllowed = value;
@@ -169,7 +169,7 @@ export class IotSecurityDeviceGroupAllowRuleOutputReference extends cdktf.Comple
   // connection_to_ip_not_allowed - computed: false, optional: true, required: false
   private _connectionToIpNotAllowed?: string[]; 
   public get connectionToIpNotAllowed() {
-    return this.getListAttribute('connection_to_ip_not_allowed');
+    return cdktf.Fn.tolist(this.getListAttribute('connection_to_ip_not_allowed'));
   }
   public set connectionToIpNotAllowed(value: string[]) {
     this._connectionToIpNotAllowed = value;
@@ -185,7 +185,7 @@ export class IotSecurityDeviceGroupAllowRuleOutputReference extends cdktf.Comple
   // connection_to_ips_not_allowed - computed: false, optional: true, required: false
   private _connectionToIpsNotAllowed?: string[]; 
   public get connectionToIpsNotAllowed() {
-    return this.getListAttribute('connection_to_ips_not_allowed');
+    return cdktf.Fn.tolist(this.getListAttribute('connection_to_ips_not_allowed'));
   }
   public set connectionToIpsNotAllowed(value: string[]) {
     this._connectionToIpsNotAllowed = value;
@@ -201,7 +201,7 @@ export class IotSecurityDeviceGroupAllowRuleOutputReference extends cdktf.Comple
   // local_user_not_allowed - computed: false, optional: true, required: false
   private _localUserNotAllowed?: string[]; 
   public get localUserNotAllowed() {
-    return this.getListAttribute('local_user_not_allowed');
+    return cdktf.Fn.tolist(this.getListAttribute('local_user_not_allowed'));
   }
   public set localUserNotAllowed(value: string[]) {
     this._localUserNotAllowed = value;
@@ -217,7 +217,7 @@ export class IotSecurityDeviceGroupAllowRuleOutputReference extends cdktf.Comple
   // local_users_not_allowed - computed: false, optional: true, required: false
   private _localUsersNotAllowed?: string[]; 
   public get localUsersNotAllowed() {
-    return this.getListAttribute('local_users_not_allowed');
+    return cdktf.Fn.tolist(this.getListAttribute('local_users_not_allowed'));
   }
   public set localUsersNotAllowed(value: string[]) {
     this._localUsersNotAllowed = value;
@@ -233,7 +233,7 @@ export class IotSecurityDeviceGroupAllowRuleOutputReference extends cdktf.Comple
   // process_not_allowed - computed: false, optional: true, required: false
   private _processNotAllowed?: string[]; 
   public get processNotAllowed() {
-    return this.getListAttribute('process_not_allowed');
+    return cdktf.Fn.tolist(this.getListAttribute('process_not_allowed'));
   }
   public set processNotAllowed(value: string[]) {
     this._processNotAllowed = value;
@@ -249,7 +249,7 @@ export class IotSecurityDeviceGroupAllowRuleOutputReference extends cdktf.Comple
   // processes_not_allowed - computed: false, optional: true, required: false
   private _processesNotAllowed?: string[]; 
   public get processesNotAllowed() {
-    return this.getListAttribute('processes_not_allowed');
+    return cdktf.Fn.tolist(this.getListAttribute('processes_not_allowed'));
   }
   public set processesNotAllowed(value: string[]) {
     this._processesNotAllowed = value;
@@ -281,8 +281,8 @@ export interface IotSecurityDeviceGroupRangeRule {
   readonly type: string;
 }
 
-export function iotSecurityDeviceGroupRangeRuleToTerraform(struct?: IotSecurityDeviceGroupRangeRule): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function iotSecurityDeviceGroupRangeRuleToTerraform(struct?: IotSecurityDeviceGroupRangeRule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -313,8 +313,8 @@ export interface IotSecurityDeviceGroupTimeouts {
   readonly update?: string;
 }
 
-export function iotSecurityDeviceGroupTimeoutsToTerraform(struct?: IotSecurityDeviceGroupTimeoutsOutputReference | IotSecurityDeviceGroupTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function iotSecurityDeviceGroupTimeoutsToTerraform(struct?: IotSecurityDeviceGroupTimeoutsOutputReference | IotSecurityDeviceGroupTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -334,7 +334,7 @@ export class IotSecurityDeviceGroupTimeoutsOutputReference extends cdktf.Complex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -517,7 +517,7 @@ export class IotSecurityDeviceGroup extends cdktf.TerraformResource {
   }
 
   // allow_rule - computed: false, optional: true, required: false
-  private _allowRule = new IotSecurityDeviceGroupAllowRuleOutputReference(this as any, "allow_rule", true);
+  private _allowRule = new IotSecurityDeviceGroupAllowRuleOutputReference(this, "allow_rule", true);
   public get allowRule() {
     return this._allowRule;
   }
@@ -533,12 +533,12 @@ export class IotSecurityDeviceGroup extends cdktf.TerraformResource {
   }
 
   // range_rule - computed: false, optional: true, required: false
-  private _rangeRule?: IotSecurityDeviceGroupRangeRule[]; 
+  private _rangeRule?: IotSecurityDeviceGroupRangeRule[] | cdktf.IResolvable; 
   public get rangeRule() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('range_rule') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('range_rule')));
   }
-  public set rangeRule(value: IotSecurityDeviceGroupRangeRule[]) {
+  public set rangeRule(value: IotSecurityDeviceGroupRangeRule[] | cdktf.IResolvable) {
     this._rangeRule = value;
   }
   public resetRangeRule() {
@@ -550,7 +550,7 @@ export class IotSecurityDeviceGroup extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new IotSecurityDeviceGroupTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new IotSecurityDeviceGroupTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

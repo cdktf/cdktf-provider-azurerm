@@ -66,7 +66,7 @@ export class DataAzurermVirtualMachineScaleSetNetworkInterfaceIpConfigurationPub
   // ip_tag - computed: true, optional: false, required: false
   public get ipTag() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('ip_tag') as any;
+    return this.interpolationForAttribute('ip_tag');
   }
 
   // name - computed: true, optional: false, required: false
@@ -108,13 +108,13 @@ export class DataAzurermVirtualMachineScaleSetNetworkInterfaceIpConfiguration ex
 
   // primary - computed: true, optional: false, required: false
   public get primary() {
-    return this.getBooleanAttribute('primary') as any;
+    return this.getBooleanAttribute('primary');
   }
 
   // public_ip_address - computed: true, optional: false, required: false
   public get publicIpAddress() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('public_ip_address') as any;
+    return this.interpolationForAttribute('public_ip_address');
   }
 
   // subnet_id - computed: true, optional: false, required: false
@@ -136,18 +136,18 @@ export class DataAzurermVirtualMachineScaleSetNetworkInterface extends cdktf.Com
 
   // enable_accelerated_networking - computed: true, optional: false, required: false
   public get enableAcceleratedNetworking() {
-    return this.getBooleanAttribute('enable_accelerated_networking') as any;
+    return this.getBooleanAttribute('enable_accelerated_networking');
   }
 
   // enable_ip_forwarding - computed: true, optional: false, required: false
   public get enableIpForwarding() {
-    return this.getBooleanAttribute('enable_ip_forwarding') as any;
+    return this.getBooleanAttribute('enable_ip_forwarding');
   }
 
   // ip_configuration - computed: true, optional: false, required: false
   public get ipConfiguration() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('ip_configuration') as any;
+    return this.interpolationForAttribute('ip_configuration');
   }
 
   // name - computed: true, optional: false, required: false
@@ -162,7 +162,7 @@ export class DataAzurermVirtualMachineScaleSetNetworkInterface extends cdktf.Com
 
   // primary - computed: true, optional: false, required: false
   public get primary() {
-    return this.getBooleanAttribute('primary') as any;
+    return this.getBooleanAttribute('primary');
   }
 }
 export interface DataAzurermVirtualMachineScaleSetTimeouts {
@@ -172,8 +172,8 @@ export interface DataAzurermVirtualMachineScaleSetTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermVirtualMachineScaleSetTimeoutsToTerraform(struct?: DataAzurermVirtualMachineScaleSetTimeoutsOutputReference | DataAzurermVirtualMachineScaleSetTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermVirtualMachineScaleSetTimeoutsToTerraform(struct?: DataAzurermVirtualMachineScaleSetTimeoutsOutputReference | DataAzurermVirtualMachineScaleSetTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -190,7 +190,7 @@ export class DataAzurermVirtualMachineScaleSetTimeoutsOutputReference extends cd
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -280,7 +280,7 @@ export class DataAzurermVirtualMachineScaleSet extends cdktf.TerraformDataSource
 
   // identity - computed: true, optional: false, required: false
   public identity(index: string) {
-    return new DataAzurermVirtualMachineScaleSetIdentity(this, 'identity', index);
+    return new DataAzurermVirtualMachineScaleSetIdentity(this, 'identity', index, false);
   }
 
   // location - computed: true, optional: false, required: false
@@ -303,7 +303,7 @@ export class DataAzurermVirtualMachineScaleSet extends cdktf.TerraformDataSource
 
   // network_interface - computed: true, optional: false, required: false
   public networkInterface(index: string) {
-    return new DataAzurermVirtualMachineScaleSetNetworkInterface(this, 'network_interface', index);
+    return new DataAzurermVirtualMachineScaleSetNetworkInterface(this, 'network_interface', index, false);
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -320,7 +320,7 @@ export class DataAzurermVirtualMachineScaleSet extends cdktf.TerraformDataSource
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermVirtualMachineScaleSetTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermVirtualMachineScaleSetTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

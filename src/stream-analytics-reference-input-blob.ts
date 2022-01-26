@@ -72,7 +72,7 @@ export interface StreamAnalyticsReferenceInputBlobSerialization {
 }
 
 export function streamAnalyticsReferenceInputBlobSerializationToTerraform(struct?: StreamAnalyticsReferenceInputBlobSerializationOutputReference | StreamAnalyticsReferenceInputBlobSerialization): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -91,7 +91,7 @@ export class StreamAnalyticsReferenceInputBlobSerializationOutputReference exten
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -192,8 +192,8 @@ export interface StreamAnalyticsReferenceInputBlobTimeouts {
   readonly update?: string;
 }
 
-export function streamAnalyticsReferenceInputBlobTimeoutsToTerraform(struct?: StreamAnalyticsReferenceInputBlobTimeoutsOutputReference | StreamAnalyticsReferenceInputBlobTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function streamAnalyticsReferenceInputBlobTimeoutsToTerraform(struct?: StreamAnalyticsReferenceInputBlobTimeoutsOutputReference | StreamAnalyticsReferenceInputBlobTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -213,7 +213,7 @@ export class StreamAnalyticsReferenceInputBlobTimeoutsOutputReference extends cd
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -493,7 +493,7 @@ export class StreamAnalyticsReferenceInputBlob extends cdktf.TerraformResource {
   }
 
   // serialization - computed: false, optional: false, required: true
-  private _serialization = new StreamAnalyticsReferenceInputBlobSerializationOutputReference(this as any, "serialization", true);
+  private _serialization = new StreamAnalyticsReferenceInputBlobSerializationOutputReference(this, "serialization", true);
   public get serialization() {
     return this._serialization;
   }
@@ -506,7 +506,7 @@ export class StreamAnalyticsReferenceInputBlob extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new StreamAnalyticsReferenceInputBlobTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new StreamAnalyticsReferenceInputBlobTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

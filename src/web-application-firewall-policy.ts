@@ -22,13 +22,13 @@ export interface WebApplicationFirewallPolicyConfig extends cdktf.TerraformMetaA
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy#tags WebApplicationFirewallPolicy#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * custom_rules block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy#custom_rules WebApplicationFirewallPolicy#custom_rules}
   */
-  readonly customRules?: WebApplicationFirewallPolicyCustomRules[];
+  readonly customRules?: WebApplicationFirewallPolicyCustomRules[] | cdktf.IResolvable;
   /**
   * managed_rules block
   * 
@@ -59,8 +59,8 @@ export interface WebApplicationFirewallPolicyCustomRulesMatchConditionsMatchVari
   readonly variableName: string;
 }
 
-export function webApplicationFirewallPolicyCustomRulesMatchConditionsMatchVariablesToTerraform(struct?: WebApplicationFirewallPolicyCustomRulesMatchConditionsMatchVariables): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function webApplicationFirewallPolicyCustomRulesMatchConditionsMatchVariablesToTerraform(struct?: WebApplicationFirewallPolicyCustomRulesMatchConditionsMatchVariables | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -92,11 +92,11 @@ export interface WebApplicationFirewallPolicyCustomRulesMatchConditions {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy#match_variables WebApplicationFirewallPolicy#match_variables}
   */
-  readonly matchVariables: WebApplicationFirewallPolicyCustomRulesMatchConditionsMatchVariables[];
+  readonly matchVariables: WebApplicationFirewallPolicyCustomRulesMatchConditionsMatchVariables[] | cdktf.IResolvable;
 }
 
-export function webApplicationFirewallPolicyCustomRulesMatchConditionsToTerraform(struct?: WebApplicationFirewallPolicyCustomRulesMatchConditions): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function webApplicationFirewallPolicyCustomRulesMatchConditionsToTerraform(struct?: WebApplicationFirewallPolicyCustomRulesMatchConditions | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -131,11 +131,11 @@ export interface WebApplicationFirewallPolicyCustomRules {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy#match_conditions WebApplicationFirewallPolicy#match_conditions}
   */
-  readonly matchConditions: WebApplicationFirewallPolicyCustomRulesMatchConditions[];
+  readonly matchConditions: WebApplicationFirewallPolicyCustomRulesMatchConditions[] | cdktf.IResolvable;
 }
 
-export function webApplicationFirewallPolicyCustomRulesToTerraform(struct?: WebApplicationFirewallPolicyCustomRules): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function webApplicationFirewallPolicyCustomRulesToTerraform(struct?: WebApplicationFirewallPolicyCustomRules | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -163,8 +163,8 @@ export interface WebApplicationFirewallPolicyManagedRulesExclusion {
   readonly selectorMatchOperator: string;
 }
 
-export function webApplicationFirewallPolicyManagedRulesExclusionToTerraform(struct?: WebApplicationFirewallPolicyManagedRulesExclusion): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function webApplicationFirewallPolicyManagedRulesExclusionToTerraform(struct?: WebApplicationFirewallPolicyManagedRulesExclusion | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -186,8 +186,8 @@ export interface WebApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroup
   readonly ruleGroupName: string;
 }
 
-export function webApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroupOverrideToTerraform(struct?: WebApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroupOverride): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function webApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroupOverrideToTerraform(struct?: WebApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroupOverride | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -211,11 +211,11 @@ export interface WebApplicationFirewallPolicyManagedRulesManagedRuleSet {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy#rule_group_override WebApplicationFirewallPolicy#rule_group_override}
   */
-  readonly ruleGroupOverride?: WebApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroupOverride[];
+  readonly ruleGroupOverride?: WebApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroupOverride[] | cdktf.IResolvable;
 }
 
-export function webApplicationFirewallPolicyManagedRulesManagedRuleSetToTerraform(struct?: WebApplicationFirewallPolicyManagedRulesManagedRuleSet): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function webApplicationFirewallPolicyManagedRulesManagedRuleSetToTerraform(struct?: WebApplicationFirewallPolicyManagedRulesManagedRuleSet | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -232,17 +232,17 @@ export interface WebApplicationFirewallPolicyManagedRules {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy#exclusion WebApplicationFirewallPolicy#exclusion}
   */
-  readonly exclusion?: WebApplicationFirewallPolicyManagedRulesExclusion[];
+  readonly exclusion?: WebApplicationFirewallPolicyManagedRulesExclusion[] | cdktf.IResolvable;
   /**
   * managed_rule_set block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy#managed_rule_set WebApplicationFirewallPolicy#managed_rule_set}
   */
-  readonly managedRuleSet: WebApplicationFirewallPolicyManagedRulesManagedRuleSet[];
+  readonly managedRuleSet: WebApplicationFirewallPolicyManagedRulesManagedRuleSet[] | cdktf.IResolvable;
 }
 
 export function webApplicationFirewallPolicyManagedRulesToTerraform(struct?: WebApplicationFirewallPolicyManagedRulesOutputReference | WebApplicationFirewallPolicyManagedRules): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -260,7 +260,7 @@ export class WebApplicationFirewallPolicyManagedRulesOutputReference extends cdk
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -292,12 +292,12 @@ export class WebApplicationFirewallPolicyManagedRulesOutputReference extends cdk
   }
 
   // exclusion - computed: false, optional: true, required: false
-  private _exclusion?: WebApplicationFirewallPolicyManagedRulesExclusion[]; 
+  private _exclusion?: WebApplicationFirewallPolicyManagedRulesExclusion[] | cdktf.IResolvable; 
   public get exclusion() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('exclusion') as any;
+    return this.interpolationForAttribute('exclusion');
   }
-  public set exclusion(value: WebApplicationFirewallPolicyManagedRulesExclusion[]) {
+  public set exclusion(value: WebApplicationFirewallPolicyManagedRulesExclusion[] | cdktf.IResolvable) {
     this._exclusion = value;
   }
   public resetExclusion() {
@@ -309,12 +309,12 @@ export class WebApplicationFirewallPolicyManagedRulesOutputReference extends cdk
   }
 
   // managed_rule_set - computed: false, optional: false, required: true
-  private _managedRuleSet?: WebApplicationFirewallPolicyManagedRulesManagedRuleSet[]; 
+  private _managedRuleSet?: WebApplicationFirewallPolicyManagedRulesManagedRuleSet[] | cdktf.IResolvable; 
   public get managedRuleSet() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('managed_rule_set') as any;
+    return this.interpolationForAttribute('managed_rule_set');
   }
-  public set managedRuleSet(value: WebApplicationFirewallPolicyManagedRulesManagedRuleSet[]) {
+  public set managedRuleSet(value: WebApplicationFirewallPolicyManagedRulesManagedRuleSet[] | cdktf.IResolvable) {
     this._managedRuleSet = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -346,7 +346,7 @@ export interface WebApplicationFirewallPolicyPolicySettings {
 }
 
 export function webApplicationFirewallPolicyPolicySettingsToTerraform(struct?: WebApplicationFirewallPolicyPolicySettingsOutputReference | WebApplicationFirewallPolicyPolicySettings): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -367,7 +367,7 @@ export class WebApplicationFirewallPolicyPolicySettingsOutputReference extends c
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -419,7 +419,7 @@ export class WebApplicationFirewallPolicyPolicySettingsOutputReference extends c
   // enabled - computed: false, optional: true, required: false
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
@@ -483,7 +483,7 @@ export class WebApplicationFirewallPolicyPolicySettingsOutputReference extends c
   // request_body_check - computed: false, optional: true, required: false
   private _requestBodyCheck?: boolean | cdktf.IResolvable; 
   public get requestBodyCheck() {
-    return this.getBooleanAttribute('request_body_check') as any;
+    return this.getBooleanAttribute('request_body_check');
   }
   public set requestBodyCheck(value: boolean | cdktf.IResolvable) {
     this._requestBodyCheck = value;
@@ -515,8 +515,8 @@ export interface WebApplicationFirewallPolicyTimeouts {
   readonly update?: string;
 }
 
-export function webApplicationFirewallPolicyTimeoutsToTerraform(struct?: WebApplicationFirewallPolicyTimeoutsOutputReference | WebApplicationFirewallPolicyTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function webApplicationFirewallPolicyTimeoutsToTerraform(struct?: WebApplicationFirewallPolicyTimeoutsOutputReference | WebApplicationFirewallPolicyTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -536,7 +536,7 @@ export class WebApplicationFirewallPolicyTimeoutsOutputReference extends cdktf.C
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -745,12 +745,11 @@ export class WebApplicationFirewallPolicy extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -762,12 +761,12 @@ export class WebApplicationFirewallPolicy extends cdktf.TerraformResource {
   }
 
   // custom_rules - computed: false, optional: true, required: false
-  private _customRules?: WebApplicationFirewallPolicyCustomRules[]; 
+  private _customRules?: WebApplicationFirewallPolicyCustomRules[] | cdktf.IResolvable; 
   public get customRules() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('custom_rules') as any;
+    return this.interpolationForAttribute('custom_rules');
   }
-  public set customRules(value: WebApplicationFirewallPolicyCustomRules[]) {
+  public set customRules(value: WebApplicationFirewallPolicyCustomRules[] | cdktf.IResolvable) {
     this._customRules = value;
   }
   public resetCustomRules() {
@@ -779,7 +778,7 @@ export class WebApplicationFirewallPolicy extends cdktf.TerraformResource {
   }
 
   // managed_rules - computed: false, optional: false, required: true
-  private _managedRules = new WebApplicationFirewallPolicyManagedRulesOutputReference(this as any, "managed_rules", true);
+  private _managedRules = new WebApplicationFirewallPolicyManagedRulesOutputReference(this, "managed_rules", true);
   public get managedRules() {
     return this._managedRules;
   }
@@ -792,7 +791,7 @@ export class WebApplicationFirewallPolicy extends cdktf.TerraformResource {
   }
 
   // policy_settings - computed: false, optional: true, required: false
-  private _policySettings = new WebApplicationFirewallPolicyPolicySettingsOutputReference(this as any, "policy_settings", true);
+  private _policySettings = new WebApplicationFirewallPolicyPolicySettingsOutputReference(this, "policy_settings", true);
   public get policySettings() {
     return this._policySettings;
   }
@@ -808,7 +807,7 @@ export class WebApplicationFirewallPolicy extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new WebApplicationFirewallPolicyTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new WebApplicationFirewallPolicyTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -832,7 +831,7 @@ export class WebApplicationFirewallPolicy extends cdktf.TerraformResource {
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       custom_rules: cdktf.listMapper(webApplicationFirewallPolicyCustomRulesToTerraform)(this._customRules),
       managed_rules: webApplicationFirewallPolicyManagedRulesToTerraform(this._managedRules.internalValue),
       policy_settings: webApplicationFirewallPolicyPolicySettingsToTerraform(this._policySettings.internalValue),

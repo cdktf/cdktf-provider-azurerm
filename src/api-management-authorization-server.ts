@@ -90,7 +90,7 @@ export interface ApiManagementAuthorizationServerConfig extends cdktf.TerraformM
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server#token_body_parameter ApiManagementAuthorizationServer#token_body_parameter}
   */
-  readonly tokenBodyParameter?: ApiManagementAuthorizationServerTokenBodyParameter[];
+  readonly tokenBodyParameter?: ApiManagementAuthorizationServerTokenBodyParameter[] | cdktf.IResolvable;
 }
 export interface ApiManagementAuthorizationServerTimeouts {
   /**
@@ -111,8 +111,8 @@ export interface ApiManagementAuthorizationServerTimeouts {
   readonly update?: string;
 }
 
-export function apiManagementAuthorizationServerTimeoutsToTerraform(struct?: ApiManagementAuthorizationServerTimeoutsOutputReference | ApiManagementAuthorizationServerTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function apiManagementAuthorizationServerTimeoutsToTerraform(struct?: ApiManagementAuthorizationServerTimeoutsOutputReference | ApiManagementAuthorizationServerTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -132,7 +132,7 @@ export class ApiManagementAuthorizationServerTimeoutsOutputReference extends cdk
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -250,8 +250,8 @@ export interface ApiManagementAuthorizationServerTokenBodyParameter {
   readonly value: string;
 }
 
-export function apiManagementAuthorizationServerTokenBodyParameterToTerraform(struct?: ApiManagementAuthorizationServerTokenBodyParameter): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function apiManagementAuthorizationServerTokenBodyParameterToTerraform(struct?: ApiManagementAuthorizationServerTokenBodyParameter | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -349,7 +349,7 @@ export class ApiManagementAuthorizationServer extends cdktf.TerraformResource {
   // authorization_methods - computed: false, optional: false, required: true
   private _authorizationMethods?: string[]; 
   public get authorizationMethods() {
-    return this.getListAttribute('authorization_methods');
+    return cdktf.Fn.tolist(this.getListAttribute('authorization_methods'));
   }
   public set authorizationMethods(value: string[]) {
     this._authorizationMethods = value;
@@ -362,7 +362,7 @@ export class ApiManagementAuthorizationServer extends cdktf.TerraformResource {
   // bearer_token_sending_methods - computed: false, optional: true, required: false
   private _bearerTokenSendingMethods?: string[]; 
   public get bearerTokenSendingMethods() {
-    return this.getListAttribute('bearer_token_sending_methods');
+    return cdktf.Fn.tolist(this.getListAttribute('bearer_token_sending_methods'));
   }
   public set bearerTokenSendingMethods(value: string[]) {
     this._bearerTokenSendingMethods = value;
@@ -378,7 +378,7 @@ export class ApiManagementAuthorizationServer extends cdktf.TerraformResource {
   // client_authentication_method - computed: false, optional: true, required: false
   private _clientAuthenticationMethod?: string[]; 
   public get clientAuthenticationMethod() {
-    return this.getListAttribute('client_authentication_method');
+    return cdktf.Fn.tolist(this.getListAttribute('client_authentication_method'));
   }
   public set clientAuthenticationMethod(value: string[]) {
     this._clientAuthenticationMethod = value;
@@ -481,7 +481,7 @@ export class ApiManagementAuthorizationServer extends cdktf.TerraformResource {
   // grant_types - computed: false, optional: false, required: true
   private _grantTypes?: string[]; 
   public get grantTypes() {
-    return this.getListAttribute('grant_types');
+    return cdktf.Fn.tolist(this.getListAttribute('grant_types'));
   }
   public set grantTypes(value: string[]) {
     this._grantTypes = value;
@@ -557,7 +557,7 @@ export class ApiManagementAuthorizationServer extends cdktf.TerraformResource {
   // support_state - computed: false, optional: true, required: false
   private _supportState?: boolean | cdktf.IResolvable; 
   public get supportState() {
-    return this.getBooleanAttribute('support_state') as any;
+    return this.getBooleanAttribute('support_state');
   }
   public set supportState(value: boolean | cdktf.IResolvable) {
     this._supportState = value;
@@ -587,7 +587,7 @@ export class ApiManagementAuthorizationServer extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ApiManagementAuthorizationServerTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ApiManagementAuthorizationServerTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -603,12 +603,12 @@ export class ApiManagementAuthorizationServer extends cdktf.TerraformResource {
   }
 
   // token_body_parameter - computed: false, optional: true, required: false
-  private _tokenBodyParameter?: ApiManagementAuthorizationServerTokenBodyParameter[]; 
+  private _tokenBodyParameter?: ApiManagementAuthorizationServerTokenBodyParameter[] | cdktf.IResolvable; 
   public get tokenBodyParameter() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('token_body_parameter') as any;
+    return this.interpolationForAttribute('token_body_parameter');
   }
-  public set tokenBodyParameter(value: ApiManagementAuthorizationServerTokenBodyParameter[]) {
+  public set tokenBodyParameter(value: ApiManagementAuthorizationServerTokenBodyParameter[] | cdktf.IResolvable) {
     this._tokenBodyParameter = value;
   }
   public resetTokenBodyParameter() {

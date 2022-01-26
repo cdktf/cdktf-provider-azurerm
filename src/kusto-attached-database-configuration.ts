@@ -76,7 +76,7 @@ export interface KustoAttachedDatabaseConfigurationSharing {
 }
 
 export function kustoAttachedDatabaseConfigurationSharingToTerraform(struct?: KustoAttachedDatabaseConfigurationSharingOutputReference | KustoAttachedDatabaseConfigurationSharing): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -98,7 +98,7 @@ export class KustoAttachedDatabaseConfigurationSharingOutputReference extends cd
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -156,7 +156,7 @@ export class KustoAttachedDatabaseConfigurationSharingOutputReference extends cd
   // external_tables_to_exclude - computed: false, optional: true, required: false
   private _externalTablesToExclude?: string[]; 
   public get externalTablesToExclude() {
-    return this.getListAttribute('external_tables_to_exclude');
+    return cdktf.Fn.tolist(this.getListAttribute('external_tables_to_exclude'));
   }
   public set externalTablesToExclude(value: string[]) {
     this._externalTablesToExclude = value;
@@ -172,7 +172,7 @@ export class KustoAttachedDatabaseConfigurationSharingOutputReference extends cd
   // external_tables_to_include - computed: false, optional: true, required: false
   private _externalTablesToInclude?: string[]; 
   public get externalTablesToInclude() {
-    return this.getListAttribute('external_tables_to_include');
+    return cdktf.Fn.tolist(this.getListAttribute('external_tables_to_include'));
   }
   public set externalTablesToInclude(value: string[]) {
     this._externalTablesToInclude = value;
@@ -188,7 +188,7 @@ export class KustoAttachedDatabaseConfigurationSharingOutputReference extends cd
   // materialized_views_to_exclude - computed: false, optional: true, required: false
   private _materializedViewsToExclude?: string[]; 
   public get materializedViewsToExclude() {
-    return this.getListAttribute('materialized_views_to_exclude');
+    return cdktf.Fn.tolist(this.getListAttribute('materialized_views_to_exclude'));
   }
   public set materializedViewsToExclude(value: string[]) {
     this._materializedViewsToExclude = value;
@@ -204,7 +204,7 @@ export class KustoAttachedDatabaseConfigurationSharingOutputReference extends cd
   // materialized_views_to_include - computed: false, optional: true, required: false
   private _materializedViewsToInclude?: string[]; 
   public get materializedViewsToInclude() {
-    return this.getListAttribute('materialized_views_to_include');
+    return cdktf.Fn.tolist(this.getListAttribute('materialized_views_to_include'));
   }
   public set materializedViewsToInclude(value: string[]) {
     this._materializedViewsToInclude = value;
@@ -220,7 +220,7 @@ export class KustoAttachedDatabaseConfigurationSharingOutputReference extends cd
   // tables_to_exclude - computed: false, optional: true, required: false
   private _tablesToExclude?: string[]; 
   public get tablesToExclude() {
-    return this.getListAttribute('tables_to_exclude');
+    return cdktf.Fn.tolist(this.getListAttribute('tables_to_exclude'));
   }
   public set tablesToExclude(value: string[]) {
     this._tablesToExclude = value;
@@ -236,7 +236,7 @@ export class KustoAttachedDatabaseConfigurationSharingOutputReference extends cd
   // tables_to_include - computed: false, optional: true, required: false
   private _tablesToInclude?: string[]; 
   public get tablesToInclude() {
-    return this.getListAttribute('tables_to_include');
+    return cdktf.Fn.tolist(this.getListAttribute('tables_to_include'));
   }
   public set tablesToInclude(value: string[]) {
     this._tablesToInclude = value;
@@ -268,8 +268,8 @@ export interface KustoAttachedDatabaseConfigurationTimeouts {
   readonly update?: string;
 }
 
-export function kustoAttachedDatabaseConfigurationTimeoutsToTerraform(struct?: KustoAttachedDatabaseConfigurationTimeoutsOutputReference | KustoAttachedDatabaseConfigurationTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function kustoAttachedDatabaseConfigurationTimeoutsToTerraform(struct?: KustoAttachedDatabaseConfigurationTimeoutsOutputReference | KustoAttachedDatabaseConfigurationTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -289,7 +289,7 @@ export class KustoAttachedDatabaseConfigurationTimeoutsOutputReference extends c
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -549,7 +549,7 @@ export class KustoAttachedDatabaseConfiguration extends cdktf.TerraformResource 
   }
 
   // sharing - computed: false, optional: true, required: false
-  private _sharing = new KustoAttachedDatabaseConfigurationSharingOutputReference(this as any, "sharing", true);
+  private _sharing = new KustoAttachedDatabaseConfigurationSharingOutputReference(this, "sharing", true);
   public get sharing() {
     return this._sharing;
   }
@@ -565,7 +565,7 @@ export class KustoAttachedDatabaseConfiguration extends cdktf.TerraformResource 
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new KustoAttachedDatabaseConfigurationTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new KustoAttachedDatabaseConfigurationTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

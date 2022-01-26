@@ -32,7 +32,7 @@ export interface HpcCacheNfsTargetConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_nfs_target#namespace_junction HpcCacheNfsTarget#namespace_junction}
   */
-  readonly namespaceJunction: HpcCacheNfsTargetNamespaceJunction[];
+  readonly namespaceJunction: HpcCacheNfsTargetNamespaceJunction[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -59,8 +59,8 @@ export interface HpcCacheNfsTargetNamespaceJunction {
   readonly targetPath?: string;
 }
 
-export function hpcCacheNfsTargetNamespaceJunctionToTerraform(struct?: HpcCacheNfsTargetNamespaceJunction): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function hpcCacheNfsTargetNamespaceJunctionToTerraform(struct?: HpcCacheNfsTargetNamespaceJunction | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -91,8 +91,8 @@ export interface HpcCacheNfsTargetTimeouts {
   readonly update?: string;
 }
 
-export function hpcCacheNfsTargetTimeoutsToTerraform(struct?: HpcCacheNfsTargetTimeoutsOutputReference | HpcCacheNfsTargetTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function hpcCacheNfsTargetTimeoutsToTerraform(struct?: HpcCacheNfsTargetTimeoutsOutputReference | HpcCacheNfsTargetTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -112,7 +112,7 @@ export class HpcCacheNfsTargetTimeoutsOutputReference extends cdktf.ComplexObjec
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -336,12 +336,12 @@ export class HpcCacheNfsTarget extends cdktf.TerraformResource {
   }
 
   // namespace_junction - computed: false, optional: false, required: true
-  private _namespaceJunction?: HpcCacheNfsTargetNamespaceJunction[]; 
+  private _namespaceJunction?: HpcCacheNfsTargetNamespaceJunction[] | cdktf.IResolvable; 
   public get namespaceJunction() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('namespace_junction') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('namespace_junction')));
   }
-  public set namespaceJunction(value: HpcCacheNfsTargetNamespaceJunction[]) {
+  public set namespaceJunction(value: HpcCacheNfsTargetNamespaceJunction[] | cdktf.IResolvable) {
     this._namespaceJunction = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -350,7 +350,7 @@ export class HpcCacheNfsTarget extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new HpcCacheNfsTargetTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new HpcCacheNfsTargetTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

@@ -58,7 +58,7 @@ export interface ApplicationInsightsConfig extends cdktf.TerraformMetaArguments 
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights#tags ApplicationInsights#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights#workspace_id ApplicationInsights#workspace_id}
   */
@@ -89,8 +89,8 @@ export interface ApplicationInsightsTimeouts {
   readonly update?: string;
 }
 
-export function applicationInsightsTimeoutsToTerraform(struct?: ApplicationInsightsTimeoutsOutputReference | ApplicationInsightsTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function applicationInsightsTimeoutsToTerraform(struct?: ApplicationInsightsTimeoutsOutputReference | ApplicationInsightsTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -110,7 +110,7 @@ export class ApplicationInsightsTimeoutsOutputReference extends cdktf.ComplexObj
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -313,7 +313,7 @@ export class ApplicationInsights extends cdktf.TerraformResource {
   // daily_data_cap_notifications_disabled - computed: true, optional: true, required: false
   private _dailyDataCapNotificationsDisabled?: boolean | cdktf.IResolvable; 
   public get dailyDataCapNotificationsDisabled() {
-    return this.getBooleanAttribute('daily_data_cap_notifications_disabled') as any;
+    return this.getBooleanAttribute('daily_data_cap_notifications_disabled');
   }
   public set dailyDataCapNotificationsDisabled(value: boolean | cdktf.IResolvable) {
     this._dailyDataCapNotificationsDisabled = value;
@@ -329,7 +329,7 @@ export class ApplicationInsights extends cdktf.TerraformResource {
   // disable_ip_masking - computed: false, optional: true, required: false
   private _disableIpMasking?: boolean | cdktf.IResolvable; 
   public get disableIpMasking() {
-    return this.getBooleanAttribute('disable_ip_masking') as any;
+    return this.getBooleanAttribute('disable_ip_masking');
   }
   public set disableIpMasking(value: boolean | cdktf.IResolvable) {
     this._disableIpMasking = value;
@@ -355,7 +355,7 @@ export class ApplicationInsights extends cdktf.TerraformResource {
   // internet_ingestion_enabled - computed: false, optional: true, required: false
   private _internetIngestionEnabled?: boolean | cdktf.IResolvable; 
   public get internetIngestionEnabled() {
-    return this.getBooleanAttribute('internet_ingestion_enabled') as any;
+    return this.getBooleanAttribute('internet_ingestion_enabled');
   }
   public set internetIngestionEnabled(value: boolean | cdktf.IResolvable) {
     this._internetIngestionEnabled = value;
@@ -371,7 +371,7 @@ export class ApplicationInsights extends cdktf.TerraformResource {
   // internet_query_enabled - computed: false, optional: true, required: false
   private _internetQueryEnabled?: boolean | cdktf.IResolvable; 
   public get internetQueryEnabled() {
-    return this.getBooleanAttribute('internet_query_enabled') as any;
+    return this.getBooleanAttribute('internet_query_enabled');
   }
   public set internetQueryEnabled(value: boolean | cdktf.IResolvable) {
     this._internetQueryEnabled = value;
@@ -387,7 +387,7 @@ export class ApplicationInsights extends cdktf.TerraformResource {
   // local_authentication_disabled - computed: false, optional: true, required: false
   private _localAuthenticationDisabled?: boolean | cdktf.IResolvable; 
   public get localAuthenticationDisabled() {
-    return this.getBooleanAttribute('local_authentication_disabled') as any;
+    return this.getBooleanAttribute('local_authentication_disabled');
   }
   public set localAuthenticationDisabled(value: boolean | cdktf.IResolvable) {
     this._localAuthenticationDisabled = value;
@@ -472,12 +472,11 @@ export class ApplicationInsights extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -505,7 +504,7 @@ export class ApplicationInsights extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ApplicationInsightsTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ApplicationInsightsTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -538,7 +537,7 @@ export class ApplicationInsights extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       retention_in_days: cdktf.numberToTerraform(this._retentionInDays),
       sampling_percentage: cdktf.numberToTerraform(this._samplingPercentage),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       workspace_id: cdktf.stringToTerraform(this._workspaceId),
       timeouts: applicationInsightsTimeoutsToTerraform(this._timeouts.internalValue),
     };

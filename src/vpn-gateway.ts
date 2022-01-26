@@ -30,7 +30,7 @@ export interface VpnGatewayConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway#tags VpnGateway#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway#virtual_hub_id VpnGateway#virtual_hub_id}
   */
@@ -56,7 +56,7 @@ export interface VpnGatewayBgpSettingsInstance0BgpPeeringAddress {
 }
 
 export function vpnGatewayBgpSettingsInstance0BgpPeeringAddressToTerraform(struct?: VpnGatewayBgpSettingsInstance0BgpPeeringAddressOutputReference | VpnGatewayBgpSettingsInstance0BgpPeeringAddress): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -73,7 +73,7 @@ export class VpnGatewayBgpSettingsInstance0BgpPeeringAddressOutputReference exte
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -101,7 +101,7 @@ export class VpnGatewayBgpSettingsInstance0BgpPeeringAddressOutputReference exte
   // custom_ips - computed: false, optional: false, required: true
   private _customIps?: string[]; 
   public get customIps() {
-    return this.getListAttribute('custom_ips');
+    return cdktf.Fn.tolist(this.getListAttribute('custom_ips'));
   }
   public set customIps(value: string[]) {
     this._customIps = value;
@@ -109,6 +109,21 @@ export class VpnGatewayBgpSettingsInstance0BgpPeeringAddressOutputReference exte
   // Temporarily expose input value. Use with caution.
   public get customIpsInput() {
     return this._customIps;
+  }
+
+  // default_ips - computed: true, optional: false, required: false
+  public get defaultIps() {
+    return cdktf.Fn.tolist(this.getListAttribute('default_ips'));
+  }
+
+  // ip_configuration_id - computed: true, optional: false, required: false
+  public get ipConfigurationId() {
+    return this.getStringAttribute('ip_configuration_id');
+  }
+
+  // tunnel_ips - computed: true, optional: false, required: false
+  public get tunnelIps() {
+    return cdktf.Fn.tolist(this.getListAttribute('tunnel_ips'));
   }
 }
 export interface VpnGatewayBgpSettingsInstance1BgpPeeringAddress {
@@ -119,7 +134,7 @@ export interface VpnGatewayBgpSettingsInstance1BgpPeeringAddress {
 }
 
 export function vpnGatewayBgpSettingsInstance1BgpPeeringAddressToTerraform(struct?: VpnGatewayBgpSettingsInstance1BgpPeeringAddressOutputReference | VpnGatewayBgpSettingsInstance1BgpPeeringAddress): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -136,7 +151,7 @@ export class VpnGatewayBgpSettingsInstance1BgpPeeringAddressOutputReference exte
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -164,7 +179,7 @@ export class VpnGatewayBgpSettingsInstance1BgpPeeringAddressOutputReference exte
   // custom_ips - computed: false, optional: false, required: true
   private _customIps?: string[]; 
   public get customIps() {
-    return this.getListAttribute('custom_ips');
+    return cdktf.Fn.tolist(this.getListAttribute('custom_ips'));
   }
   public set customIps(value: string[]) {
     this._customIps = value;
@@ -172,6 +187,21 @@ export class VpnGatewayBgpSettingsInstance1BgpPeeringAddressOutputReference exte
   // Temporarily expose input value. Use with caution.
   public get customIpsInput() {
     return this._customIps;
+  }
+
+  // default_ips - computed: true, optional: false, required: false
+  public get defaultIps() {
+    return cdktf.Fn.tolist(this.getListAttribute('default_ips'));
+  }
+
+  // ip_configuration_id - computed: true, optional: false, required: false
+  public get ipConfigurationId() {
+    return this.getStringAttribute('ip_configuration_id');
+  }
+
+  // tunnel_ips - computed: true, optional: false, required: false
+  public get tunnelIps() {
+    return cdktf.Fn.tolist(this.getListAttribute('tunnel_ips'));
   }
 }
 export interface VpnGatewayBgpSettings {
@@ -198,7 +228,7 @@ export interface VpnGatewayBgpSettings {
 }
 
 export function vpnGatewayBgpSettingsToTerraform(struct?: VpnGatewayBgpSettingsOutputReference | VpnGatewayBgpSettings): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -218,7 +248,7 @@ export class VpnGatewayBgpSettingsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -274,6 +304,11 @@ export class VpnGatewayBgpSettingsOutputReference extends cdktf.ComplexObject {
     return this._asn;
   }
 
+  // bgp_peering_address - computed: true, optional: false, required: false
+  public get bgpPeeringAddress() {
+    return this.getStringAttribute('bgp_peering_address');
+  }
+
   // peer_weight - computed: false, optional: false, required: true
   private _peerWeight?: number; 
   public get peerWeight() {
@@ -288,7 +323,7 @@ export class VpnGatewayBgpSettingsOutputReference extends cdktf.ComplexObject {
   }
 
   // instance_0_bgp_peering_address - computed: false, optional: true, required: false
-  private _instance0BgpPeeringAddress = new VpnGatewayBgpSettingsInstance0BgpPeeringAddressOutputReference(this as any, "instance_0_bgp_peering_address", true);
+  private _instance0BgpPeeringAddress = new VpnGatewayBgpSettingsInstance0BgpPeeringAddressOutputReference(this, "instance_0_bgp_peering_address", true);
   public get instance0BgpPeeringAddress() {
     return this._instance0BgpPeeringAddress;
   }
@@ -304,7 +339,7 @@ export class VpnGatewayBgpSettingsOutputReference extends cdktf.ComplexObject {
   }
 
   // instance_1_bgp_peering_address - computed: false, optional: true, required: false
-  private _instance1BgpPeeringAddress = new VpnGatewayBgpSettingsInstance1BgpPeeringAddressOutputReference(this as any, "instance_1_bgp_peering_address", true);
+  private _instance1BgpPeeringAddress = new VpnGatewayBgpSettingsInstance1BgpPeeringAddressOutputReference(this, "instance_1_bgp_peering_address", true);
   public get instance1BgpPeeringAddress() {
     return this._instance1BgpPeeringAddress;
   }
@@ -338,8 +373,8 @@ export interface VpnGatewayTimeouts {
   readonly update?: string;
 }
 
-export function vpnGatewayTimeoutsToTerraform(struct?: VpnGatewayTimeoutsOutputReference | VpnGatewayTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function vpnGatewayTimeoutsToTerraform(struct?: VpnGatewayTimeoutsOutputReference | VpnGatewayTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -359,7 +394,7 @@ export class VpnGatewayTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -591,12 +626,11 @@ export class VpnGateway extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -621,7 +655,7 @@ export class VpnGateway extends cdktf.TerraformResource {
   }
 
   // bgp_settings - computed: false, optional: true, required: false
-  private _bgpSettings = new VpnGatewayBgpSettingsOutputReference(this as any, "bgp_settings", true);
+  private _bgpSettings = new VpnGatewayBgpSettingsOutputReference(this, "bgp_settings", true);
   public get bgpSettings() {
     return this._bgpSettings;
   }
@@ -637,7 +671,7 @@ export class VpnGateway extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new VpnGatewayTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new VpnGatewayTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -663,7 +697,7 @@ export class VpnGateway extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       routing_preference: cdktf.stringToTerraform(this._routingPreference),
       scale_unit: cdktf.numberToTerraform(this._scaleUnit),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       virtual_hub_id: cdktf.stringToTerraform(this._virtualHubId),
       bgp_settings: vpnGatewayBgpSettingsToTerraform(this._bgpSettings.internalValue),
       timeouts: vpnGatewayTimeoutsToTerraform(this._timeouts.internalValue),

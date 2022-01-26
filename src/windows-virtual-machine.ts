@@ -110,7 +110,7 @@ export interface WindowsVirtualMachineConfig extends cdktf.TerraformMetaArgument
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine#tags WindowsVirtualMachine#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine#timezone WindowsVirtualMachine#timezone}
   */
@@ -142,7 +142,7 @@ export interface WindowsVirtualMachineConfig extends cdktf.TerraformMetaArgument
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine#additional_unattend_content WindowsVirtualMachine#additional_unattend_content}
   */
-  readonly additionalUnattendContent?: WindowsVirtualMachineAdditionalUnattendContent[];
+  readonly additionalUnattendContent?: WindowsVirtualMachineAdditionalUnattendContent[] | cdktf.IResolvable;
   /**
   * boot_diagnostics block
   * 
@@ -172,7 +172,7 @@ export interface WindowsVirtualMachineConfig extends cdktf.TerraformMetaArgument
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine#secret WindowsVirtualMachine#secret}
   */
-  readonly secret?: WindowsVirtualMachineSecret[];
+  readonly secret?: WindowsVirtualMachineSecret[] | cdktf.IResolvable;
   /**
   * source_image_reference block
   * 
@@ -190,7 +190,7 @@ export interface WindowsVirtualMachineConfig extends cdktf.TerraformMetaArgument
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine#winrm_listener WindowsVirtualMachine#winrm_listener}
   */
-  readonly winrmListener?: WindowsVirtualMachineWinrmListener[];
+  readonly winrmListener?: WindowsVirtualMachineWinrmListener[] | cdktf.IResolvable;
 }
 export interface WindowsVirtualMachineAdditionalCapabilities {
   /**
@@ -200,7 +200,7 @@ export interface WindowsVirtualMachineAdditionalCapabilities {
 }
 
 export function windowsVirtualMachineAdditionalCapabilitiesToTerraform(struct?: WindowsVirtualMachineAdditionalCapabilitiesOutputReference | WindowsVirtualMachineAdditionalCapabilities): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -217,7 +217,7 @@ export class WindowsVirtualMachineAdditionalCapabilitiesOutputReference extends 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -245,7 +245,7 @@ export class WindowsVirtualMachineAdditionalCapabilitiesOutputReference extends 
   // ultra_ssd_enabled - computed: false, optional: true, required: false
   private _ultraSsdEnabled?: boolean | cdktf.IResolvable; 
   public get ultraSsdEnabled() {
-    return this.getBooleanAttribute('ultra_ssd_enabled') as any;
+    return this.getBooleanAttribute('ultra_ssd_enabled');
   }
   public set ultraSsdEnabled(value: boolean | cdktf.IResolvable) {
     this._ultraSsdEnabled = value;
@@ -269,8 +269,8 @@ export interface WindowsVirtualMachineAdditionalUnattendContent {
   readonly setting: string;
 }
 
-export function windowsVirtualMachineAdditionalUnattendContentToTerraform(struct?: WindowsVirtualMachineAdditionalUnattendContent): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function windowsVirtualMachineAdditionalUnattendContentToTerraform(struct?: WindowsVirtualMachineAdditionalUnattendContent | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -288,7 +288,7 @@ export interface WindowsVirtualMachineBootDiagnostics {
 }
 
 export function windowsVirtualMachineBootDiagnosticsToTerraform(struct?: WindowsVirtualMachineBootDiagnosticsOutputReference | WindowsVirtualMachineBootDiagnostics): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -305,7 +305,7 @@ export class WindowsVirtualMachineBootDiagnosticsOutputReference extends cdktf.C
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -358,7 +358,7 @@ export interface WindowsVirtualMachineIdentity {
 }
 
 export function windowsVirtualMachineIdentityToTerraform(struct?: WindowsVirtualMachineIdentityOutputReference | WindowsVirtualMachineIdentity): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -376,7 +376,7 @@ export class WindowsVirtualMachineIdentityOutputReference extends cdktf.ComplexO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -410,7 +410,7 @@ export class WindowsVirtualMachineIdentityOutputReference extends cdktf.ComplexO
   // identity_ids - computed: false, optional: true, required: false
   private _identityIds?: string[]; 
   public get identityIds() {
-    return this.getListAttribute('identity_ids');
+    return cdktf.Fn.tolist(this.getListAttribute('identity_ids'));
   }
   public set identityIds(value: string[]) {
     this._identityIds = value;
@@ -421,6 +421,16 @@ export class WindowsVirtualMachineIdentityOutputReference extends cdktf.ComplexO
   // Temporarily expose input value. Use with caution.
   public get identityIdsInput() {
     return this._identityIds;
+  }
+
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
   }
 
   // type - computed: false, optional: false, required: true
@@ -444,7 +454,7 @@ export interface WindowsVirtualMachineOsDiskDiffDiskSettings {
 }
 
 export function windowsVirtualMachineOsDiskDiffDiskSettingsToTerraform(struct?: WindowsVirtualMachineOsDiskDiffDiskSettingsOutputReference | WindowsVirtualMachineOsDiskDiffDiskSettings): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -461,7 +471,7 @@ export class WindowsVirtualMachineOsDiskDiffDiskSettingsOutputReference extends 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -533,7 +543,7 @@ export interface WindowsVirtualMachineOsDisk {
 }
 
 export function windowsVirtualMachineOsDiskToTerraform(struct?: WindowsVirtualMachineOsDiskOutputReference | WindowsVirtualMachineOsDisk): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -556,7 +566,7 @@ export class WindowsVirtualMachineOsDiskOutputReference extends cdktf.ComplexObj
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -694,7 +704,7 @@ export class WindowsVirtualMachineOsDiskOutputReference extends cdktf.ComplexObj
   // write_accelerator_enabled - computed: false, optional: true, required: false
   private _writeAcceleratorEnabled?: boolean | cdktf.IResolvable; 
   public get writeAcceleratorEnabled() {
-    return this.getBooleanAttribute('write_accelerator_enabled') as any;
+    return this.getBooleanAttribute('write_accelerator_enabled');
   }
   public set writeAcceleratorEnabled(value: boolean | cdktf.IResolvable) {
     this._writeAcceleratorEnabled = value;
@@ -708,7 +718,7 @@ export class WindowsVirtualMachineOsDiskOutputReference extends cdktf.ComplexObj
   }
 
   // diff_disk_settings - computed: false, optional: true, required: false
-  private _diffDiskSettings = new WindowsVirtualMachineOsDiskDiffDiskSettingsOutputReference(this as any, "diff_disk_settings", true);
+  private _diffDiskSettings = new WindowsVirtualMachineOsDiskDiffDiskSettingsOutputReference(this, "diff_disk_settings", true);
   public get diffDiskSettings() {
     return this._diffDiskSettings;
   }
@@ -739,7 +749,7 @@ export interface WindowsVirtualMachinePlan {
 }
 
 export function windowsVirtualMachinePlanToTerraform(struct?: WindowsVirtualMachinePlanOutputReference | WindowsVirtualMachinePlan): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -758,7 +768,7 @@ export class WindowsVirtualMachinePlanOutputReference extends cdktf.ComplexObjec
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -845,8 +855,8 @@ export interface WindowsVirtualMachineSecretCertificate {
   readonly url: string;
 }
 
-export function windowsVirtualMachineSecretCertificateToTerraform(struct?: WindowsVirtualMachineSecretCertificate): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function windowsVirtualMachineSecretCertificateToTerraform(struct?: WindowsVirtualMachineSecretCertificate | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -866,11 +876,11 @@ export interface WindowsVirtualMachineSecret {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine#certificate WindowsVirtualMachine#certificate}
   */
-  readonly certificate: WindowsVirtualMachineSecretCertificate[];
+  readonly certificate: WindowsVirtualMachineSecretCertificate[] | cdktf.IResolvable;
 }
 
-export function windowsVirtualMachineSecretToTerraform(struct?: WindowsVirtualMachineSecret): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function windowsVirtualMachineSecretToTerraform(struct?: WindowsVirtualMachineSecret | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -900,7 +910,7 @@ export interface WindowsVirtualMachineSourceImageReference {
 }
 
 export function windowsVirtualMachineSourceImageReferenceToTerraform(struct?: WindowsVirtualMachineSourceImageReferenceOutputReference | WindowsVirtualMachineSourceImageReference): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -920,7 +930,7 @@ export class WindowsVirtualMachineSourceImageReferenceOutputReference extends cd
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1034,8 +1044,8 @@ export interface WindowsVirtualMachineTimeouts {
   readonly update?: string;
 }
 
-export function windowsVirtualMachineTimeoutsToTerraform(struct?: WindowsVirtualMachineTimeoutsOutputReference | WindowsVirtualMachineTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function windowsVirtualMachineTimeoutsToTerraform(struct?: WindowsVirtualMachineTimeoutsOutputReference | WindowsVirtualMachineTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1055,7 +1065,7 @@ export class WindowsVirtualMachineTimeoutsOutputReference extends cdktf.ComplexO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1173,8 +1183,8 @@ export interface WindowsVirtualMachineWinrmListener {
   readonly protocol: string;
 }
 
-export function windowsVirtualMachineWinrmListenerToTerraform(struct?: WindowsVirtualMachineWinrmListener): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function windowsVirtualMachineWinrmListenerToTerraform(struct?: WindowsVirtualMachineWinrmListener | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1293,7 +1303,7 @@ export class WindowsVirtualMachine extends cdktf.TerraformResource {
   // allow_extension_operations - computed: false, optional: true, required: false
   private _allowExtensionOperations?: boolean | cdktf.IResolvable; 
   public get allowExtensionOperations() {
-    return this.getBooleanAttribute('allow_extension_operations') as any;
+    return this.getBooleanAttribute('allow_extension_operations');
   }
   public set allowExtensionOperations(value: boolean | cdktf.IResolvable) {
     this._allowExtensionOperations = value;
@@ -1373,7 +1383,7 @@ export class WindowsVirtualMachine extends cdktf.TerraformResource {
   // enable_automatic_updates - computed: false, optional: true, required: false
   private _enableAutomaticUpdates?: boolean | cdktf.IResolvable; 
   public get enableAutomaticUpdates() {
-    return this.getBooleanAttribute('enable_automatic_updates') as any;
+    return this.getBooleanAttribute('enable_automatic_updates');
   }
   public set enableAutomaticUpdates(value: boolean | cdktf.IResolvable) {
     this._enableAutomaticUpdates = value;
@@ -1389,7 +1399,7 @@ export class WindowsVirtualMachine extends cdktf.TerraformResource {
   // encryption_at_host_enabled - computed: false, optional: true, required: false
   private _encryptionAtHostEnabled?: boolean | cdktf.IResolvable; 
   public get encryptionAtHostEnabled() {
-    return this.getBooleanAttribute('encryption_at_host_enabled') as any;
+    return this.getBooleanAttribute('encryption_at_host_enabled');
   }
   public set encryptionAtHostEnabled(value: boolean | cdktf.IResolvable) {
     this._encryptionAtHostEnabled = value;
@@ -1571,7 +1581,7 @@ export class WindowsVirtualMachine extends cdktf.TerraformResource {
   // provision_vm_agent - computed: false, optional: true, required: false
   private _provisionVmAgent?: boolean | cdktf.IResolvable; 
   public get provisionVmAgent() {
-    return this.getBooleanAttribute('provision_vm_agent') as any;
+    return this.getBooleanAttribute('provision_vm_agent');
   }
   public set provisionVmAgent(value: boolean | cdktf.IResolvable) {
     this._provisionVmAgent = value;
@@ -1626,7 +1636,7 @@ export class WindowsVirtualMachine extends cdktf.TerraformResource {
   // secure_boot_enabled - computed: false, optional: true, required: false
   private _secureBootEnabled?: boolean | cdktf.IResolvable; 
   public get secureBootEnabled() {
-    return this.getBooleanAttribute('secure_boot_enabled') as any;
+    return this.getBooleanAttribute('secure_boot_enabled');
   }
   public set secureBootEnabled(value: boolean | cdktf.IResolvable) {
     this._secureBootEnabled = value;
@@ -1669,12 +1679,11 @@ export class WindowsVirtualMachine extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -1741,7 +1750,7 @@ export class WindowsVirtualMachine extends cdktf.TerraformResource {
   // vtpm_enabled - computed: false, optional: true, required: false
   private _vtpmEnabled?: boolean | cdktf.IResolvable; 
   public get vtpmEnabled() {
-    return this.getBooleanAttribute('vtpm_enabled') as any;
+    return this.getBooleanAttribute('vtpm_enabled');
   }
   public set vtpmEnabled(value: boolean | cdktf.IResolvable) {
     this._vtpmEnabled = value;
@@ -1771,7 +1780,7 @@ export class WindowsVirtualMachine extends cdktf.TerraformResource {
   }
 
   // additional_capabilities - computed: false, optional: true, required: false
-  private _additionalCapabilities = new WindowsVirtualMachineAdditionalCapabilitiesOutputReference(this as any, "additional_capabilities", true);
+  private _additionalCapabilities = new WindowsVirtualMachineAdditionalCapabilitiesOutputReference(this, "additional_capabilities", true);
   public get additionalCapabilities() {
     return this._additionalCapabilities;
   }
@@ -1787,12 +1796,12 @@ export class WindowsVirtualMachine extends cdktf.TerraformResource {
   }
 
   // additional_unattend_content - computed: false, optional: true, required: false
-  private _additionalUnattendContent?: WindowsVirtualMachineAdditionalUnattendContent[]; 
+  private _additionalUnattendContent?: WindowsVirtualMachineAdditionalUnattendContent[] | cdktf.IResolvable; 
   public get additionalUnattendContent() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('additional_unattend_content') as any;
+    return this.interpolationForAttribute('additional_unattend_content');
   }
-  public set additionalUnattendContent(value: WindowsVirtualMachineAdditionalUnattendContent[]) {
+  public set additionalUnattendContent(value: WindowsVirtualMachineAdditionalUnattendContent[] | cdktf.IResolvable) {
     this._additionalUnattendContent = value;
   }
   public resetAdditionalUnattendContent() {
@@ -1804,7 +1813,7 @@ export class WindowsVirtualMachine extends cdktf.TerraformResource {
   }
 
   // boot_diagnostics - computed: false, optional: true, required: false
-  private _bootDiagnostics = new WindowsVirtualMachineBootDiagnosticsOutputReference(this as any, "boot_diagnostics", true);
+  private _bootDiagnostics = new WindowsVirtualMachineBootDiagnosticsOutputReference(this, "boot_diagnostics", true);
   public get bootDiagnostics() {
     return this._bootDiagnostics;
   }
@@ -1820,7 +1829,7 @@ export class WindowsVirtualMachine extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity = new WindowsVirtualMachineIdentityOutputReference(this as any, "identity", true);
+  private _identity = new WindowsVirtualMachineIdentityOutputReference(this, "identity", true);
   public get identity() {
     return this._identity;
   }
@@ -1836,7 +1845,7 @@ export class WindowsVirtualMachine extends cdktf.TerraformResource {
   }
 
   // os_disk - computed: false, optional: false, required: true
-  private _osDisk = new WindowsVirtualMachineOsDiskOutputReference(this as any, "os_disk", true);
+  private _osDisk = new WindowsVirtualMachineOsDiskOutputReference(this, "os_disk", true);
   public get osDisk() {
     return this._osDisk;
   }
@@ -1849,7 +1858,7 @@ export class WindowsVirtualMachine extends cdktf.TerraformResource {
   }
 
   // plan - computed: false, optional: true, required: false
-  private _plan = new WindowsVirtualMachinePlanOutputReference(this as any, "plan", true);
+  private _plan = new WindowsVirtualMachinePlanOutputReference(this, "plan", true);
   public get plan() {
     return this._plan;
   }
@@ -1865,12 +1874,12 @@ export class WindowsVirtualMachine extends cdktf.TerraformResource {
   }
 
   // secret - computed: false, optional: true, required: false
-  private _secret?: WindowsVirtualMachineSecret[]; 
+  private _secret?: WindowsVirtualMachineSecret[] | cdktf.IResolvable; 
   public get secret() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('secret') as any;
+    return this.interpolationForAttribute('secret');
   }
-  public set secret(value: WindowsVirtualMachineSecret[]) {
+  public set secret(value: WindowsVirtualMachineSecret[] | cdktf.IResolvable) {
     this._secret = value;
   }
   public resetSecret() {
@@ -1882,7 +1891,7 @@ export class WindowsVirtualMachine extends cdktf.TerraformResource {
   }
 
   // source_image_reference - computed: false, optional: true, required: false
-  private _sourceImageReference = new WindowsVirtualMachineSourceImageReferenceOutputReference(this as any, "source_image_reference", true);
+  private _sourceImageReference = new WindowsVirtualMachineSourceImageReferenceOutputReference(this, "source_image_reference", true);
   public get sourceImageReference() {
     return this._sourceImageReference;
   }
@@ -1898,7 +1907,7 @@ export class WindowsVirtualMachine extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new WindowsVirtualMachineTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new WindowsVirtualMachineTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -1914,12 +1923,12 @@ export class WindowsVirtualMachine extends cdktf.TerraformResource {
   }
 
   // winrm_listener - computed: false, optional: true, required: false
-  private _winrmListener?: WindowsVirtualMachineWinrmListener[]; 
+  private _winrmListener?: WindowsVirtualMachineWinrmListener[] | cdktf.IResolvable; 
   public get winrmListener() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('winrm_listener') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('winrm_listener')));
   }
-  public set winrmListener(value: WindowsVirtualMachineWinrmListener[]) {
+  public set winrmListener(value: WindowsVirtualMachineWinrmListener[] | cdktf.IResolvable) {
     this._winrmListener = value;
   }
   public resetWinrmListener() {
@@ -1961,7 +1970,7 @@ export class WindowsVirtualMachine extends cdktf.TerraformResource {
       secure_boot_enabled: cdktf.booleanToTerraform(this._secureBootEnabled),
       size: cdktf.stringToTerraform(this._size),
       source_image_id: cdktf.stringToTerraform(this._sourceImageId),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       timezone: cdktf.stringToTerraform(this._timezone),
       user_data: cdktf.stringToTerraform(this._userData),
       virtual_machine_scale_set_id: cdktf.stringToTerraform(this._virtualMachineScaleSetId),

@@ -30,7 +30,7 @@ export interface MonitorActionRuleActionGroupConfig extends cdktf.TerraformMetaA
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_rule_action_group#tags MonitorActionRuleActionGroup#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * condition block
   * 
@@ -62,7 +62,7 @@ export interface MonitorActionRuleActionGroupConditionAlertContext {
 }
 
 export function monitorActionRuleActionGroupConditionAlertContextToTerraform(struct?: MonitorActionRuleActionGroupConditionAlertContextOutputReference | MonitorActionRuleActionGroupConditionAlertContext): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -80,7 +80,7 @@ export class MonitorActionRuleActionGroupConditionAlertContextOutputReference ex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -127,7 +127,7 @@ export class MonitorActionRuleActionGroupConditionAlertContextOutputReference ex
   // values - computed: false, optional: false, required: true
   private _values?: string[]; 
   public get values() {
-    return this.getListAttribute('values');
+    return cdktf.Fn.tolist(this.getListAttribute('values'));
   }
   public set values(value: string[]) {
     this._values = value;
@@ -149,7 +149,7 @@ export interface MonitorActionRuleActionGroupConditionAlertRuleId {
 }
 
 export function monitorActionRuleActionGroupConditionAlertRuleIdToTerraform(struct?: MonitorActionRuleActionGroupConditionAlertRuleIdOutputReference | MonitorActionRuleActionGroupConditionAlertRuleId): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -167,7 +167,7 @@ export class MonitorActionRuleActionGroupConditionAlertRuleIdOutputReference ext
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -214,7 +214,7 @@ export class MonitorActionRuleActionGroupConditionAlertRuleIdOutputReference ext
   // values - computed: false, optional: false, required: true
   private _values?: string[]; 
   public get values() {
-    return this.getListAttribute('values');
+    return cdktf.Fn.tolist(this.getListAttribute('values'));
   }
   public set values(value: string[]) {
     this._values = value;
@@ -236,7 +236,7 @@ export interface MonitorActionRuleActionGroupConditionDescription {
 }
 
 export function monitorActionRuleActionGroupConditionDescriptionToTerraform(struct?: MonitorActionRuleActionGroupConditionDescriptionOutputReference | MonitorActionRuleActionGroupConditionDescription): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -254,7 +254,7 @@ export class MonitorActionRuleActionGroupConditionDescriptionOutputReference ext
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -301,7 +301,7 @@ export class MonitorActionRuleActionGroupConditionDescriptionOutputReference ext
   // values - computed: false, optional: false, required: true
   private _values?: string[]; 
   public get values() {
-    return this.getListAttribute('values');
+    return cdktf.Fn.tolist(this.getListAttribute('values'));
   }
   public set values(value: string[]) {
     this._values = value;
@@ -323,7 +323,7 @@ export interface MonitorActionRuleActionGroupConditionMonitor {
 }
 
 export function monitorActionRuleActionGroupConditionMonitorToTerraform(struct?: MonitorActionRuleActionGroupConditionMonitorOutputReference | MonitorActionRuleActionGroupConditionMonitor): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -341,7 +341,7 @@ export class MonitorActionRuleActionGroupConditionMonitorOutputReference extends
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -388,7 +388,7 @@ export class MonitorActionRuleActionGroupConditionMonitorOutputReference extends
   // values - computed: false, optional: false, required: true
   private _values?: string[]; 
   public get values() {
-    return this.getListAttribute('values');
+    return cdktf.Fn.tolist(this.getListAttribute('values'));
   }
   public set values(value: string[]) {
     this._values = value;
@@ -410,7 +410,7 @@ export interface MonitorActionRuleActionGroupConditionMonitorService {
 }
 
 export function monitorActionRuleActionGroupConditionMonitorServiceToTerraform(struct?: MonitorActionRuleActionGroupConditionMonitorServiceOutputReference | MonitorActionRuleActionGroupConditionMonitorService): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -428,7 +428,7 @@ export class MonitorActionRuleActionGroupConditionMonitorServiceOutputReference 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -475,7 +475,7 @@ export class MonitorActionRuleActionGroupConditionMonitorServiceOutputReference 
   // values - computed: false, optional: false, required: true
   private _values?: string[]; 
   public get values() {
-    return this.getListAttribute('values');
+    return cdktf.Fn.tolist(this.getListAttribute('values'));
   }
   public set values(value: string[]) {
     this._values = value;
@@ -497,7 +497,7 @@ export interface MonitorActionRuleActionGroupConditionSeverity {
 }
 
 export function monitorActionRuleActionGroupConditionSeverityToTerraform(struct?: MonitorActionRuleActionGroupConditionSeverityOutputReference | MonitorActionRuleActionGroupConditionSeverity): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -515,7 +515,7 @@ export class MonitorActionRuleActionGroupConditionSeverityOutputReference extend
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -562,7 +562,7 @@ export class MonitorActionRuleActionGroupConditionSeverityOutputReference extend
   // values - computed: false, optional: false, required: true
   private _values?: string[]; 
   public get values() {
-    return this.getListAttribute('values');
+    return cdktf.Fn.tolist(this.getListAttribute('values'));
   }
   public set values(value: string[]) {
     this._values = value;
@@ -584,7 +584,7 @@ export interface MonitorActionRuleActionGroupConditionTargetResourceType {
 }
 
 export function monitorActionRuleActionGroupConditionTargetResourceTypeToTerraform(struct?: MonitorActionRuleActionGroupConditionTargetResourceTypeOutputReference | MonitorActionRuleActionGroupConditionTargetResourceType): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -602,7 +602,7 @@ export class MonitorActionRuleActionGroupConditionTargetResourceTypeOutputRefere
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -649,7 +649,7 @@ export class MonitorActionRuleActionGroupConditionTargetResourceTypeOutputRefere
   // values - computed: false, optional: false, required: true
   private _values?: string[]; 
   public get values() {
-    return this.getListAttribute('values');
+    return cdktf.Fn.tolist(this.getListAttribute('values'));
   }
   public set values(value: string[]) {
     this._values = value;
@@ -705,7 +705,7 @@ export interface MonitorActionRuleActionGroupCondition {
 }
 
 export function monitorActionRuleActionGroupConditionToTerraform(struct?: MonitorActionRuleActionGroupConditionOutputReference | MonitorActionRuleActionGroupCondition): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -728,7 +728,7 @@ export class MonitorActionRuleActionGroupConditionOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -790,7 +790,7 @@ export class MonitorActionRuleActionGroupConditionOutputReference extends cdktf.
   }
 
   // alert_context - computed: false, optional: true, required: false
-  private _alertContext = new MonitorActionRuleActionGroupConditionAlertContextOutputReference(this as any, "alert_context", true);
+  private _alertContext = new MonitorActionRuleActionGroupConditionAlertContextOutputReference(this, "alert_context", true);
   public get alertContext() {
     return this._alertContext;
   }
@@ -806,7 +806,7 @@ export class MonitorActionRuleActionGroupConditionOutputReference extends cdktf.
   }
 
   // alert_rule_id - computed: false, optional: true, required: false
-  private _alertRuleId = new MonitorActionRuleActionGroupConditionAlertRuleIdOutputReference(this as any, "alert_rule_id", true);
+  private _alertRuleId = new MonitorActionRuleActionGroupConditionAlertRuleIdOutputReference(this, "alert_rule_id", true);
   public get alertRuleId() {
     return this._alertRuleId;
   }
@@ -822,7 +822,7 @@ export class MonitorActionRuleActionGroupConditionOutputReference extends cdktf.
   }
 
   // description - computed: false, optional: true, required: false
-  private _description = new MonitorActionRuleActionGroupConditionDescriptionOutputReference(this as any, "description", true);
+  private _description = new MonitorActionRuleActionGroupConditionDescriptionOutputReference(this, "description", true);
   public get description() {
     return this._description;
   }
@@ -838,7 +838,7 @@ export class MonitorActionRuleActionGroupConditionOutputReference extends cdktf.
   }
 
   // monitor - computed: false, optional: true, required: false
-  private _monitor = new MonitorActionRuleActionGroupConditionMonitorOutputReference(this as any, "monitor", true);
+  private _monitor = new MonitorActionRuleActionGroupConditionMonitorOutputReference(this, "monitor", true);
   public get monitor() {
     return this._monitor;
   }
@@ -854,7 +854,7 @@ export class MonitorActionRuleActionGroupConditionOutputReference extends cdktf.
   }
 
   // monitor_service - computed: false, optional: true, required: false
-  private _monitorService = new MonitorActionRuleActionGroupConditionMonitorServiceOutputReference(this as any, "monitor_service", true);
+  private _monitorService = new MonitorActionRuleActionGroupConditionMonitorServiceOutputReference(this, "monitor_service", true);
   public get monitorService() {
     return this._monitorService;
   }
@@ -870,7 +870,7 @@ export class MonitorActionRuleActionGroupConditionOutputReference extends cdktf.
   }
 
   // severity - computed: false, optional: true, required: false
-  private _severity = new MonitorActionRuleActionGroupConditionSeverityOutputReference(this as any, "severity", true);
+  private _severity = new MonitorActionRuleActionGroupConditionSeverityOutputReference(this, "severity", true);
   public get severity() {
     return this._severity;
   }
@@ -886,7 +886,7 @@ export class MonitorActionRuleActionGroupConditionOutputReference extends cdktf.
   }
 
   // target_resource_type - computed: false, optional: true, required: false
-  private _targetResourceType = new MonitorActionRuleActionGroupConditionTargetResourceTypeOutputReference(this as any, "target_resource_type", true);
+  private _targetResourceType = new MonitorActionRuleActionGroupConditionTargetResourceTypeOutputReference(this, "target_resource_type", true);
   public get targetResourceType() {
     return this._targetResourceType;
   }
@@ -913,7 +913,7 @@ export interface MonitorActionRuleActionGroupScope {
 }
 
 export function monitorActionRuleActionGroupScopeToTerraform(struct?: MonitorActionRuleActionGroupScopeOutputReference | MonitorActionRuleActionGroupScope): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -931,7 +931,7 @@ export class MonitorActionRuleActionGroupScopeOutputReference extends cdktf.Comp
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -965,7 +965,7 @@ export class MonitorActionRuleActionGroupScopeOutputReference extends cdktf.Comp
   // resource_ids - computed: false, optional: false, required: true
   private _resourceIds?: string[]; 
   public get resourceIds() {
-    return this.getListAttribute('resource_ids');
+    return cdktf.Fn.tolist(this.getListAttribute('resource_ids'));
   }
   public set resourceIds(value: string[]) {
     this._resourceIds = value;
@@ -1007,8 +1007,8 @@ export interface MonitorActionRuleActionGroupTimeouts {
   readonly update?: string;
 }
 
-export function monitorActionRuleActionGroupTimeoutsToTerraform(struct?: MonitorActionRuleActionGroupTimeoutsOutputReference | MonitorActionRuleActionGroupTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function monitorActionRuleActionGroupTimeoutsToTerraform(struct?: MonitorActionRuleActionGroupTimeoutsOutputReference | MonitorActionRuleActionGroupTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1028,7 +1028,7 @@ export class MonitorActionRuleActionGroupTimeoutsOutputReference extends cdktf.C
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1215,7 +1215,7 @@ export class MonitorActionRuleActionGroup extends cdktf.TerraformResource {
   // enabled - computed: false, optional: true, required: false
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
@@ -1260,12 +1260,11 @@ export class MonitorActionRuleActionGroup extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -1277,7 +1276,7 @@ export class MonitorActionRuleActionGroup extends cdktf.TerraformResource {
   }
 
   // condition - computed: false, optional: true, required: false
-  private _condition = new MonitorActionRuleActionGroupConditionOutputReference(this as any, "condition", true);
+  private _condition = new MonitorActionRuleActionGroupConditionOutputReference(this, "condition", true);
   public get condition() {
     return this._condition;
   }
@@ -1293,7 +1292,7 @@ export class MonitorActionRuleActionGroup extends cdktf.TerraformResource {
   }
 
   // scope - computed: false, optional: true, required: false
-  private _scope = new MonitorActionRuleActionGroupScopeOutputReference(this as any, "scope", true);
+  private _scope = new MonitorActionRuleActionGroupScopeOutputReference(this, "scope", true);
   public get scope() {
     return this._scope;
   }
@@ -1309,7 +1308,7 @@ export class MonitorActionRuleActionGroup extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new MonitorActionRuleActionGroupTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new MonitorActionRuleActionGroupTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -1335,7 +1334,7 @@ export class MonitorActionRuleActionGroup extends cdktf.TerraformResource {
       enabled: cdktf.booleanToTerraform(this._enabled),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       condition: monitorActionRuleActionGroupConditionToTerraform(this._condition.internalValue),
       scope: monitorActionRuleActionGroupScopeToTerraform(this._scope.internalValue),
       timeouts: monitorActionRuleActionGroupTimeoutsToTerraform(this._timeouts.internalValue),

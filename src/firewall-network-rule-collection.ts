@@ -32,7 +32,7 @@ export interface FirewallNetworkRuleCollectionConfig extends cdktf.TerraformMeta
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection#rule FirewallNetworkRuleCollection#rule}
   */
-  readonly rule: FirewallNetworkRuleCollectionRule[];
+  readonly rule: FirewallNetworkRuleCollectionRule[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -79,8 +79,8 @@ export interface FirewallNetworkRuleCollectionRule {
   readonly sourceIpGroups?: string[];
 }
 
-export function firewallNetworkRuleCollectionRuleToTerraform(struct?: FirewallNetworkRuleCollectionRule): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function firewallNetworkRuleCollectionRuleToTerraform(struct?: FirewallNetworkRuleCollectionRule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -116,8 +116,8 @@ export interface FirewallNetworkRuleCollectionTimeouts {
   readonly update?: string;
 }
 
-export function firewallNetworkRuleCollectionTimeoutsToTerraform(struct?: FirewallNetworkRuleCollectionTimeoutsOutputReference | FirewallNetworkRuleCollectionTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function firewallNetworkRuleCollectionTimeoutsToTerraform(struct?: FirewallNetworkRuleCollectionTimeoutsOutputReference | FirewallNetworkRuleCollectionTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -137,7 +137,7 @@ export class FirewallNetworkRuleCollectionTimeoutsOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -361,12 +361,12 @@ export class FirewallNetworkRuleCollection extends cdktf.TerraformResource {
   }
 
   // rule - computed: false, optional: false, required: true
-  private _rule?: FirewallNetworkRuleCollectionRule[]; 
+  private _rule?: FirewallNetworkRuleCollectionRule[] | cdktf.IResolvable; 
   public get rule() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('rule') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('rule')));
   }
-  public set rule(value: FirewallNetworkRuleCollectionRule[]) {
+  public set rule(value: FirewallNetworkRuleCollectionRule[] | cdktf.IResolvable) {
     this._rule = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -375,7 +375,7 @@ export class FirewallNetworkRuleCollection extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new FirewallNetworkRuleCollectionTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new FirewallNetworkRuleCollectionTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

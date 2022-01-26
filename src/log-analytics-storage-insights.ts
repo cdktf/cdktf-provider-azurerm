@@ -34,7 +34,7 @@ export interface LogAnalyticsStorageInsightsConfig extends cdktf.TerraformMetaAr
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_storage_insights#tags LogAnalyticsStorageInsights#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_storage_insights#workspace_id LogAnalyticsStorageInsights#workspace_id}
   */
@@ -65,8 +65,8 @@ export interface LogAnalyticsStorageInsightsTimeouts {
   readonly update?: string;
 }
 
-export function logAnalyticsStorageInsightsTimeoutsToTerraform(struct?: LogAnalyticsStorageInsightsTimeoutsOutputReference | LogAnalyticsStorageInsightsTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function logAnalyticsStorageInsightsTimeoutsToTerraform(struct?: LogAnalyticsStorageInsightsTimeoutsOutputReference | LogAnalyticsStorageInsightsTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -86,7 +86,7 @@ export class LogAnalyticsStorageInsightsTimeoutsOutputReference extends cdktf.Co
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -244,7 +244,7 @@ export class LogAnalyticsStorageInsights extends cdktf.TerraformResource {
   // blob_container_names - computed: false, optional: true, required: false
   private _blobContainerNames?: string[]; 
   public get blobContainerNames() {
-    return this.getListAttribute('blob_container_names');
+    return cdktf.Fn.tolist(this.getListAttribute('blob_container_names'));
   }
   public set blobContainerNames(value: string[]) {
     this._blobContainerNames = value;
@@ -317,7 +317,7 @@ export class LogAnalyticsStorageInsights extends cdktf.TerraformResource {
   // table_names - computed: false, optional: true, required: false
   private _tableNames?: string[]; 
   public get tableNames() {
-    return this.getListAttribute('table_names');
+    return cdktf.Fn.tolist(this.getListAttribute('table_names'));
   }
   public set tableNames(value: string[]) {
     this._tableNames = value;
@@ -331,12 +331,11 @@ export class LogAnalyticsStorageInsights extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -361,7 +360,7 @@ export class LogAnalyticsStorageInsights extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new LogAnalyticsStorageInsightsTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new LogAnalyticsStorageInsightsTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -388,7 +387,7 @@ export class LogAnalyticsStorageInsights extends cdktf.TerraformResource {
       storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
       storage_account_key: cdktf.stringToTerraform(this._storageAccountKey),
       table_names: cdktf.listMapper(cdktf.stringToTerraform)(this._tableNames),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       workspace_id: cdktf.stringToTerraform(this._workspaceId),
       timeouts: logAnalyticsStorageInsightsTimeoutsToTerraform(this._timeouts.internalValue),
     };

@@ -110,7 +110,7 @@ export interface LinuxVirtualMachineScaleSetConfig extends cdktf.TerraformMetaAr
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#tags LinuxVirtualMachineScaleSet#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#upgrade_mode LinuxVirtualMachineScaleSet#upgrade_mode}
   */
@@ -142,7 +142,7 @@ export interface LinuxVirtualMachineScaleSetConfig extends cdktf.TerraformMetaAr
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#admin_ssh_key LinuxVirtualMachineScaleSet#admin_ssh_key}
   */
-  readonly adminSshKey?: LinuxVirtualMachineScaleSetAdminSshKey[];
+  readonly adminSshKey?: LinuxVirtualMachineScaleSetAdminSshKey[] | cdktf.IResolvable;
   /**
   * automatic_instance_repair block
   * 
@@ -166,13 +166,13 @@ export interface LinuxVirtualMachineScaleSetConfig extends cdktf.TerraformMetaAr
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#data_disk LinuxVirtualMachineScaleSet#data_disk}
   */
-  readonly dataDisk?: LinuxVirtualMachineScaleSetDataDisk[];
+  readonly dataDisk?: LinuxVirtualMachineScaleSetDataDisk[] | cdktf.IResolvable;
   /**
   * extension block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#extension LinuxVirtualMachineScaleSet#extension}
   */
-  readonly extension?: LinuxVirtualMachineScaleSetExtension[];
+  readonly extension?: LinuxVirtualMachineScaleSetExtension[] | cdktf.IResolvable;
   /**
   * identity block
   * 
@@ -184,7 +184,7 @@ export interface LinuxVirtualMachineScaleSetConfig extends cdktf.TerraformMetaAr
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#network_interface LinuxVirtualMachineScaleSet#network_interface}
   */
-  readonly networkInterface: LinuxVirtualMachineScaleSetNetworkInterface[];
+  readonly networkInterface: LinuxVirtualMachineScaleSetNetworkInterface[] | cdktf.IResolvable;
   /**
   * os_disk block
   * 
@@ -208,7 +208,7 @@ export interface LinuxVirtualMachineScaleSetConfig extends cdktf.TerraformMetaAr
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#secret LinuxVirtualMachineScaleSet#secret}
   */
-  readonly secret?: LinuxVirtualMachineScaleSetSecret[];
+  readonly secret?: LinuxVirtualMachineScaleSetSecret[] | cdktf.IResolvable;
   /**
   * source_image_reference block
   * 
@@ -236,7 +236,7 @@ export interface LinuxVirtualMachineScaleSetAdditionalCapabilities {
 }
 
 export function linuxVirtualMachineScaleSetAdditionalCapabilitiesToTerraform(struct?: LinuxVirtualMachineScaleSetAdditionalCapabilitiesOutputReference | LinuxVirtualMachineScaleSetAdditionalCapabilities): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -253,7 +253,7 @@ export class LinuxVirtualMachineScaleSetAdditionalCapabilitiesOutputReference ex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -281,7 +281,7 @@ export class LinuxVirtualMachineScaleSetAdditionalCapabilitiesOutputReference ex
   // ultra_ssd_enabled - computed: false, optional: true, required: false
   private _ultraSsdEnabled?: boolean | cdktf.IResolvable; 
   public get ultraSsdEnabled() {
-    return this.getBooleanAttribute('ultra_ssd_enabled') as any;
+    return this.getBooleanAttribute('ultra_ssd_enabled');
   }
   public set ultraSsdEnabled(value: boolean | cdktf.IResolvable) {
     this._ultraSsdEnabled = value;
@@ -305,8 +305,8 @@ export interface LinuxVirtualMachineScaleSetAdminSshKey {
   readonly username: string;
 }
 
-export function linuxVirtualMachineScaleSetAdminSshKeyToTerraform(struct?: LinuxVirtualMachineScaleSetAdminSshKey): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function linuxVirtualMachineScaleSetAdminSshKeyToTerraform(struct?: LinuxVirtualMachineScaleSetAdminSshKey | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -328,7 +328,7 @@ export interface LinuxVirtualMachineScaleSetAutomaticInstanceRepair {
 }
 
 export function linuxVirtualMachineScaleSetAutomaticInstanceRepairToTerraform(struct?: LinuxVirtualMachineScaleSetAutomaticInstanceRepairOutputReference | LinuxVirtualMachineScaleSetAutomaticInstanceRepair): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -346,7 +346,7 @@ export class LinuxVirtualMachineScaleSetAutomaticInstanceRepairOutputReference e
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -380,7 +380,7 @@ export class LinuxVirtualMachineScaleSetAutomaticInstanceRepairOutputReference e
   // enabled - computed: false, optional: false, required: true
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
@@ -418,7 +418,7 @@ export interface LinuxVirtualMachineScaleSetAutomaticOsUpgradePolicy {
 }
 
 export function linuxVirtualMachineScaleSetAutomaticOsUpgradePolicyToTerraform(struct?: LinuxVirtualMachineScaleSetAutomaticOsUpgradePolicyOutputReference | LinuxVirtualMachineScaleSetAutomaticOsUpgradePolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -436,7 +436,7 @@ export class LinuxVirtualMachineScaleSetAutomaticOsUpgradePolicyOutputReference 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -470,7 +470,7 @@ export class LinuxVirtualMachineScaleSetAutomaticOsUpgradePolicyOutputReference 
   // disable_automatic_rollback - computed: false, optional: false, required: true
   private _disableAutomaticRollback?: boolean | cdktf.IResolvable; 
   public get disableAutomaticRollback() {
-    return this.getBooleanAttribute('disable_automatic_rollback') as any;
+    return this.getBooleanAttribute('disable_automatic_rollback');
   }
   public set disableAutomaticRollback(value: boolean | cdktf.IResolvable) {
     this._disableAutomaticRollback = value;
@@ -483,7 +483,7 @@ export class LinuxVirtualMachineScaleSetAutomaticOsUpgradePolicyOutputReference 
   // enable_automatic_os_upgrade - computed: false, optional: false, required: true
   private _enableAutomaticOsUpgrade?: boolean | cdktf.IResolvable; 
   public get enableAutomaticOsUpgrade() {
-    return this.getBooleanAttribute('enable_automatic_os_upgrade') as any;
+    return this.getBooleanAttribute('enable_automatic_os_upgrade');
   }
   public set enableAutomaticOsUpgrade(value: boolean | cdktf.IResolvable) {
     this._enableAutomaticOsUpgrade = value;
@@ -501,7 +501,7 @@ export interface LinuxVirtualMachineScaleSetBootDiagnostics {
 }
 
 export function linuxVirtualMachineScaleSetBootDiagnosticsToTerraform(struct?: LinuxVirtualMachineScaleSetBootDiagnosticsOutputReference | LinuxVirtualMachineScaleSetBootDiagnostics): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -518,7 +518,7 @@ export class LinuxVirtualMachineScaleSetBootDiagnosticsOutputReference extends c
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -598,8 +598,8 @@ export interface LinuxVirtualMachineScaleSetDataDisk {
   readonly writeAcceleratorEnabled?: boolean | cdktf.IResolvable;
 }
 
-export function linuxVirtualMachineScaleSetDataDiskToTerraform(struct?: LinuxVirtualMachineScaleSetDataDisk): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function linuxVirtualMachineScaleSetDataDiskToTerraform(struct?: LinuxVirtualMachineScaleSetDataDisk | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -659,8 +659,8 @@ export interface LinuxVirtualMachineScaleSetExtension {
   readonly typeHandlerVersion: string;
 }
 
-export function linuxVirtualMachineScaleSetExtensionToTerraform(struct?: LinuxVirtualMachineScaleSetExtension): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function linuxVirtualMachineScaleSetExtensionToTerraform(struct?: LinuxVirtualMachineScaleSetExtension | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -690,7 +690,7 @@ export interface LinuxVirtualMachineScaleSetIdentity {
 }
 
 export function linuxVirtualMachineScaleSetIdentityToTerraform(struct?: LinuxVirtualMachineScaleSetIdentityOutputReference | LinuxVirtualMachineScaleSetIdentity): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -708,7 +708,7 @@ export class LinuxVirtualMachineScaleSetIdentityOutputReference extends cdktf.Co
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -742,7 +742,7 @@ export class LinuxVirtualMachineScaleSetIdentityOutputReference extends cdktf.Co
   // identity_ids - computed: false, optional: true, required: false
   private _identityIds?: string[]; 
   public get identityIds() {
-    return this.getListAttribute('identity_ids');
+    return cdktf.Fn.tolist(this.getListAttribute('identity_ids'));
   }
   public set identityIds(value: string[]) {
     this._identityIds = value;
@@ -753,6 +753,11 @@ export class LinuxVirtualMachineScaleSetIdentityOutputReference extends cdktf.Co
   // Temporarily expose input value. Use with caution.
   public get identityIdsInput() {
     return this._identityIds;
+  }
+
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
   }
 
   // type - computed: false, optional: false, required: true
@@ -779,8 +784,8 @@ export interface LinuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPubli
   readonly type: string;
 }
 
-export function linuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTagToTerraform(struct?: LinuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTag): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function linuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTagToTerraform(struct?: LinuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTag | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -812,11 +817,11 @@ export interface LinuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPubli
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#ip_tag LinuxVirtualMachineScaleSet#ip_tag}
   */
-  readonly ipTag?: LinuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTag[];
+  readonly ipTag?: LinuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTag[] | cdktf.IResolvable;
 }
 
-export function linuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressToTerraform(struct?: LinuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddress): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function linuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressToTerraform(struct?: LinuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddress | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -867,11 +872,11 @@ export interface LinuxVirtualMachineScaleSetNetworkInterfaceIpConfiguration {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#public_ip_address LinuxVirtualMachineScaleSet#public_ip_address}
   */
-  readonly publicIpAddress?: LinuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddress[];
+  readonly publicIpAddress?: LinuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddress[] | cdktf.IResolvable;
 }
 
-export function linuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationToTerraform(struct?: LinuxVirtualMachineScaleSetNetworkInterfaceIpConfiguration): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function linuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationToTerraform(struct?: LinuxVirtualMachineScaleSetNetworkInterfaceIpConfiguration | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -918,11 +923,11 @@ export interface LinuxVirtualMachineScaleSetNetworkInterface {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#ip_configuration LinuxVirtualMachineScaleSet#ip_configuration}
   */
-  readonly ipConfiguration: LinuxVirtualMachineScaleSetNetworkInterfaceIpConfiguration[];
+  readonly ipConfiguration: LinuxVirtualMachineScaleSetNetworkInterfaceIpConfiguration[] | cdktf.IResolvable;
 }
 
-export function linuxVirtualMachineScaleSetNetworkInterfaceToTerraform(struct?: LinuxVirtualMachineScaleSetNetworkInterface): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function linuxVirtualMachineScaleSetNetworkInterfaceToTerraform(struct?: LinuxVirtualMachineScaleSetNetworkInterface | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -945,7 +950,7 @@ export interface LinuxVirtualMachineScaleSetOsDiskDiffDiskSettings {
 }
 
 export function linuxVirtualMachineScaleSetOsDiskDiffDiskSettingsToTerraform(struct?: LinuxVirtualMachineScaleSetOsDiskDiffDiskSettingsOutputReference | LinuxVirtualMachineScaleSetOsDiskDiffDiskSettings): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -962,7 +967,7 @@ export class LinuxVirtualMachineScaleSetOsDiskDiffDiskSettingsOutputReference ex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1030,7 +1035,7 @@ export interface LinuxVirtualMachineScaleSetOsDisk {
 }
 
 export function linuxVirtualMachineScaleSetOsDiskToTerraform(struct?: LinuxVirtualMachineScaleSetOsDiskOutputReference | LinuxVirtualMachineScaleSetOsDisk): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1052,7 +1057,7 @@ export class LinuxVirtualMachineScaleSetOsDiskOutputReference extends cdktf.Comp
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1168,7 +1173,7 @@ export class LinuxVirtualMachineScaleSetOsDiskOutputReference extends cdktf.Comp
   // write_accelerator_enabled - computed: false, optional: true, required: false
   private _writeAcceleratorEnabled?: boolean | cdktf.IResolvable; 
   public get writeAcceleratorEnabled() {
-    return this.getBooleanAttribute('write_accelerator_enabled') as any;
+    return this.getBooleanAttribute('write_accelerator_enabled');
   }
   public set writeAcceleratorEnabled(value: boolean | cdktf.IResolvable) {
     this._writeAcceleratorEnabled = value;
@@ -1182,7 +1187,7 @@ export class LinuxVirtualMachineScaleSetOsDiskOutputReference extends cdktf.Comp
   }
 
   // diff_disk_settings - computed: false, optional: true, required: false
-  private _diffDiskSettings = new LinuxVirtualMachineScaleSetOsDiskDiffDiskSettingsOutputReference(this as any, "diff_disk_settings", true);
+  private _diffDiskSettings = new LinuxVirtualMachineScaleSetOsDiskDiffDiskSettingsOutputReference(this, "diff_disk_settings", true);
   public get diffDiskSettings() {
     return this._diffDiskSettings;
   }
@@ -1213,7 +1218,7 @@ export interface LinuxVirtualMachineScaleSetPlan {
 }
 
 export function linuxVirtualMachineScaleSetPlanToTerraform(struct?: LinuxVirtualMachineScaleSetPlanOutputReference | LinuxVirtualMachineScaleSetPlan): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1232,7 +1237,7 @@ export class LinuxVirtualMachineScaleSetPlanOutputReference extends cdktf.Comple
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1328,7 +1333,7 @@ export interface LinuxVirtualMachineScaleSetRollingUpgradePolicy {
 }
 
 export function linuxVirtualMachineScaleSetRollingUpgradePolicyToTerraform(struct?: LinuxVirtualMachineScaleSetRollingUpgradePolicyOutputReference | LinuxVirtualMachineScaleSetRollingUpgradePolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1348,7 +1353,7 @@ export class LinuxVirtualMachineScaleSetRollingUpgradePolicyOutputReference exte
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1450,8 +1455,8 @@ export interface LinuxVirtualMachineScaleSetSecretCertificate {
   readonly url: string;
 }
 
-export function linuxVirtualMachineScaleSetSecretCertificateToTerraform(struct?: LinuxVirtualMachineScaleSetSecretCertificate): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function linuxVirtualMachineScaleSetSecretCertificateToTerraform(struct?: LinuxVirtualMachineScaleSetSecretCertificate | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1470,11 +1475,11 @@ export interface LinuxVirtualMachineScaleSetSecret {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#certificate LinuxVirtualMachineScaleSet#certificate}
   */
-  readonly certificate: LinuxVirtualMachineScaleSetSecretCertificate[];
+  readonly certificate: LinuxVirtualMachineScaleSetSecretCertificate[] | cdktf.IResolvable;
 }
 
-export function linuxVirtualMachineScaleSetSecretToTerraform(struct?: LinuxVirtualMachineScaleSetSecret): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function linuxVirtualMachineScaleSetSecretToTerraform(struct?: LinuxVirtualMachineScaleSetSecret | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1504,7 +1509,7 @@ export interface LinuxVirtualMachineScaleSetSourceImageReference {
 }
 
 export function linuxVirtualMachineScaleSetSourceImageReferenceToTerraform(struct?: LinuxVirtualMachineScaleSetSourceImageReferenceOutputReference | LinuxVirtualMachineScaleSetSourceImageReference): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1524,7 +1529,7 @@ export class LinuxVirtualMachineScaleSetSourceImageReferenceOutputReference exte
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1631,7 +1636,7 @@ export interface LinuxVirtualMachineScaleSetTerminateNotification {
 }
 
 export function linuxVirtualMachineScaleSetTerminateNotificationToTerraform(struct?: LinuxVirtualMachineScaleSetTerminateNotificationOutputReference | LinuxVirtualMachineScaleSetTerminateNotification): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1649,7 +1654,7 @@ export class LinuxVirtualMachineScaleSetTerminateNotificationOutputReference ext
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1683,7 +1688,7 @@ export class LinuxVirtualMachineScaleSetTerminateNotificationOutputReference ext
   // enabled - computed: false, optional: false, required: true
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
@@ -1728,8 +1733,8 @@ export interface LinuxVirtualMachineScaleSetTimeouts {
   readonly update?: string;
 }
 
-export function linuxVirtualMachineScaleSetTimeoutsToTerraform(struct?: LinuxVirtualMachineScaleSetTimeoutsOutputReference | LinuxVirtualMachineScaleSetTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function linuxVirtualMachineScaleSetTimeoutsToTerraform(struct?: LinuxVirtualMachineScaleSetTimeoutsOutputReference | LinuxVirtualMachineScaleSetTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1749,7 +1754,7 @@ export class LinuxVirtualMachineScaleSetTimeoutsOutputReference extends cdktf.Co
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -2006,7 +2011,7 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   // disable_password_authentication - computed: false, optional: true, required: false
   private _disablePasswordAuthentication?: boolean | cdktf.IResolvable; 
   public get disablePasswordAuthentication() {
-    return this.getBooleanAttribute('disable_password_authentication') as any;
+    return this.getBooleanAttribute('disable_password_authentication');
   }
   public set disablePasswordAuthentication(value: boolean | cdktf.IResolvable) {
     this._disablePasswordAuthentication = value;
@@ -2022,7 +2027,7 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   // do_not_run_extensions_on_overprovisioned_machines - computed: false, optional: true, required: false
   private _doNotRunExtensionsOnOverprovisionedMachines?: boolean | cdktf.IResolvable; 
   public get doNotRunExtensionsOnOverprovisionedMachines() {
-    return this.getBooleanAttribute('do_not_run_extensions_on_overprovisioned_machines') as any;
+    return this.getBooleanAttribute('do_not_run_extensions_on_overprovisioned_machines');
   }
   public set doNotRunExtensionsOnOverprovisionedMachines(value: boolean | cdktf.IResolvable) {
     this._doNotRunExtensionsOnOverprovisionedMachines = value;
@@ -2038,7 +2043,7 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   // encryption_at_host_enabled - computed: false, optional: true, required: false
   private _encryptionAtHostEnabled?: boolean | cdktf.IResolvable; 
   public get encryptionAtHostEnabled() {
-    return this.getBooleanAttribute('encryption_at_host_enabled') as any;
+    return this.getBooleanAttribute('encryption_at_host_enabled');
   }
   public set encryptionAtHostEnabled(value: boolean | cdktf.IResolvable) {
     this._encryptionAtHostEnabled = value;
@@ -2162,7 +2167,7 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   // overprovision - computed: false, optional: true, required: false
   private _overprovision?: boolean | cdktf.IResolvable; 
   public get overprovision() {
-    return this.getBooleanAttribute('overprovision') as any;
+    return this.getBooleanAttribute('overprovision');
   }
   public set overprovision(value: boolean | cdktf.IResolvable) {
     this._overprovision = value;
@@ -2210,7 +2215,7 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   // provision_vm_agent - computed: false, optional: true, required: false
   private _provisionVmAgent?: boolean | cdktf.IResolvable; 
   public get provisionVmAgent() {
-    return this.getBooleanAttribute('provision_vm_agent') as any;
+    return this.getBooleanAttribute('provision_vm_agent');
   }
   public set provisionVmAgent(value: boolean | cdktf.IResolvable) {
     this._provisionVmAgent = value;
@@ -2271,7 +2276,7 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   // secure_boot_enabled - computed: false, optional: true, required: false
   private _secureBootEnabled?: boolean | cdktf.IResolvable; 
   public get secureBootEnabled() {
-    return this.getBooleanAttribute('secure_boot_enabled') as any;
+    return this.getBooleanAttribute('secure_boot_enabled');
   }
   public set secureBootEnabled(value: boolean | cdktf.IResolvable) {
     this._secureBootEnabled = value;
@@ -2287,7 +2292,7 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   // single_placement_group - computed: false, optional: true, required: false
   private _singlePlacementGroup?: boolean | cdktf.IResolvable; 
   public get singlePlacementGroup() {
-    return this.getBooleanAttribute('single_placement_group') as any;
+    return this.getBooleanAttribute('single_placement_group');
   }
   public set singlePlacementGroup(value: boolean | cdktf.IResolvable) {
     this._singlePlacementGroup = value;
@@ -2330,12 +2335,11 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -2386,7 +2390,7 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   // vtpm_enabled - computed: false, optional: true, required: false
   private _vtpmEnabled?: boolean | cdktf.IResolvable; 
   public get vtpmEnabled() {
-    return this.getBooleanAttribute('vtpm_enabled') as any;
+    return this.getBooleanAttribute('vtpm_enabled');
   }
   public set vtpmEnabled(value: boolean | cdktf.IResolvable) {
     this._vtpmEnabled = value;
@@ -2402,7 +2406,7 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   // zone_balance - computed: false, optional: true, required: false
   private _zoneBalance?: boolean | cdktf.IResolvable; 
   public get zoneBalance() {
-    return this.getBooleanAttribute('zone_balance') as any;
+    return this.getBooleanAttribute('zone_balance');
   }
   public set zoneBalance(value: boolean | cdktf.IResolvable) {
     this._zoneBalance = value;
@@ -2432,7 +2436,7 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
 
   // additional_capabilities - computed: false, optional: true, required: false
-  private _additionalCapabilities = new LinuxVirtualMachineScaleSetAdditionalCapabilitiesOutputReference(this as any, "additional_capabilities", true);
+  private _additionalCapabilities = new LinuxVirtualMachineScaleSetAdditionalCapabilitiesOutputReference(this, "additional_capabilities", true);
   public get additionalCapabilities() {
     return this._additionalCapabilities;
   }
@@ -2448,12 +2452,12 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
 
   // admin_ssh_key - computed: false, optional: true, required: false
-  private _adminSshKey?: LinuxVirtualMachineScaleSetAdminSshKey[]; 
+  private _adminSshKey?: LinuxVirtualMachineScaleSetAdminSshKey[] | cdktf.IResolvable; 
   public get adminSshKey() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('admin_ssh_key') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('admin_ssh_key')));
   }
-  public set adminSshKey(value: LinuxVirtualMachineScaleSetAdminSshKey[]) {
+  public set adminSshKey(value: LinuxVirtualMachineScaleSetAdminSshKey[] | cdktf.IResolvable) {
     this._adminSshKey = value;
   }
   public resetAdminSshKey() {
@@ -2465,7 +2469,7 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
 
   // automatic_instance_repair - computed: false, optional: true, required: false
-  private _automaticInstanceRepair = new LinuxVirtualMachineScaleSetAutomaticInstanceRepairOutputReference(this as any, "automatic_instance_repair", true);
+  private _automaticInstanceRepair = new LinuxVirtualMachineScaleSetAutomaticInstanceRepairOutputReference(this, "automatic_instance_repair", true);
   public get automaticInstanceRepair() {
     return this._automaticInstanceRepair;
   }
@@ -2481,7 +2485,7 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
 
   // automatic_os_upgrade_policy - computed: false, optional: true, required: false
-  private _automaticOsUpgradePolicy = new LinuxVirtualMachineScaleSetAutomaticOsUpgradePolicyOutputReference(this as any, "automatic_os_upgrade_policy", true);
+  private _automaticOsUpgradePolicy = new LinuxVirtualMachineScaleSetAutomaticOsUpgradePolicyOutputReference(this, "automatic_os_upgrade_policy", true);
   public get automaticOsUpgradePolicy() {
     return this._automaticOsUpgradePolicy;
   }
@@ -2497,7 +2501,7 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
 
   // boot_diagnostics - computed: false, optional: true, required: false
-  private _bootDiagnostics = new LinuxVirtualMachineScaleSetBootDiagnosticsOutputReference(this as any, "boot_diagnostics", true);
+  private _bootDiagnostics = new LinuxVirtualMachineScaleSetBootDiagnosticsOutputReference(this, "boot_diagnostics", true);
   public get bootDiagnostics() {
     return this._bootDiagnostics;
   }
@@ -2513,12 +2517,12 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
 
   // data_disk - computed: false, optional: true, required: false
-  private _dataDisk?: LinuxVirtualMachineScaleSetDataDisk[]; 
+  private _dataDisk?: LinuxVirtualMachineScaleSetDataDisk[] | cdktf.IResolvable; 
   public get dataDisk() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('data_disk') as any;
+    return this.interpolationForAttribute('data_disk');
   }
-  public set dataDisk(value: LinuxVirtualMachineScaleSetDataDisk[]) {
+  public set dataDisk(value: LinuxVirtualMachineScaleSetDataDisk[] | cdktf.IResolvable) {
     this._dataDisk = value;
   }
   public resetDataDisk() {
@@ -2530,12 +2534,12 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
 
   // extension - computed: false, optional: true, required: false
-  private _extension?: LinuxVirtualMachineScaleSetExtension[]; 
+  private _extension?: LinuxVirtualMachineScaleSetExtension[] | cdktf.IResolvable; 
   public get extension() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('extension') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('extension')));
   }
-  public set extension(value: LinuxVirtualMachineScaleSetExtension[]) {
+  public set extension(value: LinuxVirtualMachineScaleSetExtension[] | cdktf.IResolvable) {
     this._extension = value;
   }
   public resetExtension() {
@@ -2547,7 +2551,7 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity = new LinuxVirtualMachineScaleSetIdentityOutputReference(this as any, "identity", true);
+  private _identity = new LinuxVirtualMachineScaleSetIdentityOutputReference(this, "identity", true);
   public get identity() {
     return this._identity;
   }
@@ -2563,12 +2567,12 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
 
   // network_interface - computed: false, optional: false, required: true
-  private _networkInterface?: LinuxVirtualMachineScaleSetNetworkInterface[]; 
+  private _networkInterface?: LinuxVirtualMachineScaleSetNetworkInterface[] | cdktf.IResolvable; 
   public get networkInterface() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('network_interface') as any;
+    return this.interpolationForAttribute('network_interface');
   }
-  public set networkInterface(value: LinuxVirtualMachineScaleSetNetworkInterface[]) {
+  public set networkInterface(value: LinuxVirtualMachineScaleSetNetworkInterface[] | cdktf.IResolvable) {
     this._networkInterface = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -2577,7 +2581,7 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
 
   // os_disk - computed: false, optional: false, required: true
-  private _osDisk = new LinuxVirtualMachineScaleSetOsDiskOutputReference(this as any, "os_disk", true);
+  private _osDisk = new LinuxVirtualMachineScaleSetOsDiskOutputReference(this, "os_disk", true);
   public get osDisk() {
     return this._osDisk;
   }
@@ -2590,7 +2594,7 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
 
   // plan - computed: false, optional: true, required: false
-  private _plan = new LinuxVirtualMachineScaleSetPlanOutputReference(this as any, "plan", true);
+  private _plan = new LinuxVirtualMachineScaleSetPlanOutputReference(this, "plan", true);
   public get plan() {
     return this._plan;
   }
@@ -2606,7 +2610,7 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
 
   // rolling_upgrade_policy - computed: false, optional: true, required: false
-  private _rollingUpgradePolicy = new LinuxVirtualMachineScaleSetRollingUpgradePolicyOutputReference(this as any, "rolling_upgrade_policy", true);
+  private _rollingUpgradePolicy = new LinuxVirtualMachineScaleSetRollingUpgradePolicyOutputReference(this, "rolling_upgrade_policy", true);
   public get rollingUpgradePolicy() {
     return this._rollingUpgradePolicy;
   }
@@ -2622,12 +2626,12 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
 
   // secret - computed: false, optional: true, required: false
-  private _secret?: LinuxVirtualMachineScaleSetSecret[]; 
+  private _secret?: LinuxVirtualMachineScaleSetSecret[] | cdktf.IResolvable; 
   public get secret() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('secret') as any;
+    return this.interpolationForAttribute('secret');
   }
-  public set secret(value: LinuxVirtualMachineScaleSetSecret[]) {
+  public set secret(value: LinuxVirtualMachineScaleSetSecret[] | cdktf.IResolvable) {
     this._secret = value;
   }
   public resetSecret() {
@@ -2639,7 +2643,7 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
 
   // source_image_reference - computed: false, optional: true, required: false
-  private _sourceImageReference = new LinuxVirtualMachineScaleSetSourceImageReferenceOutputReference(this as any, "source_image_reference", true);
+  private _sourceImageReference = new LinuxVirtualMachineScaleSetSourceImageReferenceOutputReference(this, "source_image_reference", true);
   public get sourceImageReference() {
     return this._sourceImageReference;
   }
@@ -2655,7 +2659,7 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
 
   // terminate_notification - computed: false, optional: true, required: false
-  private _terminateNotification = new LinuxVirtualMachineScaleSetTerminateNotificationOutputReference(this as any, "terminate_notification", true);
+  private _terminateNotification = new LinuxVirtualMachineScaleSetTerminateNotificationOutputReference(this, "terminate_notification", true);
   public get terminateNotification() {
     return this._terminateNotification;
   }
@@ -2671,7 +2675,7 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new LinuxVirtualMachineScaleSetTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new LinuxVirtualMachineScaleSetTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -2717,7 +2721,7 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
       single_placement_group: cdktf.booleanToTerraform(this._singlePlacementGroup),
       sku: cdktf.stringToTerraform(this._sku),
       source_image_id: cdktf.stringToTerraform(this._sourceImageId),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       upgrade_mode: cdktf.stringToTerraform(this._upgradeMode),
       user_data: cdktf.stringToTerraform(this._userData),
       vtpm_enabled: cdktf.booleanToTerraform(this._vtpmEnabled),

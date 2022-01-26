@@ -43,8 +43,8 @@ export interface VirtualMachineConfigurationPolicyAssignmentConfigurationParamet
   readonly value: string;
 }
 
-export function virtualMachineConfigurationPolicyAssignmentConfigurationParameterToTerraform(struct?: VirtualMachineConfigurationPolicyAssignmentConfigurationParameter): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function virtualMachineConfigurationPolicyAssignmentConfigurationParameterToTerraform(struct?: VirtualMachineConfigurationPolicyAssignmentConfigurationParameter | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -68,11 +68,11 @@ export interface VirtualMachineConfigurationPolicyAssignmentConfiguration {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_configuration_policy_assignment#parameter VirtualMachineConfigurationPolicyAssignment#parameter}
   */
-  readonly parameter?: VirtualMachineConfigurationPolicyAssignmentConfigurationParameter[];
+  readonly parameter?: VirtualMachineConfigurationPolicyAssignmentConfigurationParameter[] | cdktf.IResolvable;
 }
 
 export function virtualMachineConfigurationPolicyAssignmentConfigurationToTerraform(struct?: VirtualMachineConfigurationPolicyAssignmentConfigurationOutputReference | VirtualMachineConfigurationPolicyAssignmentConfiguration): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -91,7 +91,7 @@ export class VirtualMachineConfigurationPolicyAssignmentConfigurationOutputRefer
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -158,12 +158,12 @@ export class VirtualMachineConfigurationPolicyAssignmentConfigurationOutputRefer
   }
 
   // parameter - computed: false, optional: true, required: false
-  private _parameter?: VirtualMachineConfigurationPolicyAssignmentConfigurationParameter[]; 
+  private _parameter?: VirtualMachineConfigurationPolicyAssignmentConfigurationParameter[] | cdktf.IResolvable; 
   public get parameter() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('parameter') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('parameter')));
   }
-  public set parameter(value: VirtualMachineConfigurationPolicyAssignmentConfigurationParameter[]) {
+  public set parameter(value: VirtualMachineConfigurationPolicyAssignmentConfigurationParameter[] | cdktf.IResolvable) {
     this._parameter = value;
   }
   public resetParameter() {
@@ -193,8 +193,8 @@ export interface VirtualMachineConfigurationPolicyAssignmentTimeouts {
   readonly update?: string;
 }
 
-export function virtualMachineConfigurationPolicyAssignmentTimeoutsToTerraform(struct?: VirtualMachineConfigurationPolicyAssignmentTimeoutsOutputReference | VirtualMachineConfigurationPolicyAssignmentTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function virtualMachineConfigurationPolicyAssignmentTimeoutsToTerraform(struct?: VirtualMachineConfigurationPolicyAssignmentTimeoutsOutputReference | VirtualMachineConfigurationPolicyAssignmentTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -214,7 +214,7 @@ export class VirtualMachineConfigurationPolicyAssignmentTimeoutsOutputReference 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -410,7 +410,7 @@ export class VirtualMachineConfigurationPolicyAssignment extends cdktf.Terraform
   }
 
   // configuration - computed: false, optional: false, required: true
-  private _configuration = new VirtualMachineConfigurationPolicyAssignmentConfigurationOutputReference(this as any, "configuration", true);
+  private _configuration = new VirtualMachineConfigurationPolicyAssignmentConfigurationOutputReference(this, "configuration", true);
   public get configuration() {
     return this._configuration;
   }
@@ -423,7 +423,7 @@ export class VirtualMachineConfigurationPolicyAssignment extends cdktf.Terraform
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new VirtualMachineConfigurationPolicyAssignmentTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new VirtualMachineConfigurationPolicyAssignmentTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

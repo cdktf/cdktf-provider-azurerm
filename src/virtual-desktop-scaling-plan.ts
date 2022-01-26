@@ -34,7 +34,7 @@ export interface VirtualDesktopScalingPlanConfig extends cdktf.TerraformMetaArgu
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_scaling_plan#tags VirtualDesktopScalingPlan#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_scaling_plan#time_zone VirtualDesktopScalingPlan#time_zone}
   */
@@ -44,13 +44,13 @@ export interface VirtualDesktopScalingPlanConfig extends cdktf.TerraformMetaArgu
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_scaling_plan#host_pool VirtualDesktopScalingPlan#host_pool}
   */
-  readonly hostPool?: VirtualDesktopScalingPlanHostPool[];
+  readonly hostPool?: VirtualDesktopScalingPlanHostPool[] | cdktf.IResolvable;
   /**
   * schedule block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_scaling_plan#schedule VirtualDesktopScalingPlan#schedule}
   */
-  readonly schedule: VirtualDesktopScalingPlanSchedule[];
+  readonly schedule: VirtualDesktopScalingPlanSchedule[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -69,8 +69,8 @@ export interface VirtualDesktopScalingPlanHostPool {
   readonly scalingPlanEnabled: boolean | cdktf.IResolvable;
 }
 
-export function virtualDesktopScalingPlanHostPoolToTerraform(struct?: VirtualDesktopScalingPlanHostPool): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function virtualDesktopScalingPlanHostPoolToTerraform(struct?: VirtualDesktopScalingPlanHostPool | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -155,8 +155,8 @@ export interface VirtualDesktopScalingPlanSchedule {
   readonly rampUpStartTime: string;
 }
 
-export function virtualDesktopScalingPlanScheduleToTerraform(struct?: VirtualDesktopScalingPlanSchedule): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function virtualDesktopScalingPlanScheduleToTerraform(struct?: VirtualDesktopScalingPlanSchedule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -201,8 +201,8 @@ export interface VirtualDesktopScalingPlanTimeouts {
   readonly update?: string;
 }
 
-export function virtualDesktopScalingPlanTimeoutsToTerraform(struct?: VirtualDesktopScalingPlanTimeoutsOutputReference | VirtualDesktopScalingPlanTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function virtualDesktopScalingPlanTimeoutsToTerraform(struct?: VirtualDesktopScalingPlanTimeoutsOutputReference | VirtualDesktopScalingPlanTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -222,7 +222,7 @@ export class VirtualDesktopScalingPlanTimeoutsOutputReference extends cdktf.Comp
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -472,12 +472,11 @@ export class VirtualDesktopScalingPlan extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -502,12 +501,12 @@ export class VirtualDesktopScalingPlan extends cdktf.TerraformResource {
   }
 
   // host_pool - computed: false, optional: true, required: false
-  private _hostPool?: VirtualDesktopScalingPlanHostPool[]; 
+  private _hostPool?: VirtualDesktopScalingPlanHostPool[] | cdktf.IResolvable; 
   public get hostPool() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('host_pool') as any;
+    return this.interpolationForAttribute('host_pool');
   }
-  public set hostPool(value: VirtualDesktopScalingPlanHostPool[]) {
+  public set hostPool(value: VirtualDesktopScalingPlanHostPool[] | cdktf.IResolvable) {
     this._hostPool = value;
   }
   public resetHostPool() {
@@ -519,12 +518,12 @@ export class VirtualDesktopScalingPlan extends cdktf.TerraformResource {
   }
 
   // schedule - computed: false, optional: false, required: true
-  private _schedule?: VirtualDesktopScalingPlanSchedule[]; 
+  private _schedule?: VirtualDesktopScalingPlanSchedule[] | cdktf.IResolvable; 
   public get schedule() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('schedule') as any;
+    return this.interpolationForAttribute('schedule');
   }
-  public set schedule(value: VirtualDesktopScalingPlanSchedule[]) {
+  public set schedule(value: VirtualDesktopScalingPlanSchedule[] | cdktf.IResolvable) {
     this._schedule = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -533,7 +532,7 @@ export class VirtualDesktopScalingPlan extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new VirtualDesktopScalingPlanTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new VirtualDesktopScalingPlanTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -560,7 +559,7 @@ export class VirtualDesktopScalingPlan extends cdktf.TerraformResource {
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       time_zone: cdktf.stringToTerraform(this._timeZone),
       host_pool: cdktf.listMapper(virtualDesktopScalingPlanHostPoolToTerraform)(this._hostPool),
       schedule: cdktf.listMapper(virtualDesktopScalingPlanScheduleToTerraform)(this._schedule),

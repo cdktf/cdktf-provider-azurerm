@@ -18,7 +18,7 @@ export interface DataAzurermTrafficManagerProfileConfig extends cdktf.TerraformM
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/traffic_manager_profile#tags DataAzurermTrafficManagerProfile#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/traffic_manager_profile#traffic_view_enabled DataAzurermTrafficManagerProfile#traffic_view_enabled}
   */
@@ -59,7 +59,7 @@ export class DataAzurermTrafficManagerProfileMonitorConfig extends cdktf.Complex
   // custom_header - computed: true, optional: false, required: false
   public get customHeader() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('custom_header') as any;
+    return this.interpolationForAttribute('custom_header');
   }
 
   // expected_status_code_ranges - computed: true, optional: false, required: false
@@ -104,8 +104,8 @@ export interface DataAzurermTrafficManagerProfileTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermTrafficManagerProfileTimeoutsToTerraform(struct?: DataAzurermTrafficManagerProfileTimeoutsOutputReference | DataAzurermTrafficManagerProfileTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermTrafficManagerProfileTimeoutsToTerraform(struct?: DataAzurermTrafficManagerProfileTimeoutsOutputReference | DataAzurermTrafficManagerProfileTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -122,7 +122,7 @@ export class DataAzurermTrafficManagerProfileTimeoutsOutputReference extends cdk
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -209,7 +209,7 @@ export class DataAzurermTrafficManagerProfile extends cdktf.TerraformDataSource 
 
   // dns_config - computed: true, optional: false, required: false
   public dnsConfig(index: string) {
-    return new DataAzurermTrafficManagerProfileDnsConfig(this, 'dns_config', index);
+    return new DataAzurermTrafficManagerProfileDnsConfig(this, 'dns_config', index, false);
   }
 
   // fqdn - computed: true, optional: false, required: false
@@ -224,7 +224,7 @@ export class DataAzurermTrafficManagerProfile extends cdktf.TerraformDataSource 
 
   // monitor_config - computed: true, optional: false, required: false
   public monitorConfig(index: string) {
-    return new DataAzurermTrafficManagerProfileMonitorConfig(this, 'monitor_config', index);
+    return new DataAzurermTrafficManagerProfileMonitorConfig(this, 'monitor_config', index, false);
   }
 
   // name - computed: false, optional: false, required: true
@@ -259,12 +259,11 @@ export class DataAzurermTrafficManagerProfile extends cdktf.TerraformDataSource 
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -283,7 +282,7 @@ export class DataAzurermTrafficManagerProfile extends cdktf.TerraformDataSource 
   // traffic_view_enabled - computed: false, optional: true, required: false
   private _trafficViewEnabled?: boolean | cdktf.IResolvable; 
   public get trafficViewEnabled() {
-    return this.getBooleanAttribute('traffic_view_enabled') as any;
+    return this.getBooleanAttribute('traffic_view_enabled');
   }
   public set trafficViewEnabled(value: boolean | cdktf.IResolvable) {
     this._trafficViewEnabled = value;
@@ -297,7 +296,7 @@ export class DataAzurermTrafficManagerProfile extends cdktf.TerraformDataSource 
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermTrafficManagerProfileTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermTrafficManagerProfileTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -320,7 +319,7 @@ export class DataAzurermTrafficManagerProfile extends cdktf.TerraformDataSource 
     return {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       traffic_view_enabled: cdktf.booleanToTerraform(this._trafficViewEnabled),
       timeouts: dataAzurermTrafficManagerProfileTimeoutsToTerraform(this._timeouts.internalValue),
     };

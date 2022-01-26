@@ -58,7 +58,7 @@ export interface MediaStreamingEndpointConfig extends cdktf.TerraformMetaArgumen
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint#tags MediaStreamingEndpoint#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * access_control block
   * 
@@ -93,8 +93,8 @@ export interface MediaStreamingEndpointAccessControlAkamaiSignatureHeaderAuthent
   readonly identifier?: string;
 }
 
-export function mediaStreamingEndpointAccessControlAkamaiSignatureHeaderAuthenticationKeyToTerraform(struct?: MediaStreamingEndpointAccessControlAkamaiSignatureHeaderAuthenticationKey): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function mediaStreamingEndpointAccessControlAkamaiSignatureHeaderAuthenticationKeyToTerraform(struct?: MediaStreamingEndpointAccessControlAkamaiSignatureHeaderAuthenticationKey | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -120,8 +120,8 @@ export interface MediaStreamingEndpointAccessControlIpAllow {
   readonly subnetPrefixLength?: number;
 }
 
-export function mediaStreamingEndpointAccessControlIpAllowToTerraform(struct?: MediaStreamingEndpointAccessControlIpAllow): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function mediaStreamingEndpointAccessControlIpAllowToTerraform(struct?: MediaStreamingEndpointAccessControlIpAllow | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -138,17 +138,17 @@ export interface MediaStreamingEndpointAccessControl {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint#akamai_signature_header_authentication_key MediaStreamingEndpoint#akamai_signature_header_authentication_key}
   */
-  readonly akamaiSignatureHeaderAuthenticationKey?: MediaStreamingEndpointAccessControlAkamaiSignatureHeaderAuthenticationKey[];
+  readonly akamaiSignatureHeaderAuthenticationKey?: MediaStreamingEndpointAccessControlAkamaiSignatureHeaderAuthenticationKey[] | cdktf.IResolvable;
   /**
   * ip_allow block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint#ip_allow MediaStreamingEndpoint#ip_allow}
   */
-  readonly ipAllow?: MediaStreamingEndpointAccessControlIpAllow[];
+  readonly ipAllow?: MediaStreamingEndpointAccessControlIpAllow[] | cdktf.IResolvable;
 }
 
 export function mediaStreamingEndpointAccessControlToTerraform(struct?: MediaStreamingEndpointAccessControlOutputReference | MediaStreamingEndpointAccessControl): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -166,7 +166,7 @@ export class MediaStreamingEndpointAccessControlOutputReference extends cdktf.Co
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -198,12 +198,12 @@ export class MediaStreamingEndpointAccessControlOutputReference extends cdktf.Co
   }
 
   // akamai_signature_header_authentication_key - computed: false, optional: true, required: false
-  private _akamaiSignatureHeaderAuthenticationKey?: MediaStreamingEndpointAccessControlAkamaiSignatureHeaderAuthenticationKey[]; 
+  private _akamaiSignatureHeaderAuthenticationKey?: MediaStreamingEndpointAccessControlAkamaiSignatureHeaderAuthenticationKey[] | cdktf.IResolvable; 
   public get akamaiSignatureHeaderAuthenticationKey() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('akamai_signature_header_authentication_key') as any;
+    return this.interpolationForAttribute('akamai_signature_header_authentication_key');
   }
-  public set akamaiSignatureHeaderAuthenticationKey(value: MediaStreamingEndpointAccessControlAkamaiSignatureHeaderAuthenticationKey[]) {
+  public set akamaiSignatureHeaderAuthenticationKey(value: MediaStreamingEndpointAccessControlAkamaiSignatureHeaderAuthenticationKey[] | cdktf.IResolvable) {
     this._akamaiSignatureHeaderAuthenticationKey = value;
   }
   public resetAkamaiSignatureHeaderAuthenticationKey() {
@@ -215,12 +215,12 @@ export class MediaStreamingEndpointAccessControlOutputReference extends cdktf.Co
   }
 
   // ip_allow - computed: false, optional: true, required: false
-  private _ipAllow?: MediaStreamingEndpointAccessControlIpAllow[]; 
+  private _ipAllow?: MediaStreamingEndpointAccessControlIpAllow[] | cdktf.IResolvable; 
   public get ipAllow() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('ip_allow') as any;
+    return this.interpolationForAttribute('ip_allow');
   }
-  public set ipAllow(value: MediaStreamingEndpointAccessControlIpAllow[]) {
+  public set ipAllow(value: MediaStreamingEndpointAccessControlIpAllow[] | cdktf.IResolvable) {
     this._ipAllow = value;
   }
   public resetIpAllow() {
@@ -243,7 +243,7 @@ export interface MediaStreamingEndpointCrossSiteAccessPolicy {
 }
 
 export function mediaStreamingEndpointCrossSiteAccessPolicyToTerraform(struct?: MediaStreamingEndpointCrossSiteAccessPolicyOutputReference | MediaStreamingEndpointCrossSiteAccessPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -261,7 +261,7 @@ export class MediaStreamingEndpointCrossSiteAccessPolicyOutputReference extends 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -343,8 +343,8 @@ export interface MediaStreamingEndpointTimeouts {
   readonly update?: string;
 }
 
-export function mediaStreamingEndpointTimeoutsToTerraform(struct?: MediaStreamingEndpointTimeoutsOutputReference | MediaStreamingEndpointTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function mediaStreamingEndpointTimeoutsToTerraform(struct?: MediaStreamingEndpointTimeoutsOutputReference | MediaStreamingEndpointTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -364,7 +364,7 @@ export class MediaStreamingEndpointTimeoutsOutputReference extends cdktf.Complex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -529,7 +529,7 @@ export class MediaStreamingEndpoint extends cdktf.TerraformResource {
   // auto_start_enabled - computed: true, optional: true, required: false
   private _autoStartEnabled?: boolean | cdktf.IResolvable; 
   public get autoStartEnabled() {
-    return this.getBooleanAttribute('auto_start_enabled') as any;
+    return this.getBooleanAttribute('auto_start_enabled');
   }
   public set autoStartEnabled(value: boolean | cdktf.IResolvable) {
     this._autoStartEnabled = value;
@@ -545,7 +545,7 @@ export class MediaStreamingEndpoint extends cdktf.TerraformResource {
   // cdn_enabled - computed: false, optional: true, required: false
   private _cdnEnabled?: boolean | cdktf.IResolvable; 
   public get cdnEnabled() {
-    return this.getBooleanAttribute('cdn_enabled') as any;
+    return this.getBooleanAttribute('cdn_enabled');
   }
   public set cdnEnabled(value: boolean | cdktf.IResolvable) {
     this._cdnEnabled = value;
@@ -593,7 +593,7 @@ export class MediaStreamingEndpoint extends cdktf.TerraformResource {
   // custom_host_names - computed: false, optional: true, required: false
   private _customHostNames?: string[]; 
   public get customHostNames() {
-    return this.getListAttribute('custom_host_names');
+    return cdktf.Fn.tolist(this.getListAttribute('custom_host_names'));
   }
   public set customHostNames(value: string[]) {
     this._customHostNames = value;
@@ -714,12 +714,11 @@ export class MediaStreamingEndpoint extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -731,7 +730,7 @@ export class MediaStreamingEndpoint extends cdktf.TerraformResource {
   }
 
   // access_control - computed: false, optional: true, required: false
-  private _accessControl = new MediaStreamingEndpointAccessControlOutputReference(this as any, "access_control", true);
+  private _accessControl = new MediaStreamingEndpointAccessControlOutputReference(this, "access_control", true);
   public get accessControl() {
     return this._accessControl;
   }
@@ -747,7 +746,7 @@ export class MediaStreamingEndpoint extends cdktf.TerraformResource {
   }
 
   // cross_site_access_policy - computed: false, optional: true, required: false
-  private _crossSiteAccessPolicy = new MediaStreamingEndpointCrossSiteAccessPolicyOutputReference(this as any, "cross_site_access_policy", true);
+  private _crossSiteAccessPolicy = new MediaStreamingEndpointCrossSiteAccessPolicyOutputReference(this, "cross_site_access_policy", true);
   public get crossSiteAccessPolicy() {
     return this._crossSiteAccessPolicy;
   }
@@ -763,7 +762,7 @@ export class MediaStreamingEndpoint extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new MediaStreamingEndpointTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new MediaStreamingEndpointTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -796,7 +795,7 @@ export class MediaStreamingEndpoint extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       scale_units: cdktf.numberToTerraform(this._scaleUnits),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       access_control: mediaStreamingEndpointAccessControlToTerraform(this._accessControl.internalValue),
       cross_site_access_policy: mediaStreamingEndpointCrossSiteAccessPolicyToTerraform(this._crossSiteAccessPolicy.internalValue),
       timeouts: mediaStreamingEndpointTimeoutsToTerraform(this._timeouts.internalValue),

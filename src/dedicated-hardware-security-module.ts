@@ -30,7 +30,7 @@ export interface DedicatedHardwareSecurityModuleConfig extends cdktf.TerraformMe
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dedicated_hardware_security_module#tags DedicatedHardwareSecurityModule#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dedicated_hardware_security_module#zones DedicatedHardwareSecurityModule#zones}
   */
@@ -60,7 +60,7 @@ export interface DedicatedHardwareSecurityModuleNetworkProfile {
 }
 
 export function dedicatedHardwareSecurityModuleNetworkProfileToTerraform(struct?: DedicatedHardwareSecurityModuleNetworkProfileOutputReference | DedicatedHardwareSecurityModuleNetworkProfile): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -78,7 +78,7 @@ export class DedicatedHardwareSecurityModuleNetworkProfileOutputReference extend
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -112,7 +112,7 @@ export class DedicatedHardwareSecurityModuleNetworkProfileOutputReference extend
   // network_interface_private_ip_addresses - computed: false, optional: false, required: true
   private _networkInterfacePrivateIpAddresses?: string[]; 
   public get networkInterfacePrivateIpAddresses() {
-    return this.getListAttribute('network_interface_private_ip_addresses');
+    return cdktf.Fn.tolist(this.getListAttribute('network_interface_private_ip_addresses'));
   }
   public set networkInterfacePrivateIpAddresses(value: string[]) {
     this._networkInterfacePrivateIpAddresses = value;
@@ -154,8 +154,8 @@ export interface DedicatedHardwareSecurityModuleTimeouts {
   readonly update?: string;
 }
 
-export function dedicatedHardwareSecurityModuleTimeoutsToTerraform(struct?: DedicatedHardwareSecurityModuleTimeoutsOutputReference | DedicatedHardwareSecurityModuleTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dedicatedHardwareSecurityModuleTimeoutsToTerraform(struct?: DedicatedHardwareSecurityModuleTimeoutsOutputReference | DedicatedHardwareSecurityModuleTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -175,7 +175,7 @@ export class DedicatedHardwareSecurityModuleTimeoutsOutputReference extends cdkt
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -404,12 +404,11 @@ export class DedicatedHardwareSecurityModule extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -437,7 +436,7 @@ export class DedicatedHardwareSecurityModule extends cdktf.TerraformResource {
   }
 
   // network_profile - computed: false, optional: false, required: true
-  private _networkProfile = new DedicatedHardwareSecurityModuleNetworkProfileOutputReference(this as any, "network_profile", true);
+  private _networkProfile = new DedicatedHardwareSecurityModuleNetworkProfileOutputReference(this, "network_profile", true);
   public get networkProfile() {
     return this._networkProfile;
   }
@@ -450,7 +449,7 @@ export class DedicatedHardwareSecurityModule extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DedicatedHardwareSecurityModuleTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DedicatedHardwareSecurityModuleTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -476,7 +475,7 @@ export class DedicatedHardwareSecurityModule extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku_name: cdktf.stringToTerraform(this._skuName),
       stamp_id: cdktf.stringToTerraform(this._stampId),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),
       network_profile: dedicatedHardwareSecurityModuleNetworkProfileToTerraform(this._networkProfile.internalValue),
       timeouts: dedicatedHardwareSecurityModuleTimeoutsToTerraform(this._timeouts.internalValue),

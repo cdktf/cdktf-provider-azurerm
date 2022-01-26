@@ -38,19 +38,19 @@ export interface FrontdoorFirewallPolicyConfig extends cdktf.TerraformMetaArgume
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#tags FrontdoorFirewallPolicy#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * custom_rule block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#custom_rule FrontdoorFirewallPolicy#custom_rule}
   */
-  readonly customRule?: FrontdoorFirewallPolicyCustomRule[];
+  readonly customRule?: FrontdoorFirewallPolicyCustomRule[] | cdktf.IResolvable;
   /**
   * managed_rule block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#managed_rule FrontdoorFirewallPolicy#managed_rule}
   */
-  readonly managedRule?: FrontdoorFirewallPolicyManagedRule[];
+  readonly managedRule?: FrontdoorFirewallPolicyManagedRule[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -85,8 +85,8 @@ export interface FrontdoorFirewallPolicyCustomRuleMatchCondition {
   readonly transforms?: string[];
 }
 
-export function frontdoorFirewallPolicyCustomRuleMatchConditionToTerraform(struct?: FrontdoorFirewallPolicyCustomRuleMatchCondition): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function frontdoorFirewallPolicyCustomRuleMatchConditionToTerraform(struct?: FrontdoorFirewallPolicyCustomRuleMatchCondition | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -134,11 +134,11 @@ export interface FrontdoorFirewallPolicyCustomRule {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#match_condition FrontdoorFirewallPolicy#match_condition}
   */
-  readonly matchCondition?: FrontdoorFirewallPolicyCustomRuleMatchCondition[];
+  readonly matchCondition?: FrontdoorFirewallPolicyCustomRuleMatchCondition[] | cdktf.IResolvable;
 }
 
-export function frontdoorFirewallPolicyCustomRuleToTerraform(struct?: FrontdoorFirewallPolicyCustomRule): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function frontdoorFirewallPolicyCustomRuleToTerraform(struct?: FrontdoorFirewallPolicyCustomRule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -169,8 +169,8 @@ export interface FrontdoorFirewallPolicyManagedRuleExclusion {
   readonly selector: string;
 }
 
-export function frontdoorFirewallPolicyManagedRuleExclusionToTerraform(struct?: FrontdoorFirewallPolicyManagedRuleExclusion): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function frontdoorFirewallPolicyManagedRuleExclusionToTerraform(struct?: FrontdoorFirewallPolicyManagedRuleExclusion | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -196,8 +196,8 @@ export interface FrontdoorFirewallPolicyManagedRuleOverrideExclusion {
   readonly selector: string;
 }
 
-export function frontdoorFirewallPolicyManagedRuleOverrideExclusionToTerraform(struct?: FrontdoorFirewallPolicyManagedRuleOverrideExclusion): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function frontdoorFirewallPolicyManagedRuleOverrideExclusionToTerraform(struct?: FrontdoorFirewallPolicyManagedRuleOverrideExclusion | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -223,8 +223,8 @@ export interface FrontdoorFirewallPolicyManagedRuleOverrideRuleExclusion {
   readonly selector: string;
 }
 
-export function frontdoorFirewallPolicyManagedRuleOverrideRuleExclusionToTerraform(struct?: FrontdoorFirewallPolicyManagedRuleOverrideRuleExclusion): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function frontdoorFirewallPolicyManagedRuleOverrideRuleExclusionToTerraform(struct?: FrontdoorFirewallPolicyManagedRuleOverrideRuleExclusion | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -253,11 +253,11 @@ export interface FrontdoorFirewallPolicyManagedRuleOverrideRule {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#exclusion FrontdoorFirewallPolicy#exclusion}
   */
-  readonly exclusion?: FrontdoorFirewallPolicyManagedRuleOverrideRuleExclusion[];
+  readonly exclusion?: FrontdoorFirewallPolicyManagedRuleOverrideRuleExclusion[] | cdktf.IResolvable;
 }
 
-export function frontdoorFirewallPolicyManagedRuleOverrideRuleToTerraform(struct?: FrontdoorFirewallPolicyManagedRuleOverrideRule): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function frontdoorFirewallPolicyManagedRuleOverrideRuleToTerraform(struct?: FrontdoorFirewallPolicyManagedRuleOverrideRule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -279,17 +279,17 @@ export interface FrontdoorFirewallPolicyManagedRuleOverride {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#exclusion FrontdoorFirewallPolicy#exclusion}
   */
-  readonly exclusion?: FrontdoorFirewallPolicyManagedRuleOverrideExclusion[];
+  readonly exclusion?: FrontdoorFirewallPolicyManagedRuleOverrideExclusion[] | cdktf.IResolvable;
   /**
   * rule block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#rule FrontdoorFirewallPolicy#rule}
   */
-  readonly rule?: FrontdoorFirewallPolicyManagedRuleOverrideRule[];
+  readonly rule?: FrontdoorFirewallPolicyManagedRuleOverrideRule[] | cdktf.IResolvable;
 }
 
-export function frontdoorFirewallPolicyManagedRuleOverrideToTerraform(struct?: FrontdoorFirewallPolicyManagedRuleOverride): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function frontdoorFirewallPolicyManagedRuleOverrideToTerraform(struct?: FrontdoorFirewallPolicyManagedRuleOverride | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -314,17 +314,17 @@ export interface FrontdoorFirewallPolicyManagedRule {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#exclusion FrontdoorFirewallPolicy#exclusion}
   */
-  readonly exclusion?: FrontdoorFirewallPolicyManagedRuleExclusion[];
+  readonly exclusion?: FrontdoorFirewallPolicyManagedRuleExclusion[] | cdktf.IResolvable;
   /**
   * override block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#override FrontdoorFirewallPolicy#override}
   */
-  readonly override?: FrontdoorFirewallPolicyManagedRuleOverride[];
+  readonly override?: FrontdoorFirewallPolicyManagedRuleOverride[] | cdktf.IResolvable;
 }
 
-export function frontdoorFirewallPolicyManagedRuleToTerraform(struct?: FrontdoorFirewallPolicyManagedRule): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function frontdoorFirewallPolicyManagedRuleToTerraform(struct?: FrontdoorFirewallPolicyManagedRule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -355,8 +355,8 @@ export interface FrontdoorFirewallPolicyTimeouts {
   readonly update?: string;
 }
 
-export function frontdoorFirewallPolicyTimeoutsToTerraform(struct?: FrontdoorFirewallPolicyTimeoutsOutputReference | FrontdoorFirewallPolicyTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function frontdoorFirewallPolicyTimeoutsToTerraform(struct?: FrontdoorFirewallPolicyTimeoutsOutputReference | FrontdoorFirewallPolicyTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -376,7 +376,7 @@ export class FrontdoorFirewallPolicyTimeoutsOutputReference extends cdktf.Comple
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -568,7 +568,7 @@ export class FrontdoorFirewallPolicy extends cdktf.TerraformResource {
   // enabled - computed: false, optional: true, required: false
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
@@ -655,12 +655,11 @@ export class FrontdoorFirewallPolicy extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -672,12 +671,12 @@ export class FrontdoorFirewallPolicy extends cdktf.TerraformResource {
   }
 
   // custom_rule - computed: false, optional: true, required: false
-  private _customRule?: FrontdoorFirewallPolicyCustomRule[]; 
+  private _customRule?: FrontdoorFirewallPolicyCustomRule[] | cdktf.IResolvable; 
   public get customRule() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('custom_rule') as any;
+    return this.interpolationForAttribute('custom_rule');
   }
-  public set customRule(value: FrontdoorFirewallPolicyCustomRule[]) {
+  public set customRule(value: FrontdoorFirewallPolicyCustomRule[] | cdktf.IResolvable) {
     this._customRule = value;
   }
   public resetCustomRule() {
@@ -689,12 +688,12 @@ export class FrontdoorFirewallPolicy extends cdktf.TerraformResource {
   }
 
   // managed_rule - computed: false, optional: true, required: false
-  private _managedRule?: FrontdoorFirewallPolicyManagedRule[]; 
+  private _managedRule?: FrontdoorFirewallPolicyManagedRule[] | cdktf.IResolvable; 
   public get managedRule() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('managed_rule') as any;
+    return this.interpolationForAttribute('managed_rule');
   }
-  public set managedRule(value: FrontdoorFirewallPolicyManagedRule[]) {
+  public set managedRule(value: FrontdoorFirewallPolicyManagedRule[] | cdktf.IResolvable) {
     this._managedRule = value;
   }
   public resetManagedRule() {
@@ -706,7 +705,7 @@ export class FrontdoorFirewallPolicy extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new FrontdoorFirewallPolicyTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new FrontdoorFirewallPolicyTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -734,7 +733,7 @@ export class FrontdoorFirewallPolicy extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       redirect_url: cdktf.stringToTerraform(this._redirectUrl),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       custom_rule: cdktf.listMapper(frontdoorFirewallPolicyCustomRuleToTerraform)(this._customRule),
       managed_rule: cdktf.listMapper(frontdoorFirewallPolicyManagedRuleToTerraform)(this._managedRule),
       timeouts: frontdoorFirewallPolicyTimeoutsToTerraform(this._timeouts.internalValue),

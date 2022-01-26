@@ -30,7 +30,7 @@ export interface LogicAppIntegrationAccountAssemblyConfig extends cdktf.Terrafor
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_assembly#metadata LogicAppIntegrationAccountAssembly#metadata}
   */
-  readonly metadata?: { [key: string]: string } | cdktf.IResolvable;
+  readonly metadata?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_assembly#name LogicAppIntegrationAccountAssembly#name}
   */
@@ -65,8 +65,8 @@ export interface LogicAppIntegrationAccountAssemblyTimeouts {
   readonly update?: string;
 }
 
-export function logicAppIntegrationAccountAssemblyTimeoutsToTerraform(struct?: LogicAppIntegrationAccountAssemblyTimeoutsOutputReference | LogicAppIntegrationAccountAssemblyTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function logicAppIntegrationAccountAssemblyTimeoutsToTerraform(struct?: LogicAppIntegrationAccountAssemblyTimeoutsOutputReference | LogicAppIntegrationAccountAssemblyTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -86,7 +86,7 @@ export class LogicAppIntegrationAccountAssemblyTimeoutsOutputReference extends c
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -321,12 +321,11 @@ export class LogicAppIntegrationAccountAssembly extends cdktf.TerraformResource 
   }
 
   // metadata - computed: false, optional: true, required: false
-  private _metadata?: { [key: string]: string } | cdktf.IResolvable; 
+  private _metadata?: { [key: string]: string }; 
   public get metadata() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('metadata') as any;
+    return this.getStringMapAttribute('metadata');
   }
-  public set metadata(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set metadata(value: { [key: string]: string }) {
     this._metadata = value;
   }
   public resetMetadata() {
@@ -364,7 +363,7 @@ export class LogicAppIntegrationAccountAssembly extends cdktf.TerraformResource 
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new LogicAppIntegrationAccountAssemblyTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new LogicAppIntegrationAccountAssemblyTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -390,7 +389,7 @@ export class LogicAppIntegrationAccountAssembly extends cdktf.TerraformResource 
       content: cdktf.stringToTerraform(this._content),
       content_link_uri: cdktf.stringToTerraform(this._contentLinkUri),
       integration_account_name: cdktf.stringToTerraform(this._integrationAccountName),
-      metadata: cdktf.hashMapper(cdktf.anyToTerraform)(this._metadata),
+      metadata: cdktf.hashMapper(cdktf.stringToTerraform)(this._metadata),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       timeouts: logicAppIntegrationAccountAssemblyTimeoutsToTerraform(this._timeouts.internalValue),

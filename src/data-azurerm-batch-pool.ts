@@ -57,7 +57,7 @@ export class DataAzurermBatchPoolCertificate extends cdktf.ComplexComputedList {
 
   // visibility - computed: true, optional: false, required: false
   public get visibility() {
-    return this.getListAttribute('visibility');
+    return cdktf.Fn.tolist(this.getListAttribute('visibility'));
   }
 }
 export class DataAzurermBatchPoolContainerConfigurationContainerRegistries extends cdktf.ComplexComputedList {
@@ -81,13 +81,13 @@ export class DataAzurermBatchPoolContainerConfiguration extends cdktf.ComplexCom
 
   // container_image_names - computed: true, optional: false, required: false
   public get containerImageNames() {
-    return this.getListAttribute('container_image_names');
+    return cdktf.Fn.tolist(this.getListAttribute('container_image_names'));
   }
 
   // container_registries - computed: true, optional: false, required: false
   public get containerRegistries() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('container_registries') as any;
+    return this.interpolationForAttribute('container_registries');
   }
 
   // type - computed: true, optional: false, required: false
@@ -149,7 +149,7 @@ export class DataAzurermBatchPoolNetworkConfigurationEndpointConfiguration exten
   // network_security_group_rules - computed: true, optional: false, required: false
   public get networkSecurityGroupRules() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('network_security_group_rules') as any;
+    return this.interpolationForAttribute('network_security_group_rules');
   }
 
   // protocol - computed: true, optional: false, required: false
@@ -162,7 +162,7 @@ export class DataAzurermBatchPoolNetworkConfiguration extends cdktf.ComplexCompu
   // endpoint_configuration - computed: true, optional: false, required: false
   public get endpointConfiguration() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('endpoint_configuration') as any;
+    return this.interpolationForAttribute('endpoint_configuration');
   }
 
   // subnet_id - computed: true, optional: false, required: false
@@ -219,7 +219,7 @@ export class DataAzurermBatchPoolStartTaskUserIdentity extends cdktf.ComplexComp
   // auto_user - computed: true, optional: false, required: false
   public get autoUser() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('auto_user') as any;
+    return this.interpolationForAttribute('auto_user');
   }
 
   // user_name - computed: true, optional: false, required: false
@@ -236,14 +236,12 @@ export class DataAzurermBatchPoolStartTask extends cdktf.ComplexComputedList {
 
   // common_environment_properties - computed: true, optional: false, required: false
   public get commonEnvironmentProperties() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('common_environment_properties') as any;
+    return this.getStringMapAttribute('common_environment_properties');
   }
 
   // environment - computed: true, optional: false, required: false
   public get environment() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('environment') as any;
+    return this.getStringMapAttribute('environment');
   }
 
   // max_task_retry_count - computed: true, optional: false, required: false
@@ -254,7 +252,7 @@ export class DataAzurermBatchPoolStartTask extends cdktf.ComplexComputedList {
   // resource_file - computed: true, optional: false, required: false
   public get resourceFile() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('resource_file') as any;
+    return this.interpolationForAttribute('resource_file');
   }
 
   // task_retry_maximum - computed: true, optional: false, required: false
@@ -265,12 +263,12 @@ export class DataAzurermBatchPoolStartTask extends cdktf.ComplexComputedList {
   // user_identity - computed: true, optional: false, required: false
   public get userIdentity() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('user_identity') as any;
+    return this.interpolationForAttribute('user_identity');
   }
 
   // wait_for_success - computed: true, optional: false, required: false
   public get waitForSuccess() {
-    return this.getBooleanAttribute('wait_for_success') as any;
+    return this.getBooleanAttribute('wait_for_success');
   }
 }
 export class DataAzurermBatchPoolStorageImageReference extends cdktf.ComplexComputedList {
@@ -307,8 +305,8 @@ export interface DataAzurermBatchPoolTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermBatchPoolTimeoutsToTerraform(struct?: DataAzurermBatchPoolTimeoutsOutputReference | DataAzurermBatchPoolTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermBatchPoolTimeoutsToTerraform(struct?: DataAzurermBatchPoolTimeoutsOutputReference | DataAzurermBatchPoolTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -325,7 +323,7 @@ export class DataAzurermBatchPoolTimeoutsOutputReference extends cdktf.ComplexOb
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -424,17 +422,17 @@ export class DataAzurermBatchPool extends cdktf.TerraformDataSource {
 
   // auto_scale - computed: true, optional: false, required: false
   public autoScale(index: string) {
-    return new DataAzurermBatchPoolAutoScale(this, 'auto_scale', index);
+    return new DataAzurermBatchPoolAutoScale(this, 'auto_scale', index, false);
   }
 
   // certificate - computed: true, optional: false, required: false
   public certificate(index: string) {
-    return new DataAzurermBatchPoolCertificate(this, 'certificate', index);
+    return new DataAzurermBatchPoolCertificate(this, 'certificate', index, false);
   }
 
   // container_configuration - computed: true, optional: false, required: false
   public containerConfiguration(index: string) {
-    return new DataAzurermBatchPoolContainerConfiguration(this, 'container_configuration', index);
+    return new DataAzurermBatchPoolContainerConfiguration(this, 'container_configuration', index, false);
   }
 
   // display_name - computed: true, optional: false, required: false
@@ -444,7 +442,7 @@ export class DataAzurermBatchPool extends cdktf.TerraformDataSource {
 
   // fixed_scale - computed: true, optional: false, required: false
   public fixedScale(index: string) {
-    return new DataAzurermBatchPoolFixedScale(this, 'fixed_scale', index);
+    return new DataAzurermBatchPoolFixedScale(this, 'fixed_scale', index, false);
   }
 
   // id - computed: true, optional: true, required: false
@@ -458,7 +456,7 @@ export class DataAzurermBatchPool extends cdktf.TerraformDataSource {
   }
 
   // metadata - computed: true, optional: false, required: false
-  public metadata(key: string): string {
+  public metadata(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'metadata').lookup(key);
   }
 
@@ -477,7 +475,7 @@ export class DataAzurermBatchPool extends cdktf.TerraformDataSource {
 
   // network_configuration - computed: true, optional: false, required: false
   public networkConfiguration(index: string) {
-    return new DataAzurermBatchPoolNetworkConfiguration(this, 'network_configuration', index);
+    return new DataAzurermBatchPoolNetworkConfiguration(this, 'network_configuration', index, false);
   }
 
   // node_agent_sku_id - computed: true, optional: false, required: false
@@ -500,12 +498,12 @@ export class DataAzurermBatchPool extends cdktf.TerraformDataSource {
 
   // start_task - computed: true, optional: false, required: false
   public startTask(index: string) {
-    return new DataAzurermBatchPoolStartTask(this, 'start_task', index);
+    return new DataAzurermBatchPoolStartTask(this, 'start_task', index, false);
   }
 
   // storage_image_reference - computed: true, optional: false, required: false
   public storageImageReference(index: string) {
-    return new DataAzurermBatchPoolStorageImageReference(this, 'storage_image_reference', index);
+    return new DataAzurermBatchPoolStorageImageReference(this, 'storage_image_reference', index, false);
   }
 
   // vm_size - computed: true, optional: false, required: false
@@ -514,7 +512,7 @@ export class DataAzurermBatchPool extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermBatchPoolTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermBatchPoolTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

@@ -14,7 +14,7 @@ export interface DataFactoryTriggerCustomEventConfig extends cdktf.TerraformMeta
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_custom_event#additional_properties DataFactoryTriggerCustomEvent#additional_properties}
   */
-  readonly additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
+  readonly additionalProperties?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_custom_event#annotations DataFactoryTriggerCustomEvent#annotations}
   */
@@ -52,7 +52,7 @@ export interface DataFactoryTriggerCustomEventConfig extends cdktf.TerraformMeta
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_custom_event#pipeline DataFactoryTriggerCustomEvent#pipeline}
   */
-  readonly pipeline: DataFactoryTriggerCustomEventPipeline[];
+  readonly pipeline: DataFactoryTriggerCustomEventPipeline[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -68,17 +68,17 @@ export interface DataFactoryTriggerCustomEventPipeline {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_custom_event#parameters DataFactoryTriggerCustomEvent#parameters}
   */
-  readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
+  readonly parameters?: { [key: string]: string };
 }
 
-export function dataFactoryTriggerCustomEventPipelineToTerraform(struct?: DataFactoryTriggerCustomEventPipeline): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataFactoryTriggerCustomEventPipelineToTerraform(struct?: DataFactoryTriggerCustomEventPipeline | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
     name: cdktf.stringToTerraform(struct!.name),
-    parameters: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.parameters),
+    parameters: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.parameters),
   }
 }
 
@@ -101,8 +101,8 @@ export interface DataFactoryTriggerCustomEventTimeouts {
   readonly update?: string;
 }
 
-export function dataFactoryTriggerCustomEventTimeoutsToTerraform(struct?: DataFactoryTriggerCustomEventTimeoutsOutputReference | DataFactoryTriggerCustomEventTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataFactoryTriggerCustomEventTimeoutsToTerraform(struct?: DataFactoryTriggerCustomEventTimeoutsOutputReference | DataFactoryTriggerCustomEventTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -122,7 +122,7 @@ export class DataFactoryTriggerCustomEventTimeoutsOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -283,7 +283,7 @@ export class DataFactoryTriggerCustomEvent extends cdktf.TerraformResource {
   // activated - computed: false, optional: true, required: false
   private _activated?: boolean | cdktf.IResolvable; 
   public get activated() {
-    return this.getBooleanAttribute('activated') as any;
+    return this.getBooleanAttribute('activated');
   }
   public set activated(value: boolean | cdktf.IResolvable) {
     this._activated = value;
@@ -297,12 +297,11 @@ export class DataFactoryTriggerCustomEvent extends cdktf.TerraformResource {
   }
 
   // additional_properties - computed: false, optional: true, required: false
-  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable; 
+  private _additionalProperties?: { [key: string]: string }; 
   public get additionalProperties() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('additional_properties') as any;
+    return this.getStringMapAttribute('additional_properties');
   }
-  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set additionalProperties(value: { [key: string]: string }) {
     this._additionalProperties = value;
   }
   public resetAdditionalProperties() {
@@ -374,7 +373,7 @@ export class DataFactoryTriggerCustomEvent extends cdktf.TerraformResource {
   // events - computed: false, optional: false, required: true
   private _events?: string[]; 
   public get events() {
-    return this.getListAttribute('events');
+    return cdktf.Fn.tolist(this.getListAttribute('events'));
   }
   public set events(value: string[]) {
     this._events = value;
@@ -435,12 +434,12 @@ export class DataFactoryTriggerCustomEvent extends cdktf.TerraformResource {
   }
 
   // pipeline - computed: false, optional: false, required: true
-  private _pipeline?: DataFactoryTriggerCustomEventPipeline[]; 
+  private _pipeline?: DataFactoryTriggerCustomEventPipeline[] | cdktf.IResolvable; 
   public get pipeline() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('pipeline') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('pipeline')));
   }
-  public set pipeline(value: DataFactoryTriggerCustomEventPipeline[]) {
+  public set pipeline(value: DataFactoryTriggerCustomEventPipeline[] | cdktf.IResolvable) {
     this._pipeline = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -449,7 +448,7 @@ export class DataFactoryTriggerCustomEvent extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataFactoryTriggerCustomEventTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataFactoryTriggerCustomEventTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -471,7 +470,7 @@ export class DataFactoryTriggerCustomEvent extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       activated: cdktf.booleanToTerraform(this._activated),
-      additional_properties: cdktf.hashMapper(cdktf.anyToTerraform)(this._additionalProperties),
+      additional_properties: cdktf.hashMapper(cdktf.stringToTerraform)(this._additionalProperties),
       annotations: cdktf.listMapper(cdktf.stringToTerraform)(this._annotations),
       data_factory_id: cdktf.stringToTerraform(this._dataFactoryId),
       description: cdktf.stringToTerraform(this._description),

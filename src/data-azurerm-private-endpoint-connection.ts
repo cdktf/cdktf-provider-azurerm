@@ -63,8 +63,8 @@ export interface DataAzurermPrivateEndpointConnectionTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermPrivateEndpointConnectionTimeoutsToTerraform(struct?: DataAzurermPrivateEndpointConnectionTimeoutsOutputReference | DataAzurermPrivateEndpointConnectionTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermPrivateEndpointConnectionTimeoutsToTerraform(struct?: DataAzurermPrivateEndpointConnectionTimeoutsOutputReference | DataAzurermPrivateEndpointConnectionTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -81,7 +81,7 @@ export class DataAzurermPrivateEndpointConnectionTimeoutsOutputReference extends
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -189,12 +189,12 @@ export class DataAzurermPrivateEndpointConnection extends cdktf.TerraformDataSou
 
   // network_interface - computed: true, optional: false, required: false
   public networkInterface(index: string) {
-    return new DataAzurermPrivateEndpointConnectionNetworkInterface(this, 'network_interface', index);
+    return new DataAzurermPrivateEndpointConnectionNetworkInterface(this, 'network_interface', index, false);
   }
 
   // private_service_connection - computed: true, optional: false, required: false
   public privateServiceConnection(index: string) {
-    return new DataAzurermPrivateEndpointConnectionPrivateServiceConnection(this, 'private_service_connection', index);
+    return new DataAzurermPrivateEndpointConnectionPrivateServiceConnection(this, 'private_service_connection', index, false);
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -211,7 +211,7 @@ export class DataAzurermPrivateEndpointConnection extends cdktf.TerraformDataSou
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermPrivateEndpointConnectionTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermPrivateEndpointConnectionTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

@@ -38,11 +38,11 @@ export interface VirtualNetworkConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network#subnet VirtualNetwork#subnet}
   */
-  readonly subnet?: VirtualNetworkSubnet[];
+  readonly subnet?: VirtualNetworkSubnet[] | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network#tags VirtualNetwork#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network#vm_protection_enabled VirtualNetwork#vm_protection_enabled}
   */
@@ -79,8 +79,8 @@ export interface VirtualNetworkSubnet {
   readonly securityGroup?: string;
 }
 
-export function virtualNetworkSubnetToTerraform(struct?: VirtualNetworkSubnet): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function virtualNetworkSubnetToTerraform(struct?: VirtualNetworkSubnet | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -103,7 +103,7 @@ export interface VirtualNetworkDdosProtectionPlan {
 }
 
 export function virtualNetworkDdosProtectionPlanToTerraform(struct?: VirtualNetworkDdosProtectionPlanOutputReference | VirtualNetworkDdosProtectionPlan): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -121,7 +121,7 @@ export class VirtualNetworkDdosProtectionPlanOutputReference extends cdktf.Compl
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -155,7 +155,7 @@ export class VirtualNetworkDdosProtectionPlanOutputReference extends cdktf.Compl
   // enable - computed: false, optional: false, required: true
   private _enable?: boolean | cdktf.IResolvable; 
   public get enable() {
-    return this.getBooleanAttribute('enable') as any;
+    return this.getBooleanAttribute('enable');
   }
   public set enable(value: boolean | cdktf.IResolvable) {
     this._enable = value;
@@ -197,8 +197,8 @@ export interface VirtualNetworkTimeouts {
   readonly update?: string;
 }
 
-export function virtualNetworkTimeoutsToTerraform(struct?: VirtualNetworkTimeoutsOutputReference | VirtualNetworkTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function virtualNetworkTimeoutsToTerraform(struct?: VirtualNetworkTimeoutsOutputReference | VirtualNetworkTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -218,7 +218,7 @@ export class VirtualNetworkTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -487,12 +487,12 @@ export class VirtualNetwork extends cdktf.TerraformResource {
   }
 
   // subnet - computed: true, optional: true, required: false
-  private _subnet?: VirtualNetworkSubnet[]; 
+  private _subnet?: VirtualNetworkSubnet[] | cdktf.IResolvable; 
   public get subnet() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('subnet') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('subnet')));
   }
-  public set subnet(value: VirtualNetworkSubnet[]) {
+  public set subnet(value: VirtualNetworkSubnet[] | cdktf.IResolvable) {
     this._subnet = value;
   }
   public resetSubnet() {
@@ -504,12 +504,11 @@ export class VirtualNetwork extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -523,7 +522,7 @@ export class VirtualNetwork extends cdktf.TerraformResource {
   // vm_protection_enabled - computed: false, optional: true, required: false
   private _vmProtectionEnabled?: boolean | cdktf.IResolvable; 
   public get vmProtectionEnabled() {
-    return this.getBooleanAttribute('vm_protection_enabled') as any;
+    return this.getBooleanAttribute('vm_protection_enabled');
   }
   public set vmProtectionEnabled(value: boolean | cdktf.IResolvable) {
     this._vmProtectionEnabled = value;
@@ -537,7 +536,7 @@ export class VirtualNetwork extends cdktf.TerraformResource {
   }
 
   // ddos_protection_plan - computed: false, optional: true, required: false
-  private _ddosProtectionPlan = new VirtualNetworkDdosProtectionPlanOutputReference(this as any, "ddos_protection_plan", true);
+  private _ddosProtectionPlan = new VirtualNetworkDdosProtectionPlanOutputReference(this, "ddos_protection_plan", true);
   public get ddosProtectionPlan() {
     return this._ddosProtectionPlan;
   }
@@ -553,7 +552,7 @@ export class VirtualNetwork extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new VirtualNetworkTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new VirtualNetworkTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -582,7 +581,7 @@ export class VirtualNetwork extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       subnet: cdktf.listMapper(virtualNetworkSubnetToTerraform)(this._subnet),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       vm_protection_enabled: cdktf.booleanToTerraform(this._vmProtectionEnabled),
       ddos_protection_plan: virtualNetworkDdosProtectionPlanToTerraform(this._ddosProtectionPlan.internalValue),
       timeouts: virtualNetworkTimeoutsToTerraform(this._timeouts.internalValue),

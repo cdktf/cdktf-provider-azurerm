@@ -67,8 +67,8 @@ export interface ApiManagementNamedValueTimeouts {
   readonly update?: string;
 }
 
-export function apiManagementNamedValueTimeoutsToTerraform(struct?: ApiManagementNamedValueTimeoutsOutputReference | ApiManagementNamedValueTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function apiManagementNamedValueTimeoutsToTerraform(struct?: ApiManagementNamedValueTimeoutsOutputReference | ApiManagementNamedValueTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -88,7 +88,7 @@ export class ApiManagementNamedValueTimeoutsOutputReference extends cdktf.Comple
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -207,7 +207,7 @@ export interface ApiManagementNamedValueValueFromKeyVault {
 }
 
 export function apiManagementNamedValueValueFromKeyVaultToTerraform(struct?: ApiManagementNamedValueValueFromKeyVaultOutputReference | ApiManagementNamedValueValueFromKeyVault): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -225,7 +225,7 @@ export class ApiManagementNamedValueValueFromKeyVaultOutputReference extends cdk
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -393,7 +393,7 @@ export class ApiManagementNamedValue extends cdktf.TerraformResource {
   // secret - computed: false, optional: true, required: false
   private _secret?: boolean | cdktf.IResolvable; 
   public get secret() {
-    return this.getBooleanAttribute('secret') as any;
+    return this.getBooleanAttribute('secret');
   }
   public set secret(value: boolean | cdktf.IResolvable) {
     this._secret = value;
@@ -439,7 +439,7 @@ export class ApiManagementNamedValue extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ApiManagementNamedValueTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ApiManagementNamedValueTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -455,7 +455,7 @@ export class ApiManagementNamedValue extends cdktf.TerraformResource {
   }
 
   // value_from_key_vault - computed: false, optional: true, required: false
-  private _valueFromKeyVault = new ApiManagementNamedValueValueFromKeyVaultOutputReference(this as any, "value_from_key_vault", true);
+  private _valueFromKeyVault = new ApiManagementNamedValueValueFromKeyVaultOutputReference(this, "value_from_key_vault", true);
   public get valueFromKeyVault() {
     return this._valueFromKeyVault;
   }

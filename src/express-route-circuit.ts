@@ -46,7 +46,7 @@ export interface ExpressRouteCircuitConfig extends cdktf.TerraformMetaArguments 
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit#tags ExpressRouteCircuit#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * sku block
   * 
@@ -72,7 +72,7 @@ export interface ExpressRouteCircuitSku {
 }
 
 export function expressRouteCircuitSkuToTerraform(struct?: ExpressRouteCircuitSkuOutputReference | ExpressRouteCircuitSku): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -90,7 +90,7 @@ export class ExpressRouteCircuitSkuOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -166,8 +166,8 @@ export interface ExpressRouteCircuitTimeouts {
   readonly update?: string;
 }
 
-export function expressRouteCircuitTimeoutsToTerraform(struct?: ExpressRouteCircuitTimeoutsOutputReference | ExpressRouteCircuitTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function expressRouteCircuitTimeoutsToTerraform(struct?: ExpressRouteCircuitTimeoutsOutputReference | ExpressRouteCircuitTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -187,7 +187,7 @@ export class ExpressRouteCircuitTimeoutsOutputReference extends cdktf.ComplexObj
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -348,7 +348,7 @@ export class ExpressRouteCircuit extends cdktf.TerraformResource {
   // allow_classic_operations - computed: false, optional: true, required: false
   private _allowClassicOperations?: boolean | cdktf.IResolvable; 
   public get allowClassicOperations() {
-    return this.getBooleanAttribute('allow_classic_operations') as any;
+    return this.getBooleanAttribute('allow_classic_operations');
   }
   public set allowClassicOperations(value: boolean | cdktf.IResolvable) {
     this._allowClassicOperations = value;
@@ -496,12 +496,11 @@ export class ExpressRouteCircuit extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -513,7 +512,7 @@ export class ExpressRouteCircuit extends cdktf.TerraformResource {
   }
 
   // sku - computed: false, optional: false, required: true
-  private _sku = new ExpressRouteCircuitSkuOutputReference(this as any, "sku", true);
+  private _sku = new ExpressRouteCircuitSkuOutputReference(this, "sku", true);
   public get sku() {
     return this._sku;
   }
@@ -526,7 +525,7 @@ export class ExpressRouteCircuit extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ExpressRouteCircuitTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ExpressRouteCircuitTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -556,7 +555,7 @@ export class ExpressRouteCircuit extends cdktf.TerraformResource {
       peering_location: cdktf.stringToTerraform(this._peeringLocation),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       service_provider_name: cdktf.stringToTerraform(this._serviceProviderName),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       sku: expressRouteCircuitSkuToTerraform(this._sku.internalValue),
       timeouts: expressRouteCircuitTimeoutsToTerraform(this._timeouts.internalValue),
     };

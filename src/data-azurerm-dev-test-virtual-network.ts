@@ -77,8 +77,8 @@ export interface DataAzurermDevTestVirtualNetworkTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermDevTestVirtualNetworkTimeoutsToTerraform(struct?: DataAzurermDevTestVirtualNetworkTimeoutsOutputReference | DataAzurermDevTestVirtualNetworkTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermDevTestVirtualNetworkTimeoutsToTerraform(struct?: DataAzurermDevTestVirtualNetworkTimeoutsOutputReference | DataAzurermDevTestVirtualNetworkTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -95,7 +95,7 @@ export class DataAzurermDevTestVirtualNetworkTimeoutsOutputReference extends cdk
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -181,7 +181,7 @@ export class DataAzurermDevTestVirtualNetwork extends cdktf.TerraformDataSource 
 
   // allowed_subnets - computed: true, optional: false, required: false
   public allowedSubnets(index: string) {
-    return new DataAzurermDevTestVirtualNetworkAllowedSubnets(this, 'allowed_subnets', index);
+    return new DataAzurermDevTestVirtualNetworkAllowedSubnets(this, 'allowed_subnets', index, false);
   }
 
   // id - computed: true, optional: true, required: false
@@ -230,7 +230,7 @@ export class DataAzurermDevTestVirtualNetwork extends cdktf.TerraformDataSource 
 
   // subnet_overrides - computed: true, optional: false, required: false
   public subnetOverrides(index: string) {
-    return new DataAzurermDevTestVirtualNetworkSubnetOverrides(this, 'subnet_overrides', index);
+    return new DataAzurermDevTestVirtualNetworkSubnetOverrides(this, 'subnet_overrides', index, false);
   }
 
   // unique_identifier - computed: true, optional: false, required: false
@@ -239,7 +239,7 @@ export class DataAzurermDevTestVirtualNetwork extends cdktf.TerraformDataSource 
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermDevTestVirtualNetworkTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermDevTestVirtualNetworkTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

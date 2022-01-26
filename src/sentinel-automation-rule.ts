@@ -36,19 +36,19 @@ export interface SentinelAutomationRuleConfig extends cdktf.TerraformMetaArgumen
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule#action_incident SentinelAutomationRule#action_incident}
   */
-  readonly actionIncident?: SentinelAutomationRuleActionIncident[];
+  readonly actionIncident?: SentinelAutomationRuleActionIncident[] | cdktf.IResolvable;
   /**
   * action_playbook block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule#action_playbook SentinelAutomationRule#action_playbook}
   */
-  readonly actionPlaybook?: SentinelAutomationRuleActionPlaybook[];
+  readonly actionPlaybook?: SentinelAutomationRuleActionPlaybook[] | cdktf.IResolvable;
   /**
   * condition block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule#condition SentinelAutomationRule#condition}
   */
-  readonly condition?: SentinelAutomationRuleCondition[];
+  readonly condition?: SentinelAutomationRuleCondition[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -87,8 +87,8 @@ export interface SentinelAutomationRuleActionIncident {
   readonly status?: string;
 }
 
-export function sentinelAutomationRuleActionIncidentToTerraform(struct?: SentinelAutomationRuleActionIncident): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function sentinelAutomationRuleActionIncidentToTerraform(struct?: SentinelAutomationRuleActionIncident | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -118,8 +118,8 @@ export interface SentinelAutomationRuleActionPlaybook {
   readonly tenantId?: string;
 }
 
-export function sentinelAutomationRuleActionPlaybookToTerraform(struct?: SentinelAutomationRuleActionPlaybook): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function sentinelAutomationRuleActionPlaybookToTerraform(struct?: SentinelAutomationRuleActionPlaybook | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -145,8 +145,8 @@ export interface SentinelAutomationRuleCondition {
   readonly values: string[];
 }
 
-export function sentinelAutomationRuleConditionToTerraform(struct?: SentinelAutomationRuleCondition): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function sentinelAutomationRuleConditionToTerraform(struct?: SentinelAutomationRuleCondition | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -176,8 +176,8 @@ export interface SentinelAutomationRuleTimeouts {
   readonly update?: string;
 }
 
-export function sentinelAutomationRuleTimeoutsToTerraform(struct?: SentinelAutomationRuleTimeoutsOutputReference | SentinelAutomationRuleTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function sentinelAutomationRuleTimeoutsToTerraform(struct?: SentinelAutomationRuleTimeoutsOutputReference | SentinelAutomationRuleTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -197,7 +197,7 @@ export class SentinelAutomationRuleTimeoutsOutputReference extends cdktf.Complex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -369,7 +369,7 @@ export class SentinelAutomationRule extends cdktf.TerraformResource {
   // enabled - computed: false, optional: true, required: false
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
@@ -443,12 +443,12 @@ export class SentinelAutomationRule extends cdktf.TerraformResource {
   }
 
   // action_incident - computed: false, optional: true, required: false
-  private _actionIncident?: SentinelAutomationRuleActionIncident[]; 
+  private _actionIncident?: SentinelAutomationRuleActionIncident[] | cdktf.IResolvable; 
   public get actionIncident() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('action_incident') as any;
+    return this.interpolationForAttribute('action_incident');
   }
-  public set actionIncident(value: SentinelAutomationRuleActionIncident[]) {
+  public set actionIncident(value: SentinelAutomationRuleActionIncident[] | cdktf.IResolvable) {
     this._actionIncident = value;
   }
   public resetActionIncident() {
@@ -460,12 +460,12 @@ export class SentinelAutomationRule extends cdktf.TerraformResource {
   }
 
   // action_playbook - computed: false, optional: true, required: false
-  private _actionPlaybook?: SentinelAutomationRuleActionPlaybook[]; 
+  private _actionPlaybook?: SentinelAutomationRuleActionPlaybook[] | cdktf.IResolvable; 
   public get actionPlaybook() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('action_playbook') as any;
+    return this.interpolationForAttribute('action_playbook');
   }
-  public set actionPlaybook(value: SentinelAutomationRuleActionPlaybook[]) {
+  public set actionPlaybook(value: SentinelAutomationRuleActionPlaybook[] | cdktf.IResolvable) {
     this._actionPlaybook = value;
   }
   public resetActionPlaybook() {
@@ -477,12 +477,12 @@ export class SentinelAutomationRule extends cdktf.TerraformResource {
   }
 
   // condition - computed: false, optional: true, required: false
-  private _condition?: SentinelAutomationRuleCondition[]; 
+  private _condition?: SentinelAutomationRuleCondition[] | cdktf.IResolvable; 
   public get condition() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('condition') as any;
+    return this.interpolationForAttribute('condition');
   }
-  public set condition(value: SentinelAutomationRuleCondition[]) {
+  public set condition(value: SentinelAutomationRuleCondition[] | cdktf.IResolvable) {
     this._condition = value;
   }
   public resetCondition() {
@@ -494,7 +494,7 @@ export class SentinelAutomationRule extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new SentinelAutomationRuleTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new SentinelAutomationRuleTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

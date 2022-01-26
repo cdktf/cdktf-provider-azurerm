@@ -33,8 +33,8 @@ export interface DataAzurermLbRuleTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermLbRuleTimeoutsToTerraform(struct?: DataAzurermLbRuleTimeoutsOutputReference | DataAzurermLbRuleTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermLbRuleTimeoutsToTerraform(struct?: DataAzurermLbRuleTimeoutsOutputReference | DataAzurermLbRuleTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -51,7 +51,7 @@ export class DataAzurermLbRuleTimeoutsOutputReference extends cdktf.ComplexObjec
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -147,17 +147,17 @@ export class DataAzurermLbRule extends cdktf.TerraformDataSource {
 
   // disable_outbound_snat - computed: true, optional: false, required: false
   public get disableOutboundSnat() {
-    return this.getBooleanAttribute('disable_outbound_snat') as any;
+    return this.getBooleanAttribute('disable_outbound_snat');
   }
 
   // enable_floating_ip - computed: true, optional: false, required: false
   public get enableFloatingIp() {
-    return this.getBooleanAttribute('enable_floating_ip') as any;
+    return this.getBooleanAttribute('enable_floating_ip');
   }
 
   // enable_tcp_reset - computed: true, optional: false, required: false
   public get enableTcpReset() {
-    return this.getBooleanAttribute('enable_tcp_reset') as any;
+    return this.getBooleanAttribute('enable_tcp_reset');
   }
 
   // frontend_ip_configuration_name - computed: true, optional: false, required: false
@@ -235,7 +235,7 @@ export class DataAzurermLbRule extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermLbRuleTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermLbRuleTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

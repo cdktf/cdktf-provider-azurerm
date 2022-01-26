@@ -28,7 +28,7 @@ export interface LogicAppIntegrationAccountPartnerConfig extends cdktf.Terraform
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_partner#business_identity LogicAppIntegrationAccountPartner#business_identity}
   */
-  readonly businessIdentity: LogicAppIntegrationAccountPartnerBusinessIdentity[];
+  readonly businessIdentity: LogicAppIntegrationAccountPartnerBusinessIdentity[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -47,8 +47,8 @@ export interface LogicAppIntegrationAccountPartnerBusinessIdentity {
   readonly value: string;
 }
 
-export function logicAppIntegrationAccountPartnerBusinessIdentityToTerraform(struct?: LogicAppIntegrationAccountPartnerBusinessIdentity): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function logicAppIntegrationAccountPartnerBusinessIdentityToTerraform(struct?: LogicAppIntegrationAccountPartnerBusinessIdentity | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -77,8 +77,8 @@ export interface LogicAppIntegrationAccountPartnerTimeouts {
   readonly update?: string;
 }
 
-export function logicAppIntegrationAccountPartnerTimeoutsToTerraform(struct?: LogicAppIntegrationAccountPartnerTimeoutsOutputReference | LogicAppIntegrationAccountPartnerTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function logicAppIntegrationAccountPartnerTimeoutsToTerraform(struct?: LogicAppIntegrationAccountPartnerTimeoutsOutputReference | LogicAppIntegrationAccountPartnerTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -98,7 +98,7 @@ export class LogicAppIntegrationAccountPartnerTimeoutsOutputReference extends cd
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -311,12 +311,12 @@ export class LogicAppIntegrationAccountPartner extends cdktf.TerraformResource {
   }
 
   // business_identity - computed: false, optional: false, required: true
-  private _businessIdentity?: LogicAppIntegrationAccountPartnerBusinessIdentity[]; 
+  private _businessIdentity?: LogicAppIntegrationAccountPartnerBusinessIdentity[] | cdktf.IResolvable; 
   public get businessIdentity() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('business_identity') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('business_identity')));
   }
-  public set businessIdentity(value: LogicAppIntegrationAccountPartnerBusinessIdentity[]) {
+  public set businessIdentity(value: LogicAppIntegrationAccountPartnerBusinessIdentity[] | cdktf.IResolvable) {
     this._businessIdentity = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -325,7 +325,7 @@ export class LogicAppIntegrationAccountPartner extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new LogicAppIntegrationAccountPartnerTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new LogicAppIntegrationAccountPartnerTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

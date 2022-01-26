@@ -38,7 +38,7 @@ export interface MediaLiveEventConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event#tags MediaLiveEvent#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event#transcription_languages MediaLiveEvent#transcription_languages}
   */
@@ -90,7 +90,7 @@ export interface MediaLiveEventCrossSiteAccessPolicy {
 }
 
 export function mediaLiveEventCrossSiteAccessPolicyToTerraform(struct?: MediaLiveEventCrossSiteAccessPolicyOutputReference | MediaLiveEventCrossSiteAccessPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -108,7 +108,7 @@ export class MediaLiveEventCrossSiteAccessPolicyOutputReference extends cdktf.Co
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -191,7 +191,7 @@ export interface MediaLiveEventEncoding {
 }
 
 export function mediaLiveEventEncodingToTerraform(struct?: MediaLiveEventEncodingOutputReference | MediaLiveEventEncoding): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -211,7 +211,7 @@ export class MediaLiveEventEncodingOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -318,6 +318,18 @@ export class MediaLiveEventEncodingOutputReference extends cdktf.ComplexObject {
     return this._type;
   }
 }
+export class MediaLiveEventInputEndpoint extends cdktf.ComplexComputedList {
+
+  // protocol - computed: true, optional: false, required: false
+  public get protocol() {
+    return this.getStringAttribute('protocol');
+  }
+
+  // url - computed: true, optional: false, required: false
+  public get url() {
+    return this.getStringAttribute('url');
+  }
+}
 export interface MediaLiveEventInputIpAccessControlAllow {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event#address MediaLiveEvent#address}
@@ -333,8 +345,8 @@ export interface MediaLiveEventInputIpAccessControlAllow {
   readonly subnetPrefixLength?: number;
 }
 
-export function mediaLiveEventInputIpAccessControlAllowToTerraform(struct?: MediaLiveEventInputIpAccessControlAllow): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function mediaLiveEventInputIpAccessControlAllowToTerraform(struct?: MediaLiveEventInputIpAccessControlAllow | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -363,11 +375,11 @@ export interface MediaLiveEventInput {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event#ip_access_control_allow MediaLiveEvent#ip_access_control_allow}
   */
-  readonly ipAccessControlAllow?: MediaLiveEventInputIpAccessControlAllow[];
+  readonly ipAccessControlAllow?: MediaLiveEventInputIpAccessControlAllow[] | cdktf.IResolvable;
 }
 
 export function mediaLiveEventInputToTerraform(struct?: MediaLiveEventInputOutputReference | MediaLiveEventInput): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -387,7 +399,7 @@ export class MediaLiveEventInputOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -446,6 +458,11 @@ export class MediaLiveEventInputOutputReference extends cdktf.ComplexObject {
     return this._accessToken;
   }
 
+  // endpoint - computed: true, optional: false, required: false
+  public endpoint(index: string) {
+    return new MediaLiveEventInputEndpoint(this, 'endpoint', index, false);
+  }
+
   // key_frame_interval_duration - computed: false, optional: true, required: false
   private _keyFrameIntervalDuration?: string; 
   public get keyFrameIntervalDuration() {
@@ -479,12 +496,12 @@ export class MediaLiveEventInputOutputReference extends cdktf.ComplexObject {
   }
 
   // ip_access_control_allow - computed: false, optional: true, required: false
-  private _ipAccessControlAllow?: MediaLiveEventInputIpAccessControlAllow[]; 
+  private _ipAccessControlAllow?: MediaLiveEventInputIpAccessControlAllow[] | cdktf.IResolvable; 
   public get ipAccessControlAllow() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('ip_access_control_allow') as any;
+    return this.interpolationForAttribute('ip_access_control_allow');
   }
-  public set ipAccessControlAllow(value: MediaLiveEventInputIpAccessControlAllow[]) {
+  public set ipAccessControlAllow(value: MediaLiveEventInputIpAccessControlAllow[] | cdktf.IResolvable) {
     this._ipAccessControlAllow = value;
   }
   public resetIpAccessControlAllow() {
@@ -493,6 +510,18 @@ export class MediaLiveEventInputOutputReference extends cdktf.ComplexObject {
   // Temporarily expose input value. Use with caution.
   public get ipAccessControlAllowInput() {
     return this._ipAccessControlAllow;
+  }
+}
+export class MediaLiveEventPreviewEndpoint extends cdktf.ComplexComputedList {
+
+  // protocol - computed: true, optional: false, required: false
+  public get protocol() {
+    return this.getStringAttribute('protocol');
+  }
+
+  // url - computed: true, optional: false, required: false
+  public get url() {
+    return this.getStringAttribute('url');
   }
 }
 export interface MediaLiveEventPreviewIpAccessControlAllow {
@@ -510,8 +539,8 @@ export interface MediaLiveEventPreviewIpAccessControlAllow {
   readonly subnetPrefixLength?: number;
 }
 
-export function mediaLiveEventPreviewIpAccessControlAllowToTerraform(struct?: MediaLiveEventPreviewIpAccessControlAllow): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function mediaLiveEventPreviewIpAccessControlAllowToTerraform(struct?: MediaLiveEventPreviewIpAccessControlAllow | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -540,11 +569,11 @@ export interface MediaLiveEventPreview {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event#ip_access_control_allow MediaLiveEvent#ip_access_control_allow}
   */
-  readonly ipAccessControlAllow?: MediaLiveEventPreviewIpAccessControlAllow[];
+  readonly ipAccessControlAllow?: MediaLiveEventPreviewIpAccessControlAllow[] | cdktf.IResolvable;
 }
 
 export function mediaLiveEventPreviewToTerraform(struct?: MediaLiveEventPreviewOutputReference | MediaLiveEventPreview): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -564,7 +593,7 @@ export class MediaLiveEventPreviewOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -623,6 +652,11 @@ export class MediaLiveEventPreviewOutputReference extends cdktf.ComplexObject {
     return this._alternativeMediaId;
   }
 
+  // endpoint - computed: true, optional: false, required: false
+  public endpoint(index: string) {
+    return new MediaLiveEventPreviewEndpoint(this, 'endpoint', index, false);
+  }
+
   // preview_locator - computed: true, optional: true, required: false
   private _previewLocator?: string; 
   public get previewLocator() {
@@ -656,12 +690,12 @@ export class MediaLiveEventPreviewOutputReference extends cdktf.ComplexObject {
   }
 
   // ip_access_control_allow - computed: false, optional: true, required: false
-  private _ipAccessControlAllow?: MediaLiveEventPreviewIpAccessControlAllow[]; 
+  private _ipAccessControlAllow?: MediaLiveEventPreviewIpAccessControlAllow[] | cdktf.IResolvable; 
   public get ipAccessControlAllow() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('ip_access_control_allow') as any;
+    return this.interpolationForAttribute('ip_access_control_allow');
   }
-  public set ipAccessControlAllow(value: MediaLiveEventPreviewIpAccessControlAllow[]) {
+  public set ipAccessControlAllow(value: MediaLiveEventPreviewIpAccessControlAllow[] | cdktf.IResolvable) {
     this._ipAccessControlAllow = value;
   }
   public resetIpAccessControlAllow() {
@@ -691,8 +725,8 @@ export interface MediaLiveEventTimeouts {
   readonly update?: string;
 }
 
-export function mediaLiveEventTimeoutsToTerraform(struct?: MediaLiveEventTimeoutsOutputReference | MediaLiveEventTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function mediaLiveEventTimeoutsToTerraform(struct?: MediaLiveEventTimeoutsOutputReference | MediaLiveEventTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -712,7 +746,7 @@ export class MediaLiveEventTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -876,7 +910,7 @@ export class MediaLiveEvent extends cdktf.TerraformResource {
   // auto_start_enabled - computed: false, optional: true, required: false
   private _autoStartEnabled?: boolean | cdktf.IResolvable; 
   public get autoStartEnabled() {
-    return this.getBooleanAttribute('auto_start_enabled') as any;
+    return this.getBooleanAttribute('auto_start_enabled');
   }
   public set autoStartEnabled(value: boolean | cdktf.IResolvable) {
     this._autoStartEnabled = value;
@@ -979,12 +1013,11 @@ export class MediaLiveEvent extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -1014,7 +1047,7 @@ export class MediaLiveEvent extends cdktf.TerraformResource {
   // use_static_hostname - computed: false, optional: true, required: false
   private _useStaticHostname?: boolean | cdktf.IResolvable; 
   public get useStaticHostname() {
-    return this.getBooleanAttribute('use_static_hostname') as any;
+    return this.getBooleanAttribute('use_static_hostname');
   }
   public set useStaticHostname(value: boolean | cdktf.IResolvable) {
     this._useStaticHostname = value;
@@ -1028,7 +1061,7 @@ export class MediaLiveEvent extends cdktf.TerraformResource {
   }
 
   // cross_site_access_policy - computed: false, optional: true, required: false
-  private _crossSiteAccessPolicy = new MediaLiveEventCrossSiteAccessPolicyOutputReference(this as any, "cross_site_access_policy", true);
+  private _crossSiteAccessPolicy = new MediaLiveEventCrossSiteAccessPolicyOutputReference(this, "cross_site_access_policy", true);
   public get crossSiteAccessPolicy() {
     return this._crossSiteAccessPolicy;
   }
@@ -1044,7 +1077,7 @@ export class MediaLiveEvent extends cdktf.TerraformResource {
   }
 
   // encoding - computed: false, optional: true, required: false
-  private _encoding = new MediaLiveEventEncodingOutputReference(this as any, "encoding", true);
+  private _encoding = new MediaLiveEventEncodingOutputReference(this, "encoding", true);
   public get encoding() {
     return this._encoding;
   }
@@ -1060,7 +1093,7 @@ export class MediaLiveEvent extends cdktf.TerraformResource {
   }
 
   // input - computed: false, optional: false, required: true
-  private _input = new MediaLiveEventInputOutputReference(this as any, "input", true);
+  private _input = new MediaLiveEventInputOutputReference(this, "input", true);
   public get input() {
     return this._input;
   }
@@ -1073,7 +1106,7 @@ export class MediaLiveEvent extends cdktf.TerraformResource {
   }
 
   // preview - computed: false, optional: true, required: false
-  private _preview = new MediaLiveEventPreviewOutputReference(this as any, "preview", true);
+  private _preview = new MediaLiveEventPreviewOutputReference(this, "preview", true);
   public get preview() {
     return this._preview;
   }
@@ -1089,7 +1122,7 @@ export class MediaLiveEvent extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new MediaLiveEventTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new MediaLiveEventTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -1117,7 +1150,7 @@ export class MediaLiveEvent extends cdktf.TerraformResource {
       media_services_account_name: cdktf.stringToTerraform(this._mediaServicesAccountName),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       transcription_languages: cdktf.listMapper(cdktf.stringToTerraform)(this._transcriptionLanguages),
       use_static_hostname: cdktf.booleanToTerraform(this._useStaticHostname),
       cross_site_access_policy: mediaLiveEventCrossSiteAccessPolicyToTerraform(this._crossSiteAccessPolicy.internalValue),

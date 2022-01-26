@@ -68,7 +68,7 @@ export interface PolicyAssignmentIdentity {
 }
 
 export function policyAssignmentIdentityToTerraform(struct?: PolicyAssignmentIdentityOutputReference | PolicyAssignmentIdentity): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -85,7 +85,7 @@ export class PolicyAssignmentIdentityOutputReference extends cdktf.ComplexObject
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -108,6 +108,16 @@ export class PolicyAssignmentIdentityOutputReference extends cdktf.ComplexObject
       this.isEmptyObject = Object.keys(value).length === 0;
       this._type = value.type;
     }
+  }
+
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
   }
 
   // type - computed: false, optional: true, required: false
@@ -145,8 +155,8 @@ export interface PolicyAssignmentTimeouts {
   readonly update?: string;
 }
 
-export function policyAssignmentTimeoutsToTerraform(struct?: PolicyAssignmentTimeoutsOutputReference | PolicyAssignmentTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function policyAssignmentTimeoutsToTerraform(struct?: PolicyAssignmentTimeoutsOutputReference | PolicyAssignmentTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -166,7 +176,7 @@ export class PolicyAssignmentTimeoutsOutputReference extends cdktf.ComplexObject
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -359,7 +369,7 @@ export class PolicyAssignment extends cdktf.TerraformResource {
   // enforcement_mode - computed: false, optional: true, required: false
   private _enforcementMode?: boolean | cdktf.IResolvable; 
   public get enforcementMode() {
-    return this.getBooleanAttribute('enforcement_mode') as any;
+    return this.getBooleanAttribute('enforcement_mode');
   }
   public set enforcementMode(value: boolean | cdktf.IResolvable) {
     this._enforcementMode = value;
@@ -481,7 +491,7 @@ export class PolicyAssignment extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity = new PolicyAssignmentIdentityOutputReference(this as any, "identity", true);
+  private _identity = new PolicyAssignmentIdentityOutputReference(this, "identity", true);
   public get identity() {
     return this._identity;
   }
@@ -497,7 +507,7 @@ export class PolicyAssignment extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new PolicyAssignmentTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new PolicyAssignmentTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

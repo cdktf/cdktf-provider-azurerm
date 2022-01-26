@@ -58,7 +58,7 @@ export interface ResourceGroupPolicyAssignmentConfig extends cdktf.TerraformMeta
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group_policy_assignment#non_compliance_message ResourceGroupPolicyAssignment#non_compliance_message}
   */
-  readonly nonComplianceMessage?: ResourceGroupPolicyAssignmentNonComplianceMessage[];
+  readonly nonComplianceMessage?: ResourceGroupPolicyAssignmentNonComplianceMessage[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -74,7 +74,7 @@ export interface ResourceGroupPolicyAssignmentIdentity {
 }
 
 export function resourceGroupPolicyAssignmentIdentityToTerraform(struct?: ResourceGroupPolicyAssignmentIdentityOutputReference | ResourceGroupPolicyAssignmentIdentity): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -91,7 +91,7 @@ export class ResourceGroupPolicyAssignmentIdentityOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -114,6 +114,16 @@ export class ResourceGroupPolicyAssignmentIdentityOutputReference extends cdktf.
       this.isEmptyObject = Object.keys(value).length === 0;
       this._type = value.type;
     }
+  }
+
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
   }
 
   // type - computed: false, optional: true, required: false
@@ -143,8 +153,8 @@ export interface ResourceGroupPolicyAssignmentNonComplianceMessage {
   readonly policyDefinitionReferenceId?: string;
 }
 
-export function resourceGroupPolicyAssignmentNonComplianceMessageToTerraform(struct?: ResourceGroupPolicyAssignmentNonComplianceMessage): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function resourceGroupPolicyAssignmentNonComplianceMessageToTerraform(struct?: ResourceGroupPolicyAssignmentNonComplianceMessage | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -173,8 +183,8 @@ export interface ResourceGroupPolicyAssignmentTimeouts {
   readonly update?: string;
 }
 
-export function resourceGroupPolicyAssignmentTimeoutsToTerraform(struct?: ResourceGroupPolicyAssignmentTimeoutsOutputReference | ResourceGroupPolicyAssignmentTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function resourceGroupPolicyAssignmentTimeoutsToTerraform(struct?: ResourceGroupPolicyAssignmentTimeoutsOutputReference | ResourceGroupPolicyAssignmentTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -194,7 +204,7 @@ export class ResourceGroupPolicyAssignmentTimeoutsOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -388,7 +398,7 @@ export class ResourceGroupPolicyAssignment extends cdktf.TerraformResource {
   // enforce - computed: false, optional: true, required: false
   private _enforce?: boolean | cdktf.IResolvable; 
   public get enforce() {
-    return this.getBooleanAttribute('enforce') as any;
+    return this.getBooleanAttribute('enforce');
   }
   public set enforce(value: boolean | cdktf.IResolvable) {
     this._enforce = value;
@@ -510,7 +520,7 @@ export class ResourceGroupPolicyAssignment extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity = new ResourceGroupPolicyAssignmentIdentityOutputReference(this as any, "identity", true);
+  private _identity = new ResourceGroupPolicyAssignmentIdentityOutputReference(this, "identity", true);
   public get identity() {
     return this._identity;
   }
@@ -526,12 +536,12 @@ export class ResourceGroupPolicyAssignment extends cdktf.TerraformResource {
   }
 
   // non_compliance_message - computed: false, optional: true, required: false
-  private _nonComplianceMessage?: ResourceGroupPolicyAssignmentNonComplianceMessage[]; 
+  private _nonComplianceMessage?: ResourceGroupPolicyAssignmentNonComplianceMessage[] | cdktf.IResolvable; 
   public get nonComplianceMessage() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('non_compliance_message') as any;
+    return this.interpolationForAttribute('non_compliance_message');
   }
-  public set nonComplianceMessage(value: ResourceGroupPolicyAssignmentNonComplianceMessage[]) {
+  public set nonComplianceMessage(value: ResourceGroupPolicyAssignmentNonComplianceMessage[] | cdktf.IResolvable) {
     this._nonComplianceMessage = value;
   }
   public resetNonComplianceMessage() {
@@ -543,7 +553,7 @@ export class ResourceGroupPolicyAssignment extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ResourceGroupPolicyAssignmentTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ResourceGroupPolicyAssignmentTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

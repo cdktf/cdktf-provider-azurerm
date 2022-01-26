@@ -22,7 +22,7 @@ export interface BackupPolicyFileShareConfig extends cdktf.TerraformMetaArgument
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_file_share#tags BackupPolicyFileShare#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_file_share#timezone BackupPolicyFileShare#timezone}
   */
@@ -76,7 +76,7 @@ export interface BackupPolicyFileShareBackup {
 }
 
 export function backupPolicyFileShareBackupToTerraform(struct?: BackupPolicyFileShareBackupOutputReference | BackupPolicyFileShareBackup): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -94,7 +94,7 @@ export class BackupPolicyFileShareBackupOutputReference extends cdktf.ComplexObj
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -159,7 +159,7 @@ export interface BackupPolicyFileShareRetentionDaily {
 }
 
 export function backupPolicyFileShareRetentionDailyToTerraform(struct?: BackupPolicyFileShareRetentionDailyOutputReference | BackupPolicyFileShareRetentionDaily): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -176,7 +176,7 @@ export class BackupPolicyFileShareRetentionDailyOutputReference extends cdktf.Co
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -230,7 +230,7 @@ export interface BackupPolicyFileShareRetentionMonthly {
 }
 
 export function backupPolicyFileShareRetentionMonthlyToTerraform(struct?: BackupPolicyFileShareRetentionMonthlyOutputReference | BackupPolicyFileShareRetentionMonthly): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -249,7 +249,7 @@ export class BackupPolicyFileShareRetentionMonthlyOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -302,7 +302,7 @@ export class BackupPolicyFileShareRetentionMonthlyOutputReference extends cdktf.
   // weekdays - computed: false, optional: false, required: true
   private _weekdays?: string[]; 
   public get weekdays() {
-    return this.getListAttribute('weekdays');
+    return cdktf.Fn.tolist(this.getListAttribute('weekdays'));
   }
   public set weekdays(value: string[]) {
     this._weekdays = value;
@@ -315,7 +315,7 @@ export class BackupPolicyFileShareRetentionMonthlyOutputReference extends cdktf.
   // weeks - computed: false, optional: false, required: true
   private _weeks?: string[]; 
   public get weeks() {
-    return this.getListAttribute('weeks');
+    return cdktf.Fn.tolist(this.getListAttribute('weeks'));
   }
   public set weeks(value: string[]) {
     this._weeks = value;
@@ -337,7 +337,7 @@ export interface BackupPolicyFileShareRetentionWeekly {
 }
 
 export function backupPolicyFileShareRetentionWeeklyToTerraform(struct?: BackupPolicyFileShareRetentionWeeklyOutputReference | BackupPolicyFileShareRetentionWeekly): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -355,7 +355,7 @@ export class BackupPolicyFileShareRetentionWeeklyOutputReference extends cdktf.C
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -402,7 +402,7 @@ export class BackupPolicyFileShareRetentionWeeklyOutputReference extends cdktf.C
   // weekdays - computed: false, optional: false, required: true
   private _weekdays?: string[]; 
   public get weekdays() {
-    return this.getListAttribute('weekdays');
+    return cdktf.Fn.tolist(this.getListAttribute('weekdays'));
   }
   public set weekdays(value: string[]) {
     this._weekdays = value;
@@ -432,7 +432,7 @@ export interface BackupPolicyFileShareRetentionYearly {
 }
 
 export function backupPolicyFileShareRetentionYearlyToTerraform(struct?: BackupPolicyFileShareRetentionYearlyOutputReference | BackupPolicyFileShareRetentionYearly): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -452,7 +452,7 @@ export class BackupPolicyFileShareRetentionYearlyOutputReference extends cdktf.C
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -511,7 +511,7 @@ export class BackupPolicyFileShareRetentionYearlyOutputReference extends cdktf.C
   // months - computed: false, optional: false, required: true
   private _months?: string[]; 
   public get months() {
-    return this.getListAttribute('months');
+    return cdktf.Fn.tolist(this.getListAttribute('months'));
   }
   public set months(value: string[]) {
     this._months = value;
@@ -524,7 +524,7 @@ export class BackupPolicyFileShareRetentionYearlyOutputReference extends cdktf.C
   // weekdays - computed: false, optional: false, required: true
   private _weekdays?: string[]; 
   public get weekdays() {
-    return this.getListAttribute('weekdays');
+    return cdktf.Fn.tolist(this.getListAttribute('weekdays'));
   }
   public set weekdays(value: string[]) {
     this._weekdays = value;
@@ -537,7 +537,7 @@ export class BackupPolicyFileShareRetentionYearlyOutputReference extends cdktf.C
   // weeks - computed: false, optional: false, required: true
   private _weeks?: string[]; 
   public get weeks() {
-    return this.getListAttribute('weeks');
+    return cdktf.Fn.tolist(this.getListAttribute('weeks'));
   }
   public set weeks(value: string[]) {
     this._weeks = value;
@@ -566,8 +566,8 @@ export interface BackupPolicyFileShareTimeouts {
   readonly update?: string;
 }
 
-export function backupPolicyFileShareTimeoutsToTerraform(struct?: BackupPolicyFileShareTimeoutsOutputReference | BackupPolicyFileShareTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function backupPolicyFileShareTimeoutsToTerraform(struct?: BackupPolicyFileShareTimeoutsOutputReference | BackupPolicyFileShareTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -587,7 +587,7 @@ export class BackupPolicyFileShareTimeoutsOutputReference extends cdktf.ComplexO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -789,12 +789,11 @@ export class BackupPolicyFileShare extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -822,7 +821,7 @@ export class BackupPolicyFileShare extends cdktf.TerraformResource {
   }
 
   // backup - computed: false, optional: false, required: true
-  private _backup = new BackupPolicyFileShareBackupOutputReference(this as any, "backup", true);
+  private _backup = new BackupPolicyFileShareBackupOutputReference(this, "backup", true);
   public get backup() {
     return this._backup;
   }
@@ -835,7 +834,7 @@ export class BackupPolicyFileShare extends cdktf.TerraformResource {
   }
 
   // retention_daily - computed: false, optional: false, required: true
-  private _retentionDaily = new BackupPolicyFileShareRetentionDailyOutputReference(this as any, "retention_daily", true);
+  private _retentionDaily = new BackupPolicyFileShareRetentionDailyOutputReference(this, "retention_daily", true);
   public get retentionDaily() {
     return this._retentionDaily;
   }
@@ -848,7 +847,7 @@ export class BackupPolicyFileShare extends cdktf.TerraformResource {
   }
 
   // retention_monthly - computed: false, optional: true, required: false
-  private _retentionMonthly = new BackupPolicyFileShareRetentionMonthlyOutputReference(this as any, "retention_monthly", true);
+  private _retentionMonthly = new BackupPolicyFileShareRetentionMonthlyOutputReference(this, "retention_monthly", true);
   public get retentionMonthly() {
     return this._retentionMonthly;
   }
@@ -864,7 +863,7 @@ export class BackupPolicyFileShare extends cdktf.TerraformResource {
   }
 
   // retention_weekly - computed: false, optional: true, required: false
-  private _retentionWeekly = new BackupPolicyFileShareRetentionWeeklyOutputReference(this as any, "retention_weekly", true);
+  private _retentionWeekly = new BackupPolicyFileShareRetentionWeeklyOutputReference(this, "retention_weekly", true);
   public get retentionWeekly() {
     return this._retentionWeekly;
   }
@@ -880,7 +879,7 @@ export class BackupPolicyFileShare extends cdktf.TerraformResource {
   }
 
   // retention_yearly - computed: false, optional: true, required: false
-  private _retentionYearly = new BackupPolicyFileShareRetentionYearlyOutputReference(this as any, "retention_yearly", true);
+  private _retentionYearly = new BackupPolicyFileShareRetentionYearlyOutputReference(this, "retention_yearly", true);
   public get retentionYearly() {
     return this._retentionYearly;
   }
@@ -896,7 +895,7 @@ export class BackupPolicyFileShare extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new BackupPolicyFileShareTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new BackupPolicyFileShareTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -920,7 +919,7 @@ export class BackupPolicyFileShare extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       recovery_vault_name: cdktf.stringToTerraform(this._recoveryVaultName),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       timezone: cdktf.stringToTerraform(this._timezone),
       backup: backupPolicyFileShareBackupToTerraform(this._backup.internalValue),
       retention_daily: backupPolicyFileShareRetentionDailyToTerraform(this._retentionDaily.internalValue),
