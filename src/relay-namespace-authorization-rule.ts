@@ -57,8 +57,8 @@ export interface RelayNamespaceAuthorizationRuleTimeouts {
   readonly update?: string;
 }
 
-export function relayNamespaceAuthorizationRuleTimeoutsToTerraform(struct?: RelayNamespaceAuthorizationRuleTimeoutsOutputReference | RelayNamespaceAuthorizationRuleTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function relayNamespaceAuthorizationRuleTimeoutsToTerraform(struct?: RelayNamespaceAuthorizationRuleTimeoutsOutputReference | RelayNamespaceAuthorizationRuleTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -78,7 +78,7 @@ export class RelayNamespaceAuthorizationRuleTimeoutsOutputReference extends cdkt
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -239,7 +239,7 @@ export class RelayNamespaceAuthorizationRule extends cdktf.TerraformResource {
   // listen - computed: false, optional: true, required: false
   private _listen?: boolean | cdktf.IResolvable; 
   public get listen() {
-    return this.getBooleanAttribute('listen') as any;
+    return this.getBooleanAttribute('listen');
   }
   public set listen(value: boolean | cdktf.IResolvable) {
     this._listen = value;
@@ -255,7 +255,7 @@ export class RelayNamespaceAuthorizationRule extends cdktf.TerraformResource {
   // manage - computed: false, optional: true, required: false
   private _manage?: boolean | cdktf.IResolvable; 
   public get manage() {
-    return this.getBooleanAttribute('manage') as any;
+    return this.getBooleanAttribute('manage');
   }
   public set manage(value: boolean | cdktf.IResolvable) {
     this._manage = value;
@@ -330,7 +330,7 @@ export class RelayNamespaceAuthorizationRule extends cdktf.TerraformResource {
   // send - computed: false, optional: true, required: false
   private _send?: boolean | cdktf.IResolvable; 
   public get send() {
-    return this.getBooleanAttribute('send') as any;
+    return this.getBooleanAttribute('send');
   }
   public set send(value: boolean | cdktf.IResolvable) {
     this._send = value;
@@ -344,7 +344,7 @@ export class RelayNamespaceAuthorizationRule extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new RelayNamespaceAuthorizationRuleTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new RelayNamespaceAuthorizationRuleTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

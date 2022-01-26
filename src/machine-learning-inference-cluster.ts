@@ -34,7 +34,7 @@ export interface MachineLearningInferenceClusterConfig extends cdktf.TerraformMe
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_inference_cluster#tags MachineLearningInferenceCluster#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * identity block
   * 
@@ -66,7 +66,7 @@ export interface MachineLearningInferenceClusterIdentity {
 }
 
 export function machineLearningInferenceClusterIdentityToTerraform(struct?: MachineLearningInferenceClusterIdentityOutputReference | MachineLearningInferenceClusterIdentity): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -84,7 +84,7 @@ export class MachineLearningInferenceClusterIdentityOutputReference extends cdkt
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -118,7 +118,7 @@ export class MachineLearningInferenceClusterIdentityOutputReference extends cdkt
   // identity_ids - computed: false, optional: true, required: false
   private _identityIds?: string[]; 
   public get identityIds() {
-    return this.getListAttribute('identity_ids');
+    return cdktf.Fn.tolist(this.getListAttribute('identity_ids'));
   }
   public set identityIds(value: string[]) {
     this._identityIds = value;
@@ -129,6 +129,16 @@ export class MachineLearningInferenceClusterIdentityOutputReference extends cdkt
   // Temporarily expose input value. Use with caution.
   public get identityIdsInput() {
     return this._identityIds;
+  }
+
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
   }
 
   // type - computed: false, optional: false, required: true
@@ -168,7 +178,7 @@ export interface MachineLearningInferenceClusterSsl {
 }
 
 export function machineLearningInferenceClusterSslToTerraform(struct?: MachineLearningInferenceClusterSslOutputReference | MachineLearningInferenceClusterSsl): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -189,7 +199,7 @@ export class MachineLearningInferenceClusterSslOutputReference extends cdktf.Com
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -305,7 +315,7 @@ export class MachineLearningInferenceClusterSslOutputReference extends cdktf.Com
   // overwrite_existing_domain - computed: false, optional: true, required: false
   private _overwriteExistingDomain?: boolean | cdktf.IResolvable; 
   public get overwriteExistingDomain() {
-    return this.getBooleanAttribute('overwrite_existing_domain') as any;
+    return this.getBooleanAttribute('overwrite_existing_domain');
   }
   public set overwriteExistingDomain(value: boolean | cdktf.IResolvable) {
     this._overwriteExistingDomain = value;
@@ -337,8 +347,8 @@ export interface MachineLearningInferenceClusterTimeouts {
   readonly update?: string;
 }
 
-export function machineLearningInferenceClusterTimeoutsToTerraform(struct?: MachineLearningInferenceClusterTimeoutsOutputReference | MachineLearningInferenceClusterTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function machineLearningInferenceClusterTimeoutsToTerraform(struct?: MachineLearningInferenceClusterTimeoutsOutputReference | MachineLearningInferenceClusterTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -358,7 +368,7 @@ export class MachineLearningInferenceClusterTimeoutsOutputReference extends cdkt
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -604,12 +614,11 @@ export class MachineLearningInferenceCluster extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -621,7 +630,7 @@ export class MachineLearningInferenceCluster extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity = new MachineLearningInferenceClusterIdentityOutputReference(this as any, "identity", true);
+  private _identity = new MachineLearningInferenceClusterIdentityOutputReference(this, "identity", true);
   public get identity() {
     return this._identity;
   }
@@ -637,7 +646,7 @@ export class MachineLearningInferenceCluster extends cdktf.TerraformResource {
   }
 
   // ssl - computed: false, optional: true, required: false
-  private _ssl = new MachineLearningInferenceClusterSslOutputReference(this as any, "ssl", true);
+  private _ssl = new MachineLearningInferenceClusterSslOutputReference(this, "ssl", true);
   public get ssl() {
     return this._ssl;
   }
@@ -653,7 +662,7 @@ export class MachineLearningInferenceCluster extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new MachineLearningInferenceClusterTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new MachineLearningInferenceClusterTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -680,7 +689,7 @@ export class MachineLearningInferenceCluster extends cdktf.TerraformResource {
       location: cdktf.stringToTerraform(this._location),
       machine_learning_workspace_id: cdktf.stringToTerraform(this._machineLearningWorkspaceId),
       name: cdktf.stringToTerraform(this._name),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       identity: machineLearningInferenceClusterIdentityToTerraform(this._identity.internalValue),
       ssl: machineLearningInferenceClusterSslToTerraform(this._ssl.internalValue),
       timeouts: machineLearningInferenceClusterTimeoutsToTerraform(this._timeouts.internalValue),

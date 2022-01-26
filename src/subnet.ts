@@ -48,7 +48,7 @@ export interface SubnetConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet#delegation Subnet#delegation}
   */
-  readonly delegation?: SubnetDelegation[];
+  readonly delegation?: SubnetDelegation[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -68,7 +68,7 @@ export interface SubnetDelegationServiceDelegation {
 }
 
 export function subnetDelegationServiceDelegationToTerraform(struct?: SubnetDelegationServiceDelegationOutputReference | SubnetDelegationServiceDelegation): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -86,7 +86,7 @@ export class SubnetDelegationServiceDelegationOutputReference extends cdktf.Comp
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -159,8 +159,8 @@ export interface SubnetDelegation {
   readonly serviceDelegation: SubnetDelegationServiceDelegation;
 }
 
-export function subnetDelegationToTerraform(struct?: SubnetDelegation): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function subnetDelegationToTerraform(struct?: SubnetDelegation | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -189,8 +189,8 @@ export interface SubnetTimeouts {
   readonly update?: string;
 }
 
-export function subnetTimeoutsToTerraform(struct?: SubnetTimeoutsOutputReference | SubnetTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function subnetTimeoutsToTerraform(struct?: SubnetTimeoutsOutputReference | SubnetTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -210,7 +210,7 @@ export class SubnetTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -402,7 +402,7 @@ export class Subnet extends cdktf.TerraformResource {
   // enforce_private_link_endpoint_network_policies - computed: false, optional: true, required: false
   private _enforcePrivateLinkEndpointNetworkPolicies?: boolean | cdktf.IResolvable; 
   public get enforcePrivateLinkEndpointNetworkPolicies() {
-    return this.getBooleanAttribute('enforce_private_link_endpoint_network_policies') as any;
+    return this.getBooleanAttribute('enforce_private_link_endpoint_network_policies');
   }
   public set enforcePrivateLinkEndpointNetworkPolicies(value: boolean | cdktf.IResolvable) {
     this._enforcePrivateLinkEndpointNetworkPolicies = value;
@@ -418,7 +418,7 @@ export class Subnet extends cdktf.TerraformResource {
   // enforce_private_link_service_network_policies - computed: false, optional: true, required: false
   private _enforcePrivateLinkServiceNetworkPolicies?: boolean | cdktf.IResolvable; 
   public get enforcePrivateLinkServiceNetworkPolicies() {
-    return this.getBooleanAttribute('enforce_private_link_service_network_policies') as any;
+    return this.getBooleanAttribute('enforce_private_link_service_network_policies');
   }
   public set enforcePrivateLinkServiceNetworkPolicies(value: boolean | cdktf.IResolvable) {
     this._enforcePrivateLinkServiceNetworkPolicies = value;
@@ -465,7 +465,7 @@ export class Subnet extends cdktf.TerraformResource {
   // service_endpoint_policy_ids - computed: false, optional: true, required: false
   private _serviceEndpointPolicyIds?: string[]; 
   public get serviceEndpointPolicyIds() {
-    return this.getListAttribute('service_endpoint_policy_ids');
+    return cdktf.Fn.tolist(this.getListAttribute('service_endpoint_policy_ids'));
   }
   public set serviceEndpointPolicyIds(value: string[]) {
     this._serviceEndpointPolicyIds = value;
@@ -508,12 +508,12 @@ export class Subnet extends cdktf.TerraformResource {
   }
 
   // delegation - computed: false, optional: true, required: false
-  private _delegation?: SubnetDelegation[]; 
+  private _delegation?: SubnetDelegation[] | cdktf.IResolvable; 
   public get delegation() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('delegation') as any;
+    return this.interpolationForAttribute('delegation');
   }
-  public set delegation(value: SubnetDelegation[]) {
+  public set delegation(value: SubnetDelegation[] | cdktf.IResolvable) {
     this._delegation = value;
   }
   public resetDelegation() {
@@ -525,7 +525,7 @@ export class Subnet extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new SubnetTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new SubnetTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

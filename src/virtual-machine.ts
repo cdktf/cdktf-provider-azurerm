@@ -50,7 +50,7 @@ export interface VirtualMachineConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine#tags VirtualMachine#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine#vm_size VirtualMachine#vm_size}
   */
@@ -94,7 +94,7 @@ export interface VirtualMachineConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine#os_profile_secrets VirtualMachine#os_profile_secrets}
   */
-  readonly osProfileSecrets?: VirtualMachineOsProfileSecrets[];
+  readonly osProfileSecrets?: VirtualMachineOsProfileSecrets[] | cdktf.IResolvable;
   /**
   * os_profile_windows_config block
   * 
@@ -112,7 +112,7 @@ export interface VirtualMachineConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine#storage_data_disk VirtualMachine#storage_data_disk}
   */
-  readonly storageDataDisk?: VirtualMachineStorageDataDisk[];
+  readonly storageDataDisk?: VirtualMachineStorageDataDisk[] | cdktf.IResolvable;
   /**
   * storage_image_reference block
   * 
@@ -140,7 +140,7 @@ export interface VirtualMachineAdditionalCapabilities {
 }
 
 export function virtualMachineAdditionalCapabilitiesToTerraform(struct?: VirtualMachineAdditionalCapabilitiesOutputReference | VirtualMachineAdditionalCapabilities): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -157,7 +157,7 @@ export class VirtualMachineAdditionalCapabilitiesOutputReference extends cdktf.C
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -185,7 +185,7 @@ export class VirtualMachineAdditionalCapabilitiesOutputReference extends cdktf.C
   // ultra_ssd_enabled - computed: false, optional: false, required: true
   private _ultraSsdEnabled?: boolean | cdktf.IResolvable; 
   public get ultraSsdEnabled() {
-    return this.getBooleanAttribute('ultra_ssd_enabled') as any;
+    return this.getBooleanAttribute('ultra_ssd_enabled');
   }
   public set ultraSsdEnabled(value: boolean | cdktf.IResolvable) {
     this._ultraSsdEnabled = value;
@@ -207,7 +207,7 @@ export interface VirtualMachineBootDiagnostics {
 }
 
 export function virtualMachineBootDiagnosticsToTerraform(struct?: VirtualMachineBootDiagnosticsOutputReference | VirtualMachineBootDiagnostics): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -225,7 +225,7 @@ export class VirtualMachineBootDiagnosticsOutputReference extends cdktf.ComplexO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -259,7 +259,7 @@ export class VirtualMachineBootDiagnosticsOutputReference extends cdktf.ComplexO
   // enabled - computed: false, optional: false, required: true
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
@@ -294,7 +294,7 @@ export interface VirtualMachineIdentity {
 }
 
 export function virtualMachineIdentityToTerraform(struct?: VirtualMachineIdentityOutputReference | VirtualMachineIdentity): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -312,7 +312,7 @@ export class VirtualMachineIdentityOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -359,6 +359,11 @@ export class VirtualMachineIdentityOutputReference extends cdktf.ComplexObject {
     return this._identityIds;
   }
 
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+
   // type - computed: false, optional: false, required: true
   private _type?: string; 
   public get type() {
@@ -391,8 +396,8 @@ export interface VirtualMachineOsProfile {
   readonly customData?: string;
 }
 
-export function virtualMachineOsProfileToTerraform(struct?: VirtualMachineOsProfileOutputReference | VirtualMachineOsProfile): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function virtualMachineOsProfileToTerraform(struct?: VirtualMachineOsProfileOutputReference | VirtualMachineOsProfile | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -412,7 +417,7 @@ export class VirtualMachineOsProfileOutputReference extends cdktf.ComplexObject 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -524,8 +529,8 @@ export interface VirtualMachineOsProfileLinuxConfigSshKeys {
   readonly path: string;
 }
 
-export function virtualMachineOsProfileLinuxConfigSshKeysToTerraform(struct?: VirtualMachineOsProfileLinuxConfigSshKeys): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function virtualMachineOsProfileLinuxConfigSshKeysToTerraform(struct?: VirtualMachineOsProfileLinuxConfigSshKeys | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -545,11 +550,11 @@ export interface VirtualMachineOsProfileLinuxConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine#ssh_keys VirtualMachine#ssh_keys}
   */
-  readonly sshKeys?: VirtualMachineOsProfileLinuxConfigSshKeys[];
+  readonly sshKeys?: VirtualMachineOsProfileLinuxConfigSshKeys[] | cdktf.IResolvable;
 }
 
-export function virtualMachineOsProfileLinuxConfigToTerraform(struct?: VirtualMachineOsProfileLinuxConfigOutputReference | VirtualMachineOsProfileLinuxConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function virtualMachineOsProfileLinuxConfigToTerraform(struct?: VirtualMachineOsProfileLinuxConfigOutputReference | VirtualMachineOsProfileLinuxConfig | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -567,7 +572,7 @@ export class VirtualMachineOsProfileLinuxConfigOutputReference extends cdktf.Com
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -601,7 +606,7 @@ export class VirtualMachineOsProfileLinuxConfigOutputReference extends cdktf.Com
   // disable_password_authentication - computed: false, optional: false, required: true
   private _disablePasswordAuthentication?: boolean | cdktf.IResolvable; 
   public get disablePasswordAuthentication() {
-    return this.getBooleanAttribute('disable_password_authentication') as any;
+    return this.getBooleanAttribute('disable_password_authentication');
   }
   public set disablePasswordAuthentication(value: boolean | cdktf.IResolvable) {
     this._disablePasswordAuthentication = value;
@@ -612,12 +617,12 @@ export class VirtualMachineOsProfileLinuxConfigOutputReference extends cdktf.Com
   }
 
   // ssh_keys - computed: false, optional: true, required: false
-  private _sshKeys?: VirtualMachineOsProfileLinuxConfigSshKeys[]; 
+  private _sshKeys?: VirtualMachineOsProfileLinuxConfigSshKeys[] | cdktf.IResolvable; 
   public get sshKeys() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('ssh_keys') as any;
+    return this.interpolationForAttribute('ssh_keys');
   }
-  public set sshKeys(value: VirtualMachineOsProfileLinuxConfigSshKeys[]) {
+  public set sshKeys(value: VirtualMachineOsProfileLinuxConfigSshKeys[] | cdktf.IResolvable) {
     this._sshKeys = value;
   }
   public resetSshKeys() {
@@ -639,8 +644,8 @@ export interface VirtualMachineOsProfileSecretsVaultCertificates {
   readonly certificateUrl: string;
 }
 
-export function virtualMachineOsProfileSecretsVaultCertificatesToTerraform(struct?: VirtualMachineOsProfileSecretsVaultCertificates): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function virtualMachineOsProfileSecretsVaultCertificatesToTerraform(struct?: VirtualMachineOsProfileSecretsVaultCertificates | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -660,11 +665,11 @@ export interface VirtualMachineOsProfileSecrets {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine#vault_certificates VirtualMachine#vault_certificates}
   */
-  readonly vaultCertificates?: VirtualMachineOsProfileSecretsVaultCertificates[];
+  readonly vaultCertificates?: VirtualMachineOsProfileSecretsVaultCertificates[] | cdktf.IResolvable;
 }
 
-export function virtualMachineOsProfileSecretsToTerraform(struct?: VirtualMachineOsProfileSecrets): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function virtualMachineOsProfileSecretsToTerraform(struct?: VirtualMachineOsProfileSecrets | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -693,8 +698,8 @@ export interface VirtualMachineOsProfileWindowsConfigAdditionalUnattendConfig {
   readonly settingName: string;
 }
 
-export function virtualMachineOsProfileWindowsConfigAdditionalUnattendConfigToTerraform(struct?: VirtualMachineOsProfileWindowsConfigAdditionalUnattendConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function virtualMachineOsProfileWindowsConfigAdditionalUnattendConfigToTerraform(struct?: VirtualMachineOsProfileWindowsConfigAdditionalUnattendConfig | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -717,8 +722,8 @@ export interface VirtualMachineOsProfileWindowsConfigWinrm {
   readonly protocol: string;
 }
 
-export function virtualMachineOsProfileWindowsConfigWinrmToTerraform(struct?: VirtualMachineOsProfileWindowsConfigWinrm): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function virtualMachineOsProfileWindowsConfigWinrmToTerraform(struct?: VirtualMachineOsProfileWindowsConfigWinrm | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -746,17 +751,17 @@ export interface VirtualMachineOsProfileWindowsConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine#additional_unattend_config VirtualMachine#additional_unattend_config}
   */
-  readonly additionalUnattendConfig?: VirtualMachineOsProfileWindowsConfigAdditionalUnattendConfig[];
+  readonly additionalUnattendConfig?: VirtualMachineOsProfileWindowsConfigAdditionalUnattendConfig[] | cdktf.IResolvable;
   /**
   * winrm block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine#winrm VirtualMachine#winrm}
   */
-  readonly winrm?: VirtualMachineOsProfileWindowsConfigWinrm[];
+  readonly winrm?: VirtualMachineOsProfileWindowsConfigWinrm[] | cdktf.IResolvable;
 }
 
-export function virtualMachineOsProfileWindowsConfigToTerraform(struct?: VirtualMachineOsProfileWindowsConfigOutputReference | VirtualMachineOsProfileWindowsConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function virtualMachineOsProfileWindowsConfigToTerraform(struct?: VirtualMachineOsProfileWindowsConfigOutputReference | VirtualMachineOsProfileWindowsConfig | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -777,7 +782,7 @@ export class VirtualMachineOsProfileWindowsConfigOutputReference extends cdktf.C
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -829,7 +834,7 @@ export class VirtualMachineOsProfileWindowsConfigOutputReference extends cdktf.C
   // enable_automatic_upgrades - computed: false, optional: true, required: false
   private _enableAutomaticUpgrades?: boolean | cdktf.IResolvable; 
   public get enableAutomaticUpgrades() {
-    return this.getBooleanAttribute('enable_automatic_upgrades') as any;
+    return this.getBooleanAttribute('enable_automatic_upgrades');
   }
   public set enableAutomaticUpgrades(value: boolean | cdktf.IResolvable) {
     this._enableAutomaticUpgrades = value;
@@ -845,7 +850,7 @@ export class VirtualMachineOsProfileWindowsConfigOutputReference extends cdktf.C
   // provision_vm_agent - computed: false, optional: true, required: false
   private _provisionVmAgent?: boolean | cdktf.IResolvable; 
   public get provisionVmAgent() {
-    return this.getBooleanAttribute('provision_vm_agent') as any;
+    return this.getBooleanAttribute('provision_vm_agent');
   }
   public set provisionVmAgent(value: boolean | cdktf.IResolvable) {
     this._provisionVmAgent = value;
@@ -875,12 +880,12 @@ export class VirtualMachineOsProfileWindowsConfigOutputReference extends cdktf.C
   }
 
   // additional_unattend_config - computed: false, optional: true, required: false
-  private _additionalUnattendConfig?: VirtualMachineOsProfileWindowsConfigAdditionalUnattendConfig[]; 
+  private _additionalUnattendConfig?: VirtualMachineOsProfileWindowsConfigAdditionalUnattendConfig[] | cdktf.IResolvable; 
   public get additionalUnattendConfig() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('additional_unattend_config') as any;
+    return this.interpolationForAttribute('additional_unattend_config');
   }
-  public set additionalUnattendConfig(value: VirtualMachineOsProfileWindowsConfigAdditionalUnattendConfig[]) {
+  public set additionalUnattendConfig(value: VirtualMachineOsProfileWindowsConfigAdditionalUnattendConfig[] | cdktf.IResolvable) {
     this._additionalUnattendConfig = value;
   }
   public resetAdditionalUnattendConfig() {
@@ -892,12 +897,12 @@ export class VirtualMachineOsProfileWindowsConfigOutputReference extends cdktf.C
   }
 
   // winrm - computed: false, optional: true, required: false
-  private _winrm?: VirtualMachineOsProfileWindowsConfigWinrm[]; 
+  private _winrm?: VirtualMachineOsProfileWindowsConfigWinrm[] | cdktf.IResolvable; 
   public get winrm() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('winrm') as any;
+    return this.interpolationForAttribute('winrm');
   }
-  public set winrm(value: VirtualMachineOsProfileWindowsConfigWinrm[]) {
+  public set winrm(value: VirtualMachineOsProfileWindowsConfigWinrm[] | cdktf.IResolvable) {
     this._winrm = value;
   }
   public resetWinrm() {
@@ -924,7 +929,7 @@ export interface VirtualMachinePlan {
 }
 
 export function virtualMachinePlanToTerraform(struct?: VirtualMachinePlanOutputReference | VirtualMachinePlan): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -943,7 +948,7 @@ export class VirtualMachinePlanOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1058,8 +1063,8 @@ export interface VirtualMachineStorageDataDisk {
   readonly writeAcceleratorEnabled?: boolean | cdktf.IResolvable;
 }
 
-export function virtualMachineStorageDataDiskToTerraform(struct?: VirtualMachineStorageDataDisk): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function virtualMachineStorageDataDiskToTerraform(struct?: VirtualMachineStorageDataDisk | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1099,8 +1104,8 @@ export interface VirtualMachineStorageImageReference {
   readonly version?: string;
 }
 
-export function virtualMachineStorageImageReferenceToTerraform(struct?: VirtualMachineStorageImageReferenceOutputReference | VirtualMachineStorageImageReference): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function virtualMachineStorageImageReferenceToTerraform(struct?: VirtualMachineStorageImageReferenceOutputReference | VirtualMachineStorageImageReference | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1121,7 +1126,7 @@ export class VirtualMachineStorageImageReferenceOutputReference extends cdktf.Co
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1294,7 +1299,7 @@ export interface VirtualMachineStorageOsDisk {
 }
 
 export function virtualMachineStorageOsDiskToTerraform(struct?: VirtualMachineStorageOsDiskOutputReference | VirtualMachineStorageOsDisk): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1320,7 +1325,7 @@ export class VirtualMachineStorageOsDiskOutputReference extends cdktf.ComplexObj
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1540,7 +1545,7 @@ export class VirtualMachineStorageOsDiskOutputReference extends cdktf.ComplexObj
   // write_accelerator_enabled - computed: false, optional: true, required: false
   private _writeAcceleratorEnabled?: boolean | cdktf.IResolvable; 
   public get writeAcceleratorEnabled() {
-    return this.getBooleanAttribute('write_accelerator_enabled') as any;
+    return this.getBooleanAttribute('write_accelerator_enabled');
   }
   public set writeAcceleratorEnabled(value: boolean | cdktf.IResolvable) {
     this._writeAcceleratorEnabled = value;
@@ -1572,8 +1577,8 @@ export interface VirtualMachineTimeouts {
   readonly update?: string;
 }
 
-export function virtualMachineTimeoutsToTerraform(struct?: VirtualMachineTimeoutsOutputReference | VirtualMachineTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function virtualMachineTimeoutsToTerraform(struct?: VirtualMachineTimeoutsOutputReference | VirtualMachineTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1593,7 +1598,7 @@ export class VirtualMachineTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1783,7 +1788,7 @@ export class VirtualMachine extends cdktf.TerraformResource {
   // delete_data_disks_on_termination - computed: false, optional: true, required: false
   private _deleteDataDisksOnTermination?: boolean | cdktf.IResolvable; 
   public get deleteDataDisksOnTermination() {
-    return this.getBooleanAttribute('delete_data_disks_on_termination') as any;
+    return this.getBooleanAttribute('delete_data_disks_on_termination');
   }
   public set deleteDataDisksOnTermination(value: boolean | cdktf.IResolvable) {
     this._deleteDataDisksOnTermination = value;
@@ -1799,7 +1804,7 @@ export class VirtualMachine extends cdktf.TerraformResource {
   // delete_os_disk_on_termination - computed: false, optional: true, required: false
   private _deleteOsDiskOnTermination?: boolean | cdktf.IResolvable; 
   public get deleteOsDiskOnTermination() {
-    return this.getBooleanAttribute('delete_os_disk_on_termination') as any;
+    return this.getBooleanAttribute('delete_os_disk_on_termination');
   }
   public set deleteOsDiskOnTermination(value: boolean | cdktf.IResolvable) {
     this._deleteOsDiskOnTermination = value;
@@ -1918,12 +1923,11 @@ export class VirtualMachine extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -1964,7 +1968,7 @@ export class VirtualMachine extends cdktf.TerraformResource {
   }
 
   // additional_capabilities - computed: false, optional: true, required: false
-  private _additionalCapabilities = new VirtualMachineAdditionalCapabilitiesOutputReference(this as any, "additional_capabilities", true);
+  private _additionalCapabilities = new VirtualMachineAdditionalCapabilitiesOutputReference(this, "additional_capabilities", true);
   public get additionalCapabilities() {
     return this._additionalCapabilities;
   }
@@ -1980,7 +1984,7 @@ export class VirtualMachine extends cdktf.TerraformResource {
   }
 
   // boot_diagnostics - computed: false, optional: true, required: false
-  private _bootDiagnostics = new VirtualMachineBootDiagnosticsOutputReference(this as any, "boot_diagnostics", true);
+  private _bootDiagnostics = new VirtualMachineBootDiagnosticsOutputReference(this, "boot_diagnostics", true);
   public get bootDiagnostics() {
     return this._bootDiagnostics;
   }
@@ -1996,7 +2000,7 @@ export class VirtualMachine extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity = new VirtualMachineIdentityOutputReference(this as any, "identity", true);
+  private _identity = new VirtualMachineIdentityOutputReference(this, "identity", true);
   public get identity() {
     return this._identity;
   }
@@ -2012,7 +2016,7 @@ export class VirtualMachine extends cdktf.TerraformResource {
   }
 
   // os_profile - computed: false, optional: true, required: false
-  private _osProfile = new VirtualMachineOsProfileOutputReference(this as any, "os_profile", true);
+  private _osProfile = new VirtualMachineOsProfileOutputReference(this, "os_profile", true);
   public get osProfile() {
     return this._osProfile;
   }
@@ -2028,7 +2032,7 @@ export class VirtualMachine extends cdktf.TerraformResource {
   }
 
   // os_profile_linux_config - computed: false, optional: true, required: false
-  private _osProfileLinuxConfig = new VirtualMachineOsProfileLinuxConfigOutputReference(this as any, "os_profile_linux_config", true);
+  private _osProfileLinuxConfig = new VirtualMachineOsProfileLinuxConfigOutputReference(this, "os_profile_linux_config", true);
   public get osProfileLinuxConfig() {
     return this._osProfileLinuxConfig;
   }
@@ -2044,12 +2048,12 @@ export class VirtualMachine extends cdktf.TerraformResource {
   }
 
   // os_profile_secrets - computed: false, optional: true, required: false
-  private _osProfileSecrets?: VirtualMachineOsProfileSecrets[]; 
+  private _osProfileSecrets?: VirtualMachineOsProfileSecrets[] | cdktf.IResolvable; 
   public get osProfileSecrets() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('os_profile_secrets') as any;
+    return this.interpolationForAttribute('os_profile_secrets');
   }
-  public set osProfileSecrets(value: VirtualMachineOsProfileSecrets[]) {
+  public set osProfileSecrets(value: VirtualMachineOsProfileSecrets[] | cdktf.IResolvable) {
     this._osProfileSecrets = value;
   }
   public resetOsProfileSecrets() {
@@ -2061,7 +2065,7 @@ export class VirtualMachine extends cdktf.TerraformResource {
   }
 
   // os_profile_windows_config - computed: false, optional: true, required: false
-  private _osProfileWindowsConfig = new VirtualMachineOsProfileWindowsConfigOutputReference(this as any, "os_profile_windows_config", true);
+  private _osProfileWindowsConfig = new VirtualMachineOsProfileWindowsConfigOutputReference(this, "os_profile_windows_config", true);
   public get osProfileWindowsConfig() {
     return this._osProfileWindowsConfig;
   }
@@ -2077,7 +2081,7 @@ export class VirtualMachine extends cdktf.TerraformResource {
   }
 
   // plan - computed: false, optional: true, required: false
-  private _plan = new VirtualMachinePlanOutputReference(this as any, "plan", true);
+  private _plan = new VirtualMachinePlanOutputReference(this, "plan", true);
   public get plan() {
     return this._plan;
   }
@@ -2093,12 +2097,12 @@ export class VirtualMachine extends cdktf.TerraformResource {
   }
 
   // storage_data_disk - computed: false, optional: true, required: false
-  private _storageDataDisk?: VirtualMachineStorageDataDisk[]; 
+  private _storageDataDisk?: VirtualMachineStorageDataDisk[] | cdktf.IResolvable; 
   public get storageDataDisk() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('storage_data_disk') as any;
+    return this.interpolationForAttribute('storage_data_disk');
   }
-  public set storageDataDisk(value: VirtualMachineStorageDataDisk[]) {
+  public set storageDataDisk(value: VirtualMachineStorageDataDisk[] | cdktf.IResolvable) {
     this._storageDataDisk = value;
   }
   public resetStorageDataDisk() {
@@ -2110,7 +2114,7 @@ export class VirtualMachine extends cdktf.TerraformResource {
   }
 
   // storage_image_reference - computed: false, optional: true, required: false
-  private _storageImageReference = new VirtualMachineStorageImageReferenceOutputReference(this as any, "storage_image_reference", true);
+  private _storageImageReference = new VirtualMachineStorageImageReferenceOutputReference(this, "storage_image_reference", true);
   public get storageImageReference() {
     return this._storageImageReference;
   }
@@ -2126,7 +2130,7 @@ export class VirtualMachine extends cdktf.TerraformResource {
   }
 
   // storage_os_disk - computed: false, optional: false, required: true
-  private _storageOsDisk = new VirtualMachineStorageOsDiskOutputReference(this as any, "storage_os_disk", true);
+  private _storageOsDisk = new VirtualMachineStorageOsDiskOutputReference(this, "storage_os_disk", true);
   public get storageOsDisk() {
     return this._storageOsDisk;
   }
@@ -2139,7 +2143,7 @@ export class VirtualMachine extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new VirtualMachineTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new VirtualMachineTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -2170,7 +2174,7 @@ export class VirtualMachine extends cdktf.TerraformResource {
       primary_network_interface_id: cdktf.stringToTerraform(this._primaryNetworkInterfaceId),
       proximity_placement_group_id: cdktf.stringToTerraform(this._proximityPlacementGroupId),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       vm_size: cdktf.stringToTerraform(this._vmSize),
       zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),
       additional_capabilities: virtualMachineAdditionalCapabilitiesToTerraform(this._additionalCapabilities.internalValue),

@@ -18,7 +18,7 @@ export interface EventgridDomainConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_domain#inbound_ip_rule EventgridDomain#inbound_ip_rule}
   */
-  readonly inboundIpRule?: EventgridDomainInboundIpRule[];
+  readonly inboundIpRule?: EventgridDomainInboundIpRule[] | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_domain#input_schema EventgridDomain#input_schema}
   */
@@ -46,7 +46,7 @@ export interface EventgridDomainConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_domain#tags EventgridDomain#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * identity block
   * 
@@ -83,8 +83,8 @@ export interface EventgridDomainInboundIpRule {
   readonly ipMask?: string;
 }
 
-export function eventgridDomainInboundIpRuleToTerraform(struct?: EventgridDomainInboundIpRule): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function eventgridDomainInboundIpRuleToTerraform(struct?: EventgridDomainInboundIpRule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -106,7 +106,7 @@ export interface EventgridDomainIdentity {
 }
 
 export function eventgridDomainIdentityToTerraform(struct?: EventgridDomainIdentityOutputReference | EventgridDomainIdentity): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -124,7 +124,7 @@ export class EventgridDomainIdentityOutputReference extends cdktf.ComplexObject 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -158,7 +158,7 @@ export class EventgridDomainIdentityOutputReference extends cdktf.ComplexObject 
   // identity_ids - computed: false, optional: true, required: false
   private _identityIds?: string[]; 
   public get identityIds() {
-    return this.getListAttribute('identity_ids');
+    return cdktf.Fn.tolist(this.getListAttribute('identity_ids'));
   }
   public set identityIds(value: string[]) {
     this._identityIds = value;
@@ -169,6 +169,16 @@ export class EventgridDomainIdentityOutputReference extends cdktf.ComplexObject 
   // Temporarily expose input value. Use with caution.
   public get identityIdsInput() {
     return this._identityIds;
+  }
+
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
   }
 
   // type - computed: false, optional: false, required: true
@@ -200,7 +210,7 @@ export interface EventgridDomainInputMappingDefaultValues {
 }
 
 export function eventgridDomainInputMappingDefaultValuesToTerraform(struct?: EventgridDomainInputMappingDefaultValuesOutputReference | EventgridDomainInputMappingDefaultValues): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -219,7 +229,7 @@ export class EventgridDomainInputMappingDefaultValuesOutputReference extends cdk
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -332,7 +342,7 @@ export interface EventgridDomainInputMappingFields {
 }
 
 export function eventgridDomainInputMappingFieldsToTerraform(struct?: EventgridDomainInputMappingFieldsOutputReference | EventgridDomainInputMappingFields): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -354,7 +364,7 @@ export class EventgridDomainInputMappingFieldsOutputReference extends cdktf.Comp
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -524,8 +534,8 @@ export interface EventgridDomainTimeouts {
   readonly update?: string;
 }
 
-export function eventgridDomainTimeoutsToTerraform(struct?: EventgridDomainTimeoutsOutputReference | EventgridDomainTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function eventgridDomainTimeoutsToTerraform(struct?: EventgridDomainTimeoutsOutputReference | EventgridDomainTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -545,7 +555,7 @@ export class EventgridDomainTimeoutsOutputReference extends cdktf.ComplexObject 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -708,7 +718,7 @@ export class EventgridDomain extends cdktf.TerraformResource {
   // auto_create_topic_with_first_subscription - computed: false, optional: true, required: false
   private _autoCreateTopicWithFirstSubscription?: boolean | cdktf.IResolvable; 
   public get autoCreateTopicWithFirstSubscription() {
-    return this.getBooleanAttribute('auto_create_topic_with_first_subscription') as any;
+    return this.getBooleanAttribute('auto_create_topic_with_first_subscription');
   }
   public set autoCreateTopicWithFirstSubscription(value: boolean | cdktf.IResolvable) {
     this._autoCreateTopicWithFirstSubscription = value;
@@ -724,7 +734,7 @@ export class EventgridDomain extends cdktf.TerraformResource {
   // auto_delete_topic_with_last_subscription - computed: false, optional: true, required: false
   private _autoDeleteTopicWithLastSubscription?: boolean | cdktf.IResolvable; 
   public get autoDeleteTopicWithLastSubscription() {
-    return this.getBooleanAttribute('auto_delete_topic_with_last_subscription') as any;
+    return this.getBooleanAttribute('auto_delete_topic_with_last_subscription');
   }
   public set autoDeleteTopicWithLastSubscription(value: boolean | cdktf.IResolvable) {
     this._autoDeleteTopicWithLastSubscription = value;
@@ -748,12 +758,12 @@ export class EventgridDomain extends cdktf.TerraformResource {
   }
 
   // inbound_ip_rule - computed: false, optional: true, required: false
-  private _inboundIpRule?: EventgridDomainInboundIpRule[]; 
+  private _inboundIpRule?: EventgridDomainInboundIpRule[] | cdktf.IResolvable; 
   public get inboundIpRule() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('inbound_ip_rule') as any;
+    return this.interpolationForAttribute('inbound_ip_rule');
   }
-  public set inboundIpRule(value: EventgridDomainInboundIpRule[]) {
+  public set inboundIpRule(value: EventgridDomainInboundIpRule[] | cdktf.IResolvable) {
     this._inboundIpRule = value;
   }
   public resetInboundIpRule() {
@@ -783,7 +793,7 @@ export class EventgridDomain extends cdktf.TerraformResource {
   // local_auth_enabled - computed: false, optional: true, required: false
   private _localAuthEnabled?: boolean | cdktf.IResolvable; 
   public get localAuthEnabled() {
-    return this.getBooleanAttribute('local_auth_enabled') as any;
+    return this.getBooleanAttribute('local_auth_enabled');
   }
   public set localAuthEnabled(value: boolean | cdktf.IResolvable) {
     this._localAuthEnabled = value;
@@ -830,7 +840,7 @@ export class EventgridDomain extends cdktf.TerraformResource {
   // public_network_access_enabled - computed: false, optional: true, required: false
   private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable; 
   public get publicNetworkAccessEnabled() {
-    return this.getBooleanAttribute('public_network_access_enabled') as any;
+    return this.getBooleanAttribute('public_network_access_enabled');
   }
   public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable) {
     this._publicNetworkAccessEnabled = value;
@@ -862,12 +872,11 @@ export class EventgridDomain extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -879,7 +888,7 @@ export class EventgridDomain extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity = new EventgridDomainIdentityOutputReference(this as any, "identity", true);
+  private _identity = new EventgridDomainIdentityOutputReference(this, "identity", true);
   public get identity() {
     return this._identity;
   }
@@ -895,7 +904,7 @@ export class EventgridDomain extends cdktf.TerraformResource {
   }
 
   // input_mapping_default_values - computed: false, optional: true, required: false
-  private _inputMappingDefaultValues = new EventgridDomainInputMappingDefaultValuesOutputReference(this as any, "input_mapping_default_values", true);
+  private _inputMappingDefaultValues = new EventgridDomainInputMappingDefaultValuesOutputReference(this, "input_mapping_default_values", true);
   public get inputMappingDefaultValues() {
     return this._inputMappingDefaultValues;
   }
@@ -911,7 +920,7 @@ export class EventgridDomain extends cdktf.TerraformResource {
   }
 
   // input_mapping_fields - computed: false, optional: true, required: false
-  private _inputMappingFields = new EventgridDomainInputMappingFieldsOutputReference(this as any, "input_mapping_fields", true);
+  private _inputMappingFields = new EventgridDomainInputMappingFieldsOutputReference(this, "input_mapping_fields", true);
   public get inputMappingFields() {
     return this._inputMappingFields;
   }
@@ -927,7 +936,7 @@ export class EventgridDomain extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new EventgridDomainTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new EventgridDomainTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -957,7 +966,7 @@ export class EventgridDomain extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       identity: eventgridDomainIdentityToTerraform(this._identity.internalValue),
       input_mapping_default_values: eventgridDomainInputMappingDefaultValuesToTerraform(this._inputMappingDefaultValues.internalValue),
       input_mapping_fields: eventgridDomainInputMappingFieldsToTerraform(this._inputMappingFields.internalValue),

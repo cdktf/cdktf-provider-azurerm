@@ -76,7 +76,7 @@ export interface ServicebusSubscriptionRuleCorrelationFilter {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription_rule#properties ServicebusSubscriptionRule#properties}
   */
-  readonly properties?: { [key: string]: string } | cdktf.IResolvable;
+  readonly properties?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription_rule#reply_to ServicebusSubscriptionRule#reply_to}
   */
@@ -96,7 +96,7 @@ export interface ServicebusSubscriptionRuleCorrelationFilter {
 }
 
 export function servicebusSubscriptionRuleCorrelationFilterToTerraform(struct?: ServicebusSubscriptionRuleCorrelationFilterOutputReference | ServicebusSubscriptionRuleCorrelationFilter): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -105,7 +105,7 @@ export function servicebusSubscriptionRuleCorrelationFilterToTerraform(struct?: 
     correlation_id: cdktf.stringToTerraform(struct!.correlationId),
     label: cdktf.stringToTerraform(struct!.label),
     message_id: cdktf.stringToTerraform(struct!.messageId),
-    properties: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.properties),
+    properties: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.properties),
     reply_to: cdktf.stringToTerraform(struct!.replyTo),
     reply_to_session_id: cdktf.stringToTerraform(struct!.replyToSessionId),
     session_id: cdktf.stringToTerraform(struct!.sessionId),
@@ -121,7 +121,7 @@ export class ServicebusSubscriptionRuleCorrelationFilterOutputReference extends 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -259,12 +259,11 @@ export class ServicebusSubscriptionRuleCorrelationFilterOutputReference extends 
   }
 
   // properties - computed: false, optional: true, required: false
-  private _properties?: { [key: string]: string } | cdktf.IResolvable; 
+  private _properties?: { [key: string]: string }; 
   public get properties() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('properties') as any;
+    return this.getStringMapAttribute('properties');
   }
-  public set properties(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set properties(value: { [key: string]: string }) {
     this._properties = value;
   }
   public resetProperties() {
@@ -358,8 +357,8 @@ export interface ServicebusSubscriptionRuleTimeouts {
   readonly update?: string;
 }
 
-export function servicebusSubscriptionRuleTimeoutsToTerraform(struct?: ServicebusSubscriptionRuleTimeoutsOutputReference | ServicebusSubscriptionRuleTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function servicebusSubscriptionRuleTimeoutsToTerraform(struct?: ServicebusSubscriptionRuleTimeoutsOutputReference | ServicebusSubscriptionRuleTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -379,7 +378,7 @@ export class ServicebusSubscriptionRuleTimeoutsOutputReference extends cdktf.Com
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -680,7 +679,7 @@ export class ServicebusSubscriptionRule extends cdktf.TerraformResource {
   }
 
   // correlation_filter - computed: false, optional: true, required: false
-  private _correlationFilter = new ServicebusSubscriptionRuleCorrelationFilterOutputReference(this as any, "correlation_filter", true);
+  private _correlationFilter = new ServicebusSubscriptionRuleCorrelationFilterOutputReference(this, "correlation_filter", true);
   public get correlationFilter() {
     return this._correlationFilter;
   }
@@ -696,7 +695,7 @@ export class ServicebusSubscriptionRule extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ServicebusSubscriptionRuleTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ServicebusSubscriptionRuleTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

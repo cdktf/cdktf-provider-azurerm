@@ -62,19 +62,19 @@ export interface CdnEndpointConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint#tags CdnEndpoint#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * delivery_rule block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint#delivery_rule CdnEndpoint#delivery_rule}
   */
-  readonly deliveryRule?: CdnEndpointDeliveryRule[];
+  readonly deliveryRule?: CdnEndpointDeliveryRule[] | cdktf.IResolvable;
   /**
   * geo_filter block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint#geo_filter CdnEndpoint#geo_filter}
   */
-  readonly geoFilter?: CdnEndpointGeoFilter[];
+  readonly geoFilter?: CdnEndpointGeoFilter[] | cdktf.IResolvable;
   /**
   * global_delivery_rule block
   * 
@@ -86,7 +86,7 @@ export interface CdnEndpointConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint#origin CdnEndpoint#origin}
   */
-  readonly origin: CdnEndpointOrigin[];
+  readonly origin: CdnEndpointOrigin[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -106,7 +106,7 @@ export interface CdnEndpointDeliveryRuleCacheExpirationAction {
 }
 
 export function cdnEndpointDeliveryRuleCacheExpirationActionToTerraform(struct?: CdnEndpointDeliveryRuleCacheExpirationActionOutputReference | CdnEndpointDeliveryRuleCacheExpirationAction): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -124,7 +124,7 @@ export class CdnEndpointDeliveryRuleCacheExpirationActionOutputReference extends
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -196,7 +196,7 @@ export interface CdnEndpointDeliveryRuleCacheKeyQueryStringAction {
 }
 
 export function cdnEndpointDeliveryRuleCacheKeyQueryStringActionToTerraform(struct?: CdnEndpointDeliveryRuleCacheKeyQueryStringActionOutputReference | CdnEndpointDeliveryRuleCacheKeyQueryStringAction): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -214,7 +214,7 @@ export class CdnEndpointDeliveryRuleCacheKeyQueryStringActionOutputReference ext
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -297,8 +297,8 @@ export interface CdnEndpointDeliveryRuleCookiesCondition {
   readonly transforms?: string[];
 }
 
-export function cdnEndpointDeliveryRuleCookiesConditionToTerraform(struct?: CdnEndpointDeliveryRuleCookiesCondition): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function cdnEndpointDeliveryRuleCookiesConditionToTerraform(struct?: CdnEndpointDeliveryRuleCookiesCondition | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -327,7 +327,7 @@ export interface CdnEndpointDeliveryRuleDeviceCondition {
 }
 
 export function cdnEndpointDeliveryRuleDeviceConditionToTerraform(struct?: CdnEndpointDeliveryRuleDeviceConditionOutputReference | CdnEndpointDeliveryRuleDeviceCondition): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -346,7 +346,7 @@ export class CdnEndpointDeliveryRuleDeviceConditionOutputReference extends cdktf
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -386,7 +386,7 @@ export class CdnEndpointDeliveryRuleDeviceConditionOutputReference extends cdktf
   // match_values - computed: false, optional: false, required: true
   private _matchValues?: string[]; 
   public get matchValues() {
-    return this.getListAttribute('match_values');
+    return cdktf.Fn.tolist(this.getListAttribute('match_values'));
   }
   public set matchValues(value: string[]) {
     this._matchValues = value;
@@ -399,7 +399,7 @@ export class CdnEndpointDeliveryRuleDeviceConditionOutputReference extends cdktf
   // negate_condition - computed: false, optional: true, required: false
   private _negateCondition?: boolean | cdktf.IResolvable; 
   public get negateCondition() {
-    return this.getBooleanAttribute('negate_condition') as any;
+    return this.getBooleanAttribute('negate_condition');
   }
   public set negateCondition(value: boolean | cdktf.IResolvable) {
     this._negateCondition = value;
@@ -443,8 +443,8 @@ export interface CdnEndpointDeliveryRuleHttpVersionCondition {
   readonly operator?: string;
 }
 
-export function cdnEndpointDeliveryRuleHttpVersionConditionToTerraform(struct?: CdnEndpointDeliveryRuleHttpVersionCondition): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function cdnEndpointDeliveryRuleHttpVersionConditionToTerraform(struct?: CdnEndpointDeliveryRuleHttpVersionCondition | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -470,8 +470,8 @@ export interface CdnEndpointDeliveryRuleModifyRequestHeaderAction {
   readonly value?: string;
 }
 
-export function cdnEndpointDeliveryRuleModifyRequestHeaderActionToTerraform(struct?: CdnEndpointDeliveryRuleModifyRequestHeaderAction): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function cdnEndpointDeliveryRuleModifyRequestHeaderActionToTerraform(struct?: CdnEndpointDeliveryRuleModifyRequestHeaderAction | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -497,8 +497,8 @@ export interface CdnEndpointDeliveryRuleModifyResponseHeaderAction {
   readonly value?: string;
 }
 
-export function cdnEndpointDeliveryRuleModifyResponseHeaderActionToTerraform(struct?: CdnEndpointDeliveryRuleModifyResponseHeaderAction): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function cdnEndpointDeliveryRuleModifyResponseHeaderActionToTerraform(struct?: CdnEndpointDeliveryRuleModifyResponseHeaderAction | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -532,8 +532,8 @@ export interface CdnEndpointDeliveryRulePostArgCondition {
   readonly transforms?: string[];
 }
 
-export function cdnEndpointDeliveryRulePostArgConditionToTerraform(struct?: CdnEndpointDeliveryRulePostArgCondition): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function cdnEndpointDeliveryRulePostArgConditionToTerraform(struct?: CdnEndpointDeliveryRulePostArgCondition | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -565,8 +565,8 @@ export interface CdnEndpointDeliveryRuleQueryStringCondition {
   readonly transforms?: string[];
 }
 
-export function cdnEndpointDeliveryRuleQueryStringConditionToTerraform(struct?: CdnEndpointDeliveryRuleQueryStringCondition): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function cdnEndpointDeliveryRuleQueryStringConditionToTerraform(struct?: CdnEndpointDeliveryRuleQueryStringCondition | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -593,8 +593,8 @@ export interface CdnEndpointDeliveryRuleRemoteAddressCondition {
   readonly operator: string;
 }
 
-export function cdnEndpointDeliveryRuleRemoteAddressConditionToTerraform(struct?: CdnEndpointDeliveryRuleRemoteAddressCondition): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function cdnEndpointDeliveryRuleRemoteAddressConditionToTerraform(struct?: CdnEndpointDeliveryRuleRemoteAddressCondition | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -624,8 +624,8 @@ export interface CdnEndpointDeliveryRuleRequestBodyCondition {
   readonly transforms?: string[];
 }
 
-export function cdnEndpointDeliveryRuleRequestBodyConditionToTerraform(struct?: CdnEndpointDeliveryRuleRequestBodyCondition): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function cdnEndpointDeliveryRuleRequestBodyConditionToTerraform(struct?: CdnEndpointDeliveryRuleRequestBodyCondition | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -660,8 +660,8 @@ export interface CdnEndpointDeliveryRuleRequestHeaderCondition {
   readonly transforms?: string[];
 }
 
-export function cdnEndpointDeliveryRuleRequestHeaderConditionToTerraform(struct?: CdnEndpointDeliveryRuleRequestHeaderCondition): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function cdnEndpointDeliveryRuleRequestHeaderConditionToTerraform(struct?: CdnEndpointDeliveryRuleRequestHeaderCondition | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -690,7 +690,7 @@ export interface CdnEndpointDeliveryRuleRequestMethodCondition {
 }
 
 export function cdnEndpointDeliveryRuleRequestMethodConditionToTerraform(struct?: CdnEndpointDeliveryRuleRequestMethodConditionOutputReference | CdnEndpointDeliveryRuleRequestMethodCondition): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -709,7 +709,7 @@ export class CdnEndpointDeliveryRuleRequestMethodConditionOutputReference extend
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -749,7 +749,7 @@ export class CdnEndpointDeliveryRuleRequestMethodConditionOutputReference extend
   // match_values - computed: false, optional: false, required: true
   private _matchValues?: string[]; 
   public get matchValues() {
-    return this.getListAttribute('match_values');
+    return cdktf.Fn.tolist(this.getListAttribute('match_values'));
   }
   public set matchValues(value: string[]) {
     this._matchValues = value;
@@ -762,7 +762,7 @@ export class CdnEndpointDeliveryRuleRequestMethodConditionOutputReference extend
   // negate_condition - computed: false, optional: true, required: false
   private _negateCondition?: boolean | cdktf.IResolvable; 
   public get negateCondition() {
-    return this.getBooleanAttribute('negate_condition') as any;
+    return this.getBooleanAttribute('negate_condition');
   }
   public set negateCondition(value: boolean | cdktf.IResolvable) {
     this._negateCondition = value;
@@ -807,7 +807,7 @@ export interface CdnEndpointDeliveryRuleRequestSchemeCondition {
 }
 
 export function cdnEndpointDeliveryRuleRequestSchemeConditionToTerraform(struct?: CdnEndpointDeliveryRuleRequestSchemeConditionOutputReference | CdnEndpointDeliveryRuleRequestSchemeCondition): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -826,7 +826,7 @@ export class CdnEndpointDeliveryRuleRequestSchemeConditionOutputReference extend
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -866,7 +866,7 @@ export class CdnEndpointDeliveryRuleRequestSchemeConditionOutputReference extend
   // match_values - computed: false, optional: false, required: true
   private _matchValues?: string[]; 
   public get matchValues() {
-    return this.getListAttribute('match_values');
+    return cdktf.Fn.tolist(this.getListAttribute('match_values'));
   }
   public set matchValues(value: string[]) {
     this._matchValues = value;
@@ -879,7 +879,7 @@ export class CdnEndpointDeliveryRuleRequestSchemeConditionOutputReference extend
   // negate_condition - computed: false, optional: true, required: false
   private _negateCondition?: boolean | cdktf.IResolvable; 
   public get negateCondition() {
-    return this.getBooleanAttribute('negate_condition') as any;
+    return this.getBooleanAttribute('negate_condition');
   }
   public set negateCondition(value: boolean | cdktf.IResolvable) {
     this._negateCondition = value;
@@ -927,8 +927,8 @@ export interface CdnEndpointDeliveryRuleRequestUriCondition {
   readonly transforms?: string[];
 }
 
-export function cdnEndpointDeliveryRuleRequestUriConditionToTerraform(struct?: CdnEndpointDeliveryRuleRequestUriCondition): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function cdnEndpointDeliveryRuleRequestUriConditionToTerraform(struct?: CdnEndpointDeliveryRuleRequestUriCondition | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -959,8 +959,8 @@ export interface CdnEndpointDeliveryRuleUrlFileExtensionCondition {
   readonly transforms?: string[];
 }
 
-export function cdnEndpointDeliveryRuleUrlFileExtensionConditionToTerraform(struct?: CdnEndpointDeliveryRuleUrlFileExtensionCondition): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function cdnEndpointDeliveryRuleUrlFileExtensionConditionToTerraform(struct?: CdnEndpointDeliveryRuleUrlFileExtensionCondition | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -991,8 +991,8 @@ export interface CdnEndpointDeliveryRuleUrlFileNameCondition {
   readonly transforms?: string[];
 }
 
-export function cdnEndpointDeliveryRuleUrlFileNameConditionToTerraform(struct?: CdnEndpointDeliveryRuleUrlFileNameCondition): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function cdnEndpointDeliveryRuleUrlFileNameConditionToTerraform(struct?: CdnEndpointDeliveryRuleUrlFileNameCondition | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1023,8 +1023,8 @@ export interface CdnEndpointDeliveryRuleUrlPathCondition {
   readonly transforms?: string[];
 }
 
-export function cdnEndpointDeliveryRuleUrlPathConditionToTerraform(struct?: CdnEndpointDeliveryRuleUrlPathCondition): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function cdnEndpointDeliveryRuleUrlPathConditionToTerraform(struct?: CdnEndpointDeliveryRuleUrlPathCondition | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1064,7 +1064,7 @@ export interface CdnEndpointDeliveryRuleUrlRedirectAction {
 }
 
 export function cdnEndpointDeliveryRuleUrlRedirectActionToTerraform(struct?: CdnEndpointDeliveryRuleUrlRedirectActionOutputReference | CdnEndpointDeliveryRuleUrlRedirectAction): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1086,7 +1086,7 @@ export class CdnEndpointDeliveryRuleUrlRedirectActionOutputReference extends cdk
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1250,7 +1250,7 @@ export interface CdnEndpointDeliveryRuleUrlRewriteAction {
 }
 
 export function cdnEndpointDeliveryRuleUrlRewriteActionToTerraform(struct?: CdnEndpointDeliveryRuleUrlRewriteActionOutputReference | CdnEndpointDeliveryRuleUrlRewriteAction): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1269,7 +1269,7 @@ export class CdnEndpointDeliveryRuleUrlRewriteActionOutputReference extends cdkt
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1322,7 +1322,7 @@ export class CdnEndpointDeliveryRuleUrlRewriteActionOutputReference extends cdkt
   // preserve_unmatched_path - computed: false, optional: true, required: false
   private _preserveUnmatchedPath?: boolean | cdktf.IResolvable; 
   public get preserveUnmatchedPath() {
-    return this.getBooleanAttribute('preserve_unmatched_path') as any;
+    return this.getBooleanAttribute('preserve_unmatched_path');
   }
   public set preserveUnmatchedPath(value: boolean | cdktf.IResolvable) {
     this._preserveUnmatchedPath = value;
@@ -1374,7 +1374,7 @@ export interface CdnEndpointDeliveryRule {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint#cookies_condition CdnEndpoint#cookies_condition}
   */
-  readonly cookiesCondition?: CdnEndpointDeliveryRuleCookiesCondition[];
+  readonly cookiesCondition?: CdnEndpointDeliveryRuleCookiesCondition[] | cdktf.IResolvable;
   /**
   * device_condition block
   * 
@@ -1386,49 +1386,49 @@ export interface CdnEndpointDeliveryRule {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint#http_version_condition CdnEndpoint#http_version_condition}
   */
-  readonly httpVersionCondition?: CdnEndpointDeliveryRuleHttpVersionCondition[];
+  readonly httpVersionCondition?: CdnEndpointDeliveryRuleHttpVersionCondition[] | cdktf.IResolvable;
   /**
   * modify_request_header_action block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint#modify_request_header_action CdnEndpoint#modify_request_header_action}
   */
-  readonly modifyRequestHeaderAction?: CdnEndpointDeliveryRuleModifyRequestHeaderAction[];
+  readonly modifyRequestHeaderAction?: CdnEndpointDeliveryRuleModifyRequestHeaderAction[] | cdktf.IResolvable;
   /**
   * modify_response_header_action block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint#modify_response_header_action CdnEndpoint#modify_response_header_action}
   */
-  readonly modifyResponseHeaderAction?: CdnEndpointDeliveryRuleModifyResponseHeaderAction[];
+  readonly modifyResponseHeaderAction?: CdnEndpointDeliveryRuleModifyResponseHeaderAction[] | cdktf.IResolvable;
   /**
   * post_arg_condition block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint#post_arg_condition CdnEndpoint#post_arg_condition}
   */
-  readonly postArgCondition?: CdnEndpointDeliveryRulePostArgCondition[];
+  readonly postArgCondition?: CdnEndpointDeliveryRulePostArgCondition[] | cdktf.IResolvable;
   /**
   * query_string_condition block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint#query_string_condition CdnEndpoint#query_string_condition}
   */
-  readonly queryStringCondition?: CdnEndpointDeliveryRuleQueryStringCondition[];
+  readonly queryStringCondition?: CdnEndpointDeliveryRuleQueryStringCondition[] | cdktf.IResolvable;
   /**
   * remote_address_condition block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint#remote_address_condition CdnEndpoint#remote_address_condition}
   */
-  readonly remoteAddressCondition?: CdnEndpointDeliveryRuleRemoteAddressCondition[];
+  readonly remoteAddressCondition?: CdnEndpointDeliveryRuleRemoteAddressCondition[] | cdktf.IResolvable;
   /**
   * request_body_condition block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint#request_body_condition CdnEndpoint#request_body_condition}
   */
-  readonly requestBodyCondition?: CdnEndpointDeliveryRuleRequestBodyCondition[];
+  readonly requestBodyCondition?: CdnEndpointDeliveryRuleRequestBodyCondition[] | cdktf.IResolvable;
   /**
   * request_header_condition block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint#request_header_condition CdnEndpoint#request_header_condition}
   */
-  readonly requestHeaderCondition?: CdnEndpointDeliveryRuleRequestHeaderCondition[];
+  readonly requestHeaderCondition?: CdnEndpointDeliveryRuleRequestHeaderCondition[] | cdktf.IResolvable;
   /**
   * request_method_condition block
   * 
@@ -1446,25 +1446,25 @@ export interface CdnEndpointDeliveryRule {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint#request_uri_condition CdnEndpoint#request_uri_condition}
   */
-  readonly requestUriCondition?: CdnEndpointDeliveryRuleRequestUriCondition[];
+  readonly requestUriCondition?: CdnEndpointDeliveryRuleRequestUriCondition[] | cdktf.IResolvable;
   /**
   * url_file_extension_condition block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint#url_file_extension_condition CdnEndpoint#url_file_extension_condition}
   */
-  readonly urlFileExtensionCondition?: CdnEndpointDeliveryRuleUrlFileExtensionCondition[];
+  readonly urlFileExtensionCondition?: CdnEndpointDeliveryRuleUrlFileExtensionCondition[] | cdktf.IResolvable;
   /**
   * url_file_name_condition block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint#url_file_name_condition CdnEndpoint#url_file_name_condition}
   */
-  readonly urlFileNameCondition?: CdnEndpointDeliveryRuleUrlFileNameCondition[];
+  readonly urlFileNameCondition?: CdnEndpointDeliveryRuleUrlFileNameCondition[] | cdktf.IResolvable;
   /**
   * url_path_condition block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint#url_path_condition CdnEndpoint#url_path_condition}
   */
-  readonly urlPathCondition?: CdnEndpointDeliveryRuleUrlPathCondition[];
+  readonly urlPathCondition?: CdnEndpointDeliveryRuleUrlPathCondition[] | cdktf.IResolvable;
   /**
   * url_redirect_action block
   * 
@@ -1479,8 +1479,8 @@ export interface CdnEndpointDeliveryRule {
   readonly urlRewriteAction?: CdnEndpointDeliveryRuleUrlRewriteAction;
 }
 
-export function cdnEndpointDeliveryRuleToTerraform(struct?: CdnEndpointDeliveryRule): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function cdnEndpointDeliveryRuleToTerraform(struct?: CdnEndpointDeliveryRule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1525,8 +1525,8 @@ export interface CdnEndpointGeoFilter {
   readonly relativePath: string;
 }
 
-export function cdnEndpointGeoFilterToTerraform(struct?: CdnEndpointGeoFilter): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function cdnEndpointGeoFilterToTerraform(struct?: CdnEndpointGeoFilter | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1549,7 +1549,7 @@ export interface CdnEndpointGlobalDeliveryRuleCacheExpirationAction {
 }
 
 export function cdnEndpointGlobalDeliveryRuleCacheExpirationActionToTerraform(struct?: CdnEndpointGlobalDeliveryRuleCacheExpirationActionOutputReference | CdnEndpointGlobalDeliveryRuleCacheExpirationAction): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1567,7 +1567,7 @@ export class CdnEndpointGlobalDeliveryRuleCacheExpirationActionOutputReference e
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1639,7 +1639,7 @@ export interface CdnEndpointGlobalDeliveryRuleCacheKeyQueryStringAction {
 }
 
 export function cdnEndpointGlobalDeliveryRuleCacheKeyQueryStringActionToTerraform(struct?: CdnEndpointGlobalDeliveryRuleCacheKeyQueryStringActionOutputReference | CdnEndpointGlobalDeliveryRuleCacheKeyQueryStringAction): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1657,7 +1657,7 @@ export class CdnEndpointGlobalDeliveryRuleCacheKeyQueryStringActionOutputReferen
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1732,8 +1732,8 @@ export interface CdnEndpointGlobalDeliveryRuleModifyRequestHeaderAction {
   readonly value?: string;
 }
 
-export function cdnEndpointGlobalDeliveryRuleModifyRequestHeaderActionToTerraform(struct?: CdnEndpointGlobalDeliveryRuleModifyRequestHeaderAction): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function cdnEndpointGlobalDeliveryRuleModifyRequestHeaderActionToTerraform(struct?: CdnEndpointGlobalDeliveryRuleModifyRequestHeaderAction | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1759,8 +1759,8 @@ export interface CdnEndpointGlobalDeliveryRuleModifyResponseHeaderAction {
   readonly value?: string;
 }
 
-export function cdnEndpointGlobalDeliveryRuleModifyResponseHeaderActionToTerraform(struct?: CdnEndpointGlobalDeliveryRuleModifyResponseHeaderAction): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function cdnEndpointGlobalDeliveryRuleModifyResponseHeaderActionToTerraform(struct?: CdnEndpointGlobalDeliveryRuleModifyResponseHeaderAction | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1799,7 +1799,7 @@ export interface CdnEndpointGlobalDeliveryRuleUrlRedirectAction {
 }
 
 export function cdnEndpointGlobalDeliveryRuleUrlRedirectActionToTerraform(struct?: CdnEndpointGlobalDeliveryRuleUrlRedirectActionOutputReference | CdnEndpointGlobalDeliveryRuleUrlRedirectAction): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1821,7 +1821,7 @@ export class CdnEndpointGlobalDeliveryRuleUrlRedirectActionOutputReference exten
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1985,7 +1985,7 @@ export interface CdnEndpointGlobalDeliveryRuleUrlRewriteAction {
 }
 
 export function cdnEndpointGlobalDeliveryRuleUrlRewriteActionToTerraform(struct?: CdnEndpointGlobalDeliveryRuleUrlRewriteActionOutputReference | CdnEndpointGlobalDeliveryRuleUrlRewriteAction): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -2004,7 +2004,7 @@ export class CdnEndpointGlobalDeliveryRuleUrlRewriteActionOutputReference extend
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -2057,7 +2057,7 @@ export class CdnEndpointGlobalDeliveryRuleUrlRewriteActionOutputReference extend
   // preserve_unmatched_path - computed: false, optional: true, required: false
   private _preserveUnmatchedPath?: boolean | cdktf.IResolvable; 
   public get preserveUnmatchedPath() {
-    return this.getBooleanAttribute('preserve_unmatched_path') as any;
+    return this.getBooleanAttribute('preserve_unmatched_path');
   }
   public set preserveUnmatchedPath(value: boolean | cdktf.IResolvable) {
     this._preserveUnmatchedPath = value;
@@ -2101,13 +2101,13 @@ export interface CdnEndpointGlobalDeliveryRule {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint#modify_request_header_action CdnEndpoint#modify_request_header_action}
   */
-  readonly modifyRequestHeaderAction?: CdnEndpointGlobalDeliveryRuleModifyRequestHeaderAction[];
+  readonly modifyRequestHeaderAction?: CdnEndpointGlobalDeliveryRuleModifyRequestHeaderAction[] | cdktf.IResolvable;
   /**
   * modify_response_header_action block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint#modify_response_header_action CdnEndpoint#modify_response_header_action}
   */
-  readonly modifyResponseHeaderAction?: CdnEndpointGlobalDeliveryRuleModifyResponseHeaderAction[];
+  readonly modifyResponseHeaderAction?: CdnEndpointGlobalDeliveryRuleModifyResponseHeaderAction[] | cdktf.IResolvable;
   /**
   * url_redirect_action block
   * 
@@ -2123,7 +2123,7 @@ export interface CdnEndpointGlobalDeliveryRule {
 }
 
 export function cdnEndpointGlobalDeliveryRuleToTerraform(struct?: CdnEndpointGlobalDeliveryRuleOutputReference | CdnEndpointGlobalDeliveryRule): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -2145,7 +2145,7 @@ export class CdnEndpointGlobalDeliveryRuleOutputReference extends cdktf.ComplexO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -2201,7 +2201,7 @@ export class CdnEndpointGlobalDeliveryRuleOutputReference extends cdktf.ComplexO
   }
 
   // cache_expiration_action - computed: false, optional: true, required: false
-  private _cacheExpirationAction = new CdnEndpointGlobalDeliveryRuleCacheExpirationActionOutputReference(this as any, "cache_expiration_action", true);
+  private _cacheExpirationAction = new CdnEndpointGlobalDeliveryRuleCacheExpirationActionOutputReference(this, "cache_expiration_action", true);
   public get cacheExpirationAction() {
     return this._cacheExpirationAction;
   }
@@ -2217,7 +2217,7 @@ export class CdnEndpointGlobalDeliveryRuleOutputReference extends cdktf.ComplexO
   }
 
   // cache_key_query_string_action - computed: false, optional: true, required: false
-  private _cacheKeyQueryStringAction = new CdnEndpointGlobalDeliveryRuleCacheKeyQueryStringActionOutputReference(this as any, "cache_key_query_string_action", true);
+  private _cacheKeyQueryStringAction = new CdnEndpointGlobalDeliveryRuleCacheKeyQueryStringActionOutputReference(this, "cache_key_query_string_action", true);
   public get cacheKeyQueryStringAction() {
     return this._cacheKeyQueryStringAction;
   }
@@ -2233,12 +2233,12 @@ export class CdnEndpointGlobalDeliveryRuleOutputReference extends cdktf.ComplexO
   }
 
   // modify_request_header_action - computed: false, optional: true, required: false
-  private _modifyRequestHeaderAction?: CdnEndpointGlobalDeliveryRuleModifyRequestHeaderAction[]; 
+  private _modifyRequestHeaderAction?: CdnEndpointGlobalDeliveryRuleModifyRequestHeaderAction[] | cdktf.IResolvable; 
   public get modifyRequestHeaderAction() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('modify_request_header_action') as any;
+    return this.interpolationForAttribute('modify_request_header_action');
   }
-  public set modifyRequestHeaderAction(value: CdnEndpointGlobalDeliveryRuleModifyRequestHeaderAction[]) {
+  public set modifyRequestHeaderAction(value: CdnEndpointGlobalDeliveryRuleModifyRequestHeaderAction[] | cdktf.IResolvable) {
     this._modifyRequestHeaderAction = value;
   }
   public resetModifyRequestHeaderAction() {
@@ -2250,12 +2250,12 @@ export class CdnEndpointGlobalDeliveryRuleOutputReference extends cdktf.ComplexO
   }
 
   // modify_response_header_action - computed: false, optional: true, required: false
-  private _modifyResponseHeaderAction?: CdnEndpointGlobalDeliveryRuleModifyResponseHeaderAction[]; 
+  private _modifyResponseHeaderAction?: CdnEndpointGlobalDeliveryRuleModifyResponseHeaderAction[] | cdktf.IResolvable; 
   public get modifyResponseHeaderAction() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('modify_response_header_action') as any;
+    return this.interpolationForAttribute('modify_response_header_action');
   }
-  public set modifyResponseHeaderAction(value: CdnEndpointGlobalDeliveryRuleModifyResponseHeaderAction[]) {
+  public set modifyResponseHeaderAction(value: CdnEndpointGlobalDeliveryRuleModifyResponseHeaderAction[] | cdktf.IResolvable) {
     this._modifyResponseHeaderAction = value;
   }
   public resetModifyResponseHeaderAction() {
@@ -2267,7 +2267,7 @@ export class CdnEndpointGlobalDeliveryRuleOutputReference extends cdktf.ComplexO
   }
 
   // url_redirect_action - computed: false, optional: true, required: false
-  private _urlRedirectAction = new CdnEndpointGlobalDeliveryRuleUrlRedirectActionOutputReference(this as any, "url_redirect_action", true);
+  private _urlRedirectAction = new CdnEndpointGlobalDeliveryRuleUrlRedirectActionOutputReference(this, "url_redirect_action", true);
   public get urlRedirectAction() {
     return this._urlRedirectAction;
   }
@@ -2283,7 +2283,7 @@ export class CdnEndpointGlobalDeliveryRuleOutputReference extends cdktf.ComplexO
   }
 
   // url_rewrite_action - computed: false, optional: true, required: false
-  private _urlRewriteAction = new CdnEndpointGlobalDeliveryRuleUrlRewriteActionOutputReference(this as any, "url_rewrite_action", true);
+  private _urlRewriteAction = new CdnEndpointGlobalDeliveryRuleUrlRewriteActionOutputReference(this, "url_rewrite_action", true);
   public get urlRewriteAction() {
     return this._urlRewriteAction;
   }
@@ -2317,8 +2317,8 @@ export interface CdnEndpointOrigin {
   readonly name: string;
 }
 
-export function cdnEndpointOriginToTerraform(struct?: CdnEndpointOrigin): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function cdnEndpointOriginToTerraform(struct?: CdnEndpointOrigin | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -2349,8 +2349,8 @@ export interface CdnEndpointTimeouts {
   readonly update?: string;
 }
 
-export function cdnEndpointTimeoutsToTerraform(struct?: CdnEndpointTimeoutsOutputReference | CdnEndpointTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function cdnEndpointTimeoutsToTerraform(struct?: CdnEndpointTimeoutsOutputReference | CdnEndpointTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -2370,7 +2370,7 @@ export class CdnEndpointTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -2538,7 +2538,7 @@ export class CdnEndpoint extends cdktf.TerraformResource {
   // content_types_to_compress - computed: true, optional: true, required: false
   private _contentTypesToCompress?: string[]; 
   public get contentTypesToCompress() {
-    return this.getListAttribute('content_types_to_compress');
+    return cdktf.Fn.tolist(this.getListAttribute('content_types_to_compress'));
   }
   public set contentTypesToCompress(value: string[]) {
     this._contentTypesToCompress = value;
@@ -2564,7 +2564,7 @@ export class CdnEndpoint extends cdktf.TerraformResource {
   // is_compression_enabled - computed: false, optional: true, required: false
   private _isCompressionEnabled?: boolean | cdktf.IResolvable; 
   public get isCompressionEnabled() {
-    return this.getBooleanAttribute('is_compression_enabled') as any;
+    return this.getBooleanAttribute('is_compression_enabled');
   }
   public set isCompressionEnabled(value: boolean | cdktf.IResolvable) {
     this._isCompressionEnabled = value;
@@ -2580,7 +2580,7 @@ export class CdnEndpoint extends cdktf.TerraformResource {
   // is_http_allowed - computed: false, optional: true, required: false
   private _isHttpAllowed?: boolean | cdktf.IResolvable; 
   public get isHttpAllowed() {
-    return this.getBooleanAttribute('is_http_allowed') as any;
+    return this.getBooleanAttribute('is_http_allowed');
   }
   public set isHttpAllowed(value: boolean | cdktf.IResolvable) {
     this._isHttpAllowed = value;
@@ -2596,7 +2596,7 @@ export class CdnEndpoint extends cdktf.TerraformResource {
   // is_https_allowed - computed: false, optional: true, required: false
   private _isHttpsAllowed?: boolean | cdktf.IResolvable; 
   public get isHttpsAllowed() {
-    return this.getBooleanAttribute('is_https_allowed') as any;
+    return this.getBooleanAttribute('is_https_allowed');
   }
   public set isHttpsAllowed(value: boolean | cdktf.IResolvable) {
     this._isHttpsAllowed = value;
@@ -2742,12 +2742,11 @@ export class CdnEndpoint extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -2759,12 +2758,12 @@ export class CdnEndpoint extends cdktf.TerraformResource {
   }
 
   // delivery_rule - computed: false, optional: true, required: false
-  private _deliveryRule?: CdnEndpointDeliveryRule[]; 
+  private _deliveryRule?: CdnEndpointDeliveryRule[] | cdktf.IResolvable; 
   public get deliveryRule() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('delivery_rule') as any;
+    return this.interpolationForAttribute('delivery_rule');
   }
-  public set deliveryRule(value: CdnEndpointDeliveryRule[]) {
+  public set deliveryRule(value: CdnEndpointDeliveryRule[] | cdktf.IResolvable) {
     this._deliveryRule = value;
   }
   public resetDeliveryRule() {
@@ -2776,12 +2775,12 @@ export class CdnEndpoint extends cdktf.TerraformResource {
   }
 
   // geo_filter - computed: false, optional: true, required: false
-  private _geoFilter?: CdnEndpointGeoFilter[]; 
+  private _geoFilter?: CdnEndpointGeoFilter[] | cdktf.IResolvable; 
   public get geoFilter() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('geo_filter') as any;
+    return this.interpolationForAttribute('geo_filter');
   }
-  public set geoFilter(value: CdnEndpointGeoFilter[]) {
+  public set geoFilter(value: CdnEndpointGeoFilter[] | cdktf.IResolvable) {
     this._geoFilter = value;
   }
   public resetGeoFilter() {
@@ -2793,7 +2792,7 @@ export class CdnEndpoint extends cdktf.TerraformResource {
   }
 
   // global_delivery_rule - computed: false, optional: true, required: false
-  private _globalDeliveryRule = new CdnEndpointGlobalDeliveryRuleOutputReference(this as any, "global_delivery_rule", true);
+  private _globalDeliveryRule = new CdnEndpointGlobalDeliveryRuleOutputReference(this, "global_delivery_rule", true);
   public get globalDeliveryRule() {
     return this._globalDeliveryRule;
   }
@@ -2809,12 +2808,12 @@ export class CdnEndpoint extends cdktf.TerraformResource {
   }
 
   // origin - computed: false, optional: false, required: true
-  private _origin?: CdnEndpointOrigin[]; 
+  private _origin?: CdnEndpointOrigin[] | cdktf.IResolvable; 
   public get origin() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('origin') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('origin')));
   }
-  public set origin(value: CdnEndpointOrigin[]) {
+  public set origin(value: CdnEndpointOrigin[] | cdktf.IResolvable) {
     this._origin = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -2823,7 +2822,7 @@ export class CdnEndpoint extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new CdnEndpointTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new CdnEndpointTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -2857,7 +2856,7 @@ export class CdnEndpoint extends cdktf.TerraformResource {
       profile_name: cdktf.stringToTerraform(this._profileName),
       querystring_caching_behaviour: cdktf.stringToTerraform(this._querystringCachingBehaviour),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       delivery_rule: cdktf.listMapper(cdnEndpointDeliveryRuleToTerraform)(this._deliveryRule),
       geo_filter: cdktf.listMapper(cdnEndpointGeoFilterToTerraform)(this._geoFilter),
       global_delivery_rule: cdnEndpointGlobalDeliveryRuleToTerraform(this._globalDeliveryRule.internalValue),

@@ -30,7 +30,7 @@ export interface ImageConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image#tags Image#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image#zone_resilient Image#zone_resilient}
   */
@@ -40,7 +40,7 @@ export interface ImageConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image#data_disk Image#data_disk}
   */
-  readonly dataDisk?: ImageDataDisk[];
+  readonly dataDisk?: ImageDataDisk[] | cdktf.IResolvable;
   /**
   * os_disk block
   * 
@@ -77,8 +77,8 @@ export interface ImageDataDisk {
   readonly sizeGb?: number;
 }
 
-export function imageDataDiskToTerraform(struct?: ImageDataDisk): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function imageDataDiskToTerraform(struct?: ImageDataDisk | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -119,7 +119,7 @@ export interface ImageOsDisk {
 }
 
 export function imageOsDiskToTerraform(struct?: ImageOsDiskOutputReference | ImageOsDisk): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -141,7 +141,7 @@ export class ImageOsDiskOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -311,8 +311,8 @@ export interface ImageTimeouts {
   readonly update?: string;
 }
 
-export function imageTimeoutsToTerraform(struct?: ImageTimeoutsOutputReference | ImageTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function imageTimeoutsToTerraform(struct?: ImageTimeoutsOutputReference | ImageTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -332,7 +332,7 @@ export class ImageTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -565,12 +565,11 @@ export class Image extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -584,7 +583,7 @@ export class Image extends cdktf.TerraformResource {
   // zone_resilient - computed: false, optional: true, required: false
   private _zoneResilient?: boolean | cdktf.IResolvable; 
   public get zoneResilient() {
-    return this.getBooleanAttribute('zone_resilient') as any;
+    return this.getBooleanAttribute('zone_resilient');
   }
   public set zoneResilient(value: boolean | cdktf.IResolvable) {
     this._zoneResilient = value;
@@ -598,12 +597,12 @@ export class Image extends cdktf.TerraformResource {
   }
 
   // data_disk - computed: false, optional: true, required: false
-  private _dataDisk?: ImageDataDisk[]; 
+  private _dataDisk?: ImageDataDisk[] | cdktf.IResolvable; 
   public get dataDisk() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('data_disk') as any;
+    return this.interpolationForAttribute('data_disk');
   }
-  public set dataDisk(value: ImageDataDisk[]) {
+  public set dataDisk(value: ImageDataDisk[] | cdktf.IResolvable) {
     this._dataDisk = value;
   }
   public resetDataDisk() {
@@ -615,7 +614,7 @@ export class Image extends cdktf.TerraformResource {
   }
 
   // os_disk - computed: false, optional: true, required: false
-  private _osDisk = new ImageOsDiskOutputReference(this as any, "os_disk", true);
+  private _osDisk = new ImageOsDiskOutputReference(this, "os_disk", true);
   public get osDisk() {
     return this._osDisk;
   }
@@ -631,7 +630,7 @@ export class Image extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ImageTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ImageTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -657,7 +656,7 @@ export class Image extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       source_virtual_machine_id: cdktf.stringToTerraform(this._sourceVirtualMachineId),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       zone_resilient: cdktf.booleanToTerraform(this._zoneResilient),
       data_disk: cdktf.listMapper(imageDataDiskToTerraform)(this._dataDisk),
       os_disk: imageOsDiskToTerraform(this._osDisk.internalValue),

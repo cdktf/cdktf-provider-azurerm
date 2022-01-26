@@ -40,13 +40,13 @@ export interface MonitorDiagnosticSettingConfig extends cdktf.TerraformMetaArgum
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_diagnostic_setting#log MonitorDiagnosticSetting#log}
   */
-  readonly log?: MonitorDiagnosticSettingLog[];
+  readonly log?: MonitorDiagnosticSettingLog[] | cdktf.IResolvable;
   /**
   * metric block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_diagnostic_setting#metric MonitorDiagnosticSetting#metric}
   */
-  readonly metric?: MonitorDiagnosticSettingMetric[];
+  readonly metric?: MonitorDiagnosticSettingMetric[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -66,7 +66,7 @@ export interface MonitorDiagnosticSettingLogRetentionPolicy {
 }
 
 export function monitorDiagnosticSettingLogRetentionPolicyToTerraform(struct?: MonitorDiagnosticSettingLogRetentionPolicyOutputReference | MonitorDiagnosticSettingLogRetentionPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -84,7 +84,7 @@ export class MonitorDiagnosticSettingLogRetentionPolicyOutputReference extends c
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -134,7 +134,7 @@ export class MonitorDiagnosticSettingLogRetentionPolicyOutputReference extends c
   // enabled - computed: false, optional: false, required: true
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
@@ -161,8 +161,8 @@ export interface MonitorDiagnosticSettingLog {
   readonly retentionPolicy?: MonitorDiagnosticSettingLogRetentionPolicy;
 }
 
-export function monitorDiagnosticSettingLogToTerraform(struct?: MonitorDiagnosticSettingLog): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function monitorDiagnosticSettingLogToTerraform(struct?: MonitorDiagnosticSettingLog | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -185,7 +185,7 @@ export interface MonitorDiagnosticSettingMetricRetentionPolicy {
 }
 
 export function monitorDiagnosticSettingMetricRetentionPolicyToTerraform(struct?: MonitorDiagnosticSettingMetricRetentionPolicyOutputReference | MonitorDiagnosticSettingMetricRetentionPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -203,7 +203,7 @@ export class MonitorDiagnosticSettingMetricRetentionPolicyOutputReference extend
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -253,7 +253,7 @@ export class MonitorDiagnosticSettingMetricRetentionPolicyOutputReference extend
   // enabled - computed: false, optional: false, required: true
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
@@ -280,8 +280,8 @@ export interface MonitorDiagnosticSettingMetric {
   readonly retentionPolicy?: MonitorDiagnosticSettingMetricRetentionPolicy;
 }
 
-export function monitorDiagnosticSettingMetricToTerraform(struct?: MonitorDiagnosticSettingMetric): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function monitorDiagnosticSettingMetricToTerraform(struct?: MonitorDiagnosticSettingMetric | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -311,8 +311,8 @@ export interface MonitorDiagnosticSettingTimeouts {
   readonly update?: string;
 }
 
-export function monitorDiagnosticSettingTimeoutsToTerraform(struct?: MonitorDiagnosticSettingTimeoutsOutputReference | MonitorDiagnosticSettingTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function monitorDiagnosticSettingTimeoutsToTerraform(struct?: MonitorDiagnosticSettingTimeoutsOutputReference | MonitorDiagnosticSettingTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -332,7 +332,7 @@ export class MonitorDiagnosticSettingTimeoutsOutputReference extends cdktf.Compl
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -600,12 +600,12 @@ export class MonitorDiagnosticSetting extends cdktf.TerraformResource {
   }
 
   // log - computed: false, optional: true, required: false
-  private _log?: MonitorDiagnosticSettingLog[]; 
+  private _log?: MonitorDiagnosticSettingLog[] | cdktf.IResolvable; 
   public get log() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('log') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('log')));
   }
-  public set log(value: MonitorDiagnosticSettingLog[]) {
+  public set log(value: MonitorDiagnosticSettingLog[] | cdktf.IResolvable) {
     this._log = value;
   }
   public resetLog() {
@@ -617,12 +617,12 @@ export class MonitorDiagnosticSetting extends cdktf.TerraformResource {
   }
 
   // metric - computed: false, optional: true, required: false
-  private _metric?: MonitorDiagnosticSettingMetric[]; 
+  private _metric?: MonitorDiagnosticSettingMetric[] | cdktf.IResolvable; 
   public get metric() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('metric') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('metric')));
   }
-  public set metric(value: MonitorDiagnosticSettingMetric[]) {
+  public set metric(value: MonitorDiagnosticSettingMetric[] | cdktf.IResolvable) {
     this._metric = value;
   }
   public resetMetric() {
@@ -634,7 +634,7 @@ export class MonitorDiagnosticSetting extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new MonitorDiagnosticSettingTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new MonitorDiagnosticSettingTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

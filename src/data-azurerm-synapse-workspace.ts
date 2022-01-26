@@ -46,8 +46,8 @@ export interface DataAzurermSynapseWorkspaceTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermSynapseWorkspaceTimeoutsToTerraform(struct?: DataAzurermSynapseWorkspaceTimeoutsOutputReference | DataAzurermSynapseWorkspaceTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermSynapseWorkspaceTimeoutsToTerraform(struct?: DataAzurermSynapseWorkspaceTimeoutsOutputReference | DataAzurermSynapseWorkspaceTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -64,7 +64,7 @@ export class DataAzurermSynapseWorkspaceTimeoutsOutputReference extends cdktf.Co
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -148,7 +148,7 @@ export class DataAzurermSynapseWorkspace extends cdktf.TerraformDataSource {
   // ==========
 
   // connectivity_endpoints - computed: true, optional: false, required: false
-  public connectivityEndpoints(key: string): string {
+  public connectivityEndpoints(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'connectivity_endpoints').lookup(key);
   }
 
@@ -159,7 +159,7 @@ export class DataAzurermSynapseWorkspace extends cdktf.TerraformDataSource {
 
   // identity - computed: true, optional: false, required: false
   public identity(index: string) {
-    return new DataAzurermSynapseWorkspaceIdentity(this, 'identity', index);
+    return new DataAzurermSynapseWorkspaceIdentity(this, 'identity', index, false);
   }
 
   // location - computed: true, optional: false, required: false
@@ -194,12 +194,12 @@ export class DataAzurermSynapseWorkspace extends cdktf.TerraformDataSource {
   }
 
   // tags - computed: true, optional: false, required: false
-  public tags(key: string): string {
+  public tags(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermSynapseWorkspaceTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermSynapseWorkspaceTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

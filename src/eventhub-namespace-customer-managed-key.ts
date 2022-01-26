@@ -41,8 +41,8 @@ export interface EventhubNamespaceCustomerManagedKeyTimeouts {
   readonly update?: string;
 }
 
-export function eventhubNamespaceCustomerManagedKeyTimeoutsToTerraform(struct?: EventhubNamespaceCustomerManagedKeyTimeoutsOutputReference | EventhubNamespaceCustomerManagedKeyTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function eventhubNamespaceCustomerManagedKeyTimeoutsToTerraform(struct?: EventhubNamespaceCustomerManagedKeyTimeoutsOutputReference | EventhubNamespaceCustomerManagedKeyTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -62,7 +62,7 @@ export class EventhubNamespaceCustomerManagedKeyTimeoutsOutputReference extends 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -232,7 +232,7 @@ export class EventhubNamespaceCustomerManagedKey extends cdktf.TerraformResource
   // key_vault_key_ids - computed: false, optional: false, required: true
   private _keyVaultKeyIds?: string[]; 
   public get keyVaultKeyIds() {
-    return this.getListAttribute('key_vault_key_ids');
+    return cdktf.Fn.tolist(this.getListAttribute('key_vault_key_ids'));
   }
   public set keyVaultKeyIds(value: string[]) {
     this._keyVaultKeyIds = value;
@@ -243,7 +243,7 @@ export class EventhubNamespaceCustomerManagedKey extends cdktf.TerraformResource
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new EventhubNamespaceCustomerManagedKeyTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new EventhubNamespaceCustomerManagedKeyTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

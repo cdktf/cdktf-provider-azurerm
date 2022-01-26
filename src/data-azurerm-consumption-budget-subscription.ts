@@ -78,13 +78,13 @@ export class DataAzurermConsumptionBudgetSubscriptionFilterNot extends cdktf.Com
   // dimension - computed: true, optional: false, required: false
   public get dimension() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('dimension') as any;
+    return this.interpolationForAttribute('dimension');
   }
 
   // tag - computed: true, optional: false, required: false
   public get tag() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tag') as any;
+    return this.interpolationForAttribute('tag');
   }
 }
 export class DataAzurermConsumptionBudgetSubscriptionFilterTag extends cdktf.ComplexComputedList {
@@ -109,19 +109,19 @@ export class DataAzurermConsumptionBudgetSubscriptionFilter extends cdktf.Comple
   // dimension - computed: true, optional: false, required: false
   public get dimension() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('dimension') as any;
+    return this.interpolationForAttribute('dimension');
   }
 
   // not - computed: true, optional: false, required: false
   public get not() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('not') as any;
+    return this.interpolationForAttribute('not');
   }
 
   // tag - computed: true, optional: false, required: false
   public get tag() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tag') as any;
+    return this.interpolationForAttribute('tag');
   }
 }
 export class DataAzurermConsumptionBudgetSubscriptionNotification extends cdktf.ComplexComputedList {
@@ -143,7 +143,7 @@ export class DataAzurermConsumptionBudgetSubscriptionNotification extends cdktf.
 
   // enabled - computed: true, optional: false, required: false
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
 
   // operator - computed: true, optional: false, required: false
@@ -180,8 +180,8 @@ export interface DataAzurermConsumptionBudgetSubscriptionTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermConsumptionBudgetSubscriptionTimeoutsToTerraform(struct?: DataAzurermConsumptionBudgetSubscriptionTimeoutsOutputReference | DataAzurermConsumptionBudgetSubscriptionTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermConsumptionBudgetSubscriptionTimeoutsToTerraform(struct?: DataAzurermConsumptionBudgetSubscriptionTimeoutsOutputReference | DataAzurermConsumptionBudgetSubscriptionTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -198,7 +198,7 @@ export class DataAzurermConsumptionBudgetSubscriptionTimeoutsOutputReference ext
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -288,7 +288,7 @@ export class DataAzurermConsumptionBudgetSubscription extends cdktf.TerraformDat
 
   // filter - computed: true, optional: false, required: false
   public filter(index: string) {
-    return new DataAzurermConsumptionBudgetSubscriptionFilter(this, 'filter', index);
+    return new DataAzurermConsumptionBudgetSubscriptionFilter(this, 'filter', index, false);
   }
 
   // id - computed: true, optional: true, required: false
@@ -311,7 +311,7 @@ export class DataAzurermConsumptionBudgetSubscription extends cdktf.TerraformDat
 
   // notification - computed: true, optional: false, required: false
   public notification(index: string) {
-    return new DataAzurermConsumptionBudgetSubscriptionNotification(this, 'notification', index);
+    return new DataAzurermConsumptionBudgetSubscriptionNotification(this, 'notification', index, false);
   }
 
   // subscription_id - computed: false, optional: false, required: true
@@ -334,11 +334,11 @@ export class DataAzurermConsumptionBudgetSubscription extends cdktf.TerraformDat
 
   // time_period - computed: true, optional: false, required: false
   public timePeriod(index: string) {
-    return new DataAzurermConsumptionBudgetSubscriptionTimePeriod(this, 'time_period', index);
+    return new DataAzurermConsumptionBudgetSubscriptionTimePeriod(this, 'time_period', index, false);
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermConsumptionBudgetSubscriptionTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermConsumptionBudgetSubscriptionTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

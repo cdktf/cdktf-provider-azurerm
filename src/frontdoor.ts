@@ -38,37 +38,37 @@ export interface FrontdoorConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor#tags Frontdoor#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * backend_pool block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor#backend_pool Frontdoor#backend_pool}
   */
-  readonly backendPool: FrontdoorBackendPool[];
+  readonly backendPool: FrontdoorBackendPool[] | cdktf.IResolvable;
   /**
   * backend_pool_health_probe block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor#backend_pool_health_probe Frontdoor#backend_pool_health_probe}
   */
-  readonly backendPoolHealthProbe: FrontdoorBackendPoolHealthProbe[];
+  readonly backendPoolHealthProbe: FrontdoorBackendPoolHealthProbe[] | cdktf.IResolvable;
   /**
   * backend_pool_load_balancing block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor#backend_pool_load_balancing Frontdoor#backend_pool_load_balancing}
   */
-  readonly backendPoolLoadBalancing: FrontdoorBackendPoolLoadBalancing[];
+  readonly backendPoolLoadBalancing: FrontdoorBackendPoolLoadBalancing[] | cdktf.IResolvable;
   /**
   * frontend_endpoint block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor#frontend_endpoint Frontdoor#frontend_endpoint}
   */
-  readonly frontendEndpoint: FrontdoorFrontendEndpoint[];
+  readonly frontendEndpoint: FrontdoorFrontendEndpoint[] | cdktf.IResolvable;
   /**
   * routing_rule block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor#routing_rule Frontdoor#routing_rule}
   */
-  readonly routingRule: FrontdoorRoutingRule[];
+  readonly routingRule: FrontdoorRoutingRule[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -134,8 +134,8 @@ export interface FrontdoorBackendPoolBackend {
   readonly weight?: number;
 }
 
-export function frontdoorBackendPoolBackendToTerraform(struct?: FrontdoorBackendPoolBackend): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function frontdoorBackendPoolBackendToTerraform(struct?: FrontdoorBackendPoolBackend | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -168,11 +168,11 @@ export interface FrontdoorBackendPool {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor#backend Frontdoor#backend}
   */
-  readonly backend: FrontdoorBackendPoolBackend[];
+  readonly backend: FrontdoorBackendPoolBackend[] | cdktf.IResolvable;
 }
 
-export function frontdoorBackendPoolToTerraform(struct?: FrontdoorBackendPool): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function frontdoorBackendPoolToTerraform(struct?: FrontdoorBackendPool | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -211,8 +211,8 @@ export interface FrontdoorBackendPoolHealthProbe {
   readonly protocol?: string;
 }
 
-export function frontdoorBackendPoolHealthProbeToTerraform(struct?: FrontdoorBackendPoolHealthProbe): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function frontdoorBackendPoolHealthProbeToTerraform(struct?: FrontdoorBackendPoolHealthProbe | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -245,8 +245,8 @@ export interface FrontdoorBackendPoolLoadBalancing {
   readonly successfulSamplesRequired?: number;
 }
 
-export function frontdoorBackendPoolLoadBalancingToTerraform(struct?: FrontdoorBackendPoolLoadBalancing): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function frontdoorBackendPoolLoadBalancingToTerraform(struct?: FrontdoorBackendPoolLoadBalancing | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -281,8 +281,8 @@ export interface FrontdoorFrontendEndpoint {
   readonly webApplicationFirewallPolicyLinkId?: string;
 }
 
-export function frontdoorFrontendEndpointToTerraform(struct?: FrontdoorFrontendEndpoint): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function frontdoorFrontendEndpointToTerraform(struct?: FrontdoorFrontendEndpoint | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -331,7 +331,7 @@ export interface FrontdoorRoutingRuleForwardingConfiguration {
 }
 
 export function frontdoorRoutingRuleForwardingConfigurationToTerraform(struct?: FrontdoorRoutingRuleForwardingConfigurationOutputReference | FrontdoorRoutingRuleForwardingConfiguration): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -355,7 +355,7 @@ export class FrontdoorRoutingRuleForwardingConfigurationOutputReference extends 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -454,7 +454,7 @@ export class FrontdoorRoutingRuleForwardingConfigurationOutputReference extends 
   // cache_enabled - computed: false, optional: true, required: false
   private _cacheEnabled?: boolean | cdktf.IResolvable; 
   public get cacheEnabled() {
-    return this.getBooleanAttribute('cache_enabled') as any;
+    return this.getBooleanAttribute('cache_enabled');
   }
   public set cacheEnabled(value: boolean | cdktf.IResolvable) {
     this._cacheEnabled = value;
@@ -502,7 +502,7 @@ export class FrontdoorRoutingRuleForwardingConfigurationOutputReference extends 
   // cache_use_dynamic_compression - computed: false, optional: true, required: false
   private _cacheUseDynamicCompression?: boolean | cdktf.IResolvable; 
   public get cacheUseDynamicCompression() {
-    return this.getBooleanAttribute('cache_use_dynamic_compression') as any;
+    return this.getBooleanAttribute('cache_use_dynamic_compression');
   }
   public set cacheUseDynamicCompression(value: boolean | cdktf.IResolvable) {
     this._cacheUseDynamicCompression = value;
@@ -575,7 +575,7 @@ export interface FrontdoorRoutingRuleRedirectConfiguration {
 }
 
 export function frontdoorRoutingRuleRedirectConfigurationToTerraform(struct?: FrontdoorRoutingRuleRedirectConfigurationOutputReference | FrontdoorRoutingRuleRedirectConfiguration): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -597,7 +597,7 @@ export class FrontdoorRoutingRuleRedirectConfigurationOutputReference extends cd
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -777,8 +777,8 @@ export interface FrontdoorRoutingRule {
   readonly redirectConfiguration?: FrontdoorRoutingRuleRedirectConfiguration;
 }
 
-export function frontdoorRoutingRuleToTerraform(struct?: FrontdoorRoutingRule): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function frontdoorRoutingRuleToTerraform(struct?: FrontdoorRoutingRule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -812,8 +812,8 @@ export interface FrontdoorTimeouts {
   readonly update?: string;
 }
 
-export function frontdoorTimeoutsToTerraform(struct?: FrontdoorTimeoutsOutputReference | FrontdoorTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function frontdoorTimeoutsToTerraform(struct?: FrontdoorTimeoutsOutputReference | FrontdoorTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -833,7 +833,7 @@ export class FrontdoorTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -994,17 +994,17 @@ export class Frontdoor extends cdktf.TerraformResource {
   // ==========
 
   // backend_pool_health_probes - computed: true, optional: false, required: false
-  public backendPoolHealthProbes(key: string): string {
+  public backendPoolHealthProbes(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'backend_pool_health_probes').lookup(key);
   }
 
   // backend_pool_load_balancing_settings - computed: true, optional: false, required: false
-  public backendPoolLoadBalancingSettings(key: string): string {
+  public backendPoolLoadBalancingSettings(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'backend_pool_load_balancing_settings').lookup(key);
   }
 
   // backend_pools - computed: true, optional: false, required: false
-  public backendPools(key: string): string {
+  public backendPools(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'backend_pools').lookup(key);
   }
 
@@ -1032,7 +1032,7 @@ export class Frontdoor extends cdktf.TerraformResource {
   // enforce_backend_pools_certificate_name_check - computed: false, optional: false, required: true
   private _enforceBackendPoolsCertificateNameCheck?: boolean | cdktf.IResolvable; 
   public get enforceBackendPoolsCertificateNameCheck() {
-    return this.getBooleanAttribute('enforce_backend_pools_certificate_name_check') as any;
+    return this.getBooleanAttribute('enforce_backend_pools_certificate_name_check');
   }
   public set enforceBackendPoolsCertificateNameCheck(value: boolean | cdktf.IResolvable) {
     this._enforceBackendPoolsCertificateNameCheck = value;
@@ -1044,7 +1044,7 @@ export class Frontdoor extends cdktf.TerraformResource {
 
   // explicit_resource_order - computed: true, optional: false, required: false
   public explicitResourceOrder(index: string) {
-    return new FrontdoorExplicitResourceOrder(this, 'explicit_resource_order', index);
+    return new FrontdoorExplicitResourceOrder(this, 'explicit_resource_order', index, false);
   }
 
   // friendly_name - computed: false, optional: true, required: false
@@ -1064,7 +1064,7 @@ export class Frontdoor extends cdktf.TerraformResource {
   }
 
   // frontend_endpoints - computed: true, optional: false, required: false
-  public frontendEndpoints(key: string): string {
+  public frontendEndpoints(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'frontend_endpoints').lookup(key);
   }
 
@@ -1081,7 +1081,7 @@ export class Frontdoor extends cdktf.TerraformResource {
   // load_balancer_enabled - computed: false, optional: true, required: false
   private _loadBalancerEnabled?: boolean | cdktf.IResolvable; 
   public get loadBalancerEnabled() {
-    return this.getBooleanAttribute('load_balancer_enabled') as any;
+    return this.getBooleanAttribute('load_balancer_enabled');
   }
   public set loadBalancerEnabled(value: boolean | cdktf.IResolvable) {
     this._loadBalancerEnabled = value;
@@ -1137,17 +1137,16 @@ export class Frontdoor extends cdktf.TerraformResource {
   }
 
   // routing_rules - computed: true, optional: false, required: false
-  public routingRules(key: string): string {
+  public routingRules(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'routing_rules').lookup(key);
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -1159,12 +1158,12 @@ export class Frontdoor extends cdktf.TerraformResource {
   }
 
   // backend_pool - computed: false, optional: false, required: true
-  private _backendPool?: FrontdoorBackendPool[]; 
+  private _backendPool?: FrontdoorBackendPool[] | cdktf.IResolvable; 
   public get backendPool() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('backend_pool') as any;
+    return this.interpolationForAttribute('backend_pool');
   }
-  public set backendPool(value: FrontdoorBackendPool[]) {
+  public set backendPool(value: FrontdoorBackendPool[] | cdktf.IResolvable) {
     this._backendPool = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -1173,12 +1172,12 @@ export class Frontdoor extends cdktf.TerraformResource {
   }
 
   // backend_pool_health_probe - computed: false, optional: false, required: true
-  private _backendPoolHealthProbe?: FrontdoorBackendPoolHealthProbe[]; 
+  private _backendPoolHealthProbe?: FrontdoorBackendPoolHealthProbe[] | cdktf.IResolvable; 
   public get backendPoolHealthProbe() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('backend_pool_health_probe') as any;
+    return this.interpolationForAttribute('backend_pool_health_probe');
   }
-  public set backendPoolHealthProbe(value: FrontdoorBackendPoolHealthProbe[]) {
+  public set backendPoolHealthProbe(value: FrontdoorBackendPoolHealthProbe[] | cdktf.IResolvable) {
     this._backendPoolHealthProbe = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -1187,12 +1186,12 @@ export class Frontdoor extends cdktf.TerraformResource {
   }
 
   // backend_pool_load_balancing - computed: false, optional: false, required: true
-  private _backendPoolLoadBalancing?: FrontdoorBackendPoolLoadBalancing[]; 
+  private _backendPoolLoadBalancing?: FrontdoorBackendPoolLoadBalancing[] | cdktf.IResolvable; 
   public get backendPoolLoadBalancing() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('backend_pool_load_balancing') as any;
+    return this.interpolationForAttribute('backend_pool_load_balancing');
   }
-  public set backendPoolLoadBalancing(value: FrontdoorBackendPoolLoadBalancing[]) {
+  public set backendPoolLoadBalancing(value: FrontdoorBackendPoolLoadBalancing[] | cdktf.IResolvable) {
     this._backendPoolLoadBalancing = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -1201,12 +1200,12 @@ export class Frontdoor extends cdktf.TerraformResource {
   }
 
   // frontend_endpoint - computed: false, optional: false, required: true
-  private _frontendEndpoint?: FrontdoorFrontendEndpoint[]; 
+  private _frontendEndpoint?: FrontdoorFrontendEndpoint[] | cdktf.IResolvable; 
   public get frontendEndpoint() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('frontend_endpoint') as any;
+    return this.interpolationForAttribute('frontend_endpoint');
   }
-  public set frontendEndpoint(value: FrontdoorFrontendEndpoint[]) {
+  public set frontendEndpoint(value: FrontdoorFrontendEndpoint[] | cdktf.IResolvable) {
     this._frontendEndpoint = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -1215,12 +1214,12 @@ export class Frontdoor extends cdktf.TerraformResource {
   }
 
   // routing_rule - computed: false, optional: false, required: true
-  private _routingRule?: FrontdoorRoutingRule[]; 
+  private _routingRule?: FrontdoorRoutingRule[] | cdktf.IResolvable; 
   public get routingRule() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('routing_rule') as any;
+    return this.interpolationForAttribute('routing_rule');
   }
-  public set routingRule(value: FrontdoorRoutingRule[]) {
+  public set routingRule(value: FrontdoorRoutingRule[] | cdktf.IResolvable) {
     this._routingRule = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -1229,7 +1228,7 @@ export class Frontdoor extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new FrontdoorTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new FrontdoorTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -1257,7 +1256,7 @@ export class Frontdoor extends cdktf.TerraformResource {
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       backend_pool: cdktf.listMapper(frontdoorBackendPoolToTerraform)(this._backendPool),
       backend_pool_health_probe: cdktf.listMapper(frontdoorBackendPoolHealthProbeToTerraform)(this._backendPoolHealthProbe),
       backend_pool_load_balancing: cdktf.listMapper(frontdoorBackendPoolLoadBalancingToTerraform)(this._backendPoolLoadBalancing),

@@ -10,7 +10,7 @@ export interface DataFactoryCustomDatasetConfig extends cdktf.TerraformMetaArgum
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_custom_dataset#additional_properties DataFactoryCustomDataset#additional_properties}
   */
-  readonly additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
+  readonly additionalProperties?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_custom_dataset#annotations DataFactoryCustomDataset#annotations}
   */
@@ -34,7 +34,7 @@ export interface DataFactoryCustomDatasetConfig extends cdktf.TerraformMetaArgum
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_custom_dataset#parameters DataFactoryCustomDataset#parameters}
   */
-  readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
+  readonly parameters?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_custom_dataset#schema_json DataFactoryCustomDataset#schema_json}
   */
@@ -68,17 +68,17 @@ export interface DataFactoryCustomDatasetLinkedService {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_custom_dataset#parameters DataFactoryCustomDataset#parameters}
   */
-  readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
+  readonly parameters?: { [key: string]: string };
 }
 
 export function dataFactoryCustomDatasetLinkedServiceToTerraform(struct?: DataFactoryCustomDatasetLinkedServiceOutputReference | DataFactoryCustomDatasetLinkedService): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
     name: cdktf.stringToTerraform(struct!.name),
-    parameters: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.parameters),
+    parameters: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.parameters),
   }
 }
 
@@ -90,7 +90,7 @@ export class DataFactoryCustomDatasetLinkedServiceOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -135,12 +135,11 @@ export class DataFactoryCustomDatasetLinkedServiceOutputReference extends cdktf.
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string } | cdktf.IResolvable; 
+  private _parameters?: { [key: string]: string }; 
   public get parameters() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('parameters') as any;
+    return this.getStringMapAttribute('parameters');
   }
-  public set parameters(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set parameters(value: { [key: string]: string }) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -170,8 +169,8 @@ export interface DataFactoryCustomDatasetTimeouts {
   readonly update?: string;
 }
 
-export function dataFactoryCustomDatasetTimeoutsToTerraform(struct?: DataFactoryCustomDatasetTimeoutsOutputReference | DataFactoryCustomDatasetTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataFactoryCustomDatasetTimeoutsToTerraform(struct?: DataFactoryCustomDatasetTimeoutsOutputReference | DataFactoryCustomDatasetTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -191,7 +190,7 @@ export class DataFactoryCustomDatasetTimeoutsOutputReference extends cdktf.Compl
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -350,12 +349,11 @@ export class DataFactoryCustomDataset extends cdktf.TerraformResource {
   // ==========
 
   // additional_properties - computed: false, optional: true, required: false
-  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable; 
+  private _additionalProperties?: { [key: string]: string }; 
   public get additionalProperties() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('additional_properties') as any;
+    return this.getStringMapAttribute('additional_properties');
   }
-  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set additionalProperties(value: { [key: string]: string }) {
     this._additionalProperties = value;
   }
   public resetAdditionalProperties() {
@@ -446,12 +444,11 @@ export class DataFactoryCustomDataset extends cdktf.TerraformResource {
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string } | cdktf.IResolvable; 
+  private _parameters?: { [key: string]: string }; 
   public get parameters() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('parameters') as any;
+    return this.getStringMapAttribute('parameters');
   }
-  public set parameters(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set parameters(value: { [key: string]: string }) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -505,7 +502,7 @@ export class DataFactoryCustomDataset extends cdktf.TerraformResource {
   }
 
   // linked_service - computed: false, optional: false, required: true
-  private _linkedService = new DataFactoryCustomDatasetLinkedServiceOutputReference(this as any, "linked_service", true);
+  private _linkedService = new DataFactoryCustomDatasetLinkedServiceOutputReference(this, "linked_service", true);
   public get linkedService() {
     return this._linkedService;
   }
@@ -518,7 +515,7 @@ export class DataFactoryCustomDataset extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataFactoryCustomDatasetTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataFactoryCustomDatasetTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -539,13 +536,13 @@ export class DataFactoryCustomDataset extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      additional_properties: cdktf.hashMapper(cdktf.anyToTerraform)(this._additionalProperties),
+      additional_properties: cdktf.hashMapper(cdktf.stringToTerraform)(this._additionalProperties),
       annotations: cdktf.listMapper(cdktf.stringToTerraform)(this._annotations),
       data_factory_id: cdktf.stringToTerraform(this._dataFactoryId),
       description: cdktf.stringToTerraform(this._description),
       folder: cdktf.stringToTerraform(this._folder),
       name: cdktf.stringToTerraform(this._name),
-      parameters: cdktf.hashMapper(cdktf.anyToTerraform)(this._parameters),
+      parameters: cdktf.hashMapper(cdktf.stringToTerraform)(this._parameters),
       schema_json: cdktf.stringToTerraform(this._schemaJson),
       type: cdktf.stringToTerraform(this._type),
       type_properties_json: cdktf.stringToTerraform(this._typePropertiesJson),

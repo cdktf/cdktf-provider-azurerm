@@ -65,7 +65,7 @@ export class DataAzurermSpringCloudServiceConfigServerGitSettingRepositorySshAut
 
   // strict_host_key_checking_enabled - computed: true, optional: false, required: false
   public get strictHostKeyCheckingEnabled() {
-    return this.getBooleanAttribute('strict_host_key_checking_enabled') as any;
+    return this.getBooleanAttribute('strict_host_key_checking_enabled');
   }
 }
 export class DataAzurermSpringCloudServiceConfigServerGitSettingRepository extends cdktf.ComplexComputedList {
@@ -73,7 +73,7 @@ export class DataAzurermSpringCloudServiceConfigServerGitSettingRepository exten
   // http_basic_auth - computed: true, optional: false, required: false
   public get httpBasicAuth() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('http_basic_auth') as any;
+    return this.interpolationForAttribute('http_basic_auth');
   }
 
   // label - computed: true, optional: false, required: false
@@ -99,7 +99,7 @@ export class DataAzurermSpringCloudServiceConfigServerGitSettingRepository exten
   // ssh_auth - computed: true, optional: false, required: false
   public get sshAuth() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('ssh_auth') as any;
+    return this.interpolationForAttribute('ssh_auth');
   }
 
   // uri - computed: true, optional: false, required: false
@@ -126,7 +126,7 @@ export class DataAzurermSpringCloudServiceConfigServerGitSettingSshAuth extends 
 
   // strict_host_key_checking_enabled - computed: true, optional: false, required: false
   public get strictHostKeyCheckingEnabled() {
-    return this.getBooleanAttribute('strict_host_key_checking_enabled') as any;
+    return this.getBooleanAttribute('strict_host_key_checking_enabled');
   }
 }
 export class DataAzurermSpringCloudServiceConfigServerGitSetting extends cdktf.ComplexComputedList {
@@ -134,7 +134,7 @@ export class DataAzurermSpringCloudServiceConfigServerGitSetting extends cdktf.C
   // http_basic_auth - computed: true, optional: false, required: false
   public get httpBasicAuth() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('http_basic_auth') as any;
+    return this.interpolationForAttribute('http_basic_auth');
   }
 
   // label - computed: true, optional: false, required: false
@@ -145,7 +145,7 @@ export class DataAzurermSpringCloudServiceConfigServerGitSetting extends cdktf.C
   // repository - computed: true, optional: false, required: false
   public get repository() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('repository') as any;
+    return this.interpolationForAttribute('repository');
   }
 
   // search_paths - computed: true, optional: false, required: false
@@ -156,7 +156,7 @@ export class DataAzurermSpringCloudServiceConfigServerGitSetting extends cdktf.C
   // ssh_auth - computed: true, optional: false, required: false
   public get sshAuth() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('ssh_auth') as any;
+    return this.interpolationForAttribute('ssh_auth');
   }
 
   // uri - computed: true, optional: false, required: false
@@ -198,8 +198,8 @@ export interface DataAzurermSpringCloudServiceTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermSpringCloudServiceTimeoutsToTerraform(struct?: DataAzurermSpringCloudServiceTimeoutsOutputReference | DataAzurermSpringCloudServiceTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermSpringCloudServiceTimeoutsToTerraform(struct?: DataAzurermSpringCloudServiceTimeoutsOutputReference | DataAzurermSpringCloudServiceTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -216,7 +216,7 @@ export class DataAzurermSpringCloudServiceTimeoutsOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -301,7 +301,7 @@ export class DataAzurermSpringCloudService extends cdktf.TerraformDataSource {
 
   // config_server_git_setting - computed: true, optional: false, required: false
   public configServerGitSetting(index: string) {
-    return new DataAzurermSpringCloudServiceConfigServerGitSetting(this, 'config_server_git_setting', index);
+    return new DataAzurermSpringCloudServiceConfigServerGitSetting(this, 'config_server_git_setting', index, false);
   }
 
   // id - computed: true, optional: true, required: false
@@ -334,7 +334,7 @@ export class DataAzurermSpringCloudService extends cdktf.TerraformDataSource {
 
   // required_network_traffic_rules - computed: true, optional: false, required: false
   public requiredNetworkTrafficRules(index: string) {
-    return new DataAzurermSpringCloudServiceRequiredNetworkTrafficRules(this, 'required_network_traffic_rules', index);
+    return new DataAzurermSpringCloudServiceRequiredNetworkTrafficRules(this, 'required_network_traffic_rules', index, false);
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -351,12 +351,12 @@ export class DataAzurermSpringCloudService extends cdktf.TerraformDataSource {
   }
 
   // tags - computed: true, optional: false, required: false
-  public tags(key: string): string {
+  public tags(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermSpringCloudServiceTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermSpringCloudServiceTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

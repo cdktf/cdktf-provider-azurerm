@@ -10,7 +10,7 @@ export interface DataFactoryLinkedServiceSynapseConfig extends cdktf.TerraformMe
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_synapse#additional_properties DataFactoryLinkedServiceSynapse#additional_properties}
   */
-  readonly additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
+  readonly additionalProperties?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_synapse#annotations DataFactoryLinkedServiceSynapse#annotations}
   */
@@ -42,7 +42,7 @@ export interface DataFactoryLinkedServiceSynapseConfig extends cdktf.TerraformMe
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_synapse#parameters DataFactoryLinkedServiceSynapse#parameters}
   */
-  readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
+  readonly parameters?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_synapse#resource_group_name DataFactoryLinkedServiceSynapse#resource_group_name}
   */
@@ -72,7 +72,7 @@ export interface DataFactoryLinkedServiceSynapseKeyVaultPassword {
 }
 
 export function dataFactoryLinkedServiceSynapseKeyVaultPasswordToTerraform(struct?: DataFactoryLinkedServiceSynapseKeyVaultPasswordOutputReference | DataFactoryLinkedServiceSynapseKeyVaultPassword): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -90,7 +90,7 @@ export class DataFactoryLinkedServiceSynapseKeyVaultPasswordOutputReference exte
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -166,8 +166,8 @@ export interface DataFactoryLinkedServiceSynapseTimeouts {
   readonly update?: string;
 }
 
-export function dataFactoryLinkedServiceSynapseTimeoutsToTerraform(struct?: DataFactoryLinkedServiceSynapseTimeoutsOutputReference | DataFactoryLinkedServiceSynapseTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataFactoryLinkedServiceSynapseTimeoutsToTerraform(struct?: DataFactoryLinkedServiceSynapseTimeoutsOutputReference | DataFactoryLinkedServiceSynapseTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -187,7 +187,7 @@ export class DataFactoryLinkedServiceSynapseTimeoutsOutputReference extends cdkt
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -346,12 +346,11 @@ export class DataFactoryLinkedServiceSynapse extends cdktf.TerraformResource {
   // ==========
 
   // additional_properties - computed: false, optional: true, required: false
-  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable; 
+  private _additionalProperties?: { [key: string]: string }; 
   public get additionalProperties() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('additional_properties') as any;
+    return this.getStringMapAttribute('additional_properties');
   }
-  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set additionalProperties(value: { [key: string]: string }) {
     this._additionalProperties = value;
   }
   public resetAdditionalProperties() {
@@ -474,12 +473,11 @@ export class DataFactoryLinkedServiceSynapse extends cdktf.TerraformResource {
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string } | cdktf.IResolvable; 
+  private _parameters?: { [key: string]: string }; 
   public get parameters() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('parameters') as any;
+    return this.getStringMapAttribute('parameters');
   }
-  public set parameters(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set parameters(value: { [key: string]: string }) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -504,7 +502,7 @@ export class DataFactoryLinkedServiceSynapse extends cdktf.TerraformResource {
   }
 
   // key_vault_password - computed: false, optional: true, required: false
-  private _keyVaultPassword = new DataFactoryLinkedServiceSynapseKeyVaultPasswordOutputReference(this as any, "key_vault_password", true);
+  private _keyVaultPassword = new DataFactoryLinkedServiceSynapseKeyVaultPasswordOutputReference(this, "key_vault_password", true);
   public get keyVaultPassword() {
     return this._keyVaultPassword;
   }
@@ -520,7 +518,7 @@ export class DataFactoryLinkedServiceSynapse extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataFactoryLinkedServiceSynapseTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataFactoryLinkedServiceSynapseTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -541,7 +539,7 @@ export class DataFactoryLinkedServiceSynapse extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      additional_properties: cdktf.hashMapper(cdktf.anyToTerraform)(this._additionalProperties),
+      additional_properties: cdktf.hashMapper(cdktf.stringToTerraform)(this._additionalProperties),
       annotations: cdktf.listMapper(cdktf.stringToTerraform)(this._annotations),
       connection_string: cdktf.stringToTerraform(this._connectionString),
       data_factory_id: cdktf.stringToTerraform(this._dataFactoryId),
@@ -549,7 +547,7 @@ export class DataFactoryLinkedServiceSynapse extends cdktf.TerraformResource {
       description: cdktf.stringToTerraform(this._description),
       integration_runtime_name: cdktf.stringToTerraform(this._integrationRuntimeName),
       name: cdktf.stringToTerraform(this._name),
-      parameters: cdktf.hashMapper(cdktf.anyToTerraform)(this._parameters),
+      parameters: cdktf.hashMapper(cdktf.stringToTerraform)(this._parameters),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       key_vault_password: dataFactoryLinkedServiceSynapseKeyVaultPasswordToTerraform(this._keyVaultPassword.internalValue),
       timeouts: dataFactoryLinkedServiceSynapseTimeoutsToTerraform(this._timeouts.internalValue),

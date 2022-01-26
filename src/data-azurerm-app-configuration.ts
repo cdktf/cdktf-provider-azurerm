@@ -97,8 +97,8 @@ export interface DataAzurermAppConfigurationTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermAppConfigurationTimeoutsToTerraform(struct?: DataAzurermAppConfigurationTimeoutsOutputReference | DataAzurermAppConfigurationTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermAppConfigurationTimeoutsToTerraform(struct?: DataAzurermAppConfigurationTimeoutsOutputReference | DataAzurermAppConfigurationTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -115,7 +115,7 @@ export class DataAzurermAppConfigurationTimeoutsOutputReference extends cdktf.Co
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -228,12 +228,12 @@ export class DataAzurermAppConfiguration extends cdktf.TerraformDataSource {
 
   // primary_read_key - computed: true, optional: false, required: false
   public primaryReadKey(index: string) {
-    return new DataAzurermAppConfigurationPrimaryReadKey(this, 'primary_read_key', index);
+    return new DataAzurermAppConfigurationPrimaryReadKey(this, 'primary_read_key', index, false);
   }
 
   // primary_write_key - computed: true, optional: false, required: false
   public primaryWriteKey(index: string) {
-    return new DataAzurermAppConfigurationPrimaryWriteKey(this, 'primary_write_key', index);
+    return new DataAzurermAppConfigurationPrimaryWriteKey(this, 'primary_write_key', index, false);
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -251,12 +251,12 @@ export class DataAzurermAppConfiguration extends cdktf.TerraformDataSource {
 
   // secondary_read_key - computed: true, optional: false, required: false
   public secondaryReadKey(index: string) {
-    return new DataAzurermAppConfigurationSecondaryReadKey(this, 'secondary_read_key', index);
+    return new DataAzurermAppConfigurationSecondaryReadKey(this, 'secondary_read_key', index, false);
   }
 
   // secondary_write_key - computed: true, optional: false, required: false
   public secondaryWriteKey(index: string) {
-    return new DataAzurermAppConfigurationSecondaryWriteKey(this, 'secondary_write_key', index);
+    return new DataAzurermAppConfigurationSecondaryWriteKey(this, 'secondary_write_key', index, false);
   }
 
   // sku - computed: true, optional: false, required: false
@@ -265,12 +265,12 @@ export class DataAzurermAppConfiguration extends cdktf.TerraformDataSource {
   }
 
   // tags - computed: true, optional: false, required: false
-  public tags(key: string): string {
+  public tags(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermAppConfigurationTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermAppConfigurationTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

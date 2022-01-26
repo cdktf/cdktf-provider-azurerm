@@ -77,8 +77,8 @@ export interface VirtualMachineScaleSetExtensionTimeouts {
   readonly update?: string;
 }
 
-export function virtualMachineScaleSetExtensionTimeoutsToTerraform(struct?: VirtualMachineScaleSetExtensionTimeoutsOutputReference | VirtualMachineScaleSetExtensionTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function virtualMachineScaleSetExtensionTimeoutsToTerraform(struct?: VirtualMachineScaleSetExtensionTimeoutsOutputReference | VirtualMachineScaleSetExtensionTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -98,7 +98,7 @@ export class VirtualMachineScaleSetExtensionTimeoutsOutputReference extends cdkt
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -259,7 +259,7 @@ export class VirtualMachineScaleSetExtensionA extends cdktf.TerraformResource {
   // auto_upgrade_minor_version - computed: false, optional: true, required: false
   private _autoUpgradeMinorVersion?: boolean | cdktf.IResolvable; 
   public get autoUpgradeMinorVersion() {
-    return this.getBooleanAttribute('auto_upgrade_minor_version') as any;
+    return this.getBooleanAttribute('auto_upgrade_minor_version');
   }
   public set autoUpgradeMinorVersion(value: boolean | cdktf.IResolvable) {
     this._autoUpgradeMinorVersion = value;
@@ -275,7 +275,7 @@ export class VirtualMachineScaleSetExtensionA extends cdktf.TerraformResource {
   // automatic_upgrade_enabled - computed: false, optional: true, required: false
   private _automaticUpgradeEnabled?: boolean | cdktf.IResolvable; 
   public get automaticUpgradeEnabled() {
-    return this.getBooleanAttribute('automatic_upgrade_enabled') as any;
+    return this.getBooleanAttribute('automatic_upgrade_enabled');
   }
   public set automaticUpgradeEnabled(value: boolean | cdktf.IResolvable) {
     this._automaticUpgradeEnabled = value;
@@ -423,7 +423,7 @@ export class VirtualMachineScaleSetExtensionA extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new VirtualMachineScaleSetExtensionTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new VirtualMachineScaleSetExtensionTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

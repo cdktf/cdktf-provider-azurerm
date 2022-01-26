@@ -93,8 +93,8 @@ export interface LbRuleTimeouts {
   readonly update?: string;
 }
 
-export function lbRuleTimeoutsToTerraform(struct?: LbRuleTimeoutsOutputReference | LbRuleTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function lbRuleTimeoutsToTerraform(struct?: LbRuleTimeoutsOutputReference | LbRuleTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -114,7 +114,7 @@ export class LbRuleTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -324,7 +324,7 @@ export class LbRule extends cdktf.TerraformResource {
   // disable_outbound_snat - computed: false, optional: true, required: false
   private _disableOutboundSnat?: boolean | cdktf.IResolvable; 
   public get disableOutboundSnat() {
-    return this.getBooleanAttribute('disable_outbound_snat') as any;
+    return this.getBooleanAttribute('disable_outbound_snat');
   }
   public set disableOutboundSnat(value: boolean | cdktf.IResolvable) {
     this._disableOutboundSnat = value;
@@ -340,7 +340,7 @@ export class LbRule extends cdktf.TerraformResource {
   // enable_floating_ip - computed: false, optional: true, required: false
   private _enableFloatingIp?: boolean | cdktf.IResolvable; 
   public get enableFloatingIp() {
-    return this.getBooleanAttribute('enable_floating_ip') as any;
+    return this.getBooleanAttribute('enable_floating_ip');
   }
   public set enableFloatingIp(value: boolean | cdktf.IResolvable) {
     this._enableFloatingIp = value;
@@ -356,7 +356,7 @@ export class LbRule extends cdktf.TerraformResource {
   // enable_tcp_reset - computed: false, optional: true, required: false
   private _enableTcpReset?: boolean | cdktf.IResolvable; 
   public get enableTcpReset() {
-    return this.getBooleanAttribute('enable_tcp_reset') as any;
+    return this.getBooleanAttribute('enable_tcp_reset');
   }
   public set enableTcpReset(value: boolean | cdktf.IResolvable) {
     this._enableTcpReset = value;
@@ -506,7 +506,7 @@ export class LbRule extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new LbRuleTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new LbRuleTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

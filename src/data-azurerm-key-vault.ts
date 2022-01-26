@@ -73,12 +73,12 @@ export class DataAzurermKeyVaultNetworkAcls extends cdktf.ComplexComputedList {
 
   // ip_rules - computed: true, optional: false, required: false
   public get ipRules() {
-    return this.getListAttribute('ip_rules');
+    return cdktf.Fn.tolist(this.getListAttribute('ip_rules'));
   }
 
   // virtual_network_subnet_ids - computed: true, optional: false, required: false
   public get virtualNetworkSubnetIds() {
-    return this.getListAttribute('virtual_network_subnet_ids');
+    return cdktf.Fn.tolist(this.getListAttribute('virtual_network_subnet_ids'));
   }
 }
 export interface DataAzurermKeyVaultTimeouts {
@@ -88,8 +88,8 @@ export interface DataAzurermKeyVaultTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermKeyVaultTimeoutsToTerraform(struct?: DataAzurermKeyVaultTimeoutsOutputReference | DataAzurermKeyVaultTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermKeyVaultTimeoutsToTerraform(struct?: DataAzurermKeyVaultTimeoutsOutputReference | DataAzurermKeyVaultTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -106,7 +106,7 @@ export class DataAzurermKeyVaultTimeoutsOutputReference extends cdktf.ComplexObj
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -191,27 +191,27 @@ export class DataAzurermKeyVault extends cdktf.TerraformDataSource {
 
   // access_policy - computed: true, optional: false, required: false
   public accessPolicy(index: string) {
-    return new DataAzurermKeyVaultAccessPolicy(this, 'access_policy', index);
+    return new DataAzurermKeyVaultAccessPolicy(this, 'access_policy', index, false);
   }
 
   // enable_rbac_authorization - computed: true, optional: false, required: false
   public get enableRbacAuthorization() {
-    return this.getBooleanAttribute('enable_rbac_authorization') as any;
+    return this.getBooleanAttribute('enable_rbac_authorization');
   }
 
   // enabled_for_deployment - computed: true, optional: false, required: false
   public get enabledForDeployment() {
-    return this.getBooleanAttribute('enabled_for_deployment') as any;
+    return this.getBooleanAttribute('enabled_for_deployment');
   }
 
   // enabled_for_disk_encryption - computed: true, optional: false, required: false
   public get enabledForDiskEncryption() {
-    return this.getBooleanAttribute('enabled_for_disk_encryption') as any;
+    return this.getBooleanAttribute('enabled_for_disk_encryption');
   }
 
   // enabled_for_template_deployment - computed: true, optional: false, required: false
   public get enabledForTemplateDeployment() {
-    return this.getBooleanAttribute('enabled_for_template_deployment') as any;
+    return this.getBooleanAttribute('enabled_for_template_deployment');
   }
 
   // id - computed: true, optional: true, required: false
@@ -239,12 +239,12 @@ export class DataAzurermKeyVault extends cdktf.TerraformDataSource {
 
   // network_acls - computed: true, optional: false, required: false
   public networkAcls(index: string) {
-    return new DataAzurermKeyVaultNetworkAcls(this, 'network_acls', index);
+    return new DataAzurermKeyVaultNetworkAcls(this, 'network_acls', index, false);
   }
 
   // purge_protection_enabled - computed: true, optional: false, required: false
   public get purgeProtectionEnabled() {
-    return this.getBooleanAttribute('purge_protection_enabled') as any;
+    return this.getBooleanAttribute('purge_protection_enabled');
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -267,11 +267,11 @@ export class DataAzurermKeyVault extends cdktf.TerraformDataSource {
 
   // soft_delete_enabled - computed: true, optional: false, required: false
   public get softDeleteEnabled() {
-    return this.getBooleanAttribute('soft_delete_enabled') as any;
+    return this.getBooleanAttribute('soft_delete_enabled');
   }
 
   // tags - computed: true, optional: false, required: false
-  public tags(key: string): string {
+  public tags(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
@@ -286,7 +286,7 @@ export class DataAzurermKeyVault extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermKeyVaultTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermKeyVaultTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

@@ -51,8 +51,8 @@ export interface DataAzurermRouteFilterTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermRouteFilterTimeoutsToTerraform(struct?: DataAzurermRouteFilterTimeoutsOutputReference | DataAzurermRouteFilterTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermRouteFilterTimeoutsToTerraform(struct?: DataAzurermRouteFilterTimeoutsOutputReference | DataAzurermRouteFilterTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -69,7 +69,7 @@ export class DataAzurermRouteFilterTimeoutsOutputReference extends cdktf.Complex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -190,16 +190,16 @@ export class DataAzurermRouteFilter extends cdktf.TerraformDataSource {
 
   // rule - computed: true, optional: false, required: false
   public rule(index: string) {
-    return new DataAzurermRouteFilterRule(this, 'rule', index);
+    return new DataAzurermRouteFilterRule(this, 'rule', index, false);
   }
 
   // tags - computed: true, optional: false, required: false
-  public tags(key: string): string {
+  public tags(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermRouteFilterTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermRouteFilterTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

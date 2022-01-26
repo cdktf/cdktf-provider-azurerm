@@ -65,8 +65,8 @@ export interface VpnGatewayNatRuleTimeouts {
   readonly update?: string;
 }
 
-export function vpnGatewayNatRuleTimeoutsToTerraform(struct?: VpnGatewayNatRuleTimeoutsOutputReference | VpnGatewayNatRuleTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function vpnGatewayNatRuleTimeoutsToTerraform(struct?: VpnGatewayNatRuleTimeoutsOutputReference | VpnGatewayNatRuleTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -86,7 +86,7 @@ export class VpnGatewayNatRuleTimeoutsOutputReference extends cdktf.ComplexObjec
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -244,7 +244,7 @@ export class VpnGatewayNatRule extends cdktf.TerraformResource {
   // external_address_space_mappings - computed: false, optional: false, required: true
   private _externalAddressSpaceMappings?: string[]; 
   public get externalAddressSpaceMappings() {
-    return this.getListAttribute('external_address_space_mappings');
+    return cdktf.Fn.tolist(this.getListAttribute('external_address_space_mappings'));
   }
   public set externalAddressSpaceMappings(value: string[]) {
     this._externalAddressSpaceMappings = value;
@@ -262,7 +262,7 @@ export class VpnGatewayNatRule extends cdktf.TerraformResource {
   // internal_address_space_mappings - computed: false, optional: false, required: true
   private _internalAddressSpaceMappings?: string[]; 
   public get internalAddressSpaceMappings() {
-    return this.getListAttribute('internal_address_space_mappings');
+    return cdktf.Fn.tolist(this.getListAttribute('internal_address_space_mappings'));
   }
   public set internalAddressSpaceMappings(value: string[]) {
     this._internalAddressSpaceMappings = value;
@@ -360,7 +360,7 @@ export class VpnGatewayNatRule extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new VpnGatewayNatRuleTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new VpnGatewayNatRuleTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

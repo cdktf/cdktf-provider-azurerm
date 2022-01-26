@@ -26,7 +26,7 @@ export interface TrafficManagerProfileConfig extends cdktf.TerraformMetaArgument
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile#tags TrafficManagerProfile#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile#traffic_routing_method TrafficManagerProfile#traffic_routing_method}
   */
@@ -66,7 +66,7 @@ export interface TrafficManagerProfileDnsConfig {
 }
 
 export function trafficManagerProfileDnsConfigToTerraform(struct?: TrafficManagerProfileDnsConfigOutputReference | TrafficManagerProfileDnsConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -84,7 +84,7 @@ export class TrafficManagerProfileDnsConfigOutputReference extends cdktf.Complex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -152,8 +152,8 @@ export interface TrafficManagerProfileMonitorConfigCustomHeader {
   readonly value: string;
 }
 
-export function trafficManagerProfileMonitorConfigCustomHeaderToTerraform(struct?: TrafficManagerProfileMonitorConfigCustomHeader): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function trafficManagerProfileMonitorConfigCustomHeaderToTerraform(struct?: TrafficManagerProfileMonitorConfigCustomHeader | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -197,11 +197,11 @@ export interface TrafficManagerProfileMonitorConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile#custom_header TrafficManagerProfile#custom_header}
   */
-  readonly customHeader?: TrafficManagerProfileMonitorConfigCustomHeader[];
+  readonly customHeader?: TrafficManagerProfileMonitorConfigCustomHeader[] | cdktf.IResolvable;
 }
 
 export function trafficManagerProfileMonitorConfigToTerraform(struct?: TrafficManagerProfileMonitorConfigOutputReference | TrafficManagerProfileMonitorConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -225,7 +225,7 @@ export class TrafficManagerProfileMonitorConfigOutputReference extends cdktf.Com
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -399,12 +399,12 @@ export class TrafficManagerProfileMonitorConfigOutputReference extends cdktf.Com
   }
 
   // custom_header - computed: false, optional: true, required: false
-  private _customHeader?: TrafficManagerProfileMonitorConfigCustomHeader[]; 
+  private _customHeader?: TrafficManagerProfileMonitorConfigCustomHeader[] | cdktf.IResolvable; 
   public get customHeader() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('custom_header') as any;
+    return this.interpolationForAttribute('custom_header');
   }
-  public set customHeader(value: TrafficManagerProfileMonitorConfigCustomHeader[]) {
+  public set customHeader(value: TrafficManagerProfileMonitorConfigCustomHeader[] | cdktf.IResolvable) {
     this._customHeader = value;
   }
   public resetCustomHeader() {
@@ -434,8 +434,8 @@ export interface TrafficManagerProfileTimeouts {
   readonly update?: string;
 }
 
-export function trafficManagerProfileTimeoutsToTerraform(struct?: TrafficManagerProfileTimeoutsOutputReference | TrafficManagerProfileTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function trafficManagerProfileTimeoutsToTerraform(struct?: TrafficManagerProfileTimeoutsOutputReference | TrafficManagerProfileTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -455,7 +455,7 @@ export class TrafficManagerProfileTimeoutsOutputReference extends cdktf.ComplexO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -680,12 +680,11 @@ export class TrafficManagerProfile extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -712,7 +711,7 @@ export class TrafficManagerProfile extends cdktf.TerraformResource {
   // traffic_view_enabled - computed: false, optional: true, required: false
   private _trafficViewEnabled?: boolean | cdktf.IResolvable; 
   public get trafficViewEnabled() {
-    return this.getBooleanAttribute('traffic_view_enabled') as any;
+    return this.getBooleanAttribute('traffic_view_enabled');
   }
   public set trafficViewEnabled(value: boolean | cdktf.IResolvable) {
     this._trafficViewEnabled = value;
@@ -726,7 +725,7 @@ export class TrafficManagerProfile extends cdktf.TerraformResource {
   }
 
   // dns_config - computed: false, optional: false, required: true
-  private _dnsConfig = new TrafficManagerProfileDnsConfigOutputReference(this as any, "dns_config", true);
+  private _dnsConfig = new TrafficManagerProfileDnsConfigOutputReference(this, "dns_config", true);
   public get dnsConfig() {
     return this._dnsConfig;
   }
@@ -739,7 +738,7 @@ export class TrafficManagerProfile extends cdktf.TerraformResource {
   }
 
   // monitor_config - computed: false, optional: false, required: true
-  private _monitorConfig = new TrafficManagerProfileMonitorConfigOutputReference(this as any, "monitor_config", true);
+  private _monitorConfig = new TrafficManagerProfileMonitorConfigOutputReference(this, "monitor_config", true);
   public get monitorConfig() {
     return this._monitorConfig;
   }
@@ -752,7 +751,7 @@ export class TrafficManagerProfile extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TrafficManagerProfileTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new TrafficManagerProfileTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -777,7 +776,7 @@ export class TrafficManagerProfile extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       profile_status: cdktf.stringToTerraform(this._profileStatus),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       traffic_routing_method: cdktf.stringToTerraform(this._trafficRoutingMethod),
       traffic_view_enabled: cdktf.booleanToTerraform(this._trafficViewEnabled),
       dns_config: trafficManagerProfileDnsConfigToTerraform(this._dnsConfig.internalValue),

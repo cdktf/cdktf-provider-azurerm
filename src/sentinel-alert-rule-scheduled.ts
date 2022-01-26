@@ -94,7 +94,7 @@ export interface SentinelAlertRuleScheduledEventGrouping {
 }
 
 export function sentinelAlertRuleScheduledEventGroupingToTerraform(struct?: SentinelAlertRuleScheduledEventGroupingOutputReference | SentinelAlertRuleScheduledEventGrouping): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -111,7 +111,7 @@ export class SentinelAlertRuleScheduledEventGroupingOutputReference extends cdkt
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -173,7 +173,7 @@ export interface SentinelAlertRuleScheduledIncidentConfigurationGrouping {
 }
 
 export function sentinelAlertRuleScheduledIncidentConfigurationGroupingToTerraform(struct?: SentinelAlertRuleScheduledIncidentConfigurationGroupingOutputReference | SentinelAlertRuleScheduledIncidentConfigurationGrouping): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -194,7 +194,7 @@ export class SentinelAlertRuleScheduledIncidentConfigurationGroupingOutputRefere
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -246,7 +246,7 @@ export class SentinelAlertRuleScheduledIncidentConfigurationGroupingOutputRefere
   // enabled - computed: false, optional: true, required: false
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
@@ -278,7 +278,7 @@ export class SentinelAlertRuleScheduledIncidentConfigurationGroupingOutputRefere
   // group_by - computed: false, optional: true, required: false
   private _groupBy?: string[]; 
   public get groupBy() {
-    return this.getListAttribute('group_by');
+    return cdktf.Fn.tolist(this.getListAttribute('group_by'));
   }
   public set groupBy(value: string[]) {
     this._groupBy = value;
@@ -310,7 +310,7 @@ export class SentinelAlertRuleScheduledIncidentConfigurationGroupingOutputRefere
   // reopen_closed_incidents - computed: false, optional: true, required: false
   private _reopenClosedIncidents?: boolean | cdktf.IResolvable; 
   public get reopenClosedIncidents() {
-    return this.getBooleanAttribute('reopen_closed_incidents') as any;
+    return this.getBooleanAttribute('reopen_closed_incidents');
   }
   public set reopenClosedIncidents(value: boolean | cdktf.IResolvable) {
     this._reopenClosedIncidents = value;
@@ -337,7 +337,7 @@ export interface SentinelAlertRuleScheduledIncidentConfiguration {
 }
 
 export function sentinelAlertRuleScheduledIncidentConfigurationToTerraform(struct?: SentinelAlertRuleScheduledIncidentConfigurationOutputReference | SentinelAlertRuleScheduledIncidentConfiguration): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -355,7 +355,7 @@ export class SentinelAlertRuleScheduledIncidentConfigurationOutputReference exte
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -389,7 +389,7 @@ export class SentinelAlertRuleScheduledIncidentConfigurationOutputReference exte
   // create_incident - computed: false, optional: false, required: true
   private _createIncident?: boolean | cdktf.IResolvable; 
   public get createIncident() {
-    return this.getBooleanAttribute('create_incident') as any;
+    return this.getBooleanAttribute('create_incident');
   }
   public set createIncident(value: boolean | cdktf.IResolvable) {
     this._createIncident = value;
@@ -400,7 +400,7 @@ export class SentinelAlertRuleScheduledIncidentConfigurationOutputReference exte
   }
 
   // grouping - computed: false, optional: false, required: true
-  private _grouping = new SentinelAlertRuleScheduledIncidentConfigurationGroupingOutputReference(this as any, "grouping", true);
+  private _grouping = new SentinelAlertRuleScheduledIncidentConfigurationGroupingOutputReference(this, "grouping", true);
   public get grouping() {
     return this._grouping;
   }
@@ -431,8 +431,8 @@ export interface SentinelAlertRuleScheduledTimeouts {
   readonly update?: string;
 }
 
-export function sentinelAlertRuleScheduledTimeoutsToTerraform(struct?: SentinelAlertRuleScheduledTimeoutsOutputReference | SentinelAlertRuleScheduledTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function sentinelAlertRuleScheduledTimeoutsToTerraform(struct?: SentinelAlertRuleScheduledTimeoutsOutputReference | SentinelAlertRuleScheduledTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -452,7 +452,7 @@ export class SentinelAlertRuleScheduledTimeoutsOutputReference extends cdktf.Com
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -664,7 +664,7 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
   // enabled - computed: false, optional: true, required: false
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
@@ -785,7 +785,7 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
   // suppression_enabled - computed: false, optional: true, required: false
   private _suppressionEnabled?: boolean | cdktf.IResolvable; 
   public get suppressionEnabled() {
-    return this.getBooleanAttribute('suppression_enabled') as any;
+    return this.getBooleanAttribute('suppression_enabled');
   }
   public set suppressionEnabled(value: boolean | cdktf.IResolvable) {
     this._suppressionEnabled = value;
@@ -801,7 +801,7 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
   // tactics - computed: false, optional: true, required: false
   private _tactics?: string[]; 
   public get tactics() {
-    return this.getListAttribute('tactics');
+    return cdktf.Fn.tolist(this.getListAttribute('tactics'));
   }
   public set tactics(value: string[]) {
     this._tactics = value;
@@ -847,7 +847,7 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
   }
 
   // event_grouping - computed: false, optional: true, required: false
-  private _eventGrouping = new SentinelAlertRuleScheduledEventGroupingOutputReference(this as any, "event_grouping", true);
+  private _eventGrouping = new SentinelAlertRuleScheduledEventGroupingOutputReference(this, "event_grouping", true);
   public get eventGrouping() {
     return this._eventGrouping;
   }
@@ -863,7 +863,7 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
   }
 
   // incident_configuration - computed: false, optional: true, required: false
-  private _incidentConfiguration = new SentinelAlertRuleScheduledIncidentConfigurationOutputReference(this as any, "incident_configuration", true);
+  private _incidentConfiguration = new SentinelAlertRuleScheduledIncidentConfigurationOutputReference(this, "incident_configuration", true);
   public get incidentConfiguration() {
     return this._incidentConfiguration;
   }
@@ -879,7 +879,7 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new SentinelAlertRuleScheduledTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new SentinelAlertRuleScheduledTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

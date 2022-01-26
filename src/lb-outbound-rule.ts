@@ -44,7 +44,7 @@ export interface LbOutboundRuleConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_outbound_rule#frontend_ip_configuration LbOutboundRule#frontend_ip_configuration}
   */
-  readonly frontendIpConfiguration?: LbOutboundRuleFrontendIpConfiguration[];
+  readonly frontendIpConfiguration?: LbOutboundRuleFrontendIpConfiguration[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -59,8 +59,8 @@ export interface LbOutboundRuleFrontendIpConfiguration {
   readonly name: string;
 }
 
-export function lbOutboundRuleFrontendIpConfigurationToTerraform(struct?: LbOutboundRuleFrontendIpConfiguration): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function lbOutboundRuleFrontendIpConfigurationToTerraform(struct?: LbOutboundRuleFrontendIpConfiguration | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -88,8 +88,8 @@ export interface LbOutboundRuleTimeouts {
   readonly update?: string;
 }
 
-export function lbOutboundRuleTimeoutsToTerraform(struct?: LbOutboundRuleTimeoutsOutputReference | LbOutboundRuleTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function lbOutboundRuleTimeoutsToTerraform(struct?: LbOutboundRuleTimeoutsOutputReference | LbOutboundRuleTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -109,7 +109,7 @@ export class LbOutboundRuleTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -297,7 +297,7 @@ export class LbOutboundRule extends cdktf.TerraformResource {
   // enable_tcp_reset - computed: false, optional: true, required: false
   private _enableTcpReset?: boolean | cdktf.IResolvable; 
   public get enableTcpReset() {
-    return this.getBooleanAttribute('enable_tcp_reset') as any;
+    return this.getBooleanAttribute('enable_tcp_reset');
   }
   public set enableTcpReset(value: boolean | cdktf.IResolvable) {
     this._enableTcpReset = value;
@@ -384,12 +384,12 @@ export class LbOutboundRule extends cdktf.TerraformResource {
   }
 
   // frontend_ip_configuration - computed: false, optional: true, required: false
-  private _frontendIpConfiguration?: LbOutboundRuleFrontendIpConfiguration[]; 
+  private _frontendIpConfiguration?: LbOutboundRuleFrontendIpConfiguration[] | cdktf.IResolvable; 
   public get frontendIpConfiguration() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('frontend_ip_configuration') as any;
+    return this.interpolationForAttribute('frontend_ip_configuration');
   }
-  public set frontendIpConfiguration(value: LbOutboundRuleFrontendIpConfiguration[]) {
+  public set frontendIpConfiguration(value: LbOutboundRuleFrontendIpConfiguration[] | cdktf.IResolvable) {
     this._frontendIpConfiguration = value;
   }
   public resetFrontendIpConfiguration() {
@@ -401,7 +401,7 @@ export class LbOutboundRule extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new LbOutboundRuleTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new LbOutboundRuleTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

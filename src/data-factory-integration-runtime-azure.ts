@@ -77,8 +77,8 @@ export interface DataFactoryIntegrationRuntimeAzureTimeouts {
   readonly update?: string;
 }
 
-export function dataFactoryIntegrationRuntimeAzureTimeoutsToTerraform(struct?: DataFactoryIntegrationRuntimeAzureTimeoutsOutputReference | DataFactoryIntegrationRuntimeAzureTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataFactoryIntegrationRuntimeAzureTimeoutsToTerraform(struct?: DataFactoryIntegrationRuntimeAzureTimeoutsOutputReference | DataFactoryIntegrationRuntimeAzureTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -98,7 +98,7 @@ export class DataFactoryIntegrationRuntimeAzureTimeoutsOutputReference extends c
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -259,7 +259,7 @@ export class DataFactoryIntegrationRuntimeAzure extends cdktf.TerraformResource 
   // cleanup_enabled - computed: true, optional: true, required: false
   private _cleanupEnabled?: boolean | cdktf.IResolvable; 
   public get cleanupEnabled() {
-    return this.getBooleanAttribute('cleanup_enabled') as any;
+    return this.getBooleanAttribute('cleanup_enabled');
   }
   public set cleanupEnabled(value: boolean | cdktf.IResolvable) {
     this._cleanupEnabled = value;
@@ -415,7 +415,7 @@ export class DataFactoryIntegrationRuntimeAzure extends cdktf.TerraformResource 
   // virtual_network_enabled - computed: false, optional: true, required: false
   private _virtualNetworkEnabled?: boolean | cdktf.IResolvable; 
   public get virtualNetworkEnabled() {
-    return this.getBooleanAttribute('virtual_network_enabled') as any;
+    return this.getBooleanAttribute('virtual_network_enabled');
   }
   public set virtualNetworkEnabled(value: boolean | cdktf.IResolvable) {
     this._virtualNetworkEnabled = value;
@@ -429,7 +429,7 @@ export class DataFactoryIntegrationRuntimeAzure extends cdktf.TerraformResource 
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataFactoryIntegrationRuntimeAzureTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataFactoryIntegrationRuntimeAzureTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

@@ -105,8 +105,8 @@ export interface NetworkSecurityRuleTimeouts {
   readonly update?: string;
 }
 
-export function networkSecurityRuleTimeoutsToTerraform(struct?: NetworkSecurityRuleTimeoutsOutputReference | NetworkSecurityRuleTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function networkSecurityRuleTimeoutsToTerraform(struct?: NetworkSecurityRuleTimeoutsOutputReference | NetworkSecurityRuleTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -126,7 +126,7 @@ export class NetworkSecurityRuleTimeoutsOutputReference extends cdktf.ComplexObj
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -339,7 +339,7 @@ export class NetworkSecurityRule extends cdktf.TerraformResource {
   // destination_address_prefixes - computed: false, optional: true, required: false
   private _destinationAddressPrefixes?: string[]; 
   public get destinationAddressPrefixes() {
-    return this.getListAttribute('destination_address_prefixes');
+    return cdktf.Fn.tolist(this.getListAttribute('destination_address_prefixes'));
   }
   public set destinationAddressPrefixes(value: string[]) {
     this._destinationAddressPrefixes = value;
@@ -355,7 +355,7 @@ export class NetworkSecurityRule extends cdktf.TerraformResource {
   // destination_application_security_group_ids - computed: false, optional: true, required: false
   private _destinationApplicationSecurityGroupIds?: string[]; 
   public get destinationApplicationSecurityGroupIds() {
-    return this.getListAttribute('destination_application_security_group_ids');
+    return cdktf.Fn.tolist(this.getListAttribute('destination_application_security_group_ids'));
   }
   public set destinationApplicationSecurityGroupIds(value: string[]) {
     this._destinationApplicationSecurityGroupIds = value;
@@ -387,7 +387,7 @@ export class NetworkSecurityRule extends cdktf.TerraformResource {
   // destination_port_ranges - computed: false, optional: true, required: false
   private _destinationPortRanges?: string[]; 
   public get destinationPortRanges() {
-    return this.getListAttribute('destination_port_ranges');
+    return cdktf.Fn.tolist(this.getListAttribute('destination_port_ranges'));
   }
   public set destinationPortRanges(value: string[]) {
     this._destinationPortRanges = value;
@@ -502,7 +502,7 @@ export class NetworkSecurityRule extends cdktf.TerraformResource {
   // source_address_prefixes - computed: false, optional: true, required: false
   private _sourceAddressPrefixes?: string[]; 
   public get sourceAddressPrefixes() {
-    return this.getListAttribute('source_address_prefixes');
+    return cdktf.Fn.tolist(this.getListAttribute('source_address_prefixes'));
   }
   public set sourceAddressPrefixes(value: string[]) {
     this._sourceAddressPrefixes = value;
@@ -518,7 +518,7 @@ export class NetworkSecurityRule extends cdktf.TerraformResource {
   // source_application_security_group_ids - computed: false, optional: true, required: false
   private _sourceApplicationSecurityGroupIds?: string[]; 
   public get sourceApplicationSecurityGroupIds() {
-    return this.getListAttribute('source_application_security_group_ids');
+    return cdktf.Fn.tolist(this.getListAttribute('source_application_security_group_ids'));
   }
   public set sourceApplicationSecurityGroupIds(value: string[]) {
     this._sourceApplicationSecurityGroupIds = value;
@@ -550,7 +550,7 @@ export class NetworkSecurityRule extends cdktf.TerraformResource {
   // source_port_ranges - computed: false, optional: true, required: false
   private _sourcePortRanges?: string[]; 
   public get sourcePortRanges() {
-    return this.getListAttribute('source_port_ranges');
+    return cdktf.Fn.tolist(this.getListAttribute('source_port_ranges'));
   }
   public set sourcePortRanges(value: string[]) {
     this._sourcePortRanges = value;
@@ -564,7 +564,7 @@ export class NetworkSecurityRule extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new NetworkSecurityRuleTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new NetworkSecurityRuleTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

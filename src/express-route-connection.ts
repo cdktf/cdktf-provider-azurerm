@@ -56,7 +56,7 @@ export interface ExpressRouteConnectionRoutingPropagatedRouteTable {
 }
 
 export function expressRouteConnectionRoutingPropagatedRouteTableToTerraform(struct?: ExpressRouteConnectionRoutingPropagatedRouteTableOutputReference | ExpressRouteConnectionRoutingPropagatedRouteTable): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -74,7 +74,7 @@ export class ExpressRouteConnectionRoutingPropagatedRouteTableOutputReference ex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -108,7 +108,7 @@ export class ExpressRouteConnectionRoutingPropagatedRouteTableOutputReference ex
   // labels - computed: true, optional: true, required: false
   private _labels?: string[]; 
   public get labels() {
-    return this.getListAttribute('labels');
+    return cdktf.Fn.tolist(this.getListAttribute('labels'));
   }
   public set labels(value: string[]) {
     this._labels = value;
@@ -151,7 +151,7 @@ export interface ExpressRouteConnectionRouting {
 }
 
 export function expressRouteConnectionRoutingToTerraform(struct?: ExpressRouteConnectionRoutingOutputReference | ExpressRouteConnectionRouting): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -169,7 +169,7 @@ export class ExpressRouteConnectionRoutingOutputReference extends cdktf.ComplexO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -217,7 +217,7 @@ export class ExpressRouteConnectionRoutingOutputReference extends cdktf.ComplexO
   }
 
   // propagated_route_table - computed: false, optional: true, required: false
-  private _propagatedRouteTable = new ExpressRouteConnectionRoutingPropagatedRouteTableOutputReference(this as any, "propagated_route_table", true);
+  private _propagatedRouteTable = new ExpressRouteConnectionRoutingPropagatedRouteTableOutputReference(this, "propagated_route_table", true);
   public get propagatedRouteTable() {
     return this._propagatedRouteTable;
   }
@@ -251,8 +251,8 @@ export interface ExpressRouteConnectionTimeouts {
   readonly update?: string;
 }
 
-export function expressRouteConnectionTimeoutsToTerraform(struct?: ExpressRouteConnectionTimeoutsOutputReference | ExpressRouteConnectionTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function expressRouteConnectionTimeoutsToTerraform(struct?: ExpressRouteConnectionTimeoutsOutputReference | ExpressRouteConnectionTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -272,7 +272,7 @@ export class ExpressRouteConnectionTimeoutsOutputReference extends cdktf.Complex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -445,7 +445,7 @@ export class ExpressRouteConnection extends cdktf.TerraformResource {
   // enable_internet_security - computed: false, optional: true, required: false
   private _enableInternetSecurity?: boolean | cdktf.IResolvable; 
   public get enableInternetSecurity() {
-    return this.getBooleanAttribute('enable_internet_security') as any;
+    return this.getBooleanAttribute('enable_internet_security');
   }
   public set enableInternetSecurity(value: boolean | cdktf.IResolvable) {
     this._enableInternetSecurity = value;
@@ -519,7 +519,7 @@ export class ExpressRouteConnection extends cdktf.TerraformResource {
   }
 
   // routing - computed: false, optional: true, required: false
-  private _routing = new ExpressRouteConnectionRoutingOutputReference(this as any, "routing", true);
+  private _routing = new ExpressRouteConnectionRoutingOutputReference(this, "routing", true);
   public get routing() {
     return this._routing;
   }
@@ -535,7 +535,7 @@ export class ExpressRouteConnection extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ExpressRouteConnectionTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ExpressRouteConnectionTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

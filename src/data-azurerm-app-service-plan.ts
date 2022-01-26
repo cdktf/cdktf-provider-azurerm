@@ -46,8 +46,8 @@ export interface DataAzurermAppServicePlanTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermAppServicePlanTimeoutsToTerraform(struct?: DataAzurermAppServicePlanTimeoutsOutputReference | DataAzurermAppServicePlanTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermAppServicePlanTimeoutsToTerraform(struct?: DataAzurermAppServicePlanTimeoutsOutputReference | DataAzurermAppServicePlanTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -64,7 +64,7 @@ export class DataAzurermAppServicePlanTimeoutsOutputReference extends cdktf.Comp
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -159,7 +159,7 @@ export class DataAzurermAppServicePlan extends cdktf.TerraformDataSource {
 
   // is_xenon - computed: true, optional: false, required: false
   public get isXenon() {
-    return this.getBooleanAttribute('is_xenon') as any;
+    return this.getBooleanAttribute('is_xenon');
   }
 
   // kind - computed: true, optional: false, required: false
@@ -197,12 +197,12 @@ export class DataAzurermAppServicePlan extends cdktf.TerraformDataSource {
 
   // per_site_scaling - computed: true, optional: false, required: false
   public get perSiteScaling() {
-    return this.getBooleanAttribute('per_site_scaling') as any;
+    return this.getBooleanAttribute('per_site_scaling');
   }
 
   // reserved - computed: true, optional: false, required: false
   public get reserved() {
-    return this.getBooleanAttribute('reserved') as any;
+    return this.getBooleanAttribute('reserved');
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -220,21 +220,21 @@ export class DataAzurermAppServicePlan extends cdktf.TerraformDataSource {
 
   // sku - computed: true, optional: false, required: false
   public sku(index: string) {
-    return new DataAzurermAppServicePlanSku(this, 'sku', index);
+    return new DataAzurermAppServicePlanSku(this, 'sku', index, false);
   }
 
   // tags - computed: true, optional: false, required: false
-  public tags(key: string): string {
+  public tags(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // zone_redundant - computed: true, optional: false, required: false
   public get zoneRedundant() {
-    return this.getBooleanAttribute('zone_redundant') as any;
+    return this.getBooleanAttribute('zone_redundant');
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermAppServicePlanTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermAppServicePlanTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

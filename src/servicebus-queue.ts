@@ -113,8 +113,8 @@ export interface ServicebusQueueTimeouts {
   readonly update?: string;
 }
 
-export function servicebusQueueTimeoutsToTerraform(struct?: ServicebusQueueTimeoutsOutputReference | ServicebusQueueTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function servicebusQueueTimeoutsToTerraform(struct?: ServicebusQueueTimeoutsOutputReference | ServicebusQueueTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -134,7 +134,7 @@ export class ServicebusQueueTimeoutsOutputReference extends cdktf.ComplexObject 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -320,7 +320,7 @@ export class ServicebusQueue extends cdktf.TerraformResource {
   // dead_lettering_on_message_expiration - computed: false, optional: true, required: false
   private _deadLetteringOnMessageExpiration?: boolean | cdktf.IResolvable; 
   public get deadLetteringOnMessageExpiration() {
-    return this.getBooleanAttribute('dead_lettering_on_message_expiration') as any;
+    return this.getBooleanAttribute('dead_lettering_on_message_expiration');
   }
   public set deadLetteringOnMessageExpiration(value: boolean | cdktf.IResolvable) {
     this._deadLetteringOnMessageExpiration = value;
@@ -368,7 +368,7 @@ export class ServicebusQueue extends cdktf.TerraformResource {
   // enable_batched_operations - computed: false, optional: true, required: false
   private _enableBatchedOperations?: boolean | cdktf.IResolvable; 
   public get enableBatchedOperations() {
-    return this.getBooleanAttribute('enable_batched_operations') as any;
+    return this.getBooleanAttribute('enable_batched_operations');
   }
   public set enableBatchedOperations(value: boolean | cdktf.IResolvable) {
     this._enableBatchedOperations = value;
@@ -384,7 +384,7 @@ export class ServicebusQueue extends cdktf.TerraformResource {
   // enable_express - computed: false, optional: true, required: false
   private _enableExpress?: boolean | cdktf.IResolvable; 
   public get enableExpress() {
-    return this.getBooleanAttribute('enable_express') as any;
+    return this.getBooleanAttribute('enable_express');
   }
   public set enableExpress(value: boolean | cdktf.IResolvable) {
     this._enableExpress = value;
@@ -400,7 +400,7 @@ export class ServicebusQueue extends cdktf.TerraformResource {
   // enable_partitioning - computed: false, optional: true, required: false
   private _enablePartitioning?: boolean | cdktf.IResolvable; 
   public get enablePartitioning() {
-    return this.getBooleanAttribute('enable_partitioning') as any;
+    return this.getBooleanAttribute('enable_partitioning');
   }
   public set enablePartitioning(value: boolean | cdktf.IResolvable) {
     this._enablePartitioning = value;
@@ -562,7 +562,7 @@ export class ServicebusQueue extends cdktf.TerraformResource {
   // requires_duplicate_detection - computed: false, optional: true, required: false
   private _requiresDuplicateDetection?: boolean | cdktf.IResolvable; 
   public get requiresDuplicateDetection() {
-    return this.getBooleanAttribute('requires_duplicate_detection') as any;
+    return this.getBooleanAttribute('requires_duplicate_detection');
   }
   public set requiresDuplicateDetection(value: boolean | cdktf.IResolvable) {
     this._requiresDuplicateDetection = value;
@@ -578,7 +578,7 @@ export class ServicebusQueue extends cdktf.TerraformResource {
   // requires_session - computed: false, optional: true, required: false
   private _requiresSession?: boolean | cdktf.IResolvable; 
   public get requiresSession() {
-    return this.getBooleanAttribute('requires_session') as any;
+    return this.getBooleanAttribute('requires_session');
   }
   public set requiresSession(value: boolean | cdktf.IResolvable) {
     this._requiresSession = value;
@@ -624,7 +624,7 @@ export class ServicebusQueue extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ServicebusQueueTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ServicebusQueueTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

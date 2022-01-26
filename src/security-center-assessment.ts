@@ -10,7 +10,7 @@ export interface SecurityCenterAssessmentConfig extends cdktf.TerraformMetaArgum
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment#additional_data SecurityCenterAssessment#additional_data}
   */
-  readonly additionalData?: { [key: string]: string } | cdktf.IResolvable;
+  readonly additionalData?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment#assessment_policy_id SecurityCenterAssessment#assessment_policy_id}
   */
@@ -48,7 +48,7 @@ export interface SecurityCenterAssessmentStatus {
 }
 
 export function securityCenterAssessmentStatusToTerraform(struct?: SecurityCenterAssessmentStatusOutputReference | SecurityCenterAssessmentStatus): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -67,7 +67,7 @@ export class SecurityCenterAssessmentStatusOutputReference extends cdktf.Complex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -168,8 +168,8 @@ export interface SecurityCenterAssessmentTimeouts {
   readonly update?: string;
 }
 
-export function securityCenterAssessmentTimeoutsToTerraform(struct?: SecurityCenterAssessmentTimeoutsOutputReference | SecurityCenterAssessmentTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function securityCenterAssessmentTimeoutsToTerraform(struct?: SecurityCenterAssessmentTimeoutsOutputReference | SecurityCenterAssessmentTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -189,7 +189,7 @@ export class SecurityCenterAssessmentTimeoutsOutputReference extends cdktf.Compl
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -341,12 +341,11 @@ export class SecurityCenterAssessment extends cdktf.TerraformResource {
   // ==========
 
   // additional_data - computed: false, optional: true, required: false
-  private _additionalData?: { [key: string]: string } | cdktf.IResolvable; 
+  private _additionalData?: { [key: string]: string }; 
   public get additionalData() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('additional_data') as any;
+    return this.getStringMapAttribute('additional_data');
   }
-  public set additionalData(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set additionalData(value: { [key: string]: string }) {
     this._additionalData = value;
   }
   public resetAdditionalData() {
@@ -389,7 +388,7 @@ export class SecurityCenterAssessment extends cdktf.TerraformResource {
   }
 
   // status - computed: false, optional: false, required: true
-  private _status = new SecurityCenterAssessmentStatusOutputReference(this as any, "status", true);
+  private _status = new SecurityCenterAssessmentStatusOutputReference(this, "status", true);
   public get status() {
     return this._status;
   }
@@ -402,7 +401,7 @@ export class SecurityCenterAssessment extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new SecurityCenterAssessmentTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new SecurityCenterAssessmentTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -423,7 +422,7 @@ export class SecurityCenterAssessment extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      additional_data: cdktf.hashMapper(cdktf.anyToTerraform)(this._additionalData),
+      additional_data: cdktf.hashMapper(cdktf.stringToTerraform)(this._additionalData),
       assessment_policy_id: cdktf.stringToTerraform(this._assessmentPolicyId),
       target_resource_id: cdktf.stringToTerraform(this._targetResourceId),
       status: securityCenterAssessmentStatusToTerraform(this._status.internalValue),

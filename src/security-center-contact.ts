@@ -49,8 +49,8 @@ export interface SecurityCenterContactTimeouts {
   readonly update?: string;
 }
 
-export function securityCenterContactTimeoutsToTerraform(struct?: SecurityCenterContactTimeoutsOutputReference | SecurityCenterContactTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function securityCenterContactTimeoutsToTerraform(struct?: SecurityCenterContactTimeoutsOutputReference | SecurityCenterContactTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -70,7 +70,7 @@ export class SecurityCenterContactTimeoutsOutputReference extends cdktf.ComplexO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -224,7 +224,7 @@ export class SecurityCenterContact extends cdktf.TerraformResource {
   // alert_notifications - computed: false, optional: false, required: true
   private _alertNotifications?: boolean | cdktf.IResolvable; 
   public get alertNotifications() {
-    return this.getBooleanAttribute('alert_notifications') as any;
+    return this.getBooleanAttribute('alert_notifications');
   }
   public set alertNotifications(value: boolean | cdktf.IResolvable) {
     this._alertNotifications = value;
@@ -237,7 +237,7 @@ export class SecurityCenterContact extends cdktf.TerraformResource {
   // alerts_to_admins - computed: false, optional: false, required: true
   private _alertsToAdmins?: boolean | cdktf.IResolvable; 
   public get alertsToAdmins() {
-    return this.getBooleanAttribute('alerts_to_admins') as any;
+    return this.getBooleanAttribute('alerts_to_admins');
   }
   public set alertsToAdmins(value: boolean | cdktf.IResolvable) {
     this._alertsToAdmins = value;
@@ -282,7 +282,7 @@ export class SecurityCenterContact extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new SecurityCenterContactTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new SecurityCenterContactTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

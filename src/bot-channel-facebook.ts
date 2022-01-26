@@ -32,7 +32,7 @@ export interface BotChannelFacebookConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_facebook#page BotChannelFacebook#page}
   */
-  readonly page: BotChannelFacebookPage[];
+  readonly page: BotChannelFacebookPage[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -51,8 +51,8 @@ export interface BotChannelFacebookPage {
   readonly id: string;
 }
 
-export function botChannelFacebookPageToTerraform(struct?: BotChannelFacebookPage): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function botChannelFacebookPageToTerraform(struct?: BotChannelFacebookPage | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -81,8 +81,8 @@ export interface BotChannelFacebookTimeouts {
   readonly update?: string;
 }
 
-export function botChannelFacebookTimeoutsToTerraform(struct?: BotChannelFacebookTimeoutsOutputReference | BotChannelFacebookTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function botChannelFacebookTimeoutsToTerraform(struct?: BotChannelFacebookTimeoutsOutputReference | BotChannelFacebookTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -102,7 +102,7 @@ export class BotChannelFacebookTimeoutsOutputReference extends cdktf.ComplexObje
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -326,12 +326,12 @@ export class BotChannelFacebook extends cdktf.TerraformResource {
   }
 
   // page - computed: false, optional: false, required: true
-  private _page?: BotChannelFacebookPage[]; 
+  private _page?: BotChannelFacebookPage[] | cdktf.IResolvable; 
   public get page() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('page') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('page')));
   }
-  public set page(value: BotChannelFacebookPage[]) {
+  public set page(value: BotChannelFacebookPage[] | cdktf.IResolvable) {
     this._page = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -340,7 +340,7 @@ export class BotChannelFacebook extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new BotChannelFacebookTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new BotChannelFacebookTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

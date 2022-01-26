@@ -58,8 +58,8 @@ export interface DataAzurermSharedImageVersionTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermSharedImageVersionTimeoutsToTerraform(struct?: DataAzurermSharedImageVersionTimeoutsOutputReference | DataAzurermSharedImageVersionTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermSharedImageVersionTimeoutsToTerraform(struct?: DataAzurermSharedImageVersionTimeoutsOutputReference | DataAzurermSharedImageVersionTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -76,7 +76,7 @@ export class DataAzurermSharedImageVersionTimeoutsOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -164,7 +164,7 @@ export class DataAzurermSharedImageVersion extends cdktf.TerraformDataSource {
 
   // exclude_from_latest - computed: true, optional: false, required: false
   public get excludeFromLatest() {
-    return this.getBooleanAttribute('exclude_from_latest') as any;
+    return this.getBooleanAttribute('exclude_from_latest');
   }
 
   // gallery_name - computed: false, optional: false, required: true
@@ -247,7 +247,7 @@ export class DataAzurermSharedImageVersion extends cdktf.TerraformDataSource {
   // sort_versions_by_semver - computed: false, optional: true, required: false
   private _sortVersionsBySemver?: boolean | cdktf.IResolvable; 
   public get sortVersionsBySemver() {
-    return this.getBooleanAttribute('sort_versions_by_semver') as any;
+    return this.getBooleanAttribute('sort_versions_by_semver');
   }
   public set sortVersionsBySemver(value: boolean | cdktf.IResolvable) {
     this._sortVersionsBySemver = value;
@@ -261,17 +261,17 @@ export class DataAzurermSharedImageVersion extends cdktf.TerraformDataSource {
   }
 
   // tags - computed: true, optional: false, required: false
-  public tags(key: string): string {
+  public tags(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // target_region - computed: true, optional: false, required: false
   public targetRegion(index: string) {
-    return new DataAzurermSharedImageVersionTargetRegion(this, 'target_region', index);
+    return new DataAzurermSharedImageVersionTargetRegion(this, 'target_region', index, false);
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermSharedImageVersionTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermSharedImageVersionTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

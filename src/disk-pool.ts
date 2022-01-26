@@ -30,7 +30,7 @@ export interface DiskPoolConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_pool#tags DiskPool#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_pool#zones DiskPool#zones}
   */
@@ -61,8 +61,8 @@ export interface DiskPoolTimeouts {
   readonly update?: string;
 }
 
-export function diskPoolTimeoutsToTerraform(struct?: DiskPoolTimeoutsOutputReference | DiskPoolTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function diskPoolTimeoutsToTerraform(struct?: DiskPoolTimeoutsOutputReference | DiskPoolTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -82,7 +82,7 @@ export class DiskPoolTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -307,12 +307,11 @@ export class DiskPool extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -337,7 +336,7 @@ export class DiskPool extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DiskPoolTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DiskPoolTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -363,7 +362,7 @@ export class DiskPool extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku_name: cdktf.stringToTerraform(this._skuName),
       subnet_id: cdktf.stringToTerraform(this._subnetId),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),
       timeouts: diskPoolTimeoutsToTerraform(this._timeouts.internalValue),
     };

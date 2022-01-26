@@ -28,7 +28,7 @@ export interface FrontdoorRulesEngineConfig extends cdktf.TerraformMetaArguments
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_rules_engine#rule FrontdoorRulesEngine#rule}
   */
-  readonly rule?: FrontdoorRulesEngineRule[];
+  readonly rule?: FrontdoorRulesEngineRule[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -51,8 +51,8 @@ export interface FrontdoorRulesEngineRuleActionRequestHeader {
   readonly value?: string;
 }
 
-export function frontdoorRulesEngineRuleActionRequestHeaderToTerraform(struct?: FrontdoorRulesEngineRuleActionRequestHeader): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function frontdoorRulesEngineRuleActionRequestHeaderToTerraform(struct?: FrontdoorRulesEngineRuleActionRequestHeader | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -78,8 +78,8 @@ export interface FrontdoorRulesEngineRuleActionResponseHeader {
   readonly value?: string;
 }
 
-export function frontdoorRulesEngineRuleActionResponseHeaderToTerraform(struct?: FrontdoorRulesEngineRuleActionResponseHeader): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function frontdoorRulesEngineRuleActionResponseHeaderToTerraform(struct?: FrontdoorRulesEngineRuleActionResponseHeader | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -96,17 +96,17 @@ export interface FrontdoorRulesEngineRuleAction {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_rules_engine#request_header FrontdoorRulesEngine#request_header}
   */
-  readonly requestHeader?: FrontdoorRulesEngineRuleActionRequestHeader[];
+  readonly requestHeader?: FrontdoorRulesEngineRuleActionRequestHeader[] | cdktf.IResolvable;
   /**
   * response_header block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_rules_engine#response_header FrontdoorRulesEngine#response_header}
   */
-  readonly responseHeader?: FrontdoorRulesEngineRuleActionResponseHeader[];
+  readonly responseHeader?: FrontdoorRulesEngineRuleActionResponseHeader[] | cdktf.IResolvable;
 }
 
 export function frontdoorRulesEngineRuleActionToTerraform(struct?: FrontdoorRulesEngineRuleActionOutputReference | FrontdoorRulesEngineRuleAction): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -124,7 +124,7 @@ export class FrontdoorRulesEngineRuleActionOutputReference extends cdktf.Complex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -156,12 +156,12 @@ export class FrontdoorRulesEngineRuleActionOutputReference extends cdktf.Complex
   }
 
   // request_header - computed: false, optional: true, required: false
-  private _requestHeader?: FrontdoorRulesEngineRuleActionRequestHeader[]; 
+  private _requestHeader?: FrontdoorRulesEngineRuleActionRequestHeader[] | cdktf.IResolvable; 
   public get requestHeader() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('request_header') as any;
+    return this.interpolationForAttribute('request_header');
   }
-  public set requestHeader(value: FrontdoorRulesEngineRuleActionRequestHeader[]) {
+  public set requestHeader(value: FrontdoorRulesEngineRuleActionRequestHeader[] | cdktf.IResolvable) {
     this._requestHeader = value;
   }
   public resetRequestHeader() {
@@ -173,12 +173,12 @@ export class FrontdoorRulesEngineRuleActionOutputReference extends cdktf.Complex
   }
 
   // response_header - computed: false, optional: true, required: false
-  private _responseHeader?: FrontdoorRulesEngineRuleActionResponseHeader[]; 
+  private _responseHeader?: FrontdoorRulesEngineRuleActionResponseHeader[] | cdktf.IResolvable; 
   public get responseHeader() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('response_header') as any;
+    return this.interpolationForAttribute('response_header');
   }
-  public set responseHeader(value: FrontdoorRulesEngineRuleActionResponseHeader[]) {
+  public set responseHeader(value: FrontdoorRulesEngineRuleActionResponseHeader[] | cdktf.IResolvable) {
     this._responseHeader = value;
   }
   public resetResponseHeader() {
@@ -216,8 +216,8 @@ export interface FrontdoorRulesEngineRuleMatchCondition {
   readonly variable?: string;
 }
 
-export function frontdoorRulesEngineRuleMatchConditionToTerraform(struct?: FrontdoorRulesEngineRuleMatchCondition): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function frontdoorRulesEngineRuleMatchConditionToTerraform(struct?: FrontdoorRulesEngineRuleMatchCondition | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -251,11 +251,11 @@ export interface FrontdoorRulesEngineRule {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_rules_engine#match_condition FrontdoorRulesEngine#match_condition}
   */
-  readonly matchCondition?: FrontdoorRulesEngineRuleMatchCondition[];
+  readonly matchCondition?: FrontdoorRulesEngineRuleMatchCondition[] | cdktf.IResolvable;
 }
 
-export function frontdoorRulesEngineRuleToTerraform(struct?: FrontdoorRulesEngineRule): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function frontdoorRulesEngineRuleToTerraform(struct?: FrontdoorRulesEngineRule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -286,8 +286,8 @@ export interface FrontdoorRulesEngineTimeouts {
   readonly update?: string;
 }
 
-export function frontdoorRulesEngineTimeoutsToTerraform(struct?: FrontdoorRulesEngineTimeoutsOutputReference | FrontdoorRulesEngineTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function frontdoorRulesEngineTimeoutsToTerraform(struct?: FrontdoorRulesEngineTimeoutsOutputReference | FrontdoorRulesEngineTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -307,7 +307,7 @@ export class FrontdoorRulesEngineTimeoutsOutputReference extends cdktf.ComplexOb
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -462,7 +462,7 @@ export class FrontdoorRulesEngine extends cdktf.TerraformResource {
   // enabled - computed: false, optional: true, required: false
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
@@ -525,12 +525,12 @@ export class FrontdoorRulesEngine extends cdktf.TerraformResource {
   }
 
   // rule - computed: false, optional: true, required: false
-  private _rule?: FrontdoorRulesEngineRule[]; 
+  private _rule?: FrontdoorRulesEngineRule[] | cdktf.IResolvable; 
   public get rule() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('rule') as any;
+    return this.interpolationForAttribute('rule');
   }
-  public set rule(value: FrontdoorRulesEngineRule[]) {
+  public set rule(value: FrontdoorRulesEngineRule[] | cdktf.IResolvable) {
     this._rule = value;
   }
   public resetRule() {
@@ -542,7 +542,7 @@ export class FrontdoorRulesEngine extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new FrontdoorRulesEngineTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new FrontdoorRulesEngineTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

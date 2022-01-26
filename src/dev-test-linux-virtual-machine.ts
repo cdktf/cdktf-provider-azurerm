@@ -62,7 +62,7 @@ export interface DevTestLinuxVirtualMachineConfig extends cdktf.TerraformMetaArg
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_linux_virtual_machine#tags DevTestLinuxVirtualMachine#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_linux_virtual_machine#username DevTestLinuxVirtualMachine#username}
   */
@@ -78,7 +78,7 @@ export interface DevTestLinuxVirtualMachineConfig extends cdktf.TerraformMetaArg
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_linux_virtual_machine#inbound_nat_rule DevTestLinuxVirtualMachine#inbound_nat_rule}
   */
-  readonly inboundNatRule?: DevTestLinuxVirtualMachineInboundNatRule[];
+  readonly inboundNatRule?: DevTestLinuxVirtualMachineInboundNatRule[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -106,7 +106,7 @@ export interface DevTestLinuxVirtualMachineGalleryImageReference {
 }
 
 export function devTestLinuxVirtualMachineGalleryImageReferenceToTerraform(struct?: DevTestLinuxVirtualMachineGalleryImageReferenceOutputReference | DevTestLinuxVirtualMachineGalleryImageReference): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -126,7 +126,7 @@ export class DevTestLinuxVirtualMachineGalleryImageReferenceOutputReference exte
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -232,8 +232,8 @@ export interface DevTestLinuxVirtualMachineInboundNatRule {
   readonly protocol: string;
 }
 
-export function devTestLinuxVirtualMachineInboundNatRuleToTerraform(struct?: DevTestLinuxVirtualMachineInboundNatRule): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function devTestLinuxVirtualMachineInboundNatRuleToTerraform(struct?: DevTestLinuxVirtualMachineInboundNatRule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -262,8 +262,8 @@ export interface DevTestLinuxVirtualMachineTimeouts {
   readonly update?: string;
 }
 
-export function devTestLinuxVirtualMachineTimeoutsToTerraform(struct?: DevTestLinuxVirtualMachineTimeoutsOutputReference | DevTestLinuxVirtualMachineTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function devTestLinuxVirtualMachineTimeoutsToTerraform(struct?: DevTestLinuxVirtualMachineTimeoutsOutputReference | DevTestLinuxVirtualMachineTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -283,7 +283,7 @@ export class DevTestLinuxVirtualMachineTimeoutsOutputReference extends cdktf.Com
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -450,7 +450,7 @@ export class DevTestLinuxVirtualMachine extends cdktf.TerraformResource {
   // allow_claim - computed: false, optional: true, required: false
   private _allowClaim?: boolean | cdktf.IResolvable; 
   public get allowClaim() {
-    return this.getBooleanAttribute('allow_claim') as any;
+    return this.getBooleanAttribute('allow_claim');
   }
   public set allowClaim(value: boolean | cdktf.IResolvable) {
     this._allowClaim = value;
@@ -466,7 +466,7 @@ export class DevTestLinuxVirtualMachine extends cdktf.TerraformResource {
   // disallow_public_ip_address - computed: false, optional: true, required: false
   private _disallowPublicIpAddress?: boolean | cdktf.IResolvable; 
   public get disallowPublicIpAddress() {
-    return this.getBooleanAttribute('disallow_public_ip_address') as any;
+    return this.getBooleanAttribute('disallow_public_ip_address');
   }
   public set disallowPublicIpAddress(value: boolean | cdktf.IResolvable) {
     this._disallowPublicIpAddress = value;
@@ -642,12 +642,11 @@ export class DevTestLinuxVirtualMachine extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -677,7 +676,7 @@ export class DevTestLinuxVirtualMachine extends cdktf.TerraformResource {
   }
 
   // gallery_image_reference - computed: false, optional: false, required: true
-  private _galleryImageReference = new DevTestLinuxVirtualMachineGalleryImageReferenceOutputReference(this as any, "gallery_image_reference", true);
+  private _galleryImageReference = new DevTestLinuxVirtualMachineGalleryImageReferenceOutputReference(this, "gallery_image_reference", true);
   public get galleryImageReference() {
     return this._galleryImageReference;
   }
@@ -690,12 +689,12 @@ export class DevTestLinuxVirtualMachine extends cdktf.TerraformResource {
   }
 
   // inbound_nat_rule - computed: false, optional: true, required: false
-  private _inboundNatRule?: DevTestLinuxVirtualMachineInboundNatRule[]; 
+  private _inboundNatRule?: DevTestLinuxVirtualMachineInboundNatRule[] | cdktf.IResolvable; 
   public get inboundNatRule() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('inbound_nat_rule') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('inbound_nat_rule')));
   }
-  public set inboundNatRule(value: DevTestLinuxVirtualMachineInboundNatRule[]) {
+  public set inboundNatRule(value: DevTestLinuxVirtualMachineInboundNatRule[] | cdktf.IResolvable) {
     this._inboundNatRule = value;
   }
   public resetInboundNatRule() {
@@ -707,7 +706,7 @@ export class DevTestLinuxVirtualMachine extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DevTestLinuxVirtualMachineTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DevTestLinuxVirtualMachineTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -741,7 +740,7 @@ export class DevTestLinuxVirtualMachine extends cdktf.TerraformResource {
       size: cdktf.stringToTerraform(this._size),
       ssh_key: cdktf.stringToTerraform(this._sshKey),
       storage_type: cdktf.stringToTerraform(this._storageType),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       username: cdktf.stringToTerraform(this._username),
       gallery_image_reference: devTestLinuxVirtualMachineGalleryImageReferenceToTerraform(this._galleryImageReference.internalValue),
       inbound_nat_rule: cdktf.listMapper(devTestLinuxVirtualMachineInboundNatRuleToTerraform)(this._inboundNatRule),

@@ -42,13 +42,13 @@ export interface AnalysisServicesServerConfig extends cdktf.TerraformMetaArgumen
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/analysis_services_server#tags AnalysisServicesServer#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * ipv4_firewall_rule block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/analysis_services_server#ipv4_firewall_rule AnalysisServicesServer#ipv4_firewall_rule}
   */
-  readonly ipv4FirewallRule?: AnalysisServicesServerIpv4FirewallRule[];
+  readonly ipv4FirewallRule?: AnalysisServicesServerIpv4FirewallRule[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -71,8 +71,8 @@ export interface AnalysisServicesServerIpv4FirewallRule {
   readonly rangeStart: string;
 }
 
-export function analysisServicesServerIpv4FirewallRuleToTerraform(struct?: AnalysisServicesServerIpv4FirewallRule): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function analysisServicesServerIpv4FirewallRuleToTerraform(struct?: AnalysisServicesServerIpv4FirewallRule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -102,8 +102,8 @@ export interface AnalysisServicesServerTimeouts {
   readonly update?: string;
 }
 
-export function analysisServicesServerTimeoutsToTerraform(struct?: AnalysisServicesServerTimeoutsOutputReference | AnalysisServicesServerTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function analysisServicesServerTimeoutsToTerraform(struct?: AnalysisServicesServerTimeoutsOutputReference | AnalysisServicesServerTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -123,7 +123,7 @@ export class AnalysisServicesServerTimeoutsOutputReference extends cdktf.Complex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -283,7 +283,7 @@ export class AnalysisServicesServer extends cdktf.TerraformResource {
   // admin_users - computed: false, optional: true, required: false
   private _adminUsers?: string[]; 
   public get adminUsers() {
-    return this.getListAttribute('admin_users');
+    return cdktf.Fn.tolist(this.getListAttribute('admin_users'));
   }
   public set adminUsers(value: string[]) {
     this._adminUsers = value;
@@ -315,7 +315,7 @@ export class AnalysisServicesServer extends cdktf.TerraformResource {
   // enable_power_bi_service - computed: false, optional: true, required: false
   private _enablePowerBiService?: boolean | cdktf.IResolvable; 
   public get enablePowerBiService() {
-    return this.getBooleanAttribute('enable_power_bi_service') as any;
+    return this.getBooleanAttribute('enable_power_bi_service');
   }
   public set enablePowerBiService(value: boolean | cdktf.IResolvable) {
     this._enablePowerBiService = value;
@@ -407,12 +407,11 @@ export class AnalysisServicesServer extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -424,12 +423,12 @@ export class AnalysisServicesServer extends cdktf.TerraformResource {
   }
 
   // ipv4_firewall_rule - computed: false, optional: true, required: false
-  private _ipv4FirewallRule?: AnalysisServicesServerIpv4FirewallRule[]; 
+  private _ipv4FirewallRule?: AnalysisServicesServerIpv4FirewallRule[] | cdktf.IResolvable; 
   public get ipv4FirewallRule() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('ipv4_firewall_rule') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('ipv4_firewall_rule')));
   }
-  public set ipv4FirewallRule(value: AnalysisServicesServerIpv4FirewallRule[]) {
+  public set ipv4FirewallRule(value: AnalysisServicesServerIpv4FirewallRule[] | cdktf.IResolvable) {
     this._ipv4FirewallRule = value;
   }
   public resetIpv4FirewallRule() {
@@ -441,7 +440,7 @@ export class AnalysisServicesServer extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AnalysisServicesServerTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new AnalysisServicesServerTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -470,7 +469,7 @@ export class AnalysisServicesServer extends cdktf.TerraformResource {
       querypool_connection_mode: cdktf.stringToTerraform(this._querypoolConnectionMode),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku: cdktf.stringToTerraform(this._sku),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       ipv4_firewall_rule: cdktf.listMapper(analysisServicesServerIpv4FirewallRuleToTerraform)(this._ipv4FirewallRule),
       timeouts: analysisServicesServerTimeoutsToTerraform(this._timeouts.internalValue),
     };

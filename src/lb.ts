@@ -30,13 +30,13 @@ export interface LbConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb#tags Lb#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * frontend_ip_configuration block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb#frontend_ip_configuration Lb#frontend_ip_configuration}
   */
-  readonly frontendIpConfiguration?: LbFrontendIpConfiguration[];
+  readonly frontendIpConfiguration?: LbFrontendIpConfiguration[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -87,8 +87,8 @@ export interface LbFrontendIpConfiguration {
   readonly zones?: string[];
 }
 
-export function lbFrontendIpConfigurationToTerraform(struct?: LbFrontendIpConfiguration): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function lbFrontendIpConfigurationToTerraform(struct?: LbFrontendIpConfiguration | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -125,8 +125,8 @@ export interface LbTimeouts {
   readonly update?: string;
 }
 
-export function lbTimeoutsToTerraform(struct?: LbTimeoutsOutputReference | LbTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function lbTimeoutsToTerraform(struct?: LbTimeoutsOutputReference | LbTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -146,7 +146,7 @@ export class LbTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -387,12 +387,11 @@ export class Lb extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -404,12 +403,12 @@ export class Lb extends cdktf.TerraformResource {
   }
 
   // frontend_ip_configuration - computed: false, optional: true, required: false
-  private _frontendIpConfiguration?: LbFrontendIpConfiguration[]; 
+  private _frontendIpConfiguration?: LbFrontendIpConfiguration[] | cdktf.IResolvable; 
   public get frontendIpConfiguration() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('frontend_ip_configuration') as any;
+    return this.interpolationForAttribute('frontend_ip_configuration');
   }
-  public set frontendIpConfiguration(value: LbFrontendIpConfiguration[]) {
+  public set frontendIpConfiguration(value: LbFrontendIpConfiguration[] | cdktf.IResolvable) {
     this._frontendIpConfiguration = value;
   }
   public resetFrontendIpConfiguration() {
@@ -421,7 +420,7 @@ export class Lb extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new LbTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new LbTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -447,7 +446,7 @@ export class Lb extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku: cdktf.stringToTerraform(this._sku),
       sku_tier: cdktf.stringToTerraform(this._skuTier),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       frontend_ip_configuration: cdktf.listMapper(lbFrontendIpConfigurationToTerraform)(this._frontendIpConfiguration),
       timeouts: lbTimeoutsToTerraform(this._timeouts.internalValue),
     };

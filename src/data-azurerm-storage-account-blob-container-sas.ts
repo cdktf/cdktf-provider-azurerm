@@ -92,7 +92,7 @@ export interface DataAzurermStorageAccountBlobContainerSasPermissions {
 }
 
 export function dataAzurermStorageAccountBlobContainerSasPermissionsToTerraform(struct?: DataAzurermStorageAccountBlobContainerSasPermissionsOutputReference | DataAzurermStorageAccountBlobContainerSasPermissions): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -114,7 +114,7 @@ export class DataAzurermStorageAccountBlobContainerSasPermissionsOutputReference
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -172,7 +172,7 @@ export class DataAzurermStorageAccountBlobContainerSasPermissionsOutputReference
   // add - computed: false, optional: false, required: true
   private _add?: boolean | cdktf.IResolvable; 
   public get add() {
-    return this.getBooleanAttribute('add') as any;
+    return this.getBooleanAttribute('add');
   }
   public set add(value: boolean | cdktf.IResolvable) {
     this._add = value;
@@ -185,7 +185,7 @@ export class DataAzurermStorageAccountBlobContainerSasPermissionsOutputReference
   // create - computed: false, optional: false, required: true
   private _create?: boolean | cdktf.IResolvable; 
   public get create() {
-    return this.getBooleanAttribute('create') as any;
+    return this.getBooleanAttribute('create');
   }
   public set create(value: boolean | cdktf.IResolvable) {
     this._create = value;
@@ -198,7 +198,7 @@ export class DataAzurermStorageAccountBlobContainerSasPermissionsOutputReference
   // delete - computed: false, optional: false, required: true
   private _delete?: boolean | cdktf.IResolvable; 
   public get delete() {
-    return this.getBooleanAttribute('delete') as any;
+    return this.getBooleanAttribute('delete');
   }
   public set delete(value: boolean | cdktf.IResolvable) {
     this._delete = value;
@@ -211,7 +211,7 @@ export class DataAzurermStorageAccountBlobContainerSasPermissionsOutputReference
   // list - computed: false, optional: false, required: true
   private _list?: boolean | cdktf.IResolvable; 
   public get list() {
-    return this.getBooleanAttribute('list') as any;
+    return this.getBooleanAttribute('list');
   }
   public set list(value: boolean | cdktf.IResolvable) {
     this._list = value;
@@ -224,7 +224,7 @@ export class DataAzurermStorageAccountBlobContainerSasPermissionsOutputReference
   // read - computed: false, optional: false, required: true
   private _read?: boolean | cdktf.IResolvable; 
   public get read() {
-    return this.getBooleanAttribute('read') as any;
+    return this.getBooleanAttribute('read');
   }
   public set read(value: boolean | cdktf.IResolvable) {
     this._read = value;
@@ -237,7 +237,7 @@ export class DataAzurermStorageAccountBlobContainerSasPermissionsOutputReference
   // write - computed: false, optional: false, required: true
   private _write?: boolean | cdktf.IResolvable; 
   public get write() {
-    return this.getBooleanAttribute('write') as any;
+    return this.getBooleanAttribute('write');
   }
   public set write(value: boolean | cdktf.IResolvable) {
     this._write = value;
@@ -254,8 +254,8 @@ export interface DataAzurermStorageAccountBlobContainerSasTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermStorageAccountBlobContainerSasTimeoutsToTerraform(struct?: DataAzurermStorageAccountBlobContainerSasTimeoutsOutputReference | DataAzurermStorageAccountBlobContainerSasTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermStorageAccountBlobContainerSasTimeoutsToTerraform(struct?: DataAzurermStorageAccountBlobContainerSasTimeoutsOutputReference | DataAzurermStorageAccountBlobContainerSasTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -272,7 +272,7 @@ export class DataAzurermStorageAccountBlobContainerSasTimeoutsOutputReference ex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -487,7 +487,7 @@ export class DataAzurermStorageAccountBlobContainerSas extends cdktf.TerraformDa
   // https_only - computed: false, optional: true, required: false
   private _httpsOnly?: boolean | cdktf.IResolvable; 
   public get httpsOnly() {
-    return this.getBooleanAttribute('https_only') as any;
+    return this.getBooleanAttribute('https_only');
   }
   public set httpsOnly(value: boolean | cdktf.IResolvable) {
     this._httpsOnly = value;
@@ -540,7 +540,7 @@ export class DataAzurermStorageAccountBlobContainerSas extends cdktf.TerraformDa
   }
 
   // permissions - computed: false, optional: false, required: true
-  private _permissions = new DataAzurermStorageAccountBlobContainerSasPermissionsOutputReference(this as any, "permissions", true);
+  private _permissions = new DataAzurermStorageAccountBlobContainerSasPermissionsOutputReference(this, "permissions", true);
   public get permissions() {
     return this._permissions;
   }
@@ -553,7 +553,7 @@ export class DataAzurermStorageAccountBlobContainerSas extends cdktf.TerraformDa
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermStorageAccountBlobContainerSasTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermStorageAccountBlobContainerSasTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

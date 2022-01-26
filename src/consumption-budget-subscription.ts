@@ -38,7 +38,7 @@ export interface ConsumptionBudgetSubscriptionConfig extends cdktf.TerraformMeta
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_subscription#notification ConsumptionBudgetSubscription#notification}
   */
-  readonly notification: ConsumptionBudgetSubscriptionNotification[];
+  readonly notification: ConsumptionBudgetSubscriptionNotification[] | cdktf.IResolvable;
   /**
   * time_period block
   * 
@@ -67,8 +67,8 @@ export interface ConsumptionBudgetSubscriptionFilterDimension {
   readonly values: string[];
 }
 
-export function consumptionBudgetSubscriptionFilterDimensionToTerraform(struct?: ConsumptionBudgetSubscriptionFilterDimension): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function consumptionBudgetSubscriptionFilterDimensionToTerraform(struct?: ConsumptionBudgetSubscriptionFilterDimension | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -95,7 +95,7 @@ export interface ConsumptionBudgetSubscriptionFilterNotDimension {
 }
 
 export function consumptionBudgetSubscriptionFilterNotDimensionToTerraform(struct?: ConsumptionBudgetSubscriptionFilterNotDimensionOutputReference | ConsumptionBudgetSubscriptionFilterNotDimension): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -114,7 +114,7 @@ export class ConsumptionBudgetSubscriptionFilterNotDimensionOutputReference exte
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -209,7 +209,7 @@ export interface ConsumptionBudgetSubscriptionFilterNotTag {
 }
 
 export function consumptionBudgetSubscriptionFilterNotTagToTerraform(struct?: ConsumptionBudgetSubscriptionFilterNotTagOutputReference | ConsumptionBudgetSubscriptionFilterNotTag): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -228,7 +228,7 @@ export class ConsumptionBudgetSubscriptionFilterNotTagOutputReference extends cd
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -323,7 +323,7 @@ export interface ConsumptionBudgetSubscriptionFilterNot {
 }
 
 export function consumptionBudgetSubscriptionFilterNotToTerraform(struct?: ConsumptionBudgetSubscriptionFilterNotOutputReference | ConsumptionBudgetSubscriptionFilterNot): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -341,7 +341,7 @@ export class ConsumptionBudgetSubscriptionFilterNotOutputReference extends cdktf
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -373,7 +373,7 @@ export class ConsumptionBudgetSubscriptionFilterNotOutputReference extends cdktf
   }
 
   // dimension - computed: false, optional: true, required: false
-  private _dimension = new ConsumptionBudgetSubscriptionFilterNotDimensionOutputReference(this as any, "dimension", true);
+  private _dimension = new ConsumptionBudgetSubscriptionFilterNotDimensionOutputReference(this, "dimension", true);
   public get dimension() {
     return this._dimension;
   }
@@ -389,7 +389,7 @@ export class ConsumptionBudgetSubscriptionFilterNotOutputReference extends cdktf
   }
 
   // tag - computed: false, optional: true, required: false
-  private _tag = new ConsumptionBudgetSubscriptionFilterNotTagOutputReference(this as any, "tag", true);
+  private _tag = new ConsumptionBudgetSubscriptionFilterNotTagOutputReference(this, "tag", true);
   public get tag() {
     return this._tag;
   }
@@ -419,8 +419,8 @@ export interface ConsumptionBudgetSubscriptionFilterTag {
   readonly values: string[];
 }
 
-export function consumptionBudgetSubscriptionFilterTagToTerraform(struct?: ConsumptionBudgetSubscriptionFilterTag): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function consumptionBudgetSubscriptionFilterTagToTerraform(struct?: ConsumptionBudgetSubscriptionFilterTag | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -437,7 +437,7 @@ export interface ConsumptionBudgetSubscriptionFilter {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_subscription#dimension ConsumptionBudgetSubscription#dimension}
   */
-  readonly dimension?: ConsumptionBudgetSubscriptionFilterDimension[];
+  readonly dimension?: ConsumptionBudgetSubscriptionFilterDimension[] | cdktf.IResolvable;
   /**
   * not block
   * 
@@ -449,11 +449,11 @@ export interface ConsumptionBudgetSubscriptionFilter {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_subscription#tag ConsumptionBudgetSubscription#tag}
   */
-  readonly tag?: ConsumptionBudgetSubscriptionFilterTag[];
+  readonly tag?: ConsumptionBudgetSubscriptionFilterTag[] | cdktf.IResolvable;
 }
 
 export function consumptionBudgetSubscriptionFilterToTerraform(struct?: ConsumptionBudgetSubscriptionFilterOutputReference | ConsumptionBudgetSubscriptionFilter): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -472,7 +472,7 @@ export class ConsumptionBudgetSubscriptionFilterOutputReference extends cdktf.Co
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -510,12 +510,12 @@ export class ConsumptionBudgetSubscriptionFilterOutputReference extends cdktf.Co
   }
 
   // dimension - computed: false, optional: true, required: false
-  private _dimension?: ConsumptionBudgetSubscriptionFilterDimension[]; 
+  private _dimension?: ConsumptionBudgetSubscriptionFilterDimension[] | cdktf.IResolvable; 
   public get dimension() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('dimension') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('dimension')));
   }
-  public set dimension(value: ConsumptionBudgetSubscriptionFilterDimension[]) {
+  public set dimension(value: ConsumptionBudgetSubscriptionFilterDimension[] | cdktf.IResolvable) {
     this._dimension = value;
   }
   public resetDimension() {
@@ -527,7 +527,7 @@ export class ConsumptionBudgetSubscriptionFilterOutputReference extends cdktf.Co
   }
 
   // not - computed: false, optional: true, required: false
-  private _not = new ConsumptionBudgetSubscriptionFilterNotOutputReference(this as any, "not", true);
+  private _not = new ConsumptionBudgetSubscriptionFilterNotOutputReference(this, "not", true);
   public get not() {
     return this._not;
   }
@@ -543,12 +543,12 @@ export class ConsumptionBudgetSubscriptionFilterOutputReference extends cdktf.Co
   }
 
   // tag - computed: false, optional: true, required: false
-  private _tag?: ConsumptionBudgetSubscriptionFilterTag[]; 
+  private _tag?: ConsumptionBudgetSubscriptionFilterTag[] | cdktf.IResolvable; 
   public get tag() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tag') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('tag')));
   }
-  public set tag(value: ConsumptionBudgetSubscriptionFilterTag[]) {
+  public set tag(value: ConsumptionBudgetSubscriptionFilterTag[] | cdktf.IResolvable) {
     this._tag = value;
   }
   public resetTag() {
@@ -590,8 +590,8 @@ export interface ConsumptionBudgetSubscriptionNotification {
   readonly thresholdType?: string;
 }
 
-export function consumptionBudgetSubscriptionNotificationToTerraform(struct?: ConsumptionBudgetSubscriptionNotification): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function consumptionBudgetSubscriptionNotificationToTerraform(struct?: ConsumptionBudgetSubscriptionNotification | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -618,7 +618,7 @@ export interface ConsumptionBudgetSubscriptionTimePeriod {
 }
 
 export function consumptionBudgetSubscriptionTimePeriodToTerraform(struct?: ConsumptionBudgetSubscriptionTimePeriodOutputReference | ConsumptionBudgetSubscriptionTimePeriod): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -636,7 +636,7 @@ export class ConsumptionBudgetSubscriptionTimePeriodOutputReference extends cdkt
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -715,8 +715,8 @@ export interface ConsumptionBudgetSubscriptionTimeouts {
   readonly update?: string;
 }
 
-export function consumptionBudgetSubscriptionTimeoutsToTerraform(struct?: ConsumptionBudgetSubscriptionTimeoutsOutputReference | ConsumptionBudgetSubscriptionTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function consumptionBudgetSubscriptionTimeoutsToTerraform(struct?: ConsumptionBudgetSubscriptionTimeoutsOutputReference | ConsumptionBudgetSubscriptionTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -736,7 +736,7 @@ export class ConsumptionBudgetSubscriptionTimeoutsOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -968,7 +968,7 @@ export class ConsumptionBudgetSubscription extends cdktf.TerraformResource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new ConsumptionBudgetSubscriptionFilterOutputReference(this as any, "filter", true);
+  private _filter = new ConsumptionBudgetSubscriptionFilterOutputReference(this, "filter", true);
   public get filter() {
     return this._filter;
   }
@@ -984,12 +984,12 @@ export class ConsumptionBudgetSubscription extends cdktf.TerraformResource {
   }
 
   // notification - computed: false, optional: false, required: true
-  private _notification?: ConsumptionBudgetSubscriptionNotification[]; 
+  private _notification?: ConsumptionBudgetSubscriptionNotification[] | cdktf.IResolvable; 
   public get notification() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('notification') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('notification')));
   }
-  public set notification(value: ConsumptionBudgetSubscriptionNotification[]) {
+  public set notification(value: ConsumptionBudgetSubscriptionNotification[] | cdktf.IResolvable) {
     this._notification = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -998,7 +998,7 @@ export class ConsumptionBudgetSubscription extends cdktf.TerraformResource {
   }
 
   // time_period - computed: false, optional: false, required: true
-  private _timePeriod = new ConsumptionBudgetSubscriptionTimePeriodOutputReference(this as any, "time_period", true);
+  private _timePeriod = new ConsumptionBudgetSubscriptionTimePeriodOutputReference(this, "time_period", true);
   public get timePeriod() {
     return this._timePeriod;
   }
@@ -1011,7 +1011,7 @@ export class ConsumptionBudgetSubscription extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ConsumptionBudgetSubscriptionTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ConsumptionBudgetSubscriptionTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

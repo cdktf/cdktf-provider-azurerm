@@ -22,13 +22,13 @@ export interface ServiceFabricMeshApplicationConfig extends cdktf.TerraformMetaA
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application#tags ServiceFabricMeshApplication#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * service block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application#service ServiceFabricMeshApplication#service}
   */
-  readonly service: ServiceFabricMeshApplicationService[];
+  readonly service: ServiceFabricMeshApplicationService[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -48,7 +48,7 @@ export interface ServiceFabricMeshApplicationServiceCodePackageResourcesLimits {
 }
 
 export function serviceFabricMeshApplicationServiceCodePackageResourcesLimitsToTerraform(struct?: ServiceFabricMeshApplicationServiceCodePackageResourcesLimitsOutputReference | ServiceFabricMeshApplicationServiceCodePackageResourcesLimits): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -66,7 +66,7 @@ export class ServiceFabricMeshApplicationServiceCodePackageResourcesLimitsOutput
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -135,7 +135,7 @@ export interface ServiceFabricMeshApplicationServiceCodePackageResourcesRequests
 }
 
 export function serviceFabricMeshApplicationServiceCodePackageResourcesRequestsToTerraform(struct?: ServiceFabricMeshApplicationServiceCodePackageResourcesRequestsOutputReference | ServiceFabricMeshApplicationServiceCodePackageResourcesRequests): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -153,7 +153,7 @@ export class ServiceFabricMeshApplicationServiceCodePackageResourcesRequestsOutp
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -226,7 +226,7 @@ export interface ServiceFabricMeshApplicationServiceCodePackageResources {
 }
 
 export function serviceFabricMeshApplicationServiceCodePackageResourcesToTerraform(struct?: ServiceFabricMeshApplicationServiceCodePackageResourcesOutputReference | ServiceFabricMeshApplicationServiceCodePackageResources): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -244,7 +244,7 @@ export class ServiceFabricMeshApplicationServiceCodePackageResourcesOutputRefere
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -276,7 +276,7 @@ export class ServiceFabricMeshApplicationServiceCodePackageResourcesOutputRefere
   }
 
   // limits - computed: false, optional: true, required: false
-  private _limits = new ServiceFabricMeshApplicationServiceCodePackageResourcesLimitsOutputReference(this as any, "limits", true);
+  private _limits = new ServiceFabricMeshApplicationServiceCodePackageResourcesLimitsOutputReference(this, "limits", true);
   public get limits() {
     return this._limits;
   }
@@ -292,7 +292,7 @@ export class ServiceFabricMeshApplicationServiceCodePackageResourcesOutputRefere
   }
 
   // requests - computed: false, optional: false, required: true
-  private _requests = new ServiceFabricMeshApplicationServiceCodePackageResourcesRequestsOutputReference(this as any, "requests", true);
+  private _requests = new ServiceFabricMeshApplicationServiceCodePackageResourcesRequestsOutputReference(this, "requests", true);
   public get requests() {
     return this._requests;
   }
@@ -321,8 +321,8 @@ export interface ServiceFabricMeshApplicationServiceCodePackage {
   readonly resources: ServiceFabricMeshApplicationServiceCodePackageResources;
 }
 
-export function serviceFabricMeshApplicationServiceCodePackageToTerraform(struct?: ServiceFabricMeshApplicationServiceCodePackage): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function serviceFabricMeshApplicationServiceCodePackageToTerraform(struct?: ServiceFabricMeshApplicationServiceCodePackage | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -347,11 +347,11 @@ export interface ServiceFabricMeshApplicationService {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application#code_package ServiceFabricMeshApplication#code_package}
   */
-  readonly codePackage: ServiceFabricMeshApplicationServiceCodePackage[];
+  readonly codePackage: ServiceFabricMeshApplicationServiceCodePackage[] | cdktf.IResolvable;
 }
 
-export function serviceFabricMeshApplicationServiceToTerraform(struct?: ServiceFabricMeshApplicationService): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function serviceFabricMeshApplicationServiceToTerraform(struct?: ServiceFabricMeshApplicationService | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -381,8 +381,8 @@ export interface ServiceFabricMeshApplicationTimeouts {
   readonly update?: string;
 }
 
-export function serviceFabricMeshApplicationTimeoutsToTerraform(struct?: ServiceFabricMeshApplicationTimeoutsOutputReference | ServiceFabricMeshApplicationTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function serviceFabricMeshApplicationTimeoutsToTerraform(struct?: ServiceFabricMeshApplicationTimeoutsOutputReference | ServiceFabricMeshApplicationTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -402,7 +402,7 @@ export class ServiceFabricMeshApplicationTimeoutsOutputReference extends cdktf.C
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -599,12 +599,11 @@ export class ServiceFabricMeshApplication extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -616,12 +615,12 @@ export class ServiceFabricMeshApplication extends cdktf.TerraformResource {
   }
 
   // service - computed: false, optional: false, required: true
-  private _service?: ServiceFabricMeshApplicationService[]; 
+  private _service?: ServiceFabricMeshApplicationService[] | cdktf.IResolvable; 
   public get service() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('service') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('service')));
   }
-  public set service(value: ServiceFabricMeshApplicationService[]) {
+  public set service(value: ServiceFabricMeshApplicationService[] | cdktf.IResolvable) {
     this._service = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -630,7 +629,7 @@ export class ServiceFabricMeshApplication extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ServiceFabricMeshApplicationTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ServiceFabricMeshApplicationTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -654,7 +653,7 @@ export class ServiceFabricMeshApplication extends cdktf.TerraformResource {
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       service: cdktf.listMapper(serviceFabricMeshApplicationServiceToTerraform)(this._service),
       timeouts: serviceFabricMeshApplicationTimeoutsToTerraform(this._timeouts.internalValue),
     };

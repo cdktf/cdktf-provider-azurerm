@@ -72,7 +72,7 @@ export interface StreamAnalyticsOutputServicebusTopicSerialization {
 }
 
 export function streamAnalyticsOutputServicebusTopicSerializationToTerraform(struct?: StreamAnalyticsOutputServicebusTopicSerializationOutputReference | StreamAnalyticsOutputServicebusTopicSerialization): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -92,7 +92,7 @@ export class StreamAnalyticsOutputServicebusTopicSerializationOutputReference ex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -215,8 +215,8 @@ export interface StreamAnalyticsOutputServicebusTopicTimeouts {
   readonly update?: string;
 }
 
-export function streamAnalyticsOutputServicebusTopicTimeoutsToTerraform(struct?: StreamAnalyticsOutputServicebusTopicTimeoutsOutputReference | StreamAnalyticsOutputServicebusTopicTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function streamAnalyticsOutputServicebusTopicTimeoutsToTerraform(struct?: StreamAnalyticsOutputServicebusTopicTimeoutsOutputReference | StreamAnalyticsOutputServicebusTopicTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -236,7 +236,7 @@ export class StreamAnalyticsOutputServicebusTopicTimeoutsOutputReference extends
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -505,7 +505,7 @@ export class StreamAnalyticsOutputServicebusTopic extends cdktf.TerraformResourc
   }
 
   // serialization - computed: false, optional: false, required: true
-  private _serialization = new StreamAnalyticsOutputServicebusTopicSerializationOutputReference(this as any, "serialization", true);
+  private _serialization = new StreamAnalyticsOutputServicebusTopicSerializationOutputReference(this, "serialization", true);
   public get serialization() {
     return this._serialization;
   }
@@ -518,7 +518,7 @@ export class StreamAnalyticsOutputServicebusTopic extends cdktf.TerraformResourc
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new StreamAnalyticsOutputServicebusTopicTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new StreamAnalyticsOutputServicebusTopicTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

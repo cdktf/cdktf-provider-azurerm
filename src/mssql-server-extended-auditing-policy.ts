@@ -61,8 +61,8 @@ export interface MssqlServerExtendedAuditingPolicyTimeouts {
   readonly update?: string;
 }
 
-export function mssqlServerExtendedAuditingPolicyTimeoutsToTerraform(struct?: MssqlServerExtendedAuditingPolicyTimeoutsOutputReference | MssqlServerExtendedAuditingPolicyTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function mssqlServerExtendedAuditingPolicyTimeoutsToTerraform(struct?: MssqlServerExtendedAuditingPolicyTimeoutsOutputReference | MssqlServerExtendedAuditingPolicyTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -82,7 +82,7 @@ export class MssqlServerExtendedAuditingPolicyTimeoutsOutputReference extends cd
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -244,7 +244,7 @@ export class MssqlServerExtendedAuditingPolicyA extends cdktf.TerraformResource 
   // log_monitoring_enabled - computed: false, optional: true, required: false
   private _logMonitoringEnabled?: boolean | cdktf.IResolvable; 
   public get logMonitoringEnabled() {
-    return this.getBooleanAttribute('log_monitoring_enabled') as any;
+    return this.getBooleanAttribute('log_monitoring_enabled');
   }
   public set logMonitoringEnabled(value: boolean | cdktf.IResolvable) {
     this._logMonitoringEnabled = value;
@@ -305,7 +305,7 @@ export class MssqlServerExtendedAuditingPolicyA extends cdktf.TerraformResource 
   // storage_account_access_key_is_secondary - computed: false, optional: true, required: false
   private _storageAccountAccessKeyIsSecondary?: boolean | cdktf.IResolvable; 
   public get storageAccountAccessKeyIsSecondary() {
-    return this.getBooleanAttribute('storage_account_access_key_is_secondary') as any;
+    return this.getBooleanAttribute('storage_account_access_key_is_secondary');
   }
   public set storageAccountAccessKeyIsSecondary(value: boolean | cdktf.IResolvable) {
     this._storageAccountAccessKeyIsSecondary = value;
@@ -351,7 +351,7 @@ export class MssqlServerExtendedAuditingPolicyA extends cdktf.TerraformResource 
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new MssqlServerExtendedAuditingPolicyTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new MssqlServerExtendedAuditingPolicyTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

@@ -24,19 +24,19 @@ export interface FirewallPolicyRuleCollectionGroupConfig extends cdktf.Terraform
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy_rule_collection_group#application_rule_collection FirewallPolicyRuleCollectionGroup#application_rule_collection}
   */
-  readonly applicationRuleCollection?: FirewallPolicyRuleCollectionGroupApplicationRuleCollection[];
+  readonly applicationRuleCollection?: FirewallPolicyRuleCollectionGroupApplicationRuleCollection[] | cdktf.IResolvable;
   /**
   * nat_rule_collection block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy_rule_collection_group#nat_rule_collection FirewallPolicyRuleCollectionGroup#nat_rule_collection}
   */
-  readonly natRuleCollection?: FirewallPolicyRuleCollectionGroupNatRuleCollection[];
+  readonly natRuleCollection?: FirewallPolicyRuleCollectionGroupNatRuleCollection[] | cdktf.IResolvable;
   /**
   * network_rule_collection block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy_rule_collection_group#network_rule_collection FirewallPolicyRuleCollectionGroup#network_rule_collection}
   */
-  readonly networkRuleCollection?: FirewallPolicyRuleCollectionGroupNetworkRuleCollection[];
+  readonly networkRuleCollection?: FirewallPolicyRuleCollectionGroupNetworkRuleCollection[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -55,8 +55,8 @@ export interface FirewallPolicyRuleCollectionGroupApplicationRuleCollectionRuleP
   readonly type: string;
 }
 
-export function firewallPolicyRuleCollectionGroupApplicationRuleCollectionRuleProtocolsToTerraform(struct?: FirewallPolicyRuleCollectionGroupApplicationRuleCollectionRuleProtocols): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function firewallPolicyRuleCollectionGroupApplicationRuleCollectionRuleProtocolsToTerraform(struct?: FirewallPolicyRuleCollectionGroupApplicationRuleCollectionRuleProtocols | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -112,11 +112,11 @@ export interface FirewallPolicyRuleCollectionGroupApplicationRuleCollectionRule 
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy_rule_collection_group#protocols FirewallPolicyRuleCollectionGroup#protocols}
   */
-  readonly protocols?: FirewallPolicyRuleCollectionGroupApplicationRuleCollectionRuleProtocols[];
+  readonly protocols?: FirewallPolicyRuleCollectionGroupApplicationRuleCollectionRuleProtocols[] | cdktf.IResolvable;
 }
 
-export function firewallPolicyRuleCollectionGroupApplicationRuleCollectionRuleToTerraform(struct?: FirewallPolicyRuleCollectionGroupApplicationRuleCollectionRule): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function firewallPolicyRuleCollectionGroupApplicationRuleCollectionRuleToTerraform(struct?: FirewallPolicyRuleCollectionGroupApplicationRuleCollectionRule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -153,11 +153,11 @@ export interface FirewallPolicyRuleCollectionGroupApplicationRuleCollection {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy_rule_collection_group#rule FirewallPolicyRuleCollectionGroup#rule}
   */
-  readonly rule: FirewallPolicyRuleCollectionGroupApplicationRuleCollectionRule[];
+  readonly rule: FirewallPolicyRuleCollectionGroupApplicationRuleCollectionRule[] | cdktf.IResolvable;
 }
 
-export function firewallPolicyRuleCollectionGroupApplicationRuleCollectionToTerraform(struct?: FirewallPolicyRuleCollectionGroupApplicationRuleCollection): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function firewallPolicyRuleCollectionGroupApplicationRuleCollectionToTerraform(struct?: FirewallPolicyRuleCollectionGroupApplicationRuleCollection | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -208,8 +208,8 @@ export interface FirewallPolicyRuleCollectionGroupNatRuleCollectionRule {
   readonly translatedPort: number;
 }
 
-export function firewallPolicyRuleCollectionGroupNatRuleCollectionRuleToTerraform(struct?: FirewallPolicyRuleCollectionGroupNatRuleCollectionRule): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function firewallPolicyRuleCollectionGroupNatRuleCollectionRuleToTerraform(struct?: FirewallPolicyRuleCollectionGroupNatRuleCollectionRule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -244,11 +244,11 @@ export interface FirewallPolicyRuleCollectionGroupNatRuleCollection {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy_rule_collection_group#rule FirewallPolicyRuleCollectionGroup#rule}
   */
-  readonly rule: FirewallPolicyRuleCollectionGroupNatRuleCollectionRule[];
+  readonly rule: FirewallPolicyRuleCollectionGroupNatRuleCollectionRule[] | cdktf.IResolvable;
 }
 
-export function firewallPolicyRuleCollectionGroupNatRuleCollectionToTerraform(struct?: FirewallPolicyRuleCollectionGroupNatRuleCollection): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function firewallPolicyRuleCollectionGroupNatRuleCollectionToTerraform(struct?: FirewallPolicyRuleCollectionGroupNatRuleCollection | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -295,8 +295,8 @@ export interface FirewallPolicyRuleCollectionGroupNetworkRuleCollectionRule {
   readonly sourceIpGroups?: string[];
 }
 
-export function firewallPolicyRuleCollectionGroupNetworkRuleCollectionRuleToTerraform(struct?: FirewallPolicyRuleCollectionGroupNetworkRuleCollectionRule): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function firewallPolicyRuleCollectionGroupNetworkRuleCollectionRuleToTerraform(struct?: FirewallPolicyRuleCollectionGroupNetworkRuleCollectionRule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -330,11 +330,11 @@ export interface FirewallPolicyRuleCollectionGroupNetworkRuleCollection {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy_rule_collection_group#rule FirewallPolicyRuleCollectionGroup#rule}
   */
-  readonly rule: FirewallPolicyRuleCollectionGroupNetworkRuleCollectionRule[];
+  readonly rule: FirewallPolicyRuleCollectionGroupNetworkRuleCollectionRule[] | cdktf.IResolvable;
 }
 
-export function firewallPolicyRuleCollectionGroupNetworkRuleCollectionToTerraform(struct?: FirewallPolicyRuleCollectionGroupNetworkRuleCollection): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function firewallPolicyRuleCollectionGroupNetworkRuleCollectionToTerraform(struct?: FirewallPolicyRuleCollectionGroupNetworkRuleCollection | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -365,8 +365,8 @@ export interface FirewallPolicyRuleCollectionGroupTimeouts {
   readonly update?: string;
 }
 
-export function firewallPolicyRuleCollectionGroupTimeoutsToTerraform(struct?: FirewallPolicyRuleCollectionGroupTimeoutsOutputReference | FirewallPolicyRuleCollectionGroupTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function firewallPolicyRuleCollectionGroupTimeoutsToTerraform(struct?: FirewallPolicyRuleCollectionGroupTimeoutsOutputReference | FirewallPolicyRuleCollectionGroupTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -386,7 +386,7 @@ export class FirewallPolicyRuleCollectionGroupTimeoutsOutputReference extends cd
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -584,12 +584,12 @@ export class FirewallPolicyRuleCollectionGroup extends cdktf.TerraformResource {
   }
 
   // application_rule_collection - computed: false, optional: true, required: false
-  private _applicationRuleCollection?: FirewallPolicyRuleCollectionGroupApplicationRuleCollection[]; 
+  private _applicationRuleCollection?: FirewallPolicyRuleCollectionGroupApplicationRuleCollection[] | cdktf.IResolvable; 
   public get applicationRuleCollection() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('application_rule_collection') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('application_rule_collection')));
   }
-  public set applicationRuleCollection(value: FirewallPolicyRuleCollectionGroupApplicationRuleCollection[]) {
+  public set applicationRuleCollection(value: FirewallPolicyRuleCollectionGroupApplicationRuleCollection[] | cdktf.IResolvable) {
     this._applicationRuleCollection = value;
   }
   public resetApplicationRuleCollection() {
@@ -601,12 +601,12 @@ export class FirewallPolicyRuleCollectionGroup extends cdktf.TerraformResource {
   }
 
   // nat_rule_collection - computed: false, optional: true, required: false
-  private _natRuleCollection?: FirewallPolicyRuleCollectionGroupNatRuleCollection[]; 
+  private _natRuleCollection?: FirewallPolicyRuleCollectionGroupNatRuleCollection[] | cdktf.IResolvable; 
   public get natRuleCollection() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('nat_rule_collection') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('nat_rule_collection')));
   }
-  public set natRuleCollection(value: FirewallPolicyRuleCollectionGroupNatRuleCollection[]) {
+  public set natRuleCollection(value: FirewallPolicyRuleCollectionGroupNatRuleCollection[] | cdktf.IResolvable) {
     this._natRuleCollection = value;
   }
   public resetNatRuleCollection() {
@@ -618,12 +618,12 @@ export class FirewallPolicyRuleCollectionGroup extends cdktf.TerraformResource {
   }
 
   // network_rule_collection - computed: false, optional: true, required: false
-  private _networkRuleCollection?: FirewallPolicyRuleCollectionGroupNetworkRuleCollection[]; 
+  private _networkRuleCollection?: FirewallPolicyRuleCollectionGroupNetworkRuleCollection[] | cdktf.IResolvable; 
   public get networkRuleCollection() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('network_rule_collection') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('network_rule_collection')));
   }
-  public set networkRuleCollection(value: FirewallPolicyRuleCollectionGroupNetworkRuleCollection[]) {
+  public set networkRuleCollection(value: FirewallPolicyRuleCollectionGroupNetworkRuleCollection[] | cdktf.IResolvable) {
     this._networkRuleCollection = value;
   }
   public resetNetworkRuleCollection() {
@@ -635,7 +635,7 @@ export class FirewallPolicyRuleCollectionGroup extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new FirewallPolicyRuleCollectionGroupTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new FirewallPolicyRuleCollectionGroupTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

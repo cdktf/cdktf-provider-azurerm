@@ -68,7 +68,7 @@ export interface CosmosdbGremlinGraphConfig extends cdktf.TerraformMetaArguments
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph#unique_key CosmosdbGremlinGraph#unique_key}
   */
-  readonly uniqueKey?: CosmosdbGremlinGraphUniqueKey[];
+  readonly uniqueKey?: CosmosdbGremlinGraphUniqueKey[] | cdktf.IResolvable;
 }
 export interface CosmosdbGremlinGraphAutoscaleSettings {
   /**
@@ -78,7 +78,7 @@ export interface CosmosdbGremlinGraphAutoscaleSettings {
 }
 
 export function cosmosdbGremlinGraphAutoscaleSettingsToTerraform(struct?: CosmosdbGremlinGraphAutoscaleSettingsOutputReference | CosmosdbGremlinGraphAutoscaleSettings): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -95,7 +95,7 @@ export class CosmosdbGremlinGraphAutoscaleSettingsOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -152,7 +152,7 @@ export interface CosmosdbGremlinGraphConflictResolutionPolicy {
 }
 
 export function cosmosdbGremlinGraphConflictResolutionPolicyToTerraform(struct?: CosmosdbGremlinGraphConflictResolutionPolicyOutputReference | CosmosdbGremlinGraphConflictResolutionPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -171,7 +171,7 @@ export class CosmosdbGremlinGraphConflictResolutionPolicyOutputReference extends
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -264,8 +264,8 @@ export interface CosmosdbGremlinGraphIndexPolicyCompositeIndexIndex {
   readonly path: string;
 }
 
-export function cosmosdbGremlinGraphIndexPolicyCompositeIndexIndexToTerraform(struct?: CosmosdbGremlinGraphIndexPolicyCompositeIndexIndex): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function cosmosdbGremlinGraphIndexPolicyCompositeIndexIndexToTerraform(struct?: CosmosdbGremlinGraphIndexPolicyCompositeIndexIndex | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -281,11 +281,11 @@ export interface CosmosdbGremlinGraphIndexPolicyCompositeIndex {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph#index CosmosdbGremlinGraph#index}
   */
-  readonly index: CosmosdbGremlinGraphIndexPolicyCompositeIndexIndex[];
+  readonly index: CosmosdbGremlinGraphIndexPolicyCompositeIndexIndex[] | cdktf.IResolvable;
 }
 
-export function cosmosdbGremlinGraphIndexPolicyCompositeIndexToTerraform(struct?: CosmosdbGremlinGraphIndexPolicyCompositeIndex): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function cosmosdbGremlinGraphIndexPolicyCompositeIndexToTerraform(struct?: CosmosdbGremlinGraphIndexPolicyCompositeIndex | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -301,8 +301,8 @@ export interface CosmosdbGremlinGraphIndexPolicySpatialIndex {
   readonly path: string;
 }
 
-export function cosmosdbGremlinGraphIndexPolicySpatialIndexToTerraform(struct?: CosmosdbGremlinGraphIndexPolicySpatialIndex): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function cosmosdbGremlinGraphIndexPolicySpatialIndexToTerraform(struct?: CosmosdbGremlinGraphIndexPolicySpatialIndex | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -333,17 +333,17 @@ export interface CosmosdbGremlinGraphIndexPolicy {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph#composite_index CosmosdbGremlinGraph#composite_index}
   */
-  readonly compositeIndex?: CosmosdbGremlinGraphIndexPolicyCompositeIndex[];
+  readonly compositeIndex?: CosmosdbGremlinGraphIndexPolicyCompositeIndex[] | cdktf.IResolvable;
   /**
   * spatial_index block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph#spatial_index CosmosdbGremlinGraph#spatial_index}
   */
-  readonly spatialIndex?: CosmosdbGremlinGraphIndexPolicySpatialIndex[];
+  readonly spatialIndex?: CosmosdbGremlinGraphIndexPolicySpatialIndex[] | cdktf.IResolvable;
 }
 
 export function cosmosdbGremlinGraphIndexPolicyToTerraform(struct?: CosmosdbGremlinGraphIndexPolicyOutputReference | CosmosdbGremlinGraphIndexPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -365,7 +365,7 @@ export class CosmosdbGremlinGraphIndexPolicyOutputReference extends cdktf.Comple
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -423,7 +423,7 @@ export class CosmosdbGremlinGraphIndexPolicyOutputReference extends cdktf.Comple
   // automatic - computed: false, optional: true, required: false
   private _automatic?: boolean | cdktf.IResolvable; 
   public get automatic() {
-    return this.getBooleanAttribute('automatic') as any;
+    return this.getBooleanAttribute('automatic');
   }
   public set automatic(value: boolean | cdktf.IResolvable) {
     this._automatic = value;
@@ -439,7 +439,7 @@ export class CosmosdbGremlinGraphIndexPolicyOutputReference extends cdktf.Comple
   // excluded_paths - computed: true, optional: true, required: false
   private _excludedPaths?: string[]; 
   public get excludedPaths() {
-    return this.getListAttribute('excluded_paths');
+    return cdktf.Fn.tolist(this.getListAttribute('excluded_paths'));
   }
   public set excludedPaths(value: string[]) {
     this._excludedPaths = value;
@@ -455,7 +455,7 @@ export class CosmosdbGremlinGraphIndexPolicyOutputReference extends cdktf.Comple
   // included_paths - computed: true, optional: true, required: false
   private _includedPaths?: string[]; 
   public get includedPaths() {
-    return this.getListAttribute('included_paths');
+    return cdktf.Fn.tolist(this.getListAttribute('included_paths'));
   }
   public set includedPaths(value: string[]) {
     this._includedPaths = value;
@@ -482,12 +482,12 @@ export class CosmosdbGremlinGraphIndexPolicyOutputReference extends cdktf.Comple
   }
 
   // composite_index - computed: false, optional: true, required: false
-  private _compositeIndex?: CosmosdbGremlinGraphIndexPolicyCompositeIndex[]; 
+  private _compositeIndex?: CosmosdbGremlinGraphIndexPolicyCompositeIndex[] | cdktf.IResolvable; 
   public get compositeIndex() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('composite_index') as any;
+    return this.interpolationForAttribute('composite_index');
   }
-  public set compositeIndex(value: CosmosdbGremlinGraphIndexPolicyCompositeIndex[]) {
+  public set compositeIndex(value: CosmosdbGremlinGraphIndexPolicyCompositeIndex[] | cdktf.IResolvable) {
     this._compositeIndex = value;
   }
   public resetCompositeIndex() {
@@ -499,12 +499,12 @@ export class CosmosdbGremlinGraphIndexPolicyOutputReference extends cdktf.Comple
   }
 
   // spatial_index - computed: false, optional: true, required: false
-  private _spatialIndex?: CosmosdbGremlinGraphIndexPolicySpatialIndex[]; 
+  private _spatialIndex?: CosmosdbGremlinGraphIndexPolicySpatialIndex[] | cdktf.IResolvable; 
   public get spatialIndex() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('spatial_index') as any;
+    return this.interpolationForAttribute('spatial_index');
   }
-  public set spatialIndex(value: CosmosdbGremlinGraphIndexPolicySpatialIndex[]) {
+  public set spatialIndex(value: CosmosdbGremlinGraphIndexPolicySpatialIndex[] | cdktf.IResolvable) {
     this._spatialIndex = value;
   }
   public resetSpatialIndex() {
@@ -534,8 +534,8 @@ export interface CosmosdbGremlinGraphTimeouts {
   readonly update?: string;
 }
 
-export function cosmosdbGremlinGraphTimeoutsToTerraform(struct?: CosmosdbGremlinGraphTimeoutsOutputReference | CosmosdbGremlinGraphTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function cosmosdbGremlinGraphTimeoutsToTerraform(struct?: CosmosdbGremlinGraphTimeoutsOutputReference | CosmosdbGremlinGraphTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -555,7 +555,7 @@ export class CosmosdbGremlinGraphTimeoutsOutputReference extends cdktf.ComplexOb
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -669,8 +669,8 @@ export interface CosmosdbGremlinGraphUniqueKey {
   readonly paths: string[];
 }
 
-export function cosmosdbGremlinGraphUniqueKeyToTerraform(struct?: CosmosdbGremlinGraphUniqueKey): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function cosmosdbGremlinGraphUniqueKeyToTerraform(struct?: CosmosdbGremlinGraphUniqueKey | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -850,7 +850,7 @@ export class CosmosdbGremlinGraph extends cdktf.TerraformResource {
   }
 
   // autoscale_settings - computed: false, optional: true, required: false
-  private _autoscaleSettings = new CosmosdbGremlinGraphAutoscaleSettingsOutputReference(this as any, "autoscale_settings", true);
+  private _autoscaleSettings = new CosmosdbGremlinGraphAutoscaleSettingsOutputReference(this, "autoscale_settings", true);
   public get autoscaleSettings() {
     return this._autoscaleSettings;
   }
@@ -866,7 +866,7 @@ export class CosmosdbGremlinGraph extends cdktf.TerraformResource {
   }
 
   // conflict_resolution_policy - computed: false, optional: true, required: false
-  private _conflictResolutionPolicy = new CosmosdbGremlinGraphConflictResolutionPolicyOutputReference(this as any, "conflict_resolution_policy", true);
+  private _conflictResolutionPolicy = new CosmosdbGremlinGraphConflictResolutionPolicyOutputReference(this, "conflict_resolution_policy", true);
   public get conflictResolutionPolicy() {
     return this._conflictResolutionPolicy;
   }
@@ -882,7 +882,7 @@ export class CosmosdbGremlinGraph extends cdktf.TerraformResource {
   }
 
   // index_policy - computed: false, optional: true, required: false
-  private _indexPolicy = new CosmosdbGremlinGraphIndexPolicyOutputReference(this as any, "index_policy", true);
+  private _indexPolicy = new CosmosdbGremlinGraphIndexPolicyOutputReference(this, "index_policy", true);
   public get indexPolicy() {
     return this._indexPolicy;
   }
@@ -898,7 +898,7 @@ export class CosmosdbGremlinGraph extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new CosmosdbGremlinGraphTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new CosmosdbGremlinGraphTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -914,12 +914,12 @@ export class CosmosdbGremlinGraph extends cdktf.TerraformResource {
   }
 
   // unique_key - computed: false, optional: true, required: false
-  private _uniqueKey?: CosmosdbGremlinGraphUniqueKey[]; 
+  private _uniqueKey?: CosmosdbGremlinGraphUniqueKey[] | cdktf.IResolvable; 
   public get uniqueKey() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('unique_key') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('unique_key')));
   }
-  public set uniqueKey(value: CosmosdbGremlinGraphUniqueKey[]) {
+  public set uniqueKey(value: CosmosdbGremlinGraphUniqueKey[] | cdktf.IResolvable) {
     this._uniqueKey = value;
   }
   public resetUniqueKey() {

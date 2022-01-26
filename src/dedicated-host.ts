@@ -38,7 +38,7 @@ export interface DedicatedHostConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dedicated_host#tags DedicatedHost#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   * 
@@ -65,8 +65,8 @@ export interface DedicatedHostTimeouts {
   readonly update?: string;
 }
 
-export function dedicatedHostTimeoutsToTerraform(struct?: DedicatedHostTimeoutsOutputReference | DedicatedHostTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dedicatedHostTimeoutsToTerraform(struct?: DedicatedHostTimeoutsOutputReference | DedicatedHostTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -86,7 +86,7 @@ export class DedicatedHostTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -244,7 +244,7 @@ export class DedicatedHost extends cdktf.TerraformResource {
   // auto_replace_on_failure - computed: false, optional: true, required: false
   private _autoReplaceOnFailure?: boolean | cdktf.IResolvable; 
   public get autoReplaceOnFailure() {
-    return this.getBooleanAttribute('auto_replace_on_failure') as any;
+    return this.getBooleanAttribute('auto_replace_on_failure');
   }
   public set autoReplaceOnFailure(value: boolean | cdktf.IResolvable) {
     this._autoReplaceOnFailure = value;
@@ -344,12 +344,11 @@ export class DedicatedHost extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -361,7 +360,7 @@ export class DedicatedHost extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DedicatedHostTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DedicatedHostTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -389,7 +388,7 @@ export class DedicatedHost extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       platform_fault_domain: cdktf.numberToTerraform(this._platformFaultDomain),
       sku_name: cdktf.stringToTerraform(this._skuName),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       timeouts: dedicatedHostTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

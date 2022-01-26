@@ -48,13 +48,13 @@ export interface PolicySetDefinitionConfig extends cdktf.TerraformMetaArguments 
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_set_definition#policy_definition_group PolicySetDefinition#policy_definition_group}
   */
-  readonly policyDefinitionGroup?: PolicySetDefinitionPolicyDefinitionGroup[];
+  readonly policyDefinitionGroup?: PolicySetDefinitionPolicyDefinitionGroup[] | cdktf.IResolvable;
   /**
   * policy_definition_reference block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_set_definition#policy_definition_reference PolicySetDefinition#policy_definition_reference}
   */
-  readonly policyDefinitionReference?: PolicySetDefinitionPolicyDefinitionReference[];
+  readonly policyDefinitionReference?: PolicySetDefinitionPolicyDefinitionReference[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -85,8 +85,8 @@ export interface PolicySetDefinitionPolicyDefinitionGroup {
   readonly name: string;
 }
 
-export function policySetDefinitionPolicyDefinitionGroupToTerraform(struct?: PolicySetDefinitionPolicyDefinitionGroup): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function policySetDefinitionPolicyDefinitionGroupToTerraform(struct?: PolicySetDefinitionPolicyDefinitionGroup | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -107,7 +107,7 @@ export interface PolicySetDefinitionPolicyDefinitionReference {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_set_definition#parameters PolicySetDefinition#parameters}
   */
-  readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
+  readonly parameters?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_set_definition#policy_definition_id PolicySetDefinition#policy_definition_id}
   */
@@ -122,14 +122,14 @@ export interface PolicySetDefinitionPolicyDefinitionReference {
   readonly referenceId?: string;
 }
 
-export function policySetDefinitionPolicyDefinitionReferenceToTerraform(struct?: PolicySetDefinitionPolicyDefinitionReference): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function policySetDefinitionPolicyDefinitionReferenceToTerraform(struct?: PolicySetDefinitionPolicyDefinitionReference | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
     parameter_values: cdktf.stringToTerraform(struct!.parameterValues),
-    parameters: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.parameters),
+    parameters: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.parameters),
     policy_definition_id: cdktf.stringToTerraform(struct!.policyDefinitionId),
     policy_group_names: cdktf.listMapper(cdktf.stringToTerraform)(struct!.policyGroupNames),
     reference_id: cdktf.stringToTerraform(struct!.referenceId),
@@ -155,8 +155,8 @@ export interface PolicySetDefinitionTimeouts {
   readonly update?: string;
 }
 
-export function policySetDefinitionTimeoutsToTerraform(struct?: PolicySetDefinitionTimeoutsOutputReference | PolicySetDefinitionTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function policySetDefinitionTimeoutsToTerraform(struct?: PolicySetDefinitionTimeoutsOutputReference | PolicySetDefinitionTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -176,7 +176,7 @@ export class PolicySetDefinitionTimeoutsOutputReference extends cdktf.ComplexObj
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -475,12 +475,12 @@ export class PolicySetDefinition extends cdktf.TerraformResource {
   }
 
   // policy_definition_group - computed: false, optional: true, required: false
-  private _policyDefinitionGroup?: PolicySetDefinitionPolicyDefinitionGroup[]; 
+  private _policyDefinitionGroup?: PolicySetDefinitionPolicyDefinitionGroup[] | cdktf.IResolvable; 
   public get policyDefinitionGroup() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('policy_definition_group') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('policy_definition_group')));
   }
-  public set policyDefinitionGroup(value: PolicySetDefinitionPolicyDefinitionGroup[]) {
+  public set policyDefinitionGroup(value: PolicySetDefinitionPolicyDefinitionGroup[] | cdktf.IResolvable) {
     this._policyDefinitionGroup = value;
   }
   public resetPolicyDefinitionGroup() {
@@ -492,12 +492,12 @@ export class PolicySetDefinition extends cdktf.TerraformResource {
   }
 
   // policy_definition_reference - computed: false, optional: true, required: false
-  private _policyDefinitionReference?: PolicySetDefinitionPolicyDefinitionReference[]; 
+  private _policyDefinitionReference?: PolicySetDefinitionPolicyDefinitionReference[] | cdktf.IResolvable; 
   public get policyDefinitionReference() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('policy_definition_reference') as any;
+    return this.interpolationForAttribute('policy_definition_reference');
   }
-  public set policyDefinitionReference(value: PolicySetDefinitionPolicyDefinitionReference[]) {
+  public set policyDefinitionReference(value: PolicySetDefinitionPolicyDefinitionReference[] | cdktf.IResolvable) {
     this._policyDefinitionReference = value;
   }
   public resetPolicyDefinitionReference() {
@@ -509,7 +509,7 @@ export class PolicySetDefinition extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new PolicySetDefinitionTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new PolicySetDefinitionTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

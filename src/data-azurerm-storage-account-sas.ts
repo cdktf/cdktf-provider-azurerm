@@ -92,7 +92,7 @@ export interface DataAzurermStorageAccountSasPermissions {
 }
 
 export function dataAzurermStorageAccountSasPermissionsToTerraform(struct?: DataAzurermStorageAccountSasPermissionsOutputReference | DataAzurermStorageAccountSasPermissions): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -116,7 +116,7 @@ export class DataAzurermStorageAccountSasPermissionsOutputReference extends cdkt
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -186,7 +186,7 @@ export class DataAzurermStorageAccountSasPermissionsOutputReference extends cdkt
   // add - computed: false, optional: false, required: true
   private _add?: boolean | cdktf.IResolvable; 
   public get add() {
-    return this.getBooleanAttribute('add') as any;
+    return this.getBooleanAttribute('add');
   }
   public set add(value: boolean | cdktf.IResolvable) {
     this._add = value;
@@ -199,7 +199,7 @@ export class DataAzurermStorageAccountSasPermissionsOutputReference extends cdkt
   // create - computed: false, optional: false, required: true
   private _create?: boolean | cdktf.IResolvable; 
   public get create() {
-    return this.getBooleanAttribute('create') as any;
+    return this.getBooleanAttribute('create');
   }
   public set create(value: boolean | cdktf.IResolvable) {
     this._create = value;
@@ -212,7 +212,7 @@ export class DataAzurermStorageAccountSasPermissionsOutputReference extends cdkt
   // delete - computed: false, optional: false, required: true
   private _delete?: boolean | cdktf.IResolvable; 
   public get delete() {
-    return this.getBooleanAttribute('delete') as any;
+    return this.getBooleanAttribute('delete');
   }
   public set delete(value: boolean | cdktf.IResolvable) {
     this._delete = value;
@@ -225,7 +225,7 @@ export class DataAzurermStorageAccountSasPermissionsOutputReference extends cdkt
   // list - computed: false, optional: false, required: true
   private _list?: boolean | cdktf.IResolvable; 
   public get list() {
-    return this.getBooleanAttribute('list') as any;
+    return this.getBooleanAttribute('list');
   }
   public set list(value: boolean | cdktf.IResolvable) {
     this._list = value;
@@ -238,7 +238,7 @@ export class DataAzurermStorageAccountSasPermissionsOutputReference extends cdkt
   // process - computed: false, optional: false, required: true
   private _process?: boolean | cdktf.IResolvable; 
   public get process() {
-    return this.getBooleanAttribute('process') as any;
+    return this.getBooleanAttribute('process');
   }
   public set process(value: boolean | cdktf.IResolvable) {
     this._process = value;
@@ -251,7 +251,7 @@ export class DataAzurermStorageAccountSasPermissionsOutputReference extends cdkt
   // read - computed: false, optional: false, required: true
   private _read?: boolean | cdktf.IResolvable; 
   public get read() {
-    return this.getBooleanAttribute('read') as any;
+    return this.getBooleanAttribute('read');
   }
   public set read(value: boolean | cdktf.IResolvable) {
     this._read = value;
@@ -264,7 +264,7 @@ export class DataAzurermStorageAccountSasPermissionsOutputReference extends cdkt
   // update - computed: false, optional: false, required: true
   private _update?: boolean | cdktf.IResolvable; 
   public get update() {
-    return this.getBooleanAttribute('update') as any;
+    return this.getBooleanAttribute('update');
   }
   public set update(value: boolean | cdktf.IResolvable) {
     this._update = value;
@@ -277,7 +277,7 @@ export class DataAzurermStorageAccountSasPermissionsOutputReference extends cdkt
   // write - computed: false, optional: false, required: true
   private _write?: boolean | cdktf.IResolvable; 
   public get write() {
-    return this.getBooleanAttribute('write') as any;
+    return this.getBooleanAttribute('write');
   }
   public set write(value: boolean | cdktf.IResolvable) {
     this._write = value;
@@ -303,7 +303,7 @@ export interface DataAzurermStorageAccountSasResourceTypes {
 }
 
 export function dataAzurermStorageAccountSasResourceTypesToTerraform(struct?: DataAzurermStorageAccountSasResourceTypesOutputReference | DataAzurermStorageAccountSasResourceTypes): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -322,7 +322,7 @@ export class DataAzurermStorageAccountSasResourceTypesOutputReference extends cd
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -362,7 +362,7 @@ export class DataAzurermStorageAccountSasResourceTypesOutputReference extends cd
   // container - computed: false, optional: false, required: true
   private _container?: boolean | cdktf.IResolvable; 
   public get container() {
-    return this.getBooleanAttribute('container') as any;
+    return this.getBooleanAttribute('container');
   }
   public set container(value: boolean | cdktf.IResolvable) {
     this._container = value;
@@ -375,7 +375,7 @@ export class DataAzurermStorageAccountSasResourceTypesOutputReference extends cd
   // object - computed: false, optional: false, required: true
   private _object?: boolean | cdktf.IResolvable; 
   public get object() {
-    return this.getBooleanAttribute('object') as any;
+    return this.getBooleanAttribute('object');
   }
   public set object(value: boolean | cdktf.IResolvable) {
     this._object = value;
@@ -388,7 +388,7 @@ export class DataAzurermStorageAccountSasResourceTypesOutputReference extends cd
   // service - computed: false, optional: false, required: true
   private _service?: boolean | cdktf.IResolvable; 
   public get service() {
-    return this.getBooleanAttribute('service') as any;
+    return this.getBooleanAttribute('service');
   }
   public set service(value: boolean | cdktf.IResolvable) {
     this._service = value;
@@ -418,7 +418,7 @@ export interface DataAzurermStorageAccountSasServices {
 }
 
 export function dataAzurermStorageAccountSasServicesToTerraform(struct?: DataAzurermStorageAccountSasServicesOutputReference | DataAzurermStorageAccountSasServices): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -438,7 +438,7 @@ export class DataAzurermStorageAccountSasServicesOutputReference extends cdktf.C
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -484,7 +484,7 @@ export class DataAzurermStorageAccountSasServicesOutputReference extends cdktf.C
   // blob - computed: false, optional: false, required: true
   private _blob?: boolean | cdktf.IResolvable; 
   public get blob() {
-    return this.getBooleanAttribute('blob') as any;
+    return this.getBooleanAttribute('blob');
   }
   public set blob(value: boolean | cdktf.IResolvable) {
     this._blob = value;
@@ -497,7 +497,7 @@ export class DataAzurermStorageAccountSasServicesOutputReference extends cdktf.C
   // file - computed: false, optional: false, required: true
   private _file?: boolean | cdktf.IResolvable; 
   public get file() {
-    return this.getBooleanAttribute('file') as any;
+    return this.getBooleanAttribute('file');
   }
   public set file(value: boolean | cdktf.IResolvable) {
     this._file = value;
@@ -510,7 +510,7 @@ export class DataAzurermStorageAccountSasServicesOutputReference extends cdktf.C
   // queue - computed: false, optional: false, required: true
   private _queue?: boolean | cdktf.IResolvable; 
   public get queue() {
-    return this.getBooleanAttribute('queue') as any;
+    return this.getBooleanAttribute('queue');
   }
   public set queue(value: boolean | cdktf.IResolvable) {
     this._queue = value;
@@ -523,7 +523,7 @@ export class DataAzurermStorageAccountSasServicesOutputReference extends cdktf.C
   // table - computed: false, optional: false, required: true
   private _table?: boolean | cdktf.IResolvable; 
   public get table() {
-    return this.getBooleanAttribute('table') as any;
+    return this.getBooleanAttribute('table');
   }
   public set table(value: boolean | cdktf.IResolvable) {
     this._table = value;
@@ -540,8 +540,8 @@ export interface DataAzurermStorageAccountSasTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermStorageAccountSasTimeoutsToTerraform(struct?: DataAzurermStorageAccountSasTimeoutsOutputReference | DataAzurermStorageAccountSasTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermStorageAccountSasTimeoutsToTerraform(struct?: DataAzurermStorageAccountSasTimeoutsOutputReference | DataAzurermStorageAccountSasTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -558,7 +558,7 @@ export class DataAzurermStorageAccountSasTimeoutsOutputReference extends cdktf.C
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -677,7 +677,7 @@ export class DataAzurermStorageAccountSas extends cdktf.TerraformDataSource {
   // https_only - computed: false, optional: true, required: false
   private _httpsOnly?: boolean | cdktf.IResolvable; 
   public get httpsOnly() {
-    return this.getBooleanAttribute('https_only') as any;
+    return this.getBooleanAttribute('https_only');
   }
   public set httpsOnly(value: boolean | cdktf.IResolvable) {
     this._httpsOnly = value;
@@ -746,7 +746,7 @@ export class DataAzurermStorageAccountSas extends cdktf.TerraformDataSource {
   }
 
   // permissions - computed: false, optional: false, required: true
-  private _permissions = new DataAzurermStorageAccountSasPermissionsOutputReference(this as any, "permissions", true);
+  private _permissions = new DataAzurermStorageAccountSasPermissionsOutputReference(this, "permissions", true);
   public get permissions() {
     return this._permissions;
   }
@@ -759,7 +759,7 @@ export class DataAzurermStorageAccountSas extends cdktf.TerraformDataSource {
   }
 
   // resource_types - computed: false, optional: false, required: true
-  private _resourceTypes = new DataAzurermStorageAccountSasResourceTypesOutputReference(this as any, "resource_types", true);
+  private _resourceTypes = new DataAzurermStorageAccountSasResourceTypesOutputReference(this, "resource_types", true);
   public get resourceTypes() {
     return this._resourceTypes;
   }
@@ -772,7 +772,7 @@ export class DataAzurermStorageAccountSas extends cdktf.TerraformDataSource {
   }
 
   // services - computed: false, optional: false, required: true
-  private _services = new DataAzurermStorageAccountSasServicesOutputReference(this as any, "services", true);
+  private _services = new DataAzurermStorageAccountSasServicesOutputReference(this, "services", true);
   public get services() {
     return this._services;
   }
@@ -785,7 +785,7 @@ export class DataAzurermStorageAccountSas extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermStorageAccountSasTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermStorageAccountSasTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

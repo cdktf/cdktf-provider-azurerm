@@ -22,7 +22,7 @@ export interface BatchPoolConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#metadata BatchPool#metadata}
   */
-  readonly metadata?: { [key: string]: string } | cdktf.IResolvable;
+  readonly metadata?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#name BatchPool#name}
   */
@@ -54,7 +54,7 @@ export interface BatchPoolConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#certificate BatchPool#certificate}
   */
-  readonly certificate?: BatchPoolCertificate[];
+  readonly certificate?: BatchPoolCertificate[] | cdktf.IResolvable;
   /**
   * container_configuration block
   * 
@@ -110,7 +110,7 @@ export interface BatchPoolAutoScale {
 }
 
 export function batchPoolAutoScaleToTerraform(struct?: BatchPoolAutoScaleOutputReference | BatchPoolAutoScale): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -128,7 +128,7 @@ export class BatchPoolAutoScaleOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -207,8 +207,8 @@ export interface BatchPoolCertificate {
   readonly visibility?: string[];
 }
 
-export function batchPoolCertificateToTerraform(struct?: BatchPoolCertificate): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function batchPoolCertificateToTerraform(struct?: BatchPoolCertificate | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -235,8 +235,8 @@ export interface BatchPoolContainerConfigurationContainerRegistries {
   readonly userName?: string;
 }
 
-export function batchPoolContainerConfigurationContainerRegistriesToTerraform(struct?: BatchPoolContainerConfigurationContainerRegistries): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function batchPoolContainerConfigurationContainerRegistriesToTerraform(struct?: BatchPoolContainerConfigurationContainerRegistries | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -255,7 +255,7 @@ export interface BatchPoolContainerConfiguration {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#container_registries BatchPool#container_registries}
   */
-  readonly containerRegistries?: BatchPoolContainerConfigurationContainerRegistries[];
+  readonly containerRegistries?: BatchPoolContainerConfigurationContainerRegistries[] | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#type BatchPool#type}
   */
@@ -263,7 +263,7 @@ export interface BatchPoolContainerConfiguration {
 }
 
 export function batchPoolContainerConfigurationToTerraform(struct?: BatchPoolContainerConfigurationOutputReference | BatchPoolContainerConfiguration): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -282,7 +282,7 @@ export class BatchPoolContainerConfigurationOutputReference extends cdktf.Comple
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -322,7 +322,7 @@ export class BatchPoolContainerConfigurationOutputReference extends cdktf.Comple
   // container_image_names - computed: false, optional: true, required: false
   private _containerImageNames?: string[]; 
   public get containerImageNames() {
-    return this.getListAttribute('container_image_names');
+    return cdktf.Fn.tolist(this.getListAttribute('container_image_names'));
   }
   public set containerImageNames(value: string[]) {
     this._containerImageNames = value;
@@ -336,12 +336,12 @@ export class BatchPoolContainerConfigurationOutputReference extends cdktf.Comple
   }
 
   // container_registries - computed: false, optional: true, required: false
-  private _containerRegistries?: BatchPoolContainerConfigurationContainerRegistries[]; 
+  private _containerRegistries?: BatchPoolContainerConfigurationContainerRegistries[] | cdktf.IResolvable; 
   public get containerRegistries() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('container_registries') as any;
+    return this.interpolationForAttribute('container_registries');
   }
-  public set containerRegistries(value: BatchPoolContainerConfigurationContainerRegistries[]) {
+  public set containerRegistries(value: BatchPoolContainerConfigurationContainerRegistries[] | cdktf.IResolvable) {
     this._containerRegistries = value;
   }
   public resetContainerRegistries() {
@@ -384,7 +384,7 @@ export interface BatchPoolFixedScale {
 }
 
 export function batchPoolFixedScaleToTerraform(struct?: BatchPoolFixedScaleOutputReference | BatchPoolFixedScale): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -403,7 +403,7 @@ export class BatchPoolFixedScaleOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -500,7 +500,7 @@ export interface BatchPoolIdentity {
 }
 
 export function batchPoolIdentityToTerraform(struct?: BatchPoolIdentityOutputReference | BatchPoolIdentity): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -518,7 +518,7 @@ export class BatchPoolIdentityOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -552,7 +552,7 @@ export class BatchPoolIdentityOutputReference extends cdktf.ComplexObject {
   // identity_ids - computed: false, optional: false, required: true
   private _identityIds?: string[]; 
   public get identityIds() {
-    return this.getListAttribute('identity_ids');
+    return cdktf.Fn.tolist(this.getListAttribute('identity_ids'));
   }
   public set identityIds(value: string[]) {
     this._identityIds = value;
@@ -590,8 +590,8 @@ export interface BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecuri
   readonly sourceAddressPrefix: string;
 }
 
-export function batchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRulesToTerraform(struct?: BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function batchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRulesToTerraform(struct?: BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -624,11 +624,11 @@ export interface BatchPoolNetworkConfigurationEndpointConfiguration {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#network_security_group_rules BatchPool#network_security_group_rules}
   */
-  readonly networkSecurityGroupRules?: BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules[];
+  readonly networkSecurityGroupRules?: BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules[] | cdktf.IResolvable;
 }
 
-export function batchPoolNetworkConfigurationEndpointConfigurationToTerraform(struct?: BatchPoolNetworkConfigurationEndpointConfiguration): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function batchPoolNetworkConfigurationEndpointConfigurationToTerraform(struct?: BatchPoolNetworkConfigurationEndpointConfiguration | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -659,11 +659,11 @@ export interface BatchPoolNetworkConfiguration {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#endpoint_configuration BatchPool#endpoint_configuration}
   */
-  readonly endpointConfiguration?: BatchPoolNetworkConfigurationEndpointConfiguration[];
+  readonly endpointConfiguration?: BatchPoolNetworkConfigurationEndpointConfiguration[] | cdktf.IResolvable;
 }
 
 export function batchPoolNetworkConfigurationToTerraform(struct?: BatchPoolNetworkConfigurationOutputReference | BatchPoolNetworkConfiguration): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -683,7 +683,7 @@ export class BatchPoolNetworkConfigurationOutputReference extends cdktf.ComplexO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -745,7 +745,7 @@ export class BatchPoolNetworkConfigurationOutputReference extends cdktf.ComplexO
   // public_ips - computed: false, optional: true, required: false
   private _publicIps?: string[]; 
   public get publicIps() {
-    return this.getListAttribute('public_ips');
+    return cdktf.Fn.tolist(this.getListAttribute('public_ips'));
   }
   public set publicIps(value: string[]) {
     this._publicIps = value;
@@ -772,12 +772,12 @@ export class BatchPoolNetworkConfigurationOutputReference extends cdktf.ComplexO
   }
 
   // endpoint_configuration - computed: false, optional: true, required: false
-  private _endpointConfiguration?: BatchPoolNetworkConfigurationEndpointConfiguration[]; 
+  private _endpointConfiguration?: BatchPoolNetworkConfigurationEndpointConfiguration[] | cdktf.IResolvable; 
   public get endpointConfiguration() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('endpoint_configuration') as any;
+    return this.interpolationForAttribute('endpoint_configuration');
   }
-  public set endpointConfiguration(value: BatchPoolNetworkConfigurationEndpointConfiguration[]) {
+  public set endpointConfiguration(value: BatchPoolNetworkConfigurationEndpointConfiguration[] | cdktf.IResolvable) {
     this._endpointConfiguration = value;
   }
   public resetEndpointConfiguration() {
@@ -815,8 +815,8 @@ export interface BatchPoolStartTaskResourceFile {
   readonly storageContainerUrl?: string;
 }
 
-export function batchPoolStartTaskResourceFileToTerraform(struct?: BatchPoolStartTaskResourceFile): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function batchPoolStartTaskResourceFileToTerraform(struct?: BatchPoolStartTaskResourceFile | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -842,7 +842,7 @@ export interface BatchPoolStartTaskUserIdentityAutoUser {
 }
 
 export function batchPoolStartTaskUserIdentityAutoUserToTerraform(struct?: BatchPoolStartTaskUserIdentityAutoUserOutputReference | BatchPoolStartTaskUserIdentityAutoUser): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -860,7 +860,7 @@ export class BatchPoolStartTaskUserIdentityAutoUserOutputReference extends cdktf
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -937,7 +937,7 @@ export interface BatchPoolStartTaskUserIdentity {
 }
 
 export function batchPoolStartTaskUserIdentityToTerraform(struct?: BatchPoolStartTaskUserIdentityOutputReference | BatchPoolStartTaskUserIdentity): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -955,7 +955,7 @@ export class BatchPoolStartTaskUserIdentityOutputReference extends cdktf.Complex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1003,7 +1003,7 @@ export class BatchPoolStartTaskUserIdentityOutputReference extends cdktf.Complex
   }
 
   // auto_user - computed: false, optional: true, required: false
-  private _autoUser = new BatchPoolStartTaskUserIdentityAutoUserOutputReference(this as any, "auto_user", true);
+  private _autoUser = new BatchPoolStartTaskUserIdentityAutoUserOutputReference(this, "auto_user", true);
   public get autoUser() {
     return this._autoUser;
   }
@@ -1026,11 +1026,11 @@ export interface BatchPoolStartTask {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#common_environment_properties BatchPool#common_environment_properties}
   */
-  readonly commonEnvironmentProperties?: { [key: string]: string } | cdktf.IResolvable;
+  readonly commonEnvironmentProperties?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#environment BatchPool#environment}
   */
-  readonly environment?: { [key: string]: string } | cdktf.IResolvable;
+  readonly environment?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#max_task_retry_count BatchPool#max_task_retry_count}
   */
@@ -1048,7 +1048,7 @@ export interface BatchPoolStartTask {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#resource_file BatchPool#resource_file}
   */
-  readonly resourceFile?: BatchPoolStartTaskResourceFile[];
+  readonly resourceFile?: BatchPoolStartTaskResourceFile[] | cdktf.IResolvable;
   /**
   * user_identity block
   * 
@@ -1058,14 +1058,14 @@ export interface BatchPoolStartTask {
 }
 
 export function batchPoolStartTaskToTerraform(struct?: BatchPoolStartTaskOutputReference | BatchPoolStartTask): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
     command_line: cdktf.stringToTerraform(struct!.commandLine),
-    common_environment_properties: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.commonEnvironmentProperties),
-    environment: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.environment),
+    common_environment_properties: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.commonEnvironmentProperties),
+    environment: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.environment),
     max_task_retry_count: cdktf.numberToTerraform(struct!.maxTaskRetryCount),
     task_retry_maximum: cdktf.numberToTerraform(struct!.taskRetryMaximum),
     wait_for_success: cdktf.booleanToTerraform(struct!.waitForSuccess),
@@ -1082,7 +1082,7 @@ export class BatchPoolStartTaskOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1163,12 +1163,11 @@ export class BatchPoolStartTaskOutputReference extends cdktf.ComplexObject {
   }
 
   // common_environment_properties - computed: true, optional: true, required: false
-  private _commonEnvironmentProperties?: { [key: string]: string } | cdktf.IResolvable; 
+  private _commonEnvironmentProperties?: { [key: string]: string }; 
   public get commonEnvironmentProperties() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('common_environment_properties') as any;
+    return this.getStringMapAttribute('common_environment_properties');
   }
-  public set commonEnvironmentProperties(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set commonEnvironmentProperties(value: { [key: string]: string }) {
     this._commonEnvironmentProperties = value;
   }
   public resetCommonEnvironmentProperties() {
@@ -1180,12 +1179,11 @@ export class BatchPoolStartTaskOutputReference extends cdktf.ComplexObject {
   }
 
   // environment - computed: true, optional: true, required: false
-  private _environment?: { [key: string]: string } | cdktf.IResolvable; 
+  private _environment?: { [key: string]: string }; 
   public get environment() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('environment') as any;
+    return this.getStringMapAttribute('environment');
   }
-  public set environment(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set environment(value: { [key: string]: string }) {
     this._environment = value;
   }
   public resetEnvironment() {
@@ -1231,7 +1229,7 @@ export class BatchPoolStartTaskOutputReference extends cdktf.ComplexObject {
   // wait_for_success - computed: false, optional: true, required: false
   private _waitForSuccess?: boolean | cdktf.IResolvable; 
   public get waitForSuccess() {
-    return this.getBooleanAttribute('wait_for_success') as any;
+    return this.getBooleanAttribute('wait_for_success');
   }
   public set waitForSuccess(value: boolean | cdktf.IResolvable) {
     this._waitForSuccess = value;
@@ -1245,12 +1243,12 @@ export class BatchPoolStartTaskOutputReference extends cdktf.ComplexObject {
   }
 
   // resource_file - computed: false, optional: true, required: false
-  private _resourceFile?: BatchPoolStartTaskResourceFile[]; 
+  private _resourceFile?: BatchPoolStartTaskResourceFile[] | cdktf.IResolvable; 
   public get resourceFile() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('resource_file') as any;
+    return this.interpolationForAttribute('resource_file');
   }
-  public set resourceFile(value: BatchPoolStartTaskResourceFile[]) {
+  public set resourceFile(value: BatchPoolStartTaskResourceFile[] | cdktf.IResolvable) {
     this._resourceFile = value;
   }
   public resetResourceFile() {
@@ -1262,7 +1260,7 @@ export class BatchPoolStartTaskOutputReference extends cdktf.ComplexObject {
   }
 
   // user_identity - computed: false, optional: false, required: true
-  private _userIdentity = new BatchPoolStartTaskUserIdentityOutputReference(this as any, "user_identity", true);
+  private _userIdentity = new BatchPoolStartTaskUserIdentityOutputReference(this, "user_identity", true);
   public get userIdentity() {
     return this._userIdentity;
   }
@@ -1298,7 +1296,7 @@ export interface BatchPoolStorageImageReference {
 }
 
 export function batchPoolStorageImageReferenceToTerraform(struct?: BatchPoolStorageImageReferenceOutputReference | BatchPoolStorageImageReference): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1319,7 +1317,7 @@ export class BatchPoolStorageImageReferenceOutputReference extends cdktf.Complex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1467,8 +1465,8 @@ export interface BatchPoolTimeouts {
   readonly update?: string;
 }
 
-export function batchPoolTimeoutsToTerraform(struct?: BatchPoolTimeoutsOutputReference | BatchPoolTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function batchPoolTimeoutsToTerraform(struct?: BatchPoolTimeoutsOutputReference | BatchPoolTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1488,7 +1486,7 @@ export class BatchPoolTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1703,12 +1701,11 @@ export class BatchPool extends cdktf.TerraformResource {
   }
 
   // metadata - computed: false, optional: true, required: false
-  private _metadata?: { [key: string]: string } | cdktf.IResolvable; 
+  private _metadata?: { [key: string]: string }; 
   public get metadata() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('metadata') as any;
+    return this.getStringMapAttribute('metadata');
   }
-  public set metadata(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set metadata(value: { [key: string]: string }) {
     this._metadata = value;
   }
   public resetMetadata() {
@@ -1761,7 +1758,7 @@ export class BatchPool extends cdktf.TerraformResource {
   // stop_pending_resize_operation - computed: false, optional: true, required: false
   private _stopPendingResizeOperation?: boolean | cdktf.IResolvable; 
   public get stopPendingResizeOperation() {
-    return this.getBooleanAttribute('stop_pending_resize_operation') as any;
+    return this.getBooleanAttribute('stop_pending_resize_operation');
   }
   public set stopPendingResizeOperation(value: boolean | cdktf.IResolvable) {
     this._stopPendingResizeOperation = value;
@@ -1788,7 +1785,7 @@ export class BatchPool extends cdktf.TerraformResource {
   }
 
   // auto_scale - computed: false, optional: true, required: false
-  private _autoScale = new BatchPoolAutoScaleOutputReference(this as any, "auto_scale", true);
+  private _autoScale = new BatchPoolAutoScaleOutputReference(this, "auto_scale", true);
   public get autoScale() {
     return this._autoScale;
   }
@@ -1804,12 +1801,12 @@ export class BatchPool extends cdktf.TerraformResource {
   }
 
   // certificate - computed: false, optional: true, required: false
-  private _certificate?: BatchPoolCertificate[]; 
+  private _certificate?: BatchPoolCertificate[] | cdktf.IResolvable; 
   public get certificate() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('certificate') as any;
+    return this.interpolationForAttribute('certificate');
   }
-  public set certificate(value: BatchPoolCertificate[]) {
+  public set certificate(value: BatchPoolCertificate[] | cdktf.IResolvable) {
     this._certificate = value;
   }
   public resetCertificate() {
@@ -1821,7 +1818,7 @@ export class BatchPool extends cdktf.TerraformResource {
   }
 
   // container_configuration - computed: false, optional: true, required: false
-  private _containerConfiguration = new BatchPoolContainerConfigurationOutputReference(this as any, "container_configuration", true);
+  private _containerConfiguration = new BatchPoolContainerConfigurationOutputReference(this, "container_configuration", true);
   public get containerConfiguration() {
     return this._containerConfiguration;
   }
@@ -1837,7 +1834,7 @@ export class BatchPool extends cdktf.TerraformResource {
   }
 
   // fixed_scale - computed: false, optional: true, required: false
-  private _fixedScale = new BatchPoolFixedScaleOutputReference(this as any, "fixed_scale", true);
+  private _fixedScale = new BatchPoolFixedScaleOutputReference(this, "fixed_scale", true);
   public get fixedScale() {
     return this._fixedScale;
   }
@@ -1853,7 +1850,7 @@ export class BatchPool extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity = new BatchPoolIdentityOutputReference(this as any, "identity", true);
+  private _identity = new BatchPoolIdentityOutputReference(this, "identity", true);
   public get identity() {
     return this._identity;
   }
@@ -1869,7 +1866,7 @@ export class BatchPool extends cdktf.TerraformResource {
   }
 
   // network_configuration - computed: false, optional: true, required: false
-  private _networkConfiguration = new BatchPoolNetworkConfigurationOutputReference(this as any, "network_configuration", true);
+  private _networkConfiguration = new BatchPoolNetworkConfigurationOutputReference(this, "network_configuration", true);
   public get networkConfiguration() {
     return this._networkConfiguration;
   }
@@ -1885,7 +1882,7 @@ export class BatchPool extends cdktf.TerraformResource {
   }
 
   // start_task - computed: false, optional: true, required: false
-  private _startTask = new BatchPoolStartTaskOutputReference(this as any, "start_task", true);
+  private _startTask = new BatchPoolStartTaskOutputReference(this, "start_task", true);
   public get startTask() {
     return this._startTask;
   }
@@ -1901,7 +1898,7 @@ export class BatchPool extends cdktf.TerraformResource {
   }
 
   // storage_image_reference - computed: false, optional: false, required: true
-  private _storageImageReference = new BatchPoolStorageImageReferenceOutputReference(this as any, "storage_image_reference", true);
+  private _storageImageReference = new BatchPoolStorageImageReferenceOutputReference(this, "storage_image_reference", true);
   public get storageImageReference() {
     return this._storageImageReference;
   }
@@ -1914,7 +1911,7 @@ export class BatchPool extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new BatchPoolTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new BatchPoolTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -1938,7 +1935,7 @@ export class BatchPool extends cdktf.TerraformResource {
       account_name: cdktf.stringToTerraform(this._accountName),
       display_name: cdktf.stringToTerraform(this._displayName),
       max_tasks_per_node: cdktf.numberToTerraform(this._maxTasksPerNode),
-      metadata: cdktf.hashMapper(cdktf.anyToTerraform)(this._metadata),
+      metadata: cdktf.hashMapper(cdktf.stringToTerraform)(this._metadata),
       name: cdktf.stringToTerraform(this._name),
       node_agent_sku_id: cdktf.stringToTerraform(this._nodeAgentSkuId),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),

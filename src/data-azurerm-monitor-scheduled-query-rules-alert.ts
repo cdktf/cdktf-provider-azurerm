@@ -26,7 +26,7 @@ export class DataAzurermMonitorScheduledQueryRulesAlertAction extends cdktf.Comp
 
   // action_group - computed: true, optional: false, required: false
   public get actionGroup() {
-    return this.getListAttribute('action_group');
+    return cdktf.Fn.tolist(this.getListAttribute('action_group'));
   }
 
   // custom_webhook_payload - computed: true, optional: false, required: false
@@ -66,7 +66,7 @@ export class DataAzurermMonitorScheduledQueryRulesAlertTrigger extends cdktf.Com
   // metric_trigger - computed: true, optional: false, required: false
   public get metricTrigger() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('metric_trigger') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('metric_trigger')));
   }
 
   // operator - computed: true, optional: false, required: false
@@ -86,8 +86,8 @@ export interface DataAzurermMonitorScheduledQueryRulesAlertTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermMonitorScheduledQueryRulesAlertTimeoutsToTerraform(struct?: DataAzurermMonitorScheduledQueryRulesAlertTimeoutsOutputReference | DataAzurermMonitorScheduledQueryRulesAlertTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermMonitorScheduledQueryRulesAlertTimeoutsToTerraform(struct?: DataAzurermMonitorScheduledQueryRulesAlertTimeoutsOutputReference | DataAzurermMonitorScheduledQueryRulesAlertTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -104,7 +104,7 @@ export class DataAzurermMonitorScheduledQueryRulesAlertTimeoutsOutputReference e
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -189,12 +189,12 @@ export class DataAzurermMonitorScheduledQueryRulesAlert extends cdktf.TerraformD
 
   // action - computed: true, optional: false, required: false
   public action(index: string) {
-    return new DataAzurermMonitorScheduledQueryRulesAlertAction(this, 'action', index);
+    return new DataAzurermMonitorScheduledQueryRulesAlertAction(this, 'action', index, true);
   }
 
   // authorized_resource_ids - computed: true, optional: false, required: false
   public get authorizedResourceIds() {
-    return this.getListAttribute('authorized_resource_ids');
+    return cdktf.Fn.tolist(this.getListAttribute('authorized_resource_ids'));
   }
 
   // data_source_id - computed: true, optional: false, required: false
@@ -209,7 +209,7 @@ export class DataAzurermMonitorScheduledQueryRulesAlert extends cdktf.TerraformD
 
   // enabled - computed: true, optional: false, required: false
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
 
   // frequency - computed: true, optional: false, required: false
@@ -269,7 +269,7 @@ export class DataAzurermMonitorScheduledQueryRulesAlert extends cdktf.TerraformD
   }
 
   // tags - computed: true, optional: false, required: false
-  public tags(key: string): string {
+  public tags(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
@@ -285,11 +285,11 @@ export class DataAzurermMonitorScheduledQueryRulesAlert extends cdktf.TerraformD
 
   // trigger - computed: true, optional: false, required: false
   public trigger(index: string) {
-    return new DataAzurermMonitorScheduledQueryRulesAlertTrigger(this, 'trigger', index);
+    return new DataAzurermMonitorScheduledQueryRulesAlertTrigger(this, 'trigger', index, true);
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermMonitorScheduledQueryRulesAlertTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermMonitorScheduledQueryRulesAlertTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

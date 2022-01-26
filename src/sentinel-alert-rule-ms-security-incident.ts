@@ -77,8 +77,8 @@ export interface SentinelAlertRuleMsSecurityIncidentTimeouts {
   readonly update?: string;
 }
 
-export function sentinelAlertRuleMsSecurityIncidentTimeoutsToTerraform(struct?: SentinelAlertRuleMsSecurityIncidentTimeoutsOutputReference | SentinelAlertRuleMsSecurityIncidentTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function sentinelAlertRuleMsSecurityIncidentTimeoutsToTerraform(struct?: SentinelAlertRuleMsSecurityIncidentTimeoutsOutputReference | SentinelAlertRuleMsSecurityIncidentTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -98,7 +98,7 @@ export class SentinelAlertRuleMsSecurityIncidentTimeoutsOutputReference extends 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -304,7 +304,7 @@ export class SentinelAlertRuleMsSecurityIncident extends cdktf.TerraformResource
   // display_name_exclude_filter - computed: false, optional: true, required: false
   private _displayNameExcludeFilter?: string[]; 
   public get displayNameExcludeFilter() {
-    return this.getListAttribute('display_name_exclude_filter');
+    return cdktf.Fn.tolist(this.getListAttribute('display_name_exclude_filter'));
   }
   public set displayNameExcludeFilter(value: string[]) {
     this._displayNameExcludeFilter = value;
@@ -320,7 +320,7 @@ export class SentinelAlertRuleMsSecurityIncident extends cdktf.TerraformResource
   // display_name_filter - computed: true, optional: true, required: false
   private _displayNameFilter?: string[]; 
   public get displayNameFilter() {
-    return this.getListAttribute('display_name_filter');
+    return cdktf.Fn.tolist(this.getListAttribute('display_name_filter'));
   }
   public set displayNameFilter(value: string[]) {
     this._displayNameFilter = value;
@@ -336,7 +336,7 @@ export class SentinelAlertRuleMsSecurityIncident extends cdktf.TerraformResource
   // enabled - computed: false, optional: true, required: false
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
@@ -396,7 +396,7 @@ export class SentinelAlertRuleMsSecurityIncident extends cdktf.TerraformResource
   // severity_filter - computed: false, optional: false, required: true
   private _severityFilter?: string[]; 
   public get severityFilter() {
-    return this.getListAttribute('severity_filter');
+    return cdktf.Fn.tolist(this.getListAttribute('severity_filter'));
   }
   public set severityFilter(value: string[]) {
     this._severityFilter = value;
@@ -409,7 +409,7 @@ export class SentinelAlertRuleMsSecurityIncident extends cdktf.TerraformResource
   // text_whitelist - computed: true, optional: true, required: false
   private _textWhitelist?: string[]; 
   public get textWhitelist() {
-    return this.getListAttribute('text_whitelist');
+    return cdktf.Fn.tolist(this.getListAttribute('text_whitelist'));
   }
   public set textWhitelist(value: string[]) {
     this._textWhitelist = value;
@@ -423,7 +423,7 @@ export class SentinelAlertRuleMsSecurityIncident extends cdktf.TerraformResource
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new SentinelAlertRuleMsSecurityIncidentTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new SentinelAlertRuleMsSecurityIncidentTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

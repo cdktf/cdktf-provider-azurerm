@@ -10,7 +10,7 @@ export interface DataFactoryDatasetPostgresqlConfig extends cdktf.TerraformMetaA
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_postgresql#additional_properties DataFactoryDatasetPostgresql#additional_properties}
   */
-  readonly additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
+  readonly additionalProperties?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_postgresql#annotations DataFactoryDatasetPostgresql#annotations}
   */
@@ -42,7 +42,7 @@ export interface DataFactoryDatasetPostgresqlConfig extends cdktf.TerraformMetaA
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_postgresql#parameters DataFactoryDatasetPostgresql#parameters}
   */
-  readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
+  readonly parameters?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_postgresql#resource_group_name DataFactoryDatasetPostgresql#resource_group_name}
   */
@@ -56,7 +56,7 @@ export interface DataFactoryDatasetPostgresqlConfig extends cdktf.TerraformMetaA
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_postgresql#schema_column DataFactoryDatasetPostgresql#schema_column}
   */
-  readonly schemaColumn?: DataFactoryDatasetPostgresqlSchemaColumn[];
+  readonly schemaColumn?: DataFactoryDatasetPostgresqlSchemaColumn[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -79,8 +79,8 @@ export interface DataFactoryDatasetPostgresqlSchemaColumn {
   readonly type?: string;
 }
 
-export function dataFactoryDatasetPostgresqlSchemaColumnToTerraform(struct?: DataFactoryDatasetPostgresqlSchemaColumn): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataFactoryDatasetPostgresqlSchemaColumnToTerraform(struct?: DataFactoryDatasetPostgresqlSchemaColumn | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -110,8 +110,8 @@ export interface DataFactoryDatasetPostgresqlTimeouts {
   readonly update?: string;
 }
 
-export function dataFactoryDatasetPostgresqlTimeoutsToTerraform(struct?: DataFactoryDatasetPostgresqlTimeoutsOutputReference | DataFactoryDatasetPostgresqlTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataFactoryDatasetPostgresqlTimeoutsToTerraform(struct?: DataFactoryDatasetPostgresqlTimeoutsOutputReference | DataFactoryDatasetPostgresqlTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -131,7 +131,7 @@ export class DataFactoryDatasetPostgresqlTimeoutsOutputReference extends cdktf.C
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -291,12 +291,11 @@ export class DataFactoryDatasetPostgresql extends cdktf.TerraformResource {
   // ==========
 
   // additional_properties - computed: false, optional: true, required: false
-  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable; 
+  private _additionalProperties?: { [key: string]: string }; 
   public get additionalProperties() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('additional_properties') as any;
+    return this.getStringMapAttribute('additional_properties');
   }
-  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set additionalProperties(value: { [key: string]: string }) {
     this._additionalProperties = value;
   }
   public resetAdditionalProperties() {
@@ -419,12 +418,11 @@ export class DataFactoryDatasetPostgresql extends cdktf.TerraformResource {
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string } | cdktf.IResolvable; 
+  private _parameters?: { [key: string]: string }; 
   public get parameters() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('parameters') as any;
+    return this.getStringMapAttribute('parameters');
   }
-  public set parameters(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set parameters(value: { [key: string]: string }) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -465,12 +463,12 @@ export class DataFactoryDatasetPostgresql extends cdktf.TerraformResource {
   }
 
   // schema_column - computed: false, optional: true, required: false
-  private _schemaColumn?: DataFactoryDatasetPostgresqlSchemaColumn[]; 
+  private _schemaColumn?: DataFactoryDatasetPostgresqlSchemaColumn[] | cdktf.IResolvable; 
   public get schemaColumn() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('schema_column') as any;
+    return this.interpolationForAttribute('schema_column');
   }
-  public set schemaColumn(value: DataFactoryDatasetPostgresqlSchemaColumn[]) {
+  public set schemaColumn(value: DataFactoryDatasetPostgresqlSchemaColumn[] | cdktf.IResolvable) {
     this._schemaColumn = value;
   }
   public resetSchemaColumn() {
@@ -482,7 +480,7 @@ export class DataFactoryDatasetPostgresql extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataFactoryDatasetPostgresqlTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataFactoryDatasetPostgresqlTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -503,7 +501,7 @@ export class DataFactoryDatasetPostgresql extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      additional_properties: cdktf.hashMapper(cdktf.anyToTerraform)(this._additionalProperties),
+      additional_properties: cdktf.hashMapper(cdktf.stringToTerraform)(this._additionalProperties),
       annotations: cdktf.listMapper(cdktf.stringToTerraform)(this._annotations),
       data_factory_id: cdktf.stringToTerraform(this._dataFactoryId),
       data_factory_name: cdktf.stringToTerraform(this._dataFactoryName),
@@ -511,7 +509,7 @@ export class DataFactoryDatasetPostgresql extends cdktf.TerraformResource {
       folder: cdktf.stringToTerraform(this._folder),
       linked_service_name: cdktf.stringToTerraform(this._linkedServiceName),
       name: cdktf.stringToTerraform(this._name),
-      parameters: cdktf.hashMapper(cdktf.anyToTerraform)(this._parameters),
+      parameters: cdktf.hashMapper(cdktf.stringToTerraform)(this._parameters),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       table_name: cdktf.stringToTerraform(this._tableName),
       schema_column: cdktf.listMapper(dataFactoryDatasetPostgresqlSchemaColumnToTerraform)(this._schemaColumn),

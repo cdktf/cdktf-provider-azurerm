@@ -10,7 +10,7 @@ export interface StorageTableEntityConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table_entity#entity StorageTableEntity#entity}
   */
-  readonly entity: { [key: string]: string } | cdktf.IResolvable;
+  readonly entity: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table_entity#partition_key StorageTableEntity#partition_key}
   */
@@ -53,8 +53,8 @@ export interface StorageTableEntityTimeouts {
   readonly update?: string;
 }
 
-export function storageTableEntityTimeoutsToTerraform(struct?: StorageTableEntityTimeoutsOutputReference | StorageTableEntityTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function storageTableEntityTimeoutsToTerraform(struct?: StorageTableEntityTimeoutsOutputReference | StorageTableEntityTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -74,7 +74,7 @@ export class StorageTableEntityTimeoutsOutputReference extends cdktf.ComplexObje
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -227,12 +227,11 @@ export class StorageTableEntity extends cdktf.TerraformResource {
   // ==========
 
   // entity - computed: false, optional: false, required: true
-  private _entity?: { [key: string]: string } | cdktf.IResolvable; 
+  private _entity?: { [key: string]: string }; 
   public get entity() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('entity') as any;
+    return this.getStringMapAttribute('entity');
   }
-  public set entity(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set entity(value: { [key: string]: string }) {
     this._entity = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -298,7 +297,7 @@ export class StorageTableEntity extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new StorageTableEntityTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new StorageTableEntityTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -319,7 +318,7 @@ export class StorageTableEntity extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      entity: cdktf.hashMapper(cdktf.anyToTerraform)(this._entity),
+      entity: cdktf.hashMapper(cdktf.stringToTerraform)(this._entity),
       partition_key: cdktf.stringToTerraform(this._partitionKey),
       row_key: cdktf.stringToTerraform(this._rowKey),
       storage_account_name: cdktf.stringToTerraform(this._storageAccountName),

@@ -46,7 +46,7 @@ export interface DataFactoryPipelineConfig extends cdktf.TerraformMetaArguments 
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_pipeline#parameters DataFactoryPipeline#parameters}
   */
-  readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
+  readonly parameters?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_pipeline#resource_group_name DataFactoryPipeline#resource_group_name}
   */
@@ -54,7 +54,7 @@ export interface DataFactoryPipelineConfig extends cdktf.TerraformMetaArguments 
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_pipeline#variables DataFactoryPipeline#variables}
   */
-  readonly variables?: { [key: string]: string } | cdktf.IResolvable;
+  readonly variables?: { [key: string]: string };
   /**
   * timeouts block
   * 
@@ -81,8 +81,8 @@ export interface DataFactoryPipelineTimeouts {
   readonly update?: string;
 }
 
-export function dataFactoryPipelineTimeoutsToTerraform(struct?: DataFactoryPipelineTimeoutsOutputReference | DataFactoryPipelineTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataFactoryPipelineTimeoutsToTerraform(struct?: DataFactoryPipelineTimeoutsOutputReference | DataFactoryPipelineTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -102,7 +102,7 @@ export class DataFactoryPipelineTimeoutsOutputReference extends cdktf.ComplexObj
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -408,12 +408,11 @@ export class DataFactoryPipeline extends cdktf.TerraformResource {
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string } | cdktf.IResolvable; 
+  private _parameters?: { [key: string]: string }; 
   public get parameters() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('parameters') as any;
+    return this.getStringMapAttribute('parameters');
   }
-  public set parameters(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set parameters(value: { [key: string]: string }) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -438,12 +437,11 @@ export class DataFactoryPipeline extends cdktf.TerraformResource {
   }
 
   // variables - computed: false, optional: true, required: false
-  private _variables?: { [key: string]: string } | cdktf.IResolvable; 
+  private _variables?: { [key: string]: string }; 
   public get variables() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('variables') as any;
+    return this.getStringMapAttribute('variables');
   }
-  public set variables(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set variables(value: { [key: string]: string }) {
     this._variables = value;
   }
   public resetVariables() {
@@ -455,7 +453,7 @@ export class DataFactoryPipeline extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataFactoryPipelineTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataFactoryPipelineTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -485,9 +483,9 @@ export class DataFactoryPipeline extends cdktf.TerraformResource {
       folder: cdktf.stringToTerraform(this._folder),
       moniter_metrics_after_duration: cdktf.stringToTerraform(this._moniterMetricsAfterDuration),
       name: cdktf.stringToTerraform(this._name),
-      parameters: cdktf.hashMapper(cdktf.anyToTerraform)(this._parameters),
+      parameters: cdktf.hashMapper(cdktf.stringToTerraform)(this._parameters),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      variables: cdktf.hashMapper(cdktf.anyToTerraform)(this._variables),
+      variables: cdktf.hashMapper(cdktf.stringToTerraform)(this._variables),
       timeouts: dataFactoryPipelineTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

@@ -22,7 +22,7 @@ export interface VideoAnalyzerConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/video_analyzer#tags VideoAnalyzer#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * identity block
   * 
@@ -54,7 +54,7 @@ export interface VideoAnalyzerIdentity {
 }
 
 export function videoAnalyzerIdentityToTerraform(struct?: VideoAnalyzerIdentityOutputReference | VideoAnalyzerIdentity): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -72,7 +72,7 @@ export class VideoAnalyzerIdentityOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -106,7 +106,7 @@ export class VideoAnalyzerIdentityOutputReference extends cdktf.ComplexObject {
   // identity_ids - computed: false, optional: false, required: true
   private _identityIds?: string[]; 
   public get identityIds() {
-    return this.getListAttribute('identity_ids');
+    return cdktf.Fn.tolist(this.getListAttribute('identity_ids'));
   }
   public set identityIds(value: string[]) {
     this._identityIds = value;
@@ -141,7 +141,7 @@ export interface VideoAnalyzerStorageAccount {
 }
 
 export function videoAnalyzerStorageAccountToTerraform(struct?: VideoAnalyzerStorageAccountOutputReference | VideoAnalyzerStorageAccount): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -159,7 +159,7 @@ export class VideoAnalyzerStorageAccountOutputReference extends cdktf.ComplexObj
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -235,8 +235,8 @@ export interface VideoAnalyzerTimeouts {
   readonly update?: string;
 }
 
-export function videoAnalyzerTimeoutsToTerraform(struct?: VideoAnalyzerTimeoutsOutputReference | VideoAnalyzerTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function videoAnalyzerTimeoutsToTerraform(struct?: VideoAnalyzerTimeoutsOutputReference | VideoAnalyzerTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -256,7 +256,7 @@ export class VideoAnalyzerTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -454,12 +454,11 @@ export class VideoAnalyzer extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -471,7 +470,7 @@ export class VideoAnalyzer extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: false, required: true
-  private _identity = new VideoAnalyzerIdentityOutputReference(this as any, "identity", true);
+  private _identity = new VideoAnalyzerIdentityOutputReference(this, "identity", true);
   public get identity() {
     return this._identity;
   }
@@ -484,7 +483,7 @@ export class VideoAnalyzer extends cdktf.TerraformResource {
   }
 
   // storage_account - computed: false, optional: false, required: true
-  private _storageAccount = new VideoAnalyzerStorageAccountOutputReference(this as any, "storage_account", true);
+  private _storageAccount = new VideoAnalyzerStorageAccountOutputReference(this, "storage_account", true);
   public get storageAccount() {
     return this._storageAccount;
   }
@@ -497,7 +496,7 @@ export class VideoAnalyzer extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new VideoAnalyzerTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new VideoAnalyzerTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -521,7 +520,7 @@ export class VideoAnalyzer extends cdktf.TerraformResource {
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       identity: videoAnalyzerIdentityToTerraform(this._identity.internalValue),
       storage_account: videoAnalyzerStorageAccountToTerraform(this._storageAccount.internalValue),
       timeouts: videoAnalyzerTimeoutsToTerraform(this._timeouts.internalValue),

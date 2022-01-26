@@ -92,7 +92,7 @@ export interface DataFactoryIntegrationRuntimeManagedCatalogInfo {
 }
 
 export function dataFactoryIntegrationRuntimeManagedCatalogInfoToTerraform(struct?: DataFactoryIntegrationRuntimeManagedCatalogInfoOutputReference | DataFactoryIntegrationRuntimeManagedCatalogInfo): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -112,7 +112,7 @@ export class DataFactoryIntegrationRuntimeManagedCatalogInfoOutputReference exte
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -228,7 +228,7 @@ export interface DataFactoryIntegrationRuntimeManagedCustomSetupScript {
 }
 
 export function dataFactoryIntegrationRuntimeManagedCustomSetupScriptToTerraform(struct?: DataFactoryIntegrationRuntimeManagedCustomSetupScriptOutputReference | DataFactoryIntegrationRuntimeManagedCustomSetupScript): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -246,7 +246,7 @@ export class DataFactoryIntegrationRuntimeManagedCustomSetupScriptOutputReferenc
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -322,8 +322,8 @@ export interface DataFactoryIntegrationRuntimeManagedTimeouts {
   readonly update?: string;
 }
 
-export function dataFactoryIntegrationRuntimeManagedTimeoutsToTerraform(struct?: DataFactoryIntegrationRuntimeManagedTimeoutsOutputReference | DataFactoryIntegrationRuntimeManagedTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataFactoryIntegrationRuntimeManagedTimeoutsToTerraform(struct?: DataFactoryIntegrationRuntimeManagedTimeoutsOutputReference | DataFactoryIntegrationRuntimeManagedTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -343,7 +343,7 @@ export class DataFactoryIntegrationRuntimeManagedTimeoutsOutputReference extends
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -462,7 +462,7 @@ export interface DataFactoryIntegrationRuntimeManagedVnetIntegration {
 }
 
 export function dataFactoryIntegrationRuntimeManagedVnetIntegrationToTerraform(struct?: DataFactoryIntegrationRuntimeManagedVnetIntegrationOutputReference | DataFactoryIntegrationRuntimeManagedVnetIntegration): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -480,7 +480,7 @@ export class DataFactoryIntegrationRuntimeManagedVnetIntegrationOutputReference 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -741,7 +741,7 @@ export class DataFactoryIntegrationRuntimeManaged extends cdktf.TerraformResourc
   }
 
   // catalog_info - computed: false, optional: true, required: false
-  private _catalogInfo = new DataFactoryIntegrationRuntimeManagedCatalogInfoOutputReference(this as any, "catalog_info", true);
+  private _catalogInfo = new DataFactoryIntegrationRuntimeManagedCatalogInfoOutputReference(this, "catalog_info", true);
   public get catalogInfo() {
     return this._catalogInfo;
   }
@@ -757,7 +757,7 @@ export class DataFactoryIntegrationRuntimeManaged extends cdktf.TerraformResourc
   }
 
   // custom_setup_script - computed: false, optional: true, required: false
-  private _customSetupScript = new DataFactoryIntegrationRuntimeManagedCustomSetupScriptOutputReference(this as any, "custom_setup_script", true);
+  private _customSetupScript = new DataFactoryIntegrationRuntimeManagedCustomSetupScriptOutputReference(this, "custom_setup_script", true);
   public get customSetupScript() {
     return this._customSetupScript;
   }
@@ -773,7 +773,7 @@ export class DataFactoryIntegrationRuntimeManaged extends cdktf.TerraformResourc
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataFactoryIntegrationRuntimeManagedTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataFactoryIntegrationRuntimeManagedTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -789,7 +789,7 @@ export class DataFactoryIntegrationRuntimeManaged extends cdktf.TerraformResourc
   }
 
   // vnet_integration - computed: false, optional: true, required: false
-  private _vnetIntegration = new DataFactoryIntegrationRuntimeManagedVnetIntegrationOutputReference(this as any, "vnet_integration", true);
+  private _vnetIntegration = new DataFactoryIntegrationRuntimeManagedVnetIntegrationOutputReference(this, "vnet_integration", true);
   public get vnetIntegration() {
     return this._vnetIntegration;
   }

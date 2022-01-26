@@ -22,7 +22,7 @@ export interface SqlServerConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_server#extended_auditing_policy SqlServer#extended_auditing_policy}
   */
-  readonly extendedAuditingPolicy?: SqlServerExtendedAuditingPolicy[];
+  readonly extendedAuditingPolicy?: SqlServerExtendedAuditingPolicy[] | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_server#location SqlServer#location}
   */
@@ -38,7 +38,7 @@ export interface SqlServerConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_server#tags SqlServer#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_server#version SqlServer#version}
   */
@@ -85,8 +85,8 @@ export interface SqlServerExtendedAuditingPolicy {
   readonly storageEndpoint?: string;
 }
 
-export function sqlServerExtendedAuditingPolicyToTerraform(struct?: SqlServerExtendedAuditingPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function sqlServerExtendedAuditingPolicyToTerraform(struct?: SqlServerExtendedAuditingPolicy | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -107,7 +107,7 @@ export interface SqlServerIdentity {
 }
 
 export function sqlServerIdentityToTerraform(struct?: SqlServerIdentityOutputReference | SqlServerIdentity): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -124,7 +124,7 @@ export class SqlServerIdentityOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -147,6 +147,16 @@ export class SqlServerIdentityOutputReference extends cdktf.ComplexObject {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._type = value.type;
     }
+  }
+
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
   }
 
   // type - computed: false, optional: false, required: true
@@ -194,7 +204,7 @@ export interface SqlServerThreatDetectionPolicy {
 }
 
 export function sqlServerThreatDetectionPolicyToTerraform(struct?: SqlServerThreatDetectionPolicyOutputReference | SqlServerThreatDetectionPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -217,7 +227,7 @@ export class SqlServerThreatDetectionPolicyOutputReference extends cdktf.Complex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -281,7 +291,7 @@ export class SqlServerThreatDetectionPolicyOutputReference extends cdktf.Complex
   // disabled_alerts - computed: false, optional: true, required: false
   private _disabledAlerts?: string[]; 
   public get disabledAlerts() {
-    return this.getListAttribute('disabled_alerts');
+    return cdktf.Fn.tolist(this.getListAttribute('disabled_alerts'));
   }
   public set disabledAlerts(value: string[]) {
     this._disabledAlerts = value;
@@ -297,7 +307,7 @@ export class SqlServerThreatDetectionPolicyOutputReference extends cdktf.Complex
   // email_account_admins - computed: true, optional: true, required: false
   private _emailAccountAdmins?: boolean | cdktf.IResolvable; 
   public get emailAccountAdmins() {
-    return this.getBooleanAttribute('email_account_admins') as any;
+    return this.getBooleanAttribute('email_account_admins');
   }
   public set emailAccountAdmins(value: boolean | cdktf.IResolvable) {
     this._emailAccountAdmins = value;
@@ -313,7 +323,7 @@ export class SqlServerThreatDetectionPolicyOutputReference extends cdktf.Complex
   // email_addresses - computed: true, optional: true, required: false
   private _emailAddresses?: string[]; 
   public get emailAddresses() {
-    return this.getListAttribute('email_addresses');
+    return cdktf.Fn.tolist(this.getListAttribute('email_addresses'));
   }
   public set emailAddresses(value: string[]) {
     this._emailAddresses = value;
@@ -409,8 +419,8 @@ export interface SqlServerTimeouts {
   readonly update?: string;
 }
 
-export function sqlServerTimeoutsToTerraform(struct?: SqlServerTimeoutsOutputReference | SqlServerTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function sqlServerTimeoutsToTerraform(struct?: SqlServerTimeoutsOutputReference | SqlServerTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -430,7 +440,7 @@ export class SqlServerTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -631,12 +641,12 @@ export class SqlServer extends cdktf.TerraformResource {
   }
 
   // extended_auditing_policy - computed: true, optional: true, required: false
-  private _extendedAuditingPolicy?: SqlServerExtendedAuditingPolicy[]; 
+  private _extendedAuditingPolicy?: SqlServerExtendedAuditingPolicy[] | cdktf.IResolvable; 
   public get extendedAuditingPolicy() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('extended_auditing_policy') as any;
+    return this.interpolationForAttribute('extended_auditing_policy');
   }
-  public set extendedAuditingPolicy(value: SqlServerExtendedAuditingPolicy[]) {
+  public set extendedAuditingPolicy(value: SqlServerExtendedAuditingPolicy[] | cdktf.IResolvable) {
     this._extendedAuditingPolicy = value;
   }
   public resetExtendedAuditingPolicy() {
@@ -697,12 +707,11 @@ export class SqlServer extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -727,7 +736,7 @@ export class SqlServer extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity = new SqlServerIdentityOutputReference(this as any, "identity", true);
+  private _identity = new SqlServerIdentityOutputReference(this, "identity", true);
   public get identity() {
     return this._identity;
   }
@@ -743,7 +752,7 @@ export class SqlServer extends cdktf.TerraformResource {
   }
 
   // threat_detection_policy - computed: false, optional: true, required: false
-  private _threatDetectionPolicy = new SqlServerThreatDetectionPolicyOutputReference(this as any, "threat_detection_policy", true);
+  private _threatDetectionPolicy = new SqlServerThreatDetectionPolicyOutputReference(this, "threat_detection_policy", true);
   public get threatDetectionPolicy() {
     return this._threatDetectionPolicy;
   }
@@ -759,7 +768,7 @@ export class SqlServer extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new SqlServerTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new SqlServerTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -787,7 +796,7 @@ export class SqlServer extends cdktf.TerraformResource {
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       version: cdktf.stringToTerraform(this._version),
       identity: sqlServerIdentityToTerraform(this._identity.internalValue),
       threat_detection_policy: sqlServerThreatDetectionPolicyToTerraform(this._threatDetectionPolicy.internalValue),

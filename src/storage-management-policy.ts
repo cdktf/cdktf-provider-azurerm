@@ -16,7 +16,7 @@ export interface StorageManagementPolicyConfig extends cdktf.TerraformMetaArgume
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_management_policy#rule StorageManagementPolicy#rule}
   */
-  readonly rule?: StorageManagementPolicyRule[];
+  readonly rule?: StorageManagementPolicyRule[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -40,7 +40,7 @@ export interface StorageManagementPolicyRuleActionsBaseBlob {
 }
 
 export function storageManagementPolicyRuleActionsBaseBlobToTerraform(struct?: StorageManagementPolicyRuleActionsBaseBlobOutputReference | StorageManagementPolicyRuleActionsBaseBlob): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -59,7 +59,7 @@ export class StorageManagementPolicyRuleActionsBaseBlobOutputReference extends c
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -160,7 +160,7 @@ export interface StorageManagementPolicyRuleActionsSnapshot {
 }
 
 export function storageManagementPolicyRuleActionsSnapshotToTerraform(struct?: StorageManagementPolicyRuleActionsSnapshotOutputReference | StorageManagementPolicyRuleActionsSnapshot): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -179,7 +179,7 @@ export class StorageManagementPolicyRuleActionsSnapshotOutputReference extends c
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -280,7 +280,7 @@ export interface StorageManagementPolicyRuleActionsVersion {
 }
 
 export function storageManagementPolicyRuleActionsVersionToTerraform(struct?: StorageManagementPolicyRuleActionsVersionOutputReference | StorageManagementPolicyRuleActionsVersion): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -299,7 +299,7 @@ export class StorageManagementPolicyRuleActionsVersionOutputReference extends cd
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -406,7 +406,7 @@ export interface StorageManagementPolicyRuleActions {
 }
 
 export function storageManagementPolicyRuleActionsToTerraform(struct?: StorageManagementPolicyRuleActionsOutputReference | StorageManagementPolicyRuleActions): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -425,7 +425,7 @@ export class StorageManagementPolicyRuleActionsOutputReference extends cdktf.Com
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -463,7 +463,7 @@ export class StorageManagementPolicyRuleActionsOutputReference extends cdktf.Com
   }
 
   // base_blob - computed: false, optional: true, required: false
-  private _baseBlob = new StorageManagementPolicyRuleActionsBaseBlobOutputReference(this as any, "base_blob", true);
+  private _baseBlob = new StorageManagementPolicyRuleActionsBaseBlobOutputReference(this, "base_blob", true);
   public get baseBlob() {
     return this._baseBlob;
   }
@@ -479,7 +479,7 @@ export class StorageManagementPolicyRuleActionsOutputReference extends cdktf.Com
   }
 
   // snapshot - computed: false, optional: true, required: false
-  private _snapshot = new StorageManagementPolicyRuleActionsSnapshotOutputReference(this as any, "snapshot", true);
+  private _snapshot = new StorageManagementPolicyRuleActionsSnapshotOutputReference(this, "snapshot", true);
   public get snapshot() {
     return this._snapshot;
   }
@@ -495,7 +495,7 @@ export class StorageManagementPolicyRuleActionsOutputReference extends cdktf.Com
   }
 
   // version - computed: false, optional: true, required: false
-  private _version = new StorageManagementPolicyRuleActionsVersionOutputReference(this as any, "version", true);
+  private _version = new StorageManagementPolicyRuleActionsVersionOutputReference(this, "version", true);
   public get version() {
     return this._version;
   }
@@ -525,8 +525,8 @@ export interface StorageManagementPolicyRuleFiltersMatchBlobIndexTag {
   readonly value: string;
 }
 
-export function storageManagementPolicyRuleFiltersMatchBlobIndexTagToTerraform(struct?: StorageManagementPolicyRuleFiltersMatchBlobIndexTag): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function storageManagementPolicyRuleFiltersMatchBlobIndexTagToTerraform(struct?: StorageManagementPolicyRuleFiltersMatchBlobIndexTag | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -551,11 +551,11 @@ export interface StorageManagementPolicyRuleFilters {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_management_policy#match_blob_index_tag StorageManagementPolicy#match_blob_index_tag}
   */
-  readonly matchBlobIndexTag?: StorageManagementPolicyRuleFiltersMatchBlobIndexTag[];
+  readonly matchBlobIndexTag?: StorageManagementPolicyRuleFiltersMatchBlobIndexTag[] | cdktf.IResolvable;
 }
 
 export function storageManagementPolicyRuleFiltersToTerraform(struct?: StorageManagementPolicyRuleFiltersOutputReference | StorageManagementPolicyRuleFilters): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -574,7 +574,7 @@ export class StorageManagementPolicyRuleFiltersOutputReference extends cdktf.Com
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -614,7 +614,7 @@ export class StorageManagementPolicyRuleFiltersOutputReference extends cdktf.Com
   // blob_types - computed: false, optional: true, required: false
   private _blobTypes?: string[]; 
   public get blobTypes() {
-    return this.getListAttribute('blob_types');
+    return cdktf.Fn.tolist(this.getListAttribute('blob_types'));
   }
   public set blobTypes(value: string[]) {
     this._blobTypes = value;
@@ -630,7 +630,7 @@ export class StorageManagementPolicyRuleFiltersOutputReference extends cdktf.Com
   // prefix_match - computed: false, optional: true, required: false
   private _prefixMatch?: string[]; 
   public get prefixMatch() {
-    return this.getListAttribute('prefix_match');
+    return cdktf.Fn.tolist(this.getListAttribute('prefix_match'));
   }
   public set prefixMatch(value: string[]) {
     this._prefixMatch = value;
@@ -644,12 +644,12 @@ export class StorageManagementPolicyRuleFiltersOutputReference extends cdktf.Com
   }
 
   // match_blob_index_tag - computed: false, optional: true, required: false
-  private _matchBlobIndexTag?: StorageManagementPolicyRuleFiltersMatchBlobIndexTag[]; 
+  private _matchBlobIndexTag?: StorageManagementPolicyRuleFiltersMatchBlobIndexTag[] | cdktf.IResolvable; 
   public get matchBlobIndexTag() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('match_blob_index_tag') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('match_blob_index_tag')));
   }
-  public set matchBlobIndexTag(value: StorageManagementPolicyRuleFiltersMatchBlobIndexTag[]) {
+  public set matchBlobIndexTag(value: StorageManagementPolicyRuleFiltersMatchBlobIndexTag[] | cdktf.IResolvable) {
     this._matchBlobIndexTag = value;
   }
   public resetMatchBlobIndexTag() {
@@ -683,8 +683,8 @@ export interface StorageManagementPolicyRule {
   readonly filters?: StorageManagementPolicyRuleFilters;
 }
 
-export function storageManagementPolicyRuleToTerraform(struct?: StorageManagementPolicyRule): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function storageManagementPolicyRuleToTerraform(struct?: StorageManagementPolicyRule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -715,8 +715,8 @@ export interface StorageManagementPolicyTimeouts {
   readonly update?: string;
 }
 
-export function storageManagementPolicyTimeoutsToTerraform(struct?: StorageManagementPolicyTimeoutsOutputReference | StorageManagementPolicyTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function storageManagementPolicyTimeoutsToTerraform(struct?: StorageManagementPolicyTimeoutsOutputReference | StorageManagementPolicyTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -736,7 +736,7 @@ export class StorageManagementPolicyTimeoutsOutputReference extends cdktf.Comple
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -904,12 +904,12 @@ export class StorageManagementPolicy extends cdktf.TerraformResource {
   }
 
   // rule - computed: false, optional: true, required: false
-  private _rule?: StorageManagementPolicyRule[]; 
+  private _rule?: StorageManagementPolicyRule[] | cdktf.IResolvable; 
   public get rule() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('rule') as any;
+    return this.interpolationForAttribute('rule');
   }
-  public set rule(value: StorageManagementPolicyRule[]) {
+  public set rule(value: StorageManagementPolicyRule[] | cdktf.IResolvable) {
     this._rule = value;
   }
   public resetRule() {
@@ -921,7 +921,7 @@ export class StorageManagementPolicy extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new StorageManagementPolicyTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new StorageManagementPolicyTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

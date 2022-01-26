@@ -40,7 +40,7 @@ export interface NetworkPacketCaptureConfig extends cdktf.TerraformMetaArguments
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_packet_capture#filter NetworkPacketCapture#filter}
   */
-  readonly filter?: NetworkPacketCaptureFilter[];
+  readonly filter?: NetworkPacketCaptureFilter[] | cdktf.IResolvable;
   /**
   * storage_location block
   * 
@@ -77,8 +77,8 @@ export interface NetworkPacketCaptureFilter {
   readonly remotePort?: string;
 }
 
-export function networkPacketCaptureFilterToTerraform(struct?: NetworkPacketCaptureFilter): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function networkPacketCaptureFilterToTerraform(struct?: NetworkPacketCaptureFilter | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -103,7 +103,7 @@ export interface NetworkPacketCaptureStorageLocation {
 }
 
 export function networkPacketCaptureStorageLocationToTerraform(struct?: NetworkPacketCaptureStorageLocationOutputReference | NetworkPacketCaptureStorageLocation): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -121,7 +121,7 @@ export class NetworkPacketCaptureStorageLocationOutputReference extends cdktf.Co
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -183,6 +183,11 @@ export class NetworkPacketCaptureStorageLocationOutputReference extends cdktf.Co
   public get storageAccountIdInput() {
     return this._storageAccountId;
   }
+
+  // storage_path - computed: true, optional: false, required: false
+  public get storagePath() {
+    return this.getStringAttribute('storage_path');
+  }
 }
 export interface NetworkPacketCaptureTimeouts {
   /**
@@ -203,8 +208,8 @@ export interface NetworkPacketCaptureTimeouts {
   readonly update?: string;
 }
 
-export function networkPacketCaptureTimeoutsToTerraform(struct?: NetworkPacketCaptureTimeoutsOutputReference | NetworkPacketCaptureTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function networkPacketCaptureTimeoutsToTerraform(struct?: NetworkPacketCaptureTimeoutsOutputReference | NetworkPacketCaptureTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -224,7 +229,7 @@ export class NetworkPacketCaptureTimeoutsOutputReference extends cdktf.ComplexOb
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -486,12 +491,12 @@ export class NetworkPacketCapture extends cdktf.TerraformResource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter?: NetworkPacketCaptureFilter[]; 
+  private _filter?: NetworkPacketCaptureFilter[] | cdktf.IResolvable; 
   public get filter() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('filter') as any;
+    return this.interpolationForAttribute('filter');
   }
-  public set filter(value: NetworkPacketCaptureFilter[]) {
+  public set filter(value: NetworkPacketCaptureFilter[] | cdktf.IResolvable) {
     this._filter = value;
   }
   public resetFilter() {
@@ -503,7 +508,7 @@ export class NetworkPacketCapture extends cdktf.TerraformResource {
   }
 
   // storage_location - computed: false, optional: false, required: true
-  private _storageLocation = new NetworkPacketCaptureStorageLocationOutputReference(this as any, "storage_location", true);
+  private _storageLocation = new NetworkPacketCaptureStorageLocationOutputReference(this, "storage_location", true);
   public get storageLocation() {
     return this._storageLocation;
   }
@@ -516,7 +521,7 @@ export class NetworkPacketCapture extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new NetworkPacketCaptureTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new NetworkPacketCaptureTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

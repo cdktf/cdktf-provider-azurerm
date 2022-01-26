@@ -34,7 +34,7 @@ export interface LogzMonitorConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_monitor#tags LogzMonitor#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * plan block
   * 
@@ -74,7 +74,7 @@ export interface LogzMonitorPlan {
 }
 
 export function logzMonitorPlanToTerraform(struct?: LogzMonitorPlanOutputReference | LogzMonitorPlan): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -94,7 +94,7 @@ export class LogzMonitorPlanOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -208,8 +208,8 @@ export interface LogzMonitorTimeouts {
   readonly update?: string;
 }
 
-export function logzMonitorTimeoutsToTerraform(struct?: LogzMonitorTimeoutsOutputReference | LogzMonitorTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function logzMonitorTimeoutsToTerraform(struct?: LogzMonitorTimeoutsOutputReference | LogzMonitorTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -229,7 +229,7 @@ export class LogzMonitorTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -356,7 +356,7 @@ export interface LogzMonitorUser {
 }
 
 export function logzMonitorUserToTerraform(struct?: LogzMonitorUserOutputReference | LogzMonitorUser): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -376,7 +376,7 @@ export class LogzMonitorUserOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -539,7 +539,7 @@ export class LogzMonitor extends cdktf.TerraformResource {
   // enabled - computed: false, optional: true, required: false
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
@@ -623,12 +623,11 @@ export class LogzMonitor extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -640,7 +639,7 @@ export class LogzMonitor extends cdktf.TerraformResource {
   }
 
   // plan - computed: false, optional: false, required: true
-  private _plan = new LogzMonitorPlanOutputReference(this as any, "plan", true);
+  private _plan = new LogzMonitorPlanOutputReference(this, "plan", true);
   public get plan() {
     return this._plan;
   }
@@ -653,7 +652,7 @@ export class LogzMonitor extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new LogzMonitorTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new LogzMonitorTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -669,7 +668,7 @@ export class LogzMonitor extends cdktf.TerraformResource {
   }
 
   // user - computed: false, optional: false, required: true
-  private _user = new LogzMonitorUserOutputReference(this as any, "user", true);
+  private _user = new LogzMonitorUserOutputReference(this, "user", true);
   public get user() {
     return this._user;
   }
@@ -693,7 +692,7 @@ export class LogzMonitor extends cdktf.TerraformResource {
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       plan: logzMonitorPlanToTerraform(this._plan.internalValue),
       timeouts: logzMonitorTimeoutsToTerraform(this._timeouts.internalValue),
       user: logzMonitorUserToTerraform(this._user.internalValue),

@@ -61,7 +61,7 @@ export class DataAzurermAdvisorRecommendationsRecommendations extends cdktf.Comp
 
   // suppression_names - computed: true, optional: false, required: false
   public get suppressionNames() {
-    return this.getListAttribute('suppression_names');
+    return cdktf.Fn.tolist(this.getListAttribute('suppression_names'));
   }
 
   // updated_time - computed: true, optional: false, required: false
@@ -76,8 +76,8 @@ export interface DataAzurermAdvisorRecommendationsTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermAdvisorRecommendationsTimeoutsToTerraform(struct?: DataAzurermAdvisorRecommendationsTimeoutsOutputReference | DataAzurermAdvisorRecommendationsTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermAdvisorRecommendationsTimeoutsToTerraform(struct?: DataAzurermAdvisorRecommendationsTimeoutsOutputReference | DataAzurermAdvisorRecommendationsTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -94,7 +94,7 @@ export class DataAzurermAdvisorRecommendationsTimeoutsOutputReference extends cd
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -180,7 +180,7 @@ export class DataAzurermAdvisorRecommendations extends cdktf.TerraformDataSource
   // filter_by_category - computed: false, optional: true, required: false
   private _filterByCategory?: string[]; 
   public get filterByCategory() {
-    return this.getListAttribute('filter_by_category');
+    return cdktf.Fn.tolist(this.getListAttribute('filter_by_category'));
   }
   public set filterByCategory(value: string[]) {
     this._filterByCategory = value;
@@ -196,7 +196,7 @@ export class DataAzurermAdvisorRecommendations extends cdktf.TerraformDataSource
   // filter_by_resource_groups - computed: false, optional: true, required: false
   private _filterByResourceGroups?: string[]; 
   public get filterByResourceGroups() {
-    return this.getListAttribute('filter_by_resource_groups');
+    return cdktf.Fn.tolist(this.getListAttribute('filter_by_resource_groups'));
   }
   public set filterByResourceGroups(value: string[]) {
     this._filterByResourceGroups = value;
@@ -216,11 +216,11 @@ export class DataAzurermAdvisorRecommendations extends cdktf.TerraformDataSource
 
   // recommendations - computed: true, optional: false, required: false
   public recommendations(index: string) {
-    return new DataAzurermAdvisorRecommendationsRecommendations(this, 'recommendations', index);
+    return new DataAzurermAdvisorRecommendationsRecommendations(this, 'recommendations', index, false);
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermAdvisorRecommendationsTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermAdvisorRecommendationsTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

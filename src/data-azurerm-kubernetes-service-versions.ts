@@ -33,8 +33,8 @@ export interface DataAzurermKubernetesServiceVersionsTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermKubernetesServiceVersionsTimeoutsToTerraform(struct?: DataAzurermKubernetesServiceVersionsTimeoutsOutputReference | DataAzurermKubernetesServiceVersionsTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermKubernetesServiceVersionsTimeoutsToTerraform(struct?: DataAzurermKubernetesServiceVersionsTimeoutsOutputReference | DataAzurermKubernetesServiceVersionsTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -51,7 +51,7 @@ export class DataAzurermKubernetesServiceVersionsTimeoutsOutputReference extends
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -143,7 +143,7 @@ export class DataAzurermKubernetesServiceVersions extends cdktf.TerraformDataSou
   // include_preview - computed: false, optional: true, required: false
   private _includePreview?: boolean | cdktf.IResolvable; 
   public get includePreview() {
-    return this.getBooleanAttribute('include_preview') as any;
+    return this.getBooleanAttribute('include_preview');
   }
   public set includePreview(value: boolean | cdktf.IResolvable) {
     this._includePreview = value;
@@ -196,7 +196,7 @@ export class DataAzurermKubernetesServiceVersions extends cdktf.TerraformDataSou
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermKubernetesServiceVersionsTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermKubernetesServiceVersionsTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

@@ -43,7 +43,7 @@ export class DataAzurermVirtualNetworkGatewayCustomRoute extends cdktf.ComplexCo
 
   // address_prefixes - computed: true, optional: false, required: false
   public get addressPrefixes() {
-    return this.getListAttribute('address_prefixes');
+    return cdktf.Fn.tolist(this.getListAttribute('address_prefixes'));
   }
 }
 export class DataAzurermVirtualNetworkGatewayIpConfiguration extends cdktf.ComplexComputedList {
@@ -127,18 +127,18 @@ export class DataAzurermVirtualNetworkGatewayVpnClientConfiguration extends cdkt
   // revoked_certificate - computed: true, optional: false, required: false
   public get revokedCertificate() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('revoked_certificate') as any;
+    return this.interpolationForAttribute('revoked_certificate');
   }
 
   // root_certificate - computed: true, optional: false, required: false
   public get rootCertificate() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('root_certificate') as any;
+    return this.interpolationForAttribute('root_certificate');
   }
 
   // vpn_client_protocols - computed: true, optional: false, required: false
   public get vpnClientProtocols() {
-    return this.getListAttribute('vpn_client_protocols');
+    return cdktf.Fn.tolist(this.getListAttribute('vpn_client_protocols'));
   }
 }
 export interface DataAzurermVirtualNetworkGatewayTimeouts {
@@ -148,8 +148,8 @@ export interface DataAzurermVirtualNetworkGatewayTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermVirtualNetworkGatewayTimeoutsToTerraform(struct?: DataAzurermVirtualNetworkGatewayTimeoutsOutputReference | DataAzurermVirtualNetworkGatewayTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermVirtualNetworkGatewayTimeoutsToTerraform(struct?: DataAzurermVirtualNetworkGatewayTimeoutsOutputReference | DataAzurermVirtualNetworkGatewayTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -166,7 +166,7 @@ export class DataAzurermVirtualNetworkGatewayTimeoutsOutputReference extends cdk
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -251,17 +251,17 @@ export class DataAzurermVirtualNetworkGateway extends cdktf.TerraformDataSource 
 
   // active_active - computed: true, optional: false, required: false
   public get activeActive() {
-    return this.getBooleanAttribute('active_active') as any;
+    return this.getBooleanAttribute('active_active');
   }
 
   // bgp_settings - computed: true, optional: false, required: false
   public bgpSettings(index: string) {
-    return new DataAzurermVirtualNetworkGatewayBgpSettings(this, 'bgp_settings', index);
+    return new DataAzurermVirtualNetworkGatewayBgpSettings(this, 'bgp_settings', index, false);
   }
 
   // custom_route - computed: true, optional: false, required: false
   public customRoute(index: string) {
-    return new DataAzurermVirtualNetworkGatewayCustomRoute(this, 'custom_route', index);
+    return new DataAzurermVirtualNetworkGatewayCustomRoute(this, 'custom_route', index, false);
   }
 
   // default_local_network_gateway_id - computed: true, optional: false, required: false
@@ -271,7 +271,7 @@ export class DataAzurermVirtualNetworkGateway extends cdktf.TerraformDataSource 
 
   // enable_bgp - computed: true, optional: false, required: false
   public get enableBgp() {
-    return this.getBooleanAttribute('enable_bgp') as any;
+    return this.getBooleanAttribute('enable_bgp');
   }
 
   // generation - computed: true, optional: false, required: false
@@ -286,7 +286,7 @@ export class DataAzurermVirtualNetworkGateway extends cdktf.TerraformDataSource 
 
   // ip_configuration - computed: true, optional: false, required: false
   public ipConfiguration(index: string) {
-    return new DataAzurermVirtualNetworkGatewayIpConfiguration(this, 'ip_configuration', index);
+    return new DataAzurermVirtualNetworkGatewayIpConfiguration(this, 'ip_configuration', index, false);
   }
 
   // location - computed: true, optional: false, required: false
@@ -309,7 +309,7 @@ export class DataAzurermVirtualNetworkGateway extends cdktf.TerraformDataSource 
 
   // private_ip_address_enabled - computed: true, optional: false, required: false
   public get privateIpAddressEnabled() {
-    return this.getBooleanAttribute('private_ip_address_enabled') as any;
+    return this.getBooleanAttribute('private_ip_address_enabled');
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -331,7 +331,7 @@ export class DataAzurermVirtualNetworkGateway extends cdktf.TerraformDataSource 
   }
 
   // tags - computed: true, optional: false, required: false
-  public tags(key: string): string {
+  public tags(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
@@ -342,7 +342,7 @@ export class DataAzurermVirtualNetworkGateway extends cdktf.TerraformDataSource 
 
   // vpn_client_configuration - computed: true, optional: false, required: false
   public vpnClientConfiguration(index: string) {
-    return new DataAzurermVirtualNetworkGatewayVpnClientConfiguration(this, 'vpn_client_configuration', index);
+    return new DataAzurermVirtualNetworkGatewayVpnClientConfiguration(this, 'vpn_client_configuration', index, false);
   }
 
   // vpn_type - computed: true, optional: false, required: false
@@ -351,7 +351,7 @@ export class DataAzurermVirtualNetworkGateway extends cdktf.TerraformDataSource 
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermVirtualNetworkGatewayTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermVirtualNetworkGatewayTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

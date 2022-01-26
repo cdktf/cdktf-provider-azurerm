@@ -10,7 +10,7 @@ export interface DataFactoryLinkedServiceAzureSqlDatabaseConfig extends cdktf.Te
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_sql_database#additional_properties DataFactoryLinkedServiceAzureSqlDatabase#additional_properties}
   */
-  readonly additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
+  readonly additionalProperties?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_sql_database#annotations DataFactoryLinkedServiceAzureSqlDatabase#annotations}
   */
@@ -42,7 +42,7 @@ export interface DataFactoryLinkedServiceAzureSqlDatabaseConfig extends cdktf.Te
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_sql_database#parameters DataFactoryLinkedServiceAzureSqlDatabase#parameters}
   */
-  readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
+  readonly parameters?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_sql_database#resource_group_name DataFactoryLinkedServiceAzureSqlDatabase#resource_group_name}
   */
@@ -94,7 +94,7 @@ export interface DataFactoryLinkedServiceAzureSqlDatabaseKeyVaultConnectionStrin
 }
 
 export function dataFactoryLinkedServiceAzureSqlDatabaseKeyVaultConnectionStringToTerraform(struct?: DataFactoryLinkedServiceAzureSqlDatabaseKeyVaultConnectionStringOutputReference | DataFactoryLinkedServiceAzureSqlDatabaseKeyVaultConnectionString): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -112,7 +112,7 @@ export class DataFactoryLinkedServiceAzureSqlDatabaseKeyVaultConnectionStringOut
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -181,7 +181,7 @@ export interface DataFactoryLinkedServiceAzureSqlDatabaseKeyVaultPassword {
 }
 
 export function dataFactoryLinkedServiceAzureSqlDatabaseKeyVaultPasswordToTerraform(struct?: DataFactoryLinkedServiceAzureSqlDatabaseKeyVaultPasswordOutputReference | DataFactoryLinkedServiceAzureSqlDatabaseKeyVaultPassword): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -199,7 +199,7 @@ export class DataFactoryLinkedServiceAzureSqlDatabaseKeyVaultPasswordOutputRefer
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -275,8 +275,8 @@ export interface DataFactoryLinkedServiceAzureSqlDatabaseTimeouts {
   readonly update?: string;
 }
 
-export function dataFactoryLinkedServiceAzureSqlDatabaseTimeoutsToTerraform(struct?: DataFactoryLinkedServiceAzureSqlDatabaseTimeoutsOutputReference | DataFactoryLinkedServiceAzureSqlDatabaseTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataFactoryLinkedServiceAzureSqlDatabaseTimeoutsToTerraform(struct?: DataFactoryLinkedServiceAzureSqlDatabaseTimeoutsOutputReference | DataFactoryLinkedServiceAzureSqlDatabaseTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -296,7 +296,7 @@ export class DataFactoryLinkedServiceAzureSqlDatabaseTimeoutsOutputReference ext
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -460,12 +460,11 @@ export class DataFactoryLinkedServiceAzureSqlDatabase extends cdktf.TerraformRes
   // ==========
 
   // additional_properties - computed: false, optional: true, required: false
-  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable; 
+  private _additionalProperties?: { [key: string]: string }; 
   public get additionalProperties() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('additional_properties') as any;
+    return this.getStringMapAttribute('additional_properties');
   }
-  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set additionalProperties(value: { [key: string]: string }) {
     this._additionalProperties = value;
   }
   public resetAdditionalProperties() {
@@ -591,12 +590,11 @@ export class DataFactoryLinkedServiceAzureSqlDatabase extends cdktf.TerraformRes
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string } | cdktf.IResolvable; 
+  private _parameters?: { [key: string]: string }; 
   public get parameters() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('parameters') as any;
+    return this.getStringMapAttribute('parameters');
   }
-  public set parameters(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set parameters(value: { [key: string]: string }) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -671,7 +669,7 @@ export class DataFactoryLinkedServiceAzureSqlDatabase extends cdktf.TerraformRes
   // use_managed_identity - computed: false, optional: true, required: false
   private _useManagedIdentity?: boolean | cdktf.IResolvable; 
   public get useManagedIdentity() {
-    return this.getBooleanAttribute('use_managed_identity') as any;
+    return this.getBooleanAttribute('use_managed_identity');
   }
   public set useManagedIdentity(value: boolean | cdktf.IResolvable) {
     this._useManagedIdentity = value;
@@ -685,7 +683,7 @@ export class DataFactoryLinkedServiceAzureSqlDatabase extends cdktf.TerraformRes
   }
 
   // key_vault_connection_string - computed: false, optional: true, required: false
-  private _keyVaultConnectionString = new DataFactoryLinkedServiceAzureSqlDatabaseKeyVaultConnectionStringOutputReference(this as any, "key_vault_connection_string", true);
+  private _keyVaultConnectionString = new DataFactoryLinkedServiceAzureSqlDatabaseKeyVaultConnectionStringOutputReference(this, "key_vault_connection_string", true);
   public get keyVaultConnectionString() {
     return this._keyVaultConnectionString;
   }
@@ -701,7 +699,7 @@ export class DataFactoryLinkedServiceAzureSqlDatabase extends cdktf.TerraformRes
   }
 
   // key_vault_password - computed: false, optional: true, required: false
-  private _keyVaultPassword = new DataFactoryLinkedServiceAzureSqlDatabaseKeyVaultPasswordOutputReference(this as any, "key_vault_password", true);
+  private _keyVaultPassword = new DataFactoryLinkedServiceAzureSqlDatabaseKeyVaultPasswordOutputReference(this, "key_vault_password", true);
   public get keyVaultPassword() {
     return this._keyVaultPassword;
   }
@@ -717,7 +715,7 @@ export class DataFactoryLinkedServiceAzureSqlDatabase extends cdktf.TerraformRes
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataFactoryLinkedServiceAzureSqlDatabaseTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataFactoryLinkedServiceAzureSqlDatabaseTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -738,7 +736,7 @@ export class DataFactoryLinkedServiceAzureSqlDatabase extends cdktf.TerraformRes
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      additional_properties: cdktf.hashMapper(cdktf.anyToTerraform)(this._additionalProperties),
+      additional_properties: cdktf.hashMapper(cdktf.stringToTerraform)(this._additionalProperties),
       annotations: cdktf.listMapper(cdktf.stringToTerraform)(this._annotations),
       connection_string: cdktf.stringToTerraform(this._connectionString),
       data_factory_id: cdktf.stringToTerraform(this._dataFactoryId),
@@ -746,7 +744,7 @@ export class DataFactoryLinkedServiceAzureSqlDatabase extends cdktf.TerraformRes
       description: cdktf.stringToTerraform(this._description),
       integration_runtime_name: cdktf.stringToTerraform(this._integrationRuntimeName),
       name: cdktf.stringToTerraform(this._name),
-      parameters: cdktf.hashMapper(cdktf.anyToTerraform)(this._parameters),
+      parameters: cdktf.hashMapper(cdktf.stringToTerraform)(this._parameters),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       service_principal_id: cdktf.stringToTerraform(this._servicePrincipalId),
       service_principal_key: cdktf.stringToTerraform(this._servicePrincipalKey),

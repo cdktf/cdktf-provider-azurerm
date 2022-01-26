@@ -30,7 +30,7 @@ export interface StaticSiteConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/static_site#tags StaticSite#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * identity block
   * 
@@ -56,7 +56,7 @@ export interface StaticSiteIdentity {
 }
 
 export function staticSiteIdentityToTerraform(struct?: StaticSiteIdentityOutputReference | StaticSiteIdentity): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -74,7 +74,7 @@ export class StaticSiteIdentityOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -108,7 +108,7 @@ export class StaticSiteIdentityOutputReference extends cdktf.ComplexObject {
   // identity_ids - computed: false, optional: true, required: false
   private _identityIds?: string[]; 
   public get identityIds() {
-    return this.getListAttribute('identity_ids');
+    return cdktf.Fn.tolist(this.getListAttribute('identity_ids'));
   }
   public set identityIds(value: string[]) {
     this._identityIds = value;
@@ -119,6 +119,16 @@ export class StaticSiteIdentityOutputReference extends cdktf.ComplexObject {
   // Temporarily expose input value. Use with caution.
   public get identityIdsInput() {
     return this._identityIds;
+  }
+
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
   }
 
   // type - computed: false, optional: false, required: true
@@ -153,8 +163,8 @@ export interface StaticSiteTimeouts {
   readonly update?: string;
 }
 
-export function staticSiteTimeoutsToTerraform(struct?: StaticSiteTimeoutsOutputReference | StaticSiteTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function staticSiteTimeoutsToTerraform(struct?: StaticSiteTimeoutsOutputReference | StaticSiteTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -174,7 +184,7 @@ export class StaticSiteTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -415,12 +425,11 @@ export class StaticSite extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -432,7 +441,7 @@ export class StaticSite extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity = new StaticSiteIdentityOutputReference(this as any, "identity", true);
+  private _identity = new StaticSiteIdentityOutputReference(this, "identity", true);
   public get identity() {
     return this._identity;
   }
@@ -448,7 +457,7 @@ export class StaticSite extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new StaticSiteTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new StaticSiteTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -474,7 +483,7 @@ export class StaticSite extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku_size: cdktf.stringToTerraform(this._skuSize),
       sku_tier: cdktf.stringToTerraform(this._skuTier),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       identity: staticSiteIdentityToTerraform(this._identity.internalValue),
       timeouts: staticSiteTimeoutsToTerraform(this._timeouts.internalValue),
     };

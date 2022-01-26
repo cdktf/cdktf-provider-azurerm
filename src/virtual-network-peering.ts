@@ -65,8 +65,8 @@ export interface VirtualNetworkPeeringTimeouts {
   readonly update?: string;
 }
 
-export function virtualNetworkPeeringTimeoutsToTerraform(struct?: VirtualNetworkPeeringTimeoutsOutputReference | VirtualNetworkPeeringTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function virtualNetworkPeeringTimeoutsToTerraform(struct?: VirtualNetworkPeeringTimeoutsOutputReference | VirtualNetworkPeeringTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -86,7 +86,7 @@ export class VirtualNetworkPeeringTimeoutsOutputReference extends cdktf.ComplexO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -244,7 +244,7 @@ export class VirtualNetworkPeering extends cdktf.TerraformResource {
   // allow_forwarded_traffic - computed: true, optional: true, required: false
   private _allowForwardedTraffic?: boolean | cdktf.IResolvable; 
   public get allowForwardedTraffic() {
-    return this.getBooleanAttribute('allow_forwarded_traffic') as any;
+    return this.getBooleanAttribute('allow_forwarded_traffic');
   }
   public set allowForwardedTraffic(value: boolean | cdktf.IResolvable) {
     this._allowForwardedTraffic = value;
@@ -260,7 +260,7 @@ export class VirtualNetworkPeering extends cdktf.TerraformResource {
   // allow_gateway_transit - computed: true, optional: true, required: false
   private _allowGatewayTransit?: boolean | cdktf.IResolvable; 
   public get allowGatewayTransit() {
-    return this.getBooleanAttribute('allow_gateway_transit') as any;
+    return this.getBooleanAttribute('allow_gateway_transit');
   }
   public set allowGatewayTransit(value: boolean | cdktf.IResolvable) {
     this._allowGatewayTransit = value;
@@ -276,7 +276,7 @@ export class VirtualNetworkPeering extends cdktf.TerraformResource {
   // allow_virtual_network_access - computed: false, optional: true, required: false
   private _allowVirtualNetworkAccess?: boolean | cdktf.IResolvable; 
   public get allowVirtualNetworkAccess() {
-    return this.getBooleanAttribute('allow_virtual_network_access') as any;
+    return this.getBooleanAttribute('allow_virtual_network_access');
   }
   public set allowVirtualNetworkAccess(value: boolean | cdktf.IResolvable) {
     this._allowVirtualNetworkAccess = value;
@@ -336,7 +336,7 @@ export class VirtualNetworkPeering extends cdktf.TerraformResource {
   // use_remote_gateways - computed: true, optional: true, required: false
   private _useRemoteGateways?: boolean | cdktf.IResolvable; 
   public get useRemoteGateways() {
-    return this.getBooleanAttribute('use_remote_gateways') as any;
+    return this.getBooleanAttribute('use_remote_gateways');
   }
   public set useRemoteGateways(value: boolean | cdktf.IResolvable) {
     this._useRemoteGateways = value;
@@ -363,7 +363,7 @@ export class VirtualNetworkPeering extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new VirtualNetworkPeeringTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new VirtualNetworkPeeringTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

@@ -36,7 +36,7 @@ export interface MediaAssetFilterConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset_filter#track_selection MediaAssetFilter#track_selection}
   */
-  readonly trackSelection?: MediaAssetFilterTrackSelection[];
+  readonly trackSelection?: MediaAssetFilterTrackSelection[] | cdktf.IResolvable;
 }
 export interface MediaAssetFilterPresentationTimeRange {
   /**
@@ -66,7 +66,7 @@ export interface MediaAssetFilterPresentationTimeRange {
 }
 
 export function mediaAssetFilterPresentationTimeRangeToTerraform(struct?: MediaAssetFilterPresentationTimeRangeOutputReference | MediaAssetFilterPresentationTimeRange): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -88,7 +88,7 @@ export class MediaAssetFilterPresentationTimeRangeOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -162,7 +162,7 @@ export class MediaAssetFilterPresentationTimeRangeOutputReference extends cdktf.
   // force_end - computed: false, optional: true, required: false
   private _forceEnd?: boolean | cdktf.IResolvable; 
   public get forceEnd() {
-    return this.getBooleanAttribute('force_end') as any;
+    return this.getBooleanAttribute('force_end');
   }
   public set forceEnd(value: boolean | cdktf.IResolvable) {
     this._forceEnd = value;
@@ -258,8 +258,8 @@ export interface MediaAssetFilterTimeouts {
   readonly update?: string;
 }
 
-export function mediaAssetFilterTimeoutsToTerraform(struct?: MediaAssetFilterTimeoutsOutputReference | MediaAssetFilterTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function mediaAssetFilterTimeoutsToTerraform(struct?: MediaAssetFilterTimeoutsOutputReference | MediaAssetFilterTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -279,7 +279,7 @@ export class MediaAssetFilterTimeoutsOutputReference extends cdktf.ComplexObject
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -401,8 +401,8 @@ export interface MediaAssetFilterTrackSelectionCondition {
   readonly value?: string;
 }
 
-export function mediaAssetFilterTrackSelectionConditionToTerraform(struct?: MediaAssetFilterTrackSelectionCondition): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function mediaAssetFilterTrackSelectionConditionToTerraform(struct?: MediaAssetFilterTrackSelectionCondition | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -419,11 +419,11 @@ export interface MediaAssetFilterTrackSelection {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset_filter#condition MediaAssetFilter#condition}
   */
-  readonly condition: MediaAssetFilterTrackSelectionCondition[];
+  readonly condition: MediaAssetFilterTrackSelectionCondition[] | cdktf.IResolvable;
 }
 
-export function mediaAssetFilterTrackSelectionToTerraform(struct?: MediaAssetFilterTrackSelection): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function mediaAssetFilterTrackSelectionToTerraform(struct?: MediaAssetFilterTrackSelection | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -525,7 +525,7 @@ export class MediaAssetFilter extends cdktf.TerraformResource {
   }
 
   // presentation_time_range - computed: false, optional: true, required: false
-  private _presentationTimeRange = new MediaAssetFilterPresentationTimeRangeOutputReference(this as any, "presentation_time_range", true);
+  private _presentationTimeRange = new MediaAssetFilterPresentationTimeRangeOutputReference(this, "presentation_time_range", true);
   public get presentationTimeRange() {
     return this._presentationTimeRange;
   }
@@ -541,7 +541,7 @@ export class MediaAssetFilter extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new MediaAssetFilterTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new MediaAssetFilterTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -557,12 +557,12 @@ export class MediaAssetFilter extends cdktf.TerraformResource {
   }
 
   // track_selection - computed: false, optional: true, required: false
-  private _trackSelection?: MediaAssetFilterTrackSelection[]; 
+  private _trackSelection?: MediaAssetFilterTrackSelection[] | cdktf.IResolvable; 
   public get trackSelection() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('track_selection') as any;
+    return this.interpolationForAttribute('track_selection');
   }
-  public set trackSelection(value: MediaAssetFilterTrackSelection[]) {
+  public set trackSelection(value: MediaAssetFilterTrackSelection[] | cdktf.IResolvable) {
     this._trackSelection = value;
   }
   public resetTrackSelection() {

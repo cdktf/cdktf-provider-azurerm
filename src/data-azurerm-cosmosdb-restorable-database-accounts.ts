@@ -69,7 +69,7 @@ export class DataAzurermCosmosdbRestorableDatabaseAccountsAccounts extends cdktf
   // restorable_locations - computed: true, optional: false, required: false
   public get restorableLocations() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('restorable_locations') as any;
+    return this.interpolationForAttribute('restorable_locations');
   }
 }
 export interface DataAzurermCosmosdbRestorableDatabaseAccountsTimeouts {
@@ -79,8 +79,8 @@ export interface DataAzurermCosmosdbRestorableDatabaseAccountsTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermCosmosdbRestorableDatabaseAccountsTimeoutsToTerraform(struct?: DataAzurermCosmosdbRestorableDatabaseAccountsTimeoutsOutputReference | DataAzurermCosmosdbRestorableDatabaseAccountsTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermCosmosdbRestorableDatabaseAccountsTimeoutsToTerraform(struct?: DataAzurermCosmosdbRestorableDatabaseAccountsTimeoutsOutputReference | DataAzurermCosmosdbRestorableDatabaseAccountsTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -97,7 +97,7 @@ export class DataAzurermCosmosdbRestorableDatabaseAccountsTimeoutsOutputReferenc
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -182,7 +182,7 @@ export class DataAzurermCosmosdbRestorableDatabaseAccounts extends cdktf.Terrafo
 
   // accounts - computed: true, optional: false, required: false
   public accounts(index: string) {
-    return new DataAzurermCosmosdbRestorableDatabaseAccountsAccounts(this, 'accounts', index);
+    return new DataAzurermCosmosdbRestorableDatabaseAccountsAccounts(this, 'accounts', index, false);
   }
 
   // id - computed: true, optional: true, required: false
@@ -217,7 +217,7 @@ export class DataAzurermCosmosdbRestorableDatabaseAccounts extends cdktf.Terrafo
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermCosmosdbRestorableDatabaseAccountsTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermCosmosdbRestorableDatabaseAccountsTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

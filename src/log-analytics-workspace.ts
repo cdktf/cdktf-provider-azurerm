@@ -50,7 +50,7 @@ export interface LogAnalyticsWorkspaceConfig extends cdktf.TerraformMetaArgument
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_workspace#tags LogAnalyticsWorkspace#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   * 
@@ -77,8 +77,8 @@ export interface LogAnalyticsWorkspaceTimeouts {
   readonly update?: string;
 }
 
-export function logAnalyticsWorkspaceTimeoutsToTerraform(struct?: LogAnalyticsWorkspaceTimeoutsOutputReference | LogAnalyticsWorkspaceTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function logAnalyticsWorkspaceTimeoutsToTerraform(struct?: LogAnalyticsWorkspaceTimeoutsOutputReference | LogAnalyticsWorkspaceTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -98,7 +98,7 @@ export class LogAnalyticsWorkspaceTimeoutsOutputReference extends cdktf.ComplexO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -280,7 +280,7 @@ export class LogAnalyticsWorkspace extends cdktf.TerraformResource {
   // internet_ingestion_enabled - computed: false, optional: true, required: false
   private _internetIngestionEnabled?: boolean | cdktf.IResolvable; 
   public get internetIngestionEnabled() {
-    return this.getBooleanAttribute('internet_ingestion_enabled') as any;
+    return this.getBooleanAttribute('internet_ingestion_enabled');
   }
   public set internetIngestionEnabled(value: boolean | cdktf.IResolvable) {
     this._internetIngestionEnabled = value;
@@ -296,7 +296,7 @@ export class LogAnalyticsWorkspace extends cdktf.TerraformResource {
   // internet_query_enabled - computed: false, optional: true, required: false
   private _internetQueryEnabled?: boolean | cdktf.IResolvable; 
   public get internetQueryEnabled() {
-    return this.getBooleanAttribute('internet_query_enabled') as any;
+    return this.getBooleanAttribute('internet_query_enabled');
   }
   public set internetQueryEnabled(value: boolean | cdktf.IResolvable) {
     this._internetQueryEnabled = value;
@@ -428,12 +428,11 @@ export class LogAnalyticsWorkspace extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -450,7 +449,7 @@ export class LogAnalyticsWorkspace extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new LogAnalyticsWorkspaceTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new LogAnalyticsWorkspaceTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -481,7 +480,7 @@ export class LogAnalyticsWorkspace extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       retention_in_days: cdktf.numberToTerraform(this._retentionInDays),
       sku: cdktf.stringToTerraform(this._sku),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       timeouts: logAnalyticsWorkspaceTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

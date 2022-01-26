@@ -97,8 +97,8 @@ export interface ServicebusSubscriptionTimeouts {
   readonly update?: string;
 }
 
-export function servicebusSubscriptionTimeoutsToTerraform(struct?: ServicebusSubscriptionTimeoutsOutputReference | ServicebusSubscriptionTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function servicebusSubscriptionTimeoutsToTerraform(struct?: ServicebusSubscriptionTimeoutsOutputReference | ServicebusSubscriptionTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -118,7 +118,7 @@ export class ServicebusSubscriptionTimeoutsOutputReference extends cdktf.Complex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -300,7 +300,7 @@ export class ServicebusSubscription extends cdktf.TerraformResource {
   // dead_lettering_on_filter_evaluation_error - computed: false, optional: true, required: false
   private _deadLetteringOnFilterEvaluationError?: boolean | cdktf.IResolvable; 
   public get deadLetteringOnFilterEvaluationError() {
-    return this.getBooleanAttribute('dead_lettering_on_filter_evaluation_error') as any;
+    return this.getBooleanAttribute('dead_lettering_on_filter_evaluation_error');
   }
   public set deadLetteringOnFilterEvaluationError(value: boolean | cdktf.IResolvable) {
     this._deadLetteringOnFilterEvaluationError = value;
@@ -316,7 +316,7 @@ export class ServicebusSubscription extends cdktf.TerraformResource {
   // dead_lettering_on_message_expiration - computed: false, optional: true, required: false
   private _deadLetteringOnMessageExpiration?: boolean | cdktf.IResolvable; 
   public get deadLetteringOnMessageExpiration() {
-    return this.getBooleanAttribute('dead_lettering_on_message_expiration') as any;
+    return this.getBooleanAttribute('dead_lettering_on_message_expiration');
   }
   public set deadLetteringOnMessageExpiration(value: boolean | cdktf.IResolvable) {
     this._deadLetteringOnMessageExpiration = value;
@@ -348,7 +348,7 @@ export class ServicebusSubscription extends cdktf.TerraformResource {
   // enable_batched_operations - computed: false, optional: true, required: false
   private _enableBatchedOperations?: boolean | cdktf.IResolvable; 
   public get enableBatchedOperations() {
-    return this.getBooleanAttribute('enable_batched_operations') as any;
+    return this.getBooleanAttribute('enable_batched_operations');
   }
   public set enableBatchedOperations(value: boolean | cdktf.IResolvable) {
     this._enableBatchedOperations = value;
@@ -459,7 +459,7 @@ export class ServicebusSubscription extends cdktf.TerraformResource {
   // requires_session - computed: false, optional: true, required: false
   private _requiresSession?: boolean | cdktf.IResolvable; 
   public get requiresSession() {
-    return this.getBooleanAttribute('requires_session') as any;
+    return this.getBooleanAttribute('requires_session');
   }
   public set requiresSession(value: boolean | cdktf.IResolvable) {
     this._requiresSession = value;
@@ -537,7 +537,7 @@ export class ServicebusSubscription extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ServicebusSubscriptionTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ServicebusSubscriptionTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

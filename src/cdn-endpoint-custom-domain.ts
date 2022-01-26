@@ -54,7 +54,7 @@ export interface CdnEndpointCustomDomainCdnManagedHttps {
 }
 
 export function cdnEndpointCustomDomainCdnManagedHttpsToTerraform(struct?: CdnEndpointCustomDomainCdnManagedHttpsOutputReference | CdnEndpointCustomDomainCdnManagedHttps): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -73,7 +73,7 @@ export class CdnEndpointCustomDomainCdnManagedHttpsOutputReference extends cdktf
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -171,8 +171,8 @@ export interface CdnEndpointCustomDomainTimeouts {
   readonly update?: string;
 }
 
-export function cdnEndpointCustomDomainTimeoutsToTerraform(struct?: CdnEndpointCustomDomainTimeoutsOutputReference | CdnEndpointCustomDomainTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function cdnEndpointCustomDomainTimeoutsToTerraform(struct?: CdnEndpointCustomDomainTimeoutsOutputReference | CdnEndpointCustomDomainTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -192,7 +192,7 @@ export class CdnEndpointCustomDomainTimeoutsOutputReference extends cdktf.Comple
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -311,7 +311,7 @@ export interface CdnEndpointCustomDomainUserManagedHttps {
 }
 
 export function cdnEndpointCustomDomainUserManagedHttpsToTerraform(struct?: CdnEndpointCustomDomainUserManagedHttpsOutputReference | CdnEndpointCustomDomainUserManagedHttps): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -329,7 +329,7 @@ export class CdnEndpointCustomDomainUserManagedHttpsOutputReference extends cdkt
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -479,7 +479,7 @@ export class CdnEndpointCustomDomain extends cdktf.TerraformResource {
   }
 
   // cdn_managed_https - computed: false, optional: true, required: false
-  private _cdnManagedHttps = new CdnEndpointCustomDomainCdnManagedHttpsOutputReference(this as any, "cdn_managed_https", true);
+  private _cdnManagedHttps = new CdnEndpointCustomDomainCdnManagedHttpsOutputReference(this, "cdn_managed_https", true);
   public get cdnManagedHttps() {
     return this._cdnManagedHttps;
   }
@@ -495,7 +495,7 @@ export class CdnEndpointCustomDomain extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new CdnEndpointCustomDomainTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new CdnEndpointCustomDomainTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -511,7 +511,7 @@ export class CdnEndpointCustomDomain extends cdktf.TerraformResource {
   }
 
   // user_managed_https - computed: false, optional: true, required: false
-  private _userManagedHttps = new CdnEndpointCustomDomainUserManagedHttpsOutputReference(this as any, "user_managed_https", true);
+  private _userManagedHttps = new CdnEndpointCustomDomainUserManagedHttpsOutputReference(this, "user_managed_https", true);
   public get userManagedHttps() {
     return this._userManagedHttps;
   }

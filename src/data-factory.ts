@@ -34,7 +34,7 @@ export interface DataFactoryConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory#tags DataFactory#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * github_configuration block
   * 
@@ -46,7 +46,7 @@ export interface DataFactoryConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory#global_parameter DataFactory#global_parameter}
   */
-  readonly globalParameter?: DataFactoryGlobalParameter[];
+  readonly globalParameter?: DataFactoryGlobalParameter[] | cdktf.IResolvable;
   /**
   * identity block
   * 
@@ -90,7 +90,7 @@ export interface DataFactoryGithubConfiguration {
 }
 
 export function dataFactoryGithubConfigurationToTerraform(struct?: DataFactoryGithubConfigurationOutputReference | DataFactoryGithubConfiguration): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -111,7 +111,7 @@ export class DataFactoryGithubConfigurationOutputReference extends cdktf.Complex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -240,8 +240,8 @@ export interface DataFactoryGlobalParameter {
   readonly value: string;
 }
 
-export function dataFactoryGlobalParameterToTerraform(struct?: DataFactoryGlobalParameter): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataFactoryGlobalParameterToTerraform(struct?: DataFactoryGlobalParameter | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -264,7 +264,7 @@ export interface DataFactoryIdentity {
 }
 
 export function dataFactoryIdentityToTerraform(struct?: DataFactoryIdentityOutputReference | DataFactoryIdentity): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -282,7 +282,7 @@ export class DataFactoryIdentityOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -329,6 +329,16 @@ export class DataFactoryIdentityOutputReference extends cdktf.ComplexObject {
     return this._identityIds;
   }
 
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
+  }
+
   // type - computed: false, optional: false, required: true
   private _type?: string; 
   public get type() {
@@ -361,8 +371,8 @@ export interface DataFactoryTimeouts {
   readonly update?: string;
 }
 
-export function dataFactoryTimeoutsToTerraform(struct?: DataFactoryTimeoutsOutputReference | DataFactoryTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataFactoryTimeoutsToTerraform(struct?: DataFactoryTimeoutsOutputReference | DataFactoryTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -382,7 +392,7 @@ export class DataFactoryTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -517,7 +527,7 @@ export interface DataFactoryVstsConfiguration {
 }
 
 export function dataFactoryVstsConfigurationToTerraform(struct?: DataFactoryVstsConfigurationOutputReference | DataFactoryVstsConfiguration): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -539,7 +549,7 @@ export class DataFactoryVstsConfigurationOutputReference extends cdktf.ComplexOb
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -760,7 +770,7 @@ export class DataFactory extends cdktf.TerraformResource {
   // managed_virtual_network_enabled - computed: false, optional: true, required: false
   private _managedVirtualNetworkEnabled?: boolean | cdktf.IResolvable; 
   public get managedVirtualNetworkEnabled() {
-    return this.getBooleanAttribute('managed_virtual_network_enabled') as any;
+    return this.getBooleanAttribute('managed_virtual_network_enabled');
   }
   public set managedVirtualNetworkEnabled(value: boolean | cdktf.IResolvable) {
     this._managedVirtualNetworkEnabled = value;
@@ -789,7 +799,7 @@ export class DataFactory extends cdktf.TerraformResource {
   // public_network_enabled - computed: false, optional: true, required: false
   private _publicNetworkEnabled?: boolean | cdktf.IResolvable; 
   public get publicNetworkEnabled() {
-    return this.getBooleanAttribute('public_network_enabled') as any;
+    return this.getBooleanAttribute('public_network_enabled');
   }
   public set publicNetworkEnabled(value: boolean | cdktf.IResolvable) {
     this._publicNetworkEnabled = value;
@@ -816,12 +826,11 @@ export class DataFactory extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -833,7 +842,7 @@ export class DataFactory extends cdktf.TerraformResource {
   }
 
   // github_configuration - computed: false, optional: true, required: false
-  private _githubConfiguration = new DataFactoryGithubConfigurationOutputReference(this as any, "github_configuration", true);
+  private _githubConfiguration = new DataFactoryGithubConfigurationOutputReference(this, "github_configuration", true);
   public get githubConfiguration() {
     return this._githubConfiguration;
   }
@@ -849,12 +858,12 @@ export class DataFactory extends cdktf.TerraformResource {
   }
 
   // global_parameter - computed: false, optional: true, required: false
-  private _globalParameter?: DataFactoryGlobalParameter[]; 
+  private _globalParameter?: DataFactoryGlobalParameter[] | cdktf.IResolvable; 
   public get globalParameter() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('global_parameter') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('global_parameter')));
   }
-  public set globalParameter(value: DataFactoryGlobalParameter[]) {
+  public set globalParameter(value: DataFactoryGlobalParameter[] | cdktf.IResolvable) {
     this._globalParameter = value;
   }
   public resetGlobalParameter() {
@@ -866,7 +875,7 @@ export class DataFactory extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity = new DataFactoryIdentityOutputReference(this as any, "identity", true);
+  private _identity = new DataFactoryIdentityOutputReference(this, "identity", true);
   public get identity() {
     return this._identity;
   }
@@ -882,7 +891,7 @@ export class DataFactory extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataFactoryTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataFactoryTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -898,7 +907,7 @@ export class DataFactory extends cdktf.TerraformResource {
   }
 
   // vsts_configuration - computed: false, optional: true, required: false
-  private _vstsConfiguration = new DataFactoryVstsConfigurationOutputReference(this as any, "vsts_configuration", true);
+  private _vstsConfiguration = new DataFactoryVstsConfigurationOutputReference(this, "vsts_configuration", true);
   public get vstsConfiguration() {
     return this._vstsConfiguration;
   }
@@ -925,7 +934,7 @@ export class DataFactory extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       public_network_enabled: cdktf.booleanToTerraform(this._publicNetworkEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       github_configuration: dataFactoryGithubConfigurationToTerraform(this._githubConfiguration.internalValue),
       global_parameter: cdktf.listMapper(dataFactoryGlobalParameterToTerraform)(this._globalParameter),
       identity: dataFactoryIdentityToTerraform(this._identity.internalValue),

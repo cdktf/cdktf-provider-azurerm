@@ -34,7 +34,7 @@ export interface LocalNetworkGatewayConfig extends cdktf.TerraformMetaArguments 
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/local_network_gateway#tags LocalNetworkGateway#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * bgp_settings block
   * 
@@ -64,7 +64,7 @@ export interface LocalNetworkGatewayBgpSettings {
 }
 
 export function localNetworkGatewayBgpSettingsToTerraform(struct?: LocalNetworkGatewayBgpSettingsOutputReference | LocalNetworkGatewayBgpSettings): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -83,7 +83,7 @@ export class LocalNetworkGatewayBgpSettingsOutputReference extends cdktf.Complex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -181,8 +181,8 @@ export interface LocalNetworkGatewayTimeouts {
   readonly update?: string;
 }
 
-export function localNetworkGatewayTimeoutsToTerraform(struct?: LocalNetworkGatewayTimeoutsOutputReference | LocalNetworkGatewayTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function localNetworkGatewayTimeoutsToTerraform(struct?: LocalNetworkGatewayTimeoutsOutputReference | LocalNetworkGatewayTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -202,7 +202,7 @@ export class LocalNetworkGatewayTimeoutsOutputReference extends cdktf.ComplexObj
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -450,12 +450,11 @@ export class LocalNetworkGateway extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -467,7 +466,7 @@ export class LocalNetworkGateway extends cdktf.TerraformResource {
   }
 
   // bgp_settings - computed: false, optional: true, required: false
-  private _bgpSettings = new LocalNetworkGatewayBgpSettingsOutputReference(this as any, "bgp_settings", true);
+  private _bgpSettings = new LocalNetworkGatewayBgpSettingsOutputReference(this, "bgp_settings", true);
   public get bgpSettings() {
     return this._bgpSettings;
   }
@@ -483,7 +482,7 @@ export class LocalNetworkGateway extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new LocalNetworkGatewayTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new LocalNetworkGatewayTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -510,7 +509,7 @@ export class LocalNetworkGateway extends cdktf.TerraformResource {
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       bgp_settings: localNetworkGatewayBgpSettingsToTerraform(this._bgpSettings.internalValue),
       timeouts: localNetworkGatewayTimeoutsToTerraform(this._timeouts.internalValue),
     };

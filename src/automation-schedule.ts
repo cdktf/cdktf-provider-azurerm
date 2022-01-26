@@ -56,7 +56,7 @@ export interface AutomationScheduleConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_schedule#monthly_occurrence AutomationSchedule#monthly_occurrence}
   */
-  readonly monthlyOccurrence?: AutomationScheduleMonthlyOccurrence[];
+  readonly monthlyOccurrence?: AutomationScheduleMonthlyOccurrence[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -75,8 +75,8 @@ export interface AutomationScheduleMonthlyOccurrence {
   readonly occurrence: number;
 }
 
-export function automationScheduleMonthlyOccurrenceToTerraform(struct?: AutomationScheduleMonthlyOccurrence): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function automationScheduleMonthlyOccurrenceToTerraform(struct?: AutomationScheduleMonthlyOccurrence | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -105,8 +105,8 @@ export interface AutomationScheduleTimeouts {
   readonly update?: string;
 }
 
-export function automationScheduleTimeoutsToTerraform(struct?: AutomationScheduleTimeoutsOutputReference | AutomationScheduleTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function automationScheduleTimeoutsToTerraform(struct?: AutomationScheduleTimeoutsOutputReference | AutomationScheduleTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -126,7 +126,7 @@ export class AutomationScheduleTimeoutsOutputReference extends cdktf.ComplexObje
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -367,8 +367,7 @@ export class AutomationSchedule extends cdktf.TerraformResource {
   // month_days - computed: false, optional: true, required: false
   private _monthDays?: number[]; 
   public get monthDays() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('month_days') as any;
+    return cdktf.Token.asNumberList(cdktf.Fn.tolist(this.getNumberListAttribute('month_days')));
   }
   public set monthDays(value: number[]) {
     this._monthDays = value;
@@ -442,7 +441,7 @@ export class AutomationSchedule extends cdktf.TerraformResource {
   // week_days - computed: false, optional: true, required: false
   private _weekDays?: string[]; 
   public get weekDays() {
-    return this.getListAttribute('week_days');
+    return cdktf.Fn.tolist(this.getListAttribute('week_days'));
   }
   public set weekDays(value: string[]) {
     this._weekDays = value;
@@ -456,12 +455,12 @@ export class AutomationSchedule extends cdktf.TerraformResource {
   }
 
   // monthly_occurrence - computed: false, optional: true, required: false
-  private _monthlyOccurrence?: AutomationScheduleMonthlyOccurrence[]; 
+  private _monthlyOccurrence?: AutomationScheduleMonthlyOccurrence[] | cdktf.IResolvable; 
   public get monthlyOccurrence() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('monthly_occurrence') as any;
+    return this.interpolationForAttribute('monthly_occurrence');
   }
-  public set monthlyOccurrence(value: AutomationScheduleMonthlyOccurrence[]) {
+  public set monthlyOccurrence(value: AutomationScheduleMonthlyOccurrence[] | cdktf.IResolvable) {
     this._monthlyOccurrence = value;
   }
   public resetMonthlyOccurrence() {
@@ -473,7 +472,7 @@ export class AutomationSchedule extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AutomationScheduleTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new AutomationScheduleTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

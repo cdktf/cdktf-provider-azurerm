@@ -43,22 +43,22 @@ export class DataAzurermMysqlServerThreatDetectionPolicy extends cdktf.ComplexCo
 
   // disabled_alerts - computed: true, optional: false, required: false
   public get disabledAlerts() {
-    return this.getListAttribute('disabled_alerts');
+    return cdktf.Fn.tolist(this.getListAttribute('disabled_alerts'));
   }
 
   // email_account_admins - computed: true, optional: false, required: false
   public get emailAccountAdmins() {
-    return this.getBooleanAttribute('email_account_admins') as any;
+    return this.getBooleanAttribute('email_account_admins');
   }
 
   // email_addresses - computed: true, optional: false, required: false
   public get emailAddresses() {
-    return this.getListAttribute('email_addresses');
+    return cdktf.Fn.tolist(this.getListAttribute('email_addresses'));
   }
 
   // enabled - computed: true, optional: false, required: false
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
 
   // retention_days - computed: true, optional: false, required: false
@@ -83,8 +83,8 @@ export interface DataAzurermMysqlServerTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermMysqlServerTimeoutsToTerraform(struct?: DataAzurermMysqlServerTimeoutsOutputReference | DataAzurermMysqlServerTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermMysqlServerTimeoutsToTerraform(struct?: DataAzurermMysqlServerTimeoutsOutputReference | DataAzurermMysqlServerTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -101,7 +101,7 @@ export class DataAzurermMysqlServerTimeoutsOutputReference extends cdktf.Complex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -191,7 +191,7 @@ export class DataAzurermMysqlServer extends cdktf.TerraformDataSource {
 
   // auto_grow_enabled - computed: true, optional: false, required: false
   public get autoGrowEnabled() {
-    return this.getBooleanAttribute('auto_grow_enabled') as any;
+    return this.getBooleanAttribute('auto_grow_enabled');
   }
 
   // backup_retention_days - computed: true, optional: false, required: false
@@ -206,7 +206,7 @@ export class DataAzurermMysqlServer extends cdktf.TerraformDataSource {
 
   // geo_redundant_backup_enabled - computed: true, optional: false, required: false
   public get geoRedundantBackupEnabled() {
-    return this.getBooleanAttribute('geo_redundant_backup_enabled') as any;
+    return this.getBooleanAttribute('geo_redundant_backup_enabled');
   }
 
   // id - computed: true, optional: true, required: false
@@ -216,12 +216,12 @@ export class DataAzurermMysqlServer extends cdktf.TerraformDataSource {
 
   // identity - computed: true, optional: false, required: false
   public identity(index: string) {
-    return new DataAzurermMysqlServerIdentity(this, 'identity', index);
+    return new DataAzurermMysqlServerIdentity(this, 'identity', index, false);
   }
 
   // infrastructure_encryption_enabled - computed: true, optional: false, required: false
   public get infrastructureEncryptionEnabled() {
-    return this.getBooleanAttribute('infrastructure_encryption_enabled') as any;
+    return this.getBooleanAttribute('infrastructure_encryption_enabled');
   }
 
   // location - computed: true, optional: false, required: false
@@ -244,7 +244,7 @@ export class DataAzurermMysqlServer extends cdktf.TerraformDataSource {
 
   // public_network_access_enabled - computed: true, optional: false, required: false
   public get publicNetworkAccessEnabled() {
-    return this.getBooleanAttribute('public_network_access_enabled') as any;
+    return this.getBooleanAttribute('public_network_access_enabled');
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -272,7 +272,7 @@ export class DataAzurermMysqlServer extends cdktf.TerraformDataSource {
 
   // ssl_enforcement_enabled - computed: true, optional: false, required: false
   public get sslEnforcementEnabled() {
-    return this.getBooleanAttribute('ssl_enforcement_enabled') as any;
+    return this.getBooleanAttribute('ssl_enforcement_enabled');
   }
 
   // ssl_minimal_tls_version_enforced - computed: true, optional: false, required: false
@@ -286,13 +286,13 @@ export class DataAzurermMysqlServer extends cdktf.TerraformDataSource {
   }
 
   // tags - computed: true, optional: false, required: false
-  public tags(key: string): string {
+  public tags(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // threat_detection_policy - computed: true, optional: false, required: false
   public threatDetectionPolicy(index: string) {
-    return new DataAzurermMysqlServerThreatDetectionPolicy(this, 'threat_detection_policy', index);
+    return new DataAzurermMysqlServerThreatDetectionPolicy(this, 'threat_detection_policy', index, false);
   }
 
   // version - computed: true, optional: false, required: false
@@ -301,7 +301,7 @@ export class DataAzurermMysqlServer extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermMysqlServerTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermMysqlServerTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

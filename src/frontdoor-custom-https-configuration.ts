@@ -48,7 +48,7 @@ export interface FrontdoorCustomHttpsConfigurationCustomHttpsConfiguration {
 }
 
 export function frontdoorCustomHttpsConfigurationCustomHttpsConfigurationToTerraform(struct?: FrontdoorCustomHttpsConfigurationCustomHttpsConfigurationOutputReference | FrontdoorCustomHttpsConfigurationCustomHttpsConfiguration): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -68,7 +68,7 @@ export class FrontdoorCustomHttpsConfigurationCustomHttpsConfigurationOutputRefe
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -174,6 +174,21 @@ export class FrontdoorCustomHttpsConfigurationCustomHttpsConfigurationOutputRefe
   public get certificateSourceInput() {
     return this._certificateSource;
   }
+
+  // minimum_tls_version - computed: true, optional: false, required: false
+  public get minimumTlsVersion() {
+    return this.getStringAttribute('minimum_tls_version');
+  }
+
+  // provisioning_state - computed: true, optional: false, required: false
+  public get provisioningState() {
+    return this.getStringAttribute('provisioning_state');
+  }
+
+  // provisioning_substate - computed: true, optional: false, required: false
+  public get provisioningSubstate() {
+    return this.getStringAttribute('provisioning_substate');
+  }
 }
 export interface FrontdoorCustomHttpsConfigurationTimeouts {
   /**
@@ -194,8 +209,8 @@ export interface FrontdoorCustomHttpsConfigurationTimeouts {
   readonly update?: string;
 }
 
-export function frontdoorCustomHttpsConfigurationTimeoutsToTerraform(struct?: FrontdoorCustomHttpsConfigurationTimeoutsOutputReference | FrontdoorCustomHttpsConfigurationTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function frontdoorCustomHttpsConfigurationTimeoutsToTerraform(struct?: FrontdoorCustomHttpsConfigurationTimeoutsOutputReference | FrontdoorCustomHttpsConfigurationTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -215,7 +230,7 @@ export class FrontdoorCustomHttpsConfigurationTimeoutsOutputReference extends cd
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -368,7 +383,7 @@ export class FrontdoorCustomHttpsConfiguration extends cdktf.TerraformResource {
   // custom_https_provisioning_enabled - computed: false, optional: false, required: true
   private _customHttpsProvisioningEnabled?: boolean | cdktf.IResolvable; 
   public get customHttpsProvisioningEnabled() {
-    return this.getBooleanAttribute('custom_https_provisioning_enabled') as any;
+    return this.getBooleanAttribute('custom_https_provisioning_enabled');
   }
   public set customHttpsProvisioningEnabled(value: boolean | cdktf.IResolvable) {
     this._customHttpsProvisioningEnabled = value;
@@ -397,7 +412,7 @@ export class FrontdoorCustomHttpsConfiguration extends cdktf.TerraformResource {
   }
 
   // custom_https_configuration - computed: false, optional: true, required: false
-  private _customHttpsConfiguration = new FrontdoorCustomHttpsConfigurationCustomHttpsConfigurationOutputReference(this as any, "custom_https_configuration", true);
+  private _customHttpsConfiguration = new FrontdoorCustomHttpsConfigurationCustomHttpsConfigurationOutputReference(this, "custom_https_configuration", true);
   public get customHttpsConfiguration() {
     return this._customHttpsConfiguration;
   }
@@ -413,7 +428,7 @@ export class FrontdoorCustomHttpsConfiguration extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new FrontdoorCustomHttpsConfigurationTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new FrontdoorCustomHttpsConfigurationTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

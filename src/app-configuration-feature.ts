@@ -42,13 +42,13 @@ export interface AppConfigurationFeatureConfig extends cdktf.TerraformMetaArgume
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature#tags AppConfigurationFeature#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * targeting_filter block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature#targeting_filter AppConfigurationFeature#targeting_filter}
   */
-  readonly targetingFilter?: AppConfigurationFeatureTargetingFilter[];
+  readonly targetingFilter?: AppConfigurationFeatureTargetingFilter[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -60,7 +60,7 @@ export interface AppConfigurationFeatureConfig extends cdktf.TerraformMetaArgume
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature#timewindow_filter AppConfigurationFeature#timewindow_filter}
   */
-  readonly timewindowFilter?: AppConfigurationFeatureTimewindowFilter[];
+  readonly timewindowFilter?: AppConfigurationFeatureTimewindowFilter[] | cdktf.IResolvable;
 }
 export interface AppConfigurationFeatureTargetingFilterGroups {
   /**
@@ -73,8 +73,8 @@ export interface AppConfigurationFeatureTargetingFilterGroups {
   readonly rolloutPercentage: number;
 }
 
-export function appConfigurationFeatureTargetingFilterGroupsToTerraform(struct?: AppConfigurationFeatureTargetingFilterGroups): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function appConfigurationFeatureTargetingFilterGroupsToTerraform(struct?: AppConfigurationFeatureTargetingFilterGroups | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -98,11 +98,11 @@ export interface AppConfigurationFeatureTargetingFilter {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature#groups AppConfigurationFeature#groups}
   */
-  readonly groups?: AppConfigurationFeatureTargetingFilterGroups[];
+  readonly groups?: AppConfigurationFeatureTargetingFilterGroups[] | cdktf.IResolvable;
 }
 
-export function appConfigurationFeatureTargetingFilterToTerraform(struct?: AppConfigurationFeatureTargetingFilter): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function appConfigurationFeatureTargetingFilterToTerraform(struct?: AppConfigurationFeatureTargetingFilter | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -132,8 +132,8 @@ export interface AppConfigurationFeatureTimeouts {
   readonly update?: string;
 }
 
-export function appConfigurationFeatureTimeoutsToTerraform(struct?: AppConfigurationFeatureTimeoutsOutputReference | AppConfigurationFeatureTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function appConfigurationFeatureTimeoutsToTerraform(struct?: AppConfigurationFeatureTimeoutsOutputReference | AppConfigurationFeatureTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -153,7 +153,7 @@ export class AppConfigurationFeatureTimeoutsOutputReference extends cdktf.Comple
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -271,8 +271,8 @@ export interface AppConfigurationFeatureTimewindowFilter {
   readonly start?: string;
 }
 
-export function appConfigurationFeatureTimewindowFilterToTerraform(struct?: AppConfigurationFeatureTimewindowFilter): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function appConfigurationFeatureTimewindowFilterToTerraform(struct?: AppConfigurationFeatureTimewindowFilter | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -365,7 +365,7 @@ export class AppConfigurationFeature extends cdktf.TerraformResource {
   // enabled - computed: false, optional: true, required: false
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
@@ -418,7 +418,7 @@ export class AppConfigurationFeature extends cdktf.TerraformResource {
   // locked - computed: false, optional: true, required: false
   private _locked?: boolean | cdktf.IResolvable; 
   public get locked() {
-    return this.getBooleanAttribute('locked') as any;
+    return this.getBooleanAttribute('locked');
   }
   public set locked(value: boolean | cdktf.IResolvable) {
     this._locked = value;
@@ -461,12 +461,11 @@ export class AppConfigurationFeature extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -478,12 +477,12 @@ export class AppConfigurationFeature extends cdktf.TerraformResource {
   }
 
   // targeting_filter - computed: false, optional: true, required: false
-  private _targetingFilter?: AppConfigurationFeatureTargetingFilter[]; 
+  private _targetingFilter?: AppConfigurationFeatureTargetingFilter[] | cdktf.IResolvable; 
   public get targetingFilter() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('targeting_filter') as any;
+    return this.interpolationForAttribute('targeting_filter');
   }
-  public set targetingFilter(value: AppConfigurationFeatureTargetingFilter[]) {
+  public set targetingFilter(value: AppConfigurationFeatureTargetingFilter[] | cdktf.IResolvable) {
     this._targetingFilter = value;
   }
   public resetTargetingFilter() {
@@ -495,7 +494,7 @@ export class AppConfigurationFeature extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AppConfigurationFeatureTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new AppConfigurationFeatureTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -511,12 +510,12 @@ export class AppConfigurationFeature extends cdktf.TerraformResource {
   }
 
   // timewindow_filter - computed: false, optional: true, required: false
-  private _timewindowFilter?: AppConfigurationFeatureTimewindowFilter[]; 
+  private _timewindowFilter?: AppConfigurationFeatureTimewindowFilter[] | cdktf.IResolvable; 
   public get timewindowFilter() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('timewindow_filter') as any;
+    return this.interpolationForAttribute('timewindow_filter');
   }
-  public set timewindowFilter(value: AppConfigurationFeatureTimewindowFilter[]) {
+  public set timewindowFilter(value: AppConfigurationFeatureTimewindowFilter[] | cdktf.IResolvable) {
     this._timewindowFilter = value;
   }
   public resetTimewindowFilter() {
@@ -541,7 +540,7 @@ export class AppConfigurationFeature extends cdktf.TerraformResource {
       locked: cdktf.booleanToTerraform(this._locked),
       name: cdktf.stringToTerraform(this._name),
       percentage_filter_value: cdktf.numberToTerraform(this._percentageFilterValue),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       targeting_filter: cdktf.listMapper(appConfigurationFeatureTargetingFilterToTerraform)(this._targetingFilter),
       timeouts: appConfigurationFeatureTimeoutsToTerraform(this._timeouts.internalValue),
       timewindow_filter: cdktf.listMapper(appConfigurationFeatureTimewindowFilterToTerraform)(this._timewindowFilter),

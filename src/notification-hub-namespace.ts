@@ -34,7 +34,7 @@ export interface NotificationHubNamespaceConfig extends cdktf.TerraformMetaArgum
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub_namespace#tags NotificationHubNamespace#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   * 
@@ -61,8 +61,8 @@ export interface NotificationHubNamespaceTimeouts {
   readonly update?: string;
 }
 
-export function notificationHubNamespaceTimeoutsToTerraform(struct?: NotificationHubNamespaceTimeoutsOutputReference | NotificationHubNamespaceTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function notificationHubNamespaceTimeoutsToTerraform(struct?: NotificationHubNamespaceTimeoutsOutputReference | NotificationHubNamespaceTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -82,7 +82,7 @@ export class NotificationHubNamespaceTimeoutsOutputReference extends cdktf.Compl
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -239,7 +239,7 @@ export class NotificationHubNamespace extends cdktf.TerraformResource {
   // enabled - computed: false, optional: true, required: false
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
@@ -328,12 +328,11 @@ export class NotificationHubNamespace extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -345,7 +344,7 @@ export class NotificationHubNamespace extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new NotificationHubNamespaceTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new NotificationHubNamespaceTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -372,7 +371,7 @@ export class NotificationHubNamespace extends cdktf.TerraformResource {
       namespace_type: cdktf.stringToTerraform(this._namespaceType),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku_name: cdktf.stringToTerraform(this._skuName),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       timeouts: notificationHubNamespaceTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

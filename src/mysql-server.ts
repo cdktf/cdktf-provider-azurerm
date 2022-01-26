@@ -82,7 +82,7 @@ export interface MysqlServerConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server#tags MysqlServer#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server#version MysqlServer#version}
   */
@@ -120,7 +120,7 @@ export interface MysqlServerIdentity {
 }
 
 export function mysqlServerIdentityToTerraform(struct?: MysqlServerIdentityOutputReference | MysqlServerIdentity): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -137,7 +137,7 @@ export class MysqlServerIdentityOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -160,6 +160,16 @@ export class MysqlServerIdentityOutputReference extends cdktf.ComplexObject {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._type = value.type;
     }
+  }
+
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
   }
 
   // type - computed: false, optional: false, required: true
@@ -195,7 +205,7 @@ export interface MysqlServerStorageProfile {
 }
 
 export function mysqlServerStorageProfileToTerraform(struct?: MysqlServerStorageProfileOutputReference | MysqlServerStorageProfile): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -215,7 +225,7 @@ export class MysqlServerStorageProfileOutputReference extends cdktf.ComplexObjec
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -354,7 +364,7 @@ export interface MysqlServerThreatDetectionPolicy {
 }
 
 export function mysqlServerThreatDetectionPolicyToTerraform(struct?: MysqlServerThreatDetectionPolicyOutputReference | MysqlServerThreatDetectionPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -377,7 +387,7 @@ export class MysqlServerThreatDetectionPolicyOutputReference extends cdktf.Compl
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -441,7 +451,7 @@ export class MysqlServerThreatDetectionPolicyOutputReference extends cdktf.Compl
   // disabled_alerts - computed: false, optional: true, required: false
   private _disabledAlerts?: string[]; 
   public get disabledAlerts() {
-    return this.getListAttribute('disabled_alerts');
+    return cdktf.Fn.tolist(this.getListAttribute('disabled_alerts'));
   }
   public set disabledAlerts(value: string[]) {
     this._disabledAlerts = value;
@@ -457,7 +467,7 @@ export class MysqlServerThreatDetectionPolicyOutputReference extends cdktf.Compl
   // email_account_admins - computed: false, optional: true, required: false
   private _emailAccountAdmins?: boolean | cdktf.IResolvable; 
   public get emailAccountAdmins() {
-    return this.getBooleanAttribute('email_account_admins') as any;
+    return this.getBooleanAttribute('email_account_admins');
   }
   public set emailAccountAdmins(value: boolean | cdktf.IResolvable) {
     this._emailAccountAdmins = value;
@@ -473,7 +483,7 @@ export class MysqlServerThreatDetectionPolicyOutputReference extends cdktf.Compl
   // email_addresses - computed: false, optional: true, required: false
   private _emailAddresses?: string[]; 
   public get emailAddresses() {
-    return this.getListAttribute('email_addresses');
+    return cdktf.Fn.tolist(this.getListAttribute('email_addresses'));
   }
   public set emailAddresses(value: string[]) {
     this._emailAddresses = value;
@@ -489,7 +499,7 @@ export class MysqlServerThreatDetectionPolicyOutputReference extends cdktf.Compl
   // enabled - computed: false, optional: true, required: false
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
@@ -569,8 +579,8 @@ export interface MysqlServerTimeouts {
   readonly update?: string;
 }
 
-export function mysqlServerTimeoutsToTerraform(struct?: MysqlServerTimeoutsOutputReference | MysqlServerTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function mysqlServerTimeoutsToTerraform(struct?: MysqlServerTimeoutsOutputReference | MysqlServerTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -590,7 +600,7 @@ export class MysqlServerTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -795,7 +805,7 @@ export class MysqlServer extends cdktf.TerraformResource {
   // auto_grow_enabled - computed: true, optional: true, required: false
   private _autoGrowEnabled?: boolean | cdktf.IResolvable; 
   public get autoGrowEnabled() {
-    return this.getBooleanAttribute('auto_grow_enabled') as any;
+    return this.getBooleanAttribute('auto_grow_enabled');
   }
   public set autoGrowEnabled(value: boolean | cdktf.IResolvable) {
     this._autoGrowEnabled = value;
@@ -864,7 +874,7 @@ export class MysqlServer extends cdktf.TerraformResource {
   // geo_redundant_backup_enabled - computed: true, optional: true, required: false
   private _geoRedundantBackupEnabled?: boolean | cdktf.IResolvable; 
   public get geoRedundantBackupEnabled() {
-    return this.getBooleanAttribute('geo_redundant_backup_enabled') as any;
+    return this.getBooleanAttribute('geo_redundant_backup_enabled');
   }
   public set geoRedundantBackupEnabled(value: boolean | cdktf.IResolvable) {
     this._geoRedundantBackupEnabled = value;
@@ -885,7 +895,7 @@ export class MysqlServer extends cdktf.TerraformResource {
   // infrastructure_encryption_enabled - computed: false, optional: true, required: false
   private _infrastructureEncryptionEnabled?: boolean | cdktf.IResolvable; 
   public get infrastructureEncryptionEnabled() {
-    return this.getBooleanAttribute('infrastructure_encryption_enabled') as any;
+    return this.getBooleanAttribute('infrastructure_encryption_enabled');
   }
   public set infrastructureEncryptionEnabled(value: boolean | cdktf.IResolvable) {
     this._infrastructureEncryptionEnabled = value;
@@ -927,7 +937,7 @@ export class MysqlServer extends cdktf.TerraformResource {
   // public_network_access_enabled - computed: false, optional: true, required: false
   private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable; 
   public get publicNetworkAccessEnabled() {
-    return this.getBooleanAttribute('public_network_access_enabled') as any;
+    return this.getBooleanAttribute('public_network_access_enabled');
   }
   public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable) {
     this._publicNetworkAccessEnabled = value;
@@ -1001,7 +1011,7 @@ export class MysqlServer extends cdktf.TerraformResource {
   // ssl_enforcement_enabled - computed: false, optional: true, required: false
   private _sslEnforcementEnabled?: boolean | cdktf.IResolvable; 
   public get sslEnforcementEnabled() {
-    return this.getBooleanAttribute('ssl_enforcement_enabled') as any;
+    return this.getBooleanAttribute('ssl_enforcement_enabled');
   }
   public set sslEnforcementEnabled(value: boolean | cdktf.IResolvable) {
     this._sslEnforcementEnabled = value;
@@ -1047,12 +1057,11 @@ export class MysqlServer extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -1077,7 +1086,7 @@ export class MysqlServer extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity = new MysqlServerIdentityOutputReference(this as any, "identity", true);
+  private _identity = new MysqlServerIdentityOutputReference(this, "identity", true);
   public get identity() {
     return this._identity;
   }
@@ -1093,7 +1102,7 @@ export class MysqlServer extends cdktf.TerraformResource {
   }
 
   // storage_profile - computed: false, optional: true, required: false
-  private _storageProfile = new MysqlServerStorageProfileOutputReference(this as any, "storage_profile", true);
+  private _storageProfile = new MysqlServerStorageProfileOutputReference(this, "storage_profile", true);
   public get storageProfile() {
     return this._storageProfile;
   }
@@ -1109,7 +1118,7 @@ export class MysqlServer extends cdktf.TerraformResource {
   }
 
   // threat_detection_policy - computed: false, optional: true, required: false
-  private _threatDetectionPolicy = new MysqlServerThreatDetectionPolicyOutputReference(this as any, "threat_detection_policy", true);
+  private _threatDetectionPolicy = new MysqlServerThreatDetectionPolicyOutputReference(this, "threat_detection_policy", true);
   public get threatDetectionPolicy() {
     return this._threatDetectionPolicy;
   }
@@ -1125,7 +1134,7 @@ export class MysqlServer extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new MysqlServerTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new MysqlServerTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -1164,7 +1173,7 @@ export class MysqlServer extends cdktf.TerraformResource {
       ssl_enforcement_enabled: cdktf.booleanToTerraform(this._sslEnforcementEnabled),
       ssl_minimal_tls_version_enforced: cdktf.stringToTerraform(this._sslMinimalTlsVersionEnforced),
       storage_mb: cdktf.numberToTerraform(this._storageMb),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       version: cdktf.stringToTerraform(this._version),
       identity: mysqlServerIdentityToTerraform(this._identity.internalValue),
       storage_profile: mysqlServerStorageProfileToTerraform(this._storageProfile.internalValue),

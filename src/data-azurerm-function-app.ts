@@ -18,7 +18,7 @@ export interface DataAzurermFunctionAppConfig extends cdktf.TerraformMetaArgumen
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/function_app#tags DataAzurermFunctionApp#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   * 
@@ -64,34 +64,34 @@ export class DataAzurermFunctionAppSiteConfigCors extends cdktf.ComplexComputedL
 
   // allowed_origins - computed: true, optional: false, required: false
   public get allowedOrigins() {
-    return this.getListAttribute('allowed_origins');
+    return cdktf.Fn.tolist(this.getListAttribute('allowed_origins'));
   }
 
   // support_credentials - computed: true, optional: false, required: false
   public get supportCredentials() {
-    return this.getBooleanAttribute('support_credentials') as any;
+    return this.getBooleanAttribute('support_credentials');
   }
 }
 export class DataAzurermFunctionAppSiteConfigIpRestrictionHeaders extends cdktf.ComplexComputedList {
 
   // x_azure_fdid - computed: true, optional: false, required: false
   public get xAzureFdid() {
-    return this.getListAttribute('x_azure_fdid');
+    return cdktf.Fn.tolist(this.getListAttribute('x_azure_fdid'));
   }
 
   // x_fd_health_probe - computed: true, optional: false, required: false
   public get xFdHealthProbe() {
-    return this.getListAttribute('x_fd_health_probe');
+    return cdktf.Fn.tolist(this.getListAttribute('x_fd_health_probe'));
   }
 
   // x_forwarded_for - computed: true, optional: false, required: false
   public get xForwardedFor() {
-    return this.getListAttribute('x_forwarded_for');
+    return cdktf.Fn.tolist(this.getListAttribute('x_forwarded_for'));
   }
 
   // x_forwarded_host - computed: true, optional: false, required: false
   public get xForwardedHost() {
-    return this.getListAttribute('x_forwarded_host');
+    return cdktf.Fn.tolist(this.getListAttribute('x_forwarded_host'));
   }
 }
 export class DataAzurermFunctionAppSiteConfigIpRestriction extends cdktf.ComplexComputedList {
@@ -104,7 +104,7 @@ export class DataAzurermFunctionAppSiteConfigIpRestriction extends cdktf.Complex
   // headers - computed: true, optional: false, required: false
   public get headers() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('headers') as any;
+    return this.interpolationForAttribute('headers');
   }
 
   // ip_address - computed: true, optional: false, required: false
@@ -136,22 +136,22 @@ export class DataAzurermFunctionAppSiteConfigScmIpRestrictionHeaders extends cdk
 
   // x_azure_fdid - computed: true, optional: false, required: false
   public get xAzureFdid() {
-    return this.getListAttribute('x_azure_fdid');
+    return cdktf.Fn.tolist(this.getListAttribute('x_azure_fdid'));
   }
 
   // x_fd_health_probe - computed: true, optional: false, required: false
   public get xFdHealthProbe() {
-    return this.getListAttribute('x_fd_health_probe');
+    return cdktf.Fn.tolist(this.getListAttribute('x_fd_health_probe'));
   }
 
   // x_forwarded_for - computed: true, optional: false, required: false
   public get xForwardedFor() {
-    return this.getListAttribute('x_forwarded_for');
+    return cdktf.Fn.tolist(this.getListAttribute('x_forwarded_for'));
   }
 
   // x_forwarded_host - computed: true, optional: false, required: false
   public get xForwardedHost() {
-    return this.getListAttribute('x_forwarded_host');
+    return cdktf.Fn.tolist(this.getListAttribute('x_forwarded_host'));
   }
 }
 export class DataAzurermFunctionAppSiteConfigScmIpRestriction extends cdktf.ComplexComputedList {
@@ -164,7 +164,7 @@ export class DataAzurermFunctionAppSiteConfigScmIpRestriction extends cdktf.Comp
   // headers - computed: true, optional: false, required: false
   public get headers() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('headers') as any;
+    return this.interpolationForAttribute('headers');
   }
 
   // ip_address - computed: true, optional: false, required: false
@@ -196,7 +196,7 @@ export class DataAzurermFunctionAppSiteConfig extends cdktf.ComplexComputedList 
 
   // always_on - computed: true, optional: false, required: false
   public get alwaysOn() {
-    return this.getBooleanAttribute('always_on') as any;
+    return this.getBooleanAttribute('always_on');
   }
 
   // app_scale_limit - computed: true, optional: false, required: false
@@ -212,7 +212,7 @@ export class DataAzurermFunctionAppSiteConfig extends cdktf.ComplexComputedList 
   // cors - computed: true, optional: false, required: false
   public get cors() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('cors') as any;
+    return this.interpolationForAttribute('cors');
   }
 
   // dotnet_framework_version - computed: true, optional: false, required: false
@@ -237,13 +237,13 @@ export class DataAzurermFunctionAppSiteConfig extends cdktf.ComplexComputedList 
 
   // http2_enabled - computed: true, optional: false, required: false
   public get http2Enabled() {
-    return this.getBooleanAttribute('http2_enabled') as any;
+    return this.getBooleanAttribute('http2_enabled');
   }
 
   // ip_restriction - computed: true, optional: false, required: false
   public get ipRestriction() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('ip_restriction') as any;
+    return this.interpolationForAttribute('ip_restriction');
   }
 
   // java_version - computed: true, optional: false, required: false
@@ -268,13 +268,13 @@ export class DataAzurermFunctionAppSiteConfig extends cdktf.ComplexComputedList 
 
   // runtime_scale_monitoring_enabled - computed: true, optional: false, required: false
   public get runtimeScaleMonitoringEnabled() {
-    return this.getBooleanAttribute('runtime_scale_monitoring_enabled') as any;
+    return this.getBooleanAttribute('runtime_scale_monitoring_enabled');
   }
 
   // scm_ip_restriction - computed: true, optional: false, required: false
   public get scmIpRestriction() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('scm_ip_restriction') as any;
+    return this.interpolationForAttribute('scm_ip_restriction');
   }
 
   // scm_type - computed: true, optional: false, required: false
@@ -284,22 +284,22 @@ export class DataAzurermFunctionAppSiteConfig extends cdktf.ComplexComputedList 
 
   // scm_use_main_ip_restriction - computed: true, optional: false, required: false
   public get scmUseMainIpRestriction() {
-    return this.getBooleanAttribute('scm_use_main_ip_restriction') as any;
+    return this.getBooleanAttribute('scm_use_main_ip_restriction');
   }
 
   // use_32_bit_worker_process - computed: true, optional: false, required: false
   public get use32BitWorkerProcess() {
-    return this.getBooleanAttribute('use_32_bit_worker_process') as any;
+    return this.getBooleanAttribute('use_32_bit_worker_process');
   }
 
   // vnet_route_all_enabled - computed: true, optional: false, required: false
   public get vnetRouteAllEnabled() {
-    return this.getBooleanAttribute('vnet_route_all_enabled') as any;
+    return this.getBooleanAttribute('vnet_route_all_enabled');
   }
 
   // websockets_enabled - computed: true, optional: false, required: false
   public get websocketsEnabled() {
-    return this.getBooleanAttribute('websockets_enabled') as any;
+    return this.getBooleanAttribute('websockets_enabled');
   }
 }
 export class DataAzurermFunctionAppSiteCredential extends cdktf.ComplexComputedList {
@@ -323,7 +323,7 @@ export class DataAzurermFunctionAppSourceControl extends cdktf.ComplexComputedLi
 
   // manual_integration - computed: true, optional: false, required: false
   public get manualIntegration() {
-    return this.getBooleanAttribute('manual_integration') as any;
+    return this.getBooleanAttribute('manual_integration');
   }
 
   // repo_url - computed: true, optional: false, required: false
@@ -333,12 +333,12 @@ export class DataAzurermFunctionAppSourceControl extends cdktf.ComplexComputedLi
 
   // rollback_enabled - computed: true, optional: false, required: false
   public get rollbackEnabled() {
-    return this.getBooleanAttribute('rollback_enabled') as any;
+    return this.getBooleanAttribute('rollback_enabled');
   }
 
   // use_mercurial - computed: true, optional: false, required: false
   public get useMercurial() {
-    return this.getBooleanAttribute('use_mercurial') as any;
+    return this.getBooleanAttribute('use_mercurial');
   }
 }
 export interface DataAzurermFunctionAppTimeouts {
@@ -348,8 +348,8 @@ export interface DataAzurermFunctionAppTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermFunctionAppTimeoutsToTerraform(struct?: DataAzurermFunctionAppTimeoutsOutputReference | DataAzurermFunctionAppTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermFunctionAppTimeoutsToTerraform(struct?: DataAzurermFunctionAppTimeoutsOutputReference | DataAzurermFunctionAppTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -366,7 +366,7 @@ export class DataAzurermFunctionAppTimeoutsOutputReference extends cdktf.Complex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -456,7 +456,7 @@ export class DataAzurermFunctionApp extends cdktf.TerraformDataSource {
   }
 
   // app_settings - computed: true, optional: false, required: false
-  public appSettings(key: string): string {
+  public appSettings(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'app_settings').lookup(key);
   }
 
@@ -467,7 +467,7 @@ export class DataAzurermFunctionApp extends cdktf.TerraformDataSource {
 
   // connection_string - computed: true, optional: false, required: false
   public connectionString(index: string) {
-    return new DataAzurermFunctionAppConnectionString(this, 'connection_string', index);
+    return new DataAzurermFunctionAppConnectionString(this, 'connection_string', index, false);
   }
 
   // custom_domain_verification_id - computed: true, optional: false, required: false
@@ -482,7 +482,7 @@ export class DataAzurermFunctionApp extends cdktf.TerraformDataSource {
 
   // enabled - computed: true, optional: false, required: false
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
 
   // id - computed: true, optional: true, required: false
@@ -492,7 +492,7 @@ export class DataAzurermFunctionApp extends cdktf.TerraformDataSource {
 
   // identity - computed: true, optional: false, required: false
   public identity(index: string) {
-    return new DataAzurermFunctionAppIdentity(this, 'identity', index);
+    return new DataAzurermFunctionAppIdentity(this, 'identity', index, false);
   }
 
   // location - computed: true, optional: false, required: false
@@ -543,26 +543,25 @@ export class DataAzurermFunctionApp extends cdktf.TerraformDataSource {
 
   // site_config - computed: true, optional: false, required: false
   public siteConfig(index: string) {
-    return new DataAzurermFunctionAppSiteConfig(this, 'site_config', index);
+    return new DataAzurermFunctionAppSiteConfig(this, 'site_config', index, false);
   }
 
   // site_credential - computed: true, optional: false, required: false
   public siteCredential(index: string) {
-    return new DataAzurermFunctionAppSiteCredential(this, 'site_credential', index);
+    return new DataAzurermFunctionAppSiteCredential(this, 'site_credential', index, false);
   }
 
   // source_control - computed: true, optional: false, required: false
   public sourceControl(index: string) {
-    return new DataAzurermFunctionAppSourceControl(this, 'source_control', index);
+    return new DataAzurermFunctionAppSourceControl(this, 'source_control', index, false);
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -574,7 +573,7 @@ export class DataAzurermFunctionApp extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermFunctionAppTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermFunctionAppTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -597,7 +596,7 @@ export class DataAzurermFunctionApp extends cdktf.TerraformDataSource {
     return {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       timeouts: dataAzurermFunctionAppTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

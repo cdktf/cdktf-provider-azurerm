@@ -58,7 +58,7 @@ export interface ResourcePolicyAssignmentConfig extends cdktf.TerraformMetaArgum
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_assignment#non_compliance_message ResourcePolicyAssignment#non_compliance_message}
   */
-  readonly nonComplianceMessage?: ResourcePolicyAssignmentNonComplianceMessage[];
+  readonly nonComplianceMessage?: ResourcePolicyAssignmentNonComplianceMessage[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -74,7 +74,7 @@ export interface ResourcePolicyAssignmentIdentity {
 }
 
 export function resourcePolicyAssignmentIdentityToTerraform(struct?: ResourcePolicyAssignmentIdentityOutputReference | ResourcePolicyAssignmentIdentity): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -91,7 +91,7 @@ export class ResourcePolicyAssignmentIdentityOutputReference extends cdktf.Compl
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -114,6 +114,16 @@ export class ResourcePolicyAssignmentIdentityOutputReference extends cdktf.Compl
       this.isEmptyObject = Object.keys(value).length === 0;
       this._type = value.type;
     }
+  }
+
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
   }
 
   // type - computed: false, optional: true, required: false
@@ -143,8 +153,8 @@ export interface ResourcePolicyAssignmentNonComplianceMessage {
   readonly policyDefinitionReferenceId?: string;
 }
 
-export function resourcePolicyAssignmentNonComplianceMessageToTerraform(struct?: ResourcePolicyAssignmentNonComplianceMessage): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function resourcePolicyAssignmentNonComplianceMessageToTerraform(struct?: ResourcePolicyAssignmentNonComplianceMessage | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -173,8 +183,8 @@ export interface ResourcePolicyAssignmentTimeouts {
   readonly update?: string;
 }
 
-export function resourcePolicyAssignmentTimeoutsToTerraform(struct?: ResourcePolicyAssignmentTimeoutsOutputReference | ResourcePolicyAssignmentTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function resourcePolicyAssignmentTimeoutsToTerraform(struct?: ResourcePolicyAssignmentTimeoutsOutputReference | ResourcePolicyAssignmentTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -194,7 +204,7 @@ export class ResourcePolicyAssignmentTimeoutsOutputReference extends cdktf.Compl
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -388,7 +398,7 @@ export class ResourcePolicyAssignment extends cdktf.TerraformResource {
   // enforce - computed: false, optional: true, required: false
   private _enforce?: boolean | cdktf.IResolvable; 
   public get enforce() {
-    return this.getBooleanAttribute('enforce') as any;
+    return this.getBooleanAttribute('enforce');
   }
   public set enforce(value: boolean | cdktf.IResolvable) {
     this._enforce = value;
@@ -510,7 +520,7 @@ export class ResourcePolicyAssignment extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity = new ResourcePolicyAssignmentIdentityOutputReference(this as any, "identity", true);
+  private _identity = new ResourcePolicyAssignmentIdentityOutputReference(this, "identity", true);
   public get identity() {
     return this._identity;
   }
@@ -526,12 +536,12 @@ export class ResourcePolicyAssignment extends cdktf.TerraformResource {
   }
 
   // non_compliance_message - computed: false, optional: true, required: false
-  private _nonComplianceMessage?: ResourcePolicyAssignmentNonComplianceMessage[]; 
+  private _nonComplianceMessage?: ResourcePolicyAssignmentNonComplianceMessage[] | cdktf.IResolvable; 
   public get nonComplianceMessage() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('non_compliance_message') as any;
+    return this.interpolationForAttribute('non_compliance_message');
   }
-  public set nonComplianceMessage(value: ResourcePolicyAssignmentNonComplianceMessage[]) {
+  public set nonComplianceMessage(value: ResourcePolicyAssignmentNonComplianceMessage[] | cdktf.IResolvable) {
     this._nonComplianceMessage = value;
   }
   public resetNonComplianceMessage() {
@@ -543,7 +553,7 @@ export class ResourcePolicyAssignment extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ResourcePolicyAssignmentTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ResourcePolicyAssignmentTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

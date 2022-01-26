@@ -34,7 +34,7 @@ export interface PurviewAccountConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/purview_account#tags PurviewAccount#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   * 
@@ -95,8 +95,8 @@ export interface PurviewAccountTimeouts {
   readonly update?: string;
 }
 
-export function purviewAccountTimeoutsToTerraform(struct?: PurviewAccountTimeoutsOutputReference | PurviewAccountTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function purviewAccountTimeoutsToTerraform(struct?: PurviewAccountTimeoutsOutputReference | PurviewAccountTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -116,7 +116,7 @@ export class PurviewAccountTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -297,7 +297,7 @@ export class PurviewAccount extends cdktf.TerraformResource {
 
   // identity - computed: true, optional: false, required: false
   public identity(index: string) {
-    return new PurviewAccountIdentity(this, 'identity', index);
+    return new PurviewAccountIdentity(this, 'identity', index, false);
   }
 
   // location - computed: false, optional: false, required: true
@@ -331,7 +331,7 @@ export class PurviewAccount extends cdktf.TerraformResource {
 
   // managed_resources - computed: true, optional: false, required: false
   public managedResources(index: string) {
-    return new PurviewAccountManagedResources(this, 'managed_resources', index);
+    return new PurviewAccountManagedResources(this, 'managed_resources', index, false);
   }
 
   // name - computed: false, optional: false, required: true
@@ -350,7 +350,7 @@ export class PurviewAccount extends cdktf.TerraformResource {
   // public_network_enabled - computed: false, optional: true, required: false
   private _publicNetworkEnabled?: boolean | cdktf.IResolvable; 
   public get publicNetworkEnabled() {
-    return this.getBooleanAttribute('public_network_enabled') as any;
+    return this.getBooleanAttribute('public_network_enabled');
   }
   public set publicNetworkEnabled(value: boolean | cdktf.IResolvable) {
     this._publicNetworkEnabled = value;
@@ -398,12 +398,11 @@ export class PurviewAccount extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -415,7 +414,7 @@ export class PurviewAccount extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new PurviewAccountTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new PurviewAccountTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -442,7 +441,7 @@ export class PurviewAccount extends cdktf.TerraformResource {
       public_network_enabled: cdktf.booleanToTerraform(this._publicNetworkEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku_name: cdktf.stringToTerraform(this._skuName),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       timeouts: purviewAccountTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

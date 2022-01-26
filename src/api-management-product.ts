@@ -73,8 +73,8 @@ export interface ApiManagementProductTimeouts {
   readonly update?: string;
 }
 
-export function apiManagementProductTimeoutsToTerraform(struct?: ApiManagementProductTimeoutsOutputReference | ApiManagementProductTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function apiManagementProductTimeoutsToTerraform(struct?: ApiManagementProductTimeoutsOutputReference | ApiManagementProductTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -94,7 +94,7 @@ export class ApiManagementProductTimeoutsOutputReference extends cdktf.ComplexOb
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -267,7 +267,7 @@ export class ApiManagementProduct extends cdktf.TerraformResource {
   // approval_required - computed: false, optional: true, required: false
   private _approvalRequired?: boolean | cdktf.IResolvable; 
   public get approvalRequired() {
-    return this.getBooleanAttribute('approval_required') as any;
+    return this.getBooleanAttribute('approval_required');
   }
   public set approvalRequired(value: boolean | cdktf.IResolvable) {
     this._approvalRequired = value;
@@ -330,7 +330,7 @@ export class ApiManagementProduct extends cdktf.TerraformResource {
   // published - computed: false, optional: false, required: true
   private _published?: boolean | cdktf.IResolvable; 
   public get published() {
-    return this.getBooleanAttribute('published') as any;
+    return this.getBooleanAttribute('published');
   }
   public set published(value: boolean | cdktf.IResolvable) {
     this._published = value;
@@ -356,7 +356,7 @@ export class ApiManagementProduct extends cdktf.TerraformResource {
   // subscription_required - computed: false, optional: false, required: true
   private _subscriptionRequired?: boolean | cdktf.IResolvable; 
   public get subscriptionRequired() {
-    return this.getBooleanAttribute('subscription_required') as any;
+    return this.getBooleanAttribute('subscription_required');
   }
   public set subscriptionRequired(value: boolean | cdktf.IResolvable) {
     this._subscriptionRequired = value;
@@ -399,7 +399,7 @@ export class ApiManagementProduct extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ApiManagementProductTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ApiManagementProductTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

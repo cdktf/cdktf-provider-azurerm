@@ -10,7 +10,7 @@ export interface DataFactoryDatasetDelimitedTextConfig extends cdktf.TerraformMe
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text#additional_properties DataFactoryDatasetDelimitedText#additional_properties}
   */
-  readonly additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
+  readonly additionalProperties?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text#annotations DataFactoryDatasetDelimitedText#annotations}
   */
@@ -70,7 +70,7 @@ export interface DataFactoryDatasetDelimitedTextConfig extends cdktf.TerraformMe
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text#parameters DataFactoryDatasetDelimitedText#parameters}
   */
-  readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
+  readonly parameters?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text#quote_character DataFactoryDatasetDelimitedText#quote_character}
   */
@@ -106,7 +106,7 @@ export interface DataFactoryDatasetDelimitedTextConfig extends cdktf.TerraformMe
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text#schema_column DataFactoryDatasetDelimitedText#schema_column}
   */
-  readonly schemaColumn?: DataFactoryDatasetDelimitedTextSchemaColumn[];
+  readonly schemaColumn?: DataFactoryDatasetDelimitedTextSchemaColumn[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -130,7 +130,7 @@ export interface DataFactoryDatasetDelimitedTextAzureBlobFsLocation {
 }
 
 export function dataFactoryDatasetDelimitedTextAzureBlobFsLocationToTerraform(struct?: DataFactoryDatasetDelimitedTextAzureBlobFsLocationOutputReference | DataFactoryDatasetDelimitedTextAzureBlobFsLocation): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -149,7 +149,7 @@ export class DataFactoryDatasetDelimitedTextAzureBlobFsLocationOutputReference e
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -255,7 +255,7 @@ export interface DataFactoryDatasetDelimitedTextAzureBlobStorageLocation {
 }
 
 export function dataFactoryDatasetDelimitedTextAzureBlobStorageLocationToTerraform(struct?: DataFactoryDatasetDelimitedTextAzureBlobStorageLocationOutputReference | DataFactoryDatasetDelimitedTextAzureBlobStorageLocation): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -276,7 +276,7 @@ export class DataFactoryDatasetDelimitedTextAzureBlobStorageLocationOutputRefere
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -341,7 +341,7 @@ export class DataFactoryDatasetDelimitedTextAzureBlobStorageLocationOutputRefere
   // dynamic_filename_enabled - computed: false, optional: true, required: false
   private _dynamicFilenameEnabled?: boolean | cdktf.IResolvable; 
   public get dynamicFilenameEnabled() {
-    return this.getBooleanAttribute('dynamic_filename_enabled') as any;
+    return this.getBooleanAttribute('dynamic_filename_enabled');
   }
   public set dynamicFilenameEnabled(value: boolean | cdktf.IResolvable) {
     this._dynamicFilenameEnabled = value;
@@ -357,7 +357,7 @@ export class DataFactoryDatasetDelimitedTextAzureBlobStorageLocationOutputRefere
   // dynamic_path_enabled - computed: false, optional: true, required: false
   private _dynamicPathEnabled?: boolean | cdktf.IResolvable; 
   public get dynamicPathEnabled() {
-    return this.getBooleanAttribute('dynamic_path_enabled') as any;
+    return this.getBooleanAttribute('dynamic_path_enabled');
   }
   public set dynamicPathEnabled(value: boolean | cdktf.IResolvable) {
     this._dynamicPathEnabled = value;
@@ -426,7 +426,7 @@ export interface DataFactoryDatasetDelimitedTextHttpServerLocation {
 }
 
 export function dataFactoryDatasetDelimitedTextHttpServerLocationToTerraform(struct?: DataFactoryDatasetDelimitedTextHttpServerLocationOutputReference | DataFactoryDatasetDelimitedTextHttpServerLocation): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -447,7 +447,7 @@ export class DataFactoryDatasetDelimitedTextHttpServerLocationOutputReference ex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -499,7 +499,7 @@ export class DataFactoryDatasetDelimitedTextHttpServerLocationOutputReference ex
   // dynamic_filename_enabled - computed: false, optional: true, required: false
   private _dynamicFilenameEnabled?: boolean | cdktf.IResolvable; 
   public get dynamicFilenameEnabled() {
-    return this.getBooleanAttribute('dynamic_filename_enabled') as any;
+    return this.getBooleanAttribute('dynamic_filename_enabled');
   }
   public set dynamicFilenameEnabled(value: boolean | cdktf.IResolvable) {
     this._dynamicFilenameEnabled = value;
@@ -515,7 +515,7 @@ export class DataFactoryDatasetDelimitedTextHttpServerLocationOutputReference ex
   // dynamic_path_enabled - computed: false, optional: true, required: false
   private _dynamicPathEnabled?: boolean | cdktf.IResolvable; 
   public get dynamicPathEnabled() {
-    return this.getBooleanAttribute('dynamic_path_enabled') as any;
+    return this.getBooleanAttribute('dynamic_path_enabled');
   }
   public set dynamicPathEnabled(value: boolean | cdktf.IResolvable) {
     this._dynamicPathEnabled = value;
@@ -582,8 +582,8 @@ export interface DataFactoryDatasetDelimitedTextSchemaColumn {
   readonly type?: string;
 }
 
-export function dataFactoryDatasetDelimitedTextSchemaColumnToTerraform(struct?: DataFactoryDatasetDelimitedTextSchemaColumn): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataFactoryDatasetDelimitedTextSchemaColumnToTerraform(struct?: DataFactoryDatasetDelimitedTextSchemaColumn | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -613,8 +613,8 @@ export interface DataFactoryDatasetDelimitedTextTimeouts {
   readonly update?: string;
 }
 
-export function dataFactoryDatasetDelimitedTextTimeoutsToTerraform(struct?: DataFactoryDatasetDelimitedTextTimeoutsOutputReference | DataFactoryDatasetDelimitedTextTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataFactoryDatasetDelimitedTextTimeoutsToTerraform(struct?: DataFactoryDatasetDelimitedTextTimeoutsOutputReference | DataFactoryDatasetDelimitedTextTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -634,7 +634,7 @@ export class DataFactoryDatasetDelimitedTextTimeoutsOutputReference extends cdkt
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -805,12 +805,11 @@ export class DataFactoryDatasetDelimitedText extends cdktf.TerraformResource {
   // ==========
 
   // additional_properties - computed: false, optional: true, required: false
-  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable; 
+  private _additionalProperties?: { [key: string]: string }; 
   public get additionalProperties() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('additional_properties') as any;
+    return this.getStringMapAttribute('additional_properties');
   }
-  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set additionalProperties(value: { [key: string]: string }) {
     this._additionalProperties = value;
   }
   public resetAdditionalProperties() {
@@ -968,7 +967,7 @@ export class DataFactoryDatasetDelimitedText extends cdktf.TerraformResource {
   // first_row_as_header - computed: false, optional: true, required: false
   private _firstRowAsHeader?: boolean | cdktf.IResolvable; 
   public get firstRowAsHeader() {
-    return this.getBooleanAttribute('first_row_as_header') as any;
+    return this.getBooleanAttribute('first_row_as_header');
   }
   public set firstRowAsHeader(value: boolean | cdktf.IResolvable) {
     this._firstRowAsHeader = value;
@@ -1045,12 +1044,11 @@ export class DataFactoryDatasetDelimitedText extends cdktf.TerraformResource {
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string } | cdktf.IResolvable; 
+  private _parameters?: { [key: string]: string }; 
   public get parameters() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('parameters') as any;
+    return this.getStringMapAttribute('parameters');
   }
-  public set parameters(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set parameters(value: { [key: string]: string }) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -1107,7 +1105,7 @@ export class DataFactoryDatasetDelimitedText extends cdktf.TerraformResource {
   }
 
   // azure_blob_fs_location - computed: false, optional: true, required: false
-  private _azureBlobFsLocation = new DataFactoryDatasetDelimitedTextAzureBlobFsLocationOutputReference(this as any, "azure_blob_fs_location", true);
+  private _azureBlobFsLocation = new DataFactoryDatasetDelimitedTextAzureBlobFsLocationOutputReference(this, "azure_blob_fs_location", true);
   public get azureBlobFsLocation() {
     return this._azureBlobFsLocation;
   }
@@ -1123,7 +1121,7 @@ export class DataFactoryDatasetDelimitedText extends cdktf.TerraformResource {
   }
 
   // azure_blob_storage_location - computed: false, optional: true, required: false
-  private _azureBlobStorageLocation = new DataFactoryDatasetDelimitedTextAzureBlobStorageLocationOutputReference(this as any, "azure_blob_storage_location", true);
+  private _azureBlobStorageLocation = new DataFactoryDatasetDelimitedTextAzureBlobStorageLocationOutputReference(this, "azure_blob_storage_location", true);
   public get azureBlobStorageLocation() {
     return this._azureBlobStorageLocation;
   }
@@ -1139,7 +1137,7 @@ export class DataFactoryDatasetDelimitedText extends cdktf.TerraformResource {
   }
 
   // http_server_location - computed: false, optional: true, required: false
-  private _httpServerLocation = new DataFactoryDatasetDelimitedTextHttpServerLocationOutputReference(this as any, "http_server_location", true);
+  private _httpServerLocation = new DataFactoryDatasetDelimitedTextHttpServerLocationOutputReference(this, "http_server_location", true);
   public get httpServerLocation() {
     return this._httpServerLocation;
   }
@@ -1155,12 +1153,12 @@ export class DataFactoryDatasetDelimitedText extends cdktf.TerraformResource {
   }
 
   // schema_column - computed: false, optional: true, required: false
-  private _schemaColumn?: DataFactoryDatasetDelimitedTextSchemaColumn[]; 
+  private _schemaColumn?: DataFactoryDatasetDelimitedTextSchemaColumn[] | cdktf.IResolvable; 
   public get schemaColumn() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('schema_column') as any;
+    return this.interpolationForAttribute('schema_column');
   }
-  public set schemaColumn(value: DataFactoryDatasetDelimitedTextSchemaColumn[]) {
+  public set schemaColumn(value: DataFactoryDatasetDelimitedTextSchemaColumn[] | cdktf.IResolvable) {
     this._schemaColumn = value;
   }
   public resetSchemaColumn() {
@@ -1172,7 +1170,7 @@ export class DataFactoryDatasetDelimitedText extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataFactoryDatasetDelimitedTextTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataFactoryDatasetDelimitedTextTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -1193,7 +1191,7 @@ export class DataFactoryDatasetDelimitedText extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      additional_properties: cdktf.hashMapper(cdktf.anyToTerraform)(this._additionalProperties),
+      additional_properties: cdktf.hashMapper(cdktf.stringToTerraform)(this._additionalProperties),
       annotations: cdktf.listMapper(cdktf.stringToTerraform)(this._annotations),
       column_delimiter: cdktf.stringToTerraform(this._columnDelimiter),
       compression_codec: cdktf.stringToTerraform(this._compressionCodec),
@@ -1208,7 +1206,7 @@ export class DataFactoryDatasetDelimitedText extends cdktf.TerraformResource {
       linked_service_name: cdktf.stringToTerraform(this._linkedServiceName),
       name: cdktf.stringToTerraform(this._name),
       null_value: cdktf.stringToTerraform(this._nullValue),
-      parameters: cdktf.hashMapper(cdktf.anyToTerraform)(this._parameters),
+      parameters: cdktf.hashMapper(cdktf.stringToTerraform)(this._parameters),
       quote_character: cdktf.stringToTerraform(this._quoteCharacter),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       row_delimiter: cdktf.stringToTerraform(this._rowDelimiter),

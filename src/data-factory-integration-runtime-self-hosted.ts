@@ -32,7 +32,7 @@ export interface DataFactoryIntegrationRuntimeSelfHostedConfig extends cdktf.Ter
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_self_hosted#rbac_authorization DataFactoryIntegrationRuntimeSelfHosted#rbac_authorization}
   */
-  readonly rbacAuthorization?: DataFactoryIntegrationRuntimeSelfHostedRbacAuthorization[];
+  readonly rbacAuthorization?: DataFactoryIntegrationRuntimeSelfHostedRbacAuthorization[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -47,8 +47,8 @@ export interface DataFactoryIntegrationRuntimeSelfHostedRbacAuthorization {
   readonly resourceId: string;
 }
 
-export function dataFactoryIntegrationRuntimeSelfHostedRbacAuthorizationToTerraform(struct?: DataFactoryIntegrationRuntimeSelfHostedRbacAuthorization): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataFactoryIntegrationRuntimeSelfHostedRbacAuthorizationToTerraform(struct?: DataFactoryIntegrationRuntimeSelfHostedRbacAuthorization | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -76,8 +76,8 @@ export interface DataFactoryIntegrationRuntimeSelfHostedTimeouts {
   readonly update?: string;
 }
 
-export function dataFactoryIntegrationRuntimeSelfHostedTimeoutsToTerraform(struct?: DataFactoryIntegrationRuntimeSelfHostedTimeoutsOutputReference | DataFactoryIntegrationRuntimeSelfHostedTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataFactoryIntegrationRuntimeSelfHostedTimeoutsToTerraform(struct?: DataFactoryIntegrationRuntimeSelfHostedTimeoutsOutputReference | DataFactoryIntegrationRuntimeSelfHostedTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -97,7 +97,7 @@ export class DataFactoryIntegrationRuntimeSelfHostedTimeoutsOutputReference exte
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -340,12 +340,12 @@ export class DataFactoryIntegrationRuntimeSelfHosted extends cdktf.TerraformReso
   }
 
   // rbac_authorization - computed: false, optional: true, required: false
-  private _rbacAuthorization?: DataFactoryIntegrationRuntimeSelfHostedRbacAuthorization[]; 
+  private _rbacAuthorization?: DataFactoryIntegrationRuntimeSelfHostedRbacAuthorization[] | cdktf.IResolvable; 
   public get rbacAuthorization() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('rbac_authorization') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('rbac_authorization')));
   }
-  public set rbacAuthorization(value: DataFactoryIntegrationRuntimeSelfHostedRbacAuthorization[]) {
+  public set rbacAuthorization(value: DataFactoryIntegrationRuntimeSelfHostedRbacAuthorization[] | cdktf.IResolvable) {
     this._rbacAuthorization = value;
   }
   public resetRbacAuthorization() {
@@ -357,7 +357,7 @@ export class DataFactoryIntegrationRuntimeSelfHosted extends cdktf.TerraformReso
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataFactoryIntegrationRuntimeSelfHostedTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataFactoryIntegrationRuntimeSelfHostedTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

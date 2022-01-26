@@ -34,7 +34,7 @@ export interface RecoveryServicesVaultConfig extends cdktf.TerraformMetaArgument
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/recovery_services_vault#tags RecoveryServicesVault#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * encryption block
   * 
@@ -70,7 +70,7 @@ export interface RecoveryServicesVaultEncryption {
 }
 
 export function recoveryServicesVaultEncryptionToTerraform(struct?: RecoveryServicesVaultEncryptionOutputReference | RecoveryServicesVaultEncryption): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -89,7 +89,7 @@ export class RecoveryServicesVaultEncryptionOutputReference extends cdktf.Comple
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -129,7 +129,7 @@ export class RecoveryServicesVaultEncryptionOutputReference extends cdktf.Comple
   // infrastructure_encryption_enabled - computed: false, optional: false, required: true
   private _infrastructureEncryptionEnabled?: boolean | cdktf.IResolvable; 
   public get infrastructureEncryptionEnabled() {
-    return this.getBooleanAttribute('infrastructure_encryption_enabled') as any;
+    return this.getBooleanAttribute('infrastructure_encryption_enabled');
   }
   public set infrastructureEncryptionEnabled(value: boolean | cdktf.IResolvable) {
     this._infrastructureEncryptionEnabled = value;
@@ -155,7 +155,7 @@ export class RecoveryServicesVaultEncryptionOutputReference extends cdktf.Comple
   // use_system_assigned_identity - computed: false, optional: true, required: false
   private _useSystemAssignedIdentity?: boolean | cdktf.IResolvable; 
   public get useSystemAssignedIdentity() {
-    return this.getBooleanAttribute('use_system_assigned_identity') as any;
+    return this.getBooleanAttribute('use_system_assigned_identity');
   }
   public set useSystemAssignedIdentity(value: boolean | cdktf.IResolvable) {
     this._useSystemAssignedIdentity = value;
@@ -176,7 +176,7 @@ export interface RecoveryServicesVaultIdentity {
 }
 
 export function recoveryServicesVaultIdentityToTerraform(struct?: RecoveryServicesVaultIdentityOutputReference | RecoveryServicesVaultIdentity): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -193,7 +193,7 @@ export class RecoveryServicesVaultIdentityOutputReference extends cdktf.ComplexO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -216,6 +216,16 @@ export class RecoveryServicesVaultIdentityOutputReference extends cdktf.ComplexO
       this.isEmptyObject = Object.keys(value).length === 0;
       this._type = value.type;
     }
+  }
+
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
   }
 
   // type - computed: false, optional: false, required: true
@@ -250,8 +260,8 @@ export interface RecoveryServicesVaultTimeouts {
   readonly update?: string;
 }
 
-export function recoveryServicesVaultTimeoutsToTerraform(struct?: RecoveryServicesVaultTimeoutsOutputReference | RecoveryServicesVaultTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function recoveryServicesVaultTimeoutsToTerraform(struct?: RecoveryServicesVaultTimeoutsOutputReference | RecoveryServicesVaultTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -271,7 +281,7 @@ export class RecoveryServicesVaultTimeoutsOutputReference extends cdktf.ComplexO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -487,7 +497,7 @@ export class RecoveryServicesVault extends cdktf.TerraformResource {
   // soft_delete_enabled - computed: false, optional: true, required: false
   private _softDeleteEnabled?: boolean | cdktf.IResolvable; 
   public get softDeleteEnabled() {
-    return this.getBooleanAttribute('soft_delete_enabled') as any;
+    return this.getBooleanAttribute('soft_delete_enabled');
   }
   public set softDeleteEnabled(value: boolean | cdktf.IResolvable) {
     this._softDeleteEnabled = value;
@@ -517,12 +527,11 @@ export class RecoveryServicesVault extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -534,7 +543,7 @@ export class RecoveryServicesVault extends cdktf.TerraformResource {
   }
 
   // encryption - computed: false, optional: true, required: false
-  private _encryption = new RecoveryServicesVaultEncryptionOutputReference(this as any, "encryption", true);
+  private _encryption = new RecoveryServicesVaultEncryptionOutputReference(this, "encryption", true);
   public get encryption() {
     return this._encryption;
   }
@@ -550,7 +559,7 @@ export class RecoveryServicesVault extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity = new RecoveryServicesVaultIdentityOutputReference(this as any, "identity", true);
+  private _identity = new RecoveryServicesVaultIdentityOutputReference(this, "identity", true);
   public get identity() {
     return this._identity;
   }
@@ -566,7 +575,7 @@ export class RecoveryServicesVault extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new RecoveryServicesVaultTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new RecoveryServicesVaultTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -593,7 +602,7 @@ export class RecoveryServicesVault extends cdktf.TerraformResource {
       sku: cdktf.stringToTerraform(this._sku),
       soft_delete_enabled: cdktf.booleanToTerraform(this._softDeleteEnabled),
       storage_mode_type: cdktf.stringToTerraform(this._storageModeType),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       encryption: recoveryServicesVaultEncryptionToTerraform(this._encryption.internalValue),
       identity: recoveryServicesVaultIdentityToTerraform(this._identity.internalValue),
       timeouts: recoveryServicesVaultTimeoutsToTerraform(this._timeouts.internalValue),

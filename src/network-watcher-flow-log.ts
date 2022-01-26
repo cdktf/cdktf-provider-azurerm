@@ -34,7 +34,7 @@ export interface NetworkWatcherFlowLogConfig extends cdktf.TerraformMetaArgument
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_watcher_flow_log#tags NetworkWatcherFlowLog#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_watcher_flow_log#version NetworkWatcherFlowLog#version}
   */
@@ -70,7 +70,7 @@ export interface NetworkWatcherFlowLogRetentionPolicy {
 }
 
 export function networkWatcherFlowLogRetentionPolicyToTerraform(struct?: NetworkWatcherFlowLogRetentionPolicyOutputReference | NetworkWatcherFlowLogRetentionPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -88,7 +88,7 @@ export class NetworkWatcherFlowLogRetentionPolicyOutputReference extends cdktf.C
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -135,7 +135,7 @@ export class NetworkWatcherFlowLogRetentionPolicyOutputReference extends cdktf.C
   // enabled - computed: false, optional: false, required: true
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
@@ -164,8 +164,8 @@ export interface NetworkWatcherFlowLogTimeouts {
   readonly update?: string;
 }
 
-export function networkWatcherFlowLogTimeoutsToTerraform(struct?: NetworkWatcherFlowLogTimeoutsOutputReference | NetworkWatcherFlowLogTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function networkWatcherFlowLogTimeoutsToTerraform(struct?: NetworkWatcherFlowLogTimeoutsOutputReference | NetworkWatcherFlowLogTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -185,7 +185,7 @@ export class NetworkWatcherFlowLogTimeoutsOutputReference extends cdktf.ComplexO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -316,7 +316,7 @@ export interface NetworkWatcherFlowLogTrafficAnalytics {
 }
 
 export function networkWatcherFlowLogTrafficAnalyticsToTerraform(struct?: NetworkWatcherFlowLogTrafficAnalyticsOutputReference | NetworkWatcherFlowLogTrafficAnalytics): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -337,7 +337,7 @@ export class NetworkWatcherFlowLogTrafficAnalyticsOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -389,7 +389,7 @@ export class NetworkWatcherFlowLogTrafficAnalyticsOutputReference extends cdktf.
   // enabled - computed: false, optional: false, required: true
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
@@ -507,7 +507,7 @@ export class NetworkWatcherFlowLog extends cdktf.TerraformResource {
   // enabled - computed: false, optional: false, required: true
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
@@ -596,12 +596,11 @@ export class NetworkWatcherFlowLog extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -629,7 +628,7 @@ export class NetworkWatcherFlowLog extends cdktf.TerraformResource {
   }
 
   // retention_policy - computed: false, optional: false, required: true
-  private _retentionPolicy = new NetworkWatcherFlowLogRetentionPolicyOutputReference(this as any, "retention_policy", true);
+  private _retentionPolicy = new NetworkWatcherFlowLogRetentionPolicyOutputReference(this, "retention_policy", true);
   public get retentionPolicy() {
     return this._retentionPolicy;
   }
@@ -642,7 +641,7 @@ export class NetworkWatcherFlowLog extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new NetworkWatcherFlowLogTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new NetworkWatcherFlowLogTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -658,7 +657,7 @@ export class NetworkWatcherFlowLog extends cdktf.TerraformResource {
   }
 
   // traffic_analytics - computed: false, optional: true, required: false
-  private _trafficAnalytics = new NetworkWatcherFlowLogTrafficAnalyticsOutputReference(this as any, "traffic_analytics", true);
+  private _trafficAnalytics = new NetworkWatcherFlowLogTrafficAnalyticsOutputReference(this, "traffic_analytics", true);
   public get trafficAnalytics() {
     return this._trafficAnalytics;
   }
@@ -685,7 +684,7 @@ export class NetworkWatcherFlowLog extends cdktf.TerraformResource {
       network_watcher_name: cdktf.stringToTerraform(this._networkWatcherName),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       version: cdktf.numberToTerraform(this._version),
       retention_policy: networkWatcherFlowLogRetentionPolicyToTerraform(this._retentionPolicy.internalValue),
       timeouts: networkWatcherFlowLogTimeoutsToTerraform(this._timeouts.internalValue),

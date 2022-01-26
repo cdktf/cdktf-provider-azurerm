@@ -68,7 +68,7 @@ export interface BlueprintAssignmentIdentity {
 }
 
 export function blueprintAssignmentIdentityToTerraform(struct?: BlueprintAssignmentIdentityOutputReference | BlueprintAssignmentIdentity): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -86,7 +86,7 @@ export class BlueprintAssignmentIdentityOutputReference extends cdktf.ComplexObj
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -130,6 +130,16 @@ export class BlueprintAssignmentIdentityOutputReference extends cdktf.ComplexObj
     return this._identityIds;
   }
 
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
+  }
+
   // type - computed: false, optional: false, required: true
   private _type?: string; 
   public get type() {
@@ -162,8 +172,8 @@ export interface BlueprintAssignmentTimeouts {
   readonly update?: string;
 }
 
-export function blueprintAssignmentTimeoutsToTerraform(struct?: BlueprintAssignmentTimeoutsOutputReference | BlueprintAssignmentTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function blueprintAssignmentTimeoutsToTerraform(struct?: BlueprintAssignmentTimeoutsOutputReference | BlueprintAssignmentTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -183,7 +193,7 @@ export class BlueprintAssignmentTimeoutsOutputReference extends cdktf.ComplexObj
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -498,7 +508,7 @@ export class BlueprintAssignment extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity = new BlueprintAssignmentIdentityOutputReference(this as any, "identity", true);
+  private _identity = new BlueprintAssignmentIdentityOutputReference(this, "identity", true);
   public get identity() {
     return this._identity;
   }
@@ -514,7 +524,7 @@ export class BlueprintAssignment extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new BlueprintAssignmentTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new BlueprintAssignmentTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

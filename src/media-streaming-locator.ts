@@ -52,7 +52,7 @@ export interface MediaStreamingLocatorConfig extends cdktf.TerraformMetaArgument
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_locator#content_key MediaStreamingLocator#content_key}
   */
-  readonly contentKey?: MediaStreamingLocatorContentKey[];
+  readonly contentKey?: MediaStreamingLocatorContentKey[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -83,8 +83,8 @@ export interface MediaStreamingLocatorContentKey {
   readonly value?: string;
 }
 
-export function mediaStreamingLocatorContentKeyToTerraform(struct?: MediaStreamingLocatorContentKey): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function mediaStreamingLocatorContentKeyToTerraform(struct?: MediaStreamingLocatorContentKey | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -112,8 +112,8 @@ export interface MediaStreamingLocatorTimeouts {
   readonly read?: string;
 }
 
-export function mediaStreamingLocatorTimeoutsToTerraform(struct?: MediaStreamingLocatorTimeoutsOutputReference | MediaStreamingLocatorTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function mediaStreamingLocatorTimeoutsToTerraform(struct?: MediaStreamingLocatorTimeoutsOutputReference | MediaStreamingLocatorTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -132,7 +132,7 @@ export class MediaStreamingLocatorTimeoutsOutputReference extends cdktf.ComplexO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -419,12 +419,12 @@ export class MediaStreamingLocator extends cdktf.TerraformResource {
   }
 
   // content_key - computed: false, optional: true, required: false
-  private _contentKey?: MediaStreamingLocatorContentKey[]; 
+  private _contentKey?: MediaStreamingLocatorContentKey[] | cdktf.IResolvable; 
   public get contentKey() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('content_key') as any;
+    return this.interpolationForAttribute('content_key');
   }
-  public set contentKey(value: MediaStreamingLocatorContentKey[]) {
+  public set contentKey(value: MediaStreamingLocatorContentKey[] | cdktf.IResolvable) {
     this._contentKey = value;
   }
   public resetContentKey() {
@@ -436,7 +436,7 @@ export class MediaStreamingLocator extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new MediaStreamingLocatorTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new MediaStreamingLocatorTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

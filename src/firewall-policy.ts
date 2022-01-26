@@ -34,7 +34,7 @@ export interface FirewallPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy#tags FirewallPolicy#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy#threat_intelligence_mode FirewallPolicy#threat_intelligence_mode}
   */
@@ -98,7 +98,7 @@ export interface FirewallPolicyDns {
 }
 
 export function firewallPolicyDnsToTerraform(struct?: FirewallPolicyDnsOutputReference | FirewallPolicyDns): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -117,7 +117,7 @@ export class FirewallPolicyDnsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -157,7 +157,7 @@ export class FirewallPolicyDnsOutputReference extends cdktf.ComplexObject {
   // network_rule_fqdn_enabled - computed: true, optional: true, required: false
   private _networkRuleFqdnEnabled?: boolean | cdktf.IResolvable; 
   public get networkRuleFqdnEnabled() {
-    return this.getBooleanAttribute('network_rule_fqdn_enabled') as any;
+    return this.getBooleanAttribute('network_rule_fqdn_enabled');
   }
   public set networkRuleFqdnEnabled(value: boolean | cdktf.IResolvable) {
     this._networkRuleFqdnEnabled = value;
@@ -173,7 +173,7 @@ export class FirewallPolicyDnsOutputReference extends cdktf.ComplexObject {
   // proxy_enabled - computed: false, optional: true, required: false
   private _proxyEnabled?: boolean | cdktf.IResolvable; 
   public get proxyEnabled() {
-    return this.getBooleanAttribute('proxy_enabled') as any;
+    return this.getBooleanAttribute('proxy_enabled');
   }
   public set proxyEnabled(value: boolean | cdktf.IResolvable) {
     this._proxyEnabled = value;
@@ -189,7 +189,7 @@ export class FirewallPolicyDnsOutputReference extends cdktf.ComplexObject {
   // servers - computed: false, optional: true, required: false
   private _servers?: string[]; 
   public get servers() {
-    return this.getListAttribute('servers');
+    return cdktf.Fn.tolist(this.getListAttribute('servers'));
   }
   public set servers(value: string[]) {
     this._servers = value;
@@ -214,7 +214,7 @@ export interface FirewallPolicyIdentity {
 }
 
 export function firewallPolicyIdentityToTerraform(struct?: FirewallPolicyIdentityOutputReference | FirewallPolicyIdentity): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -232,7 +232,7 @@ export class FirewallPolicyIdentityOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -263,6 +263,16 @@ export class FirewallPolicyIdentityOutputReference extends cdktf.ComplexObject {
     }
   }
 
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
+  }
+
   // type - computed: false, optional: false, required: true
   private _type?: string; 
   public get type() {
@@ -279,7 +289,7 @@ export class FirewallPolicyIdentityOutputReference extends cdktf.ComplexObject {
   // user_assigned_identity_ids - computed: false, optional: true, required: false
   private _userAssignedIdentityIds?: string[]; 
   public get userAssignedIdentityIds() {
-    return this.getListAttribute('user_assigned_identity_ids');
+    return cdktf.Fn.tolist(this.getListAttribute('user_assigned_identity_ids'));
   }
   public set userAssignedIdentityIds(value: string[]) {
     this._userAssignedIdentityIds = value;
@@ -303,8 +313,8 @@ export interface FirewallPolicyInsightsLogAnalyticsWorkspace {
   readonly id: string;
 }
 
-export function firewallPolicyInsightsLogAnalyticsWorkspaceToTerraform(struct?: FirewallPolicyInsightsLogAnalyticsWorkspace): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function firewallPolicyInsightsLogAnalyticsWorkspaceToTerraform(struct?: FirewallPolicyInsightsLogAnalyticsWorkspace | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -332,11 +342,11 @@ export interface FirewallPolicyInsights {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy#log_analytics_workspace FirewallPolicy#log_analytics_workspace}
   */
-  readonly logAnalyticsWorkspace?: FirewallPolicyInsightsLogAnalyticsWorkspace[];
+  readonly logAnalyticsWorkspace?: FirewallPolicyInsightsLogAnalyticsWorkspace[] | cdktf.IResolvable;
 }
 
 export function firewallPolicyInsightsToTerraform(struct?: FirewallPolicyInsightsOutputReference | FirewallPolicyInsights): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -356,7 +366,7 @@ export class FirewallPolicyInsightsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -415,7 +425,7 @@ export class FirewallPolicyInsightsOutputReference extends cdktf.ComplexObject {
   // enabled - computed: false, optional: false, required: true
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
@@ -442,12 +452,12 @@ export class FirewallPolicyInsightsOutputReference extends cdktf.ComplexObject {
   }
 
   // log_analytics_workspace - computed: false, optional: true, required: false
-  private _logAnalyticsWorkspace?: FirewallPolicyInsightsLogAnalyticsWorkspace[]; 
+  private _logAnalyticsWorkspace?: FirewallPolicyInsightsLogAnalyticsWorkspace[] | cdktf.IResolvable; 
   public get logAnalyticsWorkspace() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('log_analytics_workspace') as any;
+    return this.interpolationForAttribute('log_analytics_workspace');
   }
-  public set logAnalyticsWorkspace(value: FirewallPolicyInsightsLogAnalyticsWorkspace[]) {
+  public set logAnalyticsWorkspace(value: FirewallPolicyInsightsLogAnalyticsWorkspace[] | cdktf.IResolvable) {
     this._logAnalyticsWorkspace = value;
   }
   public resetLogAnalyticsWorkspace() {
@@ -469,8 +479,8 @@ export interface FirewallPolicyIntrusionDetectionSignatureOverrides {
   readonly state?: string;
 }
 
-export function firewallPolicyIntrusionDetectionSignatureOverridesToTerraform(struct?: FirewallPolicyIntrusionDetectionSignatureOverrides): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function firewallPolicyIntrusionDetectionSignatureOverridesToTerraform(struct?: FirewallPolicyIntrusionDetectionSignatureOverrides | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -515,8 +525,8 @@ export interface FirewallPolicyIntrusionDetectionTrafficBypass {
   readonly sourceIpGroups?: string[];
 }
 
-export function firewallPolicyIntrusionDetectionTrafficBypassToTerraform(struct?: FirewallPolicyIntrusionDetectionTrafficBypass): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function firewallPolicyIntrusionDetectionTrafficBypassToTerraform(struct?: FirewallPolicyIntrusionDetectionTrafficBypass | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -542,17 +552,17 @@ export interface FirewallPolicyIntrusionDetection {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy#signature_overrides FirewallPolicy#signature_overrides}
   */
-  readonly signatureOverrides?: FirewallPolicyIntrusionDetectionSignatureOverrides[];
+  readonly signatureOverrides?: FirewallPolicyIntrusionDetectionSignatureOverrides[] | cdktf.IResolvable;
   /**
   * traffic_bypass block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy#traffic_bypass FirewallPolicy#traffic_bypass}
   */
-  readonly trafficBypass?: FirewallPolicyIntrusionDetectionTrafficBypass[];
+  readonly trafficBypass?: FirewallPolicyIntrusionDetectionTrafficBypass[] | cdktf.IResolvable;
 }
 
 export function firewallPolicyIntrusionDetectionToTerraform(struct?: FirewallPolicyIntrusionDetectionOutputReference | FirewallPolicyIntrusionDetection): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -571,7 +581,7 @@ export class FirewallPolicyIntrusionDetectionOutputReference extends cdktf.Compl
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -625,12 +635,12 @@ export class FirewallPolicyIntrusionDetectionOutputReference extends cdktf.Compl
   }
 
   // signature_overrides - computed: false, optional: true, required: false
-  private _signatureOverrides?: FirewallPolicyIntrusionDetectionSignatureOverrides[]; 
+  private _signatureOverrides?: FirewallPolicyIntrusionDetectionSignatureOverrides[] | cdktf.IResolvable; 
   public get signatureOverrides() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('signature_overrides') as any;
+    return this.interpolationForAttribute('signature_overrides');
   }
-  public set signatureOverrides(value: FirewallPolicyIntrusionDetectionSignatureOverrides[]) {
+  public set signatureOverrides(value: FirewallPolicyIntrusionDetectionSignatureOverrides[] | cdktf.IResolvable) {
     this._signatureOverrides = value;
   }
   public resetSignatureOverrides() {
@@ -642,12 +652,12 @@ export class FirewallPolicyIntrusionDetectionOutputReference extends cdktf.Compl
   }
 
   // traffic_bypass - computed: false, optional: true, required: false
-  private _trafficBypass?: FirewallPolicyIntrusionDetectionTrafficBypass[]; 
+  private _trafficBypass?: FirewallPolicyIntrusionDetectionTrafficBypass[] | cdktf.IResolvable; 
   public get trafficBypass() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('traffic_bypass') as any;
+    return this.interpolationForAttribute('traffic_bypass');
   }
-  public set trafficBypass(value: FirewallPolicyIntrusionDetectionTrafficBypass[]) {
+  public set trafficBypass(value: FirewallPolicyIntrusionDetectionTrafficBypass[] | cdktf.IResolvable) {
     this._trafficBypass = value;
   }
   public resetTrafficBypass() {
@@ -670,7 +680,7 @@ export interface FirewallPolicyThreatIntelligenceAllowlist {
 }
 
 export function firewallPolicyThreatIntelligenceAllowlistToTerraform(struct?: FirewallPolicyThreatIntelligenceAllowlistOutputReference | FirewallPolicyThreatIntelligenceAllowlist): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -688,7 +698,7 @@ export class FirewallPolicyThreatIntelligenceAllowlistOutputReference extends cd
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -722,7 +732,7 @@ export class FirewallPolicyThreatIntelligenceAllowlistOutputReference extends cd
   // fqdns - computed: false, optional: true, required: false
   private _fqdns?: string[]; 
   public get fqdns() {
-    return this.getListAttribute('fqdns');
+    return cdktf.Fn.tolist(this.getListAttribute('fqdns'));
   }
   public set fqdns(value: string[]) {
     this._fqdns = value;
@@ -738,7 +748,7 @@ export class FirewallPolicyThreatIntelligenceAllowlistOutputReference extends cd
   // ip_addresses - computed: false, optional: true, required: false
   private _ipAddresses?: string[]; 
   public get ipAddresses() {
-    return this.getListAttribute('ip_addresses');
+    return cdktf.Fn.tolist(this.getListAttribute('ip_addresses'));
   }
   public set ipAddresses(value: string[]) {
     this._ipAddresses = value;
@@ -770,8 +780,8 @@ export interface FirewallPolicyTimeouts {
   readonly update?: string;
 }
 
-export function firewallPolicyTimeoutsToTerraform(struct?: FirewallPolicyTimeoutsOutputReference | FirewallPolicyTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function firewallPolicyTimeoutsToTerraform(struct?: FirewallPolicyTimeoutsOutputReference | FirewallPolicyTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -791,7 +801,7 @@ export class FirewallPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -910,7 +920,7 @@ export interface FirewallPolicyTlsCertificate {
 }
 
 export function firewallPolicyTlsCertificateToTerraform(struct?: FirewallPolicyTlsCertificateOutputReference | FirewallPolicyTlsCertificate): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -928,7 +938,7 @@ export class FirewallPolicyTlsCertificateOutputReference extends cdktf.ComplexOb
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1147,12 +1157,11 @@ export class FirewallPolicy extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -1180,7 +1189,7 @@ export class FirewallPolicy extends cdktf.TerraformResource {
   }
 
   // dns - computed: false, optional: true, required: false
-  private _dns = new FirewallPolicyDnsOutputReference(this as any, "dns", true);
+  private _dns = new FirewallPolicyDnsOutputReference(this, "dns", true);
   public get dns() {
     return this._dns;
   }
@@ -1196,7 +1205,7 @@ export class FirewallPolicy extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity = new FirewallPolicyIdentityOutputReference(this as any, "identity", true);
+  private _identity = new FirewallPolicyIdentityOutputReference(this, "identity", true);
   public get identity() {
     return this._identity;
   }
@@ -1212,7 +1221,7 @@ export class FirewallPolicy extends cdktf.TerraformResource {
   }
 
   // insights - computed: false, optional: true, required: false
-  private _insights = new FirewallPolicyInsightsOutputReference(this as any, "insights", true);
+  private _insights = new FirewallPolicyInsightsOutputReference(this, "insights", true);
   public get insights() {
     return this._insights;
   }
@@ -1228,7 +1237,7 @@ export class FirewallPolicy extends cdktf.TerraformResource {
   }
 
   // intrusion_detection - computed: false, optional: true, required: false
-  private _intrusionDetection = new FirewallPolicyIntrusionDetectionOutputReference(this as any, "intrusion_detection", true);
+  private _intrusionDetection = new FirewallPolicyIntrusionDetectionOutputReference(this, "intrusion_detection", true);
   public get intrusionDetection() {
     return this._intrusionDetection;
   }
@@ -1244,7 +1253,7 @@ export class FirewallPolicy extends cdktf.TerraformResource {
   }
 
   // threat_intelligence_allowlist - computed: false, optional: true, required: false
-  private _threatIntelligenceAllowlist = new FirewallPolicyThreatIntelligenceAllowlistOutputReference(this as any, "threat_intelligence_allowlist", true);
+  private _threatIntelligenceAllowlist = new FirewallPolicyThreatIntelligenceAllowlistOutputReference(this, "threat_intelligence_allowlist", true);
   public get threatIntelligenceAllowlist() {
     return this._threatIntelligenceAllowlist;
   }
@@ -1260,7 +1269,7 @@ export class FirewallPolicy extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new FirewallPolicyTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new FirewallPolicyTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -1276,7 +1285,7 @@ export class FirewallPolicy extends cdktf.TerraformResource {
   }
 
   // tls_certificate - computed: false, optional: true, required: false
-  private _tlsCertificate = new FirewallPolicyTlsCertificateOutputReference(this as any, "tls_certificate", true);
+  private _tlsCertificate = new FirewallPolicyTlsCertificateOutputReference(this, "tls_certificate", true);
   public get tlsCertificate() {
     return this._tlsCertificate;
   }
@@ -1303,7 +1312,7 @@ export class FirewallPolicy extends cdktf.TerraformResource {
       private_ip_ranges: cdktf.listMapper(cdktf.stringToTerraform)(this._privateIpRanges),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku: cdktf.stringToTerraform(this._sku),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       threat_intelligence_mode: cdktf.stringToTerraform(this._threatIntelligenceMode),
       dns: firewallPolicyDnsToTerraform(this._dns.internalValue),
       identity: firewallPolicyIdentityToTerraform(this._identity.internalValue),

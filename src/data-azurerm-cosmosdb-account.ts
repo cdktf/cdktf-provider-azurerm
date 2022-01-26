@@ -77,8 +77,8 @@ export interface DataAzurermCosmosdbAccountTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermCosmosdbAccountTimeoutsToTerraform(struct?: DataAzurermCosmosdbAccountTimeoutsOutputReference | DataAzurermCosmosdbAccountTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermCosmosdbAccountTimeoutsToTerraform(struct?: DataAzurermCosmosdbAccountTimeoutsOutputReference | DataAzurermCosmosdbAccountTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -95,7 +95,7 @@ export class DataAzurermCosmosdbAccountTimeoutsOutputReference extends cdktf.Com
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -180,27 +180,27 @@ export class DataAzurermCosmosdbAccount extends cdktf.TerraformDataSource {
 
   // capabilities - computed: true, optional: false, required: false
   public capabilities(index: string) {
-    return new DataAzurermCosmosdbAccountCapabilities(this, 'capabilities', index);
+    return new DataAzurermCosmosdbAccountCapabilities(this, 'capabilities', index, false);
   }
 
   // consistency_policy - computed: true, optional: false, required: false
   public consistencyPolicy(index: string) {
-    return new DataAzurermCosmosdbAccountConsistencyPolicy(this, 'consistency_policy', index);
+    return new DataAzurermCosmosdbAccountConsistencyPolicy(this, 'consistency_policy', index, false);
   }
 
   // enable_automatic_failover - computed: true, optional: false, required: false
   public get enableAutomaticFailover() {
-    return this.getBooleanAttribute('enable_automatic_failover') as any;
+    return this.getBooleanAttribute('enable_automatic_failover');
   }
 
   // enable_free_tier - computed: true, optional: false, required: false
   public get enableFreeTier() {
-    return this.getBooleanAttribute('enable_free_tier') as any;
+    return this.getBooleanAttribute('enable_free_tier');
   }
 
   // enable_multiple_write_locations - computed: true, optional: false, required: false
   public get enableMultipleWriteLocations() {
-    return this.getBooleanAttribute('enable_multiple_write_locations') as any;
+    return this.getBooleanAttribute('enable_multiple_write_locations');
   }
 
   // endpoint - computed: true, optional: false, required: false
@@ -210,7 +210,7 @@ export class DataAzurermCosmosdbAccount extends cdktf.TerraformDataSource {
 
   // geo_location - computed: true, optional: false, required: false
   public geoLocation(index: string) {
-    return new DataAzurermCosmosdbAccountGeoLocation(this, 'geo_location', index);
+    return new DataAzurermCosmosdbAccountGeoLocation(this, 'geo_location', index, false);
   }
 
   // id - computed: true, optional: true, required: false
@@ -225,7 +225,7 @@ export class DataAzurermCosmosdbAccount extends cdktf.TerraformDataSource {
 
   // is_virtual_network_filter_enabled - computed: true, optional: false, required: false
   public get isVirtualNetworkFilterEnabled() {
-    return this.getBooleanAttribute('is_virtual_network_filter_enabled') as any;
+    return this.getBooleanAttribute('is_virtual_network_filter_enabled');
   }
 
   // key_vault_key_id - computed: true, optional: false, required: false
@@ -320,13 +320,13 @@ export class DataAzurermCosmosdbAccount extends cdktf.TerraformDataSource {
   }
 
   // tags - computed: true, optional: false, required: false
-  public tags(key: string): string {
+  public tags(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // virtual_network_rule - computed: true, optional: false, required: false
   public virtualNetworkRule(index: string) {
-    return new DataAzurermCosmosdbAccountVirtualNetworkRule(this, 'virtual_network_rule', index);
+    return new DataAzurermCosmosdbAccountVirtualNetworkRule(this, 'virtual_network_rule', index, false);
   }
 
   // write_endpoints - computed: true, optional: false, required: false
@@ -335,7 +335,7 @@ export class DataAzurermCosmosdbAccount extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermCosmosdbAccountTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermCosmosdbAccountTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

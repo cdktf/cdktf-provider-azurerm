@@ -34,7 +34,7 @@ export interface MachineLearningSynapseSparkConfig extends cdktf.TerraformMetaAr
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_synapse_spark#tags MachineLearningSynapseSpark#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * identity block
   * 
@@ -60,7 +60,7 @@ export interface MachineLearningSynapseSparkIdentity {
 }
 
 export function machineLearningSynapseSparkIdentityToTerraform(struct?: MachineLearningSynapseSparkIdentityOutputReference | MachineLearningSynapseSparkIdentity): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -78,7 +78,7 @@ export class MachineLearningSynapseSparkIdentityOutputReference extends cdktf.Co
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -112,7 +112,7 @@ export class MachineLearningSynapseSparkIdentityOutputReference extends cdktf.Co
   // identity_ids - computed: false, optional: true, required: false
   private _identityIds?: string[]; 
   public get identityIds() {
-    return this.getListAttribute('identity_ids');
+    return cdktf.Fn.tolist(this.getListAttribute('identity_ids'));
   }
   public set identityIds(value: string[]) {
     this._identityIds = value;
@@ -123,6 +123,16 @@ export class MachineLearningSynapseSparkIdentityOutputReference extends cdktf.Co
   // Temporarily expose input value. Use with caution.
   public get identityIdsInput() {
     return this._identityIds;
+  }
+
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
   }
 
   // type - computed: false, optional: false, required: true
@@ -153,8 +163,8 @@ export interface MachineLearningSynapseSparkTimeouts {
   readonly read?: string;
 }
 
-export function machineLearningSynapseSparkTimeoutsToTerraform(struct?: MachineLearningSynapseSparkTimeoutsOutputReference | MachineLearningSynapseSparkTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function machineLearningSynapseSparkTimeoutsToTerraform(struct?: MachineLearningSynapseSparkTimeoutsOutputReference | MachineLearningSynapseSparkTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -173,7 +183,7 @@ export class MachineLearningSynapseSparkTimeoutsOutputReference extends cdktf.Co
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -330,7 +340,7 @@ export class MachineLearningSynapseSpark extends cdktf.TerraformResource {
   // local_auth_enabled - computed: false, optional: true, required: false
   private _localAuthEnabled?: boolean | cdktf.IResolvable; 
   public get localAuthEnabled() {
-    return this.getBooleanAttribute('local_auth_enabled') as any;
+    return this.getBooleanAttribute('local_auth_enabled');
   }
   public set localAuthEnabled(value: boolean | cdktf.IResolvable) {
     this._localAuthEnabled = value;
@@ -396,12 +406,11 @@ export class MachineLearningSynapseSpark extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -413,7 +422,7 @@ export class MachineLearningSynapseSpark extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity = new MachineLearningSynapseSparkIdentityOutputReference(this as any, "identity", true);
+  private _identity = new MachineLearningSynapseSparkIdentityOutputReference(this, "identity", true);
   public get identity() {
     return this._identity;
   }
@@ -429,7 +438,7 @@ export class MachineLearningSynapseSpark extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new MachineLearningSynapseSparkTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new MachineLearningSynapseSparkTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -456,7 +465,7 @@ export class MachineLearningSynapseSpark extends cdktf.TerraformResource {
       machine_learning_workspace_id: cdktf.stringToTerraform(this._machineLearningWorkspaceId),
       name: cdktf.stringToTerraform(this._name),
       synapse_spark_pool_id: cdktf.stringToTerraform(this._synapseSparkPoolId),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       identity: machineLearningSynapseSparkIdentityToTerraform(this._identity.internalValue),
       timeouts: machineLearningSynapseSparkTimeoutsToTerraform(this._timeouts.internalValue),
     };

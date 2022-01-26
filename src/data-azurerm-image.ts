@@ -96,8 +96,8 @@ export interface DataAzurermImageTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermImageTimeoutsToTerraform(struct?: DataAzurermImageTimeoutsOutputReference | DataAzurermImageTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermImageTimeoutsToTerraform(struct?: DataAzurermImageTimeoutsOutputReference | DataAzurermImageTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -114,7 +114,7 @@ export class DataAzurermImageTimeoutsOutputReference extends cdktf.ComplexObject
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -201,7 +201,7 @@ export class DataAzurermImage extends cdktf.TerraformDataSource {
 
   // data_disk - computed: true, optional: false, required: false
   public dataDisk(index: string) {
-    return new DataAzurermImageDataDisk(this, 'data_disk', index);
+    return new DataAzurermImageDataDisk(this, 'data_disk', index, false);
   }
 
   // id - computed: true, optional: true, required: false
@@ -248,7 +248,7 @@ export class DataAzurermImage extends cdktf.TerraformDataSource {
 
   // os_disk - computed: true, optional: false, required: false
   public osDisk(index: string) {
-    return new DataAzurermImageOsDisk(this, 'os_disk', index);
+    return new DataAzurermImageOsDisk(this, 'os_disk', index, false);
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -267,7 +267,7 @@ export class DataAzurermImage extends cdktf.TerraformDataSource {
   // sort_descending - computed: false, optional: true, required: false
   private _sortDescending?: boolean | cdktf.IResolvable; 
   public get sortDescending() {
-    return this.getBooleanAttribute('sort_descending') as any;
+    return this.getBooleanAttribute('sort_descending');
   }
   public set sortDescending(value: boolean | cdktf.IResolvable) {
     this._sortDescending = value;
@@ -281,17 +281,17 @@ export class DataAzurermImage extends cdktf.TerraformDataSource {
   }
 
   // tags - computed: true, optional: false, required: false
-  public tags(key: string): string {
+  public tags(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // zone_resilient - computed: true, optional: false, required: false
   public get zoneResilient() {
-    return this.getBooleanAttribute('zone_resilient') as any;
+    return this.getBooleanAttribute('zone_resilient');
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermImageTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermImageTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

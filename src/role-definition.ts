@@ -32,7 +32,7 @@ export interface RoleDefinitionConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/role_definition#permissions RoleDefinition#permissions}
   */
-  readonly permissions?: RoleDefinitionPermissions[];
+  readonly permissions?: RoleDefinitionPermissions[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -59,8 +59,8 @@ export interface RoleDefinitionPermissions {
   readonly notDataActions?: string[];
 }
 
-export function roleDefinitionPermissionsToTerraform(struct?: RoleDefinitionPermissions): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function roleDefinitionPermissionsToTerraform(struct?: RoleDefinitionPermissions | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -91,8 +91,8 @@ export interface RoleDefinitionTimeouts {
   readonly update?: string;
 }
 
-export function roleDefinitionTimeoutsToTerraform(struct?: RoleDefinitionTimeoutsOutputReference | RoleDefinitionTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function roleDefinitionTimeoutsToTerraform(struct?: RoleDefinitionTimeoutsOutputReference | RoleDefinitionTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -112,7 +112,7 @@ export class RoleDefinitionTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -350,12 +350,12 @@ export class RoleDefinition extends cdktf.TerraformResource {
   }
 
   // permissions - computed: false, optional: true, required: false
-  private _permissions?: RoleDefinitionPermissions[]; 
+  private _permissions?: RoleDefinitionPermissions[] | cdktf.IResolvable; 
   public get permissions() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('permissions') as any;
+    return this.interpolationForAttribute('permissions');
   }
-  public set permissions(value: RoleDefinitionPermissions[]) {
+  public set permissions(value: RoleDefinitionPermissions[] | cdktf.IResolvable) {
     this._permissions = value;
   }
   public resetPermissions() {
@@ -367,7 +367,7 @@ export class RoleDefinition extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new RoleDefinitionTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new RoleDefinitionTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

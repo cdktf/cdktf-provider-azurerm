@@ -28,7 +28,7 @@ export interface MediaContentKeyPolicyConfig extends cdktf.TerraformMetaArgument
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy#policy_option MediaContentKeyPolicy#policy_option}
   */
-  readonly policyOption: MediaContentKeyPolicyPolicyOption[];
+  readonly policyOption: MediaContentKeyPolicyPolicyOption[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -48,7 +48,7 @@ export interface MediaContentKeyPolicyPolicyOptionFairplayConfigurationOfflineRe
 }
 
 export function mediaContentKeyPolicyPolicyOptionFairplayConfigurationOfflineRentalConfigurationToTerraform(struct?: MediaContentKeyPolicyPolicyOptionFairplayConfigurationOfflineRentalConfigurationOutputReference | MediaContentKeyPolicyPolicyOptionFairplayConfigurationOfflineRentalConfiguration): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -66,7 +66,7 @@ export class MediaContentKeyPolicyPolicyOptionFairplayConfigurationOfflineRental
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -159,7 +159,7 @@ export interface MediaContentKeyPolicyPolicyOptionFairplayConfiguration {
 }
 
 export function mediaContentKeyPolicyPolicyOptionFairplayConfigurationToTerraform(struct?: MediaContentKeyPolicyPolicyOptionFairplayConfigurationOutputReference | MediaContentKeyPolicyPolicyOptionFairplayConfiguration): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -181,7 +181,7 @@ export class MediaContentKeyPolicyPolicyOptionFairplayConfigurationOutputReferen
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -317,7 +317,7 @@ export class MediaContentKeyPolicyPolicyOptionFairplayConfigurationOutputReferen
   }
 
   // offline_rental_configuration - computed: false, optional: true, required: false
-  private _offlineRentalConfiguration = new MediaContentKeyPolicyPolicyOptionFairplayConfigurationOfflineRentalConfigurationOutputReference(this as any, "offline_rental_configuration", true);
+  private _offlineRentalConfiguration = new MediaContentKeyPolicyPolicyOptionFairplayConfigurationOfflineRentalConfigurationOutputReference(this, "offline_rental_configuration", true);
   public get offlineRentalConfiguration() {
     return this._offlineRentalConfiguration;
   }
@@ -380,7 +380,7 @@ export interface MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicenseP
 }
 
 export function mediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayRightToTerraform(struct?: MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayRightOutputReference | MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayRight): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -407,7 +407,7 @@ export class MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayR
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -559,7 +559,7 @@ export class MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayR
   // digital_video_only_content_restriction - computed: false, optional: true, required: false
   private _digitalVideoOnlyContentRestriction?: boolean | cdktf.IResolvable; 
   public get digitalVideoOnlyContentRestriction() {
-    return this.getBooleanAttribute('digital_video_only_content_restriction') as any;
+    return this.getBooleanAttribute('digital_video_only_content_restriction');
   }
   public set digitalVideoOnlyContentRestriction(value: boolean | cdktf.IResolvable) {
     this._digitalVideoOnlyContentRestriction = value;
@@ -591,7 +591,7 @@ export class MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayR
   // image_constraint_for_analog_component_video_restriction - computed: false, optional: true, required: false
   private _imageConstraintForAnalogComponentVideoRestriction?: boolean | cdktf.IResolvable; 
   public get imageConstraintForAnalogComponentVideoRestriction() {
-    return this.getBooleanAttribute('image_constraint_for_analog_component_video_restriction') as any;
+    return this.getBooleanAttribute('image_constraint_for_analog_component_video_restriction');
   }
   public set imageConstraintForAnalogComponentVideoRestriction(value: boolean | cdktf.IResolvable) {
     this._imageConstraintForAnalogComponentVideoRestriction = value;
@@ -607,7 +607,7 @@ export class MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayR
   // image_constraint_for_analog_computer_monitor_restriction - computed: false, optional: true, required: false
   private _imageConstraintForAnalogComputerMonitorRestriction?: boolean | cdktf.IResolvable; 
   public get imageConstraintForAnalogComputerMonitorRestriction() {
-    return this.getBooleanAttribute('image_constraint_for_analog_computer_monitor_restriction') as any;
+    return this.getBooleanAttribute('image_constraint_for_analog_computer_monitor_restriction');
   }
   public set imageConstraintForAnalogComputerMonitorRestriction(value: boolean | cdktf.IResolvable) {
     this._imageConstraintForAnalogComputerMonitorRestriction = value;
@@ -717,8 +717,8 @@ export interface MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicense 
   readonly playRight?: MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayRight;
 }
 
-export function mediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicenseToTerraform(struct?: MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicense): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function mediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicenseToTerraform(struct?: MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicense | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -748,8 +748,8 @@ export interface MediaContentKeyPolicyPolicyOptionTokenRestrictionRequiredClaim 
   readonly value?: string;
 }
 
-export function mediaContentKeyPolicyPolicyOptionTokenRestrictionRequiredClaimToTerraform(struct?: MediaContentKeyPolicyPolicyOptionTokenRestrictionRequiredClaim): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function mediaContentKeyPolicyPolicyOptionTokenRestrictionRequiredClaimToTerraform(struct?: MediaContentKeyPolicyPolicyOptionTokenRestrictionRequiredClaim | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -797,11 +797,11 @@ export interface MediaContentKeyPolicyPolicyOptionTokenRestriction {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy#required_claim MediaContentKeyPolicy#required_claim}
   */
-  readonly requiredClaim?: MediaContentKeyPolicyPolicyOptionTokenRestrictionRequiredClaim[];
+  readonly requiredClaim?: MediaContentKeyPolicyPolicyOptionTokenRestrictionRequiredClaim[] | cdktf.IResolvable;
 }
 
 export function mediaContentKeyPolicyPolicyOptionTokenRestrictionToTerraform(struct?: MediaContentKeyPolicyPolicyOptionTokenRestrictionOutputReference | MediaContentKeyPolicyPolicyOptionTokenRestriction): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -826,7 +826,7 @@ export class MediaContentKeyPolicyPolicyOptionTokenRestrictionOutputReference ex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1028,12 +1028,12 @@ export class MediaContentKeyPolicyPolicyOptionTokenRestrictionOutputReference ex
   }
 
   // required_claim - computed: false, optional: true, required: false
-  private _requiredClaim?: MediaContentKeyPolicyPolicyOptionTokenRestrictionRequiredClaim[]; 
+  private _requiredClaim?: MediaContentKeyPolicyPolicyOptionTokenRestrictionRequiredClaim[] | cdktf.IResolvable; 
   public get requiredClaim() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('required_claim') as any;
+    return this.interpolationForAttribute('required_claim');
   }
-  public set requiredClaim(value: MediaContentKeyPolicyPolicyOptionTokenRestrictionRequiredClaim[]) {
+  public set requiredClaim(value: MediaContentKeyPolicyPolicyOptionTokenRestrictionRequiredClaim[] | cdktf.IResolvable) {
     this._requiredClaim = value;
   }
   public resetRequiredClaim() {
@@ -1072,7 +1072,7 @@ export interface MediaContentKeyPolicyPolicyOption {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy#playready_configuration_license MediaContentKeyPolicy#playready_configuration_license}
   */
-  readonly playreadyConfigurationLicense?: MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicense[];
+  readonly playreadyConfigurationLicense?: MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicense[] | cdktf.IResolvable;
   /**
   * token_restriction block
   * 
@@ -1081,8 +1081,8 @@ export interface MediaContentKeyPolicyPolicyOption {
   readonly tokenRestriction?: MediaContentKeyPolicyPolicyOptionTokenRestriction;
 }
 
-export function mediaContentKeyPolicyPolicyOptionToTerraform(struct?: MediaContentKeyPolicyPolicyOption): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function mediaContentKeyPolicyPolicyOptionToTerraform(struct?: MediaContentKeyPolicyPolicyOption | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1116,8 +1116,8 @@ export interface MediaContentKeyPolicyTimeouts {
   readonly update?: string;
 }
 
-export function mediaContentKeyPolicyTimeoutsToTerraform(struct?: MediaContentKeyPolicyTimeoutsOutputReference | MediaContentKeyPolicyTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function mediaContentKeyPolicyTimeoutsToTerraform(struct?: MediaContentKeyPolicyTimeoutsOutputReference | MediaContentKeyPolicyTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1137,7 +1137,7 @@ export class MediaContentKeyPolicyTimeoutsOutputReference extends cdktf.ComplexO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1350,12 +1350,12 @@ export class MediaContentKeyPolicy extends cdktf.TerraformResource {
   }
 
   // policy_option - computed: false, optional: false, required: true
-  private _policyOption?: MediaContentKeyPolicyPolicyOption[]; 
+  private _policyOption?: MediaContentKeyPolicyPolicyOption[] | cdktf.IResolvable; 
   public get policyOption() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('policy_option') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('policy_option')));
   }
-  public set policyOption(value: MediaContentKeyPolicyPolicyOption[]) {
+  public set policyOption(value: MediaContentKeyPolicyPolicyOption[] | cdktf.IResolvable) {
     this._policyOption = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -1364,7 +1364,7 @@ export class MediaContentKeyPolicy extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new MediaContentKeyPolicyTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new MediaContentKeyPolicyTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

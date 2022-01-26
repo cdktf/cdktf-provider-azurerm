@@ -30,7 +30,7 @@ export interface LogicAppWorkflowConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_workflow#parameters LogicAppWorkflow#parameters}
   */
-  readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
+  readonly parameters?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_workflow#resource_group_name LogicAppWorkflow#resource_group_name}
   */
@@ -38,11 +38,11 @@ export interface LogicAppWorkflowConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_workflow#tags LogicAppWorkflow#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_workflow#workflow_parameters LogicAppWorkflow#workflow_parameters}
   */
-  readonly workflowParameters?: { [key: string]: string } | cdktf.IResolvable;
+  readonly workflowParameters?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_workflow#workflow_schema LogicAppWorkflow#workflow_schema}
   */
@@ -78,7 +78,7 @@ export interface LogicAppWorkflowAccessControlAction {
 }
 
 export function logicAppWorkflowAccessControlActionToTerraform(struct?: LogicAppWorkflowAccessControlActionOutputReference | LogicAppWorkflowAccessControlAction): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -95,7 +95,7 @@ export class LogicAppWorkflowAccessControlActionOutputReference extends cdktf.Co
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -123,7 +123,7 @@ export class LogicAppWorkflowAccessControlActionOutputReference extends cdktf.Co
   // allowed_caller_ip_address_range - computed: false, optional: false, required: true
   private _allowedCallerIpAddressRange?: string[]; 
   public get allowedCallerIpAddressRange() {
-    return this.getListAttribute('allowed_caller_ip_address_range');
+    return cdktf.Fn.tolist(this.getListAttribute('allowed_caller_ip_address_range'));
   }
   public set allowedCallerIpAddressRange(value: string[]) {
     this._allowedCallerIpAddressRange = value;
@@ -141,7 +141,7 @@ export interface LogicAppWorkflowAccessControlContent {
 }
 
 export function logicAppWorkflowAccessControlContentToTerraform(struct?: LogicAppWorkflowAccessControlContentOutputReference | LogicAppWorkflowAccessControlContent): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -158,7 +158,7 @@ export class LogicAppWorkflowAccessControlContentOutputReference extends cdktf.C
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -186,7 +186,7 @@ export class LogicAppWorkflowAccessControlContentOutputReference extends cdktf.C
   // allowed_caller_ip_address_range - computed: false, optional: false, required: true
   private _allowedCallerIpAddressRange?: string[]; 
   public get allowedCallerIpAddressRange() {
-    return this.getListAttribute('allowed_caller_ip_address_range');
+    return cdktf.Fn.tolist(this.getListAttribute('allowed_caller_ip_address_range'));
   }
   public set allowedCallerIpAddressRange(value: string[]) {
     this._allowedCallerIpAddressRange = value;
@@ -207,8 +207,8 @@ export interface LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicyCla
   readonly value: string;
 }
 
-export function logicAppWorkflowAccessControlTriggerOpenAuthenticationPolicyClaimToTerraform(struct?: LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicyClaim): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function logicAppWorkflowAccessControlTriggerOpenAuthenticationPolicyClaimToTerraform(struct?: LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicyClaim | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -228,11 +228,11 @@ export interface LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicy {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_workflow#claim LogicAppWorkflow#claim}
   */
-  readonly claim: LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicyClaim[];
+  readonly claim: LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicyClaim[] | cdktf.IResolvable;
 }
 
-export function logicAppWorkflowAccessControlTriggerOpenAuthenticationPolicyToTerraform(struct?: LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function logicAppWorkflowAccessControlTriggerOpenAuthenticationPolicyToTerraform(struct?: LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicy | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -252,11 +252,11 @@ export interface LogicAppWorkflowAccessControlTrigger {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_workflow#open_authentication_policy LogicAppWorkflow#open_authentication_policy}
   */
-  readonly openAuthenticationPolicy?: LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicy[];
+  readonly openAuthenticationPolicy?: LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicy[] | cdktf.IResolvable;
 }
 
 export function logicAppWorkflowAccessControlTriggerToTerraform(struct?: LogicAppWorkflowAccessControlTriggerOutputReference | LogicAppWorkflowAccessControlTrigger): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -274,7 +274,7 @@ export class LogicAppWorkflowAccessControlTriggerOutputReference extends cdktf.C
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -308,7 +308,7 @@ export class LogicAppWorkflowAccessControlTriggerOutputReference extends cdktf.C
   // allowed_caller_ip_address_range - computed: false, optional: false, required: true
   private _allowedCallerIpAddressRange?: string[]; 
   public get allowedCallerIpAddressRange() {
-    return this.getListAttribute('allowed_caller_ip_address_range');
+    return cdktf.Fn.tolist(this.getListAttribute('allowed_caller_ip_address_range'));
   }
   public set allowedCallerIpAddressRange(value: string[]) {
     this._allowedCallerIpAddressRange = value;
@@ -319,12 +319,12 @@ export class LogicAppWorkflowAccessControlTriggerOutputReference extends cdktf.C
   }
 
   // open_authentication_policy - computed: false, optional: true, required: false
-  private _openAuthenticationPolicy?: LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicy[]; 
+  private _openAuthenticationPolicy?: LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicy[] | cdktf.IResolvable; 
   public get openAuthenticationPolicy() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('open_authentication_policy') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('open_authentication_policy')));
   }
-  public set openAuthenticationPolicy(value: LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicy[]) {
+  public set openAuthenticationPolicy(value: LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicy[] | cdktf.IResolvable) {
     this._openAuthenticationPolicy = value;
   }
   public resetOpenAuthenticationPolicy() {
@@ -343,7 +343,7 @@ export interface LogicAppWorkflowAccessControlWorkflowManagement {
 }
 
 export function logicAppWorkflowAccessControlWorkflowManagementToTerraform(struct?: LogicAppWorkflowAccessControlWorkflowManagementOutputReference | LogicAppWorkflowAccessControlWorkflowManagement): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -360,7 +360,7 @@ export class LogicAppWorkflowAccessControlWorkflowManagementOutputReference exte
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -388,7 +388,7 @@ export class LogicAppWorkflowAccessControlWorkflowManagementOutputReference exte
   // allowed_caller_ip_address_range - computed: false, optional: false, required: true
   private _allowedCallerIpAddressRange?: string[]; 
   public get allowedCallerIpAddressRange() {
-    return this.getListAttribute('allowed_caller_ip_address_range');
+    return cdktf.Fn.tolist(this.getListAttribute('allowed_caller_ip_address_range'));
   }
   public set allowedCallerIpAddressRange(value: string[]) {
     this._allowedCallerIpAddressRange = value;
@@ -426,7 +426,7 @@ export interface LogicAppWorkflowAccessControl {
 }
 
 export function logicAppWorkflowAccessControlToTerraform(struct?: LogicAppWorkflowAccessControlOutputReference | LogicAppWorkflowAccessControl): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -446,7 +446,7 @@ export class LogicAppWorkflowAccessControlOutputReference extends cdktf.ComplexO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -490,7 +490,7 @@ export class LogicAppWorkflowAccessControlOutputReference extends cdktf.ComplexO
   }
 
   // action - computed: false, optional: true, required: false
-  private _action = new LogicAppWorkflowAccessControlActionOutputReference(this as any, "action", true);
+  private _action = new LogicAppWorkflowAccessControlActionOutputReference(this, "action", true);
   public get action() {
     return this._action;
   }
@@ -506,7 +506,7 @@ export class LogicAppWorkflowAccessControlOutputReference extends cdktf.ComplexO
   }
 
   // content - computed: false, optional: true, required: false
-  private _content = new LogicAppWorkflowAccessControlContentOutputReference(this as any, "content", true);
+  private _content = new LogicAppWorkflowAccessControlContentOutputReference(this, "content", true);
   public get content() {
     return this._content;
   }
@@ -522,7 +522,7 @@ export class LogicAppWorkflowAccessControlOutputReference extends cdktf.ComplexO
   }
 
   // trigger - computed: false, optional: true, required: false
-  private _trigger = new LogicAppWorkflowAccessControlTriggerOutputReference(this as any, "trigger", true);
+  private _trigger = new LogicAppWorkflowAccessControlTriggerOutputReference(this, "trigger", true);
   public get trigger() {
     return this._trigger;
   }
@@ -538,7 +538,7 @@ export class LogicAppWorkflowAccessControlOutputReference extends cdktf.ComplexO
   }
 
   // workflow_management - computed: false, optional: true, required: false
-  private _workflowManagement = new LogicAppWorkflowAccessControlWorkflowManagementOutputReference(this as any, "workflow_management", true);
+  private _workflowManagement = new LogicAppWorkflowAccessControlWorkflowManagementOutputReference(this, "workflow_management", true);
   public get workflowManagement() {
     return this._workflowManagement;
   }
@@ -565,7 +565,7 @@ export interface LogicAppWorkflowIdentity {
 }
 
 export function logicAppWorkflowIdentityToTerraform(struct?: LogicAppWorkflowIdentityOutputReference | LogicAppWorkflowIdentity): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -583,7 +583,7 @@ export class LogicAppWorkflowIdentityOutputReference extends cdktf.ComplexObject
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -617,7 +617,7 @@ export class LogicAppWorkflowIdentityOutputReference extends cdktf.ComplexObject
   // identity_ids - computed: false, optional: true, required: false
   private _identityIds?: string[]; 
   public get identityIds() {
-    return this.getListAttribute('identity_ids');
+    return cdktf.Fn.tolist(this.getListAttribute('identity_ids'));
   }
   public set identityIds(value: string[]) {
     this._identityIds = value;
@@ -628,6 +628,16 @@ export class LogicAppWorkflowIdentityOutputReference extends cdktf.ComplexObject
   // Temporarily expose input value. Use with caution.
   public get identityIdsInput() {
     return this._identityIds;
+  }
+
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
   }
 
   // type - computed: false, optional: false, required: true
@@ -662,8 +672,8 @@ export interface LogicAppWorkflowTimeouts {
   readonly update?: string;
 }
 
-export function logicAppWorkflowTimeoutsToTerraform(struct?: LogicAppWorkflowTimeoutsOutputReference | LogicAppWorkflowTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function logicAppWorkflowTimeoutsToTerraform(struct?: LogicAppWorkflowTimeoutsOutputReference | LogicAppWorkflowTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -683,7 +693,7 @@ export class LogicAppWorkflowTimeoutsOutputReference extends cdktf.ComplexObject
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -861,7 +871,7 @@ export class LogicAppWorkflow extends cdktf.TerraformResource {
   // enabled - computed: false, optional: true, required: false
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
@@ -938,12 +948,11 @@ export class LogicAppWorkflow extends cdktf.TerraformResource {
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string } | cdktf.IResolvable; 
+  private _parameters?: { [key: string]: string }; 
   public get parameters() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('parameters') as any;
+    return this.getStringMapAttribute('parameters');
   }
-  public set parameters(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set parameters(value: { [key: string]: string }) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -968,12 +977,11 @@ export class LogicAppWorkflow extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -995,12 +1003,11 @@ export class LogicAppWorkflow extends cdktf.TerraformResource {
   }
 
   // workflow_parameters - computed: false, optional: true, required: false
-  private _workflowParameters?: { [key: string]: string } | cdktf.IResolvable; 
+  private _workflowParameters?: { [key: string]: string }; 
   public get workflowParameters() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('workflow_parameters') as any;
+    return this.getStringMapAttribute('workflow_parameters');
   }
-  public set workflowParameters(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set workflowParameters(value: { [key: string]: string }) {
     this._workflowParameters = value;
   }
   public resetWorkflowParameters() {
@@ -1044,7 +1051,7 @@ export class LogicAppWorkflow extends cdktf.TerraformResource {
   }
 
   // access_control - computed: false, optional: true, required: false
-  private _accessControl = new LogicAppWorkflowAccessControlOutputReference(this as any, "access_control", true);
+  private _accessControl = new LogicAppWorkflowAccessControlOutputReference(this, "access_control", true);
   public get accessControl() {
     return this._accessControl;
   }
@@ -1060,7 +1067,7 @@ export class LogicAppWorkflow extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity = new LogicAppWorkflowIdentityOutputReference(this as any, "identity", true);
+  private _identity = new LogicAppWorkflowIdentityOutputReference(this, "identity", true);
   public get identity() {
     return this._identity;
   }
@@ -1076,7 +1083,7 @@ export class LogicAppWorkflow extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new LogicAppWorkflowTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new LogicAppWorkflowTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -1102,10 +1109,10 @@ export class LogicAppWorkflow extends cdktf.TerraformResource {
       location: cdktf.stringToTerraform(this._location),
       logic_app_integration_account_id: cdktf.stringToTerraform(this._logicAppIntegrationAccountId),
       name: cdktf.stringToTerraform(this._name),
-      parameters: cdktf.hashMapper(cdktf.anyToTerraform)(this._parameters),
+      parameters: cdktf.hashMapper(cdktf.stringToTerraform)(this._parameters),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
-      workflow_parameters: cdktf.hashMapper(cdktf.anyToTerraform)(this._workflowParameters),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
+      workflow_parameters: cdktf.hashMapper(cdktf.stringToTerraform)(this._workflowParameters),
       workflow_schema: cdktf.stringToTerraform(this._workflowSchema),
       workflow_version: cdktf.stringToTerraform(this._workflowVersion),
       access_control: logicAppWorkflowAccessControlToTerraform(this._accessControl.internalValue),

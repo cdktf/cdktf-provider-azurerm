@@ -40,19 +40,19 @@ export class DataAzurermHealthcareServiceAuthenticationConfiguration extends cdk
 
   // smart_proxy_enabled - computed: true, optional: false, required: false
   public get smartProxyEnabled() {
-    return this.getBooleanAttribute('smart_proxy_enabled') as any;
+    return this.getBooleanAttribute('smart_proxy_enabled');
   }
 }
 export class DataAzurermHealthcareServiceCorsConfiguration extends cdktf.ComplexComputedList {
 
   // allow_credentials - computed: true, optional: false, required: false
   public get allowCredentials() {
-    return this.getBooleanAttribute('allow_credentials') as any;
+    return this.getBooleanAttribute('allow_credentials');
   }
 
   // allowed_headers - computed: true, optional: false, required: false
   public get allowedHeaders() {
-    return this.getListAttribute('allowed_headers');
+    return cdktf.Fn.tolist(this.getListAttribute('allowed_headers'));
   }
 
   // allowed_methods - computed: true, optional: false, required: false
@@ -62,7 +62,7 @@ export class DataAzurermHealthcareServiceCorsConfiguration extends cdktf.Complex
 
   // allowed_origins - computed: true, optional: false, required: false
   public get allowedOrigins() {
-    return this.getListAttribute('allowed_origins');
+    return cdktf.Fn.tolist(this.getListAttribute('allowed_origins'));
   }
 
   // max_age_in_seconds - computed: true, optional: false, required: false
@@ -77,8 +77,8 @@ export interface DataAzurermHealthcareServiceTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermHealthcareServiceTimeoutsToTerraform(struct?: DataAzurermHealthcareServiceTimeoutsOutputReference | DataAzurermHealthcareServiceTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermHealthcareServiceTimeoutsToTerraform(struct?: DataAzurermHealthcareServiceTimeoutsOutputReference | DataAzurermHealthcareServiceTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -95,7 +95,7 @@ export class DataAzurermHealthcareServiceTimeoutsOutputReference extends cdktf.C
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -181,17 +181,17 @@ export class DataAzurermHealthcareService extends cdktf.TerraformDataSource {
 
   // access_policy_object_ids - computed: true, optional: false, required: false
   public get accessPolicyObjectIds() {
-    return this.getListAttribute('access_policy_object_ids');
+    return cdktf.Fn.tolist(this.getListAttribute('access_policy_object_ids'));
   }
 
   // authentication_configuration - computed: true, optional: false, required: false
   public authenticationConfiguration(index: string) {
-    return new DataAzurermHealthcareServiceAuthenticationConfiguration(this, 'authentication_configuration', index);
+    return new DataAzurermHealthcareServiceAuthenticationConfiguration(this, 'authentication_configuration', index, false);
   }
 
   // cors_configuration - computed: true, optional: false, required: false
   public corsConfiguration(index: string) {
-    return new DataAzurermHealthcareServiceCorsConfiguration(this, 'cors_configuration', index);
+    return new DataAzurermHealthcareServiceCorsConfiguration(this, 'cors_configuration', index, false);
   }
 
   // cosmosdb_key_vault_key_versionless_id - computed: true, optional: false, required: false
@@ -254,12 +254,12 @@ export class DataAzurermHealthcareService extends cdktf.TerraformDataSource {
   }
 
   // tags - computed: true, optional: false, required: false
-  public tags(key: string): string {
+  public tags(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermHealthcareServiceTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermHealthcareServiceTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

@@ -70,11 +70,11 @@ export interface RedisCacheConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache#tags RedisCache#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache#tenant_settings RedisCache#tenant_settings}
   */
-  readonly tenantSettings?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tenantSettings?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache#zones RedisCache#zones}
   */
@@ -84,7 +84,7 @@ export interface RedisCacheConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache#patch_schedule RedisCache#patch_schedule}
   */
-  readonly patchSchedule?: RedisCachePatchSchedule[];
+  readonly patchSchedule?: RedisCachePatchSchedule[] | cdktf.IResolvable;
   /**
   * redis_configuration block
   * 
@@ -113,8 +113,8 @@ export interface RedisCachePatchSchedule {
   readonly startHourUtc?: number;
 }
 
-export function redisCachePatchScheduleToTerraform(struct?: RedisCachePatchSchedule): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function redisCachePatchScheduleToTerraform(struct?: RedisCachePatchSchedule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -181,7 +181,7 @@ export interface RedisCacheRedisConfiguration {
 }
 
 export function redisCacheRedisConfigurationToTerraform(struct?: RedisCacheRedisConfigurationOutputReference | RedisCacheRedisConfiguration): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -210,7 +210,7 @@ export class RedisCacheRedisConfigurationOutputReference extends cdktf.ComplexOb
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -310,7 +310,7 @@ export class RedisCacheRedisConfigurationOutputReference extends cdktf.ComplexOb
   // aof_backup_enabled - computed: false, optional: true, required: false
   private _aofBackupEnabled?: boolean | cdktf.IResolvable; 
   public get aofBackupEnabled() {
-    return this.getBooleanAttribute('aof_backup_enabled') as any;
+    return this.getBooleanAttribute('aof_backup_enabled');
   }
   public set aofBackupEnabled(value: boolean | cdktf.IResolvable) {
     this._aofBackupEnabled = value;
@@ -358,7 +358,7 @@ export class RedisCacheRedisConfigurationOutputReference extends cdktf.ComplexOb
   // enable_authentication - computed: false, optional: true, required: false
   private _enableAuthentication?: boolean | cdktf.IResolvable; 
   public get enableAuthentication() {
-    return this.getBooleanAttribute('enable_authentication') as any;
+    return this.getBooleanAttribute('enable_authentication');
   }
   public set enableAuthentication(value: boolean | cdktf.IResolvable) {
     this._enableAuthentication = value;
@@ -369,6 +369,11 @@ export class RedisCacheRedisConfigurationOutputReference extends cdktf.ComplexOb
   // Temporarily expose input value. Use with caution.
   public get enableAuthenticationInput() {
     return this._enableAuthentication;
+  }
+
+  // maxclients - computed: true, optional: false, required: false
+  public get maxclients() {
+    return this.getNumberAttribute('maxclients');
   }
 
   // maxfragmentationmemory_reserved - computed: true, optional: true, required: false
@@ -454,7 +459,7 @@ export class RedisCacheRedisConfigurationOutputReference extends cdktf.ComplexOb
   // rdb_backup_enabled - computed: false, optional: true, required: false
   private _rdbBackupEnabled?: boolean | cdktf.IResolvable; 
   public get rdbBackupEnabled() {
-    return this.getBooleanAttribute('rdb_backup_enabled') as any;
+    return this.getBooleanAttribute('rdb_backup_enabled');
   }
   public set rdbBackupEnabled(value: boolean | cdktf.IResolvable) {
     this._rdbBackupEnabled = value;
@@ -534,8 +539,8 @@ export interface RedisCacheTimeouts {
   readonly update?: string;
 }
 
-export function redisCacheTimeoutsToTerraform(struct?: RedisCacheTimeoutsOutputReference | RedisCacheTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function redisCacheTimeoutsToTerraform(struct?: RedisCacheTimeoutsOutputReference | RedisCacheTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -555,7 +560,7 @@ export class RedisCacheTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -738,7 +743,7 @@ export class RedisCache extends cdktf.TerraformResource {
   // enable_non_ssl_port - computed: false, optional: true, required: false
   private _enableNonSslPort?: boolean | cdktf.IResolvable; 
   public get enableNonSslPort() {
-    return this.getBooleanAttribute('enable_non_ssl_port') as any;
+    return this.getBooleanAttribute('enable_non_ssl_port');
   }
   public set enableNonSslPort(value: boolean | cdktf.IResolvable) {
     this._enableNonSslPort = value;
@@ -850,7 +855,7 @@ export class RedisCache extends cdktf.TerraformResource {
   // public_network_access_enabled - computed: false, optional: true, required: false
   private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable; 
   public get publicNetworkAccessEnabled() {
-    return this.getBooleanAttribute('public_network_access_enabled') as any;
+    return this.getBooleanAttribute('public_network_access_enabled');
   }
   public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable) {
     this._publicNetworkAccessEnabled = value;
@@ -985,12 +990,11 @@ export class RedisCache extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -1002,12 +1006,11 @@ export class RedisCache extends cdktf.TerraformResource {
   }
 
   // tenant_settings - computed: false, optional: true, required: false
-  private _tenantSettings?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tenantSettings?: { [key: string]: string }; 
   public get tenantSettings() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tenant_settings') as any;
+    return this.getStringMapAttribute('tenant_settings');
   }
-  public set tenantSettings(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tenantSettings(value: { [key: string]: string }) {
     this._tenantSettings = value;
   }
   public resetTenantSettings() {
@@ -1035,12 +1038,12 @@ export class RedisCache extends cdktf.TerraformResource {
   }
 
   // patch_schedule - computed: false, optional: true, required: false
-  private _patchSchedule?: RedisCachePatchSchedule[]; 
+  private _patchSchedule?: RedisCachePatchSchedule[] | cdktf.IResolvable; 
   public get patchSchedule() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('patch_schedule') as any;
+    return this.interpolationForAttribute('patch_schedule');
   }
-  public set patchSchedule(value: RedisCachePatchSchedule[]) {
+  public set patchSchedule(value: RedisCachePatchSchedule[] | cdktf.IResolvable) {
     this._patchSchedule = value;
   }
   public resetPatchSchedule() {
@@ -1052,7 +1055,7 @@ export class RedisCache extends cdktf.TerraformResource {
   }
 
   // redis_configuration - computed: false, optional: true, required: false
-  private _redisConfiguration = new RedisCacheRedisConfigurationOutputReference(this as any, "redis_configuration", true);
+  private _redisConfiguration = new RedisCacheRedisConfigurationOutputReference(this, "redis_configuration", true);
   public get redisConfiguration() {
     return this._redisConfiguration;
   }
@@ -1068,7 +1071,7 @@ export class RedisCache extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new RedisCacheTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new RedisCacheTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -1104,8 +1107,8 @@ export class RedisCache extends cdktf.TerraformResource {
       shard_count: cdktf.numberToTerraform(this._shardCount),
       sku_name: cdktf.stringToTerraform(this._skuName),
       subnet_id: cdktf.stringToTerraform(this._subnetId),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
-      tenant_settings: cdktf.hashMapper(cdktf.anyToTerraform)(this._tenantSettings),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
+      tenant_settings: cdktf.hashMapper(cdktf.stringToTerraform)(this._tenantSettings),
       zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),
       patch_schedule: cdktf.listMapper(redisCachePatchScheduleToTerraform)(this._patchSchedule),
       redis_configuration: redisCacheRedisConfigurationToTerraform(this._redisConfiguration.internalValue),

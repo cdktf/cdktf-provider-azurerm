@@ -26,7 +26,7 @@ export interface PublicIpConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip#ip_tags PublicIp#ip_tags}
   */
-  readonly ipTags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly ipTags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip#ip_version PublicIp#ip_version}
   */
@@ -62,7 +62,7 @@ export interface PublicIpConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip#tags PublicIp#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip#zones PublicIp#zones}
   */
@@ -93,8 +93,8 @@ export interface PublicIpTimeouts {
   readonly update?: string;
 }
 
-export function publicIpTimeoutsToTerraform(struct?: PublicIpTimeoutsOutputReference | PublicIpTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function publicIpTimeoutsToTerraform(struct?: PublicIpTimeoutsOutputReference | PublicIpTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -114,7 +114,7 @@ export class PublicIpTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -353,12 +353,11 @@ export class PublicIp extends cdktf.TerraformResource {
   }
 
   // ip_tags - computed: false, optional: true, required: false
-  private _ipTags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _ipTags?: { [key: string]: string }; 
   public get ipTags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('ip_tags') as any;
+    return this.getStringMapAttribute('ip_tags');
   }
-  public set ipTags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set ipTags(value: { [key: string]: string }) {
     this._ipTags = value;
   }
   public resetIpTags() {
@@ -489,12 +488,11 @@ export class PublicIp extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -522,7 +520,7 @@ export class PublicIp extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new PublicIpTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new PublicIpTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -547,7 +545,7 @@ export class PublicIp extends cdktf.TerraformResource {
       availability_zone: cdktf.stringToTerraform(this._availabilityZone),
       domain_name_label: cdktf.stringToTerraform(this._domainNameLabel),
       idle_timeout_in_minutes: cdktf.numberToTerraform(this._idleTimeoutInMinutes),
-      ip_tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._ipTags),
+      ip_tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._ipTags),
       ip_version: cdktf.stringToTerraform(this._ipVersion),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
@@ -556,7 +554,7 @@ export class PublicIp extends cdktf.TerraformResource {
       reverse_fqdn: cdktf.stringToTerraform(this._reverseFqdn),
       sku: cdktf.stringToTerraform(this._sku),
       sku_tier: cdktf.stringToTerraform(this._skuTier),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),
       timeouts: publicIpTimeoutsToTerraform(this._timeouts.internalValue),
     };

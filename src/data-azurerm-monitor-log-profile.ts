@@ -27,7 +27,7 @@ export class DataAzurermMonitorLogProfileRetentionPolicy extends cdktf.ComplexCo
 
   // enabled - computed: true, optional: false, required: false
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
 }
 export interface DataAzurermMonitorLogProfileTimeouts {
@@ -37,8 +37,8 @@ export interface DataAzurermMonitorLogProfileTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermMonitorLogProfileTimeoutsToTerraform(struct?: DataAzurermMonitorLogProfileTimeoutsOutputReference | DataAzurermMonitorLogProfileTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermMonitorLogProfileTimeoutsToTerraform(struct?: DataAzurermMonitorLogProfileTimeoutsOutputReference | DataAzurermMonitorLogProfileTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -55,7 +55,7 @@ export class DataAzurermMonitorLogProfileTimeoutsOutputReference extends cdktf.C
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -167,7 +167,7 @@ export class DataAzurermMonitorLogProfile extends cdktf.TerraformDataSource {
 
   // retention_policy - computed: true, optional: false, required: false
   public retentionPolicy(index: string) {
-    return new DataAzurermMonitorLogProfileRetentionPolicy(this, 'retention_policy', index);
+    return new DataAzurermMonitorLogProfileRetentionPolicy(this, 'retention_policy', index, false);
   }
 
   // servicebus_rule_id - computed: true, optional: false, required: false
@@ -181,7 +181,7 @@ export class DataAzurermMonitorLogProfile extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermMonitorLogProfileTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermMonitorLogProfileTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

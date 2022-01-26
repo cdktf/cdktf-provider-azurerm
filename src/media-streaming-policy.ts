@@ -60,7 +60,7 @@ export interface MediaStreamingPolicyCommonEncryptionCbcsDefaultContentKey {
 }
 
 export function mediaStreamingPolicyCommonEncryptionCbcsDefaultContentKeyToTerraform(struct?: MediaStreamingPolicyCommonEncryptionCbcsDefaultContentKeyOutputReference | MediaStreamingPolicyCommonEncryptionCbcsDefaultContentKey): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -78,7 +78,7 @@ export class MediaStreamingPolicyCommonEncryptionCbcsDefaultContentKeyOutputRefe
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -153,7 +153,7 @@ export interface MediaStreamingPolicyCommonEncryptionCbcsDrmFairplay {
 }
 
 export function mediaStreamingPolicyCommonEncryptionCbcsDrmFairplayToTerraform(struct?: MediaStreamingPolicyCommonEncryptionCbcsDrmFairplayOutputReference | MediaStreamingPolicyCommonEncryptionCbcsDrmFairplay): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -171,7 +171,7 @@ export class MediaStreamingPolicyCommonEncryptionCbcsDrmFairplayOutputReference 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -205,7 +205,7 @@ export class MediaStreamingPolicyCommonEncryptionCbcsDrmFairplayOutputReference 
   // allow_persistent_license - computed: false, optional: true, required: false
   private _allowPersistentLicense?: boolean | cdktf.IResolvable; 
   public get allowPersistentLicense() {
-    return this.getBooleanAttribute('allow_persistent_license') as any;
+    return this.getBooleanAttribute('allow_persistent_license');
   }
   public set allowPersistentLicense(value: boolean | cdktf.IResolvable) {
     this._allowPersistentLicense = value;
@@ -254,7 +254,7 @@ export interface MediaStreamingPolicyCommonEncryptionCbcsEnabledProtocols {
 }
 
 export function mediaStreamingPolicyCommonEncryptionCbcsEnabledProtocolsToTerraform(struct?: MediaStreamingPolicyCommonEncryptionCbcsEnabledProtocolsOutputReference | MediaStreamingPolicyCommonEncryptionCbcsEnabledProtocols): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -274,7 +274,7 @@ export class MediaStreamingPolicyCommonEncryptionCbcsEnabledProtocolsOutputRefer
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -320,7 +320,7 @@ export class MediaStreamingPolicyCommonEncryptionCbcsEnabledProtocolsOutputRefer
   // dash - computed: false, optional: true, required: false
   private _dash?: boolean | cdktf.IResolvable; 
   public get dash() {
-    return this.getBooleanAttribute('dash') as any;
+    return this.getBooleanAttribute('dash');
   }
   public set dash(value: boolean | cdktf.IResolvable) {
     this._dash = value;
@@ -336,7 +336,7 @@ export class MediaStreamingPolicyCommonEncryptionCbcsEnabledProtocolsOutputRefer
   // download - computed: false, optional: true, required: false
   private _download?: boolean | cdktf.IResolvable; 
   public get download() {
-    return this.getBooleanAttribute('download') as any;
+    return this.getBooleanAttribute('download');
   }
   public set download(value: boolean | cdktf.IResolvable) {
     this._download = value;
@@ -352,7 +352,7 @@ export class MediaStreamingPolicyCommonEncryptionCbcsEnabledProtocolsOutputRefer
   // hls - computed: false, optional: true, required: false
   private _hls?: boolean | cdktf.IResolvable; 
   public get hls() {
-    return this.getBooleanAttribute('hls') as any;
+    return this.getBooleanAttribute('hls');
   }
   public set hls(value: boolean | cdktf.IResolvable) {
     this._hls = value;
@@ -368,7 +368,7 @@ export class MediaStreamingPolicyCommonEncryptionCbcsEnabledProtocolsOutputRefer
   // smooth_streaming - computed: false, optional: true, required: false
   private _smoothStreaming?: boolean | cdktf.IResolvable; 
   public get smoothStreaming() {
-    return this.getBooleanAttribute('smooth_streaming') as any;
+    return this.getBooleanAttribute('smooth_streaming');
   }
   public set smoothStreaming(value: boolean | cdktf.IResolvable) {
     this._smoothStreaming = value;
@@ -403,7 +403,7 @@ export interface MediaStreamingPolicyCommonEncryptionCbcs {
 }
 
 export function mediaStreamingPolicyCommonEncryptionCbcsToTerraform(struct?: MediaStreamingPolicyCommonEncryptionCbcsOutputReference | MediaStreamingPolicyCommonEncryptionCbcs): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -422,7 +422,7 @@ export class MediaStreamingPolicyCommonEncryptionCbcsOutputReference extends cdk
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -460,7 +460,7 @@ export class MediaStreamingPolicyCommonEncryptionCbcsOutputReference extends cdk
   }
 
   // default_content_key - computed: false, optional: true, required: false
-  private _defaultContentKey = new MediaStreamingPolicyCommonEncryptionCbcsDefaultContentKeyOutputReference(this as any, "default_content_key", true);
+  private _defaultContentKey = new MediaStreamingPolicyCommonEncryptionCbcsDefaultContentKeyOutputReference(this, "default_content_key", true);
   public get defaultContentKey() {
     return this._defaultContentKey;
   }
@@ -476,7 +476,7 @@ export class MediaStreamingPolicyCommonEncryptionCbcsOutputReference extends cdk
   }
 
   // drm_fairplay - computed: false, optional: true, required: false
-  private _drmFairplay = new MediaStreamingPolicyCommonEncryptionCbcsDrmFairplayOutputReference(this as any, "drm_fairplay", true);
+  private _drmFairplay = new MediaStreamingPolicyCommonEncryptionCbcsDrmFairplayOutputReference(this, "drm_fairplay", true);
   public get drmFairplay() {
     return this._drmFairplay;
   }
@@ -492,7 +492,7 @@ export class MediaStreamingPolicyCommonEncryptionCbcsOutputReference extends cdk
   }
 
   // enabled_protocols - computed: false, optional: true, required: false
-  private _enabledProtocols = new MediaStreamingPolicyCommonEncryptionCbcsEnabledProtocolsOutputReference(this as any, "enabled_protocols", true);
+  private _enabledProtocols = new MediaStreamingPolicyCommonEncryptionCbcsEnabledProtocolsOutputReference(this, "enabled_protocols", true);
   public get enabledProtocols() {
     return this._enabledProtocols;
   }
@@ -519,7 +519,7 @@ export interface MediaStreamingPolicyCommonEncryptionCencDefaultContentKey {
 }
 
 export function mediaStreamingPolicyCommonEncryptionCencDefaultContentKeyToTerraform(struct?: MediaStreamingPolicyCommonEncryptionCencDefaultContentKeyOutputReference | MediaStreamingPolicyCommonEncryptionCencDefaultContentKey): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -537,7 +537,7 @@ export class MediaStreamingPolicyCommonEncryptionCencDefaultContentKeyOutputRefe
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -612,7 +612,7 @@ export interface MediaStreamingPolicyCommonEncryptionCencDrmPlayready {
 }
 
 export function mediaStreamingPolicyCommonEncryptionCencDrmPlayreadyToTerraform(struct?: MediaStreamingPolicyCommonEncryptionCencDrmPlayreadyOutputReference | MediaStreamingPolicyCommonEncryptionCencDrmPlayready): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -630,7 +630,7 @@ export class MediaStreamingPolicyCommonEncryptionCencDrmPlayreadyOutputReference
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -713,7 +713,7 @@ export interface MediaStreamingPolicyCommonEncryptionCencEnabledProtocols {
 }
 
 export function mediaStreamingPolicyCommonEncryptionCencEnabledProtocolsToTerraform(struct?: MediaStreamingPolicyCommonEncryptionCencEnabledProtocolsOutputReference | MediaStreamingPolicyCommonEncryptionCencEnabledProtocols): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -733,7 +733,7 @@ export class MediaStreamingPolicyCommonEncryptionCencEnabledProtocolsOutputRefer
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -779,7 +779,7 @@ export class MediaStreamingPolicyCommonEncryptionCencEnabledProtocolsOutputRefer
   // dash - computed: false, optional: true, required: false
   private _dash?: boolean | cdktf.IResolvable; 
   public get dash() {
-    return this.getBooleanAttribute('dash') as any;
+    return this.getBooleanAttribute('dash');
   }
   public set dash(value: boolean | cdktf.IResolvable) {
     this._dash = value;
@@ -795,7 +795,7 @@ export class MediaStreamingPolicyCommonEncryptionCencEnabledProtocolsOutputRefer
   // download - computed: false, optional: true, required: false
   private _download?: boolean | cdktf.IResolvable; 
   public get download() {
-    return this.getBooleanAttribute('download') as any;
+    return this.getBooleanAttribute('download');
   }
   public set download(value: boolean | cdktf.IResolvable) {
     this._download = value;
@@ -811,7 +811,7 @@ export class MediaStreamingPolicyCommonEncryptionCencEnabledProtocolsOutputRefer
   // hls - computed: false, optional: true, required: false
   private _hls?: boolean | cdktf.IResolvable; 
   public get hls() {
-    return this.getBooleanAttribute('hls') as any;
+    return this.getBooleanAttribute('hls');
   }
   public set hls(value: boolean | cdktf.IResolvable) {
     this._hls = value;
@@ -827,7 +827,7 @@ export class MediaStreamingPolicyCommonEncryptionCencEnabledProtocolsOutputRefer
   // smooth_streaming - computed: false, optional: true, required: false
   private _smoothStreaming?: boolean | cdktf.IResolvable; 
   public get smoothStreaming() {
-    return this.getBooleanAttribute('smooth_streaming') as any;
+    return this.getBooleanAttribute('smooth_streaming');
   }
   public set smoothStreaming(value: boolean | cdktf.IResolvable) {
     this._smoothStreaming = value;
@@ -866,7 +866,7 @@ export interface MediaStreamingPolicyCommonEncryptionCenc {
 }
 
 export function mediaStreamingPolicyCommonEncryptionCencToTerraform(struct?: MediaStreamingPolicyCommonEncryptionCencOutputReference | MediaStreamingPolicyCommonEncryptionCenc): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -886,7 +886,7 @@ export class MediaStreamingPolicyCommonEncryptionCencOutputReference extends cdk
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -946,7 +946,7 @@ export class MediaStreamingPolicyCommonEncryptionCencOutputReference extends cdk
   }
 
   // default_content_key - computed: false, optional: true, required: false
-  private _defaultContentKey = new MediaStreamingPolicyCommonEncryptionCencDefaultContentKeyOutputReference(this as any, "default_content_key", true);
+  private _defaultContentKey = new MediaStreamingPolicyCommonEncryptionCencDefaultContentKeyOutputReference(this, "default_content_key", true);
   public get defaultContentKey() {
     return this._defaultContentKey;
   }
@@ -962,7 +962,7 @@ export class MediaStreamingPolicyCommonEncryptionCencOutputReference extends cdk
   }
 
   // drm_playready - computed: false, optional: true, required: false
-  private _drmPlayready = new MediaStreamingPolicyCommonEncryptionCencDrmPlayreadyOutputReference(this as any, "drm_playready", true);
+  private _drmPlayready = new MediaStreamingPolicyCommonEncryptionCencDrmPlayreadyOutputReference(this, "drm_playready", true);
   public get drmPlayready() {
     return this._drmPlayready;
   }
@@ -978,7 +978,7 @@ export class MediaStreamingPolicyCommonEncryptionCencOutputReference extends cdk
   }
 
   // enabled_protocols - computed: false, optional: true, required: false
-  private _enabledProtocols = new MediaStreamingPolicyCommonEncryptionCencEnabledProtocolsOutputReference(this as any, "enabled_protocols", true);
+  private _enabledProtocols = new MediaStreamingPolicyCommonEncryptionCencEnabledProtocolsOutputReference(this, "enabled_protocols", true);
   public get enabledProtocols() {
     return this._enabledProtocols;
   }
@@ -1013,7 +1013,7 @@ export interface MediaStreamingPolicyNoEncryptionEnabledProtocols {
 }
 
 export function mediaStreamingPolicyNoEncryptionEnabledProtocolsToTerraform(struct?: MediaStreamingPolicyNoEncryptionEnabledProtocolsOutputReference | MediaStreamingPolicyNoEncryptionEnabledProtocols): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1033,7 +1033,7 @@ export class MediaStreamingPolicyNoEncryptionEnabledProtocolsOutputReference ext
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1079,7 +1079,7 @@ export class MediaStreamingPolicyNoEncryptionEnabledProtocolsOutputReference ext
   // dash - computed: false, optional: true, required: false
   private _dash?: boolean | cdktf.IResolvable; 
   public get dash() {
-    return this.getBooleanAttribute('dash') as any;
+    return this.getBooleanAttribute('dash');
   }
   public set dash(value: boolean | cdktf.IResolvable) {
     this._dash = value;
@@ -1095,7 +1095,7 @@ export class MediaStreamingPolicyNoEncryptionEnabledProtocolsOutputReference ext
   // download - computed: false, optional: true, required: false
   private _download?: boolean | cdktf.IResolvable; 
   public get download() {
-    return this.getBooleanAttribute('download') as any;
+    return this.getBooleanAttribute('download');
   }
   public set download(value: boolean | cdktf.IResolvable) {
     this._download = value;
@@ -1111,7 +1111,7 @@ export class MediaStreamingPolicyNoEncryptionEnabledProtocolsOutputReference ext
   // hls - computed: false, optional: true, required: false
   private _hls?: boolean | cdktf.IResolvable; 
   public get hls() {
-    return this.getBooleanAttribute('hls') as any;
+    return this.getBooleanAttribute('hls');
   }
   public set hls(value: boolean | cdktf.IResolvable) {
     this._hls = value;
@@ -1127,7 +1127,7 @@ export class MediaStreamingPolicyNoEncryptionEnabledProtocolsOutputReference ext
   // smooth_streaming - computed: false, optional: true, required: false
   private _smoothStreaming?: boolean | cdktf.IResolvable; 
   public get smoothStreaming() {
-    return this.getBooleanAttribute('smooth_streaming') as any;
+    return this.getBooleanAttribute('smooth_streaming');
   }
   public set smoothStreaming(value: boolean | cdktf.IResolvable) {
     this._smoothStreaming = value;
@@ -1155,8 +1155,8 @@ export interface MediaStreamingPolicyTimeouts {
   readonly read?: string;
 }
 
-export function mediaStreamingPolicyTimeoutsToTerraform(struct?: MediaStreamingPolicyTimeoutsOutputReference | MediaStreamingPolicyTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function mediaStreamingPolicyTimeoutsToTerraform(struct?: MediaStreamingPolicyTimeoutsOutputReference | MediaStreamingPolicyTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1175,7 +1175,7 @@ export class MediaStreamingPolicyTimeoutsOutputReference extends cdktf.ComplexOb
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1368,7 +1368,7 @@ export class MediaStreamingPolicy extends cdktf.TerraformResource {
   }
 
   // common_encryption_cbcs - computed: false, optional: true, required: false
-  private _commonEncryptionCbcs = new MediaStreamingPolicyCommonEncryptionCbcsOutputReference(this as any, "common_encryption_cbcs", true);
+  private _commonEncryptionCbcs = new MediaStreamingPolicyCommonEncryptionCbcsOutputReference(this, "common_encryption_cbcs", true);
   public get commonEncryptionCbcs() {
     return this._commonEncryptionCbcs;
   }
@@ -1384,7 +1384,7 @@ export class MediaStreamingPolicy extends cdktf.TerraformResource {
   }
 
   // common_encryption_cenc - computed: false, optional: true, required: false
-  private _commonEncryptionCenc = new MediaStreamingPolicyCommonEncryptionCencOutputReference(this as any, "common_encryption_cenc", true);
+  private _commonEncryptionCenc = new MediaStreamingPolicyCommonEncryptionCencOutputReference(this, "common_encryption_cenc", true);
   public get commonEncryptionCenc() {
     return this._commonEncryptionCenc;
   }
@@ -1400,7 +1400,7 @@ export class MediaStreamingPolicy extends cdktf.TerraformResource {
   }
 
   // no_encryption_enabled_protocols - computed: false, optional: true, required: false
-  private _noEncryptionEnabledProtocols = new MediaStreamingPolicyNoEncryptionEnabledProtocolsOutputReference(this as any, "no_encryption_enabled_protocols", true);
+  private _noEncryptionEnabledProtocols = new MediaStreamingPolicyNoEncryptionEnabledProtocolsOutputReference(this, "no_encryption_enabled_protocols", true);
   public get noEncryptionEnabledProtocols() {
     return this._noEncryptionEnabledProtocols;
   }
@@ -1416,7 +1416,7 @@ export class MediaStreamingPolicy extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new MediaStreamingPolicyTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new MediaStreamingPolicyTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

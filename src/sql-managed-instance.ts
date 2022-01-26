@@ -70,7 +70,7 @@ export interface SqlManagedInstanceConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_managed_instance#tags SqlManagedInstance#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_managed_instance#timezone_id SqlManagedInstance#timezone_id}
   */
@@ -100,7 +100,7 @@ export interface SqlManagedInstanceIdentity {
 }
 
 export function sqlManagedInstanceIdentityToTerraform(struct?: SqlManagedInstanceIdentityOutputReference | SqlManagedInstanceIdentity): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -117,7 +117,7 @@ export class SqlManagedInstanceIdentityOutputReference extends cdktf.ComplexObje
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -140,6 +140,16 @@ export class SqlManagedInstanceIdentityOutputReference extends cdktf.ComplexObje
       this.isEmptyObject = Object.keys(value).length === 0;
       this._type = value.type;
     }
+  }
+
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
   }
 
   // type - computed: false, optional: true, required: false
@@ -177,8 +187,8 @@ export interface SqlManagedInstanceTimeouts {
   readonly update?: string;
 }
 
-export function sqlManagedInstanceTimeoutsToTerraform(struct?: SqlManagedInstanceTimeoutsOutputReference | SqlManagedInstanceTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function sqlManagedInstanceTimeoutsToTerraform(struct?: SqlManagedInstanceTimeoutsOutputReference | SqlManagedInstanceTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -198,7 +208,7 @@ export class SqlManagedInstanceTimeoutsOutputReference extends cdktf.ComplexObje
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -506,7 +516,7 @@ export class SqlManagedInstance extends cdktf.TerraformResource {
   // public_data_endpoint_enabled - computed: false, optional: true, required: false
   private _publicDataEndpointEnabled?: boolean | cdktf.IResolvable; 
   public get publicDataEndpointEnabled() {
-    return this.getBooleanAttribute('public_data_endpoint_enabled') as any;
+    return this.getBooleanAttribute('public_data_endpoint_enabled');
   }
   public set publicDataEndpointEnabled(value: boolean | cdktf.IResolvable) {
     this._publicDataEndpointEnabled = value;
@@ -588,12 +598,11 @@ export class SqlManagedInstance extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -634,7 +643,7 @@ export class SqlManagedInstance extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity = new SqlManagedInstanceIdentityOutputReference(this as any, "identity", true);
+  private _identity = new SqlManagedInstanceIdentityOutputReference(this, "identity", true);
   public get identity() {
     return this._identity;
   }
@@ -650,7 +659,7 @@ export class SqlManagedInstance extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new SqlManagedInstanceTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new SqlManagedInstanceTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -686,7 +695,7 @@ export class SqlManagedInstance extends cdktf.TerraformResource {
       storage_account_type: cdktf.stringToTerraform(this._storageAccountType),
       storage_size_in_gb: cdktf.numberToTerraform(this._storageSizeInGb),
       subnet_id: cdktf.stringToTerraform(this._subnetId),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       timezone_id: cdktf.stringToTerraform(this._timezoneId),
       vcores: cdktf.numberToTerraform(this._vcores),
       identity: sqlManagedInstanceIdentityToTerraform(this._identity.internalValue),

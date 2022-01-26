@@ -14,7 +14,7 @@ export interface ContainerRegistryWebhookConfig extends cdktf.TerraformMetaArgum
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_webhook#custom_headers ContainerRegistryWebhook#custom_headers}
   */
-  readonly customHeaders?: { [key: string]: string } | cdktf.IResolvable;
+  readonly customHeaders?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_webhook#location ContainerRegistryWebhook#location}
   */
@@ -46,7 +46,7 @@ export interface ContainerRegistryWebhookConfig extends cdktf.TerraformMetaArgum
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_webhook#tags ContainerRegistryWebhook#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   * 
@@ -73,8 +73,8 @@ export interface ContainerRegistryWebhookTimeouts {
   readonly update?: string;
 }
 
-export function containerRegistryWebhookTimeoutsToTerraform(struct?: ContainerRegistryWebhookTimeoutsOutputReference | ContainerRegistryWebhookTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function containerRegistryWebhookTimeoutsToTerraform(struct?: ContainerRegistryWebhookTimeoutsOutputReference | ContainerRegistryWebhookTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -94,7 +94,7 @@ export class ContainerRegistryWebhookTimeoutsOutputReference extends cdktf.Compl
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -254,7 +254,7 @@ export class ContainerRegistryWebhook extends cdktf.TerraformResource {
   // actions - computed: false, optional: false, required: true
   private _actions?: string[]; 
   public get actions() {
-    return this.getListAttribute('actions');
+    return cdktf.Fn.tolist(this.getListAttribute('actions'));
   }
   public set actions(value: string[]) {
     this._actions = value;
@@ -265,12 +265,11 @@ export class ContainerRegistryWebhook extends cdktf.TerraformResource {
   }
 
   // custom_headers - computed: false, optional: true, required: false
-  private _customHeaders?: { [key: string]: string } | cdktf.IResolvable; 
+  private _customHeaders?: { [key: string]: string }; 
   public get customHeaders() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('custom_headers') as any;
+    return this.getStringMapAttribute('custom_headers');
   }
-  public set customHeaders(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set customHeaders(value: { [key: string]: string }) {
     this._customHeaders = value;
   }
   public resetCustomHeaders() {
@@ -384,12 +383,11 @@ export class ContainerRegistryWebhook extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -401,7 +399,7 @@ export class ContainerRegistryWebhook extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ContainerRegistryWebhookTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ContainerRegistryWebhookTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -423,7 +421,7 @@ export class ContainerRegistryWebhook extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       actions: cdktf.listMapper(cdktf.stringToTerraform)(this._actions),
-      custom_headers: cdktf.hashMapper(cdktf.anyToTerraform)(this._customHeaders),
+      custom_headers: cdktf.hashMapper(cdktf.stringToTerraform)(this._customHeaders),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       registry_name: cdktf.stringToTerraform(this._registryName),
@@ -431,7 +429,7 @@ export class ContainerRegistryWebhook extends cdktf.TerraformResource {
       scope: cdktf.stringToTerraform(this._scope),
       service_uri: cdktf.stringToTerraform(this._serviceUri),
       status: cdktf.stringToTerraform(this._status),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       timeouts: containerRegistryWebhookTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

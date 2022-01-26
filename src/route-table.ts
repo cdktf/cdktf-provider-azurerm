@@ -26,11 +26,11 @@ export interface RouteTableConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_table#route RouteTable#route}
   */
-  readonly route?: RouteTableRoute[];
+  readonly route?: RouteTableRoute[] | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_table#tags RouteTable#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   * 
@@ -57,8 +57,8 @@ export interface RouteTableRoute {
   readonly nextHopType?: string;
 }
 
-export function routeTableRouteToTerraform(struct?: RouteTableRoute): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function routeTableRouteToTerraform(struct?: RouteTableRoute | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -89,8 +89,8 @@ export interface RouteTableTimeouts {
   readonly update?: string;
 }
 
-export function routeTableTimeoutsToTerraform(struct?: RouteTableTimeoutsOutputReference | RouteTableTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function routeTableTimeoutsToTerraform(struct?: RouteTableTimeoutsOutputReference | RouteTableTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -110,7 +110,7 @@ export class RouteTableTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -266,7 +266,7 @@ export class RouteTable extends cdktf.TerraformResource {
   // disable_bgp_route_propagation - computed: false, optional: true, required: false
   private _disableBgpRoutePropagation?: boolean | cdktf.IResolvable; 
   public get disableBgpRoutePropagation() {
-    return this.getBooleanAttribute('disable_bgp_route_propagation') as any;
+    return this.getBooleanAttribute('disable_bgp_route_propagation');
   }
   public set disableBgpRoutePropagation(value: boolean | cdktf.IResolvable) {
     this._disableBgpRoutePropagation = value;
@@ -324,12 +324,12 @@ export class RouteTable extends cdktf.TerraformResource {
   }
 
   // route - computed: true, optional: true, required: false
-  private _route?: RouteTableRoute[]; 
+  private _route?: RouteTableRoute[] | cdktf.IResolvable; 
   public get route() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('route') as any;
+    return this.interpolationForAttribute('route');
   }
-  public set route(value: RouteTableRoute[]) {
+  public set route(value: RouteTableRoute[] | cdktf.IResolvable) {
     this._route = value;
   }
   public resetRoute() {
@@ -342,16 +342,15 @@ export class RouteTable extends cdktf.TerraformResource {
 
   // subnets - computed: true, optional: false, required: false
   public get subnets() {
-    return this.getListAttribute('subnets');
+    return cdktf.Fn.tolist(this.getListAttribute('subnets'));
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -363,7 +362,7 @@ export class RouteTable extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new RouteTableTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new RouteTableTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -389,7 +388,7 @@ export class RouteTable extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       route: cdktf.listMapper(routeTableRouteToTerraform)(this._route),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       timeouts: routeTableTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

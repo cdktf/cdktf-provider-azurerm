@@ -34,7 +34,7 @@ export interface MssqlVirtualMachineConfig extends cdktf.TerraformMetaArguments 
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine#tags MssqlVirtualMachine#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine#virtual_machine_id MssqlVirtualMachine#virtual_machine_id}
   */
@@ -90,7 +90,7 @@ export interface MssqlVirtualMachineAutoBackupManualSchedule {
 }
 
 export function mssqlVirtualMachineAutoBackupManualScheduleToTerraform(struct?: MssqlVirtualMachineAutoBackupManualScheduleOutputReference | MssqlVirtualMachineAutoBackupManualSchedule): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -110,7 +110,7 @@ export class MssqlVirtualMachineAutoBackupManualScheduleOutputReference extends 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -239,7 +239,7 @@ export interface MssqlVirtualMachineAutoBackup {
 }
 
 export function mssqlVirtualMachineAutoBackupToTerraform(struct?: MssqlVirtualMachineAutoBackupOutputReference | MssqlVirtualMachineAutoBackup): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -262,7 +262,7 @@ export class MssqlVirtualMachineAutoBackupOutputReference extends cdktf.ComplexO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -326,7 +326,7 @@ export class MssqlVirtualMachineAutoBackupOutputReference extends cdktf.ComplexO
   // encryption_enabled - computed: false, optional: true, required: false
   private _encryptionEnabled?: boolean | cdktf.IResolvable; 
   public get encryptionEnabled() {
-    return this.getBooleanAttribute('encryption_enabled') as any;
+    return this.getBooleanAttribute('encryption_enabled');
   }
   public set encryptionEnabled(value: boolean | cdktf.IResolvable) {
     this._encryptionEnabled = value;
@@ -397,7 +397,7 @@ export class MssqlVirtualMachineAutoBackupOutputReference extends cdktf.ComplexO
   // system_databases_backup_enabled - computed: false, optional: true, required: false
   private _systemDatabasesBackupEnabled?: boolean | cdktf.IResolvable; 
   public get systemDatabasesBackupEnabled() {
-    return this.getBooleanAttribute('system_databases_backup_enabled') as any;
+    return this.getBooleanAttribute('system_databases_backup_enabled');
   }
   public set systemDatabasesBackupEnabled(value: boolean | cdktf.IResolvable) {
     this._systemDatabasesBackupEnabled = value;
@@ -411,7 +411,7 @@ export class MssqlVirtualMachineAutoBackupOutputReference extends cdktf.ComplexO
   }
 
   // manual_schedule - computed: false, optional: true, required: false
-  private _manualSchedule = new MssqlVirtualMachineAutoBackupManualScheduleOutputReference(this as any, "manual_schedule", true);
+  private _manualSchedule = new MssqlVirtualMachineAutoBackupManualScheduleOutputReference(this, "manual_schedule", true);
   public get manualSchedule() {
     return this._manualSchedule;
   }
@@ -442,7 +442,7 @@ export interface MssqlVirtualMachineAutoPatching {
 }
 
 export function mssqlVirtualMachineAutoPatchingToTerraform(struct?: MssqlVirtualMachineAutoPatchingOutputReference | MssqlVirtualMachineAutoPatching): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -461,7 +461,7 @@ export class MssqlVirtualMachineAutoPatchingOutputReference extends cdktf.Comple
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -557,7 +557,7 @@ export interface MssqlVirtualMachineKeyVaultCredential {
 }
 
 export function mssqlVirtualMachineKeyVaultCredentialToTerraform(struct?: MssqlVirtualMachineKeyVaultCredentialOutputReference | MssqlVirtualMachineKeyVaultCredential): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -577,7 +577,7 @@ export class MssqlVirtualMachineKeyVaultCredentialOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -684,7 +684,7 @@ export interface MssqlVirtualMachineStorageConfigurationDataSettings {
 }
 
 export function mssqlVirtualMachineStorageConfigurationDataSettingsToTerraform(struct?: MssqlVirtualMachineStorageConfigurationDataSettingsOutputReference | MssqlVirtualMachineStorageConfigurationDataSettings): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -702,7 +702,7 @@ export class MssqlVirtualMachineStorageConfigurationDataSettingsOutputReference 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -749,8 +749,7 @@ export class MssqlVirtualMachineStorageConfigurationDataSettingsOutputReference 
   // luns - computed: false, optional: false, required: true
   private _luns?: number[]; 
   public get luns() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('luns') as any;
+    return this.getNumberListAttribute('luns');
   }
   public set luns(value: number[]) {
     this._luns = value;
@@ -772,7 +771,7 @@ export interface MssqlVirtualMachineStorageConfigurationLogSettings {
 }
 
 export function mssqlVirtualMachineStorageConfigurationLogSettingsToTerraform(struct?: MssqlVirtualMachineStorageConfigurationLogSettingsOutputReference | MssqlVirtualMachineStorageConfigurationLogSettings): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -790,7 +789,7 @@ export class MssqlVirtualMachineStorageConfigurationLogSettingsOutputReference e
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -837,8 +836,7 @@ export class MssqlVirtualMachineStorageConfigurationLogSettingsOutputReference e
   // luns - computed: false, optional: false, required: true
   private _luns?: number[]; 
   public get luns() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('luns') as any;
+    return this.getNumberListAttribute('luns');
   }
   public set luns(value: number[]) {
     this._luns = value;
@@ -860,7 +858,7 @@ export interface MssqlVirtualMachineStorageConfigurationTempDbSettings {
 }
 
 export function mssqlVirtualMachineStorageConfigurationTempDbSettingsToTerraform(struct?: MssqlVirtualMachineStorageConfigurationTempDbSettingsOutputReference | MssqlVirtualMachineStorageConfigurationTempDbSettings): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -878,7 +876,7 @@ export class MssqlVirtualMachineStorageConfigurationTempDbSettingsOutputReferenc
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -925,8 +923,7 @@ export class MssqlVirtualMachineStorageConfigurationTempDbSettingsOutputReferenc
   // luns - computed: false, optional: false, required: true
   private _luns?: number[]; 
   public get luns() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('luns') as any;
+    return this.getNumberListAttribute('luns');
   }
   public set luns(value: number[]) {
     this._luns = value;
@@ -966,7 +963,7 @@ export interface MssqlVirtualMachineStorageConfiguration {
 }
 
 export function mssqlVirtualMachineStorageConfigurationToTerraform(struct?: MssqlVirtualMachineStorageConfigurationOutputReference | MssqlVirtualMachineStorageConfiguration): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -987,7 +984,7 @@ export class MssqlVirtualMachineStorageConfigurationOutputReference extends cdkt
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1063,7 +1060,7 @@ export class MssqlVirtualMachineStorageConfigurationOutputReference extends cdkt
   }
 
   // data_settings - computed: false, optional: true, required: false
-  private _dataSettings = new MssqlVirtualMachineStorageConfigurationDataSettingsOutputReference(this as any, "data_settings", true);
+  private _dataSettings = new MssqlVirtualMachineStorageConfigurationDataSettingsOutputReference(this, "data_settings", true);
   public get dataSettings() {
     return this._dataSettings;
   }
@@ -1079,7 +1076,7 @@ export class MssqlVirtualMachineStorageConfigurationOutputReference extends cdkt
   }
 
   // log_settings - computed: false, optional: true, required: false
-  private _logSettings = new MssqlVirtualMachineStorageConfigurationLogSettingsOutputReference(this as any, "log_settings", true);
+  private _logSettings = new MssqlVirtualMachineStorageConfigurationLogSettingsOutputReference(this, "log_settings", true);
   public get logSettings() {
     return this._logSettings;
   }
@@ -1095,7 +1092,7 @@ export class MssqlVirtualMachineStorageConfigurationOutputReference extends cdkt
   }
 
   // temp_db_settings - computed: false, optional: true, required: false
-  private _tempDbSettings = new MssqlVirtualMachineStorageConfigurationTempDbSettingsOutputReference(this as any, "temp_db_settings", true);
+  private _tempDbSettings = new MssqlVirtualMachineStorageConfigurationTempDbSettingsOutputReference(this, "temp_db_settings", true);
   public get tempDbSettings() {
     return this._tempDbSettings;
   }
@@ -1129,8 +1126,8 @@ export interface MssqlVirtualMachineTimeouts {
   readonly update?: string;
 }
 
-export function mssqlVirtualMachineTimeoutsToTerraform(struct?: MssqlVirtualMachineTimeoutsOutputReference | MssqlVirtualMachineTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function mssqlVirtualMachineTimeoutsToTerraform(struct?: MssqlVirtualMachineTimeoutsOutputReference | MssqlVirtualMachineTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1150,7 +1147,7 @@ export class MssqlVirtualMachineTimeoutsOutputReference extends cdktf.ComplexObj
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1317,7 +1314,7 @@ export class MssqlVirtualMachine extends cdktf.TerraformResource {
   // r_services_enabled - computed: false, optional: true, required: false
   private _rServicesEnabled?: boolean | cdktf.IResolvable; 
   public get rServicesEnabled() {
-    return this.getBooleanAttribute('r_services_enabled') as any;
+    return this.getBooleanAttribute('r_services_enabled');
   }
   public set rServicesEnabled(value: boolean | cdktf.IResolvable) {
     this._rServicesEnabled = value;
@@ -1408,12 +1405,11 @@ export class MssqlVirtualMachine extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -1438,7 +1434,7 @@ export class MssqlVirtualMachine extends cdktf.TerraformResource {
   }
 
   // auto_backup - computed: false, optional: true, required: false
-  private _autoBackup = new MssqlVirtualMachineAutoBackupOutputReference(this as any, "auto_backup", true);
+  private _autoBackup = new MssqlVirtualMachineAutoBackupOutputReference(this, "auto_backup", true);
   public get autoBackup() {
     return this._autoBackup;
   }
@@ -1454,7 +1450,7 @@ export class MssqlVirtualMachine extends cdktf.TerraformResource {
   }
 
   // auto_patching - computed: false, optional: true, required: false
-  private _autoPatching = new MssqlVirtualMachineAutoPatchingOutputReference(this as any, "auto_patching", true);
+  private _autoPatching = new MssqlVirtualMachineAutoPatchingOutputReference(this, "auto_patching", true);
   public get autoPatching() {
     return this._autoPatching;
   }
@@ -1470,7 +1466,7 @@ export class MssqlVirtualMachine extends cdktf.TerraformResource {
   }
 
   // key_vault_credential - computed: false, optional: true, required: false
-  private _keyVaultCredential = new MssqlVirtualMachineKeyVaultCredentialOutputReference(this as any, "key_vault_credential", true);
+  private _keyVaultCredential = new MssqlVirtualMachineKeyVaultCredentialOutputReference(this, "key_vault_credential", true);
   public get keyVaultCredential() {
     return this._keyVaultCredential;
   }
@@ -1486,7 +1482,7 @@ export class MssqlVirtualMachine extends cdktf.TerraformResource {
   }
 
   // storage_configuration - computed: false, optional: true, required: false
-  private _storageConfiguration = new MssqlVirtualMachineStorageConfigurationOutputReference(this as any, "storage_configuration", true);
+  private _storageConfiguration = new MssqlVirtualMachineStorageConfigurationOutputReference(this, "storage_configuration", true);
   public get storageConfiguration() {
     return this._storageConfiguration;
   }
@@ -1502,7 +1498,7 @@ export class MssqlVirtualMachine extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new MssqlVirtualMachineTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new MssqlVirtualMachineTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -1529,7 +1525,7 @@ export class MssqlVirtualMachine extends cdktf.TerraformResource {
       sql_connectivity_update_password: cdktf.stringToTerraform(this._sqlConnectivityUpdatePassword),
       sql_connectivity_update_username: cdktf.stringToTerraform(this._sqlConnectivityUpdateUsername),
       sql_license_type: cdktf.stringToTerraform(this._sqlLicenseType),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       virtual_machine_id: cdktf.stringToTerraform(this._virtualMachineId),
       auto_backup: mssqlVirtualMachineAutoBackupToTerraform(this._autoBackup.internalValue),
       auto_patching: mssqlVirtualMachineAutoPatchingToTerraform(this._autoPatching.internalValue),

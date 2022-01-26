@@ -24,7 +24,7 @@ export interface BotChannelLineConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_line#line_channel BotChannelLine#line_channel}
   */
-  readonly lineChannel: BotChannelLineLineChannel[];
+  readonly lineChannel: BotChannelLineLineChannel[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -43,8 +43,8 @@ export interface BotChannelLineLineChannel {
   readonly secret: string;
 }
 
-export function botChannelLineLineChannelToTerraform(struct?: BotChannelLineLineChannel): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function botChannelLineLineChannelToTerraform(struct?: BotChannelLineLineChannel | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -73,8 +73,8 @@ export interface BotChannelLineTimeouts {
   readonly update?: string;
 }
 
-export function botChannelLineTimeoutsToTerraform(struct?: BotChannelLineTimeoutsOutputReference | BotChannelLineTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function botChannelLineTimeoutsToTerraform(struct?: BotChannelLineTimeoutsOutputReference | BotChannelLineTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -94,7 +94,7 @@ export class BotChannelLineTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -290,12 +290,12 @@ export class BotChannelLine extends cdktf.TerraformResource {
   }
 
   // line_channel - computed: false, optional: false, required: true
-  private _lineChannel?: BotChannelLineLineChannel[]; 
+  private _lineChannel?: BotChannelLineLineChannel[] | cdktf.IResolvable; 
   public get lineChannel() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('line_channel') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('line_channel')));
   }
-  public set lineChannel(value: BotChannelLineLineChannel[]) {
+  public set lineChannel(value: BotChannelLineLineChannel[] | cdktf.IResolvable) {
     this._lineChannel = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -304,7 +304,7 @@ export class BotChannelLine extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new BotChannelLineTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new BotChannelLineTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

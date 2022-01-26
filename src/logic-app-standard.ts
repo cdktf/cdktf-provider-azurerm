@@ -14,7 +14,7 @@ export interface LogicAppStandardConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_standard#app_settings LogicAppStandard#app_settings}
   */
-  readonly appSettings?: { [key: string]: string } | cdktf.IResolvable;
+  readonly appSettings?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_standard#bundle_version LogicAppStandard#bundle_version}
   */
@@ -62,7 +62,7 @@ export interface LogicAppStandardConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_standard#tags LogicAppStandard#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_standard#use_extension_bundle LogicAppStandard#use_extension_bundle}
   */
@@ -76,7 +76,7 @@ export interface LogicAppStandardConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_standard#connection_string LogicAppStandard#connection_string}
   */
-  readonly connectionString?: LogicAppStandardConnectionString[];
+  readonly connectionString?: LogicAppStandardConnectionString[] | cdktf.IResolvable;
   /**
   * identity block
   * 
@@ -123,8 +123,8 @@ export interface LogicAppStandardConnectionString {
   readonly value: string;
 }
 
-export function logicAppStandardConnectionStringToTerraform(struct?: LogicAppStandardConnectionString): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function logicAppStandardConnectionStringToTerraform(struct?: LogicAppStandardConnectionString | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -143,7 +143,7 @@ export interface LogicAppStandardIdentity {
 }
 
 export function logicAppStandardIdentityToTerraform(struct?: LogicAppStandardIdentityOutputReference | LogicAppStandardIdentity): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -160,7 +160,7 @@ export class LogicAppStandardIdentityOutputReference extends cdktf.ComplexObject
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -183,6 +183,16 @@ export class LogicAppStandardIdentityOutputReference extends cdktf.ComplexObject
       this.isEmptyObject = Object.keys(value).length === 0;
       this._type = value.type;
     }
+  }
+
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
   }
 
   // type - computed: false, optional: false, required: true
@@ -217,8 +227,8 @@ export interface LogicAppStandardSiteConfigIpRestrictionHeaders {
   readonly xForwardedHost?: string[];
 }
 
-export function logicAppStandardSiteConfigIpRestrictionHeadersToTerraform(struct?: LogicAppStandardSiteConfigIpRestrictionHeaders): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function logicAppStandardSiteConfigIpRestrictionHeadersToTerraform(struct?: LogicAppStandardSiteConfigIpRestrictionHeaders | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -238,7 +248,7 @@ export interface LogicAppStandardSiteConfigIpRestriction {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_standard#headers LogicAppStandard#headers}
   */
-  readonly headers?: LogicAppStandardSiteConfigIpRestrictionHeaders[];
+  readonly headers?: LogicAppStandardSiteConfigIpRestrictionHeaders[] | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_standard#ip_address LogicAppStandard#ip_address}
   */
@@ -261,8 +271,8 @@ export interface LogicAppStandardSiteConfigIpRestriction {
   readonly virtualNetworkSubnetId?: string;
 }
 
-export function logicAppStandardSiteConfigIpRestrictionToTerraform(struct?: LogicAppStandardSiteConfigIpRestriction): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function logicAppStandardSiteConfigIpRestrictionToTerraform(struct?: LogicAppStandardSiteConfigIpRestriction | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -289,7 +299,7 @@ export interface LogicAppStandardSiteConfigCors {
 }
 
 export function logicAppStandardSiteConfigCorsToTerraform(struct?: LogicAppStandardSiteConfigCorsOutputReference | LogicAppStandardSiteConfigCors): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -307,7 +317,7 @@ export class LogicAppStandardSiteConfigCorsOutputReference extends cdktf.Complex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -341,7 +351,7 @@ export class LogicAppStandardSiteConfigCorsOutputReference extends cdktf.Complex
   // allowed_origins - computed: false, optional: false, required: true
   private _allowedOrigins?: string[]; 
   public get allowedOrigins() {
-    return this.getListAttribute('allowed_origins');
+    return cdktf.Fn.tolist(this.getListAttribute('allowed_origins'));
   }
   public set allowedOrigins(value: string[]) {
     this._allowedOrigins = value;
@@ -354,7 +364,7 @@ export class LogicAppStandardSiteConfigCorsOutputReference extends cdktf.Complex
   // support_credentials - computed: false, optional: true, required: false
   private _supportCredentials?: boolean | cdktf.IResolvable; 
   public get supportCredentials() {
-    return this.getBooleanAttribute('support_credentials') as any;
+    return this.getBooleanAttribute('support_credentials');
   }
   public set supportCredentials(value: boolean | cdktf.IResolvable) {
     this._supportCredentials = value;
@@ -399,7 +409,7 @@ export interface LogicAppStandardSiteConfig {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_standard#ip_restriction LogicAppStandard#ip_restriction}
   */
-  readonly ipRestriction?: LogicAppStandardSiteConfigIpRestriction[];
+  readonly ipRestriction?: LogicAppStandardSiteConfigIpRestriction[] | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_standard#linux_fx_version LogicAppStandard#linux_fx_version}
   */
@@ -437,7 +447,7 @@ export interface LogicAppStandardSiteConfig {
 }
 
 export function logicAppStandardSiteConfigToTerraform(struct?: LogicAppStandardSiteConfigOutputReference | LogicAppStandardSiteConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -469,7 +479,7 @@ export class LogicAppStandardSiteConfigOutputReference extends cdktf.ComplexObje
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -587,7 +597,7 @@ export class LogicAppStandardSiteConfigOutputReference extends cdktf.ComplexObje
   // always_on - computed: false, optional: true, required: false
   private _alwaysOn?: boolean | cdktf.IResolvable; 
   public get alwaysOn() {
-    return this.getBooleanAttribute('always_on') as any;
+    return this.getBooleanAttribute('always_on');
   }
   public set alwaysOn(value: boolean | cdktf.IResolvable) {
     this._alwaysOn = value;
@@ -683,7 +693,7 @@ export class LogicAppStandardSiteConfigOutputReference extends cdktf.ComplexObje
   // http2_enabled - computed: false, optional: true, required: false
   private _http2Enabled?: boolean | cdktf.IResolvable; 
   public get http2Enabled() {
-    return this.getBooleanAttribute('http2_enabled') as any;
+    return this.getBooleanAttribute('http2_enabled');
   }
   public set http2Enabled(value: boolean | cdktf.IResolvable) {
     this._http2Enabled = value;
@@ -697,12 +707,12 @@ export class LogicAppStandardSiteConfigOutputReference extends cdktf.ComplexObje
   }
 
   // ip_restriction - computed: true, optional: true, required: false
-  private _ipRestriction?: LogicAppStandardSiteConfigIpRestriction[]; 
+  private _ipRestriction?: LogicAppStandardSiteConfigIpRestriction[] | cdktf.IResolvable; 
   public get ipRestriction() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('ip_restriction') as any;
+    return this.interpolationForAttribute('ip_restriction');
   }
-  public set ipRestriction(value: LogicAppStandardSiteConfigIpRestriction[]) {
+  public set ipRestriction(value: LogicAppStandardSiteConfigIpRestriction[] | cdktf.IResolvable) {
     this._ipRestriction = value;
   }
   public resetIpRestriction() {
@@ -764,7 +774,7 @@ export class LogicAppStandardSiteConfigOutputReference extends cdktf.ComplexObje
   // runtime_scale_monitoring_enabled - computed: false, optional: true, required: false
   private _runtimeScaleMonitoringEnabled?: boolean | cdktf.IResolvable; 
   public get runtimeScaleMonitoringEnabled() {
-    return this.getBooleanAttribute('runtime_scale_monitoring_enabled') as any;
+    return this.getBooleanAttribute('runtime_scale_monitoring_enabled');
   }
   public set runtimeScaleMonitoringEnabled(value: boolean | cdktf.IResolvable) {
     this._runtimeScaleMonitoringEnabled = value;
@@ -780,7 +790,7 @@ export class LogicAppStandardSiteConfigOutputReference extends cdktf.ComplexObje
   // use_32_bit_worker_process - computed: false, optional: true, required: false
   private _use32BitWorkerProcess?: boolean | cdktf.IResolvable; 
   public get use32BitWorkerProcess() {
-    return this.getBooleanAttribute('use_32_bit_worker_process') as any;
+    return this.getBooleanAttribute('use_32_bit_worker_process');
   }
   public set use32BitWorkerProcess(value: boolean | cdktf.IResolvable) {
     this._use32BitWorkerProcess = value;
@@ -796,7 +806,7 @@ export class LogicAppStandardSiteConfigOutputReference extends cdktf.ComplexObje
   // vnet_route_all_enabled - computed: true, optional: true, required: false
   private _vnetRouteAllEnabled?: boolean | cdktf.IResolvable; 
   public get vnetRouteAllEnabled() {
-    return this.getBooleanAttribute('vnet_route_all_enabled') as any;
+    return this.getBooleanAttribute('vnet_route_all_enabled');
   }
   public set vnetRouteAllEnabled(value: boolean | cdktf.IResolvable) {
     this._vnetRouteAllEnabled = value;
@@ -812,7 +822,7 @@ export class LogicAppStandardSiteConfigOutputReference extends cdktf.ComplexObje
   // websockets_enabled - computed: false, optional: true, required: false
   private _websocketsEnabled?: boolean | cdktf.IResolvable; 
   public get websocketsEnabled() {
-    return this.getBooleanAttribute('websockets_enabled') as any;
+    return this.getBooleanAttribute('websockets_enabled');
   }
   public set websocketsEnabled(value: boolean | cdktf.IResolvable) {
     this._websocketsEnabled = value;
@@ -826,7 +836,7 @@ export class LogicAppStandardSiteConfigOutputReference extends cdktf.ComplexObje
   }
 
   // cors - computed: false, optional: true, required: false
-  private _cors = new LogicAppStandardSiteConfigCorsOutputReference(this as any, "cors", true);
+  private _cors = new LogicAppStandardSiteConfigCorsOutputReference(this, "cors", true);
   public get cors() {
     return this._cors;
   }
@@ -860,8 +870,8 @@ export interface LogicAppStandardTimeouts {
   readonly update?: string;
 }
 
-export function logicAppStandardTimeoutsToTerraform(struct?: LogicAppStandardTimeoutsOutputReference | LogicAppStandardTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function logicAppStandardTimeoutsToTerraform(struct?: LogicAppStandardTimeoutsOutputReference | LogicAppStandardTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -881,7 +891,7 @@ export class LogicAppStandardTimeoutsOutputReference extends cdktf.ComplexObject
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1061,12 +1071,11 @@ export class LogicAppStandard extends cdktf.TerraformResource {
   }
 
   // app_settings - computed: true, optional: true, required: false
-  private _appSettings?: { [key: string]: string } | cdktf.IResolvable; 
+  private _appSettings?: { [key: string]: string }; 
   public get appSettings() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('app_settings') as any;
+    return this.getStringMapAttribute('app_settings');
   }
-  public set appSettings(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set appSettings(value: { [key: string]: string }) {
     this._appSettings = value;
   }
   public resetAppSettings() {
@@ -1096,7 +1105,7 @@ export class LogicAppStandard extends cdktf.TerraformResource {
   // client_affinity_enabled - computed: true, optional: true, required: false
   private _clientAffinityEnabled?: boolean | cdktf.IResolvable; 
   public get clientAffinityEnabled() {
-    return this.getBooleanAttribute('client_affinity_enabled') as any;
+    return this.getBooleanAttribute('client_affinity_enabled');
   }
   public set clientAffinityEnabled(value: boolean | cdktf.IResolvable) {
     this._clientAffinityEnabled = value;
@@ -1138,7 +1147,7 @@ export class LogicAppStandard extends cdktf.TerraformResource {
   // enabled - computed: false, optional: true, required: false
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
@@ -1154,7 +1163,7 @@ export class LogicAppStandard extends cdktf.TerraformResource {
   // https_only - computed: false, optional: true, required: false
   private _httpsOnly?: boolean | cdktf.IResolvable; 
   public get httpsOnly() {
-    return this.getBooleanAttribute('https_only') as any;
+    return this.getBooleanAttribute('https_only');
   }
   public set httpsOnly(value: boolean | cdktf.IResolvable) {
     this._httpsOnly = value;
@@ -1228,7 +1237,7 @@ export class LogicAppStandard extends cdktf.TerraformResource {
 
   // site_credential - computed: true, optional: false, required: false
   public siteCredential(index: string) {
-    return new LogicAppStandardSiteCredential(this, 'site_credential', index);
+    return new LogicAppStandardSiteCredential(this, 'site_credential', index, false);
   }
 
   // storage_account_access_key - computed: false, optional: false, required: true
@@ -1274,12 +1283,11 @@ export class LogicAppStandard extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -1293,7 +1301,7 @@ export class LogicAppStandard extends cdktf.TerraformResource {
   // use_extension_bundle - computed: false, optional: true, required: false
   private _useExtensionBundle?: boolean | cdktf.IResolvable; 
   public get useExtensionBundle() {
-    return this.getBooleanAttribute('use_extension_bundle') as any;
+    return this.getBooleanAttribute('use_extension_bundle');
   }
   public set useExtensionBundle(value: boolean | cdktf.IResolvable) {
     this._useExtensionBundle = value;
@@ -1323,12 +1331,12 @@ export class LogicAppStandard extends cdktf.TerraformResource {
   }
 
   // connection_string - computed: false, optional: true, required: false
-  private _connectionString?: LogicAppStandardConnectionString[]; 
+  private _connectionString?: LogicAppStandardConnectionString[] | cdktf.IResolvable; 
   public get connectionString() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('connection_string') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('connection_string')));
   }
-  public set connectionString(value: LogicAppStandardConnectionString[]) {
+  public set connectionString(value: LogicAppStandardConnectionString[] | cdktf.IResolvable) {
     this._connectionString = value;
   }
   public resetConnectionString() {
@@ -1340,7 +1348,7 @@ export class LogicAppStandard extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity = new LogicAppStandardIdentityOutputReference(this as any, "identity", true);
+  private _identity = new LogicAppStandardIdentityOutputReference(this, "identity", true);
   public get identity() {
     return this._identity;
   }
@@ -1356,7 +1364,7 @@ export class LogicAppStandard extends cdktf.TerraformResource {
   }
 
   // site_config - computed: false, optional: true, required: false
-  private _siteConfig = new LogicAppStandardSiteConfigOutputReference(this as any, "site_config", true);
+  private _siteConfig = new LogicAppStandardSiteConfigOutputReference(this, "site_config", true);
   public get siteConfig() {
     return this._siteConfig;
   }
@@ -1372,7 +1380,7 @@ export class LogicAppStandard extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new LogicAppStandardTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new LogicAppStandardTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -1394,7 +1402,7 @@ export class LogicAppStandard extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       app_service_plan_id: cdktf.stringToTerraform(this._appServicePlanId),
-      app_settings: cdktf.hashMapper(cdktf.anyToTerraform)(this._appSettings),
+      app_settings: cdktf.hashMapper(cdktf.stringToTerraform)(this._appSettings),
       bundle_version: cdktf.stringToTerraform(this._bundleVersion),
       client_affinity_enabled: cdktf.booleanToTerraform(this._clientAffinityEnabled),
       client_certificate_mode: cdktf.stringToTerraform(this._clientCertificateMode),
@@ -1406,7 +1414,7 @@ export class LogicAppStandard extends cdktf.TerraformResource {
       storage_account_access_key: cdktf.stringToTerraform(this._storageAccountAccessKey),
       storage_account_name: cdktf.stringToTerraform(this._storageAccountName),
       storage_account_share_name: cdktf.stringToTerraform(this._storageAccountShareName),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       use_extension_bundle: cdktf.booleanToTerraform(this._useExtensionBundle),
       version: cdktf.stringToTerraform(this._version),
       connection_string: cdktf.listMapper(logicAppStandardConnectionStringToTerraform)(this._connectionString),

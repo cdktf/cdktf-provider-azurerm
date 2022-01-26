@@ -10,7 +10,7 @@ export interface DataFactoryDatasetCosmosdbSqlapiConfig extends cdktf.TerraformM
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_cosmosdb_sqlapi#additional_properties DataFactoryDatasetCosmosdbSqlapi#additional_properties}
   */
-  readonly additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
+  readonly additionalProperties?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_cosmosdb_sqlapi#annotations DataFactoryDatasetCosmosdbSqlapi#annotations}
   */
@@ -46,7 +46,7 @@ export interface DataFactoryDatasetCosmosdbSqlapiConfig extends cdktf.TerraformM
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_cosmosdb_sqlapi#parameters DataFactoryDatasetCosmosdbSqlapi#parameters}
   */
-  readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
+  readonly parameters?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_cosmosdb_sqlapi#resource_group_name DataFactoryDatasetCosmosdbSqlapi#resource_group_name}
   */
@@ -56,7 +56,7 @@ export interface DataFactoryDatasetCosmosdbSqlapiConfig extends cdktf.TerraformM
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_cosmosdb_sqlapi#schema_column DataFactoryDatasetCosmosdbSqlapi#schema_column}
   */
-  readonly schemaColumn?: DataFactoryDatasetCosmosdbSqlapiSchemaColumn[];
+  readonly schemaColumn?: DataFactoryDatasetCosmosdbSqlapiSchemaColumn[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -79,8 +79,8 @@ export interface DataFactoryDatasetCosmosdbSqlapiSchemaColumn {
   readonly type?: string;
 }
 
-export function dataFactoryDatasetCosmosdbSqlapiSchemaColumnToTerraform(struct?: DataFactoryDatasetCosmosdbSqlapiSchemaColumn): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataFactoryDatasetCosmosdbSqlapiSchemaColumnToTerraform(struct?: DataFactoryDatasetCosmosdbSqlapiSchemaColumn | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -110,8 +110,8 @@ export interface DataFactoryDatasetCosmosdbSqlapiTimeouts {
   readonly update?: string;
 }
 
-export function dataFactoryDatasetCosmosdbSqlapiTimeoutsToTerraform(struct?: DataFactoryDatasetCosmosdbSqlapiTimeoutsOutputReference | DataFactoryDatasetCosmosdbSqlapiTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataFactoryDatasetCosmosdbSqlapiTimeoutsToTerraform(struct?: DataFactoryDatasetCosmosdbSqlapiTimeoutsOutputReference | DataFactoryDatasetCosmosdbSqlapiTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -131,7 +131,7 @@ export class DataFactoryDatasetCosmosdbSqlapiTimeoutsOutputReference extends cdk
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -291,12 +291,11 @@ export class DataFactoryDatasetCosmosdbSqlapi extends cdktf.TerraformResource {
   // ==========
 
   // additional_properties - computed: false, optional: true, required: false
-  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable; 
+  private _additionalProperties?: { [key: string]: string }; 
   public get additionalProperties() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('additional_properties') as any;
+    return this.getStringMapAttribute('additional_properties');
   }
-  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set additionalProperties(value: { [key: string]: string }) {
     this._additionalProperties = value;
   }
   public resetAdditionalProperties() {
@@ -435,12 +434,11 @@ export class DataFactoryDatasetCosmosdbSqlapi extends cdktf.TerraformResource {
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string } | cdktf.IResolvable; 
+  private _parameters?: { [key: string]: string }; 
   public get parameters() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('parameters') as any;
+    return this.getStringMapAttribute('parameters');
   }
-  public set parameters(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set parameters(value: { [key: string]: string }) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -465,12 +463,12 @@ export class DataFactoryDatasetCosmosdbSqlapi extends cdktf.TerraformResource {
   }
 
   // schema_column - computed: false, optional: true, required: false
-  private _schemaColumn?: DataFactoryDatasetCosmosdbSqlapiSchemaColumn[]; 
+  private _schemaColumn?: DataFactoryDatasetCosmosdbSqlapiSchemaColumn[] | cdktf.IResolvable; 
   public get schemaColumn() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('schema_column') as any;
+    return this.interpolationForAttribute('schema_column');
   }
-  public set schemaColumn(value: DataFactoryDatasetCosmosdbSqlapiSchemaColumn[]) {
+  public set schemaColumn(value: DataFactoryDatasetCosmosdbSqlapiSchemaColumn[] | cdktf.IResolvable) {
     this._schemaColumn = value;
   }
   public resetSchemaColumn() {
@@ -482,7 +480,7 @@ export class DataFactoryDatasetCosmosdbSqlapi extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataFactoryDatasetCosmosdbSqlapiTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataFactoryDatasetCosmosdbSqlapiTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -503,7 +501,7 @@ export class DataFactoryDatasetCosmosdbSqlapi extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      additional_properties: cdktf.hashMapper(cdktf.anyToTerraform)(this._additionalProperties),
+      additional_properties: cdktf.hashMapper(cdktf.stringToTerraform)(this._additionalProperties),
       annotations: cdktf.listMapper(cdktf.stringToTerraform)(this._annotations),
       collection_name: cdktf.stringToTerraform(this._collectionName),
       data_factory_id: cdktf.stringToTerraform(this._dataFactoryId),
@@ -512,7 +510,7 @@ export class DataFactoryDatasetCosmosdbSqlapi extends cdktf.TerraformResource {
       folder: cdktf.stringToTerraform(this._folder),
       linked_service_name: cdktf.stringToTerraform(this._linkedServiceName),
       name: cdktf.stringToTerraform(this._name),
-      parameters: cdktf.hashMapper(cdktf.anyToTerraform)(this._parameters),
+      parameters: cdktf.hashMapper(cdktf.stringToTerraform)(this._parameters),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       schema_column: cdktf.listMapper(dataFactoryDatasetCosmosdbSqlapiSchemaColumnToTerraform)(this._schemaColumn),
       timeouts: dataFactoryDatasetCosmosdbSqlapiTimeoutsToTerraform(this._timeouts.internalValue),

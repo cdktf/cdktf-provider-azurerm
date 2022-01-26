@@ -68,8 +68,8 @@ export interface DataAzurermNetappVolumeTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermNetappVolumeTimeoutsToTerraform(struct?: DataAzurermNetappVolumeTimeoutsOutputReference | DataAzurermNetappVolumeTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermNetappVolumeTimeoutsToTerraform(struct?: DataAzurermNetappVolumeTimeoutsOutputReference | DataAzurermNetappVolumeTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -86,7 +86,7 @@ export class DataAzurermNetappVolumeTimeoutsOutputReference extends cdktf.Comple
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -187,7 +187,7 @@ export class DataAzurermNetappVolume extends cdktf.TerraformDataSource {
 
   // data_protection_replication - computed: true, optional: false, required: false
   public dataProtectionReplication(index: string) {
-    return new DataAzurermNetappVolumeDataProtectionReplication(this, 'data_protection_replication', index);
+    return new DataAzurermNetappVolumeDataProtectionReplication(this, 'data_protection_replication', index, false);
   }
 
   // id - computed: true, optional: true, required: false
@@ -286,7 +286,7 @@ export class DataAzurermNetappVolume extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermNetappVolumeTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermNetappVolumeTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

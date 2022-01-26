@@ -22,7 +22,7 @@ export interface DnsNsRecordConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_ns_record#tags DnsNsRecord#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_ns_record#ttl DnsNsRecord#ttl}
   */
@@ -57,8 +57,8 @@ export interface DnsNsRecordTimeouts {
   readonly update?: string;
 }
 
-export function dnsNsRecordTimeoutsToTerraform(struct?: DnsNsRecordTimeoutsOutputReference | DnsNsRecordTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dnsNsRecordTimeoutsToTerraform(struct?: DnsNsRecordTimeoutsOutputReference | DnsNsRecordTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -78,7 +78,7 @@ export class DnsNsRecordTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -281,12 +281,11 @@ export class DnsNsRecord extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -324,7 +323,7 @@ export class DnsNsRecord extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DnsNsRecordTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DnsNsRecordTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -348,7 +347,7 @@ export class DnsNsRecord extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       records: cdktf.listMapper(cdktf.stringToTerraform)(this._records),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       ttl: cdktf.numberToTerraform(this._ttl),
       zone_name: cdktf.stringToTerraform(this._zoneName),
       timeouts: dnsNsRecordTimeoutsToTerraform(this._timeouts.internalValue),

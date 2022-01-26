@@ -28,7 +28,7 @@ export interface StreamAnalyticsFunctionJavascriptUdfConfig extends cdktf.Terraf
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_function_javascript_udf#input StreamAnalyticsFunctionJavascriptUdf#input}
   */
-  readonly input: StreamAnalyticsFunctionJavascriptUdfInput[];
+  readonly input: StreamAnalyticsFunctionJavascriptUdfInput[] | cdktf.IResolvable;
   /**
   * output block
   * 
@@ -49,8 +49,8 @@ export interface StreamAnalyticsFunctionJavascriptUdfInput {
   readonly type: string;
 }
 
-export function streamAnalyticsFunctionJavascriptUdfInputToTerraform(struct?: StreamAnalyticsFunctionJavascriptUdfInput): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function streamAnalyticsFunctionJavascriptUdfInputToTerraform(struct?: StreamAnalyticsFunctionJavascriptUdfInput | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -67,7 +67,7 @@ export interface StreamAnalyticsFunctionJavascriptUdfOutput {
 }
 
 export function streamAnalyticsFunctionJavascriptUdfOutputToTerraform(struct?: StreamAnalyticsFunctionJavascriptUdfOutputOutputReference | StreamAnalyticsFunctionJavascriptUdfOutput): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -84,7 +84,7 @@ export class StreamAnalyticsFunctionJavascriptUdfOutputOutputReference extends c
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -141,8 +141,8 @@ export interface StreamAnalyticsFunctionJavascriptUdfTimeouts {
   readonly update?: string;
 }
 
-export function streamAnalyticsFunctionJavascriptUdfTimeoutsToTerraform(struct?: StreamAnalyticsFunctionJavascriptUdfTimeoutsOutputReference | StreamAnalyticsFunctionJavascriptUdfTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function streamAnalyticsFunctionJavascriptUdfTimeoutsToTerraform(struct?: StreamAnalyticsFunctionJavascriptUdfTimeoutsOutputReference | StreamAnalyticsFunctionJavascriptUdfTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -162,7 +162,7 @@ export class StreamAnalyticsFunctionJavascriptUdfTimeoutsOutputReference extends
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -373,12 +373,12 @@ export class StreamAnalyticsFunctionJavascriptUdf extends cdktf.TerraformResourc
   }
 
   // input - computed: false, optional: false, required: true
-  private _input?: StreamAnalyticsFunctionJavascriptUdfInput[]; 
+  private _input?: StreamAnalyticsFunctionJavascriptUdfInput[] | cdktf.IResolvable; 
   public get input() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('input') as any;
+    return this.interpolationForAttribute('input');
   }
-  public set input(value: StreamAnalyticsFunctionJavascriptUdfInput[]) {
+  public set input(value: StreamAnalyticsFunctionJavascriptUdfInput[] | cdktf.IResolvable) {
     this._input = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -387,7 +387,7 @@ export class StreamAnalyticsFunctionJavascriptUdf extends cdktf.TerraformResourc
   }
 
   // output - computed: false, optional: false, required: true
-  private _output = new StreamAnalyticsFunctionJavascriptUdfOutputOutputReference(this as any, "output", true);
+  private _output = new StreamAnalyticsFunctionJavascriptUdfOutputOutputReference(this, "output", true);
   public get output() {
     return this._output;
   }
@@ -400,7 +400,7 @@ export class StreamAnalyticsFunctionJavascriptUdf extends cdktf.TerraformResourc
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new StreamAnalyticsFunctionJavascriptUdfTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new StreamAnalyticsFunctionJavascriptUdfTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

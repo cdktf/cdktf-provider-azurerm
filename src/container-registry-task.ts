@@ -34,7 +34,7 @@ export interface ContainerRegistryTaskConfig extends cdktf.TerraformMetaArgument
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_task#tags ContainerRegistryTask#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_task#timeout_in_seconds ContainerRegistryTask#timeout_in_seconds}
   */
@@ -92,7 +92,7 @@ export interface ContainerRegistryTaskConfig extends cdktf.TerraformMetaArgument
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_task#source_trigger ContainerRegistryTask#source_trigger}
   */
-  readonly sourceTrigger?: ContainerRegistryTaskSourceTrigger[];
+  readonly sourceTrigger?: ContainerRegistryTaskSourceTrigger[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -104,7 +104,7 @@ export interface ContainerRegistryTaskConfig extends cdktf.TerraformMetaArgument
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_task#timer_trigger ContainerRegistryTask#timer_trigger}
   */
-  readonly timerTrigger?: ContainerRegistryTaskTimerTrigger[];
+  readonly timerTrigger?: ContainerRegistryTaskTimerTrigger[] | cdktf.IResolvable;
 }
 export interface ContainerRegistryTaskAgentSetting {
   /**
@@ -114,7 +114,7 @@ export interface ContainerRegistryTaskAgentSetting {
 }
 
 export function containerRegistryTaskAgentSettingToTerraform(struct?: ContainerRegistryTaskAgentSettingOutputReference | ContainerRegistryTaskAgentSetting): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -131,7 +131,7 @@ export class ContainerRegistryTaskAgentSettingOutputReference extends cdktf.Comp
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -193,7 +193,7 @@ export interface ContainerRegistryTaskBaseImageTrigger {
 }
 
 export function containerRegistryTaskBaseImageTriggerToTerraform(struct?: ContainerRegistryTaskBaseImageTriggerOutputReference | ContainerRegistryTaskBaseImageTrigger): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -214,7 +214,7 @@ export class ContainerRegistryTaskBaseImageTriggerOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -266,7 +266,7 @@ export class ContainerRegistryTaskBaseImageTriggerOutputReference extends cdktf.
   // enabled - computed: false, optional: true, required: false
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
@@ -341,7 +341,7 @@ export interface ContainerRegistryTaskDockerStep {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_task#arguments ContainerRegistryTask#arguments}
   */
-  readonly arguments?: { [key: string]: string } | cdktf.IResolvable;
+  readonly arguments?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_task#cache_enabled ContainerRegistryTask#cache_enabled}
   */
@@ -369,7 +369,7 @@ export interface ContainerRegistryTaskDockerStep {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_task#secret_arguments ContainerRegistryTask#secret_arguments}
   */
-  readonly secretArguments?: { [key: string]: string } | cdktf.IResolvable;
+  readonly secretArguments?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_task#target ContainerRegistryTask#target}
   */
@@ -377,19 +377,19 @@ export interface ContainerRegistryTaskDockerStep {
 }
 
 export function containerRegistryTaskDockerStepToTerraform(struct?: ContainerRegistryTaskDockerStepOutputReference | ContainerRegistryTaskDockerStep): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    arguments: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.arguments),
+    arguments: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.arguments),
     cache_enabled: cdktf.booleanToTerraform(struct!.cacheEnabled),
     context_access_token: cdktf.stringToTerraform(struct!.contextAccessToken),
     context_path: cdktf.stringToTerraform(struct!.contextPath),
     dockerfile_path: cdktf.stringToTerraform(struct!.dockerfilePath),
     image_names: cdktf.listMapper(cdktf.stringToTerraform)(struct!.imageNames),
     push_enabled: cdktf.booleanToTerraform(struct!.pushEnabled),
-    secret_arguments: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.secretArguments),
+    secret_arguments: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.secretArguments),
     target: cdktf.stringToTerraform(struct!.target),
   }
 }
@@ -402,7 +402,7 @@ export class ContainerRegistryTaskDockerStepOutputReference extends cdktf.Comple
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -476,12 +476,11 @@ export class ContainerRegistryTaskDockerStepOutputReference extends cdktf.Comple
   }
 
   // arguments - computed: false, optional: true, required: false
-  private _arguments?: { [key: string]: string } | cdktf.IResolvable; 
+  private _arguments?: { [key: string]: string }; 
   public get arguments() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('arguments') as any;
+    return this.getStringMapAttribute('arguments');
   }
-  public set arguments(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set arguments(value: { [key: string]: string }) {
     this._arguments = value;
   }
   public resetArguments() {
@@ -495,7 +494,7 @@ export class ContainerRegistryTaskDockerStepOutputReference extends cdktf.Comple
   // cache_enabled - computed: false, optional: true, required: false
   private _cacheEnabled?: boolean | cdktf.IResolvable; 
   public get cacheEnabled() {
-    return this.getBooleanAttribute('cache_enabled') as any;
+    return this.getBooleanAttribute('cache_enabled');
   }
   public set cacheEnabled(value: boolean | cdktf.IResolvable) {
     this._cacheEnabled = value;
@@ -566,7 +565,7 @@ export class ContainerRegistryTaskDockerStepOutputReference extends cdktf.Comple
   // push_enabled - computed: false, optional: true, required: false
   private _pushEnabled?: boolean | cdktf.IResolvable; 
   public get pushEnabled() {
-    return this.getBooleanAttribute('push_enabled') as any;
+    return this.getBooleanAttribute('push_enabled');
   }
   public set pushEnabled(value: boolean | cdktf.IResolvable) {
     this._pushEnabled = value;
@@ -580,12 +579,11 @@ export class ContainerRegistryTaskDockerStepOutputReference extends cdktf.Comple
   }
 
   // secret_arguments - computed: false, optional: true, required: false
-  private _secretArguments?: { [key: string]: string } | cdktf.IResolvable; 
+  private _secretArguments?: { [key: string]: string }; 
   public get secretArguments() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('secret_arguments') as any;
+    return this.getStringMapAttribute('secret_arguments');
   }
-  public set secretArguments(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set secretArguments(value: { [key: string]: string }) {
     this._secretArguments = value;
   }
   public resetSecretArguments() {
@@ -624,7 +622,7 @@ export interface ContainerRegistryTaskEncodedStep {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_task#secret_values ContainerRegistryTask#secret_values}
   */
-  readonly secretValues?: { [key: string]: string } | cdktf.IResolvable;
+  readonly secretValues?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_task#task_content ContainerRegistryTask#task_content}
   */
@@ -636,21 +634,21 @@ export interface ContainerRegistryTaskEncodedStep {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_task#values ContainerRegistryTask#values}
   */
-  readonly values?: { [key: string]: string } | cdktf.IResolvable;
+  readonly values?: { [key: string]: string };
 }
 
 export function containerRegistryTaskEncodedStepToTerraform(struct?: ContainerRegistryTaskEncodedStepOutputReference | ContainerRegistryTaskEncodedStep): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
     context_access_token: cdktf.stringToTerraform(struct!.contextAccessToken),
     context_path: cdktf.stringToTerraform(struct!.contextPath),
-    secret_values: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.secretValues),
+    secret_values: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.secretValues),
     task_content: cdktf.stringToTerraform(struct!.taskContent),
     value_content: cdktf.stringToTerraform(struct!.valueContent),
-    values: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.values),
+    values: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.values),
   }
 }
 
@@ -662,7 +660,7 @@ export class ContainerRegistryTaskEncodedStepOutputReference extends cdktf.Compl
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -750,12 +748,11 @@ export class ContainerRegistryTaskEncodedStepOutputReference extends cdktf.Compl
   }
 
   // secret_values - computed: false, optional: true, required: false
-  private _secretValues?: { [key: string]: string } | cdktf.IResolvable; 
+  private _secretValues?: { [key: string]: string }; 
   public get secretValues() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('secret_values') as any;
+    return this.getStringMapAttribute('secret_values');
   }
-  public set secretValues(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set secretValues(value: { [key: string]: string }) {
     this._secretValues = value;
   }
   public resetSecretValues() {
@@ -796,12 +793,11 @@ export class ContainerRegistryTaskEncodedStepOutputReference extends cdktf.Compl
   }
 
   // values - computed: false, optional: true, required: false
-  private _values?: { [key: string]: string } | cdktf.IResolvable; 
+  private _values?: { [key: string]: string }; 
   public get values() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('values') as any;
+    return this.getStringMapAttribute('values');
   }
-  public set values(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set values(value: { [key: string]: string }) {
     this._values = value;
   }
   public resetValues() {
@@ -824,7 +820,7 @@ export interface ContainerRegistryTaskFileStep {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_task#secret_values ContainerRegistryTask#secret_values}
   */
-  readonly secretValues?: { [key: string]: string } | cdktf.IResolvable;
+  readonly secretValues?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_task#task_file_path ContainerRegistryTask#task_file_path}
   */
@@ -836,21 +832,21 @@ export interface ContainerRegistryTaskFileStep {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_task#values ContainerRegistryTask#values}
   */
-  readonly values?: { [key: string]: string } | cdktf.IResolvable;
+  readonly values?: { [key: string]: string };
 }
 
 export function containerRegistryTaskFileStepToTerraform(struct?: ContainerRegistryTaskFileStepOutputReference | ContainerRegistryTaskFileStep): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
     context_access_token: cdktf.stringToTerraform(struct!.contextAccessToken),
     context_path: cdktf.stringToTerraform(struct!.contextPath),
-    secret_values: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.secretValues),
+    secret_values: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.secretValues),
     task_file_path: cdktf.stringToTerraform(struct!.taskFilePath),
     value_file_path: cdktf.stringToTerraform(struct!.valueFilePath),
-    values: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.values),
+    values: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.values),
   }
 }
 
@@ -862,7 +858,7 @@ export class ContainerRegistryTaskFileStepOutputReference extends cdktf.ComplexO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -950,12 +946,11 @@ export class ContainerRegistryTaskFileStepOutputReference extends cdktf.ComplexO
   }
 
   // secret_values - computed: false, optional: true, required: false
-  private _secretValues?: { [key: string]: string } | cdktf.IResolvable; 
+  private _secretValues?: { [key: string]: string }; 
   public get secretValues() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('secret_values') as any;
+    return this.getStringMapAttribute('secret_values');
   }
-  public set secretValues(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set secretValues(value: { [key: string]: string }) {
     this._secretValues = value;
   }
   public resetSecretValues() {
@@ -996,12 +991,11 @@ export class ContainerRegistryTaskFileStepOutputReference extends cdktf.ComplexO
   }
 
   // values - computed: false, optional: true, required: false
-  private _values?: { [key: string]: string } | cdktf.IResolvable; 
+  private _values?: { [key: string]: string }; 
   public get values() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('values') as any;
+    return this.getStringMapAttribute('values');
   }
-  public set values(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set values(value: { [key: string]: string }) {
     this._values = value;
   }
   public resetValues() {
@@ -1024,7 +1018,7 @@ export interface ContainerRegistryTaskIdentity {
 }
 
 export function containerRegistryTaskIdentityToTerraform(struct?: ContainerRegistryTaskIdentityOutputReference | ContainerRegistryTaskIdentity): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1042,7 +1036,7 @@ export class ContainerRegistryTaskIdentityOutputReference extends cdktf.ComplexO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1076,7 +1070,7 @@ export class ContainerRegistryTaskIdentityOutputReference extends cdktf.ComplexO
   // identity_ids - computed: false, optional: true, required: false
   private _identityIds?: string[]; 
   public get identityIds() {
-    return this.getListAttribute('identity_ids');
+    return cdktf.Fn.tolist(this.getListAttribute('identity_ids'));
   }
   public set identityIds(value: string[]) {
     this._identityIds = value;
@@ -1087,6 +1081,16 @@ export class ContainerRegistryTaskIdentityOutputReference extends cdktf.ComplexO
   // Temporarily expose input value. Use with caution.
   public get identityIdsInput() {
     return this._identityIds;
+  }
+
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
   }
 
   // type - computed: false, optional: false, required: true
@@ -1118,7 +1122,7 @@ export interface ContainerRegistryTaskPlatform {
 }
 
 export function containerRegistryTaskPlatformToTerraform(struct?: ContainerRegistryTaskPlatformOutputReference | ContainerRegistryTaskPlatform): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1137,7 +1141,7 @@ export class ContainerRegistryTaskPlatformOutputReference extends cdktf.ComplexO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1238,8 +1242,8 @@ export interface ContainerRegistryTaskRegistryCredentialCustom {
   readonly username?: string;
 }
 
-export function containerRegistryTaskRegistryCredentialCustomToTerraform(struct?: ContainerRegistryTaskRegistryCredentialCustom): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function containerRegistryTaskRegistryCredentialCustomToTerraform(struct?: ContainerRegistryTaskRegistryCredentialCustom | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1259,7 +1263,7 @@ export interface ContainerRegistryTaskRegistryCredentialSource {
 }
 
 export function containerRegistryTaskRegistryCredentialSourceToTerraform(struct?: ContainerRegistryTaskRegistryCredentialSourceOutputReference | ContainerRegistryTaskRegistryCredentialSource): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1276,7 +1280,7 @@ export class ContainerRegistryTaskRegistryCredentialSourceOutputReference extend
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1320,7 +1324,7 @@ export interface ContainerRegistryTaskRegistryCredential {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_task#custom ContainerRegistryTask#custom}
   */
-  readonly custom?: ContainerRegistryTaskRegistryCredentialCustom[];
+  readonly custom?: ContainerRegistryTaskRegistryCredentialCustom[] | cdktf.IResolvable;
   /**
   * source block
   * 
@@ -1330,7 +1334,7 @@ export interface ContainerRegistryTaskRegistryCredential {
 }
 
 export function containerRegistryTaskRegistryCredentialToTerraform(struct?: ContainerRegistryTaskRegistryCredentialOutputReference | ContainerRegistryTaskRegistryCredential): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1348,7 +1352,7 @@ export class ContainerRegistryTaskRegistryCredentialOutputReference extends cdkt
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1380,12 +1384,12 @@ export class ContainerRegistryTaskRegistryCredentialOutputReference extends cdkt
   }
 
   // custom - computed: false, optional: true, required: false
-  private _custom?: ContainerRegistryTaskRegistryCredentialCustom[]; 
+  private _custom?: ContainerRegistryTaskRegistryCredentialCustom[] | cdktf.IResolvable; 
   public get custom() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('custom') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('custom')));
   }
-  public set custom(value: ContainerRegistryTaskRegistryCredentialCustom[]) {
+  public set custom(value: ContainerRegistryTaskRegistryCredentialCustom[] | cdktf.IResolvable) {
     this._custom = value;
   }
   public resetCustom() {
@@ -1397,7 +1401,7 @@ export class ContainerRegistryTaskRegistryCredentialOutputReference extends cdkt
   }
 
   // source - computed: false, optional: true, required: false
-  private _source = new ContainerRegistryTaskRegistryCredentialSourceOutputReference(this as any, "source", true);
+  private _source = new ContainerRegistryTaskRegistryCredentialSourceOutputReference(this, "source", true);
   public get source() {
     return this._source;
   }
@@ -1436,7 +1440,7 @@ export interface ContainerRegistryTaskSourceTriggerAuthentication {
 }
 
 export function containerRegistryTaskSourceTriggerAuthenticationToTerraform(struct?: ContainerRegistryTaskSourceTriggerAuthenticationOutputReference | ContainerRegistryTaskSourceTriggerAuthentication): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1457,7 +1461,7 @@ export class ContainerRegistryTaskSourceTriggerAuthenticationOutputReference ext
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1613,8 +1617,8 @@ export interface ContainerRegistryTaskSourceTrigger {
   readonly authentication?: ContainerRegistryTaskSourceTriggerAuthentication;
 }
 
-export function containerRegistryTaskSourceTriggerToTerraform(struct?: ContainerRegistryTaskSourceTrigger): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function containerRegistryTaskSourceTriggerToTerraform(struct?: ContainerRegistryTaskSourceTrigger | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1648,8 +1652,8 @@ export interface ContainerRegistryTaskTimeouts {
   readonly update?: string;
 }
 
-export function containerRegistryTaskTimeoutsToTerraform(struct?: ContainerRegistryTaskTimeoutsOutputReference | ContainerRegistryTaskTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function containerRegistryTaskTimeoutsToTerraform(struct?: ContainerRegistryTaskTimeoutsOutputReference | ContainerRegistryTaskTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1669,7 +1673,7 @@ export class ContainerRegistryTaskTimeoutsOutputReference extends cdktf.ComplexO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1791,8 +1795,8 @@ export interface ContainerRegistryTaskTimerTrigger {
   readonly schedule: string;
 }
 
-export function containerRegistryTaskTimerTriggerToTerraform(struct?: ContainerRegistryTaskTimerTrigger): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function containerRegistryTaskTimerTriggerToTerraform(struct?: ContainerRegistryTaskTimerTrigger | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1893,7 +1897,7 @@ export class ContainerRegistryTask extends cdktf.TerraformResource {
   // enabled - computed: false, optional: true, required: false
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
@@ -1914,7 +1918,7 @@ export class ContainerRegistryTask extends cdktf.TerraformResource {
   // is_system_task - computed: false, optional: true, required: false
   private _isSystemTask?: boolean | cdktf.IResolvable; 
   public get isSystemTask() {
-    return this.getBooleanAttribute('is_system_task') as any;
+    return this.getBooleanAttribute('is_system_task');
   }
   public set isSystemTask(value: boolean | cdktf.IResolvable) {
     this._isSystemTask = value;
@@ -1957,12 +1961,11 @@ export class ContainerRegistryTask extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -1990,7 +1993,7 @@ export class ContainerRegistryTask extends cdktf.TerraformResource {
   }
 
   // agent_setting - computed: false, optional: true, required: false
-  private _agentSetting = new ContainerRegistryTaskAgentSettingOutputReference(this as any, "agent_setting", true);
+  private _agentSetting = new ContainerRegistryTaskAgentSettingOutputReference(this, "agent_setting", true);
   public get agentSetting() {
     return this._agentSetting;
   }
@@ -2006,7 +2009,7 @@ export class ContainerRegistryTask extends cdktf.TerraformResource {
   }
 
   // base_image_trigger - computed: false, optional: true, required: false
-  private _baseImageTrigger = new ContainerRegistryTaskBaseImageTriggerOutputReference(this as any, "base_image_trigger", true);
+  private _baseImageTrigger = new ContainerRegistryTaskBaseImageTriggerOutputReference(this, "base_image_trigger", true);
   public get baseImageTrigger() {
     return this._baseImageTrigger;
   }
@@ -2022,7 +2025,7 @@ export class ContainerRegistryTask extends cdktf.TerraformResource {
   }
 
   // docker_step - computed: false, optional: true, required: false
-  private _dockerStep = new ContainerRegistryTaskDockerStepOutputReference(this as any, "docker_step", true);
+  private _dockerStep = new ContainerRegistryTaskDockerStepOutputReference(this, "docker_step", true);
   public get dockerStep() {
     return this._dockerStep;
   }
@@ -2038,7 +2041,7 @@ export class ContainerRegistryTask extends cdktf.TerraformResource {
   }
 
   // encoded_step - computed: false, optional: true, required: false
-  private _encodedStep = new ContainerRegistryTaskEncodedStepOutputReference(this as any, "encoded_step", true);
+  private _encodedStep = new ContainerRegistryTaskEncodedStepOutputReference(this, "encoded_step", true);
   public get encodedStep() {
     return this._encodedStep;
   }
@@ -2054,7 +2057,7 @@ export class ContainerRegistryTask extends cdktf.TerraformResource {
   }
 
   // file_step - computed: false, optional: true, required: false
-  private _fileStep = new ContainerRegistryTaskFileStepOutputReference(this as any, "file_step", true);
+  private _fileStep = new ContainerRegistryTaskFileStepOutputReference(this, "file_step", true);
   public get fileStep() {
     return this._fileStep;
   }
@@ -2070,7 +2073,7 @@ export class ContainerRegistryTask extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity = new ContainerRegistryTaskIdentityOutputReference(this as any, "identity", true);
+  private _identity = new ContainerRegistryTaskIdentityOutputReference(this, "identity", true);
   public get identity() {
     return this._identity;
   }
@@ -2086,7 +2089,7 @@ export class ContainerRegistryTask extends cdktf.TerraformResource {
   }
 
   // platform - computed: false, optional: true, required: false
-  private _platform = new ContainerRegistryTaskPlatformOutputReference(this as any, "platform", true);
+  private _platform = new ContainerRegistryTaskPlatformOutputReference(this, "platform", true);
   public get platform() {
     return this._platform;
   }
@@ -2102,7 +2105,7 @@ export class ContainerRegistryTask extends cdktf.TerraformResource {
   }
 
   // registry_credential - computed: false, optional: true, required: false
-  private _registryCredential = new ContainerRegistryTaskRegistryCredentialOutputReference(this as any, "registry_credential", true);
+  private _registryCredential = new ContainerRegistryTaskRegistryCredentialOutputReference(this, "registry_credential", true);
   public get registryCredential() {
     return this._registryCredential;
   }
@@ -2118,12 +2121,12 @@ export class ContainerRegistryTask extends cdktf.TerraformResource {
   }
 
   // source_trigger - computed: false, optional: true, required: false
-  private _sourceTrigger?: ContainerRegistryTaskSourceTrigger[]; 
+  private _sourceTrigger?: ContainerRegistryTaskSourceTrigger[] | cdktf.IResolvable; 
   public get sourceTrigger() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('source_trigger') as any;
+    return this.interpolationForAttribute('source_trigger');
   }
-  public set sourceTrigger(value: ContainerRegistryTaskSourceTrigger[]) {
+  public set sourceTrigger(value: ContainerRegistryTaskSourceTrigger[] | cdktf.IResolvable) {
     this._sourceTrigger = value;
   }
   public resetSourceTrigger() {
@@ -2135,7 +2138,7 @@ export class ContainerRegistryTask extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ContainerRegistryTaskTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ContainerRegistryTaskTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -2151,12 +2154,12 @@ export class ContainerRegistryTask extends cdktf.TerraformResource {
   }
 
   // timer_trigger - computed: false, optional: true, required: false
-  private _timerTrigger?: ContainerRegistryTaskTimerTrigger[]; 
+  private _timerTrigger?: ContainerRegistryTaskTimerTrigger[] | cdktf.IResolvable; 
   public get timerTrigger() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('timer_trigger') as any;
+    return this.interpolationForAttribute('timer_trigger');
   }
-  public set timerTrigger(value: ContainerRegistryTaskTimerTrigger[]) {
+  public set timerTrigger(value: ContainerRegistryTaskTimerTrigger[] | cdktf.IResolvable) {
     this._timerTrigger = value;
   }
   public resetTimerTrigger() {
@@ -2179,7 +2182,7 @@ export class ContainerRegistryTask extends cdktf.TerraformResource {
       is_system_task: cdktf.booleanToTerraform(this._isSystemTask),
       log_template: cdktf.stringToTerraform(this._logTemplate),
       name: cdktf.stringToTerraform(this._name),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       timeout_in_seconds: cdktf.numberToTerraform(this._timeoutInSeconds),
       agent_setting: containerRegistryTaskAgentSettingToTerraform(this._agentSetting.internalValue),
       base_image_trigger: containerRegistryTaskBaseImageTriggerToTerraform(this._baseImageTrigger.internalValue),

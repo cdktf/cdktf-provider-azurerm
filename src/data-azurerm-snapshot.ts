@@ -51,18 +51,18 @@ export class DataAzurermSnapshotEncryptionSettings extends cdktf.ComplexComputed
   // disk_encryption_key - computed: true, optional: false, required: false
   public get diskEncryptionKey() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('disk_encryption_key') as any;
+    return this.interpolationForAttribute('disk_encryption_key');
   }
 
   // enabled - computed: true, optional: false, required: false
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
 
   // key_encryption_key - computed: true, optional: false, required: false
   public get keyEncryptionKey() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('key_encryption_key') as any;
+    return this.interpolationForAttribute('key_encryption_key');
   }
 }
 export interface DataAzurermSnapshotTimeouts {
@@ -72,8 +72,8 @@ export interface DataAzurermSnapshotTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermSnapshotTimeoutsToTerraform(struct?: DataAzurermSnapshotTimeoutsOutputReference | DataAzurermSnapshotTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermSnapshotTimeoutsToTerraform(struct?: DataAzurermSnapshotTimeoutsOutputReference | DataAzurermSnapshotTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -90,7 +90,7 @@ export class DataAzurermSnapshotTimeoutsOutputReference extends cdktf.ComplexObj
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -185,7 +185,7 @@ export class DataAzurermSnapshot extends cdktf.TerraformDataSource {
 
   // encryption_settings - computed: true, optional: false, required: false
   public encryptionSettings(index: string) {
-    return new DataAzurermSnapshotEncryptionSettings(this, 'encryption_settings', index);
+    return new DataAzurermSnapshotEncryptionSettings(this, 'encryption_settings', index, false);
   }
 
   // id - computed: true, optional: true, required: false
@@ -245,7 +245,7 @@ export class DataAzurermSnapshot extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermSnapshotTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermSnapshotTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

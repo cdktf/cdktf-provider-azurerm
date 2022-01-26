@@ -57,8 +57,8 @@ export interface SqlActiveDirectoryAdministratorTimeouts {
   readonly update?: string;
 }
 
-export function sqlActiveDirectoryAdministratorTimeoutsToTerraform(struct?: SqlActiveDirectoryAdministratorTimeoutsOutputReference | SqlActiveDirectoryAdministratorTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function sqlActiveDirectoryAdministratorTimeoutsToTerraform(struct?: SqlActiveDirectoryAdministratorTimeoutsOutputReference | SqlActiveDirectoryAdministratorTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -78,7 +78,7 @@ export class SqlActiveDirectoryAdministratorTimeoutsOutputReference extends cdkt
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -234,7 +234,7 @@ export class SqlActiveDirectoryAdministrator extends cdktf.TerraformResource {
   // azuread_authentication_only - computed: true, optional: true, required: false
   private _azureadAuthenticationOnly?: boolean | cdktf.IResolvable; 
   public get azureadAuthenticationOnly() {
-    return this.getBooleanAttribute('azuread_authentication_only') as any;
+    return this.getBooleanAttribute('azuread_authentication_only');
   }
   public set azureadAuthenticationOnly(value: boolean | cdktf.IResolvable) {
     this._azureadAuthenticationOnly = value;
@@ -318,7 +318,7 @@ export class SqlActiveDirectoryAdministrator extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new SqlActiveDirectoryAdministratorTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new SqlActiveDirectoryAdministratorTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

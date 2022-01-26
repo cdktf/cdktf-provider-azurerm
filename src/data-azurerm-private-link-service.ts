@@ -31,7 +31,7 @@ export class DataAzurermPrivateLinkServiceNatIpConfiguration extends cdktf.Compl
 
   // primary - computed: true, optional: false, required: false
   public get primary() {
-    return this.getBooleanAttribute('primary') as any;
+    return this.getBooleanAttribute('primary');
   }
 
   // private_ip_address - computed: true, optional: false, required: false
@@ -56,8 +56,8 @@ export interface DataAzurermPrivateLinkServiceTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermPrivateLinkServiceTimeoutsToTerraform(struct?: DataAzurermPrivateLinkServiceTimeoutsOutputReference | DataAzurermPrivateLinkServiceTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermPrivateLinkServiceTimeoutsToTerraform(struct?: DataAzurermPrivateLinkServiceTimeoutsOutputReference | DataAzurermPrivateLinkServiceTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -74,7 +74,7 @@ export class DataAzurermPrivateLinkServiceTimeoutsOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -169,7 +169,7 @@ export class DataAzurermPrivateLinkService extends cdktf.TerraformDataSource {
 
   // enable_proxy_protocol - computed: true, optional: false, required: false
   public get enableProxyProtocol() {
-    return this.getBooleanAttribute('enable_proxy_protocol') as any;
+    return this.getBooleanAttribute('enable_proxy_protocol');
   }
 
   // id - computed: true, optional: true, required: false
@@ -202,7 +202,7 @@ export class DataAzurermPrivateLinkService extends cdktf.TerraformDataSource {
 
   // nat_ip_configuration - computed: true, optional: false, required: false
   public natIpConfiguration(index: string) {
-    return new DataAzurermPrivateLinkServiceNatIpConfiguration(this, 'nat_ip_configuration', index);
+    return new DataAzurermPrivateLinkServiceNatIpConfiguration(this, 'nat_ip_configuration', index, false);
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -219,7 +219,7 @@ export class DataAzurermPrivateLinkService extends cdktf.TerraformDataSource {
   }
 
   // tags - computed: true, optional: false, required: false
-  public tags(key: string): string {
+  public tags(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
@@ -229,7 +229,7 @@ export class DataAzurermPrivateLinkService extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermPrivateLinkServiceTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermPrivateLinkServiceTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

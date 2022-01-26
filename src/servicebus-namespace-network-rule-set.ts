@@ -40,7 +40,7 @@ export interface ServicebusNamespaceNetworkRuleSetConfig extends cdktf.Terraform
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_network_rule_set#network_rules ServicebusNamespaceNetworkRuleSet#network_rules}
   */
-  readonly networkRules?: ServicebusNamespaceNetworkRuleSetNetworkRules[];
+  readonly networkRules?: ServicebusNamespaceNetworkRuleSetNetworkRules[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -59,8 +59,8 @@ export interface ServicebusNamespaceNetworkRuleSetNetworkRules {
   readonly subnetId: string;
 }
 
-export function servicebusNamespaceNetworkRuleSetNetworkRulesToTerraform(struct?: ServicebusNamespaceNetworkRuleSetNetworkRules): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function servicebusNamespaceNetworkRuleSetNetworkRulesToTerraform(struct?: ServicebusNamespaceNetworkRuleSetNetworkRules | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -89,8 +89,8 @@ export interface ServicebusNamespaceNetworkRuleSetTimeouts {
   readonly update?: string;
 }
 
-export function servicebusNamespaceNetworkRuleSetTimeoutsToTerraform(struct?: ServicebusNamespaceNetworkRuleSetTimeoutsOutputReference | ServicebusNamespaceNetworkRuleSetTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function servicebusNamespaceNetworkRuleSetTimeoutsToTerraform(struct?: ServicebusNamespaceNetworkRuleSetTimeoutsOutputReference | ServicebusNamespaceNetworkRuleSetTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -110,7 +110,7 @@ export class ServicebusNamespaceNetworkRuleSetTimeoutsOutputReference extends cd
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -289,7 +289,7 @@ export class ServicebusNamespaceNetworkRuleSet extends cdktf.TerraformResource {
   // ip_rules - computed: false, optional: true, required: false
   private _ipRules?: string[]; 
   public get ipRules() {
-    return this.getListAttribute('ip_rules');
+    return cdktf.Fn.tolist(this.getListAttribute('ip_rules'));
   }
   public set ipRules(value: string[]) {
     this._ipRules = value;
@@ -337,7 +337,7 @@ export class ServicebusNamespaceNetworkRuleSet extends cdktf.TerraformResource {
   // public_network_access_enabled - computed: false, optional: true, required: false
   private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable; 
   public get publicNetworkAccessEnabled() {
-    return this.getBooleanAttribute('public_network_access_enabled') as any;
+    return this.getBooleanAttribute('public_network_access_enabled');
   }
   public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable) {
     this._publicNetworkAccessEnabled = value;
@@ -369,7 +369,7 @@ export class ServicebusNamespaceNetworkRuleSet extends cdktf.TerraformResource {
   // trusted_services_allowed - computed: false, optional: true, required: false
   private _trustedServicesAllowed?: boolean | cdktf.IResolvable; 
   public get trustedServicesAllowed() {
-    return this.getBooleanAttribute('trusted_services_allowed') as any;
+    return this.getBooleanAttribute('trusted_services_allowed');
   }
   public set trustedServicesAllowed(value: boolean | cdktf.IResolvable) {
     this._trustedServicesAllowed = value;
@@ -383,12 +383,12 @@ export class ServicebusNamespaceNetworkRuleSet extends cdktf.TerraformResource {
   }
 
   // network_rules - computed: false, optional: true, required: false
-  private _networkRules?: ServicebusNamespaceNetworkRuleSetNetworkRules[]; 
+  private _networkRules?: ServicebusNamespaceNetworkRuleSetNetworkRules[] | cdktf.IResolvable; 
   public get networkRules() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('network_rules') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('network_rules')));
   }
-  public set networkRules(value: ServicebusNamespaceNetworkRuleSetNetworkRules[]) {
+  public set networkRules(value: ServicebusNamespaceNetworkRuleSetNetworkRules[] | cdktf.IResolvable) {
     this._networkRules = value;
   }
   public resetNetworkRules() {
@@ -400,7 +400,7 @@ export class ServicebusNamespaceNetworkRuleSet extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ServicebusNamespaceNetworkRuleSetTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ServicebusNamespaceNetworkRuleSetTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

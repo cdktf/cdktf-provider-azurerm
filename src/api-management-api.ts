@@ -114,7 +114,7 @@ export interface ApiManagementApiImportWsdlSelector {
 }
 
 export function apiManagementApiImportWsdlSelectorToTerraform(struct?: ApiManagementApiImportWsdlSelectorOutputReference | ApiManagementApiImportWsdlSelector): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -132,7 +132,7 @@ export class ApiManagementApiImportWsdlSelectorOutputReference extends cdktf.Com
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -207,7 +207,7 @@ export interface ApiManagementApiImport {
 }
 
 export function apiManagementApiImportToTerraform(struct?: ApiManagementApiImportOutputReference | ApiManagementApiImport): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -226,7 +226,7 @@ export class ApiManagementApiImportOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -290,7 +290,7 @@ export class ApiManagementApiImportOutputReference extends cdktf.ComplexObject {
   }
 
   // wsdl_selector - computed: false, optional: true, required: false
-  private _wsdlSelector = new ApiManagementApiImportWsdlSelectorOutputReference(this as any, "wsdl_selector", true);
+  private _wsdlSelector = new ApiManagementApiImportWsdlSelectorOutputReference(this, "wsdl_selector", true);
   public get wsdlSelector() {
     return this._wsdlSelector;
   }
@@ -317,7 +317,7 @@ export interface ApiManagementApiOauth2Authorization {
 }
 
 export function apiManagementApiOauth2AuthorizationToTerraform(struct?: ApiManagementApiOauth2AuthorizationOutputReference | ApiManagementApiOauth2Authorization): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -335,7 +335,7 @@ export class ApiManagementApiOauth2AuthorizationOutputReference extends cdktf.Co
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -407,7 +407,7 @@ export interface ApiManagementApiOpenidAuthentication {
 }
 
 export function apiManagementApiOpenidAuthenticationToTerraform(struct?: ApiManagementApiOpenidAuthenticationOutputReference | ApiManagementApiOpenidAuthentication): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -425,7 +425,7 @@ export class ApiManagementApiOpenidAuthenticationOutputReference extends cdktf.C
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -459,7 +459,7 @@ export class ApiManagementApiOpenidAuthenticationOutputReference extends cdktf.C
   // bearer_token_sending_methods - computed: false, optional: true, required: false
   private _bearerTokenSendingMethods?: string[]; 
   public get bearerTokenSendingMethods() {
-    return this.getListAttribute('bearer_token_sending_methods');
+    return cdktf.Fn.tolist(this.getListAttribute('bearer_token_sending_methods'));
   }
   public set bearerTokenSendingMethods(value: string[]) {
     this._bearerTokenSendingMethods = value;
@@ -497,7 +497,7 @@ export interface ApiManagementApiSubscriptionKeyParameterNames {
 }
 
 export function apiManagementApiSubscriptionKeyParameterNamesToTerraform(struct?: ApiManagementApiSubscriptionKeyParameterNamesOutputReference | ApiManagementApiSubscriptionKeyParameterNames): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -515,7 +515,7 @@ export class ApiManagementApiSubscriptionKeyParameterNamesOutputReference extend
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -591,8 +591,8 @@ export interface ApiManagementApiTimeouts {
   readonly update?: string;
 }
 
-export function apiManagementApiTimeoutsToTerraform(struct?: ApiManagementApiTimeoutsOutputReference | ApiManagementApiTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function apiManagementApiTimeoutsToTerraform(struct?: ApiManagementApiTimeoutsOutputReference | ApiManagementApiTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -612,7 +612,7 @@ export class ApiManagementApiTimeoutsOutputReference extends cdktf.ComplexObject
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -831,12 +831,12 @@ export class ApiManagementApi extends cdktf.TerraformResource {
 
   // is_current - computed: true, optional: false, required: false
   public get isCurrent() {
-    return this.getBooleanAttribute('is_current') as any;
+    return this.getBooleanAttribute('is_current');
   }
 
   // is_online - computed: true, optional: false, required: false
   public get isOnline() {
-    return this.getBooleanAttribute('is_online') as any;
+    return this.getBooleanAttribute('is_online');
   }
 
   // name - computed: false, optional: false, required: true
@@ -871,7 +871,7 @@ export class ApiManagementApi extends cdktf.TerraformResource {
   // protocols - computed: true, optional: true, required: false
   private _protocols?: string[]; 
   public get protocols() {
-    return this.getListAttribute('protocols');
+    return cdktf.Fn.tolist(this.getListAttribute('protocols'));
   }
   public set protocols(value: string[]) {
     this._protocols = value;
@@ -945,7 +945,7 @@ export class ApiManagementApi extends cdktf.TerraformResource {
   // soap_pass_through - computed: false, optional: true, required: false
   private _soapPassThrough?: boolean | cdktf.IResolvable; 
   public get soapPassThrough() {
-    return this.getBooleanAttribute('soap_pass_through') as any;
+    return this.getBooleanAttribute('soap_pass_through');
   }
   public set soapPassThrough(value: boolean | cdktf.IResolvable) {
     this._soapPassThrough = value;
@@ -977,7 +977,7 @@ export class ApiManagementApi extends cdktf.TerraformResource {
   // subscription_required - computed: false, optional: true, required: false
   private _subscriptionRequired?: boolean | cdktf.IResolvable; 
   public get subscriptionRequired() {
-    return this.getBooleanAttribute('subscription_required') as any;
+    return this.getBooleanAttribute('subscription_required');
   }
   public set subscriptionRequired(value: boolean | cdktf.IResolvable) {
     this._subscriptionRequired = value;
@@ -1039,7 +1039,7 @@ export class ApiManagementApi extends cdktf.TerraformResource {
   }
 
   // import - computed: false, optional: true, required: false
-  private _import = new ApiManagementApiImportOutputReference(this as any, "import", true);
+  private _import = new ApiManagementApiImportOutputReference(this, "import", true);
   public get import() {
     return this._import;
   }
@@ -1055,7 +1055,7 @@ export class ApiManagementApi extends cdktf.TerraformResource {
   }
 
   // oauth2_authorization - computed: false, optional: true, required: false
-  private _oauth2Authorization = new ApiManagementApiOauth2AuthorizationOutputReference(this as any, "oauth2_authorization", true);
+  private _oauth2Authorization = new ApiManagementApiOauth2AuthorizationOutputReference(this, "oauth2_authorization", true);
   public get oauth2Authorization() {
     return this._oauth2Authorization;
   }
@@ -1071,7 +1071,7 @@ export class ApiManagementApi extends cdktf.TerraformResource {
   }
 
   // openid_authentication - computed: false, optional: true, required: false
-  private _openidAuthentication = new ApiManagementApiOpenidAuthenticationOutputReference(this as any, "openid_authentication", true);
+  private _openidAuthentication = new ApiManagementApiOpenidAuthenticationOutputReference(this, "openid_authentication", true);
   public get openidAuthentication() {
     return this._openidAuthentication;
   }
@@ -1087,7 +1087,7 @@ export class ApiManagementApi extends cdktf.TerraformResource {
   }
 
   // subscription_key_parameter_names - computed: false, optional: true, required: false
-  private _subscriptionKeyParameterNames = new ApiManagementApiSubscriptionKeyParameterNamesOutputReference(this as any, "subscription_key_parameter_names", true);
+  private _subscriptionKeyParameterNames = new ApiManagementApiSubscriptionKeyParameterNamesOutputReference(this, "subscription_key_parameter_names", true);
   public get subscriptionKeyParameterNames() {
     return this._subscriptionKeyParameterNames;
   }
@@ -1103,7 +1103,7 @@ export class ApiManagementApi extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ApiManagementApiTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ApiManagementApiTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

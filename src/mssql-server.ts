@@ -22,7 +22,7 @@ export interface MssqlServerConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server#extended_auditing_policy MssqlServer#extended_auditing_policy}
   */
-  readonly extendedAuditingPolicy?: MssqlServerExtendedAuditingPolicy[];
+  readonly extendedAuditingPolicy?: MssqlServerExtendedAuditingPolicy[] | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server#location MssqlServer#location}
   */
@@ -50,7 +50,7 @@ export interface MssqlServerConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server#tags MssqlServer#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server#version MssqlServer#version}
   */
@@ -101,8 +101,8 @@ export interface MssqlServerExtendedAuditingPolicy {
   readonly storageEndpoint?: string;
 }
 
-export function mssqlServerExtendedAuditingPolicyToTerraform(struct?: MssqlServerExtendedAuditingPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function mssqlServerExtendedAuditingPolicyToTerraform(struct?: MssqlServerExtendedAuditingPolicy | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -136,7 +136,7 @@ export interface MssqlServerAzureadAdministrator {
 }
 
 export function mssqlServerAzureadAdministratorToTerraform(struct?: MssqlServerAzureadAdministratorOutputReference | MssqlServerAzureadAdministrator): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -156,7 +156,7 @@ export class MssqlServerAzureadAdministratorOutputReference extends cdktf.Comple
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -202,7 +202,7 @@ export class MssqlServerAzureadAdministratorOutputReference extends cdktf.Comple
   // azuread_authentication_only - computed: true, optional: true, required: false
   private _azureadAuthenticationOnly?: boolean | cdktf.IResolvable; 
   public get azureadAuthenticationOnly() {
-    return this.getBooleanAttribute('azuread_authentication_only') as any;
+    return this.getBooleanAttribute('azuread_authentication_only');
   }
   public set azureadAuthenticationOnly(value: boolean | cdktf.IResolvable) {
     this._azureadAuthenticationOnly = value;
@@ -269,7 +269,7 @@ export interface MssqlServerIdentity {
 }
 
 export function mssqlServerIdentityToTerraform(struct?: MssqlServerIdentityOutputReference | MssqlServerIdentity): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -287,7 +287,7 @@ export class MssqlServerIdentityOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -318,6 +318,16 @@ export class MssqlServerIdentityOutputReference extends cdktf.ComplexObject {
     }
   }
 
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
+  }
+
   // type - computed: false, optional: false, required: true
   private _type?: string; 
   public get type() {
@@ -334,7 +344,7 @@ export class MssqlServerIdentityOutputReference extends cdktf.ComplexObject {
   // user_assigned_identity_ids - computed: false, optional: true, required: false
   private _userAssignedIdentityIds?: string[]; 
   public get userAssignedIdentityIds() {
-    return this.getListAttribute('user_assigned_identity_ids');
+    return cdktf.Fn.tolist(this.getListAttribute('user_assigned_identity_ids'));
   }
   public set userAssignedIdentityIds(value: string[]) {
     this._userAssignedIdentityIds = value;
@@ -366,8 +376,8 @@ export interface MssqlServerTimeouts {
   readonly update?: string;
 }
 
-export function mssqlServerTimeoutsToTerraform(struct?: MssqlServerTimeoutsOutputReference | MssqlServerTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function mssqlServerTimeoutsToTerraform(struct?: MssqlServerTimeoutsOutputReference | MssqlServerTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -387,7 +397,7 @@ export class MssqlServerTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -591,12 +601,12 @@ export class MssqlServer extends cdktf.TerraformResource {
   }
 
   // extended_auditing_policy - computed: true, optional: true, required: false
-  private _extendedAuditingPolicy?: MssqlServerExtendedAuditingPolicy[]; 
+  private _extendedAuditingPolicy?: MssqlServerExtendedAuditingPolicy[] | cdktf.IResolvable; 
   public get extendedAuditingPolicy() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('extended_auditing_policy') as any;
+    return this.interpolationForAttribute('extended_auditing_policy');
   }
-  public set extendedAuditingPolicy(value: MssqlServerExtendedAuditingPolicy[]) {
+  public set extendedAuditingPolicy(value: MssqlServerExtendedAuditingPolicy[] | cdktf.IResolvable) {
     this._extendedAuditingPolicy = value;
   }
   public resetExtendedAuditingPolicy() {
@@ -678,7 +688,7 @@ export class MssqlServer extends cdktf.TerraformResource {
   // public_network_access_enabled - computed: false, optional: true, required: false
   private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable; 
   public get publicNetworkAccessEnabled() {
-    return this.getBooleanAttribute('public_network_access_enabled') as any;
+    return this.getBooleanAttribute('public_network_access_enabled');
   }
   public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable) {
     this._publicNetworkAccessEnabled = value;
@@ -710,12 +720,11 @@ export class MssqlServer extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -740,7 +749,7 @@ export class MssqlServer extends cdktf.TerraformResource {
   }
 
   // azuread_administrator - computed: false, optional: true, required: false
-  private _azureadAdministrator = new MssqlServerAzureadAdministratorOutputReference(this as any, "azuread_administrator", true);
+  private _azureadAdministrator = new MssqlServerAzureadAdministratorOutputReference(this, "azuread_administrator", true);
   public get azureadAdministrator() {
     return this._azureadAdministrator;
   }
@@ -756,7 +765,7 @@ export class MssqlServer extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity = new MssqlServerIdentityOutputReference(this as any, "identity", true);
+  private _identity = new MssqlServerIdentityOutputReference(this, "identity", true);
   public get identity() {
     return this._identity;
   }
@@ -772,7 +781,7 @@ export class MssqlServer extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new MssqlServerTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new MssqlServerTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -803,7 +812,7 @@ export class MssqlServer extends cdktf.TerraformResource {
       primary_user_assigned_identity_id: cdktf.stringToTerraform(this._primaryUserAssignedIdentityId),
       public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       version: cdktf.stringToTerraform(this._version),
       azuread_administrator: mssqlServerAzureadAdministratorToTerraform(this._azureadAdministrator.internalValue),
       identity: mssqlServerIdentityToTerraform(this._identity.internalValue),

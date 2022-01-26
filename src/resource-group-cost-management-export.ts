@@ -62,7 +62,7 @@ export interface ResourceGroupCostManagementExportExportDataOptions {
 }
 
 export function resourceGroupCostManagementExportExportDataOptionsToTerraform(struct?: ResourceGroupCostManagementExportExportDataOptionsOutputReference | ResourceGroupCostManagementExportExportDataOptions): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -80,7 +80,7 @@ export class ResourceGroupCostManagementExportExportDataOptionsOutputReference e
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -149,7 +149,7 @@ export interface ResourceGroupCostManagementExportExportDataStorageLocation {
 }
 
 export function resourceGroupCostManagementExportExportDataStorageLocationToTerraform(struct?: ResourceGroupCostManagementExportExportDataStorageLocationOutputReference | ResourceGroupCostManagementExportExportDataStorageLocation): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -167,7 +167,7 @@ export class ResourceGroupCostManagementExportExportDataStorageLocationOutputRef
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -243,8 +243,8 @@ export interface ResourceGroupCostManagementExportTimeouts {
   readonly update?: string;
 }
 
-export function resourceGroupCostManagementExportTimeoutsToTerraform(struct?: ResourceGroupCostManagementExportTimeoutsOutputReference | ResourceGroupCostManagementExportTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function resourceGroupCostManagementExportTimeoutsToTerraform(struct?: ResourceGroupCostManagementExportTimeoutsOutputReference | ResourceGroupCostManagementExportTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -264,7 +264,7 @@ export class ResourceGroupCostManagementExportTimeoutsOutputReference extends cd
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -422,7 +422,7 @@ export class ResourceGroupCostManagementExport extends cdktf.TerraformResource {
   // active - computed: false, optional: true, required: false
   private _active?: boolean | cdktf.IResolvable; 
   public get active() {
-    return this.getBooleanAttribute('active') as any;
+    return this.getBooleanAttribute('active');
   }
   public set active(value: boolean | cdktf.IResolvable) {
     this._active = value;
@@ -506,7 +506,7 @@ export class ResourceGroupCostManagementExport extends cdktf.TerraformResource {
   }
 
   // export_data_options - computed: false, optional: false, required: true
-  private _exportDataOptions = new ResourceGroupCostManagementExportExportDataOptionsOutputReference(this as any, "export_data_options", true);
+  private _exportDataOptions = new ResourceGroupCostManagementExportExportDataOptionsOutputReference(this, "export_data_options", true);
   public get exportDataOptions() {
     return this._exportDataOptions;
   }
@@ -519,7 +519,7 @@ export class ResourceGroupCostManagementExport extends cdktf.TerraformResource {
   }
 
   // export_data_storage_location - computed: false, optional: false, required: true
-  private _exportDataStorageLocation = new ResourceGroupCostManagementExportExportDataStorageLocationOutputReference(this as any, "export_data_storage_location", true);
+  private _exportDataStorageLocation = new ResourceGroupCostManagementExportExportDataStorageLocationOutputReference(this, "export_data_storage_location", true);
   public get exportDataStorageLocation() {
     return this._exportDataStorageLocation;
   }
@@ -532,7 +532,7 @@ export class ResourceGroupCostManagementExport extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ResourceGroupCostManagementExportTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ResourceGroupCostManagementExportTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

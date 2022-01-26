@@ -38,7 +38,7 @@ export interface AvailabilitySetConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/availability_set#tags AvailabilitySet#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   * 
@@ -65,8 +65,8 @@ export interface AvailabilitySetTimeouts {
   readonly update?: string;
 }
 
-export function availabilitySetTimeoutsToTerraform(struct?: AvailabilitySetTimeoutsOutputReference | AvailabilitySetTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function availabilitySetTimeoutsToTerraform(struct?: AvailabilitySetTimeoutsOutputReference | AvailabilitySetTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -86,7 +86,7 @@ export class AvailabilitySetTimeoutsOutputReference extends cdktf.ComplexObject 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -262,7 +262,7 @@ export class AvailabilitySet extends cdktf.TerraformResource {
   // managed - computed: false, optional: true, required: false
   private _managed?: boolean | cdktf.IResolvable; 
   public get managed() {
-    return this.getBooleanAttribute('managed') as any;
+    return this.getBooleanAttribute('managed');
   }
   public set managed(value: boolean | cdktf.IResolvable) {
     this._managed = value;
@@ -350,12 +350,11 @@ export class AvailabilitySet extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -367,7 +366,7 @@ export class AvailabilitySet extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AvailabilitySetTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new AvailabilitySetTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -395,7 +394,7 @@ export class AvailabilitySet extends cdktf.TerraformResource {
       platform_update_domain_count: cdktf.numberToTerraform(this._platformUpdateDomainCount),
       proximity_placement_group_id: cdktf.stringToTerraform(this._proximityPlacementGroupId),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       timeouts: availabilitySetTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

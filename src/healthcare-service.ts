@@ -42,7 +42,7 @@ export interface HealthcareServiceConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service#tags HealthcareService#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * authentication_configuration block
   * 
@@ -78,7 +78,7 @@ export interface HealthcareServiceAuthenticationConfiguration {
 }
 
 export function healthcareServiceAuthenticationConfigurationToTerraform(struct?: HealthcareServiceAuthenticationConfigurationOutputReference | HealthcareServiceAuthenticationConfiguration): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -97,7 +97,7 @@ export class HealthcareServiceAuthenticationConfigurationOutputReference extends
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -169,7 +169,7 @@ export class HealthcareServiceAuthenticationConfigurationOutputReference extends
   // smart_proxy_enabled - computed: false, optional: true, required: false
   private _smartProxyEnabled?: boolean | cdktf.IResolvable; 
   public get smartProxyEnabled() {
-    return this.getBooleanAttribute('smart_proxy_enabled') as any;
+    return this.getBooleanAttribute('smart_proxy_enabled');
   }
   public set smartProxyEnabled(value: boolean | cdktf.IResolvable) {
     this._smartProxyEnabled = value;
@@ -206,7 +206,7 @@ export interface HealthcareServiceCorsConfiguration {
 }
 
 export function healthcareServiceCorsConfigurationToTerraform(struct?: HealthcareServiceCorsConfigurationOutputReference | HealthcareServiceCorsConfiguration): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -227,7 +227,7 @@ export class HealthcareServiceCorsConfigurationOutputReference extends cdktf.Com
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -279,7 +279,7 @@ export class HealthcareServiceCorsConfigurationOutputReference extends cdktf.Com
   // allow_credentials - computed: false, optional: true, required: false
   private _allowCredentials?: boolean | cdktf.IResolvable; 
   public get allowCredentials() {
-    return this.getBooleanAttribute('allow_credentials') as any;
+    return this.getBooleanAttribute('allow_credentials');
   }
   public set allowCredentials(value: boolean | cdktf.IResolvable) {
     this._allowCredentials = value;
@@ -295,7 +295,7 @@ export class HealthcareServiceCorsConfigurationOutputReference extends cdktf.Com
   // allowed_headers - computed: false, optional: true, required: false
   private _allowedHeaders?: string[]; 
   public get allowedHeaders() {
-    return this.getListAttribute('allowed_headers');
+    return cdktf.Fn.tolist(this.getListAttribute('allowed_headers'));
   }
   public set allowedHeaders(value: string[]) {
     this._allowedHeaders = value;
@@ -327,7 +327,7 @@ export class HealthcareServiceCorsConfigurationOutputReference extends cdktf.Com
   // allowed_origins - computed: false, optional: true, required: false
   private _allowedOrigins?: string[]; 
   public get allowedOrigins() {
-    return this.getListAttribute('allowed_origins');
+    return cdktf.Fn.tolist(this.getListAttribute('allowed_origins'));
   }
   public set allowedOrigins(value: string[]) {
     this._allowedOrigins = value;
@@ -375,8 +375,8 @@ export interface HealthcareServiceTimeouts {
   readonly update?: string;
 }
 
-export function healthcareServiceTimeoutsToTerraform(struct?: HealthcareServiceTimeoutsOutputReference | HealthcareServiceTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function healthcareServiceTimeoutsToTerraform(struct?: HealthcareServiceTimeoutsOutputReference | HealthcareServiceTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -396,7 +396,7 @@ export class HealthcareServiceTimeoutsOutputReference extends cdktf.ComplexObjec
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -557,7 +557,7 @@ export class HealthcareService extends cdktf.TerraformResource {
   // access_policy_object_ids - computed: false, optional: true, required: false
   private _accessPolicyObjectIds?: string[]; 
   public get accessPolicyObjectIds() {
-    return this.getListAttribute('access_policy_object_ids');
+    return cdktf.Fn.tolist(this.getListAttribute('access_policy_object_ids'));
   }
   public set accessPolicyObjectIds(value: string[]) {
     this._accessPolicyObjectIds = value;
@@ -652,7 +652,7 @@ export class HealthcareService extends cdktf.TerraformResource {
   // public_network_access_enabled - computed: false, optional: true, required: false
   private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable; 
   public get publicNetworkAccessEnabled() {
-    return this.getBooleanAttribute('public_network_access_enabled') as any;
+    return this.getBooleanAttribute('public_network_access_enabled');
   }
   public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable) {
     this._publicNetworkAccessEnabled = value;
@@ -679,12 +679,11 @@ export class HealthcareService extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -696,7 +695,7 @@ export class HealthcareService extends cdktf.TerraformResource {
   }
 
   // authentication_configuration - computed: false, optional: true, required: false
-  private _authenticationConfiguration = new HealthcareServiceAuthenticationConfigurationOutputReference(this as any, "authentication_configuration", true);
+  private _authenticationConfiguration = new HealthcareServiceAuthenticationConfigurationOutputReference(this, "authentication_configuration", true);
   public get authenticationConfiguration() {
     return this._authenticationConfiguration;
   }
@@ -712,7 +711,7 @@ export class HealthcareService extends cdktf.TerraformResource {
   }
 
   // cors_configuration - computed: false, optional: true, required: false
-  private _corsConfiguration = new HealthcareServiceCorsConfigurationOutputReference(this as any, "cors_configuration", true);
+  private _corsConfiguration = new HealthcareServiceCorsConfigurationOutputReference(this, "cors_configuration", true);
   public get corsConfiguration() {
     return this._corsConfiguration;
   }
@@ -728,7 +727,7 @@ export class HealthcareService extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new HealthcareServiceTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new HealthcareServiceTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -757,7 +756,7 @@ export class HealthcareService extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       authentication_configuration: healthcareServiceAuthenticationConfigurationToTerraform(this._authenticationConfiguration.internalValue),
       cors_configuration: healthcareServiceCorsConfigurationToTerraform(this._corsConfiguration.internalValue),
       timeouts: healthcareServiceTimeoutsToTerraform(this._timeouts.internalValue),

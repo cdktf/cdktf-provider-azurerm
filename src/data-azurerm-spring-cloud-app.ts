@@ -62,8 +62,8 @@ export interface DataAzurermSpringCloudAppTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermSpringCloudAppTimeoutsToTerraform(struct?: DataAzurermSpringCloudAppTimeoutsOutputReference | DataAzurermSpringCloudAppTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermSpringCloudAppTimeoutsToTerraform(struct?: DataAzurermSpringCloudAppTimeoutsOutputReference | DataAzurermSpringCloudAppTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -80,7 +80,7 @@ export class DataAzurermSpringCloudAppTimeoutsOutputReference extends cdktf.Comp
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -171,7 +171,7 @@ export class DataAzurermSpringCloudApp extends cdktf.TerraformDataSource {
 
   // https_only - computed: true, optional: false, required: false
   public get httpsOnly() {
-    return this.getBooleanAttribute('https_only') as any;
+    return this.getBooleanAttribute('https_only');
   }
 
   // id - computed: true, optional: true, required: false
@@ -181,12 +181,12 @@ export class DataAzurermSpringCloudApp extends cdktf.TerraformDataSource {
 
   // identity - computed: true, optional: false, required: false
   public identity(index: string) {
-    return new DataAzurermSpringCloudAppIdentity(this, 'identity', index);
+    return new DataAzurermSpringCloudAppIdentity(this, 'identity', index, false);
   }
 
   // is_public - computed: true, optional: false, required: false
   public get isPublic() {
-    return this.getBooleanAttribute('is_public') as any;
+    return this.getBooleanAttribute('is_public');
   }
 
   // name - computed: false, optional: false, required: true
@@ -204,7 +204,7 @@ export class DataAzurermSpringCloudApp extends cdktf.TerraformDataSource {
 
   // persistent_disk - computed: true, optional: false, required: false
   public persistentDisk(index: string) {
-    return new DataAzurermSpringCloudAppPersistentDisk(this, 'persistent_disk', index);
+    return new DataAzurermSpringCloudAppPersistentDisk(this, 'persistent_disk', index, false);
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -235,7 +235,7 @@ export class DataAzurermSpringCloudApp extends cdktf.TerraformDataSource {
 
   // tls_enabled - computed: true, optional: false, required: false
   public get tlsEnabled() {
-    return this.getBooleanAttribute('tls_enabled') as any;
+    return this.getBooleanAttribute('tls_enabled');
   }
 
   // url - computed: true, optional: false, required: false
@@ -244,7 +244,7 @@ export class DataAzurermSpringCloudApp extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermSpringCloudAppTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermSpringCloudAppTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

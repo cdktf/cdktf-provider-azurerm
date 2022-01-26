@@ -81,13 +81,13 @@ export class DataAzurermVpnGatewayBgpSettings extends cdktf.ComplexComputedList 
   // instance_0_bgp_peering_address - computed: true, optional: false, required: false
   public get instance0BgpPeeringAddress() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('instance_0_bgp_peering_address') as any;
+    return this.interpolationForAttribute('instance_0_bgp_peering_address');
   }
 
   // instance_1_bgp_peering_address - computed: true, optional: false, required: false
   public get instance1BgpPeeringAddress() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('instance_1_bgp_peering_address') as any;
+    return this.interpolationForAttribute('instance_1_bgp_peering_address');
   }
 
   // peer_weight - computed: true, optional: false, required: false
@@ -102,8 +102,8 @@ export interface DataAzurermVpnGatewayTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermVpnGatewayTimeoutsToTerraform(struct?: DataAzurermVpnGatewayTimeoutsOutputReference | DataAzurermVpnGatewayTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermVpnGatewayTimeoutsToTerraform(struct?: DataAzurermVpnGatewayTimeoutsOutputReference | DataAzurermVpnGatewayTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -120,7 +120,7 @@ export class DataAzurermVpnGatewayTimeoutsOutputReference extends cdktf.ComplexO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -205,7 +205,7 @@ export class DataAzurermVpnGateway extends cdktf.TerraformDataSource {
 
   // bgp_settings - computed: true, optional: false, required: false
   public bgpSettings(index: string) {
-    return new DataAzurermVpnGatewayBgpSettings(this, 'bgp_settings', index);
+    return new DataAzurermVpnGatewayBgpSettings(this, 'bgp_settings', index, false);
   }
 
   // id - computed: true, optional: true, required: false
@@ -250,7 +250,7 @@ export class DataAzurermVpnGateway extends cdktf.TerraformDataSource {
   }
 
   // tags - computed: true, optional: false, required: false
-  public tags(key: string): string {
+  public tags(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
@@ -260,7 +260,7 @@ export class DataAzurermVpnGateway extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermVpnGatewayTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermVpnGatewayTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

@@ -56,7 +56,7 @@ export interface DataShareSnapshotSchedule {
 }
 
 export function dataShareSnapshotScheduleToTerraform(struct?: DataShareSnapshotScheduleOutputReference | DataShareSnapshotSchedule): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -75,7 +75,7 @@ export class DataShareSnapshotScheduleOutputReference extends cdktf.ComplexObjec
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -170,8 +170,8 @@ export interface DataShareTimeouts {
   readonly update?: string;
 }
 
-export function dataShareTimeoutsToTerraform(struct?: DataShareTimeoutsOutputReference | DataShareTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataShareTimeoutsToTerraform(struct?: DataShareTimeoutsOutputReference | DataShareTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -191,7 +191,7 @@ export class DataShareTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -421,7 +421,7 @@ export class DataShare extends cdktf.TerraformResource {
   }
 
   // snapshot_schedule - computed: false, optional: true, required: false
-  private _snapshotSchedule = new DataShareSnapshotScheduleOutputReference(this as any, "snapshot_schedule", true);
+  private _snapshotSchedule = new DataShareSnapshotScheduleOutputReference(this, "snapshot_schedule", true);
   public get snapshotSchedule() {
     return this._snapshotSchedule;
   }
@@ -437,7 +437,7 @@ export class DataShare extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataShareTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataShareTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

@@ -65,8 +65,8 @@ export interface SecurityCenterAssessmentPolicyTimeouts {
   readonly update?: string;
 }
 
-export function securityCenterAssessmentPolicyTimeoutsToTerraform(struct?: SecurityCenterAssessmentPolicyTimeoutsOutputReference | SecurityCenterAssessmentPolicyTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function securityCenterAssessmentPolicyTimeoutsToTerraform(struct?: SecurityCenterAssessmentPolicyTimeoutsOutputReference | SecurityCenterAssessmentPolicyTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -86,7 +86,7 @@ export class SecurityCenterAssessmentPolicyTimeoutsOutputReference extends cdktf
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -244,7 +244,7 @@ export class SecurityCenterAssessmentPolicy extends cdktf.TerraformResource {
   // categories - computed: true, optional: true, required: false
   private _categories?: string[]; 
   public get categories() {
-    return this.getListAttribute('categories');
+    return cdktf.Fn.tolist(this.getListAttribute('categories'));
   }
   public set categories(value: string[]) {
     this._categories = value;
@@ -344,7 +344,7 @@ export class SecurityCenterAssessmentPolicy extends cdktf.TerraformResource {
   // threats - computed: false, optional: true, required: false
   private _threats?: string[]; 
   public get threats() {
-    return this.getListAttribute('threats');
+    return cdktf.Fn.tolist(this.getListAttribute('threats'));
   }
   public set threats(value: string[]) {
     this._threats = value;
@@ -374,7 +374,7 @@ export class SecurityCenterAssessmentPolicy extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new SecurityCenterAssessmentPolicyTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new SecurityCenterAssessmentPolicyTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

@@ -50,13 +50,13 @@ export interface ManagedApplicationDefinitionConfig extends cdktf.TerraformMetaA
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application_definition#tags ManagedApplicationDefinition#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * authorization block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application_definition#authorization ManagedApplicationDefinition#authorization}
   */
-  readonly authorization?: ManagedApplicationDefinitionAuthorization[];
+  readonly authorization?: ManagedApplicationDefinitionAuthorization[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -75,8 +75,8 @@ export interface ManagedApplicationDefinitionAuthorization {
   readonly servicePrincipalId: string;
 }
 
-export function managedApplicationDefinitionAuthorizationToTerraform(struct?: ManagedApplicationDefinitionAuthorization): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function managedApplicationDefinitionAuthorizationToTerraform(struct?: ManagedApplicationDefinitionAuthorization | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -105,8 +105,8 @@ export interface ManagedApplicationDefinitionTimeouts {
   readonly update?: string;
 }
 
-export function managedApplicationDefinitionTimeoutsToTerraform(struct?: ManagedApplicationDefinitionTimeoutsOutputReference | ManagedApplicationDefinitionTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function managedApplicationDefinitionTimeoutsToTerraform(struct?: ManagedApplicationDefinitionTimeoutsOutputReference | ManagedApplicationDefinitionTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -126,7 +126,7 @@ export class ManagedApplicationDefinitionTimeoutsOutputReference extends cdktf.C
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -393,7 +393,7 @@ export class ManagedApplicationDefinition extends cdktf.TerraformResource {
   // package_enabled - computed: false, optional: true, required: false
   private _packageEnabled?: boolean | cdktf.IResolvable; 
   public get packageEnabled() {
-    return this.getBooleanAttribute('package_enabled') as any;
+    return this.getBooleanAttribute('package_enabled');
   }
   public set packageEnabled(value: boolean | cdktf.IResolvable) {
     this._packageEnabled = value;
@@ -436,12 +436,11 @@ export class ManagedApplicationDefinition extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -453,12 +452,12 @@ export class ManagedApplicationDefinition extends cdktf.TerraformResource {
   }
 
   // authorization - computed: false, optional: true, required: false
-  private _authorization?: ManagedApplicationDefinitionAuthorization[]; 
+  private _authorization?: ManagedApplicationDefinitionAuthorization[] | cdktf.IResolvable; 
   public get authorization() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('authorization') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('authorization')));
   }
-  public set authorization(value: ManagedApplicationDefinitionAuthorization[]) {
+  public set authorization(value: ManagedApplicationDefinitionAuthorization[] | cdktf.IResolvable) {
     this._authorization = value;
   }
   public resetAuthorization() {
@@ -470,7 +469,7 @@ export class ManagedApplicationDefinition extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ManagedApplicationDefinitionTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ManagedApplicationDefinitionTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -501,7 +500,7 @@ export class ManagedApplicationDefinition extends cdktf.TerraformResource {
       package_enabled: cdktf.booleanToTerraform(this._packageEnabled),
       package_file_uri: cdktf.stringToTerraform(this._packageFileUri),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       authorization: cdktf.listMapper(managedApplicationDefinitionAuthorizationToTerraform)(this._authorization),
       timeouts: managedApplicationDefinitionTimeoutsToTerraform(this._timeouts.internalValue),
     };

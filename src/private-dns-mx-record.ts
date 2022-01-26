@@ -18,7 +18,7 @@ export interface PrivateDnsMxRecordConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_mx_record#tags PrivateDnsMxRecord#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_mx_record#ttl PrivateDnsMxRecord#ttl}
   */
@@ -32,7 +32,7 @@ export interface PrivateDnsMxRecordConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_mx_record#record PrivateDnsMxRecord#record}
   */
-  readonly record: PrivateDnsMxRecordRecord[];
+  readonly record: PrivateDnsMxRecordRecord[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -51,8 +51,8 @@ export interface PrivateDnsMxRecordRecord {
   readonly preference: number;
 }
 
-export function privateDnsMxRecordRecordToTerraform(struct?: PrivateDnsMxRecordRecord): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function privateDnsMxRecordRecordToTerraform(struct?: PrivateDnsMxRecordRecord | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -81,8 +81,8 @@ export interface PrivateDnsMxRecordTimeouts {
   readonly update?: string;
 }
 
-export function privateDnsMxRecordTimeoutsToTerraform(struct?: PrivateDnsMxRecordTimeoutsOutputReference | PrivateDnsMxRecordTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function privateDnsMxRecordTimeoutsToTerraform(struct?: PrivateDnsMxRecordTimeoutsOutputReference | PrivateDnsMxRecordTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -102,7 +102,7 @@ export class PrivateDnsMxRecordTimeoutsOutputReference extends cdktf.ComplexObje
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -295,12 +295,11 @@ export class PrivateDnsMxRecord extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -338,12 +337,12 @@ export class PrivateDnsMxRecord extends cdktf.TerraformResource {
   }
 
   // record - computed: false, optional: false, required: true
-  private _record?: PrivateDnsMxRecordRecord[]; 
+  private _record?: PrivateDnsMxRecordRecord[] | cdktf.IResolvable; 
   public get record() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('record') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('record')));
   }
-  public set record(value: PrivateDnsMxRecordRecord[]) {
+  public set record(value: PrivateDnsMxRecordRecord[] | cdktf.IResolvable) {
     this._record = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -352,7 +351,7 @@ export class PrivateDnsMxRecord extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new PrivateDnsMxRecordTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new PrivateDnsMxRecordTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -375,7 +374,7 @@ export class PrivateDnsMxRecord extends cdktf.TerraformResource {
     return {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       ttl: cdktf.numberToTerraform(this._ttl),
       zone_name: cdktf.stringToTerraform(this._zoneName),
       record: cdktf.listMapper(privateDnsMxRecordRecordToTerraform)(this._record),

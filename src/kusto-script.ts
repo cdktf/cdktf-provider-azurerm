@@ -57,8 +57,8 @@ export interface KustoScriptTimeouts {
   readonly update?: string;
 }
 
-export function kustoScriptTimeoutsToTerraform(struct?: KustoScriptTimeoutsOutputReference | KustoScriptTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function kustoScriptTimeoutsToTerraform(struct?: KustoScriptTimeoutsOutputReference | KustoScriptTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -78,7 +78,7 @@ export class KustoScriptTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -234,7 +234,7 @@ export class KustoScript extends cdktf.TerraformResource {
   // continue_on_errors_enabled - computed: false, optional: true, required: false
   private _continueOnErrorsEnabled?: boolean | cdktf.IResolvable; 
   public get continueOnErrorsEnabled() {
-    return this.getBooleanAttribute('continue_on_errors_enabled') as any;
+    return this.getBooleanAttribute('continue_on_errors_enabled');
   }
   public set continueOnErrorsEnabled(value: boolean | cdktf.IResolvable) {
     this._continueOnErrorsEnabled = value;
@@ -321,7 +321,7 @@ export class KustoScript extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new KustoScriptTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new KustoScriptTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

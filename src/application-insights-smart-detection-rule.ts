@@ -53,8 +53,8 @@ export interface ApplicationInsightsSmartDetectionRuleTimeouts {
   readonly update?: string;
 }
 
-export function applicationInsightsSmartDetectionRuleTimeoutsToTerraform(struct?: ApplicationInsightsSmartDetectionRuleTimeoutsOutputReference | ApplicationInsightsSmartDetectionRuleTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function applicationInsightsSmartDetectionRuleTimeoutsToTerraform(struct?: ApplicationInsightsSmartDetectionRuleTimeoutsOutputReference | ApplicationInsightsSmartDetectionRuleTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -74,7 +74,7 @@ export class ApplicationInsightsSmartDetectionRuleTimeoutsOutputReference extend
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -229,7 +229,7 @@ export class ApplicationInsightsSmartDetectionRule extends cdktf.TerraformResour
   // additional_email_recipients - computed: false, optional: true, required: false
   private _additionalEmailRecipients?: string[]; 
   public get additionalEmailRecipients() {
-    return this.getListAttribute('additional_email_recipients');
+    return cdktf.Fn.tolist(this.getListAttribute('additional_email_recipients'));
   }
   public set additionalEmailRecipients(value: string[]) {
     this._additionalEmailRecipients = value;
@@ -258,7 +258,7 @@ export class ApplicationInsightsSmartDetectionRule extends cdktf.TerraformResour
   // enabled - computed: false, optional: true, required: false
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
@@ -292,7 +292,7 @@ export class ApplicationInsightsSmartDetectionRule extends cdktf.TerraformResour
   // send_emails_to_subscription_owners - computed: false, optional: true, required: false
   private _sendEmailsToSubscriptionOwners?: boolean | cdktf.IResolvable; 
   public get sendEmailsToSubscriptionOwners() {
-    return this.getBooleanAttribute('send_emails_to_subscription_owners') as any;
+    return this.getBooleanAttribute('send_emails_to_subscription_owners');
   }
   public set sendEmailsToSubscriptionOwners(value: boolean | cdktf.IResolvable) {
     this._sendEmailsToSubscriptionOwners = value;
@@ -306,7 +306,7 @@ export class ApplicationInsightsSmartDetectionRule extends cdktf.TerraformResour
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ApplicationInsightsSmartDetectionRuleTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ApplicationInsightsSmartDetectionRuleTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

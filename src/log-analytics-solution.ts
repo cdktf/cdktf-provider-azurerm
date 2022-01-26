@@ -22,7 +22,7 @@ export interface LogAnalyticsSolutionConfig extends cdktf.TerraformMetaArguments
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_solution#tags LogAnalyticsSolution#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_solution#workspace_name LogAnalyticsSolution#workspace_name}
   */
@@ -60,7 +60,7 @@ export interface LogAnalyticsSolutionPlan {
 }
 
 export function logAnalyticsSolutionPlanToTerraform(struct?: LogAnalyticsSolutionPlanOutputReference | LogAnalyticsSolutionPlan): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -79,7 +79,7 @@ export class LogAnalyticsSolutionPlanOutputReference extends cdktf.ComplexObject
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -114,6 +114,11 @@ export class LogAnalyticsSolutionPlanOutputReference extends cdktf.ComplexObject
       this._promotionCode = value.promotionCode;
       this._publisher = value.publisher;
     }
+  }
+
+  // name - computed: true, optional: false, required: false
+  public get name() {
+    return this.getStringAttribute('name');
   }
 
   // product - computed: false, optional: false, required: true
@@ -177,8 +182,8 @@ export interface LogAnalyticsSolutionTimeouts {
   readonly update?: string;
 }
 
-export function logAnalyticsSolutionTimeoutsToTerraform(struct?: LogAnalyticsSolutionTimeoutsOutputReference | LogAnalyticsSolutionTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function logAnalyticsSolutionTimeoutsToTerraform(struct?: LogAnalyticsSolutionTimeoutsOutputReference | LogAnalyticsSolutionTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -198,7 +203,7 @@ export class LogAnalyticsSolutionTimeoutsOutputReference extends cdktf.ComplexOb
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -397,12 +402,11 @@ export class LogAnalyticsSolution extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -440,7 +444,7 @@ export class LogAnalyticsSolution extends cdktf.TerraformResource {
   }
 
   // plan - computed: false, optional: false, required: true
-  private _plan = new LogAnalyticsSolutionPlanOutputReference(this as any, "plan", true);
+  private _plan = new LogAnalyticsSolutionPlanOutputReference(this, "plan", true);
   public get plan() {
     return this._plan;
   }
@@ -453,7 +457,7 @@ export class LogAnalyticsSolution extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new LogAnalyticsSolutionTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new LogAnalyticsSolutionTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -477,7 +481,7 @@ export class LogAnalyticsSolution extends cdktf.TerraformResource {
       location: cdktf.stringToTerraform(this._location),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       solution_name: cdktf.stringToTerraform(this._solutionName),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       workspace_name: cdktf.stringToTerraform(this._workspaceName),
       workspace_resource_id: cdktf.stringToTerraform(this._workspaceResourceId),
       plan: logAnalyticsSolutionPlanToTerraform(this._plan.internalValue),

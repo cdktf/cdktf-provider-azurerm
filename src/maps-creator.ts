@@ -26,7 +26,7 @@ export interface MapsCreatorConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/maps_creator#tags MapsCreator#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   * 
@@ -53,8 +53,8 @@ export interface MapsCreatorTimeouts {
   readonly update?: string;
 }
 
-export function mapsCreatorTimeoutsToTerraform(struct?: MapsCreatorTimeoutsOutputReference | MapsCreatorTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function mapsCreatorTimeoutsToTerraform(struct?: MapsCreatorTimeoutsOutputReference | MapsCreatorTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -74,7 +74,7 @@ export class MapsCreatorTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -284,12 +284,11 @@ export class MapsCreator extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -301,7 +300,7 @@ export class MapsCreator extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new MapsCreatorTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new MapsCreatorTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -326,7 +325,7 @@ export class MapsCreator extends cdktf.TerraformResource {
       maps_account_id: cdktf.stringToTerraform(this._mapsAccountId),
       name: cdktf.stringToTerraform(this._name),
       storage_units: cdktf.numberToTerraform(this._storageUnits),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       timeouts: mapsCreatorTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

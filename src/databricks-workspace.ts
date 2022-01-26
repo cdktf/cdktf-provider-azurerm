@@ -54,7 +54,7 @@ export interface DatabricksWorkspaceConfig extends cdktf.TerraformMetaArguments 
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace#tags DatabricksWorkspace#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * custom_parameters block
   * 
@@ -137,7 +137,7 @@ export interface DatabricksWorkspaceCustomParameters {
 }
 
 export function databricksWorkspaceCustomParametersToTerraform(struct?: DatabricksWorkspaceCustomParametersOutputReference | DatabricksWorkspaceCustomParameters): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -165,7 +165,7 @@ export class DatabricksWorkspaceCustomParametersOutputReference extends cdktf.Co
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -291,7 +291,7 @@ export class DatabricksWorkspaceCustomParametersOutputReference extends cdktf.Co
   // no_public_ip - computed: true, optional: true, required: false
   private _noPublicIp?: boolean | cdktf.IResolvable; 
   public get noPublicIp() {
-    return this.getBooleanAttribute('no_public_ip') as any;
+    return this.getBooleanAttribute('no_public_ip');
   }
   public set noPublicIp(value: boolean | cdktf.IResolvable) {
     this._noPublicIp = value;
@@ -467,8 +467,8 @@ export interface DatabricksWorkspaceTimeouts {
   readonly update?: string;
 }
 
-export function databricksWorkspaceTimeoutsToTerraform(struct?: DatabricksWorkspaceTimeoutsOutputReference | DatabricksWorkspaceTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function databricksWorkspaceTimeoutsToTerraform(struct?: DatabricksWorkspaceTimeoutsOutputReference | DatabricksWorkspaceTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -488,7 +488,7 @@ export class DatabricksWorkspaceTimeoutsOutputReference extends cdktf.ComplexObj
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -651,7 +651,7 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
   // customer_managed_key_enabled - computed: false, optional: true, required: false
   private _customerManagedKeyEnabled?: boolean | cdktf.IResolvable; 
   public get customerManagedKeyEnabled() {
-    return this.getBooleanAttribute('customer_managed_key_enabled') as any;
+    return this.getBooleanAttribute('customer_managed_key_enabled');
   }
   public set customerManagedKeyEnabled(value: boolean | cdktf.IResolvable) {
     this._customerManagedKeyEnabled = value;
@@ -672,7 +672,7 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
   // infrastructure_encryption_enabled - computed: false, optional: true, required: false
   private _infrastructureEncryptionEnabled?: boolean | cdktf.IResolvable; 
   public get infrastructureEncryptionEnabled() {
-    return this.getBooleanAttribute('infrastructure_encryption_enabled') as any;
+    return this.getBooleanAttribute('infrastructure_encryption_enabled');
   }
   public set infrastructureEncryptionEnabled(value: boolean | cdktf.IResolvable) {
     this._infrastructureEncryptionEnabled = value;
@@ -783,7 +783,7 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
   // public_network_access_enabled - computed: false, optional: true, required: false
   private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable; 
   public get publicNetworkAccessEnabled() {
-    return this.getBooleanAttribute('public_network_access_enabled') as any;
+    return this.getBooleanAttribute('public_network_access_enabled');
   }
   public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable) {
     this._publicNetworkAccessEnabled = value;
@@ -824,16 +824,15 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
 
   // storage_account_identity - computed: true, optional: false, required: false
   public storageAccountIdentity(index: string) {
-    return new DatabricksWorkspaceStorageAccountIdentity(this, 'storage_account_identity', index);
+    return new DatabricksWorkspaceStorageAccountIdentity(this, 'storage_account_identity', index, false);
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -855,7 +854,7 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
   }
 
   // custom_parameters - computed: false, optional: true, required: false
-  private _customParameters = new DatabricksWorkspaceCustomParametersOutputReference(this as any, "custom_parameters", true);
+  private _customParameters = new DatabricksWorkspaceCustomParametersOutputReference(this, "custom_parameters", true);
   public get customParameters() {
     return this._customParameters;
   }
@@ -871,7 +870,7 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DatabricksWorkspaceTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DatabricksWorkspaceTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -903,7 +902,7 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
       public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku: cdktf.stringToTerraform(this._sku),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       custom_parameters: databricksWorkspaceCustomParametersToTerraform(this._customParameters.internalValue),
       timeouts: databricksWorkspaceTimeoutsToTerraform(this._timeouts.internalValue),
     };

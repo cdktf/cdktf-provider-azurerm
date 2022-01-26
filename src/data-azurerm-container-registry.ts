@@ -29,8 +29,8 @@ export interface DataAzurermContainerRegistryTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermContainerRegistryTimeoutsToTerraform(struct?: DataAzurermContainerRegistryTimeoutsOutputReference | DataAzurermContainerRegistryTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermContainerRegistryTimeoutsToTerraform(struct?: DataAzurermContainerRegistryTimeoutsOutputReference | DataAzurermContainerRegistryTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -47,7 +47,7 @@ export class DataAzurermContainerRegistryTimeoutsOutputReference extends cdktf.C
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -132,7 +132,7 @@ export class DataAzurermContainerRegistry extends cdktf.TerraformDataSource {
 
   // admin_enabled - computed: true, optional: false, required: false
   public get adminEnabled() {
-    return this.getBooleanAttribute('admin_enabled') as any;
+    return this.getBooleanAttribute('admin_enabled');
   }
 
   // admin_password - computed: true, optional: false, required: false
@@ -197,12 +197,12 @@ export class DataAzurermContainerRegistry extends cdktf.TerraformDataSource {
   }
 
   // tags - computed: true, optional: false, required: false
-  public tags(key: string): string {
+  public tags(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermContainerRegistryTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermContainerRegistryTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

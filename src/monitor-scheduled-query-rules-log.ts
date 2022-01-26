@@ -38,7 +38,7 @@ export interface MonitorScheduledQueryRulesLogConfig extends cdktf.TerraformMeta
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_scheduled_query_rules_log#tags MonitorScheduledQueryRulesLog#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * criteria block
   * 
@@ -67,8 +67,8 @@ export interface MonitorScheduledQueryRulesLogCriteriaDimension {
   readonly values: string[];
 }
 
-export function monitorScheduledQueryRulesLogCriteriaDimensionToTerraform(struct?: MonitorScheduledQueryRulesLogCriteriaDimension): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function monitorScheduledQueryRulesLogCriteriaDimensionToTerraform(struct?: MonitorScheduledQueryRulesLogCriteriaDimension | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -89,11 +89,11 @@ export interface MonitorScheduledQueryRulesLogCriteria {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_scheduled_query_rules_log#dimension MonitorScheduledQueryRulesLog#dimension}
   */
-  readonly dimension: MonitorScheduledQueryRulesLogCriteriaDimension[];
+  readonly dimension: MonitorScheduledQueryRulesLogCriteriaDimension[] | cdktf.IResolvable;
 }
 
 export function monitorScheduledQueryRulesLogCriteriaToTerraform(struct?: MonitorScheduledQueryRulesLogCriteriaOutputReference | MonitorScheduledQueryRulesLogCriteria): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -111,7 +111,7 @@ export class MonitorScheduledQueryRulesLogCriteriaOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -156,12 +156,12 @@ export class MonitorScheduledQueryRulesLogCriteriaOutputReference extends cdktf.
   }
 
   // dimension - computed: false, optional: false, required: true
-  private _dimension?: MonitorScheduledQueryRulesLogCriteriaDimension[]; 
+  private _dimension?: MonitorScheduledQueryRulesLogCriteriaDimension[] | cdktf.IResolvable; 
   public get dimension() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('dimension') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('dimension')));
   }
-  public set dimension(value: MonitorScheduledQueryRulesLogCriteriaDimension[]) {
+  public set dimension(value: MonitorScheduledQueryRulesLogCriteriaDimension[] | cdktf.IResolvable) {
     this._dimension = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -188,8 +188,8 @@ export interface MonitorScheduledQueryRulesLogTimeouts {
   readonly update?: string;
 }
 
-export function monitorScheduledQueryRulesLogTimeoutsToTerraform(struct?: MonitorScheduledQueryRulesLogTimeoutsOutputReference | MonitorScheduledQueryRulesLogTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function monitorScheduledQueryRulesLogTimeoutsToTerraform(struct?: MonitorScheduledQueryRulesLogTimeoutsOutputReference | MonitorScheduledQueryRulesLogTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -209,7 +209,7 @@ export class MonitorScheduledQueryRulesLogTimeoutsOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -368,7 +368,7 @@ export class MonitorScheduledQueryRulesLog extends cdktf.TerraformResource {
   // authorized_resource_ids - computed: false, optional: true, required: false
   private _authorizedResourceIds?: string[]; 
   public get authorizedResourceIds() {
-    return this.getListAttribute('authorized_resource_ids');
+    return cdktf.Fn.tolist(this.getListAttribute('authorized_resource_ids'));
   }
   public set authorizedResourceIds(value: string[]) {
     this._authorizedResourceIds = value;
@@ -413,7 +413,7 @@ export class MonitorScheduledQueryRulesLog extends cdktf.TerraformResource {
   // enabled - computed: false, optional: true, required: false
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
@@ -471,12 +471,11 @@ export class MonitorScheduledQueryRulesLog extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -488,7 +487,7 @@ export class MonitorScheduledQueryRulesLog extends cdktf.TerraformResource {
   }
 
   // criteria - computed: false, optional: false, required: true
-  private _criteria = new MonitorScheduledQueryRulesLogCriteriaOutputReference(this as any, "criteria", true);
+  private _criteria = new MonitorScheduledQueryRulesLogCriteriaOutputReference(this, "criteria", true);
   public get criteria() {
     return this._criteria;
   }
@@ -501,7 +500,7 @@ export class MonitorScheduledQueryRulesLog extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new MonitorScheduledQueryRulesLogTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new MonitorScheduledQueryRulesLogTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -529,7 +528,7 @@ export class MonitorScheduledQueryRulesLog extends cdktf.TerraformResource {
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       criteria: monitorScheduledQueryRulesLogCriteriaToTerraform(this._criteria.internalValue),
       timeouts: monitorScheduledQueryRulesLogTimeoutsToTerraform(this._timeouts.internalValue),
     };

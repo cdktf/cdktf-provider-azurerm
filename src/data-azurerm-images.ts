@@ -14,7 +14,7 @@ export interface DataAzurermImagesConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/images#tags_filter DataAzurermImages#tags_filter}
   */
-  readonly tagsFilter?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tagsFilter?: { [key: string]: string };
   /**
   * timeouts block
   * 
@@ -86,7 +86,7 @@ export class DataAzurermImagesImages extends cdktf.ComplexComputedList {
   // data_disk - computed: true, optional: false, required: false
   public get dataDisk() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('data_disk') as any;
+    return this.interpolationForAttribute('data_disk');
   }
 
   // location - computed: true, optional: false, required: false
@@ -102,18 +102,17 @@ export class DataAzurermImagesImages extends cdktf.ComplexComputedList {
   // os_disk - computed: true, optional: false, required: false
   public get osDisk() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('os_disk') as any;
+    return this.interpolationForAttribute('os_disk');
   }
 
   // tags - computed: true, optional: false, required: false
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
 
   // zone_resilient - computed: true, optional: false, required: false
   public get zoneResilient() {
-    return this.getBooleanAttribute('zone_resilient') as any;
+    return this.getBooleanAttribute('zone_resilient');
   }
 }
 export interface DataAzurermImagesTimeouts {
@@ -123,8 +122,8 @@ export interface DataAzurermImagesTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermImagesTimeoutsToTerraform(struct?: DataAzurermImagesTimeoutsOutputReference | DataAzurermImagesTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermImagesTimeoutsToTerraform(struct?: DataAzurermImagesTimeoutsOutputReference | DataAzurermImagesTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -141,7 +140,7 @@ export class DataAzurermImagesTimeoutsOutputReference extends cdktf.ComplexObjec
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -231,7 +230,7 @@ export class DataAzurermImages extends cdktf.TerraformDataSource {
 
   // images - computed: true, optional: false, required: false
   public images(index: string) {
-    return new DataAzurermImagesImages(this, 'images', index);
+    return new DataAzurermImagesImages(this, 'images', index, false);
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -248,12 +247,11 @@ export class DataAzurermImages extends cdktf.TerraformDataSource {
   }
 
   // tags_filter - computed: false, optional: true, required: false
-  private _tagsFilter?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tagsFilter?: { [key: string]: string }; 
   public get tagsFilter() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags_filter') as any;
+    return this.getStringMapAttribute('tags_filter');
   }
-  public set tagsFilter(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tagsFilter(value: { [key: string]: string }) {
     this._tagsFilter = value;
   }
   public resetTagsFilter() {
@@ -265,7 +263,7 @@ export class DataAzurermImages extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermImagesTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermImagesTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -287,7 +285,7 @@ export class DataAzurermImages extends cdktf.TerraformDataSource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      tags_filter: cdktf.hashMapper(cdktf.anyToTerraform)(this._tagsFilter),
+      tags_filter: cdktf.hashMapper(cdktf.stringToTerraform)(this._tagsFilter),
       timeouts: dataAzurermImagesTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

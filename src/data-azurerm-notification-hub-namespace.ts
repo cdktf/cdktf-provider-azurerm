@@ -36,8 +36,8 @@ export interface DataAzurermNotificationHubNamespaceTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermNotificationHubNamespaceTimeoutsToTerraform(struct?: DataAzurermNotificationHubNamespaceTimeoutsOutputReference | DataAzurermNotificationHubNamespaceTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermNotificationHubNamespaceTimeoutsToTerraform(struct?: DataAzurermNotificationHubNamespaceTimeoutsOutputReference | DataAzurermNotificationHubNamespaceTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -54,7 +54,7 @@ export class DataAzurermNotificationHubNamespaceTimeoutsOutputReference extends 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -139,7 +139,7 @@ export class DataAzurermNotificationHubNamespace extends cdktf.TerraformDataSour
 
   // enabled - computed: true, optional: false, required: false
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
 
   // id - computed: true, optional: true, required: false
@@ -190,16 +190,16 @@ export class DataAzurermNotificationHubNamespace extends cdktf.TerraformDataSour
 
   // sku - computed: true, optional: false, required: false
   public sku(index: string) {
-    return new DataAzurermNotificationHubNamespaceSku(this, 'sku', index);
+    return new DataAzurermNotificationHubNamespaceSku(this, 'sku', index, false);
   }
 
   // tags - computed: true, optional: false, required: false
-  public tags(key: string): string {
+  public tags(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermNotificationHubNamespaceTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermNotificationHubNamespaceTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

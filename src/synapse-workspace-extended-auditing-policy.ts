@@ -57,8 +57,8 @@ export interface SynapseWorkspaceExtendedAuditingPolicyTimeouts {
   readonly update?: string;
 }
 
-export function synapseWorkspaceExtendedAuditingPolicyTimeoutsToTerraform(struct?: SynapseWorkspaceExtendedAuditingPolicyTimeoutsOutputReference | SynapseWorkspaceExtendedAuditingPolicyTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function synapseWorkspaceExtendedAuditingPolicyTimeoutsToTerraform(struct?: SynapseWorkspaceExtendedAuditingPolicyTimeoutsOutputReference | SynapseWorkspaceExtendedAuditingPolicyTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -78,7 +78,7 @@ export class SynapseWorkspaceExtendedAuditingPolicyTimeoutsOutputReference exten
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -239,7 +239,7 @@ export class SynapseWorkspaceExtendedAuditingPolicy extends cdktf.TerraformResou
   // log_monitoring_enabled - computed: false, optional: true, required: false
   private _logMonitoringEnabled?: boolean | cdktf.IResolvable; 
   public get logMonitoringEnabled() {
-    return this.getBooleanAttribute('log_monitoring_enabled') as any;
+    return this.getBooleanAttribute('log_monitoring_enabled');
   }
   public set logMonitoringEnabled(value: boolean | cdktf.IResolvable) {
     this._logMonitoringEnabled = value;
@@ -287,7 +287,7 @@ export class SynapseWorkspaceExtendedAuditingPolicy extends cdktf.TerraformResou
   // storage_account_access_key_is_secondary - computed: false, optional: true, required: false
   private _storageAccountAccessKeyIsSecondary?: boolean | cdktf.IResolvable; 
   public get storageAccountAccessKeyIsSecondary() {
-    return this.getBooleanAttribute('storage_account_access_key_is_secondary') as any;
+    return this.getBooleanAttribute('storage_account_access_key_is_secondary');
   }
   public set storageAccountAccessKeyIsSecondary(value: boolean | cdktf.IResolvable) {
     this._storageAccountAccessKeyIsSecondary = value;
@@ -330,7 +330,7 @@ export class SynapseWorkspaceExtendedAuditingPolicy extends cdktf.TerraformResou
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new SynapseWorkspaceExtendedAuditingPolicyTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new SynapseWorkspaceExtendedAuditingPolicyTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

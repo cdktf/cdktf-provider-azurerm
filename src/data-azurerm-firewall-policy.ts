@@ -26,12 +26,12 @@ export class DataAzurermFirewallPolicyDns extends cdktf.ComplexComputedList {
 
   // network_rule_fqdn_enabled - computed: true, optional: false, required: false
   public get networkRuleFqdnEnabled() {
-    return this.getBooleanAttribute('network_rule_fqdn_enabled') as any;
+    return this.getBooleanAttribute('network_rule_fqdn_enabled');
   }
 
   // proxy_enabled - computed: true, optional: false, required: false
   public get proxyEnabled() {
-    return this.getBooleanAttribute('proxy_enabled') as any;
+    return this.getBooleanAttribute('proxy_enabled');
   }
 
   // servers - computed: true, optional: false, required: false
@@ -58,8 +58,8 @@ export interface DataAzurermFirewallPolicyTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermFirewallPolicyTimeoutsToTerraform(struct?: DataAzurermFirewallPolicyTimeoutsOutputReference | DataAzurermFirewallPolicyTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermFirewallPolicyTimeoutsToTerraform(struct?: DataAzurermFirewallPolicyTimeoutsOutputReference | DataAzurermFirewallPolicyTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -76,7 +76,7 @@ export class DataAzurermFirewallPolicyTimeoutsOutputReference extends cdktf.Comp
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -171,7 +171,7 @@ export class DataAzurermFirewallPolicy extends cdktf.TerraformDataSource {
 
   // dns - computed: true, optional: false, required: false
   public dns(index: string) {
-    return new DataAzurermFirewallPolicyDns(this, 'dns', index);
+    return new DataAzurermFirewallPolicyDns(this, 'dns', index, false);
   }
 
   // firewalls - computed: true, optional: false, required: false
@@ -221,13 +221,13 @@ export class DataAzurermFirewallPolicy extends cdktf.TerraformDataSource {
   }
 
   // tags - computed: true, optional: false, required: false
-  public tags(key: string): string {
+  public tags(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // threat_intelligence_allowlist - computed: true, optional: false, required: false
   public threatIntelligenceAllowlist(index: string) {
-    return new DataAzurermFirewallPolicyThreatIntelligenceAllowlist(this, 'threat_intelligence_allowlist', index);
+    return new DataAzurermFirewallPolicyThreatIntelligenceAllowlist(this, 'threat_intelligence_allowlist', index, false);
   }
 
   // threat_intelligence_mode - computed: true, optional: false, required: false
@@ -236,7 +236,7 @@ export class DataAzurermFirewallPolicy extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermFirewallPolicyTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermFirewallPolicyTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

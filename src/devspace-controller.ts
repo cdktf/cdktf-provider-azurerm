@@ -26,7 +26,7 @@ export interface DevspaceControllerConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/devspace_controller#tags DevspaceController#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/devspace_controller#target_container_host_credentials_base64 DevspaceController#target_container_host_credentials_base64}
   */
@@ -61,8 +61,8 @@ export interface DevspaceControllerTimeouts {
   readonly update?: string;
 }
 
-export function devspaceControllerTimeoutsToTerraform(struct?: DevspaceControllerTimeoutsOutputReference | DevspaceControllerTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function devspaceControllerTimeoutsToTerraform(struct?: DevspaceControllerTimeoutsOutputReference | DevspaceControllerTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -82,7 +82,7 @@ export class DevspaceControllerTimeoutsOutputReference extends cdktf.ComplexObje
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -304,12 +304,11 @@ export class DevspaceController extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -347,7 +346,7 @@ export class DevspaceController extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DevspaceControllerTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DevspaceControllerTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -372,7 +371,7 @@ export class DevspaceController extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku_name: cdktf.stringToTerraform(this._skuName),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       target_container_host_credentials_base64: cdktf.stringToTerraform(this._targetContainerHostCredentialsBase64),
       target_container_host_resource_id: cdktf.stringToTerraform(this._targetContainerHostResourceId),
       timeouts: devspaceControllerTimeoutsToTerraform(this._timeouts.internalValue),

@@ -84,7 +84,7 @@ export interface StreamAnalyticsOutputBlobSerialization {
 }
 
 export function streamAnalyticsOutputBlobSerializationToTerraform(struct?: StreamAnalyticsOutputBlobSerializationOutputReference | StreamAnalyticsOutputBlobSerialization): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -104,7 +104,7 @@ export class StreamAnalyticsOutputBlobSerializationOutputReference extends cdktf
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -227,8 +227,8 @@ export interface StreamAnalyticsOutputBlobTimeouts {
   readonly update?: string;
 }
 
-export function streamAnalyticsOutputBlobTimeoutsToTerraform(struct?: StreamAnalyticsOutputBlobTimeoutsOutputReference | StreamAnalyticsOutputBlobTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function streamAnalyticsOutputBlobTimeoutsToTerraform(struct?: StreamAnalyticsOutputBlobTimeoutsOutputReference | StreamAnalyticsOutputBlobTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -248,7 +248,7 @@ export class StreamAnalyticsOutputBlobTimeoutsOutputReference extends cdktf.Comp
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -562,7 +562,7 @@ export class StreamAnalyticsOutputBlob extends cdktf.TerraformResource {
   }
 
   // serialization - computed: false, optional: false, required: true
-  private _serialization = new StreamAnalyticsOutputBlobSerializationOutputReference(this as any, "serialization", true);
+  private _serialization = new StreamAnalyticsOutputBlobSerializationOutputReference(this, "serialization", true);
   public get serialization() {
     return this._serialization;
   }
@@ -575,7 +575,7 @@ export class StreamAnalyticsOutputBlob extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new StreamAnalyticsOutputBlobTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new StreamAnalyticsOutputBlobTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

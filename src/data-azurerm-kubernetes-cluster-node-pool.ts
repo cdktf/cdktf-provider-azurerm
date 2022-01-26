@@ -40,8 +40,8 @@ export interface DataAzurermKubernetesClusterNodePoolTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermKubernetesClusterNodePoolTimeoutsToTerraform(struct?: DataAzurermKubernetesClusterNodePoolTimeoutsOutputReference | DataAzurermKubernetesClusterNodePoolTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermKubernetesClusterNodePoolTimeoutsToTerraform(struct?: DataAzurermKubernetesClusterNodePoolTimeoutsOutputReference | DataAzurermKubernetesClusterNodePoolTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -58,7 +58,7 @@ export class DataAzurermKubernetesClusterNodePoolTimeoutsOutputReference extends
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -149,12 +149,12 @@ export class DataAzurermKubernetesClusterNodePool extends cdktf.TerraformDataSou
 
   // enable_auto_scaling - computed: true, optional: false, required: false
   public get enableAutoScaling() {
-    return this.getBooleanAttribute('enable_auto_scaling') as any;
+    return this.getBooleanAttribute('enable_auto_scaling');
   }
 
   // enable_node_public_ip - computed: true, optional: false, required: false
   public get enableNodePublicIp() {
-    return this.getBooleanAttribute('enable_node_public_ip') as any;
+    return this.getBooleanAttribute('enable_node_public_ip');
   }
 
   // eviction_policy - computed: true, optional: false, required: false
@@ -219,7 +219,7 @@ export class DataAzurermKubernetesClusterNodePool extends cdktf.TerraformDataSou
   }
 
   // node_labels - computed: true, optional: false, required: false
-  public nodeLabels(key: string): string {
+  public nodeLabels(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'node_labels').lookup(key);
   }
 
@@ -282,13 +282,13 @@ export class DataAzurermKubernetesClusterNodePool extends cdktf.TerraformDataSou
   }
 
   // tags - computed: true, optional: false, required: false
-  public tags(key: string): string {
+  public tags(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // upgrade_settings - computed: true, optional: false, required: false
   public upgradeSettings(index: string) {
-    return new DataAzurermKubernetesClusterNodePoolUpgradeSettings(this, 'upgrade_settings', index);
+    return new DataAzurermKubernetesClusterNodePoolUpgradeSettings(this, 'upgrade_settings', index, false);
   }
 
   // vm_size - computed: true, optional: false, required: false
@@ -302,7 +302,7 @@ export class DataAzurermKubernetesClusterNodePool extends cdktf.TerraformDataSou
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermKubernetesClusterNodePoolTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermKubernetesClusterNodePoolTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

@@ -53,8 +53,8 @@ export interface SynapseWorkspaceKeyTimeouts {
   readonly update?: string;
 }
 
-export function synapseWorkspaceKeyTimeoutsToTerraform(struct?: SynapseWorkspaceKeyTimeoutsOutputReference | SynapseWorkspaceKeyTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function synapseWorkspaceKeyTimeoutsToTerraform(struct?: SynapseWorkspaceKeyTimeoutsOutputReference | SynapseWorkspaceKeyTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -74,7 +74,7 @@ export class SynapseWorkspaceKeyTimeoutsOutputReference extends cdktf.ComplexObj
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -229,7 +229,7 @@ export class SynapseWorkspaceKey extends cdktf.TerraformResource {
   // active - computed: false, optional: false, required: true
   private _active?: boolean | cdktf.IResolvable; 
   public get active() {
-    return this.getBooleanAttribute('active') as any;
+    return this.getBooleanAttribute('active');
   }
   public set active(value: boolean | cdktf.IResolvable) {
     this._active = value;
@@ -306,7 +306,7 @@ export class SynapseWorkspaceKey extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new SynapseWorkspaceKeyTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new SynapseWorkspaceKeyTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

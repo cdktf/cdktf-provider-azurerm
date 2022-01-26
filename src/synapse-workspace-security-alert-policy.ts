@@ -65,8 +65,8 @@ export interface SynapseWorkspaceSecurityAlertPolicyTimeouts {
   readonly update?: string;
 }
 
-export function synapseWorkspaceSecurityAlertPolicyTimeoutsToTerraform(struct?: SynapseWorkspaceSecurityAlertPolicyTimeoutsOutputReference | SynapseWorkspaceSecurityAlertPolicyTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function synapseWorkspaceSecurityAlertPolicyTimeoutsToTerraform(struct?: SynapseWorkspaceSecurityAlertPolicyTimeoutsOutputReference | SynapseWorkspaceSecurityAlertPolicyTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -86,7 +86,7 @@ export class SynapseWorkspaceSecurityAlertPolicyTimeoutsOutputReference extends 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -244,7 +244,7 @@ export class SynapseWorkspaceSecurityAlertPolicy extends cdktf.TerraformResource
   // disabled_alerts - computed: false, optional: true, required: false
   private _disabledAlerts?: string[]; 
   public get disabledAlerts() {
-    return this.getListAttribute('disabled_alerts');
+    return cdktf.Fn.tolist(this.getListAttribute('disabled_alerts'));
   }
   public set disabledAlerts(value: string[]) {
     this._disabledAlerts = value;
@@ -260,7 +260,7 @@ export class SynapseWorkspaceSecurityAlertPolicy extends cdktf.TerraformResource
   // email_account_admins_enabled - computed: false, optional: true, required: false
   private _emailAccountAdminsEnabled?: boolean | cdktf.IResolvable; 
   public get emailAccountAdminsEnabled() {
-    return this.getBooleanAttribute('email_account_admins_enabled') as any;
+    return this.getBooleanAttribute('email_account_admins_enabled');
   }
   public set emailAccountAdminsEnabled(value: boolean | cdktf.IResolvable) {
     this._emailAccountAdminsEnabled = value;
@@ -276,7 +276,7 @@ export class SynapseWorkspaceSecurityAlertPolicy extends cdktf.TerraformResource
   // email_addresses - computed: false, optional: true, required: false
   private _emailAddresses?: string[]; 
   public get emailAddresses() {
-    return this.getListAttribute('email_addresses');
+    return cdktf.Fn.tolist(this.getListAttribute('email_addresses'));
   }
   public set emailAddresses(value: string[]) {
     this._emailAddresses = value;
@@ -369,7 +369,7 @@ export class SynapseWorkspaceSecurityAlertPolicy extends cdktf.TerraformResource
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new SynapseWorkspaceSecurityAlertPolicyTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new SynapseWorkspaceSecurityAlertPolicyTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

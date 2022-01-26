@@ -70,7 +70,7 @@ export interface VirtualNetworkGatewayConnectionConfig extends cdktf.TerraformMe
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway_connection#tags VirtualNetworkGatewayConnection#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway_connection#type VirtualNetworkGatewayConnection#type}
   */
@@ -138,7 +138,7 @@ export interface VirtualNetworkGatewayConnectionIpsecPolicy {
 }
 
 export function virtualNetworkGatewayConnectionIpsecPolicyToTerraform(struct?: VirtualNetworkGatewayConnectionIpsecPolicyOutputReference | VirtualNetworkGatewayConnectionIpsecPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -162,7 +162,7 @@ export class VirtualNetworkGatewayConnectionIpsecPolicyOutputReference extends c
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -358,8 +358,8 @@ export interface VirtualNetworkGatewayConnectionTimeouts {
   readonly update?: string;
 }
 
-export function virtualNetworkGatewayConnectionTimeoutsToTerraform(struct?: VirtualNetworkGatewayConnectionTimeoutsOutputReference | VirtualNetworkGatewayConnectionTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function virtualNetworkGatewayConnectionTimeoutsToTerraform(struct?: VirtualNetworkGatewayConnectionTimeoutsOutputReference | VirtualNetworkGatewayConnectionTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -379,7 +379,7 @@ export class VirtualNetworkGatewayConnectionTimeoutsOutputReference extends cdkt
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -498,7 +498,7 @@ export interface VirtualNetworkGatewayConnectionTrafficSelectorPolicy {
 }
 
 export function virtualNetworkGatewayConnectionTrafficSelectorPolicyToTerraform(struct?: VirtualNetworkGatewayConnectionTrafficSelectorPolicyOutputReference | VirtualNetworkGatewayConnectionTrafficSelectorPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -516,7 +516,7 @@ export class VirtualNetworkGatewayConnectionTrafficSelectorPolicyOutputReference
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -701,7 +701,7 @@ export class VirtualNetworkGatewayConnection extends cdktf.TerraformResource {
   // enable_bgp - computed: true, optional: true, required: false
   private _enableBgp?: boolean | cdktf.IResolvable; 
   public get enableBgp() {
-    return this.getBooleanAttribute('enable_bgp') as any;
+    return this.getBooleanAttribute('enable_bgp');
   }
   public set enableBgp(value: boolean | cdktf.IResolvable) {
     this._enableBgp = value;
@@ -733,7 +733,7 @@ export class VirtualNetworkGatewayConnection extends cdktf.TerraformResource {
   // express_route_gateway_bypass - computed: true, optional: true, required: false
   private _expressRouteGatewayBypass?: boolean | cdktf.IResolvable; 
   public get expressRouteGatewayBypass() {
-    return this.getBooleanAttribute('express_route_gateway_bypass') as any;
+    return this.getBooleanAttribute('express_route_gateway_bypass');
   }
   public set expressRouteGatewayBypass(value: boolean | cdktf.IResolvable) {
     this._expressRouteGatewayBypass = value;
@@ -754,7 +754,7 @@ export class VirtualNetworkGatewayConnection extends cdktf.TerraformResource {
   // local_azure_ip_address_enabled - computed: false, optional: true, required: false
   private _localAzureIpAddressEnabled?: boolean | cdktf.IResolvable; 
   public get localAzureIpAddressEnabled() {
-    return this.getBooleanAttribute('local_azure_ip_address_enabled') as any;
+    return this.getBooleanAttribute('local_azure_ip_address_enabled');
   }
   public set localAzureIpAddressEnabled(value: boolean | cdktf.IResolvable) {
     this._localAzureIpAddressEnabled = value;
@@ -871,12 +871,11 @@ export class VirtualNetworkGatewayConnection extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -903,7 +902,7 @@ export class VirtualNetworkGatewayConnection extends cdktf.TerraformResource {
   // use_policy_based_traffic_selectors - computed: true, optional: true, required: false
   private _usePolicyBasedTrafficSelectors?: boolean | cdktf.IResolvable; 
   public get usePolicyBasedTrafficSelectors() {
-    return this.getBooleanAttribute('use_policy_based_traffic_selectors') as any;
+    return this.getBooleanAttribute('use_policy_based_traffic_selectors');
   }
   public set usePolicyBasedTrafficSelectors(value: boolean | cdktf.IResolvable) {
     this._usePolicyBasedTrafficSelectors = value;
@@ -930,7 +929,7 @@ export class VirtualNetworkGatewayConnection extends cdktf.TerraformResource {
   }
 
   // ipsec_policy - computed: false, optional: true, required: false
-  private _ipsecPolicy = new VirtualNetworkGatewayConnectionIpsecPolicyOutputReference(this as any, "ipsec_policy", true);
+  private _ipsecPolicy = new VirtualNetworkGatewayConnectionIpsecPolicyOutputReference(this, "ipsec_policy", true);
   public get ipsecPolicy() {
     return this._ipsecPolicy;
   }
@@ -946,7 +945,7 @@ export class VirtualNetworkGatewayConnection extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new VirtualNetworkGatewayConnectionTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new VirtualNetworkGatewayConnectionTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -962,7 +961,7 @@ export class VirtualNetworkGatewayConnection extends cdktf.TerraformResource {
   }
 
   // traffic_selector_policy - computed: false, optional: true, required: false
-  private _trafficSelectorPolicy = new VirtualNetworkGatewayConnectionTrafficSelectorPolicyOutputReference(this as any, "traffic_selector_policy", true);
+  private _trafficSelectorPolicy = new VirtualNetworkGatewayConnectionTrafficSelectorPolicyOutputReference(this, "traffic_selector_policy", true);
   public get trafficSelectorPolicy() {
     return this._trafficSelectorPolicy;
   }
@@ -998,7 +997,7 @@ export class VirtualNetworkGatewayConnection extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       routing_weight: cdktf.numberToTerraform(this._routingWeight),
       shared_key: cdktf.stringToTerraform(this._sharedKey),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       type: cdktf.stringToTerraform(this._type),
       use_policy_based_traffic_selectors: cdktf.booleanToTerraform(this._usePolicyBasedTrafficSelectors),
       virtual_network_gateway_id: cdktf.stringToTerraform(this._virtualNetworkGatewayId),

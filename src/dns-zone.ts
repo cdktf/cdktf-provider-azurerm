@@ -18,7 +18,7 @@ export interface DnsZoneConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_zone#tags DnsZone#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * soa_record block
   * 
@@ -64,7 +64,7 @@ export interface DnsZoneSoaRecord {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_zone#tags DnsZone#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_zone#ttl DnsZone#ttl}
   */
@@ -72,7 +72,7 @@ export interface DnsZoneSoaRecord {
 }
 
 export function dnsZoneSoaRecordToTerraform(struct?: DnsZoneSoaRecordOutputReference | DnsZoneSoaRecord): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -84,7 +84,7 @@ export function dnsZoneSoaRecordToTerraform(struct?: DnsZoneSoaRecordOutputRefer
     refresh_time: cdktf.numberToTerraform(struct!.refreshTime),
     retry_time: cdktf.numberToTerraform(struct!.retryTime),
     serial_number: cdktf.numberToTerraform(struct!.serialNumber),
-    tags: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.tags),
+    tags: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.tags),
     ttl: cdktf.numberToTerraform(struct!.ttl),
   }
 }
@@ -97,7 +97,7 @@ export class DnsZoneSoaRecordOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -199,6 +199,11 @@ export class DnsZoneSoaRecordOutputReference extends cdktf.ComplexObject {
     return this._expireTime;
   }
 
+  // fqdn - computed: true, optional: false, required: false
+  public get fqdn() {
+    return this.getStringAttribute('fqdn');
+  }
+
   // host_name - computed: false, optional: false, required: true
   private _hostName?: string; 
   public get hostName() {
@@ -277,12 +282,11 @@ export class DnsZoneSoaRecordOutputReference extends cdktf.ComplexObject {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -328,8 +332,8 @@ export interface DnsZoneTimeouts {
   readonly update?: string;
 }
 
-export function dnsZoneTimeoutsToTerraform(struct?: DnsZoneTimeoutsOutputReference | DnsZoneTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dnsZoneTimeoutsToTerraform(struct?: DnsZoneTimeoutsOutputReference | DnsZoneTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -349,7 +353,7 @@ export class DnsZoneTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -525,7 +529,7 @@ export class DnsZone extends cdktf.TerraformResource {
 
   // name_servers - computed: true, optional: false, required: false
   public get nameServers() {
-    return this.getListAttribute('name_servers');
+    return cdktf.Fn.tolist(this.getListAttribute('name_servers'));
   }
 
   // number_of_record_sets - computed: true, optional: false, required: false
@@ -547,12 +551,11 @@ export class DnsZone extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -564,7 +567,7 @@ export class DnsZone extends cdktf.TerraformResource {
   }
 
   // soa_record - computed: false, optional: true, required: false
-  private _soaRecord = new DnsZoneSoaRecordOutputReference(this as any, "soa_record", true);
+  private _soaRecord = new DnsZoneSoaRecordOutputReference(this, "soa_record", true);
   public get soaRecord() {
     return this._soaRecord;
   }
@@ -580,7 +583,7 @@ export class DnsZone extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DnsZoneTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DnsZoneTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -603,7 +606,7 @@ export class DnsZone extends cdktf.TerraformResource {
     return {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       soa_record: dnsZoneSoaRecordToTerraform(this._soaRecord.internalValue),
       timeouts: dnsZoneTimeoutsToTerraform(this._timeouts.internalValue),
     };

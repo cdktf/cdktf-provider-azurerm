@@ -40,8 +40,8 @@ export interface DataAzurermStorageAccountTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermStorageAccountTimeoutsToTerraform(struct?: DataAzurermStorageAccountTimeoutsOutputReference | DataAzurermStorageAccountTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermStorageAccountTimeoutsToTerraform(struct?: DataAzurermStorageAccountTimeoutsOutputReference | DataAzurermStorageAccountTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -58,7 +58,7 @@ export class DataAzurermStorageAccountTimeoutsOutputReference extends cdktf.Comp
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -164,17 +164,17 @@ export class DataAzurermStorageAccount extends cdktf.TerraformDataSource {
 
   // allow_blob_public_access - computed: true, optional: false, required: false
   public get allowBlobPublicAccess() {
-    return this.getBooleanAttribute('allow_blob_public_access') as any;
+    return this.getBooleanAttribute('allow_blob_public_access');
   }
 
   // custom_domain - computed: true, optional: false, required: false
   public customDomain(index: string) {
-    return new DataAzurermStorageAccountCustomDomain(this, 'custom_domain', index);
+    return new DataAzurermStorageAccountCustomDomain(this, 'custom_domain', index, false);
   }
 
   // enable_https_traffic_only - computed: true, optional: false, required: false
   public get enableHttpsTrafficOnly() {
-    return this.getBooleanAttribute('enable_https_traffic_only') as any;
+    return this.getBooleanAttribute('enable_https_traffic_only');
   }
 
   // id - computed: true, optional: true, required: false
@@ -184,12 +184,12 @@ export class DataAzurermStorageAccount extends cdktf.TerraformDataSource {
 
   // infrastructure_encryption_enabled - computed: true, optional: false, required: false
   public get infrastructureEncryptionEnabled() {
-    return this.getBooleanAttribute('infrastructure_encryption_enabled') as any;
+    return this.getBooleanAttribute('infrastructure_encryption_enabled');
   }
 
   // is_hns_enabled - computed: true, optional: false, required: false
   public get isHnsEnabled() {
-    return this.getBooleanAttribute('is_hns_enabled') as any;
+    return this.getBooleanAttribute('is_hns_enabled');
   }
 
   // location - computed: true, optional: false, required: false
@@ -410,12 +410,12 @@ export class DataAzurermStorageAccount extends cdktf.TerraformDataSource {
   }
 
   // tags - computed: true, optional: false, required: false
-  public tags(key: string): string {
+  public tags(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermStorageAccountTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermStorageAccountTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

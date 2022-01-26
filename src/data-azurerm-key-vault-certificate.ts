@@ -42,7 +42,7 @@ export class DataAzurermKeyVaultCertificateCertificatePolicyKeyProperties extend
 
   // exportable - computed: true, optional: false, required: false
   public get exportable() {
-    return this.getBooleanAttribute('exportable') as any;
+    return this.getBooleanAttribute('exportable');
   }
 
   // key_size - computed: true, optional: false, required: false
@@ -57,7 +57,7 @@ export class DataAzurermKeyVaultCertificateCertificatePolicyKeyProperties extend
 
   // reuse_key - computed: true, optional: false, required: false
   public get reuseKey() {
-    return this.getBooleanAttribute('reuse_key') as any;
+    return this.getBooleanAttribute('reuse_key');
   }
 }
 export class DataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionAction extends cdktf.ComplexComputedList {
@@ -84,13 +84,13 @@ export class DataAzurermKeyVaultCertificateCertificatePolicyLifetimeAction exten
   // action - computed: true, optional: false, required: false
   public get action() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('action') as any;
+    return this.interpolationForAttribute('action');
   }
 
   // trigger - computed: true, optional: false, required: false
   public get trigger() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('trigger') as any;
+    return this.interpolationForAttribute('trigger');
   }
 }
 export class DataAzurermKeyVaultCertificateCertificatePolicySecretProperties extends cdktf.ComplexComputedList {
@@ -137,7 +137,7 @@ export class DataAzurermKeyVaultCertificateCertificatePolicyX509CertificatePrope
   // subject_alternative_names - computed: true, optional: false, required: false
   public get subjectAlternativeNames() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('subject_alternative_names') as any;
+    return this.interpolationForAttribute('subject_alternative_names');
   }
 
   // validity_in_months - computed: true, optional: false, required: false
@@ -150,31 +150,31 @@ export class DataAzurermKeyVaultCertificateCertificatePolicy extends cdktf.Compl
   // issuer_parameters - computed: true, optional: false, required: false
   public get issuerParameters() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('issuer_parameters') as any;
+    return this.interpolationForAttribute('issuer_parameters');
   }
 
   // key_properties - computed: true, optional: false, required: false
   public get keyProperties() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('key_properties') as any;
+    return this.interpolationForAttribute('key_properties');
   }
 
   // lifetime_action - computed: true, optional: false, required: false
   public get lifetimeAction() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('lifetime_action') as any;
+    return this.interpolationForAttribute('lifetime_action');
   }
 
   // secret_properties - computed: true, optional: false, required: false
   public get secretProperties() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('secret_properties') as any;
+    return this.interpolationForAttribute('secret_properties');
   }
 
   // x509_certificate_properties - computed: true, optional: false, required: false
   public get x509CertificateProperties() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('x509_certificate_properties') as any;
+    return this.interpolationForAttribute('x509_certificate_properties');
   }
 }
 export interface DataAzurermKeyVaultCertificateTimeouts {
@@ -184,8 +184,8 @@ export interface DataAzurermKeyVaultCertificateTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermKeyVaultCertificateTimeoutsToTerraform(struct?: DataAzurermKeyVaultCertificateTimeoutsOutputReference | DataAzurermKeyVaultCertificateTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermKeyVaultCertificateTimeoutsToTerraform(struct?: DataAzurermKeyVaultCertificateTimeoutsOutputReference | DataAzurermKeyVaultCertificateTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -202,7 +202,7 @@ export class DataAzurermKeyVaultCertificateTimeoutsOutputReference extends cdktf
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -298,7 +298,7 @@ export class DataAzurermKeyVaultCertificate extends cdktf.TerraformDataSource {
 
   // certificate_policy - computed: true, optional: false, required: false
   public certificatePolicy(index: string) {
-    return new DataAzurermKeyVaultCertificateCertificatePolicy(this, 'certificate_policy', index);
+    return new DataAzurermKeyVaultCertificateCertificatePolicy(this, 'certificate_policy', index, false);
   }
 
   // expires - computed: true, optional: false, required: false
@@ -348,7 +348,7 @@ export class DataAzurermKeyVaultCertificate extends cdktf.TerraformDataSource {
   }
 
   // tags - computed: true, optional: false, required: false
-  public tags(key: string): string {
+  public tags(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
@@ -384,7 +384,7 @@ export class DataAzurermKeyVaultCertificate extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermKeyVaultCertificateTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermKeyVaultCertificateTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

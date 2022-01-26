@@ -68,13 +68,13 @@ export interface TrafficManagerEndpointConfig extends cdktf.TerraformMetaArgumen
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_endpoint#custom_header TrafficManagerEndpoint#custom_header}
   */
-  readonly customHeader?: TrafficManagerEndpointCustomHeader[];
+  readonly customHeader?: TrafficManagerEndpointCustomHeader[] | cdktf.IResolvable;
   /**
   * subnet block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_endpoint#subnet TrafficManagerEndpoint#subnet}
   */
-  readonly subnet?: TrafficManagerEndpointSubnet[];
+  readonly subnet?: TrafficManagerEndpointSubnet[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -93,8 +93,8 @@ export interface TrafficManagerEndpointCustomHeader {
   readonly value: string;
 }
 
-export function trafficManagerEndpointCustomHeaderToTerraform(struct?: TrafficManagerEndpointCustomHeader): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function trafficManagerEndpointCustomHeaderToTerraform(struct?: TrafficManagerEndpointCustomHeader | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -119,8 +119,8 @@ export interface TrafficManagerEndpointSubnet {
   readonly scope?: number;
 }
 
-export function trafficManagerEndpointSubnetToTerraform(struct?: TrafficManagerEndpointSubnet): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function trafficManagerEndpointSubnetToTerraform(struct?: TrafficManagerEndpointSubnet | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -150,8 +150,8 @@ export interface TrafficManagerEndpointTimeouts {
   readonly update?: string;
 }
 
-export function trafficManagerEndpointTimeoutsToTerraform(struct?: TrafficManagerEndpointTimeoutsOutputReference | TrafficManagerEndpointTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function trafficManagerEndpointTimeoutsToTerraform(struct?: TrafficManagerEndpointTimeoutsOutputReference | TrafficManagerEndpointTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -171,7 +171,7 @@ export class TrafficManagerEndpointTimeoutsOutputReference extends cdktf.Complex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -557,12 +557,12 @@ export class TrafficManagerEndpoint extends cdktf.TerraformResource {
   }
 
   // custom_header - computed: false, optional: true, required: false
-  private _customHeader?: TrafficManagerEndpointCustomHeader[]; 
+  private _customHeader?: TrafficManagerEndpointCustomHeader[] | cdktf.IResolvable; 
   public get customHeader() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('custom_header') as any;
+    return this.interpolationForAttribute('custom_header');
   }
-  public set customHeader(value: TrafficManagerEndpointCustomHeader[]) {
+  public set customHeader(value: TrafficManagerEndpointCustomHeader[] | cdktf.IResolvable) {
     this._customHeader = value;
   }
   public resetCustomHeader() {
@@ -574,12 +574,12 @@ export class TrafficManagerEndpoint extends cdktf.TerraformResource {
   }
 
   // subnet - computed: false, optional: true, required: false
-  private _subnet?: TrafficManagerEndpointSubnet[]; 
+  private _subnet?: TrafficManagerEndpointSubnet[] | cdktf.IResolvable; 
   public get subnet() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('subnet') as any;
+    return this.interpolationForAttribute('subnet');
   }
-  public set subnet(value: TrafficManagerEndpointSubnet[]) {
+  public set subnet(value: TrafficManagerEndpointSubnet[] | cdktf.IResolvable) {
     this._subnet = value;
   }
   public resetSubnet() {
@@ -591,7 +591,7 @@ export class TrafficManagerEndpoint extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TrafficManagerEndpointTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new TrafficManagerEndpointTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

@@ -30,7 +30,7 @@ export interface IntegrationServiceEnvironmentConfig extends cdktf.TerraformMeta
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/integration_service_environment#tags IntegrationServiceEnvironment#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/integration_service_environment#virtual_network_subnet_ids IntegrationServiceEnvironment#virtual_network_subnet_ids}
   */
@@ -61,8 +61,8 @@ export interface IntegrationServiceEnvironmentTimeouts {
   readonly update?: string;
 }
 
-export function integrationServiceEnvironmentTimeoutsToTerraform(struct?: IntegrationServiceEnvironmentTimeoutsOutputReference | IntegrationServiceEnvironmentTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function integrationServiceEnvironmentTimeoutsToTerraform(struct?: IntegrationServiceEnvironmentTimeoutsOutputReference | IntegrationServiceEnvironmentTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -82,7 +82,7 @@ export class IntegrationServiceEnvironmentTimeoutsOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -320,12 +320,11 @@ export class IntegrationServiceEnvironment extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -339,7 +338,7 @@ export class IntegrationServiceEnvironment extends cdktf.TerraformResource {
   // virtual_network_subnet_ids - computed: false, optional: false, required: true
   private _virtualNetworkSubnetIds?: string[]; 
   public get virtualNetworkSubnetIds() {
-    return this.getListAttribute('virtual_network_subnet_ids');
+    return cdktf.Fn.tolist(this.getListAttribute('virtual_network_subnet_ids'));
   }
   public set virtualNetworkSubnetIds(value: string[]) {
     this._virtualNetworkSubnetIds = value;
@@ -360,7 +359,7 @@ export class IntegrationServiceEnvironment extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new IntegrationServiceEnvironmentTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new IntegrationServiceEnvironmentTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -386,7 +385,7 @@ export class IntegrationServiceEnvironment extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku_name: cdktf.stringToTerraform(this._skuName),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       virtual_network_subnet_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._virtualNetworkSubnetIds),
       timeouts: integrationServiceEnvironmentTimeoutsToTerraform(this._timeouts.internalValue),
     };

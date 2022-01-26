@@ -49,8 +49,8 @@ export interface ApplicationInsightsApiKeyTimeouts {
   readonly update?: string;
 }
 
-export function applicationInsightsApiKeyTimeoutsToTerraform(struct?: ApplicationInsightsApiKeyTimeoutsOutputReference | ApplicationInsightsApiKeyTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function applicationInsightsApiKeyTimeoutsToTerraform(struct?: ApplicationInsightsApiKeyTimeoutsOutputReference | ApplicationInsightsApiKeyTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -70,7 +70,7 @@ export class ApplicationInsightsApiKeyTimeoutsOutputReference extends cdktf.Comp
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -260,7 +260,7 @@ export class ApplicationInsightsApiKey extends cdktf.TerraformResource {
   // read_permissions - computed: false, optional: true, required: false
   private _readPermissions?: string[]; 
   public get readPermissions() {
-    return this.getListAttribute('read_permissions');
+    return cdktf.Fn.tolist(this.getListAttribute('read_permissions'));
   }
   public set readPermissions(value: string[]) {
     this._readPermissions = value;
@@ -276,7 +276,7 @@ export class ApplicationInsightsApiKey extends cdktf.TerraformResource {
   // write_permissions - computed: false, optional: true, required: false
   private _writePermissions?: string[]; 
   public get writePermissions() {
-    return this.getListAttribute('write_permissions');
+    return cdktf.Fn.tolist(this.getListAttribute('write_permissions'));
   }
   public set writePermissions(value: string[]) {
     this._writePermissions = value;
@@ -290,7 +290,7 @@ export class ApplicationInsightsApiKey extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ApplicationInsightsApiKeyTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ApplicationInsightsApiKeyTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

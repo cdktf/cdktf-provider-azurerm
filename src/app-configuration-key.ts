@@ -34,7 +34,7 @@ export interface AppConfigurationKeyConfig extends cdktf.TerraformMetaArguments 
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_key#tags AppConfigurationKey#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_key#type AppConfigurationKey#type}
   */
@@ -73,8 +73,8 @@ export interface AppConfigurationKeyTimeouts {
   readonly update?: string;
 }
 
-export function appConfigurationKeyTimeoutsToTerraform(struct?: AppConfigurationKeyTimeoutsOutputReference | AppConfigurationKeyTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function appConfigurationKeyTimeoutsToTerraform(struct?: AppConfigurationKeyTimeoutsOutputReference | AppConfigurationKeyTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -94,7 +94,7 @@ export class AppConfigurationKeyTimeoutsOutputReference extends cdktf.ComplexObj
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -333,7 +333,7 @@ export class AppConfigurationKey extends cdktf.TerraformResource {
   // locked - computed: false, optional: true, required: false
   private _locked?: boolean | cdktf.IResolvable; 
   public get locked() {
-    return this.getBooleanAttribute('locked') as any;
+    return this.getBooleanAttribute('locked');
   }
   public set locked(value: boolean | cdktf.IResolvable) {
     this._locked = value;
@@ -347,12 +347,11 @@ export class AppConfigurationKey extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -412,7 +411,7 @@ export class AppConfigurationKey extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AppConfigurationKeyTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new AppConfigurationKeyTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -439,7 +438,7 @@ export class AppConfigurationKey extends cdktf.TerraformResource {
       key: cdktf.stringToTerraform(this._key),
       label: cdktf.stringToTerraform(this._label),
       locked: cdktf.booleanToTerraform(this._locked),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       type: cdktf.stringToTerraform(this._type),
       value: cdktf.stringToTerraform(this._value),
       vault_key_reference: cdktf.stringToTerraform(this._vaultKeyReference),

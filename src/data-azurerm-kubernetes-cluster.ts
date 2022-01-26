@@ -43,13 +43,13 @@ export class DataAzurermKubernetesClusterAddonProfileAzureKeyvaultSecretsProvide
 
   // enabled - computed: true, optional: false, required: false
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
 
   // secret_identity - computed: true, optional: false, required: false
   public get secretIdentity() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('secret_identity') as any;
+    return this.interpolationForAttribute('secret_identity');
   }
 
   // secret_rotation_enabled - computed: true, optional: false, required: false
@@ -66,14 +66,14 @@ export class DataAzurermKubernetesClusterAddonProfileAzurePolicy extends cdktf.C
 
   // enabled - computed: true, optional: false, required: false
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
 }
 export class DataAzurermKubernetesClusterAddonProfileHttpApplicationRouting extends cdktf.ComplexComputedList {
 
   // enabled - computed: true, optional: false, required: false
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
 
   // http_application_routing_zone_name - computed: true, optional: false, required: false
@@ -107,7 +107,7 @@ export class DataAzurermKubernetesClusterAddonProfileIngressApplicationGateway e
 
   // enabled - computed: true, optional: false, required: false
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
 
   // gateway_id - computed: true, optional: false, required: false
@@ -118,7 +118,7 @@ export class DataAzurermKubernetesClusterAddonProfileIngressApplicationGateway e
   // ingress_application_gateway_identity - computed: true, optional: false, required: false
   public get ingressApplicationGatewayIdentity() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('ingress_application_gateway_identity') as any;
+    return this.interpolationForAttribute('ingress_application_gateway_identity');
   }
 
   // subnet_cidr - computed: true, optional: false, required: false
@@ -135,7 +135,7 @@ export class DataAzurermKubernetesClusterAddonProfileKubeDashboard extends cdktf
 
   // enabled - computed: true, optional: false, required: false
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
 }
 export class DataAzurermKubernetesClusterAddonProfileOmsAgentOmsAgentIdentity extends cdktf.ComplexComputedList {
@@ -159,7 +159,7 @@ export class DataAzurermKubernetesClusterAddonProfileOmsAgent extends cdktf.Comp
 
   // enabled - computed: true, optional: false, required: false
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
 
   // log_analytics_workspace_id - computed: true, optional: false, required: false
@@ -170,14 +170,14 @@ export class DataAzurermKubernetesClusterAddonProfileOmsAgent extends cdktf.Comp
   // oms_agent_identity - computed: true, optional: false, required: false
   public get omsAgentIdentity() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('oms_agent_identity') as any;
+    return this.interpolationForAttribute('oms_agent_identity');
   }
 }
 export class DataAzurermKubernetesClusterAddonProfileOpenServiceMesh extends cdktf.ComplexComputedList {
 
   // enabled - computed: true, optional: false, required: false
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
 }
 export class DataAzurermKubernetesClusterAddonProfile extends cdktf.ComplexComputedList {
@@ -185,43 +185,43 @@ export class DataAzurermKubernetesClusterAddonProfile extends cdktf.ComplexCompu
   // azure_keyvault_secrets_provider - computed: true, optional: false, required: false
   public get azureKeyvaultSecretsProvider() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('azure_keyvault_secrets_provider') as any;
+    return this.interpolationForAttribute('azure_keyvault_secrets_provider');
   }
 
   // azure_policy - computed: true, optional: false, required: false
   public get azurePolicy() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('azure_policy') as any;
+    return this.interpolationForAttribute('azure_policy');
   }
 
   // http_application_routing - computed: true, optional: false, required: false
   public get httpApplicationRouting() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('http_application_routing') as any;
+    return this.interpolationForAttribute('http_application_routing');
   }
 
   // ingress_application_gateway - computed: true, optional: false, required: false
   public get ingressApplicationGateway() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('ingress_application_gateway') as any;
+    return this.interpolationForAttribute('ingress_application_gateway');
   }
 
   // kube_dashboard - computed: true, optional: false, required: false
   public get kubeDashboard() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('kube_dashboard') as any;
+    return this.interpolationForAttribute('kube_dashboard');
   }
 
   // oms_agent - computed: true, optional: false, required: false
   public get omsAgent() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('oms_agent') as any;
+    return this.interpolationForAttribute('oms_agent');
   }
 
   // open_service_mesh - computed: true, optional: false, required: false
   public get openServiceMesh() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('open_service_mesh') as any;
+    return this.interpolationForAttribute('open_service_mesh');
   }
 }
 export class DataAzurermKubernetesClusterAgentPoolProfileUpgradeSettings extends cdktf.ComplexComputedList {
@@ -245,12 +245,12 @@ export class DataAzurermKubernetesClusterAgentPoolProfile extends cdktf.ComplexC
 
   // enable_auto_scaling - computed: true, optional: false, required: false
   public get enableAutoScaling() {
-    return this.getBooleanAttribute('enable_auto_scaling') as any;
+    return this.getBooleanAttribute('enable_auto_scaling');
   }
 
   // enable_node_public_ip - computed: true, optional: false, required: false
   public get enableNodePublicIp() {
-    return this.getBooleanAttribute('enable_node_public_ip') as any;
+    return this.getBooleanAttribute('enable_node_public_ip');
   }
 
   // max_count - computed: true, optional: false, required: false
@@ -275,8 +275,7 @@ export class DataAzurermKubernetesClusterAgentPoolProfile extends cdktf.ComplexC
 
   // node_labels - computed: true, optional: false, required: false
   public get nodeLabels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('node_labels') as any;
+    return this.getStringMapAttribute('node_labels');
   }
 
   // node_public_ip_prefix_id - computed: true, optional: false, required: false
@@ -306,8 +305,7 @@ export class DataAzurermKubernetesClusterAgentPoolProfile extends cdktf.ComplexC
 
   // tags - computed: true, optional: false, required: false
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
 
   // type - computed: true, optional: false, required: false
@@ -318,7 +316,7 @@ export class DataAzurermKubernetesClusterAgentPoolProfile extends cdktf.ComplexC
   // upgrade_settings - computed: true, optional: false, required: false
   public get upgradeSettings() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('upgrade_settings') as any;
+    return this.interpolationForAttribute('upgrade_settings');
   }
 
   // vm_size - computed: true, optional: false, required: false
@@ -451,7 +449,7 @@ export class DataAzurermKubernetesClusterLinuxProfile extends cdktf.ComplexCompu
   // ssh_key - computed: true, optional: false, required: false
   public get sshKey() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('ssh_key') as any;
+    return this.interpolationForAttribute('ssh_key');
   }
 }
 export class DataAzurermKubernetesClusterNetworkProfile extends cdktf.ComplexComputedList {
@@ -505,7 +503,7 @@ export class DataAzurermKubernetesClusterRoleBasedAccessControlAzureActiveDirect
 
   // managed - computed: true, optional: false, required: false
   public get managed() {
-    return this.getBooleanAttribute('managed') as any;
+    return this.getBooleanAttribute('managed');
   }
 
   // server_app_id - computed: true, optional: false, required: false
@@ -523,12 +521,12 @@ export class DataAzurermKubernetesClusterRoleBasedAccessControl extends cdktf.Co
   // azure_active_directory - computed: true, optional: false, required: false
   public get azureActiveDirectory() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('azure_active_directory') as any;
+    return this.interpolationForAttribute('azure_active_directory');
   }
 
   // enabled - computed: true, optional: false, required: false
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
 }
 export class DataAzurermKubernetesClusterServicePrincipal extends cdktf.ComplexComputedList {
@@ -552,8 +550,8 @@ export interface DataAzurermKubernetesClusterTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermKubernetesClusterTimeoutsToTerraform(struct?: DataAzurermKubernetesClusterTimeoutsOutputReference | DataAzurermKubernetesClusterTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermKubernetesClusterTimeoutsToTerraform(struct?: DataAzurermKubernetesClusterTimeoutsOutputReference | DataAzurermKubernetesClusterTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -570,7 +568,7 @@ export class DataAzurermKubernetesClusterTimeoutsOutputReference extends cdktf.C
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -655,17 +653,17 @@ export class DataAzurermKubernetesCluster extends cdktf.TerraformDataSource {
 
   // addon_profile - computed: true, optional: false, required: false
   public addonProfile(index: string) {
-    return new DataAzurermKubernetesClusterAddonProfile(this, 'addon_profile', index);
+    return new DataAzurermKubernetesClusterAddonProfile(this, 'addon_profile', index, false);
   }
 
   // agent_pool_profile - computed: true, optional: false, required: false
   public agentPoolProfile(index: string) {
-    return new DataAzurermKubernetesClusterAgentPoolProfile(this, 'agent_pool_profile', index);
+    return new DataAzurermKubernetesClusterAgentPoolProfile(this, 'agent_pool_profile', index, false);
   }
 
   // api_server_authorized_ip_ranges - computed: true, optional: false, required: false
   public get apiServerAuthorizedIpRanges() {
-    return this.getListAttribute('api_server_authorized_ip_ranges');
+    return cdktf.Fn.tolist(this.getListAttribute('api_server_authorized_ip_ranges'));
   }
 
   // disk_encryption_set_id - computed: true, optional: false, required: false
@@ -690,12 +688,12 @@ export class DataAzurermKubernetesCluster extends cdktf.TerraformDataSource {
 
   // identity - computed: true, optional: false, required: false
   public identity(index: string) {
-    return new DataAzurermKubernetesClusterIdentity(this, 'identity', index);
+    return new DataAzurermKubernetesClusterIdentity(this, 'identity', index, false);
   }
 
   // kube_admin_config - computed: true, optional: false, required: false
   public kubeAdminConfig(index: string) {
-    return new DataAzurermKubernetesClusterKubeAdminConfig(this, 'kube_admin_config', index);
+    return new DataAzurermKubernetesClusterKubeAdminConfig(this, 'kube_admin_config', index, false);
   }
 
   // kube_admin_config_raw - computed: true, optional: false, required: false
@@ -705,7 +703,7 @@ export class DataAzurermKubernetesCluster extends cdktf.TerraformDataSource {
 
   // kube_config - computed: true, optional: false, required: false
   public kubeConfig(index: string) {
-    return new DataAzurermKubernetesClusterKubeConfig(this, 'kube_config', index);
+    return new DataAzurermKubernetesClusterKubeConfig(this, 'kube_config', index, false);
   }
 
   // kube_config_raw - computed: true, optional: false, required: false
@@ -715,7 +713,7 @@ export class DataAzurermKubernetesCluster extends cdktf.TerraformDataSource {
 
   // kubelet_identity - computed: true, optional: false, required: false
   public kubeletIdentity(index: string) {
-    return new DataAzurermKubernetesClusterKubeletIdentity(this, 'kubelet_identity', index);
+    return new DataAzurermKubernetesClusterKubeletIdentity(this, 'kubelet_identity', index, false);
   }
 
   // kubernetes_version - computed: true, optional: false, required: false
@@ -725,7 +723,7 @@ export class DataAzurermKubernetesCluster extends cdktf.TerraformDataSource {
 
   // linux_profile - computed: true, optional: false, required: false
   public linuxProfile(index: string) {
-    return new DataAzurermKubernetesClusterLinuxProfile(this, 'linux_profile', index);
+    return new DataAzurermKubernetesClusterLinuxProfile(this, 'linux_profile', index, false);
   }
 
   // location - computed: true, optional: false, required: false
@@ -748,7 +746,7 @@ export class DataAzurermKubernetesCluster extends cdktf.TerraformDataSource {
 
   // network_profile - computed: true, optional: false, required: false
   public networkProfile(index: string) {
-    return new DataAzurermKubernetesClusterNetworkProfile(this, 'network_profile', index);
+    return new DataAzurermKubernetesClusterNetworkProfile(this, 'network_profile', index, false);
   }
 
   // node_resource_group - computed: true, optional: false, required: false
@@ -758,7 +756,7 @@ export class DataAzurermKubernetesCluster extends cdktf.TerraformDataSource {
 
   // private_cluster_enabled - computed: true, optional: false, required: false
   public get privateClusterEnabled() {
-    return this.getBooleanAttribute('private_cluster_enabled') as any;
+    return this.getBooleanAttribute('private_cluster_enabled');
   }
 
   // private_fqdn - computed: true, optional: false, required: false
@@ -768,7 +766,7 @@ export class DataAzurermKubernetesCluster extends cdktf.TerraformDataSource {
 
   // private_link_enabled - computed: true, optional: false, required: false
   public get privateLinkEnabled() {
-    return this.getBooleanAttribute('private_link_enabled') as any;
+    return this.getBooleanAttribute('private_link_enabled');
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -786,26 +784,26 @@ export class DataAzurermKubernetesCluster extends cdktf.TerraformDataSource {
 
   // role_based_access_control - computed: true, optional: false, required: false
   public roleBasedAccessControl(index: string) {
-    return new DataAzurermKubernetesClusterRoleBasedAccessControl(this, 'role_based_access_control', index);
+    return new DataAzurermKubernetesClusterRoleBasedAccessControl(this, 'role_based_access_control', index, false);
   }
 
   // service_principal - computed: true, optional: false, required: false
   public servicePrincipal(index: string) {
-    return new DataAzurermKubernetesClusterServicePrincipal(this, 'service_principal', index);
+    return new DataAzurermKubernetesClusterServicePrincipal(this, 'service_principal', index, false);
   }
 
   // tags - computed: true, optional: false, required: false
-  public tags(key: string): string {
+  public tags(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // windows_profile - computed: true, optional: false, required: false
   public windowsProfile(index: string) {
-    return new DataAzurermKubernetesClusterWindowsProfile(this, 'windows_profile', index);
+    return new DataAzurermKubernetesClusterWindowsProfile(this, 'windows_profile', index, false);
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermKubernetesClusterTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermKubernetesClusterTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

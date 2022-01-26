@@ -30,7 +30,7 @@ export interface VirtualHubConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub#tags VirtualHub#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub#virtual_wan_id VirtualHub#virtual_wan_id}
   */
@@ -40,7 +40,7 @@ export interface VirtualHubConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub#route VirtualHub#route}
   */
-  readonly route?: VirtualHubRoute[];
+  readonly route?: VirtualHubRoute[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -59,8 +59,8 @@ export interface VirtualHubRoute {
   readonly nextHopIpAddress: string;
 }
 
-export function virtualHubRouteToTerraform(struct?: VirtualHubRoute): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function virtualHubRouteToTerraform(struct?: VirtualHubRoute | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -89,8 +89,8 @@ export interface VirtualHubTimeouts {
   readonly update?: string;
 }
 
-export function virtualHubTimeoutsToTerraform(struct?: VirtualHubTimeoutsOutputReference | VirtualHubTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function virtualHubTimeoutsToTerraform(struct?: VirtualHubTimeoutsOutputReference | VirtualHubTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -110,7 +110,7 @@ export class VirtualHubTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -347,12 +347,11 @@ export class VirtualHub extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -380,12 +379,12 @@ export class VirtualHub extends cdktf.TerraformResource {
   }
 
   // route - computed: false, optional: true, required: false
-  private _route?: VirtualHubRoute[]; 
+  private _route?: VirtualHubRoute[] | cdktf.IResolvable; 
   public get route() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('route') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('route')));
   }
-  public set route(value: VirtualHubRoute[]) {
+  public set route(value: VirtualHubRoute[] | cdktf.IResolvable) {
     this._route = value;
   }
   public resetRoute() {
@@ -397,7 +396,7 @@ export class VirtualHub extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new VirtualHubTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new VirtualHubTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -423,7 +422,7 @@ export class VirtualHub extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku: cdktf.stringToTerraform(this._sku),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       virtual_wan_id: cdktf.stringToTerraform(this._virtualWanId),
       route: cdktf.listMapper(virtualHubRouteToTerraform)(this._route),
       timeouts: virtualHubTimeoutsToTerraform(this._timeouts.internalValue),

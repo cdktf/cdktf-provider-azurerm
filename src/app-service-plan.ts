@@ -46,7 +46,7 @@ export interface AppServicePlanConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_plan#tags AppServicePlan#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_plan#zone_redundant AppServicePlan#zone_redundant}
   */
@@ -80,7 +80,7 @@ export interface AppServicePlanSku {
 }
 
 export function appServicePlanSkuToTerraform(struct?: AppServicePlanSkuOutputReference | AppServicePlanSku): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -99,7 +99,7 @@ export class AppServicePlanSkuOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -197,8 +197,8 @@ export interface AppServicePlanTimeouts {
   readonly update?: string;
 }
 
-export function appServicePlanTimeoutsToTerraform(struct?: AppServicePlanTimeoutsOutputReference | AppServicePlanTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function appServicePlanTimeoutsToTerraform(struct?: AppServicePlanTimeoutsOutputReference | AppServicePlanTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -218,7 +218,7 @@ export class AppServicePlanTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -401,7 +401,7 @@ export class AppServicePlan extends cdktf.TerraformResource {
   // is_xenon - computed: false, optional: true, required: false
   private _isXenon?: boolean | cdktf.IResolvable; 
   public get isXenon() {
-    return this.getBooleanAttribute('is_xenon') as any;
+    return this.getBooleanAttribute('is_xenon');
   }
   public set isXenon(value: boolean | cdktf.IResolvable) {
     this._isXenon = value;
@@ -480,7 +480,7 @@ export class AppServicePlan extends cdktf.TerraformResource {
   // per_site_scaling - computed: false, optional: true, required: false
   private _perSiteScaling?: boolean | cdktf.IResolvable; 
   public get perSiteScaling() {
-    return this.getBooleanAttribute('per_site_scaling') as any;
+    return this.getBooleanAttribute('per_site_scaling');
   }
   public set perSiteScaling(value: boolean | cdktf.IResolvable) {
     this._perSiteScaling = value;
@@ -496,7 +496,7 @@ export class AppServicePlan extends cdktf.TerraformResource {
   // reserved - computed: false, optional: true, required: false
   private _reserved?: boolean | cdktf.IResolvable; 
   public get reserved() {
-    return this.getBooleanAttribute('reserved') as any;
+    return this.getBooleanAttribute('reserved');
   }
   public set reserved(value: boolean | cdktf.IResolvable) {
     this._reserved = value;
@@ -523,12 +523,11 @@ export class AppServicePlan extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -542,7 +541,7 @@ export class AppServicePlan extends cdktf.TerraformResource {
   // zone_redundant - computed: false, optional: true, required: false
   private _zoneRedundant?: boolean | cdktf.IResolvable; 
   public get zoneRedundant() {
-    return this.getBooleanAttribute('zone_redundant') as any;
+    return this.getBooleanAttribute('zone_redundant');
   }
   public set zoneRedundant(value: boolean | cdktf.IResolvable) {
     this._zoneRedundant = value;
@@ -556,7 +555,7 @@ export class AppServicePlan extends cdktf.TerraformResource {
   }
 
   // sku - computed: false, optional: false, required: true
-  private _sku = new AppServicePlanSkuOutputReference(this as any, "sku", true);
+  private _sku = new AppServicePlanSkuOutputReference(this, "sku", true);
   public get sku() {
     return this._sku;
   }
@@ -569,7 +568,7 @@ export class AppServicePlan extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AppServicePlanTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new AppServicePlanTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -599,7 +598,7 @@ export class AppServicePlan extends cdktf.TerraformResource {
       per_site_scaling: cdktf.booleanToTerraform(this._perSiteScaling),
       reserved: cdktf.booleanToTerraform(this._reserved),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       zone_redundant: cdktf.booleanToTerraform(this._zoneRedundant),
       sku: appServicePlanSkuToTerraform(this._sku.internalValue),
       timeouts: appServicePlanTimeoutsToTerraform(this._timeouts.internalValue),

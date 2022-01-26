@@ -70,7 +70,7 @@ export interface CognitiveAccountConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#tags CognitiveAccount#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * identity block
   * 
@@ -88,7 +88,7 @@ export interface CognitiveAccountConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#storage CognitiveAccount#storage}
   */
-  readonly storage?: CognitiveAccountStorage[];
+  readonly storage?: CognitiveAccountStorage[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -108,7 +108,7 @@ export interface CognitiveAccountIdentity {
 }
 
 export function cognitiveAccountIdentityToTerraform(struct?: CognitiveAccountIdentityOutputReference | CognitiveAccountIdentity): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -126,7 +126,7 @@ export class CognitiveAccountIdentityOutputReference extends cdktf.ComplexObject
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -160,7 +160,7 @@ export class CognitiveAccountIdentityOutputReference extends cdktf.ComplexObject
   // identity_ids - computed: false, optional: true, required: false
   private _identityIds?: string[]; 
   public get identityIds() {
-    return this.getListAttribute('identity_ids');
+    return cdktf.Fn.tolist(this.getListAttribute('identity_ids'));
   }
   public set identityIds(value: string[]) {
     this._identityIds = value;
@@ -171,6 +171,16 @@ export class CognitiveAccountIdentityOutputReference extends cdktf.ComplexObject
   // Temporarily expose input value. Use with caution.
   public get identityIdsInput() {
     return this._identityIds;
+  }
+
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
   }
 
   // type - computed: false, optional: true, required: false
@@ -200,8 +210,8 @@ export interface CognitiveAccountNetworkAclsVirtualNetworkRules {
   readonly subnetId?: string;
 }
 
-export function cognitiveAccountNetworkAclsVirtualNetworkRulesToTerraform(struct?: CognitiveAccountNetworkAclsVirtualNetworkRules): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function cognitiveAccountNetworkAclsVirtualNetworkRulesToTerraform(struct?: CognitiveAccountNetworkAclsVirtualNetworkRules | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -223,7 +233,7 @@ export interface CognitiveAccountNetworkAcls {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#virtual_network_rules CognitiveAccount#virtual_network_rules}
   */
-  readonly virtualNetworkRules?: CognitiveAccountNetworkAclsVirtualNetworkRules[];
+  readonly virtualNetworkRules?: CognitiveAccountNetworkAclsVirtualNetworkRules[] | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#virtual_network_subnet_ids CognitiveAccount#virtual_network_subnet_ids}
   */
@@ -231,7 +241,7 @@ export interface CognitiveAccountNetworkAcls {
 }
 
 export function cognitiveAccountNetworkAclsToTerraform(struct?: CognitiveAccountNetworkAclsOutputReference | CognitiveAccountNetworkAcls): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -251,7 +261,7 @@ export class CognitiveAccountNetworkAclsOutputReference extends cdktf.ComplexObj
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -310,7 +320,7 @@ export class CognitiveAccountNetworkAclsOutputReference extends cdktf.ComplexObj
   // ip_rules - computed: false, optional: true, required: false
   private _ipRules?: string[]; 
   public get ipRules() {
-    return this.getListAttribute('ip_rules');
+    return cdktf.Fn.tolist(this.getListAttribute('ip_rules'));
   }
   public set ipRules(value: string[]) {
     this._ipRules = value;
@@ -324,12 +334,12 @@ export class CognitiveAccountNetworkAclsOutputReference extends cdktf.ComplexObj
   }
 
   // virtual_network_rules - computed: true, optional: true, required: false
-  private _virtualNetworkRules?: CognitiveAccountNetworkAclsVirtualNetworkRules[]; 
+  private _virtualNetworkRules?: CognitiveAccountNetworkAclsVirtualNetworkRules[] | cdktf.IResolvable; 
   public get virtualNetworkRules() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('virtual_network_rules') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('virtual_network_rules')));
   }
-  public set virtualNetworkRules(value: CognitiveAccountNetworkAclsVirtualNetworkRules[]) {
+  public set virtualNetworkRules(value: CognitiveAccountNetworkAclsVirtualNetworkRules[] | cdktf.IResolvable) {
     this._virtualNetworkRules = value;
   }
   public resetVirtualNetworkRules() {
@@ -343,7 +353,7 @@ export class CognitiveAccountNetworkAclsOutputReference extends cdktf.ComplexObj
   // virtual_network_subnet_ids - computed: true, optional: true, required: false
   private _virtualNetworkSubnetIds?: string[]; 
   public get virtualNetworkSubnetIds() {
-    return this.getListAttribute('virtual_network_subnet_ids');
+    return cdktf.Fn.tolist(this.getListAttribute('virtual_network_subnet_ids'));
   }
   public set virtualNetworkSubnetIds(value: string[]) {
     this._virtualNetworkSubnetIds = value;
@@ -367,8 +377,8 @@ export interface CognitiveAccountStorage {
   readonly storageAccountId: string;
 }
 
-export function cognitiveAccountStorageToTerraform(struct?: CognitiveAccountStorage): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function cognitiveAccountStorageToTerraform(struct?: CognitiveAccountStorage | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -397,8 +407,8 @@ export interface CognitiveAccountTimeouts {
   readonly update?: string;
 }
 
-export function cognitiveAccountTimeoutsToTerraform(struct?: CognitiveAccountTimeoutsOutputReference | CognitiveAccountTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function cognitiveAccountTimeoutsToTerraform(struct?: CognitiveAccountTimeoutsOutputReference | CognitiveAccountTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -418,7 +428,7 @@ export class CognitiveAccountTimeoutsOutputReference extends cdktf.ComplexObject
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -642,7 +652,7 @@ export class CognitiveAccount extends cdktf.TerraformResource {
   // local_auth_enabled - computed: false, optional: true, required: false
   private _localAuthEnabled?: boolean | cdktf.IResolvable; 
   public get localAuthEnabled() {
-    return this.getBooleanAttribute('local_auth_enabled') as any;
+    return this.getBooleanAttribute('local_auth_enabled');
   }
   public set localAuthEnabled(value: boolean | cdktf.IResolvable) {
     this._localAuthEnabled = value;
@@ -748,7 +758,7 @@ export class CognitiveAccount extends cdktf.TerraformResource {
   // outbound_network_access_restrited - computed: false, optional: true, required: false
   private _outboundNetworkAccessRestrited?: boolean | cdktf.IResolvable; 
   public get outboundNetworkAccessRestrited() {
-    return this.getBooleanAttribute('outbound_network_access_restrited') as any;
+    return this.getBooleanAttribute('outbound_network_access_restrited');
   }
   public set outboundNetworkAccessRestrited(value: boolean | cdktf.IResolvable) {
     this._outboundNetworkAccessRestrited = value;
@@ -769,7 +779,7 @@ export class CognitiveAccount extends cdktf.TerraformResource {
   // public_network_access_enabled - computed: false, optional: true, required: false
   private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable; 
   public get publicNetworkAccessEnabled() {
-    return this.getBooleanAttribute('public_network_access_enabled') as any;
+    return this.getBooleanAttribute('public_network_access_enabled');
   }
   public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable) {
     this._publicNetworkAccessEnabled = value;
@@ -830,12 +840,11 @@ export class CognitiveAccount extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -847,7 +856,7 @@ export class CognitiveAccount extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity = new CognitiveAccountIdentityOutputReference(this as any, "identity", true);
+  private _identity = new CognitiveAccountIdentityOutputReference(this, "identity", true);
   public get identity() {
     return this._identity;
   }
@@ -863,7 +872,7 @@ export class CognitiveAccount extends cdktf.TerraformResource {
   }
 
   // network_acls - computed: false, optional: true, required: false
-  private _networkAcls = new CognitiveAccountNetworkAclsOutputReference(this as any, "network_acls", true);
+  private _networkAcls = new CognitiveAccountNetworkAclsOutputReference(this, "network_acls", true);
   public get networkAcls() {
     return this._networkAcls;
   }
@@ -879,12 +888,12 @@ export class CognitiveAccount extends cdktf.TerraformResource {
   }
 
   // storage - computed: false, optional: true, required: false
-  private _storage?: CognitiveAccountStorage[]; 
+  private _storage?: CognitiveAccountStorage[] | cdktf.IResolvable; 
   public get storage() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('storage') as any;
+    return this.interpolationForAttribute('storage');
   }
-  public set storage(value: CognitiveAccountStorage[]) {
+  public set storage(value: CognitiveAccountStorage[] | cdktf.IResolvable) {
     this._storage = value;
   }
   public resetStorage() {
@@ -896,7 +905,7 @@ export class CognitiveAccount extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new CognitiveAccountTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new CognitiveAccountTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -932,7 +941,7 @@ export class CognitiveAccount extends cdktf.TerraformResource {
       qna_runtime_endpoint: cdktf.stringToTerraform(this._qnaRuntimeEndpoint),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku_name: cdktf.stringToTerraform(this._skuName),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       identity: cognitiveAccountIdentityToTerraform(this._identity.internalValue),
       network_acls: cognitiveAccountNetworkAclsToTerraform(this._networkAcls.internalValue),
       storage: cdktf.listMapper(cognitiveAccountStorageToTerraform)(this._storage),

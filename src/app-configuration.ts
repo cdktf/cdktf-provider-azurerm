@@ -26,7 +26,7 @@ export interface AppConfigurationConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration#tags AppConfiguration#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * identity block
   * 
@@ -120,7 +120,7 @@ export interface AppConfigurationIdentity {
 }
 
 export function appConfigurationIdentityToTerraform(struct?: AppConfigurationIdentityOutputReference | AppConfigurationIdentity): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -138,7 +138,7 @@ export class AppConfigurationIdentityOutputReference extends cdktf.ComplexObject
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -172,7 +172,7 @@ export class AppConfigurationIdentityOutputReference extends cdktf.ComplexObject
   // identity_ids - computed: false, optional: true, required: false
   private _identityIds?: string[]; 
   public get identityIds() {
-    return this.getListAttribute('identity_ids');
+    return cdktf.Fn.tolist(this.getListAttribute('identity_ids'));
   }
   public set identityIds(value: string[]) {
     this._identityIds = value;
@@ -183,6 +183,16 @@ export class AppConfigurationIdentityOutputReference extends cdktf.ComplexObject
   // Temporarily expose input value. Use with caution.
   public get identityIdsInput() {
     return this._identityIds;
+  }
+
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
   }
 
   // type - computed: false, optional: false, required: true
@@ -217,8 +227,8 @@ export interface AppConfigurationTimeouts {
   readonly update?: string;
 }
 
-export function appConfigurationTimeoutsToTerraform(struct?: AppConfigurationTimeoutsOutputReference | AppConfigurationTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function appConfigurationTimeoutsToTerraform(struct?: AppConfigurationTimeoutsOutputReference | AppConfigurationTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -238,7 +248,7 @@ export class AppConfigurationTimeoutsOutputReference extends cdktf.ComplexObject
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -429,12 +439,12 @@ export class AppConfiguration extends cdktf.TerraformResource {
 
   // primary_read_key - computed: true, optional: false, required: false
   public primaryReadKey(index: string) {
-    return new AppConfigurationPrimaryReadKey(this, 'primary_read_key', index);
+    return new AppConfigurationPrimaryReadKey(this, 'primary_read_key', index, false);
   }
 
   // primary_write_key - computed: true, optional: false, required: false
   public primaryWriteKey(index: string) {
-    return new AppConfigurationPrimaryWriteKey(this, 'primary_write_key', index);
+    return new AppConfigurationPrimaryWriteKey(this, 'primary_write_key', index, false);
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -452,12 +462,12 @@ export class AppConfiguration extends cdktf.TerraformResource {
 
   // secondary_read_key - computed: true, optional: false, required: false
   public secondaryReadKey(index: string) {
-    return new AppConfigurationSecondaryReadKey(this, 'secondary_read_key', index);
+    return new AppConfigurationSecondaryReadKey(this, 'secondary_read_key', index, false);
   }
 
   // secondary_write_key - computed: true, optional: false, required: false
   public secondaryWriteKey(index: string) {
-    return new AppConfigurationSecondaryWriteKey(this, 'secondary_write_key', index);
+    return new AppConfigurationSecondaryWriteKey(this, 'secondary_write_key', index, false);
   }
 
   // sku - computed: false, optional: true, required: false
@@ -477,12 +487,11 @@ export class AppConfiguration extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -494,7 +503,7 @@ export class AppConfiguration extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity = new AppConfigurationIdentityOutputReference(this as any, "identity", true);
+  private _identity = new AppConfigurationIdentityOutputReference(this, "identity", true);
   public get identity() {
     return this._identity;
   }
@@ -510,7 +519,7 @@ export class AppConfiguration extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AppConfigurationTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new AppConfigurationTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -535,7 +544,7 @@ export class AppConfiguration extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku: cdktf.stringToTerraform(this._sku),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       identity: appConfigurationIdentityToTerraform(this._identity.internalValue),
       timeouts: appConfigurationTimeoutsToTerraform(this._timeouts.internalValue),
     };

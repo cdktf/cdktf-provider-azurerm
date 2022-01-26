@@ -62,8 +62,7 @@ export class DataAzurermPolicySetDefinitionPolicyDefinitionReference extends cdk
 
   // parameters - computed: true, optional: false, required: false
   public get parameters() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('parameters') as any;
+    return this.getStringMapAttribute('parameters');
   }
 
   // policy_definition_id - computed: true, optional: false, required: false
@@ -88,8 +87,8 @@ export interface DataAzurermPolicySetDefinitionTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermPolicySetDefinitionTimeoutsToTerraform(struct?: DataAzurermPolicySetDefinitionTimeoutsOutputReference | DataAzurermPolicySetDefinitionTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermPolicySetDefinitionTimeoutsToTerraform(struct?: DataAzurermPolicySetDefinitionTimeoutsOutputReference | DataAzurermPolicySetDefinitionTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -106,7 +105,7 @@ export class DataAzurermPolicySetDefinitionTimeoutsOutputReference extends cdktf
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -260,12 +259,12 @@ export class DataAzurermPolicySetDefinition extends cdktf.TerraformDataSource {
 
   // policy_definition_group - computed: true, optional: false, required: false
   public policyDefinitionGroup(index: string) {
-    return new DataAzurermPolicySetDefinitionPolicyDefinitionGroup(this, 'policy_definition_group', index);
+    return new DataAzurermPolicySetDefinitionPolicyDefinitionGroup(this, 'policy_definition_group', index, false);
   }
 
   // policy_definition_reference - computed: true, optional: false, required: false
   public policyDefinitionReference(index: string) {
-    return new DataAzurermPolicySetDefinitionPolicyDefinitionReference(this, 'policy_definition_reference', index);
+    return new DataAzurermPolicySetDefinitionPolicyDefinitionReference(this, 'policy_definition_reference', index, false);
   }
 
   // policy_definitions - computed: true, optional: false, required: false
@@ -279,7 +278,7 @@ export class DataAzurermPolicySetDefinition extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermPolicySetDefinitionTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermPolicySetDefinitionTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

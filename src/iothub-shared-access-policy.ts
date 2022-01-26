@@ -61,8 +61,8 @@ export interface IothubSharedAccessPolicyTimeouts {
   readonly update?: string;
 }
 
-export function iothubSharedAccessPolicyTimeoutsToTerraform(struct?: IothubSharedAccessPolicyTimeoutsOutputReference | IothubSharedAccessPolicyTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function iothubSharedAccessPolicyTimeoutsToTerraform(struct?: IothubSharedAccessPolicyTimeoutsOutputReference | IothubSharedAccessPolicyTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -82,7 +82,7 @@ export class IothubSharedAccessPolicyTimeoutsOutputReference extends cdktf.Compl
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -239,7 +239,7 @@ export class IothubSharedAccessPolicyA extends cdktf.TerraformResource {
   // device_connect - computed: false, optional: true, required: false
   private _deviceConnect?: boolean | cdktf.IResolvable; 
   public get deviceConnect() {
-    return this.getBooleanAttribute('device_connect') as any;
+    return this.getBooleanAttribute('device_connect');
   }
   public set deviceConnect(value: boolean | cdktf.IResolvable) {
     this._deviceConnect = value;
@@ -296,7 +296,7 @@ export class IothubSharedAccessPolicyA extends cdktf.TerraformResource {
   // registry_read - computed: false, optional: true, required: false
   private _registryRead?: boolean | cdktf.IResolvable; 
   public get registryRead() {
-    return this.getBooleanAttribute('registry_read') as any;
+    return this.getBooleanAttribute('registry_read');
   }
   public set registryRead(value: boolean | cdktf.IResolvable) {
     this._registryRead = value;
@@ -312,7 +312,7 @@ export class IothubSharedAccessPolicyA extends cdktf.TerraformResource {
   // registry_write - computed: false, optional: true, required: false
   private _registryWrite?: boolean | cdktf.IResolvable; 
   public get registryWrite() {
-    return this.getBooleanAttribute('registry_write') as any;
+    return this.getBooleanAttribute('registry_write');
   }
   public set registryWrite(value: boolean | cdktf.IResolvable) {
     this._registryWrite = value;
@@ -351,7 +351,7 @@ export class IothubSharedAccessPolicyA extends cdktf.TerraformResource {
   // service_connect - computed: false, optional: true, required: false
   private _serviceConnect?: boolean | cdktf.IResolvable; 
   public get serviceConnect() {
-    return this.getBooleanAttribute('service_connect') as any;
+    return this.getBooleanAttribute('service_connect');
   }
   public set serviceConnect(value: boolean | cdktf.IResolvable) {
     this._serviceConnect = value;
@@ -365,7 +365,7 @@ export class IothubSharedAccessPolicyA extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new IothubSharedAccessPolicyTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new IothubSharedAccessPolicyTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

@@ -87,8 +87,8 @@ export interface DataAzurermSentinelAlertRuleTemplateTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermSentinelAlertRuleTemplateTimeoutsToTerraform(struct?: DataAzurermSentinelAlertRuleTemplateTimeoutsOutputReference | DataAzurermSentinelAlertRuleTemplateTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermSentinelAlertRuleTemplateTimeoutsToTerraform(struct?: DataAzurermSentinelAlertRuleTemplateTimeoutsOutputReference | DataAzurermSentinelAlertRuleTemplateTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -105,7 +105,7 @@ export class DataAzurermSentinelAlertRuleTemplateTimeoutsOutputReference extends
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -241,16 +241,16 @@ export class DataAzurermSentinelAlertRuleTemplate extends cdktf.TerraformDataSou
 
   // scheduled_template - computed: true, optional: false, required: false
   public scheduledTemplate(index: string) {
-    return new DataAzurermSentinelAlertRuleTemplateScheduledTemplate(this, 'scheduled_template', index);
+    return new DataAzurermSentinelAlertRuleTemplateScheduledTemplate(this, 'scheduled_template', index, false);
   }
 
   // security_incident_template - computed: true, optional: false, required: false
   public securityIncidentTemplate(index: string) {
-    return new DataAzurermSentinelAlertRuleTemplateSecurityIncidentTemplate(this, 'security_incident_template', index);
+    return new DataAzurermSentinelAlertRuleTemplateSecurityIncidentTemplate(this, 'security_incident_template', index, false);
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermSentinelAlertRuleTemplateTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermSentinelAlertRuleTemplateTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

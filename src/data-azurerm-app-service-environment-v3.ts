@@ -58,8 +58,8 @@ export interface DataAzurermAppServiceEnvironmentV3Timeouts {
   readonly read?: string;
 }
 
-export function dataAzurermAppServiceEnvironmentV3TimeoutsToTerraform(struct?: DataAzurermAppServiceEnvironmentV3TimeoutsOutputReference | DataAzurermAppServiceEnvironmentV3Timeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermAppServiceEnvironmentV3TimeoutsToTerraform(struct?: DataAzurermAppServiceEnvironmentV3TimeoutsOutputReference | DataAzurermAppServiceEnvironmentV3Timeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -76,7 +76,7 @@ export class DataAzurermAppServiceEnvironmentV3TimeoutsOutputReference extends c
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -161,12 +161,12 @@ export class DataAzurermAppServiceEnvironmentV3 extends cdktf.TerraformDataSourc
 
   // allow_new_private_endpoint_connections - computed: true, optional: false, required: false
   public get allowNewPrivateEndpointConnections() {
-    return this.getBooleanAttribute('allow_new_private_endpoint_connections') as any;
+    return this.getBooleanAttribute('allow_new_private_endpoint_connections');
   }
 
   // cluster_setting - computed: true, optional: false, required: false
   public clusterSetting(index: string) {
-    return new DataAzurermAppServiceEnvironmentV3ClusterSetting(this, 'cluster_setting', index);
+    return new DataAzurermAppServiceEnvironmentV3ClusterSetting(this, 'cluster_setting', index, false);
   }
 
   // dedicated_host_count - computed: true, optional: false, required: false
@@ -191,7 +191,7 @@ export class DataAzurermAppServiceEnvironmentV3 extends cdktf.TerraformDataSourc
 
   // inbound_network_dependencies - computed: true, optional: false, required: false
   public inboundNetworkDependencies(index: string) {
-    return new DataAzurermAppServiceEnvironmentV3InboundNetworkDependencies(this, 'inbound_network_dependencies', index);
+    return new DataAzurermAppServiceEnvironmentV3InboundNetworkDependencies(this, 'inbound_network_dependencies', index, false);
   }
 
   // internal_inbound_ip_addresses - computed: true, optional: false, required: false
@@ -256,7 +256,7 @@ export class DataAzurermAppServiceEnvironmentV3 extends cdktf.TerraformDataSourc
   }
 
   // tags - computed: true, optional: false, required: false
-  public tags(key: string): string {
+  public tags(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
@@ -267,11 +267,11 @@ export class DataAzurermAppServiceEnvironmentV3 extends cdktf.TerraformDataSourc
 
   // zone_redundant - computed: true, optional: false, required: false
   public get zoneRedundant() {
-    return this.getBooleanAttribute('zone_redundant') as any;
+    return this.getBooleanAttribute('zone_redundant');
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermAppServiceEnvironmentV3TimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermAppServiceEnvironmentV3TimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

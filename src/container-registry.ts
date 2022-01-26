@@ -22,7 +22,7 @@ export interface ContainerRegistryConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry#encryption ContainerRegistry#encryption}
   */
-  readonly encryption?: ContainerRegistryEncryption[];
+  readonly encryption?: ContainerRegistryEncryption[] | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry#georeplication_locations ContainerRegistry#georeplication_locations}
   */
@@ -30,7 +30,7 @@ export interface ContainerRegistryConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry#georeplications ContainerRegistry#georeplications}
   */
-  readonly georeplications?: ContainerRegistryGeoreplications[];
+  readonly georeplications?: ContainerRegistryGeoreplications[] | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry#location ContainerRegistry#location}
   */
@@ -46,7 +46,7 @@ export interface ContainerRegistryConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry#network_rule_set ContainerRegistry#network_rule_set}
   */
-  readonly networkRuleSet?: ContainerRegistryNetworkRuleSet[];
+  readonly networkRuleSet?: ContainerRegistryNetworkRuleSet[] | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry#public_network_access_enabled ContainerRegistry#public_network_access_enabled}
   */
@@ -62,7 +62,7 @@ export interface ContainerRegistryConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry#retention_policy ContainerRegistry#retention_policy}
   */
-  readonly retentionPolicy?: ContainerRegistryRetentionPolicy[];
+  readonly retentionPolicy?: ContainerRegistryRetentionPolicy[] | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry#sku ContainerRegistry#sku}
   */
@@ -74,11 +74,11 @@ export interface ContainerRegistryConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry#tags ContainerRegistry#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry#trust_policy ContainerRegistry#trust_policy}
   */
-  readonly trustPolicy?: ContainerRegistryTrustPolicy[];
+  readonly trustPolicy?: ContainerRegistryTrustPolicy[] | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry#zone_redundancy_enabled ContainerRegistry#zone_redundancy_enabled}
   */
@@ -111,8 +111,8 @@ export interface ContainerRegistryEncryption {
   readonly keyVaultKeyId?: string;
 }
 
-export function containerRegistryEncryptionToTerraform(struct?: ContainerRegistryEncryption): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function containerRegistryEncryptionToTerraform(struct?: ContainerRegistryEncryption | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -135,22 +135,22 @@ export interface ContainerRegistryGeoreplications {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry#tags ContainerRegistry#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry#zone_redundancy_enabled ContainerRegistry#zone_redundancy_enabled}
   */
   readonly zoneRedundancyEnabled?: boolean | cdktf.IResolvable;
 }
 
-export function containerRegistryGeoreplicationsToTerraform(struct?: ContainerRegistryGeoreplications): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function containerRegistryGeoreplicationsToTerraform(struct?: ContainerRegistryGeoreplications | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
     location: cdktf.stringToTerraform(struct!.location),
     regional_endpoint_enabled: cdktf.booleanToTerraform(struct!.regionalEndpointEnabled),
-    tags: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.tags),
+    tags: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.tags),
     zone_redundancy_enabled: cdktf.booleanToTerraform(struct!.zoneRedundancyEnabled),
   }
 }
@@ -166,8 +166,8 @@ export interface ContainerRegistryNetworkRuleSetIpRule {
   readonly ipRange?: string;
 }
 
-export function containerRegistryNetworkRuleSetIpRuleToTerraform(struct?: ContainerRegistryNetworkRuleSetIpRule): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function containerRegistryNetworkRuleSetIpRuleToTerraform(struct?: ContainerRegistryNetworkRuleSetIpRule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -188,8 +188,8 @@ export interface ContainerRegistryNetworkRuleSetVirtualNetwork {
   readonly subnetId?: string;
 }
 
-export function containerRegistryNetworkRuleSetVirtualNetworkToTerraform(struct?: ContainerRegistryNetworkRuleSetVirtualNetwork): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function containerRegistryNetworkRuleSetVirtualNetworkToTerraform(struct?: ContainerRegistryNetworkRuleSetVirtualNetwork | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -207,15 +207,15 @@ export interface ContainerRegistryNetworkRuleSet {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry#ip_rule ContainerRegistry#ip_rule}
   */
-  readonly ipRule?: ContainerRegistryNetworkRuleSetIpRule[];
+  readonly ipRule?: ContainerRegistryNetworkRuleSetIpRule[] | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry#virtual_network ContainerRegistry#virtual_network}
   */
-  readonly virtualNetwork?: ContainerRegistryNetworkRuleSetVirtualNetwork[];
+  readonly virtualNetwork?: ContainerRegistryNetworkRuleSetVirtualNetwork[] | cdktf.IResolvable;
 }
 
-export function containerRegistryNetworkRuleSetToTerraform(struct?: ContainerRegistryNetworkRuleSet): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function containerRegistryNetworkRuleSetToTerraform(struct?: ContainerRegistryNetworkRuleSet | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -237,8 +237,8 @@ export interface ContainerRegistryRetentionPolicy {
   readonly enabled?: boolean | cdktf.IResolvable;
 }
 
-export function containerRegistryRetentionPolicyToTerraform(struct?: ContainerRegistryRetentionPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function containerRegistryRetentionPolicyToTerraform(struct?: ContainerRegistryRetentionPolicy | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -255,8 +255,8 @@ export interface ContainerRegistryTrustPolicy {
   readonly enabled?: boolean | cdktf.IResolvable;
 }
 
-export function containerRegistryTrustPolicyToTerraform(struct?: ContainerRegistryTrustPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function containerRegistryTrustPolicyToTerraform(struct?: ContainerRegistryTrustPolicy | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -277,7 +277,7 @@ export interface ContainerRegistryIdentity {
 }
 
 export function containerRegistryIdentityToTerraform(struct?: ContainerRegistryIdentityOutputReference | ContainerRegistryIdentity): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -295,7 +295,7 @@ export class ContainerRegistryIdentityOutputReference extends cdktf.ComplexObjec
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -342,6 +342,16 @@ export class ContainerRegistryIdentityOutputReference extends cdktf.ComplexObjec
     return this._identityIds;
   }
 
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
+  }
+
   // type - computed: false, optional: false, required: true
   private _type?: string; 
   public get type() {
@@ -374,8 +384,8 @@ export interface ContainerRegistryTimeouts {
   readonly update?: string;
 }
 
-export function containerRegistryTimeoutsToTerraform(struct?: ContainerRegistryTimeoutsOutputReference | ContainerRegistryTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function containerRegistryTimeoutsToTerraform(struct?: ContainerRegistryTimeoutsOutputReference | ContainerRegistryTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -395,7 +405,7 @@ export class ContainerRegistryTimeoutsOutputReference extends cdktf.ComplexObjec
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -565,7 +575,7 @@ export class ContainerRegistry extends cdktf.TerraformResource {
   // admin_enabled - computed: false, optional: true, required: false
   private _adminEnabled?: boolean | cdktf.IResolvable; 
   public get adminEnabled() {
-    return this.getBooleanAttribute('admin_enabled') as any;
+    return this.getBooleanAttribute('admin_enabled');
   }
   public set adminEnabled(value: boolean | cdktf.IResolvable) {
     this._adminEnabled = value;
@@ -591,7 +601,7 @@ export class ContainerRegistry extends cdktf.TerraformResource {
   // anonymous_pull_enabled - computed: false, optional: true, required: false
   private _anonymousPullEnabled?: boolean | cdktf.IResolvable; 
   public get anonymousPullEnabled() {
-    return this.getBooleanAttribute('anonymous_pull_enabled') as any;
+    return this.getBooleanAttribute('anonymous_pull_enabled');
   }
   public set anonymousPullEnabled(value: boolean | cdktf.IResolvable) {
     this._anonymousPullEnabled = value;
@@ -607,7 +617,7 @@ export class ContainerRegistry extends cdktf.TerraformResource {
   // data_endpoint_enabled - computed: false, optional: true, required: false
   private _dataEndpointEnabled?: boolean | cdktf.IResolvable; 
   public get dataEndpointEnabled() {
-    return this.getBooleanAttribute('data_endpoint_enabled') as any;
+    return this.getBooleanAttribute('data_endpoint_enabled');
   }
   public set dataEndpointEnabled(value: boolean | cdktf.IResolvable) {
     this._dataEndpointEnabled = value;
@@ -621,12 +631,12 @@ export class ContainerRegistry extends cdktf.TerraformResource {
   }
 
   // encryption - computed: true, optional: true, required: false
-  private _encryption?: ContainerRegistryEncryption[]; 
+  private _encryption?: ContainerRegistryEncryption[] | cdktf.IResolvable; 
   public get encryption() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('encryption') as any;
+    return this.interpolationForAttribute('encryption');
   }
-  public set encryption(value: ContainerRegistryEncryption[]) {
+  public set encryption(value: ContainerRegistryEncryption[] | cdktf.IResolvable) {
     this._encryption = value;
   }
   public resetEncryption() {
@@ -640,7 +650,7 @@ export class ContainerRegistry extends cdktf.TerraformResource {
   // georeplication_locations - computed: true, optional: true, required: false
   private _georeplicationLocations?: string[]; 
   public get georeplicationLocations() {
-    return this.getListAttribute('georeplication_locations');
+    return cdktf.Fn.tolist(this.getListAttribute('georeplication_locations'));
   }
   public set georeplicationLocations(value: string[]) {
     this._georeplicationLocations = value;
@@ -654,12 +664,12 @@ export class ContainerRegistry extends cdktf.TerraformResource {
   }
 
   // georeplications - computed: true, optional: true, required: false
-  private _georeplications?: ContainerRegistryGeoreplications[]; 
+  private _georeplications?: ContainerRegistryGeoreplications[] | cdktf.IResolvable; 
   public get georeplications() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('georeplications') as any;
+    return this.interpolationForAttribute('georeplications');
   }
-  public set georeplications(value: ContainerRegistryGeoreplications[]) {
+  public set georeplications(value: ContainerRegistryGeoreplications[] | cdktf.IResolvable) {
     this._georeplications = value;
   }
   public resetGeoreplications() {
@@ -723,12 +733,12 @@ export class ContainerRegistry extends cdktf.TerraformResource {
   }
 
   // network_rule_set - computed: true, optional: true, required: false
-  private _networkRuleSet?: ContainerRegistryNetworkRuleSet[]; 
+  private _networkRuleSet?: ContainerRegistryNetworkRuleSet[] | cdktf.IResolvable; 
   public get networkRuleSet() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('network_rule_set') as any;
+    return this.interpolationForAttribute('network_rule_set');
   }
-  public set networkRuleSet(value: ContainerRegistryNetworkRuleSet[]) {
+  public set networkRuleSet(value: ContainerRegistryNetworkRuleSet[] | cdktf.IResolvable) {
     this._networkRuleSet = value;
   }
   public resetNetworkRuleSet() {
@@ -742,7 +752,7 @@ export class ContainerRegistry extends cdktf.TerraformResource {
   // public_network_access_enabled - computed: false, optional: true, required: false
   private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable; 
   public get publicNetworkAccessEnabled() {
-    return this.getBooleanAttribute('public_network_access_enabled') as any;
+    return this.getBooleanAttribute('public_network_access_enabled');
   }
   public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable) {
     this._publicNetworkAccessEnabled = value;
@@ -758,7 +768,7 @@ export class ContainerRegistry extends cdktf.TerraformResource {
   // quarantine_policy_enabled - computed: false, optional: true, required: false
   private _quarantinePolicyEnabled?: boolean | cdktf.IResolvable; 
   public get quarantinePolicyEnabled() {
-    return this.getBooleanAttribute('quarantine_policy_enabled') as any;
+    return this.getBooleanAttribute('quarantine_policy_enabled');
   }
   public set quarantinePolicyEnabled(value: boolean | cdktf.IResolvable) {
     this._quarantinePolicyEnabled = value;
@@ -785,12 +795,12 @@ export class ContainerRegistry extends cdktf.TerraformResource {
   }
 
   // retention_policy - computed: true, optional: true, required: false
-  private _retentionPolicy?: ContainerRegistryRetentionPolicy[]; 
+  private _retentionPolicy?: ContainerRegistryRetentionPolicy[] | cdktf.IResolvable; 
   public get retentionPolicy() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('retention_policy') as any;
+    return this.interpolationForAttribute('retention_policy');
   }
-  public set retentionPolicy(value: ContainerRegistryRetentionPolicy[]) {
+  public set retentionPolicy(value: ContainerRegistryRetentionPolicy[] | cdktf.IResolvable) {
     this._retentionPolicy = value;
   }
   public resetRetentionPolicy() {
@@ -834,12 +844,11 @@ export class ContainerRegistry extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -851,12 +860,12 @@ export class ContainerRegistry extends cdktf.TerraformResource {
   }
 
   // trust_policy - computed: true, optional: true, required: false
-  private _trustPolicy?: ContainerRegistryTrustPolicy[]; 
+  private _trustPolicy?: ContainerRegistryTrustPolicy[] | cdktf.IResolvable; 
   public get trustPolicy() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('trust_policy') as any;
+    return this.interpolationForAttribute('trust_policy');
   }
-  public set trustPolicy(value: ContainerRegistryTrustPolicy[]) {
+  public set trustPolicy(value: ContainerRegistryTrustPolicy[] | cdktf.IResolvable) {
     this._trustPolicy = value;
   }
   public resetTrustPolicy() {
@@ -870,7 +879,7 @@ export class ContainerRegistry extends cdktf.TerraformResource {
   // zone_redundancy_enabled - computed: false, optional: true, required: false
   private _zoneRedundancyEnabled?: boolean | cdktf.IResolvable; 
   public get zoneRedundancyEnabled() {
-    return this.getBooleanAttribute('zone_redundancy_enabled') as any;
+    return this.getBooleanAttribute('zone_redundancy_enabled');
   }
   public set zoneRedundancyEnabled(value: boolean | cdktf.IResolvable) {
     this._zoneRedundancyEnabled = value;
@@ -884,7 +893,7 @@ export class ContainerRegistry extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity = new ContainerRegistryIdentityOutputReference(this as any, "identity", true);
+  private _identity = new ContainerRegistryIdentityOutputReference(this, "identity", true);
   public get identity() {
     return this._identity;
   }
@@ -900,7 +909,7 @@ export class ContainerRegistry extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ContainerRegistryTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ContainerRegistryTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -937,7 +946,7 @@ export class ContainerRegistry extends cdktf.TerraformResource {
       retention_policy: cdktf.listMapper(containerRegistryRetentionPolicyToTerraform)(this._retentionPolicy),
       sku: cdktf.stringToTerraform(this._sku),
       storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       trust_policy: cdktf.listMapper(containerRegistryTrustPolicyToTerraform)(this._trustPolicy),
       zone_redundancy_enabled: cdktf.booleanToTerraform(this._zoneRedundancyEnabled),
       identity: containerRegistryIdentityToTerraform(this._identity.internalValue),

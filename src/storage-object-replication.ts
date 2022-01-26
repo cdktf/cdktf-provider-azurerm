@@ -20,7 +20,7 @@ export interface StorageObjectReplicationConfig extends cdktf.TerraformMetaArgum
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_object_replication#rules StorageObjectReplication#rules}
   */
-  readonly rules: StorageObjectReplicationRules[];
+  readonly rules: StorageObjectReplicationRules[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -47,8 +47,8 @@ export interface StorageObjectReplicationRules {
   readonly sourceContainerName: string;
 }
 
-export function storageObjectReplicationRulesToTerraform(struct?: StorageObjectReplicationRules): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function storageObjectReplicationRulesToTerraform(struct?: StorageObjectReplicationRules | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -79,8 +79,8 @@ export interface StorageObjectReplicationTimeouts {
   readonly update?: string;
 }
 
-export function storageObjectReplicationTimeoutsToTerraform(struct?: StorageObjectReplicationTimeoutsOutputReference | StorageObjectReplicationTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function storageObjectReplicationTimeoutsToTerraform(struct?: StorageObjectReplicationTimeoutsOutputReference | StorageObjectReplicationTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -100,7 +100,7 @@ export class StorageObjectReplicationTimeoutsOutputReference extends cdktf.Compl
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -292,12 +292,12 @@ export class StorageObjectReplication extends cdktf.TerraformResource {
   }
 
   // rules - computed: false, optional: false, required: true
-  private _rules?: StorageObjectReplicationRules[]; 
+  private _rules?: StorageObjectReplicationRules[] | cdktf.IResolvable; 
   public get rules() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('rules') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('rules')));
   }
-  public set rules(value: StorageObjectReplicationRules[]) {
+  public set rules(value: StorageObjectReplicationRules[] | cdktf.IResolvable) {
     this._rules = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -306,7 +306,7 @@ export class StorageObjectReplication extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new StorageObjectReplicationTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new StorageObjectReplicationTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

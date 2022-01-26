@@ -68,8 +68,8 @@ export interface DataAzurermVmwarePrivateCloudTimeouts {
   readonly read?: string;
 }
 
-export function dataAzurermVmwarePrivateCloudTimeoutsToTerraform(struct?: DataAzurermVmwarePrivateCloudTimeoutsOutputReference | DataAzurermVmwarePrivateCloudTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function dataAzurermVmwarePrivateCloudTimeoutsToTerraform(struct?: DataAzurermVmwarePrivateCloudTimeoutsOutputReference | DataAzurermVmwarePrivateCloudTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -86,7 +86,7 @@ export class DataAzurermVmwarePrivateCloudTimeoutsOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -171,7 +171,7 @@ export class DataAzurermVmwarePrivateCloud extends cdktf.TerraformDataSource {
 
   // circuit - computed: true, optional: false, required: false
   public circuit(index: string) {
-    return new DataAzurermVmwarePrivateCloudCircuit(this, 'circuit', index);
+    return new DataAzurermVmwarePrivateCloudCircuit(this, 'circuit', index, false);
   }
 
   // hcx_cloud_manager_endpoint - computed: true, optional: false, required: false
@@ -186,7 +186,7 @@ export class DataAzurermVmwarePrivateCloud extends cdktf.TerraformDataSource {
 
   // internet_connection_enabled - computed: true, optional: false, required: false
   public get internetConnectionEnabled() {
-    return this.getBooleanAttribute('internet_connection_enabled') as any;
+    return this.getBooleanAttribute('internet_connection_enabled');
   }
 
   // location - computed: true, optional: false, required: false
@@ -196,7 +196,7 @@ export class DataAzurermVmwarePrivateCloud extends cdktf.TerraformDataSource {
 
   // management_cluster - computed: true, optional: false, required: false
   public managementCluster(index: string) {
-    return new DataAzurermVmwarePrivateCloudManagementCluster(this, 'management_cluster', index);
+    return new DataAzurermVmwarePrivateCloudManagementCluster(this, 'management_cluster', index, false);
   }
 
   // management_subnet_cidr - computed: true, optional: false, required: false
@@ -256,7 +256,7 @@ export class DataAzurermVmwarePrivateCloud extends cdktf.TerraformDataSource {
   }
 
   // tags - computed: true, optional: false, required: false
-  public tags(key: string): string {
+  public tags(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
@@ -276,7 +276,7 @@ export class DataAzurermVmwarePrivateCloud extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermVmwarePrivateCloudTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermVmwarePrivateCloudTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

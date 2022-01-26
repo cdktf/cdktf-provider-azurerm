@@ -52,7 +52,7 @@ export interface MonitorLogProfileRetentionPolicy {
 }
 
 export function monitorLogProfileRetentionPolicyToTerraform(struct?: MonitorLogProfileRetentionPolicyOutputReference | MonitorLogProfileRetentionPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -70,7 +70,7 @@ export class MonitorLogProfileRetentionPolicyOutputReference extends cdktf.Compl
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -120,7 +120,7 @@ export class MonitorLogProfileRetentionPolicyOutputReference extends cdktf.Compl
   // enabled - computed: false, optional: false, required: true
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
@@ -149,8 +149,8 @@ export interface MonitorLogProfileTimeouts {
   readonly update?: string;
 }
 
-export function monitorLogProfileTimeoutsToTerraform(struct?: MonitorLogProfileTimeoutsOutputReference | MonitorLogProfileTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function monitorLogProfileTimeoutsToTerraform(struct?: MonitorLogProfileTimeoutsOutputReference | MonitorLogProfileTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -170,7 +170,7 @@ export class MonitorLogProfileTimeoutsOutputReference extends cdktf.ComplexObjec
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -326,7 +326,7 @@ export class MonitorLogProfile extends cdktf.TerraformResource {
   // categories - computed: false, optional: false, required: true
   private _categories?: string[]; 
   public get categories() {
-    return this.getListAttribute('categories');
+    return cdktf.Fn.tolist(this.getListAttribute('categories'));
   }
   public set categories(value: string[]) {
     this._categories = value;
@@ -344,7 +344,7 @@ export class MonitorLogProfile extends cdktf.TerraformResource {
   // locations - computed: false, optional: false, required: true
   private _locations?: string[]; 
   public get locations() {
-    return this.getListAttribute('locations');
+    return cdktf.Fn.tolist(this.getListAttribute('locations'));
   }
   public set locations(value: string[]) {
     this._locations = value;
@@ -400,7 +400,7 @@ export class MonitorLogProfile extends cdktf.TerraformResource {
   }
 
   // retention_policy - computed: false, optional: false, required: true
-  private _retentionPolicy = new MonitorLogProfileRetentionPolicyOutputReference(this as any, "retention_policy", true);
+  private _retentionPolicy = new MonitorLogProfileRetentionPolicyOutputReference(this, "retention_policy", true);
   public get retentionPolicy() {
     return this._retentionPolicy;
   }
@@ -413,7 +413,7 @@ export class MonitorLogProfile extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new MonitorLogProfileTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new MonitorLogProfileTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

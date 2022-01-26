@@ -20,7 +20,7 @@ export interface StorageTableConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table#acl StorageTable#acl}
   */
-  readonly acl?: StorageTableAcl[];
+  readonly acl?: StorageTableAcl[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -43,8 +43,8 @@ export interface StorageTableAclAccessPolicy {
   readonly start: string;
 }
 
-export function storageTableAclAccessPolicyToTerraform(struct?: StorageTableAclAccessPolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function storageTableAclAccessPolicyToTerraform(struct?: StorageTableAclAccessPolicy | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -65,11 +65,11 @@ export interface StorageTableAcl {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table#access_policy StorageTable#access_policy}
   */
-  readonly accessPolicy?: StorageTableAclAccessPolicy[];
+  readonly accessPolicy?: StorageTableAclAccessPolicy[] | cdktf.IResolvable;
 }
 
-export function storageTableAclToTerraform(struct?: StorageTableAcl): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function storageTableAclToTerraform(struct?: StorageTableAcl | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -98,8 +98,8 @@ export interface StorageTableTimeouts {
   readonly update?: string;
 }
 
-export function storageTableTimeoutsToTerraform(struct?: StorageTableTimeoutsOutputReference | StorageTableTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function storageTableTimeoutsToTerraform(struct?: StorageTableTimeoutsOutputReference | StorageTableTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -119,7 +119,7 @@ export class StorageTableTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -301,12 +301,12 @@ export class StorageTable extends cdktf.TerraformResource {
   }
 
   // acl - computed: false, optional: true, required: false
-  private _acl?: StorageTableAcl[]; 
+  private _acl?: StorageTableAcl[] | cdktf.IResolvable; 
   public get acl() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('acl') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('acl')));
   }
-  public set acl(value: StorageTableAcl[]) {
+  public set acl(value: StorageTableAcl[] | cdktf.IResolvable) {
     this._acl = value;
   }
   public resetAcl() {
@@ -318,7 +318,7 @@ export class StorageTable extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new StorageTableTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new StorageTableTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

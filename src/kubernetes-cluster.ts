@@ -82,7 +82,7 @@ export interface KubernetesClusterConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#tags KubernetesCluster#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * addon_profile block
   * 
@@ -238,7 +238,7 @@ export interface KubernetesClusterAddonProfileAciConnectorLinux {
 }
 
 export function kubernetesClusterAddonProfileAciConnectorLinuxToTerraform(struct?: KubernetesClusterAddonProfileAciConnectorLinuxOutputReference | KubernetesClusterAddonProfileAciConnectorLinux): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -256,7 +256,7 @@ export class KubernetesClusterAddonProfileAciConnectorLinuxOutputReference exten
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -290,7 +290,7 @@ export class KubernetesClusterAddonProfileAciConnectorLinuxOutputReference exten
   // enabled - computed: false, optional: false, required: true
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
@@ -316,6 +316,23 @@ export class KubernetesClusterAddonProfileAciConnectorLinuxOutputReference exten
     return this._subnetName;
   }
 }
+export class KubernetesClusterAddonProfileAzureKeyvaultSecretsProviderSecretIdentity extends cdktf.ComplexComputedList {
+
+  // client_id - computed: true, optional: false, required: false
+  public get clientId() {
+    return this.getStringAttribute('client_id');
+  }
+
+  // object_id - computed: true, optional: false, required: false
+  public get objectId() {
+    return this.getStringAttribute('object_id');
+  }
+
+  // user_assigned_identity_id - computed: true, optional: false, required: false
+  public get userAssignedIdentityId() {
+    return this.getStringAttribute('user_assigned_identity_id');
+  }
+}
 export interface KubernetesClusterAddonProfileAzureKeyvaultSecretsProvider {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#enabled KubernetesCluster#enabled}
@@ -332,7 +349,7 @@ export interface KubernetesClusterAddonProfileAzureKeyvaultSecretsProvider {
 }
 
 export function kubernetesClusterAddonProfileAzureKeyvaultSecretsProviderToTerraform(struct?: KubernetesClusterAddonProfileAzureKeyvaultSecretsProviderOutputReference | KubernetesClusterAddonProfileAzureKeyvaultSecretsProvider): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -351,7 +368,7 @@ export class KubernetesClusterAddonProfileAzureKeyvaultSecretsProviderOutputRefe
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -391,7 +408,7 @@ export class KubernetesClusterAddonProfileAzureKeyvaultSecretsProviderOutputRefe
   // enabled - computed: false, optional: false, required: true
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
@@ -401,10 +418,15 @@ export class KubernetesClusterAddonProfileAzureKeyvaultSecretsProviderOutputRefe
     return this._enabled;
   }
 
+  // secret_identity - computed: true, optional: false, required: false
+  public secretIdentity(index: string) {
+    return new KubernetesClusterAddonProfileAzureKeyvaultSecretsProviderSecretIdentity(this, 'secret_identity', index, false);
+  }
+
   // secret_rotation_enabled - computed: false, optional: true, required: false
   private _secretRotationEnabled?: boolean | cdktf.IResolvable; 
   public get secretRotationEnabled() {
-    return this.getBooleanAttribute('secret_rotation_enabled') as any;
+    return this.getBooleanAttribute('secret_rotation_enabled');
   }
   public set secretRotationEnabled(value: boolean | cdktf.IResolvable) {
     this._secretRotationEnabled = value;
@@ -441,7 +463,7 @@ export interface KubernetesClusterAddonProfileAzurePolicy {
 }
 
 export function kubernetesClusterAddonProfileAzurePolicyToTerraform(struct?: KubernetesClusterAddonProfileAzurePolicyOutputReference | KubernetesClusterAddonProfileAzurePolicy): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -458,7 +480,7 @@ export class KubernetesClusterAddonProfileAzurePolicyOutputReference extends cdk
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -486,7 +508,7 @@ export class KubernetesClusterAddonProfileAzurePolicyOutputReference extends cdk
   // enabled - computed: false, optional: false, required: true
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
@@ -504,7 +526,7 @@ export interface KubernetesClusterAddonProfileHttpApplicationRouting {
 }
 
 export function kubernetesClusterAddonProfileHttpApplicationRoutingToTerraform(struct?: KubernetesClusterAddonProfileHttpApplicationRoutingOutputReference | KubernetesClusterAddonProfileHttpApplicationRouting): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -521,7 +543,7 @@ export class KubernetesClusterAddonProfileHttpApplicationRoutingOutputReference 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -549,7 +571,7 @@ export class KubernetesClusterAddonProfileHttpApplicationRoutingOutputReference 
   // enabled - computed: false, optional: false, required: true
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
@@ -557,6 +579,28 @@ export class KubernetesClusterAddonProfileHttpApplicationRoutingOutputReference 
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
     return this._enabled;
+  }
+
+  // http_application_routing_zone_name - computed: true, optional: false, required: false
+  public get httpApplicationRoutingZoneName() {
+    return this.getStringAttribute('http_application_routing_zone_name');
+  }
+}
+export class KubernetesClusterAddonProfileIngressApplicationGatewayIngressApplicationGatewayIdentity extends cdktf.ComplexComputedList {
+
+  // client_id - computed: true, optional: false, required: false
+  public get clientId() {
+    return this.getStringAttribute('client_id');
+  }
+
+  // object_id - computed: true, optional: false, required: false
+  public get objectId() {
+    return this.getStringAttribute('object_id');
+  }
+
+  // user_assigned_identity_id - computed: true, optional: false, required: false
+  public get userAssignedIdentityId() {
+    return this.getStringAttribute('user_assigned_identity_id');
   }
 }
 export interface KubernetesClusterAddonProfileIngressApplicationGateway {
@@ -583,7 +627,7 @@ export interface KubernetesClusterAddonProfileIngressApplicationGateway {
 }
 
 export function kubernetesClusterAddonProfileIngressApplicationGatewayToTerraform(struct?: KubernetesClusterAddonProfileIngressApplicationGatewayOutputReference | KubernetesClusterAddonProfileIngressApplicationGateway): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -604,7 +648,7 @@ export class KubernetesClusterAddonProfileIngressApplicationGatewayOutputReferen
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -653,10 +697,15 @@ export class KubernetesClusterAddonProfileIngressApplicationGatewayOutputReferen
     }
   }
 
+  // effective_gateway_id - computed: true, optional: false, required: false
+  public get effectiveGatewayId() {
+    return this.getStringAttribute('effective_gateway_id');
+  }
+
   // enabled - computed: false, optional: false, required: true
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
@@ -696,6 +745,11 @@ export class KubernetesClusterAddonProfileIngressApplicationGatewayOutputReferen
   // Temporarily expose input value. Use with caution.
   public get gatewayNameInput() {
     return this._gatewayName;
+  }
+
+  // ingress_application_gateway_identity - computed: true, optional: false, required: false
+  public ingressApplicationGatewayIdentity(index: string) {
+    return new KubernetesClusterAddonProfileIngressApplicationGatewayIngressApplicationGatewayIdentity(this, 'ingress_application_gateway_identity', index, false);
   }
 
   // subnet_cidr - computed: false, optional: true, required: false
@@ -738,7 +792,7 @@ export interface KubernetesClusterAddonProfileKubeDashboard {
 }
 
 export function kubernetesClusterAddonProfileKubeDashboardToTerraform(struct?: KubernetesClusterAddonProfileKubeDashboardOutputReference | KubernetesClusterAddonProfileKubeDashboard): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -755,7 +809,7 @@ export class KubernetesClusterAddonProfileKubeDashboardOutputReference extends c
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -783,7 +837,7 @@ export class KubernetesClusterAddonProfileKubeDashboardOutputReference extends c
   // enabled - computed: false, optional: false, required: true
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
@@ -791,6 +845,23 @@ export class KubernetesClusterAddonProfileKubeDashboardOutputReference extends c
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
     return this._enabled;
+  }
+}
+export class KubernetesClusterAddonProfileOmsAgentOmsAgentIdentity extends cdktf.ComplexComputedList {
+
+  // client_id - computed: true, optional: false, required: false
+  public get clientId() {
+    return this.getStringAttribute('client_id');
+  }
+
+  // object_id - computed: true, optional: false, required: false
+  public get objectId() {
+    return this.getStringAttribute('object_id');
+  }
+
+  // user_assigned_identity_id - computed: true, optional: false, required: false
+  public get userAssignedIdentityId() {
+    return this.getStringAttribute('user_assigned_identity_id');
   }
 }
 export interface KubernetesClusterAddonProfileOmsAgent {
@@ -805,7 +876,7 @@ export interface KubernetesClusterAddonProfileOmsAgent {
 }
 
 export function kubernetesClusterAddonProfileOmsAgentToTerraform(struct?: KubernetesClusterAddonProfileOmsAgentOutputReference | KubernetesClusterAddonProfileOmsAgent): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -823,7 +894,7 @@ export class KubernetesClusterAddonProfileOmsAgentOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -857,7 +928,7 @@ export class KubernetesClusterAddonProfileOmsAgentOutputReference extends cdktf.
   // enabled - computed: false, optional: false, required: true
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
@@ -882,6 +953,11 @@ export class KubernetesClusterAddonProfileOmsAgentOutputReference extends cdktf.
   public get logAnalyticsWorkspaceIdInput() {
     return this._logAnalyticsWorkspaceId;
   }
+
+  // oms_agent_identity - computed: true, optional: false, required: false
+  public omsAgentIdentity(index: string) {
+    return new KubernetesClusterAddonProfileOmsAgentOmsAgentIdentity(this, 'oms_agent_identity', index, false);
+  }
 }
 export interface KubernetesClusterAddonProfileOpenServiceMesh {
   /**
@@ -891,7 +967,7 @@ export interface KubernetesClusterAddonProfileOpenServiceMesh {
 }
 
 export function kubernetesClusterAddonProfileOpenServiceMeshToTerraform(struct?: KubernetesClusterAddonProfileOpenServiceMeshOutputReference | KubernetesClusterAddonProfileOpenServiceMesh): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -908,7 +984,7 @@ export class KubernetesClusterAddonProfileOpenServiceMeshOutputReference extends
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -936,7 +1012,7 @@ export class KubernetesClusterAddonProfileOpenServiceMeshOutputReference extends
   // enabled - computed: false, optional: false, required: true
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
@@ -998,7 +1074,7 @@ export interface KubernetesClusterAddonProfile {
 }
 
 export function kubernetesClusterAddonProfileToTerraform(struct?: KubernetesClusterAddonProfileOutputReference | KubernetesClusterAddonProfile): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1022,7 +1098,7 @@ export class KubernetesClusterAddonProfileOutputReference extends cdktf.ComplexO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1090,7 +1166,7 @@ export class KubernetesClusterAddonProfileOutputReference extends cdktf.ComplexO
   }
 
   // aci_connector_linux - computed: false, optional: true, required: false
-  private _aciConnectorLinux = new KubernetesClusterAddonProfileAciConnectorLinuxOutputReference(this as any, "aci_connector_linux", true);
+  private _aciConnectorLinux = new KubernetesClusterAddonProfileAciConnectorLinuxOutputReference(this, "aci_connector_linux", true);
   public get aciConnectorLinux() {
     return this._aciConnectorLinux;
   }
@@ -1106,7 +1182,7 @@ export class KubernetesClusterAddonProfileOutputReference extends cdktf.ComplexO
   }
 
   // azure_keyvault_secrets_provider - computed: false, optional: true, required: false
-  private _azureKeyvaultSecretsProvider = new KubernetesClusterAddonProfileAzureKeyvaultSecretsProviderOutputReference(this as any, "azure_keyvault_secrets_provider", true);
+  private _azureKeyvaultSecretsProvider = new KubernetesClusterAddonProfileAzureKeyvaultSecretsProviderOutputReference(this, "azure_keyvault_secrets_provider", true);
   public get azureKeyvaultSecretsProvider() {
     return this._azureKeyvaultSecretsProvider;
   }
@@ -1122,7 +1198,7 @@ export class KubernetesClusterAddonProfileOutputReference extends cdktf.ComplexO
   }
 
   // azure_policy - computed: false, optional: true, required: false
-  private _azurePolicy = new KubernetesClusterAddonProfileAzurePolicyOutputReference(this as any, "azure_policy", true);
+  private _azurePolicy = new KubernetesClusterAddonProfileAzurePolicyOutputReference(this, "azure_policy", true);
   public get azurePolicy() {
     return this._azurePolicy;
   }
@@ -1138,7 +1214,7 @@ export class KubernetesClusterAddonProfileOutputReference extends cdktf.ComplexO
   }
 
   // http_application_routing - computed: false, optional: true, required: false
-  private _httpApplicationRouting = new KubernetesClusterAddonProfileHttpApplicationRoutingOutputReference(this as any, "http_application_routing", true);
+  private _httpApplicationRouting = new KubernetesClusterAddonProfileHttpApplicationRoutingOutputReference(this, "http_application_routing", true);
   public get httpApplicationRouting() {
     return this._httpApplicationRouting;
   }
@@ -1154,7 +1230,7 @@ export class KubernetesClusterAddonProfileOutputReference extends cdktf.ComplexO
   }
 
   // ingress_application_gateway - computed: false, optional: true, required: false
-  private _ingressApplicationGateway = new KubernetesClusterAddonProfileIngressApplicationGatewayOutputReference(this as any, "ingress_application_gateway", true);
+  private _ingressApplicationGateway = new KubernetesClusterAddonProfileIngressApplicationGatewayOutputReference(this, "ingress_application_gateway", true);
   public get ingressApplicationGateway() {
     return this._ingressApplicationGateway;
   }
@@ -1170,7 +1246,7 @@ export class KubernetesClusterAddonProfileOutputReference extends cdktf.ComplexO
   }
 
   // kube_dashboard - computed: false, optional: true, required: false
-  private _kubeDashboard = new KubernetesClusterAddonProfileKubeDashboardOutputReference(this as any, "kube_dashboard", true);
+  private _kubeDashboard = new KubernetesClusterAddonProfileKubeDashboardOutputReference(this, "kube_dashboard", true);
   public get kubeDashboard() {
     return this._kubeDashboard;
   }
@@ -1186,7 +1262,7 @@ export class KubernetesClusterAddonProfileOutputReference extends cdktf.ComplexO
   }
 
   // oms_agent - computed: false, optional: true, required: false
-  private _omsAgent = new KubernetesClusterAddonProfileOmsAgentOutputReference(this as any, "oms_agent", true);
+  private _omsAgent = new KubernetesClusterAddonProfileOmsAgentOutputReference(this, "oms_agent", true);
   public get omsAgent() {
     return this._omsAgent;
   }
@@ -1202,7 +1278,7 @@ export class KubernetesClusterAddonProfileOutputReference extends cdktf.ComplexO
   }
 
   // open_service_mesh - computed: false, optional: true, required: false
-  private _openServiceMesh = new KubernetesClusterAddonProfileOpenServiceMeshOutputReference(this as any, "open_service_mesh", true);
+  private _openServiceMesh = new KubernetesClusterAddonProfileOpenServiceMeshOutputReference(this, "open_service_mesh", true);
   public get openServiceMesh() {
     return this._openServiceMesh;
   }
@@ -1289,7 +1365,7 @@ export interface KubernetesClusterAutoScalerProfile {
 }
 
 export function kubernetesClusterAutoScalerProfileToTerraform(struct?: KubernetesClusterAutoScalerProfileOutputReference | KubernetesClusterAutoScalerProfile): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1322,7 +1398,7 @@ export class KubernetesClusterAutoScalerProfileOutputReference extends cdktf.Com
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1446,7 +1522,7 @@ export class KubernetesClusterAutoScalerProfileOutputReference extends cdktf.Com
   // balance_similar_node_groups - computed: false, optional: true, required: false
   private _balanceSimilarNodeGroups?: boolean | cdktf.IResolvable; 
   public get balanceSimilarNodeGroups() {
-    return this.getBooleanAttribute('balance_similar_node_groups') as any;
+    return this.getBooleanAttribute('balance_similar_node_groups');
   }
   public set balanceSimilarNodeGroups(value: boolean | cdktf.IResolvable) {
     this._balanceSimilarNodeGroups = value;
@@ -1686,7 +1762,7 @@ export class KubernetesClusterAutoScalerProfileOutputReference extends cdktf.Com
   // skip_nodes_with_local_storage - computed: false, optional: true, required: false
   private _skipNodesWithLocalStorage?: boolean | cdktf.IResolvable; 
   public get skipNodesWithLocalStorage() {
-    return this.getBooleanAttribute('skip_nodes_with_local_storage') as any;
+    return this.getBooleanAttribute('skip_nodes_with_local_storage');
   }
   public set skipNodesWithLocalStorage(value: boolean | cdktf.IResolvable) {
     this._skipNodesWithLocalStorage = value;
@@ -1702,7 +1778,7 @@ export class KubernetesClusterAutoScalerProfileOutputReference extends cdktf.Com
   // skip_nodes_with_system_pods - computed: false, optional: true, required: false
   private _skipNodesWithSystemPods?: boolean | cdktf.IResolvable; 
   public get skipNodesWithSystemPods() {
-    return this.getBooleanAttribute('skip_nodes_with_system_pods') as any;
+    return this.getBooleanAttribute('skip_nodes_with_system_pods');
   }
   public set skipNodesWithSystemPods(value: boolean | cdktf.IResolvable) {
     this._skipNodesWithSystemPods = value;
@@ -1759,7 +1835,7 @@ export interface KubernetesClusterDefaultNodePoolKubeletConfig {
 }
 
 export function kubernetesClusterDefaultNodePoolKubeletConfigToTerraform(struct?: KubernetesClusterDefaultNodePoolKubeletConfigOutputReference | KubernetesClusterDefaultNodePoolKubeletConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -1785,7 +1861,7 @@ export class KubernetesClusterDefaultNodePoolKubeletConfigOutputReference extend
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -1867,7 +1943,7 @@ export class KubernetesClusterDefaultNodePoolKubeletConfigOutputReference extend
   // allowed_unsafe_sysctls - computed: false, optional: true, required: false
   private _allowedUnsafeSysctls?: string[]; 
   public get allowedUnsafeSysctls() {
-    return this.getListAttribute('allowed_unsafe_sysctls');
+    return cdktf.Fn.tolist(this.getListAttribute('allowed_unsafe_sysctls'));
   }
   public set allowedUnsafeSysctls(value: string[]) {
     this._allowedUnsafeSysctls = value;
@@ -1915,7 +1991,7 @@ export class KubernetesClusterDefaultNodePoolKubeletConfigOutputReference extend
   // cpu_cfs_quota_enabled - computed: false, optional: true, required: false
   private _cpuCfsQuotaEnabled?: boolean | cdktf.IResolvable; 
   public get cpuCfsQuotaEnabled() {
-    return this.getBooleanAttribute('cpu_cfs_quota_enabled') as any;
+    return this.getBooleanAttribute('cpu_cfs_quota_enabled');
   }
   public set cpuCfsQuotaEnabled(value: boolean | cdktf.IResolvable) {
     this._cpuCfsQuotaEnabled = value;
@@ -2144,7 +2220,7 @@ export interface KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig {
 }
 
 export function kubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigToTerraform(struct?: KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputReference | KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -2189,7 +2265,7 @@ export class KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputRefe
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -2753,7 +2829,7 @@ export class KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputRefe
   // net_ipv4_tcp_tw_reuse - computed: false, optional: true, required: false
   private _netIpv4TcpTwReuse?: boolean | cdktf.IResolvable; 
   public get netIpv4TcpTwReuse() {
-    return this.getBooleanAttribute('net_ipv4_tcp_tw_reuse') as any;
+    return this.getBooleanAttribute('net_ipv4_tcp_tw_reuse');
   }
   public set netIpv4TcpTwReuse(value: boolean | cdktf.IResolvable) {
     this._netIpv4TcpTwReuse = value;
@@ -2868,7 +2944,7 @@ export interface KubernetesClusterDefaultNodePoolLinuxOsConfig {
 }
 
 export function kubernetesClusterDefaultNodePoolLinuxOsConfigToTerraform(struct?: KubernetesClusterDefaultNodePoolLinuxOsConfigOutputReference | KubernetesClusterDefaultNodePoolLinuxOsConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -2888,7 +2964,7 @@ export class KubernetesClusterDefaultNodePoolLinuxOsConfigOutputReference extend
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -2980,7 +3056,7 @@ export class KubernetesClusterDefaultNodePoolLinuxOsConfigOutputReference extend
   }
 
   // sysctl_config - computed: false, optional: true, required: false
-  private _sysctlConfig = new KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputReference(this as any, "sysctl_config", true);
+  private _sysctlConfig = new KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputReference(this, "sysctl_config", true);
   public get sysctlConfig() {
     return this._sysctlConfig;
   }
@@ -3003,7 +3079,7 @@ export interface KubernetesClusterDefaultNodePoolUpgradeSettings {
 }
 
 export function kubernetesClusterDefaultNodePoolUpgradeSettingsToTerraform(struct?: KubernetesClusterDefaultNodePoolUpgradeSettingsOutputReference | KubernetesClusterDefaultNodePoolUpgradeSettings): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -3020,7 +3096,7 @@ export class KubernetesClusterDefaultNodePoolUpgradeSettingsOutputReference exte
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -3106,7 +3182,7 @@ export interface KubernetesClusterDefaultNodePool {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#node_labels KubernetesCluster#node_labels}
   */
-  readonly nodeLabels?: { [key: string]: string } | cdktf.IResolvable;
+  readonly nodeLabels?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#node_public_ip_prefix_id KubernetesCluster#node_public_ip_prefix_id}
   */
@@ -3146,7 +3222,7 @@ export interface KubernetesClusterDefaultNodePool {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#tags KubernetesCluster#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#type KubernetesCluster#type}
   */
@@ -3184,7 +3260,7 @@ export interface KubernetesClusterDefaultNodePool {
 }
 
 export function kubernetesClusterDefaultNodePoolToTerraform(struct?: KubernetesClusterDefaultNodePoolOutputReference | KubernetesClusterDefaultNodePool): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -3200,7 +3276,7 @@ export function kubernetesClusterDefaultNodePoolToTerraform(struct?: KubernetesC
     min_count: cdktf.numberToTerraform(struct!.minCount),
     name: cdktf.stringToTerraform(struct!.name),
     node_count: cdktf.numberToTerraform(struct!.nodeCount),
-    node_labels: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.nodeLabels),
+    node_labels: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.nodeLabels),
     node_public_ip_prefix_id: cdktf.stringToTerraform(struct!.nodePublicIpPrefixId),
     node_taints: cdktf.listMapper(cdktf.stringToTerraform)(struct!.nodeTaints),
     only_critical_addons_enabled: cdktf.booleanToTerraform(struct!.onlyCriticalAddonsEnabled),
@@ -3210,7 +3286,7 @@ export function kubernetesClusterDefaultNodePoolToTerraform(struct?: KubernetesC
     os_sku: cdktf.stringToTerraform(struct!.osSku),
     pod_subnet_id: cdktf.stringToTerraform(struct!.podSubnetId),
     proximity_placement_group_id: cdktf.stringToTerraform(struct!.proximityPlacementGroupId),
-    tags: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.tags),
+    tags: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.tags),
     type: cdktf.stringToTerraform(struct!.type),
     ultra_ssd_enabled: cdktf.booleanToTerraform(struct!.ultraSsdEnabled),
     vm_size: cdktf.stringToTerraform(struct!.vmSize),
@@ -3229,7 +3305,7 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -3441,7 +3517,7 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
   // enable_auto_scaling - computed: false, optional: true, required: false
   private _enableAutoScaling?: boolean | cdktf.IResolvable; 
   public get enableAutoScaling() {
-    return this.getBooleanAttribute('enable_auto_scaling') as any;
+    return this.getBooleanAttribute('enable_auto_scaling');
   }
   public set enableAutoScaling(value: boolean | cdktf.IResolvable) {
     this._enableAutoScaling = value;
@@ -3457,7 +3533,7 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
   // enable_host_encryption - computed: false, optional: true, required: false
   private _enableHostEncryption?: boolean | cdktf.IResolvable; 
   public get enableHostEncryption() {
-    return this.getBooleanAttribute('enable_host_encryption') as any;
+    return this.getBooleanAttribute('enable_host_encryption');
   }
   public set enableHostEncryption(value: boolean | cdktf.IResolvable) {
     this._enableHostEncryption = value;
@@ -3473,7 +3549,7 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
   // enable_node_public_ip - computed: false, optional: true, required: false
   private _enableNodePublicIp?: boolean | cdktf.IResolvable; 
   public get enableNodePublicIp() {
-    return this.getBooleanAttribute('enable_node_public_ip') as any;
+    return this.getBooleanAttribute('enable_node_public_ip');
   }
   public set enableNodePublicIp(value: boolean | cdktf.IResolvable) {
     this._enableNodePublicIp = value;
@@ -3489,7 +3565,7 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
   // fips_enabled - computed: false, optional: true, required: false
   private _fipsEnabled?: boolean | cdktf.IResolvable; 
   public get fipsEnabled() {
-    return this.getBooleanAttribute('fips_enabled') as any;
+    return this.getBooleanAttribute('fips_enabled');
   }
   public set fipsEnabled(value: boolean | cdktf.IResolvable) {
     this._fipsEnabled = value;
@@ -3596,12 +3672,11 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
   }
 
   // node_labels - computed: true, optional: true, required: false
-  private _nodeLabels?: { [key: string]: string } | cdktf.IResolvable; 
+  private _nodeLabels?: { [key: string]: string }; 
   public get nodeLabels() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('node_labels') as any;
+    return this.getStringMapAttribute('node_labels');
   }
-  public set nodeLabels(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set nodeLabels(value: { [key: string]: string }) {
     this._nodeLabels = value;
   }
   public resetNodeLabels() {
@@ -3647,7 +3722,7 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
   // only_critical_addons_enabled - computed: false, optional: true, required: false
   private _onlyCriticalAddonsEnabled?: boolean | cdktf.IResolvable; 
   public get onlyCriticalAddonsEnabled() {
-    return this.getBooleanAttribute('only_critical_addons_enabled') as any;
+    return this.getBooleanAttribute('only_critical_addons_enabled');
   }
   public set onlyCriticalAddonsEnabled(value: boolean | cdktf.IResolvable) {
     this._onlyCriticalAddonsEnabled = value;
@@ -3757,12 +3832,11 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -3792,7 +3866,7 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
   // ultra_ssd_enabled - computed: false, optional: true, required: false
   private _ultraSsdEnabled?: boolean | cdktf.IResolvable; 
   public get ultraSsdEnabled() {
-    return this.getBooleanAttribute('ultra_ssd_enabled') as any;
+    return this.getBooleanAttribute('ultra_ssd_enabled');
   }
   public set ultraSsdEnabled(value: boolean | cdktf.IResolvable) {
     this._ultraSsdEnabled = value;
@@ -3835,7 +3909,7 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
   }
 
   // kubelet_config - computed: false, optional: true, required: false
-  private _kubeletConfig = new KubernetesClusterDefaultNodePoolKubeletConfigOutputReference(this as any, "kubelet_config", true);
+  private _kubeletConfig = new KubernetesClusterDefaultNodePoolKubeletConfigOutputReference(this, "kubelet_config", true);
   public get kubeletConfig() {
     return this._kubeletConfig;
   }
@@ -3851,7 +3925,7 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
   }
 
   // linux_os_config - computed: false, optional: true, required: false
-  private _linuxOsConfig = new KubernetesClusterDefaultNodePoolLinuxOsConfigOutputReference(this as any, "linux_os_config", true);
+  private _linuxOsConfig = new KubernetesClusterDefaultNodePoolLinuxOsConfigOutputReference(this, "linux_os_config", true);
   public get linuxOsConfig() {
     return this._linuxOsConfig;
   }
@@ -3867,7 +3941,7 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
   }
 
   // upgrade_settings - computed: false, optional: true, required: false
-  private _upgradeSettings = new KubernetesClusterDefaultNodePoolUpgradeSettingsOutputReference(this as any, "upgrade_settings", true);
+  private _upgradeSettings = new KubernetesClusterDefaultNodePoolUpgradeSettingsOutputReference(this, "upgrade_settings", true);
   public get upgradeSettings() {
     return this._upgradeSettings;
   }
@@ -3902,7 +3976,7 @@ export interface KubernetesClusterHttpProxyConfig {
 }
 
 export function kubernetesClusterHttpProxyConfigToTerraform(struct?: KubernetesClusterHttpProxyConfigOutputReference | KubernetesClusterHttpProxyConfig): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -3922,7 +3996,7 @@ export class KubernetesClusterHttpProxyConfigOutputReference extends cdktf.Compl
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -4000,7 +4074,7 @@ export class KubernetesClusterHttpProxyConfigOutputReference extends cdktf.Compl
   // no_proxy - computed: false, optional: true, required: false
   private _noProxy?: string[]; 
   public get noProxy() {
-    return this.getListAttribute('no_proxy');
+    return cdktf.Fn.tolist(this.getListAttribute('no_proxy'));
   }
   public set noProxy(value: string[]) {
     this._noProxy = value;
@@ -4041,7 +4115,7 @@ export interface KubernetesClusterIdentity {
 }
 
 export function kubernetesClusterIdentityToTerraform(struct?: KubernetesClusterIdentityOutputReference | KubernetesClusterIdentity): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -4059,7 +4133,7 @@ export class KubernetesClusterIdentityOutputReference extends cdktf.ComplexObjec
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -4088,6 +4162,16 @@ export class KubernetesClusterIdentityOutputReference extends cdktf.ComplexObjec
       this._type = value.type;
       this._userAssignedIdentityId = value.userAssignedIdentityId;
     }
+  }
+
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
   }
 
   // type - computed: false, optional: false, required: true
@@ -4135,7 +4219,7 @@ export interface KubernetesClusterKubeletIdentity {
 }
 
 export function kubernetesClusterKubeletIdentityToTerraform(struct?: KubernetesClusterKubeletIdentityOutputReference | KubernetesClusterKubeletIdentity): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -4154,7 +4238,7 @@ export class KubernetesClusterKubeletIdentityOutputReference extends cdktf.Compl
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -4247,7 +4331,7 @@ export interface KubernetesClusterLinuxProfileSshKey {
 }
 
 export function kubernetesClusterLinuxProfileSshKeyToTerraform(struct?: KubernetesClusterLinuxProfileSshKeyOutputReference | KubernetesClusterLinuxProfileSshKey): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -4264,7 +4348,7 @@ export class KubernetesClusterLinuxProfileSshKeyOutputReference extends cdktf.Co
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -4316,7 +4400,7 @@ export interface KubernetesClusterLinuxProfile {
 }
 
 export function kubernetesClusterLinuxProfileToTerraform(struct?: KubernetesClusterLinuxProfileOutputReference | KubernetesClusterLinuxProfile): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -4334,7 +4418,7 @@ export class KubernetesClusterLinuxProfileOutputReference extends cdktf.ComplexO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -4379,7 +4463,7 @@ export class KubernetesClusterLinuxProfileOutputReference extends cdktf.ComplexO
   }
 
   // ssh_key - computed: false, optional: false, required: true
-  private _sshKey = new KubernetesClusterLinuxProfileSshKeyOutputReference(this as any, "ssh_key", true);
+  private _sshKey = new KubernetesClusterLinuxProfileSshKeyOutputReference(this, "ssh_key", true);
   public get sshKey() {
     return this._sshKey;
   }
@@ -4402,8 +4486,8 @@ export interface KubernetesClusterMaintenanceWindowAllowed {
   readonly hours: number[];
 }
 
-export function kubernetesClusterMaintenanceWindowAllowedToTerraform(struct?: KubernetesClusterMaintenanceWindowAllowed): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function kubernetesClusterMaintenanceWindowAllowedToTerraform(struct?: KubernetesClusterMaintenanceWindowAllowed | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -4424,8 +4508,8 @@ export interface KubernetesClusterMaintenanceWindowNotAllowed {
   readonly start: string;
 }
 
-export function kubernetesClusterMaintenanceWindowNotAllowedToTerraform(struct?: KubernetesClusterMaintenanceWindowNotAllowed): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function kubernetesClusterMaintenanceWindowNotAllowedToTerraform(struct?: KubernetesClusterMaintenanceWindowNotAllowed | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -4441,17 +4525,17 @@ export interface KubernetesClusterMaintenanceWindow {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#allowed KubernetesCluster#allowed}
   */
-  readonly allowed?: KubernetesClusterMaintenanceWindowAllowed[];
+  readonly allowed?: KubernetesClusterMaintenanceWindowAllowed[] | cdktf.IResolvable;
   /**
   * not_allowed block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#not_allowed KubernetesCluster#not_allowed}
   */
-  readonly notAllowed?: KubernetesClusterMaintenanceWindowNotAllowed[];
+  readonly notAllowed?: KubernetesClusterMaintenanceWindowNotAllowed[] | cdktf.IResolvable;
 }
 
 export function kubernetesClusterMaintenanceWindowToTerraform(struct?: KubernetesClusterMaintenanceWindowOutputReference | KubernetesClusterMaintenanceWindow): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -4469,7 +4553,7 @@ export class KubernetesClusterMaintenanceWindowOutputReference extends cdktf.Com
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -4501,12 +4585,12 @@ export class KubernetesClusterMaintenanceWindowOutputReference extends cdktf.Com
   }
 
   // allowed - computed: false, optional: true, required: false
-  private _allowed?: KubernetesClusterMaintenanceWindowAllowed[]; 
+  private _allowed?: KubernetesClusterMaintenanceWindowAllowed[] | cdktf.IResolvable; 
   public get allowed() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('allowed') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('allowed')));
   }
-  public set allowed(value: KubernetesClusterMaintenanceWindowAllowed[]) {
+  public set allowed(value: KubernetesClusterMaintenanceWindowAllowed[] | cdktf.IResolvable) {
     this._allowed = value;
   }
   public resetAllowed() {
@@ -4518,12 +4602,12 @@ export class KubernetesClusterMaintenanceWindowOutputReference extends cdktf.Com
   }
 
   // not_allowed - computed: false, optional: true, required: false
-  private _notAllowed?: KubernetesClusterMaintenanceWindowNotAllowed[]; 
+  private _notAllowed?: KubernetesClusterMaintenanceWindowNotAllowed[] | cdktf.IResolvable; 
   public get notAllowed() {
     // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('not_allowed') as any;
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('not_allowed')));
   }
-  public set notAllowed(value: KubernetesClusterMaintenanceWindowNotAllowed[]) {
+  public set notAllowed(value: KubernetesClusterMaintenanceWindowNotAllowed[] | cdktf.IResolvable) {
     this._notAllowed = value;
   }
   public resetNotAllowed() {
@@ -4558,7 +4642,7 @@ export interface KubernetesClusterNetworkProfileLoadBalancerProfile {
 }
 
 export function kubernetesClusterNetworkProfileLoadBalancerProfileToTerraform(struct?: KubernetesClusterNetworkProfileLoadBalancerProfileOutputReference | KubernetesClusterNetworkProfileLoadBalancerProfile): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -4579,7 +4663,7 @@ export class KubernetesClusterNetworkProfileLoadBalancerProfileOutputReference e
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -4628,6 +4712,11 @@ export class KubernetesClusterNetworkProfileLoadBalancerProfileOutputReference e
     }
   }
 
+  // effective_outbound_ips - computed: true, optional: false, required: false
+  public get effectiveOutboundIps() {
+    return cdktf.Fn.tolist(this.getListAttribute('effective_outbound_ips'));
+  }
+
   // idle_timeout_in_minutes - computed: false, optional: true, required: false
   private _idleTimeoutInMinutes?: number; 
   public get idleTimeoutInMinutes() {
@@ -4663,7 +4752,7 @@ export class KubernetesClusterNetworkProfileLoadBalancerProfileOutputReference e
   // outbound_ip_address_ids - computed: true, optional: true, required: false
   private _outboundIpAddressIds?: string[]; 
   public get outboundIpAddressIds() {
-    return this.getListAttribute('outbound_ip_address_ids');
+    return cdktf.Fn.tolist(this.getListAttribute('outbound_ip_address_ids'));
   }
   public set outboundIpAddressIds(value: string[]) {
     this._outboundIpAddressIds = value;
@@ -4679,7 +4768,7 @@ export class KubernetesClusterNetworkProfileLoadBalancerProfileOutputReference e
   // outbound_ip_prefix_ids - computed: true, optional: true, required: false
   private _outboundIpPrefixIds?: string[]; 
   public get outboundIpPrefixIds() {
-    return this.getListAttribute('outbound_ip_prefix_ids');
+    return cdktf.Fn.tolist(this.getListAttribute('outbound_ip_prefix_ids'));
   }
   public set outboundIpPrefixIds(value: string[]) {
     this._outboundIpPrefixIds = value;
@@ -4720,7 +4809,7 @@ export interface KubernetesClusterNetworkProfileNatGatewayProfile {
 }
 
 export function kubernetesClusterNetworkProfileNatGatewayProfileToTerraform(struct?: KubernetesClusterNetworkProfileNatGatewayProfileOutputReference | KubernetesClusterNetworkProfileNatGatewayProfile): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -4738,7 +4827,7 @@ export class KubernetesClusterNetworkProfileNatGatewayProfileOutputReference ext
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -4767,6 +4856,11 @@ export class KubernetesClusterNetworkProfileNatGatewayProfileOutputReference ext
       this._idleTimeoutInMinutes = value.idleTimeoutInMinutes;
       this._managedOutboundIpCount = value.managedOutboundIpCount;
     }
+  }
+
+  // effective_outbound_ips - computed: true, optional: false, required: false
+  public get effectiveOutboundIps() {
+    return cdktf.Fn.tolist(this.getListAttribute('effective_outbound_ips'));
   }
 
   // idle_timeout_in_minutes - computed: false, optional: true, required: false
@@ -4853,7 +4947,7 @@ export interface KubernetesClusterNetworkProfile {
 }
 
 export function kubernetesClusterNetworkProfileToTerraform(struct?: KubernetesClusterNetworkProfileOutputReference | KubernetesClusterNetworkProfile): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -4880,7 +4974,7 @@ export class KubernetesClusterNetworkProfileOutputReference extends cdktf.Comple
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -5107,7 +5201,7 @@ export class KubernetesClusterNetworkProfileOutputReference extends cdktf.Comple
   }
 
   // load_balancer_profile - computed: false, optional: true, required: false
-  private _loadBalancerProfile = new KubernetesClusterNetworkProfileLoadBalancerProfileOutputReference(this as any, "load_balancer_profile", true);
+  private _loadBalancerProfile = new KubernetesClusterNetworkProfileLoadBalancerProfileOutputReference(this, "load_balancer_profile", true);
   public get loadBalancerProfile() {
     return this._loadBalancerProfile;
   }
@@ -5123,7 +5217,7 @@ export class KubernetesClusterNetworkProfileOutputReference extends cdktf.Comple
   }
 
   // nat_gateway_profile - computed: false, optional: true, required: false
-  private _natGatewayProfile = new KubernetesClusterNetworkProfileNatGatewayProfileOutputReference(this as any, "nat_gateway_profile", true);
+  private _natGatewayProfile = new KubernetesClusterNetworkProfileNatGatewayProfileOutputReference(this, "nat_gateway_profile", true);
   public get natGatewayProfile() {
     return this._natGatewayProfile;
   }
@@ -5170,7 +5264,7 @@ export interface KubernetesClusterRoleBasedAccessControlAzureActiveDirectory {
 }
 
 export function kubernetesClusterRoleBasedAccessControlAzureActiveDirectoryToTerraform(struct?: KubernetesClusterRoleBasedAccessControlAzureActiveDirectoryOutputReference | KubernetesClusterRoleBasedAccessControlAzureActiveDirectory): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -5193,7 +5287,7 @@ export class KubernetesClusterRoleBasedAccessControlAzureActiveDirectoryOutputRe
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -5257,7 +5351,7 @@ export class KubernetesClusterRoleBasedAccessControlAzureActiveDirectoryOutputRe
   // admin_group_object_ids - computed: false, optional: true, required: false
   private _adminGroupObjectIds?: string[]; 
   public get adminGroupObjectIds() {
-    return this.getListAttribute('admin_group_object_ids');
+    return cdktf.Fn.tolist(this.getListAttribute('admin_group_object_ids'));
   }
   public set adminGroupObjectIds(value: string[]) {
     this._adminGroupObjectIds = value;
@@ -5273,7 +5367,7 @@ export class KubernetesClusterRoleBasedAccessControlAzureActiveDirectoryOutputRe
   // azure_rbac_enabled - computed: false, optional: true, required: false
   private _azureRbacEnabled?: boolean | cdktf.IResolvable; 
   public get azureRbacEnabled() {
-    return this.getBooleanAttribute('azure_rbac_enabled') as any;
+    return this.getBooleanAttribute('azure_rbac_enabled');
   }
   public set azureRbacEnabled(value: boolean | cdktf.IResolvable) {
     this._azureRbacEnabled = value;
@@ -5305,7 +5399,7 @@ export class KubernetesClusterRoleBasedAccessControlAzureActiveDirectoryOutputRe
   // managed - computed: false, optional: true, required: false
   private _managed?: boolean | cdktf.IResolvable; 
   public get managed() {
-    return this.getBooleanAttribute('managed') as any;
+    return this.getBooleanAttribute('managed');
   }
   public set managed(value: boolean | cdktf.IResolvable) {
     this._managed = value;
@@ -5380,7 +5474,7 @@ export interface KubernetesClusterRoleBasedAccessControl {
 }
 
 export function kubernetesClusterRoleBasedAccessControlToTerraform(struct?: KubernetesClusterRoleBasedAccessControlOutputReference | KubernetesClusterRoleBasedAccessControl): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -5398,7 +5492,7 @@ export class KubernetesClusterRoleBasedAccessControlOutputReference extends cdkt
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -5432,7 +5526,7 @@ export class KubernetesClusterRoleBasedAccessControlOutputReference extends cdkt
   // enabled - computed: false, optional: false, required: true
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
@@ -5443,7 +5537,7 @@ export class KubernetesClusterRoleBasedAccessControlOutputReference extends cdkt
   }
 
   // azure_active_directory - computed: false, optional: true, required: false
-  private _azureActiveDirectory = new KubernetesClusterRoleBasedAccessControlAzureActiveDirectoryOutputReference(this as any, "azure_active_directory", true);
+  private _azureActiveDirectory = new KubernetesClusterRoleBasedAccessControlAzureActiveDirectoryOutputReference(this, "azure_active_directory", true);
   public get azureActiveDirectory() {
     return this._azureActiveDirectory;
   }
@@ -5470,7 +5564,7 @@ export interface KubernetesClusterServicePrincipal {
 }
 
 export function kubernetesClusterServicePrincipalToTerraform(struct?: KubernetesClusterServicePrincipalOutputReference | KubernetesClusterServicePrincipal): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -5488,7 +5582,7 @@ export class KubernetesClusterServicePrincipalOutputReference extends cdktf.Comp
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -5564,8 +5658,8 @@ export interface KubernetesClusterTimeouts {
   readonly update?: string;
 }
 
-export function kubernetesClusterTimeoutsToTerraform(struct?: KubernetesClusterTimeoutsOutputReference | KubernetesClusterTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function kubernetesClusterTimeoutsToTerraform(struct?: KubernetesClusterTimeoutsOutputReference | KubernetesClusterTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -5585,7 +5679,7 @@ export class KubernetesClusterTimeoutsOutputReference extends cdktf.ComplexObjec
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -5708,7 +5802,7 @@ export interface KubernetesClusterWindowsProfile {
 }
 
 export function kubernetesClusterWindowsProfileToTerraform(struct?: KubernetesClusterWindowsProfileOutputReference | KubernetesClusterWindowsProfile): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -5727,7 +5821,7 @@ export class KubernetesClusterWindowsProfileOutputReference extends cdktf.Comple
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -5883,7 +5977,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   // api_server_authorized_ip_ranges - computed: false, optional: true, required: false
   private _apiServerAuthorizedIpRanges?: string[]; 
   public get apiServerAuthorizedIpRanges() {
-    return this.getListAttribute('api_server_authorized_ip_ranges');
+    return cdktf.Fn.tolist(this.getListAttribute('api_server_authorized_ip_ranges'));
   }
   public set apiServerAuthorizedIpRanges(value: string[]) {
     this._apiServerAuthorizedIpRanges = value;
@@ -5963,7 +6057,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   // enable_pod_security_policy - computed: false, optional: true, required: false
   private _enablePodSecurityPolicy?: boolean | cdktf.IResolvable; 
   public get enablePodSecurityPolicy() {
-    return this.getBooleanAttribute('enable_pod_security_policy') as any;
+    return this.getBooleanAttribute('enable_pod_security_policy');
   }
   public set enablePodSecurityPolicy(value: boolean | cdktf.IResolvable) {
     this._enablePodSecurityPolicy = value;
@@ -5988,7 +6082,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
 
   // kube_admin_config - computed: true, optional: false, required: false
   public kubeAdminConfig(index: string) {
-    return new KubernetesClusterKubeAdminConfig(this, 'kube_admin_config', index);
+    return new KubernetesClusterKubeAdminConfig(this, 'kube_admin_config', index, false);
   }
 
   // kube_admin_config_raw - computed: true, optional: false, required: false
@@ -5998,7 +6092,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
 
   // kube_config - computed: true, optional: false, required: false
   public kubeConfig(index: string) {
-    return new KubernetesClusterKubeConfig(this, 'kube_config', index);
+    return new KubernetesClusterKubeConfig(this, 'kube_config', index, false);
   }
 
   // kube_config_raw - computed: true, optional: false, required: false
@@ -6025,7 +6119,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   // local_account_disabled - computed: false, optional: true, required: false
   private _localAccountDisabled?: boolean | cdktf.IResolvable; 
   public get localAccountDisabled() {
-    return this.getBooleanAttribute('local_account_disabled') as any;
+    return this.getBooleanAttribute('local_account_disabled');
   }
   public set localAccountDisabled(value: boolean | cdktf.IResolvable) {
     this._localAccountDisabled = value;
@@ -6088,7 +6182,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   // private_cluster_enabled - computed: true, optional: true, required: false
   private _privateClusterEnabled?: boolean | cdktf.IResolvable; 
   public get privateClusterEnabled() {
-    return this.getBooleanAttribute('private_cluster_enabled') as any;
+    return this.getBooleanAttribute('private_cluster_enabled');
   }
   public set privateClusterEnabled(value: boolean | cdktf.IResolvable) {
     this._privateClusterEnabled = value;
@@ -6104,7 +6198,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   // private_cluster_public_fqdn_enabled - computed: false, optional: true, required: false
   private _privateClusterPublicFqdnEnabled?: boolean | cdktf.IResolvable; 
   public get privateClusterPublicFqdnEnabled() {
-    return this.getBooleanAttribute('private_cluster_public_fqdn_enabled') as any;
+    return this.getBooleanAttribute('private_cluster_public_fqdn_enabled');
   }
   public set privateClusterPublicFqdnEnabled(value: boolean | cdktf.IResolvable) {
     this._privateClusterPublicFqdnEnabled = value;
@@ -6141,7 +6235,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   // private_link_enabled - computed: true, optional: true, required: false
   private _privateLinkEnabled?: boolean | cdktf.IResolvable; 
   public get privateLinkEnabled() {
-    return this.getBooleanAttribute('private_link_enabled') as any;
+    return this.getBooleanAttribute('private_link_enabled');
   }
   public set privateLinkEnabled(value: boolean | cdktf.IResolvable) {
     this._privateLinkEnabled = value;
@@ -6157,7 +6251,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   // public_network_access_enabled - computed: false, optional: true, required: false
   private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable; 
   public get publicNetworkAccessEnabled() {
-    return this.getBooleanAttribute('public_network_access_enabled') as any;
+    return this.getBooleanAttribute('public_network_access_enabled');
   }
   public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable) {
     this._publicNetworkAccessEnabled = value;
@@ -6200,12 +6294,11 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -6217,7 +6310,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
 
   // addon_profile - computed: false, optional: true, required: false
-  private _addonProfile = new KubernetesClusterAddonProfileOutputReference(this as any, "addon_profile", true);
+  private _addonProfile = new KubernetesClusterAddonProfileOutputReference(this, "addon_profile", true);
   public get addonProfile() {
     return this._addonProfile;
   }
@@ -6233,7 +6326,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
 
   // auto_scaler_profile - computed: false, optional: true, required: false
-  private _autoScalerProfile = new KubernetesClusterAutoScalerProfileOutputReference(this as any, "auto_scaler_profile", true);
+  private _autoScalerProfile = new KubernetesClusterAutoScalerProfileOutputReference(this, "auto_scaler_profile", true);
   public get autoScalerProfile() {
     return this._autoScalerProfile;
   }
@@ -6249,7 +6342,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
 
   // default_node_pool - computed: false, optional: false, required: true
-  private _defaultNodePool = new KubernetesClusterDefaultNodePoolOutputReference(this as any, "default_node_pool", true);
+  private _defaultNodePool = new KubernetesClusterDefaultNodePoolOutputReference(this, "default_node_pool", true);
   public get defaultNodePool() {
     return this._defaultNodePool;
   }
@@ -6262,7 +6355,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
 
   // http_proxy_config - computed: false, optional: true, required: false
-  private _httpProxyConfig = new KubernetesClusterHttpProxyConfigOutputReference(this as any, "http_proxy_config", true);
+  private _httpProxyConfig = new KubernetesClusterHttpProxyConfigOutputReference(this, "http_proxy_config", true);
   public get httpProxyConfig() {
     return this._httpProxyConfig;
   }
@@ -6278,7 +6371,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity = new KubernetesClusterIdentityOutputReference(this as any, "identity", true);
+  private _identity = new KubernetesClusterIdentityOutputReference(this, "identity", true);
   public get identity() {
     return this._identity;
   }
@@ -6294,7 +6387,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
 
   // kubelet_identity - computed: false, optional: true, required: false
-  private _kubeletIdentity = new KubernetesClusterKubeletIdentityOutputReference(this as any, "kubelet_identity", true);
+  private _kubeletIdentity = new KubernetesClusterKubeletIdentityOutputReference(this, "kubelet_identity", true);
   public get kubeletIdentity() {
     return this._kubeletIdentity;
   }
@@ -6310,7 +6403,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
 
   // linux_profile - computed: false, optional: true, required: false
-  private _linuxProfile = new KubernetesClusterLinuxProfileOutputReference(this as any, "linux_profile", true);
+  private _linuxProfile = new KubernetesClusterLinuxProfileOutputReference(this, "linux_profile", true);
   public get linuxProfile() {
     return this._linuxProfile;
   }
@@ -6326,7 +6419,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
 
   // maintenance_window - computed: false, optional: true, required: false
-  private _maintenanceWindow = new KubernetesClusterMaintenanceWindowOutputReference(this as any, "maintenance_window", true);
+  private _maintenanceWindow = new KubernetesClusterMaintenanceWindowOutputReference(this, "maintenance_window", true);
   public get maintenanceWindow() {
     return this._maintenanceWindow;
   }
@@ -6342,7 +6435,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
 
   // network_profile - computed: false, optional: true, required: false
-  private _networkProfile = new KubernetesClusterNetworkProfileOutputReference(this as any, "network_profile", true);
+  private _networkProfile = new KubernetesClusterNetworkProfileOutputReference(this, "network_profile", true);
   public get networkProfile() {
     return this._networkProfile;
   }
@@ -6358,7 +6451,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
 
   // role_based_access_control - computed: false, optional: true, required: false
-  private _roleBasedAccessControl = new KubernetesClusterRoleBasedAccessControlOutputReference(this as any, "role_based_access_control", true);
+  private _roleBasedAccessControl = new KubernetesClusterRoleBasedAccessControlOutputReference(this, "role_based_access_control", true);
   public get roleBasedAccessControl() {
     return this._roleBasedAccessControl;
   }
@@ -6374,7 +6467,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
 
   // service_principal - computed: false, optional: true, required: false
-  private _servicePrincipal = new KubernetesClusterServicePrincipalOutputReference(this as any, "service_principal", true);
+  private _servicePrincipal = new KubernetesClusterServicePrincipalOutputReference(this, "service_principal", true);
   public get servicePrincipal() {
     return this._servicePrincipal;
   }
@@ -6390,7 +6483,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new KubernetesClusterTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new KubernetesClusterTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -6406,7 +6499,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
 
   // windows_profile - computed: false, optional: true, required: false
-  private _windowsProfile = new KubernetesClusterWindowsProfileOutputReference(this as any, "windows_profile", true);
+  private _windowsProfile = new KubernetesClusterWindowsProfileOutputReference(this, "windows_profile", true);
   public get windowsProfile() {
     return this._windowsProfile;
   }
@@ -6445,7 +6538,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
       public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku_tier: cdktf.stringToTerraform(this._skuTier),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       addon_profile: kubernetesClusterAddonProfileToTerraform(this._addonProfile.internalValue),
       auto_scaler_profile: kubernetesClusterAutoScalerProfileToTerraform(this._autoScalerProfile.internalValue),
       default_node_pool: kubernetesClusterDefaultNodePoolToTerraform(this._defaultNodePool.internalValue),

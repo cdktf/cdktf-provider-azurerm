@@ -65,8 +65,8 @@ export interface IothubDpsSharedAccessPolicyTimeouts {
   readonly update?: string;
 }
 
-export function iothubDpsSharedAccessPolicyTimeoutsToTerraform(struct?: IothubDpsSharedAccessPolicyTimeoutsOutputReference | IothubDpsSharedAccessPolicyTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function iothubDpsSharedAccessPolicyTimeoutsToTerraform(struct?: IothubDpsSharedAccessPolicyTimeoutsOutputReference | IothubDpsSharedAccessPolicyTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -86,7 +86,7 @@ export class IothubDpsSharedAccessPolicyTimeoutsOutputReference extends cdktf.Co
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -244,7 +244,7 @@ export class IothubDpsSharedAccessPolicy extends cdktf.TerraformResource {
   // enrollment_read - computed: false, optional: true, required: false
   private _enrollmentRead?: boolean | cdktf.IResolvable; 
   public get enrollmentRead() {
-    return this.getBooleanAttribute('enrollment_read') as any;
+    return this.getBooleanAttribute('enrollment_read');
   }
   public set enrollmentRead(value: boolean | cdktf.IResolvable) {
     this._enrollmentRead = value;
@@ -260,7 +260,7 @@ export class IothubDpsSharedAccessPolicy extends cdktf.TerraformResource {
   // enrollment_write - computed: false, optional: true, required: false
   private _enrollmentWrite?: boolean | cdktf.IResolvable; 
   public get enrollmentWrite() {
-    return this.getBooleanAttribute('enrollment_write') as any;
+    return this.getBooleanAttribute('enrollment_write');
   }
   public set enrollmentWrite(value: boolean | cdktf.IResolvable) {
     this._enrollmentWrite = value;
@@ -317,7 +317,7 @@ export class IothubDpsSharedAccessPolicy extends cdktf.TerraformResource {
   // registration_read - computed: false, optional: true, required: false
   private _registrationRead?: boolean | cdktf.IResolvable; 
   public get registrationRead() {
-    return this.getBooleanAttribute('registration_read') as any;
+    return this.getBooleanAttribute('registration_read');
   }
   public set registrationRead(value: boolean | cdktf.IResolvable) {
     this._registrationRead = value;
@@ -333,7 +333,7 @@ export class IothubDpsSharedAccessPolicy extends cdktf.TerraformResource {
   // registration_write - computed: false, optional: true, required: false
   private _registrationWrite?: boolean | cdktf.IResolvable; 
   public get registrationWrite() {
-    return this.getBooleanAttribute('registration_write') as any;
+    return this.getBooleanAttribute('registration_write');
   }
   public set registrationWrite(value: boolean | cdktf.IResolvable) {
     this._registrationWrite = value;
@@ -372,7 +372,7 @@ export class IothubDpsSharedAccessPolicy extends cdktf.TerraformResource {
   // service_config - computed: false, optional: true, required: false
   private _serviceConfig?: boolean | cdktf.IResolvable; 
   public get serviceConfig() {
-    return this.getBooleanAttribute('service_config') as any;
+    return this.getBooleanAttribute('service_config');
   }
   public set serviceConfig(value: boolean | cdktf.IResolvable) {
     this._serviceConfig = value;
@@ -386,7 +386,7 @@ export class IothubDpsSharedAccessPolicy extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new IothubDpsSharedAccessPolicyTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new IothubDpsSharedAccessPolicyTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }

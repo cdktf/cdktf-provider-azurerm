@@ -38,7 +38,7 @@ export interface KeyVaultManagedHardwareSecurityModuleConfig extends cdktf.Terra
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_hardware_security_module#tags KeyVaultManagedHardwareSecurityModule#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_hardware_security_module#tenant_id KeyVaultManagedHardwareSecurityModule#tenant_id}
   */
@@ -65,8 +65,8 @@ export interface KeyVaultManagedHardwareSecurityModuleTimeouts {
   readonly read?: string;
 }
 
-export function keyVaultManagedHardwareSecurityModuleTimeoutsToTerraform(struct?: KeyVaultManagedHardwareSecurityModuleTimeoutsOutputReference | KeyVaultManagedHardwareSecurityModuleTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function keyVaultManagedHardwareSecurityModuleTimeoutsToTerraform(struct?: KeyVaultManagedHardwareSecurityModuleTimeoutsOutputReference | KeyVaultManagedHardwareSecurityModuleTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -85,7 +85,7 @@ export class KeyVaultManagedHardwareSecurityModuleTimeoutsOutputReference extend
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -222,7 +222,7 @@ export class KeyVaultManagedHardwareSecurityModule extends cdktf.TerraformResour
   // admin_object_ids - computed: false, optional: false, required: true
   private _adminObjectIds?: string[]; 
   public get adminObjectIds() {
-    return this.getListAttribute('admin_object_ids');
+    return cdktf.Fn.tolist(this.getListAttribute('admin_object_ids'));
   }
   public set adminObjectIds(value: string[]) {
     this._adminObjectIds = value;
@@ -271,7 +271,7 @@ export class KeyVaultManagedHardwareSecurityModule extends cdktf.TerraformResour
   // purge_protection_enabled - computed: false, optional: true, required: false
   private _purgeProtectionEnabled?: boolean | cdktf.IResolvable; 
   public get purgeProtectionEnabled() {
-    return this.getBooleanAttribute('purge_protection_enabled') as any;
+    return this.getBooleanAttribute('purge_protection_enabled');
   }
   public set purgeProtectionEnabled(value: boolean | cdktf.IResolvable) {
     this._purgeProtectionEnabled = value;
@@ -327,12 +327,11 @@ export class KeyVaultManagedHardwareSecurityModule extends cdktf.TerraformResour
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -357,7 +356,7 @@ export class KeyVaultManagedHardwareSecurityModule extends cdktf.TerraformResour
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new KeyVaultManagedHardwareSecurityModuleTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new KeyVaultManagedHardwareSecurityModuleTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -385,7 +384,7 @@ export class KeyVaultManagedHardwareSecurityModule extends cdktf.TerraformResour
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku_name: cdktf.stringToTerraform(this._skuName),
       soft_delete_retention_days: cdktf.numberToTerraform(this._softDeleteRetentionDays),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       tenant_id: cdktf.stringToTerraform(this._tenantId),
       timeouts: keyVaultManagedHardwareSecurityModuleTimeoutsToTerraform(this._timeouts.internalValue),
     };

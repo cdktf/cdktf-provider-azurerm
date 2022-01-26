@@ -58,7 +58,7 @@ export interface MonitorScheduledQueryRulesAlertConfig extends cdktf.TerraformMe
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_scheduled_query_rules_alert#tags MonitorScheduledQueryRulesAlert#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_scheduled_query_rules_alert#throttling MonitorScheduledQueryRulesAlert#throttling}
   */
@@ -102,7 +102,7 @@ export interface MonitorScheduledQueryRulesAlertAction {
 }
 
 export function monitorScheduledQueryRulesAlertActionToTerraform(struct?: MonitorScheduledQueryRulesAlertActionOutputReference | MonitorScheduledQueryRulesAlertAction): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -121,7 +121,7 @@ export class MonitorScheduledQueryRulesAlertActionOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -161,7 +161,7 @@ export class MonitorScheduledQueryRulesAlertActionOutputReference extends cdktf.
   // action_group - computed: false, optional: false, required: true
   private _actionGroup?: string[]; 
   public get actionGroup() {
-    return this.getListAttribute('action_group');
+    return cdktf.Fn.tolist(this.getListAttribute('action_group'));
   }
   public set actionGroup(value: string[]) {
     this._actionGroup = value;
@@ -222,8 +222,8 @@ export interface MonitorScheduledQueryRulesAlertTimeouts {
   readonly update?: string;
 }
 
-export function monitorScheduledQueryRulesAlertTimeoutsToTerraform(struct?: MonitorScheduledQueryRulesAlertTimeoutsOutputReference | MonitorScheduledQueryRulesAlertTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function monitorScheduledQueryRulesAlertTimeoutsToTerraform(struct?: MonitorScheduledQueryRulesAlertTimeoutsOutputReference | MonitorScheduledQueryRulesAlertTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -243,7 +243,7 @@ export class MonitorScheduledQueryRulesAlertTimeoutsOutputReference extends cdkt
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -370,7 +370,7 @@ export interface MonitorScheduledQueryRulesAlertTriggerMetricTrigger {
 }
 
 export function monitorScheduledQueryRulesAlertTriggerMetricTriggerToTerraform(struct?: MonitorScheduledQueryRulesAlertTriggerMetricTriggerOutputReference | MonitorScheduledQueryRulesAlertTriggerMetricTrigger): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -390,7 +390,7 @@ export class MonitorScheduledQueryRulesAlertTriggerMetricTriggerOutputReference 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -503,7 +503,7 @@ export interface MonitorScheduledQueryRulesAlertTrigger {
 }
 
 export function monitorScheduledQueryRulesAlertTriggerToTerraform(struct?: MonitorScheduledQueryRulesAlertTriggerOutputReference | MonitorScheduledQueryRulesAlertTrigger): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -522,7 +522,7 @@ export class MonitorScheduledQueryRulesAlertTriggerOutputReference extends cdktf
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -586,7 +586,7 @@ export class MonitorScheduledQueryRulesAlertTriggerOutputReference extends cdktf
   }
 
   // metric_trigger - computed: false, optional: true, required: false
-  private _metricTrigger = new MonitorScheduledQueryRulesAlertTriggerMetricTriggerOutputReference(this as any, "metric_trigger", true);
+  private _metricTrigger = new MonitorScheduledQueryRulesAlertTriggerMetricTriggerOutputReference(this, "metric_trigger", true);
   public get metricTrigger() {
     return this._metricTrigger;
   }
@@ -661,7 +661,7 @@ export class MonitorScheduledQueryRulesAlert extends cdktf.TerraformResource {
   // authorized_resource_ids - computed: false, optional: true, required: false
   private _authorizedResourceIds?: string[]; 
   public get authorizedResourceIds() {
-    return this.getListAttribute('authorized_resource_ids');
+    return cdktf.Fn.tolist(this.getListAttribute('authorized_resource_ids'));
   }
   public set authorizedResourceIds(value: string[]) {
     this._authorizedResourceIds = value;
@@ -677,7 +677,7 @@ export class MonitorScheduledQueryRulesAlert extends cdktf.TerraformResource {
   // auto_mitigation_enabled - computed: false, optional: true, required: false
   private _autoMitigationEnabled?: boolean | cdktf.IResolvable; 
   public get autoMitigationEnabled() {
-    return this.getBooleanAttribute('auto_mitigation_enabled') as any;
+    return this.getBooleanAttribute('auto_mitigation_enabled');
   }
   public set autoMitigationEnabled(value: boolean | cdktf.IResolvable) {
     this._autoMitigationEnabled = value;
@@ -722,7 +722,7 @@ export class MonitorScheduledQueryRulesAlert extends cdktf.TerraformResource {
   // enabled - computed: false, optional: true, required: false
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled') as any;
+    return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
@@ -838,12 +838,11 @@ export class MonitorScheduledQueryRulesAlert extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -884,7 +883,7 @@ export class MonitorScheduledQueryRulesAlert extends cdktf.TerraformResource {
   }
 
   // action - computed: false, optional: false, required: true
-  private _action = new MonitorScheduledQueryRulesAlertActionOutputReference(this as any, "action", true);
+  private _action = new MonitorScheduledQueryRulesAlertActionOutputReference(this, "action", true);
   public get action() {
     return this._action;
   }
@@ -897,7 +896,7 @@ export class MonitorScheduledQueryRulesAlert extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new MonitorScheduledQueryRulesAlertTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new MonitorScheduledQueryRulesAlertTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -913,7 +912,7 @@ export class MonitorScheduledQueryRulesAlert extends cdktf.TerraformResource {
   }
 
   // trigger - computed: false, optional: false, required: true
-  private _trigger = new MonitorScheduledQueryRulesAlertTriggerOutputReference(this as any, "trigger", true);
+  private _trigger = new MonitorScheduledQueryRulesAlertTriggerOutputReference(this, "trigger", true);
   public get trigger() {
     return this._trigger;
   }
@@ -943,7 +942,7 @@ export class MonitorScheduledQueryRulesAlert extends cdktf.TerraformResource {
       query_type: cdktf.stringToTerraform(this._queryType),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       severity: cdktf.numberToTerraform(this._severity),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       throttling: cdktf.numberToTerraform(this._throttling),
       time_window: cdktf.numberToTerraform(this._timeWindow),
       action: monitorScheduledQueryRulesAlertActionToTerraform(this._action.internalValue),

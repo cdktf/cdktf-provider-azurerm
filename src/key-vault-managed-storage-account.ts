@@ -34,7 +34,7 @@ export interface KeyVaultManagedStorageAccountConfig extends cdktf.TerraformMeta
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_storage_account#tags KeyVaultManagedStorageAccount#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   * 
@@ -61,8 +61,8 @@ export interface KeyVaultManagedStorageAccountTimeouts {
   readonly update?: string;
 }
 
-export function keyVaultManagedStorageAccountTimeoutsToTerraform(struct?: KeyVaultManagedStorageAccountTimeoutsOutputReference | KeyVaultManagedStorageAccountTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function keyVaultManagedStorageAccountTimeoutsToTerraform(struct?: KeyVaultManagedStorageAccountTimeoutsOutputReference | KeyVaultManagedStorageAccountTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -82,7 +82,7 @@ export class KeyVaultManagedStorageAccountTimeoutsOutputReference extends cdktf.
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -270,7 +270,7 @@ export class KeyVaultManagedStorageAccount extends cdktf.TerraformResource {
   // regenerate_key_automatically - computed: false, optional: true, required: false
   private _regenerateKeyAutomatically?: boolean | cdktf.IResolvable; 
   public get regenerateKeyAutomatically() {
-    return this.getBooleanAttribute('regenerate_key_automatically') as any;
+    return this.getBooleanAttribute('regenerate_key_automatically');
   }
   public set regenerateKeyAutomatically(value: boolean | cdktf.IResolvable) {
     this._regenerateKeyAutomatically = value;
@@ -326,12 +326,11 @@ export class KeyVaultManagedStorageAccount extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -343,7 +342,7 @@ export class KeyVaultManagedStorageAccount extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new KeyVaultManagedStorageAccountTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new KeyVaultManagedStorageAccountTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -370,7 +369,7 @@ export class KeyVaultManagedStorageAccount extends cdktf.TerraformResource {
       regeneration_period: cdktf.stringToTerraform(this._regenerationPeriod),
       storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
       storage_account_key: cdktf.stringToTerraform(this._storageAccountKey),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       timeouts: keyVaultManagedStorageAccountTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

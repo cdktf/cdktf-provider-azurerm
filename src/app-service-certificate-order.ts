@@ -42,7 +42,7 @@ export interface AppServiceCertificateOrderConfig extends cdktf.TerraformMetaArg
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate_order#tags AppServiceCertificateOrder#tags}
   */
-  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate_order#validity_in_years AppServiceCertificateOrder#validity_in_years}
   */
@@ -95,8 +95,8 @@ export interface AppServiceCertificateOrderTimeouts {
   readonly update?: string;
 }
 
-export function appServiceCertificateOrderTimeoutsToTerraform(struct?: AppServiceCertificateOrderTimeoutsOutputReference | AppServiceCertificateOrderTimeouts): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
+export function appServiceCertificateOrderTimeoutsToTerraform(struct?: AppServiceCertificateOrderTimeoutsOutputReference | AppServiceCertificateOrderTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
@@ -116,7 +116,7 @@ export class AppServiceCertificateOrderTimeoutsOutputReference extends cdktf.Com
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
@@ -281,7 +281,7 @@ export class AppServiceCertificateOrder extends cdktf.TerraformResource {
   // auto_renew - computed: false, optional: true, required: false
   private _autoRenew?: boolean | cdktf.IResolvable; 
   public get autoRenew() {
-    return this.getBooleanAttribute('auto_renew') as any;
+    return this.getBooleanAttribute('auto_renew');
   }
   public set autoRenew(value: boolean | cdktf.IResolvable) {
     this._autoRenew = value;
@@ -296,7 +296,7 @@ export class AppServiceCertificateOrder extends cdktf.TerraformResource {
 
   // certificates - computed: true, optional: false, required: false
   public certificates(index: string) {
-    return new AppServiceCertificateOrderCertificates(this, 'certificates', index);
+    return new AppServiceCertificateOrderCertificates(this, 'certificates', index, false);
   }
 
   // csr - computed: true, optional: true, required: false
@@ -353,7 +353,7 @@ export class AppServiceCertificateOrder extends cdktf.TerraformResource {
 
   // is_private_key_external - computed: true, optional: false, required: false
   public get isPrivateKeyExternal() {
-    return this.getBooleanAttribute('is_private_key_external') as any;
+    return this.getBooleanAttribute('is_private_key_external');
   }
 
   // key_size - computed: false, optional: true, required: false
@@ -443,12 +443,11 @@ export class AppServiceCertificateOrder extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  private _tags?: { [key: string]: string }; 
   public get tags() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tags') as any;
+    return this.getStringMapAttribute('tags');
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set tags(value: { [key: string]: string }) {
     this._tags = value;
   }
   public resetTags() {
@@ -476,7 +475,7 @@ export class AppServiceCertificateOrder extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AppServiceCertificateOrderTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new AppServiceCertificateOrderTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
     return this._timeouts;
   }
@@ -505,7 +504,7 @@ export class AppServiceCertificateOrder extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       product_type: cdktf.stringToTerraform(this._productType),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       validity_in_years: cdktf.numberToTerraform(this._validityInYears),
       timeouts: appServiceCertificateOrderTimeoutsToTerraform(this._timeouts.internalValue),
     };
