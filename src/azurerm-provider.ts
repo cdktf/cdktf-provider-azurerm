@@ -48,7 +48,7 @@ export interface AzurermProviderConfig {
   */
   readonly disableTerraformPartnerId?: boolean | cdktf.IResolvable;
   /**
-  * The Cloud Environment which should be used. Possible values are public, usgovernment, german, and china. Defaults to public.
+  * The Cloud Environment which should be used. Possible values are public, usgovernment, and china. Defaults to public.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#environment AzurermProvider#environment}
   */
@@ -107,6 +107,12 @@ export interface AzurermProviderConfig {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#tenant_id AzurermProvider#tenant_id}
   */
   readonly tenantId?: string;
+  /**
+  * Should Terraform obtain MSAL auth tokens and no longer use Azure Active Directory Graph?
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#use_msal AzurermProvider#use_msal}
+  */
+  readonly useMsal?: boolean | cdktf.IResolvable;
   /**
   * Allowed Managed Service Identity be used for Authentication.
   * 
@@ -427,6 +433,7 @@ export class AzurermProvider extends cdktf.TerraformProvider {
     this._storageUseAzuread = config.storageUseAzuread;
     this._subscriptionId = config.subscriptionId;
     this._tenantId = config.tenantId;
+    this._useMsal = config.useMsal;
     this._useMsi = config.useMsi;
     this._alias = config.alias;
     this._features = config.features;
@@ -708,6 +715,22 @@ export class AzurermProvider extends cdktf.TerraformProvider {
     return this._tenantId;
   }
 
+  // use_msal - computed: false, optional: true, required: false
+  private _useMsal?: boolean | cdktf.IResolvable; 
+  public get useMsal() {
+    return this._useMsal;
+  }
+  public set useMsal(value: boolean | cdktf.IResolvable | undefined) {
+    this._useMsal = value;
+  }
+  public resetUseMsal() {
+    this._useMsal = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get useMsalInput() {
+    return this._useMsal;
+  }
+
   // use_msi - computed: false, optional: true, required: false
   private _useMsi?: boolean | cdktf.IResolvable; 
   public get useMsi() {
@@ -776,6 +799,7 @@ export class AzurermProvider extends cdktf.TerraformProvider {
       storage_use_azuread: cdktf.booleanToTerraform(this._storageUseAzuread),
       subscription_id: cdktf.stringToTerraform(this._subscriptionId),
       tenant_id: cdktf.stringToTerraform(this._tenantId),
+      use_msal: cdktf.booleanToTerraform(this._useMsal),
       use_msi: cdktf.booleanToTerraform(this._useMsi),
       alias: cdktf.stringToTerraform(this._alias),
       features: azurermProviderFeaturesToTerraform(this._features),
