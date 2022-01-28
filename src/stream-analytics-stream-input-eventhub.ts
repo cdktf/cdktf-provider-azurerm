@@ -20,6 +20,10 @@ export interface StreamAnalyticsStreamInputEventhubConfig extends cdktf.Terrafor
   */
   readonly name: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_eventhub#partition_key StreamAnalyticsStreamInputEventhub#partition_key}
+  */
+  readonly partitionKey?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_eventhub#resource_group_name StreamAnalyticsStreamInputEventhub#resource_group_name}
   */
   readonly resourceGroupName: string;
@@ -352,6 +356,7 @@ export class StreamAnalyticsStreamInputEventhub extends cdktf.TerraformResource 
     this._eventhubConsumerGroupName = config.eventhubConsumerGroupName;
     this._eventhubName = config.eventhubName;
     this._name = config.name;
+    this._partitionKey = config.partitionKey;
     this._resourceGroupName = config.resourceGroupName;
     this._servicebusNamespace = config.servicebusNamespace;
     this._sharedAccessPolicyKey = config.sharedAccessPolicyKey;
@@ -410,6 +415,22 @@ export class StreamAnalyticsStreamInputEventhub extends cdktf.TerraformResource 
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name;
+  }
+
+  // partition_key - computed: false, optional: true, required: false
+  private _partitionKey?: string; 
+  public get partitionKey() {
+    return this.getStringAttribute('partition_key');
+  }
+  public set partitionKey(value: string) {
+    this._partitionKey = value;
+  }
+  public resetPartitionKey() {
+    this._partitionKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get partitionKeyInput() {
+    return this._partitionKey;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -515,6 +536,7 @@ export class StreamAnalyticsStreamInputEventhub extends cdktf.TerraformResource 
       eventhub_consumer_group_name: cdktf.stringToTerraform(this._eventhubConsumerGroupName),
       eventhub_name: cdktf.stringToTerraform(this._eventhubName),
       name: cdktf.stringToTerraform(this._name),
+      partition_key: cdktf.stringToTerraform(this._partitionKey),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       servicebus_namespace: cdktf.stringToTerraform(this._servicebusNamespace),
       shared_access_policy_key: cdktf.stringToTerraform(this._sharedAccessPolicyKey),

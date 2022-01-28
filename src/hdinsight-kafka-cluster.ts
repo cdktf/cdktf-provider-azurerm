@@ -900,6 +900,10 @@ export interface HdinsightKafkaClusterRestProxy {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster#security_group_id HdinsightKafkaCluster#security_group_id}
   */
   readonly securityGroupId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster#security_group_name HdinsightKafkaCluster#security_group_name}
+  */
+  readonly securityGroupName?: string;
 }
 
 export function hdinsightKafkaClusterRestProxyToTerraform(struct?: HdinsightKafkaClusterRestProxyOutputReference | HdinsightKafkaClusterRestProxy): any {
@@ -909,6 +913,7 @@ export function hdinsightKafkaClusterRestProxyToTerraform(struct?: HdinsightKafk
   }
   return {
     security_group_id: cdktf.stringToTerraform(struct!.securityGroupId),
+    security_group_name: cdktf.stringToTerraform(struct!.securityGroupName),
   }
 }
 
@@ -931,6 +936,10 @@ export class HdinsightKafkaClusterRestProxyOutputReference extends cdktf.Complex
       hasAnyValues = true;
       internalValueResult.securityGroupId = this._securityGroupId;
     }
+    if (this._securityGroupName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.securityGroupName = this._securityGroupName;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -938,10 +947,12 @@ export class HdinsightKafkaClusterRestProxyOutputReference extends cdktf.Complex
     if (value === undefined) {
       this.isEmptyObject = false;
       this._securityGroupId = undefined;
+      this._securityGroupName = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._securityGroupId = value.securityGroupId;
+      this._securityGroupName = value.securityGroupName;
     }
   }
 
@@ -956,6 +967,22 @@ export class HdinsightKafkaClusterRestProxyOutputReference extends cdktf.Complex
   // Temporarily expose input value. Use with caution.
   public get securityGroupIdInput() {
     return this._securityGroupId;
+  }
+
+  // security_group_name - computed: true, optional: true, required: false
+  private _securityGroupName?: string; 
+  public get securityGroupName() {
+    return this.getStringAttribute('security_group_name');
+  }
+  public set securityGroupName(value: string) {
+    this._securityGroupName = value;
+  }
+  public resetSecurityGroupName() {
+    this._securityGroupName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get securityGroupNameInput() {
+    return this._securityGroupName;
   }
 }
 export interface HdinsightKafkaClusterRolesHeadNode {

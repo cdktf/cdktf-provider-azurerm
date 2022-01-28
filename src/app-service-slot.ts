@@ -82,6 +82,12 @@ export interface AppServiceSlotConfig extends cdktf.TerraformMetaArguments {
   */
   readonly siteConfig?: AppServiceSlotSiteConfig;
   /**
+  * storage_account block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot#storage_account AppServiceSlot#storage_account}
+  */
+  readonly storageAccount?: AppServiceSlotStorageAccount[] | cdktf.IResolvable;
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot#timeouts AppServiceSlot#timeouts}
@@ -2953,6 +2959,48 @@ export class AppServiceSlotSiteConfigOutputReference extends cdktf.ComplexObject
     return this._cors.internalValue;
   }
 }
+export interface AppServiceSlotStorageAccount {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot#access_key AppServiceSlot#access_key}
+  */
+  readonly accessKey: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot#account_name AppServiceSlot#account_name}
+  */
+  readonly accountName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot#mount_path AppServiceSlot#mount_path}
+  */
+  readonly mountPath?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot#name AppServiceSlot#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot#share_name AppServiceSlot#share_name}
+  */
+  readonly shareName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot#type AppServiceSlot#type}
+  */
+  readonly type: string;
+}
+
+export function appServiceSlotStorageAccountToTerraform(struct?: AppServiceSlotStorageAccount | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    access_key: cdktf.stringToTerraform(struct!.accessKey),
+    account_name: cdktf.stringToTerraform(struct!.accountName),
+    mount_path: cdktf.stringToTerraform(struct!.mountPath),
+    name: cdktf.stringToTerraform(struct!.name),
+    share_name: cdktf.stringToTerraform(struct!.shareName),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface AppServiceSlotTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot#create AppServiceSlot#create}
@@ -3149,6 +3197,7 @@ export class AppServiceSlot extends cdktf.TerraformResource {
     this._identity.internalValue = config.identity;
     this._logs.internalValue = config.logs;
     this._siteConfig.internalValue = config.siteConfig;
+    this._storageAccount = config.storageAccount;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -3413,6 +3462,23 @@ export class AppServiceSlot extends cdktf.TerraformResource {
     return this._siteConfig.internalValue;
   }
 
+  // storage_account - computed: false, optional: true, required: false
+  private _storageAccount?: AppServiceSlotStorageAccount[] | cdktf.IResolvable; 
+  public get storageAccount() {
+    // Getting the computed value is not yet implemented
+    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('storage_account')));
+  }
+  public set storageAccount(value: AppServiceSlotStorageAccount[] | cdktf.IResolvable) {
+    this._storageAccount = value;
+  }
+  public resetStorageAccount() {
+    this._storageAccount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageAccountInput() {
+    return this._storageAccount;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new AppServiceSlotTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {
@@ -3451,6 +3517,7 @@ export class AppServiceSlot extends cdktf.TerraformResource {
       identity: appServiceSlotIdentityToTerraform(this._identity.internalValue),
       logs: appServiceSlotLogsToTerraform(this._logs.internalValue),
       site_config: appServiceSlotSiteConfigToTerraform(this._siteConfig.internalValue),
+      storage_account: cdktf.listMapper(appServiceSlotStorageAccountToTerraform)(this._storageAccount),
       timeouts: appServiceSlotTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

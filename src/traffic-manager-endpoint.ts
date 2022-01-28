@@ -355,7 +355,7 @@ export class TrafficManagerEndpoint extends cdktf.TerraformResource {
     return this.getStringAttribute('endpoint_monitor_status');
   }
 
-  // endpoint_status - computed: true, optional: true, required: false
+  // endpoint_status - computed: false, optional: true, required: false
   private _endpointStatus?: string; 
   public get endpointStatus() {
     return this.getStringAttribute('endpoint_status');
