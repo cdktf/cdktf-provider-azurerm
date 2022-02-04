@@ -32,6 +32,10 @@ export interface LinuxVirtualMachineConfig extends cdktf.TerraformMetaArguments 
   */
   readonly customData?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine#dedicated_host_group_id LinuxVirtualMachine#dedicated_host_group_id}
+  */
+  readonly dedicatedHostGroupId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine#dedicated_host_id LinuxVirtualMachine#dedicated_host_id}
   */
   readonly dedicatedHostId?: string;
@@ -1196,6 +1200,7 @@ export class LinuxVirtualMachine extends cdktf.TerraformResource {
     this._availabilitySetId = config.availabilitySetId;
     this._computerName = config.computerName;
     this._customData = config.customData;
+    this._dedicatedHostGroupId = config.dedicatedHostGroupId;
     this._dedicatedHostId = config.dedicatedHostId;
     this._disablePasswordAuthentication = config.disablePasswordAuthentication;
     this._encryptionAtHostEnabled = config.encryptionAtHostEnabled;
@@ -1326,6 +1331,22 @@ export class LinuxVirtualMachine extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get customDataInput() {
     return this._customData;
+  }
+
+  // dedicated_host_group_id - computed: false, optional: true, required: false
+  private _dedicatedHostGroupId?: string; 
+  public get dedicatedHostGroupId() {
+    return this.getStringAttribute('dedicated_host_group_id');
+  }
+  public set dedicatedHostGroupId(value: string) {
+    this._dedicatedHostGroupId = value;
+  }
+  public resetDedicatedHostGroupId() {
+    this._dedicatedHostGroupId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dedicatedHostGroupIdInput() {
+    return this._dedicatedHostGroupId;
   }
 
   // dedicated_host_id - computed: false, optional: true, required: false
@@ -1882,6 +1903,7 @@ export class LinuxVirtualMachine extends cdktf.TerraformResource {
       availability_set_id: cdktf.stringToTerraform(this._availabilitySetId),
       computer_name: cdktf.stringToTerraform(this._computerName),
       custom_data: cdktf.stringToTerraform(this._customData),
+      dedicated_host_group_id: cdktf.stringToTerraform(this._dedicatedHostGroupId),
       dedicated_host_id: cdktf.stringToTerraform(this._dedicatedHostId),
       disable_password_authentication: cdktf.booleanToTerraform(this._disablePasswordAuthentication),
       encryption_at_host_enabled: cdktf.booleanToTerraform(this._encryptionAtHostEnabled),
