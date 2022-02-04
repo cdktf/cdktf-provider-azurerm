@@ -2294,6 +2294,10 @@ export interface HdinsightSparkClusterStorageAccount {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_spark_cluster#storage_container_id HdinsightSparkCluster#storage_container_id}
   */
   readonly storageContainerId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_spark_cluster#storage_resource_id HdinsightSparkCluster#storage_resource_id}
+  */
+  readonly storageResourceId?: string;
 }
 
 export function hdinsightSparkClusterStorageAccountToTerraform(struct?: HdinsightSparkClusterStorageAccount | cdktf.IResolvable): any {
@@ -2305,6 +2309,7 @@ export function hdinsightSparkClusterStorageAccountToTerraform(struct?: Hdinsigh
     is_default: cdktf.booleanToTerraform(struct!.isDefault),
     storage_account_key: cdktf.stringToTerraform(struct!.storageAccountKey),
     storage_container_id: cdktf.stringToTerraform(struct!.storageContainerId),
+    storage_resource_id: cdktf.stringToTerraform(struct!.storageResourceId),
   }
 }
 

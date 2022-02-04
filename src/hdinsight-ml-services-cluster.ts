@@ -1165,6 +1165,10 @@ export interface HdinsightMlServicesClusterStorageAccount {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_ml_services_cluster#storage_container_id HdinsightMlServicesCluster#storage_container_id}
   */
   readonly storageContainerId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_ml_services_cluster#storage_resource_id HdinsightMlServicesCluster#storage_resource_id}
+  */
+  readonly storageResourceId?: string;
 }
 
 export function hdinsightMlServicesClusterStorageAccountToTerraform(struct?: HdinsightMlServicesClusterStorageAccount | cdktf.IResolvable): any {
@@ -1176,6 +1180,7 @@ export function hdinsightMlServicesClusterStorageAccountToTerraform(struct?: Hdi
     is_default: cdktf.booleanToTerraform(struct!.isDefault),
     storage_account_key: cdktf.stringToTerraform(struct!.storageAccountKey),
     storage_container_id: cdktf.stringToTerraform(struct!.storageContainerId),
+    storage_resource_id: cdktf.stringToTerraform(struct!.storageResourceId),
   }
 }
 
