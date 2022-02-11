@@ -16,6 +16,10 @@ export interface NetworkWatcherFlowLogConfig extends cdktf.TerraformMetaArgument
   */
   readonly location?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_watcher_flow_log#name NetworkWatcherFlowLog#name}
+  */
+  readonly name?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_watcher_flow_log#network_security_group_id NetworkWatcherFlowLog#network_security_group_id}
   */
   readonly networkSecurityGroupId: string;
@@ -489,6 +493,7 @@ export class NetworkWatcherFlowLog extends cdktf.TerraformResource {
     });
     this._enabled = config.enabled;
     this._location = config.location;
+    this._name = config.name;
     this._networkSecurityGroupId = config.networkSecurityGroupId;
     this._networkWatcherName = config.networkWatcherName;
     this._resourceGroupName = config.resourceGroupName;
@@ -538,9 +543,20 @@ export class NetworkWatcherFlowLog extends cdktf.TerraformResource {
     return this._location;
   }
 
-  // name - computed: true, optional: false, required: false
+  // name - computed: true, optional: true, required: false
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
   }
 
   // network_security_group_id - computed: false, optional: false, required: true
@@ -680,6 +696,7 @@ export class NetworkWatcherFlowLog extends cdktf.TerraformResource {
     return {
       enabled: cdktf.booleanToTerraform(this._enabled),
       location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
       network_security_group_id: cdktf.stringToTerraform(this._networkSecurityGroupId),
       network_watcher_name: cdktf.stringToTerraform(this._networkWatcherName),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),

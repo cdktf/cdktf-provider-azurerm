@@ -34,6 +34,11 @@ export class DataAzurermVirtualMachineScaleSetIdentity extends cdktf.ComplexComp
     return this.getStringAttribute('principal_id');
   }
 
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
+  }
+
   // type - computed: true, optional: false, required: false
   public get type() {
     return this.getStringAttribute('type');

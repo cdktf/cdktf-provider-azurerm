@@ -24,6 +24,10 @@ export interface ApplicationInsightsConfig extends cdktf.TerraformMetaArguments 
   */
   readonly disableIpMasking?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights#force_customer_storage_for_profiler ApplicationInsights#force_customer_storage_for_profiler}
+  */
+  readonly forceCustomerStorageForProfiler?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights#internet_ingestion_enabled ApplicationInsights#internet_ingestion_enabled}
   */
   readonly internetIngestionEnabled?: boolean | cdktf.IResolvable;
@@ -254,6 +258,7 @@ export class ApplicationInsights extends cdktf.TerraformResource {
     this._dailyDataCapInGb = config.dailyDataCapInGb;
     this._dailyDataCapNotificationsDisabled = config.dailyDataCapNotificationsDisabled;
     this._disableIpMasking = config.disableIpMasking;
+    this._forceCustomerStorageForProfiler = config.forceCustomerStorageForProfiler;
     this._internetIngestionEnabled = config.internetIngestionEnabled;
     this._internetQueryEnabled = config.internetQueryEnabled;
     this._localAuthenticationDisabled = config.localAuthenticationDisabled;
@@ -340,6 +345,22 @@ export class ApplicationInsights extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get disableIpMaskingInput() {
     return this._disableIpMasking;
+  }
+
+  // force_customer_storage_for_profiler - computed: false, optional: true, required: false
+  private _forceCustomerStorageForProfiler?: boolean | cdktf.IResolvable; 
+  public get forceCustomerStorageForProfiler() {
+    return this.getBooleanAttribute('force_customer_storage_for_profiler');
+  }
+  public set forceCustomerStorageForProfiler(value: boolean | cdktf.IResolvable) {
+    this._forceCustomerStorageForProfiler = value;
+  }
+  public resetForceCustomerStorageForProfiler() {
+    this._forceCustomerStorageForProfiler = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get forceCustomerStorageForProfilerInput() {
+    return this._forceCustomerStorageForProfiler;
   }
 
   // id - computed: true, optional: true, required: false
@@ -529,6 +550,7 @@ export class ApplicationInsights extends cdktf.TerraformResource {
       daily_data_cap_in_gb: cdktf.numberToTerraform(this._dailyDataCapInGb),
       daily_data_cap_notifications_disabled: cdktf.booleanToTerraform(this._dailyDataCapNotificationsDisabled),
       disable_ip_masking: cdktf.booleanToTerraform(this._disableIpMasking),
+      force_customer_storage_for_profiler: cdktf.booleanToTerraform(this._forceCustomerStorageForProfiler),
       internet_ingestion_enabled: cdktf.booleanToTerraform(this._internetIngestionEnabled),
       internet_query_enabled: cdktf.booleanToTerraform(this._internetQueryEnabled),
       local_authentication_disabled: cdktf.booleanToTerraform(this._localAuthenticationDisabled),

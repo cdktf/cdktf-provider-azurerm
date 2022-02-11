@@ -42,11 +42,6 @@ export class DataAzurermSqlManagedInstanceIdentity extends cdktf.ComplexComputed
   public get type() {
     return this.getStringAttribute('type');
   }
-
-  // user_assigned_identity_id - computed: true, optional: false, required: false
-  public get userAssignedIdentityId() {
-    return this.getStringAttribute('user_assigned_identity_id');
-  }
 }
 export interface DataAzurermSqlManagedInstanceTimeouts {
   /**

@@ -64,7 +64,7 @@ export interface ExpressRoutePortIdentity {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_port#identity_ids ExpressRoutePort#identity_ids}
   */
-  readonly identityIds?: string[];
+  readonly identityIds: string[];
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_port#type ExpressRoutePort#type}
   */
@@ -121,16 +121,13 @@ export class ExpressRoutePortIdentityOutputReference extends cdktf.ComplexObject
     }
   }
 
-  // identity_ids - computed: false, optional: true, required: false
+  // identity_ids - computed: false, optional: false, required: true
   private _identityIds?: string[]; 
   public get identityIds() {
-    return this.getListAttribute('identity_ids');
+    return cdktf.Fn.tolist(this.getListAttribute('identity_ids'));
   }
   public set identityIds(value: string[]) {
     this._identityIds = value;
-  }
-  public resetIdentityIds() {
-    this._identityIds = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get identityIdsInput() {

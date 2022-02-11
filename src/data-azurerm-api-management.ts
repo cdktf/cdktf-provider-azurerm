@@ -24,6 +24,11 @@ export interface DataAzurermApiManagementConfig extends cdktf.TerraformMetaArgum
 }
 export class DataAzurermApiManagementAdditionalLocation extends cdktf.ComplexComputedList {
 
+  // capacity - computed: true, optional: false, required: false
+  public get capacity() {
+    return this.getNumberAttribute('capacity');
+  }
+
   // gateway_regional_url - computed: true, optional: false, required: false
   public get gatewayRegionalUrl() {
     return this.getStringAttribute('gateway_regional_url');
@@ -39,9 +44,19 @@ export class DataAzurermApiManagementAdditionalLocation extends cdktf.ComplexCom
     return this.getListAttribute('private_ip_addresses');
   }
 
+  // public_ip_address_id - computed: true, optional: false, required: false
+  public get publicIpAddressId() {
+    return this.getStringAttribute('public_ip_address_id');
+  }
+
   // public_ip_addresses - computed: true, optional: false, required: false
   public get publicIpAddresses() {
     return this.getListAttribute('public_ip_addresses');
+  }
+
+  // zones - computed: true, optional: false, required: false
+  public get zones() {
+    return this.getListAttribute('zones');
   }
 }
 export class DataAzurermApiManagementHostnameConfigurationDeveloperPortal extends cdktf.ComplexComputedList {
@@ -367,6 +382,11 @@ export class DataAzurermApiManagement extends cdktf.TerraformDataSource {
   // private_ip_addresses - computed: true, optional: false, required: false
   public get privateIpAddresses() {
     return this.getListAttribute('private_ip_addresses');
+  }
+
+  // public_ip_address_id - computed: true, optional: false, required: false
+  public get publicIpAddressId() {
+    return this.getStringAttribute('public_ip_address_id');
   }
 
   // public_ip_addresses - computed: true, optional: false, required: false

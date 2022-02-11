@@ -48,7 +48,7 @@ export interface BlueprintAssignmentConfig extends cdktf.TerraformMetaArguments 
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/blueprint_assignment#identity BlueprintAssignment#identity}
   */
-  readonly identity?: BlueprintAssignmentIdentity;
+  readonly identity: BlueprintAssignmentIdentity;
   /**
   * timeouts block
   * 
@@ -120,7 +120,7 @@ export class BlueprintAssignmentIdentityOutputReference extends cdktf.ComplexObj
   // identity_ids - computed: false, optional: false, required: true
   private _identityIds?: string[]; 
   public get identityIds() {
-    return this.getListAttribute('identity_ids');
+    return cdktf.Fn.tolist(this.getListAttribute('identity_ids'));
   }
   public set identityIds(value: string[]) {
     this._identityIds = value;
@@ -128,16 +128,6 @@ export class BlueprintAssignmentIdentityOutputReference extends cdktf.ComplexObj
   // Temporarily expose input value. Use with caution.
   public get identityIdsInput() {
     return this._identityIds;
-  }
-
-  // principal_id - computed: true, optional: false, required: false
-  public get principalId() {
-    return this.getStringAttribute('principal_id');
-  }
-
-  // tenant_id - computed: true, optional: false, required: false
-  public get tenantId() {
-    return this.getStringAttribute('tenant_id');
   }
 
   // type - computed: false, optional: false, required: true
@@ -507,16 +497,13 @@ export class BlueprintAssignment extends cdktf.TerraformResource {
     return this._versionId;
   }
 
-  // identity - computed: false, optional: true, required: false
+  // identity - computed: false, optional: false, required: true
   private _identity = new BlueprintAssignmentIdentityOutputReference(this, "identity", true);
   public get identity() {
     return this._identity;
   }
   public putIdentity(value: BlueprintAssignmentIdentity) {
     this._identity.internalValue = value;
-  }
-  public resetIdentity() {
-    this._identity.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get identityInput() {

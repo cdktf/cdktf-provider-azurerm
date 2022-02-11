@@ -20,12 +20,6 @@ export interface DataAzurermLogicAppStandardConfig extends cdktf.TerraformMetaAr
   */
   readonly tags?: { [key: string]: string };
   /**
-  * identity block
-  * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/logic_app_standard#identity DataAzurermLogicAppStandard#identity}
-  */
-  readonly identity?: DataAzurermLogicAppStandardIdentity;
-  /**
   * site_config block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/logic_app_standard#site_config DataAzurermLogicAppStandard#site_config}
@@ -55,67 +49,7 @@ export class DataAzurermLogicAppStandardConnectionString extends cdktf.ComplexCo
     return this.getStringAttribute('value');
   }
 }
-export class DataAzurermLogicAppStandardSiteCredential extends cdktf.ComplexComputedList {
-
-  // password - computed: true, optional: false, required: false
-  public get password() {
-    return this.getStringAttribute('password');
-  }
-
-  // username - computed: true, optional: false, required: false
-  public get username() {
-    return this.getStringAttribute('username');
-  }
-}
-export interface DataAzurermLogicAppStandardIdentity {
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/logic_app_standard#type DataAzurermLogicAppStandard#type}
-  */
-  readonly type: string;
-}
-
-export function dataAzurermLogicAppStandardIdentityToTerraform(struct?: DataAzurermLogicAppStandardIdentityOutputReference | DataAzurermLogicAppStandardIdentity): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-    type: cdktf.stringToTerraform(struct!.type),
-  }
-}
-
-export class DataAzurermLogicAppStandardIdentityOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
-  }
-
-  public get internalValue(): DataAzurermLogicAppStandardIdentity | undefined {
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    if (this._type !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.type = this._type;
-    }
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: DataAzurermLogicAppStandardIdentity | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-      this._type = undefined;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-      this._type = value.type;
-    }
-  }
+export class DataAzurermLogicAppStandardIdentity extends cdktf.ComplexComputedList {
 
   // principal_id - computed: true, optional: false, required: false
   public get principalId() {
@@ -127,17 +61,21 @@ export class DataAzurermLogicAppStandardIdentityOutputReference extends cdktf.Co
     return this.getStringAttribute('tenant_id');
   }
 
-  // type - computed: false, optional: false, required: true
-  private _type?: string; 
+  // type - computed: true, optional: false, required: false
   public get type() {
     return this.getStringAttribute('type');
   }
-  public set type(value: string) {
-    this._type = value;
+}
+export class DataAzurermLogicAppStandardSiteCredential extends cdktf.ComplexComputedList {
+
+  // password - computed: true, optional: false, required: false
+  public get password() {
+    return this.getStringAttribute('password');
   }
-  // Temporarily expose input value. Use with caution.
-  public get typeInput() {
-    return this._type;
+
+  // username - computed: true, optional: false, required: false
+  public get username() {
+    return this.getStringAttribute('username');
   }
 }
 export interface DataAzurermLogicAppStandardSiteConfigIpRestrictionHeaders {
@@ -885,7 +823,6 @@ export class DataAzurermLogicAppStandard extends cdktf.TerraformDataSource {
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
-    this._identity.internalValue = config.identity;
     this._siteConfig.internalValue = config.siteConfig;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -947,6 +884,11 @@ export class DataAzurermLogicAppStandard extends cdktf.TerraformDataSource {
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+
+  // identity - computed: true, optional: false, required: false
+  public identity(index: string) {
+    return new DataAzurermLogicAppStandardIdentity(this, 'identity', index, false);
   }
 
   // kind - computed: true, optional: false, required: false
@@ -1041,22 +983,6 @@ export class DataAzurermLogicAppStandard extends cdktf.TerraformDataSource {
     return this.getStringAttribute('version');
   }
 
-  // identity - computed: false, optional: true, required: false
-  private _identity = new DataAzurermLogicAppStandardIdentityOutputReference(this, "identity", true);
-  public get identity() {
-    return this._identity;
-  }
-  public putIdentity(value: DataAzurermLogicAppStandardIdentity) {
-    this._identity.internalValue = value;
-  }
-  public resetIdentity() {
-    this._identity.internalValue = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get identityInput() {
-    return this._identity.internalValue;
-  }
-
   // site_config - computed: false, optional: true, required: false
   private _siteConfig = new DataAzurermLogicAppStandardSiteConfigOutputReference(this, "site_config", true);
   public get siteConfig() {
@@ -1098,7 +1024,6 @@ export class DataAzurermLogicAppStandard extends cdktf.TerraformDataSource {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
-      identity: dataAzurermLogicAppStandardIdentityToTerraform(this._identity.internalValue),
       site_config: dataAzurermLogicAppStandardSiteConfigToTerraform(this._siteConfig.internalValue),
       timeouts: dataAzurermLogicAppStandardTimeoutsToTerraform(this._timeouts.internalValue),
     };
