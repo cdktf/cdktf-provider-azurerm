@@ -492,11 +492,6 @@ export class OrchestratedVirtualMachineScaleSetIdentityOutputReference extends c
     return this._identityIds;
   }
 
-  // principal_id - computed: true, optional: false, required: false
-  public get principalId() {
-    return this.getStringAttribute('principal_id');
-  }
-
   // type - computed: false, optional: false, required: true
   private _type?: string; 
   public get type() {
@@ -1015,6 +1010,10 @@ export interface OrchestratedVirtualMachineScaleSetOsProfileLinuxConfiguration {
   */
   readonly disablePasswordAuthentication?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#patch_mode OrchestratedVirtualMachineScaleSet#patch_mode}
+  */
+  readonly patchMode?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#provision_vm_agent OrchestratedVirtualMachineScaleSet#provision_vm_agent}
   */
   readonly provisionVmAgent?: boolean | cdktf.IResolvable;
@@ -1042,6 +1041,7 @@ export function orchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationToT
     admin_username: cdktf.stringToTerraform(struct!.adminUsername),
     computer_name_prefix: cdktf.stringToTerraform(struct!.computerNamePrefix),
     disable_password_authentication: cdktf.booleanToTerraform(struct!.disablePasswordAuthentication),
+    patch_mode: cdktf.stringToTerraform(struct!.patchMode),
     provision_vm_agent: cdktf.booleanToTerraform(struct!.provisionVmAgent),
     admin_ssh_key: cdktf.listMapper(orchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationAdminSshKeyToTerraform)(struct!.adminSshKey),
     secret: cdktf.listMapper(orchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationSecretToTerraform)(struct!.secret),
@@ -1079,6 +1079,10 @@ export class OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationOutput
       hasAnyValues = true;
       internalValueResult.disablePasswordAuthentication = this._disablePasswordAuthentication;
     }
+    if (this._patchMode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.patchMode = this._patchMode;
+    }
     if (this._provisionVmAgent !== undefined) {
       hasAnyValues = true;
       internalValueResult.provisionVmAgent = this._provisionVmAgent;
@@ -1101,6 +1105,7 @@ export class OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationOutput
       this._adminUsername = undefined;
       this._computerNamePrefix = undefined;
       this._disablePasswordAuthentication = undefined;
+      this._patchMode = undefined;
       this._provisionVmAgent = undefined;
       this._adminSshKey = undefined;
       this._secret = undefined;
@@ -1111,6 +1116,7 @@ export class OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationOutput
       this._adminUsername = value.adminUsername;
       this._computerNamePrefix = value.computerNamePrefix;
       this._disablePasswordAuthentication = value.disablePasswordAuthentication;
+      this._patchMode = value.patchMode;
       this._provisionVmAgent = value.provisionVmAgent;
       this._adminSshKey = value.adminSshKey;
       this._secret = value.secret;
@@ -1176,6 +1182,22 @@ export class OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationOutput
   // Temporarily expose input value. Use with caution.
   public get disablePasswordAuthenticationInput() {
     return this._disablePasswordAuthentication;
+  }
+
+  // patch_mode - computed: false, optional: true, required: false
+  private _patchMode?: string; 
+  public get patchMode() {
+    return this.getStringAttribute('patch_mode');
+  }
+  public set patchMode(value: string) {
+    this._patchMode = value;
+  }
+  public resetPatchMode() {
+    this._patchMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get patchModeInput() {
+    return this._patchMode;
   }
 
   // provision_vm_agent - computed: false, optional: true, required: false
@@ -1314,6 +1336,14 @@ export interface OrchestratedVirtualMachineScaleSetOsProfileWindowsConfiguration
   */
   readonly enableAutomaticUpdates?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#hotpatching_enabled OrchestratedVirtualMachineScaleSet#hotpatching_enabled}
+  */
+  readonly hotpatchingEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#patch_mode OrchestratedVirtualMachineScaleSet#patch_mode}
+  */
+  readonly patchMode?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#provision_vm_agent OrchestratedVirtualMachineScaleSet#provision_vm_agent}
   */
   readonly provisionVmAgent?: boolean | cdktf.IResolvable;
@@ -1345,6 +1375,8 @@ export function orchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationT
     admin_username: cdktf.stringToTerraform(struct!.adminUsername),
     computer_name_prefix: cdktf.stringToTerraform(struct!.computerNamePrefix),
     enable_automatic_updates: cdktf.booleanToTerraform(struct!.enableAutomaticUpdates),
+    hotpatching_enabled: cdktf.booleanToTerraform(struct!.hotpatchingEnabled),
+    patch_mode: cdktf.stringToTerraform(struct!.patchMode),
     provision_vm_agent: cdktf.booleanToTerraform(struct!.provisionVmAgent),
     timezone: cdktf.stringToTerraform(struct!.timezone),
     secret: cdktf.listMapper(orchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationSecretToTerraform)(struct!.secret),
@@ -1383,6 +1415,14 @@ export class OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationOutp
       hasAnyValues = true;
       internalValueResult.enableAutomaticUpdates = this._enableAutomaticUpdates;
     }
+    if (this._hotpatchingEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.hotpatchingEnabled = this._hotpatchingEnabled;
+    }
+    if (this._patchMode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.patchMode = this._patchMode;
+    }
     if (this._provisionVmAgent !== undefined) {
       hasAnyValues = true;
       internalValueResult.provisionVmAgent = this._provisionVmAgent;
@@ -1409,6 +1449,8 @@ export class OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationOutp
       this._adminUsername = undefined;
       this._computerNamePrefix = undefined;
       this._enableAutomaticUpdates = undefined;
+      this._hotpatchingEnabled = undefined;
+      this._patchMode = undefined;
       this._provisionVmAgent = undefined;
       this._timezone = undefined;
       this._secret = undefined;
@@ -1420,6 +1462,8 @@ export class OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationOutp
       this._adminUsername = value.adminUsername;
       this._computerNamePrefix = value.computerNamePrefix;
       this._enableAutomaticUpdates = value.enableAutomaticUpdates;
+      this._hotpatchingEnabled = value.hotpatchingEnabled;
+      this._patchMode = value.patchMode;
       this._provisionVmAgent = value.provisionVmAgent;
       this._timezone = value.timezone;
       this._secret = value.secret;
@@ -1483,6 +1527,38 @@ export class OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationOutp
   // Temporarily expose input value. Use with caution.
   public get enableAutomaticUpdatesInput() {
     return this._enableAutomaticUpdates;
+  }
+
+  // hotpatching_enabled - computed: false, optional: true, required: false
+  private _hotpatchingEnabled?: boolean | cdktf.IResolvable; 
+  public get hotpatchingEnabled() {
+    return this.getBooleanAttribute('hotpatching_enabled');
+  }
+  public set hotpatchingEnabled(value: boolean | cdktf.IResolvable) {
+    this._hotpatchingEnabled = value;
+  }
+  public resetHotpatchingEnabled() {
+    this._hotpatchingEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hotpatchingEnabledInput() {
+    return this._hotpatchingEnabled;
+  }
+
+  // patch_mode - computed: false, optional: true, required: false
+  private _patchMode?: string; 
+  public get patchMode() {
+    return this.getStringAttribute('patch_mode');
+  }
+  public set patchMode(value: string) {
+    this._patchMode = value;
+  }
+  public resetPatchMode() {
+    this._patchMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get patchModeInput() {
+    return this._patchMode;
   }
 
   // provision_vm_agent - computed: false, optional: true, required: false

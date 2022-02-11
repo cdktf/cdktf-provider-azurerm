@@ -774,6 +774,11 @@ export class WindowsVirtualMachineScaleSetIdentityOutputReference extends cdktf.
     return this.getStringAttribute('principal_id');
   }
 
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
+  }
+
   // type - computed: false, optional: false, required: true
   private _type?: string; 
   public get type() {

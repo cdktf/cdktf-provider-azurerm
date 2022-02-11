@@ -36,6 +36,14 @@ export interface ApiManagementConfig extends cdktf.TerraformMetaArguments {
   */
   readonly policy?: ApiManagementPolicy[] | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management#public_ip_address_id ApiManagement#public_ip_address_id}
+  */
+  readonly publicIpAddressId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management#public_network_access_enabled ApiManagement#public_network_access_enabled}
+  */
+  readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management#publisher_email ApiManagement#publisher_email}
   */
   readonly publisherEmail: string;
@@ -217,9 +225,21 @@ export class ApiManagementAdditionalLocationVirtualNetworkConfigurationOutputRef
 }
 export interface ApiManagementAdditionalLocation {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management#capacity ApiManagement#capacity}
+  */
+  readonly capacity?: number;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management#location ApiManagement#location}
   */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management#public_ip_address_id ApiManagement#public_ip_address_id}
+  */
+  readonly publicIpAddressId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management#zones ApiManagement#zones}
+  */
+  readonly zones?: string[];
   /**
   * virtual_network_configuration block
   * 
@@ -234,7 +254,10 @@ export function apiManagementAdditionalLocationToTerraform(struct?: ApiManagemen
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    capacity: cdktf.numberToTerraform(struct!.capacity),
     location: cdktf.stringToTerraform(struct!.location),
+    public_ip_address_id: cdktf.stringToTerraform(struct!.publicIpAddressId),
+    zones: cdktf.listMapper(cdktf.stringToTerraform)(struct!.zones),
     virtual_network_configuration: apiManagementAdditionalLocationVirtualNetworkConfigurationToTerraform(struct!.virtualNetworkConfiguration),
   }
 }
@@ -678,7 +701,7 @@ export interface ApiManagementIdentity {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management#type ApiManagement#type}
   */
-  readonly type?: string;
+  readonly type: string;
 }
 
 export function apiManagementIdentityToTerraform(struct?: ApiManagementIdentityOutputReference | ApiManagementIdentity): any {
@@ -757,16 +780,13 @@ export class ApiManagementIdentityOutputReference extends cdktf.ComplexObject {
     return this.getStringAttribute('tenant_id');
   }
 
-  // type - computed: false, optional: true, required: false
+  // type - computed: false, optional: false, required: true
   private _type?: string; 
   public get type() {
     return this.getStringAttribute('type');
   }
   public set type(value: string) {
     this._type = value;
-  }
-  public resetType() {
-    this._type = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get typeInput() {
@@ -1931,6 +1951,8 @@ export class ApiManagement extends cdktf.TerraformResource {
     this._name = config.name;
     this._notificationSenderEmail = config.notificationSenderEmail;
     this._policy = config.policy;
+    this._publicIpAddressId = config.publicIpAddressId;
+    this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
     this._publisherEmail = config.publisherEmail;
     this._publisherName = config.publisherName;
     this._resourceGroupName = config.resourceGroupName;
@@ -2097,9 +2119,41 @@ export class ApiManagement extends cdktf.TerraformResource {
     return this.getListAttribute('private_ip_addresses');
   }
 
+  // public_ip_address_id - computed: false, optional: true, required: false
+  private _publicIpAddressId?: string; 
+  public get publicIpAddressId() {
+    return this.getStringAttribute('public_ip_address_id');
+  }
+  public set publicIpAddressId(value: string) {
+    this._publicIpAddressId = value;
+  }
+  public resetPublicIpAddressId() {
+    this._publicIpAddressId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicIpAddressIdInput() {
+    return this._publicIpAddressId;
+  }
+
   // public_ip_addresses - computed: true, optional: false, required: false
   public get publicIpAddresses() {
     return this.getListAttribute('public_ip_addresses');
+  }
+
+  // public_network_access_enabled - computed: false, optional: true, required: false
+  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable; 
+  public get publicNetworkAccessEnabled() {
+    return this.getBooleanAttribute('public_network_access_enabled');
+  }
+  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable) {
+    this._publicNetworkAccessEnabled = value;
+  }
+  public resetPublicNetworkAccessEnabled() {
+    this._publicNetworkAccessEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicNetworkAccessEnabledInput() {
+    return this._publicNetworkAccessEnabled;
   }
 
   // publisher_email - computed: false, optional: false, required: true
@@ -2398,6 +2452,8 @@ export class ApiManagement extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       notification_sender_email: cdktf.stringToTerraform(this._notificationSenderEmail),
       policy: cdktf.listMapper(apiManagementPolicyToTerraform)(this._policy),
+      public_ip_address_id: cdktf.stringToTerraform(this._publicIpAddressId),
+      public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       publisher_email: cdktf.stringToTerraform(this._publisherEmail),
       publisher_name: cdktf.stringToTerraform(this._publisherName),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),

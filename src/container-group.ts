@@ -1382,7 +1382,7 @@ export class ContainerGroupIdentityOutputReference extends cdktf.ComplexObject {
   // identity_ids - computed: false, optional: true, required: false
   private _identityIds?: string[]; 
   public get identityIds() {
-    return this.getListAttribute('identity_ids');
+    return cdktf.Fn.tolist(this.getListAttribute('identity_ids'));
   }
   public set identityIds(value: string[]) {
     this._identityIds = value;
@@ -1398,6 +1398,11 @@ export class ContainerGroupIdentityOutputReference extends cdktf.ComplexObject {
   // principal_id - computed: true, optional: false, required: false
   public get principalId() {
     return this.getStringAttribute('principal_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
   }
 
   // type - computed: false, optional: false, required: true

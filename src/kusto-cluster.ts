@@ -12,6 +12,10 @@ export interface KustoClusterConfig extends cdktf.TerraformMetaArguments {
   */
   readonly doubleEncryptionEnabled?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster#enable_auto_stop KustoCluster#enable_auto_stop}
+  */
+  readonly enableAutoStop?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster#enable_disk_encryption KustoCluster#enable_disk_encryption}
   */
   readonly enableDiskEncryption?: boolean | cdktf.IResolvable;
@@ -655,6 +659,7 @@ export class KustoCluster extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._doubleEncryptionEnabled = config.doubleEncryptionEnabled;
+    this._enableAutoStop = config.enableAutoStop;
     this._enableDiskEncryption = config.enableDiskEncryption;
     this._enablePurge = config.enablePurge;
     this._enableStreamingIngest = config.enableStreamingIngest;
@@ -696,6 +701,22 @@ export class KustoCluster extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get doubleEncryptionEnabledInput() {
     return this._doubleEncryptionEnabled;
+  }
+
+  // enable_auto_stop - computed: false, optional: true, required: false
+  private _enableAutoStop?: boolean | cdktf.IResolvable; 
+  public get enableAutoStop() {
+    return this.getBooleanAttribute('enable_auto_stop');
+  }
+  public set enableAutoStop(value: boolean | cdktf.IResolvable) {
+    this._enableAutoStop = value;
+  }
+  public resetEnableAutoStop() {
+    this._enableAutoStop = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableAutoStopInput() {
+    return this._enableAutoStop;
   }
 
   // enable_disk_encryption - computed: false, optional: true, required: false
@@ -959,6 +980,7 @@ export class KustoCluster extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       double_encryption_enabled: cdktf.booleanToTerraform(this._doubleEncryptionEnabled),
+      enable_auto_stop: cdktf.booleanToTerraform(this._enableAutoStop),
       enable_disk_encryption: cdktf.booleanToTerraform(this._enableDiskEncryption),
       enable_purge: cdktf.booleanToTerraform(this._enablePurge),
       enable_streaming_ingest: cdktf.booleanToTerraform(this._enableStreamingIngest),

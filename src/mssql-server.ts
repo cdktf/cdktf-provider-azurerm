@@ -62,6 +62,12 @@ export interface MssqlServerConfig extends cdktf.TerraformMetaArguments {
   */
   readonly azureadAdministrator?: MssqlServerAzureadAdministrator;
   /**
+  * foo block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server#foo MssqlServer#foo}
+  */
+  readonly foo?: MssqlServerFoo;
+  /**
   * identity block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server#identity MssqlServer#identity}
@@ -255,6 +261,106 @@ export class MssqlServerAzureadAdministratorOutputReference extends cdktf.Comple
   // Temporarily expose input value. Use with caution.
   public get tenantIdInput() {
     return this._tenantId;
+  }
+}
+export interface MssqlServerFoo {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server#identity_ids MssqlServer#identity_ids}
+  */
+  readonly identityIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server#type MssqlServer#type}
+  */
+  readonly type: string;
+}
+
+export function mssqlServerFooToTerraform(struct?: MssqlServerFooOutputReference | MssqlServerFoo): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
+export class MssqlServerFooOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  public get internalValue(): MssqlServerFoo | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._identityIds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.identityIds = this._identityIds;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MssqlServerFoo | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._identityIds = undefined;
+      this._type = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._identityIds = value.identityIds;
+      this._type = value.type;
+    }
+  }
+
+  // identity_ids - computed: false, optional: true, required: false
+  private _identityIds?: string[]; 
+  public get identityIds() {
+    return cdktf.Fn.tolist(this.getListAttribute('identity_ids'));
+  }
+  public set identityIds(value: string[]) {
+    this._identityIds = value;
+  }
+  public resetIdentityIds() {
+    this._identityIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityIdsInput() {
+    return this._identityIds;
+  }
+
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
   }
 }
 export interface MssqlServerIdentity {
@@ -550,6 +656,7 @@ export class MssqlServer extends cdktf.TerraformResource {
     this._tags = config.tags;
     this._version = config.version;
     this._azureadAdministrator.internalValue = config.azureadAdministrator;
+    this._foo.internalValue = config.foo;
     this._identity.internalValue = config.identity;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -764,6 +871,22 @@ export class MssqlServer extends cdktf.TerraformResource {
     return this._azureadAdministrator.internalValue;
   }
 
+  // foo - computed: false, optional: true, required: false
+  private _foo = new MssqlServerFooOutputReference(this, "foo", true);
+  public get foo() {
+    return this._foo;
+  }
+  public putFoo(value: MssqlServerFoo) {
+    this._foo.internalValue = value;
+  }
+  public resetFoo() {
+    this._foo.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fooInput() {
+    return this._foo.internalValue;
+  }
+
   // identity - computed: false, optional: true, required: false
   private _identity = new MssqlServerIdentityOutputReference(this, "identity", true);
   public get identity() {
@@ -815,6 +938,7 @@ export class MssqlServer extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       version: cdktf.stringToTerraform(this._version),
       azuread_administrator: mssqlServerAzureadAdministratorToTerraform(this._azureadAdministrator.internalValue),
+      foo: mssqlServerFooToTerraform(this._foo.internalValue),
       identity: mssqlServerIdentityToTerraform(this._identity.internalValue),
       timeouts: mssqlServerTimeoutsToTerraform(this._timeouts.internalValue),
     };

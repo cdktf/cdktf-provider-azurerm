@@ -56,6 +56,10 @@ export interface WindowsVirtualMachineConfig extends cdktf.TerraformMetaArgument
   */
   readonly extensionsTimeBudget?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine#hotpatching_enabled WindowsVirtualMachine#hotpatching_enabled}
+  */
+  readonly hotpatchingEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine#license_type WindowsVirtualMachine#license_type}
   */
   readonly licenseType?: string;
@@ -1243,6 +1247,7 @@ export class WindowsVirtualMachine extends cdktf.TerraformResource {
     this._encryptionAtHostEnabled = config.encryptionAtHostEnabled;
     this._evictionPolicy = config.evictionPolicy;
     this._extensionsTimeBudget = config.extensionsTimeBudget;
+    this._hotpatchingEnabled = config.hotpatchingEnabled;
     this._licenseType = config.licenseType;
     this._location = config.location;
     this._maxBidPrice = config.maxBidPrice;
@@ -1463,6 +1468,22 @@ export class WindowsVirtualMachine extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get extensionsTimeBudgetInput() {
     return this._extensionsTimeBudget;
+  }
+
+  // hotpatching_enabled - computed: false, optional: true, required: false
+  private _hotpatchingEnabled?: boolean | cdktf.IResolvable; 
+  public get hotpatchingEnabled() {
+    return this.getBooleanAttribute('hotpatching_enabled');
+  }
+  public set hotpatchingEnabled(value: boolean | cdktf.IResolvable) {
+    this._hotpatchingEnabled = value;
+  }
+  public resetHotpatchingEnabled() {
+    this._hotpatchingEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hotpatchingEnabledInput() {
+    return this._hotpatchingEnabled;
   }
 
   // id - computed: true, optional: true, required: false
@@ -1978,6 +1999,7 @@ export class WindowsVirtualMachine extends cdktf.TerraformResource {
       encryption_at_host_enabled: cdktf.booleanToTerraform(this._encryptionAtHostEnabled),
       eviction_policy: cdktf.stringToTerraform(this._evictionPolicy),
       extensions_time_budget: cdktf.stringToTerraform(this._extensionsTimeBudget),
+      hotpatching_enabled: cdktf.booleanToTerraform(this._hotpatchingEnabled),
       license_type: cdktf.stringToTerraform(this._licenseType),
       location: cdktf.stringToTerraform(this._location),
       max_bid_price: cdktf.numberToTerraform(this._maxBidPrice),
