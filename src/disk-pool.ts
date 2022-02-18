@@ -325,7 +325,7 @@ export class DiskPool extends cdktf.TerraformResource {
   // zones - computed: false, optional: false, required: true
   private _zones?: string[]; 
   public get zones() {
-    return this.getListAttribute('zones');
+    return cdktf.Fn.tolist(this.getListAttribute('zones'));
   }
   public set zones(value: string[]) {
     this._zones = value;

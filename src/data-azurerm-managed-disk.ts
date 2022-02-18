@@ -16,10 +16,6 @@ export interface DataAzurermManagedDiskConfig extends cdktf.TerraformMetaArgumen
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/managed_disk#tags DataAzurermManagedDisk#tags}
-  */
-  readonly tags?: { [key: string]: string };
-  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/managed_disk#timeouts DataAzurermManagedDisk#timeouts}
@@ -127,7 +123,6 @@ export class DataAzurermManagedDisk extends cdktf.TerraformDataSource {
     });
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
-    this._tags = config.tags;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -221,20 +216,9 @@ export class DataAzurermManagedDisk extends cdktf.TerraformDataSource {
     return this.getStringAttribute('storage_account_type');
   }
 
-  // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string }; 
-  public get tags() {
-    return this.getStringMapAttribute('tags');
-  }
-  public set tags(value: { [key: string]: string }) {
-    this._tags = value;
-  }
-  public resetTags() {
-    this._tags = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get tagsInput() {
-    return this._tags;
+  // tags - computed: true, optional: false, required: false
+  public tags(key: string): string | cdktf.IResolvable {
+    return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // zones - computed: true, optional: false, required: false
@@ -266,7 +250,6 @@ export class DataAzurermManagedDisk extends cdktf.TerraformDataSource {
     return {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       timeouts: dataAzurermManagedDiskTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

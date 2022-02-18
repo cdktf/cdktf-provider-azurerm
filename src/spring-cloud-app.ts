@@ -32,6 +32,12 @@ export interface SpringCloudAppConfig extends cdktf.TerraformMetaArguments {
   */
   readonly tlsEnabled?: boolean | cdktf.IResolvable;
   /**
+  * custom_persistent_disk block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app#custom_persistent_disk SpringCloudApp#custom_persistent_disk}
+  */
+  readonly customPersistentDisk?: SpringCloudAppCustomPersistentDisk[] | cdktf.IResolvable;
+  /**
   * identity block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app#identity SpringCloudApp#identity}
@@ -50,6 +56,43 @@ export interface SpringCloudAppConfig extends cdktf.TerraformMetaArguments {
   */
   readonly timeouts?: SpringCloudAppTimeouts;
 }
+export interface SpringCloudAppCustomPersistentDisk {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app#mount_options SpringCloudApp#mount_options}
+  */
+  readonly mountOptions?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app#mount_path SpringCloudApp#mount_path}
+  */
+  readonly mountPath: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app#read_only_enabled SpringCloudApp#read_only_enabled}
+  */
+  readonly readOnlyEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app#share_name SpringCloudApp#share_name}
+  */
+  readonly shareName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app#storage_name SpringCloudApp#storage_name}
+  */
+  readonly storageName: string;
+}
+
+export function springCloudAppCustomPersistentDiskToTerraform(struct?: SpringCloudAppCustomPersistentDisk | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    mount_options: cdktf.listMapper(cdktf.stringToTerraform)(struct!.mountOptions),
+    mount_path: cdktf.stringToTerraform(struct!.mountPath),
+    read_only_enabled: cdktf.booleanToTerraform(struct!.readOnlyEnabled),
+    share_name: cdktf.stringToTerraform(struct!.shareName),
+    storage_name: cdktf.stringToTerraform(struct!.storageName),
+  }
+}
+
 export interface SpringCloudAppIdentity {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app#type SpringCloudApp#type}
@@ -399,6 +442,7 @@ export class SpringCloudApp extends cdktf.TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._serviceName = config.serviceName;
     this._tlsEnabled = config.tlsEnabled;
+    this._customPersistentDisk = config.customPersistentDisk;
     this._identity.internalValue = config.identity;
     this._persistentDisk.internalValue = config.persistentDisk;
     this._timeouts.internalValue = config.timeouts;
@@ -510,6 +554,23 @@ export class SpringCloudApp extends cdktf.TerraformResource {
     return this.getStringAttribute('url');
   }
 
+  // custom_persistent_disk - computed: false, optional: true, required: false
+  private _customPersistentDisk?: SpringCloudAppCustomPersistentDisk[] | cdktf.IResolvable; 
+  public get customPersistentDisk() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('custom_persistent_disk');
+  }
+  public set customPersistentDisk(value: SpringCloudAppCustomPersistentDisk[] | cdktf.IResolvable) {
+    this._customPersistentDisk = value;
+  }
+  public resetCustomPersistentDisk() {
+    this._customPersistentDisk = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customPersistentDiskInput() {
+    return this._customPersistentDisk;
+  }
+
   // identity - computed: false, optional: true, required: false
   private _identity = new SpringCloudAppIdentityOutputReference(this, "identity", true);
   public get identity() {
@@ -570,6 +631,7 @@ export class SpringCloudApp extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       service_name: cdktf.stringToTerraform(this._serviceName),
       tls_enabled: cdktf.booleanToTerraform(this._tlsEnabled),
+      custom_persistent_disk: cdktf.listMapper(springCloudAppCustomPersistentDiskToTerraform)(this._customPersistentDisk),
       identity: springCloudAppIdentityToTerraform(this._identity.internalValue),
       persistent_disk: springCloudAppPersistentDiskToTerraform(this._persistentDisk.internalValue),
       timeouts: springCloudAppTimeoutsToTerraform(this._timeouts.internalValue),

@@ -338,6 +338,14 @@ export interface OrchestratedVirtualMachineScaleSetDataDisk {
   */
   readonly storageAccountType: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#ultra_ssd_disk_iops_read_write OrchestratedVirtualMachineScaleSet#ultra_ssd_disk_iops_read_write}
+  */
+  readonly ultraSsdDiskIopsReadWrite?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#ultra_ssd_disk_mbps_read_write OrchestratedVirtualMachineScaleSet#ultra_ssd_disk_mbps_read_write}
+  */
+  readonly ultraSsdDiskMbpsReadWrite?: number;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#write_accelerator_enabled OrchestratedVirtualMachineScaleSet#write_accelerator_enabled}
   */
   readonly writeAcceleratorEnabled?: boolean | cdktf.IResolvable;
@@ -357,6 +365,8 @@ export function orchestratedVirtualMachineScaleSetDataDiskToTerraform(struct?: O
     disk_size_gb: cdktf.numberToTerraform(struct!.diskSizeGb),
     lun: cdktf.numberToTerraform(struct!.lun),
     storage_account_type: cdktf.stringToTerraform(struct!.storageAccountType),
+    ultra_ssd_disk_iops_read_write: cdktf.numberToTerraform(struct!.ultraSsdDiskIopsReadWrite),
+    ultra_ssd_disk_mbps_read_write: cdktf.numberToTerraform(struct!.ultraSsdDiskMbpsReadWrite),
     write_accelerator_enabled: cdktf.booleanToTerraform(struct!.writeAcceleratorEnabled),
   }
 }

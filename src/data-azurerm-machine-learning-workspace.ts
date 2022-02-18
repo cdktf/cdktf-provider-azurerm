@@ -24,6 +24,11 @@ export interface DataAzurermMachineLearningWorkspaceConfig extends cdktf.Terrafo
 }
 export class DataAzurermMachineLearningWorkspaceIdentity extends cdktf.ComplexComputedList {
 
+  // identity_ids - computed: true, optional: false, required: false
+  public get identityIds() {
+    return this.getListAttribute('identity_ids');
+  }
+
   // principal_id - computed: true, optional: false, required: false
   public get principalId() {
     return this.getStringAttribute('principal_id');

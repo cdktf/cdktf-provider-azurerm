@@ -8,6 +8,14 @@ import * as cdktf from 'cdktf';
 
 export interface KustoClusterConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster#auto_stop_enabled KustoCluster#auto_stop_enabled}
+  */
+  readonly autoStopEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster#disk_encryption_enabled KustoCluster#disk_encryption_enabled}
+  */
+  readonly diskEncryptionEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster#double_encryption_enabled KustoCluster#double_encryption_enabled}
   */
   readonly doubleEncryptionEnabled?: boolean | cdktf.IResolvable;
@@ -44,9 +52,21 @@ export interface KustoClusterConfig extends cdktf.TerraformMetaArguments {
   */
   readonly name: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster#public_network_access_enabled KustoCluster#public_network_access_enabled}
+  */
+  readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster#purge_enabled KustoCluster#purge_enabled}
+  */
+  readonly purgeEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster#resource_group_name KustoCluster#resource_group_name}
   */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster#streaming_ingestion_enabled KustoCluster#streaming_ingestion_enabled}
+  */
+  readonly streamingIngestionEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster#tags KustoCluster#tags}
   */
@@ -658,6 +678,8 @@ export class KustoCluster extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._autoStopEnabled = config.autoStopEnabled;
+    this._diskEncryptionEnabled = config.diskEncryptionEnabled;
     this._doubleEncryptionEnabled = config.doubleEncryptionEnabled;
     this._enableAutoStop = config.enableAutoStop;
     this._enableDiskEncryption = config.enableDiskEncryption;
@@ -667,7 +689,10 @@ export class KustoCluster extends cdktf.TerraformResource {
     this._languageExtensions = config.languageExtensions;
     this._location = config.location;
     this._name = config.name;
+    this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
+    this._purgeEnabled = config.purgeEnabled;
     this._resourceGroupName = config.resourceGroupName;
+    this._streamingIngestionEnabled = config.streamingIngestionEnabled;
     this._tags = config.tags;
     this._trustedExternalTenants = config.trustedExternalTenants;
     this._zones = config.zones;
@@ -682,9 +707,41 @@ export class KustoCluster extends cdktf.TerraformResource {
   // ATTRIBUTES
   // ==========
 
+  // auto_stop_enabled - computed: true, optional: true, required: false
+  private _autoStopEnabled?: boolean | cdktf.IResolvable; 
+  public get autoStopEnabled() {
+    return this.getBooleanAttribute('auto_stop_enabled');
+  }
+  public set autoStopEnabled(value: boolean | cdktf.IResolvable) {
+    this._autoStopEnabled = value;
+  }
+  public resetAutoStopEnabled() {
+    this._autoStopEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get autoStopEnabledInput() {
+    return this._autoStopEnabled;
+  }
+
   // data_ingestion_uri - computed: true, optional: false, required: false
   public get dataIngestionUri() {
     return this.getStringAttribute('data_ingestion_uri');
+  }
+
+  // disk_encryption_enabled - computed: true, optional: true, required: false
+  private _diskEncryptionEnabled?: boolean | cdktf.IResolvable; 
+  public get diskEncryptionEnabled() {
+    return this.getBooleanAttribute('disk_encryption_enabled');
+  }
+  public set diskEncryptionEnabled(value: boolean | cdktf.IResolvable) {
+    this._diskEncryptionEnabled = value;
+  }
+  public resetDiskEncryptionEnabled() {
+    this._diskEncryptionEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get diskEncryptionEnabledInput() {
+    return this._diskEncryptionEnabled;
   }
 
   // double_encryption_enabled - computed: false, optional: true, required: false
@@ -703,7 +760,7 @@ export class KustoCluster extends cdktf.TerraformResource {
     return this._doubleEncryptionEnabled;
   }
 
-  // enable_auto_stop - computed: false, optional: true, required: false
+  // enable_auto_stop - computed: true, optional: true, required: false
   private _enableAutoStop?: boolean | cdktf.IResolvable; 
   public get enableAutoStop() {
     return this.getBooleanAttribute('enable_auto_stop');
@@ -719,7 +776,7 @@ export class KustoCluster extends cdktf.TerraformResource {
     return this._enableAutoStop;
   }
 
-  // enable_disk_encryption - computed: false, optional: true, required: false
+  // enable_disk_encryption - computed: true, optional: true, required: false
   private _enableDiskEncryption?: boolean | cdktf.IResolvable; 
   public get enableDiskEncryption() {
     return this.getBooleanAttribute('enable_disk_encryption');
@@ -735,7 +792,7 @@ export class KustoCluster extends cdktf.TerraformResource {
     return this._enableDiskEncryption;
   }
 
-  // enable_purge - computed: false, optional: true, required: false
+  // enable_purge - computed: true, optional: true, required: false
   private _enablePurge?: boolean | cdktf.IResolvable; 
   public get enablePurge() {
     return this.getBooleanAttribute('enable_purge');
@@ -751,7 +808,7 @@ export class KustoCluster extends cdktf.TerraformResource {
     return this._enablePurge;
   }
 
-  // enable_streaming_ingest - computed: false, optional: true, required: false
+  // enable_streaming_ingest - computed: true, optional: true, required: false
   private _enableStreamingIngest?: boolean | cdktf.IResolvable; 
   public get enableStreamingIngest() {
     return this.getBooleanAttribute('enable_streaming_ingest');
@@ -830,6 +887,38 @@ export class KustoCluster extends cdktf.TerraformResource {
     return this._name;
   }
 
+  // public_network_access_enabled - computed: false, optional: true, required: false
+  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable; 
+  public get publicNetworkAccessEnabled() {
+    return this.getBooleanAttribute('public_network_access_enabled');
+  }
+  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable) {
+    this._publicNetworkAccessEnabled = value;
+  }
+  public resetPublicNetworkAccessEnabled() {
+    this._publicNetworkAccessEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicNetworkAccessEnabledInput() {
+    return this._publicNetworkAccessEnabled;
+  }
+
+  // purge_enabled - computed: true, optional: true, required: false
+  private _purgeEnabled?: boolean | cdktf.IResolvable; 
+  public get purgeEnabled() {
+    return this.getBooleanAttribute('purge_enabled');
+  }
+  public set purgeEnabled(value: boolean | cdktf.IResolvable) {
+    this._purgeEnabled = value;
+  }
+  public resetPurgeEnabled() {
+    this._purgeEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get purgeEnabledInput() {
+    return this._purgeEnabled;
+  }
+
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName?: string; 
   public get resourceGroupName() {
@@ -841,6 +930,22 @@ export class KustoCluster extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
     return this._resourceGroupName;
+  }
+
+  // streaming_ingestion_enabled - computed: true, optional: true, required: false
+  private _streamingIngestionEnabled?: boolean | cdktf.IResolvable; 
+  public get streamingIngestionEnabled() {
+    return this.getBooleanAttribute('streaming_ingestion_enabled');
+  }
+  public set streamingIngestionEnabled(value: boolean | cdktf.IResolvable) {
+    this._streamingIngestionEnabled = value;
+  }
+  public resetStreamingIngestionEnabled() {
+    this._streamingIngestionEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get streamingIngestionEnabledInput() {
+    return this._streamingIngestionEnabled;
   }
 
   // tags - computed: false, optional: true, required: false
@@ -979,6 +1084,8 @@ export class KustoCluster extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      auto_stop_enabled: cdktf.booleanToTerraform(this._autoStopEnabled),
+      disk_encryption_enabled: cdktf.booleanToTerraform(this._diskEncryptionEnabled),
       double_encryption_enabled: cdktf.booleanToTerraform(this._doubleEncryptionEnabled),
       enable_auto_stop: cdktf.booleanToTerraform(this._enableAutoStop),
       enable_disk_encryption: cdktf.booleanToTerraform(this._enableDiskEncryption),
@@ -988,7 +1095,10 @@ export class KustoCluster extends cdktf.TerraformResource {
       language_extensions: cdktf.listMapper(cdktf.stringToTerraform)(this._languageExtensions),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
+      public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
+      purge_enabled: cdktf.booleanToTerraform(this._purgeEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      streaming_ingestion_enabled: cdktf.booleanToTerraform(this._streamingIngestionEnabled),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       trusted_external_tenants: cdktf.listMapper(cdktf.stringToTerraform)(this._trustedExternalTenants),
       zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),

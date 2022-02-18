@@ -301,6 +301,11 @@ export class DataAzurermKubernetesClusterNodePool extends cdktf.TerraformDataSou
     return this.getStringAttribute('vnet_subnet_id');
   }
 
+  // zones - computed: true, optional: false, required: false
+  public get zones() {
+    return this.getListAttribute('zones');
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new DataAzurermKubernetesClusterNodePoolTimeoutsOutputReference(this, "timeouts", true);
   public get timeouts() {

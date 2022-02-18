@@ -179,7 +179,7 @@ export interface WebApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroup
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy#disabled_rules WebApplicationFirewallPolicy#disabled_rules}
   */
-  readonly disabledRules: string[];
+  readonly disabledRules?: string[];
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy#rule_group_name WebApplicationFirewallPolicy#rule_group_name}
   */

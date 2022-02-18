@@ -82,7 +82,7 @@ export interface VirtualDesktopHostPoolRegistrationInfo {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool#expiration_date VirtualDesktopHostPool#expiration_date}
   */
-  readonly expirationDate: string;
+  readonly expirationDate?: string;
 }
 
 export function virtualDesktopHostPoolRegistrationInfoToTerraform(struct?: VirtualDesktopHostPoolRegistrationInfoOutputReference | VirtualDesktopHostPoolRegistrationInfo): any {
@@ -128,13 +128,16 @@ export class VirtualDesktopHostPoolRegistrationInfoOutputReference extends cdktf
     }
   }
 
-  // expiration_date - computed: false, optional: false, required: true
+  // expiration_date - computed: false, optional: true, required: false
   private _expirationDate?: string; 
   public get expirationDate() {
     return this.getStringAttribute('expiration_date');
   }
   public set expirationDate(value: string) {
     this._expirationDate = value;
+  }
+  public resetExpirationDate() {
+    this._expirationDate = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get expirationDateInput() {

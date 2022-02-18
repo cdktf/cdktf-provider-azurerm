@@ -98,6 +98,12 @@ export interface StorageAccountConfig extends cdktf.TerraformMetaArguments {
   */
   readonly customDomain?: StorageAccountCustomDomain;
   /**
+  * customer_managed_key block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account#customer_managed_key StorageAccount#customer_managed_key}
+  */
+  readonly customerManagedKey?: StorageAccountCustomerManagedKey;
+  /**
   * identity block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account#identity StorageAccount#identity}
@@ -907,6 +913,93 @@ export class StorageAccountCustomDomainOutputReference extends cdktf.ComplexObje
   // Temporarily expose input value. Use with caution.
   public get useSubdomainInput() {
     return this._useSubdomain;
+  }
+}
+export interface StorageAccountCustomerManagedKey {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account#key_vault_key_id StorageAccount#key_vault_key_id}
+  */
+  readonly keyVaultKeyId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account#user_assigned_identity_id StorageAccount#user_assigned_identity_id}
+  */
+  readonly userAssignedIdentityId: string;
+}
+
+export function storageAccountCustomerManagedKeyToTerraform(struct?: StorageAccountCustomerManagedKeyOutputReference | StorageAccountCustomerManagedKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    key_vault_key_id: cdktf.stringToTerraform(struct!.keyVaultKeyId),
+    user_assigned_identity_id: cdktf.stringToTerraform(struct!.userAssignedIdentityId),
+  }
+}
+
+export class StorageAccountCustomerManagedKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  public get internalValue(): StorageAccountCustomerManagedKey | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._keyVaultKeyId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keyVaultKeyId = this._keyVaultKeyId;
+    }
+    if (this._userAssignedIdentityId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.userAssignedIdentityId = this._userAssignedIdentityId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageAccountCustomerManagedKey | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._keyVaultKeyId = undefined;
+      this._userAssignedIdentityId = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._keyVaultKeyId = value.keyVaultKeyId;
+      this._userAssignedIdentityId = value.userAssignedIdentityId;
+    }
+  }
+
+  // key_vault_key_id - computed: false, optional: false, required: true
+  private _keyVaultKeyId?: string; 
+  public get keyVaultKeyId() {
+    return this.getStringAttribute('key_vault_key_id');
+  }
+  public set keyVaultKeyId(value: string) {
+    this._keyVaultKeyId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultKeyIdInput() {
+    return this._keyVaultKeyId;
+  }
+
+  // user_assigned_identity_id - computed: false, optional: false, required: true
+  private _userAssignedIdentityId?: string; 
+  public get userAssignedIdentityId() {
+    return this.getStringAttribute('user_assigned_identity_id');
+  }
+  public set userAssignedIdentityId(value: string) {
+    this._userAssignedIdentityId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userAssignedIdentityIdInput() {
+    return this._userAssignedIdentityId;
   }
 }
 export interface StorageAccountIdentity {
@@ -2633,6 +2726,7 @@ export class StorageAccount extends cdktf.TerraformResource {
     this._azureFilesAuthentication.internalValue = config.azureFilesAuthentication;
     this._blobProperties.internalValue = config.blobProperties;
     this._customDomain.internalValue = config.customDomain;
+    this._customerManagedKey.internalValue = config.customerManagedKey;
     this._identity.internalValue = config.identity;
     this._networkRules.internalValue = config.networkRules;
     this._queueProperties.internalValue = config.queueProperties;
@@ -3132,6 +3226,22 @@ export class StorageAccount extends cdktf.TerraformResource {
     return this._customDomain.internalValue;
   }
 
+  // customer_managed_key - computed: false, optional: true, required: false
+  private _customerManagedKey = new StorageAccountCustomerManagedKeyOutputReference(this, "customer_managed_key", true);
+  public get customerManagedKey() {
+    return this._customerManagedKey;
+  }
+  public putCustomerManagedKey(value: StorageAccountCustomerManagedKey) {
+    this._customerManagedKey.internalValue = value;
+  }
+  public resetCustomerManagedKey() {
+    this._customerManagedKey.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customerManagedKeyInput() {
+    return this._customerManagedKey.internalValue;
+  }
+
   // identity - computed: false, optional: true, required: false
   private _identity = new StorageAccountIdentityOutputReference(this, "identity", true);
   public get identity() {
@@ -3271,6 +3381,7 @@ export class StorageAccount extends cdktf.TerraformResource {
       azure_files_authentication: storageAccountAzureFilesAuthenticationToTerraform(this._azureFilesAuthentication.internalValue),
       blob_properties: storageAccountBlobPropertiesToTerraform(this._blobProperties.internalValue),
       custom_domain: storageAccountCustomDomainToTerraform(this._customDomain.internalValue),
+      customer_managed_key: storageAccountCustomerManagedKeyToTerraform(this._customerManagedKey.internalValue),
       identity: storageAccountIdentityToTerraform(this._identity.internalValue),
       network_rules: storageAccountNetworkRulesToTerraform(this._networkRules.internalValue),
       queue_properties: storageAccountQueuePropertiesToTerraform(this._queueProperties.internalValue),

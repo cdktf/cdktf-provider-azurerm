@@ -6,49 +6,49 @@ import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface StorageAccountCustomerManagedKeyConfig extends cdktf.TerraformMetaArguments {
+export interface StorageAccountCustomerManagedKeyAConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_customer_managed_key#key_name StorageAccountCustomerManagedKey#key_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_customer_managed_key#key_name StorageAccountCustomerManagedKeyA#key_name}
   */
   readonly keyName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_customer_managed_key#key_vault_id StorageAccountCustomerManagedKey#key_vault_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_customer_managed_key#key_vault_id StorageAccountCustomerManagedKeyA#key_vault_id}
   */
   readonly keyVaultId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_customer_managed_key#key_version StorageAccountCustomerManagedKey#key_version}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_customer_managed_key#key_version StorageAccountCustomerManagedKeyA#key_version}
   */
   readonly keyVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_customer_managed_key#storage_account_id StorageAccountCustomerManagedKey#storage_account_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_customer_managed_key#storage_account_id StorageAccountCustomerManagedKeyA#storage_account_id}
   */
   readonly storageAccountId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_customer_managed_key#user_assigned_identity_id StorageAccountCustomerManagedKey#user_assigned_identity_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_customer_managed_key#user_assigned_identity_id StorageAccountCustomerManagedKeyA#user_assigned_identity_id}
   */
   readonly userAssignedIdentityId?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_customer_managed_key#timeouts StorageAccountCustomerManagedKey#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_customer_managed_key#timeouts StorageAccountCustomerManagedKeyA#timeouts}
   */
   readonly timeouts?: StorageAccountCustomerManagedKeyTimeouts;
 }
 export interface StorageAccountCustomerManagedKeyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_customer_managed_key#create StorageAccountCustomerManagedKey#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_customer_managed_key#create StorageAccountCustomerManagedKeyA#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_customer_managed_key#delete StorageAccountCustomerManagedKey#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_customer_managed_key#delete StorageAccountCustomerManagedKeyA#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_customer_managed_key#read StorageAccountCustomerManagedKey#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_customer_managed_key#read StorageAccountCustomerManagedKeyA#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_customer_managed_key#update StorageAccountCustomerManagedKey#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_customer_managed_key#update StorageAccountCustomerManagedKeyA#update}
   */
   readonly update?: string;
 }
@@ -185,7 +185,7 @@ export class StorageAccountCustomerManagedKeyTimeoutsOutputReference extends cdk
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_customer_managed_key azurerm_storage_account_customer_managed_key}
 */
-export class StorageAccountCustomerManagedKey extends cdktf.TerraformResource {
+export class StorageAccountCustomerManagedKeyA extends cdktf.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -201,9 +201,9 @@ export class StorageAccountCustomerManagedKey extends cdktf.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options StorageAccountCustomerManagedKeyConfig
+  * @param options StorageAccountCustomerManagedKeyAConfig
   */
-  public constructor(scope: Construct, id: string, config: StorageAccountCustomerManagedKeyConfig) {
+  public constructor(scope: Construct, id: string, config: StorageAccountCustomerManagedKeyAConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_storage_account_customer_managed_key',
       terraformGeneratorMetadata: {

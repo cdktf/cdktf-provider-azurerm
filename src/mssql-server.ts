@@ -36,6 +36,10 @@ export interface MssqlServerConfig extends cdktf.TerraformMetaArguments {
   */
   readonly name: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server#outbound_network_restriction_enabled MssqlServer#outbound_network_restriction_enabled}
+  */
+  readonly outboundNetworkRestrictionEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server#primary_user_assigned_identity_id MssqlServer#primary_user_assigned_identity_id}
   */
   readonly primaryUserAssignedIdentityId?: string;
@@ -650,6 +654,7 @@ export class MssqlServer extends cdktf.TerraformResource {
     this._location = config.location;
     this._minimumTlsVersion = config.minimumTlsVersion;
     this._name = config.name;
+    this._outboundNetworkRestrictionEnabled = config.outboundNetworkRestrictionEnabled;
     this._primaryUserAssignedIdentityId = config.primaryUserAssignedIdentityId;
     this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
     this._resourceGroupName = config.resourceGroupName;
@@ -774,6 +779,22 @@ export class MssqlServer extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name;
+  }
+
+  // outbound_network_restriction_enabled - computed: false, optional: true, required: false
+  private _outboundNetworkRestrictionEnabled?: boolean | cdktf.IResolvable; 
+  public get outboundNetworkRestrictionEnabled() {
+    return this.getBooleanAttribute('outbound_network_restriction_enabled');
+  }
+  public set outboundNetworkRestrictionEnabled(value: boolean | cdktf.IResolvable) {
+    this._outboundNetworkRestrictionEnabled = value;
+  }
+  public resetOutboundNetworkRestrictionEnabled() {
+    this._outboundNetworkRestrictionEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get outboundNetworkRestrictionEnabledInput() {
+    return this._outboundNetworkRestrictionEnabled;
   }
 
   // primary_user_assigned_identity_id - computed: true, optional: true, required: false
@@ -932,6 +953,7 @@ export class MssqlServer extends cdktf.TerraformResource {
       location: cdktf.stringToTerraform(this._location),
       minimum_tls_version: cdktf.stringToTerraform(this._minimumTlsVersion),
       name: cdktf.stringToTerraform(this._name),
+      outbound_network_restriction_enabled: cdktf.booleanToTerraform(this._outboundNetworkRestrictionEnabled),
       primary_user_assigned_identity_id: cdktf.stringToTerraform(this._primaryUserAssignedIdentityId),
       public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),

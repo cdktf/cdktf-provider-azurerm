@@ -174,7 +174,7 @@ export class MysqlFlexibleServerHighAvailabilityOutputReference extends cdktf.Co
     return this._mode;
   }
 
-  // standby_availability_zone - computed: true, optional: true, required: false
+  // standby_availability_zone - computed: false, optional: true, required: false
   private _standbyAvailabilityZone?: string; 
   public get standbyAvailabilityZone() {
     return this.getStringAttribute('standby_availability_zone');
@@ -904,7 +904,7 @@ export class MysqlFlexibleServer extends cdktf.TerraformResource {
     return this._version;
   }
 
-  // zone - computed: true, optional: true, required: false
+  // zone - computed: false, optional: true, required: false
   private _zone?: string; 
   public get zone() {
     return this.getStringAttribute('zone');
