@@ -20,6 +20,10 @@ export interface IothubDpsConfig extends cdktf.TerraformMetaArguments {
   */
   readonly name: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps#public_network_access_enabled IothubDps#public_network_access_enabled}
+  */
+  readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps#resource_group_name IothubDps#resource_group_name}
   */
   readonly resourceGroupName: string;
@@ -27,6 +31,12 @@ export interface IothubDpsConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps#tags IothubDps#tags}
   */
   readonly tags?: { [key: string]: string };
+  /**
+  * ip_filter_rule block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps#ip_filter_rule IothubDps#ip_filter_rule}
+  */
+  readonly ipFilterRule?: IothubDpsIpFilterRule[] | cdktf.IResolvable;
   /**
   * linked_hub block
   * 
@@ -46,6 +56,38 @@ export interface IothubDpsConfig extends cdktf.TerraformMetaArguments {
   */
   readonly timeouts?: IothubDpsTimeouts;
 }
+export interface IothubDpsIpFilterRule {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps#action IothubDps#action}
+  */
+  readonly action: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps#ip_mask IothubDps#ip_mask}
+  */
+  readonly ipMask: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps#name IothubDps#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps#target IothubDps#target}
+  */
+  readonly target?: string;
+}
+
+export function iothubDpsIpFilterRuleToTerraform(struct?: IothubDpsIpFilterRule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    action: cdktf.stringToTerraform(struct!.action),
+    ip_mask: cdktf.stringToTerraform(struct!.ipMask),
+    name: cdktf.stringToTerraform(struct!.name),
+    target: cdktf.stringToTerraform(struct!.target),
+  }
+}
+
 export interface IothubDpsLinkedHub {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps#allocation_weight IothubDps#allocation_weight}
@@ -348,8 +390,10 @@ export class IothubDps extends cdktf.TerraformResource {
     this._allocationPolicy = config.allocationPolicy;
     this._location = config.location;
     this._name = config.name;
+    this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
+    this._ipFilterRule = config.ipFilterRule;
     this._linkedHub = config.linkedHub;
     this._sku.internalValue = config.sku;
     this._timeouts.internalValue = config.timeouts;
@@ -416,6 +460,22 @@ export class IothubDps extends cdktf.TerraformResource {
     return this._name;
   }
 
+  // public_network_access_enabled - computed: false, optional: true, required: false
+  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable; 
+  public get publicNetworkAccessEnabled() {
+    return this.getBooleanAttribute('public_network_access_enabled');
+  }
+  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable) {
+    this._publicNetworkAccessEnabled = value;
+  }
+  public resetPublicNetworkAccessEnabled() {
+    this._publicNetworkAccessEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicNetworkAccessEnabledInput() {
+    return this._publicNetworkAccessEnabled;
+  }
+
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName?: string; 
   public get resourceGroupName() {
@@ -448,6 +508,23 @@ export class IothubDps extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
     return this._tags;
+  }
+
+  // ip_filter_rule - computed: false, optional: true, required: false
+  private _ipFilterRule?: IothubDpsIpFilterRule[] | cdktf.IResolvable; 
+  public get ipFilterRule() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('ip_filter_rule');
+  }
+  public set ipFilterRule(value: IothubDpsIpFilterRule[] | cdktf.IResolvable) {
+    this._ipFilterRule = value;
+  }
+  public resetIpFilterRule() {
+    this._ipFilterRule = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipFilterRuleInput() {
+    return this._ipFilterRule;
   }
 
   // linked_hub - computed: false, optional: true, required: false
@@ -505,8 +582,10 @@ export class IothubDps extends cdktf.TerraformResource {
       allocation_policy: cdktf.stringToTerraform(this._allocationPolicy),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
+      public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
+      ip_filter_rule: cdktf.listMapper(iothubDpsIpFilterRuleToTerraform)(this._ipFilterRule),
       linked_hub: cdktf.listMapper(iothubDpsLinkedHubToTerraform)(this._linkedHub),
       sku: iothubDpsSkuToTerraform(this._sku.internalValue),
       timeouts: iothubDpsTimeoutsToTerraform(this._timeouts.internalValue),

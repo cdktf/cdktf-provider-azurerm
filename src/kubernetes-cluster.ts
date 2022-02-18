@@ -16,6 +16,10 @@ export interface KubernetesClusterConfig extends cdktf.TerraformMetaArguments {
   */
   readonly automaticChannelUpgrade?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#azure_policy_enabled KubernetesCluster#azure_policy_enabled}
+  */
+  readonly azurePolicyEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#disk_encryption_set_id KubernetesCluster#disk_encryption_set_id}
   */
   readonly diskEncryptionSetId?: string;
@@ -31,6 +35,10 @@ export interface KubernetesClusterConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#enable_pod_security_policy KubernetesCluster#enable_pod_security_policy}
   */
   readonly enablePodSecurityPolicy?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#http_application_routing_enabled KubernetesCluster#http_application_routing_enabled}
+  */
+  readonly httpApplicationRoutingEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#kubernetes_version KubernetesCluster#kubernetes_version}
   */
@@ -51,6 +59,10 @@ export interface KubernetesClusterConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#node_resource_group KubernetesCluster#node_resource_group}
   */
   readonly nodeResourceGroup?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#open_service_mesh_enabled KubernetesCluster#open_service_mesh_enabled}
+  */
+  readonly openServiceMeshEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#private_cluster_enabled KubernetesCluster#private_cluster_enabled}
   */
@@ -84,6 +96,12 @@ export interface KubernetesClusterConfig extends cdktf.TerraformMetaArguments {
   */
   readonly tags?: { [key: string]: string };
   /**
+  * aci_connector_linux block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#aci_connector_linux KubernetesCluster#aci_connector_linux}
+  */
+  readonly aciConnectorLinux?: KubernetesClusterAciConnectorLinux;
+  /**
   * addon_profile block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#addon_profile KubernetesCluster#addon_profile}
@@ -114,6 +132,18 @@ export interface KubernetesClusterConfig extends cdktf.TerraformMetaArguments {
   */
   readonly identity?: KubernetesClusterIdentity;
   /**
+  * ingress_application_gateway block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#ingress_application_gateway KubernetesCluster#ingress_application_gateway}
+  */
+  readonly ingressApplicationGateway?: KubernetesClusterIngressApplicationGateway;
+  /**
+  * key_vault_secrets_provider block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#key_vault_secrets_provider KubernetesCluster#key_vault_secrets_provider}
+  */
+  readonly keyVaultSecretsProvider?: KubernetesClusterKeyVaultSecretsProvider;
+  /**
   * kubelet_identity block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#kubelet_identity KubernetesCluster#kubelet_identity}
@@ -137,6 +167,12 @@ export interface KubernetesClusterConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#network_profile KubernetesCluster#network_profile}
   */
   readonly networkProfile?: KubernetesClusterNetworkProfile;
+  /**
+  * oms_agent block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#oms_agent KubernetesCluster#oms_agent}
+  */
+  readonly omsAgent?: KubernetesClusterOmsAgent;
   /**
   * role_based_access_control block
   * 
@@ -224,6 +260,69 @@ export class KubernetesClusterKubeConfig extends cdktf.ComplexComputedList {
   // username - computed: true, optional: false, required: false
   public get username() {
     return this.getStringAttribute('username');
+  }
+}
+export interface KubernetesClusterAciConnectorLinux {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#subnet_name KubernetesCluster#subnet_name}
+  */
+  readonly subnetName: string;
+}
+
+export function kubernetesClusterAciConnectorLinuxToTerraform(struct?: KubernetesClusterAciConnectorLinuxOutputReference | KubernetesClusterAciConnectorLinux): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    subnet_name: cdktf.stringToTerraform(struct!.subnetName),
+  }
+}
+
+export class KubernetesClusterAciConnectorLinuxOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  public get internalValue(): KubernetesClusterAciConnectorLinux | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._subnetName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.subnetName = this._subnetName;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesClusterAciConnectorLinux | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._subnetName = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._subnetName = value.subnetName;
+    }
+  }
+
+  // subnet_name - computed: false, optional: false, required: true
+  private _subnetName?: string; 
+  public get subnetName() {
+    return this.getStringAttribute('subnet_name');
+  }
+  public set subnetName(value: string) {
+    this._subnetName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetNameInput() {
+    return this._subnetName;
   }
 }
 export interface KubernetesClusterAddonProfileAciConnectorLinux {
@@ -4203,6 +4302,295 @@ export class KubernetesClusterIdentityOutputReference extends cdktf.ComplexObjec
     return this._userAssignedIdentityId;
   }
 }
+export class KubernetesClusterIngressApplicationGatewayIngressApplicationGatewayIdentity extends cdktf.ComplexComputedList {
+
+  // client_id - computed: true, optional: false, required: false
+  public get clientId() {
+    return this.getStringAttribute('client_id');
+  }
+
+  // object_id - computed: true, optional: false, required: false
+  public get objectId() {
+    return this.getStringAttribute('object_id');
+  }
+
+  // user_assigned_identity_id - computed: true, optional: false, required: false
+  public get userAssignedIdentityId() {
+    return this.getStringAttribute('user_assigned_identity_id');
+  }
+}
+export interface KubernetesClusterIngressApplicationGateway {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#gateway_id KubernetesCluster#gateway_id}
+  */
+  readonly gatewayId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#gateway_name KubernetesCluster#gateway_name}
+  */
+  readonly gatewayName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#subnet_cidr KubernetesCluster#subnet_cidr}
+  */
+  readonly subnetCidr?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#subnet_id KubernetesCluster#subnet_id}
+  */
+  readonly subnetId?: string;
+}
+
+export function kubernetesClusterIngressApplicationGatewayToTerraform(struct?: KubernetesClusterIngressApplicationGatewayOutputReference | KubernetesClusterIngressApplicationGateway): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    gateway_id: cdktf.stringToTerraform(struct!.gatewayId),
+    gateway_name: cdktf.stringToTerraform(struct!.gatewayName),
+    subnet_cidr: cdktf.stringToTerraform(struct!.subnetCidr),
+    subnet_id: cdktf.stringToTerraform(struct!.subnetId),
+  }
+}
+
+export class KubernetesClusterIngressApplicationGatewayOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  public get internalValue(): KubernetesClusterIngressApplicationGateway | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._gatewayId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.gatewayId = this._gatewayId;
+    }
+    if (this._gatewayName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.gatewayName = this._gatewayName;
+    }
+    if (this._subnetCidr !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.subnetCidr = this._subnetCidr;
+    }
+    if (this._subnetId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.subnetId = this._subnetId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesClusterIngressApplicationGateway | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._gatewayId = undefined;
+      this._gatewayName = undefined;
+      this._subnetCidr = undefined;
+      this._subnetId = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._gatewayId = value.gatewayId;
+      this._gatewayName = value.gatewayName;
+      this._subnetCidr = value.subnetCidr;
+      this._subnetId = value.subnetId;
+    }
+  }
+
+  // effective_gateway_id - computed: true, optional: false, required: false
+  public get effectiveGatewayId() {
+    return this.getStringAttribute('effective_gateway_id');
+  }
+
+  // gateway_id - computed: false, optional: true, required: false
+  private _gatewayId?: string; 
+  public get gatewayId() {
+    return this.getStringAttribute('gateway_id');
+  }
+  public set gatewayId(value: string) {
+    this._gatewayId = value;
+  }
+  public resetGatewayId() {
+    this._gatewayId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get gatewayIdInput() {
+    return this._gatewayId;
+  }
+
+  // gateway_name - computed: false, optional: true, required: false
+  private _gatewayName?: string; 
+  public get gatewayName() {
+    return this.getStringAttribute('gateway_name');
+  }
+  public set gatewayName(value: string) {
+    this._gatewayName = value;
+  }
+  public resetGatewayName() {
+    this._gatewayName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get gatewayNameInput() {
+    return this._gatewayName;
+  }
+
+  // ingress_application_gateway_identity - computed: true, optional: false, required: false
+  public ingressApplicationGatewayIdentity(index: string) {
+    return new KubernetesClusterIngressApplicationGatewayIngressApplicationGatewayIdentity(this, 'ingress_application_gateway_identity', index, false);
+  }
+
+  // subnet_cidr - computed: false, optional: true, required: false
+  private _subnetCidr?: string; 
+  public get subnetCidr() {
+    return this.getStringAttribute('subnet_cidr');
+  }
+  public set subnetCidr(value: string) {
+    this._subnetCidr = value;
+  }
+  public resetSubnetCidr() {
+    this._subnetCidr = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetCidrInput() {
+    return this._subnetCidr;
+  }
+
+  // subnet_id - computed: false, optional: true, required: false
+  private _subnetId?: string; 
+  public get subnetId() {
+    return this.getStringAttribute('subnet_id');
+  }
+  public set subnetId(value: string) {
+    this._subnetId = value;
+  }
+  public resetSubnetId() {
+    this._subnetId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetIdInput() {
+    return this._subnetId;
+  }
+}
+export class KubernetesClusterKeyVaultSecretsProviderSecretIdentity extends cdktf.ComplexComputedList {
+
+  // client_id - computed: true, optional: false, required: false
+  public get clientId() {
+    return this.getStringAttribute('client_id');
+  }
+
+  // object_id - computed: true, optional: false, required: false
+  public get objectId() {
+    return this.getStringAttribute('object_id');
+  }
+
+  // user_assigned_identity_id - computed: true, optional: false, required: false
+  public get userAssignedIdentityId() {
+    return this.getStringAttribute('user_assigned_identity_id');
+  }
+}
+export interface KubernetesClusterKeyVaultSecretsProvider {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#secret_rotation_enabled KubernetesCluster#secret_rotation_enabled}
+  */
+  readonly secretRotationEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#secret_rotation_interval KubernetesCluster#secret_rotation_interval}
+  */
+  readonly secretRotationInterval?: string;
+}
+
+export function kubernetesClusterKeyVaultSecretsProviderToTerraform(struct?: KubernetesClusterKeyVaultSecretsProviderOutputReference | KubernetesClusterKeyVaultSecretsProvider): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    secret_rotation_enabled: cdktf.booleanToTerraform(struct!.secretRotationEnabled),
+    secret_rotation_interval: cdktf.stringToTerraform(struct!.secretRotationInterval),
+  }
+}
+
+export class KubernetesClusterKeyVaultSecretsProviderOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  public get internalValue(): KubernetesClusterKeyVaultSecretsProvider | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._secretRotationEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.secretRotationEnabled = this._secretRotationEnabled;
+    }
+    if (this._secretRotationInterval !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.secretRotationInterval = this._secretRotationInterval;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesClusterKeyVaultSecretsProvider | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._secretRotationEnabled = undefined;
+      this._secretRotationInterval = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._secretRotationEnabled = value.secretRotationEnabled;
+      this._secretRotationInterval = value.secretRotationInterval;
+    }
+  }
+
+  // secret_identity - computed: true, optional: false, required: false
+  public secretIdentity(index: string) {
+    return new KubernetesClusterKeyVaultSecretsProviderSecretIdentity(this, 'secret_identity', index, false);
+  }
+
+  // secret_rotation_enabled - computed: false, optional: true, required: false
+  private _secretRotationEnabled?: boolean | cdktf.IResolvable; 
+  public get secretRotationEnabled() {
+    return this.getBooleanAttribute('secret_rotation_enabled');
+  }
+  public set secretRotationEnabled(value: boolean | cdktf.IResolvable) {
+    this._secretRotationEnabled = value;
+  }
+  public resetSecretRotationEnabled() {
+    this._secretRotationEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secretRotationEnabledInput() {
+    return this._secretRotationEnabled;
+  }
+
+  // secret_rotation_interval - computed: false, optional: true, required: false
+  private _secretRotationInterval?: string; 
+  public get secretRotationInterval() {
+    return this.getStringAttribute('secret_rotation_interval');
+  }
+  public set secretRotationInterval(value: string) {
+    this._secretRotationInterval = value;
+  }
+  public resetSecretRotationInterval() {
+    this._secretRotationInterval = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secretRotationIntervalInput() {
+    return this._secretRotationInterval;
+  }
+}
 export interface KubernetesClusterKubeletIdentity {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#client_id KubernetesCluster#client_id}
@@ -5232,6 +5620,91 @@ export class KubernetesClusterNetworkProfileOutputReference extends cdktf.Comple
     return this._natGatewayProfile.internalValue;
   }
 }
+export class KubernetesClusterOmsAgentOmsAgentIdentity extends cdktf.ComplexComputedList {
+
+  // client_id - computed: true, optional: false, required: false
+  public get clientId() {
+    return this.getStringAttribute('client_id');
+  }
+
+  // object_id - computed: true, optional: false, required: false
+  public get objectId() {
+    return this.getStringAttribute('object_id');
+  }
+
+  // user_assigned_identity_id - computed: true, optional: false, required: false
+  public get userAssignedIdentityId() {
+    return this.getStringAttribute('user_assigned_identity_id');
+  }
+}
+export interface KubernetesClusterOmsAgent {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#log_analytics_workspace_id KubernetesCluster#log_analytics_workspace_id}
+  */
+  readonly logAnalyticsWorkspaceId: string;
+}
+
+export function kubernetesClusterOmsAgentToTerraform(struct?: KubernetesClusterOmsAgentOutputReference | KubernetesClusterOmsAgent): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    log_analytics_workspace_id: cdktf.stringToTerraform(struct!.logAnalyticsWorkspaceId),
+  }
+}
+
+export class KubernetesClusterOmsAgentOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  public get internalValue(): KubernetesClusterOmsAgent | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._logAnalyticsWorkspaceId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.logAnalyticsWorkspaceId = this._logAnalyticsWorkspaceId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesClusterOmsAgent | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._logAnalyticsWorkspaceId = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._logAnalyticsWorkspaceId = value.logAnalyticsWorkspaceId;
+    }
+  }
+
+  // log_analytics_workspace_id - computed: false, optional: false, required: true
+  private _logAnalyticsWorkspaceId?: string; 
+  public get logAnalyticsWorkspaceId() {
+    return this.getStringAttribute('log_analytics_workspace_id');
+  }
+  public set logAnalyticsWorkspaceId(value: string) {
+    this._logAnalyticsWorkspaceId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get logAnalyticsWorkspaceIdInput() {
+    return this._logAnalyticsWorkspaceId;
+  }
+
+  // oms_agent_identity - computed: true, optional: false, required: false
+  public omsAgentIdentity(index: string) {
+    return new KubernetesClusterOmsAgentOmsAgentIdentity(this, 'oms_agent_identity', index, false);
+  }
+}
 export interface KubernetesClusterRoleBasedAccessControlAzureActiveDirectory {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#admin_group_object_ids KubernetesCluster#admin_group_object_ids}
@@ -5938,15 +6411,18 @@ export class KubernetesCluster extends cdktf.TerraformResource {
     });
     this._apiServerAuthorizedIpRanges = config.apiServerAuthorizedIpRanges;
     this._automaticChannelUpgrade = config.automaticChannelUpgrade;
+    this._azurePolicyEnabled = config.azurePolicyEnabled;
     this._diskEncryptionSetId = config.diskEncryptionSetId;
     this._dnsPrefix = config.dnsPrefix;
     this._dnsPrefixPrivateCluster = config.dnsPrefixPrivateCluster;
     this._enablePodSecurityPolicy = config.enablePodSecurityPolicy;
+    this._httpApplicationRoutingEnabled = config.httpApplicationRoutingEnabled;
     this._kubernetesVersion = config.kubernetesVersion;
     this._localAccountDisabled = config.localAccountDisabled;
     this._location = config.location;
     this._name = config.name;
     this._nodeResourceGroup = config.nodeResourceGroup;
+    this._openServiceMeshEnabled = config.openServiceMeshEnabled;
     this._privateClusterEnabled = config.privateClusterEnabled;
     this._privateClusterPublicFqdnEnabled = config.privateClusterPublicFqdnEnabled;
     this._privateDnsZoneId = config.privateDnsZoneId;
@@ -5955,15 +6431,19 @@ export class KubernetesCluster extends cdktf.TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._skuTier = config.skuTier;
     this._tags = config.tags;
+    this._aciConnectorLinux.internalValue = config.aciConnectorLinux;
     this._addonProfile.internalValue = config.addonProfile;
     this._autoScalerProfile.internalValue = config.autoScalerProfile;
     this._defaultNodePool.internalValue = config.defaultNodePool;
     this._httpProxyConfig.internalValue = config.httpProxyConfig;
     this._identity.internalValue = config.identity;
+    this._ingressApplicationGateway.internalValue = config.ingressApplicationGateway;
+    this._keyVaultSecretsProvider.internalValue = config.keyVaultSecretsProvider;
     this._kubeletIdentity.internalValue = config.kubeletIdentity;
     this._linuxProfile.internalValue = config.linuxProfile;
     this._maintenanceWindow.internalValue = config.maintenanceWindow;
     this._networkProfile.internalValue = config.networkProfile;
+    this._omsAgent.internalValue = config.omsAgent;
     this._roleBasedAccessControl.internalValue = config.roleBasedAccessControl;
     this._servicePrincipal.internalValue = config.servicePrincipal;
     this._timeouts.internalValue = config.timeouts;
@@ -6004,6 +6484,22 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get automaticChannelUpgradeInput() {
     return this._automaticChannelUpgrade;
+  }
+
+  // azure_policy_enabled - computed: true, optional: true, required: false
+  private _azurePolicyEnabled?: boolean | cdktf.IResolvable; 
+  public get azurePolicyEnabled() {
+    return this.getBooleanAttribute('azure_policy_enabled');
+  }
+  public set azurePolicyEnabled(value: boolean | cdktf.IResolvable) {
+    this._azurePolicyEnabled = value;
+  }
+  public resetAzurePolicyEnabled() {
+    this._azurePolicyEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get azurePolicyEnabledInput() {
+    return this._azurePolicyEnabled;
   }
 
   // disk_encryption_set_id - computed: false, optional: true, required: false
@@ -6073,6 +6569,27 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   // fqdn - computed: true, optional: false, required: false
   public get fqdn() {
     return this.getStringAttribute('fqdn');
+  }
+
+  // http_application_routing_enabled - computed: true, optional: true, required: false
+  private _httpApplicationRoutingEnabled?: boolean | cdktf.IResolvable; 
+  public get httpApplicationRoutingEnabled() {
+    return this.getBooleanAttribute('http_application_routing_enabled');
+  }
+  public set httpApplicationRoutingEnabled(value: boolean | cdktf.IResolvable) {
+    this._httpApplicationRoutingEnabled = value;
+  }
+  public resetHttpApplicationRoutingEnabled() {
+    this._httpApplicationRoutingEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get httpApplicationRoutingEnabledInput() {
+    return this._httpApplicationRoutingEnabled;
+  }
+
+  // http_application_routing_zone_name - computed: true, optional: false, required: false
+  public get httpApplicationRoutingZoneName() {
+    return this.getStringAttribute('http_application_routing_zone_name');
   }
 
   // id - computed: true, optional: true, required: false
@@ -6172,6 +6689,22 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get nodeResourceGroupInput() {
     return this._nodeResourceGroup;
+  }
+
+  // open_service_mesh_enabled - computed: true, optional: true, required: false
+  private _openServiceMeshEnabled?: boolean | cdktf.IResolvable; 
+  public get openServiceMeshEnabled() {
+    return this.getBooleanAttribute('open_service_mesh_enabled');
+  }
+  public set openServiceMeshEnabled(value: boolean | cdktf.IResolvable) {
+    this._openServiceMeshEnabled = value;
+  }
+  public resetOpenServiceMeshEnabled() {
+    this._openServiceMeshEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get openServiceMeshEnabledInput() {
+    return this._openServiceMeshEnabled;
   }
 
   // portal_fqdn - computed: true, optional: false, required: false
@@ -6309,6 +6842,22 @@ export class KubernetesCluster extends cdktf.TerraformResource {
     return this._tags;
   }
 
+  // aci_connector_linux - computed: false, optional: true, required: false
+  private _aciConnectorLinux = new KubernetesClusterAciConnectorLinuxOutputReference(this, "aci_connector_linux", true);
+  public get aciConnectorLinux() {
+    return this._aciConnectorLinux;
+  }
+  public putAciConnectorLinux(value: KubernetesClusterAciConnectorLinux) {
+    this._aciConnectorLinux.internalValue = value;
+  }
+  public resetAciConnectorLinux() {
+    this._aciConnectorLinux.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get aciConnectorLinuxInput() {
+    return this._aciConnectorLinux.internalValue;
+  }
+
   // addon_profile - computed: false, optional: true, required: false
   private _addonProfile = new KubernetesClusterAddonProfileOutputReference(this, "addon_profile", true);
   public get addonProfile() {
@@ -6386,6 +6935,38 @@ export class KubernetesCluster extends cdktf.TerraformResource {
     return this._identity.internalValue;
   }
 
+  // ingress_application_gateway - computed: false, optional: true, required: false
+  private _ingressApplicationGateway = new KubernetesClusterIngressApplicationGatewayOutputReference(this, "ingress_application_gateway", true);
+  public get ingressApplicationGateway() {
+    return this._ingressApplicationGateway;
+  }
+  public putIngressApplicationGateway(value: KubernetesClusterIngressApplicationGateway) {
+    this._ingressApplicationGateway.internalValue = value;
+  }
+  public resetIngressApplicationGateway() {
+    this._ingressApplicationGateway.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ingressApplicationGatewayInput() {
+    return this._ingressApplicationGateway.internalValue;
+  }
+
+  // key_vault_secrets_provider - computed: false, optional: true, required: false
+  private _keyVaultSecretsProvider = new KubernetesClusterKeyVaultSecretsProviderOutputReference(this, "key_vault_secrets_provider", true);
+  public get keyVaultSecretsProvider() {
+    return this._keyVaultSecretsProvider;
+  }
+  public putKeyVaultSecretsProvider(value: KubernetesClusterKeyVaultSecretsProvider) {
+    this._keyVaultSecretsProvider.internalValue = value;
+  }
+  public resetKeyVaultSecretsProvider() {
+    this._keyVaultSecretsProvider.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultSecretsProviderInput() {
+    return this._keyVaultSecretsProvider.internalValue;
+  }
+
   // kubelet_identity - computed: false, optional: true, required: false
   private _kubeletIdentity = new KubernetesClusterKubeletIdentityOutputReference(this, "kubelet_identity", true);
   public get kubeletIdentity() {
@@ -6448,6 +7029,22 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get networkProfileInput() {
     return this._networkProfile.internalValue;
+  }
+
+  // oms_agent - computed: false, optional: true, required: false
+  private _omsAgent = new KubernetesClusterOmsAgentOutputReference(this, "oms_agent", true);
+  public get omsAgent() {
+    return this._omsAgent;
+  }
+  public putOmsAgent(value: KubernetesClusterOmsAgent) {
+    this._omsAgent.internalValue = value;
+  }
+  public resetOmsAgent() {
+    this._omsAgent.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get omsAgentInput() {
+    return this._omsAgent.internalValue;
   }
 
   // role_based_access_control - computed: false, optional: true, required: false
@@ -6522,15 +7119,18 @@ export class KubernetesCluster extends cdktf.TerraformResource {
     return {
       api_server_authorized_ip_ranges: cdktf.listMapper(cdktf.stringToTerraform)(this._apiServerAuthorizedIpRanges),
       automatic_channel_upgrade: cdktf.stringToTerraform(this._automaticChannelUpgrade),
+      azure_policy_enabled: cdktf.booleanToTerraform(this._azurePolicyEnabled),
       disk_encryption_set_id: cdktf.stringToTerraform(this._diskEncryptionSetId),
       dns_prefix: cdktf.stringToTerraform(this._dnsPrefix),
       dns_prefix_private_cluster: cdktf.stringToTerraform(this._dnsPrefixPrivateCluster),
       enable_pod_security_policy: cdktf.booleanToTerraform(this._enablePodSecurityPolicy),
+      http_application_routing_enabled: cdktf.booleanToTerraform(this._httpApplicationRoutingEnabled),
       kubernetes_version: cdktf.stringToTerraform(this._kubernetesVersion),
       local_account_disabled: cdktf.booleanToTerraform(this._localAccountDisabled),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       node_resource_group: cdktf.stringToTerraform(this._nodeResourceGroup),
+      open_service_mesh_enabled: cdktf.booleanToTerraform(this._openServiceMeshEnabled),
       private_cluster_enabled: cdktf.booleanToTerraform(this._privateClusterEnabled),
       private_cluster_public_fqdn_enabled: cdktf.booleanToTerraform(this._privateClusterPublicFqdnEnabled),
       private_dns_zone_id: cdktf.stringToTerraform(this._privateDnsZoneId),
@@ -6539,15 +7139,19 @@ export class KubernetesCluster extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku_tier: cdktf.stringToTerraform(this._skuTier),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
+      aci_connector_linux: kubernetesClusterAciConnectorLinuxToTerraform(this._aciConnectorLinux.internalValue),
       addon_profile: kubernetesClusterAddonProfileToTerraform(this._addonProfile.internalValue),
       auto_scaler_profile: kubernetesClusterAutoScalerProfileToTerraform(this._autoScalerProfile.internalValue),
       default_node_pool: kubernetesClusterDefaultNodePoolToTerraform(this._defaultNodePool.internalValue),
       http_proxy_config: kubernetesClusterHttpProxyConfigToTerraform(this._httpProxyConfig.internalValue),
       identity: kubernetesClusterIdentityToTerraform(this._identity.internalValue),
+      ingress_application_gateway: kubernetesClusterIngressApplicationGatewayToTerraform(this._ingressApplicationGateway.internalValue),
+      key_vault_secrets_provider: kubernetesClusterKeyVaultSecretsProviderToTerraform(this._keyVaultSecretsProvider.internalValue),
       kubelet_identity: kubernetesClusterKubeletIdentityToTerraform(this._kubeletIdentity.internalValue),
       linux_profile: kubernetesClusterLinuxProfileToTerraform(this._linuxProfile.internalValue),
       maintenance_window: kubernetesClusterMaintenanceWindowToTerraform(this._maintenanceWindow.internalValue),
       network_profile: kubernetesClusterNetworkProfileToTerraform(this._networkProfile.internalValue),
+      oms_agent: kubernetesClusterOmsAgentToTerraform(this._omsAgent.internalValue),
       role_based_access_control: kubernetesClusterRoleBasedAccessControlToTerraform(this._roleBasedAccessControl.internalValue),
       service_principal: kubernetesClusterServicePrincipalToTerraform(this._servicePrincipal.internalValue),
       timeouts: kubernetesClusterTimeoutsToTerraform(this._timeouts.internalValue),

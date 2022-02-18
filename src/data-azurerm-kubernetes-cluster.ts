@@ -328,6 +328,11 @@ export class DataAzurermKubernetesClusterAgentPoolProfile extends cdktf.ComplexC
   public get vnetSubnetId() {
     return this.getStringAttribute('vnet_subnet_id');
   }
+
+  // zones - computed: true, optional: false, required: false
+  public get zones() {
+    return this.getListAttribute('zones');
+  }
 }
 export class DataAzurermKubernetesClusterIdentity extends cdktf.ComplexComputedList {
 

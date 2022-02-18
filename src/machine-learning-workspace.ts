@@ -44,6 +44,10 @@ export interface MachineLearningWorkspaceConfig extends cdktf.TerraformMetaArgum
   */
   readonly name: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_workspace#primary_user_assigned_identity MachineLearningWorkspace#primary_user_assigned_identity}
+  */
+  readonly primaryUserAssignedIdentity?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_workspace#public_network_access_enabled MachineLearningWorkspace#public_network_access_enabled}
   */
   readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
@@ -91,6 +95,10 @@ export interface MachineLearningWorkspaceEncryption {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_workspace#key_vault_id MachineLearningWorkspace#key_vault_id}
   */
   readonly keyVaultId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_workspace#user_assigned_identity_id MachineLearningWorkspace#user_assigned_identity_id}
+  */
+  readonly userAssignedIdentityId?: string;
 }
 
 export function machineLearningWorkspaceEncryptionToTerraform(struct?: MachineLearningWorkspaceEncryptionOutputReference | MachineLearningWorkspaceEncryption): any {
@@ -101,6 +109,7 @@ export function machineLearningWorkspaceEncryptionToTerraform(struct?: MachineLe
   return {
     key_id: cdktf.stringToTerraform(struct!.keyId),
     key_vault_id: cdktf.stringToTerraform(struct!.keyVaultId),
+    user_assigned_identity_id: cdktf.stringToTerraform(struct!.userAssignedIdentityId),
   }
 }
 
@@ -127,6 +136,10 @@ export class MachineLearningWorkspaceEncryptionOutputReference extends cdktf.Com
       hasAnyValues = true;
       internalValueResult.keyVaultId = this._keyVaultId;
     }
+    if (this._userAssignedIdentityId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.userAssignedIdentityId = this._userAssignedIdentityId;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -135,11 +148,13 @@ export class MachineLearningWorkspaceEncryptionOutputReference extends cdktf.Com
       this.isEmptyObject = false;
       this._keyId = undefined;
       this._keyVaultId = undefined;
+      this._userAssignedIdentityId = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._keyId = value.keyId;
       this._keyVaultId = value.keyVaultId;
+      this._userAssignedIdentityId = value.userAssignedIdentityId;
     }
   }
 
@@ -168,8 +183,28 @@ export class MachineLearningWorkspaceEncryptionOutputReference extends cdktf.Com
   public get keyVaultIdInput() {
     return this._keyVaultId;
   }
+
+  // user_assigned_identity_id - computed: false, optional: true, required: false
+  private _userAssignedIdentityId?: string; 
+  public get userAssignedIdentityId() {
+    return this.getStringAttribute('user_assigned_identity_id');
+  }
+  public set userAssignedIdentityId(value: string) {
+    this._userAssignedIdentityId = value;
+  }
+  public resetUserAssignedIdentityId() {
+    this._userAssignedIdentityId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userAssignedIdentityIdInput() {
+    return this._userAssignedIdentityId;
+  }
 }
 export interface MachineLearningWorkspaceIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_workspace#identity_ids MachineLearningWorkspace#identity_ids}
+  */
+  readonly identityIds?: string[];
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_workspace#type MachineLearningWorkspace#type}
   */
@@ -182,6 +217,7 @@ export function machineLearningWorkspaceIdentityToTerraform(struct?: MachineLear
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
@@ -201,6 +237,10 @@ export class MachineLearningWorkspaceIdentityOutputReference extends cdktf.Compl
   public get internalValue(): MachineLearningWorkspaceIdentity | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._identityIds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.identityIds = this._identityIds;
+    }
     if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
@@ -211,12 +251,30 @@ export class MachineLearningWorkspaceIdentityOutputReference extends cdktf.Compl
   public set internalValue(value: MachineLearningWorkspaceIdentity | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this._identityIds = undefined;
       this._type = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this._identityIds = value.identityIds;
       this._type = value.type;
     }
+  }
+
+  // identity_ids - computed: false, optional: true, required: false
+  private _identityIds?: string[]; 
+  public get identityIds() {
+    return cdktf.Fn.tolist(this.getListAttribute('identity_ids'));
+  }
+  public set identityIds(value: string[]) {
+    this._identityIds = value;
+  }
+  public resetIdentityIds() {
+    this._identityIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityIdsInput() {
+    return this._identityIds;
   }
 
   // principal_id - computed: true, optional: false, required: false
@@ -431,6 +489,7 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
     this._keyVaultId = config.keyVaultId;
     this._location = config.location;
     this._name = config.name;
+    this._primaryUserAssignedIdentity = config.primaryUserAssignedIdentity;
     this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
     this._resourceGroupName = config.resourceGroupName;
     this._skuName = config.skuName;
@@ -587,6 +646,22 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
     return this._name;
   }
 
+  // primary_user_assigned_identity - computed: false, optional: true, required: false
+  private _primaryUserAssignedIdentity?: string; 
+  public get primaryUserAssignedIdentity() {
+    return this.getStringAttribute('primary_user_assigned_identity');
+  }
+  public set primaryUserAssignedIdentity(value: string) {
+    this._primaryUserAssignedIdentity = value;
+  }
+  public resetPrimaryUserAssignedIdentity() {
+    this._primaryUserAssignedIdentity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get primaryUserAssignedIdentityInput() {
+    return this._primaryUserAssignedIdentity;
+  }
+
   // public_network_access_enabled - computed: false, optional: true, required: false
   private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable; 
   public get publicNetworkAccessEnabled() {
@@ -721,6 +796,7 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
       key_vault_id: cdktf.stringToTerraform(this._keyVaultId),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
+      primary_user_assigned_identity: cdktf.stringToTerraform(this._primaryUserAssignedIdentity),
       public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku_name: cdktf.stringToTerraform(this._skuName),

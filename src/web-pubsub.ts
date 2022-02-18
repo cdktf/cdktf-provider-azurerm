@@ -48,6 +48,12 @@ export interface WebPubsubConfig extends cdktf.TerraformMetaArguments {
   */
   readonly tlsClientCertEnabled?: boolean | cdktf.IResolvable;
   /**
+  * identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_pubsub#identity WebPubsub#identity}
+  */
+  readonly identity?: WebPubsubIdentity;
+  /**
   * live_trace block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_pubsub#live_trace WebPubsub#live_trace}
@@ -59,6 +65,106 @@ export interface WebPubsubConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_pubsub#timeouts WebPubsub#timeouts}
   */
   readonly timeouts?: WebPubsubTimeouts;
+}
+export interface WebPubsubIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_pubsub#identity_ids WebPubsub#identity_ids}
+  */
+  readonly identityIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_pubsub#type WebPubsub#type}
+  */
+  readonly type: string;
+}
+
+export function webPubsubIdentityToTerraform(struct?: WebPubsubIdentityOutputReference | WebPubsubIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
+export class WebPubsubIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  public get internalValue(): WebPubsubIdentity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._identityIds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.identityIds = this._identityIds;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: WebPubsubIdentity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._identityIds = undefined;
+      this._type = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._identityIds = value.identityIds;
+      this._type = value.type;
+    }
+  }
+
+  // identity_ids - computed: false, optional: true, required: false
+  private _identityIds?: string[]; 
+  public get identityIds() {
+    return cdktf.Fn.tolist(this.getListAttribute('identity_ids'));
+  }
+  public set identityIds(value: string[]) {
+    this._identityIds = value;
+  }
+  public resetIdentityIds() {
+    this._identityIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityIdsInput() {
+    return this._identityIds;
+  }
+
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
 }
 export interface WebPubsubLiveTrace {
   /**
@@ -397,6 +503,7 @@ export class WebPubsub extends cdktf.TerraformResource {
     this._sku = config.sku;
     this._tags = config.tags;
     this._tlsClientCertEnabled = config.tlsClientCertEnabled;
+    this._identity.internalValue = config.identity;
     this._liveTrace.internalValue = config.liveTrace;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -603,6 +710,22 @@ export class WebPubsub extends cdktf.TerraformResource {
     return this.getStringAttribute('version');
   }
 
+  // identity - computed: false, optional: true, required: false
+  private _identity = new WebPubsubIdentityOutputReference(this, "identity", true);
+  public get identity() {
+    return this._identity;
+  }
+  public putIdentity(value: WebPubsubIdentity) {
+    this._identity.internalValue = value;
+  }
+  public resetIdentity() {
+    this._identity.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityInput() {
+    return this._identity.internalValue;
+  }
+
   // live_trace - computed: false, optional: true, required: false
   private _liveTrace = new WebPubsubLiveTraceOutputReference(this, "live_trace", true);
   public get liveTrace() {
@@ -651,6 +774,7 @@ export class WebPubsub extends cdktf.TerraformResource {
       sku: cdktf.stringToTerraform(this._sku),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       tls_client_cert_enabled: cdktf.booleanToTerraform(this._tlsClientCertEnabled),
+      identity: webPubsubIdentityToTerraform(this._identity.internalValue),
       live_trace: webPubsubLiveTraceToTerraform(this._liveTrace.internalValue),
       timeouts: webPubsubTimeoutsToTerraform(this._timeouts.internalValue),
     };

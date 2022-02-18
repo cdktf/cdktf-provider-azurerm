@@ -16,10 +16,6 @@ export interface DataAzurermPublicIpConfig extends cdktf.TerraformMetaArguments 
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/public_ip#tags DataAzurermPublicIp#tags}
-  */
-  readonly tags?: { [key: string]: string };
-  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/public_ip#timeouts DataAzurermPublicIp#timeouts}
@@ -127,7 +123,6 @@ export class DataAzurermPublicIp extends cdktf.TerraformDataSource {
     });
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
-    this._tags = config.tags;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -216,20 +211,9 @@ export class DataAzurermPublicIp extends cdktf.TerraformDataSource {
     return this.getStringAttribute('sku');
   }
 
-  // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string }; 
-  public get tags() {
-    return this.getStringMapAttribute('tags');
-  }
-  public set tags(value: { [key: string]: string }) {
-    this._tags = value;
-  }
-  public resetTags() {
-    this._tags = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get tagsInput() {
-    return this._tags;
+  // tags - computed: true, optional: false, required: false
+  public tags(key: string): string | cdktf.IResolvable {
+    return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // zones - computed: true, optional: false, required: false
@@ -261,7 +245,6 @@ export class DataAzurermPublicIp extends cdktf.TerraformDataSource {
     return {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       timeouts: dataAzurermPublicIpTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

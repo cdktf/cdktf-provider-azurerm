@@ -72,6 +72,33 @@ export function monitorActivityLogAlertActionToTerraform(struct?: MonitorActivit
   }
 }
 
+export interface MonitorActivityLogAlertCriteriaResourceHealth {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_activity_log_alert#current MonitorActivityLogAlert#current}
+  */
+  readonly current?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_activity_log_alert#previous MonitorActivityLogAlert#previous}
+  */
+  readonly previous?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_activity_log_alert#reason MonitorActivityLogAlert#reason}
+  */
+  readonly reason?: string[];
+}
+
+export function monitorActivityLogAlertCriteriaResourceHealthToTerraform(struct?: MonitorActivityLogAlertCriteriaResourceHealth | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    current: cdktf.listMapper(cdktf.stringToTerraform)(struct!.current),
+    previous: cdktf.listMapper(cdktf.stringToTerraform)(struct!.previous),
+    reason: cdktf.listMapper(cdktf.stringToTerraform)(struct!.reason),
+  }
+}
+
 export interface MonitorActivityLogAlertCriteriaServiceHealth {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_activity_log_alert#events MonitorActivityLogAlert#events}
@@ -153,6 +180,12 @@ export interface MonitorActivityLogAlertCriteria {
   */
   readonly subStatus?: string;
   /**
+  * resource_health block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_activity_log_alert#resource_health MonitorActivityLogAlert#resource_health}
+  */
+  readonly resourceHealth?: MonitorActivityLogAlertCriteriaResourceHealth[] | cdktf.IResolvable;
+  /**
   * service_health block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_activity_log_alert#service_health MonitorActivityLogAlert#service_health}
@@ -179,6 +212,7 @@ export function monitorActivityLogAlertCriteriaToTerraform(struct?: MonitorActiv
     resource_type: cdktf.stringToTerraform(struct!.resourceType),
     status: cdktf.stringToTerraform(struct!.status),
     sub_status: cdktf.stringToTerraform(struct!.subStatus),
+    resource_health: cdktf.listMapper(monitorActivityLogAlertCriteriaResourceHealthToTerraform)(struct!.resourceHealth),
     service_health: cdktf.listMapper(monitorActivityLogAlertCriteriaServiceHealthToTerraform)(struct!.serviceHealth),
   }
 }
@@ -250,6 +284,10 @@ export class MonitorActivityLogAlertCriteriaOutputReference extends cdktf.Comple
       hasAnyValues = true;
       internalValueResult.subStatus = this._subStatus;
     }
+    if (this._resourceHealth !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.resourceHealth = this._resourceHealth;
+    }
     if (this._serviceHealth !== undefined) {
       hasAnyValues = true;
       internalValueResult.serviceHealth = this._serviceHealth;
@@ -273,6 +311,7 @@ export class MonitorActivityLogAlertCriteriaOutputReference extends cdktf.Comple
       this._resourceType = undefined;
       this._status = undefined;
       this._subStatus = undefined;
+      this._resourceHealth = undefined;
       this._serviceHealth = undefined;
     }
     else {
@@ -290,6 +329,7 @@ export class MonitorActivityLogAlertCriteriaOutputReference extends cdktf.Comple
       this._resourceType = value.resourceType;
       this._status = value.status;
       this._subStatus = value.subStatus;
+      this._resourceHealth = value.resourceHealth;
       this._serviceHealth = value.serviceHealth;
     }
   }
@@ -497,6 +537,23 @@ export class MonitorActivityLogAlertCriteriaOutputReference extends cdktf.Comple
   // Temporarily expose input value. Use with caution.
   public get subStatusInput() {
     return this._subStatus;
+  }
+
+  // resource_health - computed: false, optional: true, required: false
+  private _resourceHealth?: MonitorActivityLogAlertCriteriaResourceHealth[] | cdktf.IResolvable; 
+  public get resourceHealth() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('resource_health');
+  }
+  public set resourceHealth(value: MonitorActivityLogAlertCriteriaResourceHealth[] | cdktf.IResolvable) {
+    this._resourceHealth = value;
+  }
+  public resetResourceHealth() {
+    this._resourceHealth = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceHealthInput() {
+    return this._resourceHealth;
   }
 
   // service_health - computed: false, optional: true, required: false
