@@ -88,6 +88,10 @@ export interface KubernetesClusterConfig extends cdktf.TerraformMetaArguments {
   */
   readonly resourceGroupName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#role_based_access_control_enabled KubernetesCluster#role_based_access_control_enabled}
+  */
+  readonly roleBasedAccessControlEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#sku_tier KubernetesCluster#sku_tier}
   */
   readonly skuTier?: string;
@@ -113,6 +117,12 @@ export interface KubernetesClusterConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#auto_scaler_profile KubernetesCluster#auto_scaler_profile}
   */
   readonly autoScalerProfile?: KubernetesClusterAutoScalerProfile;
+  /**
+  * azure_active_directory_role_based_access_control block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#azure_active_directory_role_based_access_control KubernetesCluster#azure_active_directory_role_based_access_control}
+  */
+  readonly azureActiveDirectoryRoleBasedAccessControl?: KubernetesClusterAzureActiveDirectoryRoleBasedAccessControl;
   /**
   * default_node_pool block
   * 
@@ -1888,6 +1898,234 @@ export class KubernetesClusterAutoScalerProfileOutputReference extends cdktf.Com
   // Temporarily expose input value. Use with caution.
   public get skipNodesWithSystemPodsInput() {
     return this._skipNodesWithSystemPods;
+  }
+}
+export interface KubernetesClusterAzureActiveDirectoryRoleBasedAccessControl {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#admin_group_object_ids KubernetesCluster#admin_group_object_ids}
+  */
+  readonly adminGroupObjectIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#azure_rbac_enabled KubernetesCluster#azure_rbac_enabled}
+  */
+  readonly azureRbacEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#client_app_id KubernetesCluster#client_app_id}
+  */
+  readonly clientAppId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#managed KubernetesCluster#managed}
+  */
+  readonly managed?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#server_app_id KubernetesCluster#server_app_id}
+  */
+  readonly serverAppId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#server_app_secret KubernetesCluster#server_app_secret}
+  */
+  readonly serverAppSecret?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#tenant_id KubernetesCluster#tenant_id}
+  */
+  readonly tenantId?: string;
+}
+
+export function kubernetesClusterAzureActiveDirectoryRoleBasedAccessControlToTerraform(struct?: KubernetesClusterAzureActiveDirectoryRoleBasedAccessControlOutputReference | KubernetesClusterAzureActiveDirectoryRoleBasedAccessControl): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    admin_group_object_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.adminGroupObjectIds),
+    azure_rbac_enabled: cdktf.booleanToTerraform(struct!.azureRbacEnabled),
+    client_app_id: cdktf.stringToTerraform(struct!.clientAppId),
+    managed: cdktf.booleanToTerraform(struct!.managed),
+    server_app_id: cdktf.stringToTerraform(struct!.serverAppId),
+    server_app_secret: cdktf.stringToTerraform(struct!.serverAppSecret),
+    tenant_id: cdktf.stringToTerraform(struct!.tenantId),
+  }
+}
+
+export class KubernetesClusterAzureActiveDirectoryRoleBasedAccessControlOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  public get internalValue(): KubernetesClusterAzureActiveDirectoryRoleBasedAccessControl | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._adminGroupObjectIds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.adminGroupObjectIds = this._adminGroupObjectIds;
+    }
+    if (this._azureRbacEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.azureRbacEnabled = this._azureRbacEnabled;
+    }
+    if (this._clientAppId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.clientAppId = this._clientAppId;
+    }
+    if (this._managed !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.managed = this._managed;
+    }
+    if (this._serverAppId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.serverAppId = this._serverAppId;
+    }
+    if (this._serverAppSecret !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.serverAppSecret = this._serverAppSecret;
+    }
+    if (this._tenantId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.tenantId = this._tenantId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesClusterAzureActiveDirectoryRoleBasedAccessControl | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._adminGroupObjectIds = undefined;
+      this._azureRbacEnabled = undefined;
+      this._clientAppId = undefined;
+      this._managed = undefined;
+      this._serverAppId = undefined;
+      this._serverAppSecret = undefined;
+      this._tenantId = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._adminGroupObjectIds = value.adminGroupObjectIds;
+      this._azureRbacEnabled = value.azureRbacEnabled;
+      this._clientAppId = value.clientAppId;
+      this._managed = value.managed;
+      this._serverAppId = value.serverAppId;
+      this._serverAppSecret = value.serverAppSecret;
+      this._tenantId = value.tenantId;
+    }
+  }
+
+  // admin_group_object_ids - computed: false, optional: true, required: false
+  private _adminGroupObjectIds?: string[]; 
+  public get adminGroupObjectIds() {
+    return this.getListAttribute('admin_group_object_ids');
+  }
+  public set adminGroupObjectIds(value: string[]) {
+    this._adminGroupObjectIds = value;
+  }
+  public resetAdminGroupObjectIds() {
+    this._adminGroupObjectIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get adminGroupObjectIdsInput() {
+    return this._adminGroupObjectIds;
+  }
+
+  // azure_rbac_enabled - computed: false, optional: true, required: false
+  private _azureRbacEnabled?: boolean | cdktf.IResolvable; 
+  public get azureRbacEnabled() {
+    return this.getBooleanAttribute('azure_rbac_enabled');
+  }
+  public set azureRbacEnabled(value: boolean | cdktf.IResolvable) {
+    this._azureRbacEnabled = value;
+  }
+  public resetAzureRbacEnabled() {
+    this._azureRbacEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get azureRbacEnabledInput() {
+    return this._azureRbacEnabled;
+  }
+
+  // client_app_id - computed: false, optional: true, required: false
+  private _clientAppId?: string; 
+  public get clientAppId() {
+    return this.getStringAttribute('client_app_id');
+  }
+  public set clientAppId(value: string) {
+    this._clientAppId = value;
+  }
+  public resetClientAppId() {
+    this._clientAppId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientAppIdInput() {
+    return this._clientAppId;
+  }
+
+  // managed - computed: false, optional: true, required: false
+  private _managed?: boolean | cdktf.IResolvable; 
+  public get managed() {
+    return this.getBooleanAttribute('managed');
+  }
+  public set managed(value: boolean | cdktf.IResolvable) {
+    this._managed = value;
+  }
+  public resetManaged() {
+    this._managed = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get managedInput() {
+    return this._managed;
+  }
+
+  // server_app_id - computed: false, optional: true, required: false
+  private _serverAppId?: string; 
+  public get serverAppId() {
+    return this.getStringAttribute('server_app_id');
+  }
+  public set serverAppId(value: string) {
+    this._serverAppId = value;
+  }
+  public resetServerAppId() {
+    this._serverAppId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serverAppIdInput() {
+    return this._serverAppId;
+  }
+
+  // server_app_secret - computed: false, optional: true, required: false
+  private _serverAppSecret?: string; 
+  public get serverAppSecret() {
+    return this.getStringAttribute('server_app_secret');
+  }
+  public set serverAppSecret(value: string) {
+    this._serverAppSecret = value;
+  }
+  public resetServerAppSecret() {
+    this._serverAppSecret = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serverAppSecretInput() {
+    return this._serverAppSecret;
+  }
+
+  // tenant_id - computed: true, optional: true, required: false
+  private _tenantId?: string; 
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
+  }
+  public set tenantId(value: string) {
+    this._tenantId = value;
+  }
+  public resetTenantId() {
+    this._tenantId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tenantIdInput() {
+    return this._tenantId;
   }
 }
 export interface KubernetesClusterDefaultNodePoolKubeletConfig {
@@ -6429,11 +6667,13 @@ export class KubernetesCluster extends cdktf.TerraformResource {
     this._privateLinkEnabled = config.privateLinkEnabled;
     this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
     this._resourceGroupName = config.resourceGroupName;
+    this._roleBasedAccessControlEnabled = config.roleBasedAccessControlEnabled;
     this._skuTier = config.skuTier;
     this._tags = config.tags;
     this._aciConnectorLinux.internalValue = config.aciConnectorLinux;
     this._addonProfile.internalValue = config.addonProfile;
     this._autoScalerProfile.internalValue = config.autoScalerProfile;
+    this._azureActiveDirectoryRoleBasedAccessControl.internalValue = config.azureActiveDirectoryRoleBasedAccessControl;
     this._defaultNodePool.internalValue = config.defaultNodePool;
     this._httpProxyConfig.internalValue = config.httpProxyConfig;
     this._identity.internalValue = config.identity;
@@ -6810,6 +7050,22 @@ export class KubernetesCluster extends cdktf.TerraformResource {
     return this._resourceGroupName;
   }
 
+  // role_based_access_control_enabled - computed: true, optional: true, required: false
+  private _roleBasedAccessControlEnabled?: boolean | cdktf.IResolvable; 
+  public get roleBasedAccessControlEnabled() {
+    return this.getBooleanAttribute('role_based_access_control_enabled');
+  }
+  public set roleBasedAccessControlEnabled(value: boolean | cdktf.IResolvable) {
+    this._roleBasedAccessControlEnabled = value;
+  }
+  public resetRoleBasedAccessControlEnabled() {
+    this._roleBasedAccessControlEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get roleBasedAccessControlEnabledInput() {
+    return this._roleBasedAccessControlEnabled;
+  }
+
   // sku_tier - computed: false, optional: true, required: false
   private _skuTier?: string; 
   public get skuTier() {
@@ -6888,6 +7144,22 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get autoScalerProfileInput() {
     return this._autoScalerProfile.internalValue;
+  }
+
+  // azure_active_directory_role_based_access_control - computed: false, optional: true, required: false
+  private _azureActiveDirectoryRoleBasedAccessControl = new KubernetesClusterAzureActiveDirectoryRoleBasedAccessControlOutputReference(this, "azure_active_directory_role_based_access_control", true);
+  public get azureActiveDirectoryRoleBasedAccessControl() {
+    return this._azureActiveDirectoryRoleBasedAccessControl;
+  }
+  public putAzureActiveDirectoryRoleBasedAccessControl(value: KubernetesClusterAzureActiveDirectoryRoleBasedAccessControl) {
+    this._azureActiveDirectoryRoleBasedAccessControl.internalValue = value;
+  }
+  public resetAzureActiveDirectoryRoleBasedAccessControl() {
+    this._azureActiveDirectoryRoleBasedAccessControl.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get azureActiveDirectoryRoleBasedAccessControlInput() {
+    return this._azureActiveDirectoryRoleBasedAccessControl.internalValue;
   }
 
   // default_node_pool - computed: false, optional: false, required: true
@@ -7137,11 +7409,13 @@ export class KubernetesCluster extends cdktf.TerraformResource {
       private_link_enabled: cdktf.booleanToTerraform(this._privateLinkEnabled),
       public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      role_based_access_control_enabled: cdktf.booleanToTerraform(this._roleBasedAccessControlEnabled),
       sku_tier: cdktf.stringToTerraform(this._skuTier),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       aci_connector_linux: kubernetesClusterAciConnectorLinuxToTerraform(this._aciConnectorLinux.internalValue),
       addon_profile: kubernetesClusterAddonProfileToTerraform(this._addonProfile.internalValue),
       auto_scaler_profile: kubernetesClusterAutoScalerProfileToTerraform(this._autoScalerProfile.internalValue),
+      azure_active_directory_role_based_access_control: kubernetesClusterAzureActiveDirectoryRoleBasedAccessControlToTerraform(this._azureActiveDirectoryRoleBasedAccessControl.internalValue),
       default_node_pool: kubernetesClusterDefaultNodePoolToTerraform(this._defaultNodePool.internalValue),
       http_proxy_config: kubernetesClusterHttpProxyConfigToTerraform(this._httpProxyConfig.internalValue),
       identity: kubernetesClusterIdentityToTerraform(this._identity.internalValue),

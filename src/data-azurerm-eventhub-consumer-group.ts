@@ -158,11 +158,6 @@ export class DataAzurermEventhubConsumerGroup extends cdktf.TerraformDataSource 
     return this.getStringAttribute('id');
   }
 
-  // location - computed: true, optional: false, required: false
-  public get location() {
-    return this.getStringAttribute('location');
-  }
-
   // name - computed: false, optional: false, required: true
   private _name?: string; 
   public get name() {

@@ -24,6 +24,10 @@ export interface ContainerRegistryConfig extends cdktf.TerraformMetaArguments {
   */
   readonly encryption?: ContainerRegistryEncryption[] | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry#export_policy_enabled ContainerRegistry#export_policy_enabled}
+  */
+  readonly exportPolicyEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry#georeplication_locations ContainerRegistry#georeplication_locations}
   */
   readonly georeplicationLocations?: string[];
@@ -549,6 +553,7 @@ export class ContainerRegistry extends cdktf.TerraformResource {
     this._anonymousPullEnabled = config.anonymousPullEnabled;
     this._dataEndpointEnabled = config.dataEndpointEnabled;
     this._encryption = config.encryption;
+    this._exportPolicyEnabled = config.exportPolicyEnabled;
     this._georeplicationLocations = config.georeplicationLocations;
     this._georeplications = config.georeplications;
     this._location = config.location;
@@ -645,6 +650,22 @@ export class ContainerRegistry extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get encryptionInput() {
     return this._encryption;
+  }
+
+  // export_policy_enabled - computed: false, optional: true, required: false
+  private _exportPolicyEnabled?: boolean | cdktf.IResolvable; 
+  public get exportPolicyEnabled() {
+    return this.getBooleanAttribute('export_policy_enabled');
+  }
+  public set exportPolicyEnabled(value: boolean | cdktf.IResolvable) {
+    this._exportPolicyEnabled = value;
+  }
+  public resetExportPolicyEnabled() {
+    this._exportPolicyEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get exportPolicyEnabledInput() {
+    return this._exportPolicyEnabled;
   }
 
   // georeplication_locations - computed: true, optional: true, required: false
@@ -934,6 +955,7 @@ export class ContainerRegistry extends cdktf.TerraformResource {
       anonymous_pull_enabled: cdktf.booleanToTerraform(this._anonymousPullEnabled),
       data_endpoint_enabled: cdktf.booleanToTerraform(this._dataEndpointEnabled),
       encryption: cdktf.listMapper(containerRegistryEncryptionToTerraform)(this._encryption),
+      export_policy_enabled: cdktf.booleanToTerraform(this._exportPolicyEnabled),
       georeplication_locations: cdktf.listMapper(cdktf.stringToTerraform)(this._georeplicationLocations),
       georeplications: cdktf.listMapper(containerRegistryGeoreplicationsToTerraform)(this._georeplications),
       location: cdktf.stringToTerraform(this._location),

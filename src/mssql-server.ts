@@ -10,11 +10,11 @@ export interface MssqlServerConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server#administrator_login MssqlServer#administrator_login}
   */
-  readonly administratorLogin: string;
+  readonly administratorLogin?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server#administrator_login_password MssqlServer#administrator_login_password}
   */
-  readonly administratorLoginPassword: string;
+  readonly administratorLoginPassword?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server#connection_policy MssqlServer#connection_policy}
   */
@@ -670,7 +670,7 @@ export class MssqlServer extends cdktf.TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // administrator_login - computed: false, optional: false, required: true
+  // administrator_login - computed: true, optional: true, required: false
   private _administratorLogin?: string; 
   public get administratorLogin() {
     return this.getStringAttribute('administrator_login');
@@ -678,18 +678,24 @@ export class MssqlServer extends cdktf.TerraformResource {
   public set administratorLogin(value: string) {
     this._administratorLogin = value;
   }
+  public resetAdministratorLogin() {
+    this._administratorLogin = undefined;
+  }
   // Temporarily expose input value. Use with caution.
   public get administratorLoginInput() {
     return this._administratorLogin;
   }
 
-  // administrator_login_password - computed: false, optional: false, required: true
+  // administrator_login_password - computed: false, optional: true, required: false
   private _administratorLoginPassword?: string; 
   public get administratorLoginPassword() {
     return this.getStringAttribute('administrator_login_password');
   }
   public set administratorLoginPassword(value: string) {
     this._administratorLoginPassword = value;
+  }
+  public resetAdministratorLoginPassword() {
+    this._administratorLoginPassword = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get administratorLoginPasswordInput() {

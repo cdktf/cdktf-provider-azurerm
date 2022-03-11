@@ -12,6 +12,10 @@ export interface MssqlDatabaseExtendedAuditingPolicyAConfig extends cdktf.Terraf
   */
   readonly databaseId: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database_extended_auditing_policy#enabled MssqlDatabaseExtendedAuditingPolicyA#enabled}
+  */
+  readonly enabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database_extended_auditing_policy#log_monitoring_enabled MssqlDatabaseExtendedAuditingPolicyA#log_monitoring_enabled}
   */
   readonly logMonitoringEnabled?: boolean | cdktf.IResolvable;
@@ -219,6 +223,7 @@ export class MssqlDatabaseExtendedAuditingPolicyA extends cdktf.TerraformResourc
       lifecycle: config.lifecycle
     });
     this._databaseId = config.databaseId;
+    this._enabled = config.enabled;
     this._logMonitoringEnabled = config.logMonitoringEnabled;
     this._retentionInDays = config.retentionInDays;
     this._storageAccountAccessKey = config.storageAccountAccessKey;
@@ -242,6 +247,22 @@ export class MssqlDatabaseExtendedAuditingPolicyA extends cdktf.TerraformResourc
   // Temporarily expose input value. Use with caution.
   public get databaseIdInput() {
     return this._databaseId;
+  }
+
+  // enabled - computed: false, optional: true, required: false
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
   }
 
   // id - computed: true, optional: true, required: false
@@ -352,6 +373,7 @@ export class MssqlDatabaseExtendedAuditingPolicyA extends cdktf.TerraformResourc
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       database_id: cdktf.stringToTerraform(this._databaseId),
+      enabled: cdktf.booleanToTerraform(this._enabled),
       log_monitoring_enabled: cdktf.booleanToTerraform(this._logMonitoringEnabled),
       retention_in_days: cdktf.numberToTerraform(this._retentionInDays),
       storage_account_access_key: cdktf.stringToTerraform(this._storageAccountAccessKey),

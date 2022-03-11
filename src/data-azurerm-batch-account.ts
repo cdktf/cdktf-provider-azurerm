@@ -8,6 +8,10 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermBatchAccountConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/batch_account#encryption DataAzurermBatchAccount#encryption}
+  */
+  readonly encryption?: DataAzurermBatchAccountEncryption[] | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/batch_account#name DataAzurermBatchAccount#name}
   */
   readonly name: string;
@@ -22,6 +26,23 @@ export interface DataAzurermBatchAccountConfig extends cdktf.TerraformMetaArgume
   */
   readonly timeouts?: DataAzurermBatchAccountTimeouts;
 }
+export interface DataAzurermBatchAccountEncryption {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/batch_account#key_vault_key_id DataAzurermBatchAccount#key_vault_key_id}
+  */
+  readonly keyVaultKeyId?: string;
+}
+
+export function dataAzurermBatchAccountEncryptionToTerraform(struct?: DataAzurermBatchAccountEncryption | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    key_vault_key_id: cdktf.stringToTerraform(struct!.keyVaultKeyId),
+  }
+}
+
 export class DataAzurermBatchAccountKeyVaultReference extends cdktf.ComplexComputedList {
 
   // id - computed: true, optional: false, required: false
@@ -133,6 +154,7 @@ export class DataAzurermBatchAccount extends cdktf.TerraformDataSource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._encryption = config.encryption;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._timeouts.internalValue = config.timeouts;
@@ -145,6 +167,23 @@ export class DataAzurermBatchAccount extends cdktf.TerraformDataSource {
   // account_endpoint - computed: true, optional: false, required: false
   public get accountEndpoint() {
     return this.getStringAttribute('account_endpoint');
+  }
+
+  // encryption - computed: false, optional: true, required: false
+  private _encryption?: DataAzurermBatchAccountEncryption[] | cdktf.IResolvable; 
+  public get encryption() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('encryption');
+  }
+  public set encryption(value: DataAzurermBatchAccountEncryption[] | cdktf.IResolvable) {
+    this._encryption = value;
+  }
+  public resetEncryption() {
+    this._encryption = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get encryptionInput() {
+    return this._encryption;
   }
 
   // id - computed: true, optional: true, required: false
@@ -235,6 +274,7 @@ export class DataAzurermBatchAccount extends cdktf.TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      encryption: cdktf.listMapper(dataAzurermBatchAccountEncryptionToTerraform)(this._encryption),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       timeouts: dataAzurermBatchAccountTimeoutsToTerraform(this._timeouts.internalValue),

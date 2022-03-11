@@ -189,11 +189,6 @@ export class DataAzurermEventhubAuthorizationRule extends cdktf.TerraformDataSou
     return this._listen;
   }
 
-  // location - computed: true, optional: false, required: false
-  public get location() {
-    return this.getStringAttribute('location');
-  }
-
   // manage - computed: false, optional: true, required: false
   private _manage?: boolean | cdktf.IResolvable; 
   public get manage() {

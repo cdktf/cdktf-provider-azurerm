@@ -14,15 +14,19 @@ export interface DataAzurermServicebusSubscriptionConfig extends cdktf.Terraform
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_subscription#namespace_name DataAzurermServicebusSubscription#namespace_name}
   */
-  readonly namespaceName: string;
+  readonly namespaceName?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_subscription#resource_group_name DataAzurermServicebusSubscription#resource_group_name}
   */
-  readonly resourceGroupName: string;
+  readonly resourceGroupName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_subscription#topic_id DataAzurermServicebusSubscription#topic_id}
+  */
+  readonly topicId?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_subscription#topic_name DataAzurermServicebusSubscription#topic_name}
   */
-  readonly topicName: string;
+  readonly topicName?: string;
   /**
   * timeouts block
   * 
@@ -132,6 +136,7 @@ export class DataAzurermServicebusSubscription extends cdktf.TerraformDataSource
     this._name = config.name;
     this._namespaceName = config.namespaceName;
     this._resourceGroupName = config.resourceGroupName;
+    this._topicId = config.topicId;
     this._topicName = config.topicName;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -203,13 +208,16 @@ export class DataAzurermServicebusSubscription extends cdktf.TerraformDataSource
     return this._name;
   }
 
-  // namespace_name - computed: false, optional: false, required: true
+  // namespace_name - computed: false, optional: true, required: false
   private _namespaceName?: string; 
   public get namespaceName() {
     return this.getStringAttribute('namespace_name');
   }
   public set namespaceName(value: string) {
     this._namespaceName = value;
+  }
+  public resetNamespaceName() {
+    this._namespaceName = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get namespaceNameInput() {
@@ -221,7 +229,7 @@ export class DataAzurermServicebusSubscription extends cdktf.TerraformDataSource
     return this.getBooleanAttribute('requires_session');
   }
 
-  // resource_group_name - computed: false, optional: false, required: true
+  // resource_group_name - computed: false, optional: true, required: false
   private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
@@ -229,18 +237,40 @@ export class DataAzurermServicebusSubscription extends cdktf.TerraformDataSource
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
+  public resetResourceGroupName() {
+    this._resourceGroupName = undefined;
+  }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
     return this._resourceGroupName;
   }
 
-  // topic_name - computed: false, optional: false, required: true
+  // topic_id - computed: false, optional: true, required: false
+  private _topicId?: string; 
+  public get topicId() {
+    return this.getStringAttribute('topic_id');
+  }
+  public set topicId(value: string) {
+    this._topicId = value;
+  }
+  public resetTopicId() {
+    this._topicId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get topicIdInput() {
+    return this._topicId;
+  }
+
+  // topic_name - computed: false, optional: true, required: false
   private _topicName?: string; 
   public get topicName() {
     return this.getStringAttribute('topic_name');
   }
   public set topicName(value: string) {
     this._topicName = value;
+  }
+  public resetTopicName() {
+    this._topicName = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get topicNameInput() {
@@ -272,6 +302,7 @@ export class DataAzurermServicebusSubscription extends cdktf.TerraformDataSource
       name: cdktf.stringToTerraform(this._name),
       namespace_name: cdktf.stringToTerraform(this._namespaceName),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      topic_id: cdktf.stringToTerraform(this._topicId),
       topic_name: cdktf.stringToTerraform(this._topicName),
       timeouts: dataAzurermServicebusSubscriptionTimeoutsToTerraform(this._timeouts.internalValue),
     };

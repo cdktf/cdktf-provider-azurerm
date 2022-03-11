@@ -186,6 +186,11 @@ export class DataAzurermVirtualNetwork extends cdktf.TerraformDataSource {
     return this.getListAttribute('subnets');
   }
 
+  // tags - computed: true, optional: false, required: false
+  public tags(key: string): string | cdktf.IResolvable {
+    return new cdktf.StringMap(this, 'tags').lookup(key);
+  }
+
   // vnet_peerings - computed: true, optional: false, required: false
   public vnetPeerings(key: string): string | cdktf.IResolvable {
     return new cdktf.StringMap(this, 'vnet_peerings').lookup(key);

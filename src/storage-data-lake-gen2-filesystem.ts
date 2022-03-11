@@ -8,9 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface StorageDataLakeGen2FilesystemConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_data_lake_gen2_filesystem#group StorageDataLakeGen2Filesystem#group}
+  */
+  readonly group?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_data_lake_gen2_filesystem#name StorageDataLakeGen2Filesystem#name}
   */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_data_lake_gen2_filesystem#owner StorageDataLakeGen2Filesystem#owner}
+  */
+  readonly owner?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_data_lake_gen2_filesystem#properties StorageDataLakeGen2Filesystem#properties}
   */
@@ -244,7 +252,9 @@ export class StorageDataLakeGen2Filesystem extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._group = config.group;
     this._name = config.name;
+    this._owner = config.owner;
     this._properties = config.properties;
     this._storageAccountId = config.storageAccountId;
     this._ace = config.ace;
@@ -254,6 +264,22 @@ export class StorageDataLakeGen2Filesystem extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // group - computed: true, optional: true, required: false
+  private _group?: string; 
+  public get group() {
+    return this.getStringAttribute('group');
+  }
+  public set group(value: string) {
+    this._group = value;
+  }
+  public resetGroup() {
+    this._group = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get groupInput() {
+    return this._group;
+  }
 
   // id - computed: true, optional: true, required: false
   public get id() {
@@ -271,6 +297,22 @@ export class StorageDataLakeGen2Filesystem extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name;
+  }
+
+  // owner - computed: true, optional: true, required: false
+  private _owner?: string; 
+  public get owner() {
+    return this.getStringAttribute('owner');
+  }
+  public set owner(value: string) {
+    this._owner = value;
+  }
+  public resetOwner() {
+    this._owner = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ownerInput() {
+    return this._owner;
   }
 
   // properties - computed: false, optional: true, required: false
@@ -341,7 +383,9 @@ export class StorageDataLakeGen2Filesystem extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      group: cdktf.stringToTerraform(this._group),
       name: cdktf.stringToTerraform(this._name),
+      owner: cdktf.stringToTerraform(this._owner),
       properties: cdktf.hashMapper(cdktf.stringToTerraform)(this._properties),
       storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
       ace: cdktf.listMapper(storageDataLakeGen2FilesystemAceToTerraform)(this._ace),
