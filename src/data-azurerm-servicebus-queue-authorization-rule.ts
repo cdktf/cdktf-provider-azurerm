@@ -14,15 +14,19 @@ export interface DataAzurermServicebusQueueAuthorizationRuleConfig extends cdktf
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_queue_authorization_rule#namespace_name DataAzurermServicebusQueueAuthorizationRule#namespace_name}
   */
-  readonly namespaceName: string;
+  readonly namespaceName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_queue_authorization_rule#queue_id DataAzurermServicebusQueueAuthorizationRule#queue_id}
+  */
+  readonly queueId?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_queue_authorization_rule#queue_name DataAzurermServicebusQueueAuthorizationRule#queue_name}
   */
-  readonly queueName: string;
+  readonly queueName?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_queue_authorization_rule#resource_group_name DataAzurermServicebusQueueAuthorizationRule#resource_group_name}
   */
-  readonly resourceGroupName: string;
+  readonly resourceGroupName?: string;
   /**
   * timeouts block
   * 
@@ -131,6 +135,7 @@ export class DataAzurermServicebusQueueAuthorizationRule extends cdktf.Terraform
     });
     this._name = config.name;
     this._namespaceName = config.namespaceName;
+    this._queueId = config.queueId;
     this._queueName = config.queueName;
     this._resourceGroupName = config.resourceGroupName;
     this._timeouts.internalValue = config.timeouts;
@@ -168,13 +173,16 @@ export class DataAzurermServicebusQueueAuthorizationRule extends cdktf.Terraform
     return this._name;
   }
 
-  // namespace_name - computed: false, optional: false, required: true
+  // namespace_name - computed: false, optional: true, required: false
   private _namespaceName?: string; 
   public get namespaceName() {
     return this.getStringAttribute('namespace_name');
   }
   public set namespaceName(value: string) {
     this._namespaceName = value;
+  }
+  public resetNamespaceName() {
+    this._namespaceName = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get namespaceNameInput() {
@@ -196,7 +204,23 @@ export class DataAzurermServicebusQueueAuthorizationRule extends cdktf.Terraform
     return this.getStringAttribute('primary_key');
   }
 
-  // queue_name - computed: false, optional: false, required: true
+  // queue_id - computed: false, optional: true, required: false
+  private _queueId?: string; 
+  public get queueId() {
+    return this.getStringAttribute('queue_id');
+  }
+  public set queueId(value: string) {
+    this._queueId = value;
+  }
+  public resetQueueId() {
+    this._queueId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get queueIdInput() {
+    return this._queueId;
+  }
+
+  // queue_name - computed: false, optional: true, required: false
   private _queueName?: string; 
   public get queueName() {
     return this.getStringAttribute('queue_name');
@@ -204,18 +228,24 @@ export class DataAzurermServicebusQueueAuthorizationRule extends cdktf.Terraform
   public set queueName(value: string) {
     this._queueName = value;
   }
+  public resetQueueName() {
+    this._queueName = undefined;
+  }
   // Temporarily expose input value. Use with caution.
   public get queueNameInput() {
     return this._queueName;
   }
 
-  // resource_group_name - computed: false, optional: false, required: true
+  // resource_group_name - computed: false, optional: true, required: false
   private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  public resetResourceGroupName() {
+    this._resourceGroupName = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
@@ -266,6 +296,7 @@ export class DataAzurermServicebusQueueAuthorizationRule extends cdktf.Terraform
     return {
       name: cdktf.stringToTerraform(this._name),
       namespace_name: cdktf.stringToTerraform(this._namespaceName),
+      queue_id: cdktf.stringToTerraform(this._queueId),
       queue_name: cdktf.stringToTerraform(this._queueName),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       timeouts: dataAzurermServicebusQueueAuthorizationRuleTimeoutsToTerraform(this._timeouts.internalValue),

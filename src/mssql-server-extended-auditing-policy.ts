@@ -8,6 +8,10 @@ import * as cdktf from 'cdktf';
 
 export interface MssqlServerExtendedAuditingPolicyAConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_extended_auditing_policy#enabled MssqlServerExtendedAuditingPolicyA#enabled}
+  */
+  readonly enabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_extended_auditing_policy#log_monitoring_enabled MssqlServerExtendedAuditingPolicyA#log_monitoring_enabled}
   */
   readonly logMonitoringEnabled?: boolean | cdktf.IResolvable;
@@ -222,6 +226,7 @@ export class MssqlServerExtendedAuditingPolicyA extends cdktf.TerraformResource 
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._enabled = config.enabled;
     this._logMonitoringEnabled = config.logMonitoringEnabled;
     this._retentionInDays = config.retentionInDays;
     this._serverId = config.serverId;
@@ -235,6 +240,22 @@ export class MssqlServerExtendedAuditingPolicyA extends cdktf.TerraformResource 
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // enabled - computed: false, optional: true, required: false
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
 
   // id - computed: true, optional: true, required: false
   public get id() {
@@ -372,6 +393,7 @@ export class MssqlServerExtendedAuditingPolicyA extends cdktf.TerraformResource 
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      enabled: cdktf.booleanToTerraform(this._enabled),
       log_monitoring_enabled: cdktf.booleanToTerraform(this._logMonitoringEnabled),
       retention_in_days: cdktf.numberToTerraform(this._retentionInDays),
       server_id: cdktf.stringToTerraform(this._serverId),

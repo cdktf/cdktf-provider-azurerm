@@ -8,6 +8,10 @@ import * as cdktf from 'cdktf';
 
 export interface BatchAccountConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_account#encryption BatchAccount#encryption}
+  */
+  readonly encryption?: BatchAccountEncryption[] | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_account#location BatchAccount#location}
   */
   readonly location: string;
@@ -54,6 +58,23 @@ export interface BatchAccountConfig extends cdktf.TerraformMetaArguments {
   */
   readonly timeouts?: BatchAccountTimeouts;
 }
+export interface BatchAccountEncryption {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_account#key_vault_key_id BatchAccount#key_vault_key_id}
+  */
+  readonly keyVaultKeyId?: string;
+}
+
+export function batchAccountEncryptionToTerraform(struct?: BatchAccountEncryption | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    key_vault_key_id: cdktf.stringToTerraform(struct!.keyVaultKeyId),
+  }
+}
+
 export interface BatchAccountIdentity {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_account#identity_ids BatchAccount#identity_ids}
@@ -421,6 +442,7 @@ export class BatchAccount extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._encryption = config.encryption;
     this._location = config.location;
     this._name = config.name;
     this._poolAllocationMode = config.poolAllocationMode;
@@ -440,6 +462,23 @@ export class BatchAccount extends cdktf.TerraformResource {
   // account_endpoint - computed: true, optional: false, required: false
   public get accountEndpoint() {
     return this.getStringAttribute('account_endpoint');
+  }
+
+  // encryption - computed: false, optional: true, required: false
+  private _encryption?: BatchAccountEncryption[] | cdktf.IResolvable; 
+  public get encryption() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('encryption');
+  }
+  public set encryption(value: BatchAccountEncryption[] | cdktf.IResolvable) {
+    this._encryption = value;
+  }
+  public resetEncryption() {
+    this._encryption = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get encryptionInput() {
+    return this._encryption;
   }
 
   // id - computed: true, optional: true, required: false
@@ -614,6 +653,7 @@ export class BatchAccount extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      encryption: cdktf.listMapper(batchAccountEncryptionToTerraform)(this._encryption),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       pool_allocation_mode: cdktf.stringToTerraform(this._poolAllocationMode),

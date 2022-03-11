@@ -14,7 +14,7 @@ export interface StorageBlobInventoryPolicyConfig extends cdktf.TerraformMetaArg
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_blob_inventory_policy#storage_container_name StorageBlobInventoryPolicy#storage_container_name}
   */
-  readonly storageContainerName: string;
+  readonly storageContainerName?: string;
   /**
   * rules block
   * 
@@ -174,15 +174,35 @@ export class StorageBlobInventoryPolicyRulesFilterOutputReference extends cdktf.
 }
 export interface StorageBlobInventoryPolicyRules {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_blob_inventory_policy#format StorageBlobInventoryPolicy#format}
+  */
+  readonly format: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_blob_inventory_policy#name StorageBlobInventoryPolicy#name}
   */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_blob_inventory_policy#schedule StorageBlobInventoryPolicy#schedule}
+  */
+  readonly schedule: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_blob_inventory_policy#schema_fields StorageBlobInventoryPolicy#schema_fields}
+  */
+  readonly schemaFields: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_blob_inventory_policy#scope StorageBlobInventoryPolicy#scope}
+  */
+  readonly scope: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_blob_inventory_policy#storage_container_name StorageBlobInventoryPolicy#storage_container_name}
+  */
+  readonly storageContainerName: string;
   /**
   * filter block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_blob_inventory_policy#filter StorageBlobInventoryPolicy#filter}
   */
-  readonly filter: StorageBlobInventoryPolicyRulesFilter;
+  readonly filter?: StorageBlobInventoryPolicyRulesFilter;
 }
 
 export function storageBlobInventoryPolicyRulesToTerraform(struct?: StorageBlobInventoryPolicyRules | cdktf.IResolvable): any {
@@ -191,7 +211,12 @@ export function storageBlobInventoryPolicyRulesToTerraform(struct?: StorageBlobI
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    format: cdktf.stringToTerraform(struct!.format),
     name: cdktf.stringToTerraform(struct!.name),
+    schedule: cdktf.stringToTerraform(struct!.schedule),
+    schema_fields: cdktf.listMapper(cdktf.stringToTerraform)(struct!.schemaFields),
+    scope: cdktf.stringToTerraform(struct!.scope),
+    storage_container_name: cdktf.stringToTerraform(struct!.storageContainerName),
     filter: storageBlobInventoryPolicyRulesFilterToTerraform(struct!.filter),
   }
 }
@@ -404,13 +429,16 @@ export class StorageBlobInventoryPolicy extends cdktf.TerraformResource {
     return this._storageAccountId;
   }
 
-  // storage_container_name - computed: false, optional: false, required: true
+  // storage_container_name - computed: false, optional: true, required: false
   private _storageContainerName?: string; 
   public get storageContainerName() {
     return this.getStringAttribute('storage_container_name');
   }
   public set storageContainerName(value: string) {
     this._storageContainerName = value;
+  }
+  public resetStorageContainerName() {
+    this._storageContainerName = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get storageContainerNameInput() {

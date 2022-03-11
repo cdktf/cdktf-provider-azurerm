@@ -147,6 +147,8 @@ export * from './cosmosdb-notebook-workspace';
 export * from './cosmosdb-sql-container';
 export * from './cosmosdb-sql-database';
 export * from './cosmosdb-sql-function';
+export * from './cosmosdb-sql-role-assignment';
+export * from './cosmosdb-sql-role-definition';
 export * from './cosmosdb-sql-stored-procedure';
 export * from './cosmosdb-sql-trigger';
 export * from './cosmosdb-table';

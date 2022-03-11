@@ -82,6 +82,12 @@ export interface IothubConfig extends cdktf.TerraformMetaArguments {
   */
   readonly ipFilterRule?: IothubIpFilterRule[] | cdktf.IResolvable;
   /**
+  * network_rule_set block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub#network_rule_set Iothub#network_rule_set}
+  */
+  readonly networkRuleSet?: IothubNetworkRuleSet[] | cdktf.IResolvable;
+  /**
   * sku block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub#sku Iothub#sku}
@@ -903,6 +909,62 @@ export function iothubIpFilterRuleToTerraform(struct?: IothubIpFilterRule | cdkt
   }
 }
 
+export interface IothubNetworkRuleSetIpRule {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub#action Iothub#action}
+  */
+  readonly action?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub#ip_mask Iothub#ip_mask}
+  */
+  readonly ipMask: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub#name Iothub#name}
+  */
+  readonly name: string;
+}
+
+export function iothubNetworkRuleSetIpRuleToTerraform(struct?: IothubNetworkRuleSetIpRule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    action: cdktf.stringToTerraform(struct!.action),
+    ip_mask: cdktf.stringToTerraform(struct!.ipMask),
+    name: cdktf.stringToTerraform(struct!.name),
+  }
+}
+
+export interface IothubNetworkRuleSet {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub#apply_to_builtin_eventhub_endpoint Iothub#apply_to_builtin_eventhub_endpoint}
+  */
+  readonly applyToBuiltinEventhubEndpoint?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub#default_action Iothub#default_action}
+  */
+  readonly defaultAction?: string;
+  /**
+  * ip_rule block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub#ip_rule Iothub#ip_rule}
+  */
+  readonly ipRule?: IothubNetworkRuleSetIpRule[] | cdktf.IResolvable;
+}
+
+export function iothubNetworkRuleSetToTerraform(struct?: IothubNetworkRuleSet | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    apply_to_builtin_eventhub_endpoint: cdktf.booleanToTerraform(struct!.applyToBuiltinEventhubEndpoint),
+    default_action: cdktf.stringToTerraform(struct!.defaultAction),
+    ip_rule: cdktf.listMapper(iothubNetworkRuleSetIpRuleToTerraform)(struct!.ipRule),
+  }
+}
+
 export interface IothubSku {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub#capacity Iothub#capacity}
@@ -1186,6 +1248,7 @@ export class Iothub extends cdktf.TerraformResource {
     this._fileUpload.internalValue = config.fileUpload;
     this._identity.internalValue = config.identity;
     this._ipFilterRule = config.ipFilterRule;
+    this._networkRuleSet = config.networkRuleSet;
     this._sku.internalValue = config.sku;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -1490,6 +1553,23 @@ export class Iothub extends cdktf.TerraformResource {
     return this._ipFilterRule;
   }
 
+  // network_rule_set - computed: false, optional: true, required: false
+  private _networkRuleSet?: IothubNetworkRuleSet[] | cdktf.IResolvable; 
+  public get networkRuleSet() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('network_rule_set');
+  }
+  public set networkRuleSet(value: IothubNetworkRuleSet[] | cdktf.IResolvable) {
+    this._networkRuleSet = value;
+  }
+  public resetNetworkRuleSet() {
+    this._networkRuleSet = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkRuleSetInput() {
+    return this._networkRuleSet;
+  }
+
   // sku - computed: false, optional: false, required: true
   private _sku = new IothubSkuOutputReference(this, "sku", true);
   public get sku() {
@@ -1541,6 +1621,7 @@ export class Iothub extends cdktf.TerraformResource {
       file_upload: iothubFileUploadToTerraform(this._fileUpload.internalValue),
       identity: iothubIdentityToTerraform(this._identity.internalValue),
       ip_filter_rule: cdktf.listMapper(iothubIpFilterRuleToTerraform)(this._ipFilterRule),
+      network_rule_set: cdktf.listMapper(iothubNetworkRuleSetToTerraform)(this._networkRuleSet),
       sku: iothubSkuToTerraform(this._sku.internalValue),
       timeouts: iothubTimeoutsToTerraform(this._timeouts.internalValue),
     };

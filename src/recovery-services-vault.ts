@@ -8,6 +8,10 @@ import * as cdktf from 'cdktf';
 
 export interface RecoveryServicesVaultConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/recovery_services_vault#cross_region_restore_enabled RecoveryServicesVault#cross_region_restore_enabled}
+  */
+  readonly crossRegionRestoreEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/recovery_services_vault#location RecoveryServicesVault#location}
   */
   readonly location: string;
@@ -421,6 +425,7 @@ export class RecoveryServicesVault extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._crossRegionRestoreEnabled = config.crossRegionRestoreEnabled;
     this._location = config.location;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
@@ -436,6 +441,22 @@ export class RecoveryServicesVault extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // cross_region_restore_enabled - computed: false, optional: true, required: false
+  private _crossRegionRestoreEnabled?: boolean | cdktf.IResolvable; 
+  public get crossRegionRestoreEnabled() {
+    return this.getBooleanAttribute('cross_region_restore_enabled');
+  }
+  public set crossRegionRestoreEnabled(value: boolean | cdktf.IResolvable) {
+    this._crossRegionRestoreEnabled = value;
+  }
+  public resetCrossRegionRestoreEnabled() {
+    this._crossRegionRestoreEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get crossRegionRestoreEnabledInput() {
+    return this._crossRegionRestoreEnabled;
+  }
 
   // id - computed: true, optional: true, required: false
   public get id() {
@@ -596,6 +617,7 @@ export class RecoveryServicesVault extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      cross_region_restore_enabled: cdktf.booleanToTerraform(this._crossRegionRestoreEnabled),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),

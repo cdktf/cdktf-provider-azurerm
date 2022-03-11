@@ -14,15 +14,23 @@ export interface DataAzurermServicebusTopicAuthorizationRuleConfig extends cdktf
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_topic_authorization_rule#namespace_name DataAzurermServicebusTopicAuthorizationRule#namespace_name}
   */
-  readonly namespaceName: string;
+  readonly namespaceName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_topic_authorization_rule#queue_name DataAzurermServicebusTopicAuthorizationRule#queue_name}
+  */
+  readonly queueName?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_topic_authorization_rule#resource_group_name DataAzurermServicebusTopicAuthorizationRule#resource_group_name}
   */
-  readonly resourceGroupName: string;
+  readonly resourceGroupName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_topic_authorization_rule#topic_id DataAzurermServicebusTopicAuthorizationRule#topic_id}
+  */
+  readonly topicId?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_topic_authorization_rule#topic_name DataAzurermServicebusTopicAuthorizationRule#topic_name}
   */
-  readonly topicName: string;
+  readonly topicName?: string;
   /**
   * timeouts block
   * 
@@ -131,7 +139,9 @@ export class DataAzurermServicebusTopicAuthorizationRule extends cdktf.Terraform
     });
     this._name = config.name;
     this._namespaceName = config.namespaceName;
+    this._queueName = config.queueName;
     this._resourceGroupName = config.resourceGroupName;
+    this._topicId = config.topicId;
     this._topicName = config.topicName;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -168,13 +178,16 @@ export class DataAzurermServicebusTopicAuthorizationRule extends cdktf.Terraform
     return this._name;
   }
 
-  // namespace_name - computed: false, optional: false, required: true
+  // namespace_name - computed: false, optional: true, required: false
   private _namespaceName?: string; 
   public get namespaceName() {
     return this.getStringAttribute('namespace_name');
   }
   public set namespaceName(value: string) {
     this._namespaceName = value;
+  }
+  public resetNamespaceName() {
+    this._namespaceName = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get namespaceNameInput() {
@@ -196,13 +209,32 @@ export class DataAzurermServicebusTopicAuthorizationRule extends cdktf.Terraform
     return this.getStringAttribute('primary_key');
   }
 
-  // resource_group_name - computed: false, optional: false, required: true
+  // queue_name - computed: false, optional: true, required: false
+  private _queueName?: string; 
+  public get queueName() {
+    return this.getStringAttribute('queue_name');
+  }
+  public set queueName(value: string) {
+    this._queueName = value;
+  }
+  public resetQueueName() {
+    this._queueName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get queueNameInput() {
+    return this._queueName;
+  }
+
+  // resource_group_name - computed: false, optional: true, required: false
   private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  public resetResourceGroupName() {
+    this._resourceGroupName = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
@@ -229,13 +261,32 @@ export class DataAzurermServicebusTopicAuthorizationRule extends cdktf.Terraform
     return this.getBooleanAttribute('send');
   }
 
-  // topic_name - computed: false, optional: false, required: true
+  // topic_id - computed: false, optional: true, required: false
+  private _topicId?: string; 
+  public get topicId() {
+    return this.getStringAttribute('topic_id');
+  }
+  public set topicId(value: string) {
+    this._topicId = value;
+  }
+  public resetTopicId() {
+    this._topicId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get topicIdInput() {
+    return this._topicId;
+  }
+
+  // topic_name - computed: false, optional: true, required: false
   private _topicName?: string; 
   public get topicName() {
     return this.getStringAttribute('topic_name');
   }
   public set topicName(value: string) {
     this._topicName = value;
+  }
+  public resetTopicName() {
+    this._topicName = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get topicNameInput() {
@@ -266,7 +317,9 @@ export class DataAzurermServicebusTopicAuthorizationRule extends cdktf.Terraform
     return {
       name: cdktf.stringToTerraform(this._name),
       namespace_name: cdktf.stringToTerraform(this._namespaceName),
+      queue_name: cdktf.stringToTerraform(this._queueName),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      topic_id: cdktf.stringToTerraform(this._topicId),
       topic_name: cdktf.stringToTerraform(this._topicName),
       timeouts: dataAzurermServicebusTopicAuthorizationRuleTimeoutsToTerraform(this._timeouts.internalValue),
     };

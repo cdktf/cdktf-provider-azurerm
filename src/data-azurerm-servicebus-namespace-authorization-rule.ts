@@ -12,13 +12,17 @@ export interface DataAzurermServicebusNamespaceAuthorizationRuleConfig extends c
   */
   readonly name: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_namespace_authorization_rule#namespace_id DataAzurermServicebusNamespaceAuthorizationRule#namespace_id}
+  */
+  readonly namespaceId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_namespace_authorization_rule#namespace_name DataAzurermServicebusNamespaceAuthorizationRule#namespace_name}
   */
-  readonly namespaceName: string;
+  readonly namespaceName?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_namespace_authorization_rule#resource_group_name DataAzurermServicebusNamespaceAuthorizationRule#resource_group_name}
   */
-  readonly resourceGroupName: string;
+  readonly resourceGroupName?: string;
   /**
   * timeouts block
   * 
@@ -126,6 +130,7 @@ export class DataAzurermServicebusNamespaceAuthorizationRule extends cdktf.Terra
       lifecycle: config.lifecycle
     });
     this._name = config.name;
+    this._namespaceId = config.namespaceId;
     this._namespaceName = config.namespaceName;
     this._resourceGroupName = config.resourceGroupName;
     this._timeouts.internalValue = config.timeouts;
@@ -153,13 +158,32 @@ export class DataAzurermServicebusNamespaceAuthorizationRule extends cdktf.Terra
     return this._name;
   }
 
-  // namespace_name - computed: false, optional: false, required: true
+  // namespace_id - computed: false, optional: true, required: false
+  private _namespaceId?: string; 
+  public get namespaceId() {
+    return this.getStringAttribute('namespace_id');
+  }
+  public set namespaceId(value: string) {
+    this._namespaceId = value;
+  }
+  public resetNamespaceId() {
+    this._namespaceId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get namespaceIdInput() {
+    return this._namespaceId;
+  }
+
+  // namespace_name - computed: false, optional: true, required: false
   private _namespaceName?: string; 
   public get namespaceName() {
     return this.getStringAttribute('namespace_name');
   }
   public set namespaceName(value: string) {
     this._namespaceName = value;
+  }
+  public resetNamespaceName() {
+    this._namespaceName = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get namespaceNameInput() {
@@ -181,13 +205,16 @@ export class DataAzurermServicebusNamespaceAuthorizationRule extends cdktf.Terra
     return this.getStringAttribute('primary_key');
   }
 
-  // resource_group_name - computed: false, optional: false, required: true
+  // resource_group_name - computed: false, optional: true, required: false
   private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  public resetResourceGroupName() {
+    this._resourceGroupName = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
@@ -232,6 +259,7 @@ export class DataAzurermServicebusNamespaceAuthorizationRule extends cdktf.Terra
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       name: cdktf.stringToTerraform(this._name),
+      namespace_id: cdktf.stringToTerraform(this._namespaceId),
       namespace_name: cdktf.stringToTerraform(this._namespaceName),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       timeouts: dataAzurermServicebusNamespaceAuthorizationRuleTimeoutsToTerraform(this._timeouts.internalValue),

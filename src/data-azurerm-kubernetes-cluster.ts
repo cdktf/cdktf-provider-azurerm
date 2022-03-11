@@ -22,6 +22,13 @@ export interface DataAzurermKubernetesClusterConfig extends cdktf.TerraformMetaA
   */
   readonly timeouts?: DataAzurermKubernetesClusterTimeouts;
 }
+export class DataAzurermKubernetesClusterAciConnectorLinux extends cdktf.ComplexComputedList {
+
+  // subnet_name - computed: true, optional: false, required: false
+  public get subnetName() {
+    return this.getStringAttribute('subnet_name');
+  }
+}
 export class DataAzurermKubernetesClusterAddonProfileAzureKeyvaultSecretsProviderSecretIdentity extends cdktf.ComplexComputedList {
 
   // client_id - computed: true, optional: false, required: false
@@ -334,6 +341,38 @@ export class DataAzurermKubernetesClusterAgentPoolProfile extends cdktf.ComplexC
     return this.getListAttribute('zones');
   }
 }
+export class DataAzurermKubernetesClusterAzureActiveDirectoryRoleBasedAccessControl extends cdktf.ComplexComputedList {
+
+  // admin_group_object_ids - computed: true, optional: false, required: false
+  public get adminGroupObjectIds() {
+    return this.getListAttribute('admin_group_object_ids');
+  }
+
+  // azure_rbac_enabled - computed: true, optional: false, required: false
+  public get azureRbacEnabled() {
+    return this.getBooleanAttribute('azure_rbac_enabled');
+  }
+
+  // client_app_id - computed: true, optional: false, required: false
+  public get clientAppId() {
+    return this.getStringAttribute('client_app_id');
+  }
+
+  // managed - computed: true, optional: false, required: false
+  public get managed() {
+    return this.getBooleanAttribute('managed');
+  }
+
+  // server_app_id - computed: true, optional: false, required: false
+  public get serverAppId() {
+    return this.getStringAttribute('server_app_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
+  }
+}
 export class DataAzurermKubernetesClusterIdentity extends cdktf.ComplexComputedList {
 
   // principal_id - computed: true, optional: false, required: false
@@ -354,6 +393,91 @@ export class DataAzurermKubernetesClusterIdentity extends cdktf.ComplexComputedL
   // user_assigned_identity_id - computed: true, optional: false, required: false
   public get userAssignedIdentityId() {
     return this.getStringAttribute('user_assigned_identity_id');
+  }
+}
+export class DataAzurermKubernetesClusterIngressApplicationGatewayIngressApplicationGatewayIdentity extends cdktf.ComplexComputedList {
+
+  // client_id - computed: true, optional: false, required: false
+  public get clientId() {
+    return this.getStringAttribute('client_id');
+  }
+
+  // object_id - computed: true, optional: false, required: false
+  public get objectId() {
+    return this.getStringAttribute('object_id');
+  }
+
+  // user_assigned_identity_id - computed: true, optional: false, required: false
+  public get userAssignedIdentityId() {
+    return this.getStringAttribute('user_assigned_identity_id');
+  }
+}
+export class DataAzurermKubernetesClusterIngressApplicationGateway extends cdktf.ComplexComputedList {
+
+  // effective_gateway_id - computed: true, optional: false, required: false
+  public get effectiveGatewayId() {
+    return this.getStringAttribute('effective_gateway_id');
+  }
+
+  // gateway_id - computed: true, optional: false, required: false
+  public get gatewayId() {
+    return this.getStringAttribute('gateway_id');
+  }
+
+  // gateway_name - computed: true, optional: false, required: false
+  public get gatewayName() {
+    return this.getStringAttribute('gateway_name');
+  }
+
+  // ingress_application_gateway_identity - computed: true, optional: false, required: false
+  public get ingressApplicationGatewayIdentity() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('ingress_application_gateway_identity');
+  }
+
+  // subnet_cidr - computed: true, optional: false, required: false
+  public get subnetCidr() {
+    return this.getStringAttribute('subnet_cidr');
+  }
+
+  // subnet_id - computed: true, optional: false, required: false
+  public get subnetId() {
+    return this.getStringAttribute('subnet_id');
+  }
+}
+export class DataAzurermKubernetesClusterKeyVaultSecretsProviderSecretIdentity extends cdktf.ComplexComputedList {
+
+  // client_id - computed: true, optional: false, required: false
+  public get clientId() {
+    return this.getStringAttribute('client_id');
+  }
+
+  // object_id - computed: true, optional: false, required: false
+  public get objectId() {
+    return this.getStringAttribute('object_id');
+  }
+
+  // user_assigned_identity_id - computed: true, optional: false, required: false
+  public get userAssignedIdentityId() {
+    return this.getStringAttribute('user_assigned_identity_id');
+  }
+}
+export class DataAzurermKubernetesClusterKeyVaultSecretsProvider extends cdktf.ComplexComputedList {
+
+  // secret_identity - computed: true, optional: false, required: false
+  public get secretIdentity() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('secret_identity');
+  }
+
+  // secret_rotation_enabled - computed: true, optional: false, required: false
+  public get secretRotationEnabled() {
+    return this.getBooleanAttribute('secret_rotation_enabled');
+  }
+
+  // secret_rotation_interval - computed: true, optional: false, required: false
+  public get secretRotationInterval() {
+    return this.getStringAttribute('secret_rotation_interval');
   }
 }
 export class DataAzurermKubernetesClusterKubeAdminConfig extends cdktf.ComplexComputedList {
@@ -492,6 +616,36 @@ export class DataAzurermKubernetesClusterNetworkProfile extends cdktf.ComplexCom
   // service_cidr - computed: true, optional: false, required: false
   public get serviceCidr() {
     return this.getStringAttribute('service_cidr');
+  }
+}
+export class DataAzurermKubernetesClusterOmsAgentOmsAgentIdentity extends cdktf.ComplexComputedList {
+
+  // client_id - computed: true, optional: false, required: false
+  public get clientId() {
+    return this.getStringAttribute('client_id');
+  }
+
+  // object_id - computed: true, optional: false, required: false
+  public get objectId() {
+    return this.getStringAttribute('object_id');
+  }
+
+  // user_assigned_identity_id - computed: true, optional: false, required: false
+  public get userAssignedIdentityId() {
+    return this.getStringAttribute('user_assigned_identity_id');
+  }
+}
+export class DataAzurermKubernetesClusterOmsAgent extends cdktf.ComplexComputedList {
+
+  // log_analytics_workspace_id - computed: true, optional: false, required: false
+  public get logAnalyticsWorkspaceId() {
+    return this.getStringAttribute('log_analytics_workspace_id');
+  }
+
+  // oms_agent_identity - computed: true, optional: false, required: false
+  public get omsAgentIdentity() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('oms_agent_identity');
   }
 }
 export class DataAzurermKubernetesClusterRoleBasedAccessControlAzureActiveDirectory extends cdktf.ComplexComputedList {
@@ -656,6 +810,11 @@ export class DataAzurermKubernetesCluster extends cdktf.TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
+  // aci_connector_linux - computed: true, optional: false, required: false
+  public aciConnectorLinux(index: string) {
+    return new DataAzurermKubernetesClusterAciConnectorLinux(this, 'aci_connector_linux', index, false);
+  }
+
   // addon_profile - computed: true, optional: false, required: false
   public addonProfile(index: string) {
     return new DataAzurermKubernetesClusterAddonProfile(this, 'addon_profile', index, false);
@@ -669,6 +828,16 @@ export class DataAzurermKubernetesCluster extends cdktf.TerraformDataSource {
   // api_server_authorized_ip_ranges - computed: true, optional: false, required: false
   public get apiServerAuthorizedIpRanges() {
     return cdktf.Fn.tolist(this.getListAttribute('api_server_authorized_ip_ranges'));
+  }
+
+  // azure_active_directory_role_based_access_control - computed: true, optional: false, required: false
+  public azureActiveDirectoryRoleBasedAccessControl(index: string) {
+    return new DataAzurermKubernetesClusterAzureActiveDirectoryRoleBasedAccessControl(this, 'azure_active_directory_role_based_access_control', index, false);
+  }
+
+  // azure_policy_enabled - computed: true, optional: false, required: false
+  public get azurePolicyEnabled() {
+    return this.getBooleanAttribute('azure_policy_enabled');
   }
 
   // disk_encryption_set_id - computed: true, optional: false, required: false
@@ -686,6 +855,16 @@ export class DataAzurermKubernetesCluster extends cdktf.TerraformDataSource {
     return this.getStringAttribute('fqdn');
   }
 
+  // http_application_routing_enabled - computed: true, optional: false, required: false
+  public get httpApplicationRoutingEnabled() {
+    return this.getBooleanAttribute('http_application_routing_enabled');
+  }
+
+  // http_application_routing_zone_name - computed: true, optional: false, required: false
+  public get httpApplicationRoutingZoneName() {
+    return this.getStringAttribute('http_application_routing_zone_name');
+  }
+
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
@@ -694,6 +873,16 @@ export class DataAzurermKubernetesCluster extends cdktf.TerraformDataSource {
   // identity - computed: true, optional: false, required: false
   public identity(index: string) {
     return new DataAzurermKubernetesClusterIdentity(this, 'identity', index, false);
+  }
+
+  // ingress_application_gateway - computed: true, optional: false, required: false
+  public ingressApplicationGateway(index: string) {
+    return new DataAzurermKubernetesClusterIngressApplicationGateway(this, 'ingress_application_gateway', index, false);
+  }
+
+  // key_vault_secrets_provider - computed: true, optional: false, required: false
+  public keyVaultSecretsProvider(index: string) {
+    return new DataAzurermKubernetesClusterKeyVaultSecretsProvider(this, 'key_vault_secrets_provider', index, false);
   }
 
   // kube_admin_config - computed: true, optional: false, required: false
@@ -759,6 +948,16 @@ export class DataAzurermKubernetesCluster extends cdktf.TerraformDataSource {
     return this.getStringAttribute('node_resource_group');
   }
 
+  // oms_agent - computed: true, optional: false, required: false
+  public omsAgent(index: string) {
+    return new DataAzurermKubernetesClusterOmsAgent(this, 'oms_agent', index, false);
+  }
+
+  // open_service_mesh_enabled - computed: true, optional: false, required: false
+  public get openServiceMeshEnabled() {
+    return this.getBooleanAttribute('open_service_mesh_enabled');
+  }
+
   // private_cluster_enabled - computed: true, optional: false, required: false
   public get privateClusterEnabled() {
     return this.getBooleanAttribute('private_cluster_enabled');
@@ -790,6 +989,11 @@ export class DataAzurermKubernetesCluster extends cdktf.TerraformDataSource {
   // role_based_access_control - computed: true, optional: false, required: false
   public roleBasedAccessControl(index: string) {
     return new DataAzurermKubernetesClusterRoleBasedAccessControl(this, 'role_based_access_control', index, false);
+  }
+
+  // role_based_access_control_enabled - computed: true, optional: false, required: false
+  public get roleBasedAccessControlEnabled() {
+    return this.getBooleanAttribute('role_based_access_control_enabled');
   }
 
   // service_principal - computed: true, optional: false, required: false
