@@ -22,7 +22,45 @@ export interface DataAzurermSearchServiceConfig extends cdktf.TerraformMetaArgum
   */
   readonly timeouts?: DataAzurermSearchServiceTimeouts;
 }
-export class DataAzurermSearchServiceIdentity extends cdktf.ComplexComputedList {
+export interface DataAzurermSearchServiceIdentity {
+}
+
+export function dataAzurermSearchServiceIdentityToTerraform(struct?: DataAzurermSearchServiceIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermSearchServiceIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermSearchServiceIdentity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermSearchServiceIdentity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // principal_id - computed: true, optional: false, required: false
   public get principalId() {
@@ -39,7 +77,64 @@ export class DataAzurermSearchServiceIdentity extends cdktf.ComplexComputedList 
     return this.getStringAttribute('type');
   }
 }
-export class DataAzurermSearchServiceQueryKeys extends cdktf.ComplexComputedList {
+
+export class DataAzurermSearchServiceIdentityList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermSearchServiceIdentityOutputReference {
+    return new DataAzurermSearchServiceIdentityOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermSearchServiceQueryKeys {
+}
+
+export function dataAzurermSearchServiceQueryKeysToTerraform(struct?: DataAzurermSearchServiceQueryKeys): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermSearchServiceQueryKeysOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermSearchServiceQueryKeys | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermSearchServiceQueryKeys | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // key - computed: true, optional: false, required: false
   public get key() {
@@ -49,6 +144,25 @@ export class DataAzurermSearchServiceQueryKeys extends cdktf.ComplexComputedList
   // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
+  }
+}
+
+export class DataAzurermSearchServiceQueryKeysList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermSearchServiceQueryKeysOutputReference {
+    return new DataAzurermSearchServiceQueryKeysOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataAzurermSearchServiceTimeouts {
@@ -74,10 +188,9 @@ export class DataAzurermSearchServiceTimeoutsOutputReference extends cdktf.Compl
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermSearchServiceTimeouts | undefined {
@@ -126,7 +239,7 @@ export class DataAzurermSearchService extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_search_service";
+  public static readonly tfResourceType = "azurerm_search_service";
 
   // ===========
   // INITIALIZER
@@ -143,7 +256,9 @@ export class DataAzurermSearchService extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'azurerm_search_service',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -165,8 +280,9 @@ export class DataAzurermSearchService extends cdktf.TerraformDataSource {
   }
 
   // identity - computed: true, optional: false, required: false
-  public identity(index: string) {
-    return new DataAzurermSearchServiceIdentity(this, 'identity', index, false);
+  private _identity = new DataAzurermSearchServiceIdentityList(this, "identity", false);
+  public get identity() {
+    return this._identity;
   }
 
   // name - computed: false, optional: false, required: true
@@ -198,8 +314,9 @@ export class DataAzurermSearchService extends cdktf.TerraformDataSource {
   }
 
   // query_keys - computed: true, optional: false, required: false
-  public queryKeys(index: string) {
-    return new DataAzurermSearchServiceQueryKeys(this, 'query_keys', index, false);
+  private _queryKeys = new DataAzurermSearchServiceQueryKeysList(this, "query_keys", false);
+  public get queryKeys() {
+    return this._queryKeys;
   }
 
   // replica_count - computed: true, optional: false, required: false
@@ -226,7 +343,7 @@ export class DataAzurermSearchService extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermSearchServiceTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermSearchServiceTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

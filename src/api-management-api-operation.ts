@@ -317,10 +317,9 @@ export class ApiManagementApiOperationRequestOutputReference extends cdktf.Compl
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ApiManagementApiOperationRequest | undefined {
@@ -712,10 +711,9 @@ export class ApiManagementApiOperationTimeoutsOutputReference extends cdktf.Comp
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ApiManagementApiOperationTimeouts | undefined {
@@ -830,7 +828,7 @@ export class ApiManagementApiOperation extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_api_management_api_operation";
+  public static readonly tfResourceType = "azurerm_api_management_api_operation";
 
   // ===========
   // INITIALIZER
@@ -847,7 +845,9 @@ export class ApiManagementApiOperation extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_api_management_api_operation',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -985,7 +985,7 @@ export class ApiManagementApiOperation extends cdktf.TerraformResource {
   }
 
   // request - computed: false, optional: true, required: false
-  private _request = new ApiManagementApiOperationRequestOutputReference(this, "request", true);
+  private _request = new ApiManagementApiOperationRequestOutputReference(this, "request");
   public get request() {
     return this._request;
   }
@@ -1035,7 +1035,7 @@ export class ApiManagementApiOperation extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ApiManagementApiOperationTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new ApiManagementApiOperationTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

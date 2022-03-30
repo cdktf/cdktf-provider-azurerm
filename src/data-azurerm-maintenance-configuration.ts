@@ -22,7 +22,45 @@ export interface DataAzurermMaintenanceConfigurationConfig extends cdktf.Terrafo
   */
   readonly timeouts?: DataAzurermMaintenanceConfigurationTimeouts;
 }
-export class DataAzurermMaintenanceConfigurationWindow extends cdktf.ComplexComputedList {
+export interface DataAzurermMaintenanceConfigurationWindow {
+}
+
+export function dataAzurermMaintenanceConfigurationWindowToTerraform(struct?: DataAzurermMaintenanceConfigurationWindow): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermMaintenanceConfigurationWindowOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermMaintenanceConfigurationWindow | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermMaintenanceConfigurationWindow | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // duration - computed: true, optional: false, required: false
   public get duration() {
@@ -49,6 +87,25 @@ export class DataAzurermMaintenanceConfigurationWindow extends cdktf.ComplexComp
     return this.getStringAttribute('time_zone');
   }
 }
+
+export class DataAzurermMaintenanceConfigurationWindowList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermMaintenanceConfigurationWindowOutputReference {
+    return new DataAzurermMaintenanceConfigurationWindowOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataAzurermMaintenanceConfigurationTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/maintenance_configuration#read DataAzurermMaintenanceConfiguration#read}
@@ -72,10 +129,9 @@ export class DataAzurermMaintenanceConfigurationTimeoutsOutputReference extends 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermMaintenanceConfigurationTimeouts | undefined {
@@ -124,7 +180,7 @@ export class DataAzurermMaintenanceConfiguration extends cdktf.TerraformDataSour
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_maintenance_configuration";
+  public static readonly tfResourceType = "azurerm_maintenance_configuration";
 
   // ===========
   // INITIALIZER
@@ -141,7 +197,9 @@ export class DataAzurermMaintenanceConfiguration extends cdktf.TerraformDataSour
     super(scope, id, {
       terraformResourceType: 'azurerm_maintenance_configuration',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -214,12 +272,13 @@ export class DataAzurermMaintenanceConfiguration extends cdktf.TerraformDataSour
   }
 
   // window - computed: true, optional: false, required: false
-  public window(index: string) {
-    return new DataAzurermMaintenanceConfigurationWindow(this, 'window', index, false);
+  private _window = new DataAzurermMaintenanceConfigurationWindowList(this, "window", false);
+  public get window() {
+    return this._window;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermMaintenanceConfigurationTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermMaintenanceConfigurationTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

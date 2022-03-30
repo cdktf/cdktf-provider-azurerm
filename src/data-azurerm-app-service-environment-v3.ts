@@ -22,7 +22,45 @@ export interface DataAzurermAppServiceEnvironmentV3Config extends cdktf.Terrafor
   */
   readonly timeouts?: DataAzurermAppServiceEnvironmentV3Timeouts;
 }
-export class DataAzurermAppServiceEnvironmentV3ClusterSetting extends cdktf.ComplexComputedList {
+export interface DataAzurermAppServiceEnvironmentV3ClusterSetting {
+}
+
+export function dataAzurermAppServiceEnvironmentV3ClusterSettingToTerraform(struct?: DataAzurermAppServiceEnvironmentV3ClusterSetting): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermAppServiceEnvironmentV3ClusterSettingOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermAppServiceEnvironmentV3ClusterSetting | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermAppServiceEnvironmentV3ClusterSetting | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // name - computed: true, optional: false, required: false
   public get name() {
@@ -34,7 +72,64 @@ export class DataAzurermAppServiceEnvironmentV3ClusterSetting extends cdktf.Comp
     return this.getStringAttribute('value');
   }
 }
-export class DataAzurermAppServiceEnvironmentV3InboundNetworkDependencies extends cdktf.ComplexComputedList {
+
+export class DataAzurermAppServiceEnvironmentV3ClusterSettingList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermAppServiceEnvironmentV3ClusterSettingOutputReference {
+    return new DataAzurermAppServiceEnvironmentV3ClusterSettingOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermAppServiceEnvironmentV3InboundNetworkDependencies {
+}
+
+export function dataAzurermAppServiceEnvironmentV3InboundNetworkDependenciesToTerraform(struct?: DataAzurermAppServiceEnvironmentV3InboundNetworkDependencies): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermAppServiceEnvironmentV3InboundNetworkDependenciesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermAppServiceEnvironmentV3InboundNetworkDependencies | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermAppServiceEnvironmentV3InboundNetworkDependencies | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // description - computed: true, optional: false, required: false
   public get description() {
@@ -49,6 +144,25 @@ export class DataAzurermAppServiceEnvironmentV3InboundNetworkDependencies extend
   // ports - computed: true, optional: false, required: false
   public get ports() {
     return this.getListAttribute('ports');
+  }
+}
+
+export class DataAzurermAppServiceEnvironmentV3InboundNetworkDependenciesList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermAppServiceEnvironmentV3InboundNetworkDependenciesOutputReference {
+    return new DataAzurermAppServiceEnvironmentV3InboundNetworkDependenciesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataAzurermAppServiceEnvironmentV3Timeouts {
@@ -74,10 +188,9 @@ export class DataAzurermAppServiceEnvironmentV3TimeoutsOutputReference extends c
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermAppServiceEnvironmentV3Timeouts | undefined {
@@ -126,7 +239,7 @@ export class DataAzurermAppServiceEnvironmentV3 extends cdktf.TerraformDataSourc
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_app_service_environment_v3";
+  public static readonly tfResourceType = "azurerm_app_service_environment_v3";
 
   // ===========
   // INITIALIZER
@@ -143,7 +256,9 @@ export class DataAzurermAppServiceEnvironmentV3 extends cdktf.TerraformDataSourc
     super(scope, id, {
       terraformResourceType: 'azurerm_app_service_environment_v3',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -165,8 +280,9 @@ export class DataAzurermAppServiceEnvironmentV3 extends cdktf.TerraformDataSourc
   }
 
   // cluster_setting - computed: true, optional: false, required: false
-  public clusterSetting(index: string) {
-    return new DataAzurermAppServiceEnvironmentV3ClusterSetting(this, 'cluster_setting', index, false);
+  private _clusterSetting = new DataAzurermAppServiceEnvironmentV3ClusterSettingList(this, "cluster_setting", false);
+  public get clusterSetting() {
+    return this._clusterSetting;
   }
 
   // dedicated_host_count - computed: true, optional: false, required: false
@@ -190,8 +306,9 @@ export class DataAzurermAppServiceEnvironmentV3 extends cdktf.TerraformDataSourc
   }
 
   // inbound_network_dependencies - computed: true, optional: false, required: false
-  public inboundNetworkDependencies(index: string) {
-    return new DataAzurermAppServiceEnvironmentV3InboundNetworkDependencies(this, 'inbound_network_dependencies', index, false);
+  private _inboundNetworkDependencies = new DataAzurermAppServiceEnvironmentV3InboundNetworkDependenciesList(this, "inbound_network_dependencies", false);
+  public get inboundNetworkDependencies() {
+    return this._inboundNetworkDependencies;
   }
 
   // internal_inbound_ip_addresses - computed: true, optional: false, required: false
@@ -271,7 +388,7 @@ export class DataAzurermAppServiceEnvironmentV3 extends cdktf.TerraformDataSourc
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermAppServiceEnvironmentV3TimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermAppServiceEnvironmentV3TimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

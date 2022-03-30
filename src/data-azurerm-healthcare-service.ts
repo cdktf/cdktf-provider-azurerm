@@ -26,7 +26,45 @@ export interface DataAzurermHealthcareServiceConfig extends cdktf.TerraformMetaA
   */
   readonly timeouts?: DataAzurermHealthcareServiceTimeouts;
 }
-export class DataAzurermHealthcareServiceAuthenticationConfiguration extends cdktf.ComplexComputedList {
+export interface DataAzurermHealthcareServiceAuthenticationConfiguration {
+}
+
+export function dataAzurermHealthcareServiceAuthenticationConfigurationToTerraform(struct?: DataAzurermHealthcareServiceAuthenticationConfiguration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermHealthcareServiceAuthenticationConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermHealthcareServiceAuthenticationConfiguration | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermHealthcareServiceAuthenticationConfiguration | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // audience - computed: true, optional: false, required: false
   public get audience() {
@@ -43,7 +81,64 @@ export class DataAzurermHealthcareServiceAuthenticationConfiguration extends cdk
     return this.getBooleanAttribute('smart_proxy_enabled');
   }
 }
-export class DataAzurermHealthcareServiceCorsConfiguration extends cdktf.ComplexComputedList {
+
+export class DataAzurermHealthcareServiceAuthenticationConfigurationList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermHealthcareServiceAuthenticationConfigurationOutputReference {
+    return new DataAzurermHealthcareServiceAuthenticationConfigurationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermHealthcareServiceCorsConfiguration {
+}
+
+export function dataAzurermHealthcareServiceCorsConfigurationToTerraform(struct?: DataAzurermHealthcareServiceCorsConfiguration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermHealthcareServiceCorsConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermHealthcareServiceCorsConfiguration | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermHealthcareServiceCorsConfiguration | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // allow_credentials - computed: true, optional: false, required: false
   public get allowCredentials() {
@@ -70,6 +165,25 @@ export class DataAzurermHealthcareServiceCorsConfiguration extends cdktf.Complex
     return this.getNumberAttribute('max_age_in_seconds');
   }
 }
+
+export class DataAzurermHealthcareServiceCorsConfigurationList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermHealthcareServiceCorsConfigurationOutputReference {
+    return new DataAzurermHealthcareServiceCorsConfigurationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataAzurermHealthcareServiceTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/healthcare_service#read DataAzurermHealthcareService#read}
@@ -93,10 +207,9 @@ export class DataAzurermHealthcareServiceTimeoutsOutputReference extends cdktf.C
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermHealthcareServiceTimeouts | undefined {
@@ -145,7 +258,7 @@ export class DataAzurermHealthcareService extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_healthcare_service";
+  public static readonly tfResourceType = "azurerm_healthcare_service";
 
   // ===========
   // INITIALIZER
@@ -162,7 +275,9 @@ export class DataAzurermHealthcareService extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'azurerm_healthcare_service',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -185,13 +300,15 @@ export class DataAzurermHealthcareService extends cdktf.TerraformDataSource {
   }
 
   // authentication_configuration - computed: true, optional: false, required: false
-  public authenticationConfiguration(index: string) {
-    return new DataAzurermHealthcareServiceAuthenticationConfiguration(this, 'authentication_configuration', index, false);
+  private _authenticationConfiguration = new DataAzurermHealthcareServiceAuthenticationConfigurationList(this, "authentication_configuration", false);
+  public get authenticationConfiguration() {
+    return this._authenticationConfiguration;
   }
 
   // cors_configuration - computed: true, optional: false, required: false
-  public corsConfiguration(index: string) {
-    return new DataAzurermHealthcareServiceCorsConfiguration(this, 'cors_configuration', index, false);
+  private _corsConfiguration = new DataAzurermHealthcareServiceCorsConfigurationList(this, "cors_configuration", false);
+  public get corsConfiguration() {
+    return this._corsConfiguration;
   }
 
   // cosmosdb_key_vault_key_versionless_id - computed: true, optional: false, required: false
@@ -259,7 +376,7 @@ export class DataAzurermHealthcareService extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermHealthcareServiceTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermHealthcareServiceTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

@@ -22,7 +22,45 @@ export interface DataAzurermVirtualMachineScaleSetConfig extends cdktf.Terraform
   */
   readonly timeouts?: DataAzurermVirtualMachineScaleSetTimeouts;
 }
-export class DataAzurermVirtualMachineScaleSetIdentity extends cdktf.ComplexComputedList {
+export interface DataAzurermVirtualMachineScaleSetIdentity {
+}
+
+export function dataAzurermVirtualMachineScaleSetIdentityToTerraform(struct?: DataAzurermVirtualMachineScaleSetIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermVirtualMachineScaleSetIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermVirtualMachineScaleSetIdentity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermVirtualMachineScaleSetIdentity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // identity_ids - computed: true, optional: false, required: false
   public get identityIds() {
@@ -44,7 +82,64 @@ export class DataAzurermVirtualMachineScaleSetIdentity extends cdktf.ComplexComp
     return this.getStringAttribute('type');
   }
 }
-export class DataAzurermVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTag extends cdktf.ComplexComputedList {
+
+export class DataAzurermVirtualMachineScaleSetIdentityList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermVirtualMachineScaleSetIdentityOutputReference {
+    return new DataAzurermVirtualMachineScaleSetIdentityOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTag {
+}
+
+export function dataAzurermVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTagToTerraform(struct?: DataAzurermVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTag): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTagOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTag | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTag | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // tag - computed: true, optional: false, required: false
   public get tag() {
@@ -56,7 +151,64 @@ export class DataAzurermVirtualMachineScaleSetNetworkInterfaceIpConfigurationPub
     return this.getStringAttribute('type');
   }
 }
-export class DataAzurermVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddress extends cdktf.ComplexComputedList {
+
+export class DataAzurermVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTagList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTagOutputReference {
+    return new DataAzurermVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTagOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddress {
+}
+
+export function dataAzurermVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressToTerraform(struct?: DataAzurermVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddress): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddress | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddress | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // domain_name_label - computed: true, optional: false, required: false
   public get domainNameLabel() {
@@ -69,9 +221,9 @@ export class DataAzurermVirtualMachineScaleSetNetworkInterfaceIpConfigurationPub
   }
 
   // ip_tag - computed: true, optional: false, required: false
+  private _ipTag = new DataAzurermVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTagList(this, "ip_tag", false);
   public get ipTag() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('ip_tag');
+    return this._ipTag;
   }
 
   // name - computed: true, optional: false, required: false
@@ -84,7 +236,64 @@ export class DataAzurermVirtualMachineScaleSetNetworkInterfaceIpConfigurationPub
     return this.getStringAttribute('public_ip_prefix_id');
   }
 }
-export class DataAzurermVirtualMachineScaleSetNetworkInterfaceIpConfiguration extends cdktf.ComplexComputedList {
+
+export class DataAzurermVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressOutputReference {
+    return new DataAzurermVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermVirtualMachineScaleSetNetworkInterfaceIpConfiguration {
+}
+
+export function dataAzurermVirtualMachineScaleSetNetworkInterfaceIpConfigurationToTerraform(struct?: DataAzurermVirtualMachineScaleSetNetworkInterfaceIpConfiguration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermVirtualMachineScaleSetNetworkInterfaceIpConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermVirtualMachineScaleSetNetworkInterfaceIpConfiguration | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermVirtualMachineScaleSetNetworkInterfaceIpConfiguration | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // application_gateway_backend_address_pool_ids - computed: true, optional: false, required: false
   public get applicationGatewayBackendAddressPoolIds() {
@@ -117,9 +326,9 @@ export class DataAzurermVirtualMachineScaleSetNetworkInterfaceIpConfiguration ex
   }
 
   // public_ip_address - computed: true, optional: false, required: false
+  private _publicIpAddress = new DataAzurermVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressList(this, "public_ip_address", false);
   public get publicIpAddress() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('public_ip_address');
+    return this._publicIpAddress;
   }
 
   // subnet_id - computed: true, optional: false, required: false
@@ -132,7 +341,64 @@ export class DataAzurermVirtualMachineScaleSetNetworkInterfaceIpConfiguration ex
     return this.getStringAttribute('version');
   }
 }
-export class DataAzurermVirtualMachineScaleSetNetworkInterface extends cdktf.ComplexComputedList {
+
+export class DataAzurermVirtualMachineScaleSetNetworkInterfaceIpConfigurationList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermVirtualMachineScaleSetNetworkInterfaceIpConfigurationOutputReference {
+    return new DataAzurermVirtualMachineScaleSetNetworkInterfaceIpConfigurationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermVirtualMachineScaleSetNetworkInterface {
+}
+
+export function dataAzurermVirtualMachineScaleSetNetworkInterfaceToTerraform(struct?: DataAzurermVirtualMachineScaleSetNetworkInterface): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermVirtualMachineScaleSetNetworkInterfaceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermVirtualMachineScaleSetNetworkInterface | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermVirtualMachineScaleSetNetworkInterface | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // dns_servers - computed: true, optional: false, required: false
   public get dnsServers() {
@@ -150,9 +416,9 @@ export class DataAzurermVirtualMachineScaleSetNetworkInterface extends cdktf.Com
   }
 
   // ip_configuration - computed: true, optional: false, required: false
+  private _ipConfiguration = new DataAzurermVirtualMachineScaleSetNetworkInterfaceIpConfigurationList(this, "ip_configuration", false);
   public get ipConfiguration() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('ip_configuration');
+    return this._ipConfiguration;
   }
 
   // name - computed: true, optional: false, required: false
@@ -168,6 +434,25 @@ export class DataAzurermVirtualMachineScaleSetNetworkInterface extends cdktf.Com
   // primary - computed: true, optional: false, required: false
   public get primary() {
     return this.getBooleanAttribute('primary');
+  }
+}
+
+export class DataAzurermVirtualMachineScaleSetNetworkInterfaceList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermVirtualMachineScaleSetNetworkInterfaceOutputReference {
+    return new DataAzurermVirtualMachineScaleSetNetworkInterfaceOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataAzurermVirtualMachineScaleSetTimeouts {
@@ -193,10 +478,9 @@ export class DataAzurermVirtualMachineScaleSetTimeoutsOutputReference extends cd
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermVirtualMachineScaleSetTimeouts | undefined {
@@ -245,7 +529,7 @@ export class DataAzurermVirtualMachineScaleSet extends cdktf.TerraformDataSource
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_virtual_machine_scale_set";
+  public static readonly tfResourceType = "azurerm_virtual_machine_scale_set";
 
   // ===========
   // INITIALIZER
@@ -262,7 +546,9 @@ export class DataAzurermVirtualMachineScaleSet extends cdktf.TerraformDataSource
     super(scope, id, {
       terraformResourceType: 'azurerm_virtual_machine_scale_set',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -284,8 +570,9 @@ export class DataAzurermVirtualMachineScaleSet extends cdktf.TerraformDataSource
   }
 
   // identity - computed: true, optional: false, required: false
-  public identity(index: string) {
-    return new DataAzurermVirtualMachineScaleSetIdentity(this, 'identity', index, false);
+  private _identity = new DataAzurermVirtualMachineScaleSetIdentityList(this, "identity", false);
+  public get identity() {
+    return this._identity;
   }
 
   // location - computed: true, optional: false, required: false
@@ -307,8 +594,9 @@ export class DataAzurermVirtualMachineScaleSet extends cdktf.TerraformDataSource
   }
 
   // network_interface - computed: true, optional: false, required: false
-  public networkInterface(index: string) {
-    return new DataAzurermVirtualMachineScaleSetNetworkInterface(this, 'network_interface', index, false);
+  private _networkInterface = new DataAzurermVirtualMachineScaleSetNetworkInterfaceList(this, "network_interface", false);
+  public get networkInterface() {
+    return this._networkInterface;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -325,7 +613,7 @@ export class DataAzurermVirtualMachineScaleSet extends cdktf.TerraformDataSource
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermVirtualMachineScaleSetTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermVirtualMachineScaleSetTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

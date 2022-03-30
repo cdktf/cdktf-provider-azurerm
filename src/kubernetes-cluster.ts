@@ -208,7 +208,45 @@ export interface KubernetesClusterConfig extends cdktf.TerraformMetaArguments {
   */
   readonly windowsProfile?: KubernetesClusterWindowsProfile;
 }
-export class KubernetesClusterKubeAdminConfig extends cdktf.ComplexComputedList {
+export interface KubernetesClusterKubeAdminConfig {
+}
+
+export function kubernetesClusterKubeAdminConfigToTerraform(struct?: KubernetesClusterKubeAdminConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class KubernetesClusterKubeAdminConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): KubernetesClusterKubeAdminConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesClusterKubeAdminConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // client_certificate - computed: true, optional: false, required: false
   public get clientCertificate() {
@@ -240,7 +278,64 @@ export class KubernetesClusterKubeAdminConfig extends cdktf.ComplexComputedList 
     return this.getStringAttribute('username');
   }
 }
-export class KubernetesClusterKubeConfig extends cdktf.ComplexComputedList {
+
+export class KubernetesClusterKubeAdminConfigList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): KubernetesClusterKubeAdminConfigOutputReference {
+    return new KubernetesClusterKubeAdminConfigOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface KubernetesClusterKubeConfig {
+}
+
+export function kubernetesClusterKubeConfigToTerraform(struct?: KubernetesClusterKubeConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class KubernetesClusterKubeConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): KubernetesClusterKubeConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesClusterKubeConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // client_certificate - computed: true, optional: false, required: false
   public get clientCertificate() {
@@ -270,6 +365,25 @@ export class KubernetesClusterKubeConfig extends cdktf.ComplexComputedList {
   // username - computed: true, optional: false, required: false
   public get username() {
     return this.getStringAttribute('username');
+  }
+}
+
+export class KubernetesClusterKubeConfigList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): KubernetesClusterKubeConfigOutputReference {
+    return new KubernetesClusterKubeConfigOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface KubernetesClusterAciConnectorLinux {
@@ -295,10 +409,9 @@ export class KubernetesClusterAciConnectorLinuxOutputReference extends cdktf.Com
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KubernetesClusterAciConnectorLinux | undefined {
@@ -363,10 +476,9 @@ export class KubernetesClusterAddonProfileAciConnectorLinuxOutputReference exten
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KubernetesClusterAddonProfileAciConnectorLinux | undefined {
@@ -425,7 +537,45 @@ export class KubernetesClusterAddonProfileAciConnectorLinuxOutputReference exten
     return this._subnetName;
   }
 }
-export class KubernetesClusterAddonProfileAzureKeyvaultSecretsProviderSecretIdentity extends cdktf.ComplexComputedList {
+export interface KubernetesClusterAddonProfileAzureKeyvaultSecretsProviderSecretIdentity {
+}
+
+export function kubernetesClusterAddonProfileAzureKeyvaultSecretsProviderSecretIdentityToTerraform(struct?: KubernetesClusterAddonProfileAzureKeyvaultSecretsProviderSecretIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class KubernetesClusterAddonProfileAzureKeyvaultSecretsProviderSecretIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): KubernetesClusterAddonProfileAzureKeyvaultSecretsProviderSecretIdentity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesClusterAddonProfileAzureKeyvaultSecretsProviderSecretIdentity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // client_id - computed: true, optional: false, required: false
   public get clientId() {
@@ -440,6 +590,25 @@ export class KubernetesClusterAddonProfileAzureKeyvaultSecretsProviderSecretIden
   // user_assigned_identity_id - computed: true, optional: false, required: false
   public get userAssignedIdentityId() {
     return this.getStringAttribute('user_assigned_identity_id');
+  }
+}
+
+export class KubernetesClusterAddonProfileAzureKeyvaultSecretsProviderSecretIdentityList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): KubernetesClusterAddonProfileAzureKeyvaultSecretsProviderSecretIdentityOutputReference {
+    return new KubernetesClusterAddonProfileAzureKeyvaultSecretsProviderSecretIdentityOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface KubernetesClusterAddonProfileAzureKeyvaultSecretsProvider {
@@ -475,10 +644,9 @@ export class KubernetesClusterAddonProfileAzureKeyvaultSecretsProviderOutputRefe
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KubernetesClusterAddonProfileAzureKeyvaultSecretsProvider | undefined {
@@ -487,14 +655,6 @@ export class KubernetesClusterAddonProfileAzureKeyvaultSecretsProviderOutputRefe
     if (this._enabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.enabled = this._enabled;
-    }
-    if (this._secretRotationEnabled !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.secretRotationEnabled = this._secretRotationEnabled;
-    }
-    if (this._secretRotationInterval !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.secretRotationInterval = this._secretRotationInterval;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -528,8 +688,9 @@ export class KubernetesClusterAddonProfileAzureKeyvaultSecretsProviderOutputRefe
   }
 
   // secret_identity - computed: true, optional: false, required: false
-  public secretIdentity(index: string) {
-    return new KubernetesClusterAddonProfileAzureKeyvaultSecretsProviderSecretIdentity(this, 'secret_identity', index, false);
+  private _secretIdentity = new KubernetesClusterAddonProfileAzureKeyvaultSecretsProviderSecretIdentityList(this, "secret_identity", false);
+  public get secretIdentity() {
+    return this._secretIdentity;
   }
 
   // secret_rotation_enabled - computed: false, optional: true, required: false
@@ -587,10 +748,9 @@ export class KubernetesClusterAddonProfileAzurePolicyOutputReference extends cdk
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KubernetesClusterAddonProfileAzurePolicy | undefined {
@@ -650,10 +810,9 @@ export class KubernetesClusterAddonProfileHttpApplicationRoutingOutputReference 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KubernetesClusterAddonProfileHttpApplicationRouting | undefined {
@@ -695,7 +854,45 @@ export class KubernetesClusterAddonProfileHttpApplicationRoutingOutputReference 
     return this.getStringAttribute('http_application_routing_zone_name');
   }
 }
-export class KubernetesClusterAddonProfileIngressApplicationGatewayIngressApplicationGatewayIdentity extends cdktf.ComplexComputedList {
+export interface KubernetesClusterAddonProfileIngressApplicationGatewayIngressApplicationGatewayIdentity {
+}
+
+export function kubernetesClusterAddonProfileIngressApplicationGatewayIngressApplicationGatewayIdentityToTerraform(struct?: KubernetesClusterAddonProfileIngressApplicationGatewayIngressApplicationGatewayIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class KubernetesClusterAddonProfileIngressApplicationGatewayIngressApplicationGatewayIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): KubernetesClusterAddonProfileIngressApplicationGatewayIngressApplicationGatewayIdentity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesClusterAddonProfileIngressApplicationGatewayIngressApplicationGatewayIdentity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // client_id - computed: true, optional: false, required: false
   public get clientId() {
@@ -710,6 +907,25 @@ export class KubernetesClusterAddonProfileIngressApplicationGatewayIngressApplic
   // user_assigned_identity_id - computed: true, optional: false, required: false
   public get userAssignedIdentityId() {
     return this.getStringAttribute('user_assigned_identity_id');
+  }
+}
+
+export class KubernetesClusterAddonProfileIngressApplicationGatewayIngressApplicationGatewayIdentityList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): KubernetesClusterAddonProfileIngressApplicationGatewayIngressApplicationGatewayIdentityOutputReference {
+    return new KubernetesClusterAddonProfileIngressApplicationGatewayIngressApplicationGatewayIdentityOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface KubernetesClusterAddonProfileIngressApplicationGateway {
@@ -755,10 +971,9 @@ export class KubernetesClusterAddonProfileIngressApplicationGatewayOutputReferen
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KubernetesClusterAddonProfileIngressApplicationGateway | undefined {
@@ -775,14 +990,6 @@ export class KubernetesClusterAddonProfileIngressApplicationGatewayOutputReferen
     if (this._gatewayName !== undefined) {
       hasAnyValues = true;
       internalValueResult.gatewayName = this._gatewayName;
-    }
-    if (this._subnetCidr !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.subnetCidr = this._subnetCidr;
-    }
-    if (this._subnetId !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.subnetId = this._subnetId;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -857,8 +1064,9 @@ export class KubernetesClusterAddonProfileIngressApplicationGatewayOutputReferen
   }
 
   // ingress_application_gateway_identity - computed: true, optional: false, required: false
-  public ingressApplicationGatewayIdentity(index: string) {
-    return new KubernetesClusterAddonProfileIngressApplicationGatewayIngressApplicationGatewayIdentity(this, 'ingress_application_gateway_identity', index, false);
+  private _ingressApplicationGatewayIdentity = new KubernetesClusterAddonProfileIngressApplicationGatewayIngressApplicationGatewayIdentityList(this, "ingress_application_gateway_identity", false);
+  public get ingressApplicationGatewayIdentity() {
+    return this._ingressApplicationGatewayIdentity;
   }
 
   // subnet_cidr - computed: false, optional: true, required: false
@@ -916,10 +1124,9 @@ export class KubernetesClusterAddonProfileKubeDashboardOutputReference extends c
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KubernetesClusterAddonProfileKubeDashboard | undefined {
@@ -956,7 +1163,45 @@ export class KubernetesClusterAddonProfileKubeDashboardOutputReference extends c
     return this._enabled;
   }
 }
-export class KubernetesClusterAddonProfileOmsAgentOmsAgentIdentity extends cdktf.ComplexComputedList {
+export interface KubernetesClusterAddonProfileOmsAgentOmsAgentIdentity {
+}
+
+export function kubernetesClusterAddonProfileOmsAgentOmsAgentIdentityToTerraform(struct?: KubernetesClusterAddonProfileOmsAgentOmsAgentIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class KubernetesClusterAddonProfileOmsAgentOmsAgentIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): KubernetesClusterAddonProfileOmsAgentOmsAgentIdentity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesClusterAddonProfileOmsAgentOmsAgentIdentity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // client_id - computed: true, optional: false, required: false
   public get clientId() {
@@ -971,6 +1216,25 @@ export class KubernetesClusterAddonProfileOmsAgentOmsAgentIdentity extends cdktf
   // user_assigned_identity_id - computed: true, optional: false, required: false
   public get userAssignedIdentityId() {
     return this.getStringAttribute('user_assigned_identity_id');
+  }
+}
+
+export class KubernetesClusterAddonProfileOmsAgentOmsAgentIdentityList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): KubernetesClusterAddonProfileOmsAgentOmsAgentIdentityOutputReference {
+    return new KubernetesClusterAddonProfileOmsAgentOmsAgentIdentityOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface KubernetesClusterAddonProfileOmsAgent {
@@ -1001,10 +1265,9 @@ export class KubernetesClusterAddonProfileOmsAgentOutputReference extends cdktf.
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KubernetesClusterAddonProfileOmsAgent | undefined {
@@ -1064,8 +1327,9 @@ export class KubernetesClusterAddonProfileOmsAgentOutputReference extends cdktf.
   }
 
   // oms_agent_identity - computed: true, optional: false, required: false
-  public omsAgentIdentity(index: string) {
-    return new KubernetesClusterAddonProfileOmsAgentOmsAgentIdentity(this, 'oms_agent_identity', index, false);
+  private _omsAgentIdentity = new KubernetesClusterAddonProfileOmsAgentOmsAgentIdentityList(this, "oms_agent_identity", false);
+  public get omsAgentIdentity() {
+    return this._omsAgentIdentity;
   }
 }
 export interface KubernetesClusterAddonProfileOpenServiceMesh {
@@ -1091,10 +1355,9 @@ export class KubernetesClusterAddonProfileOpenServiceMeshOutputReference extends
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KubernetesClusterAddonProfileOpenServiceMesh | undefined {
@@ -1205,10 +1468,9 @@ export class KubernetesClusterAddonProfileOutputReference extends cdktf.ComplexO
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KubernetesClusterAddonProfile | undefined {
@@ -1275,7 +1537,7 @@ export class KubernetesClusterAddonProfileOutputReference extends cdktf.ComplexO
   }
 
   // aci_connector_linux - computed: false, optional: true, required: false
-  private _aciConnectorLinux = new KubernetesClusterAddonProfileAciConnectorLinuxOutputReference(this, "aci_connector_linux", true);
+  private _aciConnectorLinux = new KubernetesClusterAddonProfileAciConnectorLinuxOutputReference(this, "aci_connector_linux");
   public get aciConnectorLinux() {
     return this._aciConnectorLinux;
   }
@@ -1291,7 +1553,7 @@ export class KubernetesClusterAddonProfileOutputReference extends cdktf.ComplexO
   }
 
   // azure_keyvault_secrets_provider - computed: false, optional: true, required: false
-  private _azureKeyvaultSecretsProvider = new KubernetesClusterAddonProfileAzureKeyvaultSecretsProviderOutputReference(this, "azure_keyvault_secrets_provider", true);
+  private _azureKeyvaultSecretsProvider = new KubernetesClusterAddonProfileAzureKeyvaultSecretsProviderOutputReference(this, "azure_keyvault_secrets_provider");
   public get azureKeyvaultSecretsProvider() {
     return this._azureKeyvaultSecretsProvider;
   }
@@ -1307,7 +1569,7 @@ export class KubernetesClusterAddonProfileOutputReference extends cdktf.ComplexO
   }
 
   // azure_policy - computed: false, optional: true, required: false
-  private _azurePolicy = new KubernetesClusterAddonProfileAzurePolicyOutputReference(this, "azure_policy", true);
+  private _azurePolicy = new KubernetesClusterAddonProfileAzurePolicyOutputReference(this, "azure_policy");
   public get azurePolicy() {
     return this._azurePolicy;
   }
@@ -1323,7 +1585,7 @@ export class KubernetesClusterAddonProfileOutputReference extends cdktf.ComplexO
   }
 
   // http_application_routing - computed: false, optional: true, required: false
-  private _httpApplicationRouting = new KubernetesClusterAddonProfileHttpApplicationRoutingOutputReference(this, "http_application_routing", true);
+  private _httpApplicationRouting = new KubernetesClusterAddonProfileHttpApplicationRoutingOutputReference(this, "http_application_routing");
   public get httpApplicationRouting() {
     return this._httpApplicationRouting;
   }
@@ -1339,7 +1601,7 @@ export class KubernetesClusterAddonProfileOutputReference extends cdktf.ComplexO
   }
 
   // ingress_application_gateway - computed: false, optional: true, required: false
-  private _ingressApplicationGateway = new KubernetesClusterAddonProfileIngressApplicationGatewayOutputReference(this, "ingress_application_gateway", true);
+  private _ingressApplicationGateway = new KubernetesClusterAddonProfileIngressApplicationGatewayOutputReference(this, "ingress_application_gateway");
   public get ingressApplicationGateway() {
     return this._ingressApplicationGateway;
   }
@@ -1355,7 +1617,7 @@ export class KubernetesClusterAddonProfileOutputReference extends cdktf.ComplexO
   }
 
   // kube_dashboard - computed: false, optional: true, required: false
-  private _kubeDashboard = new KubernetesClusterAddonProfileKubeDashboardOutputReference(this, "kube_dashboard", true);
+  private _kubeDashboard = new KubernetesClusterAddonProfileKubeDashboardOutputReference(this, "kube_dashboard");
   public get kubeDashboard() {
     return this._kubeDashboard;
   }
@@ -1371,7 +1633,7 @@ export class KubernetesClusterAddonProfileOutputReference extends cdktf.ComplexO
   }
 
   // oms_agent - computed: false, optional: true, required: false
-  private _omsAgent = new KubernetesClusterAddonProfileOmsAgentOutputReference(this, "oms_agent", true);
+  private _omsAgent = new KubernetesClusterAddonProfileOmsAgentOutputReference(this, "oms_agent");
   public get omsAgent() {
     return this._omsAgent;
   }
@@ -1387,7 +1649,7 @@ export class KubernetesClusterAddonProfileOutputReference extends cdktf.ComplexO
   }
 
   // open_service_mesh - computed: false, optional: true, required: false
-  private _openServiceMesh = new KubernetesClusterAddonProfileOpenServiceMeshOutputReference(this, "open_service_mesh", true);
+  private _openServiceMesh = new KubernetesClusterAddonProfileOpenServiceMeshOutputReference(this, "open_service_mesh");
   public get openServiceMesh() {
     return this._openServiceMesh;
   }
@@ -1505,10 +1767,9 @@ export class KubernetesClusterAutoScalerProfileOutputReference extends cdktf.Com
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KubernetesClusterAutoScalerProfile | undefined {
@@ -1953,10 +2214,9 @@ export class KubernetesClusterAzureActiveDirectoryRoleBasedAccessControlOutputRe
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KubernetesClusterAzureActiveDirectoryRoleBasedAccessControl | undefined {
@@ -2196,10 +2456,9 @@ export class KubernetesClusterDefaultNodePoolKubeletConfigOutputReference extend
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KubernetesClusterDefaultNodePoolKubeletConfig | undefined {
@@ -2600,10 +2859,9 @@ export class KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputRefe
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig | undefined {
@@ -3299,10 +3557,9 @@ export class KubernetesClusterDefaultNodePoolLinuxOsConfigOutputReference extend
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KubernetesClusterDefaultNodePoolLinuxOsConfig | undefined {
@@ -3393,7 +3650,7 @@ export class KubernetesClusterDefaultNodePoolLinuxOsConfigOutputReference extend
   }
 
   // sysctl_config - computed: false, optional: true, required: false
-  private _sysctlConfig = new KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputReference(this, "sysctl_config", true);
+  private _sysctlConfig = new KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputReference(this, "sysctl_config");
   public get sysctlConfig() {
     return this._sysctlConfig;
   }
@@ -3431,10 +3688,9 @@ export class KubernetesClusterDefaultNodePoolUpgradeSettingsOutputReference exte
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KubernetesClusterDefaultNodePoolUpgradeSettings | undefined {
@@ -3640,10 +3896,9 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KubernetesClusterDefaultNodePool | undefined {
@@ -4246,7 +4501,7 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
   }
 
   // kubelet_config - computed: false, optional: true, required: false
-  private _kubeletConfig = new KubernetesClusterDefaultNodePoolKubeletConfigOutputReference(this, "kubelet_config", true);
+  private _kubeletConfig = new KubernetesClusterDefaultNodePoolKubeletConfigOutputReference(this, "kubelet_config");
   public get kubeletConfig() {
     return this._kubeletConfig;
   }
@@ -4262,7 +4517,7 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
   }
 
   // linux_os_config - computed: false, optional: true, required: false
-  private _linuxOsConfig = new KubernetesClusterDefaultNodePoolLinuxOsConfigOutputReference(this, "linux_os_config", true);
+  private _linuxOsConfig = new KubernetesClusterDefaultNodePoolLinuxOsConfigOutputReference(this, "linux_os_config");
   public get linuxOsConfig() {
     return this._linuxOsConfig;
   }
@@ -4278,7 +4533,7 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
   }
 
   // upgrade_settings - computed: false, optional: true, required: false
-  private _upgradeSettings = new KubernetesClusterDefaultNodePoolUpgradeSettingsOutputReference(this, "upgrade_settings", true);
+  private _upgradeSettings = new KubernetesClusterDefaultNodePoolUpgradeSettingsOutputReference(this, "upgrade_settings");
   public get upgradeSettings() {
     return this._upgradeSettings;
   }
@@ -4331,10 +4586,9 @@ export class KubernetesClusterHttpProxyConfigOutputReference extends cdktf.Compl
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KubernetesClusterHttpProxyConfig | undefined {
@@ -4468,10 +4722,9 @@ export class KubernetesClusterIdentityOutputReference extends cdktf.ComplexObjec
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KubernetesClusterIdentity | undefined {
@@ -4540,7 +4793,45 @@ export class KubernetesClusterIdentityOutputReference extends cdktf.ComplexObjec
     return this._userAssignedIdentityId;
   }
 }
-export class KubernetesClusterIngressApplicationGatewayIngressApplicationGatewayIdentity extends cdktf.ComplexComputedList {
+export interface KubernetesClusterIngressApplicationGatewayIngressApplicationGatewayIdentity {
+}
+
+export function kubernetesClusterIngressApplicationGatewayIngressApplicationGatewayIdentityToTerraform(struct?: KubernetesClusterIngressApplicationGatewayIngressApplicationGatewayIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class KubernetesClusterIngressApplicationGatewayIngressApplicationGatewayIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): KubernetesClusterIngressApplicationGatewayIngressApplicationGatewayIdentity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesClusterIngressApplicationGatewayIngressApplicationGatewayIdentity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // client_id - computed: true, optional: false, required: false
   public get clientId() {
@@ -4555,6 +4846,25 @@ export class KubernetesClusterIngressApplicationGatewayIngressApplicationGateway
   // user_assigned_identity_id - computed: true, optional: false, required: false
   public get userAssignedIdentityId() {
     return this.getStringAttribute('user_assigned_identity_id');
+  }
+}
+
+export class KubernetesClusterIngressApplicationGatewayIngressApplicationGatewayIdentityList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): KubernetesClusterIngressApplicationGatewayIngressApplicationGatewayIdentityOutputReference {
+    return new KubernetesClusterIngressApplicationGatewayIngressApplicationGatewayIdentityOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface KubernetesClusterIngressApplicationGateway {
@@ -4595,10 +4905,9 @@ export class KubernetesClusterIngressApplicationGatewayOutputReference extends c
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KubernetesClusterIngressApplicationGateway | undefined {
@@ -4611,14 +4920,6 @@ export class KubernetesClusterIngressApplicationGatewayOutputReference extends c
     if (this._gatewayName !== undefined) {
       hasAnyValues = true;
       internalValueResult.gatewayName = this._gatewayName;
-    }
-    if (this._subnetCidr !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.subnetCidr = this._subnetCidr;
-    }
-    if (this._subnetId !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.subnetId = this._subnetId;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -4678,8 +4979,9 @@ export class KubernetesClusterIngressApplicationGatewayOutputReference extends c
   }
 
   // ingress_application_gateway_identity - computed: true, optional: false, required: false
-  public ingressApplicationGatewayIdentity(index: string) {
-    return new KubernetesClusterIngressApplicationGatewayIngressApplicationGatewayIdentity(this, 'ingress_application_gateway_identity', index, false);
+  private _ingressApplicationGatewayIdentity = new KubernetesClusterIngressApplicationGatewayIngressApplicationGatewayIdentityList(this, "ingress_application_gateway_identity", false);
+  public get ingressApplicationGatewayIdentity() {
+    return this._ingressApplicationGatewayIdentity;
   }
 
   // subnet_cidr - computed: false, optional: true, required: false
@@ -4714,7 +5016,45 @@ export class KubernetesClusterIngressApplicationGatewayOutputReference extends c
     return this._subnetId;
   }
 }
-export class KubernetesClusterKeyVaultSecretsProviderSecretIdentity extends cdktf.ComplexComputedList {
+export interface KubernetesClusterKeyVaultSecretsProviderSecretIdentity {
+}
+
+export function kubernetesClusterKeyVaultSecretsProviderSecretIdentityToTerraform(struct?: KubernetesClusterKeyVaultSecretsProviderSecretIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class KubernetesClusterKeyVaultSecretsProviderSecretIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): KubernetesClusterKeyVaultSecretsProviderSecretIdentity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesClusterKeyVaultSecretsProviderSecretIdentity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // client_id - computed: true, optional: false, required: false
   public get clientId() {
@@ -4729,6 +5069,25 @@ export class KubernetesClusterKeyVaultSecretsProviderSecretIdentity extends cdkt
   // user_assigned_identity_id - computed: true, optional: false, required: false
   public get userAssignedIdentityId() {
     return this.getStringAttribute('user_assigned_identity_id');
+  }
+}
+
+export class KubernetesClusterKeyVaultSecretsProviderSecretIdentityList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): KubernetesClusterKeyVaultSecretsProviderSecretIdentityOutputReference {
+    return new KubernetesClusterKeyVaultSecretsProviderSecretIdentityOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface KubernetesClusterKeyVaultSecretsProvider {
@@ -4759,23 +5118,14 @@ export class KubernetesClusterKeyVaultSecretsProviderOutputReference extends cdk
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KubernetesClusterKeyVaultSecretsProvider | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._secretRotationEnabled !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.secretRotationEnabled = this._secretRotationEnabled;
-    }
-    if (this._secretRotationInterval !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.secretRotationInterval = this._secretRotationInterval;
-    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -4793,8 +5143,9 @@ export class KubernetesClusterKeyVaultSecretsProviderOutputReference extends cdk
   }
 
   // secret_identity - computed: true, optional: false, required: false
-  public secretIdentity(index: string) {
-    return new KubernetesClusterKeyVaultSecretsProviderSecretIdentity(this, 'secret_identity', index, false);
+  private _secretIdentity = new KubernetesClusterKeyVaultSecretsProviderSecretIdentityList(this, "secret_identity", false);
+  public get secretIdentity() {
+    return this._secretIdentity;
   }
 
   // secret_rotation_enabled - computed: false, optional: true, required: false
@@ -4862,10 +5213,9 @@ export class KubernetesClusterKubeletIdentityOutputReference extends cdktf.Compl
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KubernetesClusterKubeletIdentity | undefined {
@@ -4972,10 +5322,9 @@ export class KubernetesClusterLinuxProfileSshKeyOutputReference extends cdktf.Co
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KubernetesClusterLinuxProfileSshKey | undefined {
@@ -5042,10 +5391,9 @@ export class KubernetesClusterLinuxProfileOutputReference extends cdktf.ComplexO
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KubernetesClusterLinuxProfile | undefined {
@@ -5089,7 +5437,7 @@ export class KubernetesClusterLinuxProfileOutputReference extends cdktf.ComplexO
   }
 
   // ssh_key - computed: false, optional: false, required: true
-  private _sshKey = new KubernetesClusterLinuxProfileSshKeyOutputReference(this, "ssh_key", true);
+  private _sshKey = new KubernetesClusterLinuxProfileSshKeyOutputReference(this, "ssh_key");
   public get sshKey() {
     return this._sshKey;
   }
@@ -5177,10 +5525,9 @@ export class KubernetesClusterMaintenanceWindowOutputReference extends cdktf.Com
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KubernetesClusterMaintenanceWindow | undefined {
@@ -5287,10 +5634,9 @@ export class KubernetesClusterNetworkProfileLoadBalancerProfileOutputReference e
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KubernetesClusterNetworkProfileLoadBalancerProfile | undefined {
@@ -5451,10 +5797,9 @@ export class KubernetesClusterNetworkProfileNatGatewayProfileOutputReference ext
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KubernetesClusterNetworkProfileNatGatewayProfile | undefined {
@@ -5598,10 +5943,9 @@ export class KubernetesClusterNetworkProfileOutputReference extends cdktf.Comple
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KubernetesClusterNetworkProfile | undefined {
@@ -5827,7 +6171,7 @@ export class KubernetesClusterNetworkProfileOutputReference extends cdktf.Comple
   }
 
   // load_balancer_profile - computed: false, optional: true, required: false
-  private _loadBalancerProfile = new KubernetesClusterNetworkProfileLoadBalancerProfileOutputReference(this, "load_balancer_profile", true);
+  private _loadBalancerProfile = new KubernetesClusterNetworkProfileLoadBalancerProfileOutputReference(this, "load_balancer_profile");
   public get loadBalancerProfile() {
     return this._loadBalancerProfile;
   }
@@ -5843,7 +6187,7 @@ export class KubernetesClusterNetworkProfileOutputReference extends cdktf.Comple
   }
 
   // nat_gateway_profile - computed: false, optional: true, required: false
-  private _natGatewayProfile = new KubernetesClusterNetworkProfileNatGatewayProfileOutputReference(this, "nat_gateway_profile", true);
+  private _natGatewayProfile = new KubernetesClusterNetworkProfileNatGatewayProfileOutputReference(this, "nat_gateway_profile");
   public get natGatewayProfile() {
     return this._natGatewayProfile;
   }
@@ -5858,7 +6202,45 @@ export class KubernetesClusterNetworkProfileOutputReference extends cdktf.Comple
     return this._natGatewayProfile.internalValue;
   }
 }
-export class KubernetesClusterOmsAgentOmsAgentIdentity extends cdktf.ComplexComputedList {
+export interface KubernetesClusterOmsAgentOmsAgentIdentity {
+}
+
+export function kubernetesClusterOmsAgentOmsAgentIdentityToTerraform(struct?: KubernetesClusterOmsAgentOmsAgentIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class KubernetesClusterOmsAgentOmsAgentIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): KubernetesClusterOmsAgentOmsAgentIdentity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesClusterOmsAgentOmsAgentIdentity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // client_id - computed: true, optional: false, required: false
   public get clientId() {
@@ -5873,6 +6255,25 @@ export class KubernetesClusterOmsAgentOmsAgentIdentity extends cdktf.ComplexComp
   // user_assigned_identity_id - computed: true, optional: false, required: false
   public get userAssignedIdentityId() {
     return this.getStringAttribute('user_assigned_identity_id');
+  }
+}
+
+export class KubernetesClusterOmsAgentOmsAgentIdentityList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): KubernetesClusterOmsAgentOmsAgentIdentityOutputReference {
+    return new KubernetesClusterOmsAgentOmsAgentIdentityOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface KubernetesClusterOmsAgent {
@@ -5898,10 +6299,9 @@ export class KubernetesClusterOmsAgentOutputReference extends cdktf.ComplexObjec
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KubernetesClusterOmsAgent | undefined {
@@ -5939,8 +6339,9 @@ export class KubernetesClusterOmsAgentOutputReference extends cdktf.ComplexObjec
   }
 
   // oms_agent_identity - computed: true, optional: false, required: false
-  public omsAgentIdentity(index: string) {
-    return new KubernetesClusterOmsAgentOmsAgentIdentity(this, 'oms_agent_identity', index, false);
+  private _omsAgentIdentity = new KubernetesClusterOmsAgentOmsAgentIdentityList(this, "oms_agent_identity", false);
+  public get omsAgentIdentity() {
+    return this._omsAgentIdentity;
   }
 }
 export interface KubernetesClusterRoleBasedAccessControlAzureActiveDirectory {
@@ -5996,10 +6397,9 @@ export class KubernetesClusterRoleBasedAccessControlAzureActiveDirectoryOutputRe
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KubernetesClusterRoleBasedAccessControlAzureActiveDirectory | undefined {
@@ -6201,10 +6601,9 @@ export class KubernetesClusterRoleBasedAccessControlOutputReference extends cdkt
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KubernetesClusterRoleBasedAccessControl | undefined {
@@ -6248,7 +6647,7 @@ export class KubernetesClusterRoleBasedAccessControlOutputReference extends cdkt
   }
 
   // azure_active_directory - computed: false, optional: true, required: false
-  private _azureActiveDirectory = new KubernetesClusterRoleBasedAccessControlAzureActiveDirectoryOutputReference(this, "azure_active_directory", true);
+  private _azureActiveDirectory = new KubernetesClusterRoleBasedAccessControlAzureActiveDirectoryOutputReference(this, "azure_active_directory");
   public get azureActiveDirectory() {
     return this._azureActiveDirectory;
   }
@@ -6291,10 +6690,9 @@ export class KubernetesClusterServicePrincipalOutputReference extends cdktf.Comp
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KubernetesClusterServicePrincipal | undefined {
@@ -6388,10 +6786,9 @@ export class KubernetesClusterTimeoutsOutputReference extends cdktf.ComplexObjec
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KubernetesClusterTimeouts | undefined {
@@ -6530,10 +6927,9 @@ export class KubernetesClusterWindowsProfileOutputReference extends cdktf.Comple
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KubernetesClusterWindowsProfile | undefined {
@@ -6623,7 +7019,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_kubernetes_cluster";
+  public static readonly tfResourceType = "azurerm_kubernetes_cluster";
 
   // ===========
   // INITIALIZER
@@ -6640,7 +7036,9 @@ export class KubernetesCluster extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_kubernetes_cluster',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -6838,8 +7236,9 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
 
   // kube_admin_config - computed: true, optional: false, required: false
-  public kubeAdminConfig(index: string) {
-    return new KubernetesClusterKubeAdminConfig(this, 'kube_admin_config', index, false);
+  private _kubeAdminConfig = new KubernetesClusterKubeAdminConfigList(this, "kube_admin_config", false);
+  public get kubeAdminConfig() {
+    return this._kubeAdminConfig;
   }
 
   // kube_admin_config_raw - computed: true, optional: false, required: false
@@ -6848,8 +7247,9 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
 
   // kube_config - computed: true, optional: false, required: false
-  public kubeConfig(index: string) {
-    return new KubernetesClusterKubeConfig(this, 'kube_config', index, false);
+  private _kubeConfig = new KubernetesClusterKubeConfigList(this, "kube_config", false);
+  public get kubeConfig() {
+    return this._kubeConfig;
   }
 
   // kube_config_raw - computed: true, optional: false, required: false
@@ -7099,7 +7499,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
 
   // aci_connector_linux - computed: false, optional: true, required: false
-  private _aciConnectorLinux = new KubernetesClusterAciConnectorLinuxOutputReference(this, "aci_connector_linux", true);
+  private _aciConnectorLinux = new KubernetesClusterAciConnectorLinuxOutputReference(this, "aci_connector_linux");
   public get aciConnectorLinux() {
     return this._aciConnectorLinux;
   }
@@ -7115,7 +7515,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
 
   // addon_profile - computed: false, optional: true, required: false
-  private _addonProfile = new KubernetesClusterAddonProfileOutputReference(this, "addon_profile", true);
+  private _addonProfile = new KubernetesClusterAddonProfileOutputReference(this, "addon_profile");
   public get addonProfile() {
     return this._addonProfile;
   }
@@ -7131,7 +7531,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
 
   // auto_scaler_profile - computed: false, optional: true, required: false
-  private _autoScalerProfile = new KubernetesClusterAutoScalerProfileOutputReference(this, "auto_scaler_profile", true);
+  private _autoScalerProfile = new KubernetesClusterAutoScalerProfileOutputReference(this, "auto_scaler_profile");
   public get autoScalerProfile() {
     return this._autoScalerProfile;
   }
@@ -7147,7 +7547,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
 
   // azure_active_directory_role_based_access_control - computed: false, optional: true, required: false
-  private _azureActiveDirectoryRoleBasedAccessControl = new KubernetesClusterAzureActiveDirectoryRoleBasedAccessControlOutputReference(this, "azure_active_directory_role_based_access_control", true);
+  private _azureActiveDirectoryRoleBasedAccessControl = new KubernetesClusterAzureActiveDirectoryRoleBasedAccessControlOutputReference(this, "azure_active_directory_role_based_access_control");
   public get azureActiveDirectoryRoleBasedAccessControl() {
     return this._azureActiveDirectoryRoleBasedAccessControl;
   }
@@ -7163,7 +7563,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
 
   // default_node_pool - computed: false, optional: false, required: true
-  private _defaultNodePool = new KubernetesClusterDefaultNodePoolOutputReference(this, "default_node_pool", true);
+  private _defaultNodePool = new KubernetesClusterDefaultNodePoolOutputReference(this, "default_node_pool");
   public get defaultNodePool() {
     return this._defaultNodePool;
   }
@@ -7176,7 +7576,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
 
   // http_proxy_config - computed: false, optional: true, required: false
-  private _httpProxyConfig = new KubernetesClusterHttpProxyConfigOutputReference(this, "http_proxy_config", true);
+  private _httpProxyConfig = new KubernetesClusterHttpProxyConfigOutputReference(this, "http_proxy_config");
   public get httpProxyConfig() {
     return this._httpProxyConfig;
   }
@@ -7192,7 +7592,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity = new KubernetesClusterIdentityOutputReference(this, "identity", true);
+  private _identity = new KubernetesClusterIdentityOutputReference(this, "identity");
   public get identity() {
     return this._identity;
   }
@@ -7208,7 +7608,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
 
   // ingress_application_gateway - computed: false, optional: true, required: false
-  private _ingressApplicationGateway = new KubernetesClusterIngressApplicationGatewayOutputReference(this, "ingress_application_gateway", true);
+  private _ingressApplicationGateway = new KubernetesClusterIngressApplicationGatewayOutputReference(this, "ingress_application_gateway");
   public get ingressApplicationGateway() {
     return this._ingressApplicationGateway;
   }
@@ -7224,7 +7624,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
 
   // key_vault_secrets_provider - computed: false, optional: true, required: false
-  private _keyVaultSecretsProvider = new KubernetesClusterKeyVaultSecretsProviderOutputReference(this, "key_vault_secrets_provider", true);
+  private _keyVaultSecretsProvider = new KubernetesClusterKeyVaultSecretsProviderOutputReference(this, "key_vault_secrets_provider");
   public get keyVaultSecretsProvider() {
     return this._keyVaultSecretsProvider;
   }
@@ -7240,7 +7640,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
 
   // kubelet_identity - computed: false, optional: true, required: false
-  private _kubeletIdentity = new KubernetesClusterKubeletIdentityOutputReference(this, "kubelet_identity", true);
+  private _kubeletIdentity = new KubernetesClusterKubeletIdentityOutputReference(this, "kubelet_identity");
   public get kubeletIdentity() {
     return this._kubeletIdentity;
   }
@@ -7256,7 +7656,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
 
   // linux_profile - computed: false, optional: true, required: false
-  private _linuxProfile = new KubernetesClusterLinuxProfileOutputReference(this, "linux_profile", true);
+  private _linuxProfile = new KubernetesClusterLinuxProfileOutputReference(this, "linux_profile");
   public get linuxProfile() {
     return this._linuxProfile;
   }
@@ -7272,7 +7672,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
 
   // maintenance_window - computed: false, optional: true, required: false
-  private _maintenanceWindow = new KubernetesClusterMaintenanceWindowOutputReference(this, "maintenance_window", true);
+  private _maintenanceWindow = new KubernetesClusterMaintenanceWindowOutputReference(this, "maintenance_window");
   public get maintenanceWindow() {
     return this._maintenanceWindow;
   }
@@ -7288,7 +7688,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
 
   // network_profile - computed: false, optional: true, required: false
-  private _networkProfile = new KubernetesClusterNetworkProfileOutputReference(this, "network_profile", true);
+  private _networkProfile = new KubernetesClusterNetworkProfileOutputReference(this, "network_profile");
   public get networkProfile() {
     return this._networkProfile;
   }
@@ -7304,7 +7704,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
 
   // oms_agent - computed: false, optional: true, required: false
-  private _omsAgent = new KubernetesClusterOmsAgentOutputReference(this, "oms_agent", true);
+  private _omsAgent = new KubernetesClusterOmsAgentOutputReference(this, "oms_agent");
   public get omsAgent() {
     return this._omsAgent;
   }
@@ -7320,7 +7720,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
 
   // role_based_access_control - computed: false, optional: true, required: false
-  private _roleBasedAccessControl = new KubernetesClusterRoleBasedAccessControlOutputReference(this, "role_based_access_control", true);
+  private _roleBasedAccessControl = new KubernetesClusterRoleBasedAccessControlOutputReference(this, "role_based_access_control");
   public get roleBasedAccessControl() {
     return this._roleBasedAccessControl;
   }
@@ -7336,7 +7736,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
 
   // service_principal - computed: false, optional: true, required: false
-  private _servicePrincipal = new KubernetesClusterServicePrincipalOutputReference(this, "service_principal", true);
+  private _servicePrincipal = new KubernetesClusterServicePrincipalOutputReference(this, "service_principal");
   public get servicePrincipal() {
     return this._servicePrincipal;
   }
@@ -7352,7 +7752,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new KubernetesClusterTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new KubernetesClusterTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
@@ -7368,7 +7768,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
 
   // windows_profile - computed: false, optional: true, required: false
-  private _windowsProfile = new KubernetesClusterWindowsProfileOutputReference(this, "windows_profile", true);
+  private _windowsProfile = new KubernetesClusterWindowsProfileOutputReference(this, "windows_profile");
   public get windowsProfile() {
     return this._windowsProfile;
   }

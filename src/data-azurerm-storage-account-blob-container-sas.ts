@@ -112,10 +112,9 @@ export class DataAzurermStorageAccountBlobContainerSasPermissionsOutputReference
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermStorageAccountBlobContainerSasPermissions | undefined {
@@ -270,10 +269,9 @@ export class DataAzurermStorageAccountBlobContainerSasTimeoutsOutputReference ex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermStorageAccountBlobContainerSasTimeouts | undefined {
@@ -322,7 +320,7 @@ export class DataAzurermStorageAccountBlobContainerSas extends cdktf.TerraformDa
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_storage_account_blob_container_sas";
+  public static readonly tfResourceType = "azurerm_storage_account_blob_container_sas";
 
   // ===========
   // INITIALIZER
@@ -339,7 +337,9 @@ export class DataAzurermStorageAccountBlobContainerSas extends cdktf.TerraformDa
     super(scope, id, {
       terraformResourceType: 'azurerm_storage_account_blob_container_sas',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -540,7 +540,7 @@ export class DataAzurermStorageAccountBlobContainerSas extends cdktf.TerraformDa
   }
 
   // permissions - computed: false, optional: false, required: true
-  private _permissions = new DataAzurermStorageAccountBlobContainerSasPermissionsOutputReference(this, "permissions", true);
+  private _permissions = new DataAzurermStorageAccountBlobContainerSasPermissionsOutputReference(this, "permissions");
   public get permissions() {
     return this._permissions;
   }
@@ -553,7 +553,7 @@ export class DataAzurermStorageAccountBlobContainerSas extends cdktf.TerraformDa
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermStorageAccountBlobContainerSasTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermStorageAccountBlobContainerSasTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

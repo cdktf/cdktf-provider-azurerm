@@ -145,10 +145,9 @@ export class MonitorMetricAlertApplicationInsightsWebTestLocationAvailabilityCri
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitorMetricAlertApplicationInsightsWebTestLocationAvailabilityCriteria | undefined {
@@ -371,7 +370,7 @@ export interface MonitorMetricAlertDynamicCriteria {
   readonly dimension?: MonitorMetricAlertDynamicCriteriaDimension[] | cdktf.IResolvable;
 }
 
-export function monitorMetricAlertDynamicCriteriaToTerraform(struct?: MonitorMetricAlertDynamicCriteriaOutputReference | MonitorMetricAlertDynamicCriteria | cdktf.IResolvable): any {
+export function monitorMetricAlertDynamicCriteriaToTerraform(struct?: MonitorMetricAlertDynamicCriteriaOutputReference | MonitorMetricAlertDynamicCriteria): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -396,10 +395,9 @@ export class MonitorMetricAlertDynamicCriteriaOutputReference extends cdktf.Comp
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitorMetricAlertDynamicCriteria | undefined {
@@ -661,10 +659,9 @@ export class MonitorMetricAlertTimeoutsOutputReference extends cdktf.ComplexObje
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitorMetricAlertTimeouts | undefined {
@@ -779,7 +776,7 @@ export class MonitorMetricAlert extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_monitor_metric_alert";
+  public static readonly tfResourceType = "azurerm_monitor_metric_alert";
 
   // ===========
   // INITIALIZER
@@ -796,7 +793,9 @@ export class MonitorMetricAlert extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_monitor_metric_alert',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1032,7 +1031,7 @@ export class MonitorMetricAlert extends cdktf.TerraformResource {
   }
 
   // application_insights_web_test_location_availability_criteria - computed: false, optional: true, required: false
-  private _applicationInsightsWebTestLocationAvailabilityCriteria = new MonitorMetricAlertApplicationInsightsWebTestLocationAvailabilityCriteriaOutputReference(this, "application_insights_web_test_location_availability_criteria", true);
+  private _applicationInsightsWebTestLocationAvailabilityCriteria = new MonitorMetricAlertApplicationInsightsWebTestLocationAvailabilityCriteriaOutputReference(this, "application_insights_web_test_location_availability_criteria");
   public get applicationInsightsWebTestLocationAvailabilityCriteria() {
     return this._applicationInsightsWebTestLocationAvailabilityCriteria;
   }
@@ -1065,7 +1064,7 @@ export class MonitorMetricAlert extends cdktf.TerraformResource {
   }
 
   // dynamic_criteria - computed: false, optional: true, required: false
-  private _dynamicCriteria = new MonitorMetricAlertDynamicCriteriaOutputReference(this, "dynamic_criteria", true);
+  private _dynamicCriteria = new MonitorMetricAlertDynamicCriteriaOutputReference(this, "dynamic_criteria");
   public get dynamicCriteria() {
     return this._dynamicCriteria;
   }
@@ -1081,7 +1080,7 @@ export class MonitorMetricAlert extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new MonitorMetricAlertTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new MonitorMetricAlertTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

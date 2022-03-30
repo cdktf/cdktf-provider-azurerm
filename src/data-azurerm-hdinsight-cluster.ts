@@ -22,7 +22,45 @@ export interface DataAzurermHdinsightClusterConfig extends cdktf.TerraformMetaAr
   */
   readonly timeouts?: DataAzurermHdinsightClusterTimeouts;
 }
-export class DataAzurermHdinsightClusterGateway extends cdktf.ComplexComputedList {
+export interface DataAzurermHdinsightClusterGateway {
+}
+
+export function dataAzurermHdinsightClusterGatewayToTerraform(struct?: DataAzurermHdinsightClusterGateway): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermHdinsightClusterGatewayOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermHdinsightClusterGateway | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermHdinsightClusterGateway | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // enabled - computed: true, optional: false, required: false
   public get enabled() {
@@ -37,6 +75,25 @@ export class DataAzurermHdinsightClusterGateway extends cdktf.ComplexComputedLis
   // username - computed: true, optional: false, required: false
   public get username() {
     return this.getStringAttribute('username');
+  }
+}
+
+export class DataAzurermHdinsightClusterGatewayList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermHdinsightClusterGatewayOutputReference {
+    return new DataAzurermHdinsightClusterGatewayOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataAzurermHdinsightClusterTimeouts {
@@ -62,10 +119,9 @@ export class DataAzurermHdinsightClusterTimeoutsOutputReference extends cdktf.Co
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermHdinsightClusterTimeouts | undefined {
@@ -114,7 +170,7 @@ export class DataAzurermHdinsightCluster extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_hdinsight_cluster";
+  public static readonly tfResourceType = "azurerm_hdinsight_cluster";
 
   // ===========
   // INITIALIZER
@@ -131,7 +187,9 @@ export class DataAzurermHdinsightCluster extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'azurerm_hdinsight_cluster',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -163,8 +221,9 @@ export class DataAzurermHdinsightCluster extends cdktf.TerraformDataSource {
   }
 
   // gateway - computed: true, optional: false, required: false
-  public gateway(index: string) {
-    return new DataAzurermHdinsightClusterGateway(this, 'gateway', index, false);
+  private _gateway = new DataAzurermHdinsightClusterGatewayList(this, "gateway", false);
+  public get gateway() {
+    return this._gateway;
   }
 
   // https_endpoint - computed: true, optional: false, required: false
@@ -239,7 +298,7 @@ export class DataAzurermHdinsightCluster extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermHdinsightClusterTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermHdinsightClusterTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

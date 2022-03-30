@@ -22,7 +22,45 @@ export interface DataAzurermRedisCacheConfig extends cdktf.TerraformMetaArgument
   */
   readonly timeouts?: DataAzurermRedisCacheTimeouts;
 }
-export class DataAzurermRedisCachePatchSchedule extends cdktf.ComplexComputedList {
+export interface DataAzurermRedisCachePatchSchedule {
+}
+
+export function dataAzurermRedisCachePatchScheduleToTerraform(struct?: DataAzurermRedisCachePatchSchedule): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermRedisCachePatchScheduleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermRedisCachePatchSchedule | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermRedisCachePatchSchedule | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // day_of_week - computed: true, optional: false, required: false
   public get dayOfWeek() {
@@ -39,7 +77,64 @@ export class DataAzurermRedisCachePatchSchedule extends cdktf.ComplexComputedLis
     return this.getNumberAttribute('start_hour_utc');
   }
 }
-export class DataAzurermRedisCacheRedisConfiguration extends cdktf.ComplexComputedList {
+
+export class DataAzurermRedisCachePatchScheduleList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermRedisCachePatchScheduleOutputReference {
+    return new DataAzurermRedisCachePatchScheduleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermRedisCacheRedisConfiguration {
+}
+
+export function dataAzurermRedisCacheRedisConfigurationToTerraform(struct?: DataAzurermRedisCacheRedisConfiguration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermRedisCacheRedisConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermRedisCacheRedisConfiguration | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermRedisCacheRedisConfiguration | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // aof_backup_enabled - computed: true, optional: false, required: false
   public get aofBackupEnabled() {
@@ -111,6 +206,25 @@ export class DataAzurermRedisCacheRedisConfiguration extends cdktf.ComplexComput
     return this.getStringAttribute('rdb_storage_connection_string');
   }
 }
+
+export class DataAzurermRedisCacheRedisConfigurationList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermRedisCacheRedisConfigurationOutputReference {
+    return new DataAzurermRedisCacheRedisConfigurationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataAzurermRedisCacheTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/redis_cache#read DataAzurermRedisCache#read}
@@ -134,10 +248,9 @@ export class DataAzurermRedisCacheTimeoutsOutputReference extends cdktf.ComplexO
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermRedisCacheTimeouts | undefined {
@@ -186,7 +299,7 @@ export class DataAzurermRedisCache extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_redis_cache";
+  public static readonly tfResourceType = "azurerm_redis_cache";
 
   // ===========
   // INITIALIZER
@@ -203,7 +316,9 @@ export class DataAzurermRedisCache extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'azurerm_redis_cache',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -268,8 +383,9 @@ export class DataAzurermRedisCache extends cdktf.TerraformDataSource {
   }
 
   // patch_schedule - computed: true, optional: false, required: false
-  public patchSchedule(index: string) {
-    return new DataAzurermRedisCachePatchSchedule(this, 'patch_schedule', index, false);
+  private _patchSchedule = new DataAzurermRedisCachePatchScheduleList(this, "patch_schedule", false);
+  public get patchSchedule() {
+    return this._patchSchedule;
   }
 
   // port - computed: true, optional: false, required: false
@@ -293,8 +409,9 @@ export class DataAzurermRedisCache extends cdktf.TerraformDataSource {
   }
 
   // redis_configuration - computed: true, optional: false, required: false
-  public redisConfiguration(index: string) {
-    return new DataAzurermRedisCacheRedisConfiguration(this, 'redis_configuration', index, false);
+  private _redisConfiguration = new DataAzurermRedisCacheRedisConfigurationList(this, "redis_configuration", false);
+  public get redisConfiguration() {
+    return this._redisConfiguration;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -351,7 +468,7 @@ export class DataAzurermRedisCache extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermRedisCacheTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermRedisCacheTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

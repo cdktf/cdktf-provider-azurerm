@@ -112,10 +112,9 @@ export class ConsumptionBudgetSubscriptionFilterNotDimensionOutputReference exte
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ConsumptionBudgetSubscriptionFilterNotDimension | undefined {
@@ -226,10 +225,9 @@ export class ConsumptionBudgetSubscriptionFilterNotTagOutputReference extends cd
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ConsumptionBudgetSubscriptionFilterNotTag | undefined {
@@ -339,10 +337,9 @@ export class ConsumptionBudgetSubscriptionFilterNotOutputReference extends cdktf
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ConsumptionBudgetSubscriptionFilterNot | undefined {
@@ -373,7 +370,7 @@ export class ConsumptionBudgetSubscriptionFilterNotOutputReference extends cdktf
   }
 
   // dimension - computed: false, optional: true, required: false
-  private _dimension = new ConsumptionBudgetSubscriptionFilterNotDimensionOutputReference(this, "dimension", true);
+  private _dimension = new ConsumptionBudgetSubscriptionFilterNotDimensionOutputReference(this, "dimension");
   public get dimension() {
     return this._dimension;
   }
@@ -389,7 +386,7 @@ export class ConsumptionBudgetSubscriptionFilterNotOutputReference extends cdktf
   }
 
   // tag - computed: false, optional: true, required: false
-  private _tag = new ConsumptionBudgetSubscriptionFilterNotTagOutputReference(this, "tag", true);
+  private _tag = new ConsumptionBudgetSubscriptionFilterNotTagOutputReference(this, "tag");
   public get tag() {
     return this._tag;
   }
@@ -470,10 +467,9 @@ export class ConsumptionBudgetSubscriptionFilterOutputReference extends cdktf.Co
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ConsumptionBudgetSubscriptionFilter | undefined {
@@ -527,7 +523,7 @@ export class ConsumptionBudgetSubscriptionFilterOutputReference extends cdktf.Co
   }
 
   // not - computed: false, optional: true, required: false
-  private _not = new ConsumptionBudgetSubscriptionFilterNotOutputReference(this, "not", true);
+  private _not = new ConsumptionBudgetSubscriptionFilterNotOutputReference(this, "not");
   public get not() {
     return this._not;
   }
@@ -634,10 +630,9 @@ export class ConsumptionBudgetSubscriptionTimePeriodOutputReference extends cdkt
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ConsumptionBudgetSubscriptionTimePeriod | undefined {
@@ -734,10 +729,9 @@ export class ConsumptionBudgetSubscriptionTimeoutsOutputReference extends cdktf.
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ConsumptionBudgetSubscriptionTimeouts | undefined {
@@ -852,7 +846,7 @@ export class ConsumptionBudgetSubscription extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_consumption_budget_subscription";
+  public static readonly tfResourceType = "azurerm_consumption_budget_subscription";
 
   // ===========
   // INITIALIZER
@@ -869,7 +863,9 @@ export class ConsumptionBudgetSubscription extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_consumption_budget_subscription',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -968,7 +964,7 @@ export class ConsumptionBudgetSubscription extends cdktf.TerraformResource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter = new ConsumptionBudgetSubscriptionFilterOutputReference(this, "filter", true);
+  private _filter = new ConsumptionBudgetSubscriptionFilterOutputReference(this, "filter");
   public get filter() {
     return this._filter;
   }
@@ -998,7 +994,7 @@ export class ConsumptionBudgetSubscription extends cdktf.TerraformResource {
   }
 
   // time_period - computed: false, optional: false, required: true
-  private _timePeriod = new ConsumptionBudgetSubscriptionTimePeriodOutputReference(this, "time_period", true);
+  private _timePeriod = new ConsumptionBudgetSubscriptionTimePeriodOutputReference(this, "time_period");
   public get timePeriod() {
     return this._timePeriod;
   }
@@ -1011,7 +1007,7 @@ export class ConsumptionBudgetSubscription extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ConsumptionBudgetSubscriptionTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new ConsumptionBudgetSubscriptionTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

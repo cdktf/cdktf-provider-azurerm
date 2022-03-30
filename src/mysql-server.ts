@@ -135,10 +135,9 @@ export class MysqlServerIdentityOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MysqlServerIdentity | undefined {
@@ -223,10 +222,9 @@ export class MysqlServerStorageProfileOutputReference extends cdktf.ComplexObjec
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MysqlServerStorageProfile | undefined {
@@ -385,10 +383,9 @@ export class MysqlServerThreatDetectionPolicyOutputReference extends cdktf.Compl
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MysqlServerThreatDetectionPolicy | undefined {
@@ -598,10 +595,9 @@ export class MysqlServerTimeoutsOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MysqlServerTimeouts | undefined {
@@ -716,7 +712,7 @@ export class MysqlServer extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_mysql_server";
+  public static readonly tfResourceType = "azurerm_mysql_server";
 
   // ===========
   // INITIALIZER
@@ -733,7 +729,9 @@ export class MysqlServer extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_mysql_server',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1086,7 +1084,7 @@ export class MysqlServer extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity = new MysqlServerIdentityOutputReference(this, "identity", true);
+  private _identity = new MysqlServerIdentityOutputReference(this, "identity");
   public get identity() {
     return this._identity;
   }
@@ -1102,7 +1100,7 @@ export class MysqlServer extends cdktf.TerraformResource {
   }
 
   // storage_profile - computed: false, optional: true, required: false
-  private _storageProfile = new MysqlServerStorageProfileOutputReference(this, "storage_profile", true);
+  private _storageProfile = new MysqlServerStorageProfileOutputReference(this, "storage_profile");
   public get storageProfile() {
     return this._storageProfile;
   }
@@ -1118,7 +1116,7 @@ export class MysqlServer extends cdktf.TerraformResource {
   }
 
   // threat_detection_policy - computed: false, optional: true, required: false
-  private _threatDetectionPolicy = new MysqlServerThreatDetectionPolicyOutputReference(this, "threat_detection_policy", true);
+  private _threatDetectionPolicy = new MysqlServerThreatDetectionPolicyOutputReference(this, "threat_detection_policy");
   public get threatDetectionPolicy() {
     return this._threatDetectionPolicy;
   }
@@ -1134,7 +1132,7 @@ export class MysqlServer extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new MysqlServerTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new MysqlServerTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

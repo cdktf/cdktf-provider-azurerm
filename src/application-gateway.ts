@@ -188,7 +188,45 @@ export interface ApplicationGatewayConfig extends cdktf.TerraformMetaArguments {
   */
   readonly wafConfiguration?: ApplicationGatewayWafConfiguration;
 }
-export class ApplicationGatewayPrivateEndpointConnection extends cdktf.ComplexComputedList {
+export interface ApplicationGatewayPrivateEndpointConnection {
+}
+
+export function applicationGatewayPrivateEndpointConnectionToTerraform(struct?: ApplicationGatewayPrivateEndpointConnection): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class ApplicationGatewayPrivateEndpointConnectionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ApplicationGatewayPrivateEndpointConnection | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApplicationGatewayPrivateEndpointConnection | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // id - computed: true, optional: false, required: false
   public get id() {
@@ -198,6 +236,25 @@ export class ApplicationGatewayPrivateEndpointConnection extends cdktf.ComplexCo
   // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
+  }
+}
+
+export class ApplicationGatewayPrivateEndpointConnectionList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ApplicationGatewayPrivateEndpointConnectionOutputReference {
+    return new ApplicationGatewayPrivateEndpointConnectionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface ApplicationGatewayAuthenticationCertificate {
@@ -250,10 +307,9 @@ export class ApplicationGatewayAutoscaleConfigurationOutputReference extends cdk
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ApplicationGatewayAutoscaleConfiguration | undefined {
@@ -384,10 +440,9 @@ export class ApplicationGatewayBackendHttpSettingsConnectionDrainingOutputRefere
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ApplicationGatewayBackendHttpSettingsConnectionDraining | undefined {
@@ -751,10 +806,9 @@ export class ApplicationGatewayIdentityOutputReference extends cdktf.ComplexObje
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ApplicationGatewayIdentity | undefined {
@@ -899,10 +953,9 @@ export class ApplicationGatewayProbeMatchOutputReference extends cdktf.ComplexOb
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ApplicationGatewayProbeMatch | undefined {
@@ -1241,10 +1294,9 @@ export class ApplicationGatewayRewriteRuleSetRewriteRuleUrlOutputReference exten
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ApplicationGatewayRewriteRuleSetRewriteRuleUrl | undefined {
@@ -1435,10 +1487,9 @@ export class ApplicationGatewaySkuOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ApplicationGatewaySku | undefined {
@@ -1591,10 +1642,9 @@ export class ApplicationGatewaySslPolicyOutputReference extends cdktf.ComplexObj
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ApplicationGatewaySslPolicy | undefined {
@@ -1765,10 +1815,9 @@ export class ApplicationGatewaySslProfileSslPolicyOutputReference extends cdktf.
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ApplicationGatewaySslProfileSslPolicy | undefined {
@@ -1968,10 +2017,9 @@ export class ApplicationGatewayTimeoutsOutputReference extends cdktf.ComplexObje
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ApplicationGatewayTimeouts | undefined {
@@ -2333,10 +2381,9 @@ export class ApplicationGatewayWafConfigurationOutputReference extends cdktf.Com
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ApplicationGatewayWafConfiguration | undefined {
@@ -2554,7 +2601,7 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_application_gateway";
+  public static readonly tfResourceType = "azurerm_application_gateway";
 
   // ===========
   // INITIALIZER
@@ -2571,7 +2618,9 @@ export class ApplicationGateway extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_application_gateway',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -2713,8 +2762,9 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   }
 
   // private_endpoint_connection - computed: true, optional: false, required: false
-  public privateEndpointConnection(index: string) {
-    return new ApplicationGatewayPrivateEndpointConnection(this, 'private_endpoint_connection', index, true);
+  private _privateEndpointConnection = new ApplicationGatewayPrivateEndpointConnectionList(this, "private_endpoint_connection", true);
+  public get privateEndpointConnection() {
+    return this._privateEndpointConnection;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -2780,7 +2830,7 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   }
 
   // autoscale_configuration - computed: false, optional: true, required: false
-  private _autoscaleConfiguration = new ApplicationGatewayAutoscaleConfigurationOutputReference(this, "autoscale_configuration", true);
+  private _autoscaleConfiguration = new ApplicationGatewayAutoscaleConfigurationOutputReference(this, "autoscale_configuration");
   public get autoscaleConfiguration() {
     return this._autoscaleConfiguration;
   }
@@ -2897,7 +2947,7 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity = new ApplicationGatewayIdentityOutputReference(this, "identity", true);
+  private _identity = new ApplicationGatewayIdentityOutputReference(this, "identity");
   public get identity() {
     return this._identity;
   }
@@ -2995,7 +3045,7 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   }
 
   // sku - computed: false, optional: false, required: true
-  private _sku = new ApplicationGatewaySkuOutputReference(this, "sku", true);
+  private _sku = new ApplicationGatewaySkuOutputReference(this, "sku");
   public get sku() {
     return this._sku;
   }
@@ -3025,7 +3075,7 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   }
 
   // ssl_policy - computed: false, optional: true, required: false
-  private _sslPolicy = new ApplicationGatewaySslPolicyOutputReference(this, "ssl_policy", true);
+  private _sslPolicy = new ApplicationGatewaySslPolicyOutputReference(this, "ssl_policy");
   public get sslPolicy() {
     return this._sslPolicy;
   }
@@ -3058,7 +3108,7 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ApplicationGatewayTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new ApplicationGatewayTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
@@ -3125,7 +3175,7 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   }
 
   // waf_configuration - computed: false, optional: true, required: false
-  private _wafConfiguration = new ApplicationGatewayWafConfigurationOutputReference(this, "waf_configuration", true);
+  private _wafConfiguration = new ApplicationGatewayWafConfigurationOutputReference(this, "waf_configuration");
   public get wafConfiguration() {
     return this._wafConfiguration;
   }

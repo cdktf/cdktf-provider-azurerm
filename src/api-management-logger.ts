@@ -73,10 +73,9 @@ export class ApiManagementLoggerApplicationInsightsOutputReference extends cdktf
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ApiManagementLoggerApplicationInsights | undefined {
@@ -141,10 +140,9 @@ export class ApiManagementLoggerEventhubOutputReference extends cdktf.ComplexObj
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ApiManagementLoggerEventhub | undefined {
@@ -238,10 +236,9 @@ export class ApiManagementLoggerTimeoutsOutputReference extends cdktf.ComplexObj
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ApiManagementLoggerTimeouts | undefined {
@@ -356,7 +353,7 @@ export class ApiManagementLogger extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_api_management_logger";
+  public static readonly tfResourceType = "azurerm_api_management_logger";
 
   // ===========
   // INITIALIZER
@@ -373,7 +370,9 @@ export class ApiManagementLogger extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_api_management_logger',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -488,7 +487,7 @@ export class ApiManagementLogger extends cdktf.TerraformResource {
   }
 
   // application_insights - computed: false, optional: true, required: false
-  private _applicationInsights = new ApiManagementLoggerApplicationInsightsOutputReference(this, "application_insights", true);
+  private _applicationInsights = new ApiManagementLoggerApplicationInsightsOutputReference(this, "application_insights");
   public get applicationInsights() {
     return this._applicationInsights;
   }
@@ -504,7 +503,7 @@ export class ApiManagementLogger extends cdktf.TerraformResource {
   }
 
   // eventhub - computed: false, optional: true, required: false
-  private _eventhub = new ApiManagementLoggerEventhubOutputReference(this, "eventhub", true);
+  private _eventhub = new ApiManagementLoggerEventhubOutputReference(this, "eventhub");
   public get eventhub() {
     return this._eventhub;
   }
@@ -520,7 +519,7 @@ export class ApiManagementLogger extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ApiManagementLoggerTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new ApiManagementLoggerTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

@@ -22,7 +22,45 @@ export interface DataAzurermDataFactoryConfig extends cdktf.TerraformMetaArgumen
   */
   readonly timeouts?: DataAzurermDataFactoryTimeouts;
 }
-export class DataAzurermDataFactoryGithubConfiguration extends cdktf.ComplexComputedList {
+export interface DataAzurermDataFactoryGithubConfiguration {
+}
+
+export function dataAzurermDataFactoryGithubConfigurationToTerraform(struct?: DataAzurermDataFactoryGithubConfiguration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermDataFactoryGithubConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermDataFactoryGithubConfiguration | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermDataFactoryGithubConfiguration | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // account_name - computed: true, optional: false, required: false
   public get accountName() {
@@ -49,7 +87,64 @@ export class DataAzurermDataFactoryGithubConfiguration extends cdktf.ComplexComp
     return this.getStringAttribute('root_folder');
   }
 }
-export class DataAzurermDataFactoryIdentity extends cdktf.ComplexComputedList {
+
+export class DataAzurermDataFactoryGithubConfigurationList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermDataFactoryGithubConfigurationOutputReference {
+    return new DataAzurermDataFactoryGithubConfigurationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermDataFactoryIdentity {
+}
+
+export function dataAzurermDataFactoryIdentityToTerraform(struct?: DataAzurermDataFactoryIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermDataFactoryIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermDataFactoryIdentity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermDataFactoryIdentity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // identity_ids - computed: true, optional: false, required: false
   public get identityIds() {
@@ -71,7 +166,64 @@ export class DataAzurermDataFactoryIdentity extends cdktf.ComplexComputedList {
     return this.getStringAttribute('type');
   }
 }
-export class DataAzurermDataFactoryVstsConfiguration extends cdktf.ComplexComputedList {
+
+export class DataAzurermDataFactoryIdentityList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermDataFactoryIdentityOutputReference {
+    return new DataAzurermDataFactoryIdentityOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermDataFactoryVstsConfiguration {
+}
+
+export function dataAzurermDataFactoryVstsConfigurationToTerraform(struct?: DataAzurermDataFactoryVstsConfiguration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermDataFactoryVstsConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermDataFactoryVstsConfiguration | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermDataFactoryVstsConfiguration | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // account_name - computed: true, optional: false, required: false
   public get accountName() {
@@ -103,6 +255,25 @@ export class DataAzurermDataFactoryVstsConfiguration extends cdktf.ComplexComput
     return this.getStringAttribute('tenant_id');
   }
 }
+
+export class DataAzurermDataFactoryVstsConfigurationList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermDataFactoryVstsConfigurationOutputReference {
+    return new DataAzurermDataFactoryVstsConfigurationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataAzurermDataFactoryTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_factory#read DataAzurermDataFactory#read}
@@ -126,10 +297,9 @@ export class DataAzurermDataFactoryTimeoutsOutputReference extends cdktf.Complex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermDataFactoryTimeouts | undefined {
@@ -178,7 +348,7 @@ export class DataAzurermDataFactory extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_data_factory";
+  public static readonly tfResourceType = "azurerm_data_factory";
 
   // ===========
   // INITIALIZER
@@ -195,7 +365,9 @@ export class DataAzurermDataFactory extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'azurerm_data_factory',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -212,8 +384,9 @@ export class DataAzurermDataFactory extends cdktf.TerraformDataSource {
   // ==========
 
   // github_configuration - computed: true, optional: false, required: false
-  public githubConfiguration(index: string) {
-    return new DataAzurermDataFactoryGithubConfiguration(this, 'github_configuration', index, false);
+  private _githubConfiguration = new DataAzurermDataFactoryGithubConfigurationList(this, "github_configuration", false);
+  public get githubConfiguration() {
+    return this._githubConfiguration;
   }
 
   // id - computed: true, optional: true, required: false
@@ -222,8 +395,9 @@ export class DataAzurermDataFactory extends cdktf.TerraformDataSource {
   }
 
   // identity - computed: true, optional: false, required: false
-  public identity(index: string) {
-    return new DataAzurermDataFactoryIdentity(this, 'identity', index, false);
+  private _identity = new DataAzurermDataFactoryIdentityList(this, "identity", false);
+  public get identity() {
+    return this._identity;
   }
 
   // location - computed: true, optional: false, required: false
@@ -263,12 +437,13 @@ export class DataAzurermDataFactory extends cdktf.TerraformDataSource {
   }
 
   // vsts_configuration - computed: true, optional: false, required: false
-  public vstsConfiguration(index: string) {
-    return new DataAzurermDataFactoryVstsConfiguration(this, 'vsts_configuration', index, false);
+  private _vstsConfiguration = new DataAzurermDataFactoryVstsConfigurationList(this, "vsts_configuration", false);
+  public get vstsConfiguration() {
+    return this._vstsConfiguration;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermDataFactoryTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermDataFactoryTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

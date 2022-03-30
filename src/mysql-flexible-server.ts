@@ -128,10 +128,9 @@ export class MysqlFlexibleServerHighAvailabilityOutputReference extends cdktf.Co
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MysqlFlexibleServerHighAvailability | undefined {
@@ -223,10 +222,9 @@ export class MysqlFlexibleServerMaintenanceWindowOutputReference extends cdktf.C
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MysqlFlexibleServerMaintenanceWindow | undefined {
@@ -343,10 +341,9 @@ export class MysqlFlexibleServerStorageOutputReference extends cdktf.ComplexObje
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MysqlFlexibleServerStorage | undefined {
@@ -468,10 +465,9 @@ export class MysqlFlexibleServerTimeoutsOutputReference extends cdktf.ComplexObj
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MysqlFlexibleServerTimeouts | undefined {
@@ -586,7 +582,7 @@ export class MysqlFlexibleServer extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_mysql_flexible_server";
+  public static readonly tfResourceType = "azurerm_mysql_flexible_server";
 
   // ===========
   // INITIALIZER
@@ -603,7 +599,9 @@ export class MysqlFlexibleServer extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_mysql_flexible_server',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -921,7 +919,7 @@ export class MysqlFlexibleServer extends cdktf.TerraformResource {
   }
 
   // high_availability - computed: false, optional: true, required: false
-  private _highAvailability = new MysqlFlexibleServerHighAvailabilityOutputReference(this, "high_availability", true);
+  private _highAvailability = new MysqlFlexibleServerHighAvailabilityOutputReference(this, "high_availability");
   public get highAvailability() {
     return this._highAvailability;
   }
@@ -937,7 +935,7 @@ export class MysqlFlexibleServer extends cdktf.TerraformResource {
   }
 
   // maintenance_window - computed: false, optional: true, required: false
-  private _maintenanceWindow = new MysqlFlexibleServerMaintenanceWindowOutputReference(this, "maintenance_window", true);
+  private _maintenanceWindow = new MysqlFlexibleServerMaintenanceWindowOutputReference(this, "maintenance_window");
   public get maintenanceWindow() {
     return this._maintenanceWindow;
   }
@@ -953,7 +951,7 @@ export class MysqlFlexibleServer extends cdktf.TerraformResource {
   }
 
   // storage - computed: false, optional: true, required: false
-  private _storage = new MysqlFlexibleServerStorageOutputReference(this, "storage", true);
+  private _storage = new MysqlFlexibleServerStorageOutputReference(this, "storage");
   public get storage() {
     return this._storage;
   }
@@ -969,7 +967,7 @@ export class MysqlFlexibleServer extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new MysqlFlexibleServerTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new MysqlFlexibleServerTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

@@ -34,7 +34,45 @@ export interface DataAzurermSharedImageVersionConfig extends cdktf.TerraformMeta
   */
   readonly timeouts?: DataAzurermSharedImageVersionTimeouts;
 }
-export class DataAzurermSharedImageVersionTargetRegion extends cdktf.ComplexComputedList {
+export interface DataAzurermSharedImageVersionTargetRegion {
+}
+
+export function dataAzurermSharedImageVersionTargetRegionToTerraform(struct?: DataAzurermSharedImageVersionTargetRegion): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermSharedImageVersionTargetRegionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermSharedImageVersionTargetRegion | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermSharedImageVersionTargetRegion | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // name - computed: true, optional: false, required: false
   public get name() {
@@ -49,6 +87,25 @@ export class DataAzurermSharedImageVersionTargetRegion extends cdktf.ComplexComp
   // storage_account_type - computed: true, optional: false, required: false
   public get storageAccountType() {
     return this.getStringAttribute('storage_account_type');
+  }
+}
+
+export class DataAzurermSharedImageVersionTargetRegionList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermSharedImageVersionTargetRegionOutputReference {
+    return new DataAzurermSharedImageVersionTargetRegionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataAzurermSharedImageVersionTimeouts {
@@ -74,10 +131,9 @@ export class DataAzurermSharedImageVersionTimeoutsOutputReference extends cdktf.
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermSharedImageVersionTimeouts | undefined {
@@ -126,7 +182,7 @@ export class DataAzurermSharedImageVersion extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_shared_image_version";
+  public static readonly tfResourceType = "azurerm_shared_image_version";
 
   // ===========
   // INITIALIZER
@@ -143,7 +199,9 @@ export class DataAzurermSharedImageVersion extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'azurerm_shared_image_version',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -266,12 +324,13 @@ export class DataAzurermSharedImageVersion extends cdktf.TerraformDataSource {
   }
 
   // target_region - computed: true, optional: false, required: false
-  public targetRegion(index: string) {
-    return new DataAzurermSharedImageVersionTargetRegion(this, 'target_region', index, false);
+  private _targetRegion = new DataAzurermSharedImageVersionTargetRegionList(this, "target_region", false);
+  public get targetRegion() {
+    return this._targetRegion;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermSharedImageVersionTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermSharedImageVersionTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

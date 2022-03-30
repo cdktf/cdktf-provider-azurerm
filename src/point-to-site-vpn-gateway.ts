@@ -80,10 +80,9 @@ export class PointToSiteVpnGatewayConnectionConfigurationRoutePropagatedRouteTab
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): PointToSiteVpnGatewayConnectionConfigurationRoutePropagatedRouteTable | undefined {
@@ -172,10 +171,9 @@ export class PointToSiteVpnGatewayConnectionConfigurationRouteOutputReference ex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): PointToSiteVpnGatewayConnectionConfigurationRoute | undefined {
@@ -219,7 +217,7 @@ export class PointToSiteVpnGatewayConnectionConfigurationRouteOutputReference ex
   }
 
   // propagated_route_table - computed: false, optional: true, required: false
-  private _propagatedRouteTable = new PointToSiteVpnGatewayConnectionConfigurationRoutePropagatedRouteTableOutputReference(this, "propagated_route_table", true);
+  private _propagatedRouteTable = new PointToSiteVpnGatewayConnectionConfigurationRoutePropagatedRouteTableOutputReference(this, "propagated_route_table");
   public get propagatedRouteTable() {
     return this._propagatedRouteTable;
   }
@@ -257,10 +255,9 @@ export class PointToSiteVpnGatewayConnectionConfigurationVpnClientAddressPoolOut
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): PointToSiteVpnGatewayConnectionConfigurationVpnClientAddressPool | undefined {
@@ -339,10 +336,9 @@ export class PointToSiteVpnGatewayConnectionConfigurationOutputReference extends
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): PointToSiteVpnGatewayConnectionConfiguration | undefined {
@@ -414,7 +410,7 @@ export class PointToSiteVpnGatewayConnectionConfigurationOutputReference extends
   }
 
   // route - computed: false, optional: true, required: false
-  private _route = new PointToSiteVpnGatewayConnectionConfigurationRouteOutputReference(this, "route", true);
+  private _route = new PointToSiteVpnGatewayConnectionConfigurationRouteOutputReference(this, "route");
   public get route() {
     return this._route;
   }
@@ -430,7 +426,7 @@ export class PointToSiteVpnGatewayConnectionConfigurationOutputReference extends
   }
 
   // vpn_client_address_pool - computed: false, optional: false, required: true
-  private _vpnClientAddressPool = new PointToSiteVpnGatewayConnectionConfigurationVpnClientAddressPoolOutputReference(this, "vpn_client_address_pool", true);
+  private _vpnClientAddressPool = new PointToSiteVpnGatewayConnectionConfigurationVpnClientAddressPoolOutputReference(this, "vpn_client_address_pool");
   public get vpnClientAddressPool() {
     return this._vpnClientAddressPool;
   }
@@ -480,10 +476,9 @@ export class PointToSiteVpnGatewayTimeoutsOutputReference extends cdktf.ComplexO
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): PointToSiteVpnGatewayTimeouts | undefined {
@@ -598,7 +593,7 @@ export class PointToSiteVpnGateway extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_point_to_site_vpn_gateway";
+  public static readonly tfResourceType = "azurerm_point_to_site_vpn_gateway";
 
   // ===========
   // INITIALIZER
@@ -615,7 +610,9 @@ export class PointToSiteVpnGateway extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_point_to_site_vpn_gateway',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -754,7 +751,7 @@ export class PointToSiteVpnGateway extends cdktf.TerraformResource {
   }
 
   // connection_configuration - computed: false, optional: false, required: true
-  private _connectionConfiguration = new PointToSiteVpnGatewayConnectionConfigurationOutputReference(this, "connection_configuration", true);
+  private _connectionConfiguration = new PointToSiteVpnGatewayConnectionConfigurationOutputReference(this, "connection_configuration");
   public get connectionConfiguration() {
     return this._connectionConfiguration;
   }
@@ -767,7 +764,7 @@ export class PointToSiteVpnGateway extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new PointToSiteVpnGatewayTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new PointToSiteVpnGatewayTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

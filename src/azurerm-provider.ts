@@ -394,7 +394,7 @@ export class AzurermProvider extends cdktf.TerraformProvider {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm";
+  public static readonly tfResourceType = "azurerm";
 
   // ===========
   // INITIALIZER
@@ -412,6 +412,7 @@ export class AzurermProvider extends cdktf.TerraformProvider {
       terraformResourceType: 'azurerm',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
+        providerVersion: '2.99.0',
         providerVersionConstraint: '~> 2.0'
       },
       terraformProviderSource: 'azurerm'

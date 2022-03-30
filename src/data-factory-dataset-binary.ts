@@ -121,10 +121,9 @@ export class DataFactoryDatasetBinaryAzureBlobStorageLocationOutputReference ext
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataFactoryDatasetBinaryAzureBlobStorageLocation | undefined {
@@ -277,10 +276,9 @@ export class DataFactoryDatasetBinaryCompressionOutputReference extends cdktf.Co
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataFactoryDatasetBinaryCompression | undefined {
@@ -382,10 +380,9 @@ export class DataFactoryDatasetBinaryHttpServerLocationOutputReference extends c
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataFactoryDatasetBinaryHttpServerLocation | undefined {
@@ -542,10 +539,9 @@ export class DataFactoryDatasetBinarySftpServerLocationOutputReference extends c
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataFactoryDatasetBinarySftpServerLocation | undefined {
@@ -683,10 +679,9 @@ export class DataFactoryDatasetBinaryTimeoutsOutputReference extends cdktf.Compl
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataFactoryDatasetBinaryTimeouts | undefined {
@@ -801,7 +796,7 @@ export class DataFactoryDatasetBinary extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_data_factory_dataset_binary";
+  public static readonly tfResourceType = "azurerm_data_factory_dataset_binary";
 
   // ===========
   // INITIALIZER
@@ -818,7 +813,9 @@ export class DataFactoryDatasetBinary extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_data_factory_dataset_binary',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1003,7 +1000,7 @@ export class DataFactoryDatasetBinary extends cdktf.TerraformResource {
   }
 
   // azure_blob_storage_location - computed: false, optional: true, required: false
-  private _azureBlobStorageLocation = new DataFactoryDatasetBinaryAzureBlobStorageLocationOutputReference(this, "azure_blob_storage_location", true);
+  private _azureBlobStorageLocation = new DataFactoryDatasetBinaryAzureBlobStorageLocationOutputReference(this, "azure_blob_storage_location");
   public get azureBlobStorageLocation() {
     return this._azureBlobStorageLocation;
   }
@@ -1019,7 +1016,7 @@ export class DataFactoryDatasetBinary extends cdktf.TerraformResource {
   }
 
   // compression - computed: false, optional: true, required: false
-  private _compression = new DataFactoryDatasetBinaryCompressionOutputReference(this, "compression", true);
+  private _compression = new DataFactoryDatasetBinaryCompressionOutputReference(this, "compression");
   public get compression() {
     return this._compression;
   }
@@ -1035,7 +1032,7 @@ export class DataFactoryDatasetBinary extends cdktf.TerraformResource {
   }
 
   // http_server_location - computed: false, optional: true, required: false
-  private _httpServerLocation = new DataFactoryDatasetBinaryHttpServerLocationOutputReference(this, "http_server_location", true);
+  private _httpServerLocation = new DataFactoryDatasetBinaryHttpServerLocationOutputReference(this, "http_server_location");
   public get httpServerLocation() {
     return this._httpServerLocation;
   }
@@ -1051,7 +1048,7 @@ export class DataFactoryDatasetBinary extends cdktf.TerraformResource {
   }
 
   // sftp_server_location - computed: false, optional: true, required: false
-  private _sftpServerLocation = new DataFactoryDatasetBinarySftpServerLocationOutputReference(this, "sftp_server_location", true);
+  private _sftpServerLocation = new DataFactoryDatasetBinarySftpServerLocationOutputReference(this, "sftp_server_location");
   public get sftpServerLocation() {
     return this._sftpServerLocation;
   }
@@ -1067,7 +1064,7 @@ export class DataFactoryDatasetBinary extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataFactoryDatasetBinaryTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataFactoryDatasetBinaryTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

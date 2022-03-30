@@ -115,10 +115,9 @@ export class MssqlManagedInstanceIdentityOutputReference extends cdktf.ComplexOb
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MssqlManagedInstanceIdentity | undefined {
@@ -203,10 +202,9 @@ export class MssqlManagedInstanceTimeoutsOutputReference extends cdktf.ComplexOb
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MssqlManagedInstanceTimeouts | undefined {
@@ -321,7 +319,7 @@ export class MssqlManagedInstance extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_mssql_managed_instance";
+  public static readonly tfResourceType = "azurerm_mssql_managed_instance";
 
   // ===========
   // INITIALIZER
@@ -338,7 +336,9 @@ export class MssqlManagedInstance extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_mssql_managed_instance',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -640,7 +640,7 @@ export class MssqlManagedInstance extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity = new MssqlManagedInstanceIdentityOutputReference(this, "identity", true);
+  private _identity = new MssqlManagedInstanceIdentityOutputReference(this, "identity");
   public get identity() {
     return this._identity;
   }
@@ -656,7 +656,7 @@ export class MssqlManagedInstance extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new MssqlManagedInstanceTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new MssqlManagedInstanceTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

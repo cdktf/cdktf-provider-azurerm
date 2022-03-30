@@ -137,10 +137,9 @@ export class DataFactoryIntegrationRuntimeAzureSsisCatalogInfoOutputReference ex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataFactoryIntegrationRuntimeAzureSsisCatalogInfo | undefined {
@@ -293,10 +292,9 @@ export class DataFactoryIntegrationRuntimeAzureSsisCustomSetupScriptOutputRefere
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataFactoryIntegrationRuntimeAzureSsisCustomSetupScript | undefined {
@@ -390,10 +388,9 @@ export class DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyK
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyKeyVaultPassword | undefined {
@@ -565,10 +562,9 @@ export class DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentKe
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentKeyVaultLicense | undefined {
@@ -739,10 +735,9 @@ export class DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupOutputRefer
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetup | undefined {
@@ -905,10 +900,9 @@ export class DataFactoryIntegrationRuntimeAzureSsisProxyOutputReference extends 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataFactoryIntegrationRuntimeAzureSsisProxy | undefined {
@@ -1024,10 +1018,9 @@ export class DataFactoryIntegrationRuntimeAzureSsisTimeoutsOutputReference exten
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataFactoryIntegrationRuntimeAzureSsisTimeouts | undefined {
@@ -1171,10 +1164,9 @@ export class DataFactoryIntegrationRuntimeAzureSsisVnetIntegrationOutputReferenc
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataFactoryIntegrationRuntimeAzureSsisVnetIntegration | undefined {
@@ -1289,7 +1281,7 @@ export class DataFactoryIntegrationRuntimeAzureSsis extends cdktf.TerraformResou
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_data_factory_integration_runtime_azure_ssis";
+  public static readonly tfResourceType = "azurerm_data_factory_integration_runtime_azure_ssis";
 
   // ===========
   // INITIALIZER
@@ -1306,7 +1298,9 @@ export class DataFactoryIntegrationRuntimeAzureSsis extends cdktf.TerraformResou
     super(scope, id, {
       terraformResourceType: 'azurerm_data_factory_integration_runtime_azure_ssis',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1507,7 +1501,7 @@ export class DataFactoryIntegrationRuntimeAzureSsis extends cdktf.TerraformResou
   }
 
   // catalog_info - computed: false, optional: true, required: false
-  private _catalogInfo = new DataFactoryIntegrationRuntimeAzureSsisCatalogInfoOutputReference(this, "catalog_info", true);
+  private _catalogInfo = new DataFactoryIntegrationRuntimeAzureSsisCatalogInfoOutputReference(this, "catalog_info");
   public get catalogInfo() {
     return this._catalogInfo;
   }
@@ -1523,7 +1517,7 @@ export class DataFactoryIntegrationRuntimeAzureSsis extends cdktf.TerraformResou
   }
 
   // custom_setup_script - computed: false, optional: true, required: false
-  private _customSetupScript = new DataFactoryIntegrationRuntimeAzureSsisCustomSetupScriptOutputReference(this, "custom_setup_script", true);
+  private _customSetupScript = new DataFactoryIntegrationRuntimeAzureSsisCustomSetupScriptOutputReference(this, "custom_setup_script");
   public get customSetupScript() {
     return this._customSetupScript;
   }
@@ -1539,7 +1533,7 @@ export class DataFactoryIntegrationRuntimeAzureSsis extends cdktf.TerraformResou
   }
 
   // express_custom_setup - computed: false, optional: true, required: false
-  private _expressCustomSetup = new DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupOutputReference(this, "express_custom_setup", true);
+  private _expressCustomSetup = new DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupOutputReference(this, "express_custom_setup");
   public get expressCustomSetup() {
     return this._expressCustomSetup;
   }
@@ -1572,7 +1566,7 @@ export class DataFactoryIntegrationRuntimeAzureSsis extends cdktf.TerraformResou
   }
 
   // proxy - computed: false, optional: true, required: false
-  private _proxy = new DataFactoryIntegrationRuntimeAzureSsisProxyOutputReference(this, "proxy", true);
+  private _proxy = new DataFactoryIntegrationRuntimeAzureSsisProxyOutputReference(this, "proxy");
   public get proxy() {
     return this._proxy;
   }
@@ -1588,7 +1582,7 @@ export class DataFactoryIntegrationRuntimeAzureSsis extends cdktf.TerraformResou
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataFactoryIntegrationRuntimeAzureSsisTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataFactoryIntegrationRuntimeAzureSsisTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
@@ -1604,7 +1598,7 @@ export class DataFactoryIntegrationRuntimeAzureSsis extends cdktf.TerraformResou
   }
 
   // vnet_integration - computed: false, optional: true, required: false
-  private _vnetIntegration = new DataFactoryIntegrationRuntimeAzureSsisVnetIntegrationOutputReference(this, "vnet_integration", true);
+  private _vnetIntegration = new DataFactoryIntegrationRuntimeAzureSsisVnetIntegrationOutputReference(this, "vnet_integration");
   public get vnetIntegration() {
     return this._vnetIntegration;
   }

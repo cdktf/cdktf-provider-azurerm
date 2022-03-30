@@ -22,7 +22,45 @@ export interface DataAzurermAppServicePlanConfig extends cdktf.TerraformMetaArgu
   */
   readonly timeouts?: DataAzurermAppServicePlanTimeouts;
 }
-export class DataAzurermAppServicePlanSku extends cdktf.ComplexComputedList {
+export interface DataAzurermAppServicePlanSku {
+}
+
+export function dataAzurermAppServicePlanSkuToTerraform(struct?: DataAzurermAppServicePlanSku): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermAppServicePlanSkuOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermAppServicePlanSku | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermAppServicePlanSku | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // capacity - computed: true, optional: false, required: false
   public get capacity() {
@@ -37,6 +75,25 @@ export class DataAzurermAppServicePlanSku extends cdktf.ComplexComputedList {
   // tier - computed: true, optional: false, required: false
   public get tier() {
     return this.getStringAttribute('tier');
+  }
+}
+
+export class DataAzurermAppServicePlanSkuList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermAppServicePlanSkuOutputReference {
+    return new DataAzurermAppServicePlanSkuOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataAzurermAppServicePlanTimeouts {
@@ -62,10 +119,9 @@ export class DataAzurermAppServicePlanTimeoutsOutputReference extends cdktf.Comp
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermAppServicePlanTimeouts | undefined {
@@ -114,7 +170,7 @@ export class DataAzurermAppServicePlan extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_app_service_plan";
+  public static readonly tfResourceType = "azurerm_app_service_plan";
 
   // ===========
   // INITIALIZER
@@ -131,7 +187,9 @@ export class DataAzurermAppServicePlan extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'azurerm_app_service_plan',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -219,8 +277,9 @@ export class DataAzurermAppServicePlan extends cdktf.TerraformDataSource {
   }
 
   // sku - computed: true, optional: false, required: false
-  public sku(index: string) {
-    return new DataAzurermAppServicePlanSku(this, 'sku', index, false);
+  private _sku = new DataAzurermAppServicePlanSkuList(this, "sku", false);
+  public get sku() {
+    return this._sku;
   }
 
   // tags - computed: true, optional: false, required: false
@@ -234,7 +293,7 @@ export class DataAzurermAppServicePlan extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermAppServicePlanTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermAppServicePlanTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

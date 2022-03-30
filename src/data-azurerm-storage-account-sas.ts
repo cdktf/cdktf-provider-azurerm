@@ -114,10 +114,9 @@ export class DataAzurermStorageAccountSasPermissionsOutputReference extends cdkt
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermStorageAccountSasPermissions | undefined {
@@ -320,10 +319,9 @@ export class DataAzurermStorageAccountSasResourceTypesOutputReference extends cd
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermStorageAccountSasResourceTypes | undefined {
@@ -436,10 +434,9 @@ export class DataAzurermStorageAccountSasServicesOutputReference extends cdktf.C
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermStorageAccountSasServices | undefined {
@@ -556,10 +553,9 @@ export class DataAzurermStorageAccountSasTimeoutsOutputReference extends cdktf.C
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermStorageAccountSasTimeouts | undefined {
@@ -608,7 +604,7 @@ export class DataAzurermStorageAccountSas extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_storage_account_sas";
+  public static readonly tfResourceType = "azurerm_storage_account_sas";
 
   // ===========
   // INITIALIZER
@@ -625,7 +621,9 @@ export class DataAzurermStorageAccountSas extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'azurerm_storage_account_sas',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -746,7 +744,7 @@ export class DataAzurermStorageAccountSas extends cdktf.TerraformDataSource {
   }
 
   // permissions - computed: false, optional: false, required: true
-  private _permissions = new DataAzurermStorageAccountSasPermissionsOutputReference(this, "permissions", true);
+  private _permissions = new DataAzurermStorageAccountSasPermissionsOutputReference(this, "permissions");
   public get permissions() {
     return this._permissions;
   }
@@ -759,7 +757,7 @@ export class DataAzurermStorageAccountSas extends cdktf.TerraformDataSource {
   }
 
   // resource_types - computed: false, optional: false, required: true
-  private _resourceTypes = new DataAzurermStorageAccountSasResourceTypesOutputReference(this, "resource_types", true);
+  private _resourceTypes = new DataAzurermStorageAccountSasResourceTypesOutputReference(this, "resource_types");
   public get resourceTypes() {
     return this._resourceTypes;
   }
@@ -772,7 +770,7 @@ export class DataAzurermStorageAccountSas extends cdktf.TerraformDataSource {
   }
 
   // services - computed: false, optional: false, required: true
-  private _services = new DataAzurermStorageAccountSasServicesOutputReference(this, "services", true);
+  private _services = new DataAzurermStorageAccountSasServicesOutputReference(this, "services");
   public get services() {
     return this._services;
   }
@@ -785,7 +783,7 @@ export class DataAzurermStorageAccountSas extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermStorageAccountSasTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermStorageAccountSasTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

@@ -119,10 +119,9 @@ export class ServicebusSubscriptionRuleCorrelationFilterOutputReference extends 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ServicebusSubscriptionRuleCorrelationFilter | undefined {
@@ -376,10 +375,9 @@ export class ServicebusSubscriptionRuleTimeoutsOutputReference extends cdktf.Com
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ServicebusSubscriptionRuleTimeouts | undefined {
@@ -494,7 +492,7 @@ export class ServicebusSubscriptionRule extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_servicebus_subscription_rule";
+  public static readonly tfResourceType = "azurerm_servicebus_subscription_rule";
 
   // ===========
   // INITIALIZER
@@ -511,7 +509,9 @@ export class ServicebusSubscriptionRule extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_servicebus_subscription_rule',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -679,7 +679,7 @@ export class ServicebusSubscriptionRule extends cdktf.TerraformResource {
   }
 
   // correlation_filter - computed: false, optional: true, required: false
-  private _correlationFilter = new ServicebusSubscriptionRuleCorrelationFilterOutputReference(this, "correlation_filter", true);
+  private _correlationFilter = new ServicebusSubscriptionRuleCorrelationFilterOutputReference(this, "correlation_filter");
   public get correlationFilter() {
     return this._correlationFilter;
   }
@@ -695,7 +695,7 @@ export class ServicebusSubscriptionRule extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ServicebusSubscriptionRuleTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new ServicebusSubscriptionRuleTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

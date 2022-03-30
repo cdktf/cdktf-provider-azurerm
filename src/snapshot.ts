@@ -84,10 +84,9 @@ export class SnapshotEncryptionSettingsDiskEncryptionKeyOutputReference extends 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): SnapshotEncryptionSettingsDiskEncryptionKey | undefined {
@@ -171,10 +170,9 @@ export class SnapshotEncryptionSettingsKeyEncryptionKeyOutputReference extends c
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): SnapshotEncryptionSettingsKeyEncryptionKey | undefined {
@@ -267,10 +265,9 @@ export class SnapshotEncryptionSettingsOutputReference extends cdktf.ComplexObje
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): SnapshotEncryptionSettings | undefined {
@@ -320,7 +317,7 @@ export class SnapshotEncryptionSettingsOutputReference extends cdktf.ComplexObje
   }
 
   // disk_encryption_key - computed: false, optional: true, required: false
-  private _diskEncryptionKey = new SnapshotEncryptionSettingsDiskEncryptionKeyOutputReference(this, "disk_encryption_key", true);
+  private _diskEncryptionKey = new SnapshotEncryptionSettingsDiskEncryptionKeyOutputReference(this, "disk_encryption_key");
   public get diskEncryptionKey() {
     return this._diskEncryptionKey;
   }
@@ -336,7 +333,7 @@ export class SnapshotEncryptionSettingsOutputReference extends cdktf.ComplexObje
   }
 
   // key_encryption_key - computed: false, optional: true, required: false
-  private _keyEncryptionKey = new SnapshotEncryptionSettingsKeyEncryptionKeyOutputReference(this, "key_encryption_key", true);
+  private _keyEncryptionKey = new SnapshotEncryptionSettingsKeyEncryptionKeyOutputReference(this, "key_encryption_key");
   public get keyEncryptionKey() {
     return this._keyEncryptionKey;
   }
@@ -389,10 +386,9 @@ export class SnapshotTimeoutsOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): SnapshotTimeouts | undefined {
@@ -507,7 +503,7 @@ export class Snapshot extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_snapshot";
+  public static readonly tfResourceType = "azurerm_snapshot";
 
   // ===========
   // INITIALIZER
@@ -524,7 +520,9 @@ export class Snapshot extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_snapshot',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -686,7 +684,7 @@ export class Snapshot extends cdktf.TerraformResource {
   }
 
   // encryption_settings - computed: false, optional: true, required: false
-  private _encryptionSettings = new SnapshotEncryptionSettingsOutputReference(this, "encryption_settings", true);
+  private _encryptionSettings = new SnapshotEncryptionSettingsOutputReference(this, "encryption_settings");
   public get encryptionSettings() {
     return this._encryptionSettings;
   }
@@ -702,7 +700,7 @@ export class Snapshot extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new SnapshotTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new SnapshotTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

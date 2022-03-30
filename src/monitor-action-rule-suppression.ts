@@ -80,10 +80,9 @@ export class MonitorActionRuleSuppressionConditionAlertContextOutputReference ex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitorActionRuleSuppressionConditionAlertContext | undefined {
@@ -167,10 +166,9 @@ export class MonitorActionRuleSuppressionConditionAlertRuleIdOutputReference ext
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitorActionRuleSuppressionConditionAlertRuleId | undefined {
@@ -254,10 +252,9 @@ export class MonitorActionRuleSuppressionConditionDescriptionOutputReference ext
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitorActionRuleSuppressionConditionDescription | undefined {
@@ -341,10 +338,9 @@ export class MonitorActionRuleSuppressionConditionMonitorOutputReference extends
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitorActionRuleSuppressionConditionMonitor | undefined {
@@ -428,10 +424,9 @@ export class MonitorActionRuleSuppressionConditionMonitorServiceOutputReference 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitorActionRuleSuppressionConditionMonitorService | undefined {
@@ -515,10 +510,9 @@ export class MonitorActionRuleSuppressionConditionSeverityOutputReference extend
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitorActionRuleSuppressionConditionSeverity | undefined {
@@ -602,10 +596,9 @@ export class MonitorActionRuleSuppressionConditionTargetResourceTypeOutputRefere
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitorActionRuleSuppressionConditionTargetResourceType | undefined {
@@ -728,10 +721,9 @@ export class MonitorActionRuleSuppressionConditionOutputReference extends cdktf.
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitorActionRuleSuppressionCondition | undefined {
@@ -792,7 +784,7 @@ export class MonitorActionRuleSuppressionConditionOutputReference extends cdktf.
   }
 
   // alert_context - computed: false, optional: true, required: false
-  private _alertContext = new MonitorActionRuleSuppressionConditionAlertContextOutputReference(this, "alert_context", true);
+  private _alertContext = new MonitorActionRuleSuppressionConditionAlertContextOutputReference(this, "alert_context");
   public get alertContext() {
     return this._alertContext;
   }
@@ -808,7 +800,7 @@ export class MonitorActionRuleSuppressionConditionOutputReference extends cdktf.
   }
 
   // alert_rule_id - computed: false, optional: true, required: false
-  private _alertRuleId = new MonitorActionRuleSuppressionConditionAlertRuleIdOutputReference(this, "alert_rule_id", true);
+  private _alertRuleId = new MonitorActionRuleSuppressionConditionAlertRuleIdOutputReference(this, "alert_rule_id");
   public get alertRuleId() {
     return this._alertRuleId;
   }
@@ -824,7 +816,7 @@ export class MonitorActionRuleSuppressionConditionOutputReference extends cdktf.
   }
 
   // description - computed: false, optional: true, required: false
-  private _description = new MonitorActionRuleSuppressionConditionDescriptionOutputReference(this, "description", true);
+  private _description = new MonitorActionRuleSuppressionConditionDescriptionOutputReference(this, "description");
   public get description() {
     return this._description;
   }
@@ -840,7 +832,7 @@ export class MonitorActionRuleSuppressionConditionOutputReference extends cdktf.
   }
 
   // monitor - computed: false, optional: true, required: false
-  private _monitor = new MonitorActionRuleSuppressionConditionMonitorOutputReference(this, "monitor", true);
+  private _monitor = new MonitorActionRuleSuppressionConditionMonitorOutputReference(this, "monitor");
   public get monitor() {
     return this._monitor;
   }
@@ -856,7 +848,7 @@ export class MonitorActionRuleSuppressionConditionOutputReference extends cdktf.
   }
 
   // monitor_service - computed: false, optional: true, required: false
-  private _monitorService = new MonitorActionRuleSuppressionConditionMonitorServiceOutputReference(this, "monitor_service", true);
+  private _monitorService = new MonitorActionRuleSuppressionConditionMonitorServiceOutputReference(this, "monitor_service");
   public get monitorService() {
     return this._monitorService;
   }
@@ -872,7 +864,7 @@ export class MonitorActionRuleSuppressionConditionOutputReference extends cdktf.
   }
 
   // severity - computed: false, optional: true, required: false
-  private _severity = new MonitorActionRuleSuppressionConditionSeverityOutputReference(this, "severity", true);
+  private _severity = new MonitorActionRuleSuppressionConditionSeverityOutputReference(this, "severity");
   public get severity() {
     return this._severity;
   }
@@ -888,7 +880,7 @@ export class MonitorActionRuleSuppressionConditionOutputReference extends cdktf.
   }
 
   // target_resource_type - computed: false, optional: true, required: false
-  private _targetResourceType = new MonitorActionRuleSuppressionConditionTargetResourceTypeOutputReference(this, "target_resource_type", true);
+  private _targetResourceType = new MonitorActionRuleSuppressionConditionTargetResourceTypeOutputReference(this, "target_resource_type");
   public get targetResourceType() {
     return this._targetResourceType;
   }
@@ -931,10 +923,9 @@ export class MonitorActionRuleSuppressionScopeOutputReference extends cdktf.Comp
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitorActionRuleSuppressionScope | undefined {
@@ -1028,10 +1019,9 @@ export class MonitorActionRuleSuppressionSuppressionScheduleOutputReference exte
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitorActionRuleSuppressionSuppressionSchedule | undefined {
@@ -1161,10 +1151,9 @@ export class MonitorActionRuleSuppressionSuppressionOutputReference extends cdkt
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitorActionRuleSuppressionSuppression | undefined {
@@ -1208,7 +1197,7 @@ export class MonitorActionRuleSuppressionSuppressionOutputReference extends cdkt
   }
 
   // schedule - computed: false, optional: true, required: false
-  private _schedule = new MonitorActionRuleSuppressionSuppressionScheduleOutputReference(this, "schedule", true);
+  private _schedule = new MonitorActionRuleSuppressionSuppressionScheduleOutputReference(this, "schedule");
   public get schedule() {
     return this._schedule;
   }
@@ -1261,10 +1250,9 @@ export class MonitorActionRuleSuppressionTimeoutsOutputReference extends cdktf.C
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitorActionRuleSuppressionTimeouts | undefined {
@@ -1379,7 +1367,7 @@ export class MonitorActionRuleSuppression extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_monitor_action_rule_suppression";
+  public static readonly tfResourceType = "azurerm_monitor_action_rule_suppression";
 
   // ===========
   // INITIALIZER
@@ -1396,7 +1384,9 @@ export class MonitorActionRuleSuppression extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_monitor_action_rule_suppression',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1498,7 +1488,7 @@ export class MonitorActionRuleSuppression extends cdktf.TerraformResource {
   }
 
   // condition - computed: false, optional: true, required: false
-  private _condition = new MonitorActionRuleSuppressionConditionOutputReference(this, "condition", true);
+  private _condition = new MonitorActionRuleSuppressionConditionOutputReference(this, "condition");
   public get condition() {
     return this._condition;
   }
@@ -1514,7 +1504,7 @@ export class MonitorActionRuleSuppression extends cdktf.TerraformResource {
   }
 
   // scope - computed: false, optional: true, required: false
-  private _scope = new MonitorActionRuleSuppressionScopeOutputReference(this, "scope", true);
+  private _scope = new MonitorActionRuleSuppressionScopeOutputReference(this, "scope");
   public get scope() {
     return this._scope;
   }
@@ -1530,7 +1520,7 @@ export class MonitorActionRuleSuppression extends cdktf.TerraformResource {
   }
 
   // suppression - computed: false, optional: false, required: true
-  private _suppression = new MonitorActionRuleSuppressionSuppressionOutputReference(this, "suppression", true);
+  private _suppression = new MonitorActionRuleSuppressionSuppressionOutputReference(this, "suppression");
   public get suppression() {
     return this._suppression;
   }
@@ -1543,7 +1533,7 @@ export class MonitorActionRuleSuppression extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new MonitorActionRuleSuppressionTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new MonitorActionRuleSuppressionTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

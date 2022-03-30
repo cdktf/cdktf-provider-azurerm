@@ -78,10 +78,9 @@ export class MonitorActionRuleActionGroupConditionAlertContextOutputReference ex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitorActionRuleActionGroupConditionAlertContext | undefined {
@@ -165,10 +164,9 @@ export class MonitorActionRuleActionGroupConditionAlertRuleIdOutputReference ext
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitorActionRuleActionGroupConditionAlertRuleId | undefined {
@@ -252,10 +250,9 @@ export class MonitorActionRuleActionGroupConditionDescriptionOutputReference ext
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitorActionRuleActionGroupConditionDescription | undefined {
@@ -339,10 +336,9 @@ export class MonitorActionRuleActionGroupConditionMonitorOutputReference extends
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitorActionRuleActionGroupConditionMonitor | undefined {
@@ -426,10 +422,9 @@ export class MonitorActionRuleActionGroupConditionMonitorServiceOutputReference 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitorActionRuleActionGroupConditionMonitorService | undefined {
@@ -513,10 +508,9 @@ export class MonitorActionRuleActionGroupConditionSeverityOutputReference extend
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitorActionRuleActionGroupConditionSeverity | undefined {
@@ -600,10 +594,9 @@ export class MonitorActionRuleActionGroupConditionTargetResourceTypeOutputRefere
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitorActionRuleActionGroupConditionTargetResourceType | undefined {
@@ -726,10 +719,9 @@ export class MonitorActionRuleActionGroupConditionOutputReference extends cdktf.
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitorActionRuleActionGroupCondition | undefined {
@@ -790,7 +782,7 @@ export class MonitorActionRuleActionGroupConditionOutputReference extends cdktf.
   }
 
   // alert_context - computed: false, optional: true, required: false
-  private _alertContext = new MonitorActionRuleActionGroupConditionAlertContextOutputReference(this, "alert_context", true);
+  private _alertContext = new MonitorActionRuleActionGroupConditionAlertContextOutputReference(this, "alert_context");
   public get alertContext() {
     return this._alertContext;
   }
@@ -806,7 +798,7 @@ export class MonitorActionRuleActionGroupConditionOutputReference extends cdktf.
   }
 
   // alert_rule_id - computed: false, optional: true, required: false
-  private _alertRuleId = new MonitorActionRuleActionGroupConditionAlertRuleIdOutputReference(this, "alert_rule_id", true);
+  private _alertRuleId = new MonitorActionRuleActionGroupConditionAlertRuleIdOutputReference(this, "alert_rule_id");
   public get alertRuleId() {
     return this._alertRuleId;
   }
@@ -822,7 +814,7 @@ export class MonitorActionRuleActionGroupConditionOutputReference extends cdktf.
   }
 
   // description - computed: false, optional: true, required: false
-  private _description = new MonitorActionRuleActionGroupConditionDescriptionOutputReference(this, "description", true);
+  private _description = new MonitorActionRuleActionGroupConditionDescriptionOutputReference(this, "description");
   public get description() {
     return this._description;
   }
@@ -838,7 +830,7 @@ export class MonitorActionRuleActionGroupConditionOutputReference extends cdktf.
   }
 
   // monitor - computed: false, optional: true, required: false
-  private _monitor = new MonitorActionRuleActionGroupConditionMonitorOutputReference(this, "monitor", true);
+  private _monitor = new MonitorActionRuleActionGroupConditionMonitorOutputReference(this, "monitor");
   public get monitor() {
     return this._monitor;
   }
@@ -854,7 +846,7 @@ export class MonitorActionRuleActionGroupConditionOutputReference extends cdktf.
   }
 
   // monitor_service - computed: false, optional: true, required: false
-  private _monitorService = new MonitorActionRuleActionGroupConditionMonitorServiceOutputReference(this, "monitor_service", true);
+  private _monitorService = new MonitorActionRuleActionGroupConditionMonitorServiceOutputReference(this, "monitor_service");
   public get monitorService() {
     return this._monitorService;
   }
@@ -870,7 +862,7 @@ export class MonitorActionRuleActionGroupConditionOutputReference extends cdktf.
   }
 
   // severity - computed: false, optional: true, required: false
-  private _severity = new MonitorActionRuleActionGroupConditionSeverityOutputReference(this, "severity", true);
+  private _severity = new MonitorActionRuleActionGroupConditionSeverityOutputReference(this, "severity");
   public get severity() {
     return this._severity;
   }
@@ -886,7 +878,7 @@ export class MonitorActionRuleActionGroupConditionOutputReference extends cdktf.
   }
 
   // target_resource_type - computed: false, optional: true, required: false
-  private _targetResourceType = new MonitorActionRuleActionGroupConditionTargetResourceTypeOutputReference(this, "target_resource_type", true);
+  private _targetResourceType = new MonitorActionRuleActionGroupConditionTargetResourceTypeOutputReference(this, "target_resource_type");
   public get targetResourceType() {
     return this._targetResourceType;
   }
@@ -929,10 +921,9 @@ export class MonitorActionRuleActionGroupScopeOutputReference extends cdktf.Comp
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitorActionRuleActionGroupScope | undefined {
@@ -1026,10 +1017,9 @@ export class MonitorActionRuleActionGroupTimeoutsOutputReference extends cdktf.C
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitorActionRuleActionGroupTimeouts | undefined {
@@ -1144,7 +1134,7 @@ export class MonitorActionRuleActionGroup extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_monitor_action_rule_action_group";
+  public static readonly tfResourceType = "azurerm_monitor_action_rule_action_group";
 
   // ===========
   // INITIALIZER
@@ -1161,7 +1151,9 @@ export class MonitorActionRuleActionGroup extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_monitor_action_rule_action_group',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1276,7 +1268,7 @@ export class MonitorActionRuleActionGroup extends cdktf.TerraformResource {
   }
 
   // condition - computed: false, optional: true, required: false
-  private _condition = new MonitorActionRuleActionGroupConditionOutputReference(this, "condition", true);
+  private _condition = new MonitorActionRuleActionGroupConditionOutputReference(this, "condition");
   public get condition() {
     return this._condition;
   }
@@ -1292,7 +1284,7 @@ export class MonitorActionRuleActionGroup extends cdktf.TerraformResource {
   }
 
   // scope - computed: false, optional: true, required: false
-  private _scope = new MonitorActionRuleActionGroupScopeOutputReference(this, "scope", true);
+  private _scope = new MonitorActionRuleActionGroupScopeOutputReference(this, "scope");
   public get scope() {
     return this._scope;
   }
@@ -1308,7 +1300,7 @@ export class MonitorActionRuleActionGroup extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new MonitorActionRuleActionGroupTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new MonitorActionRuleActionGroupTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

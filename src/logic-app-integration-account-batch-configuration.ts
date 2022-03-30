@@ -107,10 +107,9 @@ export class LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurren
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceSchedule | undefined {
@@ -289,10 +288,9 @@ export class LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurren
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrence | undefined {
@@ -421,7 +419,7 @@ export class LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurren
   }
 
   // schedule - computed: false, optional: true, required: false
-  private _schedule = new LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleOutputReference(this, "schedule", true);
+  private _schedule = new LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleOutputReference(this, "schedule");
   public get schedule() {
     return this._schedule;
   }
@@ -471,10 +469,9 @@ export class LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaOutputRe
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): LogicAppIntegrationAccountBatchConfigurationReleaseCriteria | undefined {
@@ -543,7 +540,7 @@ export class LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaOutputRe
   }
 
   // recurrence - computed: false, optional: true, required: false
-  private _recurrence = new LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceOutputReference(this, "recurrence", true);
+  private _recurrence = new LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceOutputReference(this, "recurrence");
   public get recurrence() {
     return this._recurrence;
   }
@@ -596,10 +593,9 @@ export class LogicAppIntegrationAccountBatchConfigurationTimeoutsOutputReference
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): LogicAppIntegrationAccountBatchConfigurationTimeouts | undefined {
@@ -714,7 +710,7 @@ export class LogicAppIntegrationAccountBatchConfiguration extends cdktf.Terrafor
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_logic_app_integration_account_batch_configuration";
+  public static readonly tfResourceType = "azurerm_logic_app_integration_account_batch_configuration";
 
   // ===========
   // INITIALIZER
@@ -731,7 +727,9 @@ export class LogicAppIntegrationAccountBatchConfiguration extends cdktf.Terrafor
     super(scope, id, {
       terraformResourceType: 'azurerm_logic_app_integration_account_batch_configuration',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -825,7 +823,7 @@ export class LogicAppIntegrationAccountBatchConfiguration extends cdktf.Terrafor
   }
 
   // release_criteria - computed: false, optional: false, required: true
-  private _releaseCriteria = new LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaOutputReference(this, "release_criteria", true);
+  private _releaseCriteria = new LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaOutputReference(this, "release_criteria");
   public get releaseCriteria() {
     return this._releaseCriteria;
   }
@@ -838,7 +836,7 @@ export class LogicAppIntegrationAccountBatchConfiguration extends cdktf.Terrafor
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new LogicAppIntegrationAccountBatchConfigurationTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new LogicAppIntegrationAccountBatchConfigurationTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

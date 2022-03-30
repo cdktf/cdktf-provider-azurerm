@@ -119,10 +119,9 @@ export class MonitorScheduledQueryRulesAlertActionOutputReference extends cdktf.
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitorScheduledQueryRulesAlertAction | undefined {
@@ -241,10 +240,9 @@ export class MonitorScheduledQueryRulesAlertTimeoutsOutputReference extends cdkt
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitorScheduledQueryRulesAlertTimeouts | undefined {
@@ -388,10 +386,9 @@ export class MonitorScheduledQueryRulesAlertTriggerMetricTriggerOutputReference 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitorScheduledQueryRulesAlertTriggerMetricTrigger | undefined {
@@ -520,10 +517,9 @@ export class MonitorScheduledQueryRulesAlertTriggerOutputReference extends cdktf
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitorScheduledQueryRulesAlertTrigger | undefined {
@@ -586,7 +582,7 @@ export class MonitorScheduledQueryRulesAlertTriggerOutputReference extends cdktf
   }
 
   // metric_trigger - computed: false, optional: true, required: false
-  private _metricTrigger = new MonitorScheduledQueryRulesAlertTriggerMetricTriggerOutputReference(this, "metric_trigger", true);
+  private _metricTrigger = new MonitorScheduledQueryRulesAlertTriggerMetricTriggerOutputReference(this, "metric_trigger");
   public get metricTrigger() {
     return this._metricTrigger;
   }
@@ -610,7 +606,7 @@ export class MonitorScheduledQueryRulesAlert extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_monitor_scheduled_query_rules_alert";
+  public static readonly tfResourceType = "azurerm_monitor_scheduled_query_rules_alert";
 
   // ===========
   // INITIALIZER
@@ -627,7 +623,9 @@ export class MonitorScheduledQueryRulesAlert extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_monitor_scheduled_query_rules_alert',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -883,7 +881,7 @@ export class MonitorScheduledQueryRulesAlert extends cdktf.TerraformResource {
   }
 
   // action - computed: false, optional: false, required: true
-  private _action = new MonitorScheduledQueryRulesAlertActionOutputReference(this, "action", true);
+  private _action = new MonitorScheduledQueryRulesAlertActionOutputReference(this, "action");
   public get action() {
     return this._action;
   }
@@ -896,7 +894,7 @@ export class MonitorScheduledQueryRulesAlert extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new MonitorScheduledQueryRulesAlertTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new MonitorScheduledQueryRulesAlertTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
@@ -912,7 +910,7 @@ export class MonitorScheduledQueryRulesAlert extends cdktf.TerraformResource {
   }
 
   // trigger - computed: false, optional: false, required: true
-  private _trigger = new MonitorScheduledQueryRulesAlertTriggerOutputReference(this, "trigger", true);
+  private _trigger = new MonitorScheduledQueryRulesAlertTriggerOutputReference(this, "trigger");
   public get trigger() {
     return this._trigger;
   }

@@ -81,10 +81,9 @@ export class LocalNetworkGatewayBgpSettingsOutputReference extends cdktf.Complex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): LocalNetworkGatewayBgpSettings | undefined {
@@ -200,10 +199,9 @@ export class LocalNetworkGatewayTimeoutsOutputReference extends cdktf.ComplexObj
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): LocalNetworkGatewayTimeouts | undefined {
@@ -318,7 +316,7 @@ export class LocalNetworkGateway extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_local_network_gateway";
+  public static readonly tfResourceType = "azurerm_local_network_gateway";
 
   // ===========
   // INITIALIZER
@@ -335,7 +333,9 @@ export class LocalNetworkGateway extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_local_network_gateway',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -466,7 +466,7 @@ export class LocalNetworkGateway extends cdktf.TerraformResource {
   }
 
   // bgp_settings - computed: false, optional: true, required: false
-  private _bgpSettings = new LocalNetworkGatewayBgpSettingsOutputReference(this, "bgp_settings", true);
+  private _bgpSettings = new LocalNetworkGatewayBgpSettingsOutputReference(this, "bgp_settings");
   public get bgpSettings() {
     return this._bgpSettings;
   }
@@ -482,7 +482,7 @@ export class LocalNetworkGateway extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new LocalNetworkGatewayTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new LocalNetworkGatewayTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

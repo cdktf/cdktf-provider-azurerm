@@ -241,7 +241,45 @@ export function iothubRouteToTerraform(struct?: IothubRoute | cdktf.IResolvable)
   }
 }
 
-export class IothubSharedAccessPolicy extends cdktf.ComplexComputedList {
+export interface IothubSharedAccessPolicy {
+}
+
+export function iothubSharedAccessPolicyToTerraform(struct?: IothubSharedAccessPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class IothubSharedAccessPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): IothubSharedAccessPolicy | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: IothubSharedAccessPolicy | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // key_name - computed: true, optional: false, required: false
   public get keyName() {
@@ -261,6 +299,25 @@ export class IothubSharedAccessPolicy extends cdktf.ComplexComputedList {
   // secondary_key - computed: true, optional: false, required: false
   public get secondaryKey() {
     return this.getStringAttribute('secondary_key');
+  }
+}
+
+export class IothubSharedAccessPolicyList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): IothubSharedAccessPolicyOutputReference {
+    return new IothubSharedAccessPolicyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface IothubCloudToDeviceFeedback {
@@ -325,10 +382,9 @@ export class IothubCloudToDeviceOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): IothubCloudToDevice | undefined {
@@ -451,10 +507,9 @@ export class IothubFallbackRouteOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): IothubFallbackRoute | undefined {
@@ -613,10 +668,9 @@ export class IothubFileUploadOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): IothubFileUpload | undefined {
@@ -810,10 +864,9 @@ export class IothubIdentityOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): IothubIdentity | undefined {
@@ -993,10 +1046,9 @@ export class IothubSkuOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): IothubSku | undefined {
@@ -1090,10 +1142,9 @@ export class IothubTimeoutsOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): IothubTimeouts | undefined {
@@ -1208,7 +1259,7 @@ export class Iothub extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_iothub";
+  public static readonly tfResourceType = "azurerm_iothub";
 
   // ===========
   // INITIALIZER
@@ -1225,7 +1276,9 @@ export class Iothub extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_iothub',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1447,8 +1500,9 @@ export class Iothub extends cdktf.TerraformResource {
   }
 
   // shared_access_policy - computed: true, optional: false, required: false
-  public sharedAccessPolicy(index: string) {
-    return new IothubSharedAccessPolicy(this, 'shared_access_policy', index, false);
+  private _sharedAccessPolicy = new IothubSharedAccessPolicyList(this, "shared_access_policy", false);
+  public get sharedAccessPolicy() {
+    return this._sharedAccessPolicy;
   }
 
   // tags - computed: false, optional: true, required: false
@@ -1473,7 +1527,7 @@ export class Iothub extends cdktf.TerraformResource {
   }
 
   // cloud_to_device - computed: false, optional: true, required: false
-  private _cloudToDevice = new IothubCloudToDeviceOutputReference(this, "cloud_to_device", true);
+  private _cloudToDevice = new IothubCloudToDeviceOutputReference(this, "cloud_to_device");
   public get cloudToDevice() {
     return this._cloudToDevice;
   }
@@ -1489,7 +1543,7 @@ export class Iothub extends cdktf.TerraformResource {
   }
 
   // fallback_route - computed: false, optional: true, required: false
-  private _fallbackRoute = new IothubFallbackRouteOutputReference(this, "fallback_route", true);
+  private _fallbackRoute = new IothubFallbackRouteOutputReference(this, "fallback_route");
   public get fallbackRoute() {
     return this._fallbackRoute;
   }
@@ -1505,7 +1559,7 @@ export class Iothub extends cdktf.TerraformResource {
   }
 
   // file_upload - computed: false, optional: true, required: false
-  private _fileUpload = new IothubFileUploadOutputReference(this, "file_upload", true);
+  private _fileUpload = new IothubFileUploadOutputReference(this, "file_upload");
   public get fileUpload() {
     return this._fileUpload;
   }
@@ -1521,7 +1575,7 @@ export class Iothub extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity = new IothubIdentityOutputReference(this, "identity", true);
+  private _identity = new IothubIdentityOutputReference(this, "identity");
   public get identity() {
     return this._identity;
   }
@@ -1571,7 +1625,7 @@ export class Iothub extends cdktf.TerraformResource {
   }
 
   // sku - computed: false, optional: false, required: true
-  private _sku = new IothubSkuOutputReference(this, "sku", true);
+  private _sku = new IothubSkuOutputReference(this, "sku");
   public get sku() {
     return this._sku;
   }
@@ -1584,7 +1638,7 @@ export class Iothub extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new IothubTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new IothubTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

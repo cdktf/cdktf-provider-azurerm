@@ -109,10 +109,9 @@ export class DataFactoryGithubConfigurationOutputReference extends cdktf.Complex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataFactoryGithubConfiguration | undefined {
@@ -280,10 +279,9 @@ export class DataFactoryIdentityOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataFactoryIdentity | undefined {
@@ -390,10 +388,9 @@ export class DataFactoryTimeoutsOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataFactoryTimeouts | undefined {
@@ -547,10 +544,9 @@ export class DataFactoryVstsConfigurationOutputReference extends cdktf.ComplexOb
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataFactoryVstsConfiguration | undefined {
@@ -691,7 +687,7 @@ export class DataFactory extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_data_factory";
+  public static readonly tfResourceType = "azurerm_data_factory";
 
   // ===========
   // INITIALIZER
@@ -708,7 +704,9 @@ export class DataFactory extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_data_factory',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -842,7 +840,7 @@ export class DataFactory extends cdktf.TerraformResource {
   }
 
   // github_configuration - computed: false, optional: true, required: false
-  private _githubConfiguration = new DataFactoryGithubConfigurationOutputReference(this, "github_configuration", true);
+  private _githubConfiguration = new DataFactoryGithubConfigurationOutputReference(this, "github_configuration");
   public get githubConfiguration() {
     return this._githubConfiguration;
   }
@@ -875,7 +873,7 @@ export class DataFactory extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity = new DataFactoryIdentityOutputReference(this, "identity", true);
+  private _identity = new DataFactoryIdentityOutputReference(this, "identity");
   public get identity() {
     return this._identity;
   }
@@ -891,7 +889,7 @@ export class DataFactory extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataFactoryTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataFactoryTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
@@ -907,7 +905,7 @@ export class DataFactory extends cdktf.TerraformResource {
   }
 
   // vsts_configuration - computed: false, optional: true, required: false
-  private _vstsConfiguration = new DataFactoryVstsConfigurationOutputReference(this, "vsts_configuration", true);
+  private _vstsConfiguration = new DataFactoryVstsConfigurationOutputReference(this, "vsts_configuration");
   public get vstsConfiguration() {
     return this._vstsConfiguration;
   }

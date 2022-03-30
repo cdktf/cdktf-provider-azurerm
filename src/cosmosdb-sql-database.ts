@@ -59,10 +59,9 @@ export class CosmosdbSqlDatabaseAutoscaleSettingsOutputReference extends cdktf.C
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CosmosdbSqlDatabaseAutoscaleSettings | undefined {
@@ -140,10 +139,9 @@ export class CosmosdbSqlDatabaseTimeoutsOutputReference extends cdktf.ComplexObj
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CosmosdbSqlDatabaseTimeouts | undefined {
@@ -258,7 +256,7 @@ export class CosmosdbSqlDatabase extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_cosmosdb_sql_database";
+  public static readonly tfResourceType = "azurerm_cosmosdb_sql_database";
 
   // ===========
   // INITIALIZER
@@ -275,7 +273,9 @@ export class CosmosdbSqlDatabase extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_cosmosdb_sql_database',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -355,7 +355,7 @@ export class CosmosdbSqlDatabase extends cdktf.TerraformResource {
   }
 
   // autoscale_settings - computed: false, optional: true, required: false
-  private _autoscaleSettings = new CosmosdbSqlDatabaseAutoscaleSettingsOutputReference(this, "autoscale_settings", true);
+  private _autoscaleSettings = new CosmosdbSqlDatabaseAutoscaleSettingsOutputReference(this, "autoscale_settings");
   public get autoscaleSettings() {
     return this._autoscaleSettings;
   }
@@ -371,7 +371,7 @@ export class CosmosdbSqlDatabase extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new CosmosdbSqlDatabaseTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new CosmosdbSqlDatabaseTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

@@ -158,10 +158,9 @@ export class ApiManagementDiagnosticBackendRequestDataMaskingOutputReference ext
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ApiManagementDiagnosticBackendRequestDataMasking | undefined {
@@ -260,10 +259,9 @@ export class ApiManagementDiagnosticBackendRequestOutputReference extends cdktf.
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ApiManagementDiagnosticBackendRequest | undefined {
@@ -332,7 +330,7 @@ export class ApiManagementDiagnosticBackendRequestOutputReference extends cdktf.
   }
 
   // data_masking - computed: false, optional: true, required: false
-  private _dataMasking = new ApiManagementDiagnosticBackendRequestDataMaskingOutputReference(this, "data_masking", true);
+  private _dataMasking = new ApiManagementDiagnosticBackendRequestDataMaskingOutputReference(this, "data_masking");
   public get dataMasking() {
     return this._dataMasking;
   }
@@ -423,10 +421,9 @@ export class ApiManagementDiagnosticBackendResponseDataMaskingOutputReference ex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ApiManagementDiagnosticBackendResponseDataMasking | undefined {
@@ -525,10 +522,9 @@ export class ApiManagementDiagnosticBackendResponseOutputReference extends cdktf
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ApiManagementDiagnosticBackendResponse | undefined {
@@ -597,7 +593,7 @@ export class ApiManagementDiagnosticBackendResponseOutputReference extends cdktf
   }
 
   // data_masking - computed: false, optional: true, required: false
-  private _dataMasking = new ApiManagementDiagnosticBackendResponseDataMaskingOutputReference(this, "data_masking", true);
+  private _dataMasking = new ApiManagementDiagnosticBackendResponseDataMaskingOutputReference(this, "data_masking");
   public get dataMasking() {
     return this._dataMasking;
   }
@@ -688,10 +684,9 @@ export class ApiManagementDiagnosticFrontendRequestDataMaskingOutputReference ex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ApiManagementDiagnosticFrontendRequestDataMasking | undefined {
@@ -790,10 +785,9 @@ export class ApiManagementDiagnosticFrontendRequestOutputReference extends cdktf
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ApiManagementDiagnosticFrontendRequest | undefined {
@@ -862,7 +856,7 @@ export class ApiManagementDiagnosticFrontendRequestOutputReference extends cdktf
   }
 
   // data_masking - computed: false, optional: true, required: false
-  private _dataMasking = new ApiManagementDiagnosticFrontendRequestDataMaskingOutputReference(this, "data_masking", true);
+  private _dataMasking = new ApiManagementDiagnosticFrontendRequestDataMaskingOutputReference(this, "data_masking");
   public get dataMasking() {
     return this._dataMasking;
   }
@@ -953,10 +947,9 @@ export class ApiManagementDiagnosticFrontendResponseDataMaskingOutputReference e
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ApiManagementDiagnosticFrontendResponseDataMasking | undefined {
@@ -1055,10 +1048,9 @@ export class ApiManagementDiagnosticFrontendResponseOutputReference extends cdkt
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ApiManagementDiagnosticFrontendResponse | undefined {
@@ -1127,7 +1119,7 @@ export class ApiManagementDiagnosticFrontendResponseOutputReference extends cdkt
   }
 
   // data_masking - computed: false, optional: true, required: false
-  private _dataMasking = new ApiManagementDiagnosticFrontendResponseDataMaskingOutputReference(this, "data_masking", true);
+  private _dataMasking = new ApiManagementDiagnosticFrontendResponseDataMaskingOutputReference(this, "data_masking");
   public get dataMasking() {
     return this._dataMasking;
   }
@@ -1180,10 +1172,9 @@ export class ApiManagementDiagnosticTimeoutsOutputReference extends cdktf.Comple
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ApiManagementDiagnosticTimeouts | undefined {
@@ -1298,7 +1289,7 @@ export class ApiManagementDiagnostic extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_api_management_diagnostic";
+  public static readonly tfResourceType = "azurerm_api_management_diagnostic";
 
   // ===========
   // INITIALIZER
@@ -1315,7 +1306,9 @@ export class ApiManagementDiagnostic extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_api_management_diagnostic',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1514,7 +1507,7 @@ export class ApiManagementDiagnostic extends cdktf.TerraformResource {
   }
 
   // backend_request - computed: false, optional: true, required: false
-  private _backendRequest = new ApiManagementDiagnosticBackendRequestOutputReference(this, "backend_request", true);
+  private _backendRequest = new ApiManagementDiagnosticBackendRequestOutputReference(this, "backend_request");
   public get backendRequest() {
     return this._backendRequest;
   }
@@ -1530,7 +1523,7 @@ export class ApiManagementDiagnostic extends cdktf.TerraformResource {
   }
 
   // backend_response - computed: false, optional: true, required: false
-  private _backendResponse = new ApiManagementDiagnosticBackendResponseOutputReference(this, "backend_response", true);
+  private _backendResponse = new ApiManagementDiagnosticBackendResponseOutputReference(this, "backend_response");
   public get backendResponse() {
     return this._backendResponse;
   }
@@ -1546,7 +1539,7 @@ export class ApiManagementDiagnostic extends cdktf.TerraformResource {
   }
 
   // frontend_request - computed: false, optional: true, required: false
-  private _frontendRequest = new ApiManagementDiagnosticFrontendRequestOutputReference(this, "frontend_request", true);
+  private _frontendRequest = new ApiManagementDiagnosticFrontendRequestOutputReference(this, "frontend_request");
   public get frontendRequest() {
     return this._frontendRequest;
   }
@@ -1562,7 +1555,7 @@ export class ApiManagementDiagnostic extends cdktf.TerraformResource {
   }
 
   // frontend_response - computed: false, optional: true, required: false
-  private _frontendResponse = new ApiManagementDiagnosticFrontendResponseOutputReference(this, "frontend_response", true);
+  private _frontendResponse = new ApiManagementDiagnosticFrontendResponseOutputReference(this, "frontend_response");
   public get frontendResponse() {
     return this._frontendResponse;
   }
@@ -1578,7 +1571,7 @@ export class ApiManagementDiagnostic extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ApiManagementDiagnosticTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new ApiManagementDiagnosticTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

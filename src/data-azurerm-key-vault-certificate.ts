@@ -26,14 +26,109 @@ export interface DataAzurermKeyVaultCertificateConfig extends cdktf.TerraformMet
   */
   readonly timeouts?: DataAzurermKeyVaultCertificateTimeouts;
 }
-export class DataAzurermKeyVaultCertificateCertificatePolicyIssuerParameters extends cdktf.ComplexComputedList {
+export interface DataAzurermKeyVaultCertificateCertificatePolicyIssuerParameters {
+}
+
+export function dataAzurermKeyVaultCertificateCertificatePolicyIssuerParametersToTerraform(struct?: DataAzurermKeyVaultCertificateCertificatePolicyIssuerParameters): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermKeyVaultCertificateCertificatePolicyIssuerParametersOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermKeyVaultCertificateCertificatePolicyIssuerParameters | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermKeyVaultCertificateCertificatePolicyIssuerParameters | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
 }
-export class DataAzurermKeyVaultCertificateCertificatePolicyKeyProperties extends cdktf.ComplexComputedList {
+
+export class DataAzurermKeyVaultCertificateCertificatePolicyIssuerParametersList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermKeyVaultCertificateCertificatePolicyIssuerParametersOutputReference {
+    return new DataAzurermKeyVaultCertificateCertificatePolicyIssuerParametersOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermKeyVaultCertificateCertificatePolicyKeyProperties {
+}
+
+export function dataAzurermKeyVaultCertificateCertificatePolicyKeyPropertiesToTerraform(struct?: DataAzurermKeyVaultCertificateCertificatePolicyKeyProperties): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermKeyVaultCertificateCertificatePolicyKeyPropertiesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermKeyVaultCertificateCertificatePolicyKeyProperties | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermKeyVaultCertificateCertificatePolicyKeyProperties | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // curve - computed: true, optional: false, required: false
   public get curve() {
@@ -60,14 +155,128 @@ export class DataAzurermKeyVaultCertificateCertificatePolicyKeyProperties extend
     return this.getBooleanAttribute('reuse_key');
   }
 }
-export class DataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionAction extends cdktf.ComplexComputedList {
+
+export class DataAzurermKeyVaultCertificateCertificatePolicyKeyPropertiesList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermKeyVaultCertificateCertificatePolicyKeyPropertiesOutputReference {
+    return new DataAzurermKeyVaultCertificateCertificatePolicyKeyPropertiesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionAction {
+}
+
+export function dataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionActionToTerraform(struct?: DataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionAction): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionActionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionAction | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionAction | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // action_type - computed: true, optional: false, required: false
   public get actionType() {
     return this.getStringAttribute('action_type');
   }
 }
-export class DataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionTrigger extends cdktf.ComplexComputedList {
+
+export class DataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionActionList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionActionOutputReference {
+    return new DataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionActionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionTrigger {
+}
+
+export function dataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionTriggerToTerraform(struct?: DataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionTrigger): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionTriggerOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionTrigger | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionTrigger | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // days_before_expiry - computed: true, optional: false, required: false
   public get daysBeforeExpiry() {
@@ -79,28 +288,199 @@ export class DataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionTrigge
     return this.getNumberAttribute('lifetime_percentage');
   }
 }
-export class DataAzurermKeyVaultCertificateCertificatePolicyLifetimeAction extends cdktf.ComplexComputedList {
+
+export class DataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionTriggerList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionTriggerOutputReference {
+    return new DataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionTriggerOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermKeyVaultCertificateCertificatePolicyLifetimeAction {
+}
+
+export function dataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionToTerraform(struct?: DataAzurermKeyVaultCertificateCertificatePolicyLifetimeAction): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermKeyVaultCertificateCertificatePolicyLifetimeAction | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermKeyVaultCertificateCertificatePolicyLifetimeAction | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // action - computed: true, optional: false, required: false
+  private _action = new DataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionActionList(this, "action", false);
   public get action() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('action');
+    return this._action;
   }
 
   // trigger - computed: true, optional: false, required: false
+  private _trigger = new DataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionTriggerList(this, "trigger", false);
   public get trigger() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('trigger');
+    return this._trigger;
   }
 }
-export class DataAzurermKeyVaultCertificateCertificatePolicySecretProperties extends cdktf.ComplexComputedList {
+
+export class DataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionOutputReference {
+    return new DataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermKeyVaultCertificateCertificatePolicySecretProperties {
+}
+
+export function dataAzurermKeyVaultCertificateCertificatePolicySecretPropertiesToTerraform(struct?: DataAzurermKeyVaultCertificateCertificatePolicySecretProperties): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermKeyVaultCertificateCertificatePolicySecretPropertiesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermKeyVaultCertificateCertificatePolicySecretProperties | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermKeyVaultCertificateCertificatePolicySecretProperties | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // content_type - computed: true, optional: false, required: false
   public get contentType() {
     return this.getStringAttribute('content_type');
   }
 }
-export class DataAzurermKeyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNames extends cdktf.ComplexComputedList {
+
+export class DataAzurermKeyVaultCertificateCertificatePolicySecretPropertiesList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermKeyVaultCertificateCertificatePolicySecretPropertiesOutputReference {
+    return new DataAzurermKeyVaultCertificateCertificatePolicySecretPropertiesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermKeyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNames {
+}
+
+export function dataAzurermKeyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNamesToTerraform(struct?: DataAzurermKeyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNames): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermKeyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNamesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermKeyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNames | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermKeyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNames | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // dns_names - computed: true, optional: false, required: false
   public get dnsNames() {
@@ -117,7 +497,64 @@ export class DataAzurermKeyVaultCertificateCertificatePolicyX509CertificatePrope
     return this.getListAttribute('upns');
   }
 }
-export class DataAzurermKeyVaultCertificateCertificatePolicyX509CertificateProperties extends cdktf.ComplexComputedList {
+
+export class DataAzurermKeyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNamesList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermKeyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNamesOutputReference {
+    return new DataAzurermKeyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNamesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermKeyVaultCertificateCertificatePolicyX509CertificateProperties {
+}
+
+export function dataAzurermKeyVaultCertificateCertificatePolicyX509CertificatePropertiesToTerraform(struct?: DataAzurermKeyVaultCertificateCertificatePolicyX509CertificateProperties): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermKeyVaultCertificateCertificatePolicyX509CertificatePropertiesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermKeyVaultCertificateCertificatePolicyX509CertificateProperties | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermKeyVaultCertificateCertificatePolicyX509CertificateProperties | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // extended_key_usage - computed: true, optional: false, required: false
   public get extendedKeyUsage() {
@@ -135,9 +572,9 @@ export class DataAzurermKeyVaultCertificateCertificatePolicyX509CertificatePrope
   }
 
   // subject_alternative_names - computed: true, optional: false, required: false
+  private _subjectAlternativeNames = new DataAzurermKeyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNamesList(this, "subject_alternative_names", false);
   public get subjectAlternativeNames() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('subject_alternative_names');
+    return this._subjectAlternativeNames;
   }
 
   // validity_in_months - computed: true, optional: false, required: false
@@ -145,36 +582,112 @@ export class DataAzurermKeyVaultCertificateCertificatePolicyX509CertificatePrope
     return this.getNumberAttribute('validity_in_months');
   }
 }
-export class DataAzurermKeyVaultCertificateCertificatePolicy extends cdktf.ComplexComputedList {
+
+export class DataAzurermKeyVaultCertificateCertificatePolicyX509CertificatePropertiesList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermKeyVaultCertificateCertificatePolicyX509CertificatePropertiesOutputReference {
+    return new DataAzurermKeyVaultCertificateCertificatePolicyX509CertificatePropertiesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermKeyVaultCertificateCertificatePolicy {
+}
+
+export function dataAzurermKeyVaultCertificateCertificatePolicyToTerraform(struct?: DataAzurermKeyVaultCertificateCertificatePolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermKeyVaultCertificateCertificatePolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermKeyVaultCertificateCertificatePolicy | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermKeyVaultCertificateCertificatePolicy | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // issuer_parameters - computed: true, optional: false, required: false
+  private _issuerParameters = new DataAzurermKeyVaultCertificateCertificatePolicyIssuerParametersList(this, "issuer_parameters", false);
   public get issuerParameters() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('issuer_parameters');
+    return this._issuerParameters;
   }
 
   // key_properties - computed: true, optional: false, required: false
+  private _keyProperties = new DataAzurermKeyVaultCertificateCertificatePolicyKeyPropertiesList(this, "key_properties", false);
   public get keyProperties() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('key_properties');
+    return this._keyProperties;
   }
 
   // lifetime_action - computed: true, optional: false, required: false
+  private _lifetimeAction = new DataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionList(this, "lifetime_action", false);
   public get lifetimeAction() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('lifetime_action');
+    return this._lifetimeAction;
   }
 
   // secret_properties - computed: true, optional: false, required: false
+  private _secretProperties = new DataAzurermKeyVaultCertificateCertificatePolicySecretPropertiesList(this, "secret_properties", false);
   public get secretProperties() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('secret_properties');
+    return this._secretProperties;
   }
 
   // x509_certificate_properties - computed: true, optional: false, required: false
+  private _x509CertificateProperties = new DataAzurermKeyVaultCertificateCertificatePolicyX509CertificatePropertiesList(this, "x509_certificate_properties", false);
   public get x509CertificateProperties() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('x509_certificate_properties');
+    return this._x509CertificateProperties;
+  }
+}
+
+export class DataAzurermKeyVaultCertificateCertificatePolicyList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermKeyVaultCertificateCertificatePolicyOutputReference {
+    return new DataAzurermKeyVaultCertificateCertificatePolicyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataAzurermKeyVaultCertificateTimeouts {
@@ -200,10 +713,9 @@ export class DataAzurermKeyVaultCertificateTimeoutsOutputReference extends cdktf
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermKeyVaultCertificateTimeouts | undefined {
@@ -252,7 +764,7 @@ export class DataAzurermKeyVaultCertificate extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_key_vault_certificate";
+  public static readonly tfResourceType = "azurerm_key_vault_certificate";
 
   // ===========
   // INITIALIZER
@@ -269,7 +781,9 @@ export class DataAzurermKeyVaultCertificate extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'azurerm_key_vault_certificate',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -297,8 +811,9 @@ export class DataAzurermKeyVaultCertificate extends cdktf.TerraformDataSource {
   }
 
   // certificate_policy - computed: true, optional: false, required: false
-  public certificatePolicy(index: string) {
-    return new DataAzurermKeyVaultCertificateCertificatePolicy(this, 'certificate_policy', index, false);
+  private _certificatePolicy = new DataAzurermKeyVaultCertificateCertificatePolicyList(this, "certificate_policy", false);
+  public get certificatePolicy() {
+    return this._certificatePolicy;
   }
 
   // expires - computed: true, optional: false, required: false
@@ -384,7 +899,7 @@ export class DataAzurermKeyVaultCertificate extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermKeyVaultCertificateTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermKeyVaultCertificateTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

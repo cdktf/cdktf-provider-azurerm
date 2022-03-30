@@ -90,10 +90,9 @@ export class MssqlElasticpoolPerDatabaseSettingsOutputReference extends cdktf.Co
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MssqlElasticpoolPerDatabaseSettings | undefined {
@@ -187,10 +186,9 @@ export class MssqlElasticpoolSkuOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MssqlElasticpoolSku | undefined {
@@ -325,10 +323,9 @@ export class MssqlElasticpoolTimeoutsOutputReference extends cdktf.ComplexObject
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MssqlElasticpoolTimeouts | undefined {
@@ -443,7 +440,7 @@ export class MssqlElasticpool extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_mssql_elasticpool";
+  public static readonly tfResourceType = "azurerm_mssql_elasticpool";
 
   // ===========
   // INITIALIZER
@@ -460,7 +457,9 @@ export class MssqlElasticpool extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_mssql_elasticpool',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -623,7 +622,7 @@ export class MssqlElasticpool extends cdktf.TerraformResource {
   }
 
   // per_database_settings - computed: false, optional: false, required: true
-  private _perDatabaseSettings = new MssqlElasticpoolPerDatabaseSettingsOutputReference(this, "per_database_settings", true);
+  private _perDatabaseSettings = new MssqlElasticpoolPerDatabaseSettingsOutputReference(this, "per_database_settings");
   public get perDatabaseSettings() {
     return this._perDatabaseSettings;
   }
@@ -636,7 +635,7 @@ export class MssqlElasticpool extends cdktf.TerraformResource {
   }
 
   // sku - computed: false, optional: false, required: true
-  private _sku = new MssqlElasticpoolSkuOutputReference(this, "sku", true);
+  private _sku = new MssqlElasticpoolSkuOutputReference(this, "sku");
   public get sku() {
     return this._sku;
   }
@@ -649,7 +648,7 @@ export class MssqlElasticpool extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new MssqlElasticpoolTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new MssqlElasticpoolTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

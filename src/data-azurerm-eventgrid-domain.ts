@@ -56,7 +56,45 @@ export function dataAzurermEventgridDomainInboundIpRuleToTerraform(struct?: Data
   }
 }
 
-export class DataAzurermEventgridDomainInputMappingDefaultValues extends cdktf.ComplexComputedList {
+export interface DataAzurermEventgridDomainInputMappingDefaultValues {
+}
+
+export function dataAzurermEventgridDomainInputMappingDefaultValuesToTerraform(struct?: DataAzurermEventgridDomainInputMappingDefaultValues): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermEventgridDomainInputMappingDefaultValuesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermEventgridDomainInputMappingDefaultValues | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermEventgridDomainInputMappingDefaultValues | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // data_version - computed: true, optional: false, required: false
   public get dataVersion() {
@@ -73,7 +111,64 @@ export class DataAzurermEventgridDomainInputMappingDefaultValues extends cdktf.C
     return this.getStringAttribute('subject');
   }
 }
-export class DataAzurermEventgridDomainInputMappingFields extends cdktf.ComplexComputedList {
+
+export class DataAzurermEventgridDomainInputMappingDefaultValuesList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermEventgridDomainInputMappingDefaultValuesOutputReference {
+    return new DataAzurermEventgridDomainInputMappingDefaultValuesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermEventgridDomainInputMappingFields {
+}
+
+export function dataAzurermEventgridDomainInputMappingFieldsToTerraform(struct?: DataAzurermEventgridDomainInputMappingFields): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermEventgridDomainInputMappingFieldsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermEventgridDomainInputMappingFields | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermEventgridDomainInputMappingFields | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // data_version - computed: true, optional: false, required: false
   public get dataVersion() {
@@ -105,6 +200,25 @@ export class DataAzurermEventgridDomainInputMappingFields extends cdktf.ComplexC
     return this.getStringAttribute('topic');
   }
 }
+
+export class DataAzurermEventgridDomainInputMappingFieldsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermEventgridDomainInputMappingFieldsOutputReference {
+    return new DataAzurermEventgridDomainInputMappingFieldsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataAzurermEventgridDomainTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventgrid_domain#read DataAzurermEventgridDomain#read}
@@ -128,10 +242,9 @@ export class DataAzurermEventgridDomainTimeoutsOutputReference extends cdktf.Com
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermEventgridDomainTimeouts | undefined {
@@ -180,7 +293,7 @@ export class DataAzurermEventgridDomain extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_eventgrid_domain";
+  public static readonly tfResourceType = "azurerm_eventgrid_domain";
 
   // ===========
   // INITIALIZER
@@ -197,7 +310,9 @@ export class DataAzurermEventgridDomain extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'azurerm_eventgrid_domain',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -244,13 +359,15 @@ export class DataAzurermEventgridDomain extends cdktf.TerraformDataSource {
   }
 
   // input_mapping_default_values - computed: true, optional: false, required: false
-  public inputMappingDefaultValues(index: string) {
-    return new DataAzurermEventgridDomainInputMappingDefaultValues(this, 'input_mapping_default_values', index, false);
+  private _inputMappingDefaultValues = new DataAzurermEventgridDomainInputMappingDefaultValuesList(this, "input_mapping_default_values", false);
+  public get inputMappingDefaultValues() {
+    return this._inputMappingDefaultValues;
   }
 
   // input_mapping_fields - computed: true, optional: false, required: false
-  public inputMappingFields(index: string) {
-    return new DataAzurermEventgridDomainInputMappingFields(this, 'input_mapping_fields', index, false);
+  private _inputMappingFields = new DataAzurermEventgridDomainInputMappingFieldsList(this, "input_mapping_fields", false);
+  public get inputMappingFields() {
+    return this._inputMappingFields;
   }
 
   // input_schema - computed: true, optional: false, required: false
@@ -332,7 +449,7 @@ export class DataAzurermEventgridDomain extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermEventgridDomainTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermEventgridDomainTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

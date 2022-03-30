@@ -95,10 +95,9 @@ export class NetappSnapshotPolicyDailyScheduleOutputReference extends cdktf.Comp
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): NetappSnapshotPolicyDailySchedule | undefined {
@@ -201,10 +200,9 @@ export class NetappSnapshotPolicyHourlyScheduleOutputReference extends cdktf.Com
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): NetappSnapshotPolicyHourlySchedule | undefined {
@@ -298,10 +296,9 @@ export class NetappSnapshotPolicyMonthlyScheduleOutputReference extends cdktf.Co
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): NetappSnapshotPolicyMonthlySchedule | undefined {
@@ -433,10 +430,9 @@ export class NetappSnapshotPolicyTimeoutsOutputReference extends cdktf.ComplexOb
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): NetappSnapshotPolicyTimeouts | undefined {
@@ -580,10 +576,9 @@ export class NetappSnapshotPolicyWeeklyScheduleOutputReference extends cdktf.Com
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): NetappSnapshotPolicyWeeklySchedule | undefined {
@@ -686,7 +681,7 @@ export class NetappSnapshotPolicy extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_netapp_snapshot_policy";
+  public static readonly tfResourceType = "azurerm_netapp_snapshot_policy";
 
   // ===========
   // INITIALIZER
@@ -703,7 +698,9 @@ export class NetappSnapshotPolicy extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_netapp_snapshot_policy',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -814,7 +811,7 @@ export class NetappSnapshotPolicy extends cdktf.TerraformResource {
   }
 
   // daily_schedule - computed: false, optional: true, required: false
-  private _dailySchedule = new NetappSnapshotPolicyDailyScheduleOutputReference(this, "daily_schedule", true);
+  private _dailySchedule = new NetappSnapshotPolicyDailyScheduleOutputReference(this, "daily_schedule");
   public get dailySchedule() {
     return this._dailySchedule;
   }
@@ -830,7 +827,7 @@ export class NetappSnapshotPolicy extends cdktf.TerraformResource {
   }
 
   // hourly_schedule - computed: false, optional: true, required: false
-  private _hourlySchedule = new NetappSnapshotPolicyHourlyScheduleOutputReference(this, "hourly_schedule", true);
+  private _hourlySchedule = new NetappSnapshotPolicyHourlyScheduleOutputReference(this, "hourly_schedule");
   public get hourlySchedule() {
     return this._hourlySchedule;
   }
@@ -846,7 +843,7 @@ export class NetappSnapshotPolicy extends cdktf.TerraformResource {
   }
 
   // monthly_schedule - computed: false, optional: true, required: false
-  private _monthlySchedule = new NetappSnapshotPolicyMonthlyScheduleOutputReference(this, "monthly_schedule", true);
+  private _monthlySchedule = new NetappSnapshotPolicyMonthlyScheduleOutputReference(this, "monthly_schedule");
   public get monthlySchedule() {
     return this._monthlySchedule;
   }
@@ -862,7 +859,7 @@ export class NetappSnapshotPolicy extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new NetappSnapshotPolicyTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new NetappSnapshotPolicyTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
@@ -878,7 +875,7 @@ export class NetappSnapshotPolicy extends cdktf.TerraformResource {
   }
 
   // weekly_schedule - computed: false, optional: true, required: false
-  private _weeklySchedule = new NetappSnapshotPolicyWeeklyScheduleOutputReference(this, "weekly_schedule", true);
+  private _weeklySchedule = new NetappSnapshotPolicyWeeklyScheduleOutputReference(this, "weekly_schedule");
   public get weeklySchedule() {
     return this._weeklySchedule;
   }

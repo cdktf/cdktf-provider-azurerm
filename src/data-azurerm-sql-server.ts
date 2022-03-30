@@ -22,7 +22,45 @@ export interface DataAzurermSqlServerConfig extends cdktf.TerraformMetaArguments
   */
   readonly timeouts?: DataAzurermSqlServerTimeouts;
 }
-export class DataAzurermSqlServerIdentity extends cdktf.ComplexComputedList {
+export interface DataAzurermSqlServerIdentity {
+}
+
+export function dataAzurermSqlServerIdentityToTerraform(struct?: DataAzurermSqlServerIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermSqlServerIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermSqlServerIdentity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermSqlServerIdentity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // principal_id - computed: true, optional: false, required: false
   public get principalId() {
@@ -37,6 +75,25 @@ export class DataAzurermSqlServerIdentity extends cdktf.ComplexComputedList {
   // type - computed: true, optional: false, required: false
   public get type() {
     return this.getStringAttribute('type');
+  }
+}
+
+export class DataAzurermSqlServerIdentityList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermSqlServerIdentityOutputReference {
+    return new DataAzurermSqlServerIdentityOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataAzurermSqlServerTimeouts {
@@ -62,10 +119,9 @@ export class DataAzurermSqlServerTimeoutsOutputReference extends cdktf.ComplexOb
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermSqlServerTimeouts | undefined {
@@ -114,7 +170,7 @@ export class DataAzurermSqlServer extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_sql_server";
+  public static readonly tfResourceType = "azurerm_sql_server";
 
   // ===========
   // INITIALIZER
@@ -131,7 +187,9 @@ export class DataAzurermSqlServer extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'azurerm_sql_server',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -163,8 +221,9 @@ export class DataAzurermSqlServer extends cdktf.TerraformDataSource {
   }
 
   // identity - computed: true, optional: false, required: false
-  public identity(index: string) {
-    return new DataAzurermSqlServerIdentity(this, 'identity', index, false);
+  private _identity = new DataAzurermSqlServerIdentityList(this, "identity", false);
+  public get identity() {
+    return this._identity;
   }
 
   // location - computed: true, optional: false, required: false
@@ -209,7 +268,7 @@ export class DataAzurermSqlServer extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermSqlServerTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermSqlServerTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

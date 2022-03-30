@@ -68,7 +68,45 @@ export interface DatabricksWorkspaceConfig extends cdktf.TerraformMetaArguments 
   */
   readonly timeouts?: DatabricksWorkspaceTimeouts;
 }
-export class DatabricksWorkspaceStorageAccountIdentity extends cdktf.ComplexComputedList {
+export interface DatabricksWorkspaceStorageAccountIdentity {
+}
+
+export function databricksWorkspaceStorageAccountIdentityToTerraform(struct?: DatabricksWorkspaceStorageAccountIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DatabricksWorkspaceStorageAccountIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DatabricksWorkspaceStorageAccountIdentity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DatabricksWorkspaceStorageAccountIdentity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // principal_id - computed: true, optional: false, required: false
   public get principalId() {
@@ -83,6 +121,25 @@ export class DatabricksWorkspaceStorageAccountIdentity extends cdktf.ComplexComp
   // type - computed: true, optional: false, required: false
   public get type() {
     return this.getStringAttribute('type');
+  }
+}
+
+export class DatabricksWorkspaceStorageAccountIdentityList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DatabricksWorkspaceStorageAccountIdentityOutputReference {
+    return new DatabricksWorkspaceStorageAccountIdentityOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DatabricksWorkspaceCustomParameters {
@@ -163,10 +220,9 @@ export class DatabricksWorkspaceCustomParametersOutputReference extends cdktf.Co
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DatabricksWorkspaceCustomParameters | undefined {
@@ -486,10 +542,9 @@ export class DatabricksWorkspaceTimeoutsOutputReference extends cdktf.ComplexObj
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DatabricksWorkspaceTimeouts | undefined {
@@ -604,7 +659,7 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_databricks_workspace";
+  public static readonly tfResourceType = "azurerm_databricks_workspace";
 
   // ===========
   // INITIALIZER
@@ -621,7 +676,9 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_databricks_workspace',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -823,8 +880,9 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
   }
 
   // storage_account_identity - computed: true, optional: false, required: false
-  public storageAccountIdentity(index: string) {
-    return new DatabricksWorkspaceStorageAccountIdentity(this, 'storage_account_identity', index, false);
+  private _storageAccountIdentity = new DatabricksWorkspaceStorageAccountIdentityList(this, "storage_account_identity", false);
+  public get storageAccountIdentity() {
+    return this._storageAccountIdentity;
   }
 
   // tags - computed: false, optional: true, required: false
@@ -854,7 +912,7 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
   }
 
   // custom_parameters - computed: false, optional: true, required: false
-  private _customParameters = new DatabricksWorkspaceCustomParametersOutputReference(this, "custom_parameters", true);
+  private _customParameters = new DatabricksWorkspaceCustomParametersOutputReference(this, "custom_parameters");
   public get customParameters() {
     return this._customParameters;
   }
@@ -870,7 +928,7 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DatabricksWorkspaceTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DatabricksWorkspaceTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

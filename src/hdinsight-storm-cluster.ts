@@ -101,10 +101,9 @@ export class HdinsightStormClusterComponentVersionOutputReference extends cdktf.
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): HdinsightStormClusterComponentVersion | undefined {
@@ -174,10 +173,9 @@ export class HdinsightStormClusterGatewayOutputReference extends cdktf.ComplexOb
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): HdinsightStormClusterGateway | undefined {
@@ -293,10 +291,9 @@ export class HdinsightStormClusterMetastoresAmbariOutputReference extends cdktf.
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): HdinsightStormClusterMetastoresAmbari | undefined {
@@ -428,10 +425,9 @@ export class HdinsightStormClusterMetastoresHiveOutputReference extends cdktf.Co
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): HdinsightStormClusterMetastoresHive | undefined {
@@ -563,10 +559,9 @@ export class HdinsightStormClusterMetastoresOozieOutputReference extends cdktf.C
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): HdinsightStormClusterMetastoresOozie | undefined {
@@ -699,10 +694,9 @@ export class HdinsightStormClusterMetastoresOutputReference extends cdktf.Comple
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): HdinsightStormClusterMetastores | undefined {
@@ -739,7 +733,7 @@ export class HdinsightStormClusterMetastoresOutputReference extends cdktf.Comple
   }
 
   // ambari - computed: false, optional: true, required: false
-  private _ambari = new HdinsightStormClusterMetastoresAmbariOutputReference(this, "ambari", true);
+  private _ambari = new HdinsightStormClusterMetastoresAmbariOutputReference(this, "ambari");
   public get ambari() {
     return this._ambari;
   }
@@ -755,7 +749,7 @@ export class HdinsightStormClusterMetastoresOutputReference extends cdktf.Comple
   }
 
   // hive - computed: false, optional: true, required: false
-  private _hive = new HdinsightStormClusterMetastoresHiveOutputReference(this, "hive", true);
+  private _hive = new HdinsightStormClusterMetastoresHiveOutputReference(this, "hive");
   public get hive() {
     return this._hive;
   }
@@ -771,7 +765,7 @@ export class HdinsightStormClusterMetastoresOutputReference extends cdktf.Comple
   }
 
   // oozie - computed: false, optional: true, required: false
-  private _oozie = new HdinsightStormClusterMetastoresOozieOutputReference(this, "oozie", true);
+  private _oozie = new HdinsightStormClusterMetastoresOozieOutputReference(this, "oozie");
   public get oozie() {
     return this._oozie;
   }
@@ -814,10 +808,9 @@ export class HdinsightStormClusterMonitorOutputReference extends cdktf.ComplexOb
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): HdinsightStormClusterMonitor | undefined {
@@ -921,10 +914,9 @@ export class HdinsightStormClusterRolesHeadNodeOutputReference extends cdktf.Com
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): HdinsightStormClusterRolesHeadNode | undefined {
@@ -1126,10 +1118,9 @@ export class HdinsightStormClusterRolesWorkerNodeOutputReference extends cdktf.C
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): HdinsightStormClusterRolesWorkerNode | undefined {
@@ -1362,10 +1353,9 @@ export class HdinsightStormClusterRolesZookeeperNodeOutputReference extends cdkt
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): HdinsightStormClusterRolesZookeeperNode | undefined {
@@ -1548,10 +1538,9 @@ export class HdinsightStormClusterRolesOutputReference extends cdktf.ComplexObje
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): HdinsightStormClusterRoles | undefined {
@@ -1588,7 +1577,7 @@ export class HdinsightStormClusterRolesOutputReference extends cdktf.ComplexObje
   }
 
   // head_node - computed: false, optional: false, required: true
-  private _headNode = new HdinsightStormClusterRolesHeadNodeOutputReference(this, "head_node", true);
+  private _headNode = new HdinsightStormClusterRolesHeadNodeOutputReference(this, "head_node");
   public get headNode() {
     return this._headNode;
   }
@@ -1601,7 +1590,7 @@ export class HdinsightStormClusterRolesOutputReference extends cdktf.ComplexObje
   }
 
   // worker_node - computed: false, optional: false, required: true
-  private _workerNode = new HdinsightStormClusterRolesWorkerNodeOutputReference(this, "worker_node", true);
+  private _workerNode = new HdinsightStormClusterRolesWorkerNodeOutputReference(this, "worker_node");
   public get workerNode() {
     return this._workerNode;
   }
@@ -1614,7 +1603,7 @@ export class HdinsightStormClusterRolesOutputReference extends cdktf.ComplexObje
   }
 
   // zookeeper_node - computed: false, optional: false, required: true
-  private _zookeeperNode = new HdinsightStormClusterRolesZookeeperNodeOutputReference(this, "zookeeper_node", true);
+  private _zookeeperNode = new HdinsightStormClusterRolesZookeeperNodeOutputReference(this, "zookeeper_node");
   public get zookeeperNode() {
     return this._zookeeperNode;
   }
@@ -1696,10 +1685,9 @@ export class HdinsightStormClusterTimeoutsOutputReference extends cdktf.ComplexO
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): HdinsightStormClusterTimeouts | undefined {
@@ -1814,7 +1802,7 @@ export class HdinsightStormCluster extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_hdinsight_storm_cluster";
+  public static readonly tfResourceType = "azurerm_hdinsight_storm_cluster";
 
   // ===========
   // INITIALIZER
@@ -1831,7 +1819,9 @@ export class HdinsightStormCluster extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_hdinsight_storm_cluster',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1971,7 +1961,7 @@ export class HdinsightStormCluster extends cdktf.TerraformResource {
   }
 
   // component_version - computed: false, optional: false, required: true
-  private _componentVersion = new HdinsightStormClusterComponentVersionOutputReference(this, "component_version", true);
+  private _componentVersion = new HdinsightStormClusterComponentVersionOutputReference(this, "component_version");
   public get componentVersion() {
     return this._componentVersion;
   }
@@ -1984,7 +1974,7 @@ export class HdinsightStormCluster extends cdktf.TerraformResource {
   }
 
   // gateway - computed: false, optional: false, required: true
-  private _gateway = new HdinsightStormClusterGatewayOutputReference(this, "gateway", true);
+  private _gateway = new HdinsightStormClusterGatewayOutputReference(this, "gateway");
   public get gateway() {
     return this._gateway;
   }
@@ -1997,7 +1987,7 @@ export class HdinsightStormCluster extends cdktf.TerraformResource {
   }
 
   // metastores - computed: false, optional: true, required: false
-  private _metastores = new HdinsightStormClusterMetastoresOutputReference(this, "metastores", true);
+  private _metastores = new HdinsightStormClusterMetastoresOutputReference(this, "metastores");
   public get metastores() {
     return this._metastores;
   }
@@ -2013,7 +2003,7 @@ export class HdinsightStormCluster extends cdktf.TerraformResource {
   }
 
   // monitor - computed: false, optional: true, required: false
-  private _monitor = new HdinsightStormClusterMonitorOutputReference(this, "monitor", true);
+  private _monitor = new HdinsightStormClusterMonitorOutputReference(this, "monitor");
   public get monitor() {
     return this._monitor;
   }
@@ -2029,7 +2019,7 @@ export class HdinsightStormCluster extends cdktf.TerraformResource {
   }
 
   // roles - computed: false, optional: false, required: true
-  private _roles = new HdinsightStormClusterRolesOutputReference(this, "roles", true);
+  private _roles = new HdinsightStormClusterRolesOutputReference(this, "roles");
   public get roles() {
     return this._roles;
   }
@@ -2059,7 +2049,7 @@ export class HdinsightStormCluster extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new HdinsightStormClusterTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new HdinsightStormClusterTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

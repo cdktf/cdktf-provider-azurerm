@@ -181,10 +181,9 @@ export class CosmosdbAccountAnalyticalStorageOutputReference extends cdktf.Compl
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CosmosdbAccountAnalyticalStorage | undefined {
@@ -259,10 +258,9 @@ export class CosmosdbAccountBackupOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CosmosdbAccountBackup | undefined {
@@ -405,10 +403,9 @@ export class CosmosdbAccountCapacityOutputReference extends cdktf.ComplexObject 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CosmosdbAccountCapacity | undefined {
@@ -478,10 +475,9 @@ export class CosmosdbAccountConsistencyPolicyOutputReference extends cdktf.Compl
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CosmosdbAccountConsistencyPolicy | undefined {
@@ -605,10 +601,9 @@ export class CosmosdbAccountCorsRuleOutputReference extends cdktf.ComplexObject 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CosmosdbAccountCorsRule | undefined {
@@ -776,10 +771,9 @@ export class CosmosdbAccountIdentityOutputReference extends cdktf.ComplexObject 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CosmosdbAccountIdentity | undefined {
@@ -883,10 +877,9 @@ export class CosmosdbAccountRestoreOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CosmosdbAccountRestore | undefined {
@@ -1003,10 +996,9 @@ export class CosmosdbAccountTimeoutsOutputReference extends cdktf.ComplexObject 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CosmosdbAccountTimeouts | undefined {
@@ -1143,7 +1135,7 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_cosmosdb_account";
+  public static readonly tfResourceType = "azurerm_cosmosdb_account";
 
   // ===========
   // INITIALIZER
@@ -1160,7 +1152,9 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_cosmosdb_account',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1595,7 +1589,7 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   }
 
   // analytical_storage - computed: false, optional: true, required: false
-  private _analyticalStorage = new CosmosdbAccountAnalyticalStorageOutputReference(this, "analytical_storage", true);
+  private _analyticalStorage = new CosmosdbAccountAnalyticalStorageOutputReference(this, "analytical_storage");
   public get analyticalStorage() {
     return this._analyticalStorage;
   }
@@ -1611,7 +1605,7 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   }
 
   // backup - computed: false, optional: true, required: false
-  private _backup = new CosmosdbAccountBackupOutputReference(this, "backup", true);
+  private _backup = new CosmosdbAccountBackupOutputReference(this, "backup");
   public get backup() {
     return this._backup;
   }
@@ -1644,7 +1638,7 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   }
 
   // capacity - computed: false, optional: true, required: false
-  private _capacity = new CosmosdbAccountCapacityOutputReference(this, "capacity", true);
+  private _capacity = new CosmosdbAccountCapacityOutputReference(this, "capacity");
   public get capacity() {
     return this._capacity;
   }
@@ -1660,7 +1654,7 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   }
 
   // consistency_policy - computed: false, optional: false, required: true
-  private _consistencyPolicy = new CosmosdbAccountConsistencyPolicyOutputReference(this, "consistency_policy", true);
+  private _consistencyPolicy = new CosmosdbAccountConsistencyPolicyOutputReference(this, "consistency_policy");
   public get consistencyPolicy() {
     return this._consistencyPolicy;
   }
@@ -1673,7 +1667,7 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   }
 
   // cors_rule - computed: false, optional: true, required: false
-  private _corsRule = new CosmosdbAccountCorsRuleOutputReference(this, "cors_rule", true);
+  private _corsRule = new CosmosdbAccountCorsRuleOutputReference(this, "cors_rule");
   public get corsRule() {
     return this._corsRule;
   }
@@ -1703,7 +1697,7 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity = new CosmosdbAccountIdentityOutputReference(this, "identity", true);
+  private _identity = new CosmosdbAccountIdentityOutputReference(this, "identity");
   public get identity() {
     return this._identity;
   }
@@ -1719,7 +1713,7 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   }
 
   // restore - computed: false, optional: true, required: false
-  private _restore = new CosmosdbAccountRestoreOutputReference(this, "restore", true);
+  private _restore = new CosmosdbAccountRestoreOutputReference(this, "restore");
   public get restore() {
     return this._restore;
   }
@@ -1735,7 +1729,7 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new CosmosdbAccountTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new CosmosdbAccountTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

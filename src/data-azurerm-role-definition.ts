@@ -26,7 +26,45 @@ export interface DataAzurermRoleDefinitionConfig extends cdktf.TerraformMetaArgu
   */
   readonly timeouts?: DataAzurermRoleDefinitionTimeouts;
 }
-export class DataAzurermRoleDefinitionPermissions extends cdktf.ComplexComputedList {
+export interface DataAzurermRoleDefinitionPermissions {
+}
+
+export function dataAzurermRoleDefinitionPermissionsToTerraform(struct?: DataAzurermRoleDefinitionPermissions): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermRoleDefinitionPermissionsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermRoleDefinitionPermissions | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermRoleDefinitionPermissions | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // actions - computed: true, optional: false, required: false
   public get actions() {
@@ -46,6 +84,25 @@ export class DataAzurermRoleDefinitionPermissions extends cdktf.ComplexComputedL
   // not_data_actions - computed: true, optional: false, required: false
   public get notDataActions() {
     return cdktf.Fn.tolist(this.getListAttribute('not_data_actions'));
+  }
+}
+
+export class DataAzurermRoleDefinitionPermissionsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermRoleDefinitionPermissionsOutputReference {
+    return new DataAzurermRoleDefinitionPermissionsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataAzurermRoleDefinitionTimeouts {
@@ -71,10 +128,9 @@ export class DataAzurermRoleDefinitionTimeoutsOutputReference extends cdktf.Comp
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermRoleDefinitionTimeouts | undefined {
@@ -123,7 +179,7 @@ export class DataAzurermRoleDefinition extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_role_definition";
+  public static readonly tfResourceType = "azurerm_role_definition";
 
   // ===========
   // INITIALIZER
@@ -140,7 +196,9 @@ export class DataAzurermRoleDefinition extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'azurerm_role_definition',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -189,8 +247,9 @@ export class DataAzurermRoleDefinition extends cdktf.TerraformDataSource {
   }
 
   // permissions - computed: true, optional: false, required: false
-  public permissions(index: string) {
-    return new DataAzurermRoleDefinitionPermissions(this, 'permissions', index, false);
+  private _permissions = new DataAzurermRoleDefinitionPermissionsList(this, "permissions", false);
+  public get permissions() {
+    return this._permissions;
   }
 
   // role_definition_id - computed: true, optional: true, required: false
@@ -231,7 +290,7 @@ export class DataAzurermRoleDefinition extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermRoleDefinitionTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermRoleDefinitionTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

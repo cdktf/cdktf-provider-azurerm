@@ -26,7 +26,45 @@ export interface DataAzurermDevTestVirtualNetworkConfig extends cdktf.TerraformM
   */
   readonly timeouts?: DataAzurermDevTestVirtualNetworkTimeouts;
 }
-export class DataAzurermDevTestVirtualNetworkAllowedSubnets extends cdktf.ComplexComputedList {
+export interface DataAzurermDevTestVirtualNetworkAllowedSubnets {
+}
+
+export function dataAzurermDevTestVirtualNetworkAllowedSubnetsToTerraform(struct?: DataAzurermDevTestVirtualNetworkAllowedSubnets): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermDevTestVirtualNetworkAllowedSubnetsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermDevTestVirtualNetworkAllowedSubnets | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermDevTestVirtualNetworkAllowedSubnets | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // allow_public_ip - computed: true, optional: false, required: false
   public get allowPublicIp() {
@@ -43,7 +81,64 @@ export class DataAzurermDevTestVirtualNetworkAllowedSubnets extends cdktf.Comple
     return this.getStringAttribute('resource_id');
   }
 }
-export class DataAzurermDevTestVirtualNetworkSubnetOverrides extends cdktf.ComplexComputedList {
+
+export class DataAzurermDevTestVirtualNetworkAllowedSubnetsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermDevTestVirtualNetworkAllowedSubnetsOutputReference {
+    return new DataAzurermDevTestVirtualNetworkAllowedSubnetsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermDevTestVirtualNetworkSubnetOverrides {
+}
+
+export function dataAzurermDevTestVirtualNetworkSubnetOverridesToTerraform(struct?: DataAzurermDevTestVirtualNetworkSubnetOverrides): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermDevTestVirtualNetworkSubnetOverridesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermDevTestVirtualNetworkSubnetOverrides | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermDevTestVirtualNetworkSubnetOverrides | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // lab_subnet_name - computed: true, optional: false, required: false
   public get labSubnetName() {
@@ -70,6 +165,25 @@ export class DataAzurermDevTestVirtualNetworkSubnetOverrides extends cdktf.Compl
     return this.getStringAttribute('virtual_network_pool_name');
   }
 }
+
+export class DataAzurermDevTestVirtualNetworkSubnetOverridesList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermDevTestVirtualNetworkSubnetOverridesOutputReference {
+    return new DataAzurermDevTestVirtualNetworkSubnetOverridesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataAzurermDevTestVirtualNetworkTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dev_test_virtual_network#read DataAzurermDevTestVirtualNetwork#read}
@@ -93,10 +207,9 @@ export class DataAzurermDevTestVirtualNetworkTimeoutsOutputReference extends cdk
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermDevTestVirtualNetworkTimeouts | undefined {
@@ -145,7 +258,7 @@ export class DataAzurermDevTestVirtualNetwork extends cdktf.TerraformDataSource 
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_dev_test_virtual_network";
+  public static readonly tfResourceType = "azurerm_dev_test_virtual_network";
 
   // ===========
   // INITIALIZER
@@ -162,7 +275,9 @@ export class DataAzurermDevTestVirtualNetwork extends cdktf.TerraformDataSource 
     super(scope, id, {
       terraformResourceType: 'azurerm_dev_test_virtual_network',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -180,8 +295,9 @@ export class DataAzurermDevTestVirtualNetwork extends cdktf.TerraformDataSource 
   // ==========
 
   // allowed_subnets - computed: true, optional: false, required: false
-  public allowedSubnets(index: string) {
-    return new DataAzurermDevTestVirtualNetworkAllowedSubnets(this, 'allowed_subnets', index, false);
+  private _allowedSubnets = new DataAzurermDevTestVirtualNetworkAllowedSubnetsList(this, "allowed_subnets", false);
+  public get allowedSubnets() {
+    return this._allowedSubnets;
   }
 
   // id - computed: true, optional: true, required: false
@@ -229,8 +345,9 @@ export class DataAzurermDevTestVirtualNetwork extends cdktf.TerraformDataSource 
   }
 
   // subnet_overrides - computed: true, optional: false, required: false
-  public subnetOverrides(index: string) {
-    return new DataAzurermDevTestVirtualNetworkSubnetOverrides(this, 'subnet_overrides', index, false);
+  private _subnetOverrides = new DataAzurermDevTestVirtualNetworkSubnetOverridesList(this, "subnet_overrides", false);
+  public get subnetOverrides() {
+    return this._subnetOverrides;
   }
 
   // unique_identifier - computed: true, optional: false, required: false
@@ -239,7 +356,7 @@ export class DataAzurermDevTestVirtualNetwork extends cdktf.TerraformDataSource 
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermDevTestVirtualNetworkTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermDevTestVirtualNetworkTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

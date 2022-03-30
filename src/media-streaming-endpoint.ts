@@ -164,10 +164,9 @@ export class MediaStreamingEndpointAccessControlOutputReference extends cdktf.Co
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MediaStreamingEndpointAccessControl | undefined {
@@ -259,10 +258,9 @@ export class MediaStreamingEndpointCrossSiteAccessPolicyOutputReference extends 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MediaStreamingEndpointCrossSiteAccessPolicy | undefined {
@@ -362,10 +360,9 @@ export class MediaStreamingEndpointTimeoutsOutputReference extends cdktf.Complex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MediaStreamingEndpointTimeouts | undefined {
@@ -480,7 +477,7 @@ export class MediaStreamingEndpoint extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_media_streaming_endpoint";
+  public static readonly tfResourceType = "azurerm_media_streaming_endpoint";
 
   // ===========
   // INITIALIZER
@@ -497,7 +494,9 @@ export class MediaStreamingEndpoint extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_media_streaming_endpoint',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -730,7 +729,7 @@ export class MediaStreamingEndpoint extends cdktf.TerraformResource {
   }
 
   // access_control - computed: false, optional: true, required: false
-  private _accessControl = new MediaStreamingEndpointAccessControlOutputReference(this, "access_control", true);
+  private _accessControl = new MediaStreamingEndpointAccessControlOutputReference(this, "access_control");
   public get accessControl() {
     return this._accessControl;
   }
@@ -746,7 +745,7 @@ export class MediaStreamingEndpoint extends cdktf.TerraformResource {
   }
 
   // cross_site_access_policy - computed: false, optional: true, required: false
-  private _crossSiteAccessPolicy = new MediaStreamingEndpointCrossSiteAccessPolicyOutputReference(this, "cross_site_access_policy", true);
+  private _crossSiteAccessPolicy = new MediaStreamingEndpointCrossSiteAccessPolicyOutputReference(this, "cross_site_access_policy");
   public get crossSiteAccessPolicy() {
     return this._crossSiteAccessPolicy;
   }
@@ -762,7 +761,7 @@ export class MediaStreamingEndpoint extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new MediaStreamingEndpointTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new MediaStreamingEndpointTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

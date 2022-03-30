@@ -22,11 +22,68 @@ export interface DataAzurermNotificationHubNamespaceConfig extends cdktf.Terrafo
   */
   readonly timeouts?: DataAzurermNotificationHubNamespaceTimeouts;
 }
-export class DataAzurermNotificationHubNamespaceSku extends cdktf.ComplexComputedList {
+export interface DataAzurermNotificationHubNamespaceSku {
+}
+
+export function dataAzurermNotificationHubNamespaceSkuToTerraform(struct?: DataAzurermNotificationHubNamespaceSku): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermNotificationHubNamespaceSkuOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermNotificationHubNamespaceSku | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermNotificationHubNamespaceSku | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
+  }
+}
+
+export class DataAzurermNotificationHubNamespaceSkuList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermNotificationHubNamespaceSkuOutputReference {
+    return new DataAzurermNotificationHubNamespaceSkuOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataAzurermNotificationHubNamespaceTimeouts {
@@ -52,10 +109,9 @@ export class DataAzurermNotificationHubNamespaceTimeoutsOutputReference extends 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermNotificationHubNamespaceTimeouts | undefined {
@@ -104,7 +160,7 @@ export class DataAzurermNotificationHubNamespace extends cdktf.TerraformDataSour
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_notification_hub_namespace";
+  public static readonly tfResourceType = "azurerm_notification_hub_namespace";
 
   // ===========
   // INITIALIZER
@@ -121,7 +177,9 @@ export class DataAzurermNotificationHubNamespace extends cdktf.TerraformDataSour
     super(scope, id, {
       terraformResourceType: 'azurerm_notification_hub_namespace',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -189,8 +247,9 @@ export class DataAzurermNotificationHubNamespace extends cdktf.TerraformDataSour
   }
 
   // sku - computed: true, optional: false, required: false
-  public sku(index: string) {
-    return new DataAzurermNotificationHubNamespaceSku(this, 'sku', index, false);
+  private _sku = new DataAzurermNotificationHubNamespaceSkuList(this, "sku", false);
+  public get sku() {
+    return this._sku;
   }
 
   // tags - computed: true, optional: false, required: false
@@ -199,7 +258,7 @@ export class DataAzurermNotificationHubNamespace extends cdktf.TerraformDataSour
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermNotificationHubNamespaceTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermNotificationHubNamespaceTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

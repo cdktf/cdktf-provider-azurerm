@@ -43,7 +43,45 @@ export function dataAzurermBatchAccountEncryptionToTerraform(struct?: DataAzurer
   }
 }
 
-export class DataAzurermBatchAccountKeyVaultReference extends cdktf.ComplexComputedList {
+export interface DataAzurermBatchAccountKeyVaultReference {
+}
+
+export function dataAzurermBatchAccountKeyVaultReferenceToTerraform(struct?: DataAzurermBatchAccountKeyVaultReference): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermBatchAccountKeyVaultReferenceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermBatchAccountKeyVaultReference | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermBatchAccountKeyVaultReference | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // id - computed: true, optional: false, required: false
   public get id() {
@@ -53,6 +91,25 @@ export class DataAzurermBatchAccountKeyVaultReference extends cdktf.ComplexCompu
   // url - computed: true, optional: false, required: false
   public get url() {
     return this.getStringAttribute('url');
+  }
+}
+
+export class DataAzurermBatchAccountKeyVaultReferenceList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermBatchAccountKeyVaultReferenceOutputReference {
+    return new DataAzurermBatchAccountKeyVaultReferenceOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataAzurermBatchAccountTimeouts {
@@ -78,10 +135,9 @@ export class DataAzurermBatchAccountTimeoutsOutputReference extends cdktf.Comple
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermBatchAccountTimeouts | undefined {
@@ -130,7 +186,7 @@ export class DataAzurermBatchAccount extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_batch_account";
+  public static readonly tfResourceType = "azurerm_batch_account";
 
   // ===========
   // INITIALIZER
@@ -147,7 +203,9 @@ export class DataAzurermBatchAccount extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'azurerm_batch_account',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -192,8 +250,9 @@ export class DataAzurermBatchAccount extends cdktf.TerraformDataSource {
   }
 
   // key_vault_reference - computed: true, optional: false, required: false
-  public keyVaultReference(index: string) {
-    return new DataAzurermBatchAccountKeyVaultReference(this, 'key_vault_reference', index, false);
+  private _keyVaultReference = new DataAzurermBatchAccountKeyVaultReferenceList(this, "key_vault_reference", false);
+  public get keyVaultReference() {
+    return this._keyVaultReference;
   }
 
   // location - computed: true, optional: false, required: false
@@ -253,7 +312,7 @@ export class DataAzurermBatchAccount extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermBatchAccountTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermBatchAccountTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

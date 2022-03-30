@@ -110,10 +110,9 @@ export class DataFactoryLinkedServiceAzureSqlDatabaseKeyVaultConnectionStringOut
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataFactoryLinkedServiceAzureSqlDatabaseKeyVaultConnectionString | undefined {
@@ -197,10 +196,9 @@ export class DataFactoryLinkedServiceAzureSqlDatabaseKeyVaultPasswordOutputRefer
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataFactoryLinkedServiceAzureSqlDatabaseKeyVaultPassword | undefined {
@@ -294,10 +292,9 @@ export class DataFactoryLinkedServiceAzureSqlDatabaseTimeoutsOutputReference ext
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataFactoryLinkedServiceAzureSqlDatabaseTimeouts | undefined {
@@ -412,7 +409,7 @@ export class DataFactoryLinkedServiceAzureSqlDatabase extends cdktf.TerraformRes
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_data_factory_linked_service_azure_sql_database";
+  public static readonly tfResourceType = "azurerm_data_factory_linked_service_azure_sql_database";
 
   // ===========
   // INITIALIZER
@@ -429,7 +426,9 @@ export class DataFactoryLinkedServiceAzureSqlDatabase extends cdktf.TerraformRes
     super(scope, id, {
       terraformResourceType: 'azurerm_data_factory_linked_service_azure_sql_database',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -683,7 +682,7 @@ export class DataFactoryLinkedServiceAzureSqlDatabase extends cdktf.TerraformRes
   }
 
   // key_vault_connection_string - computed: false, optional: true, required: false
-  private _keyVaultConnectionString = new DataFactoryLinkedServiceAzureSqlDatabaseKeyVaultConnectionStringOutputReference(this, "key_vault_connection_string", true);
+  private _keyVaultConnectionString = new DataFactoryLinkedServiceAzureSqlDatabaseKeyVaultConnectionStringOutputReference(this, "key_vault_connection_string");
   public get keyVaultConnectionString() {
     return this._keyVaultConnectionString;
   }
@@ -699,7 +698,7 @@ export class DataFactoryLinkedServiceAzureSqlDatabase extends cdktf.TerraformRes
   }
 
   // key_vault_password - computed: false, optional: true, required: false
-  private _keyVaultPassword = new DataFactoryLinkedServiceAzureSqlDatabaseKeyVaultPasswordOutputReference(this, "key_vault_password", true);
+  private _keyVaultPassword = new DataFactoryLinkedServiceAzureSqlDatabaseKeyVaultPasswordOutputReference(this, "key_vault_password");
   public get keyVaultPassword() {
     return this._keyVaultPassword;
   }
@@ -715,7 +714,7 @@ export class DataFactoryLinkedServiceAzureSqlDatabase extends cdktf.TerraformRes
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataFactoryLinkedServiceAzureSqlDatabaseTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataFactoryLinkedServiceAzureSqlDatabaseTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

@@ -22,7 +22,45 @@ export interface DataAzurermMysqlFlexibleServerConfig extends cdktf.TerraformMet
   */
   readonly timeouts?: DataAzurermMysqlFlexibleServerTimeouts;
 }
-export class DataAzurermMysqlFlexibleServerHighAvailability extends cdktf.ComplexComputedList {
+export interface DataAzurermMysqlFlexibleServerHighAvailability {
+}
+
+export function dataAzurermMysqlFlexibleServerHighAvailabilityToTerraform(struct?: DataAzurermMysqlFlexibleServerHighAvailability): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermMysqlFlexibleServerHighAvailabilityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermMysqlFlexibleServerHighAvailability | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermMysqlFlexibleServerHighAvailability | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // mode - computed: true, optional: false, required: false
   public get mode() {
@@ -34,7 +72,64 @@ export class DataAzurermMysqlFlexibleServerHighAvailability extends cdktf.Comple
     return this.getStringAttribute('standby_availability_zone');
   }
 }
-export class DataAzurermMysqlFlexibleServerMaintenanceWindow extends cdktf.ComplexComputedList {
+
+export class DataAzurermMysqlFlexibleServerHighAvailabilityList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermMysqlFlexibleServerHighAvailabilityOutputReference {
+    return new DataAzurermMysqlFlexibleServerHighAvailabilityOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermMysqlFlexibleServerMaintenanceWindow {
+}
+
+export function dataAzurermMysqlFlexibleServerMaintenanceWindowToTerraform(struct?: DataAzurermMysqlFlexibleServerMaintenanceWindow): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermMysqlFlexibleServerMaintenanceWindowOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermMysqlFlexibleServerMaintenanceWindow | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermMysqlFlexibleServerMaintenanceWindow | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // day_of_week - computed: true, optional: false, required: false
   public get dayOfWeek() {
@@ -51,7 +146,64 @@ export class DataAzurermMysqlFlexibleServerMaintenanceWindow extends cdktf.Compl
     return this.getNumberAttribute('start_minute');
   }
 }
-export class DataAzurermMysqlFlexibleServerStorage extends cdktf.ComplexComputedList {
+
+export class DataAzurermMysqlFlexibleServerMaintenanceWindowList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermMysqlFlexibleServerMaintenanceWindowOutputReference {
+    return new DataAzurermMysqlFlexibleServerMaintenanceWindowOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermMysqlFlexibleServerStorage {
+}
+
+export function dataAzurermMysqlFlexibleServerStorageToTerraform(struct?: DataAzurermMysqlFlexibleServerStorage): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermMysqlFlexibleServerStorageOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermMysqlFlexibleServerStorage | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermMysqlFlexibleServerStorage | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // auto_grow_enabled - computed: true, optional: false, required: false
   public get autoGrowEnabled() {
@@ -66,6 +218,25 @@ export class DataAzurermMysqlFlexibleServerStorage extends cdktf.ComplexComputed
   // size_gb - computed: true, optional: false, required: false
   public get sizeGb() {
     return this.getNumberAttribute('size_gb');
+  }
+}
+
+export class DataAzurermMysqlFlexibleServerStorageList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermMysqlFlexibleServerStorageOutputReference {
+    return new DataAzurermMysqlFlexibleServerStorageOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataAzurermMysqlFlexibleServerTimeouts {
@@ -91,10 +262,9 @@ export class DataAzurermMysqlFlexibleServerTimeoutsOutputReference extends cdktf
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermMysqlFlexibleServerTimeouts | undefined {
@@ -143,7 +313,7 @@ export class DataAzurermMysqlFlexibleServer extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_mysql_flexible_server";
+  public static readonly tfResourceType = "azurerm_mysql_flexible_server";
 
   // ===========
   // INITIALIZER
@@ -160,7 +330,9 @@ export class DataAzurermMysqlFlexibleServer extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'azurerm_mysql_flexible_server',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -202,8 +374,9 @@ export class DataAzurermMysqlFlexibleServer extends cdktf.TerraformDataSource {
   }
 
   // high_availability - computed: true, optional: false, required: false
-  public highAvailability(index: string) {
-    return new DataAzurermMysqlFlexibleServerHighAvailability(this, 'high_availability', index, false);
+  private _highAvailability = new DataAzurermMysqlFlexibleServerHighAvailabilityList(this, "high_availability", false);
+  public get highAvailability() {
+    return this._highAvailability;
   }
 
   // id - computed: true, optional: true, required: false
@@ -217,8 +390,9 @@ export class DataAzurermMysqlFlexibleServer extends cdktf.TerraformDataSource {
   }
 
   // maintenance_window - computed: true, optional: false, required: false
-  public maintenanceWindow(index: string) {
-    return new DataAzurermMysqlFlexibleServerMaintenanceWindow(this, 'maintenance_window', index, false);
+  private _maintenanceWindow = new DataAzurermMysqlFlexibleServerMaintenanceWindowList(this, "maintenance_window", false);
+  public get maintenanceWindow() {
+    return this._maintenanceWindow;
   }
 
   // name - computed: false, optional: false, required: true
@@ -278,8 +452,9 @@ export class DataAzurermMysqlFlexibleServer extends cdktf.TerraformDataSource {
   }
 
   // storage - computed: true, optional: false, required: false
-  public storage(index: string) {
-    return new DataAzurermMysqlFlexibleServerStorage(this, 'storage', index, false);
+  private _storage = new DataAzurermMysqlFlexibleServerStorageList(this, "storage", false);
+  public get storage() {
+    return this._storage;
   }
 
   // tags - computed: true, optional: false, required: false
@@ -298,7 +473,7 @@ export class DataAzurermMysqlFlexibleServer extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermMysqlFlexibleServerTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermMysqlFlexibleServerTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

@@ -89,10 +89,9 @@ export class StreamAnalyticsStreamInputEventhubSerializationOutputReference exte
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): StreamAnalyticsStreamInputEventhubSerialization | undefined {
@@ -211,10 +210,9 @@ export class StreamAnalyticsStreamInputEventhubTimeoutsOutputReference extends c
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): StreamAnalyticsStreamInputEventhubTimeouts | undefined {
@@ -329,7 +327,7 @@ export class StreamAnalyticsStreamInputEventhub extends cdktf.TerraformResource 
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_stream_analytics_stream_input_eventhub";
+  public static readonly tfResourceType = "azurerm_stream_analytics_stream_input_eventhub";
 
   // ===========
   // INITIALIZER
@@ -346,7 +344,9 @@ export class StreamAnalyticsStreamInputEventhub extends cdktf.TerraformResource 
     super(scope, id, {
       terraformResourceType: 'azurerm_stream_analytics_stream_input_eventhub',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -499,7 +499,7 @@ export class StreamAnalyticsStreamInputEventhub extends cdktf.TerraformResource 
   }
 
   // serialization - computed: false, optional: false, required: true
-  private _serialization = new StreamAnalyticsStreamInputEventhubSerializationOutputReference(this, "serialization", true);
+  private _serialization = new StreamAnalyticsStreamInputEventhubSerializationOutputReference(this, "serialization");
   public get serialization() {
     return this._serialization;
   }
@@ -512,7 +512,7 @@ export class StreamAnalyticsStreamInputEventhub extends cdktf.TerraformResource 
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new StreamAnalyticsStreamInputEventhubTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new StreamAnalyticsStreamInputEventhubTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

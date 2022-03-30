@@ -30,7 +30,45 @@ export interface DataAzurermApiManagementApiConfig extends cdktf.TerraformMetaAr
   */
   readonly timeouts?: DataAzurermApiManagementApiTimeouts;
 }
-export class DataAzurermApiManagementApiSubscriptionKeyParameterNames extends cdktf.ComplexComputedList {
+export interface DataAzurermApiManagementApiSubscriptionKeyParameterNames {
+}
+
+export function dataAzurermApiManagementApiSubscriptionKeyParameterNamesToTerraform(struct?: DataAzurermApiManagementApiSubscriptionKeyParameterNames): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermApiManagementApiSubscriptionKeyParameterNamesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermApiManagementApiSubscriptionKeyParameterNames | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermApiManagementApiSubscriptionKeyParameterNames | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // header - computed: true, optional: false, required: false
   public get header() {
@@ -40,6 +78,25 @@ export class DataAzurermApiManagementApiSubscriptionKeyParameterNames extends cd
   // query - computed: true, optional: false, required: false
   public get query() {
     return this.getStringAttribute('query');
+  }
+}
+
+export class DataAzurermApiManagementApiSubscriptionKeyParameterNamesList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermApiManagementApiSubscriptionKeyParameterNamesOutputReference {
+    return new DataAzurermApiManagementApiSubscriptionKeyParameterNamesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataAzurermApiManagementApiTimeouts {
@@ -65,10 +122,9 @@ export class DataAzurermApiManagementApiTimeoutsOutputReference extends cdktf.Co
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermApiManagementApiTimeouts | undefined {
@@ -117,7 +173,7 @@ export class DataAzurermApiManagementApi extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_api_management_api";
+  public static readonly tfResourceType = "azurerm_api_management_api";
 
   // ===========
   // INITIALIZER
@@ -134,7 +190,9 @@ export class DataAzurermApiManagementApi extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'azurerm_api_management_api',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -250,8 +308,9 @@ export class DataAzurermApiManagementApi extends cdktf.TerraformDataSource {
   }
 
   // subscription_key_parameter_names - computed: true, optional: false, required: false
-  public subscriptionKeyParameterNames(index: string) {
-    return new DataAzurermApiManagementApiSubscriptionKeyParameterNames(this, 'subscription_key_parameter_names', index, false);
+  private _subscriptionKeyParameterNames = new DataAzurermApiManagementApiSubscriptionKeyParameterNamesList(this, "subscription_key_parameter_names", false);
+  public get subscriptionKeyParameterNames() {
+    return this._subscriptionKeyParameterNames;
   }
 
   // subscription_required - computed: true, optional: false, required: false
@@ -270,7 +329,7 @@ export class DataAzurermApiManagementApi extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermApiManagementApiTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermApiManagementApiTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

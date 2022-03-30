@@ -22,7 +22,45 @@ export interface DataAzurermNetworkInterfaceConfig extends cdktf.TerraformMetaAr
   */
   readonly timeouts?: DataAzurermNetworkInterfaceTimeouts;
 }
-export class DataAzurermNetworkInterfaceIpConfiguration extends cdktf.ComplexComputedList {
+export interface DataAzurermNetworkInterfaceIpConfiguration {
+}
+
+export function dataAzurermNetworkInterfaceIpConfigurationToTerraform(struct?: DataAzurermNetworkInterfaceIpConfiguration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermNetworkInterfaceIpConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermNetworkInterfaceIpConfiguration | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermNetworkInterfaceIpConfiguration | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // application_gateway_backend_address_pools_ids - computed: true, optional: false, required: false
   public get applicationGatewayBackendAddressPoolsIds() {
@@ -84,6 +122,25 @@ export class DataAzurermNetworkInterfaceIpConfiguration extends cdktf.ComplexCom
     return this.getStringAttribute('subnet_id');
   }
 }
+
+export class DataAzurermNetworkInterfaceIpConfigurationList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermNetworkInterfaceIpConfigurationOutputReference {
+    return new DataAzurermNetworkInterfaceIpConfigurationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataAzurermNetworkInterfaceTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/network_interface#read DataAzurermNetworkInterface#read}
@@ -107,10 +164,9 @@ export class DataAzurermNetworkInterfaceTimeoutsOutputReference extends cdktf.Co
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermNetworkInterfaceTimeouts | undefined {
@@ -159,7 +215,7 @@ export class DataAzurermNetworkInterface extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_network_interface";
+  public static readonly tfResourceType = "azurerm_network_interface";
 
   // ===========
   // INITIALIZER
@@ -176,7 +232,9 @@ export class DataAzurermNetworkInterface extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'azurerm_network_interface',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -223,8 +281,9 @@ export class DataAzurermNetworkInterface extends cdktf.TerraformDataSource {
   }
 
   // ip_configuration - computed: true, optional: false, required: false
-  public ipConfiguration(index: string) {
-    return new DataAzurermNetworkInterfaceIpConfiguration(this, 'ip_configuration', index, false);
+  private _ipConfiguration = new DataAzurermNetworkInterfaceIpConfigurationList(this, "ip_configuration", false);
+  public get ipConfiguration() {
+    return this._ipConfiguration;
   }
 
   // location - computed: true, optional: false, required: false
@@ -289,7 +348,7 @@ export class DataAzurermNetworkInterface extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermNetworkInterfaceTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermNetworkInterfaceTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

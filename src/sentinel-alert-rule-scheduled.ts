@@ -109,10 +109,9 @@ export class SentinelAlertRuleScheduledEventGroupingOutputReference extends cdkt
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): SentinelAlertRuleScheduledEventGrouping | undefined {
@@ -192,10 +191,9 @@ export class SentinelAlertRuleScheduledIncidentConfigurationGroupingOutputRefere
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): SentinelAlertRuleScheduledIncidentConfigurationGrouping | undefined {
@@ -353,10 +351,9 @@ export class SentinelAlertRuleScheduledIncidentConfigurationOutputReference exte
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): SentinelAlertRuleScheduledIncidentConfiguration | undefined {
@@ -400,7 +397,7 @@ export class SentinelAlertRuleScheduledIncidentConfigurationOutputReference exte
   }
 
   // grouping - computed: false, optional: false, required: true
-  private _grouping = new SentinelAlertRuleScheduledIncidentConfigurationGroupingOutputReference(this, "grouping", true);
+  private _grouping = new SentinelAlertRuleScheduledIncidentConfigurationGroupingOutputReference(this, "grouping");
   public get grouping() {
     return this._grouping;
   }
@@ -450,10 +447,9 @@ export class SentinelAlertRuleScheduledTimeoutsOutputReference extends cdktf.Com
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): SentinelAlertRuleScheduledTimeouts | undefined {
@@ -568,7 +564,7 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_sentinel_alert_rule_scheduled";
+  public static readonly tfResourceType = "azurerm_sentinel_alert_rule_scheduled";
 
   // ===========
   // INITIALIZER
@@ -585,7 +581,9 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_sentinel_alert_rule_scheduled',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -847,7 +845,7 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
   }
 
   // event_grouping - computed: false, optional: true, required: false
-  private _eventGrouping = new SentinelAlertRuleScheduledEventGroupingOutputReference(this, "event_grouping", true);
+  private _eventGrouping = new SentinelAlertRuleScheduledEventGroupingOutputReference(this, "event_grouping");
   public get eventGrouping() {
     return this._eventGrouping;
   }
@@ -863,7 +861,7 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
   }
 
   // incident_configuration - computed: false, optional: true, required: false
-  private _incidentConfiguration = new SentinelAlertRuleScheduledIncidentConfigurationOutputReference(this, "incident_configuration", true);
+  private _incidentConfiguration = new SentinelAlertRuleScheduledIncidentConfigurationOutputReference(this, "incident_configuration");
   public get incidentConfiguration() {
     return this._incidentConfiguration;
   }
@@ -879,7 +877,7 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new SentinelAlertRuleScheduledTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new SentinelAlertRuleScheduledTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

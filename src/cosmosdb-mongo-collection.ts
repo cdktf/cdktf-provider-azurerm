@@ -58,7 +58,45 @@ export interface CosmosdbMongoCollectionConfig extends cdktf.TerraformMetaArgume
   */
   readonly timeouts?: CosmosdbMongoCollectionTimeouts;
 }
-export class CosmosdbMongoCollectionSystemIndexes extends cdktf.ComplexComputedList {
+export interface CosmosdbMongoCollectionSystemIndexes {
+}
+
+export function cosmosdbMongoCollectionSystemIndexesToTerraform(struct?: CosmosdbMongoCollectionSystemIndexes): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class CosmosdbMongoCollectionSystemIndexesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CosmosdbMongoCollectionSystemIndexes | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CosmosdbMongoCollectionSystemIndexes | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // keys - computed: true, optional: false, required: false
   public get keys() {
@@ -68,6 +106,25 @@ export class CosmosdbMongoCollectionSystemIndexes extends cdktf.ComplexComputedL
   // unique - computed: true, optional: false, required: false
   public get unique() {
     return this.getBooleanAttribute('unique');
+  }
+}
+
+export class CosmosdbMongoCollectionSystemIndexesList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CosmosdbMongoCollectionSystemIndexesOutputReference {
+    return new CosmosdbMongoCollectionSystemIndexesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface CosmosdbMongoCollectionAutoscaleSettings {
@@ -93,10 +150,9 @@ export class CosmosdbMongoCollectionAutoscaleSettingsOutputReference extends cdk
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CosmosdbMongoCollectionAutoscaleSettings | undefined {
@@ -196,10 +252,9 @@ export class CosmosdbMongoCollectionTimeoutsOutputReference extends cdktf.Comple
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CosmosdbMongoCollectionTimeouts | undefined {
@@ -314,7 +369,7 @@ export class CosmosdbMongoCollection extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_cosmosdb_mongo_collection";
+  public static readonly tfResourceType = "azurerm_cosmosdb_mongo_collection";
 
   // ===========
   // INITIALIZER
@@ -331,7 +386,9 @@ export class CosmosdbMongoCollection extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_cosmosdb_mongo_collection',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -461,8 +518,9 @@ export class CosmosdbMongoCollection extends cdktf.TerraformResource {
   }
 
   // system_indexes - computed: true, optional: false, required: false
-  public systemIndexes(index: string) {
-    return new CosmosdbMongoCollectionSystemIndexes(this, 'system_indexes', index, false);
+  private _systemIndexes = new CosmosdbMongoCollectionSystemIndexesList(this, "system_indexes", false);
+  public get systemIndexes() {
+    return this._systemIndexes;
   }
 
   // throughput - computed: true, optional: true, required: false
@@ -482,7 +540,7 @@ export class CosmosdbMongoCollection extends cdktf.TerraformResource {
   }
 
   // autoscale_settings - computed: false, optional: true, required: false
-  private _autoscaleSettings = new CosmosdbMongoCollectionAutoscaleSettingsOutputReference(this, "autoscale_settings", true);
+  private _autoscaleSettings = new CosmosdbMongoCollectionAutoscaleSettingsOutputReference(this, "autoscale_settings");
   public get autoscaleSettings() {
     return this._autoscaleSettings;
   }
@@ -515,7 +573,7 @@ export class CosmosdbMongoCollection extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new CosmosdbMongoCollectionTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new CosmosdbMongoCollectionTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

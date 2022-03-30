@@ -86,10 +86,9 @@ export class ApiManagementNamedValueTimeoutsOutputReference extends cdktf.Comple
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ApiManagementNamedValueTimeouts | undefined {
@@ -223,10 +222,9 @@ export class ApiManagementNamedValueValueFromKeyVaultOutputReference extends cdk
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ApiManagementNamedValueValueFromKeyVault | undefined {
@@ -294,7 +292,7 @@ export class ApiManagementNamedValue extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_api_management_named_value";
+  public static readonly tfResourceType = "azurerm_api_management_named_value";
 
   // ===========
   // INITIALIZER
@@ -311,7 +309,9 @@ export class ApiManagementNamedValue extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_api_management_named_value',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -439,7 +439,7 @@ export class ApiManagementNamedValue extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ApiManagementNamedValueTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new ApiManagementNamedValueTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
@@ -455,7 +455,7 @@ export class ApiManagementNamedValue extends cdktf.TerraformResource {
   }
 
   // value_from_key_vault - computed: false, optional: true, required: false
-  private _valueFromKeyVault = new ApiManagementNamedValueValueFromKeyVaultOutputReference(this, "value_from_key_vault", true);
+  private _valueFromKeyVault = new ApiManagementNamedValueValueFromKeyVaultOutputReference(this, "value_from_key_vault");
   public get valueFromKeyVault() {
     return this._valueFromKeyVault;
   }

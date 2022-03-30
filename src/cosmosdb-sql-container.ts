@@ -97,10 +97,9 @@ export class CosmosdbSqlContainerAutoscaleSettingsOutputReference extends cdktf.
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CosmosdbSqlContainerAutoscaleSettings | undefined {
@@ -173,10 +172,9 @@ export class CosmosdbSqlContainerConflictResolutionPolicyOutputReference extends
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CosmosdbSqlContainerConflictResolutionPolicy | undefined {
@@ -400,10 +398,9 @@ export class CosmosdbSqlContainerIndexingPolicyOutputReference extends cdktf.Com
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CosmosdbSqlContainerIndexingPolicy | undefined {
@@ -573,10 +570,9 @@ export class CosmosdbSqlContainerTimeoutsOutputReference extends cdktf.ComplexOb
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CosmosdbSqlContainerTimeouts | undefined {
@@ -708,7 +704,7 @@ export class CosmosdbSqlContainer extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_cosmosdb_sql_container";
+  public static readonly tfResourceType = "azurerm_cosmosdb_sql_container";
 
   // ===========
   // INITIALIZER
@@ -725,7 +721,9 @@ export class CosmosdbSqlContainer extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_cosmosdb_sql_container',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -887,7 +885,7 @@ export class CosmosdbSqlContainer extends cdktf.TerraformResource {
   }
 
   // autoscale_settings - computed: false, optional: true, required: false
-  private _autoscaleSettings = new CosmosdbSqlContainerAutoscaleSettingsOutputReference(this, "autoscale_settings", true);
+  private _autoscaleSettings = new CosmosdbSqlContainerAutoscaleSettingsOutputReference(this, "autoscale_settings");
   public get autoscaleSettings() {
     return this._autoscaleSettings;
   }
@@ -903,7 +901,7 @@ export class CosmosdbSqlContainer extends cdktf.TerraformResource {
   }
 
   // conflict_resolution_policy - computed: false, optional: true, required: false
-  private _conflictResolutionPolicy = new CosmosdbSqlContainerConflictResolutionPolicyOutputReference(this, "conflict_resolution_policy", true);
+  private _conflictResolutionPolicy = new CosmosdbSqlContainerConflictResolutionPolicyOutputReference(this, "conflict_resolution_policy");
   public get conflictResolutionPolicy() {
     return this._conflictResolutionPolicy;
   }
@@ -919,7 +917,7 @@ export class CosmosdbSqlContainer extends cdktf.TerraformResource {
   }
 
   // indexing_policy - computed: false, optional: true, required: false
-  private _indexingPolicy = new CosmosdbSqlContainerIndexingPolicyOutputReference(this, "indexing_policy", true);
+  private _indexingPolicy = new CosmosdbSqlContainerIndexingPolicyOutputReference(this, "indexing_policy");
   public get indexingPolicy() {
     return this._indexingPolicy;
   }
@@ -935,7 +933,7 @@ export class CosmosdbSqlContainer extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new CosmosdbSqlContainerTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new CosmosdbSqlContainerTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

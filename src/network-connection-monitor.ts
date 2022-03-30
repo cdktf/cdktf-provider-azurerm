@@ -109,10 +109,9 @@ export class NetworkConnectionMonitorDestinationOutputReference extends cdktf.Co
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): NetworkConnectionMonitorDestination | undefined {
@@ -248,10 +247,9 @@ export class NetworkConnectionMonitorEndpointFilterOutputReference extends cdktf
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): NetworkConnectionMonitorEndpointFilter | undefined {
@@ -401,10 +399,9 @@ export class NetworkConnectionMonitorSourceOutputReference extends cdktf.Complex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): NetworkConnectionMonitorSource | undefined {
@@ -538,10 +535,9 @@ export class NetworkConnectionMonitorTestConfigurationHttpConfigurationOutputRef
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): NetworkConnectionMonitorTestConfigurationHttpConfiguration | undefined {
@@ -715,10 +711,9 @@ export class NetworkConnectionMonitorTestConfigurationIcmpConfigurationOutputRef
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): NetworkConnectionMonitorTestConfigurationIcmpConfiguration | undefined {
@@ -786,10 +781,9 @@ export class NetworkConnectionMonitorTestConfigurationSuccessThresholdOutputRefe
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): NetworkConnectionMonitorTestConfigurationSuccessThreshold | undefined {
@@ -884,10 +878,9 @@ export class NetworkConnectionMonitorTestConfigurationTcpConfigurationOutputRefe
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): NetworkConnectionMonitorTestConfigurationTcpConfiguration | undefined {
@@ -1103,10 +1096,9 @@ export class NetworkConnectionMonitorTimeoutsOutputReference extends cdktf.Compl
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): NetworkConnectionMonitorTimeouts | undefined {
@@ -1221,7 +1213,7 @@ export class NetworkConnectionMonitor extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_network_connection_monitor";
+  public static readonly tfResourceType = "azurerm_network_connection_monitor";
 
   // ===========
   // INITIALIZER
@@ -1238,7 +1230,9 @@ export class NetworkConnectionMonitor extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_network_connection_monitor',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1390,7 +1384,7 @@ export class NetworkConnectionMonitor extends cdktf.TerraformResource {
   }
 
   // destination - computed: false, optional: true, required: false
-  private _destination = new NetworkConnectionMonitorDestinationOutputReference(this, "destination", true);
+  private _destination = new NetworkConnectionMonitorDestinationOutputReference(this, "destination");
   public get destination() {
     return this._destination;
   }
@@ -1420,7 +1414,7 @@ export class NetworkConnectionMonitor extends cdktf.TerraformResource {
   }
 
   // source - computed: false, optional: true, required: false
-  private _source = new NetworkConnectionMonitorSourceOutputReference(this, "source", true);
+  private _source = new NetworkConnectionMonitorSourceOutputReference(this, "source");
   public get source() {
     return this._source;
   }
@@ -1464,7 +1458,7 @@ export class NetworkConnectionMonitor extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new NetworkConnectionMonitorTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new NetworkConnectionMonitorTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

@@ -72,10 +72,9 @@ export class ExpressRouteConnectionRoutingPropagatedRouteTableOutputReference ex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ExpressRouteConnectionRoutingPropagatedRouteTable | undefined {
@@ -167,10 +166,9 @@ export class ExpressRouteConnectionRoutingOutputReference extends cdktf.ComplexO
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ExpressRouteConnectionRouting | undefined {
@@ -217,7 +215,7 @@ export class ExpressRouteConnectionRoutingOutputReference extends cdktf.ComplexO
   }
 
   // propagated_route_table - computed: false, optional: true, required: false
-  private _propagatedRouteTable = new ExpressRouteConnectionRoutingPropagatedRouteTableOutputReference(this, "propagated_route_table", true);
+  private _propagatedRouteTable = new ExpressRouteConnectionRoutingPropagatedRouteTableOutputReference(this, "propagated_route_table");
   public get propagatedRouteTable() {
     return this._propagatedRouteTable;
   }
@@ -270,10 +268,9 @@ export class ExpressRouteConnectionTimeoutsOutputReference extends cdktf.Complex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ExpressRouteConnectionTimeouts | undefined {
@@ -388,7 +385,7 @@ export class ExpressRouteConnection extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_express_route_connection";
+  public static readonly tfResourceType = "azurerm_express_route_connection";
 
   // ===========
   // INITIALIZER
@@ -405,7 +402,9 @@ export class ExpressRouteConnection extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_express_route_connection',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -519,7 +518,7 @@ export class ExpressRouteConnection extends cdktf.TerraformResource {
   }
 
   // routing - computed: false, optional: true, required: false
-  private _routing = new ExpressRouteConnectionRoutingOutputReference(this, "routing", true);
+  private _routing = new ExpressRouteConnectionRoutingOutputReference(this, "routing");
   public get routing() {
     return this._routing;
   }
@@ -535,7 +534,7 @@ export class ExpressRouteConnection extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ExpressRouteConnectionTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new ExpressRouteConnectionTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

@@ -22,7 +22,45 @@ export interface DataAzurermFirewallPolicyConfig extends cdktf.TerraformMetaArgu
   */
   readonly timeouts?: DataAzurermFirewallPolicyTimeouts;
 }
-export class DataAzurermFirewallPolicyDns extends cdktf.ComplexComputedList {
+export interface DataAzurermFirewallPolicyDns {
+}
+
+export function dataAzurermFirewallPolicyDnsToTerraform(struct?: DataAzurermFirewallPolicyDns): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermFirewallPolicyDnsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermFirewallPolicyDns | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermFirewallPolicyDns | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // network_rule_fqdn_enabled - computed: true, optional: false, required: false
   public get networkRuleFqdnEnabled() {
@@ -39,7 +77,64 @@ export class DataAzurermFirewallPolicyDns extends cdktf.ComplexComputedList {
     return this.getListAttribute('servers');
   }
 }
-export class DataAzurermFirewallPolicyThreatIntelligenceAllowlist extends cdktf.ComplexComputedList {
+
+export class DataAzurermFirewallPolicyDnsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermFirewallPolicyDnsOutputReference {
+    return new DataAzurermFirewallPolicyDnsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermFirewallPolicyThreatIntelligenceAllowlist {
+}
+
+export function dataAzurermFirewallPolicyThreatIntelligenceAllowlistToTerraform(struct?: DataAzurermFirewallPolicyThreatIntelligenceAllowlist): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermFirewallPolicyThreatIntelligenceAllowlistOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermFirewallPolicyThreatIntelligenceAllowlist | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermFirewallPolicyThreatIntelligenceAllowlist | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // fqdns - computed: true, optional: false, required: false
   public get fqdns() {
@@ -49,6 +144,25 @@ export class DataAzurermFirewallPolicyThreatIntelligenceAllowlist extends cdktf.
   // ip_addresses - computed: true, optional: false, required: false
   public get ipAddresses() {
     return this.getListAttribute('ip_addresses');
+  }
+}
+
+export class DataAzurermFirewallPolicyThreatIntelligenceAllowlistList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermFirewallPolicyThreatIntelligenceAllowlistOutputReference {
+    return new DataAzurermFirewallPolicyThreatIntelligenceAllowlistOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataAzurermFirewallPolicyTimeouts {
@@ -74,10 +188,9 @@ export class DataAzurermFirewallPolicyTimeoutsOutputReference extends cdktf.Comp
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermFirewallPolicyTimeouts | undefined {
@@ -126,7 +239,7 @@ export class DataAzurermFirewallPolicy extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_firewall_policy";
+  public static readonly tfResourceType = "azurerm_firewall_policy";
 
   // ===========
   // INITIALIZER
@@ -143,7 +256,9 @@ export class DataAzurermFirewallPolicy extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'azurerm_firewall_policy',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -170,8 +285,9 @@ export class DataAzurermFirewallPolicy extends cdktf.TerraformDataSource {
   }
 
   // dns - computed: true, optional: false, required: false
-  public dns(index: string) {
-    return new DataAzurermFirewallPolicyDns(this, 'dns', index, false);
+  private _dns = new DataAzurermFirewallPolicyDnsList(this, "dns", false);
+  public get dns() {
+    return this._dns;
   }
 
   // firewalls - computed: true, optional: false, required: false
@@ -226,8 +342,9 @@ export class DataAzurermFirewallPolicy extends cdktf.TerraformDataSource {
   }
 
   // threat_intelligence_allowlist - computed: true, optional: false, required: false
-  public threatIntelligenceAllowlist(index: string) {
-    return new DataAzurermFirewallPolicyThreatIntelligenceAllowlist(this, 'threat_intelligence_allowlist', index, false);
+  private _threatIntelligenceAllowlist = new DataAzurermFirewallPolicyThreatIntelligenceAllowlistList(this, "threat_intelligence_allowlist", false);
+  public get threatIntelligenceAllowlist() {
+    return this._threatIntelligenceAllowlist;
   }
 
   // threat_intelligence_mode - computed: true, optional: false, required: false
@@ -236,7 +353,7 @@ export class DataAzurermFirewallPolicy extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermFirewallPolicyTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermFirewallPolicyTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

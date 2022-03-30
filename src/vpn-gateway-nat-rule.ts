@@ -84,10 +84,9 @@ export class VpnGatewayNatRuleTimeoutsOutputReference extends cdktf.ComplexObjec
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): VpnGatewayNatRuleTimeouts | undefined {
@@ -202,7 +201,7 @@ export class VpnGatewayNatRule extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_vpn_gateway_nat_rule";
+  public static readonly tfResourceType = "azurerm_vpn_gateway_nat_rule";
 
   // ===========
   // INITIALIZER
@@ -219,7 +218,9 @@ export class VpnGatewayNatRule extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_vpn_gateway_nat_rule',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -360,7 +361,7 @@ export class VpnGatewayNatRule extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new VpnGatewayNatRuleTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new VpnGatewayNatRuleTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

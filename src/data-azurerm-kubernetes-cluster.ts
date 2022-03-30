@@ -22,14 +22,109 @@ export interface DataAzurermKubernetesClusterConfig extends cdktf.TerraformMetaA
   */
   readonly timeouts?: DataAzurermKubernetesClusterTimeouts;
 }
-export class DataAzurermKubernetesClusterAciConnectorLinux extends cdktf.ComplexComputedList {
+export interface DataAzurermKubernetesClusterAciConnectorLinux {
+}
+
+export function dataAzurermKubernetesClusterAciConnectorLinuxToTerraform(struct?: DataAzurermKubernetesClusterAciConnectorLinux): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermKubernetesClusterAciConnectorLinuxOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermKubernetesClusterAciConnectorLinux | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermKubernetesClusterAciConnectorLinux | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // subnet_name - computed: true, optional: false, required: false
   public get subnetName() {
     return this.getStringAttribute('subnet_name');
   }
 }
-export class DataAzurermKubernetesClusterAddonProfileAzureKeyvaultSecretsProviderSecretIdentity extends cdktf.ComplexComputedList {
+
+export class DataAzurermKubernetesClusterAciConnectorLinuxList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermKubernetesClusterAciConnectorLinuxOutputReference {
+    return new DataAzurermKubernetesClusterAciConnectorLinuxOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermKubernetesClusterAddonProfileAzureKeyvaultSecretsProviderSecretIdentity {
+}
+
+export function dataAzurermKubernetesClusterAddonProfileAzureKeyvaultSecretsProviderSecretIdentityToTerraform(struct?: DataAzurermKubernetesClusterAddonProfileAzureKeyvaultSecretsProviderSecretIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermKubernetesClusterAddonProfileAzureKeyvaultSecretsProviderSecretIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermKubernetesClusterAddonProfileAzureKeyvaultSecretsProviderSecretIdentity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermKubernetesClusterAddonProfileAzureKeyvaultSecretsProviderSecretIdentity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // client_id - computed: true, optional: false, required: false
   public get clientId() {
@@ -46,7 +141,64 @@ export class DataAzurermKubernetesClusterAddonProfileAzureKeyvaultSecretsProvide
     return this.getStringAttribute('user_assigned_identity_id');
   }
 }
-export class DataAzurermKubernetesClusterAddonProfileAzureKeyvaultSecretsProvider extends cdktf.ComplexComputedList {
+
+export class DataAzurermKubernetesClusterAddonProfileAzureKeyvaultSecretsProviderSecretIdentityList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermKubernetesClusterAddonProfileAzureKeyvaultSecretsProviderSecretIdentityOutputReference {
+    return new DataAzurermKubernetesClusterAddonProfileAzureKeyvaultSecretsProviderSecretIdentityOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermKubernetesClusterAddonProfileAzureKeyvaultSecretsProvider {
+}
+
+export function dataAzurermKubernetesClusterAddonProfileAzureKeyvaultSecretsProviderToTerraform(struct?: DataAzurermKubernetesClusterAddonProfileAzureKeyvaultSecretsProvider): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermKubernetesClusterAddonProfileAzureKeyvaultSecretsProviderOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermKubernetesClusterAddonProfileAzureKeyvaultSecretsProvider | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermKubernetesClusterAddonProfileAzureKeyvaultSecretsProvider | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // enabled - computed: true, optional: false, required: false
   public get enabled() {
@@ -54,9 +206,9 @@ export class DataAzurermKubernetesClusterAddonProfileAzureKeyvaultSecretsProvide
   }
 
   // secret_identity - computed: true, optional: false, required: false
+  private _secretIdentity = new DataAzurermKubernetesClusterAddonProfileAzureKeyvaultSecretsProviderSecretIdentityList(this, "secret_identity", false);
   public get secretIdentity() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('secret_identity');
+    return this._secretIdentity;
   }
 
   // secret_rotation_enabled - computed: true, optional: false, required: false
@@ -69,14 +221,128 @@ export class DataAzurermKubernetesClusterAddonProfileAzureKeyvaultSecretsProvide
     return this.getStringAttribute('secret_rotation_interval');
   }
 }
-export class DataAzurermKubernetesClusterAddonProfileAzurePolicy extends cdktf.ComplexComputedList {
+
+export class DataAzurermKubernetesClusterAddonProfileAzureKeyvaultSecretsProviderList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermKubernetesClusterAddonProfileAzureKeyvaultSecretsProviderOutputReference {
+    return new DataAzurermKubernetesClusterAddonProfileAzureKeyvaultSecretsProviderOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermKubernetesClusterAddonProfileAzurePolicy {
+}
+
+export function dataAzurermKubernetesClusterAddonProfileAzurePolicyToTerraform(struct?: DataAzurermKubernetesClusterAddonProfileAzurePolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermKubernetesClusterAddonProfileAzurePolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermKubernetesClusterAddonProfileAzurePolicy | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermKubernetesClusterAddonProfileAzurePolicy | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // enabled - computed: true, optional: false, required: false
   public get enabled() {
     return this.getBooleanAttribute('enabled');
   }
 }
-export class DataAzurermKubernetesClusterAddonProfileHttpApplicationRouting extends cdktf.ComplexComputedList {
+
+export class DataAzurermKubernetesClusterAddonProfileAzurePolicyList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermKubernetesClusterAddonProfileAzurePolicyOutputReference {
+    return new DataAzurermKubernetesClusterAddonProfileAzurePolicyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermKubernetesClusterAddonProfileHttpApplicationRouting {
+}
+
+export function dataAzurermKubernetesClusterAddonProfileHttpApplicationRoutingToTerraform(struct?: DataAzurermKubernetesClusterAddonProfileHttpApplicationRouting): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermKubernetesClusterAddonProfileHttpApplicationRoutingOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermKubernetesClusterAddonProfileHttpApplicationRouting | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermKubernetesClusterAddonProfileHttpApplicationRouting | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // enabled - computed: true, optional: false, required: false
   public get enabled() {
@@ -88,7 +354,64 @@ export class DataAzurermKubernetesClusterAddonProfileHttpApplicationRouting exte
     return this.getStringAttribute('http_application_routing_zone_name');
   }
 }
-export class DataAzurermKubernetesClusterAddonProfileIngressApplicationGatewayIngressApplicationGatewayIdentity extends cdktf.ComplexComputedList {
+
+export class DataAzurermKubernetesClusterAddonProfileHttpApplicationRoutingList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermKubernetesClusterAddonProfileHttpApplicationRoutingOutputReference {
+    return new DataAzurermKubernetesClusterAddonProfileHttpApplicationRoutingOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermKubernetesClusterAddonProfileIngressApplicationGatewayIngressApplicationGatewayIdentity {
+}
+
+export function dataAzurermKubernetesClusterAddonProfileIngressApplicationGatewayIngressApplicationGatewayIdentityToTerraform(struct?: DataAzurermKubernetesClusterAddonProfileIngressApplicationGatewayIngressApplicationGatewayIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermKubernetesClusterAddonProfileIngressApplicationGatewayIngressApplicationGatewayIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermKubernetesClusterAddonProfileIngressApplicationGatewayIngressApplicationGatewayIdentity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermKubernetesClusterAddonProfileIngressApplicationGatewayIngressApplicationGatewayIdentity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // client_id - computed: true, optional: false, required: false
   public get clientId() {
@@ -105,7 +428,64 @@ export class DataAzurermKubernetesClusterAddonProfileIngressApplicationGatewayIn
     return this.getStringAttribute('user_assigned_identity_id');
   }
 }
-export class DataAzurermKubernetesClusterAddonProfileIngressApplicationGateway extends cdktf.ComplexComputedList {
+
+export class DataAzurermKubernetesClusterAddonProfileIngressApplicationGatewayIngressApplicationGatewayIdentityList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermKubernetesClusterAddonProfileIngressApplicationGatewayIngressApplicationGatewayIdentityOutputReference {
+    return new DataAzurermKubernetesClusterAddonProfileIngressApplicationGatewayIngressApplicationGatewayIdentityOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermKubernetesClusterAddonProfileIngressApplicationGateway {
+}
+
+export function dataAzurermKubernetesClusterAddonProfileIngressApplicationGatewayToTerraform(struct?: DataAzurermKubernetesClusterAddonProfileIngressApplicationGateway): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermKubernetesClusterAddonProfileIngressApplicationGatewayOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermKubernetesClusterAddonProfileIngressApplicationGateway | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermKubernetesClusterAddonProfileIngressApplicationGateway | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // effective_gateway_id - computed: true, optional: false, required: false
   public get effectiveGatewayId() {
@@ -123,9 +503,9 @@ export class DataAzurermKubernetesClusterAddonProfileIngressApplicationGateway e
   }
 
   // ingress_application_gateway_identity - computed: true, optional: false, required: false
+  private _ingressApplicationGatewayIdentity = new DataAzurermKubernetesClusterAddonProfileIngressApplicationGatewayIngressApplicationGatewayIdentityList(this, "ingress_application_gateway_identity", false);
   public get ingressApplicationGatewayIdentity() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('ingress_application_gateway_identity');
+    return this._ingressApplicationGatewayIdentity;
   }
 
   // subnet_cidr - computed: true, optional: false, required: false
@@ -138,14 +518,128 @@ export class DataAzurermKubernetesClusterAddonProfileIngressApplicationGateway e
     return this.getStringAttribute('subnet_id');
   }
 }
-export class DataAzurermKubernetesClusterAddonProfileKubeDashboard extends cdktf.ComplexComputedList {
+
+export class DataAzurermKubernetesClusterAddonProfileIngressApplicationGatewayList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermKubernetesClusterAddonProfileIngressApplicationGatewayOutputReference {
+    return new DataAzurermKubernetesClusterAddonProfileIngressApplicationGatewayOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermKubernetesClusterAddonProfileKubeDashboard {
+}
+
+export function dataAzurermKubernetesClusterAddonProfileKubeDashboardToTerraform(struct?: DataAzurermKubernetesClusterAddonProfileKubeDashboard): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermKubernetesClusterAddonProfileKubeDashboardOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermKubernetesClusterAddonProfileKubeDashboard | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermKubernetesClusterAddonProfileKubeDashboard | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // enabled - computed: true, optional: false, required: false
   public get enabled() {
     return this.getBooleanAttribute('enabled');
   }
 }
-export class DataAzurermKubernetesClusterAddonProfileOmsAgentOmsAgentIdentity extends cdktf.ComplexComputedList {
+
+export class DataAzurermKubernetesClusterAddonProfileKubeDashboardList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermKubernetesClusterAddonProfileKubeDashboardOutputReference {
+    return new DataAzurermKubernetesClusterAddonProfileKubeDashboardOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermKubernetesClusterAddonProfileOmsAgentOmsAgentIdentity {
+}
+
+export function dataAzurermKubernetesClusterAddonProfileOmsAgentOmsAgentIdentityToTerraform(struct?: DataAzurermKubernetesClusterAddonProfileOmsAgentOmsAgentIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermKubernetesClusterAddonProfileOmsAgentOmsAgentIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermKubernetesClusterAddonProfileOmsAgentOmsAgentIdentity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermKubernetesClusterAddonProfileOmsAgentOmsAgentIdentity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // client_id - computed: true, optional: false, required: false
   public get clientId() {
@@ -162,7 +656,64 @@ export class DataAzurermKubernetesClusterAddonProfileOmsAgentOmsAgentIdentity ex
     return this.getStringAttribute('user_assigned_identity_id');
   }
 }
-export class DataAzurermKubernetesClusterAddonProfileOmsAgent extends cdktf.ComplexComputedList {
+
+export class DataAzurermKubernetesClusterAddonProfileOmsAgentOmsAgentIdentityList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermKubernetesClusterAddonProfileOmsAgentOmsAgentIdentityOutputReference {
+    return new DataAzurermKubernetesClusterAddonProfileOmsAgentOmsAgentIdentityOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermKubernetesClusterAddonProfileOmsAgent {
+}
+
+export function dataAzurermKubernetesClusterAddonProfileOmsAgentToTerraform(struct?: DataAzurermKubernetesClusterAddonProfileOmsAgent): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermKubernetesClusterAddonProfileOmsAgentOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermKubernetesClusterAddonProfileOmsAgent | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermKubernetesClusterAddonProfileOmsAgent | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // enabled - computed: true, optional: false, required: false
   public get enabled() {
@@ -175,70 +726,298 @@ export class DataAzurermKubernetesClusterAddonProfileOmsAgent extends cdktf.Comp
   }
 
   // oms_agent_identity - computed: true, optional: false, required: false
+  private _omsAgentIdentity = new DataAzurermKubernetesClusterAddonProfileOmsAgentOmsAgentIdentityList(this, "oms_agent_identity", false);
   public get omsAgentIdentity() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('oms_agent_identity');
+    return this._omsAgentIdentity;
   }
 }
-export class DataAzurermKubernetesClusterAddonProfileOpenServiceMesh extends cdktf.ComplexComputedList {
+
+export class DataAzurermKubernetesClusterAddonProfileOmsAgentList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermKubernetesClusterAddonProfileOmsAgentOutputReference {
+    return new DataAzurermKubernetesClusterAddonProfileOmsAgentOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermKubernetesClusterAddonProfileOpenServiceMesh {
+}
+
+export function dataAzurermKubernetesClusterAddonProfileOpenServiceMeshToTerraform(struct?: DataAzurermKubernetesClusterAddonProfileOpenServiceMesh): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermKubernetesClusterAddonProfileOpenServiceMeshOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermKubernetesClusterAddonProfileOpenServiceMesh | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermKubernetesClusterAddonProfileOpenServiceMesh | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // enabled - computed: true, optional: false, required: false
   public get enabled() {
     return this.getBooleanAttribute('enabled');
   }
 }
-export class DataAzurermKubernetesClusterAddonProfile extends cdktf.ComplexComputedList {
+
+export class DataAzurermKubernetesClusterAddonProfileOpenServiceMeshList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermKubernetesClusterAddonProfileOpenServiceMeshOutputReference {
+    return new DataAzurermKubernetesClusterAddonProfileOpenServiceMeshOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermKubernetesClusterAddonProfile {
+}
+
+export function dataAzurermKubernetesClusterAddonProfileToTerraform(struct?: DataAzurermKubernetesClusterAddonProfile): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermKubernetesClusterAddonProfileOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermKubernetesClusterAddonProfile | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermKubernetesClusterAddonProfile | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // azure_keyvault_secrets_provider - computed: true, optional: false, required: false
+  private _azureKeyvaultSecretsProvider = new DataAzurermKubernetesClusterAddonProfileAzureKeyvaultSecretsProviderList(this, "azure_keyvault_secrets_provider", false);
   public get azureKeyvaultSecretsProvider() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('azure_keyvault_secrets_provider');
+    return this._azureKeyvaultSecretsProvider;
   }
 
   // azure_policy - computed: true, optional: false, required: false
+  private _azurePolicy = new DataAzurermKubernetesClusterAddonProfileAzurePolicyList(this, "azure_policy", false);
   public get azurePolicy() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('azure_policy');
+    return this._azurePolicy;
   }
 
   // http_application_routing - computed: true, optional: false, required: false
+  private _httpApplicationRouting = new DataAzurermKubernetesClusterAddonProfileHttpApplicationRoutingList(this, "http_application_routing", false);
   public get httpApplicationRouting() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('http_application_routing');
+    return this._httpApplicationRouting;
   }
 
   // ingress_application_gateway - computed: true, optional: false, required: false
+  private _ingressApplicationGateway = new DataAzurermKubernetesClusterAddonProfileIngressApplicationGatewayList(this, "ingress_application_gateway", false);
   public get ingressApplicationGateway() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('ingress_application_gateway');
+    return this._ingressApplicationGateway;
   }
 
   // kube_dashboard - computed: true, optional: false, required: false
+  private _kubeDashboard = new DataAzurermKubernetesClusterAddonProfileKubeDashboardList(this, "kube_dashboard", false);
   public get kubeDashboard() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('kube_dashboard');
+    return this._kubeDashboard;
   }
 
   // oms_agent - computed: true, optional: false, required: false
+  private _omsAgent = new DataAzurermKubernetesClusterAddonProfileOmsAgentList(this, "oms_agent", false);
   public get omsAgent() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('oms_agent');
+    return this._omsAgent;
   }
 
   // open_service_mesh - computed: true, optional: false, required: false
+  private _openServiceMesh = new DataAzurermKubernetesClusterAddonProfileOpenServiceMeshList(this, "open_service_mesh", false);
   public get openServiceMesh() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('open_service_mesh');
+    return this._openServiceMesh;
   }
 }
-export class DataAzurermKubernetesClusterAgentPoolProfileUpgradeSettings extends cdktf.ComplexComputedList {
+
+export class DataAzurermKubernetesClusterAddonProfileList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermKubernetesClusterAddonProfileOutputReference {
+    return new DataAzurermKubernetesClusterAddonProfileOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermKubernetesClusterAgentPoolProfileUpgradeSettings {
+}
+
+export function dataAzurermKubernetesClusterAgentPoolProfileUpgradeSettingsToTerraform(struct?: DataAzurermKubernetesClusterAgentPoolProfileUpgradeSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermKubernetesClusterAgentPoolProfileUpgradeSettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermKubernetesClusterAgentPoolProfileUpgradeSettings | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermKubernetesClusterAgentPoolProfileUpgradeSettings | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // max_surge - computed: true, optional: false, required: false
   public get maxSurge() {
     return this.getStringAttribute('max_surge');
   }
 }
-export class DataAzurermKubernetesClusterAgentPoolProfile extends cdktf.ComplexComputedList {
+
+export class DataAzurermKubernetesClusterAgentPoolProfileUpgradeSettingsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermKubernetesClusterAgentPoolProfileUpgradeSettingsOutputReference {
+    return new DataAzurermKubernetesClusterAgentPoolProfileUpgradeSettingsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermKubernetesClusterAgentPoolProfile {
+}
+
+export function dataAzurermKubernetesClusterAgentPoolProfileToTerraform(struct?: DataAzurermKubernetesClusterAgentPoolProfile): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermKubernetesClusterAgentPoolProfileOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermKubernetesClusterAgentPoolProfile | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermKubernetesClusterAgentPoolProfile | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // availability_zones - computed: true, optional: false, required: false
   public get availabilityZones() {
@@ -281,8 +1060,8 @@ export class DataAzurermKubernetesClusterAgentPoolProfile extends cdktf.ComplexC
   }
 
   // node_labels - computed: true, optional: false, required: false
-  public get nodeLabels() {
-    return this.getStringMapAttribute('node_labels');
+  public nodeLabels(key: string): string | cdktf.IResolvable {
+    return new cdktf.StringMap(this, 'node_labels').lookup(key);
   }
 
   // node_public_ip_prefix_id - computed: true, optional: false, required: false
@@ -311,8 +1090,8 @@ export class DataAzurermKubernetesClusterAgentPoolProfile extends cdktf.ComplexC
   }
 
   // tags - computed: true, optional: false, required: false
-  public get tags() {
-    return this.getStringMapAttribute('tags');
+  public tags(key: string): string | cdktf.IResolvable {
+    return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // type - computed: true, optional: false, required: false
@@ -321,9 +1100,9 @@ export class DataAzurermKubernetesClusterAgentPoolProfile extends cdktf.ComplexC
   }
 
   // upgrade_settings - computed: true, optional: false, required: false
+  private _upgradeSettings = new DataAzurermKubernetesClusterAgentPoolProfileUpgradeSettingsList(this, "upgrade_settings", false);
   public get upgradeSettings() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('upgrade_settings');
+    return this._upgradeSettings;
   }
 
   // vm_size - computed: true, optional: false, required: false
@@ -341,7 +1120,64 @@ export class DataAzurermKubernetesClusterAgentPoolProfile extends cdktf.ComplexC
     return this.getListAttribute('zones');
   }
 }
-export class DataAzurermKubernetesClusterAzureActiveDirectoryRoleBasedAccessControl extends cdktf.ComplexComputedList {
+
+export class DataAzurermKubernetesClusterAgentPoolProfileList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermKubernetesClusterAgentPoolProfileOutputReference {
+    return new DataAzurermKubernetesClusterAgentPoolProfileOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermKubernetesClusterAzureActiveDirectoryRoleBasedAccessControl {
+}
+
+export function dataAzurermKubernetesClusterAzureActiveDirectoryRoleBasedAccessControlToTerraform(struct?: DataAzurermKubernetesClusterAzureActiveDirectoryRoleBasedAccessControl): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermKubernetesClusterAzureActiveDirectoryRoleBasedAccessControlOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermKubernetesClusterAzureActiveDirectoryRoleBasedAccessControl | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermKubernetesClusterAzureActiveDirectoryRoleBasedAccessControl | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // admin_group_object_ids - computed: true, optional: false, required: false
   public get adminGroupObjectIds() {
@@ -373,7 +1209,64 @@ export class DataAzurermKubernetesClusterAzureActiveDirectoryRoleBasedAccessCont
     return this.getStringAttribute('tenant_id');
   }
 }
-export class DataAzurermKubernetesClusterIdentity extends cdktf.ComplexComputedList {
+
+export class DataAzurermKubernetesClusterAzureActiveDirectoryRoleBasedAccessControlList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermKubernetesClusterAzureActiveDirectoryRoleBasedAccessControlOutputReference {
+    return new DataAzurermKubernetesClusterAzureActiveDirectoryRoleBasedAccessControlOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermKubernetesClusterIdentity {
+}
+
+export function dataAzurermKubernetesClusterIdentityToTerraform(struct?: DataAzurermKubernetesClusterIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermKubernetesClusterIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermKubernetesClusterIdentity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermKubernetesClusterIdentity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // principal_id - computed: true, optional: false, required: false
   public get principalId() {
@@ -395,7 +1288,64 @@ export class DataAzurermKubernetesClusterIdentity extends cdktf.ComplexComputedL
     return this.getStringAttribute('user_assigned_identity_id');
   }
 }
-export class DataAzurermKubernetesClusterIngressApplicationGatewayIngressApplicationGatewayIdentity extends cdktf.ComplexComputedList {
+
+export class DataAzurermKubernetesClusterIdentityList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermKubernetesClusterIdentityOutputReference {
+    return new DataAzurermKubernetesClusterIdentityOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermKubernetesClusterIngressApplicationGatewayIngressApplicationGatewayIdentity {
+}
+
+export function dataAzurermKubernetesClusterIngressApplicationGatewayIngressApplicationGatewayIdentityToTerraform(struct?: DataAzurermKubernetesClusterIngressApplicationGatewayIngressApplicationGatewayIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermKubernetesClusterIngressApplicationGatewayIngressApplicationGatewayIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermKubernetesClusterIngressApplicationGatewayIngressApplicationGatewayIdentity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermKubernetesClusterIngressApplicationGatewayIngressApplicationGatewayIdentity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // client_id - computed: true, optional: false, required: false
   public get clientId() {
@@ -412,7 +1362,64 @@ export class DataAzurermKubernetesClusterIngressApplicationGatewayIngressApplica
     return this.getStringAttribute('user_assigned_identity_id');
   }
 }
-export class DataAzurermKubernetesClusterIngressApplicationGateway extends cdktf.ComplexComputedList {
+
+export class DataAzurermKubernetesClusterIngressApplicationGatewayIngressApplicationGatewayIdentityList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermKubernetesClusterIngressApplicationGatewayIngressApplicationGatewayIdentityOutputReference {
+    return new DataAzurermKubernetesClusterIngressApplicationGatewayIngressApplicationGatewayIdentityOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermKubernetesClusterIngressApplicationGateway {
+}
+
+export function dataAzurermKubernetesClusterIngressApplicationGatewayToTerraform(struct?: DataAzurermKubernetesClusterIngressApplicationGateway): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermKubernetesClusterIngressApplicationGatewayOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermKubernetesClusterIngressApplicationGateway | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermKubernetesClusterIngressApplicationGateway | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // effective_gateway_id - computed: true, optional: false, required: false
   public get effectiveGatewayId() {
@@ -430,9 +1437,9 @@ export class DataAzurermKubernetesClusterIngressApplicationGateway extends cdktf
   }
 
   // ingress_application_gateway_identity - computed: true, optional: false, required: false
+  private _ingressApplicationGatewayIdentity = new DataAzurermKubernetesClusterIngressApplicationGatewayIngressApplicationGatewayIdentityList(this, "ingress_application_gateway_identity", false);
   public get ingressApplicationGatewayIdentity() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('ingress_application_gateway_identity');
+    return this._ingressApplicationGatewayIdentity;
   }
 
   // subnet_cidr - computed: true, optional: false, required: false
@@ -445,7 +1452,64 @@ export class DataAzurermKubernetesClusterIngressApplicationGateway extends cdktf
     return this.getStringAttribute('subnet_id');
   }
 }
-export class DataAzurermKubernetesClusterKeyVaultSecretsProviderSecretIdentity extends cdktf.ComplexComputedList {
+
+export class DataAzurermKubernetesClusterIngressApplicationGatewayList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermKubernetesClusterIngressApplicationGatewayOutputReference {
+    return new DataAzurermKubernetesClusterIngressApplicationGatewayOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermKubernetesClusterKeyVaultSecretsProviderSecretIdentity {
+}
+
+export function dataAzurermKubernetesClusterKeyVaultSecretsProviderSecretIdentityToTerraform(struct?: DataAzurermKubernetesClusterKeyVaultSecretsProviderSecretIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermKubernetesClusterKeyVaultSecretsProviderSecretIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermKubernetesClusterKeyVaultSecretsProviderSecretIdentity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermKubernetesClusterKeyVaultSecretsProviderSecretIdentity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // client_id - computed: true, optional: false, required: false
   public get clientId() {
@@ -462,12 +1526,69 @@ export class DataAzurermKubernetesClusterKeyVaultSecretsProviderSecretIdentity e
     return this.getStringAttribute('user_assigned_identity_id');
   }
 }
-export class DataAzurermKubernetesClusterKeyVaultSecretsProvider extends cdktf.ComplexComputedList {
+
+export class DataAzurermKubernetesClusterKeyVaultSecretsProviderSecretIdentityList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermKubernetesClusterKeyVaultSecretsProviderSecretIdentityOutputReference {
+    return new DataAzurermKubernetesClusterKeyVaultSecretsProviderSecretIdentityOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermKubernetesClusterKeyVaultSecretsProvider {
+}
+
+export function dataAzurermKubernetesClusterKeyVaultSecretsProviderToTerraform(struct?: DataAzurermKubernetesClusterKeyVaultSecretsProvider): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermKubernetesClusterKeyVaultSecretsProviderOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermKubernetesClusterKeyVaultSecretsProvider | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermKubernetesClusterKeyVaultSecretsProvider | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // secret_identity - computed: true, optional: false, required: false
+  private _secretIdentity = new DataAzurermKubernetesClusterKeyVaultSecretsProviderSecretIdentityList(this, "secret_identity", false);
   public get secretIdentity() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('secret_identity');
+    return this._secretIdentity;
   }
 
   // secret_rotation_enabled - computed: true, optional: false, required: false
@@ -480,7 +1601,64 @@ export class DataAzurermKubernetesClusterKeyVaultSecretsProvider extends cdktf.C
     return this.getStringAttribute('secret_rotation_interval');
   }
 }
-export class DataAzurermKubernetesClusterKubeAdminConfig extends cdktf.ComplexComputedList {
+
+export class DataAzurermKubernetesClusterKeyVaultSecretsProviderList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermKubernetesClusterKeyVaultSecretsProviderOutputReference {
+    return new DataAzurermKubernetesClusterKeyVaultSecretsProviderOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermKubernetesClusterKubeAdminConfig {
+}
+
+export function dataAzurermKubernetesClusterKubeAdminConfigToTerraform(struct?: DataAzurermKubernetesClusterKubeAdminConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermKubernetesClusterKubeAdminConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermKubernetesClusterKubeAdminConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermKubernetesClusterKubeAdminConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // client_certificate - computed: true, optional: false, required: false
   public get clientCertificate() {
@@ -512,7 +1690,64 @@ export class DataAzurermKubernetesClusterKubeAdminConfig extends cdktf.ComplexCo
     return this.getStringAttribute('username');
   }
 }
-export class DataAzurermKubernetesClusterKubeConfig extends cdktf.ComplexComputedList {
+
+export class DataAzurermKubernetesClusterKubeAdminConfigList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermKubernetesClusterKubeAdminConfigOutputReference {
+    return new DataAzurermKubernetesClusterKubeAdminConfigOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermKubernetesClusterKubeConfig {
+}
+
+export function dataAzurermKubernetesClusterKubeConfigToTerraform(struct?: DataAzurermKubernetesClusterKubeConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermKubernetesClusterKubeConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermKubernetesClusterKubeConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermKubernetesClusterKubeConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // client_certificate - computed: true, optional: false, required: false
   public get clientCertificate() {
@@ -544,7 +1779,64 @@ export class DataAzurermKubernetesClusterKubeConfig extends cdktf.ComplexCompute
     return this.getStringAttribute('username');
   }
 }
-export class DataAzurermKubernetesClusterKubeletIdentity extends cdktf.ComplexComputedList {
+
+export class DataAzurermKubernetesClusterKubeConfigList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermKubernetesClusterKubeConfigOutputReference {
+    return new DataAzurermKubernetesClusterKubeConfigOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermKubernetesClusterKubeletIdentity {
+}
+
+export function dataAzurermKubernetesClusterKubeletIdentityToTerraform(struct?: DataAzurermKubernetesClusterKubeletIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermKubernetesClusterKubeletIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermKubernetesClusterKubeletIdentity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermKubernetesClusterKubeletIdentity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // client_id - computed: true, optional: false, required: false
   public get clientId() {
@@ -561,14 +1853,128 @@ export class DataAzurermKubernetesClusterKubeletIdentity extends cdktf.ComplexCo
     return this.getStringAttribute('user_assigned_identity_id');
   }
 }
-export class DataAzurermKubernetesClusterLinuxProfileSshKey extends cdktf.ComplexComputedList {
+
+export class DataAzurermKubernetesClusterKubeletIdentityList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermKubernetesClusterKubeletIdentityOutputReference {
+    return new DataAzurermKubernetesClusterKubeletIdentityOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermKubernetesClusterLinuxProfileSshKey {
+}
+
+export function dataAzurermKubernetesClusterLinuxProfileSshKeyToTerraform(struct?: DataAzurermKubernetesClusterLinuxProfileSshKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermKubernetesClusterLinuxProfileSshKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermKubernetesClusterLinuxProfileSshKey | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermKubernetesClusterLinuxProfileSshKey | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // key_data - computed: true, optional: false, required: false
   public get keyData() {
     return this.getStringAttribute('key_data');
   }
 }
-export class DataAzurermKubernetesClusterLinuxProfile extends cdktf.ComplexComputedList {
+
+export class DataAzurermKubernetesClusterLinuxProfileSshKeyList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermKubernetesClusterLinuxProfileSshKeyOutputReference {
+    return new DataAzurermKubernetesClusterLinuxProfileSshKeyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermKubernetesClusterLinuxProfile {
+}
+
+export function dataAzurermKubernetesClusterLinuxProfileToTerraform(struct?: DataAzurermKubernetesClusterLinuxProfile): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermKubernetesClusterLinuxProfileOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermKubernetesClusterLinuxProfile | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermKubernetesClusterLinuxProfile | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // admin_username - computed: true, optional: false, required: false
   public get adminUsername() {
@@ -576,12 +1982,69 @@ export class DataAzurermKubernetesClusterLinuxProfile extends cdktf.ComplexCompu
   }
 
   // ssh_key - computed: true, optional: false, required: false
+  private _sshKey = new DataAzurermKubernetesClusterLinuxProfileSshKeyList(this, "ssh_key", false);
   public get sshKey() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('ssh_key');
+    return this._sshKey;
   }
 }
-export class DataAzurermKubernetesClusterNetworkProfile extends cdktf.ComplexComputedList {
+
+export class DataAzurermKubernetesClusterLinuxProfileList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermKubernetesClusterLinuxProfileOutputReference {
+    return new DataAzurermKubernetesClusterLinuxProfileOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermKubernetesClusterNetworkProfile {
+}
+
+export function dataAzurermKubernetesClusterNetworkProfileToTerraform(struct?: DataAzurermKubernetesClusterNetworkProfile): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermKubernetesClusterNetworkProfileOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermKubernetesClusterNetworkProfile | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermKubernetesClusterNetworkProfile | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // dns_service_ip - computed: true, optional: false, required: false
   public get dnsServiceIp() {
@@ -618,7 +2081,64 @@ export class DataAzurermKubernetesClusterNetworkProfile extends cdktf.ComplexCom
     return this.getStringAttribute('service_cidr');
   }
 }
-export class DataAzurermKubernetesClusterOmsAgentOmsAgentIdentity extends cdktf.ComplexComputedList {
+
+export class DataAzurermKubernetesClusterNetworkProfileList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermKubernetesClusterNetworkProfileOutputReference {
+    return new DataAzurermKubernetesClusterNetworkProfileOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermKubernetesClusterOmsAgentOmsAgentIdentity {
+}
+
+export function dataAzurermKubernetesClusterOmsAgentOmsAgentIdentityToTerraform(struct?: DataAzurermKubernetesClusterOmsAgentOmsAgentIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermKubernetesClusterOmsAgentOmsAgentIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermKubernetesClusterOmsAgentOmsAgentIdentity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermKubernetesClusterOmsAgentOmsAgentIdentity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // client_id - computed: true, optional: false, required: false
   public get clientId() {
@@ -635,7 +2155,64 @@ export class DataAzurermKubernetesClusterOmsAgentOmsAgentIdentity extends cdktf.
     return this.getStringAttribute('user_assigned_identity_id');
   }
 }
-export class DataAzurermKubernetesClusterOmsAgent extends cdktf.ComplexComputedList {
+
+export class DataAzurermKubernetesClusterOmsAgentOmsAgentIdentityList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermKubernetesClusterOmsAgentOmsAgentIdentityOutputReference {
+    return new DataAzurermKubernetesClusterOmsAgentOmsAgentIdentityOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermKubernetesClusterOmsAgent {
+}
+
+export function dataAzurermKubernetesClusterOmsAgentToTerraform(struct?: DataAzurermKubernetesClusterOmsAgent): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermKubernetesClusterOmsAgentOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermKubernetesClusterOmsAgent | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermKubernetesClusterOmsAgent | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // log_analytics_workspace_id - computed: true, optional: false, required: false
   public get logAnalyticsWorkspaceId() {
@@ -643,12 +2220,69 @@ export class DataAzurermKubernetesClusterOmsAgent extends cdktf.ComplexComputedL
   }
 
   // oms_agent_identity - computed: true, optional: false, required: false
+  private _omsAgentIdentity = new DataAzurermKubernetesClusterOmsAgentOmsAgentIdentityList(this, "oms_agent_identity", false);
   public get omsAgentIdentity() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('oms_agent_identity');
+    return this._omsAgentIdentity;
   }
 }
-export class DataAzurermKubernetesClusterRoleBasedAccessControlAzureActiveDirectory extends cdktf.ComplexComputedList {
+
+export class DataAzurermKubernetesClusterOmsAgentList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermKubernetesClusterOmsAgentOutputReference {
+    return new DataAzurermKubernetesClusterOmsAgentOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermKubernetesClusterRoleBasedAccessControlAzureActiveDirectory {
+}
+
+export function dataAzurermKubernetesClusterRoleBasedAccessControlAzureActiveDirectoryToTerraform(struct?: DataAzurermKubernetesClusterRoleBasedAccessControlAzureActiveDirectory): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermKubernetesClusterRoleBasedAccessControlAzureActiveDirectoryOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermKubernetesClusterRoleBasedAccessControlAzureActiveDirectory | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermKubernetesClusterRoleBasedAccessControlAzureActiveDirectory | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // admin_group_object_ids - computed: true, optional: false, required: false
   public get adminGroupObjectIds() {
@@ -675,12 +2309,69 @@ export class DataAzurermKubernetesClusterRoleBasedAccessControlAzureActiveDirect
     return this.getStringAttribute('tenant_id');
   }
 }
-export class DataAzurermKubernetesClusterRoleBasedAccessControl extends cdktf.ComplexComputedList {
+
+export class DataAzurermKubernetesClusterRoleBasedAccessControlAzureActiveDirectoryList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermKubernetesClusterRoleBasedAccessControlAzureActiveDirectoryOutputReference {
+    return new DataAzurermKubernetesClusterRoleBasedAccessControlAzureActiveDirectoryOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermKubernetesClusterRoleBasedAccessControl {
+}
+
+export function dataAzurermKubernetesClusterRoleBasedAccessControlToTerraform(struct?: DataAzurermKubernetesClusterRoleBasedAccessControl): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermKubernetesClusterRoleBasedAccessControlOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermKubernetesClusterRoleBasedAccessControl | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermKubernetesClusterRoleBasedAccessControl | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // azure_active_directory - computed: true, optional: false, required: false
+  private _azureActiveDirectory = new DataAzurermKubernetesClusterRoleBasedAccessControlAzureActiveDirectoryList(this, "azure_active_directory", false);
   public get azureActiveDirectory() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('azure_active_directory');
+    return this._azureActiveDirectory;
   }
 
   // enabled - computed: true, optional: false, required: false
@@ -688,18 +2379,151 @@ export class DataAzurermKubernetesClusterRoleBasedAccessControl extends cdktf.Co
     return this.getBooleanAttribute('enabled');
   }
 }
-export class DataAzurermKubernetesClusterServicePrincipal extends cdktf.ComplexComputedList {
+
+export class DataAzurermKubernetesClusterRoleBasedAccessControlList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermKubernetesClusterRoleBasedAccessControlOutputReference {
+    return new DataAzurermKubernetesClusterRoleBasedAccessControlOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermKubernetesClusterServicePrincipal {
+}
+
+export function dataAzurermKubernetesClusterServicePrincipalToTerraform(struct?: DataAzurermKubernetesClusterServicePrincipal): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermKubernetesClusterServicePrincipalOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermKubernetesClusterServicePrincipal | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermKubernetesClusterServicePrincipal | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // client_id - computed: true, optional: false, required: false
   public get clientId() {
     return this.getStringAttribute('client_id');
   }
 }
-export class DataAzurermKubernetesClusterWindowsProfile extends cdktf.ComplexComputedList {
+
+export class DataAzurermKubernetesClusterServicePrincipalList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermKubernetesClusterServicePrincipalOutputReference {
+    return new DataAzurermKubernetesClusterServicePrincipalOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermKubernetesClusterWindowsProfile {
+}
+
+export function dataAzurermKubernetesClusterWindowsProfileToTerraform(struct?: DataAzurermKubernetesClusterWindowsProfile): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermKubernetesClusterWindowsProfileOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermKubernetesClusterWindowsProfile | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermKubernetesClusterWindowsProfile | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // admin_username - computed: true, optional: false, required: false
   public get adminUsername() {
     return this.getStringAttribute('admin_username');
+  }
+}
+
+export class DataAzurermKubernetesClusterWindowsProfileList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermKubernetesClusterWindowsProfileOutputReference {
+    return new DataAzurermKubernetesClusterWindowsProfileOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataAzurermKubernetesClusterTimeouts {
@@ -725,10 +2549,9 @@ export class DataAzurermKubernetesClusterTimeoutsOutputReference extends cdktf.C
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermKubernetesClusterTimeouts | undefined {
@@ -777,7 +2600,7 @@ export class DataAzurermKubernetesCluster extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_kubernetes_cluster";
+  public static readonly tfResourceType = "azurerm_kubernetes_cluster";
 
   // ===========
   // INITIALIZER
@@ -794,7 +2617,9 @@ export class DataAzurermKubernetesCluster extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'azurerm_kubernetes_cluster',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -811,18 +2636,21 @@ export class DataAzurermKubernetesCluster extends cdktf.TerraformDataSource {
   // ==========
 
   // aci_connector_linux - computed: true, optional: false, required: false
-  public aciConnectorLinux(index: string) {
-    return new DataAzurermKubernetesClusterAciConnectorLinux(this, 'aci_connector_linux', index, false);
+  private _aciConnectorLinux = new DataAzurermKubernetesClusterAciConnectorLinuxList(this, "aci_connector_linux", false);
+  public get aciConnectorLinux() {
+    return this._aciConnectorLinux;
   }
 
   // addon_profile - computed: true, optional: false, required: false
-  public addonProfile(index: string) {
-    return new DataAzurermKubernetesClusterAddonProfile(this, 'addon_profile', index, false);
+  private _addonProfile = new DataAzurermKubernetesClusterAddonProfileList(this, "addon_profile", false);
+  public get addonProfile() {
+    return this._addonProfile;
   }
 
   // agent_pool_profile - computed: true, optional: false, required: false
-  public agentPoolProfile(index: string) {
-    return new DataAzurermKubernetesClusterAgentPoolProfile(this, 'agent_pool_profile', index, false);
+  private _agentPoolProfile = new DataAzurermKubernetesClusterAgentPoolProfileList(this, "agent_pool_profile", false);
+  public get agentPoolProfile() {
+    return this._agentPoolProfile;
   }
 
   // api_server_authorized_ip_ranges - computed: true, optional: false, required: false
@@ -831,8 +2659,9 @@ export class DataAzurermKubernetesCluster extends cdktf.TerraformDataSource {
   }
 
   // azure_active_directory_role_based_access_control - computed: true, optional: false, required: false
-  public azureActiveDirectoryRoleBasedAccessControl(index: string) {
-    return new DataAzurermKubernetesClusterAzureActiveDirectoryRoleBasedAccessControl(this, 'azure_active_directory_role_based_access_control', index, false);
+  private _azureActiveDirectoryRoleBasedAccessControl = new DataAzurermKubernetesClusterAzureActiveDirectoryRoleBasedAccessControlList(this, "azure_active_directory_role_based_access_control", false);
+  public get azureActiveDirectoryRoleBasedAccessControl() {
+    return this._azureActiveDirectoryRoleBasedAccessControl;
   }
 
   // azure_policy_enabled - computed: true, optional: false, required: false
@@ -871,23 +2700,27 @@ export class DataAzurermKubernetesCluster extends cdktf.TerraformDataSource {
   }
 
   // identity - computed: true, optional: false, required: false
-  public identity(index: string) {
-    return new DataAzurermKubernetesClusterIdentity(this, 'identity', index, false);
+  private _identity = new DataAzurermKubernetesClusterIdentityList(this, "identity", false);
+  public get identity() {
+    return this._identity;
   }
 
   // ingress_application_gateway - computed: true, optional: false, required: false
-  public ingressApplicationGateway(index: string) {
-    return new DataAzurermKubernetesClusterIngressApplicationGateway(this, 'ingress_application_gateway', index, false);
+  private _ingressApplicationGateway = new DataAzurermKubernetesClusterIngressApplicationGatewayList(this, "ingress_application_gateway", false);
+  public get ingressApplicationGateway() {
+    return this._ingressApplicationGateway;
   }
 
   // key_vault_secrets_provider - computed: true, optional: false, required: false
-  public keyVaultSecretsProvider(index: string) {
-    return new DataAzurermKubernetesClusterKeyVaultSecretsProvider(this, 'key_vault_secrets_provider', index, false);
+  private _keyVaultSecretsProvider = new DataAzurermKubernetesClusterKeyVaultSecretsProviderList(this, "key_vault_secrets_provider", false);
+  public get keyVaultSecretsProvider() {
+    return this._keyVaultSecretsProvider;
   }
 
   // kube_admin_config - computed: true, optional: false, required: false
-  public kubeAdminConfig(index: string) {
-    return new DataAzurermKubernetesClusterKubeAdminConfig(this, 'kube_admin_config', index, false);
+  private _kubeAdminConfig = new DataAzurermKubernetesClusterKubeAdminConfigList(this, "kube_admin_config", false);
+  public get kubeAdminConfig() {
+    return this._kubeAdminConfig;
   }
 
   // kube_admin_config_raw - computed: true, optional: false, required: false
@@ -896,8 +2729,9 @@ export class DataAzurermKubernetesCluster extends cdktf.TerraformDataSource {
   }
 
   // kube_config - computed: true, optional: false, required: false
-  public kubeConfig(index: string) {
-    return new DataAzurermKubernetesClusterKubeConfig(this, 'kube_config', index, false);
+  private _kubeConfig = new DataAzurermKubernetesClusterKubeConfigList(this, "kube_config", false);
+  public get kubeConfig() {
+    return this._kubeConfig;
   }
 
   // kube_config_raw - computed: true, optional: false, required: false
@@ -906,8 +2740,9 @@ export class DataAzurermKubernetesCluster extends cdktf.TerraformDataSource {
   }
 
   // kubelet_identity - computed: true, optional: false, required: false
-  public kubeletIdentity(index: string) {
-    return new DataAzurermKubernetesClusterKubeletIdentity(this, 'kubelet_identity', index, false);
+  private _kubeletIdentity = new DataAzurermKubernetesClusterKubeletIdentityList(this, "kubelet_identity", false);
+  public get kubeletIdentity() {
+    return this._kubeletIdentity;
   }
 
   // kubernetes_version - computed: true, optional: false, required: false
@@ -916,8 +2751,9 @@ export class DataAzurermKubernetesCluster extends cdktf.TerraformDataSource {
   }
 
   // linux_profile - computed: true, optional: false, required: false
-  public linuxProfile(index: string) {
-    return new DataAzurermKubernetesClusterLinuxProfile(this, 'linux_profile', index, false);
+  private _linuxProfile = new DataAzurermKubernetesClusterLinuxProfileList(this, "linux_profile", false);
+  public get linuxProfile() {
+    return this._linuxProfile;
   }
 
   // location - computed: true, optional: false, required: false
@@ -939,8 +2775,9 @@ export class DataAzurermKubernetesCluster extends cdktf.TerraformDataSource {
   }
 
   // network_profile - computed: true, optional: false, required: false
-  public networkProfile(index: string) {
-    return new DataAzurermKubernetesClusterNetworkProfile(this, 'network_profile', index, false);
+  private _networkProfile = new DataAzurermKubernetesClusterNetworkProfileList(this, "network_profile", false);
+  public get networkProfile() {
+    return this._networkProfile;
   }
 
   // node_resource_group - computed: true, optional: false, required: false
@@ -949,8 +2786,9 @@ export class DataAzurermKubernetesCluster extends cdktf.TerraformDataSource {
   }
 
   // oms_agent - computed: true, optional: false, required: false
-  public omsAgent(index: string) {
-    return new DataAzurermKubernetesClusterOmsAgent(this, 'oms_agent', index, false);
+  private _omsAgent = new DataAzurermKubernetesClusterOmsAgentList(this, "oms_agent", false);
+  public get omsAgent() {
+    return this._omsAgent;
   }
 
   // open_service_mesh_enabled - computed: true, optional: false, required: false
@@ -987,8 +2825,9 @@ export class DataAzurermKubernetesCluster extends cdktf.TerraformDataSource {
   }
 
   // role_based_access_control - computed: true, optional: false, required: false
-  public roleBasedAccessControl(index: string) {
-    return new DataAzurermKubernetesClusterRoleBasedAccessControl(this, 'role_based_access_control', index, false);
+  private _roleBasedAccessControl = new DataAzurermKubernetesClusterRoleBasedAccessControlList(this, "role_based_access_control", false);
+  public get roleBasedAccessControl() {
+    return this._roleBasedAccessControl;
   }
 
   // role_based_access_control_enabled - computed: true, optional: false, required: false
@@ -997,8 +2836,9 @@ export class DataAzurermKubernetesCluster extends cdktf.TerraformDataSource {
   }
 
   // service_principal - computed: true, optional: false, required: false
-  public servicePrincipal(index: string) {
-    return new DataAzurermKubernetesClusterServicePrincipal(this, 'service_principal', index, false);
+  private _servicePrincipal = new DataAzurermKubernetesClusterServicePrincipalList(this, "service_principal", false);
+  public get servicePrincipal() {
+    return this._servicePrincipal;
   }
 
   // tags - computed: true, optional: false, required: false
@@ -1007,12 +2847,13 @@ export class DataAzurermKubernetesCluster extends cdktf.TerraformDataSource {
   }
 
   // windows_profile - computed: true, optional: false, required: false
-  public windowsProfile(index: string) {
-    return new DataAzurermKubernetesClusterWindowsProfile(this, 'windows_profile', index, false);
+  private _windowsProfile = new DataAzurermKubernetesClusterWindowsProfileList(this, "windows_profile", false);
+  public get windowsProfile() {
+    return this._windowsProfile;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermKubernetesClusterTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermKubernetesClusterTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

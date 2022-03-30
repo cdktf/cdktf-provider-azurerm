@@ -70,10 +70,9 @@ export class VideoAnalyzerIdentityOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): VideoAnalyzerIdentity | undefined {
@@ -157,10 +156,9 @@ export class VideoAnalyzerStorageAccountOutputReference extends cdktf.ComplexObj
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): VideoAnalyzerStorageAccount | undefined {
@@ -254,10 +252,9 @@ export class VideoAnalyzerTimeoutsOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): VideoAnalyzerTimeouts | undefined {
@@ -372,7 +369,7 @@ export class VideoAnalyzer extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_video_analyzer";
+  public static readonly tfResourceType = "azurerm_video_analyzer";
 
   // ===========
   // INITIALIZER
@@ -389,7 +386,9 @@ export class VideoAnalyzer extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_video_analyzer',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -470,7 +469,7 @@ export class VideoAnalyzer extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: false, required: true
-  private _identity = new VideoAnalyzerIdentityOutputReference(this, "identity", true);
+  private _identity = new VideoAnalyzerIdentityOutputReference(this, "identity");
   public get identity() {
     return this._identity;
   }
@@ -483,7 +482,7 @@ export class VideoAnalyzer extends cdktf.TerraformResource {
   }
 
   // storage_account - computed: false, optional: false, required: true
-  private _storageAccount = new VideoAnalyzerStorageAccountOutputReference(this, "storage_account", true);
+  private _storageAccount = new VideoAnalyzerStorageAccountOutputReference(this, "storage_account");
   public get storageAccount() {
     return this._storageAccount;
   }
@@ -496,7 +495,7 @@ export class VideoAnalyzer extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new VideoAnalyzerTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new VideoAnalyzerTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

@@ -136,10 +136,9 @@ export class FirewallManagementIpConfigurationOutputReference extends cdktf.Comp
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): FirewallManagementIpConfiguration | undefined {
@@ -257,10 +256,9 @@ export class FirewallTimeoutsOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): FirewallTimeouts | undefined {
@@ -394,10 +392,9 @@ export class FirewallVirtualHubOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): FirewallVirtualHub | undefined {
@@ -475,7 +472,7 @@ export class Firewall extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_firewall";
+  public static readonly tfResourceType = "azurerm_firewall";
 
   // ===========
   // INITIALIZER
@@ -492,7 +489,9 @@ export class Firewall extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_firewall',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -710,7 +709,7 @@ export class Firewall extends cdktf.TerraformResource {
   }
 
   // management_ip_configuration - computed: false, optional: true, required: false
-  private _managementIpConfiguration = new FirewallManagementIpConfigurationOutputReference(this, "management_ip_configuration", true);
+  private _managementIpConfiguration = new FirewallManagementIpConfigurationOutputReference(this, "management_ip_configuration");
   public get managementIpConfiguration() {
     return this._managementIpConfiguration;
   }
@@ -726,7 +725,7 @@ export class Firewall extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new FirewallTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new FirewallTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
@@ -742,7 +741,7 @@ export class Firewall extends cdktf.TerraformResource {
   }
 
   // virtual_hub - computed: false, optional: true, required: false
-  private _virtualHub = new FirewallVirtualHubOutputReference(this, "virtual_hub", true);
+  private _virtualHub = new FirewallVirtualHubOutputReference(this, "virtual_hub");
   public get virtualHub() {
     return this._virtualHub;
   }

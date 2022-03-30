@@ -130,10 +130,9 @@ export class ApiManagementApiImportWsdlSelectorOutputReference extends cdktf.Com
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ApiManagementApiImportWsdlSelector | undefined {
@@ -224,10 +223,9 @@ export class ApiManagementApiImportOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ApiManagementApiImport | undefined {
@@ -290,7 +288,7 @@ export class ApiManagementApiImportOutputReference extends cdktf.ComplexObject {
   }
 
   // wsdl_selector - computed: false, optional: true, required: false
-  private _wsdlSelector = new ApiManagementApiImportWsdlSelectorOutputReference(this, "wsdl_selector", true);
+  private _wsdlSelector = new ApiManagementApiImportWsdlSelectorOutputReference(this, "wsdl_selector");
   public get wsdlSelector() {
     return this._wsdlSelector;
   }
@@ -333,10 +331,9 @@ export class ApiManagementApiOauth2AuthorizationOutputReference extends cdktf.Co
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ApiManagementApiOauth2Authorization | undefined {
@@ -423,10 +420,9 @@ export class ApiManagementApiOpenidAuthenticationOutputReference extends cdktf.C
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ApiManagementApiOpenidAuthentication | undefined {
@@ -513,10 +509,9 @@ export class ApiManagementApiSubscriptionKeyParameterNamesOutputReference extend
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ApiManagementApiSubscriptionKeyParameterNames | undefined {
@@ -610,10 +605,9 @@ export class ApiManagementApiTimeoutsOutputReference extends cdktf.ComplexObject
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ApiManagementApiTimeouts | undefined {
@@ -728,7 +722,7 @@ export class ApiManagementApi extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_api_management_api";
+  public static readonly tfResourceType = "azurerm_api_management_api";
 
   // ===========
   // INITIALIZER
@@ -745,7 +739,9 @@ export class ApiManagementApi extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_api_management_api',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1039,7 +1035,7 @@ export class ApiManagementApi extends cdktf.TerraformResource {
   }
 
   // import - computed: false, optional: true, required: false
-  private _import = new ApiManagementApiImportOutputReference(this, "import", true);
+  private _import = new ApiManagementApiImportOutputReference(this, "import");
   public get import() {
     return this._import;
   }
@@ -1055,7 +1051,7 @@ export class ApiManagementApi extends cdktf.TerraformResource {
   }
 
   // oauth2_authorization - computed: false, optional: true, required: false
-  private _oauth2Authorization = new ApiManagementApiOauth2AuthorizationOutputReference(this, "oauth2_authorization", true);
+  private _oauth2Authorization = new ApiManagementApiOauth2AuthorizationOutputReference(this, "oauth2_authorization");
   public get oauth2Authorization() {
     return this._oauth2Authorization;
   }
@@ -1071,7 +1067,7 @@ export class ApiManagementApi extends cdktf.TerraformResource {
   }
 
   // openid_authentication - computed: false, optional: true, required: false
-  private _openidAuthentication = new ApiManagementApiOpenidAuthenticationOutputReference(this, "openid_authentication", true);
+  private _openidAuthentication = new ApiManagementApiOpenidAuthenticationOutputReference(this, "openid_authentication");
   public get openidAuthentication() {
     return this._openidAuthentication;
   }
@@ -1087,7 +1083,7 @@ export class ApiManagementApi extends cdktf.TerraformResource {
   }
 
   // subscription_key_parameter_names - computed: false, optional: true, required: false
-  private _subscriptionKeyParameterNames = new ApiManagementApiSubscriptionKeyParameterNamesOutputReference(this, "subscription_key_parameter_names", true);
+  private _subscriptionKeyParameterNames = new ApiManagementApiSubscriptionKeyParameterNamesOutputReference(this, "subscription_key_parameter_names");
   public get subscriptionKeyParameterNames() {
     return this._subscriptionKeyParameterNames;
   }
@@ -1103,7 +1099,7 @@ export class ApiManagementApi extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ApiManagementApiTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new ApiManagementApiTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

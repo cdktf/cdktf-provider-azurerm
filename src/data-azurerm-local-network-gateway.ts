@@ -22,7 +22,45 @@ export interface DataAzurermLocalNetworkGatewayConfig extends cdktf.TerraformMet
   */
   readonly timeouts?: DataAzurermLocalNetworkGatewayTimeouts;
 }
-export class DataAzurermLocalNetworkGatewayBgpSettings extends cdktf.ComplexComputedList {
+export interface DataAzurermLocalNetworkGatewayBgpSettings {
+}
+
+export function dataAzurermLocalNetworkGatewayBgpSettingsToTerraform(struct?: DataAzurermLocalNetworkGatewayBgpSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermLocalNetworkGatewayBgpSettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermLocalNetworkGatewayBgpSettings | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermLocalNetworkGatewayBgpSettings | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // asn - computed: true, optional: false, required: false
   public get asn() {
@@ -37,6 +75,25 @@ export class DataAzurermLocalNetworkGatewayBgpSettings extends cdktf.ComplexComp
   // peer_weight - computed: true, optional: false, required: false
   public get peerWeight() {
     return this.getNumberAttribute('peer_weight');
+  }
+}
+
+export class DataAzurermLocalNetworkGatewayBgpSettingsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermLocalNetworkGatewayBgpSettingsOutputReference {
+    return new DataAzurermLocalNetworkGatewayBgpSettingsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataAzurermLocalNetworkGatewayTimeouts {
@@ -62,10 +119,9 @@ export class DataAzurermLocalNetworkGatewayTimeoutsOutputReference extends cdktf
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermLocalNetworkGatewayTimeouts | undefined {
@@ -114,7 +170,7 @@ export class DataAzurermLocalNetworkGateway extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_local_network_gateway";
+  public static readonly tfResourceType = "azurerm_local_network_gateway";
 
   // ===========
   // INITIALIZER
@@ -131,7 +187,9 @@ export class DataAzurermLocalNetworkGateway extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'azurerm_local_network_gateway',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -153,8 +211,9 @@ export class DataAzurermLocalNetworkGateway extends cdktf.TerraformDataSource {
   }
 
   // bgp_settings - computed: true, optional: false, required: false
-  public bgpSettings(index: string) {
-    return new DataAzurermLocalNetworkGatewayBgpSettings(this, 'bgp_settings', index, false);
+  private _bgpSettings = new DataAzurermLocalNetworkGatewayBgpSettingsList(this, "bgp_settings", false);
+  public get bgpSettings() {
+    return this._bgpSettings;
   }
 
   // gateway_address - computed: true, optional: false, required: false
@@ -209,7 +268,7 @@ export class DataAzurermLocalNetworkGateway extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermLocalNetworkGatewayTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermLocalNetworkGatewayTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

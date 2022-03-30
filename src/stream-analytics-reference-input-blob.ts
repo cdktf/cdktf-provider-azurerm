@@ -89,10 +89,9 @@ export class StreamAnalyticsReferenceInputBlobSerializationOutputReference exten
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): StreamAnalyticsReferenceInputBlobSerialization | undefined {
@@ -211,10 +210,9 @@ export class StreamAnalyticsReferenceInputBlobTimeoutsOutputReference extends cd
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): StreamAnalyticsReferenceInputBlobTimeouts | undefined {
@@ -329,7 +327,7 @@ export class StreamAnalyticsReferenceInputBlob extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_stream_analytics_reference_input_blob";
+  public static readonly tfResourceType = "azurerm_stream_analytics_reference_input_blob";
 
   // ===========
   // INITIALIZER
@@ -346,7 +344,9 @@ export class StreamAnalyticsReferenceInputBlob extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_stream_analytics_reference_input_blob',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -493,7 +493,7 @@ export class StreamAnalyticsReferenceInputBlob extends cdktf.TerraformResource {
   }
 
   // serialization - computed: false, optional: false, required: true
-  private _serialization = new StreamAnalyticsReferenceInputBlobSerializationOutputReference(this, "serialization", true);
+  private _serialization = new StreamAnalyticsReferenceInputBlobSerializationOutputReference(this, "serialization");
   public get serialization() {
     return this._serialization;
   }
@@ -506,7 +506,7 @@ export class StreamAnalyticsReferenceInputBlob extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new StreamAnalyticsReferenceInputBlobTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new StreamAnalyticsReferenceInputBlobTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

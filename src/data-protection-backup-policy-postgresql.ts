@@ -83,10 +83,9 @@ export class DataProtectionBackupPolicyPostgresqlRetentionRuleCriteriaOutputRefe
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataProtectionBackupPolicyPostgresqlRetentionRuleCriteria | undefined {
@@ -286,10 +285,9 @@ export class DataProtectionBackupPolicyPostgresqlTimeoutsOutputReference extends
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataProtectionBackupPolicyPostgresqlTimeouts | undefined {
@@ -404,7 +402,7 @@ export class DataProtectionBackupPolicyPostgresql extends cdktf.TerraformResourc
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_data_protection_backup_policy_postgresql";
+  public static readonly tfResourceType = "azurerm_data_protection_backup_policy_postgresql";
 
   // ===========
   // INITIALIZER
@@ -421,7 +419,9 @@ export class DataProtectionBackupPolicyPostgresql extends cdktf.TerraformResourc
     super(scope, id, {
       terraformResourceType: 'azurerm_data_protection_backup_policy_postgresql',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -529,7 +529,7 @@ export class DataProtectionBackupPolicyPostgresql extends cdktf.TerraformResourc
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataProtectionBackupPolicyPostgresqlTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataProtectionBackupPolicyPostgresqlTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

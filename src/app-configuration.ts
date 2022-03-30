@@ -40,7 +40,45 @@ export interface AppConfigurationConfig extends cdktf.TerraformMetaArguments {
   */
   readonly timeouts?: AppConfigurationTimeouts;
 }
-export class AppConfigurationPrimaryReadKey extends cdktf.ComplexComputedList {
+export interface AppConfigurationPrimaryReadKey {
+}
+
+export function appConfigurationPrimaryReadKeyToTerraform(struct?: AppConfigurationPrimaryReadKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class AppConfigurationPrimaryReadKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AppConfigurationPrimaryReadKey | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppConfigurationPrimaryReadKey | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // connection_string - computed: true, optional: false, required: false
   public get connectionString() {
@@ -57,7 +95,64 @@ export class AppConfigurationPrimaryReadKey extends cdktf.ComplexComputedList {
     return this.getStringAttribute('secret');
   }
 }
-export class AppConfigurationPrimaryWriteKey extends cdktf.ComplexComputedList {
+
+export class AppConfigurationPrimaryReadKeyList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AppConfigurationPrimaryReadKeyOutputReference {
+    return new AppConfigurationPrimaryReadKeyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface AppConfigurationPrimaryWriteKey {
+}
+
+export function appConfigurationPrimaryWriteKeyToTerraform(struct?: AppConfigurationPrimaryWriteKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class AppConfigurationPrimaryWriteKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AppConfigurationPrimaryWriteKey | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppConfigurationPrimaryWriteKey | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // connection_string - computed: true, optional: false, required: false
   public get connectionString() {
@@ -74,7 +169,64 @@ export class AppConfigurationPrimaryWriteKey extends cdktf.ComplexComputedList {
     return this.getStringAttribute('secret');
   }
 }
-export class AppConfigurationSecondaryReadKey extends cdktf.ComplexComputedList {
+
+export class AppConfigurationPrimaryWriteKeyList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AppConfigurationPrimaryWriteKeyOutputReference {
+    return new AppConfigurationPrimaryWriteKeyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface AppConfigurationSecondaryReadKey {
+}
+
+export function appConfigurationSecondaryReadKeyToTerraform(struct?: AppConfigurationSecondaryReadKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class AppConfigurationSecondaryReadKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AppConfigurationSecondaryReadKey | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppConfigurationSecondaryReadKey | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // connection_string - computed: true, optional: false, required: false
   public get connectionString() {
@@ -91,7 +243,64 @@ export class AppConfigurationSecondaryReadKey extends cdktf.ComplexComputedList 
     return this.getStringAttribute('secret');
   }
 }
-export class AppConfigurationSecondaryWriteKey extends cdktf.ComplexComputedList {
+
+export class AppConfigurationSecondaryReadKeyList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AppConfigurationSecondaryReadKeyOutputReference {
+    return new AppConfigurationSecondaryReadKeyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface AppConfigurationSecondaryWriteKey {
+}
+
+export function appConfigurationSecondaryWriteKeyToTerraform(struct?: AppConfigurationSecondaryWriteKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class AppConfigurationSecondaryWriteKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AppConfigurationSecondaryWriteKey | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppConfigurationSecondaryWriteKey | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // connection_string - computed: true, optional: false, required: false
   public get connectionString() {
@@ -106,6 +315,25 @@ export class AppConfigurationSecondaryWriteKey extends cdktf.ComplexComputedList
   // secret - computed: true, optional: false, required: false
   public get secret() {
     return this.getStringAttribute('secret');
+  }
+}
+
+export class AppConfigurationSecondaryWriteKeyList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AppConfigurationSecondaryWriteKeyOutputReference {
+    return new AppConfigurationSecondaryWriteKeyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface AppConfigurationIdentity {
@@ -136,10 +364,9 @@ export class AppConfigurationIdentityOutputReference extends cdktf.ComplexObject
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AppConfigurationIdentity | undefined {
@@ -246,10 +473,9 @@ export class AppConfigurationTimeoutsOutputReference extends cdktf.ComplexObject
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AppConfigurationTimeouts | undefined {
@@ -364,7 +590,7 @@ export class AppConfiguration extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_app_configuration";
+  public static readonly tfResourceType = "azurerm_app_configuration";
 
   // ===========
   // INITIALIZER
@@ -381,7 +607,9 @@ export class AppConfiguration extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_app_configuration',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -438,13 +666,15 @@ export class AppConfiguration extends cdktf.TerraformResource {
   }
 
   // primary_read_key - computed: true, optional: false, required: false
-  public primaryReadKey(index: string) {
-    return new AppConfigurationPrimaryReadKey(this, 'primary_read_key', index, false);
+  private _primaryReadKey = new AppConfigurationPrimaryReadKeyList(this, "primary_read_key", false);
+  public get primaryReadKey() {
+    return this._primaryReadKey;
   }
 
   // primary_write_key - computed: true, optional: false, required: false
-  public primaryWriteKey(index: string) {
-    return new AppConfigurationPrimaryWriteKey(this, 'primary_write_key', index, false);
+  private _primaryWriteKey = new AppConfigurationPrimaryWriteKeyList(this, "primary_write_key", false);
+  public get primaryWriteKey() {
+    return this._primaryWriteKey;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -461,13 +691,15 @@ export class AppConfiguration extends cdktf.TerraformResource {
   }
 
   // secondary_read_key - computed: true, optional: false, required: false
-  public secondaryReadKey(index: string) {
-    return new AppConfigurationSecondaryReadKey(this, 'secondary_read_key', index, false);
+  private _secondaryReadKey = new AppConfigurationSecondaryReadKeyList(this, "secondary_read_key", false);
+  public get secondaryReadKey() {
+    return this._secondaryReadKey;
   }
 
   // secondary_write_key - computed: true, optional: false, required: false
-  public secondaryWriteKey(index: string) {
-    return new AppConfigurationSecondaryWriteKey(this, 'secondary_write_key', index, false);
+  private _secondaryWriteKey = new AppConfigurationSecondaryWriteKeyList(this, "secondary_write_key", false);
+  public get secondaryWriteKey() {
+    return this._secondaryWriteKey;
   }
 
   // sku - computed: false, optional: true, required: false
@@ -503,7 +735,7 @@ export class AppConfiguration extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity = new AppConfigurationIdentityOutputReference(this, "identity", true);
+  private _identity = new AppConfigurationIdentityOutputReference(this, "identity");
   public get identity() {
     return this._identity;
   }
@@ -519,7 +751,7 @@ export class AppConfiguration extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AppConfigurationTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new AppConfigurationTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

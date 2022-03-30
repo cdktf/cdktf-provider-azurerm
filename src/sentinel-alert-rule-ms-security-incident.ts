@@ -96,10 +96,9 @@ export class SentinelAlertRuleMsSecurityIncidentTimeoutsOutputReference extends 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): SentinelAlertRuleMsSecurityIncidentTimeouts | undefined {
@@ -214,7 +213,7 @@ export class SentinelAlertRuleMsSecurityIncident extends cdktf.TerraformResource
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_sentinel_alert_rule_ms_security_incident";
+  public static readonly tfResourceType = "azurerm_sentinel_alert_rule_ms_security_incident";
 
   // ===========
   // INITIALIZER
@@ -231,7 +230,9 @@ export class SentinelAlertRuleMsSecurityIncident extends cdktf.TerraformResource
     super(scope, id, {
       terraformResourceType: 'azurerm_sentinel_alert_rule_ms_security_incident',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -423,7 +424,7 @@ export class SentinelAlertRuleMsSecurityIncident extends cdktf.TerraformResource
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new SentinelAlertRuleMsSecurityIncidentTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new SentinelAlertRuleMsSecurityIncidentTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

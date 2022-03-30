@@ -82,10 +82,9 @@ export class EventhubCaptureDescriptionDestinationOutputReference extends cdktf.
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): EventhubCaptureDescriptionDestination | undefined {
@@ -229,10 +228,9 @@ export class EventhubCaptureDescriptionOutputReference extends cdktf.ComplexObje
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): EventhubCaptureDescription | undefined {
@@ -361,7 +359,7 @@ export class EventhubCaptureDescriptionOutputReference extends cdktf.ComplexObje
   }
 
   // destination - computed: false, optional: false, required: true
-  private _destination = new EventhubCaptureDescriptionDestinationOutputReference(this, "destination", true);
+  private _destination = new EventhubCaptureDescriptionDestinationOutputReference(this, "destination");
   public get destination() {
     return this._destination;
   }
@@ -411,10 +409,9 @@ export class EventhubTimeoutsOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): EventhubTimeouts | undefined {
@@ -529,7 +526,7 @@ export class Eventhub extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_eventhub";
+  public static readonly tfResourceType = "azurerm_eventhub";
 
   // ===========
   // INITIALIZER
@@ -546,7 +543,9 @@ export class Eventhub extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_eventhub',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -659,7 +658,7 @@ export class Eventhub extends cdktf.TerraformResource {
   }
 
   // capture_description - computed: false, optional: true, required: false
-  private _captureDescription = new EventhubCaptureDescriptionOutputReference(this, "capture_description", true);
+  private _captureDescription = new EventhubCaptureDescriptionOutputReference(this, "capture_description");
   public get captureDescription() {
     return this._captureDescription;
   }
@@ -675,7 +674,7 @@ export class Eventhub extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new EventhubTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new EventhubTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

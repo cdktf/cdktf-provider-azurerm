@@ -122,10 +122,9 @@ export class DataFactoryLinkedServiceAzureDatabricksInstancePoolOutputReference 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataFactoryLinkedServiceAzureDatabricksInstancePool | undefined {
@@ -253,10 +252,9 @@ export class DataFactoryLinkedServiceAzureDatabricksKeyVaultPasswordOutputRefere
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataFactoryLinkedServiceAzureDatabricksKeyVaultPassword | undefined {
@@ -380,10 +378,9 @@ export class DataFactoryLinkedServiceAzureDatabricksNewClusterConfigOutputRefere
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataFactoryLinkedServiceAzureDatabricksNewClusterConfig | undefined {
@@ -653,10 +650,9 @@ export class DataFactoryLinkedServiceAzureDatabricksTimeoutsOutputReference exte
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataFactoryLinkedServiceAzureDatabricksTimeouts | undefined {
@@ -771,7 +767,7 @@ export class DataFactoryLinkedServiceAzureDatabricks extends cdktf.TerraformReso
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_data_factory_linked_service_azure_databricks";
+  public static readonly tfResourceType = "azurerm_data_factory_linked_service_azure_databricks";
 
   // ===========
   // INITIALIZER
@@ -788,7 +784,9 @@ export class DataFactoryLinkedServiceAzureDatabricks extends cdktf.TerraformReso
     super(scope, id, {
       terraformResourceType: 'azurerm_data_factory_linked_service_azure_databricks',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1023,7 +1021,7 @@ export class DataFactoryLinkedServiceAzureDatabricks extends cdktf.TerraformReso
   }
 
   // instance_pool - computed: false, optional: true, required: false
-  private _instancePool = new DataFactoryLinkedServiceAzureDatabricksInstancePoolOutputReference(this, "instance_pool", true);
+  private _instancePool = new DataFactoryLinkedServiceAzureDatabricksInstancePoolOutputReference(this, "instance_pool");
   public get instancePool() {
     return this._instancePool;
   }
@@ -1039,7 +1037,7 @@ export class DataFactoryLinkedServiceAzureDatabricks extends cdktf.TerraformReso
   }
 
   // key_vault_password - computed: false, optional: true, required: false
-  private _keyVaultPassword = new DataFactoryLinkedServiceAzureDatabricksKeyVaultPasswordOutputReference(this, "key_vault_password", true);
+  private _keyVaultPassword = new DataFactoryLinkedServiceAzureDatabricksKeyVaultPasswordOutputReference(this, "key_vault_password");
   public get keyVaultPassword() {
     return this._keyVaultPassword;
   }
@@ -1055,7 +1053,7 @@ export class DataFactoryLinkedServiceAzureDatabricks extends cdktf.TerraformReso
   }
 
   // new_cluster_config - computed: false, optional: true, required: false
-  private _newClusterConfig = new DataFactoryLinkedServiceAzureDatabricksNewClusterConfigOutputReference(this, "new_cluster_config", true);
+  private _newClusterConfig = new DataFactoryLinkedServiceAzureDatabricksNewClusterConfigOutputReference(this, "new_cluster_config");
   public get newClusterConfig() {
     return this._newClusterConfig;
   }
@@ -1071,7 +1069,7 @@ export class DataFactoryLinkedServiceAzureDatabricks extends cdktf.TerraformReso
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataFactoryLinkedServiceAzureDatabricksTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataFactoryLinkedServiceAzureDatabricksTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

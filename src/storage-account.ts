@@ -194,10 +194,9 @@ export class StorageAccountAzureFilesAuthenticationActiveDirectoryOutputReferenc
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): StorageAccountAzureFilesAuthenticationActiveDirectory | undefined {
@@ -359,10 +358,9 @@ export class StorageAccountAzureFilesAuthenticationOutputReference extends cdktf
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): StorageAccountAzureFilesAuthentication | undefined {
@@ -406,7 +404,7 @@ export class StorageAccountAzureFilesAuthenticationOutputReference extends cdktf
   }
 
   // active_directory - computed: false, optional: true, required: false
-  private _activeDirectory = new StorageAccountAzureFilesAuthenticationActiveDirectoryOutputReference(this, "active_directory", true);
+  private _activeDirectory = new StorageAccountAzureFilesAuthenticationActiveDirectoryOutputReference(this, "active_directory");
   public get activeDirectory() {
     return this._activeDirectory;
   }
@@ -444,10 +442,9 @@ export class StorageAccountBlobPropertiesContainerDeleteRetentionPolicyOutputRef
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): StorageAccountBlobPropertiesContainerDeleteRetentionPolicy | undefined {
@@ -547,10 +544,9 @@ export class StorageAccountBlobPropertiesDeleteRetentionPolicyOutputReference ex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): StorageAccountBlobPropertiesDeleteRetentionPolicy | undefined {
@@ -649,10 +645,9 @@ export class StorageAccountBlobPropertiesOutputReference extends cdktf.ComplexOb
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): StorageAccountBlobProperties | undefined {
@@ -777,7 +772,7 @@ export class StorageAccountBlobPropertiesOutputReference extends cdktf.ComplexOb
   }
 
   // container_delete_retention_policy - computed: false, optional: true, required: false
-  private _containerDeleteRetentionPolicy = new StorageAccountBlobPropertiesContainerDeleteRetentionPolicyOutputReference(this, "container_delete_retention_policy", true);
+  private _containerDeleteRetentionPolicy = new StorageAccountBlobPropertiesContainerDeleteRetentionPolicyOutputReference(this, "container_delete_retention_policy");
   public get containerDeleteRetentionPolicy() {
     return this._containerDeleteRetentionPolicy;
   }
@@ -810,7 +805,7 @@ export class StorageAccountBlobPropertiesOutputReference extends cdktf.ComplexOb
   }
 
   // delete_retention_policy - computed: false, optional: true, required: false
-  private _deleteRetentionPolicy = new StorageAccountBlobPropertiesDeleteRetentionPolicyOutputReference(this, "delete_retention_policy", true);
+  private _deleteRetentionPolicy = new StorageAccountBlobPropertiesDeleteRetentionPolicyOutputReference(this, "delete_retention_policy");
   public get deleteRetentionPolicy() {
     return this._deleteRetentionPolicy;
   }
@@ -853,10 +848,9 @@ export class StorageAccountCustomDomainOutputReference extends cdktf.ComplexObje
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): StorageAccountCustomDomain | undefined {
@@ -943,10 +937,9 @@ export class StorageAccountCustomerManagedKeyOutputReference extends cdktf.Compl
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): StorageAccountCustomerManagedKey | undefined {
@@ -1030,10 +1023,9 @@ export class StorageAccountIdentityOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): StorageAccountIdentity | undefined {
@@ -1169,10 +1161,9 @@ export class StorageAccountNetworkRulesOutputReference extends cdktf.ComplexObje
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): StorageAccountNetworkRules | undefined {
@@ -1373,10 +1364,9 @@ export class StorageAccountQueuePropertiesHourMetricsOutputReference extends cdk
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): StorageAccountQueuePropertiesHourMetrics | undefined {
@@ -1519,10 +1509,9 @@ export class StorageAccountQueuePropertiesLoggingOutputReference extends cdktf.C
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): StorageAccountQueuePropertiesLogging | undefined {
@@ -1676,10 +1665,9 @@ export class StorageAccountQueuePropertiesMinuteMetricsOutputReference extends c
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): StorageAccountQueuePropertiesMinuteMetrics | undefined {
@@ -1825,10 +1813,9 @@ export class StorageAccountQueuePropertiesOutputReference extends cdktf.ComplexO
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): StorageAccountQueueProperties | undefined {
@@ -1888,7 +1875,7 @@ export class StorageAccountQueuePropertiesOutputReference extends cdktf.ComplexO
   }
 
   // hour_metrics - computed: false, optional: true, required: false
-  private _hourMetrics = new StorageAccountQueuePropertiesHourMetricsOutputReference(this, "hour_metrics", true);
+  private _hourMetrics = new StorageAccountQueuePropertiesHourMetricsOutputReference(this, "hour_metrics");
   public get hourMetrics() {
     return this._hourMetrics;
   }
@@ -1904,7 +1891,7 @@ export class StorageAccountQueuePropertiesOutputReference extends cdktf.ComplexO
   }
 
   // logging - computed: false, optional: true, required: false
-  private _logging = new StorageAccountQueuePropertiesLoggingOutputReference(this, "logging", true);
+  private _logging = new StorageAccountQueuePropertiesLoggingOutputReference(this, "logging");
   public get logging() {
     return this._logging;
   }
@@ -1920,7 +1907,7 @@ export class StorageAccountQueuePropertiesOutputReference extends cdktf.ComplexO
   }
 
   // minute_metrics - computed: false, optional: true, required: false
-  private _minuteMetrics = new StorageAccountQueuePropertiesMinuteMetricsOutputReference(this, "minute_metrics", true);
+  private _minuteMetrics = new StorageAccountQueuePropertiesMinuteMetricsOutputReference(this, "minute_metrics");
   public get minuteMetrics() {
     return this._minuteMetrics;
   }
@@ -1968,10 +1955,9 @@ export class StorageAccountRoutingOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): StorageAccountRouting | undefined {
@@ -2115,10 +2101,9 @@ export class StorageAccountSharePropertiesRetentionPolicyOutputReference extends
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): StorageAccountSharePropertiesRetentionPolicy | undefined {
@@ -2196,10 +2181,9 @@ export class StorageAccountSharePropertiesSmbOutputReference extends cdktf.Compl
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): StorageAccountSharePropertiesSmb | undefined {
@@ -2344,10 +2328,9 @@ export class StorageAccountSharePropertiesOutputReference extends cdktf.ComplexO
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): StorageAccountShareProperties | undefined {
@@ -2401,7 +2384,7 @@ export class StorageAccountSharePropertiesOutputReference extends cdktf.ComplexO
   }
 
   // retention_policy - computed: false, optional: true, required: false
-  private _retentionPolicy = new StorageAccountSharePropertiesRetentionPolicyOutputReference(this, "retention_policy", true);
+  private _retentionPolicy = new StorageAccountSharePropertiesRetentionPolicyOutputReference(this, "retention_policy");
   public get retentionPolicy() {
     return this._retentionPolicy;
   }
@@ -2417,7 +2400,7 @@ export class StorageAccountSharePropertiesOutputReference extends cdktf.ComplexO
   }
 
   // smb - computed: false, optional: true, required: false
-  private _smb = new StorageAccountSharePropertiesSmbOutputReference(this, "smb", true);
+  private _smb = new StorageAccountSharePropertiesSmbOutputReference(this, "smb");
   public get smb() {
     return this._smb;
   }
@@ -2460,10 +2443,9 @@ export class StorageAccountStaticWebsiteOutputReference extends cdktf.ComplexObj
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): StorageAccountStaticWebsite | undefined {
@@ -2563,10 +2545,9 @@ export class StorageAccountTimeoutsOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): StorageAccountTimeouts | undefined {
@@ -2681,7 +2662,7 @@ export class StorageAccount extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_storage_account";
+  public static readonly tfResourceType = "azurerm_storage_account";
 
   // ===========
   // INITIALIZER
@@ -2698,7 +2679,9 @@ export class StorageAccount extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_storage_account',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -3179,7 +3162,7 @@ export class StorageAccount extends cdktf.TerraformResource {
   }
 
   // azure_files_authentication - computed: false, optional: true, required: false
-  private _azureFilesAuthentication = new StorageAccountAzureFilesAuthenticationOutputReference(this, "azure_files_authentication", true);
+  private _azureFilesAuthentication = new StorageAccountAzureFilesAuthenticationOutputReference(this, "azure_files_authentication");
   public get azureFilesAuthentication() {
     return this._azureFilesAuthentication;
   }
@@ -3195,7 +3178,7 @@ export class StorageAccount extends cdktf.TerraformResource {
   }
 
   // blob_properties - computed: false, optional: true, required: false
-  private _blobProperties = new StorageAccountBlobPropertiesOutputReference(this, "blob_properties", true);
+  private _blobProperties = new StorageAccountBlobPropertiesOutputReference(this, "blob_properties");
   public get blobProperties() {
     return this._blobProperties;
   }
@@ -3211,7 +3194,7 @@ export class StorageAccount extends cdktf.TerraformResource {
   }
 
   // custom_domain - computed: false, optional: true, required: false
-  private _customDomain = new StorageAccountCustomDomainOutputReference(this, "custom_domain", true);
+  private _customDomain = new StorageAccountCustomDomainOutputReference(this, "custom_domain");
   public get customDomain() {
     return this._customDomain;
   }
@@ -3227,7 +3210,7 @@ export class StorageAccount extends cdktf.TerraformResource {
   }
 
   // customer_managed_key - computed: false, optional: true, required: false
-  private _customerManagedKey = new StorageAccountCustomerManagedKeyOutputReference(this, "customer_managed_key", true);
+  private _customerManagedKey = new StorageAccountCustomerManagedKeyOutputReference(this, "customer_managed_key");
   public get customerManagedKey() {
     return this._customerManagedKey;
   }
@@ -3243,7 +3226,7 @@ export class StorageAccount extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity = new StorageAccountIdentityOutputReference(this, "identity", true);
+  private _identity = new StorageAccountIdentityOutputReference(this, "identity");
   public get identity() {
     return this._identity;
   }
@@ -3259,7 +3242,7 @@ export class StorageAccount extends cdktf.TerraformResource {
   }
 
   // network_rules - computed: false, optional: true, required: false
-  private _networkRules = new StorageAccountNetworkRulesOutputReference(this, "network_rules", true);
+  private _networkRules = new StorageAccountNetworkRulesOutputReference(this, "network_rules");
   public get networkRules() {
     return this._networkRules;
   }
@@ -3275,7 +3258,7 @@ export class StorageAccount extends cdktf.TerraformResource {
   }
 
   // queue_properties - computed: false, optional: true, required: false
-  private _queueProperties = new StorageAccountQueuePropertiesOutputReference(this, "queue_properties", true);
+  private _queueProperties = new StorageAccountQueuePropertiesOutputReference(this, "queue_properties");
   public get queueProperties() {
     return this._queueProperties;
   }
@@ -3291,7 +3274,7 @@ export class StorageAccount extends cdktf.TerraformResource {
   }
 
   // routing - computed: false, optional: true, required: false
-  private _routing = new StorageAccountRoutingOutputReference(this, "routing", true);
+  private _routing = new StorageAccountRoutingOutputReference(this, "routing");
   public get routing() {
     return this._routing;
   }
@@ -3307,7 +3290,7 @@ export class StorageAccount extends cdktf.TerraformResource {
   }
 
   // share_properties - computed: false, optional: true, required: false
-  private _shareProperties = new StorageAccountSharePropertiesOutputReference(this, "share_properties", true);
+  private _shareProperties = new StorageAccountSharePropertiesOutputReference(this, "share_properties");
   public get shareProperties() {
     return this._shareProperties;
   }
@@ -3323,7 +3306,7 @@ export class StorageAccount extends cdktf.TerraformResource {
   }
 
   // static_website - computed: false, optional: true, required: false
-  private _staticWebsite = new StorageAccountStaticWebsiteOutputReference(this, "static_website", true);
+  private _staticWebsite = new StorageAccountStaticWebsiteOutputReference(this, "static_website");
   public get staticWebsite() {
     return this._staticWebsite;
   }
@@ -3339,7 +3322,7 @@ export class StorageAccount extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new StorageAccountTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new StorageAccountTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

@@ -95,10 +95,9 @@ export class ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference exten
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ExpressRouteCircuitPeeringIpv6MicrosoftPeering | undefined {
@@ -222,10 +221,9 @@ export class ExpressRouteCircuitPeeringIpv6OutputReference extends cdktf.Complex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ExpressRouteCircuitPeeringIpv6 | undefined {
@@ -310,7 +308,7 @@ export class ExpressRouteCircuitPeeringIpv6OutputReference extends cdktf.Complex
   }
 
   // microsoft_peering - computed: false, optional: false, required: true
-  private _microsoftPeering = new ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference(this, "microsoft_peering", true);
+  private _microsoftPeering = new ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference(this, "microsoft_peering");
   public get microsoftPeering() {
     return this._microsoftPeering;
   }
@@ -355,10 +353,9 @@ export class ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference ext
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ExpressRouteCircuitPeeringMicrosoftPeeringConfig | undefined {
@@ -477,10 +474,9 @@ export class ExpressRouteCircuitPeeringTimeoutsOutputReference extends cdktf.Com
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ExpressRouteCircuitPeeringTimeouts | undefined {
@@ -595,7 +591,7 @@ export class ExpressRouteCircuitPeering extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_express_route_circuit_peering";
+  public static readonly tfResourceType = "azurerm_express_route_circuit_peering";
 
   // ===========
   // INITIALIZER
@@ -612,7 +608,9 @@ export class ExpressRouteCircuitPeering extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_express_route_circuit_peering',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -784,7 +782,7 @@ export class ExpressRouteCircuitPeering extends cdktf.TerraformResource {
   }
 
   // ipv6 - computed: false, optional: true, required: false
-  private _ipv6 = new ExpressRouteCircuitPeeringIpv6OutputReference(this, "ipv6", true);
+  private _ipv6 = new ExpressRouteCircuitPeeringIpv6OutputReference(this, "ipv6");
   public get ipv6() {
     return this._ipv6;
   }
@@ -800,7 +798,7 @@ export class ExpressRouteCircuitPeering extends cdktf.TerraformResource {
   }
 
   // microsoft_peering_config - computed: false, optional: true, required: false
-  private _microsoftPeeringConfig = new ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference(this, "microsoft_peering_config", true);
+  private _microsoftPeeringConfig = new ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference(this, "microsoft_peering_config");
   public get microsoftPeeringConfig() {
     return this._microsoftPeeringConfig;
   }
@@ -816,7 +814,7 @@ export class ExpressRouteCircuitPeering extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ExpressRouteCircuitPeeringTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new ExpressRouteCircuitPeeringTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

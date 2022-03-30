@@ -93,10 +93,9 @@ export class DevTestScheduleDailyRecurrenceOutputReference extends cdktf.Complex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DevTestScheduleDailyRecurrence | undefined {
@@ -156,10 +155,9 @@ export class DevTestScheduleHourlyRecurrenceOutputReference extends cdktf.Comple
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DevTestScheduleHourlyRecurrence | undefined {
@@ -229,10 +227,9 @@ export class DevTestScheduleNotificationSettingsOutputReference extends cdktf.Co
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DevTestScheduleNotificationSettings | undefined {
@@ -354,10 +351,9 @@ export class DevTestScheduleTimeoutsOutputReference extends cdktf.ComplexObject 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DevTestScheduleTimeouts | undefined {
@@ -491,10 +487,9 @@ export class DevTestScheduleWeeklyRecurrenceOutputReference extends cdktf.Comple
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DevTestScheduleWeeklyRecurrence | undefined {
@@ -562,7 +557,7 @@ export class DevTestSchedule extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_dev_test_schedule";
+  public static readonly tfResourceType = "azurerm_dev_test_schedule";
 
   // ===========
   // INITIALIZER
@@ -579,7 +574,9 @@ export class DevTestSchedule extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_dev_test_schedule',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -721,7 +718,7 @@ export class DevTestSchedule extends cdktf.TerraformResource {
   }
 
   // daily_recurrence - computed: false, optional: true, required: false
-  private _dailyRecurrence = new DevTestScheduleDailyRecurrenceOutputReference(this, "daily_recurrence", true);
+  private _dailyRecurrence = new DevTestScheduleDailyRecurrenceOutputReference(this, "daily_recurrence");
   public get dailyRecurrence() {
     return this._dailyRecurrence;
   }
@@ -737,7 +734,7 @@ export class DevTestSchedule extends cdktf.TerraformResource {
   }
 
   // hourly_recurrence - computed: false, optional: true, required: false
-  private _hourlyRecurrence = new DevTestScheduleHourlyRecurrenceOutputReference(this, "hourly_recurrence", true);
+  private _hourlyRecurrence = new DevTestScheduleHourlyRecurrenceOutputReference(this, "hourly_recurrence");
   public get hourlyRecurrence() {
     return this._hourlyRecurrence;
   }
@@ -753,7 +750,7 @@ export class DevTestSchedule extends cdktf.TerraformResource {
   }
 
   // notification_settings - computed: false, optional: false, required: true
-  private _notificationSettings = new DevTestScheduleNotificationSettingsOutputReference(this, "notification_settings", true);
+  private _notificationSettings = new DevTestScheduleNotificationSettingsOutputReference(this, "notification_settings");
   public get notificationSettings() {
     return this._notificationSettings;
   }
@@ -766,7 +763,7 @@ export class DevTestSchedule extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DevTestScheduleTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DevTestScheduleTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
@@ -782,7 +779,7 @@ export class DevTestSchedule extends cdktf.TerraformResource {
   }
 
   // weekly_recurrence - computed: false, optional: true, required: false
-  private _weeklyRecurrence = new DevTestScheduleWeeklyRecurrenceOutputReference(this, "weekly_recurrence", true);
+  private _weeklyRecurrence = new DevTestScheduleWeeklyRecurrenceOutputReference(this, "weekly_recurrence");
   public get weeklyRecurrence() {
     return this._weeklyRecurrence;
   }

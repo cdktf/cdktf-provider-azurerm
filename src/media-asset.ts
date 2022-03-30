@@ -80,10 +80,9 @@ export class MediaAssetTimeoutsOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MediaAssetTimeouts | undefined {
@@ -198,7 +197,7 @@ export class MediaAsset extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_media_asset";
+  public static readonly tfResourceType = "azurerm_media_asset";
 
   // ===========
   // INITIALIZER
@@ -215,7 +214,9 @@ export class MediaAsset extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_media_asset',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -345,7 +346,7 @@ export class MediaAsset extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new MediaAssetTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new MediaAssetTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

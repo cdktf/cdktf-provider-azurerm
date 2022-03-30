@@ -183,10 +183,9 @@ export class ApiManagementAdditionalLocationVirtualNetworkConfigurationOutputRef
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ApiManagementAdditionalLocationVirtualNetworkConfiguration | undefined {
@@ -557,10 +556,9 @@ export class ApiManagementHostnameConfigurationOutputReference extends cdktf.Com
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ApiManagementHostnameConfiguration | undefined {
@@ -721,10 +719,9 @@ export class ApiManagementIdentityOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ApiManagementIdentity | undefined {
@@ -816,10 +813,9 @@ export class ApiManagementProtocolsOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ApiManagementProtocols | undefined {
@@ -962,10 +958,9 @@ export class ApiManagementSecurityOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ApiManagementSecurity | undefined {
@@ -1380,10 +1375,9 @@ export class ApiManagementSignInOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ApiManagementSignIn | undefined {
@@ -1453,10 +1447,9 @@ export class ApiManagementSignUpTermsOfServiceOutputReference extends cdktf.Comp
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ApiManagementSignUpTermsOfService | undefined {
@@ -1564,10 +1557,9 @@ export class ApiManagementSignUpOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ApiManagementSignUp | undefined {
@@ -1611,7 +1603,7 @@ export class ApiManagementSignUpOutputReference extends cdktf.ComplexObject {
   }
 
   // terms_of_service - computed: false, optional: false, required: true
-  private _termsOfService = new ApiManagementSignUpTermsOfServiceOutputReference(this, "terms_of_service", true);
+  private _termsOfService = new ApiManagementSignUpTermsOfServiceOutputReference(this, "terms_of_service");
   public get termsOfService() {
     return this._termsOfService;
   }
@@ -1646,10 +1638,9 @@ export class ApiManagementTenantAccessOutputReference extends cdktf.ComplexObjec
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ApiManagementTenantAccess | undefined {
@@ -1739,10 +1730,9 @@ export class ApiManagementTimeoutsOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ApiManagementTimeouts | undefined {
@@ -1871,10 +1861,9 @@ export class ApiManagementVirtualNetworkConfigurationOutputReference extends cdk
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ApiManagementVirtualNetworkConfiguration | undefined {
@@ -1920,7 +1909,7 @@ export class ApiManagement extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_api_management";
+  public static readonly tfResourceType = "azurerm_api_management";
 
   // ===========
   // INITIALIZER
@@ -1937,7 +1926,9 @@ export class ApiManagement extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_api_management',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -2296,7 +2287,7 @@ export class ApiManagement extends cdktf.TerraformResource {
   }
 
   // hostname_configuration - computed: false, optional: true, required: false
-  private _hostnameConfiguration = new ApiManagementHostnameConfigurationOutputReference(this, "hostname_configuration", true);
+  private _hostnameConfiguration = new ApiManagementHostnameConfigurationOutputReference(this, "hostname_configuration");
   public get hostnameConfiguration() {
     return this._hostnameConfiguration;
   }
@@ -2312,7 +2303,7 @@ export class ApiManagement extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity = new ApiManagementIdentityOutputReference(this, "identity", true);
+  private _identity = new ApiManagementIdentityOutputReference(this, "identity");
   public get identity() {
     return this._identity;
   }
@@ -2328,7 +2319,7 @@ export class ApiManagement extends cdktf.TerraformResource {
   }
 
   // protocols - computed: false, optional: true, required: false
-  private _protocols = new ApiManagementProtocolsOutputReference(this, "protocols", true);
+  private _protocols = new ApiManagementProtocolsOutputReference(this, "protocols");
   public get protocols() {
     return this._protocols;
   }
@@ -2344,7 +2335,7 @@ export class ApiManagement extends cdktf.TerraformResource {
   }
 
   // security - computed: false, optional: true, required: false
-  private _security = new ApiManagementSecurityOutputReference(this, "security", true);
+  private _security = new ApiManagementSecurityOutputReference(this, "security");
   public get security() {
     return this._security;
   }
@@ -2360,7 +2351,7 @@ export class ApiManagement extends cdktf.TerraformResource {
   }
 
   // sign_in - computed: false, optional: true, required: false
-  private _signIn = new ApiManagementSignInOutputReference(this, "sign_in", true);
+  private _signIn = new ApiManagementSignInOutputReference(this, "sign_in");
   public get signIn() {
     return this._signIn;
   }
@@ -2376,7 +2367,7 @@ export class ApiManagement extends cdktf.TerraformResource {
   }
 
   // sign_up - computed: false, optional: true, required: false
-  private _signUp = new ApiManagementSignUpOutputReference(this, "sign_up", true);
+  private _signUp = new ApiManagementSignUpOutputReference(this, "sign_up");
   public get signUp() {
     return this._signUp;
   }
@@ -2392,7 +2383,7 @@ export class ApiManagement extends cdktf.TerraformResource {
   }
 
   // tenant_access - computed: false, optional: true, required: false
-  private _tenantAccess = new ApiManagementTenantAccessOutputReference(this, "tenant_access", true);
+  private _tenantAccess = new ApiManagementTenantAccessOutputReference(this, "tenant_access");
   public get tenantAccess() {
     return this._tenantAccess;
   }
@@ -2408,7 +2399,7 @@ export class ApiManagement extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ApiManagementTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new ApiManagementTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
@@ -2424,7 +2415,7 @@ export class ApiManagement extends cdktf.TerraformResource {
   }
 
   // virtual_network_configuration - computed: false, optional: true, required: false
-  private _virtualNetworkConfiguration = new ApiManagementVirtualNetworkConfigurationOutputReference(this, "virtual_network_configuration", true);
+  private _virtualNetworkConfiguration = new ApiManagementVirtualNetworkConfigurationOutputReference(this, "virtual_network_configuration");
   public get virtualNetworkConfiguration() {
     return this._virtualNetworkConfiguration;
   }

@@ -161,10 +161,9 @@ export class HpcCacheDefaultAccessPolicyOutputReference extends cdktf.ComplexObj
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): HpcCacheDefaultAccessPolicy | undefined {
@@ -255,10 +254,9 @@ export class HpcCacheDirectoryActiveDirectoryOutputReference extends cdktf.Compl
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): HpcCacheDirectoryActiveDirectory | undefined {
@@ -440,10 +438,9 @@ export class HpcCacheDirectoryFlatFileOutputReference extends cdktf.ComplexObjec
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): HpcCacheDirectoryFlatFile | undefined {
@@ -527,10 +524,9 @@ export class HpcCacheDirectoryLdapBindOutputReference extends cdktf.ComplexObjec
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): HpcCacheDirectoryLdapBind | undefined {
@@ -636,10 +632,9 @@ export class HpcCacheDirectoryLdapOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): HpcCacheDirectoryLdap | undefined {
@@ -768,7 +763,7 @@ export class HpcCacheDirectoryLdapOutputReference extends cdktf.ComplexObject {
   }
 
   // bind - computed: false, optional: true, required: false
-  private _bind = new HpcCacheDirectoryLdapBindOutputReference(this, "bind", true);
+  private _bind = new HpcCacheDirectoryLdapBindOutputReference(this, "bind");
   public get bind() {
     return this._bind;
   }
@@ -811,10 +806,9 @@ export class HpcCacheDnsOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): HpcCacheDns | undefined {
@@ -911,10 +905,9 @@ export class HpcCacheTimeoutsOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): HpcCacheTimeouts | undefined {
@@ -1029,7 +1022,7 @@ export class HpcCache extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_hpc_cache";
+  public static readonly tfResourceType = "azurerm_hpc_cache";
 
   // ===========
   // INITIALIZER
@@ -1046,7 +1039,9 @@ export class HpcCache extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_hpc_cache',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1228,7 +1223,7 @@ export class HpcCache extends cdktf.TerraformResource {
   }
 
   // default_access_policy - computed: false, optional: true, required: false
-  private _defaultAccessPolicy = new HpcCacheDefaultAccessPolicyOutputReference(this, "default_access_policy", true);
+  private _defaultAccessPolicy = new HpcCacheDefaultAccessPolicyOutputReference(this, "default_access_policy");
   public get defaultAccessPolicy() {
     return this._defaultAccessPolicy;
   }
@@ -1244,7 +1239,7 @@ export class HpcCache extends cdktf.TerraformResource {
   }
 
   // directory_active_directory - computed: false, optional: true, required: false
-  private _directoryActiveDirectory = new HpcCacheDirectoryActiveDirectoryOutputReference(this, "directory_active_directory", true);
+  private _directoryActiveDirectory = new HpcCacheDirectoryActiveDirectoryOutputReference(this, "directory_active_directory");
   public get directoryActiveDirectory() {
     return this._directoryActiveDirectory;
   }
@@ -1260,7 +1255,7 @@ export class HpcCache extends cdktf.TerraformResource {
   }
 
   // directory_flat_file - computed: false, optional: true, required: false
-  private _directoryFlatFile = new HpcCacheDirectoryFlatFileOutputReference(this, "directory_flat_file", true);
+  private _directoryFlatFile = new HpcCacheDirectoryFlatFileOutputReference(this, "directory_flat_file");
   public get directoryFlatFile() {
     return this._directoryFlatFile;
   }
@@ -1276,7 +1271,7 @@ export class HpcCache extends cdktf.TerraformResource {
   }
 
   // directory_ldap - computed: false, optional: true, required: false
-  private _directoryLdap = new HpcCacheDirectoryLdapOutputReference(this, "directory_ldap", true);
+  private _directoryLdap = new HpcCacheDirectoryLdapOutputReference(this, "directory_ldap");
   public get directoryLdap() {
     return this._directoryLdap;
   }
@@ -1292,7 +1287,7 @@ export class HpcCache extends cdktf.TerraformResource {
   }
 
   // dns - computed: false, optional: true, required: false
-  private _dns = new HpcCacheDnsOutputReference(this, "dns", true);
+  private _dns = new HpcCacheDnsOutputReference(this, "dns");
   public get dns() {
     return this._dns;
   }
@@ -1308,7 +1303,7 @@ export class HpcCache extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new HpcCacheTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new HpcCacheTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

@@ -129,10 +129,9 @@ export class ContainerRegistryTaskAgentSettingOutputReference extends cdktf.Comp
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ContainerRegistryTaskAgentSetting | undefined {
@@ -212,10 +211,9 @@ export class ContainerRegistryTaskBaseImageTriggerOutputReference extends cdktf.
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ContainerRegistryTaskBaseImageTrigger | undefined {
@@ -400,10 +398,9 @@ export class ContainerRegistryTaskDockerStepOutputReference extends cdktf.Comple
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ContainerRegistryTaskDockerStep | undefined {
@@ -658,10 +655,9 @@ export class ContainerRegistryTaskEncodedStepOutputReference extends cdktf.Compl
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ContainerRegistryTaskEncodedStep | undefined {
@@ -856,10 +852,9 @@ export class ContainerRegistryTaskFileStepOutputReference extends cdktf.ComplexO
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ContainerRegistryTaskFileStep | undefined {
@@ -1034,10 +1029,9 @@ export class ContainerRegistryTaskIdentityOutputReference extends cdktf.ComplexO
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ContainerRegistryTaskIdentity | undefined {
@@ -1139,10 +1133,9 @@ export class ContainerRegistryTaskPlatformOutputReference extends cdktf.ComplexO
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ContainerRegistryTaskPlatform | undefined {
@@ -1278,10 +1271,9 @@ export class ContainerRegistryTaskRegistryCredentialSourceOutputReference extend
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ContainerRegistryTaskRegistryCredentialSource | undefined {
@@ -1350,10 +1342,9 @@ export class ContainerRegistryTaskRegistryCredentialOutputReference extends cdkt
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ContainerRegistryTaskRegistryCredential | undefined {
@@ -1401,7 +1392,7 @@ export class ContainerRegistryTaskRegistryCredentialOutputReference extends cdkt
   }
 
   // source - computed: false, optional: true, required: false
-  private _source = new ContainerRegistryTaskRegistryCredentialSourceOutputReference(this, "source", true);
+  private _source = new ContainerRegistryTaskRegistryCredentialSourceOutputReference(this, "source");
   public get source() {
     return this._source;
   }
@@ -1459,10 +1450,9 @@ export class ContainerRegistryTaskSourceTriggerAuthenticationOutputReference ext
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ContainerRegistryTaskSourceTriggerAuthentication | undefined {
@@ -1671,10 +1661,9 @@ export class ContainerRegistryTaskTimeoutsOutputReference extends cdktf.ComplexO
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ContainerRegistryTaskTimeouts | undefined {
@@ -1816,7 +1805,7 @@ export class ContainerRegistryTask extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_container_registry_task";
+  public static readonly tfResourceType = "azurerm_container_registry_task";
 
   // ===========
   // INITIALIZER
@@ -1833,7 +1822,9 @@ export class ContainerRegistryTask extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_container_registry_task',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1993,7 +1984,7 @@ export class ContainerRegistryTask extends cdktf.TerraformResource {
   }
 
   // agent_setting - computed: false, optional: true, required: false
-  private _agentSetting = new ContainerRegistryTaskAgentSettingOutputReference(this, "agent_setting", true);
+  private _agentSetting = new ContainerRegistryTaskAgentSettingOutputReference(this, "agent_setting");
   public get agentSetting() {
     return this._agentSetting;
   }
@@ -2009,7 +2000,7 @@ export class ContainerRegistryTask extends cdktf.TerraformResource {
   }
 
   // base_image_trigger - computed: false, optional: true, required: false
-  private _baseImageTrigger = new ContainerRegistryTaskBaseImageTriggerOutputReference(this, "base_image_trigger", true);
+  private _baseImageTrigger = new ContainerRegistryTaskBaseImageTriggerOutputReference(this, "base_image_trigger");
   public get baseImageTrigger() {
     return this._baseImageTrigger;
   }
@@ -2025,7 +2016,7 @@ export class ContainerRegistryTask extends cdktf.TerraformResource {
   }
 
   // docker_step - computed: false, optional: true, required: false
-  private _dockerStep = new ContainerRegistryTaskDockerStepOutputReference(this, "docker_step", true);
+  private _dockerStep = new ContainerRegistryTaskDockerStepOutputReference(this, "docker_step");
   public get dockerStep() {
     return this._dockerStep;
   }
@@ -2041,7 +2032,7 @@ export class ContainerRegistryTask extends cdktf.TerraformResource {
   }
 
   // encoded_step - computed: false, optional: true, required: false
-  private _encodedStep = new ContainerRegistryTaskEncodedStepOutputReference(this, "encoded_step", true);
+  private _encodedStep = new ContainerRegistryTaskEncodedStepOutputReference(this, "encoded_step");
   public get encodedStep() {
     return this._encodedStep;
   }
@@ -2057,7 +2048,7 @@ export class ContainerRegistryTask extends cdktf.TerraformResource {
   }
 
   // file_step - computed: false, optional: true, required: false
-  private _fileStep = new ContainerRegistryTaskFileStepOutputReference(this, "file_step", true);
+  private _fileStep = new ContainerRegistryTaskFileStepOutputReference(this, "file_step");
   public get fileStep() {
     return this._fileStep;
   }
@@ -2073,7 +2064,7 @@ export class ContainerRegistryTask extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity = new ContainerRegistryTaskIdentityOutputReference(this, "identity", true);
+  private _identity = new ContainerRegistryTaskIdentityOutputReference(this, "identity");
   public get identity() {
     return this._identity;
   }
@@ -2089,7 +2080,7 @@ export class ContainerRegistryTask extends cdktf.TerraformResource {
   }
 
   // platform - computed: false, optional: true, required: false
-  private _platform = new ContainerRegistryTaskPlatformOutputReference(this, "platform", true);
+  private _platform = new ContainerRegistryTaskPlatformOutputReference(this, "platform");
   public get platform() {
     return this._platform;
   }
@@ -2105,7 +2096,7 @@ export class ContainerRegistryTask extends cdktf.TerraformResource {
   }
 
   // registry_credential - computed: false, optional: true, required: false
-  private _registryCredential = new ContainerRegistryTaskRegistryCredentialOutputReference(this, "registry_credential", true);
+  private _registryCredential = new ContainerRegistryTaskRegistryCredentialOutputReference(this, "registry_credential");
   public get registryCredential() {
     return this._registryCredential;
   }
@@ -2138,7 +2129,7 @@ export class ContainerRegistryTask extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ContainerRegistryTaskTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new ContainerRegistryTaskTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

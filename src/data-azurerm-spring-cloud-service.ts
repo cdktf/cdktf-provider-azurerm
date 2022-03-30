@@ -22,7 +22,45 @@ export interface DataAzurermSpringCloudServiceConfig extends cdktf.TerraformMeta
   */
   readonly timeouts?: DataAzurermSpringCloudServiceTimeouts;
 }
-export class DataAzurermSpringCloudServiceConfigServerGitSettingHttpBasicAuth extends cdktf.ComplexComputedList {
+export interface DataAzurermSpringCloudServiceConfigServerGitSettingHttpBasicAuth {
+}
+
+export function dataAzurermSpringCloudServiceConfigServerGitSettingHttpBasicAuthToTerraform(struct?: DataAzurermSpringCloudServiceConfigServerGitSettingHttpBasicAuth): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermSpringCloudServiceConfigServerGitSettingHttpBasicAuthOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermSpringCloudServiceConfigServerGitSettingHttpBasicAuth | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermSpringCloudServiceConfigServerGitSettingHttpBasicAuth | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // password - computed: true, optional: false, required: false
   public get password() {
@@ -34,7 +72,64 @@ export class DataAzurermSpringCloudServiceConfigServerGitSettingHttpBasicAuth ex
     return this.getStringAttribute('username');
   }
 }
-export class DataAzurermSpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuth extends cdktf.ComplexComputedList {
+
+export class DataAzurermSpringCloudServiceConfigServerGitSettingHttpBasicAuthList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermSpringCloudServiceConfigServerGitSettingHttpBasicAuthOutputReference {
+    return new DataAzurermSpringCloudServiceConfigServerGitSettingHttpBasicAuthOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermSpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuth {
+}
+
+export function dataAzurermSpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuthToTerraform(struct?: DataAzurermSpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuth): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermSpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuthOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermSpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuth | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermSpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuth | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // password - computed: true, optional: false, required: false
   public get password() {
@@ -46,7 +141,64 @@ export class DataAzurermSpringCloudServiceConfigServerGitSettingRepositoryHttpBa
     return this.getStringAttribute('username');
   }
 }
-export class DataAzurermSpringCloudServiceConfigServerGitSettingRepositorySshAuth extends cdktf.ComplexComputedList {
+
+export class DataAzurermSpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuthList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermSpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuthOutputReference {
+    return new DataAzurermSpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuthOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermSpringCloudServiceConfigServerGitSettingRepositorySshAuth {
+}
+
+export function dataAzurermSpringCloudServiceConfigServerGitSettingRepositorySshAuthToTerraform(struct?: DataAzurermSpringCloudServiceConfigServerGitSettingRepositorySshAuth): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermSpringCloudServiceConfigServerGitSettingRepositorySshAuthOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermSpringCloudServiceConfigServerGitSettingRepositorySshAuth | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermSpringCloudServiceConfigServerGitSettingRepositorySshAuth | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // host_key - computed: true, optional: false, required: false
   public get hostKey() {
@@ -68,12 +220,69 @@ export class DataAzurermSpringCloudServiceConfigServerGitSettingRepositorySshAut
     return this.getBooleanAttribute('strict_host_key_checking_enabled');
   }
 }
-export class DataAzurermSpringCloudServiceConfigServerGitSettingRepository extends cdktf.ComplexComputedList {
+
+export class DataAzurermSpringCloudServiceConfigServerGitSettingRepositorySshAuthList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermSpringCloudServiceConfigServerGitSettingRepositorySshAuthOutputReference {
+    return new DataAzurermSpringCloudServiceConfigServerGitSettingRepositorySshAuthOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermSpringCloudServiceConfigServerGitSettingRepository {
+}
+
+export function dataAzurermSpringCloudServiceConfigServerGitSettingRepositoryToTerraform(struct?: DataAzurermSpringCloudServiceConfigServerGitSettingRepository): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermSpringCloudServiceConfigServerGitSettingRepositoryOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermSpringCloudServiceConfigServerGitSettingRepository | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermSpringCloudServiceConfigServerGitSettingRepository | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // http_basic_auth - computed: true, optional: false, required: false
+  private _httpBasicAuth = new DataAzurermSpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuthList(this, "http_basic_auth", false);
   public get httpBasicAuth() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('http_basic_auth');
+    return this._httpBasicAuth;
   }
 
   // label - computed: true, optional: false, required: false
@@ -97,9 +306,9 @@ export class DataAzurermSpringCloudServiceConfigServerGitSettingRepository exten
   }
 
   // ssh_auth - computed: true, optional: false, required: false
+  private _sshAuth = new DataAzurermSpringCloudServiceConfigServerGitSettingRepositorySshAuthList(this, "ssh_auth", false);
   public get sshAuth() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('ssh_auth');
+    return this._sshAuth;
   }
 
   // uri - computed: true, optional: false, required: false
@@ -107,7 +316,64 @@ export class DataAzurermSpringCloudServiceConfigServerGitSettingRepository exten
     return this.getStringAttribute('uri');
   }
 }
-export class DataAzurermSpringCloudServiceConfigServerGitSettingSshAuth extends cdktf.ComplexComputedList {
+
+export class DataAzurermSpringCloudServiceConfigServerGitSettingRepositoryList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermSpringCloudServiceConfigServerGitSettingRepositoryOutputReference {
+    return new DataAzurermSpringCloudServiceConfigServerGitSettingRepositoryOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermSpringCloudServiceConfigServerGitSettingSshAuth {
+}
+
+export function dataAzurermSpringCloudServiceConfigServerGitSettingSshAuthToTerraform(struct?: DataAzurermSpringCloudServiceConfigServerGitSettingSshAuth): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermSpringCloudServiceConfigServerGitSettingSshAuthOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermSpringCloudServiceConfigServerGitSettingSshAuth | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermSpringCloudServiceConfigServerGitSettingSshAuth | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // host_key - computed: true, optional: false, required: false
   public get hostKey() {
@@ -129,12 +395,69 @@ export class DataAzurermSpringCloudServiceConfigServerGitSettingSshAuth extends 
     return this.getBooleanAttribute('strict_host_key_checking_enabled');
   }
 }
-export class DataAzurermSpringCloudServiceConfigServerGitSetting extends cdktf.ComplexComputedList {
+
+export class DataAzurermSpringCloudServiceConfigServerGitSettingSshAuthList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermSpringCloudServiceConfigServerGitSettingSshAuthOutputReference {
+    return new DataAzurermSpringCloudServiceConfigServerGitSettingSshAuthOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermSpringCloudServiceConfigServerGitSetting {
+}
+
+export function dataAzurermSpringCloudServiceConfigServerGitSettingToTerraform(struct?: DataAzurermSpringCloudServiceConfigServerGitSetting): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermSpringCloudServiceConfigServerGitSettingOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermSpringCloudServiceConfigServerGitSetting | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermSpringCloudServiceConfigServerGitSetting | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // http_basic_auth - computed: true, optional: false, required: false
+  private _httpBasicAuth = new DataAzurermSpringCloudServiceConfigServerGitSettingHttpBasicAuthList(this, "http_basic_auth", false);
   public get httpBasicAuth() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('http_basic_auth');
+    return this._httpBasicAuth;
   }
 
   // label - computed: true, optional: false, required: false
@@ -143,9 +466,9 @@ export class DataAzurermSpringCloudServiceConfigServerGitSetting extends cdktf.C
   }
 
   // repository - computed: true, optional: false, required: false
+  private _repository = new DataAzurermSpringCloudServiceConfigServerGitSettingRepositoryList(this, "repository", false);
   public get repository() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('repository');
+    return this._repository;
   }
 
   // search_paths - computed: true, optional: false, required: false
@@ -154,9 +477,9 @@ export class DataAzurermSpringCloudServiceConfigServerGitSetting extends cdktf.C
   }
 
   // ssh_auth - computed: true, optional: false, required: false
+  private _sshAuth = new DataAzurermSpringCloudServiceConfigServerGitSettingSshAuthList(this, "ssh_auth", false);
   public get sshAuth() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('ssh_auth');
+    return this._sshAuth;
   }
 
   // uri - computed: true, optional: false, required: false
@@ -164,7 +487,64 @@ export class DataAzurermSpringCloudServiceConfigServerGitSetting extends cdktf.C
     return this.getStringAttribute('uri');
   }
 }
-export class DataAzurermSpringCloudServiceRequiredNetworkTrafficRules extends cdktf.ComplexComputedList {
+
+export class DataAzurermSpringCloudServiceConfigServerGitSettingList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermSpringCloudServiceConfigServerGitSettingOutputReference {
+    return new DataAzurermSpringCloudServiceConfigServerGitSettingOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermSpringCloudServiceRequiredNetworkTrafficRules {
+}
+
+export function dataAzurermSpringCloudServiceRequiredNetworkTrafficRulesToTerraform(struct?: DataAzurermSpringCloudServiceRequiredNetworkTrafficRules): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermSpringCloudServiceRequiredNetworkTrafficRulesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermSpringCloudServiceRequiredNetworkTrafficRules | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermSpringCloudServiceRequiredNetworkTrafficRules | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // direction - computed: true, optional: false, required: false
   public get direction() {
@@ -191,6 +571,25 @@ export class DataAzurermSpringCloudServiceRequiredNetworkTrafficRules extends cd
     return this.getStringAttribute('protocol');
   }
 }
+
+export class DataAzurermSpringCloudServiceRequiredNetworkTrafficRulesList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermSpringCloudServiceRequiredNetworkTrafficRulesOutputReference {
+    return new DataAzurermSpringCloudServiceRequiredNetworkTrafficRulesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataAzurermSpringCloudServiceTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/spring_cloud_service#read DataAzurermSpringCloudService#read}
@@ -214,10 +613,9 @@ export class DataAzurermSpringCloudServiceTimeoutsOutputReference extends cdktf.
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermSpringCloudServiceTimeouts | undefined {
@@ -266,7 +664,7 @@ export class DataAzurermSpringCloudService extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_spring_cloud_service";
+  public static readonly tfResourceType = "azurerm_spring_cloud_service";
 
   // ===========
   // INITIALIZER
@@ -283,7 +681,9 @@ export class DataAzurermSpringCloudService extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'azurerm_spring_cloud_service',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -300,8 +700,9 @@ export class DataAzurermSpringCloudService extends cdktf.TerraformDataSource {
   // ==========
 
   // config_server_git_setting - computed: true, optional: false, required: false
-  public configServerGitSetting(index: string) {
-    return new DataAzurermSpringCloudServiceConfigServerGitSetting(this, 'config_server_git_setting', index, false);
+  private _configServerGitSetting = new DataAzurermSpringCloudServiceConfigServerGitSettingList(this, "config_server_git_setting", false);
+  public get configServerGitSetting() {
+    return this._configServerGitSetting;
   }
 
   // id - computed: true, optional: true, required: false
@@ -333,8 +734,9 @@ export class DataAzurermSpringCloudService extends cdktf.TerraformDataSource {
   }
 
   // required_network_traffic_rules - computed: true, optional: false, required: false
-  public requiredNetworkTrafficRules(index: string) {
-    return new DataAzurermSpringCloudServiceRequiredNetworkTrafficRules(this, 'required_network_traffic_rules', index, false);
+  private _requiredNetworkTrafficRules = new DataAzurermSpringCloudServiceRequiredNetworkTrafficRulesList(this, "required_network_traffic_rules", false);
+  public get requiredNetworkTrafficRules() {
+    return this._requiredNetworkTrafficRules;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -356,7 +758,7 @@ export class DataAzurermSpringCloudService extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermSpringCloudServiceTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermSpringCloudServiceTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

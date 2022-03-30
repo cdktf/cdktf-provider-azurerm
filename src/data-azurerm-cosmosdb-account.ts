@@ -22,14 +22,109 @@ export interface DataAzurermCosmosdbAccountConfig extends cdktf.TerraformMetaArg
   */
   readonly timeouts?: DataAzurermCosmosdbAccountTimeouts;
 }
-export class DataAzurermCosmosdbAccountCapabilities extends cdktf.ComplexComputedList {
+export interface DataAzurermCosmosdbAccountCapabilities {
+}
+
+export function dataAzurermCosmosdbAccountCapabilitiesToTerraform(struct?: DataAzurermCosmosdbAccountCapabilities): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermCosmosdbAccountCapabilitiesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermCosmosdbAccountCapabilities | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermCosmosdbAccountCapabilities | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
 }
-export class DataAzurermCosmosdbAccountConsistencyPolicy extends cdktf.ComplexComputedList {
+
+export class DataAzurermCosmosdbAccountCapabilitiesList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermCosmosdbAccountCapabilitiesOutputReference {
+    return new DataAzurermCosmosdbAccountCapabilitiesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermCosmosdbAccountConsistencyPolicy {
+}
+
+export function dataAzurermCosmosdbAccountConsistencyPolicyToTerraform(struct?: DataAzurermCosmosdbAccountConsistencyPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermCosmosdbAccountConsistencyPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermCosmosdbAccountConsistencyPolicy | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermCosmosdbAccountConsistencyPolicy | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // consistency_level - computed: true, optional: false, required: false
   public get consistencyLevel() {
@@ -46,7 +141,64 @@ export class DataAzurermCosmosdbAccountConsistencyPolicy extends cdktf.ComplexCo
     return this.getNumberAttribute('max_staleness_prefix');
   }
 }
-export class DataAzurermCosmosdbAccountGeoLocation extends cdktf.ComplexComputedList {
+
+export class DataAzurermCosmosdbAccountConsistencyPolicyList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermCosmosdbAccountConsistencyPolicyOutputReference {
+    return new DataAzurermCosmosdbAccountConsistencyPolicyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermCosmosdbAccountGeoLocation {
+}
+
+export function dataAzurermCosmosdbAccountGeoLocationToTerraform(struct?: DataAzurermCosmosdbAccountGeoLocation): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermCosmosdbAccountGeoLocationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermCosmosdbAccountGeoLocation | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermCosmosdbAccountGeoLocation | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // failover_priority - computed: true, optional: false, required: false
   public get failoverPriority() {
@@ -63,11 +215,87 @@ export class DataAzurermCosmosdbAccountGeoLocation extends cdktf.ComplexComputed
     return this.getStringAttribute('location');
   }
 }
-export class DataAzurermCosmosdbAccountVirtualNetworkRule extends cdktf.ComplexComputedList {
+
+export class DataAzurermCosmosdbAccountGeoLocationList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermCosmosdbAccountGeoLocationOutputReference {
+    return new DataAzurermCosmosdbAccountGeoLocationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermCosmosdbAccountVirtualNetworkRule {
+}
+
+export function dataAzurermCosmosdbAccountVirtualNetworkRuleToTerraform(struct?: DataAzurermCosmosdbAccountVirtualNetworkRule): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermCosmosdbAccountVirtualNetworkRuleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermCosmosdbAccountVirtualNetworkRule | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermCosmosdbAccountVirtualNetworkRule | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // id - computed: true, optional: false, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+}
+
+export class DataAzurermCosmosdbAccountVirtualNetworkRuleList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermCosmosdbAccountVirtualNetworkRuleOutputReference {
+    return new DataAzurermCosmosdbAccountVirtualNetworkRuleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataAzurermCosmosdbAccountTimeouts {
@@ -93,10 +321,9 @@ export class DataAzurermCosmosdbAccountTimeoutsOutputReference extends cdktf.Com
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermCosmosdbAccountTimeouts | undefined {
@@ -145,7 +372,7 @@ export class DataAzurermCosmosdbAccount extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_cosmosdb_account";
+  public static readonly tfResourceType = "azurerm_cosmosdb_account";
 
   // ===========
   // INITIALIZER
@@ -162,7 +389,9 @@ export class DataAzurermCosmosdbAccount extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'azurerm_cosmosdb_account',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -179,13 +408,15 @@ export class DataAzurermCosmosdbAccount extends cdktf.TerraformDataSource {
   // ==========
 
   // capabilities - computed: true, optional: false, required: false
-  public capabilities(index: string) {
-    return new DataAzurermCosmosdbAccountCapabilities(this, 'capabilities', index, false);
+  private _capabilities = new DataAzurermCosmosdbAccountCapabilitiesList(this, "capabilities", false);
+  public get capabilities() {
+    return this._capabilities;
   }
 
   // consistency_policy - computed: true, optional: false, required: false
-  public consistencyPolicy(index: string) {
-    return new DataAzurermCosmosdbAccountConsistencyPolicy(this, 'consistency_policy', index, false);
+  private _consistencyPolicy = new DataAzurermCosmosdbAccountConsistencyPolicyList(this, "consistency_policy", false);
+  public get consistencyPolicy() {
+    return this._consistencyPolicy;
   }
 
   // enable_automatic_failover - computed: true, optional: false, required: false
@@ -209,8 +440,9 @@ export class DataAzurermCosmosdbAccount extends cdktf.TerraformDataSource {
   }
 
   // geo_location - computed: true, optional: false, required: false
-  public geoLocation(index: string) {
-    return new DataAzurermCosmosdbAccountGeoLocation(this, 'geo_location', index, false);
+  private _geoLocation = new DataAzurermCosmosdbAccountGeoLocationList(this, "geo_location", false);
+  public get geoLocation() {
+    return this._geoLocation;
   }
 
   // id - computed: true, optional: true, required: false
@@ -325,8 +557,9 @@ export class DataAzurermCosmosdbAccount extends cdktf.TerraformDataSource {
   }
 
   // virtual_network_rule - computed: true, optional: false, required: false
-  public virtualNetworkRule(index: string) {
-    return new DataAzurermCosmosdbAccountVirtualNetworkRule(this, 'virtual_network_rule', index, false);
+  private _virtualNetworkRule = new DataAzurermCosmosdbAccountVirtualNetworkRuleList(this, "virtual_network_rule", false);
+  public get virtualNetworkRule() {
+    return this._virtualNetworkRule;
   }
 
   // write_endpoints - computed: true, optional: false, required: false
@@ -335,7 +568,7 @@ export class DataAzurermCosmosdbAccount extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermCosmosdbAccountTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermCosmosdbAccountTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

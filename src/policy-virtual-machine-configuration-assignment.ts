@@ -104,10 +104,9 @@ export class PolicyVirtualMachineConfigurationAssignmentConfigurationOutputRefer
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): PolicyVirtualMachineConfigurationAssignmentConfiguration | undefined {
@@ -296,10 +295,9 @@ export class PolicyVirtualMachineConfigurationAssignmentTimeoutsOutputReference 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): PolicyVirtualMachineConfigurationAssignmentTimeouts | undefined {
@@ -414,7 +412,7 @@ export class PolicyVirtualMachineConfigurationAssignment extends cdktf.Terraform
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_policy_virtual_machine_configuration_assignment";
+  public static readonly tfResourceType = "azurerm_policy_virtual_machine_configuration_assignment";
 
   // ===========
   // INITIALIZER
@@ -431,7 +429,9 @@ export class PolicyVirtualMachineConfigurationAssignment extends cdktf.Terraform
     super(scope, id, {
       terraformResourceType: 'azurerm_policy_virtual_machine_configuration_assignment',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -494,7 +494,7 @@ export class PolicyVirtualMachineConfigurationAssignment extends cdktf.Terraform
   }
 
   // configuration - computed: false, optional: false, required: true
-  private _configuration = new PolicyVirtualMachineConfigurationAssignmentConfigurationOutputReference(this, "configuration", true);
+  private _configuration = new PolicyVirtualMachineConfigurationAssignmentConfigurationOutputReference(this, "configuration");
   public get configuration() {
     return this._configuration;
   }
@@ -507,7 +507,7 @@ export class PolicyVirtualMachineConfigurationAssignment extends cdktf.Terraform
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new PolicyVirtualMachineConfigurationAssignmentTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new PolicyVirtualMachineConfigurationAssignmentTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

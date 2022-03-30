@@ -130,10 +130,9 @@ export class NetappVolumeDataProtectionReplicationOutputReference extends cdktf.
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): NetappVolumeDataProtectionReplication | undefined {
@@ -253,10 +252,9 @@ export class NetappVolumeDataProtectionSnapshotPolicyOutputReference extends cdk
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): NetappVolumeDataProtectionSnapshotPolicy | undefined {
@@ -388,10 +386,9 @@ export class NetappVolumeTimeoutsOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): NetappVolumeTimeouts | undefined {
@@ -506,7 +503,7 @@ export class NetappVolume extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_netapp_volume";
+  public static readonly tfResourceType = "azurerm_netapp_volume";
 
   // ===========
   // INITIALIZER
@@ -523,7 +520,9 @@ export class NetappVolume extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_netapp_volume',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -779,7 +778,7 @@ export class NetappVolume extends cdktf.TerraformResource {
   }
 
   // data_protection_replication - computed: false, optional: true, required: false
-  private _dataProtectionReplication = new NetappVolumeDataProtectionReplicationOutputReference(this, "data_protection_replication", true);
+  private _dataProtectionReplication = new NetappVolumeDataProtectionReplicationOutputReference(this, "data_protection_replication");
   public get dataProtectionReplication() {
     return this._dataProtectionReplication;
   }
@@ -795,7 +794,7 @@ export class NetappVolume extends cdktf.TerraformResource {
   }
 
   // data_protection_snapshot_policy - computed: false, optional: true, required: false
-  private _dataProtectionSnapshotPolicy = new NetappVolumeDataProtectionSnapshotPolicyOutputReference(this, "data_protection_snapshot_policy", true);
+  private _dataProtectionSnapshotPolicy = new NetappVolumeDataProtectionSnapshotPolicyOutputReference(this, "data_protection_snapshot_policy");
   public get dataProtectionSnapshotPolicy() {
     return this._dataProtectionSnapshotPolicy;
   }
@@ -828,7 +827,7 @@ export class NetappVolume extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new NetappVolumeTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new NetappVolumeTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

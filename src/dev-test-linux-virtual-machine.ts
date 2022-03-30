@@ -124,10 +124,9 @@ export class DevTestLinuxVirtualMachineGalleryImageReferenceOutputReference exte
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DevTestLinuxVirtualMachineGalleryImageReference | undefined {
@@ -281,10 +280,9 @@ export class DevTestLinuxVirtualMachineTimeoutsOutputReference extends cdktf.Com
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DevTestLinuxVirtualMachineTimeouts | undefined {
@@ -399,7 +397,7 @@ export class DevTestLinuxVirtualMachine extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_dev_test_linux_virtual_machine";
+  public static readonly tfResourceType = "azurerm_dev_test_linux_virtual_machine";
 
   // ===========
   // INITIALIZER
@@ -416,7 +414,9 @@ export class DevTestLinuxVirtualMachine extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_dev_test_linux_virtual_machine',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -676,7 +676,7 @@ export class DevTestLinuxVirtualMachine extends cdktf.TerraformResource {
   }
 
   // gallery_image_reference - computed: false, optional: false, required: true
-  private _galleryImageReference = new DevTestLinuxVirtualMachineGalleryImageReferenceOutputReference(this, "gallery_image_reference", true);
+  private _galleryImageReference = new DevTestLinuxVirtualMachineGalleryImageReferenceOutputReference(this, "gallery_image_reference");
   public get galleryImageReference() {
     return this._galleryImageReference;
   }
@@ -706,7 +706,7 @@ export class DevTestLinuxVirtualMachine extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DevTestLinuxVirtualMachineTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DevTestLinuxVirtualMachineTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

@@ -26,7 +26,45 @@ export interface DataAzurermPolicySetDefinitionConfig extends cdktf.TerraformMet
   */
   readonly timeouts?: DataAzurermPolicySetDefinitionTimeouts;
 }
-export class DataAzurermPolicySetDefinitionPolicyDefinitionGroup extends cdktf.ComplexComputedList {
+export interface DataAzurermPolicySetDefinitionPolicyDefinitionGroup {
+}
+
+export function dataAzurermPolicySetDefinitionPolicyDefinitionGroupToTerraform(struct?: DataAzurermPolicySetDefinitionPolicyDefinitionGroup): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermPolicySetDefinitionPolicyDefinitionGroupOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermPolicySetDefinitionPolicyDefinitionGroup | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermPolicySetDefinitionPolicyDefinitionGroup | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // additional_metadata_resource_id - computed: true, optional: false, required: false
   public get additionalMetadataResourceId() {
@@ -53,7 +91,64 @@ export class DataAzurermPolicySetDefinitionPolicyDefinitionGroup extends cdktf.C
     return this.getStringAttribute('name');
   }
 }
-export class DataAzurermPolicySetDefinitionPolicyDefinitionReference extends cdktf.ComplexComputedList {
+
+export class DataAzurermPolicySetDefinitionPolicyDefinitionGroupList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermPolicySetDefinitionPolicyDefinitionGroupOutputReference {
+    return new DataAzurermPolicySetDefinitionPolicyDefinitionGroupOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermPolicySetDefinitionPolicyDefinitionReference {
+}
+
+export function dataAzurermPolicySetDefinitionPolicyDefinitionReferenceToTerraform(struct?: DataAzurermPolicySetDefinitionPolicyDefinitionReference): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermPolicySetDefinitionPolicyDefinitionReferenceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermPolicySetDefinitionPolicyDefinitionReference | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermPolicySetDefinitionPolicyDefinitionReference | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // parameter_values - computed: true, optional: false, required: false
   public get parameterValues() {
@@ -61,8 +156,8 @@ export class DataAzurermPolicySetDefinitionPolicyDefinitionReference extends cdk
   }
 
   // parameters - computed: true, optional: false, required: false
-  public get parameters() {
-    return this.getStringMapAttribute('parameters');
+  public parameters(key: string): string | cdktf.IResolvable {
+    return new cdktf.StringMap(this, 'parameters').lookup(key);
   }
 
   // policy_definition_id - computed: true, optional: false, required: false
@@ -78,6 +173,25 @@ export class DataAzurermPolicySetDefinitionPolicyDefinitionReference extends cdk
   // reference_id - computed: true, optional: false, required: false
   public get referenceId() {
     return this.getStringAttribute('reference_id');
+  }
+}
+
+export class DataAzurermPolicySetDefinitionPolicyDefinitionReferenceList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermPolicySetDefinitionPolicyDefinitionReferenceOutputReference {
+    return new DataAzurermPolicySetDefinitionPolicyDefinitionReferenceOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataAzurermPolicySetDefinitionTimeouts {
@@ -103,10 +217,9 @@ export class DataAzurermPolicySetDefinitionTimeoutsOutputReference extends cdktf
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermPolicySetDefinitionTimeouts | undefined {
@@ -155,7 +268,7 @@ export class DataAzurermPolicySetDefinition extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_policy_set_definition";
+  public static readonly tfResourceType = "azurerm_policy_set_definition";
 
   // ===========
   // INITIALIZER
@@ -172,7 +285,9 @@ export class DataAzurermPolicySetDefinition extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'azurerm_policy_set_definition',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -258,13 +373,15 @@ export class DataAzurermPolicySetDefinition extends cdktf.TerraformDataSource {
   }
 
   // policy_definition_group - computed: true, optional: false, required: false
-  public policyDefinitionGroup(index: string) {
-    return new DataAzurermPolicySetDefinitionPolicyDefinitionGroup(this, 'policy_definition_group', index, false);
+  private _policyDefinitionGroup = new DataAzurermPolicySetDefinitionPolicyDefinitionGroupList(this, "policy_definition_group", false);
+  public get policyDefinitionGroup() {
+    return this._policyDefinitionGroup;
   }
 
   // policy_definition_reference - computed: true, optional: false, required: false
-  public policyDefinitionReference(index: string) {
-    return new DataAzurermPolicySetDefinitionPolicyDefinitionReference(this, 'policy_definition_reference', index, false);
+  private _policyDefinitionReference = new DataAzurermPolicySetDefinitionPolicyDefinitionReferenceList(this, "policy_definition_reference", false);
+  public get policyDefinitionReference() {
+    return this._policyDefinitionReference;
   }
 
   // policy_definitions - computed: true, optional: false, required: false
@@ -278,7 +395,7 @@ export class DataAzurermPolicySetDefinition extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermPolicySetDefinitionTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermPolicySetDefinitionTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
