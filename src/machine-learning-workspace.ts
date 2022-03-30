@@ -119,10 +119,9 @@ export class MachineLearningWorkspaceEncryptionOutputReference extends cdktf.Com
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MachineLearningWorkspaceEncryption | undefined {
@@ -228,10 +227,9 @@ export class MachineLearningWorkspaceIdentityOutputReference extends cdktf.Compl
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MachineLearningWorkspaceIdentity | undefined {
@@ -338,10 +336,9 @@ export class MachineLearningWorkspaceTimeoutsOutputReference extends cdktf.Compl
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MachineLearningWorkspaceTimeouts | undefined {
@@ -456,7 +453,7 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_machine_learning_workspace";
+  public static readonly tfResourceType = "azurerm_machine_learning_workspace";
 
   // ===========
   // INITIALIZER
@@ -473,7 +470,9 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_machine_learning_workspace',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -737,7 +736,7 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
   }
 
   // encryption - computed: false, optional: true, required: false
-  private _encryption = new MachineLearningWorkspaceEncryptionOutputReference(this, "encryption", true);
+  private _encryption = new MachineLearningWorkspaceEncryptionOutputReference(this, "encryption");
   public get encryption() {
     return this._encryption;
   }
@@ -753,7 +752,7 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: false, required: true
-  private _identity = new MachineLearningWorkspaceIdentityOutputReference(this, "identity", true);
+  private _identity = new MachineLearningWorkspaceIdentityOutputReference(this, "identity");
   public get identity() {
     return this._identity;
   }
@@ -766,7 +765,7 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new MachineLearningWorkspaceTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new MachineLearningWorkspaceTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

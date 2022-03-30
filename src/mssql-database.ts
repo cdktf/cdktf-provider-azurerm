@@ -200,10 +200,9 @@ export class MssqlDatabaseLongTermRetentionPolicyOutputReference extends cdktf.C
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MssqlDatabaseLongTermRetentionPolicy | undefined {
@@ -332,10 +331,9 @@ export class MssqlDatabaseShortTermRetentionPolicyOutputReference extends cdktf.
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MssqlDatabaseShortTermRetentionPolicy | undefined {
@@ -430,10 +428,9 @@ export class MssqlDatabaseThreatDetectionPolicyOutputReference extends cdktf.Com
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MssqlDatabaseThreatDetectionPolicy | undefined {
@@ -665,10 +662,9 @@ export class MssqlDatabaseTimeoutsOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MssqlDatabaseTimeouts | undefined {
@@ -783,7 +779,7 @@ export class MssqlDatabase extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_mssql_database";
+  public static readonly tfResourceType = "azurerm_mssql_database";
 
   // ===========
   // INITIALIZER
@@ -800,7 +796,9 @@ export class MssqlDatabase extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_mssql_database',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1192,7 +1190,7 @@ export class MssqlDatabase extends cdktf.TerraformResource {
   }
 
   // long_term_retention_policy - computed: false, optional: true, required: false
-  private _longTermRetentionPolicy = new MssqlDatabaseLongTermRetentionPolicyOutputReference(this, "long_term_retention_policy", true);
+  private _longTermRetentionPolicy = new MssqlDatabaseLongTermRetentionPolicyOutputReference(this, "long_term_retention_policy");
   public get longTermRetentionPolicy() {
     return this._longTermRetentionPolicy;
   }
@@ -1208,7 +1206,7 @@ export class MssqlDatabase extends cdktf.TerraformResource {
   }
 
   // short_term_retention_policy - computed: false, optional: true, required: false
-  private _shortTermRetentionPolicy = new MssqlDatabaseShortTermRetentionPolicyOutputReference(this, "short_term_retention_policy", true);
+  private _shortTermRetentionPolicy = new MssqlDatabaseShortTermRetentionPolicyOutputReference(this, "short_term_retention_policy");
   public get shortTermRetentionPolicy() {
     return this._shortTermRetentionPolicy;
   }
@@ -1224,7 +1222,7 @@ export class MssqlDatabase extends cdktf.TerraformResource {
   }
 
   // threat_detection_policy - computed: false, optional: true, required: false
-  private _threatDetectionPolicy = new MssqlDatabaseThreatDetectionPolicyOutputReference(this, "threat_detection_policy", true);
+  private _threatDetectionPolicy = new MssqlDatabaseThreatDetectionPolicyOutputReference(this, "threat_detection_policy");
   public get threatDetectionPolicy() {
     return this._threatDetectionPolicy;
   }
@@ -1240,7 +1238,7 @@ export class MssqlDatabase extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new MssqlDatabaseTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new MssqlDatabaseTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

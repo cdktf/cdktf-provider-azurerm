@@ -87,10 +87,9 @@ export class IotSecurityDeviceGroupAllowRuleOutputReference extends cdktf.Comple
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): IotSecurityDeviceGroupAllowRule | undefined {
@@ -332,10 +331,9 @@ export class IotSecurityDeviceGroupTimeoutsOutputReference extends cdktf.Complex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): IotSecurityDeviceGroupTimeouts | undefined {
@@ -450,7 +448,7 @@ export class IotSecurityDeviceGroup extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_iot_security_device_group";
+  public static readonly tfResourceType = "azurerm_iot_security_device_group";
 
   // ===========
   // INITIALIZER
@@ -467,7 +465,9 @@ export class IotSecurityDeviceGroup extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_iot_security_device_group',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -517,7 +517,7 @@ export class IotSecurityDeviceGroup extends cdktf.TerraformResource {
   }
 
   // allow_rule - computed: false, optional: true, required: false
-  private _allowRule = new IotSecurityDeviceGroupAllowRuleOutputReference(this, "allow_rule", true);
+  private _allowRule = new IotSecurityDeviceGroupAllowRuleOutputReference(this, "allow_rule");
   public get allowRule() {
     return this._allowRule;
   }
@@ -550,7 +550,7 @@ export class IotSecurityDeviceGroup extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new IotSecurityDeviceGroupTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new IotSecurityDeviceGroupTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

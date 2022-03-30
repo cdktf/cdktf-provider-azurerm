@@ -22,7 +22,45 @@ export interface DataAzurermLbBackendAddressPoolConfig extends cdktf.TerraformMe
   */
   readonly timeouts?: DataAzurermLbBackendAddressPoolTimeouts;
 }
-export class DataAzurermLbBackendAddressPoolBackendAddress extends cdktf.ComplexComputedList {
+export interface DataAzurermLbBackendAddressPoolBackendAddress {
+}
+
+export function dataAzurermLbBackendAddressPoolBackendAddressToTerraform(struct?: DataAzurermLbBackendAddressPoolBackendAddress): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermLbBackendAddressPoolBackendAddressOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermLbBackendAddressPoolBackendAddress | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermLbBackendAddressPoolBackendAddress | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // ip_address - computed: true, optional: false, required: false
   public get ipAddress() {
@@ -39,11 +77,87 @@ export class DataAzurermLbBackendAddressPoolBackendAddress extends cdktf.Complex
     return this.getStringAttribute('virtual_network_id');
   }
 }
-export class DataAzurermLbBackendAddressPoolBackendIpConfigurations extends cdktf.ComplexComputedList {
+
+export class DataAzurermLbBackendAddressPoolBackendAddressList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermLbBackendAddressPoolBackendAddressOutputReference {
+    return new DataAzurermLbBackendAddressPoolBackendAddressOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermLbBackendAddressPoolBackendIpConfigurations {
+}
+
+export function dataAzurermLbBackendAddressPoolBackendIpConfigurationsToTerraform(struct?: DataAzurermLbBackendAddressPoolBackendIpConfigurations): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermLbBackendAddressPoolBackendIpConfigurationsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermLbBackendAddressPoolBackendIpConfigurations | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermLbBackendAddressPoolBackendIpConfigurations | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // id - computed: true, optional: false, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+}
+
+export class DataAzurermLbBackendAddressPoolBackendIpConfigurationsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermLbBackendAddressPoolBackendIpConfigurationsOutputReference {
+    return new DataAzurermLbBackendAddressPoolBackendIpConfigurationsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataAzurermLbBackendAddressPoolTimeouts {
@@ -69,10 +183,9 @@ export class DataAzurermLbBackendAddressPoolTimeoutsOutputReference extends cdkt
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermLbBackendAddressPoolTimeouts | undefined {
@@ -121,7 +234,7 @@ export class DataAzurermLbBackendAddressPool extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_lb_backend_address_pool";
+  public static readonly tfResourceType = "azurerm_lb_backend_address_pool";
 
   // ===========
   // INITIALIZER
@@ -138,7 +251,9 @@ export class DataAzurermLbBackendAddressPool extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'azurerm_lb_backend_address_pool',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -155,13 +270,15 @@ export class DataAzurermLbBackendAddressPool extends cdktf.TerraformDataSource {
   // ==========
 
   // backend_address - computed: true, optional: false, required: false
-  public backendAddress(index: string) {
-    return new DataAzurermLbBackendAddressPoolBackendAddress(this, 'backend_address', index, false);
+  private _backendAddress = new DataAzurermLbBackendAddressPoolBackendAddressList(this, "backend_address", false);
+  public get backendAddress() {
+    return this._backendAddress;
   }
 
   // backend_ip_configurations - computed: true, optional: false, required: false
-  public backendIpConfigurations(index: string) {
-    return new DataAzurermLbBackendAddressPoolBackendIpConfigurations(this, 'backend_ip_configurations', index, false);
+  private _backendIpConfigurations = new DataAzurermLbBackendAddressPoolBackendIpConfigurationsList(this, "backend_ip_configurations", false);
+  public get backendIpConfigurations() {
+    return this._backendIpConfigurations;
   }
 
   // id - computed: true, optional: true, required: false
@@ -206,7 +323,7 @@ export class DataAzurermLbBackendAddressPool extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermLbBackendAddressPoolTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermLbBackendAddressPoolTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

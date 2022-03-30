@@ -203,10 +203,9 @@ export class VpnServerConfigurationIpsecPolicyOutputReference extends cdktf.Comp
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): VpnServerConfigurationIpsecPolicy | undefined {
@@ -486,10 +485,9 @@ export class VpnServerConfigurationRadiusOutputReference extends cdktf.ComplexOb
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): VpnServerConfigurationRadius | undefined {
@@ -659,10 +657,9 @@ export class VpnServerConfigurationRadiusServerAOutputReference extends cdktf.Co
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): VpnServerConfigurationRadiusServerA | undefined {
@@ -799,10 +796,9 @@ export class VpnServerConfigurationTimeoutsOutputReference extends cdktf.Complex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): VpnServerConfigurationTimeouts | undefined {
@@ -917,7 +913,7 @@ export class VpnServerConfiguration extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_vpn_server_configuration";
+  public static readonly tfResourceType = "azurerm_vpn_server_configuration";
 
   // ===========
   // INITIALIZER
@@ -934,7 +930,9 @@ export class VpnServerConfiguration extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_vpn_server_configuration',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1101,7 +1099,7 @@ export class VpnServerConfiguration extends cdktf.TerraformResource {
   }
 
   // ipsec_policy - computed: false, optional: true, required: false
-  private _ipsecPolicy = new VpnServerConfigurationIpsecPolicyOutputReference(this, "ipsec_policy", true);
+  private _ipsecPolicy = new VpnServerConfigurationIpsecPolicyOutputReference(this, "ipsec_policy");
   public get ipsecPolicy() {
     return this._ipsecPolicy;
   }
@@ -1117,7 +1115,7 @@ export class VpnServerConfiguration extends cdktf.TerraformResource {
   }
 
   // radius - computed: false, optional: true, required: false
-  private _radius = new VpnServerConfigurationRadiusOutputReference(this, "radius", true);
+  private _radius = new VpnServerConfigurationRadiusOutputReference(this, "radius");
   public get radius() {
     return this._radius;
   }
@@ -1133,7 +1131,7 @@ export class VpnServerConfiguration extends cdktf.TerraformResource {
   }
 
   // radius_server - computed: false, optional: true, required: false
-  private _radiusServer = new VpnServerConfigurationRadiusServerAOutputReference(this, "radius_server", true);
+  private _radiusServer = new VpnServerConfigurationRadiusServerAOutputReference(this, "radius_server");
   public get radiusServer() {
     return this._radiusServer;
   }
@@ -1149,7 +1147,7 @@ export class VpnServerConfiguration extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new VpnServerConfigurationTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new VpnServerConfigurationTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

@@ -60,10 +60,9 @@ export class AutomationModuleModuleLinkHashOutputReference extends cdktf.Complex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AutomationModuleModuleLinkHash | undefined {
@@ -149,10 +148,9 @@ export class AutomationModuleModuleLinkOutputReference extends cdktf.ComplexObje
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AutomationModuleModuleLink | undefined {
@@ -196,7 +194,7 @@ export class AutomationModuleModuleLinkOutputReference extends cdktf.ComplexObje
   }
 
   // hash - computed: false, optional: true, required: false
-  private _hash = new AutomationModuleModuleLinkHashOutputReference(this, "hash", true);
+  private _hash = new AutomationModuleModuleLinkHashOutputReference(this, "hash");
   public get hash() {
     return this._hash;
   }
@@ -249,10 +247,9 @@ export class AutomationModuleTimeoutsOutputReference extends cdktf.ComplexObject
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AutomationModuleTimeouts | undefined {
@@ -367,7 +364,7 @@ export class AutomationModule extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_automation_module";
+  public static readonly tfResourceType = "azurerm_automation_module";
 
   // ===========
   // INITIALIZER
@@ -384,7 +381,9 @@ export class AutomationModule extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_automation_module',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -447,7 +446,7 @@ export class AutomationModule extends cdktf.TerraformResource {
   }
 
   // module_link - computed: false, optional: false, required: true
-  private _moduleLink = new AutomationModuleModuleLinkOutputReference(this, "module_link", true);
+  private _moduleLink = new AutomationModuleModuleLinkOutputReference(this, "module_link");
   public get moduleLink() {
     return this._moduleLink;
   }
@@ -460,7 +459,7 @@ export class AutomationModule extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AutomationModuleTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new AutomationModuleTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

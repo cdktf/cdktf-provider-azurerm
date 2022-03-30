@@ -96,7 +96,45 @@ export interface LogicAppStandardConfig extends cdktf.TerraformMetaArguments {
   */
   readonly timeouts?: LogicAppStandardTimeouts;
 }
-export class LogicAppStandardSiteCredential extends cdktf.ComplexComputedList {
+export interface LogicAppStandardSiteCredential {
+}
+
+export function logicAppStandardSiteCredentialToTerraform(struct?: LogicAppStandardSiteCredential): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class LogicAppStandardSiteCredentialOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): LogicAppStandardSiteCredential | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LogicAppStandardSiteCredential | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // password - computed: true, optional: false, required: false
   public get password() {
@@ -106,6 +144,25 @@ export class LogicAppStandardSiteCredential extends cdktf.ComplexComputedList {
   // username - computed: true, optional: false, required: false
   public get username() {
     return this.getStringAttribute('username');
+  }
+}
+
+export class LogicAppStandardSiteCredentialList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): LogicAppStandardSiteCredentialOutputReference {
+    return new LogicAppStandardSiteCredentialOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface LogicAppStandardConnectionString {
@@ -158,10 +215,9 @@ export class LogicAppStandardIdentityOutputReference extends cdktf.ComplexObject
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): LogicAppStandardIdentity | undefined {
@@ -315,10 +371,9 @@ export class LogicAppStandardSiteConfigCorsOutputReference extends cdktf.Complex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): LogicAppStandardSiteConfigCors | undefined {
@@ -477,10 +532,9 @@ export class LogicAppStandardSiteConfigOutputReference extends cdktf.ComplexObje
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): LogicAppStandardSiteConfig | undefined {
@@ -836,7 +890,7 @@ export class LogicAppStandardSiteConfigOutputReference extends cdktf.ComplexObje
   }
 
   // cors - computed: false, optional: true, required: false
-  private _cors = new LogicAppStandardSiteConfigCorsOutputReference(this, "cors", true);
+  private _cors = new LogicAppStandardSiteConfigCorsOutputReference(this, "cors");
   public get cors() {
     return this._cors;
   }
@@ -889,10 +943,9 @@ export class LogicAppStandardTimeoutsOutputReference extends cdktf.ComplexObject
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): LogicAppStandardTimeouts | undefined {
@@ -1007,7 +1060,7 @@ export class LogicAppStandard extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_logic_app_standard";
+  public static readonly tfResourceType = "azurerm_logic_app_standard";
 
   // ===========
   // INITIALIZER
@@ -1024,7 +1077,9 @@ export class LogicAppStandard extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_logic_app_standard',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1236,8 +1291,9 @@ export class LogicAppStandard extends cdktf.TerraformResource {
   }
 
   // site_credential - computed: true, optional: false, required: false
-  public siteCredential(index: string) {
-    return new LogicAppStandardSiteCredential(this, 'site_credential', index, false);
+  private _siteCredential = new LogicAppStandardSiteCredentialList(this, "site_credential", false);
+  public get siteCredential() {
+    return this._siteCredential;
   }
 
   // storage_account_access_key - computed: false, optional: false, required: true
@@ -1348,7 +1404,7 @@ export class LogicAppStandard extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity = new LogicAppStandardIdentityOutputReference(this, "identity", true);
+  private _identity = new LogicAppStandardIdentityOutputReference(this, "identity");
   public get identity() {
     return this._identity;
   }
@@ -1364,7 +1420,7 @@ export class LogicAppStandard extends cdktf.TerraformResource {
   }
 
   // site_config - computed: false, optional: true, required: false
-  private _siteConfig = new LogicAppStandardSiteConfigOutputReference(this, "site_config", true);
+  private _siteConfig = new LogicAppStandardSiteConfigOutputReference(this, "site_config");
   public get siteConfig() {
     return this._siteConfig;
   }
@@ -1380,7 +1436,7 @@ export class LogicAppStandard extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new LogicAppStandardTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new LogicAppStandardTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

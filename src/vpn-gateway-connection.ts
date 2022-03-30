@@ -76,10 +76,9 @@ export class VpnGatewayConnectionRoutingPropagatedRouteTableOutputReference exte
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): VpnGatewayConnectionRoutingPropagatedRouteTable | undefined {
@@ -173,10 +172,9 @@ export class VpnGatewayConnectionRoutingOutputReference extends cdktf.ComplexObj
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): VpnGatewayConnectionRouting | undefined {
@@ -242,7 +240,7 @@ export class VpnGatewayConnectionRoutingOutputReference extends cdktf.ComplexObj
   }
 
   // propagated_route_table - computed: false, optional: true, required: false
-  private _propagatedRouteTable = new VpnGatewayConnectionRoutingPropagatedRouteTableOutputReference(this, "propagated_route_table", true);
+  private _propagatedRouteTable = new VpnGatewayConnectionRoutingPropagatedRouteTableOutputReference(this, "propagated_route_table");
   public get propagatedRouteTable() {
     return this._propagatedRouteTable;
   }
@@ -295,10 +293,9 @@ export class VpnGatewayConnectionTimeoutsOutputReference extends cdktf.ComplexOb
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): VpnGatewayConnectionTimeouts | undefined {
@@ -571,7 +568,7 @@ export class VpnGatewayConnection extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_vpn_gateway_connection";
+  public static readonly tfResourceType = "azurerm_vpn_gateway_connection";
 
   // ===========
   // INITIALIZER
@@ -588,7 +585,9 @@ export class VpnGatewayConnection extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_vpn_gateway_connection',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -670,7 +669,7 @@ export class VpnGatewayConnection extends cdktf.TerraformResource {
   }
 
   // routing - computed: false, optional: true, required: false
-  private _routing = new VpnGatewayConnectionRoutingOutputReference(this, "routing", true);
+  private _routing = new VpnGatewayConnectionRoutingOutputReference(this, "routing");
   public get routing() {
     return this._routing;
   }
@@ -686,7 +685,7 @@ export class VpnGatewayConnection extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new VpnGatewayConnectionTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new VpnGatewayConnectionTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

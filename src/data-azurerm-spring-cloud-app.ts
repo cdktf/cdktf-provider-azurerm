@@ -26,7 +26,45 @@ export interface DataAzurermSpringCloudAppConfig extends cdktf.TerraformMetaArgu
   */
   readonly timeouts?: DataAzurermSpringCloudAppTimeouts;
 }
-export class DataAzurermSpringCloudAppIdentity extends cdktf.ComplexComputedList {
+export interface DataAzurermSpringCloudAppIdentity {
+}
+
+export function dataAzurermSpringCloudAppIdentityToTerraform(struct?: DataAzurermSpringCloudAppIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermSpringCloudAppIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermSpringCloudAppIdentity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermSpringCloudAppIdentity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // principal_id - computed: true, optional: false, required: false
   public get principalId() {
@@ -43,7 +81,64 @@ export class DataAzurermSpringCloudAppIdentity extends cdktf.ComplexComputedList
     return this.getStringAttribute('type');
   }
 }
-export class DataAzurermSpringCloudAppPersistentDisk extends cdktf.ComplexComputedList {
+
+export class DataAzurermSpringCloudAppIdentityList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermSpringCloudAppIdentityOutputReference {
+    return new DataAzurermSpringCloudAppIdentityOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermSpringCloudAppPersistentDisk {
+}
+
+export function dataAzurermSpringCloudAppPersistentDiskToTerraform(struct?: DataAzurermSpringCloudAppPersistentDisk): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermSpringCloudAppPersistentDiskOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermSpringCloudAppPersistentDisk | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermSpringCloudAppPersistentDisk | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // mount_path - computed: true, optional: false, required: false
   public get mountPath() {
@@ -53,6 +148,25 @@ export class DataAzurermSpringCloudAppPersistentDisk extends cdktf.ComplexComput
   // size_in_gb - computed: true, optional: false, required: false
   public get sizeInGb() {
     return this.getNumberAttribute('size_in_gb');
+  }
+}
+
+export class DataAzurermSpringCloudAppPersistentDiskList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermSpringCloudAppPersistentDiskOutputReference {
+    return new DataAzurermSpringCloudAppPersistentDiskOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataAzurermSpringCloudAppTimeouts {
@@ -78,10 +192,9 @@ export class DataAzurermSpringCloudAppTimeoutsOutputReference extends cdktf.Comp
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermSpringCloudAppTimeouts | undefined {
@@ -130,7 +243,7 @@ export class DataAzurermSpringCloudApp extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_spring_cloud_app";
+  public static readonly tfResourceType = "azurerm_spring_cloud_app";
 
   // ===========
   // INITIALIZER
@@ -147,7 +260,9 @@ export class DataAzurermSpringCloudApp extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'azurerm_spring_cloud_app',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -180,8 +295,9 @@ export class DataAzurermSpringCloudApp extends cdktf.TerraformDataSource {
   }
 
   // identity - computed: true, optional: false, required: false
-  public identity(index: string) {
-    return new DataAzurermSpringCloudAppIdentity(this, 'identity', index, false);
+  private _identity = new DataAzurermSpringCloudAppIdentityList(this, "identity", false);
+  public get identity() {
+    return this._identity;
   }
 
   // is_public - computed: true, optional: false, required: false
@@ -203,8 +319,9 @@ export class DataAzurermSpringCloudApp extends cdktf.TerraformDataSource {
   }
 
   // persistent_disk - computed: true, optional: false, required: false
-  public persistentDisk(index: string) {
-    return new DataAzurermSpringCloudAppPersistentDisk(this, 'persistent_disk', index, false);
+  private _persistentDisk = new DataAzurermSpringCloudAppPersistentDiskList(this, "persistent_disk", false);
+  public get persistentDisk() {
+    return this._persistentDisk;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -244,7 +361,7 @@ export class DataAzurermSpringCloudApp extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermSpringCloudAppTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermSpringCloudAppTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

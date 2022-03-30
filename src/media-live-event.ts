@@ -106,10 +106,9 @@ export class MediaLiveEventCrossSiteAccessPolicyOutputReference extends cdktf.Co
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MediaLiveEventCrossSiteAccessPolicy | undefined {
@@ -209,10 +208,9 @@ export class MediaLiveEventEncodingOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MediaLiveEventEncoding | undefined {
@@ -318,7 +316,45 @@ export class MediaLiveEventEncodingOutputReference extends cdktf.ComplexObject {
     return this._type;
   }
 }
-export class MediaLiveEventInputEndpoint extends cdktf.ComplexComputedList {
+export interface MediaLiveEventInputEndpoint {
+}
+
+export function mediaLiveEventInputEndpointToTerraform(struct?: MediaLiveEventInputEndpoint): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class MediaLiveEventInputEndpointOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MediaLiveEventInputEndpoint | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaLiveEventInputEndpoint | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // protocol - computed: true, optional: false, required: false
   public get protocol() {
@@ -328,6 +364,25 @@ export class MediaLiveEventInputEndpoint extends cdktf.ComplexComputedList {
   // url - computed: true, optional: false, required: false
   public get url() {
     return this.getStringAttribute('url');
+  }
+}
+
+export class MediaLiveEventInputEndpointList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MediaLiveEventInputEndpointOutputReference {
+    return new MediaLiveEventInputEndpointOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface MediaLiveEventInputIpAccessControlAllow {
@@ -397,10 +452,9 @@ export class MediaLiveEventInputOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MediaLiveEventInput | undefined {
@@ -409,18 +463,6 @@ export class MediaLiveEventInputOutputReference extends cdktf.ComplexObject {
     if (this._accessToken !== undefined) {
       hasAnyValues = true;
       internalValueResult.accessToken = this._accessToken;
-    }
-    if (this._keyFrameIntervalDuration !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.keyFrameIntervalDuration = this._keyFrameIntervalDuration;
-    }
-    if (this._streamingProtocol !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.streamingProtocol = this._streamingProtocol;
-    }
-    if (this._ipAccessControlAllow !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.ipAccessControlAllow = this._ipAccessControlAllow;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -459,8 +501,9 @@ export class MediaLiveEventInputOutputReference extends cdktf.ComplexObject {
   }
 
   // endpoint - computed: true, optional: false, required: false
-  public endpoint(index: string) {
-    return new MediaLiveEventInputEndpoint(this, 'endpoint', index, false);
+  private _endpoint = new MediaLiveEventInputEndpointList(this, "endpoint", false);
+  public get endpoint() {
+    return this._endpoint;
   }
 
   // key_frame_interval_duration - computed: false, optional: true, required: false
@@ -512,7 +555,45 @@ export class MediaLiveEventInputOutputReference extends cdktf.ComplexObject {
     return this._ipAccessControlAllow;
   }
 }
-export class MediaLiveEventPreviewEndpoint extends cdktf.ComplexComputedList {
+export interface MediaLiveEventPreviewEndpoint {
+}
+
+export function mediaLiveEventPreviewEndpointToTerraform(struct?: MediaLiveEventPreviewEndpoint): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class MediaLiveEventPreviewEndpointOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MediaLiveEventPreviewEndpoint | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaLiveEventPreviewEndpoint | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // protocol - computed: true, optional: false, required: false
   public get protocol() {
@@ -522,6 +603,25 @@ export class MediaLiveEventPreviewEndpoint extends cdktf.ComplexComputedList {
   // url - computed: true, optional: false, required: false
   public get url() {
     return this.getStringAttribute('url');
+  }
+}
+
+export class MediaLiveEventPreviewEndpointList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MediaLiveEventPreviewEndpointOutputReference {
+    return new MediaLiveEventPreviewEndpointOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface MediaLiveEventPreviewIpAccessControlAllow {
@@ -591,10 +691,9 @@ export class MediaLiveEventPreviewOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MediaLiveEventPreview | undefined {
@@ -603,18 +702,6 @@ export class MediaLiveEventPreviewOutputReference extends cdktf.ComplexObject {
     if (this._alternativeMediaId !== undefined) {
       hasAnyValues = true;
       internalValueResult.alternativeMediaId = this._alternativeMediaId;
-    }
-    if (this._previewLocator !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.previewLocator = this._previewLocator;
-    }
-    if (this._streamingPolicyName !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.streamingPolicyName = this._streamingPolicyName;
-    }
-    if (this._ipAccessControlAllow !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.ipAccessControlAllow = this._ipAccessControlAllow;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -653,8 +740,9 @@ export class MediaLiveEventPreviewOutputReference extends cdktf.ComplexObject {
   }
 
   // endpoint - computed: true, optional: false, required: false
-  public endpoint(index: string) {
-    return new MediaLiveEventPreviewEndpoint(this, 'endpoint', index, false);
+  private _endpoint = new MediaLiveEventPreviewEndpointList(this, "endpoint", false);
+  public get endpoint() {
+    return this._endpoint;
   }
 
   // preview_locator - computed: true, optional: true, required: false
@@ -744,10 +832,9 @@ export class MediaLiveEventTimeoutsOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MediaLiveEventTimeouts | undefined {
@@ -862,7 +949,7 @@ export class MediaLiveEvent extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_media_live_event";
+  public static readonly tfResourceType = "azurerm_media_live_event";
 
   // ===========
   // INITIALIZER
@@ -879,7 +966,9 @@ export class MediaLiveEvent extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_media_live_event',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1061,7 +1150,7 @@ export class MediaLiveEvent extends cdktf.TerraformResource {
   }
 
   // cross_site_access_policy - computed: false, optional: true, required: false
-  private _crossSiteAccessPolicy = new MediaLiveEventCrossSiteAccessPolicyOutputReference(this, "cross_site_access_policy", true);
+  private _crossSiteAccessPolicy = new MediaLiveEventCrossSiteAccessPolicyOutputReference(this, "cross_site_access_policy");
   public get crossSiteAccessPolicy() {
     return this._crossSiteAccessPolicy;
   }
@@ -1077,7 +1166,7 @@ export class MediaLiveEvent extends cdktf.TerraformResource {
   }
 
   // encoding - computed: false, optional: true, required: false
-  private _encoding = new MediaLiveEventEncodingOutputReference(this, "encoding", true);
+  private _encoding = new MediaLiveEventEncodingOutputReference(this, "encoding");
   public get encoding() {
     return this._encoding;
   }
@@ -1093,7 +1182,7 @@ export class MediaLiveEvent extends cdktf.TerraformResource {
   }
 
   // input - computed: false, optional: false, required: true
-  private _input = new MediaLiveEventInputOutputReference(this, "input", true);
+  private _input = new MediaLiveEventInputOutputReference(this, "input");
   public get input() {
     return this._input;
   }
@@ -1106,7 +1195,7 @@ export class MediaLiveEvent extends cdktf.TerraformResource {
   }
 
   // preview - computed: false, optional: true, required: false
-  private _preview = new MediaLiveEventPreviewOutputReference(this, "preview", true);
+  private _preview = new MediaLiveEventPreviewOutputReference(this, "preview");
   public get preview() {
     return this._preview;
   }
@@ -1122,7 +1211,7 @@ export class MediaLiveEvent extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new MediaLiveEventTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new MediaLiveEventTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

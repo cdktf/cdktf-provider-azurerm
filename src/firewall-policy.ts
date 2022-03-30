@@ -115,10 +115,9 @@ export class FirewallPolicyDnsOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): FirewallPolicyDns | undefined {
@@ -230,10 +229,9 @@ export class FirewallPolicyIdentityOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): FirewallPolicyIdentity | undefined {
@@ -364,10 +362,9 @@ export class FirewallPolicyInsightsOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): FirewallPolicyInsights | undefined {
@@ -579,10 +576,9 @@ export class FirewallPolicyIntrusionDetectionOutputReference extends cdktf.Compl
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): FirewallPolicyIntrusionDetection | undefined {
@@ -696,10 +692,9 @@ export class FirewallPolicyThreatIntelligenceAllowlistOutputReference extends cd
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): FirewallPolicyThreatIntelligenceAllowlist | undefined {
@@ -799,10 +794,9 @@ export class FirewallPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): FirewallPolicyTimeouts | undefined {
@@ -936,10 +930,9 @@ export class FirewallPolicyTlsCertificateOutputReference extends cdktf.ComplexOb
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): FirewallPolicyTlsCertificate | undefined {
@@ -1004,7 +997,7 @@ export class FirewallPolicy extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_firewall_policy";
+  public static readonly tfResourceType = "azurerm_firewall_policy";
 
   // ===========
   // INITIALIZER
@@ -1021,7 +1014,9 @@ export class FirewallPolicy extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_firewall_policy',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1189,7 +1184,7 @@ export class FirewallPolicy extends cdktf.TerraformResource {
   }
 
   // dns - computed: false, optional: true, required: false
-  private _dns = new FirewallPolicyDnsOutputReference(this, "dns", true);
+  private _dns = new FirewallPolicyDnsOutputReference(this, "dns");
   public get dns() {
     return this._dns;
   }
@@ -1205,7 +1200,7 @@ export class FirewallPolicy extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity = new FirewallPolicyIdentityOutputReference(this, "identity", true);
+  private _identity = new FirewallPolicyIdentityOutputReference(this, "identity");
   public get identity() {
     return this._identity;
   }
@@ -1221,7 +1216,7 @@ export class FirewallPolicy extends cdktf.TerraformResource {
   }
 
   // insights - computed: false, optional: true, required: false
-  private _insights = new FirewallPolicyInsightsOutputReference(this, "insights", true);
+  private _insights = new FirewallPolicyInsightsOutputReference(this, "insights");
   public get insights() {
     return this._insights;
   }
@@ -1237,7 +1232,7 @@ export class FirewallPolicy extends cdktf.TerraformResource {
   }
 
   // intrusion_detection - computed: false, optional: true, required: false
-  private _intrusionDetection = new FirewallPolicyIntrusionDetectionOutputReference(this, "intrusion_detection", true);
+  private _intrusionDetection = new FirewallPolicyIntrusionDetectionOutputReference(this, "intrusion_detection");
   public get intrusionDetection() {
     return this._intrusionDetection;
   }
@@ -1253,7 +1248,7 @@ export class FirewallPolicy extends cdktf.TerraformResource {
   }
 
   // threat_intelligence_allowlist - computed: false, optional: true, required: false
-  private _threatIntelligenceAllowlist = new FirewallPolicyThreatIntelligenceAllowlistOutputReference(this, "threat_intelligence_allowlist", true);
+  private _threatIntelligenceAllowlist = new FirewallPolicyThreatIntelligenceAllowlistOutputReference(this, "threat_intelligence_allowlist");
   public get threatIntelligenceAllowlist() {
     return this._threatIntelligenceAllowlist;
   }
@@ -1269,7 +1264,7 @@ export class FirewallPolicy extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new FirewallPolicyTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new FirewallPolicyTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
@@ -1285,7 +1280,7 @@ export class FirewallPolicy extends cdktf.TerraformResource {
   }
 
   // tls_certificate - computed: false, optional: true, required: false
-  private _tlsCertificate = new FirewallPolicyTlsCertificateOutputReference(this, "tls_certificate", true);
+  private _tlsCertificate = new FirewallPolicyTlsCertificateOutputReference(this, "tls_certificate");
   public get tlsCertificate() {
     return this._tlsCertificate;
   }

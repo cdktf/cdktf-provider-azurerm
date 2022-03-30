@@ -26,7 +26,45 @@ export interface DataAzurermNotificationHubConfig extends cdktf.TerraformMetaArg
   */
   readonly timeouts?: DataAzurermNotificationHubTimeouts;
 }
-export class DataAzurermNotificationHubApnsCredential extends cdktf.ComplexComputedList {
+export interface DataAzurermNotificationHubApnsCredential {
+}
+
+export function dataAzurermNotificationHubApnsCredentialToTerraform(struct?: DataAzurermNotificationHubApnsCredential): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermNotificationHubApnsCredentialOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermNotificationHubApnsCredential | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermNotificationHubApnsCredential | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // application_mode - computed: true, optional: false, required: false
   public get applicationMode() {
@@ -53,11 +91,87 @@ export class DataAzurermNotificationHubApnsCredential extends cdktf.ComplexCompu
     return this.getStringAttribute('token');
   }
 }
-export class DataAzurermNotificationHubGcmCredential extends cdktf.ComplexComputedList {
+
+export class DataAzurermNotificationHubApnsCredentialList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermNotificationHubApnsCredentialOutputReference {
+    return new DataAzurermNotificationHubApnsCredentialOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermNotificationHubGcmCredential {
+}
+
+export function dataAzurermNotificationHubGcmCredentialToTerraform(struct?: DataAzurermNotificationHubGcmCredential): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermNotificationHubGcmCredentialOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermNotificationHubGcmCredential | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermNotificationHubGcmCredential | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // api_key - computed: true, optional: false, required: false
   public get apiKey() {
     return this.getStringAttribute('api_key');
+  }
+}
+
+export class DataAzurermNotificationHubGcmCredentialList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermNotificationHubGcmCredentialOutputReference {
+    return new DataAzurermNotificationHubGcmCredentialOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataAzurermNotificationHubTimeouts {
@@ -83,10 +197,9 @@ export class DataAzurermNotificationHubTimeoutsOutputReference extends cdktf.Com
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermNotificationHubTimeouts | undefined {
@@ -135,7 +248,7 @@ export class DataAzurermNotificationHub extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_notification_hub";
+  public static readonly tfResourceType = "azurerm_notification_hub";
 
   // ===========
   // INITIALIZER
@@ -152,7 +265,9 @@ export class DataAzurermNotificationHub extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'azurerm_notification_hub',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -170,13 +285,15 @@ export class DataAzurermNotificationHub extends cdktf.TerraformDataSource {
   // ==========
 
   // apns_credential - computed: true, optional: false, required: false
-  public apnsCredential(index: string) {
-    return new DataAzurermNotificationHubApnsCredential(this, 'apns_credential', index, false);
+  private _apnsCredential = new DataAzurermNotificationHubApnsCredentialList(this, "apns_credential", false);
+  public get apnsCredential() {
+    return this._apnsCredential;
   }
 
   // gcm_credential - computed: true, optional: false, required: false
-  public gcmCredential(index: string) {
-    return new DataAzurermNotificationHubGcmCredential(this, 'gcm_credential', index, false);
+  private _gcmCredential = new DataAzurermNotificationHubGcmCredentialList(this, "gcm_credential", false);
+  public get gcmCredential() {
+    return this._gcmCredential;
   }
 
   // id - computed: true, optional: true, required: false
@@ -234,7 +351,7 @@ export class DataAzurermNotificationHub extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermNotificationHubTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermNotificationHubTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

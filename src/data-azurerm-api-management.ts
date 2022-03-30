@@ -22,7 +22,45 @@ export interface DataAzurermApiManagementConfig extends cdktf.TerraformMetaArgum
   */
   readonly timeouts?: DataAzurermApiManagementTimeouts;
 }
-export class DataAzurermApiManagementAdditionalLocation extends cdktf.ComplexComputedList {
+export interface DataAzurermApiManagementAdditionalLocation {
+}
+
+export function dataAzurermApiManagementAdditionalLocationToTerraform(struct?: DataAzurermApiManagementAdditionalLocation): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermApiManagementAdditionalLocationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermApiManagementAdditionalLocation | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermApiManagementAdditionalLocation | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // capacity - computed: true, optional: false, required: false
   public get capacity() {
@@ -59,7 +97,64 @@ export class DataAzurermApiManagementAdditionalLocation extends cdktf.ComplexCom
     return this.getListAttribute('zones');
   }
 }
-export class DataAzurermApiManagementHostnameConfigurationDeveloperPortal extends cdktf.ComplexComputedList {
+
+export class DataAzurermApiManagementAdditionalLocationList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermApiManagementAdditionalLocationOutputReference {
+    return new DataAzurermApiManagementAdditionalLocationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermApiManagementHostnameConfigurationDeveloperPortal {
+}
+
+export function dataAzurermApiManagementHostnameConfigurationDeveloperPortalToTerraform(struct?: DataAzurermApiManagementHostnameConfigurationDeveloperPortal): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermApiManagementHostnameConfigurationDeveloperPortalOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermApiManagementHostnameConfigurationDeveloperPortal | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermApiManagementHostnameConfigurationDeveloperPortal | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // host_name - computed: true, optional: false, required: false
   public get hostName() {
@@ -76,7 +171,64 @@ export class DataAzurermApiManagementHostnameConfigurationDeveloperPortal extend
     return this.getBooleanAttribute('negotiate_client_certificate');
   }
 }
-export class DataAzurermApiManagementHostnameConfigurationManagement extends cdktf.ComplexComputedList {
+
+export class DataAzurermApiManagementHostnameConfigurationDeveloperPortalList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermApiManagementHostnameConfigurationDeveloperPortalOutputReference {
+    return new DataAzurermApiManagementHostnameConfigurationDeveloperPortalOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermApiManagementHostnameConfigurationManagement {
+}
+
+export function dataAzurermApiManagementHostnameConfigurationManagementToTerraform(struct?: DataAzurermApiManagementHostnameConfigurationManagement): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermApiManagementHostnameConfigurationManagementOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermApiManagementHostnameConfigurationManagement | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermApiManagementHostnameConfigurationManagement | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // host_name - computed: true, optional: false, required: false
   public get hostName() {
@@ -93,7 +245,64 @@ export class DataAzurermApiManagementHostnameConfigurationManagement extends cdk
     return this.getBooleanAttribute('negotiate_client_certificate');
   }
 }
-export class DataAzurermApiManagementHostnameConfigurationPortal extends cdktf.ComplexComputedList {
+
+export class DataAzurermApiManagementHostnameConfigurationManagementList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermApiManagementHostnameConfigurationManagementOutputReference {
+    return new DataAzurermApiManagementHostnameConfigurationManagementOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermApiManagementHostnameConfigurationPortal {
+}
+
+export function dataAzurermApiManagementHostnameConfigurationPortalToTerraform(struct?: DataAzurermApiManagementHostnameConfigurationPortal): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermApiManagementHostnameConfigurationPortalOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermApiManagementHostnameConfigurationPortal | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermApiManagementHostnameConfigurationPortal | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // host_name - computed: true, optional: false, required: false
   public get hostName() {
@@ -110,7 +319,64 @@ export class DataAzurermApiManagementHostnameConfigurationPortal extends cdktf.C
     return this.getBooleanAttribute('negotiate_client_certificate');
   }
 }
-export class DataAzurermApiManagementHostnameConfigurationProxy extends cdktf.ComplexComputedList {
+
+export class DataAzurermApiManagementHostnameConfigurationPortalList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermApiManagementHostnameConfigurationPortalOutputReference {
+    return new DataAzurermApiManagementHostnameConfigurationPortalOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermApiManagementHostnameConfigurationProxy {
+}
+
+export function dataAzurermApiManagementHostnameConfigurationProxyToTerraform(struct?: DataAzurermApiManagementHostnameConfigurationProxy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermApiManagementHostnameConfigurationProxyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermApiManagementHostnameConfigurationProxy | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermApiManagementHostnameConfigurationProxy | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // default_ssl_binding - computed: true, optional: false, required: false
   public get defaultSslBinding() {
@@ -132,7 +398,64 @@ export class DataAzurermApiManagementHostnameConfigurationProxy extends cdktf.Co
     return this.getBooleanAttribute('negotiate_client_certificate');
   }
 }
-export class DataAzurermApiManagementHostnameConfigurationScm extends cdktf.ComplexComputedList {
+
+export class DataAzurermApiManagementHostnameConfigurationProxyList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermApiManagementHostnameConfigurationProxyOutputReference {
+    return new DataAzurermApiManagementHostnameConfigurationProxyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermApiManagementHostnameConfigurationScm {
+}
+
+export function dataAzurermApiManagementHostnameConfigurationScmToTerraform(struct?: DataAzurermApiManagementHostnameConfigurationScm): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermApiManagementHostnameConfigurationScmOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermApiManagementHostnameConfigurationScm | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermApiManagementHostnameConfigurationScm | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // host_name - computed: true, optional: false, required: false
   public get hostName() {
@@ -149,39 +472,153 @@ export class DataAzurermApiManagementHostnameConfigurationScm extends cdktf.Comp
     return this.getBooleanAttribute('negotiate_client_certificate');
   }
 }
-export class DataAzurermApiManagementHostnameConfiguration extends cdktf.ComplexComputedList {
+
+export class DataAzurermApiManagementHostnameConfigurationScmList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermApiManagementHostnameConfigurationScmOutputReference {
+    return new DataAzurermApiManagementHostnameConfigurationScmOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermApiManagementHostnameConfiguration {
+}
+
+export function dataAzurermApiManagementHostnameConfigurationToTerraform(struct?: DataAzurermApiManagementHostnameConfiguration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermApiManagementHostnameConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermApiManagementHostnameConfiguration | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermApiManagementHostnameConfiguration | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // developer_portal - computed: true, optional: false, required: false
+  private _developerPortal = new DataAzurermApiManagementHostnameConfigurationDeveloperPortalList(this, "developer_portal", false);
   public get developerPortal() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('developer_portal');
+    return this._developerPortal;
   }
 
   // management - computed: true, optional: false, required: false
+  private _management = new DataAzurermApiManagementHostnameConfigurationManagementList(this, "management", false);
   public get management() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('management');
+    return this._management;
   }
 
   // portal - computed: true, optional: false, required: false
+  private _portal = new DataAzurermApiManagementHostnameConfigurationPortalList(this, "portal", false);
   public get portal() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('portal');
+    return this._portal;
   }
 
   // proxy - computed: true, optional: false, required: false
+  private _proxy = new DataAzurermApiManagementHostnameConfigurationProxyList(this, "proxy", false);
   public get proxy() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('proxy');
+    return this._proxy;
   }
 
   // scm - computed: true, optional: false, required: false
+  private _scm = new DataAzurermApiManagementHostnameConfigurationScmList(this, "scm", false);
   public get scm() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('scm');
+    return this._scm;
   }
 }
-export class DataAzurermApiManagementIdentity extends cdktf.ComplexComputedList {
+
+export class DataAzurermApiManagementHostnameConfigurationList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermApiManagementHostnameConfigurationOutputReference {
+    return new DataAzurermApiManagementHostnameConfigurationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermApiManagementIdentity {
+}
+
+export function dataAzurermApiManagementIdentityToTerraform(struct?: DataAzurermApiManagementIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermApiManagementIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermApiManagementIdentity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermApiManagementIdentity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // identity_ids - computed: true, optional: false, required: false
   public get identityIds() {
@@ -201,6 +638,25 @@ export class DataAzurermApiManagementIdentity extends cdktf.ComplexComputedList 
   // type - computed: true, optional: false, required: false
   public get type() {
     return this.getStringAttribute('type');
+  }
+}
+
+export class DataAzurermApiManagementIdentityList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermApiManagementIdentityOutputReference {
+    return new DataAzurermApiManagementIdentityOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataAzurermApiManagementTimeouts {
@@ -226,10 +682,9 @@ export class DataAzurermApiManagementTimeoutsOutputReference extends cdktf.Compl
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermApiManagementTimeouts | undefined {
@@ -278,7 +733,7 @@ export class DataAzurermApiManagement extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_api_management";
+  public static readonly tfResourceType = "azurerm_api_management";
 
   // ===========
   // INITIALIZER
@@ -295,7 +750,9 @@ export class DataAzurermApiManagement extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'azurerm_api_management',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -312,8 +769,9 @@ export class DataAzurermApiManagement extends cdktf.TerraformDataSource {
   // ==========
 
   // additional_location - computed: true, optional: false, required: false
-  public additionalLocation(index: string) {
-    return new DataAzurermApiManagementAdditionalLocation(this, 'additional_location', index, false);
+  private _additionalLocation = new DataAzurermApiManagementAdditionalLocationList(this, "additional_location", false);
+  public get additionalLocation() {
+    return this._additionalLocation;
   }
 
   // developer_portal_url - computed: true, optional: false, required: false
@@ -332,8 +790,9 @@ export class DataAzurermApiManagement extends cdktf.TerraformDataSource {
   }
 
   // hostname_configuration - computed: true, optional: false, required: false
-  public hostnameConfiguration(index: string) {
-    return new DataAzurermApiManagementHostnameConfiguration(this, 'hostname_configuration', index, false);
+  private _hostnameConfiguration = new DataAzurermApiManagementHostnameConfigurationList(this, "hostname_configuration", false);
+  public get hostnameConfiguration() {
+    return this._hostnameConfiguration;
   }
 
   // id - computed: true, optional: true, required: false
@@ -342,8 +801,9 @@ export class DataAzurermApiManagement extends cdktf.TerraformDataSource {
   }
 
   // identity - computed: true, optional: false, required: false
-  public identity(index: string) {
-    return new DataAzurermApiManagementIdentity(this, 'identity', index, false);
+  private _identity = new DataAzurermApiManagementIdentityList(this, "identity", false);
+  public get identity() {
+    return this._identity;
   }
 
   // location - computed: true, optional: false, required: false
@@ -433,7 +893,7 @@ export class DataAzurermApiManagement extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermApiManagementTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermApiManagementTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

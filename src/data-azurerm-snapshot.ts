@@ -22,7 +22,45 @@ export interface DataAzurermSnapshotConfig extends cdktf.TerraformMetaArguments 
   */
   readonly timeouts?: DataAzurermSnapshotTimeouts;
 }
-export class DataAzurermSnapshotEncryptionSettingsDiskEncryptionKey extends cdktf.ComplexComputedList {
+export interface DataAzurermSnapshotEncryptionSettingsDiskEncryptionKey {
+}
+
+export function dataAzurermSnapshotEncryptionSettingsDiskEncryptionKeyToTerraform(struct?: DataAzurermSnapshotEncryptionSettingsDiskEncryptionKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermSnapshotEncryptionSettingsDiskEncryptionKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermSnapshotEncryptionSettingsDiskEncryptionKey | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermSnapshotEncryptionSettingsDiskEncryptionKey | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // secret_url - computed: true, optional: false, required: false
   public get secretUrl() {
@@ -34,7 +72,64 @@ export class DataAzurermSnapshotEncryptionSettingsDiskEncryptionKey extends cdkt
     return this.getStringAttribute('source_vault_id');
   }
 }
-export class DataAzurermSnapshotEncryptionSettingsKeyEncryptionKey extends cdktf.ComplexComputedList {
+
+export class DataAzurermSnapshotEncryptionSettingsDiskEncryptionKeyList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermSnapshotEncryptionSettingsDiskEncryptionKeyOutputReference {
+    return new DataAzurermSnapshotEncryptionSettingsDiskEncryptionKeyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermSnapshotEncryptionSettingsKeyEncryptionKey {
+}
+
+export function dataAzurermSnapshotEncryptionSettingsKeyEncryptionKeyToTerraform(struct?: DataAzurermSnapshotEncryptionSettingsKeyEncryptionKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermSnapshotEncryptionSettingsKeyEncryptionKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermSnapshotEncryptionSettingsKeyEncryptionKey | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermSnapshotEncryptionSettingsKeyEncryptionKey | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // key_url - computed: true, optional: false, required: false
   public get keyUrl() {
@@ -46,12 +141,69 @@ export class DataAzurermSnapshotEncryptionSettingsKeyEncryptionKey extends cdktf
     return this.getStringAttribute('source_vault_id');
   }
 }
-export class DataAzurermSnapshotEncryptionSettings extends cdktf.ComplexComputedList {
+
+export class DataAzurermSnapshotEncryptionSettingsKeyEncryptionKeyList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermSnapshotEncryptionSettingsKeyEncryptionKeyOutputReference {
+    return new DataAzurermSnapshotEncryptionSettingsKeyEncryptionKeyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermSnapshotEncryptionSettings {
+}
+
+export function dataAzurermSnapshotEncryptionSettingsToTerraform(struct?: DataAzurermSnapshotEncryptionSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermSnapshotEncryptionSettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermSnapshotEncryptionSettings | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermSnapshotEncryptionSettings | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // disk_encryption_key - computed: true, optional: false, required: false
+  private _diskEncryptionKey = new DataAzurermSnapshotEncryptionSettingsDiskEncryptionKeyList(this, "disk_encryption_key", false);
   public get diskEncryptionKey() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('disk_encryption_key');
+    return this._diskEncryptionKey;
   }
 
   // enabled - computed: true, optional: false, required: false
@@ -60,9 +212,28 @@ export class DataAzurermSnapshotEncryptionSettings extends cdktf.ComplexComputed
   }
 
   // key_encryption_key - computed: true, optional: false, required: false
+  private _keyEncryptionKey = new DataAzurermSnapshotEncryptionSettingsKeyEncryptionKeyList(this, "key_encryption_key", false);
   public get keyEncryptionKey() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('key_encryption_key');
+    return this._keyEncryptionKey;
+  }
+}
+
+export class DataAzurermSnapshotEncryptionSettingsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermSnapshotEncryptionSettingsOutputReference {
+    return new DataAzurermSnapshotEncryptionSettingsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataAzurermSnapshotTimeouts {
@@ -88,10 +259,9 @@ export class DataAzurermSnapshotTimeoutsOutputReference extends cdktf.ComplexObj
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermSnapshotTimeouts | undefined {
@@ -140,7 +310,7 @@ export class DataAzurermSnapshot extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_snapshot";
+  public static readonly tfResourceType = "azurerm_snapshot";
 
   // ===========
   // INITIALIZER
@@ -157,7 +327,9 @@ export class DataAzurermSnapshot extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'azurerm_snapshot',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -184,8 +356,9 @@ export class DataAzurermSnapshot extends cdktf.TerraformDataSource {
   }
 
   // encryption_settings - computed: true, optional: false, required: false
-  public encryptionSettings(index: string) {
-    return new DataAzurermSnapshotEncryptionSettings(this, 'encryption_settings', index, false);
+  private _encryptionSettings = new DataAzurermSnapshotEncryptionSettingsList(this, "encryption_settings", false);
+  public get encryptionSettings() {
+    return this._encryptionSettings;
   }
 
   // id - computed: true, optional: true, required: false
@@ -245,7 +418,7 @@ export class DataAzurermSnapshot extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermSnapshotTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermSnapshotTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

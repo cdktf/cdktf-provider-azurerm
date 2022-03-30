@@ -251,10 +251,9 @@ export class LinuxVirtualMachineScaleSetAdditionalCapabilitiesOutputReference ex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): LinuxVirtualMachineScaleSetAdditionalCapabilities | undefined {
@@ -344,10 +343,9 @@ export class LinuxVirtualMachineScaleSetAutomaticInstanceRepairOutputReference e
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): LinuxVirtualMachineScaleSetAutomaticInstanceRepair | undefined {
@@ -434,10 +432,9 @@ export class LinuxVirtualMachineScaleSetAutomaticOsUpgradePolicyOutputReference 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): LinuxVirtualMachineScaleSetAutomaticOsUpgradePolicy | undefined {
@@ -516,10 +513,9 @@ export class LinuxVirtualMachineScaleSetBootDiagnosticsOutputReference extends c
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): LinuxVirtualMachineScaleSetBootDiagnostics | undefined {
@@ -716,10 +712,9 @@ export class LinuxVirtualMachineScaleSetIdentityOutputReference extends cdktf.Co
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): LinuxVirtualMachineScaleSetIdentity | undefined {
@@ -980,10 +975,9 @@ export class LinuxVirtualMachineScaleSetOsDiskDiffDiskSettingsOutputReference ex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): LinuxVirtualMachineScaleSetOsDiskDiffDiskSettings | undefined {
@@ -1070,10 +1064,9 @@ export class LinuxVirtualMachineScaleSetOsDiskOutputReference extends cdktf.Comp
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): LinuxVirtualMachineScaleSetOsDisk | undefined {
@@ -1202,7 +1195,7 @@ export class LinuxVirtualMachineScaleSetOsDiskOutputReference extends cdktf.Comp
   }
 
   // diff_disk_settings - computed: false, optional: true, required: false
-  private _diffDiskSettings = new LinuxVirtualMachineScaleSetOsDiskDiffDiskSettingsOutputReference(this, "diff_disk_settings", true);
+  private _diffDiskSettings = new LinuxVirtualMachineScaleSetOsDiskDiffDiskSettingsOutputReference(this, "diff_disk_settings");
   public get diffDiskSettings() {
     return this._diffDiskSettings;
   }
@@ -1250,10 +1243,9 @@ export class LinuxVirtualMachineScaleSetPlanOutputReference extends cdktf.Comple
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): LinuxVirtualMachineScaleSetPlan | undefined {
@@ -1366,10 +1358,9 @@ export class LinuxVirtualMachineScaleSetRollingUpgradePolicyOutputReference exte
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): LinuxVirtualMachineScaleSetRollingUpgradePolicy | undefined {
@@ -1542,10 +1533,9 @@ export class LinuxVirtualMachineScaleSetSourceImageReferenceOutputReference exte
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): LinuxVirtualMachineScaleSetSourceImageReference | undefined {
@@ -1667,10 +1657,9 @@ export class LinuxVirtualMachineScaleSetTerminateNotificationOutputReference ext
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): LinuxVirtualMachineScaleSetTerminateNotification | undefined {
@@ -1767,10 +1756,9 @@ export class LinuxVirtualMachineScaleSetTimeoutsOutputReference extends cdktf.Co
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): LinuxVirtualMachineScaleSetTimeouts | undefined {
@@ -1885,7 +1873,7 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_linux_virtual_machine_scale_set";
+  public static readonly tfResourceType = "azurerm_linux_virtual_machine_scale_set";
 
   // ===========
   // INITIALIZER
@@ -1902,7 +1890,9 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_linux_virtual_machine_scale_set',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -2451,7 +2441,7 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
 
   // additional_capabilities - computed: false, optional: true, required: false
-  private _additionalCapabilities = new LinuxVirtualMachineScaleSetAdditionalCapabilitiesOutputReference(this, "additional_capabilities", true);
+  private _additionalCapabilities = new LinuxVirtualMachineScaleSetAdditionalCapabilitiesOutputReference(this, "additional_capabilities");
   public get additionalCapabilities() {
     return this._additionalCapabilities;
   }
@@ -2484,7 +2474,7 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
 
   // automatic_instance_repair - computed: false, optional: true, required: false
-  private _automaticInstanceRepair = new LinuxVirtualMachineScaleSetAutomaticInstanceRepairOutputReference(this, "automatic_instance_repair", true);
+  private _automaticInstanceRepair = new LinuxVirtualMachineScaleSetAutomaticInstanceRepairOutputReference(this, "automatic_instance_repair");
   public get automaticInstanceRepair() {
     return this._automaticInstanceRepair;
   }
@@ -2500,7 +2490,7 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
 
   // automatic_os_upgrade_policy - computed: false, optional: true, required: false
-  private _automaticOsUpgradePolicy = new LinuxVirtualMachineScaleSetAutomaticOsUpgradePolicyOutputReference(this, "automatic_os_upgrade_policy", true);
+  private _automaticOsUpgradePolicy = new LinuxVirtualMachineScaleSetAutomaticOsUpgradePolicyOutputReference(this, "automatic_os_upgrade_policy");
   public get automaticOsUpgradePolicy() {
     return this._automaticOsUpgradePolicy;
   }
@@ -2516,7 +2506,7 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
 
   // boot_diagnostics - computed: false, optional: true, required: false
-  private _bootDiagnostics = new LinuxVirtualMachineScaleSetBootDiagnosticsOutputReference(this, "boot_diagnostics", true);
+  private _bootDiagnostics = new LinuxVirtualMachineScaleSetBootDiagnosticsOutputReference(this, "boot_diagnostics");
   public get bootDiagnostics() {
     return this._bootDiagnostics;
   }
@@ -2566,7 +2556,7 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity = new LinuxVirtualMachineScaleSetIdentityOutputReference(this, "identity", true);
+  private _identity = new LinuxVirtualMachineScaleSetIdentityOutputReference(this, "identity");
   public get identity() {
     return this._identity;
   }
@@ -2596,7 +2586,7 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
 
   // os_disk - computed: false, optional: false, required: true
-  private _osDisk = new LinuxVirtualMachineScaleSetOsDiskOutputReference(this, "os_disk", true);
+  private _osDisk = new LinuxVirtualMachineScaleSetOsDiskOutputReference(this, "os_disk");
   public get osDisk() {
     return this._osDisk;
   }
@@ -2609,7 +2599,7 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
 
   // plan - computed: false, optional: true, required: false
-  private _plan = new LinuxVirtualMachineScaleSetPlanOutputReference(this, "plan", true);
+  private _plan = new LinuxVirtualMachineScaleSetPlanOutputReference(this, "plan");
   public get plan() {
     return this._plan;
   }
@@ -2625,7 +2615,7 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
 
   // rolling_upgrade_policy - computed: false, optional: true, required: false
-  private _rollingUpgradePolicy = new LinuxVirtualMachineScaleSetRollingUpgradePolicyOutputReference(this, "rolling_upgrade_policy", true);
+  private _rollingUpgradePolicy = new LinuxVirtualMachineScaleSetRollingUpgradePolicyOutputReference(this, "rolling_upgrade_policy");
   public get rollingUpgradePolicy() {
     return this._rollingUpgradePolicy;
   }
@@ -2658,7 +2648,7 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
 
   // source_image_reference - computed: false, optional: true, required: false
-  private _sourceImageReference = new LinuxVirtualMachineScaleSetSourceImageReferenceOutputReference(this, "source_image_reference", true);
+  private _sourceImageReference = new LinuxVirtualMachineScaleSetSourceImageReferenceOutputReference(this, "source_image_reference");
   public get sourceImageReference() {
     return this._sourceImageReference;
   }
@@ -2674,7 +2664,7 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
 
   // terminate_notification - computed: false, optional: true, required: false
-  private _terminateNotification = new LinuxVirtualMachineScaleSetTerminateNotificationOutputReference(this, "terminate_notification", true);
+  private _terminateNotification = new LinuxVirtualMachineScaleSetTerminateNotificationOutputReference(this, "terminate_notification");
   public get terminateNotification() {
     return this._terminateNotification;
   }
@@ -2690,7 +2680,7 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new LinuxVirtualMachineScaleSetTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new LinuxVirtualMachineScaleSetTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

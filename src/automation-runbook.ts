@@ -124,10 +124,9 @@ export class AutomationRunbookPublishContentLinkHashOutputReference extends cdkt
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AutomationRunbookPublishContentLinkHash | undefined {
@@ -218,10 +217,9 @@ export class AutomationRunbookPublishContentLinkOutputReference extends cdktf.Co
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AutomationRunbookPublishContentLink | undefined {
@@ -287,7 +285,7 @@ export class AutomationRunbookPublishContentLinkOutputReference extends cdktf.Co
   }
 
   // hash - computed: false, optional: true, required: false
-  private _hash = new AutomationRunbookPublishContentLinkHashOutputReference(this, "hash", true);
+  private _hash = new AutomationRunbookPublishContentLinkHashOutputReference(this, "hash");
   public get hash() {
     return this._hash;
   }
@@ -340,10 +338,9 @@ export class AutomationRunbookTimeoutsOutputReference extends cdktf.ComplexObjec
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AutomationRunbookTimeouts | undefined {
@@ -458,7 +455,7 @@ export class AutomationRunbook extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_automation_runbook";
+  public static readonly tfResourceType = "azurerm_automation_runbook";
 
   // ===========
   // INITIALIZER
@@ -475,7 +472,9 @@ export class AutomationRunbook extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_automation_runbook',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -663,7 +662,7 @@ export class AutomationRunbook extends cdktf.TerraformResource {
   }
 
   // publish_content_link - computed: false, optional: true, required: false
-  private _publishContentLink = new AutomationRunbookPublishContentLinkOutputReference(this, "publish_content_link", true);
+  private _publishContentLink = new AutomationRunbookPublishContentLinkOutputReference(this, "publish_content_link");
   public get publishContentLink() {
     return this._publishContentLink;
   }
@@ -679,7 +678,7 @@ export class AutomationRunbook extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AutomationRunbookTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new AutomationRunbookTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

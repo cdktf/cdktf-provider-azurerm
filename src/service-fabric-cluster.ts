@@ -161,10 +161,9 @@ export class ServiceFabricClusterAzureActiveDirectoryOutputReference extends cdk
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ServiceFabricClusterAzureActiveDirectory | undefined {
@@ -272,10 +271,9 @@ export class ServiceFabricClusterCertificateOutputReference extends cdktf.Comple
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ServiceFabricClusterCertificate | undefined {
@@ -405,10 +403,9 @@ export class ServiceFabricClusterCertificateCommonNamesOutputReference extends c
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ServiceFabricClusterCertificateCommonNames | undefined {
@@ -557,10 +554,9 @@ export class ServiceFabricClusterDiagnosticsConfigOutputReference extends cdktf.
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ServiceFabricClusterDiagnosticsConfig | undefined {
@@ -723,10 +719,9 @@ export class ServiceFabricClusterNodeTypeApplicationPortsOutputReference extends
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ServiceFabricClusterNodeTypeApplicationPorts | undefined {
@@ -810,10 +805,9 @@ export class ServiceFabricClusterNodeTypeEphemeralPortsOutputReference extends c
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ServiceFabricClusterNodeTypeEphemeralPorts | undefined {
@@ -983,10 +977,9 @@ export class ServiceFabricClusterReverseProxyCertificateOutputReference extends 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ServiceFabricClusterReverseProxyCertificate | undefined {
@@ -1116,10 +1109,9 @@ export class ServiceFabricClusterReverseProxyCertificateCommonNamesOutputReferen
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ServiceFabricClusterReverseProxyCertificateCommonNames | undefined {
@@ -1214,10 +1206,9 @@ export class ServiceFabricClusterTimeoutsOutputReference extends cdktf.ComplexOb
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ServiceFabricClusterTimeouts | undefined {
@@ -1356,10 +1347,9 @@ export class ServiceFabricClusterUpgradePolicyDeltaHealthPolicyOutputReference e
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ServiceFabricClusterUpgradePolicyDeltaHealthPolicy | undefined {
@@ -1471,10 +1461,9 @@ export class ServiceFabricClusterUpgradePolicyHealthPolicyOutputReference extend
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ServiceFabricClusterUpgradePolicyHealthPolicy | undefined {
@@ -1603,10 +1592,9 @@ export class ServiceFabricClusterUpgradePolicyOutputReference extends cdktf.Comp
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ServiceFabricClusterUpgradePolicy | undefined {
@@ -1791,7 +1779,7 @@ export class ServiceFabricClusterUpgradePolicyOutputReference extends cdktf.Comp
   }
 
   // delta_health_policy - computed: false, optional: true, required: false
-  private _deltaHealthPolicy = new ServiceFabricClusterUpgradePolicyDeltaHealthPolicyOutputReference(this, "delta_health_policy", true);
+  private _deltaHealthPolicy = new ServiceFabricClusterUpgradePolicyDeltaHealthPolicyOutputReference(this, "delta_health_policy");
   public get deltaHealthPolicy() {
     return this._deltaHealthPolicy;
   }
@@ -1807,7 +1795,7 @@ export class ServiceFabricClusterUpgradePolicyOutputReference extends cdktf.Comp
   }
 
   // health_policy - computed: false, optional: true, required: false
-  private _healthPolicy = new ServiceFabricClusterUpgradePolicyHealthPolicyOutputReference(this, "health_policy", true);
+  private _healthPolicy = new ServiceFabricClusterUpgradePolicyHealthPolicyOutputReference(this, "health_policy");
   public get healthPolicy() {
     return this._healthPolicy;
   }
@@ -1831,7 +1819,7 @@ export class ServiceFabricCluster extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_service_fabric_cluster";
+  public static readonly tfResourceType = "azurerm_service_fabric_cluster";
 
   // ===========
   // INITIALIZER
@@ -1848,7 +1836,9 @@ export class ServiceFabricCluster extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_service_fabric_cluster',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -2067,7 +2057,7 @@ export class ServiceFabricCluster extends cdktf.TerraformResource {
   }
 
   // azure_active_directory - computed: false, optional: true, required: false
-  private _azureActiveDirectory = new ServiceFabricClusterAzureActiveDirectoryOutputReference(this, "azure_active_directory", true);
+  private _azureActiveDirectory = new ServiceFabricClusterAzureActiveDirectoryOutputReference(this, "azure_active_directory");
   public get azureActiveDirectory() {
     return this._azureActiveDirectory;
   }
@@ -2083,7 +2073,7 @@ export class ServiceFabricCluster extends cdktf.TerraformResource {
   }
 
   // certificate - computed: false, optional: true, required: false
-  private _certificate = new ServiceFabricClusterCertificateOutputReference(this, "certificate", true);
+  private _certificate = new ServiceFabricClusterCertificateOutputReference(this, "certificate");
   public get certificate() {
     return this._certificate;
   }
@@ -2099,7 +2089,7 @@ export class ServiceFabricCluster extends cdktf.TerraformResource {
   }
 
   // certificate_common_names - computed: false, optional: true, required: false
-  private _certificateCommonNames = new ServiceFabricClusterCertificateCommonNamesOutputReference(this, "certificate_common_names", true);
+  private _certificateCommonNames = new ServiceFabricClusterCertificateCommonNamesOutputReference(this, "certificate_common_names");
   public get certificateCommonNames() {
     return this._certificateCommonNames;
   }
@@ -2149,7 +2139,7 @@ export class ServiceFabricCluster extends cdktf.TerraformResource {
   }
 
   // diagnostics_config - computed: false, optional: true, required: false
-  private _diagnosticsConfig = new ServiceFabricClusterDiagnosticsConfigOutputReference(this, "diagnostics_config", true);
+  private _diagnosticsConfig = new ServiceFabricClusterDiagnosticsConfigOutputReference(this, "diagnostics_config");
   public get diagnosticsConfig() {
     return this._diagnosticsConfig;
   }
@@ -2196,7 +2186,7 @@ export class ServiceFabricCluster extends cdktf.TerraformResource {
   }
 
   // reverse_proxy_certificate - computed: false, optional: true, required: false
-  private _reverseProxyCertificate = new ServiceFabricClusterReverseProxyCertificateOutputReference(this, "reverse_proxy_certificate", true);
+  private _reverseProxyCertificate = new ServiceFabricClusterReverseProxyCertificateOutputReference(this, "reverse_proxy_certificate");
   public get reverseProxyCertificate() {
     return this._reverseProxyCertificate;
   }
@@ -2212,7 +2202,7 @@ export class ServiceFabricCluster extends cdktf.TerraformResource {
   }
 
   // reverse_proxy_certificate_common_names - computed: false, optional: true, required: false
-  private _reverseProxyCertificateCommonNames = new ServiceFabricClusterReverseProxyCertificateCommonNamesOutputReference(this, "reverse_proxy_certificate_common_names", true);
+  private _reverseProxyCertificateCommonNames = new ServiceFabricClusterReverseProxyCertificateCommonNamesOutputReference(this, "reverse_proxy_certificate_common_names");
   public get reverseProxyCertificateCommonNames() {
     return this._reverseProxyCertificateCommonNames;
   }
@@ -2228,7 +2218,7 @@ export class ServiceFabricCluster extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ServiceFabricClusterTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new ServiceFabricClusterTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
@@ -2244,7 +2234,7 @@ export class ServiceFabricCluster extends cdktf.TerraformResource {
   }
 
   // upgrade_policy - computed: false, optional: true, required: false
-  private _upgradePolicy = new ServiceFabricClusterUpgradePolicyOutputReference(this, "upgrade_policy", true);
+  private _upgradePolicy = new ServiceFabricClusterUpgradePolicyOutputReference(this, "upgrade_policy");
   public get upgradePolicy() {
     return this._upgradePolicy;
   }

@@ -92,10 +92,9 @@ export class LogzMonitorPlanOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): LogzMonitorPlan | undefined {
@@ -227,10 +226,9 @@ export class LogzMonitorTimeoutsOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): LogzMonitorTimeouts | undefined {
@@ -374,10 +372,9 @@ export class LogzMonitorUserOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): LogzMonitorUser | undefined {
@@ -480,7 +477,7 @@ export class LogzMonitor extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_logz_monitor";
+  public static readonly tfResourceType = "azurerm_logz_monitor";
 
   // ===========
   // INITIALIZER
@@ -497,7 +494,9 @@ export class LogzMonitor extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_logz_monitor',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -639,7 +638,7 @@ export class LogzMonitor extends cdktf.TerraformResource {
   }
 
   // plan - computed: false, optional: false, required: true
-  private _plan = new LogzMonitorPlanOutputReference(this, "plan", true);
+  private _plan = new LogzMonitorPlanOutputReference(this, "plan");
   public get plan() {
     return this._plan;
   }
@@ -652,7 +651,7 @@ export class LogzMonitor extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new LogzMonitorTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new LogzMonitorTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
@@ -668,7 +667,7 @@ export class LogzMonitor extends cdktf.TerraformResource {
   }
 
   // user - computed: false, optional: false, required: true
-  private _user = new LogzMonitorUserOutputReference(this, "user", true);
+  private _user = new LogzMonitorUserOutputReference(this, "user");
   public get user() {
     return this._user;
   }

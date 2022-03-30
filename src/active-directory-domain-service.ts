@@ -89,10 +89,9 @@ export class ActiveDirectoryDomainServiceInitialReplicaSetOutputReference extend
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ActiveDirectoryDomainServiceInitialReplicaSet | undefined {
@@ -187,10 +186,9 @@ export class ActiveDirectoryDomainServiceNotificationsOutputReference extends cd
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ActiveDirectoryDomainServiceNotifications | undefined {
@@ -312,10 +310,9 @@ export class ActiveDirectoryDomainServiceSecureLdapOutputReference extends cdktf
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ActiveDirectoryDomainServiceSecureLdap | undefined {
@@ -470,10 +467,9 @@ export class ActiveDirectoryDomainServiceSecurityOutputReference extends cdktf.C
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ActiveDirectoryDomainServiceSecurity | undefined {
@@ -639,10 +635,9 @@ export class ActiveDirectoryDomainServiceTimeoutsOutputReference extends cdktf.C
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ActiveDirectoryDomainServiceTimeouts | undefined {
@@ -757,7 +752,7 @@ export class ActiveDirectoryDomainService extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_active_directory_domain_service";
+  public static readonly tfResourceType = "azurerm_active_directory_domain_service";
 
   // ===========
   // INITIALIZER
@@ -774,7 +769,9 @@ export class ActiveDirectoryDomainService extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_active_directory_domain_service',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -927,7 +924,7 @@ export class ActiveDirectoryDomainService extends cdktf.TerraformResource {
   }
 
   // initial_replica_set - computed: false, optional: false, required: true
-  private _initialReplicaSet = new ActiveDirectoryDomainServiceInitialReplicaSetOutputReference(this, "initial_replica_set", true);
+  private _initialReplicaSet = new ActiveDirectoryDomainServiceInitialReplicaSetOutputReference(this, "initial_replica_set");
   public get initialReplicaSet() {
     return this._initialReplicaSet;
   }
@@ -940,7 +937,7 @@ export class ActiveDirectoryDomainService extends cdktf.TerraformResource {
   }
 
   // notifications - computed: false, optional: true, required: false
-  private _notifications = new ActiveDirectoryDomainServiceNotificationsOutputReference(this, "notifications", true);
+  private _notifications = new ActiveDirectoryDomainServiceNotificationsOutputReference(this, "notifications");
   public get notifications() {
     return this._notifications;
   }
@@ -956,7 +953,7 @@ export class ActiveDirectoryDomainService extends cdktf.TerraformResource {
   }
 
   // secure_ldap - computed: false, optional: true, required: false
-  private _secureLdap = new ActiveDirectoryDomainServiceSecureLdapOutputReference(this, "secure_ldap", true);
+  private _secureLdap = new ActiveDirectoryDomainServiceSecureLdapOutputReference(this, "secure_ldap");
   public get secureLdap() {
     return this._secureLdap;
   }
@@ -972,7 +969,7 @@ export class ActiveDirectoryDomainService extends cdktf.TerraformResource {
   }
 
   // security - computed: false, optional: true, required: false
-  private _security = new ActiveDirectoryDomainServiceSecurityOutputReference(this, "security", true);
+  private _security = new ActiveDirectoryDomainServiceSecurityOutputReference(this, "security");
   public get security() {
     return this._security;
   }
@@ -988,7 +985,7 @@ export class ActiveDirectoryDomainService extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ActiveDirectoryDomainServiceTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new ActiveDirectoryDomainServiceTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

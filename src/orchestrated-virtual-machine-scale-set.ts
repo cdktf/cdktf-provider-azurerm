@@ -176,10 +176,9 @@ export class OrchestratedVirtualMachineScaleSetAutomaticInstanceRepairOutputRefe
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): OrchestratedVirtualMachineScaleSetAutomaticInstanceRepair | undefined {
@@ -261,10 +260,9 @@ export class OrchestratedVirtualMachineScaleSetBootDiagnosticsOutputReference ex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): OrchestratedVirtualMachineScaleSetBootDiagnostics | undefined {
@@ -456,10 +454,9 @@ export class OrchestratedVirtualMachineScaleSetIdentityOutputReference extends c
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): OrchestratedVirtualMachineScaleSetIdentity | undefined {
@@ -702,10 +699,9 @@ export class OrchestratedVirtualMachineScaleSetOsDiskDiffDiskSettingsOutputRefer
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): OrchestratedVirtualMachineScaleSetOsDiskDiffDiskSettings | undefined {
@@ -792,10 +788,9 @@ export class OrchestratedVirtualMachineScaleSetOsDiskOutputReference extends cdk
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): OrchestratedVirtualMachineScaleSetOsDisk | undefined {
@@ -924,7 +919,7 @@ export class OrchestratedVirtualMachineScaleSetOsDiskOutputReference extends cdk
   }
 
   // diff_disk_settings - computed: false, optional: true, required: false
-  private _diffDiskSettings = new OrchestratedVirtualMachineScaleSetOsDiskDiffDiskSettingsOutputReference(this, "diff_disk_settings", true);
+  private _diffDiskSettings = new OrchestratedVirtualMachineScaleSetOsDiskDiffDiskSettingsOutputReference(this, "diff_disk_settings");
   public get diffDiskSettings() {
     return this._diffDiskSettings;
   }
@@ -1064,10 +1059,9 @@ export class OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationOutput
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): OrchestratedVirtualMachineScaleSetOsProfileLinuxConfiguration | undefined {
@@ -1400,10 +1394,9 @@ export class OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationOutp
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): OrchestratedVirtualMachineScaleSetOsProfileWindowsConfiguration | undefined {
@@ -1674,10 +1667,9 @@ export class OrchestratedVirtualMachineScaleSetOsProfileOutputReference extends 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): OrchestratedVirtualMachineScaleSetOsProfile | undefined {
@@ -1730,7 +1722,7 @@ export class OrchestratedVirtualMachineScaleSetOsProfileOutputReference extends 
   }
 
   // linux_configuration - computed: false, optional: true, required: false
-  private _linuxConfiguration = new OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationOutputReference(this, "linux_configuration", true);
+  private _linuxConfiguration = new OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationOutputReference(this, "linux_configuration");
   public get linuxConfiguration() {
     return this._linuxConfiguration;
   }
@@ -1746,7 +1738,7 @@ export class OrchestratedVirtualMachineScaleSetOsProfileOutputReference extends 
   }
 
   // windows_configuration - computed: false, optional: true, required: false
-  private _windowsConfiguration = new OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationOutputReference(this, "windows_configuration", true);
+  private _windowsConfiguration = new OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationOutputReference(this, "windows_configuration");
   public get windowsConfiguration() {
     return this._windowsConfiguration;
   }
@@ -1794,10 +1786,9 @@ export class OrchestratedVirtualMachineScaleSetPlanOutputReference extends cdktf
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): OrchestratedVirtualMachineScaleSetPlan | undefined {
@@ -1910,10 +1901,9 @@ export class OrchestratedVirtualMachineScaleSetSourceImageReferenceOutputReferen
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): OrchestratedVirtualMachineScaleSetSourceImageReference | undefined {
@@ -2035,10 +2025,9 @@ export class OrchestratedVirtualMachineScaleSetTerminationNotificationOutputRefe
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): OrchestratedVirtualMachineScaleSetTerminationNotification | undefined {
@@ -2135,10 +2124,9 @@ export class OrchestratedVirtualMachineScaleSetTimeoutsOutputReference extends c
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): OrchestratedVirtualMachineScaleSetTimeouts | undefined {
@@ -2253,7 +2241,7 @@ export class OrchestratedVirtualMachineScaleSet extends cdktf.TerraformResource 
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_orchestrated_virtual_machine_scale_set";
+  public static readonly tfResourceType = "azurerm_orchestrated_virtual_machine_scale_set";
 
   // ===========
   // INITIALIZER
@@ -2270,7 +2258,9 @@ export class OrchestratedVirtualMachineScaleSet extends cdktf.TerraformResource 
     super(scope, id, {
       terraformResourceType: 'azurerm_orchestrated_virtual_machine_scale_set',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -2583,7 +2573,7 @@ export class OrchestratedVirtualMachineScaleSet extends cdktf.TerraformResource 
   }
 
   // automatic_instance_repair - computed: false, optional: true, required: false
-  private _automaticInstanceRepair = new OrchestratedVirtualMachineScaleSetAutomaticInstanceRepairOutputReference(this, "automatic_instance_repair", true);
+  private _automaticInstanceRepair = new OrchestratedVirtualMachineScaleSetAutomaticInstanceRepairOutputReference(this, "automatic_instance_repair");
   public get automaticInstanceRepair() {
     return this._automaticInstanceRepair;
   }
@@ -2599,7 +2589,7 @@ export class OrchestratedVirtualMachineScaleSet extends cdktf.TerraformResource 
   }
 
   // boot_diagnostics - computed: false, optional: true, required: false
-  private _bootDiagnostics = new OrchestratedVirtualMachineScaleSetBootDiagnosticsOutputReference(this, "boot_diagnostics", true);
+  private _bootDiagnostics = new OrchestratedVirtualMachineScaleSetBootDiagnosticsOutputReference(this, "boot_diagnostics");
   public get bootDiagnostics() {
     return this._bootDiagnostics;
   }
@@ -2649,7 +2639,7 @@ export class OrchestratedVirtualMachineScaleSet extends cdktf.TerraformResource 
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity = new OrchestratedVirtualMachineScaleSetIdentityOutputReference(this, "identity", true);
+  private _identity = new OrchestratedVirtualMachineScaleSetIdentityOutputReference(this, "identity");
   public get identity() {
     return this._identity;
   }
@@ -2682,7 +2672,7 @@ export class OrchestratedVirtualMachineScaleSet extends cdktf.TerraformResource 
   }
 
   // os_disk - computed: false, optional: true, required: false
-  private _osDisk = new OrchestratedVirtualMachineScaleSetOsDiskOutputReference(this, "os_disk", true);
+  private _osDisk = new OrchestratedVirtualMachineScaleSetOsDiskOutputReference(this, "os_disk");
   public get osDisk() {
     return this._osDisk;
   }
@@ -2698,7 +2688,7 @@ export class OrchestratedVirtualMachineScaleSet extends cdktf.TerraformResource 
   }
 
   // os_profile - computed: false, optional: true, required: false
-  private _osProfile = new OrchestratedVirtualMachineScaleSetOsProfileOutputReference(this, "os_profile", true);
+  private _osProfile = new OrchestratedVirtualMachineScaleSetOsProfileOutputReference(this, "os_profile");
   public get osProfile() {
     return this._osProfile;
   }
@@ -2714,7 +2704,7 @@ export class OrchestratedVirtualMachineScaleSet extends cdktf.TerraformResource 
   }
 
   // plan - computed: false, optional: true, required: false
-  private _plan = new OrchestratedVirtualMachineScaleSetPlanOutputReference(this, "plan", true);
+  private _plan = new OrchestratedVirtualMachineScaleSetPlanOutputReference(this, "plan");
   public get plan() {
     return this._plan;
   }
@@ -2730,7 +2720,7 @@ export class OrchestratedVirtualMachineScaleSet extends cdktf.TerraformResource 
   }
 
   // source_image_reference - computed: false, optional: true, required: false
-  private _sourceImageReference = new OrchestratedVirtualMachineScaleSetSourceImageReferenceOutputReference(this, "source_image_reference", true);
+  private _sourceImageReference = new OrchestratedVirtualMachineScaleSetSourceImageReferenceOutputReference(this, "source_image_reference");
   public get sourceImageReference() {
     return this._sourceImageReference;
   }
@@ -2746,7 +2736,7 @@ export class OrchestratedVirtualMachineScaleSet extends cdktf.TerraformResource 
   }
 
   // termination_notification - computed: false, optional: true, required: false
-  private _terminationNotification = new OrchestratedVirtualMachineScaleSetTerminationNotificationOutputReference(this, "termination_notification", true);
+  private _terminationNotification = new OrchestratedVirtualMachineScaleSetTerminationNotificationOutputReference(this, "termination_notification");
   public get terminationNotification() {
     return this._terminationNotification;
   }
@@ -2762,7 +2752,7 @@ export class OrchestratedVirtualMachineScaleSet extends cdktf.TerraformResource 
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new OrchestratedVirtualMachineScaleSetTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new OrchestratedVirtualMachineScaleSetTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

@@ -93,10 +93,9 @@ export class LogicAppWorkflowAccessControlActionOutputReference extends cdktf.Co
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): LogicAppWorkflowAccessControlAction | undefined {
@@ -156,10 +155,9 @@ export class LogicAppWorkflowAccessControlContentOutputReference extends cdktf.C
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): LogicAppWorkflowAccessControlContent | undefined {
@@ -272,10 +270,9 @@ export class LogicAppWorkflowAccessControlTriggerOutputReference extends cdktf.C
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): LogicAppWorkflowAccessControlTrigger | undefined {
@@ -358,10 +355,9 @@ export class LogicAppWorkflowAccessControlWorkflowManagementOutputReference exte
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): LogicAppWorkflowAccessControlWorkflowManagement | undefined {
@@ -444,10 +440,9 @@ export class LogicAppWorkflowAccessControlOutputReference extends cdktf.ComplexO
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): LogicAppWorkflowAccessControl | undefined {
@@ -490,7 +485,7 @@ export class LogicAppWorkflowAccessControlOutputReference extends cdktf.ComplexO
   }
 
   // action - computed: false, optional: true, required: false
-  private _action = new LogicAppWorkflowAccessControlActionOutputReference(this, "action", true);
+  private _action = new LogicAppWorkflowAccessControlActionOutputReference(this, "action");
   public get action() {
     return this._action;
   }
@@ -506,7 +501,7 @@ export class LogicAppWorkflowAccessControlOutputReference extends cdktf.ComplexO
   }
 
   // content - computed: false, optional: true, required: false
-  private _content = new LogicAppWorkflowAccessControlContentOutputReference(this, "content", true);
+  private _content = new LogicAppWorkflowAccessControlContentOutputReference(this, "content");
   public get content() {
     return this._content;
   }
@@ -522,7 +517,7 @@ export class LogicAppWorkflowAccessControlOutputReference extends cdktf.ComplexO
   }
 
   // trigger - computed: false, optional: true, required: false
-  private _trigger = new LogicAppWorkflowAccessControlTriggerOutputReference(this, "trigger", true);
+  private _trigger = new LogicAppWorkflowAccessControlTriggerOutputReference(this, "trigger");
   public get trigger() {
     return this._trigger;
   }
@@ -538,7 +533,7 @@ export class LogicAppWorkflowAccessControlOutputReference extends cdktf.ComplexO
   }
 
   // workflow_management - computed: false, optional: true, required: false
-  private _workflowManagement = new LogicAppWorkflowAccessControlWorkflowManagementOutputReference(this, "workflow_management", true);
+  private _workflowManagement = new LogicAppWorkflowAccessControlWorkflowManagementOutputReference(this, "workflow_management");
   public get workflowManagement() {
     return this._workflowManagement;
   }
@@ -581,10 +576,9 @@ export class LogicAppWorkflowIdentityOutputReference extends cdktf.ComplexObject
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): LogicAppWorkflowIdentity | undefined {
@@ -691,10 +685,9 @@ export class LogicAppWorkflowTimeoutsOutputReference extends cdktf.ComplexObject
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): LogicAppWorkflowTimeouts | undefined {
@@ -809,7 +802,7 @@ export class LogicAppWorkflow extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_logic_app_workflow";
+  public static readonly tfResourceType = "azurerm_logic_app_workflow";
 
   // ===========
   // INITIALIZER
@@ -826,7 +819,9 @@ export class LogicAppWorkflow extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_logic_app_workflow',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1051,7 +1046,7 @@ export class LogicAppWorkflow extends cdktf.TerraformResource {
   }
 
   // access_control - computed: false, optional: true, required: false
-  private _accessControl = new LogicAppWorkflowAccessControlOutputReference(this, "access_control", true);
+  private _accessControl = new LogicAppWorkflowAccessControlOutputReference(this, "access_control");
   public get accessControl() {
     return this._accessControl;
   }
@@ -1067,7 +1062,7 @@ export class LogicAppWorkflow extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity = new LogicAppWorkflowIdentityOutputReference(this, "identity", true);
+  private _identity = new LogicAppWorkflowIdentityOutputReference(this, "identity");
   public get identity() {
     return this._identity;
   }
@@ -1083,7 +1078,7 @@ export class LogicAppWorkflow extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new LogicAppWorkflowTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new LogicAppWorkflowTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

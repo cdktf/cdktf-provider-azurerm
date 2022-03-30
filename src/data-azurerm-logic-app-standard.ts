@@ -32,7 +32,45 @@ export interface DataAzurermLogicAppStandardConfig extends cdktf.TerraformMetaAr
   */
   readonly timeouts?: DataAzurermLogicAppStandardTimeouts;
 }
-export class DataAzurermLogicAppStandardConnectionString extends cdktf.ComplexComputedList {
+export interface DataAzurermLogicAppStandardConnectionString {
+}
+
+export function dataAzurermLogicAppStandardConnectionStringToTerraform(struct?: DataAzurermLogicAppStandardConnectionString): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermLogicAppStandardConnectionStringOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermLogicAppStandardConnectionString | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermLogicAppStandardConnectionString | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // name - computed: true, optional: false, required: false
   public get name() {
@@ -49,7 +87,64 @@ export class DataAzurermLogicAppStandardConnectionString extends cdktf.ComplexCo
     return this.getStringAttribute('value');
   }
 }
-export class DataAzurermLogicAppStandardIdentity extends cdktf.ComplexComputedList {
+
+export class DataAzurermLogicAppStandardConnectionStringList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermLogicAppStandardConnectionStringOutputReference {
+    return new DataAzurermLogicAppStandardConnectionStringOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermLogicAppStandardIdentity {
+}
+
+export function dataAzurermLogicAppStandardIdentityToTerraform(struct?: DataAzurermLogicAppStandardIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermLogicAppStandardIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermLogicAppStandardIdentity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermLogicAppStandardIdentity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // principal_id - computed: true, optional: false, required: false
   public get principalId() {
@@ -66,7 +161,64 @@ export class DataAzurermLogicAppStandardIdentity extends cdktf.ComplexComputedLi
     return this.getStringAttribute('type');
   }
 }
-export class DataAzurermLogicAppStandardSiteCredential extends cdktf.ComplexComputedList {
+
+export class DataAzurermLogicAppStandardIdentityList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermLogicAppStandardIdentityOutputReference {
+    return new DataAzurermLogicAppStandardIdentityOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermLogicAppStandardSiteCredential {
+}
+
+export function dataAzurermLogicAppStandardSiteCredentialToTerraform(struct?: DataAzurermLogicAppStandardSiteCredential): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermLogicAppStandardSiteCredentialOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermLogicAppStandardSiteCredential | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermLogicAppStandardSiteCredential | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // password - computed: true, optional: false, required: false
   public get password() {
@@ -76,6 +228,25 @@ export class DataAzurermLogicAppStandardSiteCredential extends cdktf.ComplexComp
   // username - computed: true, optional: false, required: false
   public get username() {
     return this.getStringAttribute('username');
+  }
+}
+
+export class DataAzurermLogicAppStandardSiteCredentialList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermLogicAppStandardSiteCredentialOutputReference {
+    return new DataAzurermLogicAppStandardSiteCredentialOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataAzurermLogicAppStandardSiteConfigIpRestrictionHeaders {
@@ -185,10 +356,9 @@ export class DataAzurermLogicAppStandardSiteConfigCorsOutputReference extends cd
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermLogicAppStandardSiteConfigCors | undefined {
@@ -347,10 +517,9 @@ export class DataAzurermLogicAppStandardSiteConfigOutputReference extends cdktf.
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermLogicAppStandardSiteConfig | undefined {
@@ -706,7 +875,7 @@ export class DataAzurermLogicAppStandardSiteConfigOutputReference extends cdktf.
   }
 
   // cors - computed: false, optional: true, required: false
-  private _cors = new DataAzurermLogicAppStandardSiteConfigCorsOutputReference(this, "cors", true);
+  private _cors = new DataAzurermLogicAppStandardSiteConfigCorsOutputReference(this, "cors");
   public get cors() {
     return this._cors;
   }
@@ -744,10 +913,9 @@ export class DataAzurermLogicAppStandardTimeoutsOutputReference extends cdktf.Co
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermLogicAppStandardTimeouts | undefined {
@@ -796,7 +964,7 @@ export class DataAzurermLogicAppStandard extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_logic_app_standard";
+  public static readonly tfResourceType = "azurerm_logic_app_standard";
 
   // ===========
   // INITIALIZER
@@ -813,7 +981,9 @@ export class DataAzurermLogicAppStandard extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'azurerm_logic_app_standard',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -857,8 +1027,9 @@ export class DataAzurermLogicAppStandard extends cdktf.TerraformDataSource {
   }
 
   // connection_string - computed: true, optional: false, required: false
-  public connectionString(index: string) {
-    return new DataAzurermLogicAppStandardConnectionString(this, 'connection_string', index, true);
+  private _connectionString = new DataAzurermLogicAppStandardConnectionStringList(this, "connection_string", true);
+  public get connectionString() {
+    return this._connectionString;
   }
 
   // custom_domain_verification_id - computed: true, optional: false, required: false
@@ -887,8 +1058,9 @@ export class DataAzurermLogicAppStandard extends cdktf.TerraformDataSource {
   }
 
   // identity - computed: true, optional: false, required: false
-  public identity(index: string) {
-    return new DataAzurermLogicAppStandardIdentity(this, 'identity', index, false);
+  private _identity = new DataAzurermLogicAppStandardIdentityList(this, "identity", false);
+  public get identity() {
+    return this._identity;
   }
 
   // kind - computed: true, optional: false, required: false
@@ -938,8 +1110,9 @@ export class DataAzurermLogicAppStandard extends cdktf.TerraformDataSource {
   }
 
   // site_credential - computed: true, optional: false, required: false
-  public siteCredential(index: string) {
-    return new DataAzurermLogicAppStandardSiteCredential(this, 'site_credential', index, false);
+  private _siteCredential = new DataAzurermLogicAppStandardSiteCredentialList(this, "site_credential", false);
+  public get siteCredential() {
+    return this._siteCredential;
   }
 
   // storage_account_access_key - computed: true, optional: false, required: false
@@ -984,7 +1157,7 @@ export class DataAzurermLogicAppStandard extends cdktf.TerraformDataSource {
   }
 
   // site_config - computed: false, optional: true, required: false
-  private _siteConfig = new DataAzurermLogicAppStandardSiteConfigOutputReference(this, "site_config", true);
+  private _siteConfig = new DataAzurermLogicAppStandardSiteConfigOutputReference(this, "site_config");
   public get siteConfig() {
     return this._siteConfig;
   }
@@ -1000,7 +1173,7 @@ export class DataAzurermLogicAppStandard extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermLogicAppStandardTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermLogicAppStandardTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

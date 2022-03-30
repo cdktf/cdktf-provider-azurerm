@@ -45,10 +45,9 @@ export class DataAzurermNetworkWatcherTimeoutsOutputReference extends cdktf.Comp
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermNetworkWatcherTimeouts | undefined {
@@ -97,7 +96,7 @@ export class DataAzurermNetworkWatcher extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_network_watcher";
+  public static readonly tfResourceType = "azurerm_network_watcher";
 
   // ===========
   // INITIALIZER
@@ -114,7 +113,9 @@ export class DataAzurermNetworkWatcher extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'azurerm_network_watcher',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -172,7 +173,7 @@ export class DataAzurermNetworkWatcher extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermNetworkWatcherTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermNetworkWatcherTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

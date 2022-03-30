@@ -22,7 +22,45 @@ export interface DataAzurermActiveDirectoryDomainServiceConfig extends cdktf.Ter
   */
   readonly timeouts?: DataAzurermActiveDirectoryDomainServiceTimeouts;
 }
-export class DataAzurermActiveDirectoryDomainServiceNotifications extends cdktf.ComplexComputedList {
+export interface DataAzurermActiveDirectoryDomainServiceNotifications {
+}
+
+export function dataAzurermActiveDirectoryDomainServiceNotificationsToTerraform(struct?: DataAzurermActiveDirectoryDomainServiceNotifications): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermActiveDirectoryDomainServiceNotificationsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermActiveDirectoryDomainServiceNotifications | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermActiveDirectoryDomainServiceNotifications | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // additional_recipients - computed: true, optional: false, required: false
   public get additionalRecipients() {
@@ -39,7 +77,64 @@ export class DataAzurermActiveDirectoryDomainServiceNotifications extends cdktf.
     return this.getBooleanAttribute('notify_global_admins');
   }
 }
-export class DataAzurermActiveDirectoryDomainServiceReplicaSets extends cdktf.ComplexComputedList {
+
+export class DataAzurermActiveDirectoryDomainServiceNotificationsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermActiveDirectoryDomainServiceNotificationsOutputReference {
+    return new DataAzurermActiveDirectoryDomainServiceNotificationsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermActiveDirectoryDomainServiceReplicaSets {
+}
+
+export function dataAzurermActiveDirectoryDomainServiceReplicaSetsToTerraform(struct?: DataAzurermActiveDirectoryDomainServiceReplicaSets): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermActiveDirectoryDomainServiceReplicaSetsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermActiveDirectoryDomainServiceReplicaSets | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermActiveDirectoryDomainServiceReplicaSets | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // domain_controller_ip_addresses - computed: true, optional: false, required: false
   public get domainControllerIpAddresses() {
@@ -71,7 +166,64 @@ export class DataAzurermActiveDirectoryDomainServiceReplicaSets extends cdktf.Co
     return this.getStringAttribute('subnet_id');
   }
 }
-export class DataAzurermActiveDirectoryDomainServiceSecureLdap extends cdktf.ComplexComputedList {
+
+export class DataAzurermActiveDirectoryDomainServiceReplicaSetsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermActiveDirectoryDomainServiceReplicaSetsOutputReference {
+    return new DataAzurermActiveDirectoryDomainServiceReplicaSetsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermActiveDirectoryDomainServiceSecureLdap {
+}
+
+export function dataAzurermActiveDirectoryDomainServiceSecureLdapToTerraform(struct?: DataAzurermActiveDirectoryDomainServiceSecureLdap): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermActiveDirectoryDomainServiceSecureLdapOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermActiveDirectoryDomainServiceSecureLdap | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermActiveDirectoryDomainServiceSecureLdap | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // certificate_expiry - computed: true, optional: false, required: false
   public get certificateExpiry() {
@@ -98,7 +250,64 @@ export class DataAzurermActiveDirectoryDomainServiceSecureLdap extends cdktf.Com
     return this.getStringAttribute('public_certificate');
   }
 }
-export class DataAzurermActiveDirectoryDomainServiceSecurity extends cdktf.ComplexComputedList {
+
+export class DataAzurermActiveDirectoryDomainServiceSecureLdapList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermActiveDirectoryDomainServiceSecureLdapOutputReference {
+    return new DataAzurermActiveDirectoryDomainServiceSecureLdapOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermActiveDirectoryDomainServiceSecurity {
+}
+
+export function dataAzurermActiveDirectoryDomainServiceSecurityToTerraform(struct?: DataAzurermActiveDirectoryDomainServiceSecurity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermActiveDirectoryDomainServiceSecurityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermActiveDirectoryDomainServiceSecurity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermActiveDirectoryDomainServiceSecurity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // ntlm_v1_enabled - computed: true, optional: false, required: false
   public get ntlmV1Enabled() {
@@ -125,6 +334,25 @@ export class DataAzurermActiveDirectoryDomainServiceSecurity extends cdktf.Compl
     return this.getBooleanAttribute('tls_v1_enabled');
   }
 }
+
+export class DataAzurermActiveDirectoryDomainServiceSecurityList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermActiveDirectoryDomainServiceSecurityOutputReference {
+    return new DataAzurermActiveDirectoryDomainServiceSecurityOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataAzurermActiveDirectoryDomainServiceTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/active_directory_domain_service#read DataAzurermActiveDirectoryDomainService#read}
@@ -148,10 +376,9 @@ export class DataAzurermActiveDirectoryDomainServiceTimeoutsOutputReference exte
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermActiveDirectoryDomainServiceTimeouts | undefined {
@@ -200,7 +427,7 @@ export class DataAzurermActiveDirectoryDomainService extends cdktf.TerraformData
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_active_directory_domain_service";
+  public static readonly tfResourceType = "azurerm_active_directory_domain_service";
 
   // ===========
   // INITIALIZER
@@ -217,7 +444,9 @@ export class DataAzurermActiveDirectoryDomainService extends cdktf.TerraformData
     super(scope, id, {
       terraformResourceType: 'azurerm_active_directory_domain_service',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -277,13 +506,15 @@ export class DataAzurermActiveDirectoryDomainService extends cdktf.TerraformData
   }
 
   // notifications - computed: true, optional: false, required: false
-  public notifications(index: string) {
-    return new DataAzurermActiveDirectoryDomainServiceNotifications(this, 'notifications', index, false);
+  private _notifications = new DataAzurermActiveDirectoryDomainServiceNotificationsList(this, "notifications", false);
+  public get notifications() {
+    return this._notifications;
   }
 
   // replica_sets - computed: true, optional: false, required: false
-  public replicaSets(index: string) {
-    return new DataAzurermActiveDirectoryDomainServiceReplicaSets(this, 'replica_sets', index, false);
+  private _replicaSets = new DataAzurermActiveDirectoryDomainServiceReplicaSetsList(this, "replica_sets", false);
+  public get replicaSets() {
+    return this._replicaSets;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -305,13 +536,15 @@ export class DataAzurermActiveDirectoryDomainService extends cdktf.TerraformData
   }
 
   // secure_ldap - computed: true, optional: false, required: false
-  public secureLdap(index: string) {
-    return new DataAzurermActiveDirectoryDomainServiceSecureLdap(this, 'secure_ldap', index, false);
+  private _secureLdap = new DataAzurermActiveDirectoryDomainServiceSecureLdapList(this, "secure_ldap", false);
+  public get secureLdap() {
+    return this._secureLdap;
   }
 
   // security - computed: true, optional: false, required: false
-  public security(index: string) {
-    return new DataAzurermActiveDirectoryDomainServiceSecurity(this, 'security', index, false);
+  private _security = new DataAzurermActiveDirectoryDomainServiceSecurityList(this, "security", false);
+  public get security() {
+    return this._security;
   }
 
   // sku - computed: true, optional: false, required: false
@@ -340,7 +573,7 @@ export class DataAzurermActiveDirectoryDomainService extends cdktf.TerraformData
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermActiveDirectoryDomainServiceTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermActiveDirectoryDomainServiceTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

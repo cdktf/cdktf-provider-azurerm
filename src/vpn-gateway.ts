@@ -71,10 +71,9 @@ export class VpnGatewayBgpSettingsInstance0BgpPeeringAddressOutputReference exte
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): VpnGatewayBgpSettingsInstance0BgpPeeringAddress | undefined {
@@ -149,10 +148,9 @@ export class VpnGatewayBgpSettingsInstance1BgpPeeringAddressOutputReference exte
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): VpnGatewayBgpSettingsInstance1BgpPeeringAddress | undefined {
@@ -246,10 +244,9 @@ export class VpnGatewayBgpSettingsOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): VpnGatewayBgpSettings | undefined {
@@ -323,7 +320,7 @@ export class VpnGatewayBgpSettingsOutputReference extends cdktf.ComplexObject {
   }
 
   // instance_0_bgp_peering_address - computed: false, optional: true, required: false
-  private _instance0BgpPeeringAddress = new VpnGatewayBgpSettingsInstance0BgpPeeringAddressOutputReference(this, "instance_0_bgp_peering_address", true);
+  private _instance0BgpPeeringAddress = new VpnGatewayBgpSettingsInstance0BgpPeeringAddressOutputReference(this, "instance_0_bgp_peering_address");
   public get instance0BgpPeeringAddress() {
     return this._instance0BgpPeeringAddress;
   }
@@ -339,7 +336,7 @@ export class VpnGatewayBgpSettingsOutputReference extends cdktf.ComplexObject {
   }
 
   // instance_1_bgp_peering_address - computed: false, optional: true, required: false
-  private _instance1BgpPeeringAddress = new VpnGatewayBgpSettingsInstance1BgpPeeringAddressOutputReference(this, "instance_1_bgp_peering_address", true);
+  private _instance1BgpPeeringAddress = new VpnGatewayBgpSettingsInstance1BgpPeeringAddressOutputReference(this, "instance_1_bgp_peering_address");
   public get instance1BgpPeeringAddress() {
     return this._instance1BgpPeeringAddress;
   }
@@ -392,10 +389,9 @@ export class VpnGatewayTimeoutsOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): VpnGatewayTimeouts | undefined {
@@ -510,7 +506,7 @@ export class VpnGateway extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_vpn_gateway";
+  public static readonly tfResourceType = "azurerm_vpn_gateway";
 
   // ===========
   // INITIALIZER
@@ -527,7 +523,9 @@ export class VpnGateway extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_vpn_gateway',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -655,7 +653,7 @@ export class VpnGateway extends cdktf.TerraformResource {
   }
 
   // bgp_settings - computed: false, optional: true, required: false
-  private _bgpSettings = new VpnGatewayBgpSettingsOutputReference(this, "bgp_settings", true);
+  private _bgpSettings = new VpnGatewayBgpSettingsOutputReference(this, "bgp_settings");
   public get bgpSettings() {
     return this._bgpSettings;
   }
@@ -671,7 +669,7 @@ export class VpnGateway extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new VpnGatewayTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new VpnGatewayTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

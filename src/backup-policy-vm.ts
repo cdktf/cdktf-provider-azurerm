@@ -101,10 +101,9 @@ export class BackupPolicyVmBackupOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): BackupPolicyVmBackup | undefined {
@@ -205,10 +204,9 @@ export class BackupPolicyVmRetentionDailyOutputReference extends cdktf.ComplexOb
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): BackupPolicyVmRetentionDaily | undefined {
@@ -278,10 +276,9 @@ export class BackupPolicyVmRetentionMonthlyOutputReference extends cdktf.Complex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): BackupPolicyVmRetentionMonthly | undefined {
@@ -384,10 +381,9 @@ export class BackupPolicyVmRetentionWeeklyOutputReference extends cdktf.ComplexO
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): BackupPolicyVmRetentionWeekly | undefined {
@@ -481,10 +477,9 @@ export class BackupPolicyVmRetentionYearlyOutputReference extends cdktf.ComplexO
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): BackupPolicyVmRetentionYearly | undefined {
@@ -616,10 +611,9 @@ export class BackupPolicyVmTimeoutsOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): BackupPolicyVmTimeouts | undefined {
@@ -734,7 +728,7 @@ export class BackupPolicyVm extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_backup_policy_vm";
+  public static readonly tfResourceType = "azurerm_backup_policy_vm";
 
   // ===========
   // INITIALIZER
@@ -751,7 +745,9 @@ export class BackupPolicyVm extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_backup_policy_vm',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -869,7 +865,7 @@ export class BackupPolicyVm extends cdktf.TerraformResource {
   }
 
   // backup - computed: false, optional: false, required: true
-  private _backup = new BackupPolicyVmBackupOutputReference(this, "backup", true);
+  private _backup = new BackupPolicyVmBackupOutputReference(this, "backup");
   public get backup() {
     return this._backup;
   }
@@ -882,7 +878,7 @@ export class BackupPolicyVm extends cdktf.TerraformResource {
   }
 
   // retention_daily - computed: false, optional: true, required: false
-  private _retentionDaily = new BackupPolicyVmRetentionDailyOutputReference(this, "retention_daily", true);
+  private _retentionDaily = new BackupPolicyVmRetentionDailyOutputReference(this, "retention_daily");
   public get retentionDaily() {
     return this._retentionDaily;
   }
@@ -898,7 +894,7 @@ export class BackupPolicyVm extends cdktf.TerraformResource {
   }
 
   // retention_monthly - computed: false, optional: true, required: false
-  private _retentionMonthly = new BackupPolicyVmRetentionMonthlyOutputReference(this, "retention_monthly", true);
+  private _retentionMonthly = new BackupPolicyVmRetentionMonthlyOutputReference(this, "retention_monthly");
   public get retentionMonthly() {
     return this._retentionMonthly;
   }
@@ -914,7 +910,7 @@ export class BackupPolicyVm extends cdktf.TerraformResource {
   }
 
   // retention_weekly - computed: false, optional: true, required: false
-  private _retentionWeekly = new BackupPolicyVmRetentionWeeklyOutputReference(this, "retention_weekly", true);
+  private _retentionWeekly = new BackupPolicyVmRetentionWeeklyOutputReference(this, "retention_weekly");
   public get retentionWeekly() {
     return this._retentionWeekly;
   }
@@ -930,7 +926,7 @@ export class BackupPolicyVm extends cdktf.TerraformResource {
   }
 
   // retention_yearly - computed: false, optional: true, required: false
-  private _retentionYearly = new BackupPolicyVmRetentionYearlyOutputReference(this, "retention_yearly", true);
+  private _retentionYearly = new BackupPolicyVmRetentionYearlyOutputReference(this, "retention_yearly");
   public get retentionYearly() {
     return this._retentionYearly;
   }
@@ -946,7 +942,7 @@ export class BackupPolicyVm extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new BackupPolicyVmTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new BackupPolicyVmTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

@@ -22,7 +22,45 @@ export interface DataAzurermAppConfigurationConfig extends cdktf.TerraformMetaAr
   */
   readonly timeouts?: DataAzurermAppConfigurationTimeouts;
 }
-export class DataAzurermAppConfigurationPrimaryReadKey extends cdktf.ComplexComputedList {
+export interface DataAzurermAppConfigurationPrimaryReadKey {
+}
+
+export function dataAzurermAppConfigurationPrimaryReadKeyToTerraform(struct?: DataAzurermAppConfigurationPrimaryReadKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermAppConfigurationPrimaryReadKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermAppConfigurationPrimaryReadKey | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermAppConfigurationPrimaryReadKey | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // connection_string - computed: true, optional: false, required: false
   public get connectionString() {
@@ -39,7 +77,64 @@ export class DataAzurermAppConfigurationPrimaryReadKey extends cdktf.ComplexComp
     return this.getStringAttribute('secret');
   }
 }
-export class DataAzurermAppConfigurationPrimaryWriteKey extends cdktf.ComplexComputedList {
+
+export class DataAzurermAppConfigurationPrimaryReadKeyList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermAppConfigurationPrimaryReadKeyOutputReference {
+    return new DataAzurermAppConfigurationPrimaryReadKeyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermAppConfigurationPrimaryWriteKey {
+}
+
+export function dataAzurermAppConfigurationPrimaryWriteKeyToTerraform(struct?: DataAzurermAppConfigurationPrimaryWriteKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermAppConfigurationPrimaryWriteKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermAppConfigurationPrimaryWriteKey | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermAppConfigurationPrimaryWriteKey | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // connection_string - computed: true, optional: false, required: false
   public get connectionString() {
@@ -56,7 +151,64 @@ export class DataAzurermAppConfigurationPrimaryWriteKey extends cdktf.ComplexCom
     return this.getStringAttribute('secret');
   }
 }
-export class DataAzurermAppConfigurationSecondaryReadKey extends cdktf.ComplexComputedList {
+
+export class DataAzurermAppConfigurationPrimaryWriteKeyList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermAppConfigurationPrimaryWriteKeyOutputReference {
+    return new DataAzurermAppConfigurationPrimaryWriteKeyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermAppConfigurationSecondaryReadKey {
+}
+
+export function dataAzurermAppConfigurationSecondaryReadKeyToTerraform(struct?: DataAzurermAppConfigurationSecondaryReadKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermAppConfigurationSecondaryReadKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermAppConfigurationSecondaryReadKey | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermAppConfigurationSecondaryReadKey | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // connection_string - computed: true, optional: false, required: false
   public get connectionString() {
@@ -73,7 +225,64 @@ export class DataAzurermAppConfigurationSecondaryReadKey extends cdktf.ComplexCo
     return this.getStringAttribute('secret');
   }
 }
-export class DataAzurermAppConfigurationSecondaryWriteKey extends cdktf.ComplexComputedList {
+
+export class DataAzurermAppConfigurationSecondaryReadKeyList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermAppConfigurationSecondaryReadKeyOutputReference {
+    return new DataAzurermAppConfigurationSecondaryReadKeyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermAppConfigurationSecondaryWriteKey {
+}
+
+export function dataAzurermAppConfigurationSecondaryWriteKeyToTerraform(struct?: DataAzurermAppConfigurationSecondaryWriteKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermAppConfigurationSecondaryWriteKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermAppConfigurationSecondaryWriteKey | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermAppConfigurationSecondaryWriteKey | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // connection_string - computed: true, optional: false, required: false
   public get connectionString() {
@@ -88,6 +297,25 @@ export class DataAzurermAppConfigurationSecondaryWriteKey extends cdktf.ComplexC
   // secret - computed: true, optional: false, required: false
   public get secret() {
     return this.getStringAttribute('secret');
+  }
+}
+
+export class DataAzurermAppConfigurationSecondaryWriteKeyList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermAppConfigurationSecondaryWriteKeyOutputReference {
+    return new DataAzurermAppConfigurationSecondaryWriteKeyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataAzurermAppConfigurationTimeouts {
@@ -113,10 +341,9 @@ export class DataAzurermAppConfigurationTimeoutsOutputReference extends cdktf.Co
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermAppConfigurationTimeouts | undefined {
@@ -165,7 +392,7 @@ export class DataAzurermAppConfiguration extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_app_configuration";
+  public static readonly tfResourceType = "azurerm_app_configuration";
 
   // ===========
   // INITIALIZER
@@ -182,7 +409,9 @@ export class DataAzurermAppConfiguration extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'azurerm_app_configuration',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -227,13 +456,15 @@ export class DataAzurermAppConfiguration extends cdktf.TerraformDataSource {
   }
 
   // primary_read_key - computed: true, optional: false, required: false
-  public primaryReadKey(index: string) {
-    return new DataAzurermAppConfigurationPrimaryReadKey(this, 'primary_read_key', index, false);
+  private _primaryReadKey = new DataAzurermAppConfigurationPrimaryReadKeyList(this, "primary_read_key", false);
+  public get primaryReadKey() {
+    return this._primaryReadKey;
   }
 
   // primary_write_key - computed: true, optional: false, required: false
-  public primaryWriteKey(index: string) {
-    return new DataAzurermAppConfigurationPrimaryWriteKey(this, 'primary_write_key', index, false);
+  private _primaryWriteKey = new DataAzurermAppConfigurationPrimaryWriteKeyList(this, "primary_write_key", false);
+  public get primaryWriteKey() {
+    return this._primaryWriteKey;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -250,13 +481,15 @@ export class DataAzurermAppConfiguration extends cdktf.TerraformDataSource {
   }
 
   // secondary_read_key - computed: true, optional: false, required: false
-  public secondaryReadKey(index: string) {
-    return new DataAzurermAppConfigurationSecondaryReadKey(this, 'secondary_read_key', index, false);
+  private _secondaryReadKey = new DataAzurermAppConfigurationSecondaryReadKeyList(this, "secondary_read_key", false);
+  public get secondaryReadKey() {
+    return this._secondaryReadKey;
   }
 
   // secondary_write_key - computed: true, optional: false, required: false
-  public secondaryWriteKey(index: string) {
-    return new DataAzurermAppConfigurationSecondaryWriteKey(this, 'secondary_write_key', index, false);
+  private _secondaryWriteKey = new DataAzurermAppConfigurationSecondaryWriteKeyList(this, "secondary_write_key", false);
+  public get secondaryWriteKey() {
+    return this._secondaryWriteKey;
   }
 
   // sku - computed: true, optional: false, required: false
@@ -270,7 +503,7 @@ export class DataAzurermAppConfiguration extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermAppConfigurationTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermAppConfigurationTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

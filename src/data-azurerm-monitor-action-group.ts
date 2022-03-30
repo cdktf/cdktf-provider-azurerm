@@ -28,7 +28,45 @@ export interface DataAzurermMonitorActionGroupConfig extends cdktf.TerraformMeta
   */
   readonly timeouts?: DataAzurermMonitorActionGroupTimeouts;
 }
-export class DataAzurermMonitorActionGroupArmRoleReceiver extends cdktf.ComplexComputedList {
+export interface DataAzurermMonitorActionGroupArmRoleReceiver {
+}
+
+export function dataAzurermMonitorActionGroupArmRoleReceiverToTerraform(struct?: DataAzurermMonitorActionGroupArmRoleReceiver): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermMonitorActionGroupArmRoleReceiverOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermMonitorActionGroupArmRoleReceiver | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermMonitorActionGroupArmRoleReceiver | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // name - computed: true, optional: false, required: false
   public get name() {
@@ -45,7 +83,64 @@ export class DataAzurermMonitorActionGroupArmRoleReceiver extends cdktf.ComplexC
     return this.getBooleanAttribute('use_common_alert_schema');
   }
 }
-export class DataAzurermMonitorActionGroupAutomationRunbookReceiver extends cdktf.ComplexComputedList {
+
+export class DataAzurermMonitorActionGroupArmRoleReceiverList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermMonitorActionGroupArmRoleReceiverOutputReference {
+    return new DataAzurermMonitorActionGroupArmRoleReceiverOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermMonitorActionGroupAutomationRunbookReceiver {
+}
+
+export function dataAzurermMonitorActionGroupAutomationRunbookReceiverToTerraform(struct?: DataAzurermMonitorActionGroupAutomationRunbookReceiver): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermMonitorActionGroupAutomationRunbookReceiverOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermMonitorActionGroupAutomationRunbookReceiver | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermMonitorActionGroupAutomationRunbookReceiver | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // automation_account_id - computed: true, optional: false, required: false
   public get automationAccountId() {
@@ -82,7 +177,64 @@ export class DataAzurermMonitorActionGroupAutomationRunbookReceiver extends cdkt
     return this.getStringAttribute('webhook_resource_id');
   }
 }
-export class DataAzurermMonitorActionGroupAzureAppPushReceiver extends cdktf.ComplexComputedList {
+
+export class DataAzurermMonitorActionGroupAutomationRunbookReceiverList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermMonitorActionGroupAutomationRunbookReceiverOutputReference {
+    return new DataAzurermMonitorActionGroupAutomationRunbookReceiverOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermMonitorActionGroupAzureAppPushReceiver {
+}
+
+export function dataAzurermMonitorActionGroupAzureAppPushReceiverToTerraform(struct?: DataAzurermMonitorActionGroupAzureAppPushReceiver): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermMonitorActionGroupAzureAppPushReceiverOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermMonitorActionGroupAzureAppPushReceiver | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermMonitorActionGroupAzureAppPushReceiver | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // email_address - computed: true, optional: false, required: false
   public get emailAddress() {
@@ -94,7 +246,64 @@ export class DataAzurermMonitorActionGroupAzureAppPushReceiver extends cdktf.Com
     return this.getStringAttribute('name');
   }
 }
-export class DataAzurermMonitorActionGroupAzureFunctionReceiver extends cdktf.ComplexComputedList {
+
+export class DataAzurermMonitorActionGroupAzureAppPushReceiverList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermMonitorActionGroupAzureAppPushReceiverOutputReference {
+    return new DataAzurermMonitorActionGroupAzureAppPushReceiverOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermMonitorActionGroupAzureFunctionReceiver {
+}
+
+export function dataAzurermMonitorActionGroupAzureFunctionReceiverToTerraform(struct?: DataAzurermMonitorActionGroupAzureFunctionReceiver): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermMonitorActionGroupAzureFunctionReceiverOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermMonitorActionGroupAzureFunctionReceiver | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermMonitorActionGroupAzureFunctionReceiver | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // function_app_resource_id - computed: true, optional: false, required: false
   public get functionAppResourceId() {
@@ -121,7 +330,64 @@ export class DataAzurermMonitorActionGroupAzureFunctionReceiver extends cdktf.Co
     return this.getBooleanAttribute('use_common_alert_schema');
   }
 }
-export class DataAzurermMonitorActionGroupEmailReceiver extends cdktf.ComplexComputedList {
+
+export class DataAzurermMonitorActionGroupAzureFunctionReceiverList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermMonitorActionGroupAzureFunctionReceiverOutputReference {
+    return new DataAzurermMonitorActionGroupAzureFunctionReceiverOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermMonitorActionGroupEmailReceiver {
+}
+
+export function dataAzurermMonitorActionGroupEmailReceiverToTerraform(struct?: DataAzurermMonitorActionGroupEmailReceiver): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermMonitorActionGroupEmailReceiverOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermMonitorActionGroupEmailReceiver | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermMonitorActionGroupEmailReceiver | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // email_address - computed: true, optional: false, required: false
   public get emailAddress() {
@@ -138,7 +404,64 @@ export class DataAzurermMonitorActionGroupEmailReceiver extends cdktf.ComplexCom
     return this.getBooleanAttribute('use_common_alert_schema');
   }
 }
-export class DataAzurermMonitorActionGroupItsmReceiver extends cdktf.ComplexComputedList {
+
+export class DataAzurermMonitorActionGroupEmailReceiverList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermMonitorActionGroupEmailReceiverOutputReference {
+    return new DataAzurermMonitorActionGroupEmailReceiverOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermMonitorActionGroupItsmReceiver {
+}
+
+export function dataAzurermMonitorActionGroupItsmReceiverToTerraform(struct?: DataAzurermMonitorActionGroupItsmReceiver): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermMonitorActionGroupItsmReceiverOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermMonitorActionGroupItsmReceiver | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermMonitorActionGroupItsmReceiver | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // connection_id - computed: true, optional: false, required: false
   public get connectionId() {
@@ -165,7 +488,64 @@ export class DataAzurermMonitorActionGroupItsmReceiver extends cdktf.ComplexComp
     return this.getStringAttribute('workspace_id');
   }
 }
-export class DataAzurermMonitorActionGroupLogicAppReceiver extends cdktf.ComplexComputedList {
+
+export class DataAzurermMonitorActionGroupItsmReceiverList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermMonitorActionGroupItsmReceiverOutputReference {
+    return new DataAzurermMonitorActionGroupItsmReceiverOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermMonitorActionGroupLogicAppReceiver {
+}
+
+export function dataAzurermMonitorActionGroupLogicAppReceiverToTerraform(struct?: DataAzurermMonitorActionGroupLogicAppReceiver): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermMonitorActionGroupLogicAppReceiverOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermMonitorActionGroupLogicAppReceiver | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermMonitorActionGroupLogicAppReceiver | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // callback_url - computed: true, optional: false, required: false
   public get callbackUrl() {
@@ -187,7 +567,64 @@ export class DataAzurermMonitorActionGroupLogicAppReceiver extends cdktf.Complex
     return this.getBooleanAttribute('use_common_alert_schema');
   }
 }
-export class DataAzurermMonitorActionGroupSmsReceiver extends cdktf.ComplexComputedList {
+
+export class DataAzurermMonitorActionGroupLogicAppReceiverList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermMonitorActionGroupLogicAppReceiverOutputReference {
+    return new DataAzurermMonitorActionGroupLogicAppReceiverOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermMonitorActionGroupSmsReceiver {
+}
+
+export function dataAzurermMonitorActionGroupSmsReceiverToTerraform(struct?: DataAzurermMonitorActionGroupSmsReceiver): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermMonitorActionGroupSmsReceiverOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermMonitorActionGroupSmsReceiver | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermMonitorActionGroupSmsReceiver | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // country_code - computed: true, optional: false, required: false
   public get countryCode() {
@@ -204,7 +641,64 @@ export class DataAzurermMonitorActionGroupSmsReceiver extends cdktf.ComplexCompu
     return this.getStringAttribute('phone_number');
   }
 }
-export class DataAzurermMonitorActionGroupVoiceReceiver extends cdktf.ComplexComputedList {
+
+export class DataAzurermMonitorActionGroupSmsReceiverList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermMonitorActionGroupSmsReceiverOutputReference {
+    return new DataAzurermMonitorActionGroupSmsReceiverOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermMonitorActionGroupVoiceReceiver {
+}
+
+export function dataAzurermMonitorActionGroupVoiceReceiverToTerraform(struct?: DataAzurermMonitorActionGroupVoiceReceiver): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermMonitorActionGroupVoiceReceiverOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermMonitorActionGroupVoiceReceiver | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermMonitorActionGroupVoiceReceiver | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // country_code - computed: true, optional: false, required: false
   public get countryCode() {
@@ -221,7 +715,64 @@ export class DataAzurermMonitorActionGroupVoiceReceiver extends cdktf.ComplexCom
     return this.getStringAttribute('phone_number');
   }
 }
-export class DataAzurermMonitorActionGroupWebhookReceiverAadAuth extends cdktf.ComplexComputedList {
+
+export class DataAzurermMonitorActionGroupVoiceReceiverList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermMonitorActionGroupVoiceReceiverOutputReference {
+    return new DataAzurermMonitorActionGroupVoiceReceiverOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermMonitorActionGroupWebhookReceiverAadAuth {
+}
+
+export function dataAzurermMonitorActionGroupWebhookReceiverAadAuthToTerraform(struct?: DataAzurermMonitorActionGroupWebhookReceiverAadAuth): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermMonitorActionGroupWebhookReceiverAadAuthOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermMonitorActionGroupWebhookReceiverAadAuth | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermMonitorActionGroupWebhookReceiverAadAuth | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // identifier_uri - computed: true, optional: false, required: false
   public get identifierUri() {
@@ -238,12 +789,69 @@ export class DataAzurermMonitorActionGroupWebhookReceiverAadAuth extends cdktf.C
     return this.getStringAttribute('tenant_id');
   }
 }
-export class DataAzurermMonitorActionGroupWebhookReceiver extends cdktf.ComplexComputedList {
+
+export class DataAzurermMonitorActionGroupWebhookReceiverAadAuthList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermMonitorActionGroupWebhookReceiverAadAuthOutputReference {
+    return new DataAzurermMonitorActionGroupWebhookReceiverAadAuthOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermMonitorActionGroupWebhookReceiver {
+}
+
+export function dataAzurermMonitorActionGroupWebhookReceiverToTerraform(struct?: DataAzurermMonitorActionGroupWebhookReceiver): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermMonitorActionGroupWebhookReceiverOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermMonitorActionGroupWebhookReceiver | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermMonitorActionGroupWebhookReceiver | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // aad_auth - computed: true, optional: false, required: false
+  private _aadAuth = new DataAzurermMonitorActionGroupWebhookReceiverAadAuthList(this, "aad_auth", false);
   public get aadAuth() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('aad_auth');
+    return this._aadAuth;
   }
 
   // name - computed: true, optional: false, required: false
@@ -259,6 +867,25 @@ export class DataAzurermMonitorActionGroupWebhookReceiver extends cdktf.ComplexC
   // use_common_alert_schema - computed: true, optional: false, required: false
   public get useCommonAlertSchema() {
     return this.getBooleanAttribute('use_common_alert_schema');
+  }
+}
+
+export class DataAzurermMonitorActionGroupWebhookReceiverList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermMonitorActionGroupWebhookReceiverOutputReference {
+    return new DataAzurermMonitorActionGroupWebhookReceiverOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataAzurermMonitorActionGroupEventHubReceiver {
@@ -316,10 +943,9 @@ export class DataAzurermMonitorActionGroupTimeoutsOutputReference extends cdktf.
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermMonitorActionGroupTimeouts | undefined {
@@ -368,7 +994,7 @@ export class DataAzurermMonitorActionGroup extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_monitor_action_group";
+  public static readonly tfResourceType = "azurerm_monitor_action_group";
 
   // ===========
   // INITIALIZER
@@ -385,7 +1011,9 @@ export class DataAzurermMonitorActionGroup extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'azurerm_monitor_action_group',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -403,28 +1031,33 @@ export class DataAzurermMonitorActionGroup extends cdktf.TerraformDataSource {
   // ==========
 
   // arm_role_receiver - computed: true, optional: false, required: false
-  public armRoleReceiver(index: string) {
-    return new DataAzurermMonitorActionGroupArmRoleReceiver(this, 'arm_role_receiver', index, false);
+  private _armRoleReceiver = new DataAzurermMonitorActionGroupArmRoleReceiverList(this, "arm_role_receiver", false);
+  public get armRoleReceiver() {
+    return this._armRoleReceiver;
   }
 
   // automation_runbook_receiver - computed: true, optional: false, required: false
-  public automationRunbookReceiver(index: string) {
-    return new DataAzurermMonitorActionGroupAutomationRunbookReceiver(this, 'automation_runbook_receiver', index, false);
+  private _automationRunbookReceiver = new DataAzurermMonitorActionGroupAutomationRunbookReceiverList(this, "automation_runbook_receiver", false);
+  public get automationRunbookReceiver() {
+    return this._automationRunbookReceiver;
   }
 
   // azure_app_push_receiver - computed: true, optional: false, required: false
-  public azureAppPushReceiver(index: string) {
-    return new DataAzurermMonitorActionGroupAzureAppPushReceiver(this, 'azure_app_push_receiver', index, false);
+  private _azureAppPushReceiver = new DataAzurermMonitorActionGroupAzureAppPushReceiverList(this, "azure_app_push_receiver", false);
+  public get azureAppPushReceiver() {
+    return this._azureAppPushReceiver;
   }
 
   // azure_function_receiver - computed: true, optional: false, required: false
-  public azureFunctionReceiver(index: string) {
-    return new DataAzurermMonitorActionGroupAzureFunctionReceiver(this, 'azure_function_receiver', index, false);
+  private _azureFunctionReceiver = new DataAzurermMonitorActionGroupAzureFunctionReceiverList(this, "azure_function_receiver", false);
+  public get azureFunctionReceiver() {
+    return this._azureFunctionReceiver;
   }
 
   // email_receiver - computed: true, optional: false, required: false
-  public emailReceiver(index: string) {
-    return new DataAzurermMonitorActionGroupEmailReceiver(this, 'email_receiver', index, false);
+  private _emailReceiver = new DataAzurermMonitorActionGroupEmailReceiverList(this, "email_receiver", false);
+  public get emailReceiver() {
+    return this._emailReceiver;
   }
 
   // enabled - computed: true, optional: false, required: false
@@ -438,13 +1071,15 @@ export class DataAzurermMonitorActionGroup extends cdktf.TerraformDataSource {
   }
 
   // itsm_receiver - computed: true, optional: false, required: false
-  public itsmReceiver(index: string) {
-    return new DataAzurermMonitorActionGroupItsmReceiver(this, 'itsm_receiver', index, false);
+  private _itsmReceiver = new DataAzurermMonitorActionGroupItsmReceiverList(this, "itsm_receiver", false);
+  public get itsmReceiver() {
+    return this._itsmReceiver;
   }
 
   // logic_app_receiver - computed: true, optional: false, required: false
-  public logicAppReceiver(index: string) {
-    return new DataAzurermMonitorActionGroupLogicAppReceiver(this, 'logic_app_receiver', index, false);
+  private _logicAppReceiver = new DataAzurermMonitorActionGroupLogicAppReceiverList(this, "logic_app_receiver", false);
+  public get logicAppReceiver() {
+    return this._logicAppReceiver;
   }
 
   // name - computed: false, optional: false, required: true
@@ -479,18 +1114,21 @@ export class DataAzurermMonitorActionGroup extends cdktf.TerraformDataSource {
   }
 
   // sms_receiver - computed: true, optional: false, required: false
-  public smsReceiver(index: string) {
-    return new DataAzurermMonitorActionGroupSmsReceiver(this, 'sms_receiver', index, false);
+  private _smsReceiver = new DataAzurermMonitorActionGroupSmsReceiverList(this, "sms_receiver", false);
+  public get smsReceiver() {
+    return this._smsReceiver;
   }
 
   // voice_receiver - computed: true, optional: false, required: false
-  public voiceReceiver(index: string) {
-    return new DataAzurermMonitorActionGroupVoiceReceiver(this, 'voice_receiver', index, false);
+  private _voiceReceiver = new DataAzurermMonitorActionGroupVoiceReceiverList(this, "voice_receiver", false);
+  public get voiceReceiver() {
+    return this._voiceReceiver;
   }
 
   // webhook_receiver - computed: true, optional: false, required: false
-  public webhookReceiver(index: string) {
-    return new DataAzurermMonitorActionGroupWebhookReceiver(this, 'webhook_receiver', index, false);
+  private _webhookReceiver = new DataAzurermMonitorActionGroupWebhookReceiverList(this, "webhook_receiver", false);
+  public get webhookReceiver() {
+    return this._webhookReceiver;
   }
 
   // event_hub_receiver - computed: false, optional: true, required: false
@@ -511,7 +1149,7 @@ export class DataAzurermMonitorActionGroup extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermMonitorActionGroupTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermMonitorActionGroupTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

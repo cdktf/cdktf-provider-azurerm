@@ -99,10 +99,9 @@ export class ManagedApplicationPlanOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ManagedApplicationPlan | undefined {
@@ -256,10 +255,9 @@ export class ManagedApplicationTimeoutsOutputReference extends cdktf.ComplexObje
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ManagedApplicationTimeouts | undefined {
@@ -374,7 +372,7 @@ export class ManagedApplication extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_managed_application";
+  public static readonly tfResourceType = "azurerm_managed_application";
 
   // ===========
   // INITIALIZER
@@ -391,7 +389,9 @@ export class ManagedApplication extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_managed_application',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -555,7 +555,7 @@ export class ManagedApplication extends cdktf.TerraformResource {
   }
 
   // plan - computed: false, optional: true, required: false
-  private _plan = new ManagedApplicationPlanOutputReference(this, "plan", true);
+  private _plan = new ManagedApplicationPlanOutputReference(this, "plan");
   public get plan() {
     return this._plan;
   }
@@ -571,7 +571,7 @@ export class ManagedApplication extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ManagedApplicationTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new ManagedApplicationTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

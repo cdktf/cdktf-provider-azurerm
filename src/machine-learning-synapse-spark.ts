@@ -76,10 +76,9 @@ export class MachineLearningSynapseSparkIdentityOutputReference extends cdktf.Co
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MachineLearningSynapseSparkIdentity | undefined {
@@ -181,10 +180,9 @@ export class MachineLearningSynapseSparkTimeoutsOutputReference extends cdktf.Co
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MachineLearningSynapseSparkTimeouts | undefined {
@@ -277,7 +275,7 @@ export class MachineLearningSynapseSpark extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_machine_learning_synapse_spark";
+  public static readonly tfResourceType = "azurerm_machine_learning_synapse_spark";
 
   // ===========
   // INITIALIZER
@@ -294,7 +292,9 @@ export class MachineLearningSynapseSpark extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_machine_learning_synapse_spark',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -422,7 +422,7 @@ export class MachineLearningSynapseSpark extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity = new MachineLearningSynapseSparkIdentityOutputReference(this, "identity", true);
+  private _identity = new MachineLearningSynapseSparkIdentityOutputReference(this, "identity");
   public get identity() {
     return this._identity;
   }
@@ -438,7 +438,7 @@ export class MachineLearningSynapseSpark extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new MachineLearningSynapseSparkTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new MachineLearningSynapseSparkTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

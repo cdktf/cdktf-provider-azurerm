@@ -22,7 +22,45 @@ export interface DataAzurermVpnGatewayConfig extends cdktf.TerraformMetaArgument
   */
   readonly timeouts?: DataAzurermVpnGatewayTimeouts;
 }
-export class DataAzurermVpnGatewayBgpSettingsInstance0BgpPeeringAddress extends cdktf.ComplexComputedList {
+export interface DataAzurermVpnGatewayBgpSettingsInstance0BgpPeeringAddress {
+}
+
+export function dataAzurermVpnGatewayBgpSettingsInstance0BgpPeeringAddressToTerraform(struct?: DataAzurermVpnGatewayBgpSettingsInstance0BgpPeeringAddress): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermVpnGatewayBgpSettingsInstance0BgpPeeringAddressOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermVpnGatewayBgpSettingsInstance0BgpPeeringAddress | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermVpnGatewayBgpSettingsInstance0BgpPeeringAddress | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // custom_ips - computed: true, optional: false, required: false
   public get customIps() {
@@ -44,7 +82,64 @@ export class DataAzurermVpnGatewayBgpSettingsInstance0BgpPeeringAddress extends 
     return this.getListAttribute('tunnel_ips');
   }
 }
-export class DataAzurermVpnGatewayBgpSettingsInstance1BgpPeeringAddress extends cdktf.ComplexComputedList {
+
+export class DataAzurermVpnGatewayBgpSettingsInstance0BgpPeeringAddressList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermVpnGatewayBgpSettingsInstance0BgpPeeringAddressOutputReference {
+    return new DataAzurermVpnGatewayBgpSettingsInstance0BgpPeeringAddressOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermVpnGatewayBgpSettingsInstance1BgpPeeringAddress {
+}
+
+export function dataAzurermVpnGatewayBgpSettingsInstance1BgpPeeringAddressToTerraform(struct?: DataAzurermVpnGatewayBgpSettingsInstance1BgpPeeringAddress): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermVpnGatewayBgpSettingsInstance1BgpPeeringAddressOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermVpnGatewayBgpSettingsInstance1BgpPeeringAddress | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermVpnGatewayBgpSettingsInstance1BgpPeeringAddress | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // custom_ips - computed: true, optional: false, required: false
   public get customIps() {
@@ -66,7 +161,64 @@ export class DataAzurermVpnGatewayBgpSettingsInstance1BgpPeeringAddress extends 
     return this.getListAttribute('tunnel_ips');
   }
 }
-export class DataAzurermVpnGatewayBgpSettings extends cdktf.ComplexComputedList {
+
+export class DataAzurermVpnGatewayBgpSettingsInstance1BgpPeeringAddressList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermVpnGatewayBgpSettingsInstance1BgpPeeringAddressOutputReference {
+    return new DataAzurermVpnGatewayBgpSettingsInstance1BgpPeeringAddressOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermVpnGatewayBgpSettings {
+}
+
+export function dataAzurermVpnGatewayBgpSettingsToTerraform(struct?: DataAzurermVpnGatewayBgpSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermVpnGatewayBgpSettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermVpnGatewayBgpSettings | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermVpnGatewayBgpSettings | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // asn - computed: true, optional: false, required: false
   public get asn() {
@@ -79,20 +231,39 @@ export class DataAzurermVpnGatewayBgpSettings extends cdktf.ComplexComputedList 
   }
 
   // instance_0_bgp_peering_address - computed: true, optional: false, required: false
+  private _instance0BgpPeeringAddress = new DataAzurermVpnGatewayBgpSettingsInstance0BgpPeeringAddressList(this, "instance_0_bgp_peering_address", false);
   public get instance0BgpPeeringAddress() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('instance_0_bgp_peering_address');
+    return this._instance0BgpPeeringAddress;
   }
 
   // instance_1_bgp_peering_address - computed: true, optional: false, required: false
+  private _instance1BgpPeeringAddress = new DataAzurermVpnGatewayBgpSettingsInstance1BgpPeeringAddressList(this, "instance_1_bgp_peering_address", false);
   public get instance1BgpPeeringAddress() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('instance_1_bgp_peering_address');
+    return this._instance1BgpPeeringAddress;
   }
 
   // peer_weight - computed: true, optional: false, required: false
   public get peerWeight() {
     return this.getNumberAttribute('peer_weight');
+  }
+}
+
+export class DataAzurermVpnGatewayBgpSettingsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermVpnGatewayBgpSettingsOutputReference {
+    return new DataAzurermVpnGatewayBgpSettingsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataAzurermVpnGatewayTimeouts {
@@ -118,10 +289,9 @@ export class DataAzurermVpnGatewayTimeoutsOutputReference extends cdktf.ComplexO
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermVpnGatewayTimeouts | undefined {
@@ -170,7 +340,7 @@ export class DataAzurermVpnGateway extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_vpn_gateway";
+  public static readonly tfResourceType = "azurerm_vpn_gateway";
 
   // ===========
   // INITIALIZER
@@ -187,7 +357,9 @@ export class DataAzurermVpnGateway extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'azurerm_vpn_gateway',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -204,8 +376,9 @@ export class DataAzurermVpnGateway extends cdktf.TerraformDataSource {
   // ==========
 
   // bgp_settings - computed: true, optional: false, required: false
-  public bgpSettings(index: string) {
-    return new DataAzurermVpnGatewayBgpSettings(this, 'bgp_settings', index, false);
+  private _bgpSettings = new DataAzurermVpnGatewayBgpSettingsList(this, "bgp_settings", false);
+  public get bgpSettings() {
+    return this._bgpSettings;
   }
 
   // id - computed: true, optional: true, required: false
@@ -260,7 +433,7 @@ export class DataAzurermVpnGateway extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermVpnGatewayTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermVpnGatewayTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

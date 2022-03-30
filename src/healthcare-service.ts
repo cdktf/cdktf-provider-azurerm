@@ -95,10 +95,9 @@ export class HealthcareServiceAuthenticationConfigurationOutputReference extends
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): HealthcareServiceAuthenticationConfiguration | undefined {
@@ -225,10 +224,9 @@ export class HealthcareServiceCorsConfigurationOutputReference extends cdktf.Com
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): HealthcareServiceCorsConfiguration | undefined {
@@ -394,10 +392,9 @@ export class HealthcareServiceTimeoutsOutputReference extends cdktf.ComplexObjec
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): HealthcareServiceTimeouts | undefined {
@@ -512,7 +509,7 @@ export class HealthcareService extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_healthcare_service";
+  public static readonly tfResourceType = "azurerm_healthcare_service";
 
   // ===========
   // INITIALIZER
@@ -529,7 +526,9 @@ export class HealthcareService extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_healthcare_service',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -695,7 +694,7 @@ export class HealthcareService extends cdktf.TerraformResource {
   }
 
   // authentication_configuration - computed: false, optional: true, required: false
-  private _authenticationConfiguration = new HealthcareServiceAuthenticationConfigurationOutputReference(this, "authentication_configuration", true);
+  private _authenticationConfiguration = new HealthcareServiceAuthenticationConfigurationOutputReference(this, "authentication_configuration");
   public get authenticationConfiguration() {
     return this._authenticationConfiguration;
   }
@@ -711,7 +710,7 @@ export class HealthcareService extends cdktf.TerraformResource {
   }
 
   // cors_configuration - computed: false, optional: true, required: false
-  private _corsConfiguration = new HealthcareServiceCorsConfigurationOutputReference(this, "cors_configuration", true);
+  private _corsConfiguration = new HealthcareServiceCorsConfigurationOutputReference(this, "cors_configuration");
   public get corsConfiguration() {
     return this._corsConfiguration;
   }
@@ -727,7 +726,7 @@ export class HealthcareService extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new HealthcareServiceTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new HealthcareServiceTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

@@ -126,10 +126,9 @@ export class BatchPoolAutoScaleOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): BatchPoolAutoScale | undefined {
@@ -280,10 +279,9 @@ export class BatchPoolContainerConfigurationOutputReference extends cdktf.Comple
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): BatchPoolContainerConfiguration | undefined {
@@ -401,10 +399,9 @@ export class BatchPoolFixedScaleOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): BatchPoolFixedScale | undefined {
@@ -516,10 +513,9 @@ export class BatchPoolIdentityOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): BatchPoolIdentity | undefined {
@@ -681,10 +677,9 @@ export class BatchPoolNetworkConfigurationOutputReference extends cdktf.ComplexO
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): BatchPoolNetworkConfiguration | undefined {
@@ -858,10 +853,9 @@ export class BatchPoolStartTaskUserIdentityAutoUserOutputReference extends cdktf
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): BatchPoolStartTaskUserIdentityAutoUser | undefined {
@@ -953,10 +947,9 @@ export class BatchPoolStartTaskUserIdentityOutputReference extends cdktf.Complex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): BatchPoolStartTaskUserIdentity | undefined {
@@ -1003,7 +996,7 @@ export class BatchPoolStartTaskUserIdentityOutputReference extends cdktf.Complex
   }
 
   // auto_user - computed: false, optional: true, required: false
-  private _autoUser = new BatchPoolStartTaskUserIdentityAutoUserOutputReference(this, "auto_user", true);
+  private _autoUser = new BatchPoolStartTaskUserIdentityAutoUserOutputReference(this, "auto_user");
   public get autoUser() {
     return this._autoUser;
   }
@@ -1080,10 +1073,9 @@ export class BatchPoolStartTaskOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): BatchPoolStartTask | undefined {
@@ -1260,7 +1252,7 @@ export class BatchPoolStartTaskOutputReference extends cdktf.ComplexObject {
   }
 
   // user_identity - computed: false, optional: false, required: true
-  private _userIdentity = new BatchPoolStartTaskUserIdentityOutputReference(this, "user_identity", true);
+  private _userIdentity = new BatchPoolStartTaskUserIdentityOutputReference(this, "user_identity");
   public get userIdentity() {
     return this._userIdentity;
   }
@@ -1315,10 +1307,9 @@ export class BatchPoolStorageImageReferenceOutputReference extends cdktf.Complex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): BatchPoolStorageImageReference | undefined {
@@ -1484,10 +1475,9 @@ export class BatchPoolTimeoutsOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): BatchPoolTimeouts | undefined {
@@ -1602,7 +1592,7 @@ export class BatchPool extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_batch_pool";
+  public static readonly tfResourceType = "azurerm_batch_pool";
 
   // ===========
   // INITIALIZER
@@ -1619,7 +1609,9 @@ export class BatchPool extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_batch_pool',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1785,7 +1777,7 @@ export class BatchPool extends cdktf.TerraformResource {
   }
 
   // auto_scale - computed: false, optional: true, required: false
-  private _autoScale = new BatchPoolAutoScaleOutputReference(this, "auto_scale", true);
+  private _autoScale = new BatchPoolAutoScaleOutputReference(this, "auto_scale");
   public get autoScale() {
     return this._autoScale;
   }
@@ -1818,7 +1810,7 @@ export class BatchPool extends cdktf.TerraformResource {
   }
 
   // container_configuration - computed: false, optional: true, required: false
-  private _containerConfiguration = new BatchPoolContainerConfigurationOutputReference(this, "container_configuration", true);
+  private _containerConfiguration = new BatchPoolContainerConfigurationOutputReference(this, "container_configuration");
   public get containerConfiguration() {
     return this._containerConfiguration;
   }
@@ -1834,7 +1826,7 @@ export class BatchPool extends cdktf.TerraformResource {
   }
 
   // fixed_scale - computed: false, optional: true, required: false
-  private _fixedScale = new BatchPoolFixedScaleOutputReference(this, "fixed_scale", true);
+  private _fixedScale = new BatchPoolFixedScaleOutputReference(this, "fixed_scale");
   public get fixedScale() {
     return this._fixedScale;
   }
@@ -1850,7 +1842,7 @@ export class BatchPool extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity = new BatchPoolIdentityOutputReference(this, "identity", true);
+  private _identity = new BatchPoolIdentityOutputReference(this, "identity");
   public get identity() {
     return this._identity;
   }
@@ -1866,7 +1858,7 @@ export class BatchPool extends cdktf.TerraformResource {
   }
 
   // network_configuration - computed: false, optional: true, required: false
-  private _networkConfiguration = new BatchPoolNetworkConfigurationOutputReference(this, "network_configuration", true);
+  private _networkConfiguration = new BatchPoolNetworkConfigurationOutputReference(this, "network_configuration");
   public get networkConfiguration() {
     return this._networkConfiguration;
   }
@@ -1882,7 +1874,7 @@ export class BatchPool extends cdktf.TerraformResource {
   }
 
   // start_task - computed: false, optional: true, required: false
-  private _startTask = new BatchPoolStartTaskOutputReference(this, "start_task", true);
+  private _startTask = new BatchPoolStartTaskOutputReference(this, "start_task");
   public get startTask() {
     return this._startTask;
   }
@@ -1898,7 +1890,7 @@ export class BatchPool extends cdktf.TerraformResource {
   }
 
   // storage_image_reference - computed: false, optional: false, required: true
-  private _storageImageReference = new BatchPoolStorageImageReferenceOutputReference(this, "storage_image_reference", true);
+  private _storageImageReference = new BatchPoolStorageImageReferenceOutputReference(this, "storage_image_reference");
   public get storageImageReference() {
     return this._storageImageReference;
   }
@@ -1911,7 +1903,7 @@ export class BatchPool extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new BatchPoolTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new BatchPoolTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

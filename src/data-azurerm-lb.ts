@@ -22,7 +22,45 @@ export interface DataAzurermLbConfig extends cdktf.TerraformMetaArguments {
   */
   readonly timeouts?: DataAzurermLbTimeouts;
 }
-export class DataAzurermLbFrontendIpConfiguration extends cdktf.ComplexComputedList {
+export interface DataAzurermLbFrontendIpConfiguration {
+}
+
+export function dataAzurermLbFrontendIpConfigurationToTerraform(struct?: DataAzurermLbFrontendIpConfiguration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermLbFrontendIpConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermLbFrontendIpConfiguration | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermLbFrontendIpConfiguration | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // id - computed: true, optional: false, required: false
   public get id() {
@@ -64,6 +102,25 @@ export class DataAzurermLbFrontendIpConfiguration extends cdktf.ComplexComputedL
     return this.getListAttribute('zones');
   }
 }
+
+export class DataAzurermLbFrontendIpConfigurationList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermLbFrontendIpConfigurationOutputReference {
+    return new DataAzurermLbFrontendIpConfigurationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataAzurermLbTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/lb#read DataAzurermLb#read}
@@ -87,10 +144,9 @@ export class DataAzurermLbTimeoutsOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermLbTimeouts | undefined {
@@ -139,7 +195,7 @@ export class DataAzurermLb extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_lb";
+  public static readonly tfResourceType = "azurerm_lb";
 
   // ===========
   // INITIALIZER
@@ -156,7 +212,9 @@ export class DataAzurermLb extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'azurerm_lb',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -173,8 +231,9 @@ export class DataAzurermLb extends cdktf.TerraformDataSource {
   // ==========
 
   // frontend_ip_configuration - computed: true, optional: false, required: false
-  public frontendIpConfiguration(index: string) {
-    return new DataAzurermLbFrontendIpConfiguration(this, 'frontend_ip_configuration', index, false);
+  private _frontendIpConfiguration = new DataAzurermLbFrontendIpConfigurationList(this, "frontend_ip_configuration", false);
+  public get frontendIpConfiguration() {
+    return this._frontendIpConfiguration;
   }
 
   // id - computed: true, optional: true, required: false
@@ -234,7 +293,7 @@ export class DataAzurermLb extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermLbTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermLbTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

@@ -54,7 +54,45 @@ export interface AppServiceCertificateOrderConfig extends cdktf.TerraformMetaArg
   */
   readonly timeouts?: AppServiceCertificateOrderTimeouts;
 }
-export class AppServiceCertificateOrderCertificates extends cdktf.ComplexComputedList {
+export interface AppServiceCertificateOrderCertificates {
+}
+
+export function appServiceCertificateOrderCertificatesToTerraform(struct?: AppServiceCertificateOrderCertificates): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class AppServiceCertificateOrderCertificatesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AppServiceCertificateOrderCertificates | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppServiceCertificateOrderCertificates | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // certificate_name - computed: true, optional: false, required: false
   public get certificateName() {
@@ -74,6 +112,25 @@ export class AppServiceCertificateOrderCertificates extends cdktf.ComplexCompute
   // provisioning_state - computed: true, optional: false, required: false
   public get provisioningState() {
     return this.getStringAttribute('provisioning_state');
+  }
+}
+
+export class AppServiceCertificateOrderCertificatesList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AppServiceCertificateOrderCertificatesOutputReference {
+    return new AppServiceCertificateOrderCertificatesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface AppServiceCertificateOrderTimeouts {
@@ -114,10 +171,9 @@ export class AppServiceCertificateOrderTimeoutsOutputReference extends cdktf.Com
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): AppServiceCertificateOrderTimeouts | undefined {
@@ -232,7 +288,7 @@ export class AppServiceCertificateOrder extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_app_service_certificate_order";
+  public static readonly tfResourceType = "azurerm_app_service_certificate_order";
 
   // ===========
   // INITIALIZER
@@ -249,7 +305,9 @@ export class AppServiceCertificateOrder extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_app_service_certificate_order',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -295,8 +353,9 @@ export class AppServiceCertificateOrder extends cdktf.TerraformResource {
   }
 
   // certificates - computed: true, optional: false, required: false
-  public certificates(index: string) {
-    return new AppServiceCertificateOrderCertificates(this, 'certificates', index, false);
+  private _certificates = new AppServiceCertificateOrderCertificatesList(this, "certificates", false);
+  public get certificates() {
+    return this._certificates;
   }
 
   // csr - computed: true, optional: true, required: false
@@ -475,7 +534,7 @@ export class AppServiceCertificateOrder extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new AppServiceCertificateOrderTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new AppServiceCertificateOrderTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

@@ -64,10 +64,9 @@ export class ServiceFabricMeshApplicationServiceCodePackageResourcesLimitsOutput
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ServiceFabricMeshApplicationServiceCodePackageResourcesLimits | undefined {
@@ -151,10 +150,9 @@ export class ServiceFabricMeshApplicationServiceCodePackageResourcesRequestsOutp
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ServiceFabricMeshApplicationServiceCodePackageResourcesRequests | undefined {
@@ -242,10 +240,9 @@ export class ServiceFabricMeshApplicationServiceCodePackageResourcesOutputRefere
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ServiceFabricMeshApplicationServiceCodePackageResources | undefined {
@@ -276,7 +273,7 @@ export class ServiceFabricMeshApplicationServiceCodePackageResourcesOutputRefere
   }
 
   // limits - computed: false, optional: true, required: false
-  private _limits = new ServiceFabricMeshApplicationServiceCodePackageResourcesLimitsOutputReference(this, "limits", true);
+  private _limits = new ServiceFabricMeshApplicationServiceCodePackageResourcesLimitsOutputReference(this, "limits");
   public get limits() {
     return this._limits;
   }
@@ -292,7 +289,7 @@ export class ServiceFabricMeshApplicationServiceCodePackageResourcesOutputRefere
   }
 
   // requests - computed: false, optional: false, required: true
-  private _requests = new ServiceFabricMeshApplicationServiceCodePackageResourcesRequestsOutputReference(this, "requests", true);
+  private _requests = new ServiceFabricMeshApplicationServiceCodePackageResourcesRequestsOutputReference(this, "requests");
   public get requests() {
     return this._requests;
   }
@@ -400,10 +397,9 @@ export class ServiceFabricMeshApplicationTimeoutsOutputReference extends cdktf.C
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ServiceFabricMeshApplicationTimeouts | undefined {
@@ -518,7 +514,7 @@ export class ServiceFabricMeshApplication extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_service_fabric_mesh_application";
+  public static readonly tfResourceType = "azurerm_service_fabric_mesh_application";
 
   // ===========
   // INITIALIZER
@@ -535,7 +531,9 @@ export class ServiceFabricMeshApplication extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_service_fabric_mesh_application',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -629,7 +627,7 @@ export class ServiceFabricMeshApplication extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ServiceFabricMeshApplicationTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new ServiceFabricMeshApplicationTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

@@ -22,7 +22,45 @@ export interface DataAzurermNetworkSecurityGroupConfig extends cdktf.TerraformMe
   */
   readonly timeouts?: DataAzurermNetworkSecurityGroupTimeouts;
 }
-export class DataAzurermNetworkSecurityGroupSecurityRule extends cdktf.ComplexComputedList {
+export interface DataAzurermNetworkSecurityGroupSecurityRule {
+}
+
+export function dataAzurermNetworkSecurityGroupSecurityRuleToTerraform(struct?: DataAzurermNetworkSecurityGroupSecurityRule): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermNetworkSecurityGroupSecurityRuleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermNetworkSecurityGroupSecurityRule | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermNetworkSecurityGroupSecurityRule | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // access - computed: true, optional: false, required: false
   public get access() {
@@ -104,6 +142,25 @@ export class DataAzurermNetworkSecurityGroupSecurityRule extends cdktf.ComplexCo
     return cdktf.Fn.tolist(this.getListAttribute('source_port_ranges'));
   }
 }
+
+export class DataAzurermNetworkSecurityGroupSecurityRuleList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermNetworkSecurityGroupSecurityRuleOutputReference {
+    return new DataAzurermNetworkSecurityGroupSecurityRuleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataAzurermNetworkSecurityGroupTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/network_security_group#read DataAzurermNetworkSecurityGroup#read}
@@ -127,10 +184,9 @@ export class DataAzurermNetworkSecurityGroupTimeoutsOutputReference extends cdkt
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermNetworkSecurityGroupTimeouts | undefined {
@@ -179,7 +235,7 @@ export class DataAzurermNetworkSecurityGroup extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_network_security_group";
+  public static readonly tfResourceType = "azurerm_network_security_group";
 
   // ===========
   // INITIALIZER
@@ -196,7 +252,9 @@ export class DataAzurermNetworkSecurityGroup extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'azurerm_network_security_group',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -249,8 +307,9 @@ export class DataAzurermNetworkSecurityGroup extends cdktf.TerraformDataSource {
   }
 
   // security_rule - computed: true, optional: false, required: false
-  public securityRule(index: string) {
-    return new DataAzurermNetworkSecurityGroupSecurityRule(this, 'security_rule', index, false);
+  private _securityRule = new DataAzurermNetworkSecurityGroupSecurityRuleList(this, "security_rule", false);
+  public get securityRule() {
+    return this._securityRule;
   }
 
   // tags - computed: true, optional: false, required: false
@@ -259,7 +318,7 @@ export class DataAzurermNetworkSecurityGroup extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermNetworkSecurityGroupTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermNetworkSecurityGroupTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

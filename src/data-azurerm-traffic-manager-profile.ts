@@ -30,7 +30,45 @@ export interface DataAzurermTrafficManagerProfileConfig extends cdktf.TerraformM
   */
   readonly timeouts?: DataAzurermTrafficManagerProfileTimeouts;
 }
-export class DataAzurermTrafficManagerProfileDnsConfig extends cdktf.ComplexComputedList {
+export interface DataAzurermTrafficManagerProfileDnsConfig {
+}
+
+export function dataAzurermTrafficManagerProfileDnsConfigToTerraform(struct?: DataAzurermTrafficManagerProfileDnsConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermTrafficManagerProfileDnsConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermTrafficManagerProfileDnsConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermTrafficManagerProfileDnsConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // relative_name - computed: true, optional: false, required: false
   public get relativeName() {
@@ -42,7 +80,64 @@ export class DataAzurermTrafficManagerProfileDnsConfig extends cdktf.ComplexComp
     return this.getNumberAttribute('ttl');
   }
 }
-export class DataAzurermTrafficManagerProfileMonitorConfigCustomHeader extends cdktf.ComplexComputedList {
+
+export class DataAzurermTrafficManagerProfileDnsConfigList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermTrafficManagerProfileDnsConfigOutputReference {
+    return new DataAzurermTrafficManagerProfileDnsConfigOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermTrafficManagerProfileMonitorConfigCustomHeader {
+}
+
+export function dataAzurermTrafficManagerProfileMonitorConfigCustomHeaderToTerraform(struct?: DataAzurermTrafficManagerProfileMonitorConfigCustomHeader): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermTrafficManagerProfileMonitorConfigCustomHeaderOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermTrafficManagerProfileMonitorConfigCustomHeader | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermTrafficManagerProfileMonitorConfigCustomHeader | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // name - computed: true, optional: false, required: false
   public get name() {
@@ -54,12 +149,69 @@ export class DataAzurermTrafficManagerProfileMonitorConfigCustomHeader extends c
     return this.getStringAttribute('value');
   }
 }
-export class DataAzurermTrafficManagerProfileMonitorConfig extends cdktf.ComplexComputedList {
+
+export class DataAzurermTrafficManagerProfileMonitorConfigCustomHeaderList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermTrafficManagerProfileMonitorConfigCustomHeaderOutputReference {
+    return new DataAzurermTrafficManagerProfileMonitorConfigCustomHeaderOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermTrafficManagerProfileMonitorConfig {
+}
+
+export function dataAzurermTrafficManagerProfileMonitorConfigToTerraform(struct?: DataAzurermTrafficManagerProfileMonitorConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermTrafficManagerProfileMonitorConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermTrafficManagerProfileMonitorConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermTrafficManagerProfileMonitorConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // custom_header - computed: true, optional: false, required: false
+  private _customHeader = new DataAzurermTrafficManagerProfileMonitorConfigCustomHeaderList(this, "custom_header", false);
   public get customHeader() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('custom_header');
+    return this._customHeader;
   }
 
   // expected_status_code_ranges - computed: true, optional: false, required: false
@@ -97,6 +249,25 @@ export class DataAzurermTrafficManagerProfileMonitorConfig extends cdktf.Complex
     return this.getNumberAttribute('tolerated_number_of_failures');
   }
 }
+
+export class DataAzurermTrafficManagerProfileMonitorConfigList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermTrafficManagerProfileMonitorConfigOutputReference {
+    return new DataAzurermTrafficManagerProfileMonitorConfigOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataAzurermTrafficManagerProfileTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/traffic_manager_profile#read DataAzurermTrafficManagerProfile#read}
@@ -120,10 +291,9 @@ export class DataAzurermTrafficManagerProfileTimeoutsOutputReference extends cdk
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermTrafficManagerProfileTimeouts | undefined {
@@ -172,7 +342,7 @@ export class DataAzurermTrafficManagerProfile extends cdktf.TerraformDataSource 
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_traffic_manager_profile";
+  public static readonly tfResourceType = "azurerm_traffic_manager_profile";
 
   // ===========
   // INITIALIZER
@@ -189,7 +359,9 @@ export class DataAzurermTrafficManagerProfile extends cdktf.TerraformDataSource 
     super(scope, id, {
       terraformResourceType: 'azurerm_traffic_manager_profile',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -208,8 +380,9 @@ export class DataAzurermTrafficManagerProfile extends cdktf.TerraformDataSource 
   // ==========
 
   // dns_config - computed: true, optional: false, required: false
-  public dnsConfig(index: string) {
-    return new DataAzurermTrafficManagerProfileDnsConfig(this, 'dns_config', index, false);
+  private _dnsConfig = new DataAzurermTrafficManagerProfileDnsConfigList(this, "dns_config", false);
+  public get dnsConfig() {
+    return this._dnsConfig;
   }
 
   // fqdn - computed: true, optional: false, required: false
@@ -223,8 +396,9 @@ export class DataAzurermTrafficManagerProfile extends cdktf.TerraformDataSource 
   }
 
   // monitor_config - computed: true, optional: false, required: false
-  public monitorConfig(index: string) {
-    return new DataAzurermTrafficManagerProfileMonitorConfig(this, 'monitor_config', index, false);
+  private _monitorConfig = new DataAzurermTrafficManagerProfileMonitorConfigList(this, "monitor_config", false);
+  public get monitorConfig() {
+    return this._monitorConfig;
   }
 
   // name - computed: false, optional: false, required: true
@@ -296,7 +470,7 @@ export class DataAzurermTrafficManagerProfile extends cdktf.TerraformDataSource 
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermTrafficManagerProfileTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermTrafficManagerProfileTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

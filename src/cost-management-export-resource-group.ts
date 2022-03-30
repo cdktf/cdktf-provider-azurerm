@@ -83,10 +83,9 @@ export class CostManagementExportResourceGroupDeliveryInfoOutputReference extend
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CostManagementExportResourceGroupDeliveryInfo | undefined {
@@ -189,10 +188,9 @@ export class CostManagementExportResourceGroupQueryOutputReference extends cdktf
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CostManagementExportResourceGroupQuery | undefined {
@@ -286,10 +284,9 @@ export class CostManagementExportResourceGroupTimeoutsOutputReference extends cd
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CostManagementExportResourceGroupTimeouts | undefined {
@@ -404,7 +401,7 @@ export class CostManagementExportResourceGroup extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_cost_management_export_resource_group";
+  public static readonly tfResourceType = "azurerm_cost_management_export_resource_group";
 
   // ===========
   // INITIALIZER
@@ -421,7 +418,9 @@ export class CostManagementExportResourceGroup extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_cost_management_export_resource_group',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -530,7 +529,7 @@ export class CostManagementExportResourceGroup extends cdktf.TerraformResource {
   }
 
   // delivery_info - computed: false, optional: false, required: true
-  private _deliveryInfo = new CostManagementExportResourceGroupDeliveryInfoOutputReference(this, "delivery_info", true);
+  private _deliveryInfo = new CostManagementExportResourceGroupDeliveryInfoOutputReference(this, "delivery_info");
   public get deliveryInfo() {
     return this._deliveryInfo;
   }
@@ -543,7 +542,7 @@ export class CostManagementExportResourceGroup extends cdktf.TerraformResource {
   }
 
   // query - computed: false, optional: false, required: true
-  private _query = new CostManagementExportResourceGroupQueryOutputReference(this, "query", true);
+  private _query = new CostManagementExportResourceGroupQueryOutputReference(this, "query");
   public get query() {
     return this._query;
   }
@@ -556,7 +555,7 @@ export class CostManagementExportResourceGroup extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new CostManagementExportResourceGroupTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new CostManagementExportResourceGroupTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

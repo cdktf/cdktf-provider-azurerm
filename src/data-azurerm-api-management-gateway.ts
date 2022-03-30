@@ -22,7 +22,45 @@ export interface DataAzurermApiManagementGatewayConfig extends cdktf.TerraformMe
   */
   readonly timeouts?: DataAzurermApiManagementGatewayTimeouts;
 }
-export class DataAzurermApiManagementGatewayLocationData extends cdktf.ComplexComputedList {
+export interface DataAzurermApiManagementGatewayLocationData {
+}
+
+export function dataAzurermApiManagementGatewayLocationDataToTerraform(struct?: DataAzurermApiManagementGatewayLocationData): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermApiManagementGatewayLocationDataOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermApiManagementGatewayLocationData | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermApiManagementGatewayLocationData | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // city - computed: true, optional: false, required: false
   public get city() {
@@ -42,6 +80,25 @@ export class DataAzurermApiManagementGatewayLocationData extends cdktf.ComplexCo
   // region - computed: true, optional: false, required: false
   public get region() {
     return this.getStringAttribute('region');
+  }
+}
+
+export class DataAzurermApiManagementGatewayLocationDataList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermApiManagementGatewayLocationDataOutputReference {
+    return new DataAzurermApiManagementGatewayLocationDataOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataAzurermApiManagementGatewayTimeouts {
@@ -67,10 +124,9 @@ export class DataAzurermApiManagementGatewayTimeoutsOutputReference extends cdkt
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermApiManagementGatewayTimeouts | undefined {
@@ -119,7 +175,7 @@ export class DataAzurermApiManagementGateway extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_api_management_gateway";
+  public static readonly tfResourceType = "azurerm_api_management_gateway";
 
   // ===========
   // INITIALIZER
@@ -136,7 +192,9 @@ export class DataAzurermApiManagementGateway extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'azurerm_api_management_gateway',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -176,8 +234,9 @@ export class DataAzurermApiManagementGateway extends cdktf.TerraformDataSource {
   }
 
   // location_data - computed: true, optional: false, required: false
-  public locationData(index: string) {
-    return new DataAzurermApiManagementGatewayLocationData(this, 'location_data', index, false);
+  private _locationData = new DataAzurermApiManagementGatewayLocationDataList(this, "location_data", false);
+  public get locationData() {
+    return this._locationData;
   }
 
   // name - computed: false, optional: false, required: true
@@ -194,7 +253,7 @@ export class DataAzurermApiManagementGateway extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermApiManagementGatewayTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermApiManagementGatewayTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

@@ -113,10 +113,9 @@ export class SynapseSparkPoolAutoPauseOutputReference extends cdktf.ComplexObjec
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): SynapseSparkPoolAutoPause | undefined {
@@ -181,10 +180,9 @@ export class SynapseSparkPoolAutoScaleOutputReference extends cdktf.ComplexObjec
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): SynapseSparkPoolAutoScale | undefined {
@@ -268,10 +266,9 @@ export class SynapseSparkPoolLibraryRequirementOutputReference extends cdktf.Com
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): SynapseSparkPoolLibraryRequirement | undefined {
@@ -355,10 +352,9 @@ export class SynapseSparkPoolSparkConfigOutputReference extends cdktf.ComplexObj
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): SynapseSparkPoolSparkConfig | undefined {
@@ -452,10 +448,9 @@ export class SynapseSparkPoolTimeoutsOutputReference extends cdktf.ComplexObject
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): SynapseSparkPoolTimeouts | undefined {
@@ -570,7 +565,7 @@ export class SynapseSparkPool extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_synapse_spark_pool";
+  public static readonly tfResourceType = "azurerm_synapse_spark_pool";
 
   // ===========
   // INITIALIZER
@@ -587,7 +582,9 @@ export class SynapseSparkPool extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_synapse_spark_pool',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -820,7 +817,7 @@ export class SynapseSparkPool extends cdktf.TerraformResource {
   }
 
   // auto_pause - computed: false, optional: true, required: false
-  private _autoPause = new SynapseSparkPoolAutoPauseOutputReference(this, "auto_pause", true);
+  private _autoPause = new SynapseSparkPoolAutoPauseOutputReference(this, "auto_pause");
   public get autoPause() {
     return this._autoPause;
   }
@@ -836,7 +833,7 @@ export class SynapseSparkPool extends cdktf.TerraformResource {
   }
 
   // auto_scale - computed: false, optional: true, required: false
-  private _autoScale = new SynapseSparkPoolAutoScaleOutputReference(this, "auto_scale", true);
+  private _autoScale = new SynapseSparkPoolAutoScaleOutputReference(this, "auto_scale");
   public get autoScale() {
     return this._autoScale;
   }
@@ -852,7 +849,7 @@ export class SynapseSparkPool extends cdktf.TerraformResource {
   }
 
   // library_requirement - computed: false, optional: true, required: false
-  private _libraryRequirement = new SynapseSparkPoolLibraryRequirementOutputReference(this, "library_requirement", true);
+  private _libraryRequirement = new SynapseSparkPoolLibraryRequirementOutputReference(this, "library_requirement");
   public get libraryRequirement() {
     return this._libraryRequirement;
   }
@@ -868,7 +865,7 @@ export class SynapseSparkPool extends cdktf.TerraformResource {
   }
 
   // spark_config - computed: false, optional: true, required: false
-  private _sparkConfig = new SynapseSparkPoolSparkConfigOutputReference(this, "spark_config", true);
+  private _sparkConfig = new SynapseSparkPoolSparkConfigOutputReference(this, "spark_config");
   public get sparkConfig() {
     return this._sparkConfig;
   }
@@ -884,7 +881,7 @@ export class SynapseSparkPool extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new SynapseSparkPoolTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new SynapseSparkPoolTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

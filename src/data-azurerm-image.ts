@@ -30,7 +30,45 @@ export interface DataAzurermImageConfig extends cdktf.TerraformMetaArguments {
   */
   readonly timeouts?: DataAzurermImageTimeouts;
 }
-export class DataAzurermImageDataDisk extends cdktf.ComplexComputedList {
+export interface DataAzurermImageDataDisk {
+}
+
+export function dataAzurermImageDataDiskToTerraform(struct?: DataAzurermImageDataDisk): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermImageDataDiskOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermImageDataDisk | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermImageDataDisk | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // blob_uri - computed: true, optional: false, required: false
   public get blobUri() {
@@ -57,7 +95,64 @@ export class DataAzurermImageDataDisk extends cdktf.ComplexComputedList {
     return this.getNumberAttribute('size_gb');
   }
 }
-export class DataAzurermImageOsDisk extends cdktf.ComplexComputedList {
+
+export class DataAzurermImageDataDiskList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermImageDataDiskOutputReference {
+    return new DataAzurermImageDataDiskOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermImageOsDisk {
+}
+
+export function dataAzurermImageOsDiskToTerraform(struct?: DataAzurermImageOsDisk): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermImageOsDiskOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermImageOsDisk | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermImageOsDisk | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // blob_uri - computed: true, optional: false, required: false
   public get blobUri() {
@@ -89,6 +184,25 @@ export class DataAzurermImageOsDisk extends cdktf.ComplexComputedList {
     return this.getNumberAttribute('size_gb');
   }
 }
+
+export class DataAzurermImageOsDiskList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermImageOsDiskOutputReference {
+    return new DataAzurermImageOsDiskOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataAzurermImageTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/image#read DataAzurermImage#read}
@@ -112,10 +226,9 @@ export class DataAzurermImageTimeoutsOutputReference extends cdktf.ComplexObject
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermImageTimeouts | undefined {
@@ -164,7 +277,7 @@ export class DataAzurermImage extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_image";
+  public static readonly tfResourceType = "azurerm_image";
 
   // ===========
   // INITIALIZER
@@ -181,7 +294,9 @@ export class DataAzurermImage extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'azurerm_image',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -200,8 +315,9 @@ export class DataAzurermImage extends cdktf.TerraformDataSource {
   // ==========
 
   // data_disk - computed: true, optional: false, required: false
-  public dataDisk(index: string) {
-    return new DataAzurermImageDataDisk(this, 'data_disk', index, false);
+  private _dataDisk = new DataAzurermImageDataDiskList(this, "data_disk", false);
+  public get dataDisk() {
+    return this._dataDisk;
   }
 
   // id - computed: true, optional: true, required: false
@@ -247,8 +363,9 @@ export class DataAzurermImage extends cdktf.TerraformDataSource {
   }
 
   // os_disk - computed: true, optional: false, required: false
-  public osDisk(index: string) {
-    return new DataAzurermImageOsDisk(this, 'os_disk', index, false);
+  private _osDisk = new DataAzurermImageOsDiskList(this, "os_disk", false);
+  public get osDisk() {
+    return this._osDisk;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -291,7 +408,7 @@ export class DataAzurermImage extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermImageTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermImageTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

@@ -26,7 +26,45 @@ export interface DataAzurermNetappSnapshotPolicyConfig extends cdktf.TerraformMe
   */
   readonly timeouts?: DataAzurermNetappSnapshotPolicyTimeouts;
 }
-export class DataAzurermNetappSnapshotPolicyDailySchedule extends cdktf.ComplexComputedList {
+export interface DataAzurermNetappSnapshotPolicyDailySchedule {
+}
+
+export function dataAzurermNetappSnapshotPolicyDailyScheduleToTerraform(struct?: DataAzurermNetappSnapshotPolicyDailySchedule): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermNetappSnapshotPolicyDailyScheduleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermNetappSnapshotPolicyDailySchedule | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermNetappSnapshotPolicyDailySchedule | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // hour - computed: true, optional: false, required: false
   public get hour() {
@@ -43,7 +81,64 @@ export class DataAzurermNetappSnapshotPolicyDailySchedule extends cdktf.ComplexC
     return this.getNumberAttribute('snapshots_to_keep');
   }
 }
-export class DataAzurermNetappSnapshotPolicyHourlySchedule extends cdktf.ComplexComputedList {
+
+export class DataAzurermNetappSnapshotPolicyDailyScheduleList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermNetappSnapshotPolicyDailyScheduleOutputReference {
+    return new DataAzurermNetappSnapshotPolicyDailyScheduleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermNetappSnapshotPolicyHourlySchedule {
+}
+
+export function dataAzurermNetappSnapshotPolicyHourlyScheduleToTerraform(struct?: DataAzurermNetappSnapshotPolicyHourlySchedule): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermNetappSnapshotPolicyHourlyScheduleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermNetappSnapshotPolicyHourlySchedule | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermNetappSnapshotPolicyHourlySchedule | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // minute - computed: true, optional: false, required: false
   public get minute() {
@@ -55,7 +150,64 @@ export class DataAzurermNetappSnapshotPolicyHourlySchedule extends cdktf.Complex
     return this.getNumberAttribute('snapshots_to_keep');
   }
 }
-export class DataAzurermNetappSnapshotPolicyMonthlySchedule extends cdktf.ComplexComputedList {
+
+export class DataAzurermNetappSnapshotPolicyHourlyScheduleList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermNetappSnapshotPolicyHourlyScheduleOutputReference {
+    return new DataAzurermNetappSnapshotPolicyHourlyScheduleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermNetappSnapshotPolicyMonthlySchedule {
+}
+
+export function dataAzurermNetappSnapshotPolicyMonthlyScheduleToTerraform(struct?: DataAzurermNetappSnapshotPolicyMonthlySchedule): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermNetappSnapshotPolicyMonthlyScheduleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermNetappSnapshotPolicyMonthlySchedule | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermNetappSnapshotPolicyMonthlySchedule | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // days_of_month - computed: true, optional: false, required: false
   public get daysOfMonth() {
@@ -77,7 +229,64 @@ export class DataAzurermNetappSnapshotPolicyMonthlySchedule extends cdktf.Comple
     return this.getNumberAttribute('snapshots_to_keep');
   }
 }
-export class DataAzurermNetappSnapshotPolicyWeeklySchedule extends cdktf.ComplexComputedList {
+
+export class DataAzurermNetappSnapshotPolicyMonthlyScheduleList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermNetappSnapshotPolicyMonthlyScheduleOutputReference {
+    return new DataAzurermNetappSnapshotPolicyMonthlyScheduleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermNetappSnapshotPolicyWeeklySchedule {
+}
+
+export function dataAzurermNetappSnapshotPolicyWeeklyScheduleToTerraform(struct?: DataAzurermNetappSnapshotPolicyWeeklySchedule): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermNetappSnapshotPolicyWeeklyScheduleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermNetappSnapshotPolicyWeeklySchedule | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermNetappSnapshotPolicyWeeklySchedule | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // days_of_week - computed: true, optional: false, required: false
   public get daysOfWeek() {
@@ -97,6 +306,25 @@ export class DataAzurermNetappSnapshotPolicyWeeklySchedule extends cdktf.Complex
   // snapshots_to_keep - computed: true, optional: false, required: false
   public get snapshotsToKeep() {
     return this.getNumberAttribute('snapshots_to_keep');
+  }
+}
+
+export class DataAzurermNetappSnapshotPolicyWeeklyScheduleList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermNetappSnapshotPolicyWeeklyScheduleOutputReference {
+    return new DataAzurermNetappSnapshotPolicyWeeklyScheduleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataAzurermNetappSnapshotPolicyTimeouts {
@@ -122,10 +350,9 @@ export class DataAzurermNetappSnapshotPolicyTimeoutsOutputReference extends cdkt
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermNetappSnapshotPolicyTimeouts | undefined {
@@ -174,7 +401,7 @@ export class DataAzurermNetappSnapshotPolicy extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_netapp_snapshot_policy";
+  public static readonly tfResourceType = "azurerm_netapp_snapshot_policy";
 
   // ===========
   // INITIALIZER
@@ -191,7 +418,9 @@ export class DataAzurermNetappSnapshotPolicy extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'azurerm_netapp_snapshot_policy',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -222,8 +451,9 @@ export class DataAzurermNetappSnapshotPolicy extends cdktf.TerraformDataSource {
   }
 
   // daily_schedule - computed: true, optional: false, required: false
-  public dailySchedule(index: string) {
-    return new DataAzurermNetappSnapshotPolicyDailySchedule(this, 'daily_schedule', index, false);
+  private _dailySchedule = new DataAzurermNetappSnapshotPolicyDailyScheduleList(this, "daily_schedule", false);
+  public get dailySchedule() {
+    return this._dailySchedule;
   }
 
   // enabled - computed: true, optional: false, required: false
@@ -232,8 +462,9 @@ export class DataAzurermNetappSnapshotPolicy extends cdktf.TerraformDataSource {
   }
 
   // hourly_schedule - computed: true, optional: false, required: false
-  public hourlySchedule(index: string) {
-    return new DataAzurermNetappSnapshotPolicyHourlySchedule(this, 'hourly_schedule', index, false);
+  private _hourlySchedule = new DataAzurermNetappSnapshotPolicyHourlyScheduleList(this, "hourly_schedule", false);
+  public get hourlySchedule() {
+    return this._hourlySchedule;
   }
 
   // id - computed: true, optional: true, required: false
@@ -247,8 +478,9 @@ export class DataAzurermNetappSnapshotPolicy extends cdktf.TerraformDataSource {
   }
 
   // monthly_schedule - computed: true, optional: false, required: false
-  public monthlySchedule(index: string) {
-    return new DataAzurermNetappSnapshotPolicyMonthlySchedule(this, 'monthly_schedule', index, false);
+  private _monthlySchedule = new DataAzurermNetappSnapshotPolicyMonthlyScheduleList(this, "monthly_schedule", false);
+  public get monthlySchedule() {
+    return this._monthlySchedule;
   }
 
   // name - computed: false, optional: false, required: true
@@ -283,12 +515,13 @@ export class DataAzurermNetappSnapshotPolicy extends cdktf.TerraformDataSource {
   }
 
   // weekly_schedule - computed: true, optional: false, required: false
-  public weeklySchedule(index: string) {
-    return new DataAzurermNetappSnapshotPolicyWeeklySchedule(this, 'weekly_schedule', index, false);
+  private _weeklySchedule = new DataAzurermNetappSnapshotPolicyWeeklyScheduleList(this, "weekly_schedule", false);
+  public get weeklySchedule() {
+    return this._weeklySchedule;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermNetappSnapshotPolicyTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermNetappSnapshotPolicyTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

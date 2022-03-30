@@ -22,7 +22,45 @@ export interface DataAzurermVirtualNetworkGatewayConnectionConfig extends cdktf.
   */
   readonly timeouts?: DataAzurermVirtualNetworkGatewayConnectionTimeouts;
 }
-export class DataAzurermVirtualNetworkGatewayConnectionIpsecPolicy extends cdktf.ComplexComputedList {
+export interface DataAzurermVirtualNetworkGatewayConnectionIpsecPolicy {
+}
+
+export function dataAzurermVirtualNetworkGatewayConnectionIpsecPolicyToTerraform(struct?: DataAzurermVirtualNetworkGatewayConnectionIpsecPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermVirtualNetworkGatewayConnectionIpsecPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermVirtualNetworkGatewayConnectionIpsecPolicy | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermVirtualNetworkGatewayConnectionIpsecPolicy | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // dh_group - computed: true, optional: false, required: false
   public get dhGroup() {
@@ -64,7 +102,64 @@ export class DataAzurermVirtualNetworkGatewayConnectionIpsecPolicy extends cdktf
     return this.getNumberAttribute('sa_lifetime');
   }
 }
-export class DataAzurermVirtualNetworkGatewayConnectionTrafficSelectorPolicy extends cdktf.ComplexComputedList {
+
+export class DataAzurermVirtualNetworkGatewayConnectionIpsecPolicyList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermVirtualNetworkGatewayConnectionIpsecPolicyOutputReference {
+    return new DataAzurermVirtualNetworkGatewayConnectionIpsecPolicyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermVirtualNetworkGatewayConnectionTrafficSelectorPolicy {
+}
+
+export function dataAzurermVirtualNetworkGatewayConnectionTrafficSelectorPolicyToTerraform(struct?: DataAzurermVirtualNetworkGatewayConnectionTrafficSelectorPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermVirtualNetworkGatewayConnectionTrafficSelectorPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermVirtualNetworkGatewayConnectionTrafficSelectorPolicy | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermVirtualNetworkGatewayConnectionTrafficSelectorPolicy | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // local_address_cidrs - computed: true, optional: false, required: false
   public get localAddressCidrs() {
@@ -74,6 +169,25 @@ export class DataAzurermVirtualNetworkGatewayConnectionTrafficSelectorPolicy ext
   // remote_address_cidrs - computed: true, optional: false, required: false
   public get remoteAddressCidrs() {
     return this.getListAttribute('remote_address_cidrs');
+  }
+}
+
+export class DataAzurermVirtualNetworkGatewayConnectionTrafficSelectorPolicyList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermVirtualNetworkGatewayConnectionTrafficSelectorPolicyOutputReference {
+    return new DataAzurermVirtualNetworkGatewayConnectionTrafficSelectorPolicyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataAzurermVirtualNetworkGatewayConnectionTimeouts {
@@ -99,10 +213,9 @@ export class DataAzurermVirtualNetworkGatewayConnectionTimeoutsOutputReference e
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermVirtualNetworkGatewayConnectionTimeouts | undefined {
@@ -151,7 +264,7 @@ export class DataAzurermVirtualNetworkGatewayConnection extends cdktf.TerraformD
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_virtual_network_gateway_connection";
+  public static readonly tfResourceType = "azurerm_virtual_network_gateway_connection";
 
   // ===========
   // INITIALIZER
@@ -168,7 +281,9 @@ export class DataAzurermVirtualNetworkGatewayConnection extends cdktf.TerraformD
     super(scope, id, {
       terraformResourceType: 'azurerm_virtual_network_gateway_connection',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -230,8 +345,9 @@ export class DataAzurermVirtualNetworkGatewayConnection extends cdktf.TerraformD
   }
 
   // ipsec_policy - computed: true, optional: false, required: false
-  public ipsecPolicy(index: string) {
-    return new DataAzurermVirtualNetworkGatewayConnectionIpsecPolicy(this, 'ipsec_policy', index, false);
+  private _ipsecPolicy = new DataAzurermVirtualNetworkGatewayConnectionIpsecPolicyList(this, "ipsec_policy", false);
+  public get ipsecPolicy() {
+    return this._ipsecPolicy;
   }
 
   // local_azure_ip_address_enabled - computed: true, optional: false, required: false
@@ -301,8 +417,9 @@ export class DataAzurermVirtualNetworkGatewayConnection extends cdktf.TerraformD
   }
 
   // traffic_selector_policy - computed: true, optional: false, required: false
-  public trafficSelectorPolicy(index: string) {
-    return new DataAzurermVirtualNetworkGatewayConnectionTrafficSelectorPolicy(this, 'traffic_selector_policy', index, false);
+  private _trafficSelectorPolicy = new DataAzurermVirtualNetworkGatewayConnectionTrafficSelectorPolicyList(this, "traffic_selector_policy", false);
+  public get trafficSelectorPolicy() {
+    return this._trafficSelectorPolicy;
   }
 
   // type - computed: true, optional: false, required: false
@@ -321,7 +438,7 @@ export class DataAzurermVirtualNetworkGatewayConnection extends cdktf.TerraformD
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermVirtualNetworkGatewayConnectionTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermVirtualNetworkGatewayConnectionTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

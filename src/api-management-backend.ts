@@ -98,10 +98,9 @@ export class ApiManagementBackendCredentialsAuthorizationOutputReference extends
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ApiManagementBackendCredentialsAuthorization | undefined {
@@ -203,10 +202,9 @@ export class ApiManagementBackendCredentialsOutputReference extends cdktf.Comple
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ApiManagementBackendCredentials | undefined {
@@ -297,7 +295,7 @@ export class ApiManagementBackendCredentialsOutputReference extends cdktf.Comple
   }
 
   // authorization - computed: false, optional: true, required: false
-  private _authorization = new ApiManagementBackendCredentialsAuthorizationOutputReference(this, "authorization", true);
+  private _authorization = new ApiManagementBackendCredentialsAuthorizationOutputReference(this, "authorization");
   public get authorization() {
     return this._authorization;
   }
@@ -345,10 +343,9 @@ export class ApiManagementBackendProxyOutputReference extends cdktf.ComplexObjec
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ApiManagementBackendProxy | undefined {
@@ -498,10 +495,9 @@ export class ApiManagementBackendServiceFabricClusterOutputReference extends cdk
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ApiManagementBackendServiceFabricCluster | undefined {
@@ -684,10 +680,9 @@ export class ApiManagementBackendTimeoutsOutputReference extends cdktf.ComplexOb
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ApiManagementBackendTimeouts | undefined {
@@ -821,10 +816,9 @@ export class ApiManagementBackendTlsOutputReference extends cdktf.ComplexObject 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ApiManagementBackendTls | undefined {
@@ -895,7 +889,7 @@ export class ApiManagementBackend extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_api_management_backend";
+  public static readonly tfResourceType = "azurerm_api_management_backend";
 
   // ===========
   // INITIALIZER
@@ -912,7 +906,9 @@ export class ApiManagementBackend extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_api_management_backend',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1057,7 +1053,7 @@ export class ApiManagementBackend extends cdktf.TerraformResource {
   }
 
   // credentials - computed: false, optional: true, required: false
-  private _credentials = new ApiManagementBackendCredentialsOutputReference(this, "credentials", true);
+  private _credentials = new ApiManagementBackendCredentialsOutputReference(this, "credentials");
   public get credentials() {
     return this._credentials;
   }
@@ -1073,7 +1069,7 @@ export class ApiManagementBackend extends cdktf.TerraformResource {
   }
 
   // proxy - computed: false, optional: true, required: false
-  private _proxy = new ApiManagementBackendProxyOutputReference(this, "proxy", true);
+  private _proxy = new ApiManagementBackendProxyOutputReference(this, "proxy");
   public get proxy() {
     return this._proxy;
   }
@@ -1089,7 +1085,7 @@ export class ApiManagementBackend extends cdktf.TerraformResource {
   }
 
   // service_fabric_cluster - computed: false, optional: true, required: false
-  private _serviceFabricCluster = new ApiManagementBackendServiceFabricClusterOutputReference(this, "service_fabric_cluster", true);
+  private _serviceFabricCluster = new ApiManagementBackendServiceFabricClusterOutputReference(this, "service_fabric_cluster");
   public get serviceFabricCluster() {
     return this._serviceFabricCluster;
   }
@@ -1105,7 +1101,7 @@ export class ApiManagementBackend extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ApiManagementBackendTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new ApiManagementBackendTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
@@ -1121,7 +1117,7 @@ export class ApiManagementBackend extends cdktf.TerraformResource {
   }
 
   // tls - computed: false, optional: true, required: false
-  private _tls = new ApiManagementBackendTlsOutputReference(this, "tls", true);
+  private _tls = new ApiManagementBackendTlsOutputReference(this, "tls");
   public get tls() {
     return this._tls;
   }

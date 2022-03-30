@@ -72,10 +72,9 @@ export class VirtualHubConnectionRoutingPropagatedRouteTableOutputReference exte
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): VirtualHubConnectionRoutingPropagatedRouteTable | undefined {
@@ -201,10 +200,9 @@ export class VirtualHubConnectionRoutingOutputReference extends cdktf.ComplexObj
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): VirtualHubConnectionRouting | undefined {
@@ -257,7 +255,7 @@ export class VirtualHubConnectionRoutingOutputReference extends cdktf.ComplexObj
   }
 
   // propagated_route_table - computed: false, optional: true, required: false
-  private _propagatedRouteTable = new VirtualHubConnectionRoutingPropagatedRouteTableOutputReference(this, "propagated_route_table", true);
+  private _propagatedRouteTable = new VirtualHubConnectionRoutingPropagatedRouteTableOutputReference(this, "propagated_route_table");
   public get propagatedRouteTable() {
     return this._propagatedRouteTable;
   }
@@ -327,10 +325,9 @@ export class VirtualHubConnectionTimeoutsOutputReference extends cdktf.ComplexOb
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): VirtualHubConnectionTimeouts | undefined {
@@ -445,7 +442,7 @@ export class VirtualHubConnection extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_virtual_hub_connection";
+  public static readonly tfResourceType = "azurerm_virtual_hub_connection";
 
   // ===========
   // INITIALIZER
@@ -462,7 +459,9 @@ export class VirtualHubConnection extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_virtual_hub_connection',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -576,7 +575,7 @@ export class VirtualHubConnection extends cdktf.TerraformResource {
   }
 
   // routing - computed: false, optional: true, required: false
-  private _routing = new VirtualHubConnectionRoutingOutputReference(this, "routing", true);
+  private _routing = new VirtualHubConnectionRoutingOutputReference(this, "routing");
   public get routing() {
     return this._routing;
   }
@@ -592,7 +591,7 @@ export class VirtualHubConnection extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new VirtualHubConnectionTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new VirtualHubConnectionTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

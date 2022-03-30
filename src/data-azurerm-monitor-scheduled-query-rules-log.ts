@@ -22,7 +22,45 @@ export interface DataAzurermMonitorScheduledQueryRulesLogConfig extends cdktf.Te
   */
   readonly timeouts?: DataAzurermMonitorScheduledQueryRulesLogTimeouts;
 }
-export class DataAzurermMonitorScheduledQueryRulesLogCriteriaDimension extends cdktf.ComplexComputedList {
+export interface DataAzurermMonitorScheduledQueryRulesLogCriteriaDimension {
+}
+
+export function dataAzurermMonitorScheduledQueryRulesLogCriteriaDimensionToTerraform(struct?: DataAzurermMonitorScheduledQueryRulesLogCriteriaDimension): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermMonitorScheduledQueryRulesLogCriteriaDimensionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermMonitorScheduledQueryRulesLogCriteriaDimension | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermMonitorScheduledQueryRulesLogCriteriaDimension | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // name - computed: true, optional: false, required: false
   public get name() {
@@ -39,17 +77,93 @@ export class DataAzurermMonitorScheduledQueryRulesLogCriteriaDimension extends c
     return this.getListAttribute('values');
   }
 }
-export class DataAzurermMonitorScheduledQueryRulesLogCriteria extends cdktf.ComplexComputedList {
+
+export class DataAzurermMonitorScheduledQueryRulesLogCriteriaDimensionList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermMonitorScheduledQueryRulesLogCriteriaDimensionOutputReference {
+    return new DataAzurermMonitorScheduledQueryRulesLogCriteriaDimensionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermMonitorScheduledQueryRulesLogCriteria {
+}
+
+export function dataAzurermMonitorScheduledQueryRulesLogCriteriaToTerraform(struct?: DataAzurermMonitorScheduledQueryRulesLogCriteria): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermMonitorScheduledQueryRulesLogCriteriaOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermMonitorScheduledQueryRulesLogCriteria | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermMonitorScheduledQueryRulesLogCriteria | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // dimension - computed: true, optional: false, required: false
+  private _dimension = new DataAzurermMonitorScheduledQueryRulesLogCriteriaDimensionList(this, "dimension", true);
   public get dimension() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('dimension')));
+    return this._dimension;
   }
 
   // metric_name - computed: true, optional: false, required: false
   public get metricName() {
     return this.getStringAttribute('metric_name');
+  }
+}
+
+export class DataAzurermMonitorScheduledQueryRulesLogCriteriaList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermMonitorScheduledQueryRulesLogCriteriaOutputReference {
+    return new DataAzurermMonitorScheduledQueryRulesLogCriteriaOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataAzurermMonitorScheduledQueryRulesLogTimeouts {
@@ -75,10 +189,9 @@ export class DataAzurermMonitorScheduledQueryRulesLogTimeoutsOutputReference ext
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermMonitorScheduledQueryRulesLogTimeouts | undefined {
@@ -127,7 +240,7 @@ export class DataAzurermMonitorScheduledQueryRulesLog extends cdktf.TerraformDat
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_monitor_scheduled_query_rules_log";
+  public static readonly tfResourceType = "azurerm_monitor_scheduled_query_rules_log";
 
   // ===========
   // INITIALIZER
@@ -144,7 +257,9 @@ export class DataAzurermMonitorScheduledQueryRulesLog extends cdktf.TerraformDat
     super(scope, id, {
       terraformResourceType: 'azurerm_monitor_scheduled_query_rules_log',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -166,8 +281,9 @@ export class DataAzurermMonitorScheduledQueryRulesLog extends cdktf.TerraformDat
   }
 
   // criteria - computed: true, optional: false, required: false
-  public criteria(index: string) {
-    return new DataAzurermMonitorScheduledQueryRulesLogCriteria(this, 'criteria', index, true);
+  private _criteria = new DataAzurermMonitorScheduledQueryRulesLogCriteriaList(this, "criteria", true);
+  public get criteria() {
+    return this._criteria;
   }
 
   // data_source_id - computed: true, optional: false, required: false
@@ -227,7 +343,7 @@ export class DataAzurermMonitorScheduledQueryRulesLog extends cdktf.TerraformDat
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermMonitorScheduledQueryRulesLogTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermMonitorScheduledQueryRulesLogTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

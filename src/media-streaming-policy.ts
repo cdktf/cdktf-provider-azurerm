@@ -76,10 +76,9 @@ export class MediaStreamingPolicyCommonEncryptionCbcsDefaultContentKeyOutputRefe
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MediaStreamingPolicyCommonEncryptionCbcsDefaultContentKey | undefined {
@@ -169,10 +168,9 @@ export class MediaStreamingPolicyCommonEncryptionCbcsDrmFairplayOutputReference 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MediaStreamingPolicyCommonEncryptionCbcsDrmFairplay | undefined {
@@ -272,10 +270,9 @@ export class MediaStreamingPolicyCommonEncryptionCbcsEnabledProtocolsOutputRefer
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MediaStreamingPolicyCommonEncryptionCbcsEnabledProtocols | undefined {
@@ -420,10 +417,9 @@ export class MediaStreamingPolicyCommonEncryptionCbcsOutputReference extends cdk
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MediaStreamingPolicyCommonEncryptionCbcs | undefined {
@@ -460,7 +456,7 @@ export class MediaStreamingPolicyCommonEncryptionCbcsOutputReference extends cdk
   }
 
   // default_content_key - computed: false, optional: true, required: false
-  private _defaultContentKey = new MediaStreamingPolicyCommonEncryptionCbcsDefaultContentKeyOutputReference(this, "default_content_key", true);
+  private _defaultContentKey = new MediaStreamingPolicyCommonEncryptionCbcsDefaultContentKeyOutputReference(this, "default_content_key");
   public get defaultContentKey() {
     return this._defaultContentKey;
   }
@@ -476,7 +472,7 @@ export class MediaStreamingPolicyCommonEncryptionCbcsOutputReference extends cdk
   }
 
   // drm_fairplay - computed: false, optional: true, required: false
-  private _drmFairplay = new MediaStreamingPolicyCommonEncryptionCbcsDrmFairplayOutputReference(this, "drm_fairplay", true);
+  private _drmFairplay = new MediaStreamingPolicyCommonEncryptionCbcsDrmFairplayOutputReference(this, "drm_fairplay");
   public get drmFairplay() {
     return this._drmFairplay;
   }
@@ -492,7 +488,7 @@ export class MediaStreamingPolicyCommonEncryptionCbcsOutputReference extends cdk
   }
 
   // enabled_protocols - computed: false, optional: true, required: false
-  private _enabledProtocols = new MediaStreamingPolicyCommonEncryptionCbcsEnabledProtocolsOutputReference(this, "enabled_protocols", true);
+  private _enabledProtocols = new MediaStreamingPolicyCommonEncryptionCbcsEnabledProtocolsOutputReference(this, "enabled_protocols");
   public get enabledProtocols() {
     return this._enabledProtocols;
   }
@@ -535,10 +531,9 @@ export class MediaStreamingPolicyCommonEncryptionCencDefaultContentKeyOutputRefe
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MediaStreamingPolicyCommonEncryptionCencDefaultContentKey | undefined {
@@ -628,10 +623,9 @@ export class MediaStreamingPolicyCommonEncryptionCencDrmPlayreadyOutputReference
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MediaStreamingPolicyCommonEncryptionCencDrmPlayready | undefined {
@@ -731,10 +725,9 @@ export class MediaStreamingPolicyCommonEncryptionCencEnabledProtocolsOutputRefer
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MediaStreamingPolicyCommonEncryptionCencEnabledProtocols | undefined {
@@ -884,10 +877,9 @@ export class MediaStreamingPolicyCommonEncryptionCencOutputReference extends cdk
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MediaStreamingPolicyCommonEncryptionCenc | undefined {
@@ -946,7 +938,7 @@ export class MediaStreamingPolicyCommonEncryptionCencOutputReference extends cdk
   }
 
   // default_content_key - computed: false, optional: true, required: false
-  private _defaultContentKey = new MediaStreamingPolicyCommonEncryptionCencDefaultContentKeyOutputReference(this, "default_content_key", true);
+  private _defaultContentKey = new MediaStreamingPolicyCommonEncryptionCencDefaultContentKeyOutputReference(this, "default_content_key");
   public get defaultContentKey() {
     return this._defaultContentKey;
   }
@@ -962,7 +954,7 @@ export class MediaStreamingPolicyCommonEncryptionCencOutputReference extends cdk
   }
 
   // drm_playready - computed: false, optional: true, required: false
-  private _drmPlayready = new MediaStreamingPolicyCommonEncryptionCencDrmPlayreadyOutputReference(this, "drm_playready", true);
+  private _drmPlayready = new MediaStreamingPolicyCommonEncryptionCencDrmPlayreadyOutputReference(this, "drm_playready");
   public get drmPlayready() {
     return this._drmPlayready;
   }
@@ -978,7 +970,7 @@ export class MediaStreamingPolicyCommonEncryptionCencOutputReference extends cdk
   }
 
   // enabled_protocols - computed: false, optional: true, required: false
-  private _enabledProtocols = new MediaStreamingPolicyCommonEncryptionCencEnabledProtocolsOutputReference(this, "enabled_protocols", true);
+  private _enabledProtocols = new MediaStreamingPolicyCommonEncryptionCencEnabledProtocolsOutputReference(this, "enabled_protocols");
   public get enabledProtocols() {
     return this._enabledProtocols;
   }
@@ -1031,10 +1023,9 @@ export class MediaStreamingPolicyNoEncryptionEnabledProtocolsOutputReference ext
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MediaStreamingPolicyNoEncryptionEnabledProtocols | undefined {
@@ -1173,10 +1164,9 @@ export class MediaStreamingPolicyTimeoutsOutputReference extends cdktf.ComplexOb
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MediaStreamingPolicyTimeouts | undefined {
@@ -1269,7 +1259,7 @@ export class MediaStreamingPolicy extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_media_streaming_policy";
+  public static readonly tfResourceType = "azurerm_media_streaming_policy";
 
   // ===========
   // INITIALIZER
@@ -1286,7 +1276,9 @@ export class MediaStreamingPolicy extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_media_streaming_policy',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1368,7 +1360,7 @@ export class MediaStreamingPolicy extends cdktf.TerraformResource {
   }
 
   // common_encryption_cbcs - computed: false, optional: true, required: false
-  private _commonEncryptionCbcs = new MediaStreamingPolicyCommonEncryptionCbcsOutputReference(this, "common_encryption_cbcs", true);
+  private _commonEncryptionCbcs = new MediaStreamingPolicyCommonEncryptionCbcsOutputReference(this, "common_encryption_cbcs");
   public get commonEncryptionCbcs() {
     return this._commonEncryptionCbcs;
   }
@@ -1384,7 +1376,7 @@ export class MediaStreamingPolicy extends cdktf.TerraformResource {
   }
 
   // common_encryption_cenc - computed: false, optional: true, required: false
-  private _commonEncryptionCenc = new MediaStreamingPolicyCommonEncryptionCencOutputReference(this, "common_encryption_cenc", true);
+  private _commonEncryptionCenc = new MediaStreamingPolicyCommonEncryptionCencOutputReference(this, "common_encryption_cenc");
   public get commonEncryptionCenc() {
     return this._commonEncryptionCenc;
   }
@@ -1400,7 +1392,7 @@ export class MediaStreamingPolicy extends cdktf.TerraformResource {
   }
 
   // no_encryption_enabled_protocols - computed: false, optional: true, required: false
-  private _noEncryptionEnabledProtocols = new MediaStreamingPolicyNoEncryptionEnabledProtocolsOutputReference(this, "no_encryption_enabled_protocols", true);
+  private _noEncryptionEnabledProtocols = new MediaStreamingPolicyNoEncryptionEnabledProtocolsOutputReference(this, "no_encryption_enabled_protocols");
   public get noEncryptionEnabledProtocols() {
     return this._noEncryptionEnabledProtocols;
   }
@@ -1416,7 +1408,7 @@ export class MediaStreamingPolicy extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new MediaStreamingPolicyTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new MediaStreamingPolicyTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

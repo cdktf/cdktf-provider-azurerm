@@ -22,7 +22,45 @@ export interface DataAzurermKeyVaultCertificateIssuerConfig extends cdktf.Terraf
   */
   readonly timeouts?: DataAzurermKeyVaultCertificateIssuerTimeouts;
 }
-export class DataAzurermKeyVaultCertificateIssuerAdmin extends cdktf.ComplexComputedList {
+export interface DataAzurermKeyVaultCertificateIssuerAdmin {
+}
+
+export function dataAzurermKeyVaultCertificateIssuerAdminToTerraform(struct?: DataAzurermKeyVaultCertificateIssuerAdmin): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermKeyVaultCertificateIssuerAdminOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermKeyVaultCertificateIssuerAdmin | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermKeyVaultCertificateIssuerAdmin | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // email_address - computed: true, optional: false, required: false
   public get emailAddress() {
@@ -42,6 +80,25 @@ export class DataAzurermKeyVaultCertificateIssuerAdmin extends cdktf.ComplexComp
   // phone - computed: true, optional: false, required: false
   public get phone() {
     return this.getStringAttribute('phone');
+  }
+}
+
+export class DataAzurermKeyVaultCertificateIssuerAdminList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermKeyVaultCertificateIssuerAdminOutputReference {
+    return new DataAzurermKeyVaultCertificateIssuerAdminOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataAzurermKeyVaultCertificateIssuerTimeouts {
@@ -67,10 +124,9 @@ export class DataAzurermKeyVaultCertificateIssuerTimeoutsOutputReference extends
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermKeyVaultCertificateIssuerTimeouts | undefined {
@@ -119,7 +175,7 @@ export class DataAzurermKeyVaultCertificateIssuer extends cdktf.TerraformDataSou
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_key_vault_certificate_issuer";
+  public static readonly tfResourceType = "azurerm_key_vault_certificate_issuer";
 
   // ===========
   // INITIALIZER
@@ -136,7 +192,9 @@ export class DataAzurermKeyVaultCertificateIssuer extends cdktf.TerraformDataSou
     super(scope, id, {
       terraformResourceType: 'azurerm_key_vault_certificate_issuer',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -158,8 +216,9 @@ export class DataAzurermKeyVaultCertificateIssuer extends cdktf.TerraformDataSou
   }
 
   // admin - computed: true, optional: false, required: false
-  public admin(index: string) {
-    return new DataAzurermKeyVaultCertificateIssuerAdmin(this, 'admin', index, false);
+  private _admin = new DataAzurermKeyVaultCertificateIssuerAdminList(this, "admin", false);
+  public get admin() {
+    return this._admin;
   }
 
   // id - computed: true, optional: true, required: false
@@ -204,7 +263,7 @@ export class DataAzurermKeyVaultCertificateIssuer extends cdktf.TerraformDataSou
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermKeyVaultCertificateIssuerTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermKeyVaultCertificateIssuerTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

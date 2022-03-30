@@ -22,7 +22,45 @@ export interface DataAzurermPrivateEndpointConnectionConfig extends cdktf.Terraf
   */
   readonly timeouts?: DataAzurermPrivateEndpointConnectionTimeouts;
 }
-export class DataAzurermPrivateEndpointConnectionNetworkInterface extends cdktf.ComplexComputedList {
+export interface DataAzurermPrivateEndpointConnectionNetworkInterface {
+}
+
+export function dataAzurermPrivateEndpointConnectionNetworkInterfaceToTerraform(struct?: DataAzurermPrivateEndpointConnectionNetworkInterface): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermPrivateEndpointConnectionNetworkInterfaceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermPrivateEndpointConnectionNetworkInterface | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermPrivateEndpointConnectionNetworkInterface | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // id - computed: true, optional: false, required: false
   public get id() {
@@ -34,7 +72,64 @@ export class DataAzurermPrivateEndpointConnectionNetworkInterface extends cdktf.
     return this.getStringAttribute('name');
   }
 }
-export class DataAzurermPrivateEndpointConnectionPrivateServiceConnection extends cdktf.ComplexComputedList {
+
+export class DataAzurermPrivateEndpointConnectionNetworkInterfaceList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermPrivateEndpointConnectionNetworkInterfaceOutputReference {
+    return new DataAzurermPrivateEndpointConnectionNetworkInterfaceOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermPrivateEndpointConnectionPrivateServiceConnection {
+}
+
+export function dataAzurermPrivateEndpointConnectionPrivateServiceConnectionToTerraform(struct?: DataAzurermPrivateEndpointConnectionPrivateServiceConnection): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermPrivateEndpointConnectionPrivateServiceConnectionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermPrivateEndpointConnectionPrivateServiceConnection | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermPrivateEndpointConnectionPrivateServiceConnection | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // name - computed: true, optional: false, required: false
   public get name() {
@@ -54,6 +149,25 @@ export class DataAzurermPrivateEndpointConnectionPrivateServiceConnection extend
   // status - computed: true, optional: false, required: false
   public get status() {
     return this.getStringAttribute('status');
+  }
+}
+
+export class DataAzurermPrivateEndpointConnectionPrivateServiceConnectionList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermPrivateEndpointConnectionPrivateServiceConnectionOutputReference {
+    return new DataAzurermPrivateEndpointConnectionPrivateServiceConnectionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataAzurermPrivateEndpointConnectionTimeouts {
@@ -79,10 +193,9 @@ export class DataAzurermPrivateEndpointConnectionTimeoutsOutputReference extends
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermPrivateEndpointConnectionTimeouts | undefined {
@@ -131,7 +244,7 @@ export class DataAzurermPrivateEndpointConnection extends cdktf.TerraformDataSou
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_private_endpoint_connection";
+  public static readonly tfResourceType = "azurerm_private_endpoint_connection";
 
   // ===========
   // INITIALIZER
@@ -148,7 +261,9 @@ export class DataAzurermPrivateEndpointConnection extends cdktf.TerraformDataSou
     super(scope, id, {
       terraformResourceType: 'azurerm_private_endpoint_connection',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -188,13 +303,15 @@ export class DataAzurermPrivateEndpointConnection extends cdktf.TerraformDataSou
   }
 
   // network_interface - computed: true, optional: false, required: false
-  public networkInterface(index: string) {
-    return new DataAzurermPrivateEndpointConnectionNetworkInterface(this, 'network_interface', index, false);
+  private _networkInterface = new DataAzurermPrivateEndpointConnectionNetworkInterfaceList(this, "network_interface", false);
+  public get networkInterface() {
+    return this._networkInterface;
   }
 
   // private_service_connection - computed: true, optional: false, required: false
-  public privateServiceConnection(index: string) {
-    return new DataAzurermPrivateEndpointConnectionPrivateServiceConnection(this, 'private_service_connection', index, false);
+  private _privateServiceConnection = new DataAzurermPrivateEndpointConnectionPrivateServiceConnectionList(this, "private_service_connection", false);
+  public get privateServiceConnection() {
+    return this._privateServiceConnection;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -211,7 +328,7 @@ export class DataAzurermPrivateEndpointConnection extends cdktf.TerraformDataSou
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermPrivateEndpointConnectionTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermPrivateEndpointConnectionTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

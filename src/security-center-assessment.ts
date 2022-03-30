@@ -65,10 +65,9 @@ export class SecurityCenterAssessmentStatusOutputReference extends cdktf.Complex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): SecurityCenterAssessmentStatus | undefined {
@@ -187,10 +186,9 @@ export class SecurityCenterAssessmentTimeoutsOutputReference extends cdktf.Compl
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): SecurityCenterAssessmentTimeouts | undefined {
@@ -305,7 +303,7 @@ export class SecurityCenterAssessment extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_security_center_assessment";
+  public static readonly tfResourceType = "azurerm_security_center_assessment";
 
   // ===========
   // INITIALIZER
@@ -322,7 +320,9 @@ export class SecurityCenterAssessment extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_security_center_assessment',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -388,7 +388,7 @@ export class SecurityCenterAssessment extends cdktf.TerraformResource {
   }
 
   // status - computed: false, optional: false, required: true
-  private _status = new SecurityCenterAssessmentStatusOutputReference(this, "status", true);
+  private _status = new SecurityCenterAssessmentStatusOutputReference(this, "status");
   public get status() {
     return this._status;
   }
@@ -401,7 +401,7 @@ export class SecurityCenterAssessment extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new SecurityCenterAssessmentTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new SecurityCenterAssessmentTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

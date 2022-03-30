@@ -72,10 +72,9 @@ export class StorageManagementPolicyRuleActionsBaseBlobOutputReference extends c
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): StorageManagementPolicyRuleActionsBaseBlob | undefined {
@@ -258,10 +257,9 @@ export class StorageManagementPolicyRuleActionsSnapshotOutputReference extends c
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): StorageManagementPolicyRuleActionsSnapshot | undefined {
@@ -378,10 +376,9 @@ export class StorageManagementPolicyRuleActionsVersionOutputReference extends cd
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): StorageManagementPolicyRuleActionsVersion | undefined {
@@ -504,10 +501,9 @@ export class StorageManagementPolicyRuleActionsOutputReference extends cdktf.Com
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): StorageManagementPolicyRuleActions | undefined {
@@ -544,7 +540,7 @@ export class StorageManagementPolicyRuleActionsOutputReference extends cdktf.Com
   }
 
   // base_blob - computed: false, optional: true, required: false
-  private _baseBlob = new StorageManagementPolicyRuleActionsBaseBlobOutputReference(this, "base_blob", true);
+  private _baseBlob = new StorageManagementPolicyRuleActionsBaseBlobOutputReference(this, "base_blob");
   public get baseBlob() {
     return this._baseBlob;
   }
@@ -560,7 +556,7 @@ export class StorageManagementPolicyRuleActionsOutputReference extends cdktf.Com
   }
 
   // snapshot - computed: false, optional: true, required: false
-  private _snapshot = new StorageManagementPolicyRuleActionsSnapshotOutputReference(this, "snapshot", true);
+  private _snapshot = new StorageManagementPolicyRuleActionsSnapshotOutputReference(this, "snapshot");
   public get snapshot() {
     return this._snapshot;
   }
@@ -576,7 +572,7 @@ export class StorageManagementPolicyRuleActionsOutputReference extends cdktf.Com
   }
 
   // version - computed: false, optional: true, required: false
-  private _version = new StorageManagementPolicyRuleActionsVersionOutputReference(this, "version", true);
+  private _version = new StorageManagementPolicyRuleActionsVersionOutputReference(this, "version");
   public get version() {
     return this._version;
   }
@@ -653,10 +649,9 @@ export class StorageManagementPolicyRuleFiltersOutputReference extends cdktf.Com
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): StorageManagementPolicyRuleFilters | undefined {
@@ -815,10 +810,9 @@ export class StorageManagementPolicyTimeoutsOutputReference extends cdktf.Comple
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): StorageManagementPolicyTimeouts | undefined {
@@ -933,7 +927,7 @@ export class StorageManagementPolicy extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_storage_management_policy";
+  public static readonly tfResourceType = "azurerm_storage_management_policy";
 
   // ===========
   // INITIALIZER
@@ -950,7 +944,9 @@ export class StorageManagementPolicy extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_storage_management_policy',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1002,7 +998,7 @@ export class StorageManagementPolicy extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new StorageManagementPolicyTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new StorageManagementPolicyTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

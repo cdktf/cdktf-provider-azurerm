@@ -26,7 +26,45 @@ export interface DataAzurermMssqlElasticpoolConfig extends cdktf.TerraformMetaAr
   */
   readonly timeouts?: DataAzurermMssqlElasticpoolTimeouts;
 }
-export class DataAzurermMssqlElasticpoolSku extends cdktf.ComplexComputedList {
+export interface DataAzurermMssqlElasticpoolSku {
+}
+
+export function dataAzurermMssqlElasticpoolSkuToTerraform(struct?: DataAzurermMssqlElasticpoolSku): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermMssqlElasticpoolSkuOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermMssqlElasticpoolSku | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermMssqlElasticpoolSku | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // capacity - computed: true, optional: false, required: false
   public get capacity() {
@@ -46,6 +84,25 @@ export class DataAzurermMssqlElasticpoolSku extends cdktf.ComplexComputedList {
   // tier - computed: true, optional: false, required: false
   public get tier() {
     return this.getStringAttribute('tier');
+  }
+}
+
+export class DataAzurermMssqlElasticpoolSkuList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermMssqlElasticpoolSkuOutputReference {
+    return new DataAzurermMssqlElasticpoolSkuOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataAzurermMssqlElasticpoolTimeouts {
@@ -71,10 +128,9 @@ export class DataAzurermMssqlElasticpoolTimeoutsOutputReference extends cdktf.Co
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermMssqlElasticpoolTimeouts | undefined {
@@ -123,7 +179,7 @@ export class DataAzurermMssqlElasticpool extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_mssql_elasticpool";
+  public static readonly tfResourceType = "azurerm_mssql_elasticpool";
 
   // ===========
   // INITIALIZER
@@ -140,7 +196,9 @@ export class DataAzurermMssqlElasticpool extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'azurerm_mssql_elasticpool',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -232,8 +290,9 @@ export class DataAzurermMssqlElasticpool extends cdktf.TerraformDataSource {
   }
 
   // sku - computed: true, optional: false, required: false
-  public sku(index: string) {
-    return new DataAzurermMssqlElasticpoolSku(this, 'sku', index, false);
+  private _sku = new DataAzurermMssqlElasticpoolSkuList(this, "sku", false);
+  public get sku() {
+    return this._sku;
   }
 
   // tags - computed: true, optional: false, required: false
@@ -247,7 +306,7 @@ export class DataAzurermMssqlElasticpool extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermMssqlElasticpoolTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermMssqlElasticpoolTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

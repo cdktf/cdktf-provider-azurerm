@@ -265,10 +265,9 @@ export class WindowsVirtualMachineScaleSetAdditionalCapabilitiesOutputReference 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): WindowsVirtualMachineScaleSetAdditionalCapabilities | undefined {
@@ -358,10 +357,9 @@ export class WindowsVirtualMachineScaleSetAutomaticInstanceRepairOutputReference
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): WindowsVirtualMachineScaleSetAutomaticInstanceRepair | undefined {
@@ -448,10 +446,9 @@ export class WindowsVirtualMachineScaleSetAutomaticOsUpgradePolicyOutputReferenc
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): WindowsVirtualMachineScaleSetAutomaticOsUpgradePolicy | undefined {
@@ -530,10 +527,9 @@ export class WindowsVirtualMachineScaleSetBootDiagnosticsOutputReference extends
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): WindowsVirtualMachineScaleSetBootDiagnostics | undefined {
@@ -730,10 +726,9 @@ export class WindowsVirtualMachineScaleSetIdentityOutputReference extends cdktf.
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): WindowsVirtualMachineScaleSetIdentity | undefined {
@@ -994,10 +989,9 @@ export class WindowsVirtualMachineScaleSetOsDiskDiffDiskSettingsOutputReference 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): WindowsVirtualMachineScaleSetOsDiskDiffDiskSettings | undefined {
@@ -1084,10 +1078,9 @@ export class WindowsVirtualMachineScaleSetOsDiskOutputReference extends cdktf.Co
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): WindowsVirtualMachineScaleSetOsDisk | undefined {
@@ -1216,7 +1209,7 @@ export class WindowsVirtualMachineScaleSetOsDiskOutputReference extends cdktf.Co
   }
 
   // diff_disk_settings - computed: false, optional: true, required: false
-  private _diffDiskSettings = new WindowsVirtualMachineScaleSetOsDiskDiffDiskSettingsOutputReference(this, "diff_disk_settings", true);
+  private _diffDiskSettings = new WindowsVirtualMachineScaleSetOsDiskDiffDiskSettingsOutputReference(this, "diff_disk_settings");
   public get diffDiskSettings() {
     return this._diffDiskSettings;
   }
@@ -1264,10 +1257,9 @@ export class WindowsVirtualMachineScaleSetPlanOutputReference extends cdktf.Comp
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): WindowsVirtualMachineScaleSetPlan | undefined {
@@ -1380,10 +1372,9 @@ export class WindowsVirtualMachineScaleSetRollingUpgradePolicyOutputReference ex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): WindowsVirtualMachineScaleSetRollingUpgradePolicy | undefined {
@@ -1561,10 +1552,9 @@ export class WindowsVirtualMachineScaleSetSourceImageReferenceOutputReference ex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): WindowsVirtualMachineScaleSetSourceImageReference | undefined {
@@ -1686,10 +1676,9 @@ export class WindowsVirtualMachineScaleSetTerminateNotificationOutputReference e
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): WindowsVirtualMachineScaleSetTerminateNotification | undefined {
@@ -1786,10 +1775,9 @@ export class WindowsVirtualMachineScaleSetTimeoutsOutputReference extends cdktf.
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): WindowsVirtualMachineScaleSetTimeouts | undefined {
@@ -1926,7 +1914,7 @@ export class WindowsVirtualMachineScaleSet extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_windows_virtual_machine_scale_set";
+  public static readonly tfResourceType = "azurerm_windows_virtual_machine_scale_set";
 
   // ===========
   // INITIALIZER
@@ -1943,7 +1931,9 @@ export class WindowsVirtualMachineScaleSet extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_windows_virtual_machine_scale_set',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -2524,7 +2514,7 @@ export class WindowsVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
 
   // additional_capabilities - computed: false, optional: true, required: false
-  private _additionalCapabilities = new WindowsVirtualMachineScaleSetAdditionalCapabilitiesOutputReference(this, "additional_capabilities", true);
+  private _additionalCapabilities = new WindowsVirtualMachineScaleSetAdditionalCapabilitiesOutputReference(this, "additional_capabilities");
   public get additionalCapabilities() {
     return this._additionalCapabilities;
   }
@@ -2557,7 +2547,7 @@ export class WindowsVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
 
   // automatic_instance_repair - computed: false, optional: true, required: false
-  private _automaticInstanceRepair = new WindowsVirtualMachineScaleSetAutomaticInstanceRepairOutputReference(this, "automatic_instance_repair", true);
+  private _automaticInstanceRepair = new WindowsVirtualMachineScaleSetAutomaticInstanceRepairOutputReference(this, "automatic_instance_repair");
   public get automaticInstanceRepair() {
     return this._automaticInstanceRepair;
   }
@@ -2573,7 +2563,7 @@ export class WindowsVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
 
   // automatic_os_upgrade_policy - computed: false, optional: true, required: false
-  private _automaticOsUpgradePolicy = new WindowsVirtualMachineScaleSetAutomaticOsUpgradePolicyOutputReference(this, "automatic_os_upgrade_policy", true);
+  private _automaticOsUpgradePolicy = new WindowsVirtualMachineScaleSetAutomaticOsUpgradePolicyOutputReference(this, "automatic_os_upgrade_policy");
   public get automaticOsUpgradePolicy() {
     return this._automaticOsUpgradePolicy;
   }
@@ -2589,7 +2579,7 @@ export class WindowsVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
 
   // boot_diagnostics - computed: false, optional: true, required: false
-  private _bootDiagnostics = new WindowsVirtualMachineScaleSetBootDiagnosticsOutputReference(this, "boot_diagnostics", true);
+  private _bootDiagnostics = new WindowsVirtualMachineScaleSetBootDiagnosticsOutputReference(this, "boot_diagnostics");
   public get bootDiagnostics() {
     return this._bootDiagnostics;
   }
@@ -2639,7 +2629,7 @@ export class WindowsVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity = new WindowsVirtualMachineScaleSetIdentityOutputReference(this, "identity", true);
+  private _identity = new WindowsVirtualMachineScaleSetIdentityOutputReference(this, "identity");
   public get identity() {
     return this._identity;
   }
@@ -2669,7 +2659,7 @@ export class WindowsVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
 
   // os_disk - computed: false, optional: false, required: true
-  private _osDisk = new WindowsVirtualMachineScaleSetOsDiskOutputReference(this, "os_disk", true);
+  private _osDisk = new WindowsVirtualMachineScaleSetOsDiskOutputReference(this, "os_disk");
   public get osDisk() {
     return this._osDisk;
   }
@@ -2682,7 +2672,7 @@ export class WindowsVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
 
   // plan - computed: false, optional: true, required: false
-  private _plan = new WindowsVirtualMachineScaleSetPlanOutputReference(this, "plan", true);
+  private _plan = new WindowsVirtualMachineScaleSetPlanOutputReference(this, "plan");
   public get plan() {
     return this._plan;
   }
@@ -2698,7 +2688,7 @@ export class WindowsVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
 
   // rolling_upgrade_policy - computed: false, optional: true, required: false
-  private _rollingUpgradePolicy = new WindowsVirtualMachineScaleSetRollingUpgradePolicyOutputReference(this, "rolling_upgrade_policy", true);
+  private _rollingUpgradePolicy = new WindowsVirtualMachineScaleSetRollingUpgradePolicyOutputReference(this, "rolling_upgrade_policy");
   public get rollingUpgradePolicy() {
     return this._rollingUpgradePolicy;
   }
@@ -2731,7 +2721,7 @@ export class WindowsVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
 
   // source_image_reference - computed: false, optional: true, required: false
-  private _sourceImageReference = new WindowsVirtualMachineScaleSetSourceImageReferenceOutputReference(this, "source_image_reference", true);
+  private _sourceImageReference = new WindowsVirtualMachineScaleSetSourceImageReferenceOutputReference(this, "source_image_reference");
   public get sourceImageReference() {
     return this._sourceImageReference;
   }
@@ -2747,7 +2737,7 @@ export class WindowsVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
 
   // terminate_notification - computed: false, optional: true, required: false
-  private _terminateNotification = new WindowsVirtualMachineScaleSetTerminateNotificationOutputReference(this, "terminate_notification", true);
+  private _terminateNotification = new WindowsVirtualMachineScaleSetTerminateNotificationOutputReference(this, "terminate_notification");
   public get terminateNotification() {
     return this._terminateNotification;
   }
@@ -2763,7 +2753,7 @@ export class WindowsVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new WindowsVirtualMachineScaleSetTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new WindowsVirtualMachineScaleSetTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

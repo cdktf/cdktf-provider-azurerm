@@ -46,7 +46,45 @@ export interface PrivateEndpointConfig extends cdktf.TerraformMetaArguments {
   */
   readonly timeouts?: PrivateEndpointTimeouts;
 }
-export class PrivateEndpointCustomDnsConfigs extends cdktf.ComplexComputedList {
+export interface PrivateEndpointCustomDnsConfigs {
+}
+
+export function privateEndpointCustomDnsConfigsToTerraform(struct?: PrivateEndpointCustomDnsConfigs): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class PrivateEndpointCustomDnsConfigsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): PrivateEndpointCustomDnsConfigs | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PrivateEndpointCustomDnsConfigs | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // fqdn - computed: true, optional: false, required: false
   public get fqdn() {
@@ -58,7 +96,64 @@ export class PrivateEndpointCustomDnsConfigs extends cdktf.ComplexComputedList {
     return this.getListAttribute('ip_addresses');
   }
 }
-export class PrivateEndpointNetworkInterface extends cdktf.ComplexComputedList {
+
+export class PrivateEndpointCustomDnsConfigsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): PrivateEndpointCustomDnsConfigsOutputReference {
+    return new PrivateEndpointCustomDnsConfigsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface PrivateEndpointNetworkInterface {
+}
+
+export function privateEndpointNetworkInterfaceToTerraform(struct?: PrivateEndpointNetworkInterface): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class PrivateEndpointNetworkInterfaceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): PrivateEndpointNetworkInterface | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PrivateEndpointNetworkInterface | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // id - computed: true, optional: false, required: false
   public get id() {
@@ -70,7 +165,64 @@ export class PrivateEndpointNetworkInterface extends cdktf.ComplexComputedList {
     return this.getStringAttribute('name');
   }
 }
-export class PrivateEndpointPrivateDnsZoneConfigsRecordSets extends cdktf.ComplexComputedList {
+
+export class PrivateEndpointNetworkInterfaceList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): PrivateEndpointNetworkInterfaceOutputReference {
+    return new PrivateEndpointNetworkInterfaceOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface PrivateEndpointPrivateDnsZoneConfigsRecordSets {
+}
+
+export function privateEndpointPrivateDnsZoneConfigsRecordSetsToTerraform(struct?: PrivateEndpointPrivateDnsZoneConfigsRecordSets): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class PrivateEndpointPrivateDnsZoneConfigsRecordSetsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): PrivateEndpointPrivateDnsZoneConfigsRecordSets | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PrivateEndpointPrivateDnsZoneConfigsRecordSets | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // fqdn - computed: true, optional: false, required: false
   public get fqdn() {
@@ -97,7 +249,64 @@ export class PrivateEndpointPrivateDnsZoneConfigsRecordSets extends cdktf.Comple
     return this.getStringAttribute('type');
   }
 }
-export class PrivateEndpointPrivateDnsZoneConfigs extends cdktf.ComplexComputedList {
+
+export class PrivateEndpointPrivateDnsZoneConfigsRecordSetsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): PrivateEndpointPrivateDnsZoneConfigsRecordSetsOutputReference {
+    return new PrivateEndpointPrivateDnsZoneConfigsRecordSetsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface PrivateEndpointPrivateDnsZoneConfigs {
+}
+
+export function privateEndpointPrivateDnsZoneConfigsToTerraform(struct?: PrivateEndpointPrivateDnsZoneConfigs): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class PrivateEndpointPrivateDnsZoneConfigsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): PrivateEndpointPrivateDnsZoneConfigs | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PrivateEndpointPrivateDnsZoneConfigs | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // id - computed: true, optional: false, required: false
   public get id() {
@@ -115,9 +324,28 @@ export class PrivateEndpointPrivateDnsZoneConfigs extends cdktf.ComplexComputedL
   }
 
   // record_sets - computed: true, optional: false, required: false
+  private _recordSets = new PrivateEndpointPrivateDnsZoneConfigsRecordSetsList(this, "record_sets", false);
   public get recordSets() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('record_sets');
+    return this._recordSets;
+  }
+}
+
+export class PrivateEndpointPrivateDnsZoneConfigsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): PrivateEndpointPrivateDnsZoneConfigsOutputReference {
+    return new PrivateEndpointPrivateDnsZoneConfigsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface PrivateEndpointPrivateDnsZoneGroup {
@@ -148,10 +376,9 @@ export class PrivateEndpointPrivateDnsZoneGroupOutputReference extends cdktf.Com
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): PrivateEndpointPrivateDnsZoneGroup | undefined {
@@ -260,10 +487,9 @@ export class PrivateEndpointPrivateServiceConnectionOutputReference extends cdkt
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): PrivateEndpointPrivateServiceConnection | undefined {
@@ -450,10 +676,9 @@ export class PrivateEndpointTimeoutsOutputReference extends cdktf.ComplexObject 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): PrivateEndpointTimeouts | undefined {
@@ -568,7 +793,7 @@ export class PrivateEndpoint extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_private_endpoint";
+  public static readonly tfResourceType = "azurerm_private_endpoint";
 
   // ===========
   // INITIALIZER
@@ -585,7 +810,9 @@ export class PrivateEndpoint extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_private_endpoint',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -607,8 +834,9 @@ export class PrivateEndpoint extends cdktf.TerraformResource {
   // ==========
 
   // custom_dns_configs - computed: true, optional: false, required: false
-  public customDnsConfigs(index: string) {
-    return new PrivateEndpointCustomDnsConfigs(this, 'custom_dns_configs', index, false);
+  private _customDnsConfigs = new PrivateEndpointCustomDnsConfigsList(this, "custom_dns_configs", false);
+  public get customDnsConfigs() {
+    return this._customDnsConfigs;
   }
 
   // id - computed: true, optional: true, required: false
@@ -643,13 +871,15 @@ export class PrivateEndpoint extends cdktf.TerraformResource {
   }
 
   // network_interface - computed: true, optional: false, required: false
-  public networkInterface(index: string) {
-    return new PrivateEndpointNetworkInterface(this, 'network_interface', index, false);
+  private _networkInterface = new PrivateEndpointNetworkInterfaceList(this, "network_interface", false);
+  public get networkInterface() {
+    return this._networkInterface;
   }
 
   // private_dns_zone_configs - computed: true, optional: false, required: false
-  public privateDnsZoneConfigs(index: string) {
-    return new PrivateEndpointPrivateDnsZoneConfigs(this, 'private_dns_zone_configs', index, false);
+  private _privateDnsZoneConfigs = new PrivateEndpointPrivateDnsZoneConfigsList(this, "private_dns_zone_configs", false);
+  public get privateDnsZoneConfigs() {
+    return this._privateDnsZoneConfigs;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -695,7 +925,7 @@ export class PrivateEndpoint extends cdktf.TerraformResource {
   }
 
   // private_dns_zone_group - computed: false, optional: true, required: false
-  private _privateDnsZoneGroup = new PrivateEndpointPrivateDnsZoneGroupOutputReference(this, "private_dns_zone_group", true);
+  private _privateDnsZoneGroup = new PrivateEndpointPrivateDnsZoneGroupOutputReference(this, "private_dns_zone_group");
   public get privateDnsZoneGroup() {
     return this._privateDnsZoneGroup;
   }
@@ -711,7 +941,7 @@ export class PrivateEndpoint extends cdktf.TerraformResource {
   }
 
   // private_service_connection - computed: false, optional: false, required: true
-  private _privateServiceConnection = new PrivateEndpointPrivateServiceConnectionOutputReference(this, "private_service_connection", true);
+  private _privateServiceConnection = new PrivateEndpointPrivateServiceConnectionOutputReference(this, "private_service_connection");
   public get privateServiceConnection() {
     return this._privateServiceConnection;
   }
@@ -724,7 +954,7 @@ export class PrivateEndpoint extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new PrivateEndpointTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new PrivateEndpointTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

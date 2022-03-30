@@ -122,10 +122,9 @@ export class EventgridDomainIdentityOutputReference extends cdktf.ComplexObject 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): EventgridDomainIdentity | undefined {
@@ -227,10 +226,9 @@ export class EventgridDomainInputMappingDefaultValuesOutputReference extends cdk
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): EventgridDomainInputMappingDefaultValues | undefined {
@@ -362,10 +360,9 @@ export class EventgridDomainInputMappingFieldsOutputReference extends cdktf.Comp
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): EventgridDomainInputMappingFields | undefined {
@@ -553,10 +550,9 @@ export class EventgridDomainTimeoutsOutputReference extends cdktf.ComplexObject 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): EventgridDomainTimeouts | undefined {
@@ -671,7 +667,7 @@ export class EventgridDomain extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_eventgrid_domain";
+  public static readonly tfResourceType = "azurerm_eventgrid_domain";
 
   // ===========
   // INITIALIZER
@@ -688,7 +684,9 @@ export class EventgridDomain extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_eventgrid_domain',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -888,7 +886,7 @@ export class EventgridDomain extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity = new EventgridDomainIdentityOutputReference(this, "identity", true);
+  private _identity = new EventgridDomainIdentityOutputReference(this, "identity");
   public get identity() {
     return this._identity;
   }
@@ -904,7 +902,7 @@ export class EventgridDomain extends cdktf.TerraformResource {
   }
 
   // input_mapping_default_values - computed: false, optional: true, required: false
-  private _inputMappingDefaultValues = new EventgridDomainInputMappingDefaultValuesOutputReference(this, "input_mapping_default_values", true);
+  private _inputMappingDefaultValues = new EventgridDomainInputMappingDefaultValuesOutputReference(this, "input_mapping_default_values");
   public get inputMappingDefaultValues() {
     return this._inputMappingDefaultValues;
   }
@@ -920,7 +918,7 @@ export class EventgridDomain extends cdktf.TerraformResource {
   }
 
   // input_mapping_fields - computed: false, optional: true, required: false
-  private _inputMappingFields = new EventgridDomainInputMappingFieldsOutputReference(this, "input_mapping_fields", true);
+  private _inputMappingFields = new EventgridDomainInputMappingFieldsOutputReference(this, "input_mapping_fields");
   public get inputMappingFields() {
     return this._inputMappingFields;
   }
@@ -936,7 +934,7 @@ export class EventgridDomain extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new EventgridDomainTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new EventgridDomainTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

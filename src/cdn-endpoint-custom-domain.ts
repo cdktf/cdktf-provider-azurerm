@@ -71,10 +71,9 @@ export class CdnEndpointCustomDomainCdnManagedHttpsOutputReference extends cdktf
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CdnEndpointCustomDomainCdnManagedHttps | undefined {
@@ -190,10 +189,9 @@ export class CdnEndpointCustomDomainTimeoutsOutputReference extends cdktf.Comple
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CdnEndpointCustomDomainTimeouts | undefined {
@@ -327,10 +325,9 @@ export class CdnEndpointCustomDomainUserManagedHttpsOutputReference extends cdkt
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CdnEndpointCustomDomainUserManagedHttps | undefined {
@@ -398,7 +395,7 @@ export class CdnEndpointCustomDomain extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_cdn_endpoint_custom_domain";
+  public static readonly tfResourceType = "azurerm_cdn_endpoint_custom_domain";
 
   // ===========
   // INITIALIZER
@@ -415,7 +412,9 @@ export class CdnEndpointCustomDomain extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_cdn_endpoint_custom_domain',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -479,7 +478,7 @@ export class CdnEndpointCustomDomain extends cdktf.TerraformResource {
   }
 
   // cdn_managed_https - computed: false, optional: true, required: false
-  private _cdnManagedHttps = new CdnEndpointCustomDomainCdnManagedHttpsOutputReference(this, "cdn_managed_https", true);
+  private _cdnManagedHttps = new CdnEndpointCustomDomainCdnManagedHttpsOutputReference(this, "cdn_managed_https");
   public get cdnManagedHttps() {
     return this._cdnManagedHttps;
   }
@@ -495,7 +494,7 @@ export class CdnEndpointCustomDomain extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new CdnEndpointCustomDomainTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new CdnEndpointCustomDomainTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
@@ -511,7 +510,7 @@ export class CdnEndpointCustomDomain extends cdktf.TerraformResource {
   }
 
   // user_managed_https - computed: false, optional: true, required: false
-  private _userManagedHttps = new CdnEndpointCustomDomainUserManagedHttpsOutputReference(this, "user_managed_https", true);
+  private _userManagedHttps = new CdnEndpointCustomDomainUserManagedHttpsOutputReference(this, "user_managed_https");
   public get userManagedHttps() {
     return this._userManagedHttps;
   }

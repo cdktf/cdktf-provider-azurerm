@@ -38,7 +38,45 @@ export interface KeyVaultCertificateConfig extends cdktf.TerraformMetaArguments 
   */
   readonly timeouts?: KeyVaultCertificateTimeouts;
 }
-export class KeyVaultCertificateCertificateAttribute extends cdktf.ComplexComputedList {
+export interface KeyVaultCertificateCertificateAttribute {
+}
+
+export function keyVaultCertificateCertificateAttributeToTerraform(struct?: KeyVaultCertificateCertificateAttribute): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class KeyVaultCertificateCertificateAttributeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): KeyVaultCertificateCertificateAttribute | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KeyVaultCertificateCertificateAttribute | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // created - computed: true, optional: false, required: false
   public get created() {
@@ -70,6 +108,25 @@ export class KeyVaultCertificateCertificateAttribute extends cdktf.ComplexComput
     return this.getStringAttribute('updated');
   }
 }
+
+export class KeyVaultCertificateCertificateAttributeList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): KeyVaultCertificateCertificateAttributeOutputReference {
+    return new KeyVaultCertificateCertificateAttributeOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface KeyVaultCertificateCertificate {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate#contents KeyVaultCertificate#contents}
@@ -98,10 +155,9 @@ export class KeyVaultCertificateCertificateOutputReference extends cdktf.Complex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KeyVaultCertificateCertificate | undefined {
@@ -183,10 +239,9 @@ export class KeyVaultCertificateCertificatePolicyIssuerParametersOutputReference
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KeyVaultCertificateCertificatePolicyIssuerParameters | undefined {
@@ -266,10 +321,9 @@ export class KeyVaultCertificateCertificatePolicyKeyPropertiesOutputReference ex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KeyVaultCertificateCertificatePolicyKeyProperties | undefined {
@@ -411,10 +465,9 @@ export class KeyVaultCertificateCertificatePolicyLifetimeActionActionOutputRefer
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KeyVaultCertificateCertificatePolicyLifetimeActionAction | undefined {
@@ -479,10 +532,9 @@ export class KeyVaultCertificateCertificatePolicyLifetimeActionTriggerOutputRefe
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KeyVaultCertificateCertificatePolicyLifetimeActionTrigger | undefined {
@@ -593,10 +645,9 @@ export class KeyVaultCertificateCertificatePolicySecretPropertiesOutputReference
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KeyVaultCertificateCertificatePolicySecretProperties | undefined {
@@ -666,10 +717,9 @@ export class KeyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjec
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KeyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNames | undefined {
@@ -798,10 +848,9 @@ export class KeyVaultCertificateCertificatePolicyX509CertificatePropertiesOutput
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KeyVaultCertificateCertificatePolicyX509CertificateProperties | undefined {
@@ -905,7 +954,7 @@ export class KeyVaultCertificateCertificatePolicyX509CertificatePropertiesOutput
   }
 
   // subject_alternative_names - computed: false, optional: true, required: false
-  private _subjectAlternativeNames = new KeyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNamesOutputReference(this, "subject_alternative_names", true);
+  private _subjectAlternativeNames = new KeyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNamesOutputReference(this, "subject_alternative_names");
   public get subjectAlternativeNames() {
     return this._subjectAlternativeNames;
   }
@@ -973,10 +1022,9 @@ export class KeyVaultCertificateCertificatePolicyOutputReference extends cdktf.C
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KeyVaultCertificateCertificatePolicy | undefined {
@@ -1025,7 +1073,7 @@ export class KeyVaultCertificateCertificatePolicyOutputReference extends cdktf.C
   }
 
   // issuer_parameters - computed: false, optional: false, required: true
-  private _issuerParameters = new KeyVaultCertificateCertificatePolicyIssuerParametersOutputReference(this, "issuer_parameters", true);
+  private _issuerParameters = new KeyVaultCertificateCertificatePolicyIssuerParametersOutputReference(this, "issuer_parameters");
   public get issuerParameters() {
     return this._issuerParameters;
   }
@@ -1038,7 +1086,7 @@ export class KeyVaultCertificateCertificatePolicyOutputReference extends cdktf.C
   }
 
   // key_properties - computed: false, optional: false, required: true
-  private _keyProperties = new KeyVaultCertificateCertificatePolicyKeyPropertiesOutputReference(this, "key_properties", true);
+  private _keyProperties = new KeyVaultCertificateCertificatePolicyKeyPropertiesOutputReference(this, "key_properties");
   public get keyProperties() {
     return this._keyProperties;
   }
@@ -1068,7 +1116,7 @@ export class KeyVaultCertificateCertificatePolicyOutputReference extends cdktf.C
   }
 
   // secret_properties - computed: false, optional: false, required: true
-  private _secretProperties = new KeyVaultCertificateCertificatePolicySecretPropertiesOutputReference(this, "secret_properties", true);
+  private _secretProperties = new KeyVaultCertificateCertificatePolicySecretPropertiesOutputReference(this, "secret_properties");
   public get secretProperties() {
     return this._secretProperties;
   }
@@ -1081,7 +1129,7 @@ export class KeyVaultCertificateCertificatePolicyOutputReference extends cdktf.C
   }
 
   // x509_certificate_properties - computed: false, optional: true, required: false
-  private _x509CertificateProperties = new KeyVaultCertificateCertificatePolicyX509CertificatePropertiesOutputReference(this, "x509_certificate_properties", true);
+  private _x509CertificateProperties = new KeyVaultCertificateCertificatePolicyX509CertificatePropertiesOutputReference(this, "x509_certificate_properties");
   public get x509CertificateProperties() {
     return this._x509CertificateProperties;
   }
@@ -1134,10 +1182,9 @@ export class KeyVaultCertificateTimeoutsOutputReference extends cdktf.ComplexObj
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KeyVaultCertificateTimeouts | undefined {
@@ -1252,7 +1299,7 @@ export class KeyVaultCertificate extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_key_vault_certificate";
+  public static readonly tfResourceType = "azurerm_key_vault_certificate";
 
   // ===========
   // INITIALIZER
@@ -1269,7 +1316,9 @@ export class KeyVaultCertificate extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_key_vault_certificate',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1289,8 +1338,9 @@ export class KeyVaultCertificate extends cdktf.TerraformResource {
   // ==========
 
   // certificate_attribute - computed: true, optional: false, required: false
-  public certificateAttribute(index: string) {
-    return new KeyVaultCertificateCertificateAttribute(this, 'certificate_attribute', index, false);
+  private _certificateAttribute = new KeyVaultCertificateCertificateAttributeList(this, "certificate_attribute", false);
+  public get certificateAttribute() {
+    return this._certificateAttribute;
   }
 
   // certificate_data - computed: true, optional: false, required: false
@@ -1376,7 +1426,7 @@ export class KeyVaultCertificate extends cdktf.TerraformResource {
   }
 
   // certificate - computed: false, optional: true, required: false
-  private _certificate = new KeyVaultCertificateCertificateOutputReference(this, "certificate", true);
+  private _certificate = new KeyVaultCertificateCertificateOutputReference(this, "certificate");
   public get certificate() {
     return this._certificate;
   }
@@ -1392,7 +1442,7 @@ export class KeyVaultCertificate extends cdktf.TerraformResource {
   }
 
   // certificate_policy - computed: false, optional: true, required: false
-  private _certificatePolicy = new KeyVaultCertificateCertificatePolicyOutputReference(this, "certificate_policy", true);
+  private _certificatePolicy = new KeyVaultCertificateCertificatePolicyOutputReference(this, "certificate_policy");
   public get certificatePolicy() {
     return this._certificatePolicy;
   }
@@ -1408,7 +1458,7 @@ export class KeyVaultCertificate extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new KeyVaultCertificateTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new KeyVaultCertificateTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

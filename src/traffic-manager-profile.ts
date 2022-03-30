@@ -82,10 +82,9 @@ export class TrafficManagerProfileDnsConfigOutputReference extends cdktf.Complex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): TrafficManagerProfileDnsConfig | undefined {
@@ -223,10 +222,9 @@ export class TrafficManagerProfileMonitorConfigOutputReference extends cdktf.Com
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): TrafficManagerProfileMonitorConfig | undefined {
@@ -453,10 +451,9 @@ export class TrafficManagerProfileTimeoutsOutputReference extends cdktf.ComplexO
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): TrafficManagerProfileTimeouts | undefined {
@@ -571,7 +568,7 @@ export class TrafficManagerProfile extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_traffic_manager_profile";
+  public static readonly tfResourceType = "azurerm_traffic_manager_profile";
 
   // ===========
   // INITIALIZER
@@ -588,7 +585,9 @@ export class TrafficManagerProfile extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_traffic_manager_profile',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -725,7 +724,7 @@ export class TrafficManagerProfile extends cdktf.TerraformResource {
   }
 
   // dns_config - computed: false, optional: false, required: true
-  private _dnsConfig = new TrafficManagerProfileDnsConfigOutputReference(this, "dns_config", true);
+  private _dnsConfig = new TrafficManagerProfileDnsConfigOutputReference(this, "dns_config");
   public get dnsConfig() {
     return this._dnsConfig;
   }
@@ -738,7 +737,7 @@ export class TrafficManagerProfile extends cdktf.TerraformResource {
   }
 
   // monitor_config - computed: false, optional: false, required: true
-  private _monitorConfig = new TrafficManagerProfileMonitorConfigOutputReference(this, "monitor_config", true);
+  private _monitorConfig = new TrafficManagerProfileMonitorConfigOutputReference(this, "monitor_config");
   public get monitorConfig() {
     return this._monitorConfig;
   }
@@ -751,7 +750,7 @@ export class TrafficManagerProfile extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new TrafficManagerProfileTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new TrafficManagerProfileTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

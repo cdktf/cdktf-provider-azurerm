@@ -68,10 +68,9 @@ export class MonitorLogProfileRetentionPolicyOutputReference extends cdktf.Compl
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitorLogProfileRetentionPolicy | undefined {
@@ -168,10 +167,9 @@ export class MonitorLogProfileTimeoutsOutputReference extends cdktf.ComplexObjec
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MonitorLogProfileTimeouts | undefined {
@@ -286,7 +284,7 @@ export class MonitorLogProfile extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_monitor_log_profile";
+  public static readonly tfResourceType = "azurerm_monitor_log_profile";
 
   // ===========
   // INITIALIZER
@@ -303,7 +301,9 @@ export class MonitorLogProfile extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_monitor_log_profile',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -400,7 +400,7 @@ export class MonitorLogProfile extends cdktf.TerraformResource {
   }
 
   // retention_policy - computed: false, optional: false, required: true
-  private _retentionPolicy = new MonitorLogProfileRetentionPolicyOutputReference(this, "retention_policy", true);
+  private _retentionPolicy = new MonitorLogProfileRetentionPolicyOutputReference(this, "retention_policy");
   public get retentionPolicy() {
     return this._retentionPolicy;
   }
@@ -413,7 +413,7 @@ export class MonitorLogProfile extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new MonitorLogProfileTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new MonitorLogProfileTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

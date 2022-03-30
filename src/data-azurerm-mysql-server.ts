@@ -22,7 +22,45 @@ export interface DataAzurermMysqlServerConfig extends cdktf.TerraformMetaArgumen
   */
   readonly timeouts?: DataAzurermMysqlServerTimeouts;
 }
-export class DataAzurermMysqlServerIdentity extends cdktf.ComplexComputedList {
+export interface DataAzurermMysqlServerIdentity {
+}
+
+export function dataAzurermMysqlServerIdentityToTerraform(struct?: DataAzurermMysqlServerIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermMysqlServerIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermMysqlServerIdentity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermMysqlServerIdentity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // principal_id - computed: true, optional: false, required: false
   public get principalId() {
@@ -39,7 +77,64 @@ export class DataAzurermMysqlServerIdentity extends cdktf.ComplexComputedList {
     return this.getStringAttribute('type');
   }
 }
-export class DataAzurermMysqlServerThreatDetectionPolicy extends cdktf.ComplexComputedList {
+
+export class DataAzurermMysqlServerIdentityList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermMysqlServerIdentityOutputReference {
+    return new DataAzurermMysqlServerIdentityOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermMysqlServerThreatDetectionPolicy {
+}
+
+export function dataAzurermMysqlServerThreatDetectionPolicyToTerraform(struct?: DataAzurermMysqlServerThreatDetectionPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermMysqlServerThreatDetectionPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermMysqlServerThreatDetectionPolicy | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermMysqlServerThreatDetectionPolicy | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // disabled_alerts - computed: true, optional: false, required: false
   public get disabledAlerts() {
@@ -76,6 +171,25 @@ export class DataAzurermMysqlServerThreatDetectionPolicy extends cdktf.ComplexCo
     return this.getStringAttribute('storage_endpoint');
   }
 }
+
+export class DataAzurermMysqlServerThreatDetectionPolicyList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermMysqlServerThreatDetectionPolicyOutputReference {
+    return new DataAzurermMysqlServerThreatDetectionPolicyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataAzurermMysqlServerTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mysql_server#read DataAzurermMysqlServer#read}
@@ -99,10 +213,9 @@ export class DataAzurermMysqlServerTimeoutsOutputReference extends cdktf.Complex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermMysqlServerTimeouts | undefined {
@@ -151,7 +264,7 @@ export class DataAzurermMysqlServer extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_mysql_server";
+  public static readonly tfResourceType = "azurerm_mysql_server";
 
   // ===========
   // INITIALIZER
@@ -168,7 +281,9 @@ export class DataAzurermMysqlServer extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'azurerm_mysql_server',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -215,8 +330,9 @@ export class DataAzurermMysqlServer extends cdktf.TerraformDataSource {
   }
 
   // identity - computed: true, optional: false, required: false
-  public identity(index: string) {
-    return new DataAzurermMysqlServerIdentity(this, 'identity', index, false);
+  private _identity = new DataAzurermMysqlServerIdentityList(this, "identity", false);
+  public get identity() {
+    return this._identity;
   }
 
   // infrastructure_encryption_enabled - computed: true, optional: false, required: false
@@ -291,8 +407,9 @@ export class DataAzurermMysqlServer extends cdktf.TerraformDataSource {
   }
 
   // threat_detection_policy - computed: true, optional: false, required: false
-  public threatDetectionPolicy(index: string) {
-    return new DataAzurermMysqlServerThreatDetectionPolicy(this, 'threat_detection_policy', index, false);
+  private _threatDetectionPolicy = new DataAzurermMysqlServerThreatDetectionPolicyList(this, "threat_detection_policy", false);
+  public get threatDetectionPolicy() {
+    return this._threatDetectionPolicy;
   }
 
   // version - computed: true, optional: false, required: false
@@ -301,7 +418,7 @@ export class DataAzurermMysqlServer extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermMysqlServerTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermMysqlServerTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

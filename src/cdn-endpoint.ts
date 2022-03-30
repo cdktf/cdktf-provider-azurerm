@@ -122,10 +122,9 @@ export class CdnEndpointDeliveryRuleCacheExpirationActionOutputReference extends
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CdnEndpointDeliveryRuleCacheExpirationAction | undefined {
@@ -212,10 +211,9 @@ export class CdnEndpointDeliveryRuleCacheKeyQueryStringActionOutputReference ext
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CdnEndpointDeliveryRuleCacheKeyQueryStringAction | undefined {
@@ -344,10 +342,9 @@ export class CdnEndpointDeliveryRuleDeviceConditionOutputReference extends cdktf
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CdnEndpointDeliveryRuleDeviceCondition | undefined {
@@ -707,10 +704,9 @@ export class CdnEndpointDeliveryRuleRequestMethodConditionOutputReference extend
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CdnEndpointDeliveryRuleRequestMethodCondition | undefined {
@@ -824,10 +820,9 @@ export class CdnEndpointDeliveryRuleRequestSchemeConditionOutputReference extend
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CdnEndpointDeliveryRuleRequestSchemeCondition | undefined {
@@ -1084,10 +1079,9 @@ export class CdnEndpointDeliveryRuleUrlRedirectActionOutputReference extends cdk
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CdnEndpointDeliveryRuleUrlRedirectAction | undefined {
@@ -1267,10 +1261,9 @@ export class CdnEndpointDeliveryRuleUrlRewriteActionOutputReference extends cdkt
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CdnEndpointDeliveryRuleUrlRewriteAction | undefined {
@@ -1565,10 +1558,9 @@ export class CdnEndpointGlobalDeliveryRuleCacheExpirationActionOutputReference e
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CdnEndpointGlobalDeliveryRuleCacheExpirationAction | undefined {
@@ -1655,10 +1647,9 @@ export class CdnEndpointGlobalDeliveryRuleCacheKeyQueryStringActionOutputReferen
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CdnEndpointGlobalDeliveryRuleCacheKeyQueryStringAction | undefined {
@@ -1819,10 +1810,9 @@ export class CdnEndpointGlobalDeliveryRuleUrlRedirectActionOutputReference exten
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CdnEndpointGlobalDeliveryRuleUrlRedirectAction | undefined {
@@ -2002,10 +1992,9 @@ export class CdnEndpointGlobalDeliveryRuleUrlRewriteActionOutputReference extend
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CdnEndpointGlobalDeliveryRuleUrlRewriteAction | undefined {
@@ -2143,10 +2132,9 @@ export class CdnEndpointGlobalDeliveryRuleOutputReference extends cdktf.ComplexO
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CdnEndpointGlobalDeliveryRule | undefined {
@@ -2201,7 +2189,7 @@ export class CdnEndpointGlobalDeliveryRuleOutputReference extends cdktf.ComplexO
   }
 
   // cache_expiration_action - computed: false, optional: true, required: false
-  private _cacheExpirationAction = new CdnEndpointGlobalDeliveryRuleCacheExpirationActionOutputReference(this, "cache_expiration_action", true);
+  private _cacheExpirationAction = new CdnEndpointGlobalDeliveryRuleCacheExpirationActionOutputReference(this, "cache_expiration_action");
   public get cacheExpirationAction() {
     return this._cacheExpirationAction;
   }
@@ -2217,7 +2205,7 @@ export class CdnEndpointGlobalDeliveryRuleOutputReference extends cdktf.ComplexO
   }
 
   // cache_key_query_string_action - computed: false, optional: true, required: false
-  private _cacheKeyQueryStringAction = new CdnEndpointGlobalDeliveryRuleCacheKeyQueryStringActionOutputReference(this, "cache_key_query_string_action", true);
+  private _cacheKeyQueryStringAction = new CdnEndpointGlobalDeliveryRuleCacheKeyQueryStringActionOutputReference(this, "cache_key_query_string_action");
   public get cacheKeyQueryStringAction() {
     return this._cacheKeyQueryStringAction;
   }
@@ -2267,7 +2255,7 @@ export class CdnEndpointGlobalDeliveryRuleOutputReference extends cdktf.ComplexO
   }
 
   // url_redirect_action - computed: false, optional: true, required: false
-  private _urlRedirectAction = new CdnEndpointGlobalDeliveryRuleUrlRedirectActionOutputReference(this, "url_redirect_action", true);
+  private _urlRedirectAction = new CdnEndpointGlobalDeliveryRuleUrlRedirectActionOutputReference(this, "url_redirect_action");
   public get urlRedirectAction() {
     return this._urlRedirectAction;
   }
@@ -2283,7 +2271,7 @@ export class CdnEndpointGlobalDeliveryRuleOutputReference extends cdktf.ComplexO
   }
 
   // url_rewrite_action - computed: false, optional: true, required: false
-  private _urlRewriteAction = new CdnEndpointGlobalDeliveryRuleUrlRewriteActionOutputReference(this, "url_rewrite_action", true);
+  private _urlRewriteAction = new CdnEndpointGlobalDeliveryRuleUrlRewriteActionOutputReference(this, "url_rewrite_action");
   public get urlRewriteAction() {
     return this._urlRewriteAction;
   }
@@ -2368,10 +2356,9 @@ export class CdnEndpointTimeoutsOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): CdnEndpointTimeouts | undefined {
@@ -2486,7 +2473,7 @@ export class CdnEndpoint extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_cdn_endpoint";
+  public static readonly tfResourceType = "azurerm_cdn_endpoint";
 
   // ===========
   // INITIALIZER
@@ -2503,7 +2490,9 @@ export class CdnEndpoint extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_cdn_endpoint',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -2792,7 +2781,7 @@ export class CdnEndpoint extends cdktf.TerraformResource {
   }
 
   // global_delivery_rule - computed: false, optional: true, required: false
-  private _globalDeliveryRule = new CdnEndpointGlobalDeliveryRuleOutputReference(this, "global_delivery_rule", true);
+  private _globalDeliveryRule = new CdnEndpointGlobalDeliveryRuleOutputReference(this, "global_delivery_rule");
   public get globalDeliveryRule() {
     return this._globalDeliveryRule;
   }
@@ -2822,7 +2811,7 @@ export class CdnEndpoint extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new CdnEndpointTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new CdnEndpointTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

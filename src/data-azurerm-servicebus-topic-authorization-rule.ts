@@ -61,10 +61,9 @@ export class DataAzurermServicebusTopicAuthorizationRuleTimeoutsOutputReference 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermServicebusTopicAuthorizationRuleTimeouts | undefined {
@@ -113,7 +112,7 @@ export class DataAzurermServicebusTopicAuthorizationRule extends cdktf.Terraform
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_servicebus_topic_authorization_rule";
+  public static readonly tfResourceType = "azurerm_servicebus_topic_authorization_rule";
 
   // ===========
   // INITIALIZER
@@ -130,7 +129,9 @@ export class DataAzurermServicebusTopicAuthorizationRule extends cdktf.Terraform
     super(scope, id, {
       terraformResourceType: 'azurerm_servicebus_topic_authorization_rule',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -294,7 +295,7 @@ export class DataAzurermServicebusTopicAuthorizationRule extends cdktf.Terraform
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermServicebusTopicAuthorizationRuleTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermServicebusTopicAuthorizationRuleTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

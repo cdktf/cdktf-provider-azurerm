@@ -59,10 +59,9 @@ export class EventgridDomainTopicTimeoutsOutputReference extends cdktf.ComplexOb
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): EventgridDomainTopicTimeouts | undefined {
@@ -155,7 +154,7 @@ export class EventgridDomainTopic extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_eventgrid_domain_topic";
+  public static readonly tfResourceType = "azurerm_eventgrid_domain_topic";
 
   // ===========
   // INITIALIZER
@@ -172,7 +171,9 @@ export class EventgridDomainTopic extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_eventgrid_domain_topic',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -234,7 +235,7 @@ export class EventgridDomainTopic extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new EventgridDomainTopicTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new EventgridDomainTopicTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

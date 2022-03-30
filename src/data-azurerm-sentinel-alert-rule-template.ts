@@ -26,7 +26,45 @@ export interface DataAzurermSentinelAlertRuleTemplateConfig extends cdktf.Terraf
   */
   readonly timeouts?: DataAzurermSentinelAlertRuleTemplateTimeouts;
 }
-export class DataAzurermSentinelAlertRuleTemplateScheduledTemplate extends cdktf.ComplexComputedList {
+export interface DataAzurermSentinelAlertRuleTemplateScheduledTemplate {
+}
+
+export function dataAzurermSentinelAlertRuleTemplateScheduledTemplateToTerraform(struct?: DataAzurermSentinelAlertRuleTemplateScheduledTemplate): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermSentinelAlertRuleTemplateScheduledTemplateOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermSentinelAlertRuleTemplateScheduledTemplate | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermSentinelAlertRuleTemplateScheduledTemplate | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // description - computed: true, optional: false, required: false
   public get description() {
@@ -68,7 +106,64 @@ export class DataAzurermSentinelAlertRuleTemplateScheduledTemplate extends cdktf
     return this.getNumberAttribute('trigger_threshold');
   }
 }
-export class DataAzurermSentinelAlertRuleTemplateSecurityIncidentTemplate extends cdktf.ComplexComputedList {
+
+export class DataAzurermSentinelAlertRuleTemplateScheduledTemplateList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermSentinelAlertRuleTemplateScheduledTemplateOutputReference {
+    return new DataAzurermSentinelAlertRuleTemplateScheduledTemplateOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermSentinelAlertRuleTemplateSecurityIncidentTemplate {
+}
+
+export function dataAzurermSentinelAlertRuleTemplateSecurityIncidentTemplateToTerraform(struct?: DataAzurermSentinelAlertRuleTemplateSecurityIncidentTemplate): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermSentinelAlertRuleTemplateSecurityIncidentTemplateOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermSentinelAlertRuleTemplateSecurityIncidentTemplate | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermSentinelAlertRuleTemplateSecurityIncidentTemplate | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // description - computed: true, optional: false, required: false
   public get description() {
@@ -78,6 +173,25 @@ export class DataAzurermSentinelAlertRuleTemplateSecurityIncidentTemplate extend
   // product_filter - computed: true, optional: false, required: false
   public get productFilter() {
     return this.getStringAttribute('product_filter');
+  }
+}
+
+export class DataAzurermSentinelAlertRuleTemplateSecurityIncidentTemplateList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermSentinelAlertRuleTemplateSecurityIncidentTemplateOutputReference {
+    return new DataAzurermSentinelAlertRuleTemplateSecurityIncidentTemplateOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataAzurermSentinelAlertRuleTemplateTimeouts {
@@ -103,10 +217,9 @@ export class DataAzurermSentinelAlertRuleTemplateTimeoutsOutputReference extends
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermSentinelAlertRuleTemplateTimeouts | undefined {
@@ -155,7 +268,7 @@ export class DataAzurermSentinelAlertRuleTemplate extends cdktf.TerraformDataSou
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_sentinel_alert_rule_template";
+  public static readonly tfResourceType = "azurerm_sentinel_alert_rule_template";
 
   // ===========
   // INITIALIZER
@@ -172,7 +285,9 @@ export class DataAzurermSentinelAlertRuleTemplate extends cdktf.TerraformDataSou
     super(scope, id, {
       terraformResourceType: 'azurerm_sentinel_alert_rule_template',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -240,17 +355,19 @@ export class DataAzurermSentinelAlertRuleTemplate extends cdktf.TerraformDataSou
   }
 
   // scheduled_template - computed: true, optional: false, required: false
-  public scheduledTemplate(index: string) {
-    return new DataAzurermSentinelAlertRuleTemplateScheduledTemplate(this, 'scheduled_template', index, false);
+  private _scheduledTemplate = new DataAzurermSentinelAlertRuleTemplateScheduledTemplateList(this, "scheduled_template", false);
+  public get scheduledTemplate() {
+    return this._scheduledTemplate;
   }
 
   // security_incident_template - computed: true, optional: false, required: false
-  public securityIncidentTemplate(index: string) {
-    return new DataAzurermSentinelAlertRuleTemplateSecurityIncidentTemplate(this, 'security_incident_template', index, false);
+  private _securityIncidentTemplate = new DataAzurermSentinelAlertRuleTemplateSecurityIncidentTemplateList(this, "security_incident_template", false);
+  public get securityIncidentTemplate() {
+    return this._securityIncidentTemplate;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermSentinelAlertRuleTemplateTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermSentinelAlertRuleTemplateTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

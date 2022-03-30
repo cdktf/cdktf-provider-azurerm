@@ -119,10 +119,9 @@ export class DataFactoryDatasetJsonAzureBlobStorageLocationOutputReference exten
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataFactoryDatasetJsonAzureBlobStorageLocation | undefined {
@@ -284,10 +283,9 @@ export class DataFactoryDatasetJsonHttpServerLocationOutputReference extends cdk
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataFactoryDatasetJsonHttpServerLocation | undefined {
@@ -471,10 +469,9 @@ export class DataFactoryDatasetJsonTimeoutsOutputReference extends cdktf.Complex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataFactoryDatasetJsonTimeouts | undefined {
@@ -589,7 +586,7 @@ export class DataFactoryDatasetJson extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_data_factory_dataset_json";
+  public static readonly tfResourceType = "azurerm_data_factory_dataset_json";
 
   // ===========
   // INITIALIZER
@@ -606,7 +603,9 @@ export class DataFactoryDatasetJson extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_data_factory_dataset_json',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -807,7 +806,7 @@ export class DataFactoryDatasetJson extends cdktf.TerraformResource {
   }
 
   // azure_blob_storage_location - computed: false, optional: true, required: false
-  private _azureBlobStorageLocation = new DataFactoryDatasetJsonAzureBlobStorageLocationOutputReference(this, "azure_blob_storage_location", true);
+  private _azureBlobStorageLocation = new DataFactoryDatasetJsonAzureBlobStorageLocationOutputReference(this, "azure_blob_storage_location");
   public get azureBlobStorageLocation() {
     return this._azureBlobStorageLocation;
   }
@@ -823,7 +822,7 @@ export class DataFactoryDatasetJson extends cdktf.TerraformResource {
   }
 
   // http_server_location - computed: false, optional: true, required: false
-  private _httpServerLocation = new DataFactoryDatasetJsonHttpServerLocationOutputReference(this, "http_server_location", true);
+  private _httpServerLocation = new DataFactoryDatasetJsonHttpServerLocationOutputReference(this, "http_server_location");
   public get httpServerLocation() {
     return this._httpServerLocation;
   }
@@ -856,7 +855,7 @@ export class DataFactoryDatasetJson extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataFactoryDatasetJsonTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataFactoryDatasetJsonTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

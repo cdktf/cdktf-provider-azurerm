@@ -110,10 +110,9 @@ export class DataFactoryIntegrationRuntimeManagedCatalogInfoOutputReference exte
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataFactoryIntegrationRuntimeManagedCatalogInfo | undefined {
@@ -244,10 +243,9 @@ export class DataFactoryIntegrationRuntimeManagedCustomSetupScriptOutputReferenc
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataFactoryIntegrationRuntimeManagedCustomSetupScript | undefined {
@@ -341,10 +339,9 @@ export class DataFactoryIntegrationRuntimeManagedTimeoutsOutputReference extends
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataFactoryIntegrationRuntimeManagedTimeouts | undefined {
@@ -478,10 +475,9 @@ export class DataFactoryIntegrationRuntimeManagedVnetIntegrationOutputReference 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataFactoryIntegrationRuntimeManagedVnetIntegration | undefined {
@@ -546,7 +542,7 @@ export class DataFactoryIntegrationRuntimeManaged extends cdktf.TerraformResourc
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_data_factory_integration_runtime_managed";
+  public static readonly tfResourceType = "azurerm_data_factory_integration_runtime_managed";
 
   // ===========
   // INITIALIZER
@@ -563,7 +559,9 @@ export class DataFactoryIntegrationRuntimeManaged extends cdktf.TerraformResourc
     super(scope, id, {
       terraformResourceType: 'azurerm_data_factory_integration_runtime_managed',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -741,7 +739,7 @@ export class DataFactoryIntegrationRuntimeManaged extends cdktf.TerraformResourc
   }
 
   // catalog_info - computed: false, optional: true, required: false
-  private _catalogInfo = new DataFactoryIntegrationRuntimeManagedCatalogInfoOutputReference(this, "catalog_info", true);
+  private _catalogInfo = new DataFactoryIntegrationRuntimeManagedCatalogInfoOutputReference(this, "catalog_info");
   public get catalogInfo() {
     return this._catalogInfo;
   }
@@ -757,7 +755,7 @@ export class DataFactoryIntegrationRuntimeManaged extends cdktf.TerraformResourc
   }
 
   // custom_setup_script - computed: false, optional: true, required: false
-  private _customSetupScript = new DataFactoryIntegrationRuntimeManagedCustomSetupScriptOutputReference(this, "custom_setup_script", true);
+  private _customSetupScript = new DataFactoryIntegrationRuntimeManagedCustomSetupScriptOutputReference(this, "custom_setup_script");
   public get customSetupScript() {
     return this._customSetupScript;
   }
@@ -773,7 +771,7 @@ export class DataFactoryIntegrationRuntimeManaged extends cdktf.TerraformResourc
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataFactoryIntegrationRuntimeManagedTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataFactoryIntegrationRuntimeManagedTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
@@ -789,7 +787,7 @@ export class DataFactoryIntegrationRuntimeManaged extends cdktf.TerraformResourc
   }
 
   // vnet_integration - computed: false, optional: true, required: false
-  private _vnetIntegration = new DataFactoryIntegrationRuntimeManagedVnetIntegrationOutputReference(this, "vnet_integration", true);
+  private _vnetIntegration = new DataFactoryIntegrationRuntimeManagedVnetIntegrationOutputReference(this, "vnet_integration");
   public get vnetIntegration() {
     return this._vnetIntegration;
   }

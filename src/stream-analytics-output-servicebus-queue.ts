@@ -86,10 +86,9 @@ export class StreamAnalyticsOutputServicebusQueueSerializationOutputReference ex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): StreamAnalyticsOutputServicebusQueueSerialization | undefined {
@@ -230,10 +229,9 @@ export class StreamAnalyticsOutputServicebusQueueTimeoutsOutputReference extends
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): StreamAnalyticsOutputServicebusQueueTimeouts | undefined {
@@ -348,7 +346,7 @@ export class StreamAnalyticsOutputServicebusQueue extends cdktf.TerraformResourc
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_stream_analytics_output_servicebus_queue";
+  public static readonly tfResourceType = "azurerm_stream_analytics_output_servicebus_queue";
 
   // ===========
   // INITIALIZER
@@ -365,7 +363,9 @@ export class StreamAnalyticsOutputServicebusQueue extends cdktf.TerraformResourc
     super(scope, id, {
       terraformResourceType: 'azurerm_stream_analytics_output_servicebus_queue',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -484,7 +484,7 @@ export class StreamAnalyticsOutputServicebusQueue extends cdktf.TerraformResourc
   }
 
   // serialization - computed: false, optional: false, required: true
-  private _serialization = new StreamAnalyticsOutputServicebusQueueSerializationOutputReference(this, "serialization", true);
+  private _serialization = new StreamAnalyticsOutputServicebusQueueSerializationOutputReference(this, "serialization");
   public get serialization() {
     return this._serialization;
   }
@@ -497,7 +497,7 @@ export class StreamAnalyticsOutputServicebusQueue extends cdktf.TerraformResourc
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new StreamAnalyticsOutputServicebusQueueTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new StreamAnalyticsOutputServicebusQueueTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

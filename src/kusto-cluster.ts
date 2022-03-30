@@ -138,10 +138,9 @@ export class KustoClusterIdentityOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KustoClusterIdentity | undefined {
@@ -238,10 +237,9 @@ export class KustoClusterOptimizedAutoScaleOutputReference extends cdktf.Complex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KustoClusterOptimizedAutoScale | undefined {
@@ -325,10 +323,9 @@ export class KustoClusterSkuOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KustoClusterSku | undefined {
@@ -425,10 +422,9 @@ export class KustoClusterTimeoutsOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KustoClusterTimeouts | undefined {
@@ -567,10 +563,9 @@ export class KustoClusterVirtualNetworkConfigurationOutputReference extends cdkt
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KustoClusterVirtualNetworkConfiguration | undefined {
@@ -654,7 +649,7 @@ export class KustoCluster extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_kusto_cluster";
+  public static readonly tfResourceType = "azurerm_kusto_cluster";
 
   // ===========
   // INITIALIZER
@@ -671,7 +666,9 @@ export class KustoCluster extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_kusto_cluster',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1002,7 +999,7 @@ export class KustoCluster extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity = new KustoClusterIdentityOutputReference(this, "identity", true);
+  private _identity = new KustoClusterIdentityOutputReference(this, "identity");
   public get identity() {
     return this._identity;
   }
@@ -1018,7 +1015,7 @@ export class KustoCluster extends cdktf.TerraformResource {
   }
 
   // optimized_auto_scale - computed: false, optional: true, required: false
-  private _optimizedAutoScale = new KustoClusterOptimizedAutoScaleOutputReference(this, "optimized_auto_scale", true);
+  private _optimizedAutoScale = new KustoClusterOptimizedAutoScaleOutputReference(this, "optimized_auto_scale");
   public get optimizedAutoScale() {
     return this._optimizedAutoScale;
   }
@@ -1034,7 +1031,7 @@ export class KustoCluster extends cdktf.TerraformResource {
   }
 
   // sku - computed: false, optional: false, required: true
-  private _sku = new KustoClusterSkuOutputReference(this, "sku", true);
+  private _sku = new KustoClusterSkuOutputReference(this, "sku");
   public get sku() {
     return this._sku;
   }
@@ -1047,7 +1044,7 @@ export class KustoCluster extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new KustoClusterTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new KustoClusterTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
@@ -1063,7 +1060,7 @@ export class KustoCluster extends cdktf.TerraformResource {
   }
 
   // virtual_network_configuration - computed: false, optional: true, required: false
-  private _virtualNetworkConfiguration = new KustoClusterVirtualNetworkConfigurationOutputReference(this, "virtual_network_configuration", true);
+  private _virtualNetworkConfiguration = new KustoClusterVirtualNetworkConfigurationOutputReference(this, "virtual_network_configuration");
   public get virtualNetworkConfiguration() {
     return this._virtualNetworkConfiguration;
   }

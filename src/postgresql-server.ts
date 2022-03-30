@@ -135,10 +135,9 @@ export class PostgresqlServerIdentityOutputReference extends cdktf.ComplexObject
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): PostgresqlServerIdentity | undefined {
@@ -223,10 +222,9 @@ export class PostgresqlServerStorageProfileOutputReference extends cdktf.Complex
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): PostgresqlServerStorageProfile | undefined {
@@ -385,10 +383,9 @@ export class PostgresqlServerThreatDetectionPolicyOutputReference extends cdktf.
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): PostgresqlServerThreatDetectionPolicy | undefined {
@@ -598,10 +595,9 @@ export class PostgresqlServerTimeoutsOutputReference extends cdktf.ComplexObject
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): PostgresqlServerTimeouts | undefined {
@@ -716,7 +712,7 @@ export class PostgresqlServer extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_postgresql_server";
+  public static readonly tfResourceType = "azurerm_postgresql_server";
 
   // ===========
   // INITIALIZER
@@ -733,7 +729,9 @@ export class PostgresqlServer extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_postgresql_server',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1086,7 +1084,7 @@ export class PostgresqlServer extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity = new PostgresqlServerIdentityOutputReference(this, "identity", true);
+  private _identity = new PostgresqlServerIdentityOutputReference(this, "identity");
   public get identity() {
     return this._identity;
   }
@@ -1102,7 +1100,7 @@ export class PostgresqlServer extends cdktf.TerraformResource {
   }
 
   // storage_profile - computed: false, optional: true, required: false
-  private _storageProfile = new PostgresqlServerStorageProfileOutputReference(this, "storage_profile", true);
+  private _storageProfile = new PostgresqlServerStorageProfileOutputReference(this, "storage_profile");
   public get storageProfile() {
     return this._storageProfile;
   }
@@ -1118,7 +1116,7 @@ export class PostgresqlServer extends cdktf.TerraformResource {
   }
 
   // threat_detection_policy - computed: false, optional: true, required: false
-  private _threatDetectionPolicy = new PostgresqlServerThreatDetectionPolicyOutputReference(this, "threat_detection_policy", true);
+  private _threatDetectionPolicy = new PostgresqlServerThreatDetectionPolicyOutputReference(this, "threat_detection_policy");
   public get threatDetectionPolicy() {
     return this._threatDetectionPolicy;
   }
@@ -1134,7 +1132,7 @@ export class PostgresqlServer extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new PostgresqlServerTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new PostgresqlServerTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

@@ -108,10 +108,9 @@ export class MssqlVirtualMachineAutoBackupManualScheduleOutputReference extends 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MssqlVirtualMachineAutoBackupManualSchedule | undefined {
@@ -260,10 +259,9 @@ export class MssqlVirtualMachineAutoBackupOutputReference extends cdktf.ComplexO
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MssqlVirtualMachineAutoBackup | undefined {
@@ -411,7 +409,7 @@ export class MssqlVirtualMachineAutoBackupOutputReference extends cdktf.ComplexO
   }
 
   // manual_schedule - computed: false, optional: true, required: false
-  private _manualSchedule = new MssqlVirtualMachineAutoBackupManualScheduleOutputReference(this, "manual_schedule", true);
+  private _manualSchedule = new MssqlVirtualMachineAutoBackupManualScheduleOutputReference(this, "manual_schedule");
   public get manualSchedule() {
     return this._manualSchedule;
   }
@@ -459,10 +457,9 @@ export class MssqlVirtualMachineAutoPatchingOutputReference extends cdktf.Comple
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MssqlVirtualMachineAutoPatching | undefined {
@@ -575,10 +572,9 @@ export class MssqlVirtualMachineKeyVaultCredentialOutputReference extends cdktf.
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MssqlVirtualMachineKeyVaultCredential | undefined {
@@ -700,10 +696,9 @@ export class MssqlVirtualMachineStorageConfigurationDataSettingsOutputReference 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MssqlVirtualMachineStorageConfigurationDataSettings | undefined {
@@ -787,10 +782,9 @@ export class MssqlVirtualMachineStorageConfigurationLogSettingsOutputReference e
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MssqlVirtualMachineStorageConfigurationLogSettings | undefined {
@@ -874,10 +868,9 @@ export class MssqlVirtualMachineStorageConfigurationTempDbSettingsOutputReferenc
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MssqlVirtualMachineStorageConfigurationTempDbSettings | undefined {
@@ -982,10 +975,9 @@ export class MssqlVirtualMachineStorageConfigurationOutputReference extends cdkt
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MssqlVirtualMachineStorageConfiguration | undefined {
@@ -1060,7 +1052,7 @@ export class MssqlVirtualMachineStorageConfigurationOutputReference extends cdkt
   }
 
   // data_settings - computed: false, optional: true, required: false
-  private _dataSettings = new MssqlVirtualMachineStorageConfigurationDataSettingsOutputReference(this, "data_settings", true);
+  private _dataSettings = new MssqlVirtualMachineStorageConfigurationDataSettingsOutputReference(this, "data_settings");
   public get dataSettings() {
     return this._dataSettings;
   }
@@ -1076,7 +1068,7 @@ export class MssqlVirtualMachineStorageConfigurationOutputReference extends cdkt
   }
 
   // log_settings - computed: false, optional: true, required: false
-  private _logSettings = new MssqlVirtualMachineStorageConfigurationLogSettingsOutputReference(this, "log_settings", true);
+  private _logSettings = new MssqlVirtualMachineStorageConfigurationLogSettingsOutputReference(this, "log_settings");
   public get logSettings() {
     return this._logSettings;
   }
@@ -1092,7 +1084,7 @@ export class MssqlVirtualMachineStorageConfigurationOutputReference extends cdkt
   }
 
   // temp_db_settings - computed: false, optional: true, required: false
-  private _tempDbSettings = new MssqlVirtualMachineStorageConfigurationTempDbSettingsOutputReference(this, "temp_db_settings", true);
+  private _tempDbSettings = new MssqlVirtualMachineStorageConfigurationTempDbSettingsOutputReference(this, "temp_db_settings");
   public get tempDbSettings() {
     return this._tempDbSettings;
   }
@@ -1145,10 +1137,9 @@ export class MssqlVirtualMachineTimeoutsOutputReference extends cdktf.ComplexObj
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MssqlVirtualMachineTimeouts | undefined {
@@ -1263,7 +1254,7 @@ export class MssqlVirtualMachine extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_mssql_virtual_machine";
+  public static readonly tfResourceType = "azurerm_mssql_virtual_machine";
 
   // ===========
   // INITIALIZER
@@ -1280,7 +1271,9 @@ export class MssqlVirtualMachine extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_mssql_virtual_machine',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1434,7 +1427,7 @@ export class MssqlVirtualMachine extends cdktf.TerraformResource {
   }
 
   // auto_backup - computed: false, optional: true, required: false
-  private _autoBackup = new MssqlVirtualMachineAutoBackupOutputReference(this, "auto_backup", true);
+  private _autoBackup = new MssqlVirtualMachineAutoBackupOutputReference(this, "auto_backup");
   public get autoBackup() {
     return this._autoBackup;
   }
@@ -1450,7 +1443,7 @@ export class MssqlVirtualMachine extends cdktf.TerraformResource {
   }
 
   // auto_patching - computed: false, optional: true, required: false
-  private _autoPatching = new MssqlVirtualMachineAutoPatchingOutputReference(this, "auto_patching", true);
+  private _autoPatching = new MssqlVirtualMachineAutoPatchingOutputReference(this, "auto_patching");
   public get autoPatching() {
     return this._autoPatching;
   }
@@ -1466,7 +1459,7 @@ export class MssqlVirtualMachine extends cdktf.TerraformResource {
   }
 
   // key_vault_credential - computed: false, optional: true, required: false
-  private _keyVaultCredential = new MssqlVirtualMachineKeyVaultCredentialOutputReference(this, "key_vault_credential", true);
+  private _keyVaultCredential = new MssqlVirtualMachineKeyVaultCredentialOutputReference(this, "key_vault_credential");
   public get keyVaultCredential() {
     return this._keyVaultCredential;
   }
@@ -1482,7 +1475,7 @@ export class MssqlVirtualMachine extends cdktf.TerraformResource {
   }
 
   // storage_configuration - computed: false, optional: true, required: false
-  private _storageConfiguration = new MssqlVirtualMachineStorageConfigurationOutputReference(this, "storage_configuration", true);
+  private _storageConfiguration = new MssqlVirtualMachineStorageConfigurationOutputReference(this, "storage_configuration");
   public get storageConfiguration() {
     return this._storageConfiguration;
   }
@@ -1498,7 +1491,7 @@ export class MssqlVirtualMachine extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new MssqlVirtualMachineTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new MssqlVirtualMachineTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

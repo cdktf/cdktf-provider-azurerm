@@ -26,7 +26,45 @@ export interface DataAzurermBatchPoolConfig extends cdktf.TerraformMetaArguments
   */
   readonly timeouts?: DataAzurermBatchPoolTimeouts;
 }
-export class DataAzurermBatchPoolAutoScale extends cdktf.ComplexComputedList {
+export interface DataAzurermBatchPoolAutoScale {
+}
+
+export function dataAzurermBatchPoolAutoScaleToTerraform(struct?: DataAzurermBatchPoolAutoScale): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermBatchPoolAutoScaleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermBatchPoolAutoScale | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermBatchPoolAutoScale | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // evaluation_interval - computed: true, optional: false, required: false
   public get evaluationInterval() {
@@ -38,7 +76,64 @@ export class DataAzurermBatchPoolAutoScale extends cdktf.ComplexComputedList {
     return this.getStringAttribute('formula');
   }
 }
-export class DataAzurermBatchPoolCertificate extends cdktf.ComplexComputedList {
+
+export class DataAzurermBatchPoolAutoScaleList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermBatchPoolAutoScaleOutputReference {
+    return new DataAzurermBatchPoolAutoScaleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermBatchPoolCertificate {
+}
+
+export function dataAzurermBatchPoolCertificateToTerraform(struct?: DataAzurermBatchPoolCertificate): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermBatchPoolCertificateOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermBatchPoolCertificate | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermBatchPoolCertificate | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // id - computed: true, optional: false, required: false
   public get id() {
@@ -60,7 +155,64 @@ export class DataAzurermBatchPoolCertificate extends cdktf.ComplexComputedList {
     return cdktf.Fn.tolist(this.getListAttribute('visibility'));
   }
 }
-export class DataAzurermBatchPoolContainerConfigurationContainerRegistries extends cdktf.ComplexComputedList {
+
+export class DataAzurermBatchPoolCertificateList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermBatchPoolCertificateOutputReference {
+    return new DataAzurermBatchPoolCertificateOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermBatchPoolContainerConfigurationContainerRegistries {
+}
+
+export function dataAzurermBatchPoolContainerConfigurationContainerRegistriesToTerraform(struct?: DataAzurermBatchPoolContainerConfigurationContainerRegistries): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermBatchPoolContainerConfigurationContainerRegistriesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermBatchPoolContainerConfigurationContainerRegistries | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermBatchPoolContainerConfigurationContainerRegistries | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // password - computed: true, optional: false, required: false
   public get password() {
@@ -77,7 +229,64 @@ export class DataAzurermBatchPoolContainerConfigurationContainerRegistries exten
     return this.getStringAttribute('user_name');
   }
 }
-export class DataAzurermBatchPoolContainerConfiguration extends cdktf.ComplexComputedList {
+
+export class DataAzurermBatchPoolContainerConfigurationContainerRegistriesList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermBatchPoolContainerConfigurationContainerRegistriesOutputReference {
+    return new DataAzurermBatchPoolContainerConfigurationContainerRegistriesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermBatchPoolContainerConfiguration {
+}
+
+export function dataAzurermBatchPoolContainerConfigurationToTerraform(struct?: DataAzurermBatchPoolContainerConfiguration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermBatchPoolContainerConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermBatchPoolContainerConfiguration | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermBatchPoolContainerConfiguration | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // container_image_names - computed: true, optional: false, required: false
   public get containerImageNames() {
@@ -85,9 +294,9 @@ export class DataAzurermBatchPoolContainerConfiguration extends cdktf.ComplexCom
   }
 
   // container_registries - computed: true, optional: false, required: false
+  private _containerRegistries = new DataAzurermBatchPoolContainerConfigurationContainerRegistriesList(this, "container_registries", false);
   public get containerRegistries() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('container_registries');
+    return this._containerRegistries;
   }
 
   // type - computed: true, optional: false, required: false
@@ -95,7 +304,64 @@ export class DataAzurermBatchPoolContainerConfiguration extends cdktf.ComplexCom
     return this.getStringAttribute('type');
   }
 }
-export class DataAzurermBatchPoolFixedScale extends cdktf.ComplexComputedList {
+
+export class DataAzurermBatchPoolContainerConfigurationList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermBatchPoolContainerConfigurationOutputReference {
+    return new DataAzurermBatchPoolContainerConfigurationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermBatchPoolFixedScale {
+}
+
+export function dataAzurermBatchPoolFixedScaleToTerraform(struct?: DataAzurermBatchPoolFixedScale): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermBatchPoolFixedScaleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermBatchPoolFixedScale | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermBatchPoolFixedScale | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // resize_timeout - computed: true, optional: false, required: false
   public get resizeTimeout() {
@@ -112,7 +378,64 @@ export class DataAzurermBatchPoolFixedScale extends cdktf.ComplexComputedList {
     return this.getNumberAttribute('target_low_priority_nodes');
   }
 }
-export class DataAzurermBatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules extends cdktf.ComplexComputedList {
+
+export class DataAzurermBatchPoolFixedScaleList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermBatchPoolFixedScaleOutputReference {
+    return new DataAzurermBatchPoolFixedScaleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermBatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules {
+}
+
+export function dataAzurermBatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRulesToTerraform(struct?: DataAzurermBatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermBatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRulesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermBatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermBatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // access - computed: true, optional: false, required: false
   public get access() {
@@ -129,7 +452,64 @@ export class DataAzurermBatchPoolNetworkConfigurationEndpointConfigurationNetwor
     return this.getStringAttribute('source_address_prefix');
   }
 }
-export class DataAzurermBatchPoolNetworkConfigurationEndpointConfiguration extends cdktf.ComplexComputedList {
+
+export class DataAzurermBatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRulesList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermBatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRulesOutputReference {
+    return new DataAzurermBatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRulesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermBatchPoolNetworkConfigurationEndpointConfiguration {
+}
+
+export function dataAzurermBatchPoolNetworkConfigurationEndpointConfigurationToTerraform(struct?: DataAzurermBatchPoolNetworkConfigurationEndpointConfiguration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermBatchPoolNetworkConfigurationEndpointConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermBatchPoolNetworkConfigurationEndpointConfiguration | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermBatchPoolNetworkConfigurationEndpointConfiguration | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // backend_port - computed: true, optional: false, required: false
   public get backendPort() {
@@ -147,9 +527,9 @@ export class DataAzurermBatchPoolNetworkConfigurationEndpointConfiguration exten
   }
 
   // network_security_group_rules - computed: true, optional: false, required: false
+  private _networkSecurityGroupRules = new DataAzurermBatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRulesList(this, "network_security_group_rules", false);
   public get networkSecurityGroupRules() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('network_security_group_rules');
+    return this._networkSecurityGroupRules;
   }
 
   // protocol - computed: true, optional: false, required: false
@@ -157,12 +537,69 @@ export class DataAzurermBatchPoolNetworkConfigurationEndpointConfiguration exten
     return this.getStringAttribute('protocol');
   }
 }
-export class DataAzurermBatchPoolNetworkConfiguration extends cdktf.ComplexComputedList {
+
+export class DataAzurermBatchPoolNetworkConfigurationEndpointConfigurationList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermBatchPoolNetworkConfigurationEndpointConfigurationOutputReference {
+    return new DataAzurermBatchPoolNetworkConfigurationEndpointConfigurationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermBatchPoolNetworkConfiguration {
+}
+
+export function dataAzurermBatchPoolNetworkConfigurationToTerraform(struct?: DataAzurermBatchPoolNetworkConfiguration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermBatchPoolNetworkConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermBatchPoolNetworkConfiguration | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermBatchPoolNetworkConfiguration | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // endpoint_configuration - computed: true, optional: false, required: false
+  private _endpointConfiguration = new DataAzurermBatchPoolNetworkConfigurationEndpointConfigurationList(this, "endpoint_configuration", false);
   public get endpointConfiguration() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('endpoint_configuration');
+    return this._endpointConfiguration;
   }
 
   // subnet_id - computed: true, optional: false, required: false
@@ -170,7 +607,64 @@ export class DataAzurermBatchPoolNetworkConfiguration extends cdktf.ComplexCompu
     return this.getStringAttribute('subnet_id');
   }
 }
-export class DataAzurermBatchPoolStartTaskResourceFile extends cdktf.ComplexComputedList {
+
+export class DataAzurermBatchPoolNetworkConfigurationList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermBatchPoolNetworkConfigurationOutputReference {
+    return new DataAzurermBatchPoolNetworkConfigurationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermBatchPoolStartTaskResourceFile {
+}
+
+export function dataAzurermBatchPoolStartTaskResourceFileToTerraform(struct?: DataAzurermBatchPoolStartTaskResourceFile): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermBatchPoolStartTaskResourceFileOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermBatchPoolStartTaskResourceFile | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermBatchPoolStartTaskResourceFile | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // auto_storage_container_name - computed: true, optional: false, required: false
   public get autoStorageContainerName() {
@@ -202,7 +696,64 @@ export class DataAzurermBatchPoolStartTaskResourceFile extends cdktf.ComplexComp
     return this.getStringAttribute('storage_container_url');
   }
 }
-export class DataAzurermBatchPoolStartTaskUserIdentityAutoUser extends cdktf.ComplexComputedList {
+
+export class DataAzurermBatchPoolStartTaskResourceFileList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermBatchPoolStartTaskResourceFileOutputReference {
+    return new DataAzurermBatchPoolStartTaskResourceFileOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermBatchPoolStartTaskUserIdentityAutoUser {
+}
+
+export function dataAzurermBatchPoolStartTaskUserIdentityAutoUserToTerraform(struct?: DataAzurermBatchPoolStartTaskUserIdentityAutoUser): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermBatchPoolStartTaskUserIdentityAutoUserOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermBatchPoolStartTaskUserIdentityAutoUser | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermBatchPoolStartTaskUserIdentityAutoUser | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // elevation_level - computed: true, optional: false, required: false
   public get elevationLevel() {
@@ -214,12 +765,69 @@ export class DataAzurermBatchPoolStartTaskUserIdentityAutoUser extends cdktf.Com
     return this.getStringAttribute('scope');
   }
 }
-export class DataAzurermBatchPoolStartTaskUserIdentity extends cdktf.ComplexComputedList {
+
+export class DataAzurermBatchPoolStartTaskUserIdentityAutoUserList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermBatchPoolStartTaskUserIdentityAutoUserOutputReference {
+    return new DataAzurermBatchPoolStartTaskUserIdentityAutoUserOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermBatchPoolStartTaskUserIdentity {
+}
+
+export function dataAzurermBatchPoolStartTaskUserIdentityToTerraform(struct?: DataAzurermBatchPoolStartTaskUserIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermBatchPoolStartTaskUserIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermBatchPoolStartTaskUserIdentity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermBatchPoolStartTaskUserIdentity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // auto_user - computed: true, optional: false, required: false
+  private _autoUser = new DataAzurermBatchPoolStartTaskUserIdentityAutoUserList(this, "auto_user", false);
   public get autoUser() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('auto_user');
+    return this._autoUser;
   }
 
   // user_name - computed: true, optional: false, required: false
@@ -227,7 +835,64 @@ export class DataAzurermBatchPoolStartTaskUserIdentity extends cdktf.ComplexComp
     return this.getStringAttribute('user_name');
   }
 }
-export class DataAzurermBatchPoolStartTask extends cdktf.ComplexComputedList {
+
+export class DataAzurermBatchPoolStartTaskUserIdentityList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermBatchPoolStartTaskUserIdentityOutputReference {
+    return new DataAzurermBatchPoolStartTaskUserIdentityOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermBatchPoolStartTask {
+}
+
+export function dataAzurermBatchPoolStartTaskToTerraform(struct?: DataAzurermBatchPoolStartTask): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermBatchPoolStartTaskOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermBatchPoolStartTask | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermBatchPoolStartTask | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // command_line - computed: true, optional: false, required: false
   public get commandLine() {
@@ -235,13 +900,13 @@ export class DataAzurermBatchPoolStartTask extends cdktf.ComplexComputedList {
   }
 
   // common_environment_properties - computed: true, optional: false, required: false
-  public get commonEnvironmentProperties() {
-    return this.getStringMapAttribute('common_environment_properties');
+  public commonEnvironmentProperties(key: string): string | cdktf.IResolvable {
+    return new cdktf.StringMap(this, 'common_environment_properties').lookup(key);
   }
 
   // environment - computed: true, optional: false, required: false
-  public get environment() {
-    return this.getStringMapAttribute('environment');
+  public environment(key: string): string | cdktf.IResolvable {
+    return new cdktf.StringMap(this, 'environment').lookup(key);
   }
 
   // max_task_retry_count - computed: true, optional: false, required: false
@@ -250,9 +915,9 @@ export class DataAzurermBatchPoolStartTask extends cdktf.ComplexComputedList {
   }
 
   // resource_file - computed: true, optional: false, required: false
+  private _resourceFile = new DataAzurermBatchPoolStartTaskResourceFileList(this, "resource_file", false);
   public get resourceFile() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('resource_file');
+    return this._resourceFile;
   }
 
   // task_retry_maximum - computed: true, optional: false, required: false
@@ -261,9 +926,9 @@ export class DataAzurermBatchPoolStartTask extends cdktf.ComplexComputedList {
   }
 
   // user_identity - computed: true, optional: false, required: false
+  private _userIdentity = new DataAzurermBatchPoolStartTaskUserIdentityList(this, "user_identity", false);
   public get userIdentity() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('user_identity');
+    return this._userIdentity;
   }
 
   // wait_for_success - computed: true, optional: false, required: false
@@ -271,7 +936,64 @@ export class DataAzurermBatchPoolStartTask extends cdktf.ComplexComputedList {
     return this.getBooleanAttribute('wait_for_success');
   }
 }
-export class DataAzurermBatchPoolStorageImageReference extends cdktf.ComplexComputedList {
+
+export class DataAzurermBatchPoolStartTaskList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermBatchPoolStartTaskOutputReference {
+    return new DataAzurermBatchPoolStartTaskOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermBatchPoolStorageImageReference {
+}
+
+export function dataAzurermBatchPoolStorageImageReferenceToTerraform(struct?: DataAzurermBatchPoolStorageImageReference): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermBatchPoolStorageImageReferenceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermBatchPoolStorageImageReference | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermBatchPoolStorageImageReference | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // id - computed: true, optional: false, required: false
   public get id() {
@@ -298,6 +1020,25 @@ export class DataAzurermBatchPoolStorageImageReference extends cdktf.ComplexComp
     return this.getStringAttribute('version');
   }
 }
+
+export class DataAzurermBatchPoolStorageImageReferenceList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermBatchPoolStorageImageReferenceOutputReference {
+    return new DataAzurermBatchPoolStorageImageReferenceOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataAzurermBatchPoolTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/batch_pool#read DataAzurermBatchPool#read}
@@ -321,10 +1062,9 @@ export class DataAzurermBatchPoolTimeoutsOutputReference extends cdktf.ComplexOb
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermBatchPoolTimeouts | undefined {
@@ -373,7 +1113,7 @@ export class DataAzurermBatchPool extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_batch_pool";
+  public static readonly tfResourceType = "azurerm_batch_pool";
 
   // ===========
   // INITIALIZER
@@ -390,7 +1130,9 @@ export class DataAzurermBatchPool extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'azurerm_batch_pool',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -421,18 +1163,21 @@ export class DataAzurermBatchPool extends cdktf.TerraformDataSource {
   }
 
   // auto_scale - computed: true, optional: false, required: false
-  public autoScale(index: string) {
-    return new DataAzurermBatchPoolAutoScale(this, 'auto_scale', index, false);
+  private _autoScale = new DataAzurermBatchPoolAutoScaleList(this, "auto_scale", false);
+  public get autoScale() {
+    return this._autoScale;
   }
 
   // certificate - computed: true, optional: false, required: false
-  public certificate(index: string) {
-    return new DataAzurermBatchPoolCertificate(this, 'certificate', index, false);
+  private _certificate = new DataAzurermBatchPoolCertificateList(this, "certificate", false);
+  public get certificate() {
+    return this._certificate;
   }
 
   // container_configuration - computed: true, optional: false, required: false
-  public containerConfiguration(index: string) {
-    return new DataAzurermBatchPoolContainerConfiguration(this, 'container_configuration', index, false);
+  private _containerConfiguration = new DataAzurermBatchPoolContainerConfigurationList(this, "container_configuration", false);
+  public get containerConfiguration() {
+    return this._containerConfiguration;
   }
 
   // display_name - computed: true, optional: false, required: false
@@ -441,8 +1186,9 @@ export class DataAzurermBatchPool extends cdktf.TerraformDataSource {
   }
 
   // fixed_scale - computed: true, optional: false, required: false
-  public fixedScale(index: string) {
-    return new DataAzurermBatchPoolFixedScale(this, 'fixed_scale', index, false);
+  private _fixedScale = new DataAzurermBatchPoolFixedScaleList(this, "fixed_scale", false);
+  public get fixedScale() {
+    return this._fixedScale;
   }
 
   // id - computed: true, optional: true, required: false
@@ -474,8 +1220,9 @@ export class DataAzurermBatchPool extends cdktf.TerraformDataSource {
   }
 
   // network_configuration - computed: true, optional: false, required: false
-  public networkConfiguration(index: string) {
-    return new DataAzurermBatchPoolNetworkConfiguration(this, 'network_configuration', index, false);
+  private _networkConfiguration = new DataAzurermBatchPoolNetworkConfigurationList(this, "network_configuration", false);
+  public get networkConfiguration() {
+    return this._networkConfiguration;
   }
 
   // node_agent_sku_id - computed: true, optional: false, required: false
@@ -497,13 +1244,15 @@ export class DataAzurermBatchPool extends cdktf.TerraformDataSource {
   }
 
   // start_task - computed: true, optional: false, required: false
-  public startTask(index: string) {
-    return new DataAzurermBatchPoolStartTask(this, 'start_task', index, false);
+  private _startTask = new DataAzurermBatchPoolStartTaskList(this, "start_task", false);
+  public get startTask() {
+    return this._startTask;
   }
 
   // storage_image_reference - computed: true, optional: false, required: false
-  public storageImageReference(index: string) {
-    return new DataAzurermBatchPoolStorageImageReference(this, 'storage_image_reference', index, false);
+  private _storageImageReference = new DataAzurermBatchPoolStorageImageReferenceList(this, "storage_image_reference", false);
+  public get storageImageReference() {
+    return this._storageImageReference;
   }
 
   // vm_size - computed: true, optional: false, required: false
@@ -512,7 +1261,7 @@ export class DataAzurermBatchPool extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermBatchPoolTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermBatchPoolTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

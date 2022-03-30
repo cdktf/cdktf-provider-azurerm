@@ -228,10 +228,9 @@ export class KubernetesClusterNodePoolKubeletConfigOutputReference extends cdktf
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KubernetesClusterNodePoolKubeletConfig | undefined {
@@ -632,10 +631,9 @@ export class KubernetesClusterNodePoolLinuxOsConfigSysctlConfigOutputReference e
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KubernetesClusterNodePoolLinuxOsConfigSysctlConfig | undefined {
@@ -1331,10 +1329,9 @@ export class KubernetesClusterNodePoolLinuxOsConfigOutputReference extends cdktf
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KubernetesClusterNodePoolLinuxOsConfig | undefined {
@@ -1425,7 +1422,7 @@ export class KubernetesClusterNodePoolLinuxOsConfigOutputReference extends cdktf
   }
 
   // sysctl_config - computed: false, optional: true, required: false
-  private _sysctlConfig = new KubernetesClusterNodePoolLinuxOsConfigSysctlConfigOutputReference(this, "sysctl_config", true);
+  private _sysctlConfig = new KubernetesClusterNodePoolLinuxOsConfigSysctlConfigOutputReference(this, "sysctl_config");
   public get sysctlConfig() {
     return this._sysctlConfig;
   }
@@ -1478,10 +1475,9 @@ export class KubernetesClusterNodePoolTimeoutsOutputReference extends cdktf.Comp
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KubernetesClusterNodePoolTimeouts | undefined {
@@ -1610,10 +1606,9 @@ export class KubernetesClusterNodePoolUpgradeSettingsOutputReference extends cdk
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KubernetesClusterNodePoolUpgradeSettings | undefined {
@@ -1659,7 +1654,7 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_kubernetes_cluster_node_pool";
+  public static readonly tfResourceType = "azurerm_kubernetes_cluster_node_pool";
 
   // ===========
   // INITIALIZER
@@ -1676,7 +1671,9 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_kubernetes_cluster_node_pool',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -2234,7 +2231,7 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
   }
 
   // kubelet_config - computed: false, optional: true, required: false
-  private _kubeletConfig = new KubernetesClusterNodePoolKubeletConfigOutputReference(this, "kubelet_config", true);
+  private _kubeletConfig = new KubernetesClusterNodePoolKubeletConfigOutputReference(this, "kubelet_config");
   public get kubeletConfig() {
     return this._kubeletConfig;
   }
@@ -2250,7 +2247,7 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
   }
 
   // linux_os_config - computed: false, optional: true, required: false
-  private _linuxOsConfig = new KubernetesClusterNodePoolLinuxOsConfigOutputReference(this, "linux_os_config", true);
+  private _linuxOsConfig = new KubernetesClusterNodePoolLinuxOsConfigOutputReference(this, "linux_os_config");
   public get linuxOsConfig() {
     return this._linuxOsConfig;
   }
@@ -2266,7 +2263,7 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new KubernetesClusterNodePoolTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new KubernetesClusterNodePoolTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
@@ -2282,7 +2279,7 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
   }
 
   // upgrade_settings - computed: false, optional: true, required: false
-  private _upgradeSettings = new KubernetesClusterNodePoolUpgradeSettingsOutputReference(this, "upgrade_settings", true);
+  private _upgradeSettings = new KubernetesClusterNodePoolUpgradeSettingsOutputReference(this, "upgrade_settings");
   public get upgradeSettings() {
     return this._upgradeSettings;
   }

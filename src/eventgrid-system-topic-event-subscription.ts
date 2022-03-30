@@ -675,10 +675,9 @@ export class EventgridSystemTopicEventSubscriptionAdvancedFilterOutputReference 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): EventgridSystemTopicEventSubscriptionAdvancedFilter | undefined {
@@ -1166,10 +1165,9 @@ export class EventgridSystemTopicEventSubscriptionAzureFunctionEndpointOutputRef
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): EventgridSystemTopicEventSubscriptionAzureFunctionEndpoint | undefined {
@@ -1278,10 +1276,9 @@ export class EventgridSystemTopicEventSubscriptionDeadLetterIdentityOutputRefere
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): EventgridSystemTopicEventSubscriptionDeadLetterIdentity | undefined {
@@ -1368,10 +1365,9 @@ export class EventgridSystemTopicEventSubscriptionDeliveryIdentityOutputReferenc
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): EventgridSystemTopicEventSubscriptionDeliveryIdentity | undefined {
@@ -1458,10 +1454,9 @@ export class EventgridSystemTopicEventSubscriptionRetryPolicyOutputReference ext
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): EventgridSystemTopicEventSubscriptionRetryPolicy | undefined {
@@ -1545,10 +1540,9 @@ export class EventgridSystemTopicEventSubscriptionStorageBlobDeadLetterDestinati
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): EventgridSystemTopicEventSubscriptionStorageBlobDeadLetterDestination | undefined {
@@ -1637,10 +1631,9 @@ export class EventgridSystemTopicEventSubscriptionStorageQueueEndpointOutputRefe
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): EventgridSystemTopicEventSubscriptionStorageQueueEndpoint | undefined {
@@ -1751,10 +1744,9 @@ export class EventgridSystemTopicEventSubscriptionSubjectFilterOutputReference e
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): EventgridSystemTopicEventSubscriptionSubjectFilter | undefined {
@@ -1876,10 +1868,9 @@ export class EventgridSystemTopicEventSubscriptionTimeoutsOutputReference extend
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): EventgridSystemTopicEventSubscriptionTimeouts | undefined {
@@ -2028,10 +2019,9 @@ export class EventgridSystemTopicEventSubscriptionWebhookEndpointOutputReference
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): EventgridSystemTopicEventSubscriptionWebhookEndpoint | undefined {
@@ -2170,7 +2160,7 @@ export class EventgridSystemTopicEventSubscription extends cdktf.TerraformResour
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_eventgrid_system_topic_event_subscription";
+  public static readonly tfResourceType = "azurerm_eventgrid_system_topic_event_subscription";
 
   // ===========
   // INITIALIZER
@@ -2187,7 +2177,9 @@ export class EventgridSystemTopicEventSubscription extends cdktf.TerraformResour
     super(scope, id, {
       terraformResourceType: 'azurerm_eventgrid_system_topic_event_subscription',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -2411,7 +2403,7 @@ export class EventgridSystemTopicEventSubscription extends cdktf.TerraformResour
   }
 
   // advanced_filter - computed: false, optional: true, required: false
-  private _advancedFilter = new EventgridSystemTopicEventSubscriptionAdvancedFilterOutputReference(this, "advanced_filter", true);
+  private _advancedFilter = new EventgridSystemTopicEventSubscriptionAdvancedFilterOutputReference(this, "advanced_filter");
   public get advancedFilter() {
     return this._advancedFilter;
   }
@@ -2427,7 +2419,7 @@ export class EventgridSystemTopicEventSubscription extends cdktf.TerraformResour
   }
 
   // azure_function_endpoint - computed: false, optional: true, required: false
-  private _azureFunctionEndpoint = new EventgridSystemTopicEventSubscriptionAzureFunctionEndpointOutputReference(this, "azure_function_endpoint", true);
+  private _azureFunctionEndpoint = new EventgridSystemTopicEventSubscriptionAzureFunctionEndpointOutputReference(this, "azure_function_endpoint");
   public get azureFunctionEndpoint() {
     return this._azureFunctionEndpoint;
   }
@@ -2443,7 +2435,7 @@ export class EventgridSystemTopicEventSubscription extends cdktf.TerraformResour
   }
 
   // dead_letter_identity - computed: false, optional: true, required: false
-  private _deadLetterIdentity = new EventgridSystemTopicEventSubscriptionDeadLetterIdentityOutputReference(this, "dead_letter_identity", true);
+  private _deadLetterIdentity = new EventgridSystemTopicEventSubscriptionDeadLetterIdentityOutputReference(this, "dead_letter_identity");
   public get deadLetterIdentity() {
     return this._deadLetterIdentity;
   }
@@ -2459,7 +2451,7 @@ export class EventgridSystemTopicEventSubscription extends cdktf.TerraformResour
   }
 
   // delivery_identity - computed: false, optional: true, required: false
-  private _deliveryIdentity = new EventgridSystemTopicEventSubscriptionDeliveryIdentityOutputReference(this, "delivery_identity", true);
+  private _deliveryIdentity = new EventgridSystemTopicEventSubscriptionDeliveryIdentityOutputReference(this, "delivery_identity");
   public get deliveryIdentity() {
     return this._deliveryIdentity;
   }
@@ -2475,7 +2467,7 @@ export class EventgridSystemTopicEventSubscription extends cdktf.TerraformResour
   }
 
   // retry_policy - computed: false, optional: true, required: false
-  private _retryPolicy = new EventgridSystemTopicEventSubscriptionRetryPolicyOutputReference(this, "retry_policy", true);
+  private _retryPolicy = new EventgridSystemTopicEventSubscriptionRetryPolicyOutputReference(this, "retry_policy");
   public get retryPolicy() {
     return this._retryPolicy;
   }
@@ -2491,7 +2483,7 @@ export class EventgridSystemTopicEventSubscription extends cdktf.TerraformResour
   }
 
   // storage_blob_dead_letter_destination - computed: false, optional: true, required: false
-  private _storageBlobDeadLetterDestination = new EventgridSystemTopicEventSubscriptionStorageBlobDeadLetterDestinationOutputReference(this, "storage_blob_dead_letter_destination", true);
+  private _storageBlobDeadLetterDestination = new EventgridSystemTopicEventSubscriptionStorageBlobDeadLetterDestinationOutputReference(this, "storage_blob_dead_letter_destination");
   public get storageBlobDeadLetterDestination() {
     return this._storageBlobDeadLetterDestination;
   }
@@ -2507,7 +2499,7 @@ export class EventgridSystemTopicEventSubscription extends cdktf.TerraformResour
   }
 
   // storage_queue_endpoint - computed: false, optional: true, required: false
-  private _storageQueueEndpoint = new EventgridSystemTopicEventSubscriptionStorageQueueEndpointOutputReference(this, "storage_queue_endpoint", true);
+  private _storageQueueEndpoint = new EventgridSystemTopicEventSubscriptionStorageQueueEndpointOutputReference(this, "storage_queue_endpoint");
   public get storageQueueEndpoint() {
     return this._storageQueueEndpoint;
   }
@@ -2523,7 +2515,7 @@ export class EventgridSystemTopicEventSubscription extends cdktf.TerraformResour
   }
 
   // subject_filter - computed: false, optional: true, required: false
-  private _subjectFilter = new EventgridSystemTopicEventSubscriptionSubjectFilterOutputReference(this, "subject_filter", true);
+  private _subjectFilter = new EventgridSystemTopicEventSubscriptionSubjectFilterOutputReference(this, "subject_filter");
   public get subjectFilter() {
     return this._subjectFilter;
   }
@@ -2539,7 +2531,7 @@ export class EventgridSystemTopicEventSubscription extends cdktf.TerraformResour
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new EventgridSystemTopicEventSubscriptionTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new EventgridSystemTopicEventSubscriptionTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
@@ -2555,7 +2547,7 @@ export class EventgridSystemTopicEventSubscription extends cdktf.TerraformResour
   }
 
   // webhook_endpoint - computed: false, optional: true, required: false
-  private _webhookEndpoint = new EventgridSystemTopicEventSubscriptionWebhookEndpointOutputReference(this, "webhook_endpoint", true);
+  private _webhookEndpoint = new EventgridSystemTopicEventSubscriptionWebhookEndpointOutputReference(this, "webhook_endpoint");
   public get webhookEndpoint() {
     return this._webhookEndpoint;
   }

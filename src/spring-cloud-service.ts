@@ -52,7 +52,45 @@ export interface SpringCloudServiceConfig extends cdktf.TerraformMetaArguments {
   */
   readonly trace?: SpringCloudServiceTrace;
 }
-export class SpringCloudServiceRequiredNetworkTrafficRules extends cdktf.ComplexComputedList {
+export interface SpringCloudServiceRequiredNetworkTrafficRules {
+}
+
+export function springCloudServiceRequiredNetworkTrafficRulesToTerraform(struct?: SpringCloudServiceRequiredNetworkTrafficRules): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class SpringCloudServiceRequiredNetworkTrafficRulesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): SpringCloudServiceRequiredNetworkTrafficRules | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SpringCloudServiceRequiredNetworkTrafficRules | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // direction - computed: true, optional: false, required: false
   public get direction() {
@@ -77,6 +115,25 @@ export class SpringCloudServiceRequiredNetworkTrafficRules extends cdktf.Complex
   // protocol - computed: true, optional: false, required: false
   public get protocol() {
     return this.getStringAttribute('protocol');
+  }
+}
+
+export class SpringCloudServiceRequiredNetworkTrafficRulesList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): SpringCloudServiceRequiredNetworkTrafficRulesOutputReference {
+    return new SpringCloudServiceRequiredNetworkTrafficRulesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface SpringCloudServiceConfigServerGitSettingHttpBasicAuth {
@@ -107,10 +164,9 @@ export class SpringCloudServiceConfigServerGitSettingHttpBasicAuthOutputReferenc
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): SpringCloudServiceConfigServerGitSettingHttpBasicAuth | undefined {
@@ -194,10 +250,9 @@ export class SpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuthOutp
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): SpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuth | undefined {
@@ -291,10 +346,9 @@ export class SpringCloudServiceConfigServerGitSettingRepositorySshAuthOutputRefe
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): SpringCloudServiceConfigServerGitSettingRepositorySshAuth | undefined {
@@ -486,10 +540,9 @@ export class SpringCloudServiceConfigServerGitSettingSshAuthOutputReference exte
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): SpringCloudServiceConfigServerGitSettingSshAuth | undefined {
@@ -646,10 +699,9 @@ export class SpringCloudServiceConfigServerGitSettingOutputReference extends cdk
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): SpringCloudServiceConfigServerGitSetting | undefined {
@@ -749,7 +801,7 @@ export class SpringCloudServiceConfigServerGitSettingOutputReference extends cdk
   }
 
   // http_basic_auth - computed: false, optional: true, required: false
-  private _httpBasicAuth = new SpringCloudServiceConfigServerGitSettingHttpBasicAuthOutputReference(this, "http_basic_auth", true);
+  private _httpBasicAuth = new SpringCloudServiceConfigServerGitSettingHttpBasicAuthOutputReference(this, "http_basic_auth");
   public get httpBasicAuth() {
     return this._httpBasicAuth;
   }
@@ -782,7 +834,7 @@ export class SpringCloudServiceConfigServerGitSettingOutputReference extends cdk
   }
 
   // ssh_auth - computed: false, optional: true, required: false
-  private _sshAuth = new SpringCloudServiceConfigServerGitSettingSshAuthOutputReference(this, "ssh_auth", true);
+  private _sshAuth = new SpringCloudServiceConfigServerGitSettingSshAuthOutputReference(this, "ssh_auth");
   public get sshAuth() {
     return this._sshAuth;
   }
@@ -840,10 +892,9 @@ export class SpringCloudServiceNetworkOutputReference extends cdktf.ComplexObjec
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): SpringCloudServiceNetwork | undefined {
@@ -1000,10 +1051,9 @@ export class SpringCloudServiceTimeoutsOutputReference extends cdktf.ComplexObje
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): SpringCloudServiceTimeouts | undefined {
@@ -1142,10 +1192,9 @@ export class SpringCloudServiceTraceOutputReference extends cdktf.ComplexObject 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): SpringCloudServiceTrace | undefined {
@@ -1238,7 +1287,7 @@ export class SpringCloudService extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_spring_cloud_service";
+  public static readonly tfResourceType = "azurerm_spring_cloud_service";
 
   // ===========
   // INITIALIZER
@@ -1255,7 +1304,9 @@ export class SpringCloudService extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_spring_cloud_service',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1314,8 +1365,9 @@ export class SpringCloudService extends cdktf.TerraformResource {
   }
 
   // required_network_traffic_rules - computed: true, optional: false, required: false
-  public requiredNetworkTrafficRules(index: string) {
-    return new SpringCloudServiceRequiredNetworkTrafficRules(this, 'required_network_traffic_rules', index, false);
+  private _requiredNetworkTrafficRules = new SpringCloudServiceRequiredNetworkTrafficRulesList(this, "required_network_traffic_rules", false);
+  public get requiredNetworkTrafficRules() {
+    return this._requiredNetworkTrafficRules;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -1364,7 +1416,7 @@ export class SpringCloudService extends cdktf.TerraformResource {
   }
 
   // config_server_git_setting - computed: false, optional: true, required: false
-  private _configServerGitSetting = new SpringCloudServiceConfigServerGitSettingOutputReference(this, "config_server_git_setting", true);
+  private _configServerGitSetting = new SpringCloudServiceConfigServerGitSettingOutputReference(this, "config_server_git_setting");
   public get configServerGitSetting() {
     return this._configServerGitSetting;
   }
@@ -1380,7 +1432,7 @@ export class SpringCloudService extends cdktf.TerraformResource {
   }
 
   // network - computed: false, optional: true, required: false
-  private _network = new SpringCloudServiceNetworkOutputReference(this, "network", true);
+  private _network = new SpringCloudServiceNetworkOutputReference(this, "network");
   public get network() {
     return this._network;
   }
@@ -1396,7 +1448,7 @@ export class SpringCloudService extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new SpringCloudServiceTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new SpringCloudServiceTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
@@ -1412,7 +1464,7 @@ export class SpringCloudService extends cdktf.TerraformResource {
   }
 
   // trace - computed: false, optional: true, required: false
-  private _trace = new SpringCloudServiceTraceOutputReference(this, "trace", true);
+  private _trace = new SpringCloudServiceTraceOutputReference(this, "trace");
   public get trace() {
     return this._trace;
   }

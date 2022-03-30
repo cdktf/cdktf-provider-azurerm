@@ -102,7 +102,45 @@ export interface FunctionAppSlotConfig extends cdktf.TerraformMetaArguments {
   */
   readonly timeouts?: FunctionAppSlotTimeouts;
 }
-export class FunctionAppSlotSiteCredential extends cdktf.ComplexComputedList {
+export interface FunctionAppSlotSiteCredential {
+}
+
+export function functionAppSlotSiteCredentialToTerraform(struct?: FunctionAppSlotSiteCredential): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class FunctionAppSlotSiteCredentialOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): FunctionAppSlotSiteCredential | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: FunctionAppSlotSiteCredential | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // password - computed: true, optional: false, required: false
   public get password() {
@@ -112,6 +150,25 @@ export class FunctionAppSlotSiteCredential extends cdktf.ComplexComputedList {
   // username - computed: true, optional: false, required: false
   public get username() {
     return this.getStringAttribute('username');
+  }
+}
+
+export class FunctionAppSlotSiteCredentialList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): FunctionAppSlotSiteCredentialOutputReference {
+    return new FunctionAppSlotSiteCredentialOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface FunctionAppSlotAuthSettingsActiveDirectory {
@@ -147,10 +204,9 @@ export class FunctionAppSlotAuthSettingsActiveDirectoryOutputReference extends c
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): FunctionAppSlotAuthSettingsActiveDirectory | undefined {
@@ -264,10 +320,9 @@ export class FunctionAppSlotAuthSettingsFacebookOutputReference extends cdktf.Co
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): FunctionAppSlotAuthSettingsFacebook | undefined {
@@ -378,10 +433,9 @@ export class FunctionAppSlotAuthSettingsGoogleOutputReference extends cdktf.Comp
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): FunctionAppSlotAuthSettingsGoogle | undefined {
@@ -492,10 +546,9 @@ export class FunctionAppSlotAuthSettingsMicrosoftOutputReference extends cdktf.C
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): FunctionAppSlotAuthSettingsMicrosoft | undefined {
@@ -601,10 +654,9 @@ export class FunctionAppSlotAuthSettingsTwitterOutputReference extends cdktf.Com
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): FunctionAppSlotAuthSettingsTwitter | undefined {
@@ -758,10 +810,9 @@ export class FunctionAppSlotAuthSettingsOutputReference extends cdktf.ComplexObj
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): FunctionAppSlotAuthSettings | undefined {
@@ -1005,7 +1056,7 @@ export class FunctionAppSlotAuthSettingsOutputReference extends cdktf.ComplexObj
   }
 
   // active_directory - computed: false, optional: true, required: false
-  private _activeDirectory = new FunctionAppSlotAuthSettingsActiveDirectoryOutputReference(this, "active_directory", true);
+  private _activeDirectory = new FunctionAppSlotAuthSettingsActiveDirectoryOutputReference(this, "active_directory");
   public get activeDirectory() {
     return this._activeDirectory;
   }
@@ -1021,7 +1072,7 @@ export class FunctionAppSlotAuthSettingsOutputReference extends cdktf.ComplexObj
   }
 
   // facebook - computed: false, optional: true, required: false
-  private _facebook = new FunctionAppSlotAuthSettingsFacebookOutputReference(this, "facebook", true);
+  private _facebook = new FunctionAppSlotAuthSettingsFacebookOutputReference(this, "facebook");
   public get facebook() {
     return this._facebook;
   }
@@ -1037,7 +1088,7 @@ export class FunctionAppSlotAuthSettingsOutputReference extends cdktf.ComplexObj
   }
 
   // google - computed: false, optional: true, required: false
-  private _google = new FunctionAppSlotAuthSettingsGoogleOutputReference(this, "google", true);
+  private _google = new FunctionAppSlotAuthSettingsGoogleOutputReference(this, "google");
   public get google() {
     return this._google;
   }
@@ -1053,7 +1104,7 @@ export class FunctionAppSlotAuthSettingsOutputReference extends cdktf.ComplexObj
   }
 
   // microsoft - computed: false, optional: true, required: false
-  private _microsoft = new FunctionAppSlotAuthSettingsMicrosoftOutputReference(this, "microsoft", true);
+  private _microsoft = new FunctionAppSlotAuthSettingsMicrosoftOutputReference(this, "microsoft");
   public get microsoft() {
     return this._microsoft;
   }
@@ -1069,7 +1120,7 @@ export class FunctionAppSlotAuthSettingsOutputReference extends cdktf.ComplexObj
   }
 
   // twitter - computed: false, optional: true, required: false
-  private _twitter = new FunctionAppSlotAuthSettingsTwitterOutputReference(this, "twitter", true);
+  private _twitter = new FunctionAppSlotAuthSettingsTwitterOutputReference(this, "twitter");
   public get twitter() {
     return this._twitter;
   }
@@ -1139,10 +1190,9 @@ export class FunctionAppSlotIdentityOutputReference extends cdktf.ComplexObject 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): FunctionAppSlotIdentity | undefined {
@@ -1397,10 +1447,9 @@ export class FunctionAppSlotSiteConfigCorsOutputReference extends cdktf.ComplexO
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): FunctionAppSlotSiteConfigCors | undefined {
@@ -1584,10 +1633,9 @@ export class FunctionAppSlotSiteConfigOutputReference extends cdktf.ComplexObjec
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): FunctionAppSlotSiteConfig | undefined {
@@ -2054,7 +2102,7 @@ export class FunctionAppSlotSiteConfigOutputReference extends cdktf.ComplexObjec
   }
 
   // cors - computed: false, optional: true, required: false
-  private _cors = new FunctionAppSlotSiteConfigCorsOutputReference(this, "cors", true);
+  private _cors = new FunctionAppSlotSiteConfigCorsOutputReference(this, "cors");
   public get cors() {
     return this._cors;
   }
@@ -2107,10 +2155,9 @@ export class FunctionAppSlotTimeoutsOutputReference extends cdktf.ComplexObject 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): FunctionAppSlotTimeouts | undefined {
@@ -2225,7 +2272,7 @@ export class FunctionAppSlot extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_function_app_slot";
+  public static readonly tfResourceType = "azurerm_function_app_slot";
 
   // ===========
   // INITIALIZER
@@ -2242,7 +2289,9 @@ export class FunctionAppSlot extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_function_app_slot',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -2479,8 +2528,9 @@ export class FunctionAppSlot extends cdktf.TerraformResource {
   }
 
   // site_credential - computed: true, optional: false, required: false
-  public siteCredential(index: string) {
-    return new FunctionAppSlotSiteCredential(this, 'site_credential', index, false);
+  private _siteCredential = new FunctionAppSlotSiteCredentialList(this, "site_credential", false);
+  public get siteCredential() {
+    return this._siteCredential;
   }
 
   // storage_account_access_key - computed: false, optional: false, required: true
@@ -2542,7 +2592,7 @@ export class FunctionAppSlot extends cdktf.TerraformResource {
   }
 
   // auth_settings - computed: false, optional: true, required: false
-  private _authSettings = new FunctionAppSlotAuthSettingsOutputReference(this, "auth_settings", true);
+  private _authSettings = new FunctionAppSlotAuthSettingsOutputReference(this, "auth_settings");
   public get authSettings() {
     return this._authSettings;
   }
@@ -2575,7 +2625,7 @@ export class FunctionAppSlot extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity = new FunctionAppSlotIdentityOutputReference(this, "identity", true);
+  private _identity = new FunctionAppSlotIdentityOutputReference(this, "identity");
   public get identity() {
     return this._identity;
   }
@@ -2591,7 +2641,7 @@ export class FunctionAppSlot extends cdktf.TerraformResource {
   }
 
   // site_config - computed: false, optional: true, required: false
-  private _siteConfig = new FunctionAppSlotSiteConfigOutputReference(this, "site_config", true);
+  private _siteConfig = new FunctionAppSlotSiteConfigOutputReference(this, "site_config");
   public get siteConfig() {
     return this._siteConfig;
   }
@@ -2607,7 +2657,7 @@ export class FunctionAppSlot extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new FunctionAppSlotTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new FunctionAppSlotTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

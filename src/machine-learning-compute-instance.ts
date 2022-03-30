@@ -96,10 +96,9 @@ export class MachineLearningComputeInstanceAssignToUserOutputReference extends c
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MachineLearningComputeInstanceAssignToUser | undefined {
@@ -189,10 +188,9 @@ export class MachineLearningComputeInstanceIdentityOutputReference extends cdktf
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MachineLearningComputeInstanceIdentity | undefined {
@@ -284,10 +282,9 @@ export class MachineLearningComputeInstanceSshOutputReference extends cdktf.Comp
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MachineLearningComputeInstanceSsh | undefined {
@@ -367,10 +364,9 @@ export class MachineLearningComputeInstanceTimeoutsOutputReference extends cdktf
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): MachineLearningComputeInstanceTimeouts | undefined {
@@ -463,7 +459,7 @@ export class MachineLearningComputeInstance extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_machine_learning_compute_instance";
+  public static readonly tfResourceType = "azurerm_machine_learning_compute_instance";
 
   // ===========
   // INITIALIZER
@@ -480,7 +476,9 @@ export class MachineLearningComputeInstance extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_machine_learning_compute_instance',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -644,7 +642,7 @@ export class MachineLearningComputeInstance extends cdktf.TerraformResource {
   }
 
   // assign_to_user - computed: false, optional: true, required: false
-  private _assignToUser = new MachineLearningComputeInstanceAssignToUserOutputReference(this, "assign_to_user", true);
+  private _assignToUser = new MachineLearningComputeInstanceAssignToUserOutputReference(this, "assign_to_user");
   public get assignToUser() {
     return this._assignToUser;
   }
@@ -660,7 +658,7 @@ export class MachineLearningComputeInstance extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity = new MachineLearningComputeInstanceIdentityOutputReference(this, "identity", true);
+  private _identity = new MachineLearningComputeInstanceIdentityOutputReference(this, "identity");
   public get identity() {
     return this._identity;
   }
@@ -676,7 +674,7 @@ export class MachineLearningComputeInstance extends cdktf.TerraformResource {
   }
 
   // ssh - computed: false, optional: true, required: false
-  private _ssh = new MachineLearningComputeInstanceSshOutputReference(this, "ssh", true);
+  private _ssh = new MachineLearningComputeInstanceSshOutputReference(this, "ssh");
   public get ssh() {
     return this._ssh;
   }
@@ -692,7 +690,7 @@ export class MachineLearningComputeInstance extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new MachineLearningComputeInstanceTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new MachineLearningComputeInstanceTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

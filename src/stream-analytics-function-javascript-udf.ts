@@ -82,10 +82,9 @@ export class StreamAnalyticsFunctionJavascriptUdfOutputOutputReference extends c
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): StreamAnalyticsFunctionJavascriptUdfOutput | undefined {
@@ -160,10 +159,9 @@ export class StreamAnalyticsFunctionJavascriptUdfTimeoutsOutputReference extends
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): StreamAnalyticsFunctionJavascriptUdfTimeouts | undefined {
@@ -278,7 +276,7 @@ export class StreamAnalyticsFunctionJavascriptUdf extends cdktf.TerraformResourc
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_stream_analytics_function_javascript_udf";
+  public static readonly tfResourceType = "azurerm_stream_analytics_function_javascript_udf";
 
   // ===========
   // INITIALIZER
@@ -295,7 +293,9 @@ export class StreamAnalyticsFunctionJavascriptUdf extends cdktf.TerraformResourc
     super(scope, id, {
       terraformResourceType: 'azurerm_stream_analytics_function_javascript_udf',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -387,7 +387,7 @@ export class StreamAnalyticsFunctionJavascriptUdf extends cdktf.TerraformResourc
   }
 
   // output - computed: false, optional: false, required: true
-  private _output = new StreamAnalyticsFunctionJavascriptUdfOutputOutputReference(this, "output", true);
+  private _output = new StreamAnalyticsFunctionJavascriptUdfOutputOutputReference(this, "output");
   public get output() {
     return this._output;
   }
@@ -400,7 +400,7 @@ export class StreamAnalyticsFunctionJavascriptUdf extends cdktf.TerraformResourc
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new StreamAnalyticsFunctionJavascriptUdfTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new StreamAnalyticsFunctionJavascriptUdfTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

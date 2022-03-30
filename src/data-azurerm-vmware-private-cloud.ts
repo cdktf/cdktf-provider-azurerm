@@ -22,7 +22,45 @@ export interface DataAzurermVmwarePrivateCloudConfig extends cdktf.TerraformMeta
   */
   readonly timeouts?: DataAzurermVmwarePrivateCloudTimeouts;
 }
-export class DataAzurermVmwarePrivateCloudCircuit extends cdktf.ComplexComputedList {
+export interface DataAzurermVmwarePrivateCloudCircuit {
+}
+
+export function dataAzurermVmwarePrivateCloudCircuitToTerraform(struct?: DataAzurermVmwarePrivateCloudCircuit): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermVmwarePrivateCloudCircuitOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermVmwarePrivateCloudCircuit | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermVmwarePrivateCloudCircuit | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // express_route_id - computed: true, optional: false, required: false
   public get expressRouteId() {
@@ -44,7 +82,64 @@ export class DataAzurermVmwarePrivateCloudCircuit extends cdktf.ComplexComputedL
     return this.getStringAttribute('secondary_subnet_cidr');
   }
 }
-export class DataAzurermVmwarePrivateCloudManagementCluster extends cdktf.ComplexComputedList {
+
+export class DataAzurermVmwarePrivateCloudCircuitList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermVmwarePrivateCloudCircuitOutputReference {
+    return new DataAzurermVmwarePrivateCloudCircuitOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermVmwarePrivateCloudManagementCluster {
+}
+
+export function dataAzurermVmwarePrivateCloudManagementClusterToTerraform(struct?: DataAzurermVmwarePrivateCloudManagementCluster): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermVmwarePrivateCloudManagementClusterOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermVmwarePrivateCloudManagementCluster | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermVmwarePrivateCloudManagementCluster | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // hosts - computed: true, optional: false, required: false
   public get hosts() {
@@ -59,6 +154,25 @@ export class DataAzurermVmwarePrivateCloudManagementCluster extends cdktf.Comple
   // size - computed: true, optional: false, required: false
   public get size() {
     return this.getNumberAttribute('size');
+  }
+}
+
+export class DataAzurermVmwarePrivateCloudManagementClusterList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermVmwarePrivateCloudManagementClusterOutputReference {
+    return new DataAzurermVmwarePrivateCloudManagementClusterOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataAzurermVmwarePrivateCloudTimeouts {
@@ -84,10 +198,9 @@ export class DataAzurermVmwarePrivateCloudTimeoutsOutputReference extends cdktf.
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermVmwarePrivateCloudTimeouts | undefined {
@@ -136,7 +249,7 @@ export class DataAzurermVmwarePrivateCloud extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_vmware_private_cloud";
+  public static readonly tfResourceType = "azurerm_vmware_private_cloud";
 
   // ===========
   // INITIALIZER
@@ -153,7 +266,9 @@ export class DataAzurermVmwarePrivateCloud extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'azurerm_vmware_private_cloud',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -170,8 +285,9 @@ export class DataAzurermVmwarePrivateCloud extends cdktf.TerraformDataSource {
   // ==========
 
   // circuit - computed: true, optional: false, required: false
-  public circuit(index: string) {
-    return new DataAzurermVmwarePrivateCloudCircuit(this, 'circuit', index, false);
+  private _circuit = new DataAzurermVmwarePrivateCloudCircuitList(this, "circuit", false);
+  public get circuit() {
+    return this._circuit;
   }
 
   // hcx_cloud_manager_endpoint - computed: true, optional: false, required: false
@@ -195,8 +311,9 @@ export class DataAzurermVmwarePrivateCloud extends cdktf.TerraformDataSource {
   }
 
   // management_cluster - computed: true, optional: false, required: false
-  public managementCluster(index: string) {
-    return new DataAzurermVmwarePrivateCloudManagementCluster(this, 'management_cluster', index, false);
+  private _managementCluster = new DataAzurermVmwarePrivateCloudManagementClusterList(this, "management_cluster", false);
+  public get managementCluster() {
+    return this._managementCluster;
   }
 
   // management_subnet_cidr - computed: true, optional: false, required: false
@@ -276,7 +393,7 @@ export class DataAzurermVmwarePrivateCloud extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermVmwarePrivateCloudTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermVmwarePrivateCloudTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

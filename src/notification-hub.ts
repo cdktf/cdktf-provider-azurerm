@@ -89,10 +89,9 @@ export class NotificationHubApnsCredentialOutputReference extends cdktf.ComplexO
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): NotificationHubApnsCredential | undefined {
@@ -228,10 +227,9 @@ export class NotificationHubGcmCredentialOutputReference extends cdktf.ComplexOb
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): NotificationHubGcmCredential | undefined {
@@ -306,10 +304,9 @@ export class NotificationHubTimeoutsOutputReference extends cdktf.ComplexObject 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): NotificationHubTimeouts | undefined {
@@ -424,7 +421,7 @@ export class NotificationHub extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_notification_hub";
+  public static readonly tfResourceType = "azurerm_notification_hub";
 
   // ===========
   // INITIALIZER
@@ -441,7 +438,9 @@ export class NotificationHub extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_notification_hub',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -536,7 +535,7 @@ export class NotificationHub extends cdktf.TerraformResource {
   }
 
   // apns_credential - computed: false, optional: true, required: false
-  private _apnsCredential = new NotificationHubApnsCredentialOutputReference(this, "apns_credential", true);
+  private _apnsCredential = new NotificationHubApnsCredentialOutputReference(this, "apns_credential");
   public get apnsCredential() {
     return this._apnsCredential;
   }
@@ -552,7 +551,7 @@ export class NotificationHub extends cdktf.TerraformResource {
   }
 
   // gcm_credential - computed: false, optional: true, required: false
-  private _gcmCredential = new NotificationHubGcmCredentialOutputReference(this, "gcm_credential", true);
+  private _gcmCredential = new NotificationHubGcmCredentialOutputReference(this, "gcm_credential");
   public get gcmCredential() {
     return this._gcmCredential;
   }
@@ -568,7 +567,7 @@ export class NotificationHub extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new NotificationHubTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new NotificationHubTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

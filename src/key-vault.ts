@@ -194,10 +194,9 @@ export class KeyVaultNetworkAclsOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KeyVaultNetworkAcls | undefined {
@@ -335,10 +334,9 @@ export class KeyVaultTimeoutsOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): KeyVaultTimeouts | undefined {
@@ -453,7 +451,7 @@ export class KeyVault extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_key_vault";
+  public static readonly tfResourceType = "azurerm_key_vault";
 
   // ===========
   // INITIALIZER
@@ -470,7 +468,9 @@ export class KeyVault extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_key_vault',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -738,7 +738,7 @@ export class KeyVault extends cdktf.TerraformResource {
   }
 
   // network_acls - computed: false, optional: true, required: false
-  private _networkAcls = new KeyVaultNetworkAclsOutputReference(this, "network_acls", true);
+  private _networkAcls = new KeyVaultNetworkAclsOutputReference(this, "network_acls");
   public get networkAcls() {
     return this._networkAcls;
   }
@@ -754,7 +754,7 @@ export class KeyVault extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new KeyVaultTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new KeyVaultTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

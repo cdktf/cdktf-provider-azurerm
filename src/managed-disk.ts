@@ -160,10 +160,9 @@ export class ManagedDiskEncryptionSettingsDiskEncryptionKeyOutputReference exten
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ManagedDiskEncryptionSettingsDiskEncryptionKey | undefined {
@@ -247,10 +246,9 @@ export class ManagedDiskEncryptionSettingsKeyEncryptionKeyOutputReference extend
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ManagedDiskEncryptionSettingsKeyEncryptionKey | undefined {
@@ -343,10 +341,9 @@ export class ManagedDiskEncryptionSettingsOutputReference extends cdktf.ComplexO
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ManagedDiskEncryptionSettings | undefined {
@@ -396,7 +393,7 @@ export class ManagedDiskEncryptionSettingsOutputReference extends cdktf.ComplexO
   }
 
   // disk_encryption_key - computed: false, optional: true, required: false
-  private _diskEncryptionKey = new ManagedDiskEncryptionSettingsDiskEncryptionKeyOutputReference(this, "disk_encryption_key", true);
+  private _diskEncryptionKey = new ManagedDiskEncryptionSettingsDiskEncryptionKeyOutputReference(this, "disk_encryption_key");
   public get diskEncryptionKey() {
     return this._diskEncryptionKey;
   }
@@ -412,7 +409,7 @@ export class ManagedDiskEncryptionSettingsOutputReference extends cdktf.ComplexO
   }
 
   // key_encryption_key - computed: false, optional: true, required: false
-  private _keyEncryptionKey = new ManagedDiskEncryptionSettingsKeyEncryptionKeyOutputReference(this, "key_encryption_key", true);
+  private _keyEncryptionKey = new ManagedDiskEncryptionSettingsKeyEncryptionKeyOutputReference(this, "key_encryption_key");
   public get keyEncryptionKey() {
     return this._keyEncryptionKey;
   }
@@ -465,10 +462,9 @@ export class ManagedDiskTimeoutsOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): ManagedDiskTimeouts | undefined {
@@ -583,7 +579,7 @@ export class ManagedDisk extends cdktf.TerraformResource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_managed_disk";
+  public static readonly tfResourceType = "azurerm_managed_disk";
 
   // ===========
   // INITIALIZER
@@ -600,7 +596,9 @@ export class ManagedDisk extends cdktf.TerraformResource {
     super(scope, id, {
       terraformResourceType: 'azurerm_managed_disk',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1082,7 +1080,7 @@ export class ManagedDisk extends cdktf.TerraformResource {
   }
 
   // encryption_settings - computed: false, optional: true, required: false
-  private _encryptionSettings = new ManagedDiskEncryptionSettingsOutputReference(this, "encryption_settings", true);
+  private _encryptionSettings = new ManagedDiskEncryptionSettingsOutputReference(this, "encryption_settings");
   public get encryptionSettings() {
     return this._encryptionSettings;
   }
@@ -1098,7 +1096,7 @@ export class ManagedDisk extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new ManagedDiskTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new ManagedDiskTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

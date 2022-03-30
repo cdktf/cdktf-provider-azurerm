@@ -22,7 +22,45 @@ export interface DataAzurermExpressRouteCircuitConfig extends cdktf.TerraformMet
   */
   readonly timeouts?: DataAzurermExpressRouteCircuitTimeouts;
 }
-export class DataAzurermExpressRouteCircuitPeerings extends cdktf.ComplexComputedList {
+export interface DataAzurermExpressRouteCircuitPeerings {
+}
+
+export function dataAzurermExpressRouteCircuitPeeringsToTerraform(struct?: DataAzurermExpressRouteCircuitPeerings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermExpressRouteCircuitPeeringsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermExpressRouteCircuitPeerings | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermExpressRouteCircuitPeerings | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // azure_asn - computed: true, optional: false, required: false
   public get azureAsn() {
@@ -59,7 +97,64 @@ export class DataAzurermExpressRouteCircuitPeerings extends cdktf.ComplexCompute
     return this.getNumberAttribute('vlan_id');
   }
 }
-export class DataAzurermExpressRouteCircuitServiceProviderProperties extends cdktf.ComplexComputedList {
+
+export class DataAzurermExpressRouteCircuitPeeringsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermExpressRouteCircuitPeeringsOutputReference {
+    return new DataAzurermExpressRouteCircuitPeeringsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermExpressRouteCircuitServiceProviderProperties {
+}
+
+export function dataAzurermExpressRouteCircuitServiceProviderPropertiesToTerraform(struct?: DataAzurermExpressRouteCircuitServiceProviderProperties): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermExpressRouteCircuitServiceProviderPropertiesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermExpressRouteCircuitServiceProviderProperties | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermExpressRouteCircuitServiceProviderProperties | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // bandwidth_in_mbps - computed: true, optional: false, required: false
   public get bandwidthInMbps() {
@@ -76,7 +171,64 @@ export class DataAzurermExpressRouteCircuitServiceProviderProperties extends cdk
     return this.getStringAttribute('service_provider_name');
   }
 }
-export class DataAzurermExpressRouteCircuitSku extends cdktf.ComplexComputedList {
+
+export class DataAzurermExpressRouteCircuitServiceProviderPropertiesList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermExpressRouteCircuitServiceProviderPropertiesOutputReference {
+    return new DataAzurermExpressRouteCircuitServiceProviderPropertiesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermExpressRouteCircuitSku {
+}
+
+export function dataAzurermExpressRouteCircuitSkuToTerraform(struct?: DataAzurermExpressRouteCircuitSku): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermExpressRouteCircuitSkuOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermExpressRouteCircuitSku | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermExpressRouteCircuitSku | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // family - computed: true, optional: false, required: false
   public get family() {
@@ -86,6 +238,25 @@ export class DataAzurermExpressRouteCircuitSku extends cdktf.ComplexComputedList
   // tier - computed: true, optional: false, required: false
   public get tier() {
     return this.getStringAttribute('tier');
+  }
+}
+
+export class DataAzurermExpressRouteCircuitSkuList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermExpressRouteCircuitSkuOutputReference {
+    return new DataAzurermExpressRouteCircuitSkuOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataAzurermExpressRouteCircuitTimeouts {
@@ -111,10 +282,9 @@ export class DataAzurermExpressRouteCircuitTimeoutsOutputReference extends cdktf
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermExpressRouteCircuitTimeouts | undefined {
@@ -163,7 +333,7 @@ export class DataAzurermExpressRouteCircuit extends cdktf.TerraformDataSource {
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_express_route_circuit";
+  public static readonly tfResourceType = "azurerm_express_route_circuit";
 
   // ===========
   // INITIALIZER
@@ -180,7 +350,9 @@ export class DataAzurermExpressRouteCircuit extends cdktf.TerraformDataSource {
     super(scope, id, {
       terraformResourceType: 'azurerm_express_route_circuit',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -220,8 +392,9 @@ export class DataAzurermExpressRouteCircuit extends cdktf.TerraformDataSource {
   }
 
   // peerings - computed: true, optional: false, required: false
-  public peerings(index: string) {
-    return new DataAzurermExpressRouteCircuitPeerings(this, 'peerings', index, false);
+  private _peerings = new DataAzurermExpressRouteCircuitPeeringsList(this, "peerings", false);
+  public get peerings() {
+    return this._peerings;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -243,8 +416,9 @@ export class DataAzurermExpressRouteCircuit extends cdktf.TerraformDataSource {
   }
 
   // service_provider_properties - computed: true, optional: false, required: false
-  public serviceProviderProperties(index: string) {
-    return new DataAzurermExpressRouteCircuitServiceProviderProperties(this, 'service_provider_properties', index, false);
+  private _serviceProviderProperties = new DataAzurermExpressRouteCircuitServiceProviderPropertiesList(this, "service_provider_properties", false);
+  public get serviceProviderProperties() {
+    return this._serviceProviderProperties;
   }
 
   // service_provider_provisioning_state - computed: true, optional: false, required: false
@@ -253,12 +427,13 @@ export class DataAzurermExpressRouteCircuit extends cdktf.TerraformDataSource {
   }
 
   // sku - computed: true, optional: false, required: false
-  public sku(index: string) {
-    return new DataAzurermExpressRouteCircuitSku(this, 'sku', index, false);
+  private _sku = new DataAzurermExpressRouteCircuitSkuList(this, "sku", false);
+  public get sku() {
+    return this._sku;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermExpressRouteCircuitTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermExpressRouteCircuitTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }

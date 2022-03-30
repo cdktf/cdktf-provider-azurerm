@@ -22,7 +22,45 @@ export interface DataAzurermConsumptionBudgetSubscriptionConfig extends cdktf.Te
   */
   readonly timeouts?: DataAzurermConsumptionBudgetSubscriptionTimeouts;
 }
-export class DataAzurermConsumptionBudgetSubscriptionFilterDimension extends cdktf.ComplexComputedList {
+export interface DataAzurermConsumptionBudgetSubscriptionFilterDimension {
+}
+
+export function dataAzurermConsumptionBudgetSubscriptionFilterDimensionToTerraform(struct?: DataAzurermConsumptionBudgetSubscriptionFilterDimension): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermConsumptionBudgetSubscriptionFilterDimensionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermConsumptionBudgetSubscriptionFilterDimension | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermConsumptionBudgetSubscriptionFilterDimension | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // name - computed: true, optional: false, required: false
   public get name() {
@@ -39,7 +77,64 @@ export class DataAzurermConsumptionBudgetSubscriptionFilterDimension extends cdk
     return this.getListAttribute('values');
   }
 }
-export class DataAzurermConsumptionBudgetSubscriptionFilterNotDimension extends cdktf.ComplexComputedList {
+
+export class DataAzurermConsumptionBudgetSubscriptionFilterDimensionList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermConsumptionBudgetSubscriptionFilterDimensionOutputReference {
+    return new DataAzurermConsumptionBudgetSubscriptionFilterDimensionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermConsumptionBudgetSubscriptionFilterNotDimension {
+}
+
+export function dataAzurermConsumptionBudgetSubscriptionFilterNotDimensionToTerraform(struct?: DataAzurermConsumptionBudgetSubscriptionFilterNotDimension): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermConsumptionBudgetSubscriptionFilterNotDimensionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermConsumptionBudgetSubscriptionFilterNotDimension | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermConsumptionBudgetSubscriptionFilterNotDimension | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // name - computed: true, optional: false, required: false
   public get name() {
@@ -56,7 +151,64 @@ export class DataAzurermConsumptionBudgetSubscriptionFilterNotDimension extends 
     return this.getListAttribute('values');
   }
 }
-export class DataAzurermConsumptionBudgetSubscriptionFilterNotTag extends cdktf.ComplexComputedList {
+
+export class DataAzurermConsumptionBudgetSubscriptionFilterNotDimensionList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermConsumptionBudgetSubscriptionFilterNotDimensionOutputReference {
+    return new DataAzurermConsumptionBudgetSubscriptionFilterNotDimensionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermConsumptionBudgetSubscriptionFilterNotTag {
+}
+
+export function dataAzurermConsumptionBudgetSubscriptionFilterNotTagToTerraform(struct?: DataAzurermConsumptionBudgetSubscriptionFilterNotTag): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermConsumptionBudgetSubscriptionFilterNotTagOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermConsumptionBudgetSubscriptionFilterNotTag | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermConsumptionBudgetSubscriptionFilterNotTag | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // name - computed: true, optional: false, required: false
   public get name() {
@@ -73,21 +225,135 @@ export class DataAzurermConsumptionBudgetSubscriptionFilterNotTag extends cdktf.
     return this.getListAttribute('values');
   }
 }
-export class DataAzurermConsumptionBudgetSubscriptionFilterNot extends cdktf.ComplexComputedList {
+
+export class DataAzurermConsumptionBudgetSubscriptionFilterNotTagList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermConsumptionBudgetSubscriptionFilterNotTagOutputReference {
+    return new DataAzurermConsumptionBudgetSubscriptionFilterNotTagOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermConsumptionBudgetSubscriptionFilterNot {
+}
+
+export function dataAzurermConsumptionBudgetSubscriptionFilterNotToTerraform(struct?: DataAzurermConsumptionBudgetSubscriptionFilterNot): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermConsumptionBudgetSubscriptionFilterNotOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermConsumptionBudgetSubscriptionFilterNot | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermConsumptionBudgetSubscriptionFilterNot | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // dimension - computed: true, optional: false, required: false
+  private _dimension = new DataAzurermConsumptionBudgetSubscriptionFilterNotDimensionList(this, "dimension", false);
   public get dimension() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('dimension');
+    return this._dimension;
   }
 
   // tag - computed: true, optional: false, required: false
+  private _tag = new DataAzurermConsumptionBudgetSubscriptionFilterNotTagList(this, "tag", false);
   public get tag() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tag');
+    return this._tag;
   }
 }
-export class DataAzurermConsumptionBudgetSubscriptionFilterTag extends cdktf.ComplexComputedList {
+
+export class DataAzurermConsumptionBudgetSubscriptionFilterNotList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermConsumptionBudgetSubscriptionFilterNotOutputReference {
+    return new DataAzurermConsumptionBudgetSubscriptionFilterNotOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermConsumptionBudgetSubscriptionFilterTag {
+}
+
+export function dataAzurermConsumptionBudgetSubscriptionFilterTagToTerraform(struct?: DataAzurermConsumptionBudgetSubscriptionFilterTag): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermConsumptionBudgetSubscriptionFilterTagOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermConsumptionBudgetSubscriptionFilterTag | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermConsumptionBudgetSubscriptionFilterTag | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // name - computed: true, optional: false, required: false
   public get name() {
@@ -104,27 +370,141 @@ export class DataAzurermConsumptionBudgetSubscriptionFilterTag extends cdktf.Com
     return this.getListAttribute('values');
   }
 }
-export class DataAzurermConsumptionBudgetSubscriptionFilter extends cdktf.ComplexComputedList {
+
+export class DataAzurermConsumptionBudgetSubscriptionFilterTagList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermConsumptionBudgetSubscriptionFilterTagOutputReference {
+    return new DataAzurermConsumptionBudgetSubscriptionFilterTagOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermConsumptionBudgetSubscriptionFilter {
+}
+
+export function dataAzurermConsumptionBudgetSubscriptionFilterToTerraform(struct?: DataAzurermConsumptionBudgetSubscriptionFilter): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermConsumptionBudgetSubscriptionFilterOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermConsumptionBudgetSubscriptionFilter | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermConsumptionBudgetSubscriptionFilter | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // dimension - computed: true, optional: false, required: false
+  private _dimension = new DataAzurermConsumptionBudgetSubscriptionFilterDimensionList(this, "dimension", false);
   public get dimension() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('dimension');
+    return this._dimension;
   }
 
   // not - computed: true, optional: false, required: false
+  private _not = new DataAzurermConsumptionBudgetSubscriptionFilterNotList(this, "not", false);
   public get not() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('not');
+    return this._not;
   }
 
   // tag - computed: true, optional: false, required: false
+  private _tag = new DataAzurermConsumptionBudgetSubscriptionFilterTagList(this, "tag", false);
   public get tag() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tag');
+    return this._tag;
   }
 }
-export class DataAzurermConsumptionBudgetSubscriptionNotification extends cdktf.ComplexComputedList {
+
+export class DataAzurermConsumptionBudgetSubscriptionFilterList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermConsumptionBudgetSubscriptionFilterOutputReference {
+    return new DataAzurermConsumptionBudgetSubscriptionFilterOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermConsumptionBudgetSubscriptionNotification {
+}
+
+export function dataAzurermConsumptionBudgetSubscriptionNotificationToTerraform(struct?: DataAzurermConsumptionBudgetSubscriptionNotification): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermConsumptionBudgetSubscriptionNotificationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermConsumptionBudgetSubscriptionNotification | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermConsumptionBudgetSubscriptionNotification | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // contact_emails - computed: true, optional: false, required: false
   public get contactEmails() {
@@ -161,7 +541,64 @@ export class DataAzurermConsumptionBudgetSubscriptionNotification extends cdktf.
     return this.getStringAttribute('threshold_type');
   }
 }
-export class DataAzurermConsumptionBudgetSubscriptionTimePeriod extends cdktf.ComplexComputedList {
+
+export class DataAzurermConsumptionBudgetSubscriptionNotificationList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermConsumptionBudgetSubscriptionNotificationOutputReference {
+    return new DataAzurermConsumptionBudgetSubscriptionNotificationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermConsumptionBudgetSubscriptionTimePeriod {
+}
+
+export function dataAzurermConsumptionBudgetSubscriptionTimePeriodToTerraform(struct?: DataAzurermConsumptionBudgetSubscriptionTimePeriod): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermConsumptionBudgetSubscriptionTimePeriodOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermConsumptionBudgetSubscriptionTimePeriod | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermConsumptionBudgetSubscriptionTimePeriod | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 
   // end_date - computed: true, optional: false, required: false
   public get endDate() {
@@ -171,6 +608,25 @@ export class DataAzurermConsumptionBudgetSubscriptionTimePeriod extends cdktf.Co
   // start_date - computed: true, optional: false, required: false
   public get startDate() {
     return this.getStringAttribute('start_date');
+  }
+}
+
+export class DataAzurermConsumptionBudgetSubscriptionTimePeriodList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermConsumptionBudgetSubscriptionTimePeriodOutputReference {
+    return new DataAzurermConsumptionBudgetSubscriptionTimePeriodOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataAzurermConsumptionBudgetSubscriptionTimeouts {
@@ -196,10 +652,9 @@ export class DataAzurermConsumptionBudgetSubscriptionTimeoutsOutputReference ext
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
   public get internalValue(): DataAzurermConsumptionBudgetSubscriptionTimeouts | undefined {
@@ -248,7 +703,7 @@ export class DataAzurermConsumptionBudgetSubscription extends cdktf.TerraformDat
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType: string = "azurerm_consumption_budget_subscription";
+  public static readonly tfResourceType = "azurerm_consumption_budget_subscription";
 
   // ===========
   // INITIALIZER
@@ -265,7 +720,9 @@ export class DataAzurermConsumptionBudgetSubscription extends cdktf.TerraformDat
     super(scope, id, {
       terraformResourceType: 'azurerm_consumption_budget_subscription',
       terraformGeneratorMetadata: {
-        providerName: 'azurerm'
+        providerName: 'azurerm',
+        providerVersion: '2.99.0',
+        providerVersionConstraint: '~> 2.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -287,8 +744,9 @@ export class DataAzurermConsumptionBudgetSubscription extends cdktf.TerraformDat
   }
 
   // filter - computed: true, optional: false, required: false
-  public filter(index: string) {
-    return new DataAzurermConsumptionBudgetSubscriptionFilter(this, 'filter', index, false);
+  private _filter = new DataAzurermConsumptionBudgetSubscriptionFilterList(this, "filter", false);
+  public get filter() {
+    return this._filter;
   }
 
   // id - computed: true, optional: true, required: false
@@ -310,8 +768,9 @@ export class DataAzurermConsumptionBudgetSubscription extends cdktf.TerraformDat
   }
 
   // notification - computed: true, optional: false, required: false
-  public notification(index: string) {
-    return new DataAzurermConsumptionBudgetSubscriptionNotification(this, 'notification', index, false);
+  private _notification = new DataAzurermConsumptionBudgetSubscriptionNotificationList(this, "notification", false);
+  public get notification() {
+    return this._notification;
   }
 
   // subscription_id - computed: false, optional: false, required: true
@@ -333,12 +792,13 @@ export class DataAzurermConsumptionBudgetSubscription extends cdktf.TerraformDat
   }
 
   // time_period - computed: true, optional: false, required: false
-  public timePeriod(index: string) {
-    return new DataAzurermConsumptionBudgetSubscriptionTimePeriod(this, 'time_period', index, false);
+  private _timePeriod = new DataAzurermConsumptionBudgetSubscriptionTimePeriodList(this, "time_period", false);
+  public get timePeriod() {
+    return this._timePeriod;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts = new DataAzurermConsumptionBudgetSubscriptionTimeoutsOutputReference(this, "timeouts", true);
+  private _timeouts = new DataAzurermConsumptionBudgetSubscriptionTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
     return this._timeouts;
   }
