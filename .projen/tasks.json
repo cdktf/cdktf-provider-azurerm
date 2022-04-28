@@ -128,7 +128,10 @@
       },
       "steps": [
         {
-          "exec": "mkdir -p src && rm -rf ./src/* && cdktf get && cp -R .gen/providers/azurerm/* ./src/"
+          "exec": "mkdir -p src && rm -rf ./src/* && cdktf get && cp -R .gen/providers/azurerm/* ./src/ && cp .gen/versions.json ./src/version.json"
+        },
+        {
+          "spawn": "default"
         }
       ]
     },
