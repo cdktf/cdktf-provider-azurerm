@@ -32,6 +32,13 @@ export interface MediaStreamingEndpointConfig extends cdktf.TerraformMetaArgumen
   */
   readonly description?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint#id MediaStreamingEndpoint#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint#location MediaStreamingEndpoint#location}
   */
   readonly location: string;
@@ -105,6 +112,130 @@ export function mediaStreamingEndpointAccessControlAkamaiSignatureHeaderAuthenti
   }
 }
 
+export class MediaStreamingEndpointAccessControlAkamaiSignatureHeaderAuthenticationKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MediaStreamingEndpointAccessControlAkamaiSignatureHeaderAuthenticationKey | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._base64Key !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.base64Key = this._base64Key;
+    }
+    if (this._expiration !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.expiration = this._expiration;
+    }
+    if (this._identifier !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.identifier = this._identifier;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaStreamingEndpointAccessControlAkamaiSignatureHeaderAuthenticationKey | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._base64Key = undefined;
+      this._expiration = undefined;
+      this._identifier = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._base64Key = value.base64Key;
+      this._expiration = value.expiration;
+      this._identifier = value.identifier;
+    }
+  }
+
+  // base64_key - computed: false, optional: true, required: false
+  private _base64Key?: string; 
+  public get base64Key() {
+    return this.getStringAttribute('base64_key');
+  }
+  public set base64Key(value: string) {
+    this._base64Key = value;
+  }
+  public resetBase64Key() {
+    this._base64Key = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get base64KeyInput() {
+    return this._base64Key;
+  }
+
+  // expiration - computed: false, optional: true, required: false
+  private _expiration?: string; 
+  public get expiration() {
+    return this.getStringAttribute('expiration');
+  }
+  public set expiration(value: string) {
+    this._expiration = value;
+  }
+  public resetExpiration() {
+    this._expiration = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get expirationInput() {
+    return this._expiration;
+  }
+
+  // identifier - computed: false, optional: true, required: false
+  private _identifier?: string; 
+  public get identifier() {
+    return this.getStringAttribute('identifier');
+  }
+  public set identifier(value: string) {
+    this._identifier = value;
+  }
+  public resetIdentifier() {
+    this._identifier = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identifierInput() {
+    return this._identifier;
+  }
+}
+
+export class MediaStreamingEndpointAccessControlAkamaiSignatureHeaderAuthenticationKeyList extends cdktf.ComplexList {
+  public internalValue? : MediaStreamingEndpointAccessControlAkamaiSignatureHeaderAuthenticationKey[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MediaStreamingEndpointAccessControlAkamaiSignatureHeaderAuthenticationKeyOutputReference {
+    return new MediaStreamingEndpointAccessControlAkamaiSignatureHeaderAuthenticationKeyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface MediaStreamingEndpointAccessControlIpAllow {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint#address MediaStreamingEndpoint#address}
@@ -132,6 +263,130 @@ export function mediaStreamingEndpointAccessControlIpAllowToTerraform(struct?: M
   }
 }
 
+export class MediaStreamingEndpointAccessControlIpAllowOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MediaStreamingEndpointAccessControlIpAllow | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._address !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.address = this._address;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._subnetPrefixLength !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.subnetPrefixLength = this._subnetPrefixLength;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaStreamingEndpointAccessControlIpAllow | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._address = undefined;
+      this._name = undefined;
+      this._subnetPrefixLength = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._address = value.address;
+      this._name = value.name;
+      this._subnetPrefixLength = value.subnetPrefixLength;
+    }
+  }
+
+  // address - computed: false, optional: true, required: false
+  private _address?: string; 
+  public get address() {
+    return this.getStringAttribute('address');
+  }
+  public set address(value: string) {
+    this._address = value;
+  }
+  public resetAddress() {
+    this._address = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get addressInput() {
+    return this._address;
+  }
+
+  // name - computed: false, optional: true, required: false
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // subnet_prefix_length - computed: false, optional: true, required: false
+  private _subnetPrefixLength?: number; 
+  public get subnetPrefixLength() {
+    return this.getNumberAttribute('subnet_prefix_length');
+  }
+  public set subnetPrefixLength(value: number) {
+    this._subnetPrefixLength = value;
+  }
+  public resetSubnetPrefixLength() {
+    this._subnetPrefixLength = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetPrefixLengthInput() {
+    return this._subnetPrefixLength;
+  }
+}
+
+export class MediaStreamingEndpointAccessControlIpAllowList extends cdktf.ComplexList {
+  public internalValue? : MediaStreamingEndpointAccessControlIpAllow[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MediaStreamingEndpointAccessControlIpAllowOutputReference {
+    return new MediaStreamingEndpointAccessControlIpAllowOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface MediaStreamingEndpointAccessControl {
   /**
   * akamai_signature_header_authentication_key block
@@ -172,13 +427,13 @@ export class MediaStreamingEndpointAccessControlOutputReference extends cdktf.Co
   public get internalValue(): MediaStreamingEndpointAccessControl | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._akamaiSignatureHeaderAuthenticationKey !== undefined) {
+    if (this._akamaiSignatureHeaderAuthenticationKey?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.akamaiSignatureHeaderAuthenticationKey = this._akamaiSignatureHeaderAuthenticationKey;
+      internalValueResult.akamaiSignatureHeaderAuthenticationKey = this._akamaiSignatureHeaderAuthenticationKey?.internalValue;
     }
-    if (this._ipAllow !== undefined) {
+    if (this._ipAllow?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.ipAllow = this._ipAllow;
+      internalValueResult.ipAllow = this._ipAllow?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -186,48 +441,46 @@ export class MediaStreamingEndpointAccessControlOutputReference extends cdktf.Co
   public set internalValue(value: MediaStreamingEndpointAccessControl | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
-      this._akamaiSignatureHeaderAuthenticationKey = undefined;
-      this._ipAllow = undefined;
+      this._akamaiSignatureHeaderAuthenticationKey.internalValue = undefined;
+      this._ipAllow.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
-      this._akamaiSignatureHeaderAuthenticationKey = value.akamaiSignatureHeaderAuthenticationKey;
-      this._ipAllow = value.ipAllow;
+      this._akamaiSignatureHeaderAuthenticationKey.internalValue = value.akamaiSignatureHeaderAuthenticationKey;
+      this._ipAllow.internalValue = value.ipAllow;
     }
   }
 
   // akamai_signature_header_authentication_key - computed: false, optional: true, required: false
-  private _akamaiSignatureHeaderAuthenticationKey?: MediaStreamingEndpointAccessControlAkamaiSignatureHeaderAuthenticationKey[] | cdktf.IResolvable; 
+  private _akamaiSignatureHeaderAuthenticationKey = new MediaStreamingEndpointAccessControlAkamaiSignatureHeaderAuthenticationKeyList(this, "akamai_signature_header_authentication_key", false);
   public get akamaiSignatureHeaderAuthenticationKey() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('akamai_signature_header_authentication_key');
+    return this._akamaiSignatureHeaderAuthenticationKey;
   }
-  public set akamaiSignatureHeaderAuthenticationKey(value: MediaStreamingEndpointAccessControlAkamaiSignatureHeaderAuthenticationKey[] | cdktf.IResolvable) {
-    this._akamaiSignatureHeaderAuthenticationKey = value;
+  public putAkamaiSignatureHeaderAuthenticationKey(value: MediaStreamingEndpointAccessControlAkamaiSignatureHeaderAuthenticationKey[] | cdktf.IResolvable) {
+    this._akamaiSignatureHeaderAuthenticationKey.internalValue = value;
   }
   public resetAkamaiSignatureHeaderAuthenticationKey() {
-    this._akamaiSignatureHeaderAuthenticationKey = undefined;
+    this._akamaiSignatureHeaderAuthenticationKey.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get akamaiSignatureHeaderAuthenticationKeyInput() {
-    return this._akamaiSignatureHeaderAuthenticationKey;
+    return this._akamaiSignatureHeaderAuthenticationKey.internalValue;
   }
 
   // ip_allow - computed: false, optional: true, required: false
-  private _ipAllow?: MediaStreamingEndpointAccessControlIpAllow[] | cdktf.IResolvable; 
+  private _ipAllow = new MediaStreamingEndpointAccessControlIpAllowList(this, "ip_allow", false);
   public get ipAllow() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('ip_allow');
+    return this._ipAllow;
   }
-  public set ipAllow(value: MediaStreamingEndpointAccessControlIpAllow[] | cdktf.IResolvable) {
-    this._ipAllow = value;
+  public putIpAllow(value: MediaStreamingEndpointAccessControlIpAllow[] | cdktf.IResolvable) {
+    this._ipAllow.internalValue = value;
   }
   public resetIpAllow() {
-    this._ipAllow = undefined;
+    this._ipAllow.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get ipAllowInput() {
-    return this._ipAllow;
+    return this._ipAllow.internalValue;
   }
 }
 export interface MediaStreamingEndpointCrossSiteAccessPolicy {
@@ -356,6 +609,7 @@ export function mediaStreamingEndpointTimeoutsToTerraform(struct?: MediaStreamin
 
 export class MediaStreamingEndpointTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -365,7 +619,10 @@ export class MediaStreamingEndpointTimeoutsOutputReference extends cdktf.Complex
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): MediaStreamingEndpointTimeouts | undefined {
+  public get internalValue(): MediaStreamingEndpointTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -387,16 +644,22 @@ export class MediaStreamingEndpointTimeoutsOutputReference extends cdktf.Complex
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: MediaStreamingEndpointTimeouts | undefined) {
+  public set internalValue(value: MediaStreamingEndpointTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -509,6 +772,7 @@ export class MediaStreamingEndpoint extends cdktf.TerraformResource {
     this._cdnProvider = config.cdnProvider;
     this._customHostNames = config.customHostNames;
     this._description = config.description;
+    this._id = config.id;
     this._location = config.location;
     this._maxCacheAgeSeconds = config.maxCacheAgeSeconds;
     this._mediaServicesAccountName = config.mediaServicesAccountName;
@@ -627,8 +891,19 @@ export class MediaStreamingEndpoint extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // location - computed: false, optional: false, required: true
@@ -788,6 +1063,7 @@ export class MediaStreamingEndpoint extends cdktf.TerraformResource {
       cdn_provider: cdktf.stringToTerraform(this._cdnProvider),
       custom_host_names: cdktf.listMapper(cdktf.stringToTerraform)(this._customHostNames),
       description: cdktf.stringToTerraform(this._description),
+      id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       max_cache_age_seconds: cdktf.numberToTerraform(this._maxCacheAgeSeconds),
       media_services_account_name: cdktf.stringToTerraform(this._mediaServicesAccountName),

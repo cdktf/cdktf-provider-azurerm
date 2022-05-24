@@ -16,6 +16,13 @@ export interface MonitorAadDiagnosticSettingConfig extends cdktf.TerraformMetaAr
   */
   readonly eventhubName?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_aad_diagnostic_setting#id MonitorAadDiagnosticSetting#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_aad_diagnostic_setting#log_analytics_workspace_id MonitorAadDiagnosticSetting#log_analytics_workspace_id}
   */
   readonly logAnalyticsWorkspaceId?: string;
@@ -161,6 +168,124 @@ export function monitorAadDiagnosticSettingLogToTerraform(struct?: MonitorAadDia
   }
 }
 
+export class MonitorAadDiagnosticSettingLogOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MonitorAadDiagnosticSettingLog | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._category !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.category = this._category;
+    }
+    if (this._enabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._retentionPolicy?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.retentionPolicy = this._retentionPolicy?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitorAadDiagnosticSettingLog | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._category = undefined;
+      this._enabled = undefined;
+      this._retentionPolicy.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._category = value.category;
+      this._enabled = value.enabled;
+      this._retentionPolicy.internalValue = value.retentionPolicy;
+    }
+  }
+
+  // category - computed: false, optional: false, required: true
+  private _category?: string; 
+  public get category() {
+    return this.getStringAttribute('category');
+  }
+  public set category(value: string) {
+    this._category = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get categoryInput() {
+    return this._category;
+  }
+
+  // enabled - computed: false, optional: true, required: false
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+
+  // retention_policy - computed: false, optional: false, required: true
+  private _retentionPolicy = new MonitorAadDiagnosticSettingLogRetentionPolicyOutputReference(this, "retention_policy");
+  public get retentionPolicy() {
+    return this._retentionPolicy;
+  }
+  public putRetentionPolicy(value: MonitorAadDiagnosticSettingLogRetentionPolicy) {
+    this._retentionPolicy.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get retentionPolicyInput() {
+    return this._retentionPolicy.internalValue;
+  }
+}
+
+export class MonitorAadDiagnosticSettingLogList extends cdktf.ComplexList {
+  public internalValue? : MonitorAadDiagnosticSettingLog[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MonitorAadDiagnosticSettingLogOutputReference {
+    return new MonitorAadDiagnosticSettingLogOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface MonitorAadDiagnosticSettingTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_aad_diagnostic_setting#create MonitorAadDiagnosticSetting#create}
@@ -195,6 +320,7 @@ export function monitorAadDiagnosticSettingTimeoutsToTerraform(struct?: MonitorA
 
 export class MonitorAadDiagnosticSettingTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -204,7 +330,10 @@ export class MonitorAadDiagnosticSettingTimeoutsOutputReference extends cdktf.Co
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): MonitorAadDiagnosticSettingTimeouts | undefined {
+  public get internalValue(): MonitorAadDiagnosticSettingTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -226,16 +355,22 @@ export class MonitorAadDiagnosticSettingTimeoutsOutputReference extends cdktf.Co
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: MonitorAadDiagnosticSettingTimeouts | undefined) {
+  public set internalValue(value: MonitorAadDiagnosticSettingTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -344,10 +479,11 @@ export class MonitorAadDiagnosticSetting extends cdktf.TerraformResource {
     });
     this._eventhubAuthorizationRuleId = config.eventhubAuthorizationRuleId;
     this._eventhubName = config.eventhubName;
+    this._id = config.id;
     this._logAnalyticsWorkspaceId = config.logAnalyticsWorkspaceId;
     this._name = config.name;
     this._storageAccountId = config.storageAccountId;
-    this._log = config.log;
+    this._log.internalValue = config.log;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -388,8 +524,19 @@ export class MonitorAadDiagnosticSetting extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // log_analytics_workspace_id - computed: false, optional: true, required: false
@@ -438,17 +585,16 @@ export class MonitorAadDiagnosticSetting extends cdktf.TerraformResource {
   }
 
   // log - computed: false, optional: false, required: true
-  private _log?: MonitorAadDiagnosticSettingLog[] | cdktf.IResolvable; 
+  private _log = new MonitorAadDiagnosticSettingLogList(this, "log", true);
   public get log() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('log')));
+    return this._log;
   }
-  public set log(value: MonitorAadDiagnosticSettingLog[] | cdktf.IResolvable) {
-    this._log = value;
+  public putLog(value: MonitorAadDiagnosticSettingLog[] | cdktf.IResolvable) {
+    this._log.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get logInput() {
-    return this._log;
+    return this._log.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -475,10 +621,11 @@ export class MonitorAadDiagnosticSetting extends cdktf.TerraformResource {
     return {
       eventhub_authorization_rule_id: cdktf.stringToTerraform(this._eventhubAuthorizationRuleId),
       eventhub_name: cdktf.stringToTerraform(this._eventhubName),
+      id: cdktf.stringToTerraform(this._id),
       log_analytics_workspace_id: cdktf.stringToTerraform(this._logAnalyticsWorkspaceId),
       name: cdktf.stringToTerraform(this._name),
       storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
-      log: cdktf.listMapper(monitorAadDiagnosticSettingLogToTerraform)(this._log),
+      log: cdktf.listMapper(monitorAadDiagnosticSettingLogToTerraform)(this._log.internalValue),
       timeouts: monitorAadDiagnosticSettingTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

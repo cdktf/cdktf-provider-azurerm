@@ -40,6 +40,13 @@ export interface KubernetesClusterConfig extends cdktf.TerraformMetaArguments {
   */
   readonly httpApplicationRoutingEnabled?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#id KubernetesCluster#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#kubernetes_version KubernetesCluster#kubernetes_version}
   */
   readonly kubernetesVersion?: string;
@@ -656,6 +663,14 @@ export class KubernetesClusterAddonProfileAzureKeyvaultSecretsProviderOutputRefe
       hasAnyValues = true;
       internalValueResult.enabled = this._enabled;
     }
+    if (this._secretRotationEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.secretRotationEnabled = this._secretRotationEnabled;
+    }
+    if (this._secretRotationInterval !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.secretRotationInterval = this._secretRotationInterval;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -990,6 +1005,14 @@ export class KubernetesClusterAddonProfileIngressApplicationGatewayOutputReferen
     if (this._gatewayName !== undefined) {
       hasAnyValues = true;
       internalValueResult.gatewayName = this._gatewayName;
+    }
+    if (this._subnetCidr !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.subnetCidr = this._subnetCidr;
+    }
+    if (this._subnetId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.subnetId = this._subnetId;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -4921,6 +4944,14 @@ export class KubernetesClusterIngressApplicationGatewayOutputReference extends c
       hasAnyValues = true;
       internalValueResult.gatewayName = this._gatewayName;
     }
+    if (this._subnetCidr !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.subnetCidr = this._subnetCidr;
+    }
+    if (this._subnetId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.subnetId = this._subnetId;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -5126,6 +5157,14 @@ export class KubernetesClusterKeyVaultSecretsProviderOutputReference extends cdk
   public get internalValue(): KubernetesClusterKeyVaultSecretsProvider | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._secretRotationEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.secretRotationEnabled = this._secretRotationEnabled;
+    }
+    if (this._secretRotationInterval !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.secretRotationInterval = this._secretRotationInterval;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -5471,6 +5510,102 @@ export function kubernetesClusterMaintenanceWindowAllowedToTerraform(struct?: Ku
   }
 }
 
+export class KubernetesClusterMaintenanceWindowAllowedOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): KubernetesClusterMaintenanceWindowAllowed | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._day !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.day = this._day;
+    }
+    if (this._hours !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.hours = this._hours;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesClusterMaintenanceWindowAllowed | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._day = undefined;
+      this._hours = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._day = value.day;
+      this._hours = value.hours;
+    }
+  }
+
+  // day - computed: false, optional: false, required: true
+  private _day?: string; 
+  public get day() {
+    return this.getStringAttribute('day');
+  }
+  public set day(value: string) {
+    this._day = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dayInput() {
+    return this._day;
+  }
+
+  // hours - computed: false, optional: false, required: true
+  private _hours?: number[]; 
+  public get hours() {
+    return cdktf.Token.asNumberList(cdktf.Fn.tolist(this.getNumberListAttribute('hours')));
+  }
+  public set hours(value: number[]) {
+    this._hours = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hoursInput() {
+    return this._hours;
+  }
+}
+
+export class KubernetesClusterMaintenanceWindowAllowedList extends cdktf.ComplexList {
+  public internalValue? : KubernetesClusterMaintenanceWindowAllowed[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): KubernetesClusterMaintenanceWindowAllowedOutputReference {
+    return new KubernetesClusterMaintenanceWindowAllowedOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface KubernetesClusterMaintenanceWindowNotAllowed {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#end KubernetesCluster#end}
@@ -5493,6 +5628,102 @@ export function kubernetesClusterMaintenanceWindowNotAllowedToTerraform(struct?:
   }
 }
 
+export class KubernetesClusterMaintenanceWindowNotAllowedOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): KubernetesClusterMaintenanceWindowNotAllowed | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._end !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.end = this._end;
+    }
+    if (this._start !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.start = this._start;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesClusterMaintenanceWindowNotAllowed | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._end = undefined;
+      this._start = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._end = value.end;
+      this._start = value.start;
+    }
+  }
+
+  // end - computed: false, optional: false, required: true
+  private _end?: string; 
+  public get end() {
+    return this.getStringAttribute('end');
+  }
+  public set end(value: string) {
+    this._end = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get endInput() {
+    return this._end;
+  }
+
+  // start - computed: false, optional: false, required: true
+  private _start?: string; 
+  public get start() {
+    return this.getStringAttribute('start');
+  }
+  public set start(value: string) {
+    this._start = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get startInput() {
+    return this._start;
+  }
+}
+
+export class KubernetesClusterMaintenanceWindowNotAllowedList extends cdktf.ComplexList {
+  public internalValue? : KubernetesClusterMaintenanceWindowNotAllowed[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): KubernetesClusterMaintenanceWindowNotAllowedOutputReference {
+    return new KubernetesClusterMaintenanceWindowNotAllowedOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface KubernetesClusterMaintenanceWindow {
   /**
   * allowed block
@@ -5533,13 +5764,13 @@ export class KubernetesClusterMaintenanceWindowOutputReference extends cdktf.Com
   public get internalValue(): KubernetesClusterMaintenanceWindow | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._allowed !== undefined) {
+    if (this._allowed?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.allowed = this._allowed;
+      internalValueResult.allowed = this._allowed?.internalValue;
     }
-    if (this._notAllowed !== undefined) {
+    if (this._notAllowed?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.notAllowed = this._notAllowed;
+      internalValueResult.notAllowed = this._notAllowed?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -5547,48 +5778,46 @@ export class KubernetesClusterMaintenanceWindowOutputReference extends cdktf.Com
   public set internalValue(value: KubernetesClusterMaintenanceWindow | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
-      this._allowed = undefined;
-      this._notAllowed = undefined;
+      this._allowed.internalValue = undefined;
+      this._notAllowed.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
-      this._allowed = value.allowed;
-      this._notAllowed = value.notAllowed;
+      this._allowed.internalValue = value.allowed;
+      this._notAllowed.internalValue = value.notAllowed;
     }
   }
 
   // allowed - computed: false, optional: true, required: false
-  private _allowed?: KubernetesClusterMaintenanceWindowAllowed[] | cdktf.IResolvable; 
+  private _allowed = new KubernetesClusterMaintenanceWindowAllowedList(this, "allowed", true);
   public get allowed() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('allowed')));
+    return this._allowed;
   }
-  public set allowed(value: KubernetesClusterMaintenanceWindowAllowed[] | cdktf.IResolvable) {
-    this._allowed = value;
+  public putAllowed(value: KubernetesClusterMaintenanceWindowAllowed[] | cdktf.IResolvable) {
+    this._allowed.internalValue = value;
   }
   public resetAllowed() {
-    this._allowed = undefined;
+    this._allowed.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get allowedInput() {
-    return this._allowed;
+    return this._allowed.internalValue;
   }
 
   // not_allowed - computed: false, optional: true, required: false
-  private _notAllowed?: KubernetesClusterMaintenanceWindowNotAllowed[] | cdktf.IResolvable; 
+  private _notAllowed = new KubernetesClusterMaintenanceWindowNotAllowedList(this, "not_allowed", true);
   public get notAllowed() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('not_allowed')));
+    return this._notAllowed;
   }
-  public set notAllowed(value: KubernetesClusterMaintenanceWindowNotAllowed[] | cdktf.IResolvable) {
-    this._notAllowed = value;
+  public putNotAllowed(value: KubernetesClusterMaintenanceWindowNotAllowed[] | cdktf.IResolvable) {
+    this._notAllowed.internalValue = value;
   }
   public resetNotAllowed() {
-    this._notAllowed = undefined;
+    this._notAllowed.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get notAllowedInput() {
-    return this._notAllowed;
+    return this._notAllowed.internalValue;
   }
 }
 export interface KubernetesClusterNetworkProfileLoadBalancerProfile {
@@ -6782,6 +7011,7 @@ export function kubernetesClusterTimeoutsToTerraform(struct?: KubernetesClusterT
 
 export class KubernetesClusterTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -6791,7 +7021,10 @@ export class KubernetesClusterTimeoutsOutputReference extends cdktf.ComplexObjec
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): KubernetesClusterTimeouts | undefined {
+  public get internalValue(): KubernetesClusterTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -6813,16 +7046,22 @@ export class KubernetesClusterTimeoutsOutputReference extends cdktf.ComplexObjec
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: KubernetesClusterTimeouts | undefined) {
+  public set internalValue(value: KubernetesClusterTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -7053,6 +7292,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
     this._dnsPrefixPrivateCluster = config.dnsPrefixPrivateCluster;
     this._enablePodSecurityPolicy = config.enablePodSecurityPolicy;
     this._httpApplicationRoutingEnabled = config.httpApplicationRoutingEnabled;
+    this._id = config.id;
     this._kubernetesVersion = config.kubernetesVersion;
     this._localAccountDisabled = config.localAccountDisabled;
     this._location = config.location;
@@ -7231,8 +7471,19 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // kube_admin_config - computed: true, optional: false, required: false
@@ -7797,6 +8048,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
       dns_prefix_private_cluster: cdktf.stringToTerraform(this._dnsPrefixPrivateCluster),
       enable_pod_security_policy: cdktf.booleanToTerraform(this._enablePodSecurityPolicy),
       http_application_routing_enabled: cdktf.booleanToTerraform(this._httpApplicationRoutingEnabled),
+      id: cdktf.stringToTerraform(this._id),
       kubernetes_version: cdktf.stringToTerraform(this._kubernetesVersion),
       local_account_disabled: cdktf.booleanToTerraform(this._localAccountDisabled),
       location: cdktf.stringToTerraform(this._location),

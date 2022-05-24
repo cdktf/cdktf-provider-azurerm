@@ -24,6 +24,13 @@ export interface MonitorScheduledQueryRulesLogConfig extends cdktf.TerraformMeta
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_scheduled_query_rules_log#id MonitorScheduledQueryRulesLog#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_scheduled_query_rules_log#location MonitorScheduledQueryRulesLog#location}
   */
   readonly location: string;
@@ -79,6 +86,124 @@ export function monitorScheduledQueryRulesLogCriteriaDimensionToTerraform(struct
   }
 }
 
+export class MonitorScheduledQueryRulesLogCriteriaDimensionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MonitorScheduledQueryRulesLogCriteriaDimension | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._operator !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.operator = this._operator;
+    }
+    if (this._values !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.values = this._values;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitorScheduledQueryRulesLogCriteriaDimension | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._operator = undefined;
+      this._values = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._operator = value.operator;
+      this._values = value.values;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // operator - computed: false, optional: true, required: false
+  private _operator?: string; 
+  public get operator() {
+    return this.getStringAttribute('operator');
+  }
+  public set operator(value: string) {
+    this._operator = value;
+  }
+  public resetOperator() {
+    this._operator = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get operatorInput() {
+    return this._operator;
+  }
+
+  // values - computed: false, optional: false, required: true
+  private _values?: string[]; 
+  public get values() {
+    return this.getListAttribute('values');
+  }
+  public set values(value: string[]) {
+    this._values = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valuesInput() {
+    return this._values;
+  }
+}
+
+export class MonitorScheduledQueryRulesLogCriteriaDimensionList extends cdktf.ComplexList {
+  public internalValue? : MonitorScheduledQueryRulesLogCriteriaDimension[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MonitorScheduledQueryRulesLogCriteriaDimensionOutputReference {
+    return new MonitorScheduledQueryRulesLogCriteriaDimensionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface MonitorScheduledQueryRulesLogCriteria {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_scheduled_query_rules_log#metric_name MonitorScheduledQueryRulesLog#metric_name}
@@ -121,9 +246,9 @@ export class MonitorScheduledQueryRulesLogCriteriaOutputReference extends cdktf.
       hasAnyValues = true;
       internalValueResult.metricName = this._metricName;
     }
-    if (this._dimension !== undefined) {
+    if (this._dimension?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.dimension = this._dimension;
+      internalValueResult.dimension = this._dimension?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -132,12 +257,12 @@ export class MonitorScheduledQueryRulesLogCriteriaOutputReference extends cdktf.
     if (value === undefined) {
       this.isEmptyObject = false;
       this._metricName = undefined;
-      this._dimension = undefined;
+      this._dimension.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._metricName = value.metricName;
-      this._dimension = value.dimension;
+      this._dimension.internalValue = value.dimension;
     }
   }
 
@@ -155,17 +280,16 @@ export class MonitorScheduledQueryRulesLogCriteriaOutputReference extends cdktf.
   }
 
   // dimension - computed: false, optional: false, required: true
-  private _dimension?: MonitorScheduledQueryRulesLogCriteriaDimension[] | cdktf.IResolvable; 
+  private _dimension = new MonitorScheduledQueryRulesLogCriteriaDimensionList(this, "dimension", true);
   public get dimension() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('dimension')));
+    return this._dimension;
   }
-  public set dimension(value: MonitorScheduledQueryRulesLogCriteriaDimension[] | cdktf.IResolvable) {
-    this._dimension = value;
+  public putDimension(value: MonitorScheduledQueryRulesLogCriteriaDimension[] | cdktf.IResolvable) {
+    this._dimension.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get dimensionInput() {
-    return this._dimension;
+    return this._dimension.internalValue;
   }
 }
 export interface MonitorScheduledQueryRulesLogTimeouts {
@@ -202,6 +326,7 @@ export function monitorScheduledQueryRulesLogTimeoutsToTerraform(struct?: Monito
 
 export class MonitorScheduledQueryRulesLogTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -211,7 +336,10 @@ export class MonitorScheduledQueryRulesLogTimeoutsOutputReference extends cdktf.
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): MonitorScheduledQueryRulesLogTimeouts | undefined {
+  public get internalValue(): MonitorScheduledQueryRulesLogTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -233,16 +361,22 @@ export class MonitorScheduledQueryRulesLogTimeoutsOutputReference extends cdktf.
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: MonitorScheduledQueryRulesLogTimeouts | undefined) {
+  public set internalValue(value: MonitorScheduledQueryRulesLogTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -353,6 +487,7 @@ export class MonitorScheduledQueryRulesLog extends cdktf.TerraformResource {
     this._dataSourceId = config.dataSourceId;
     this._description = config.description;
     this._enabled = config.enabled;
+    this._id = config.id;
     this._location = config.location;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
@@ -427,8 +562,19 @@ export class MonitorScheduledQueryRulesLog extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // location - computed: false, optional: false, required: true
@@ -525,6 +671,7 @@ export class MonitorScheduledQueryRulesLog extends cdktf.TerraformResource {
       data_source_id: cdktf.stringToTerraform(this._dataSourceId),
       description: cdktf.stringToTerraform(this._description),
       enabled: cdktf.booleanToTerraform(this._enabled),
+      id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),

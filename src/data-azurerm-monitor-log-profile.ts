@@ -8,6 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermMonitorLogProfileConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_log_profile#id DataAzurermMonitorLogProfile#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_log_profile#name DataAzurermMonitorLogProfile#name}
   */
   readonly name: string;
@@ -106,6 +113,7 @@ export function dataAzurermMonitorLogProfileTimeoutsToTerraform(struct?: DataAzu
 
 export class DataAzurermMonitorLogProfileTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -115,7 +123,10 @@ export class DataAzurermMonitorLogProfileTimeoutsOutputReference extends cdktf.C
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): DataAzurermMonitorLogProfileTimeouts | undefined {
+  public get internalValue(): DataAzurermMonitorLogProfileTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._read !== undefined) {
@@ -125,13 +136,19 @@ export class DataAzurermMonitorLogProfileTimeoutsOutputReference extends cdktf.C
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: DataAzurermMonitorLogProfileTimeouts | undefined) {
+  public set internalValue(value: DataAzurermMonitorLogProfileTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._read = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._read = value.read;
     }
   }
@@ -187,6 +204,7 @@ export class DataAzurermMonitorLogProfile extends cdktf.TerraformDataSource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._id = config.id;
     this._name = config.name;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -201,8 +219,19 @@ export class DataAzurermMonitorLogProfile extends cdktf.TerraformDataSource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // locations - computed: true, optional: false, required: false
@@ -261,6 +290,7 @@ export class DataAzurermMonitorLogProfile extends cdktf.TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       timeouts: dataAzurermMonitorLogProfileTimeoutsToTerraform(this._timeouts.internalValue),
     };

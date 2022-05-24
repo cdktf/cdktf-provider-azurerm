@@ -8,6 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface NatGatewayPublicIpAssociationConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/nat_gateway_public_ip_association#id NatGatewayPublicIpAssociation#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/nat_gateway_public_ip_association#nat_gateway_id NatGatewayPublicIpAssociation#nat_gateway_id}
   */
   readonly natGatewayId: string;
@@ -51,6 +58,7 @@ export function natGatewayPublicIpAssociationTimeoutsToTerraform(struct?: NatGat
 
 export class NatGatewayPublicIpAssociationTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -60,7 +68,10 @@ export class NatGatewayPublicIpAssociationTimeoutsOutputReference extends cdktf.
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): NatGatewayPublicIpAssociationTimeouts | undefined {
+  public get internalValue(): NatGatewayPublicIpAssociationTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -78,15 +89,21 @@ export class NatGatewayPublicIpAssociationTimeoutsOutputReference extends cdktf.
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: NatGatewayPublicIpAssociationTimeouts | undefined) {
+  public set internalValue(value: NatGatewayPublicIpAssociationTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -176,6 +193,7 @@ export class NatGatewayPublicIpAssociation extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._id = config.id;
     this._natGatewayId = config.natGatewayId;
     this._publicIpAddressId = config.publicIpAddressId;
     this._timeouts.internalValue = config.timeouts;
@@ -186,8 +204,19 @@ export class NatGatewayPublicIpAssociation extends cdktf.TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // nat_gateway_id - computed: false, optional: false, required: true
@@ -238,6 +267,7 @@ export class NatGatewayPublicIpAssociation extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      id: cdktf.stringToTerraform(this._id),
       nat_gateway_id: cdktf.stringToTerraform(this._natGatewayId),
       public_ip_address_id: cdktf.stringToTerraform(this._publicIpAddressId),
       timeouts: natGatewayPublicIpAssociationTimeoutsToTerraform(this._timeouts.internalValue),

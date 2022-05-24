@@ -24,6 +24,13 @@ export interface ApplicationGatewayConfig extends cdktf.TerraformMetaArguments {
   */
   readonly forceFirewallPolicyAssociation?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway#id ApplicationGateway#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway#location ApplicationGateway#location}
   */
   readonly location: string;
@@ -279,6 +286,107 @@ export function applicationGatewayAuthenticationCertificateToTerraform(struct?: 
   }
 }
 
+export class ApplicationGatewayAuthenticationCertificateOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ApplicationGatewayAuthenticationCertificate | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._data !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.data = this._data;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApplicationGatewayAuthenticationCertificate | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._data = undefined;
+      this._name = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._data = value.data;
+      this._name = value.name;
+    }
+  }
+
+  // data - computed: false, optional: false, required: true
+  private _data?: string; 
+  public get data() {
+    return this.getStringAttribute('data');
+  }
+  public set data(value: string) {
+    this._data = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataInput() {
+    return this._data;
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+}
+
+export class ApplicationGatewayAuthenticationCertificateList extends cdktf.ComplexList {
+  public internalValue? : ApplicationGatewayAuthenticationCertificate[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ApplicationGatewayAuthenticationCertificateOutputReference {
+    return new ApplicationGatewayAuthenticationCertificateOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ApplicationGatewayAutoscaleConfiguration {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway#max_capacity ApplicationGateway#max_capacity}
@@ -395,6 +503,132 @@ export function applicationGatewayBackendAddressPoolToTerraform(struct?: Applica
   }
 }
 
+export class ApplicationGatewayBackendAddressPoolOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ApplicationGatewayBackendAddressPool | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._fqdns !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.fqdns = this._fqdns;
+    }
+    if (this._ipAddresses !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ipAddresses = this._ipAddresses;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApplicationGatewayBackendAddressPool | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._fqdns = undefined;
+      this._ipAddresses = undefined;
+      this._name = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._fqdns = value.fqdns;
+      this._ipAddresses = value.ipAddresses;
+      this._name = value.name;
+    }
+  }
+
+  // fqdns - computed: false, optional: true, required: false
+  private _fqdns?: string[]; 
+  public get fqdns() {
+    return this.getListAttribute('fqdns');
+  }
+  public set fqdns(value: string[]) {
+    this._fqdns = value;
+  }
+  public resetFqdns() {
+    this._fqdns = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fqdnsInput() {
+    return this._fqdns;
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // ip_addresses - computed: false, optional: true, required: false
+  private _ipAddresses?: string[]; 
+  public get ipAddresses() {
+    return this.getListAttribute('ip_addresses');
+  }
+  public set ipAddresses(value: string[]) {
+    this._ipAddresses = value;
+  }
+  public resetIpAddresses() {
+    this._ipAddresses = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipAddressesInput() {
+    return this._ipAddresses;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+}
+
+export class ApplicationGatewayBackendAddressPoolList extends cdktf.ComplexList {
+  public internalValue? : ApplicationGatewayBackendAddressPool[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ApplicationGatewayBackendAddressPoolOutputReference {
+    return new ApplicationGatewayBackendAddressPoolOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ApplicationGatewayBackendHttpSettingsAuthenticationCertificate {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway#name ApplicationGateway#name}
@@ -412,6 +646,88 @@ export function applicationGatewayBackendHttpSettingsAuthenticationCertificateTo
   }
 }
 
+export class ApplicationGatewayBackendHttpSettingsAuthenticationCertificateOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ApplicationGatewayBackendHttpSettingsAuthenticationCertificate | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApplicationGatewayBackendHttpSettingsAuthenticationCertificate | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+    }
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+}
+
+export class ApplicationGatewayBackendHttpSettingsAuthenticationCertificateList extends cdktf.ComplexList {
+  public internalValue? : ApplicationGatewayBackendHttpSettingsAuthenticationCertificate[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ApplicationGatewayBackendHttpSettingsAuthenticationCertificateOutputReference {
+    return new ApplicationGatewayBackendHttpSettingsAuthenticationCertificateOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ApplicationGatewayBackendHttpSettingsConnectionDraining {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway#drain_timeout_sec ApplicationGateway#drain_timeout_sec}
@@ -579,6 +895,348 @@ export function applicationGatewayBackendHttpSettingsToTerraform(struct?: Applic
   }
 }
 
+export class ApplicationGatewayBackendHttpSettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ApplicationGatewayBackendHttpSettings | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._affinityCookieName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.affinityCookieName = this._affinityCookieName;
+    }
+    if (this._cookieBasedAffinity !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.cookieBasedAffinity = this._cookieBasedAffinity;
+    }
+    if (this._hostName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.hostName = this._hostName;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._path !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.path = this._path;
+    }
+    if (this._pickHostNameFromBackendAddress !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.pickHostNameFromBackendAddress = this._pickHostNameFromBackendAddress;
+    }
+    if (this._port !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.port = this._port;
+    }
+    if (this._probeName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.probeName = this._probeName;
+    }
+    if (this._protocol !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.protocol = this._protocol;
+    }
+    if (this._requestTimeout !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.requestTimeout = this._requestTimeout;
+    }
+    if (this._trustedRootCertificateNames !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.trustedRootCertificateNames = this._trustedRootCertificateNames;
+    }
+    if (this._authenticationCertificate?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.authenticationCertificate = this._authenticationCertificate?.internalValue;
+    }
+    if (this._connectionDraining?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.connectionDraining = this._connectionDraining?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApplicationGatewayBackendHttpSettings | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._affinityCookieName = undefined;
+      this._cookieBasedAffinity = undefined;
+      this._hostName = undefined;
+      this._name = undefined;
+      this._path = undefined;
+      this._pickHostNameFromBackendAddress = undefined;
+      this._port = undefined;
+      this._probeName = undefined;
+      this._protocol = undefined;
+      this._requestTimeout = undefined;
+      this._trustedRootCertificateNames = undefined;
+      this._authenticationCertificate.internalValue = undefined;
+      this._connectionDraining.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._affinityCookieName = value.affinityCookieName;
+      this._cookieBasedAffinity = value.cookieBasedAffinity;
+      this._hostName = value.hostName;
+      this._name = value.name;
+      this._path = value.path;
+      this._pickHostNameFromBackendAddress = value.pickHostNameFromBackendAddress;
+      this._port = value.port;
+      this._probeName = value.probeName;
+      this._protocol = value.protocol;
+      this._requestTimeout = value.requestTimeout;
+      this._trustedRootCertificateNames = value.trustedRootCertificateNames;
+      this._authenticationCertificate.internalValue = value.authenticationCertificate;
+      this._connectionDraining.internalValue = value.connectionDraining;
+    }
+  }
+
+  // affinity_cookie_name - computed: false, optional: true, required: false
+  private _affinityCookieName?: string; 
+  public get affinityCookieName() {
+    return this.getStringAttribute('affinity_cookie_name');
+  }
+  public set affinityCookieName(value: string) {
+    this._affinityCookieName = value;
+  }
+  public resetAffinityCookieName() {
+    this._affinityCookieName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get affinityCookieNameInput() {
+    return this._affinityCookieName;
+  }
+
+  // cookie_based_affinity - computed: false, optional: false, required: true
+  private _cookieBasedAffinity?: string; 
+  public get cookieBasedAffinity() {
+    return this.getStringAttribute('cookie_based_affinity');
+  }
+  public set cookieBasedAffinity(value: string) {
+    this._cookieBasedAffinity = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cookieBasedAffinityInput() {
+    return this._cookieBasedAffinity;
+  }
+
+  // host_name - computed: false, optional: true, required: false
+  private _hostName?: string; 
+  public get hostName() {
+    return this.getStringAttribute('host_name');
+  }
+  public set hostName(value: string) {
+    this._hostName = value;
+  }
+  public resetHostName() {
+    this._hostName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hostNameInput() {
+    return this._hostName;
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // path - computed: false, optional: true, required: false
+  private _path?: string; 
+  public get path() {
+    return this.getStringAttribute('path');
+  }
+  public set path(value: string) {
+    this._path = value;
+  }
+  public resetPath() {
+    this._path = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathInput() {
+    return this._path;
+  }
+
+  // pick_host_name_from_backend_address - computed: false, optional: true, required: false
+  private _pickHostNameFromBackendAddress?: boolean | cdktf.IResolvable; 
+  public get pickHostNameFromBackendAddress() {
+    return this.getBooleanAttribute('pick_host_name_from_backend_address');
+  }
+  public set pickHostNameFromBackendAddress(value: boolean | cdktf.IResolvable) {
+    this._pickHostNameFromBackendAddress = value;
+  }
+  public resetPickHostNameFromBackendAddress() {
+    this._pickHostNameFromBackendAddress = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pickHostNameFromBackendAddressInput() {
+    return this._pickHostNameFromBackendAddress;
+  }
+
+  // port - computed: false, optional: false, required: true
+  private _port?: number; 
+  public get port() {
+    return this.getNumberAttribute('port');
+  }
+  public set port(value: number) {
+    this._port = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get portInput() {
+    return this._port;
+  }
+
+  // probe_id - computed: true, optional: false, required: false
+  public get probeId() {
+    return this.getStringAttribute('probe_id');
+  }
+
+  // probe_name - computed: false, optional: true, required: false
+  private _probeName?: string; 
+  public get probeName() {
+    return this.getStringAttribute('probe_name');
+  }
+  public set probeName(value: string) {
+    this._probeName = value;
+  }
+  public resetProbeName() {
+    this._probeName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get probeNameInput() {
+    return this._probeName;
+  }
+
+  // protocol - computed: false, optional: false, required: true
+  private _protocol?: string; 
+  public get protocol() {
+    return this.getStringAttribute('protocol');
+  }
+  public set protocol(value: string) {
+    this._protocol = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get protocolInput() {
+    return this._protocol;
+  }
+
+  // request_timeout - computed: false, optional: true, required: false
+  private _requestTimeout?: number; 
+  public get requestTimeout() {
+    return this.getNumberAttribute('request_timeout');
+  }
+  public set requestTimeout(value: number) {
+    this._requestTimeout = value;
+  }
+  public resetRequestTimeout() {
+    this._requestTimeout = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requestTimeoutInput() {
+    return this._requestTimeout;
+  }
+
+  // trusted_root_certificate_names - computed: false, optional: true, required: false
+  private _trustedRootCertificateNames?: string[]; 
+  public get trustedRootCertificateNames() {
+    return this.getListAttribute('trusted_root_certificate_names');
+  }
+  public set trustedRootCertificateNames(value: string[]) {
+    this._trustedRootCertificateNames = value;
+  }
+  public resetTrustedRootCertificateNames() {
+    this._trustedRootCertificateNames = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get trustedRootCertificateNamesInput() {
+    return this._trustedRootCertificateNames;
+  }
+
+  // authentication_certificate - computed: false, optional: true, required: false
+  private _authenticationCertificate = new ApplicationGatewayBackendHttpSettingsAuthenticationCertificateList(this, "authentication_certificate", false);
+  public get authenticationCertificate() {
+    return this._authenticationCertificate;
+  }
+  public putAuthenticationCertificate(value: ApplicationGatewayBackendHttpSettingsAuthenticationCertificate[] | cdktf.IResolvable) {
+    this._authenticationCertificate.internalValue = value;
+  }
+  public resetAuthenticationCertificate() {
+    this._authenticationCertificate.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get authenticationCertificateInput() {
+    return this._authenticationCertificate.internalValue;
+  }
+
+  // connection_draining - computed: false, optional: true, required: false
+  private _connectionDraining = new ApplicationGatewayBackendHttpSettingsConnectionDrainingOutputReference(this, "connection_draining");
+  public get connectionDraining() {
+    return this._connectionDraining;
+  }
+  public putConnectionDraining(value: ApplicationGatewayBackendHttpSettingsConnectionDraining) {
+    this._connectionDraining.internalValue = value;
+  }
+  public resetConnectionDraining() {
+    this._connectionDraining.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get connectionDrainingInput() {
+    return this._connectionDraining.internalValue;
+  }
+}
+
+export class ApplicationGatewayBackendHttpSettingsList extends cdktf.ComplexList {
+  public internalValue? : ApplicationGatewayBackendHttpSettings[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ApplicationGatewayBackendHttpSettingsOutputReference {
+    return new ApplicationGatewayBackendHttpSettingsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ApplicationGatewayCustomErrorConfiguration {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway#custom_error_page_url ApplicationGateway#custom_error_page_url}
@@ -601,6 +1259,107 @@ export function applicationGatewayCustomErrorConfigurationToTerraform(struct?: A
   }
 }
 
+export class ApplicationGatewayCustomErrorConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ApplicationGatewayCustomErrorConfiguration | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._customErrorPageUrl !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.customErrorPageUrl = this._customErrorPageUrl;
+    }
+    if (this._statusCode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.statusCode = this._statusCode;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApplicationGatewayCustomErrorConfiguration | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._customErrorPageUrl = undefined;
+      this._statusCode = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._customErrorPageUrl = value.customErrorPageUrl;
+      this._statusCode = value.statusCode;
+    }
+  }
+
+  // custom_error_page_url - computed: false, optional: false, required: true
+  private _customErrorPageUrl?: string; 
+  public get customErrorPageUrl() {
+    return this.getStringAttribute('custom_error_page_url');
+  }
+  public set customErrorPageUrl(value: string) {
+    this._customErrorPageUrl = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customErrorPageUrlInput() {
+    return this._customErrorPageUrl;
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // status_code - computed: false, optional: false, required: true
+  private _statusCode?: string; 
+  public get statusCode() {
+    return this.getStringAttribute('status_code');
+  }
+  public set statusCode(value: string) {
+    this._statusCode = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get statusCodeInput() {
+    return this._statusCode;
+  }
+}
+
+export class ApplicationGatewayCustomErrorConfigurationList extends cdktf.ComplexList {
+  public internalValue? : ApplicationGatewayCustomErrorConfiguration[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ApplicationGatewayCustomErrorConfigurationOutputReference {
+    return new ApplicationGatewayCustomErrorConfigurationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ApplicationGatewayFrontendIpConfiguration {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway#name ApplicationGateway#name}
@@ -643,6 +1402,203 @@ export function applicationGatewayFrontendIpConfigurationToTerraform(struct?: Ap
   }
 }
 
+export class ApplicationGatewayFrontendIpConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ApplicationGatewayFrontendIpConfiguration | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._privateIpAddress !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.privateIpAddress = this._privateIpAddress;
+    }
+    if (this._privateIpAddressAllocation !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.privateIpAddressAllocation = this._privateIpAddressAllocation;
+    }
+    if (this._privateLinkConfigurationName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.privateLinkConfigurationName = this._privateLinkConfigurationName;
+    }
+    if (this._publicIpAddressId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.publicIpAddressId = this._publicIpAddressId;
+    }
+    if (this._subnetId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.subnetId = this._subnetId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApplicationGatewayFrontendIpConfiguration | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._privateIpAddress = undefined;
+      this._privateIpAddressAllocation = undefined;
+      this._privateLinkConfigurationName = undefined;
+      this._publicIpAddressId = undefined;
+      this._subnetId = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._privateIpAddress = value.privateIpAddress;
+      this._privateIpAddressAllocation = value.privateIpAddressAllocation;
+      this._privateLinkConfigurationName = value.privateLinkConfigurationName;
+      this._publicIpAddressId = value.publicIpAddressId;
+      this._subnetId = value.subnetId;
+    }
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // private_ip_address - computed: true, optional: true, required: false
+  private _privateIpAddress?: string; 
+  public get privateIpAddress() {
+    return this.getStringAttribute('private_ip_address');
+  }
+  public set privateIpAddress(value: string) {
+    this._privateIpAddress = value;
+  }
+  public resetPrivateIpAddress() {
+    this._privateIpAddress = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateIpAddressInput() {
+    return this._privateIpAddress;
+  }
+
+  // private_ip_address_allocation - computed: true, optional: true, required: false
+  private _privateIpAddressAllocation?: string; 
+  public get privateIpAddressAllocation() {
+    return this.getStringAttribute('private_ip_address_allocation');
+  }
+  public set privateIpAddressAllocation(value: string) {
+    this._privateIpAddressAllocation = value;
+  }
+  public resetPrivateIpAddressAllocation() {
+    this._privateIpAddressAllocation = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateIpAddressAllocationInput() {
+    return this._privateIpAddressAllocation;
+  }
+
+  // private_link_configuration_id - computed: true, optional: false, required: false
+  public get privateLinkConfigurationId() {
+    return this.getStringAttribute('private_link_configuration_id');
+  }
+
+  // private_link_configuration_name - computed: false, optional: true, required: false
+  private _privateLinkConfigurationName?: string; 
+  public get privateLinkConfigurationName() {
+    return this.getStringAttribute('private_link_configuration_name');
+  }
+  public set privateLinkConfigurationName(value: string) {
+    this._privateLinkConfigurationName = value;
+  }
+  public resetPrivateLinkConfigurationName() {
+    this._privateLinkConfigurationName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateLinkConfigurationNameInput() {
+    return this._privateLinkConfigurationName;
+  }
+
+  // public_ip_address_id - computed: true, optional: true, required: false
+  private _publicIpAddressId?: string; 
+  public get publicIpAddressId() {
+    return this.getStringAttribute('public_ip_address_id');
+  }
+  public set publicIpAddressId(value: string) {
+    this._publicIpAddressId = value;
+  }
+  public resetPublicIpAddressId() {
+    this._publicIpAddressId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicIpAddressIdInput() {
+    return this._publicIpAddressId;
+  }
+
+  // subnet_id - computed: true, optional: true, required: false
+  private _subnetId?: string; 
+  public get subnetId() {
+    return this.getStringAttribute('subnet_id');
+  }
+  public set subnetId(value: string) {
+    this._subnetId = value;
+  }
+  public resetSubnetId() {
+    this._subnetId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetIdInput() {
+    return this._subnetId;
+  }
+}
+
+export class ApplicationGatewayFrontendIpConfigurationList extends cdktf.ComplexList {
+  public internalValue? : ApplicationGatewayFrontendIpConfiguration[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ApplicationGatewayFrontendIpConfigurationOutputReference {
+    return new ApplicationGatewayFrontendIpConfigurationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ApplicationGatewayFrontendPort {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway#name ApplicationGateway#name}
@@ -665,6 +1621,107 @@ export function applicationGatewayFrontendPortToTerraform(struct?: ApplicationGa
   }
 }
 
+export class ApplicationGatewayFrontendPortOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ApplicationGatewayFrontendPort | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._port !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.port = this._port;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApplicationGatewayFrontendPort | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._port = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._port = value.port;
+    }
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // port - computed: false, optional: false, required: true
+  private _port?: number; 
+  public get port() {
+    return this.getNumberAttribute('port');
+  }
+  public set port(value: number) {
+    this._port = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get portInput() {
+    return this._port;
+  }
+}
+
+export class ApplicationGatewayFrontendPortList extends cdktf.ComplexList {
+  public internalValue? : ApplicationGatewayFrontendPort[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ApplicationGatewayFrontendPortOutputReference {
+    return new ApplicationGatewayFrontendPortOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ApplicationGatewayGatewayIpConfiguration {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway#name ApplicationGateway#name}
@@ -687,6 +1744,107 @@ export function applicationGatewayGatewayIpConfigurationToTerraform(struct?: App
   }
 }
 
+export class ApplicationGatewayGatewayIpConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ApplicationGatewayGatewayIpConfiguration | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._subnetId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.subnetId = this._subnetId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApplicationGatewayGatewayIpConfiguration | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._subnetId = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._subnetId = value.subnetId;
+    }
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // subnet_id - computed: false, optional: false, required: true
+  private _subnetId?: string; 
+  public get subnetId() {
+    return this.getStringAttribute('subnet_id');
+  }
+  public set subnetId(value: string) {
+    this._subnetId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetIdInput() {
+    return this._subnetId;
+  }
+}
+
+export class ApplicationGatewayGatewayIpConfigurationList extends cdktf.ComplexList {
+  public internalValue? : ApplicationGatewayGatewayIpConfiguration[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ApplicationGatewayGatewayIpConfigurationOutputReference {
+    return new ApplicationGatewayGatewayIpConfigurationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ApplicationGatewayHttpListenerCustomErrorConfiguration {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway#custom_error_page_url ApplicationGateway#custom_error_page_url}
@@ -709,6 +1867,107 @@ export function applicationGatewayHttpListenerCustomErrorConfigurationToTerrafor
   }
 }
 
+export class ApplicationGatewayHttpListenerCustomErrorConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ApplicationGatewayHttpListenerCustomErrorConfiguration | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._customErrorPageUrl !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.customErrorPageUrl = this._customErrorPageUrl;
+    }
+    if (this._statusCode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.statusCode = this._statusCode;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApplicationGatewayHttpListenerCustomErrorConfiguration | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._customErrorPageUrl = undefined;
+      this._statusCode = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._customErrorPageUrl = value.customErrorPageUrl;
+      this._statusCode = value.statusCode;
+    }
+  }
+
+  // custom_error_page_url - computed: false, optional: false, required: true
+  private _customErrorPageUrl?: string; 
+  public get customErrorPageUrl() {
+    return this.getStringAttribute('custom_error_page_url');
+  }
+  public set customErrorPageUrl(value: string) {
+    this._customErrorPageUrl = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customErrorPageUrlInput() {
+    return this._customErrorPageUrl;
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // status_code - computed: false, optional: false, required: true
+  private _statusCode?: string; 
+  public get statusCode() {
+    return this.getStringAttribute('status_code');
+  }
+  public set statusCode(value: string) {
+    this._statusCode = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get statusCodeInput() {
+    return this._statusCode;
+  }
+}
+
+export class ApplicationGatewayHttpListenerCustomErrorConfigurationList extends cdktf.ComplexList {
+  public internalValue? : ApplicationGatewayHttpListenerCustomErrorConfiguration[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ApplicationGatewayHttpListenerCustomErrorConfigurationOutputReference {
+    return new ApplicationGatewayHttpListenerCustomErrorConfigurationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ApplicationGatewayHttpListener {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway#firewall_policy_id ApplicationGateway#firewall_policy_id}
@@ -778,6 +2037,319 @@ export function applicationGatewayHttpListenerToTerraform(struct?: ApplicationGa
   }
 }
 
+export class ApplicationGatewayHttpListenerOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ApplicationGatewayHttpListener | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._firewallPolicyId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.firewallPolicyId = this._firewallPolicyId;
+    }
+    if (this._frontendIpConfigurationName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.frontendIpConfigurationName = this._frontendIpConfigurationName;
+    }
+    if (this._frontendPortName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.frontendPortName = this._frontendPortName;
+    }
+    if (this._hostName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.hostName = this._hostName;
+    }
+    if (this._hostNames !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.hostNames = this._hostNames;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._protocol !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.protocol = this._protocol;
+    }
+    if (this._requireSni !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.requireSni = this._requireSni;
+    }
+    if (this._sslCertificateName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sslCertificateName = this._sslCertificateName;
+    }
+    if (this._sslProfileName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sslProfileName = this._sslProfileName;
+    }
+    if (this._customErrorConfiguration?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.customErrorConfiguration = this._customErrorConfiguration?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApplicationGatewayHttpListener | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._firewallPolicyId = undefined;
+      this._frontendIpConfigurationName = undefined;
+      this._frontendPortName = undefined;
+      this._hostName = undefined;
+      this._hostNames = undefined;
+      this._name = undefined;
+      this._protocol = undefined;
+      this._requireSni = undefined;
+      this._sslCertificateName = undefined;
+      this._sslProfileName = undefined;
+      this._customErrorConfiguration.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._firewallPolicyId = value.firewallPolicyId;
+      this._frontendIpConfigurationName = value.frontendIpConfigurationName;
+      this._frontendPortName = value.frontendPortName;
+      this._hostName = value.hostName;
+      this._hostNames = value.hostNames;
+      this._name = value.name;
+      this._protocol = value.protocol;
+      this._requireSni = value.requireSni;
+      this._sslCertificateName = value.sslCertificateName;
+      this._sslProfileName = value.sslProfileName;
+      this._customErrorConfiguration.internalValue = value.customErrorConfiguration;
+    }
+  }
+
+  // firewall_policy_id - computed: false, optional: true, required: false
+  private _firewallPolicyId?: string; 
+  public get firewallPolicyId() {
+    return this.getStringAttribute('firewall_policy_id');
+  }
+  public set firewallPolicyId(value: string) {
+    this._firewallPolicyId = value;
+  }
+  public resetFirewallPolicyId() {
+    this._firewallPolicyId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get firewallPolicyIdInput() {
+    return this._firewallPolicyId;
+  }
+
+  // frontend_ip_configuration_id - computed: true, optional: false, required: false
+  public get frontendIpConfigurationId() {
+    return this.getStringAttribute('frontend_ip_configuration_id');
+  }
+
+  // frontend_ip_configuration_name - computed: false, optional: false, required: true
+  private _frontendIpConfigurationName?: string; 
+  public get frontendIpConfigurationName() {
+    return this.getStringAttribute('frontend_ip_configuration_name');
+  }
+  public set frontendIpConfigurationName(value: string) {
+    this._frontendIpConfigurationName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get frontendIpConfigurationNameInput() {
+    return this._frontendIpConfigurationName;
+  }
+
+  // frontend_port_id - computed: true, optional: false, required: false
+  public get frontendPortId() {
+    return this.getStringAttribute('frontend_port_id');
+  }
+
+  // frontend_port_name - computed: false, optional: false, required: true
+  private _frontendPortName?: string; 
+  public get frontendPortName() {
+    return this.getStringAttribute('frontend_port_name');
+  }
+  public set frontendPortName(value: string) {
+    this._frontendPortName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get frontendPortNameInput() {
+    return this._frontendPortName;
+  }
+
+  // host_name - computed: false, optional: true, required: false
+  private _hostName?: string; 
+  public get hostName() {
+    return this.getStringAttribute('host_name');
+  }
+  public set hostName(value: string) {
+    this._hostName = value;
+  }
+  public resetHostName() {
+    this._hostName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hostNameInput() {
+    return this._hostName;
+  }
+
+  // host_names - computed: false, optional: true, required: false
+  private _hostNames?: string[]; 
+  public get hostNames() {
+    return cdktf.Fn.tolist(this.getListAttribute('host_names'));
+  }
+  public set hostNames(value: string[]) {
+    this._hostNames = value;
+  }
+  public resetHostNames() {
+    this._hostNames = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hostNamesInput() {
+    return this._hostNames;
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // protocol - computed: false, optional: false, required: true
+  private _protocol?: string; 
+  public get protocol() {
+    return this.getStringAttribute('protocol');
+  }
+  public set protocol(value: string) {
+    this._protocol = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get protocolInput() {
+    return this._protocol;
+  }
+
+  // require_sni - computed: false, optional: true, required: false
+  private _requireSni?: boolean | cdktf.IResolvable; 
+  public get requireSni() {
+    return this.getBooleanAttribute('require_sni');
+  }
+  public set requireSni(value: boolean | cdktf.IResolvable) {
+    this._requireSni = value;
+  }
+  public resetRequireSni() {
+    this._requireSni = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requireSniInput() {
+    return this._requireSni;
+  }
+
+  // ssl_certificate_id - computed: true, optional: false, required: false
+  public get sslCertificateId() {
+    return this.getStringAttribute('ssl_certificate_id');
+  }
+
+  // ssl_certificate_name - computed: false, optional: true, required: false
+  private _sslCertificateName?: string; 
+  public get sslCertificateName() {
+    return this.getStringAttribute('ssl_certificate_name');
+  }
+  public set sslCertificateName(value: string) {
+    this._sslCertificateName = value;
+  }
+  public resetSslCertificateName() {
+    this._sslCertificateName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sslCertificateNameInput() {
+    return this._sslCertificateName;
+  }
+
+  // ssl_profile_id - computed: true, optional: false, required: false
+  public get sslProfileId() {
+    return this.getStringAttribute('ssl_profile_id');
+  }
+
+  // ssl_profile_name - computed: false, optional: true, required: false
+  private _sslProfileName?: string; 
+  public get sslProfileName() {
+    return this.getStringAttribute('ssl_profile_name');
+  }
+  public set sslProfileName(value: string) {
+    this._sslProfileName = value;
+  }
+  public resetSslProfileName() {
+    this._sslProfileName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sslProfileNameInput() {
+    return this._sslProfileName;
+  }
+
+  // custom_error_configuration - computed: false, optional: true, required: false
+  private _customErrorConfiguration = new ApplicationGatewayHttpListenerCustomErrorConfigurationList(this, "custom_error_configuration", false);
+  public get customErrorConfiguration() {
+    return this._customErrorConfiguration;
+  }
+  public putCustomErrorConfiguration(value: ApplicationGatewayHttpListenerCustomErrorConfiguration[] | cdktf.IResolvable) {
+    this._customErrorConfiguration.internalValue = value;
+  }
+  public resetCustomErrorConfiguration() {
+    this._customErrorConfiguration.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customErrorConfigurationInput() {
+    return this._customErrorConfiguration.internalValue;
+  }
+}
+
+export class ApplicationGatewayHttpListenerList extends cdktf.ComplexList {
+  public internalValue? : ApplicationGatewayHttpListener[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ApplicationGatewayHttpListenerOutputReference {
+    return new ApplicationGatewayHttpListenerOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ApplicationGatewayIdentity {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway#identity_ids ApplicationGateway#identity_ids}
@@ -901,6 +2473,162 @@ export function applicationGatewayPrivateLinkConfigurationIpConfigurationToTerra
   }
 }
 
+export class ApplicationGatewayPrivateLinkConfigurationIpConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ApplicationGatewayPrivateLinkConfigurationIpConfiguration | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._primary !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.primary = this._primary;
+    }
+    if (this._privateIpAddress !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.privateIpAddress = this._privateIpAddress;
+    }
+    if (this._privateIpAddressAllocation !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.privateIpAddressAllocation = this._privateIpAddressAllocation;
+    }
+    if (this._subnetId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.subnetId = this._subnetId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApplicationGatewayPrivateLinkConfigurationIpConfiguration | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._primary = undefined;
+      this._privateIpAddress = undefined;
+      this._privateIpAddressAllocation = undefined;
+      this._subnetId = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._primary = value.primary;
+      this._privateIpAddress = value.privateIpAddress;
+      this._privateIpAddressAllocation = value.privateIpAddressAllocation;
+      this._subnetId = value.subnetId;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // primary - computed: false, optional: false, required: true
+  private _primary?: boolean | cdktf.IResolvable; 
+  public get primary() {
+    return this.getBooleanAttribute('primary');
+  }
+  public set primary(value: boolean | cdktf.IResolvable) {
+    this._primary = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get primaryInput() {
+    return this._primary;
+  }
+
+  // private_ip_address - computed: true, optional: true, required: false
+  private _privateIpAddress?: string; 
+  public get privateIpAddress() {
+    return this.getStringAttribute('private_ip_address');
+  }
+  public set privateIpAddress(value: string) {
+    this._privateIpAddress = value;
+  }
+  public resetPrivateIpAddress() {
+    this._privateIpAddress = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateIpAddressInput() {
+    return this._privateIpAddress;
+  }
+
+  // private_ip_address_allocation - computed: false, optional: false, required: true
+  private _privateIpAddressAllocation?: string; 
+  public get privateIpAddressAllocation() {
+    return this.getStringAttribute('private_ip_address_allocation');
+  }
+  public set privateIpAddressAllocation(value: string) {
+    this._privateIpAddressAllocation = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateIpAddressAllocationInput() {
+    return this._privateIpAddressAllocation;
+  }
+
+  // subnet_id - computed: false, optional: false, required: true
+  private _subnetId?: string; 
+  public get subnetId() {
+    return this.getStringAttribute('subnet_id');
+  }
+  public set subnetId(value: string) {
+    this._subnetId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetIdInput() {
+    return this._subnetId;
+  }
+}
+
+export class ApplicationGatewayPrivateLinkConfigurationIpConfigurationList extends cdktf.ComplexList {
+  public internalValue? : ApplicationGatewayPrivateLinkConfigurationIpConfiguration[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ApplicationGatewayPrivateLinkConfigurationIpConfigurationOutputReference {
+    return new ApplicationGatewayPrivateLinkConfigurationIpConfigurationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ApplicationGatewayPrivateLinkConfiguration {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway#name ApplicationGateway#name}
@@ -925,6 +2653,107 @@ export function applicationGatewayPrivateLinkConfigurationToTerraform(struct?: A
   }
 }
 
+export class ApplicationGatewayPrivateLinkConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ApplicationGatewayPrivateLinkConfiguration | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._ipConfiguration?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ipConfiguration = this._ipConfiguration?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApplicationGatewayPrivateLinkConfiguration | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._ipConfiguration.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._ipConfiguration.internalValue = value.ipConfiguration;
+    }
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // ip_configuration - computed: false, optional: false, required: true
+  private _ipConfiguration = new ApplicationGatewayPrivateLinkConfigurationIpConfigurationList(this, "ip_configuration", false);
+  public get ipConfiguration() {
+    return this._ipConfiguration;
+  }
+  public putIpConfiguration(value: ApplicationGatewayPrivateLinkConfigurationIpConfiguration[] | cdktf.IResolvable) {
+    this._ipConfiguration.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipConfigurationInput() {
+    return this._ipConfiguration.internalValue;
+  }
+}
+
+export class ApplicationGatewayPrivateLinkConfigurationList extends cdktf.ComplexList {
+  public internalValue? : ApplicationGatewayPrivateLinkConfiguration[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ApplicationGatewayPrivateLinkConfigurationOutputReference {
+    return new ApplicationGatewayPrivateLinkConfigurationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ApplicationGatewayProbeMatch {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway#body ApplicationGateway#body}
@@ -1086,6 +2915,293 @@ export function applicationGatewayProbeToTerraform(struct?: ApplicationGatewayPr
   }
 }
 
+export class ApplicationGatewayProbeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ApplicationGatewayProbe | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._host !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.host = this._host;
+    }
+    if (this._interval !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.interval = this._interval;
+    }
+    if (this._minimumServers !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.minimumServers = this._minimumServers;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._path !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.path = this._path;
+    }
+    if (this._pickHostNameFromBackendHttpSettings !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.pickHostNameFromBackendHttpSettings = this._pickHostNameFromBackendHttpSettings;
+    }
+    if (this._port !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.port = this._port;
+    }
+    if (this._protocol !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.protocol = this._protocol;
+    }
+    if (this._timeout !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.timeout = this._timeout;
+    }
+    if (this._unhealthyThreshold !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.unhealthyThreshold = this._unhealthyThreshold;
+    }
+    if (this._match?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.match = this._match?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApplicationGatewayProbe | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._host = undefined;
+      this._interval = undefined;
+      this._minimumServers = undefined;
+      this._name = undefined;
+      this._path = undefined;
+      this._pickHostNameFromBackendHttpSettings = undefined;
+      this._port = undefined;
+      this._protocol = undefined;
+      this._timeout = undefined;
+      this._unhealthyThreshold = undefined;
+      this._match.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._host = value.host;
+      this._interval = value.interval;
+      this._minimumServers = value.minimumServers;
+      this._name = value.name;
+      this._path = value.path;
+      this._pickHostNameFromBackendHttpSettings = value.pickHostNameFromBackendHttpSettings;
+      this._port = value.port;
+      this._protocol = value.protocol;
+      this._timeout = value.timeout;
+      this._unhealthyThreshold = value.unhealthyThreshold;
+      this._match.internalValue = value.match;
+    }
+  }
+
+  // host - computed: false, optional: true, required: false
+  private _host?: string; 
+  public get host() {
+    return this.getStringAttribute('host');
+  }
+  public set host(value: string) {
+    this._host = value;
+  }
+  public resetHost() {
+    this._host = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hostInput() {
+    return this._host;
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // interval - computed: false, optional: false, required: true
+  private _interval?: number; 
+  public get interval() {
+    return this.getNumberAttribute('interval');
+  }
+  public set interval(value: number) {
+    this._interval = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get intervalInput() {
+    return this._interval;
+  }
+
+  // minimum_servers - computed: false, optional: true, required: false
+  private _minimumServers?: number; 
+  public get minimumServers() {
+    return this.getNumberAttribute('minimum_servers');
+  }
+  public set minimumServers(value: number) {
+    this._minimumServers = value;
+  }
+  public resetMinimumServers() {
+    this._minimumServers = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minimumServersInput() {
+    return this._minimumServers;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // path - computed: false, optional: false, required: true
+  private _path?: string; 
+  public get path() {
+    return this.getStringAttribute('path');
+  }
+  public set path(value: string) {
+    this._path = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathInput() {
+    return this._path;
+  }
+
+  // pick_host_name_from_backend_http_settings - computed: false, optional: true, required: false
+  private _pickHostNameFromBackendHttpSettings?: boolean | cdktf.IResolvable; 
+  public get pickHostNameFromBackendHttpSettings() {
+    return this.getBooleanAttribute('pick_host_name_from_backend_http_settings');
+  }
+  public set pickHostNameFromBackendHttpSettings(value: boolean | cdktf.IResolvable) {
+    this._pickHostNameFromBackendHttpSettings = value;
+  }
+  public resetPickHostNameFromBackendHttpSettings() {
+    this._pickHostNameFromBackendHttpSettings = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pickHostNameFromBackendHttpSettingsInput() {
+    return this._pickHostNameFromBackendHttpSettings;
+  }
+
+  // port - computed: false, optional: true, required: false
+  private _port?: number; 
+  public get port() {
+    return this.getNumberAttribute('port');
+  }
+  public set port(value: number) {
+    this._port = value;
+  }
+  public resetPort() {
+    this._port = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get portInput() {
+    return this._port;
+  }
+
+  // protocol - computed: false, optional: false, required: true
+  private _protocol?: string; 
+  public get protocol() {
+    return this.getStringAttribute('protocol');
+  }
+  public set protocol(value: string) {
+    this._protocol = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get protocolInput() {
+    return this._protocol;
+  }
+
+  // timeout - computed: false, optional: false, required: true
+  private _timeout?: number; 
+  public get timeout() {
+    return this.getNumberAttribute('timeout');
+  }
+  public set timeout(value: number) {
+    this._timeout = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutInput() {
+    return this._timeout;
+  }
+
+  // unhealthy_threshold - computed: false, optional: false, required: true
+  private _unhealthyThreshold?: number; 
+  public get unhealthyThreshold() {
+    return this.getNumberAttribute('unhealthy_threshold');
+  }
+  public set unhealthyThreshold(value: number) {
+    this._unhealthyThreshold = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get unhealthyThresholdInput() {
+    return this._unhealthyThreshold;
+  }
+
+  // match - computed: false, optional: true, required: false
+  private _match = new ApplicationGatewayProbeMatchOutputReference(this, "match");
+  public get match() {
+    return this._match;
+  }
+  public putMatch(value: ApplicationGatewayProbeMatch) {
+    this._match.internalValue = value;
+  }
+  public resetMatch() {
+    this._match.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get matchInput() {
+    return this._match.internalValue;
+  }
+}
+
+export class ApplicationGatewayProbeList extends cdktf.ComplexList {
+  public internalValue? : ApplicationGatewayProbe[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ApplicationGatewayProbeOutputReference {
+    return new ApplicationGatewayProbeOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ApplicationGatewayRedirectConfiguration {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway#include_path ApplicationGateway#include_path}
@@ -1128,6 +3244,200 @@ export function applicationGatewayRedirectConfigurationToTerraform(struct?: Appl
   }
 }
 
+export class ApplicationGatewayRedirectConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ApplicationGatewayRedirectConfiguration | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._includePath !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.includePath = this._includePath;
+    }
+    if (this._includeQueryString !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.includeQueryString = this._includeQueryString;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._redirectType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.redirectType = this._redirectType;
+    }
+    if (this._targetListenerName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.targetListenerName = this._targetListenerName;
+    }
+    if (this._targetUrl !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.targetUrl = this._targetUrl;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApplicationGatewayRedirectConfiguration | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._includePath = undefined;
+      this._includeQueryString = undefined;
+      this._name = undefined;
+      this._redirectType = undefined;
+      this._targetListenerName = undefined;
+      this._targetUrl = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._includePath = value.includePath;
+      this._includeQueryString = value.includeQueryString;
+      this._name = value.name;
+      this._redirectType = value.redirectType;
+      this._targetListenerName = value.targetListenerName;
+      this._targetUrl = value.targetUrl;
+    }
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // include_path - computed: false, optional: true, required: false
+  private _includePath?: boolean | cdktf.IResolvable; 
+  public get includePath() {
+    return this.getBooleanAttribute('include_path');
+  }
+  public set includePath(value: boolean | cdktf.IResolvable) {
+    this._includePath = value;
+  }
+  public resetIncludePath() {
+    this._includePath = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get includePathInput() {
+    return this._includePath;
+  }
+
+  // include_query_string - computed: false, optional: true, required: false
+  private _includeQueryString?: boolean | cdktf.IResolvable; 
+  public get includeQueryString() {
+    return this.getBooleanAttribute('include_query_string');
+  }
+  public set includeQueryString(value: boolean | cdktf.IResolvable) {
+    this._includeQueryString = value;
+  }
+  public resetIncludeQueryString() {
+    this._includeQueryString = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get includeQueryStringInput() {
+    return this._includeQueryString;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // redirect_type - computed: false, optional: false, required: true
+  private _redirectType?: string; 
+  public get redirectType() {
+    return this.getStringAttribute('redirect_type');
+  }
+  public set redirectType(value: string) {
+    this._redirectType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get redirectTypeInput() {
+    return this._redirectType;
+  }
+
+  // target_listener_id - computed: true, optional: false, required: false
+  public get targetListenerId() {
+    return this.getStringAttribute('target_listener_id');
+  }
+
+  // target_listener_name - computed: false, optional: true, required: false
+  private _targetListenerName?: string; 
+  public get targetListenerName() {
+    return this.getStringAttribute('target_listener_name');
+  }
+  public set targetListenerName(value: string) {
+    this._targetListenerName = value;
+  }
+  public resetTargetListenerName() {
+    this._targetListenerName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetListenerNameInput() {
+    return this._targetListenerName;
+  }
+
+  // target_url - computed: false, optional: true, required: false
+  private _targetUrl?: string; 
+  public get targetUrl() {
+    return this.getStringAttribute('target_url');
+  }
+  public set targetUrl(value: string) {
+    this._targetUrl = value;
+  }
+  public resetTargetUrl() {
+    this._targetUrl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetUrlInput() {
+    return this._targetUrl;
+  }
+}
+
+export class ApplicationGatewayRedirectConfigurationList extends cdktf.ComplexList {
+  public internalValue? : ApplicationGatewayRedirectConfiguration[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ApplicationGatewayRedirectConfigurationOutputReference {
+    return new ApplicationGatewayRedirectConfigurationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ApplicationGatewayRequestRoutingRule {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway#backend_address_pool_name ApplicationGateway#backend_address_pool_name}
@@ -1185,6 +3495,288 @@ export function applicationGatewayRequestRoutingRuleToTerraform(struct?: Applica
   }
 }
 
+export class ApplicationGatewayRequestRoutingRuleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ApplicationGatewayRequestRoutingRule | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._backendAddressPoolName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.backendAddressPoolName = this._backendAddressPoolName;
+    }
+    if (this._backendHttpSettingsName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.backendHttpSettingsName = this._backendHttpSettingsName;
+    }
+    if (this._httpListenerName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.httpListenerName = this._httpListenerName;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._priority !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.priority = this._priority;
+    }
+    if (this._redirectConfigurationName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.redirectConfigurationName = this._redirectConfigurationName;
+    }
+    if (this._rewriteRuleSetName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rewriteRuleSetName = this._rewriteRuleSetName;
+    }
+    if (this._ruleType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ruleType = this._ruleType;
+    }
+    if (this._urlPathMapName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.urlPathMapName = this._urlPathMapName;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApplicationGatewayRequestRoutingRule | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._backendAddressPoolName = undefined;
+      this._backendHttpSettingsName = undefined;
+      this._httpListenerName = undefined;
+      this._name = undefined;
+      this._priority = undefined;
+      this._redirectConfigurationName = undefined;
+      this._rewriteRuleSetName = undefined;
+      this._ruleType = undefined;
+      this._urlPathMapName = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._backendAddressPoolName = value.backendAddressPoolName;
+      this._backendHttpSettingsName = value.backendHttpSettingsName;
+      this._httpListenerName = value.httpListenerName;
+      this._name = value.name;
+      this._priority = value.priority;
+      this._redirectConfigurationName = value.redirectConfigurationName;
+      this._rewriteRuleSetName = value.rewriteRuleSetName;
+      this._ruleType = value.ruleType;
+      this._urlPathMapName = value.urlPathMapName;
+    }
+  }
+
+  // backend_address_pool_id - computed: true, optional: false, required: false
+  public get backendAddressPoolId() {
+    return this.getStringAttribute('backend_address_pool_id');
+  }
+
+  // backend_address_pool_name - computed: false, optional: true, required: false
+  private _backendAddressPoolName?: string; 
+  public get backendAddressPoolName() {
+    return this.getStringAttribute('backend_address_pool_name');
+  }
+  public set backendAddressPoolName(value: string) {
+    this._backendAddressPoolName = value;
+  }
+  public resetBackendAddressPoolName() {
+    this._backendAddressPoolName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get backendAddressPoolNameInput() {
+    return this._backendAddressPoolName;
+  }
+
+  // backend_http_settings_id - computed: true, optional: false, required: false
+  public get backendHttpSettingsId() {
+    return this.getStringAttribute('backend_http_settings_id');
+  }
+
+  // backend_http_settings_name - computed: false, optional: true, required: false
+  private _backendHttpSettingsName?: string; 
+  public get backendHttpSettingsName() {
+    return this.getStringAttribute('backend_http_settings_name');
+  }
+  public set backendHttpSettingsName(value: string) {
+    this._backendHttpSettingsName = value;
+  }
+  public resetBackendHttpSettingsName() {
+    this._backendHttpSettingsName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get backendHttpSettingsNameInput() {
+    return this._backendHttpSettingsName;
+  }
+
+  // http_listener_id - computed: true, optional: false, required: false
+  public get httpListenerId() {
+    return this.getStringAttribute('http_listener_id');
+  }
+
+  // http_listener_name - computed: false, optional: false, required: true
+  private _httpListenerName?: string; 
+  public get httpListenerName() {
+    return this.getStringAttribute('http_listener_name');
+  }
+  public set httpListenerName(value: string) {
+    this._httpListenerName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get httpListenerNameInput() {
+    return this._httpListenerName;
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // priority - computed: false, optional: true, required: false
+  private _priority?: number; 
+  public get priority() {
+    return this.getNumberAttribute('priority');
+  }
+  public set priority(value: number) {
+    this._priority = value;
+  }
+  public resetPriority() {
+    this._priority = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get priorityInput() {
+    return this._priority;
+  }
+
+  // redirect_configuration_id - computed: true, optional: false, required: false
+  public get redirectConfigurationId() {
+    return this.getStringAttribute('redirect_configuration_id');
+  }
+
+  // redirect_configuration_name - computed: false, optional: true, required: false
+  private _redirectConfigurationName?: string; 
+  public get redirectConfigurationName() {
+    return this.getStringAttribute('redirect_configuration_name');
+  }
+  public set redirectConfigurationName(value: string) {
+    this._redirectConfigurationName = value;
+  }
+  public resetRedirectConfigurationName() {
+    this._redirectConfigurationName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get redirectConfigurationNameInput() {
+    return this._redirectConfigurationName;
+  }
+
+  // rewrite_rule_set_id - computed: true, optional: false, required: false
+  public get rewriteRuleSetId() {
+    return this.getStringAttribute('rewrite_rule_set_id');
+  }
+
+  // rewrite_rule_set_name - computed: false, optional: true, required: false
+  private _rewriteRuleSetName?: string; 
+  public get rewriteRuleSetName() {
+    return this.getStringAttribute('rewrite_rule_set_name');
+  }
+  public set rewriteRuleSetName(value: string) {
+    this._rewriteRuleSetName = value;
+  }
+  public resetRewriteRuleSetName() {
+    this._rewriteRuleSetName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rewriteRuleSetNameInput() {
+    return this._rewriteRuleSetName;
+  }
+
+  // rule_type - computed: false, optional: false, required: true
+  private _ruleType?: string; 
+  public get ruleType() {
+    return this.getStringAttribute('rule_type');
+  }
+  public set ruleType(value: string) {
+    this._ruleType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ruleTypeInput() {
+    return this._ruleType;
+  }
+
+  // url_path_map_id - computed: true, optional: false, required: false
+  public get urlPathMapId() {
+    return this.getStringAttribute('url_path_map_id');
+  }
+
+  // url_path_map_name - computed: false, optional: true, required: false
+  private _urlPathMapName?: string; 
+  public get urlPathMapName() {
+    return this.getStringAttribute('url_path_map_name');
+  }
+  public set urlPathMapName(value: string) {
+    this._urlPathMapName = value;
+  }
+  public resetUrlPathMapName() {
+    this._urlPathMapName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get urlPathMapNameInput() {
+    return this._urlPathMapName;
+  }
+}
+
+export class ApplicationGatewayRequestRoutingRuleList extends cdktf.ComplexList {
+  public internalValue? : ApplicationGatewayRequestRoutingRule[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ApplicationGatewayRequestRoutingRuleOutputReference {
+    return new ApplicationGatewayRequestRoutingRuleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ApplicationGatewayRewriteRuleSetRewriteRuleCondition {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway#ignore_case ApplicationGateway#ignore_case}
@@ -1217,6 +3809,146 @@ export function applicationGatewayRewriteRuleSetRewriteRuleConditionToTerraform(
   }
 }
 
+export class ApplicationGatewayRewriteRuleSetRewriteRuleConditionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ApplicationGatewayRewriteRuleSetRewriteRuleCondition | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._ignoreCase !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ignoreCase = this._ignoreCase;
+    }
+    if (this._negate !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.negate = this._negate;
+    }
+    if (this._pattern !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.pattern = this._pattern;
+    }
+    if (this._variable !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.variable = this._variable;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApplicationGatewayRewriteRuleSetRewriteRuleCondition | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._ignoreCase = undefined;
+      this._negate = undefined;
+      this._pattern = undefined;
+      this._variable = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._ignoreCase = value.ignoreCase;
+      this._negate = value.negate;
+      this._pattern = value.pattern;
+      this._variable = value.variable;
+    }
+  }
+
+  // ignore_case - computed: false, optional: true, required: false
+  private _ignoreCase?: boolean | cdktf.IResolvable; 
+  public get ignoreCase() {
+    return this.getBooleanAttribute('ignore_case');
+  }
+  public set ignoreCase(value: boolean | cdktf.IResolvable) {
+    this._ignoreCase = value;
+  }
+  public resetIgnoreCase() {
+    this._ignoreCase = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ignoreCaseInput() {
+    return this._ignoreCase;
+  }
+
+  // negate - computed: false, optional: true, required: false
+  private _negate?: boolean | cdktf.IResolvable; 
+  public get negate() {
+    return this.getBooleanAttribute('negate');
+  }
+  public set negate(value: boolean | cdktf.IResolvable) {
+    this._negate = value;
+  }
+  public resetNegate() {
+    this._negate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get negateInput() {
+    return this._negate;
+  }
+
+  // pattern - computed: false, optional: false, required: true
+  private _pattern?: string; 
+  public get pattern() {
+    return this.getStringAttribute('pattern');
+  }
+  public set pattern(value: string) {
+    this._pattern = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get patternInput() {
+    return this._pattern;
+  }
+
+  // variable - computed: false, optional: false, required: true
+  private _variable?: string; 
+  public get variable() {
+    return this.getStringAttribute('variable');
+  }
+  public set variable(value: string) {
+    this._variable = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get variableInput() {
+    return this._variable;
+  }
+}
+
+export class ApplicationGatewayRewriteRuleSetRewriteRuleConditionList extends cdktf.ComplexList {
+  public internalValue? : ApplicationGatewayRewriteRuleSetRewriteRuleCondition[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ApplicationGatewayRewriteRuleSetRewriteRuleConditionOutputReference {
+    return new ApplicationGatewayRewriteRuleSetRewriteRuleConditionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway#header_name ApplicationGateway#header_name}
@@ -1239,6 +3971,102 @@ export function applicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfigur
   }
 }
 
+export class ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._headerName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headerName = this._headerName;
+    }
+    if (this._headerValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headerValue = this._headerValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._headerName = undefined;
+      this._headerValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._headerName = value.headerName;
+      this._headerValue = value.headerValue;
+    }
+  }
+
+  // header_name - computed: false, optional: false, required: true
+  private _headerName?: string; 
+  public get headerName() {
+    return this.getStringAttribute('header_name');
+  }
+  public set headerName(value: string) {
+    this._headerName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headerNameInput() {
+    return this._headerName;
+  }
+
+  // header_value - computed: false, optional: false, required: true
+  private _headerValue?: string; 
+  public get headerValue() {
+    return this.getStringAttribute('header_value');
+  }
+  public set headerValue(value: string) {
+    this._headerValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headerValueInput() {
+    return this._headerValue;
+  }
+}
+
+export class ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfigurationList extends cdktf.ComplexList {
+  public internalValue? : ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfigurationOutputReference {
+    return new ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfigurationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway#header_name ApplicationGateway#header_name}
@@ -1261,6 +4089,102 @@ export function applicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfigu
   }
 }
 
+export class ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._headerName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headerName = this._headerName;
+    }
+    if (this._headerValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headerValue = this._headerValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._headerName = undefined;
+      this._headerValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._headerName = value.headerName;
+      this._headerValue = value.headerValue;
+    }
+  }
+
+  // header_name - computed: false, optional: false, required: true
+  private _headerName?: string; 
+  public get headerName() {
+    return this.getStringAttribute('header_name');
+  }
+  public set headerName(value: string) {
+    this._headerName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headerNameInput() {
+    return this._headerName;
+  }
+
+  // header_value - computed: false, optional: false, required: true
+  private _headerValue?: string; 
+  public get headerValue() {
+    return this.getStringAttribute('header_value');
+  }
+  public set headerValue(value: string) {
+    this._headerValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headerValueInput() {
+    return this._headerValue;
+  }
+}
+
+export class ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfigurationList extends cdktf.ComplexList {
+  public internalValue? : ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfigurationOutputReference {
+    return new ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfigurationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ApplicationGatewayRewriteRuleSetRewriteRuleUrl {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway#path ApplicationGateway#path}
@@ -1430,6 +4354,190 @@ export function applicationGatewayRewriteRuleSetRewriteRuleToTerraform(struct?: 
   }
 }
 
+export class ApplicationGatewayRewriteRuleSetRewriteRuleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ApplicationGatewayRewriteRuleSetRewriteRule | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._ruleSequence !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ruleSequence = this._ruleSequence;
+    }
+    if (this._condition?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.condition = this._condition?.internalValue;
+    }
+    if (this._requestHeaderConfiguration?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.requestHeaderConfiguration = this._requestHeaderConfiguration?.internalValue;
+    }
+    if (this._responseHeaderConfiguration?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.responseHeaderConfiguration = this._responseHeaderConfiguration?.internalValue;
+    }
+    if (this._url?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.url = this._url?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApplicationGatewayRewriteRuleSetRewriteRule | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._ruleSequence = undefined;
+      this._condition.internalValue = undefined;
+      this._requestHeaderConfiguration.internalValue = undefined;
+      this._responseHeaderConfiguration.internalValue = undefined;
+      this._url.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._ruleSequence = value.ruleSequence;
+      this._condition.internalValue = value.condition;
+      this._requestHeaderConfiguration.internalValue = value.requestHeaderConfiguration;
+      this._responseHeaderConfiguration.internalValue = value.responseHeaderConfiguration;
+      this._url.internalValue = value.url;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // rule_sequence - computed: false, optional: false, required: true
+  private _ruleSequence?: number; 
+  public get ruleSequence() {
+    return this.getNumberAttribute('rule_sequence');
+  }
+  public set ruleSequence(value: number) {
+    this._ruleSequence = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ruleSequenceInput() {
+    return this._ruleSequence;
+  }
+
+  // condition - computed: false, optional: true, required: false
+  private _condition = new ApplicationGatewayRewriteRuleSetRewriteRuleConditionList(this, "condition", false);
+  public get condition() {
+    return this._condition;
+  }
+  public putCondition(value: ApplicationGatewayRewriteRuleSetRewriteRuleCondition[] | cdktf.IResolvable) {
+    this._condition.internalValue = value;
+  }
+  public resetCondition() {
+    this._condition.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get conditionInput() {
+    return this._condition.internalValue;
+  }
+
+  // request_header_configuration - computed: false, optional: true, required: false
+  private _requestHeaderConfiguration = new ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfigurationList(this, "request_header_configuration", false);
+  public get requestHeaderConfiguration() {
+    return this._requestHeaderConfiguration;
+  }
+  public putRequestHeaderConfiguration(value: ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration[] | cdktf.IResolvable) {
+    this._requestHeaderConfiguration.internalValue = value;
+  }
+  public resetRequestHeaderConfiguration() {
+    this._requestHeaderConfiguration.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requestHeaderConfigurationInput() {
+    return this._requestHeaderConfiguration.internalValue;
+  }
+
+  // response_header_configuration - computed: false, optional: true, required: false
+  private _responseHeaderConfiguration = new ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfigurationList(this, "response_header_configuration", false);
+  public get responseHeaderConfiguration() {
+    return this._responseHeaderConfiguration;
+  }
+  public putResponseHeaderConfiguration(value: ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration[] | cdktf.IResolvable) {
+    this._responseHeaderConfiguration.internalValue = value;
+  }
+  public resetResponseHeaderConfiguration() {
+    this._responseHeaderConfiguration.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get responseHeaderConfigurationInput() {
+    return this._responseHeaderConfiguration.internalValue;
+  }
+
+  // url - computed: false, optional: true, required: false
+  private _url = new ApplicationGatewayRewriteRuleSetRewriteRuleUrlOutputReference(this, "url");
+  public get url() {
+    return this._url;
+  }
+  public putUrl(value: ApplicationGatewayRewriteRuleSetRewriteRuleUrl) {
+    this._url.internalValue = value;
+  }
+  public resetUrl() {
+    this._url.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get urlInput() {
+    return this._url.internalValue;
+  }
+}
+
+export class ApplicationGatewayRewriteRuleSetRewriteRuleList extends cdktf.ComplexList {
+  public internalValue? : ApplicationGatewayRewriteRuleSetRewriteRule[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ApplicationGatewayRewriteRuleSetRewriteRuleOutputReference {
+    return new ApplicationGatewayRewriteRuleSetRewriteRuleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ApplicationGatewayRewriteRuleSet {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway#name ApplicationGateway#name}
@@ -1454,6 +4562,110 @@ export function applicationGatewayRewriteRuleSetToTerraform(struct?: Application
   }
 }
 
+export class ApplicationGatewayRewriteRuleSetOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ApplicationGatewayRewriteRuleSet | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._rewriteRule?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rewriteRule = this._rewriteRule?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApplicationGatewayRewriteRuleSet | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._rewriteRule.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._rewriteRule.internalValue = value.rewriteRule;
+    }
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // rewrite_rule - computed: false, optional: true, required: false
+  private _rewriteRule = new ApplicationGatewayRewriteRuleSetRewriteRuleList(this, "rewrite_rule", false);
+  public get rewriteRule() {
+    return this._rewriteRule;
+  }
+  public putRewriteRule(value: ApplicationGatewayRewriteRuleSetRewriteRule[] | cdktf.IResolvable) {
+    this._rewriteRule.internalValue = value;
+  }
+  public resetRewriteRule() {
+    this._rewriteRule.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rewriteRuleInput() {
+    return this._rewriteRule.internalValue;
+  }
+}
+
+export class ApplicationGatewayRewriteRuleSetList extends cdktf.ComplexList {
+  public internalValue? : ApplicationGatewayRewriteRuleSet[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ApplicationGatewayRewriteRuleSetOutputReference {
+    return new ApplicationGatewayRewriteRuleSetOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ApplicationGatewaySku {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway#capacity ApplicationGateway#capacity}
@@ -1599,6 +4811,159 @@ export function applicationGatewaySslCertificateToTerraform(struct?: Application
   }
 }
 
+export class ApplicationGatewaySslCertificateOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ApplicationGatewaySslCertificate | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._data !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.data = this._data;
+    }
+    if (this._keyVaultSecretId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keyVaultSecretId = this._keyVaultSecretId;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._password !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.password = this._password;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApplicationGatewaySslCertificate | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._data = undefined;
+      this._keyVaultSecretId = undefined;
+      this._name = undefined;
+      this._password = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._data = value.data;
+      this._keyVaultSecretId = value.keyVaultSecretId;
+      this._name = value.name;
+      this._password = value.password;
+    }
+  }
+
+  // data - computed: false, optional: true, required: false
+  private _data?: string; 
+  public get data() {
+    return this.getStringAttribute('data');
+  }
+  public set data(value: string) {
+    this._data = value;
+  }
+  public resetData() {
+    this._data = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataInput() {
+    return this._data;
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // key_vault_secret_id - computed: false, optional: true, required: false
+  private _keyVaultSecretId?: string; 
+  public get keyVaultSecretId() {
+    return this.getStringAttribute('key_vault_secret_id');
+  }
+  public set keyVaultSecretId(value: string) {
+    this._keyVaultSecretId = value;
+  }
+  public resetKeyVaultSecretId() {
+    this._keyVaultSecretId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultSecretIdInput() {
+    return this._keyVaultSecretId;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // password - computed: false, optional: true, required: false
+  private _password?: string; 
+  public get password() {
+    return this.getStringAttribute('password');
+  }
+  public set password(value: string) {
+    this._password = value;
+  }
+  public resetPassword() {
+    this._password = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get passwordInput() {
+    return this._password;
+  }
+
+  // public_cert_data - computed: true, optional: false, required: false
+  public get publicCertData() {
+    return this.getStringAttribute('public_cert_data');
+  }
+}
+
+export class ApplicationGatewaySslCertificateList extends cdktf.ComplexList {
+  public internalValue? : ApplicationGatewaySslCertificate[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ApplicationGatewaySslCertificateOutputReference {
+    return new ApplicationGatewaySslCertificateOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ApplicationGatewaySslPolicy {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway#cipher_suites ApplicationGateway#cipher_suites}
@@ -1979,6 +5344,154 @@ export function applicationGatewaySslProfileToTerraform(struct?: ApplicationGate
   }
 }
 
+export class ApplicationGatewaySslProfileOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ApplicationGatewaySslProfile | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._trustedClientCertificateNames !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.trustedClientCertificateNames = this._trustedClientCertificateNames;
+    }
+    if (this._verifyClientCertIssuerDn !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.verifyClientCertIssuerDn = this._verifyClientCertIssuerDn;
+    }
+    if (this._sslPolicy?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sslPolicy = this._sslPolicy?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApplicationGatewaySslProfile | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._trustedClientCertificateNames = undefined;
+      this._verifyClientCertIssuerDn = undefined;
+      this._sslPolicy.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._trustedClientCertificateNames = value.trustedClientCertificateNames;
+      this._verifyClientCertIssuerDn = value.verifyClientCertIssuerDn;
+      this._sslPolicy.internalValue = value.sslPolicy;
+    }
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // trusted_client_certificate_names - computed: false, optional: true, required: false
+  private _trustedClientCertificateNames?: string[]; 
+  public get trustedClientCertificateNames() {
+    return this.getListAttribute('trusted_client_certificate_names');
+  }
+  public set trustedClientCertificateNames(value: string[]) {
+    this._trustedClientCertificateNames = value;
+  }
+  public resetTrustedClientCertificateNames() {
+    this._trustedClientCertificateNames = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get trustedClientCertificateNamesInput() {
+    return this._trustedClientCertificateNames;
+  }
+
+  // verify_client_cert_issuer_dn - computed: false, optional: true, required: false
+  private _verifyClientCertIssuerDn?: boolean | cdktf.IResolvable; 
+  public get verifyClientCertIssuerDn() {
+    return this.getBooleanAttribute('verify_client_cert_issuer_dn');
+  }
+  public set verifyClientCertIssuerDn(value: boolean | cdktf.IResolvable) {
+    this._verifyClientCertIssuerDn = value;
+  }
+  public resetVerifyClientCertIssuerDn() {
+    this._verifyClientCertIssuerDn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get verifyClientCertIssuerDnInput() {
+    return this._verifyClientCertIssuerDn;
+  }
+
+  // ssl_policy - computed: false, optional: true, required: false
+  private _sslPolicy = new ApplicationGatewaySslProfileSslPolicyOutputReference(this, "ssl_policy");
+  public get sslPolicy() {
+    return this._sslPolicy;
+  }
+  public putSslPolicy(value: ApplicationGatewaySslProfileSslPolicy) {
+    this._sslPolicy.internalValue = value;
+  }
+  public resetSslPolicy() {
+    this._sslPolicy.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sslPolicyInput() {
+    return this._sslPolicy.internalValue;
+  }
+}
+
+export class ApplicationGatewaySslProfileList extends cdktf.ComplexList {
+  public internalValue? : ApplicationGatewaySslProfile[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ApplicationGatewaySslProfileOutputReference {
+    return new ApplicationGatewaySslProfileOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ApplicationGatewayTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway#create ApplicationGateway#create}
@@ -2013,6 +5526,7 @@ export function applicationGatewayTimeoutsToTerraform(struct?: ApplicationGatewa
 
 export class ApplicationGatewayTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -2022,7 +5536,10 @@ export class ApplicationGatewayTimeoutsOutputReference extends cdktf.ComplexObje
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): ApplicationGatewayTimeouts | undefined {
+  public get internalValue(): ApplicationGatewayTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -2044,16 +5561,22 @@ export class ApplicationGatewayTimeoutsOutputReference extends cdktf.ComplexObje
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: ApplicationGatewayTimeouts | undefined) {
+  public set internalValue(value: ApplicationGatewayTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -2147,6 +5670,107 @@ export function applicationGatewayTrustedClientCertificateToTerraform(struct?: A
   }
 }
 
+export class ApplicationGatewayTrustedClientCertificateOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ApplicationGatewayTrustedClientCertificate | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._data !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.data = this._data;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApplicationGatewayTrustedClientCertificate | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._data = undefined;
+      this._name = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._data = value.data;
+      this._name = value.name;
+    }
+  }
+
+  // data - computed: false, optional: false, required: true
+  private _data?: string; 
+  public get data() {
+    return this.getStringAttribute('data');
+  }
+  public set data(value: string) {
+    this._data = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataInput() {
+    return this._data;
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+}
+
+export class ApplicationGatewayTrustedClientCertificateList extends cdktf.ComplexList {
+  public internalValue? : ApplicationGatewayTrustedClientCertificate[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ApplicationGatewayTrustedClientCertificateOutputReference {
+    return new ApplicationGatewayTrustedClientCertificateOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ApplicationGatewayTrustedRootCertificate {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway#data ApplicationGateway#data}
@@ -2174,6 +5798,132 @@ export function applicationGatewayTrustedRootCertificateToTerraform(struct?: App
   }
 }
 
+export class ApplicationGatewayTrustedRootCertificateOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ApplicationGatewayTrustedRootCertificate | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._data !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.data = this._data;
+    }
+    if (this._keyVaultSecretId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keyVaultSecretId = this._keyVaultSecretId;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApplicationGatewayTrustedRootCertificate | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._data = undefined;
+      this._keyVaultSecretId = undefined;
+      this._name = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._data = value.data;
+      this._keyVaultSecretId = value.keyVaultSecretId;
+      this._name = value.name;
+    }
+  }
+
+  // data - computed: false, optional: true, required: false
+  private _data?: string; 
+  public get data() {
+    return this.getStringAttribute('data');
+  }
+  public set data(value: string) {
+    this._data = value;
+  }
+  public resetData() {
+    this._data = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataInput() {
+    return this._data;
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // key_vault_secret_id - computed: false, optional: true, required: false
+  private _keyVaultSecretId?: string; 
+  public get keyVaultSecretId() {
+    return this.getStringAttribute('key_vault_secret_id');
+  }
+  public set keyVaultSecretId(value: string) {
+    this._keyVaultSecretId = value;
+  }
+  public resetKeyVaultSecretId() {
+    this._keyVaultSecretId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultSecretIdInput() {
+    return this._keyVaultSecretId;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+}
+
+export class ApplicationGatewayTrustedRootCertificateList extends cdktf.ComplexList {
+  public internalValue? : ApplicationGatewayTrustedRootCertificate[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ApplicationGatewayTrustedRootCertificateOutputReference {
+    return new ApplicationGatewayTrustedRootCertificateOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ApplicationGatewayUrlPathMapPathRule {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway#backend_address_pool_name ApplicationGateway#backend_address_pool_name}
@@ -2221,6 +5971,237 @@ export function applicationGatewayUrlPathMapPathRuleToTerraform(struct?: Applica
   }
 }
 
+export class ApplicationGatewayUrlPathMapPathRuleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ApplicationGatewayUrlPathMapPathRule | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._backendAddressPoolName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.backendAddressPoolName = this._backendAddressPoolName;
+    }
+    if (this._backendHttpSettingsName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.backendHttpSettingsName = this._backendHttpSettingsName;
+    }
+    if (this._firewallPolicyId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.firewallPolicyId = this._firewallPolicyId;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._paths !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.paths = this._paths;
+    }
+    if (this._redirectConfigurationName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.redirectConfigurationName = this._redirectConfigurationName;
+    }
+    if (this._rewriteRuleSetName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rewriteRuleSetName = this._rewriteRuleSetName;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApplicationGatewayUrlPathMapPathRule | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._backendAddressPoolName = undefined;
+      this._backendHttpSettingsName = undefined;
+      this._firewallPolicyId = undefined;
+      this._name = undefined;
+      this._paths = undefined;
+      this._redirectConfigurationName = undefined;
+      this._rewriteRuleSetName = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._backendAddressPoolName = value.backendAddressPoolName;
+      this._backendHttpSettingsName = value.backendHttpSettingsName;
+      this._firewallPolicyId = value.firewallPolicyId;
+      this._name = value.name;
+      this._paths = value.paths;
+      this._redirectConfigurationName = value.redirectConfigurationName;
+      this._rewriteRuleSetName = value.rewriteRuleSetName;
+    }
+  }
+
+  // backend_address_pool_id - computed: true, optional: false, required: false
+  public get backendAddressPoolId() {
+    return this.getStringAttribute('backend_address_pool_id');
+  }
+
+  // backend_address_pool_name - computed: false, optional: true, required: false
+  private _backendAddressPoolName?: string; 
+  public get backendAddressPoolName() {
+    return this.getStringAttribute('backend_address_pool_name');
+  }
+  public set backendAddressPoolName(value: string) {
+    this._backendAddressPoolName = value;
+  }
+  public resetBackendAddressPoolName() {
+    this._backendAddressPoolName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get backendAddressPoolNameInput() {
+    return this._backendAddressPoolName;
+  }
+
+  // backend_http_settings_id - computed: true, optional: false, required: false
+  public get backendHttpSettingsId() {
+    return this.getStringAttribute('backend_http_settings_id');
+  }
+
+  // backend_http_settings_name - computed: false, optional: true, required: false
+  private _backendHttpSettingsName?: string; 
+  public get backendHttpSettingsName() {
+    return this.getStringAttribute('backend_http_settings_name');
+  }
+  public set backendHttpSettingsName(value: string) {
+    this._backendHttpSettingsName = value;
+  }
+  public resetBackendHttpSettingsName() {
+    this._backendHttpSettingsName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get backendHttpSettingsNameInput() {
+    return this._backendHttpSettingsName;
+  }
+
+  // firewall_policy_id - computed: false, optional: true, required: false
+  private _firewallPolicyId?: string; 
+  public get firewallPolicyId() {
+    return this.getStringAttribute('firewall_policy_id');
+  }
+  public set firewallPolicyId(value: string) {
+    this._firewallPolicyId = value;
+  }
+  public resetFirewallPolicyId() {
+    this._firewallPolicyId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get firewallPolicyIdInput() {
+    return this._firewallPolicyId;
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // paths - computed: false, optional: false, required: true
+  private _paths?: string[]; 
+  public get paths() {
+    return this.getListAttribute('paths');
+  }
+  public set paths(value: string[]) {
+    this._paths = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathsInput() {
+    return this._paths;
+  }
+
+  // redirect_configuration_id - computed: true, optional: false, required: false
+  public get redirectConfigurationId() {
+    return this.getStringAttribute('redirect_configuration_id');
+  }
+
+  // redirect_configuration_name - computed: false, optional: true, required: false
+  private _redirectConfigurationName?: string; 
+  public get redirectConfigurationName() {
+    return this.getStringAttribute('redirect_configuration_name');
+  }
+  public set redirectConfigurationName(value: string) {
+    this._redirectConfigurationName = value;
+  }
+  public resetRedirectConfigurationName() {
+    this._redirectConfigurationName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get redirectConfigurationNameInput() {
+    return this._redirectConfigurationName;
+  }
+
+  // rewrite_rule_set_id - computed: true, optional: false, required: false
+  public get rewriteRuleSetId() {
+    return this.getStringAttribute('rewrite_rule_set_id');
+  }
+
+  // rewrite_rule_set_name - computed: false, optional: true, required: false
+  private _rewriteRuleSetName?: string; 
+  public get rewriteRuleSetName() {
+    return this.getStringAttribute('rewrite_rule_set_name');
+  }
+  public set rewriteRuleSetName(value: string) {
+    this._rewriteRuleSetName = value;
+  }
+  public resetRewriteRuleSetName() {
+    this._rewriteRuleSetName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rewriteRuleSetNameInput() {
+    return this._rewriteRuleSetName;
+  }
+}
+
+export class ApplicationGatewayUrlPathMapPathRuleList extends cdktf.ComplexList {
+  public internalValue? : ApplicationGatewayUrlPathMapPathRule[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ApplicationGatewayUrlPathMapPathRuleOutputReference {
+    return new ApplicationGatewayUrlPathMapPathRuleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ApplicationGatewayUrlPathMap {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway#default_backend_address_pool_name ApplicationGateway#default_backend_address_pool_name}
@@ -2265,6 +6246,215 @@ export function applicationGatewayUrlPathMapToTerraform(struct?: ApplicationGate
   }
 }
 
+export class ApplicationGatewayUrlPathMapOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ApplicationGatewayUrlPathMap | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._defaultBackendAddressPoolName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.defaultBackendAddressPoolName = this._defaultBackendAddressPoolName;
+    }
+    if (this._defaultBackendHttpSettingsName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.defaultBackendHttpSettingsName = this._defaultBackendHttpSettingsName;
+    }
+    if (this._defaultRedirectConfigurationName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.defaultRedirectConfigurationName = this._defaultRedirectConfigurationName;
+    }
+    if (this._defaultRewriteRuleSetName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.defaultRewriteRuleSetName = this._defaultRewriteRuleSetName;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._pathRule?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.pathRule = this._pathRule?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApplicationGatewayUrlPathMap | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._defaultBackendAddressPoolName = undefined;
+      this._defaultBackendHttpSettingsName = undefined;
+      this._defaultRedirectConfigurationName = undefined;
+      this._defaultRewriteRuleSetName = undefined;
+      this._name = undefined;
+      this._pathRule.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._defaultBackendAddressPoolName = value.defaultBackendAddressPoolName;
+      this._defaultBackendHttpSettingsName = value.defaultBackendHttpSettingsName;
+      this._defaultRedirectConfigurationName = value.defaultRedirectConfigurationName;
+      this._defaultRewriteRuleSetName = value.defaultRewriteRuleSetName;
+      this._name = value.name;
+      this._pathRule.internalValue = value.pathRule;
+    }
+  }
+
+  // default_backend_address_pool_id - computed: true, optional: false, required: false
+  public get defaultBackendAddressPoolId() {
+    return this.getStringAttribute('default_backend_address_pool_id');
+  }
+
+  // default_backend_address_pool_name - computed: false, optional: true, required: false
+  private _defaultBackendAddressPoolName?: string; 
+  public get defaultBackendAddressPoolName() {
+    return this.getStringAttribute('default_backend_address_pool_name');
+  }
+  public set defaultBackendAddressPoolName(value: string) {
+    this._defaultBackendAddressPoolName = value;
+  }
+  public resetDefaultBackendAddressPoolName() {
+    this._defaultBackendAddressPoolName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultBackendAddressPoolNameInput() {
+    return this._defaultBackendAddressPoolName;
+  }
+
+  // default_backend_http_settings_id - computed: true, optional: false, required: false
+  public get defaultBackendHttpSettingsId() {
+    return this.getStringAttribute('default_backend_http_settings_id');
+  }
+
+  // default_backend_http_settings_name - computed: false, optional: true, required: false
+  private _defaultBackendHttpSettingsName?: string; 
+  public get defaultBackendHttpSettingsName() {
+    return this.getStringAttribute('default_backend_http_settings_name');
+  }
+  public set defaultBackendHttpSettingsName(value: string) {
+    this._defaultBackendHttpSettingsName = value;
+  }
+  public resetDefaultBackendHttpSettingsName() {
+    this._defaultBackendHttpSettingsName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultBackendHttpSettingsNameInput() {
+    return this._defaultBackendHttpSettingsName;
+  }
+
+  // default_redirect_configuration_id - computed: true, optional: false, required: false
+  public get defaultRedirectConfigurationId() {
+    return this.getStringAttribute('default_redirect_configuration_id');
+  }
+
+  // default_redirect_configuration_name - computed: false, optional: true, required: false
+  private _defaultRedirectConfigurationName?: string; 
+  public get defaultRedirectConfigurationName() {
+    return this.getStringAttribute('default_redirect_configuration_name');
+  }
+  public set defaultRedirectConfigurationName(value: string) {
+    this._defaultRedirectConfigurationName = value;
+  }
+  public resetDefaultRedirectConfigurationName() {
+    this._defaultRedirectConfigurationName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultRedirectConfigurationNameInput() {
+    return this._defaultRedirectConfigurationName;
+  }
+
+  // default_rewrite_rule_set_id - computed: true, optional: false, required: false
+  public get defaultRewriteRuleSetId() {
+    return this.getStringAttribute('default_rewrite_rule_set_id');
+  }
+
+  // default_rewrite_rule_set_name - computed: false, optional: true, required: false
+  private _defaultRewriteRuleSetName?: string; 
+  public get defaultRewriteRuleSetName() {
+    return this.getStringAttribute('default_rewrite_rule_set_name');
+  }
+  public set defaultRewriteRuleSetName(value: string) {
+    this._defaultRewriteRuleSetName = value;
+  }
+  public resetDefaultRewriteRuleSetName() {
+    this._defaultRewriteRuleSetName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultRewriteRuleSetNameInput() {
+    return this._defaultRewriteRuleSetName;
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // path_rule - computed: false, optional: false, required: true
+  private _pathRule = new ApplicationGatewayUrlPathMapPathRuleList(this, "path_rule", false);
+  public get pathRule() {
+    return this._pathRule;
+  }
+  public putPathRule(value: ApplicationGatewayUrlPathMapPathRule[] | cdktf.IResolvable) {
+    this._pathRule.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathRuleInput() {
+    return this._pathRule.internalValue;
+  }
+}
+
+export class ApplicationGatewayUrlPathMapList extends cdktf.ComplexList {
+  public internalValue? : ApplicationGatewayUrlPathMap[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ApplicationGatewayUrlPathMapOutputReference {
+    return new ApplicationGatewayUrlPathMapOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ApplicationGatewayWafConfigurationDisabledRuleGroup {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway#rule_group_name ApplicationGateway#rule_group_name}
@@ -2287,6 +6477,105 @@ export function applicationGatewayWafConfigurationDisabledRuleGroupToTerraform(s
   }
 }
 
+export class ApplicationGatewayWafConfigurationDisabledRuleGroupOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ApplicationGatewayWafConfigurationDisabledRuleGroup | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._ruleGroupName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ruleGroupName = this._ruleGroupName;
+    }
+    if (this._rules !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rules = this._rules;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApplicationGatewayWafConfigurationDisabledRuleGroup | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._ruleGroupName = undefined;
+      this._rules = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._ruleGroupName = value.ruleGroupName;
+      this._rules = value.rules;
+    }
+  }
+
+  // rule_group_name - computed: false, optional: false, required: true
+  private _ruleGroupName?: string; 
+  public get ruleGroupName() {
+    return this.getStringAttribute('rule_group_name');
+  }
+  public set ruleGroupName(value: string) {
+    this._ruleGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ruleGroupNameInput() {
+    return this._ruleGroupName;
+  }
+
+  // rules - computed: false, optional: true, required: false
+  private _rules?: number[]; 
+  public get rules() {
+    return this.getNumberListAttribute('rules');
+  }
+  public set rules(value: number[]) {
+    this._rules = value;
+  }
+  public resetRules() {
+    this._rules = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rulesInput() {
+    return this._rules;
+  }
+}
+
+export class ApplicationGatewayWafConfigurationDisabledRuleGroupList extends cdktf.ComplexList {
+  public internalValue? : ApplicationGatewayWafConfigurationDisabledRuleGroup[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ApplicationGatewayWafConfigurationDisabledRuleGroupOutputReference {
+    return new ApplicationGatewayWafConfigurationDisabledRuleGroupOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ApplicationGatewayWafConfigurationExclusion {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway#match_variable ApplicationGateway#match_variable}
@@ -2314,6 +6603,127 @@ export function applicationGatewayWafConfigurationExclusionToTerraform(struct?: 
   }
 }
 
+export class ApplicationGatewayWafConfigurationExclusionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ApplicationGatewayWafConfigurationExclusion | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._matchVariable !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.matchVariable = this._matchVariable;
+    }
+    if (this._selector !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.selector = this._selector;
+    }
+    if (this._selectorMatchOperator !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.selectorMatchOperator = this._selectorMatchOperator;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApplicationGatewayWafConfigurationExclusion | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._matchVariable = undefined;
+      this._selector = undefined;
+      this._selectorMatchOperator = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._matchVariable = value.matchVariable;
+      this._selector = value.selector;
+      this._selectorMatchOperator = value.selectorMatchOperator;
+    }
+  }
+
+  // match_variable - computed: false, optional: false, required: true
+  private _matchVariable?: string; 
+  public get matchVariable() {
+    return this.getStringAttribute('match_variable');
+  }
+  public set matchVariable(value: string) {
+    this._matchVariable = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get matchVariableInput() {
+    return this._matchVariable;
+  }
+
+  // selector - computed: false, optional: true, required: false
+  private _selector?: string; 
+  public get selector() {
+    return this.getStringAttribute('selector');
+  }
+  public set selector(value: string) {
+    this._selector = value;
+  }
+  public resetSelector() {
+    this._selector = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get selectorInput() {
+    return this._selector;
+  }
+
+  // selector_match_operator - computed: false, optional: true, required: false
+  private _selectorMatchOperator?: string; 
+  public get selectorMatchOperator() {
+    return this.getStringAttribute('selector_match_operator');
+  }
+  public set selectorMatchOperator(value: string) {
+    this._selectorMatchOperator = value;
+  }
+  public resetSelectorMatchOperator() {
+    this._selectorMatchOperator = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get selectorMatchOperatorInput() {
+    return this._selectorMatchOperator;
+  }
+}
+
+export class ApplicationGatewayWafConfigurationExclusionList extends cdktf.ComplexList {
+  public internalValue? : ApplicationGatewayWafConfigurationExclusion[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ApplicationGatewayWafConfigurationExclusionOutputReference {
+    return new ApplicationGatewayWafConfigurationExclusionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ApplicationGatewayWafConfiguration {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway#enabled ApplicationGateway#enabled}
@@ -2417,13 +6827,13 @@ export class ApplicationGatewayWafConfigurationOutputReference extends cdktf.Com
       hasAnyValues = true;
       internalValueResult.ruleSetVersion = this._ruleSetVersion;
     }
-    if (this._disabledRuleGroup !== undefined) {
+    if (this._disabledRuleGroup?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.disabledRuleGroup = this._disabledRuleGroup;
+      internalValueResult.disabledRuleGroup = this._disabledRuleGroup?.internalValue;
     }
-    if (this._exclusion !== undefined) {
+    if (this._exclusion?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.exclusion = this._exclusion;
+      internalValueResult.exclusion = this._exclusion?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -2438,8 +6848,8 @@ export class ApplicationGatewayWafConfigurationOutputReference extends cdktf.Com
       this._requestBodyCheck = undefined;
       this._ruleSetType = undefined;
       this._ruleSetVersion = undefined;
-      this._disabledRuleGroup = undefined;
-      this._exclusion = undefined;
+      this._disabledRuleGroup.internalValue = undefined;
+      this._exclusion.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
@@ -2450,8 +6860,8 @@ export class ApplicationGatewayWafConfigurationOutputReference extends cdktf.Com
       this._requestBodyCheck = value.requestBodyCheck;
       this._ruleSetType = value.ruleSetType;
       this._ruleSetVersion = value.ruleSetVersion;
-      this._disabledRuleGroup = value.disabledRuleGroup;
-      this._exclusion = value.exclusion;
+      this._disabledRuleGroup.internalValue = value.disabledRuleGroup;
+      this._exclusion.internalValue = value.exclusion;
     }
   }
 
@@ -2559,37 +6969,35 @@ export class ApplicationGatewayWafConfigurationOutputReference extends cdktf.Com
   }
 
   // disabled_rule_group - computed: false, optional: true, required: false
-  private _disabledRuleGroup?: ApplicationGatewayWafConfigurationDisabledRuleGroup[] | cdktf.IResolvable; 
+  private _disabledRuleGroup = new ApplicationGatewayWafConfigurationDisabledRuleGroupList(this, "disabled_rule_group", false);
   public get disabledRuleGroup() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('disabled_rule_group');
+    return this._disabledRuleGroup;
   }
-  public set disabledRuleGroup(value: ApplicationGatewayWafConfigurationDisabledRuleGroup[] | cdktf.IResolvable) {
-    this._disabledRuleGroup = value;
+  public putDisabledRuleGroup(value: ApplicationGatewayWafConfigurationDisabledRuleGroup[] | cdktf.IResolvable) {
+    this._disabledRuleGroup.internalValue = value;
   }
   public resetDisabledRuleGroup() {
-    this._disabledRuleGroup = undefined;
+    this._disabledRuleGroup.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get disabledRuleGroupInput() {
-    return this._disabledRuleGroup;
+    return this._disabledRuleGroup.internalValue;
   }
 
   // exclusion - computed: false, optional: true, required: false
-  private _exclusion?: ApplicationGatewayWafConfigurationExclusion[] | cdktf.IResolvable; 
+  private _exclusion = new ApplicationGatewayWafConfigurationExclusionList(this, "exclusion", false);
   public get exclusion() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('exclusion');
+    return this._exclusion;
   }
-  public set exclusion(value: ApplicationGatewayWafConfigurationExclusion[] | cdktf.IResolvable) {
-    this._exclusion = value;
+  public putExclusion(value: ApplicationGatewayWafConfigurationExclusion[] | cdktf.IResolvable) {
+    this._exclusion.internalValue = value;
   }
   public resetExclusion() {
-    this._exclusion = undefined;
+    this._exclusion.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get exclusionInput() {
-    return this._exclusion;
+    return this._exclusion.internalValue;
   }
 }
 
@@ -2631,34 +7039,35 @@ export class ApplicationGateway extends cdktf.TerraformResource {
     this._fipsEnabled = config.fipsEnabled;
     this._firewallPolicyId = config.firewallPolicyId;
     this._forceFirewallPolicyAssociation = config.forceFirewallPolicyAssociation;
+    this._id = config.id;
     this._location = config.location;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
     this._zones = config.zones;
-    this._authenticationCertificate = config.authenticationCertificate;
+    this._authenticationCertificate.internalValue = config.authenticationCertificate;
     this._autoscaleConfiguration.internalValue = config.autoscaleConfiguration;
-    this._backendAddressPool = config.backendAddressPool;
-    this._backendHttpSettings = config.backendHttpSettings;
-    this._customErrorConfiguration = config.customErrorConfiguration;
-    this._frontendIpConfiguration = config.frontendIpConfiguration;
-    this._frontendPort = config.frontendPort;
-    this._gatewayIpConfiguration = config.gatewayIpConfiguration;
-    this._httpListener = config.httpListener;
+    this._backendAddressPool.internalValue = config.backendAddressPool;
+    this._backendHttpSettings.internalValue = config.backendHttpSettings;
+    this._customErrorConfiguration.internalValue = config.customErrorConfiguration;
+    this._frontendIpConfiguration.internalValue = config.frontendIpConfiguration;
+    this._frontendPort.internalValue = config.frontendPort;
+    this._gatewayIpConfiguration.internalValue = config.gatewayIpConfiguration;
+    this._httpListener.internalValue = config.httpListener;
     this._identity.internalValue = config.identity;
-    this._privateLinkConfiguration = config.privateLinkConfiguration;
-    this._probe = config.probe;
-    this._redirectConfiguration = config.redirectConfiguration;
-    this._requestRoutingRule = config.requestRoutingRule;
-    this._rewriteRuleSet = config.rewriteRuleSet;
+    this._privateLinkConfiguration.internalValue = config.privateLinkConfiguration;
+    this._probe.internalValue = config.probe;
+    this._redirectConfiguration.internalValue = config.redirectConfiguration;
+    this._requestRoutingRule.internalValue = config.requestRoutingRule;
+    this._rewriteRuleSet.internalValue = config.rewriteRuleSet;
     this._sku.internalValue = config.sku;
-    this._sslCertificate = config.sslCertificate;
+    this._sslCertificate.internalValue = config.sslCertificate;
     this._sslPolicy.internalValue = config.sslPolicy;
-    this._sslProfile = config.sslProfile;
+    this._sslProfile.internalValue = config.sslProfile;
     this._timeouts.internalValue = config.timeouts;
-    this._trustedClientCertificate = config.trustedClientCertificate;
-    this._trustedRootCertificate = config.trustedRootCertificate;
-    this._urlPathMap = config.urlPathMap;
+    this._trustedClientCertificate.internalValue = config.trustedClientCertificate;
+    this._trustedRootCertificate.internalValue = config.trustedRootCertificate;
+    this._urlPathMap.internalValue = config.urlPathMap;
     this._wafConfiguration.internalValue = config.wafConfiguration;
   }
 
@@ -2731,8 +7140,19 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // location - computed: false, optional: false, required: true
@@ -2813,20 +7233,19 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   }
 
   // authentication_certificate - computed: false, optional: true, required: false
-  private _authenticationCertificate?: ApplicationGatewayAuthenticationCertificate[] | cdktf.IResolvable; 
+  private _authenticationCertificate = new ApplicationGatewayAuthenticationCertificateList(this, "authentication_certificate", false);
   public get authenticationCertificate() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('authentication_certificate');
+    return this._authenticationCertificate;
   }
-  public set authenticationCertificate(value: ApplicationGatewayAuthenticationCertificate[] | cdktf.IResolvable) {
-    this._authenticationCertificate = value;
+  public putAuthenticationCertificate(value: ApplicationGatewayAuthenticationCertificate[] | cdktf.IResolvable) {
+    this._authenticationCertificate.internalValue = value;
   }
   public resetAuthenticationCertificate() {
-    this._authenticationCertificate = undefined;
+    this._authenticationCertificate.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get authenticationCertificateInput() {
-    return this._authenticationCertificate;
+    return this._authenticationCertificate.internalValue;
   }
 
   // autoscale_configuration - computed: false, optional: true, required: false
@@ -2846,104 +7265,97 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   }
 
   // backend_address_pool - computed: false, optional: false, required: true
-  private _backendAddressPool?: ApplicationGatewayBackendAddressPool[] | cdktf.IResolvable; 
+  private _backendAddressPool = new ApplicationGatewayBackendAddressPoolList(this, "backend_address_pool", false);
   public get backendAddressPool() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('backend_address_pool');
+    return this._backendAddressPool;
   }
-  public set backendAddressPool(value: ApplicationGatewayBackendAddressPool[] | cdktf.IResolvable) {
-    this._backendAddressPool = value;
+  public putBackendAddressPool(value: ApplicationGatewayBackendAddressPool[] | cdktf.IResolvable) {
+    this._backendAddressPool.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get backendAddressPoolInput() {
-    return this._backendAddressPool;
+    return this._backendAddressPool.internalValue;
   }
 
   // backend_http_settings - computed: false, optional: false, required: true
-  private _backendHttpSettings?: ApplicationGatewayBackendHttpSettings[] | cdktf.IResolvable; 
+  private _backendHttpSettings = new ApplicationGatewayBackendHttpSettingsList(this, "backend_http_settings", false);
   public get backendHttpSettings() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('backend_http_settings');
+    return this._backendHttpSettings;
   }
-  public set backendHttpSettings(value: ApplicationGatewayBackendHttpSettings[] | cdktf.IResolvable) {
-    this._backendHttpSettings = value;
+  public putBackendHttpSettings(value: ApplicationGatewayBackendHttpSettings[] | cdktf.IResolvable) {
+    this._backendHttpSettings.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get backendHttpSettingsInput() {
-    return this._backendHttpSettings;
+    return this._backendHttpSettings.internalValue;
   }
 
   // custom_error_configuration - computed: false, optional: true, required: false
-  private _customErrorConfiguration?: ApplicationGatewayCustomErrorConfiguration[] | cdktf.IResolvable; 
+  private _customErrorConfiguration = new ApplicationGatewayCustomErrorConfigurationList(this, "custom_error_configuration", false);
   public get customErrorConfiguration() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('custom_error_configuration');
+    return this._customErrorConfiguration;
   }
-  public set customErrorConfiguration(value: ApplicationGatewayCustomErrorConfiguration[] | cdktf.IResolvable) {
-    this._customErrorConfiguration = value;
+  public putCustomErrorConfiguration(value: ApplicationGatewayCustomErrorConfiguration[] | cdktf.IResolvable) {
+    this._customErrorConfiguration.internalValue = value;
   }
   public resetCustomErrorConfiguration() {
-    this._customErrorConfiguration = undefined;
+    this._customErrorConfiguration.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get customErrorConfigurationInput() {
-    return this._customErrorConfiguration;
+    return this._customErrorConfiguration.internalValue;
   }
 
   // frontend_ip_configuration - computed: false, optional: false, required: true
-  private _frontendIpConfiguration?: ApplicationGatewayFrontendIpConfiguration[] | cdktf.IResolvable; 
+  private _frontendIpConfiguration = new ApplicationGatewayFrontendIpConfigurationList(this, "frontend_ip_configuration", false);
   public get frontendIpConfiguration() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('frontend_ip_configuration');
+    return this._frontendIpConfiguration;
   }
-  public set frontendIpConfiguration(value: ApplicationGatewayFrontendIpConfiguration[] | cdktf.IResolvable) {
-    this._frontendIpConfiguration = value;
+  public putFrontendIpConfiguration(value: ApplicationGatewayFrontendIpConfiguration[] | cdktf.IResolvable) {
+    this._frontendIpConfiguration.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get frontendIpConfigurationInput() {
-    return this._frontendIpConfiguration;
+    return this._frontendIpConfiguration.internalValue;
   }
 
   // frontend_port - computed: false, optional: false, required: true
-  private _frontendPort?: ApplicationGatewayFrontendPort[] | cdktf.IResolvable; 
+  private _frontendPort = new ApplicationGatewayFrontendPortList(this, "frontend_port", true);
   public get frontendPort() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('frontend_port')));
+    return this._frontendPort;
   }
-  public set frontendPort(value: ApplicationGatewayFrontendPort[] | cdktf.IResolvable) {
-    this._frontendPort = value;
+  public putFrontendPort(value: ApplicationGatewayFrontendPort[] | cdktf.IResolvable) {
+    this._frontendPort.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get frontendPortInput() {
-    return this._frontendPort;
+    return this._frontendPort.internalValue;
   }
 
   // gateway_ip_configuration - computed: false, optional: false, required: true
-  private _gatewayIpConfiguration?: ApplicationGatewayGatewayIpConfiguration[] | cdktf.IResolvable; 
+  private _gatewayIpConfiguration = new ApplicationGatewayGatewayIpConfigurationList(this, "gateway_ip_configuration", false);
   public get gatewayIpConfiguration() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('gateway_ip_configuration');
+    return this._gatewayIpConfiguration;
   }
-  public set gatewayIpConfiguration(value: ApplicationGatewayGatewayIpConfiguration[] | cdktf.IResolvable) {
-    this._gatewayIpConfiguration = value;
+  public putGatewayIpConfiguration(value: ApplicationGatewayGatewayIpConfiguration[] | cdktf.IResolvable) {
+    this._gatewayIpConfiguration.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get gatewayIpConfigurationInput() {
-    return this._gatewayIpConfiguration;
+    return this._gatewayIpConfiguration.internalValue;
   }
 
   // http_listener - computed: false, optional: false, required: true
-  private _httpListener?: ApplicationGatewayHttpListener[] | cdktf.IResolvable; 
+  private _httpListener = new ApplicationGatewayHttpListenerList(this, "http_listener", false);
   public get httpListener() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('http_listener');
+    return this._httpListener;
   }
-  public set httpListener(value: ApplicationGatewayHttpListener[] | cdktf.IResolvable) {
-    this._httpListener = value;
+  public putHttpListener(value: ApplicationGatewayHttpListener[] | cdktf.IResolvable) {
+    this._httpListener.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get httpListenerInput() {
-    return this._httpListener;
+    return this._httpListener.internalValue;
   }
 
   // identity - computed: false, optional: true, required: false
@@ -2963,85 +7375,80 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   }
 
   // private_link_configuration - computed: false, optional: true, required: false
-  private _privateLinkConfiguration?: ApplicationGatewayPrivateLinkConfiguration[] | cdktf.IResolvable; 
+  private _privateLinkConfiguration = new ApplicationGatewayPrivateLinkConfigurationList(this, "private_link_configuration", true);
   public get privateLinkConfiguration() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('private_link_configuration')));
+    return this._privateLinkConfiguration;
   }
-  public set privateLinkConfiguration(value: ApplicationGatewayPrivateLinkConfiguration[] | cdktf.IResolvable) {
-    this._privateLinkConfiguration = value;
+  public putPrivateLinkConfiguration(value: ApplicationGatewayPrivateLinkConfiguration[] | cdktf.IResolvable) {
+    this._privateLinkConfiguration.internalValue = value;
   }
   public resetPrivateLinkConfiguration() {
-    this._privateLinkConfiguration = undefined;
+    this._privateLinkConfiguration.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get privateLinkConfigurationInput() {
-    return this._privateLinkConfiguration;
+    return this._privateLinkConfiguration.internalValue;
   }
 
   // probe - computed: false, optional: true, required: false
-  private _probe?: ApplicationGatewayProbe[] | cdktf.IResolvable; 
+  private _probe = new ApplicationGatewayProbeList(this, "probe", false);
   public get probe() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('probe');
+    return this._probe;
   }
-  public set probe(value: ApplicationGatewayProbe[] | cdktf.IResolvable) {
-    this._probe = value;
+  public putProbe(value: ApplicationGatewayProbe[] | cdktf.IResolvable) {
+    this._probe.internalValue = value;
   }
   public resetProbe() {
-    this._probe = undefined;
+    this._probe.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get probeInput() {
-    return this._probe;
+    return this._probe.internalValue;
   }
 
   // redirect_configuration - computed: false, optional: true, required: false
-  private _redirectConfiguration?: ApplicationGatewayRedirectConfiguration[] | cdktf.IResolvable; 
+  private _redirectConfiguration = new ApplicationGatewayRedirectConfigurationList(this, "redirect_configuration", true);
   public get redirectConfiguration() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('redirect_configuration')));
+    return this._redirectConfiguration;
   }
-  public set redirectConfiguration(value: ApplicationGatewayRedirectConfiguration[] | cdktf.IResolvable) {
-    this._redirectConfiguration = value;
+  public putRedirectConfiguration(value: ApplicationGatewayRedirectConfiguration[] | cdktf.IResolvable) {
+    this._redirectConfiguration.internalValue = value;
   }
   public resetRedirectConfiguration() {
-    this._redirectConfiguration = undefined;
+    this._redirectConfiguration.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get redirectConfigurationInput() {
-    return this._redirectConfiguration;
+    return this._redirectConfiguration.internalValue;
   }
 
   // request_routing_rule - computed: false, optional: false, required: true
-  private _requestRoutingRule?: ApplicationGatewayRequestRoutingRule[] | cdktf.IResolvable; 
+  private _requestRoutingRule = new ApplicationGatewayRequestRoutingRuleList(this, "request_routing_rule", true);
   public get requestRoutingRule() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('request_routing_rule')));
+    return this._requestRoutingRule;
   }
-  public set requestRoutingRule(value: ApplicationGatewayRequestRoutingRule[] | cdktf.IResolvable) {
-    this._requestRoutingRule = value;
+  public putRequestRoutingRule(value: ApplicationGatewayRequestRoutingRule[] | cdktf.IResolvable) {
+    this._requestRoutingRule.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get requestRoutingRuleInput() {
-    return this._requestRoutingRule;
+    return this._requestRoutingRule.internalValue;
   }
 
   // rewrite_rule_set - computed: false, optional: true, required: false
-  private _rewriteRuleSet?: ApplicationGatewayRewriteRuleSet[] | cdktf.IResolvable; 
+  private _rewriteRuleSet = new ApplicationGatewayRewriteRuleSetList(this, "rewrite_rule_set", false);
   public get rewriteRuleSet() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('rewrite_rule_set');
+    return this._rewriteRuleSet;
   }
-  public set rewriteRuleSet(value: ApplicationGatewayRewriteRuleSet[] | cdktf.IResolvable) {
-    this._rewriteRuleSet = value;
+  public putRewriteRuleSet(value: ApplicationGatewayRewriteRuleSet[] | cdktf.IResolvable) {
+    this._rewriteRuleSet.internalValue = value;
   }
   public resetRewriteRuleSet() {
-    this._rewriteRuleSet = undefined;
+    this._rewriteRuleSet.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get rewriteRuleSetInput() {
-    return this._rewriteRuleSet;
+    return this._rewriteRuleSet.internalValue;
   }
 
   // sku - computed: false, optional: false, required: true
@@ -3058,20 +7465,19 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   }
 
   // ssl_certificate - computed: false, optional: true, required: false
-  private _sslCertificate?: ApplicationGatewaySslCertificate[] | cdktf.IResolvable; 
+  private _sslCertificate = new ApplicationGatewaySslCertificateList(this, "ssl_certificate", false);
   public get sslCertificate() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('ssl_certificate');
+    return this._sslCertificate;
   }
-  public set sslCertificate(value: ApplicationGatewaySslCertificate[] | cdktf.IResolvable) {
-    this._sslCertificate = value;
+  public putSslCertificate(value: ApplicationGatewaySslCertificate[] | cdktf.IResolvable) {
+    this._sslCertificate.internalValue = value;
   }
   public resetSslCertificate() {
-    this._sslCertificate = undefined;
+    this._sslCertificate.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get sslCertificateInput() {
-    return this._sslCertificate;
+    return this._sslCertificate.internalValue;
   }
 
   // ssl_policy - computed: false, optional: true, required: false
@@ -3091,20 +7497,19 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   }
 
   // ssl_profile - computed: false, optional: true, required: false
-  private _sslProfile?: ApplicationGatewaySslProfile[] | cdktf.IResolvable; 
+  private _sslProfile = new ApplicationGatewaySslProfileList(this, "ssl_profile", false);
   public get sslProfile() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('ssl_profile');
+    return this._sslProfile;
   }
-  public set sslProfile(value: ApplicationGatewaySslProfile[] | cdktf.IResolvable) {
-    this._sslProfile = value;
+  public putSslProfile(value: ApplicationGatewaySslProfile[] | cdktf.IResolvable) {
+    this._sslProfile.internalValue = value;
   }
   public resetSslProfile() {
-    this._sslProfile = undefined;
+    this._sslProfile.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get sslProfileInput() {
-    return this._sslProfile;
+    return this._sslProfile.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -3124,54 +7529,51 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   }
 
   // trusted_client_certificate - computed: false, optional: true, required: false
-  private _trustedClientCertificate?: ApplicationGatewayTrustedClientCertificate[] | cdktf.IResolvable; 
+  private _trustedClientCertificate = new ApplicationGatewayTrustedClientCertificateList(this, "trusted_client_certificate", false);
   public get trustedClientCertificate() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('trusted_client_certificate');
+    return this._trustedClientCertificate;
   }
-  public set trustedClientCertificate(value: ApplicationGatewayTrustedClientCertificate[] | cdktf.IResolvable) {
-    this._trustedClientCertificate = value;
+  public putTrustedClientCertificate(value: ApplicationGatewayTrustedClientCertificate[] | cdktf.IResolvable) {
+    this._trustedClientCertificate.internalValue = value;
   }
   public resetTrustedClientCertificate() {
-    this._trustedClientCertificate = undefined;
+    this._trustedClientCertificate.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get trustedClientCertificateInput() {
-    return this._trustedClientCertificate;
+    return this._trustedClientCertificate.internalValue;
   }
 
   // trusted_root_certificate - computed: false, optional: true, required: false
-  private _trustedRootCertificate?: ApplicationGatewayTrustedRootCertificate[] | cdktf.IResolvable; 
+  private _trustedRootCertificate = new ApplicationGatewayTrustedRootCertificateList(this, "trusted_root_certificate", false);
   public get trustedRootCertificate() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('trusted_root_certificate');
+    return this._trustedRootCertificate;
   }
-  public set trustedRootCertificate(value: ApplicationGatewayTrustedRootCertificate[] | cdktf.IResolvable) {
-    this._trustedRootCertificate = value;
+  public putTrustedRootCertificate(value: ApplicationGatewayTrustedRootCertificate[] | cdktf.IResolvable) {
+    this._trustedRootCertificate.internalValue = value;
   }
   public resetTrustedRootCertificate() {
-    this._trustedRootCertificate = undefined;
+    this._trustedRootCertificate.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get trustedRootCertificateInput() {
-    return this._trustedRootCertificate;
+    return this._trustedRootCertificate.internalValue;
   }
 
   // url_path_map - computed: false, optional: true, required: false
-  private _urlPathMap?: ApplicationGatewayUrlPathMap[] | cdktf.IResolvable; 
+  private _urlPathMap = new ApplicationGatewayUrlPathMapList(this, "url_path_map", false);
   public get urlPathMap() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('url_path_map');
+    return this._urlPathMap;
   }
-  public set urlPathMap(value: ApplicationGatewayUrlPathMap[] | cdktf.IResolvable) {
-    this._urlPathMap = value;
+  public putUrlPathMap(value: ApplicationGatewayUrlPathMap[] | cdktf.IResolvable) {
+    this._urlPathMap.internalValue = value;
   }
   public resetUrlPathMap() {
-    this._urlPathMap = undefined;
+    this._urlPathMap.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get urlPathMapInput() {
-    return this._urlPathMap;
+    return this._urlPathMap.internalValue;
   }
 
   // waf_configuration - computed: false, optional: true, required: false
@@ -3200,34 +7602,35 @@ export class ApplicationGateway extends cdktf.TerraformResource {
       fips_enabled: cdktf.booleanToTerraform(this._fipsEnabled),
       firewall_policy_id: cdktf.stringToTerraform(this._firewallPolicyId),
       force_firewall_policy_association: cdktf.booleanToTerraform(this._forceFirewallPolicyAssociation),
+      id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),
-      authentication_certificate: cdktf.listMapper(applicationGatewayAuthenticationCertificateToTerraform)(this._authenticationCertificate),
+      authentication_certificate: cdktf.listMapper(applicationGatewayAuthenticationCertificateToTerraform)(this._authenticationCertificate.internalValue),
       autoscale_configuration: applicationGatewayAutoscaleConfigurationToTerraform(this._autoscaleConfiguration.internalValue),
-      backend_address_pool: cdktf.listMapper(applicationGatewayBackendAddressPoolToTerraform)(this._backendAddressPool),
-      backend_http_settings: cdktf.listMapper(applicationGatewayBackendHttpSettingsToTerraform)(this._backendHttpSettings),
-      custom_error_configuration: cdktf.listMapper(applicationGatewayCustomErrorConfigurationToTerraform)(this._customErrorConfiguration),
-      frontend_ip_configuration: cdktf.listMapper(applicationGatewayFrontendIpConfigurationToTerraform)(this._frontendIpConfiguration),
-      frontend_port: cdktf.listMapper(applicationGatewayFrontendPortToTerraform)(this._frontendPort),
-      gateway_ip_configuration: cdktf.listMapper(applicationGatewayGatewayIpConfigurationToTerraform)(this._gatewayIpConfiguration),
-      http_listener: cdktf.listMapper(applicationGatewayHttpListenerToTerraform)(this._httpListener),
+      backend_address_pool: cdktf.listMapper(applicationGatewayBackendAddressPoolToTerraform)(this._backendAddressPool.internalValue),
+      backend_http_settings: cdktf.listMapper(applicationGatewayBackendHttpSettingsToTerraform)(this._backendHttpSettings.internalValue),
+      custom_error_configuration: cdktf.listMapper(applicationGatewayCustomErrorConfigurationToTerraform)(this._customErrorConfiguration.internalValue),
+      frontend_ip_configuration: cdktf.listMapper(applicationGatewayFrontendIpConfigurationToTerraform)(this._frontendIpConfiguration.internalValue),
+      frontend_port: cdktf.listMapper(applicationGatewayFrontendPortToTerraform)(this._frontendPort.internalValue),
+      gateway_ip_configuration: cdktf.listMapper(applicationGatewayGatewayIpConfigurationToTerraform)(this._gatewayIpConfiguration.internalValue),
+      http_listener: cdktf.listMapper(applicationGatewayHttpListenerToTerraform)(this._httpListener.internalValue),
       identity: applicationGatewayIdentityToTerraform(this._identity.internalValue),
-      private_link_configuration: cdktf.listMapper(applicationGatewayPrivateLinkConfigurationToTerraform)(this._privateLinkConfiguration),
-      probe: cdktf.listMapper(applicationGatewayProbeToTerraform)(this._probe),
-      redirect_configuration: cdktf.listMapper(applicationGatewayRedirectConfigurationToTerraform)(this._redirectConfiguration),
-      request_routing_rule: cdktf.listMapper(applicationGatewayRequestRoutingRuleToTerraform)(this._requestRoutingRule),
-      rewrite_rule_set: cdktf.listMapper(applicationGatewayRewriteRuleSetToTerraform)(this._rewriteRuleSet),
+      private_link_configuration: cdktf.listMapper(applicationGatewayPrivateLinkConfigurationToTerraform)(this._privateLinkConfiguration.internalValue),
+      probe: cdktf.listMapper(applicationGatewayProbeToTerraform)(this._probe.internalValue),
+      redirect_configuration: cdktf.listMapper(applicationGatewayRedirectConfigurationToTerraform)(this._redirectConfiguration.internalValue),
+      request_routing_rule: cdktf.listMapper(applicationGatewayRequestRoutingRuleToTerraform)(this._requestRoutingRule.internalValue),
+      rewrite_rule_set: cdktf.listMapper(applicationGatewayRewriteRuleSetToTerraform)(this._rewriteRuleSet.internalValue),
       sku: applicationGatewaySkuToTerraform(this._sku.internalValue),
-      ssl_certificate: cdktf.listMapper(applicationGatewaySslCertificateToTerraform)(this._sslCertificate),
+      ssl_certificate: cdktf.listMapper(applicationGatewaySslCertificateToTerraform)(this._sslCertificate.internalValue),
       ssl_policy: applicationGatewaySslPolicyToTerraform(this._sslPolicy.internalValue),
-      ssl_profile: cdktf.listMapper(applicationGatewaySslProfileToTerraform)(this._sslProfile),
+      ssl_profile: cdktf.listMapper(applicationGatewaySslProfileToTerraform)(this._sslProfile.internalValue),
       timeouts: applicationGatewayTimeoutsToTerraform(this._timeouts.internalValue),
-      trusted_client_certificate: cdktf.listMapper(applicationGatewayTrustedClientCertificateToTerraform)(this._trustedClientCertificate),
-      trusted_root_certificate: cdktf.listMapper(applicationGatewayTrustedRootCertificateToTerraform)(this._trustedRootCertificate),
-      url_path_map: cdktf.listMapper(applicationGatewayUrlPathMapToTerraform)(this._urlPathMap),
+      trusted_client_certificate: cdktf.listMapper(applicationGatewayTrustedClientCertificateToTerraform)(this._trustedClientCertificate.internalValue),
+      trusted_root_certificate: cdktf.listMapper(applicationGatewayTrustedRootCertificateToTerraform)(this._trustedRootCertificate.internalValue),
+      url_path_map: cdktf.listMapper(applicationGatewayUrlPathMapToTerraform)(this._urlPathMap.internalValue),
       waf_configuration: applicationGatewayWafConfigurationToTerraform(this._wafConfiguration.internalValue),
     };
   }

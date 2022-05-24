@@ -20,6 +20,13 @@ export interface SecurityCenterAssessmentMetadataConfig extends cdktf.TerraformM
   */
   readonly displayName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment_metadata#id SecurityCenterAssessmentMetadata#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment_metadata#implementation_effort SecurityCenterAssessmentMetadata#implementation_effort}
   */
   readonly implementationEffort?: string;
@@ -80,6 +87,7 @@ export function securityCenterAssessmentMetadataTimeoutsToTerraform(struct?: Sec
 
 export class SecurityCenterAssessmentMetadataTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -89,7 +97,10 @@ export class SecurityCenterAssessmentMetadataTimeoutsOutputReference extends cdk
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): SecurityCenterAssessmentMetadataTimeouts | undefined {
+  public get internalValue(): SecurityCenterAssessmentMetadataTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -111,16 +122,22 @@ export class SecurityCenterAssessmentMetadataTimeoutsOutputReference extends cdk
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: SecurityCenterAssessmentMetadataTimeouts | undefined) {
+  public set internalValue(value: SecurityCenterAssessmentMetadataTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -230,6 +247,7 @@ export class SecurityCenterAssessmentMetadata extends cdktf.TerraformResource {
     this._categories = config.categories;
     this._description = config.description;
     this._displayName = config.displayName;
+    this._id = config.id;
     this._implementationEffort = config.implementationEffort;
     this._remediationDescription = config.remediationDescription;
     this._severity = config.severity;
@@ -285,8 +303,19 @@ export class SecurityCenterAssessmentMetadata extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // implementation_effort - computed: false, optional: true, required: false
@@ -399,6 +428,7 @@ export class SecurityCenterAssessmentMetadata extends cdktf.TerraformResource {
       categories: cdktf.listMapper(cdktf.stringToTerraform)(this._categories),
       description: cdktf.stringToTerraform(this._description),
       display_name: cdktf.stringToTerraform(this._displayName),
+      id: cdktf.stringToTerraform(this._id),
       implementation_effort: cdktf.stringToTerraform(this._implementationEffort),
       remediation_description: cdktf.stringToTerraform(this._remediationDescription),
       severity: cdktf.stringToTerraform(this._severity),

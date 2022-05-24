@@ -24,6 +24,13 @@ export interface DataFactoryDataFlowConfig extends cdktf.TerraformMetaArguments 
   */
   readonly folder?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow#id DataFactoryDataFlow#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow#name DataFactoryDataFlow#name}
   */
   readonly name: string;
@@ -366,6 +373,171 @@ export function dataFactoryDataFlowSinkToTerraform(struct?: DataFactoryDataFlowS
   }
 }
 
+export class DataFactoryDataFlowSinkOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataFactoryDataFlowSink | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._description !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.description = this._description;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._dataset?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dataset = this._dataset?.internalValue;
+    }
+    if (this._linkedService?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.linkedService = this._linkedService?.internalValue;
+    }
+    if (this._schemaLinkedService?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.schemaLinkedService = this._schemaLinkedService?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFactoryDataFlowSink | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._description = undefined;
+      this._name = undefined;
+      this._dataset.internalValue = undefined;
+      this._linkedService.internalValue = undefined;
+      this._schemaLinkedService.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._description = value.description;
+      this._name = value.name;
+      this._dataset.internalValue = value.dataset;
+      this._linkedService.internalValue = value.linkedService;
+      this._schemaLinkedService.internalValue = value.schemaLinkedService;
+    }
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // dataset - computed: false, optional: true, required: false
+  private _dataset = new DataFactoryDataFlowSinkDatasetOutputReference(this, "dataset");
+  public get dataset() {
+    return this._dataset;
+  }
+  public putDataset(value: DataFactoryDataFlowSinkDataset) {
+    this._dataset.internalValue = value;
+  }
+  public resetDataset() {
+    this._dataset.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get datasetInput() {
+    return this._dataset.internalValue;
+  }
+
+  // linked_service - computed: false, optional: true, required: false
+  private _linkedService = new DataFactoryDataFlowSinkLinkedServiceOutputReference(this, "linked_service");
+  public get linkedService() {
+    return this._linkedService;
+  }
+  public putLinkedService(value: DataFactoryDataFlowSinkLinkedService) {
+    this._linkedService.internalValue = value;
+  }
+  public resetLinkedService() {
+    this._linkedService.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get linkedServiceInput() {
+    return this._linkedService.internalValue;
+  }
+
+  // schema_linked_service - computed: false, optional: true, required: false
+  private _schemaLinkedService = new DataFactoryDataFlowSinkSchemaLinkedServiceOutputReference(this, "schema_linked_service");
+  public get schemaLinkedService() {
+    return this._schemaLinkedService;
+  }
+  public putSchemaLinkedService(value: DataFactoryDataFlowSinkSchemaLinkedService) {
+    this._schemaLinkedService.internalValue = value;
+  }
+  public resetSchemaLinkedService() {
+    this._schemaLinkedService.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get schemaLinkedServiceInput() {
+    return this._schemaLinkedService.internalValue;
+  }
+}
+
+export class DataFactoryDataFlowSinkList extends cdktf.ComplexList {
+  public internalValue? : DataFactoryDataFlowSink[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataFactoryDataFlowSinkOutputReference {
+    return new DataFactoryDataFlowSinkOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataFactoryDataFlowSourceDataset {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow#name DataFactoryDataFlow#name}
@@ -676,6 +848,171 @@ export function dataFactoryDataFlowSourceToTerraform(struct?: DataFactoryDataFlo
   }
 }
 
+export class DataFactoryDataFlowSourceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataFactoryDataFlowSource | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._description !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.description = this._description;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._dataset?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dataset = this._dataset?.internalValue;
+    }
+    if (this._linkedService?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.linkedService = this._linkedService?.internalValue;
+    }
+    if (this._schemaLinkedService?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.schemaLinkedService = this._schemaLinkedService?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFactoryDataFlowSource | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._description = undefined;
+      this._name = undefined;
+      this._dataset.internalValue = undefined;
+      this._linkedService.internalValue = undefined;
+      this._schemaLinkedService.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._description = value.description;
+      this._name = value.name;
+      this._dataset.internalValue = value.dataset;
+      this._linkedService.internalValue = value.linkedService;
+      this._schemaLinkedService.internalValue = value.schemaLinkedService;
+    }
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // dataset - computed: false, optional: true, required: false
+  private _dataset = new DataFactoryDataFlowSourceDatasetOutputReference(this, "dataset");
+  public get dataset() {
+    return this._dataset;
+  }
+  public putDataset(value: DataFactoryDataFlowSourceDataset) {
+    this._dataset.internalValue = value;
+  }
+  public resetDataset() {
+    this._dataset.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get datasetInput() {
+    return this._dataset.internalValue;
+  }
+
+  // linked_service - computed: false, optional: true, required: false
+  private _linkedService = new DataFactoryDataFlowSourceLinkedServiceOutputReference(this, "linked_service");
+  public get linkedService() {
+    return this._linkedService;
+  }
+  public putLinkedService(value: DataFactoryDataFlowSourceLinkedService) {
+    this._linkedService.internalValue = value;
+  }
+  public resetLinkedService() {
+    this._linkedService.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get linkedServiceInput() {
+    return this._linkedService.internalValue;
+  }
+
+  // schema_linked_service - computed: false, optional: true, required: false
+  private _schemaLinkedService = new DataFactoryDataFlowSourceSchemaLinkedServiceOutputReference(this, "schema_linked_service");
+  public get schemaLinkedService() {
+    return this._schemaLinkedService;
+  }
+  public putSchemaLinkedService(value: DataFactoryDataFlowSourceSchemaLinkedService) {
+    this._schemaLinkedService.internalValue = value;
+  }
+  public resetSchemaLinkedService() {
+    this._schemaLinkedService.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get schemaLinkedServiceInput() {
+    return this._schemaLinkedService.internalValue;
+  }
+}
+
+export class DataFactoryDataFlowSourceList extends cdktf.ComplexList {
+  public internalValue? : DataFactoryDataFlowSource[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataFactoryDataFlowSourceOutputReference {
+    return new DataFactoryDataFlowSourceOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataFactoryDataFlowTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow#create DataFactoryDataFlow#create}
@@ -710,6 +1047,7 @@ export function dataFactoryDataFlowTimeoutsToTerraform(struct?: DataFactoryDataF
 
 export class DataFactoryDataFlowTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -719,7 +1057,10 @@ export class DataFactoryDataFlowTimeoutsOutputReference extends cdktf.ComplexObj
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): DataFactoryDataFlowTimeouts | undefined {
+  public get internalValue(): DataFactoryDataFlowTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -741,16 +1082,22 @@ export class DataFactoryDataFlowTimeoutsOutputReference extends cdktf.ComplexObj
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: DataFactoryDataFlowTimeouts | undefined) {
+  public set internalValue(value: DataFactoryDataFlowTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -844,6 +1191,105 @@ export function dataFactoryDataFlowTransformationToTerraform(struct?: DataFactor
   }
 }
 
+export class DataFactoryDataFlowTransformationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataFactoryDataFlowTransformation | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._description !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.description = this._description;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFactoryDataFlowTransformation | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._description = undefined;
+      this._name = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._description = value.description;
+      this._name = value.name;
+    }
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+}
+
+export class DataFactoryDataFlowTransformationList extends cdktf.ComplexList {
+  public internalValue? : DataFactoryDataFlowTransformation[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataFactoryDataFlowTransformationOutputReference {
+    return new DataFactoryDataFlowTransformationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow azurerm_data_factory_data_flow}
@@ -883,12 +1329,13 @@ export class DataFactoryDataFlow extends cdktf.TerraformResource {
     this._dataFactoryId = config.dataFactoryId;
     this._description = config.description;
     this._folder = config.folder;
+    this._id = config.id;
     this._name = config.name;
     this._script = config.script;
-    this._sink = config.sink;
-    this._source = config.source;
+    this._sink.internalValue = config.sink;
+    this._source.internalValue = config.source;
     this._timeouts.internalValue = config.timeouts;
-    this._transformation = config.transformation;
+    this._transformation.internalValue = config.transformation;
   }
 
   // ==========
@@ -957,8 +1404,19 @@ export class DataFactoryDataFlow extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // name - computed: false, optional: false, required: true
@@ -988,31 +1446,29 @@ export class DataFactoryDataFlow extends cdktf.TerraformResource {
   }
 
   // sink - computed: false, optional: false, required: true
-  private _sink?: DataFactoryDataFlowSink[] | cdktf.IResolvable; 
+  private _sink = new DataFactoryDataFlowSinkList(this, "sink", false);
   public get sink() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('sink');
+    return this._sink;
   }
-  public set sink(value: DataFactoryDataFlowSink[] | cdktf.IResolvable) {
-    this._sink = value;
+  public putSink(value: DataFactoryDataFlowSink[] | cdktf.IResolvable) {
+    this._sink.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get sinkInput() {
-    return this._sink;
+    return this._sink.internalValue;
   }
 
   // source - computed: false, optional: false, required: true
-  private _source?: DataFactoryDataFlowSource[] | cdktf.IResolvable; 
+  private _source = new DataFactoryDataFlowSourceList(this, "source", false);
   public get source() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('source');
+    return this._source;
   }
-  public set source(value: DataFactoryDataFlowSource[] | cdktf.IResolvable) {
-    this._source = value;
+  public putSource(value: DataFactoryDataFlowSource[] | cdktf.IResolvable) {
+    this._source.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get sourceInput() {
-    return this._source;
+    return this._source.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -1032,20 +1488,19 @@ export class DataFactoryDataFlow extends cdktf.TerraformResource {
   }
 
   // transformation - computed: false, optional: true, required: false
-  private _transformation?: DataFactoryDataFlowTransformation[] | cdktf.IResolvable; 
+  private _transformation = new DataFactoryDataFlowTransformationList(this, "transformation", false);
   public get transformation() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('transformation');
+    return this._transformation;
   }
-  public set transformation(value: DataFactoryDataFlowTransformation[] | cdktf.IResolvable) {
-    this._transformation = value;
+  public putTransformation(value: DataFactoryDataFlowTransformation[] | cdktf.IResolvable) {
+    this._transformation.internalValue = value;
   }
   public resetTransformation() {
-    this._transformation = undefined;
+    this._transformation.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get transformationInput() {
-    return this._transformation;
+    return this._transformation.internalValue;
   }
 
   // =========
@@ -1058,12 +1513,13 @@ export class DataFactoryDataFlow extends cdktf.TerraformResource {
       data_factory_id: cdktf.stringToTerraform(this._dataFactoryId),
       description: cdktf.stringToTerraform(this._description),
       folder: cdktf.stringToTerraform(this._folder),
+      id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       script: cdktf.stringToTerraform(this._script),
-      sink: cdktf.listMapper(dataFactoryDataFlowSinkToTerraform)(this._sink),
-      source: cdktf.listMapper(dataFactoryDataFlowSourceToTerraform)(this._source),
+      sink: cdktf.listMapper(dataFactoryDataFlowSinkToTerraform)(this._sink.internalValue),
+      source: cdktf.listMapper(dataFactoryDataFlowSourceToTerraform)(this._source.internalValue),
       timeouts: dataFactoryDataFlowTimeoutsToTerraform(this._timeouts.internalValue),
-      transformation: cdktf.listMapper(dataFactoryDataFlowTransformationToTerraform)(this._transformation),
+      transformation: cdktf.listMapper(dataFactoryDataFlowTransformationToTerraform)(this._transformation.internalValue),
     };
   }
 }

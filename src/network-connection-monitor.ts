@@ -12,6 +12,13 @@ export interface NetworkConnectionMonitorConfig extends cdktf.TerraformMetaArgum
   */
   readonly autoStart?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor#id NetworkConnectionMonitor#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor#interval_in_seconds NetworkConnectionMonitor#interval_in_seconds}
   */
   readonly intervalInSeconds?: number;
@@ -217,6 +224,108 @@ export function networkConnectionMonitorEndpointFilterItemToTerraform(struct?: N
   }
 }
 
+export class NetworkConnectionMonitorEndpointFilterItemOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): NetworkConnectionMonitorEndpointFilterItem | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._address !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.address = this._address;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkConnectionMonitorEndpointFilterItem | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._address = undefined;
+      this._type = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._address = value.address;
+      this._type = value.type;
+    }
+  }
+
+  // address - computed: false, optional: true, required: false
+  private _address?: string; 
+  public get address() {
+    return this.getStringAttribute('address');
+  }
+  public set address(value: string) {
+    this._address = value;
+  }
+  public resetAddress() {
+    this._address = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get addressInput() {
+    return this._address;
+  }
+
+  // type - computed: false, optional: true, required: false
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  public resetType() {
+    this._type = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+}
+
+export class NetworkConnectionMonitorEndpointFilterItemList extends cdktf.ComplexList {
+  public internalValue? : NetworkConnectionMonitorEndpointFilterItem[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): NetworkConnectionMonitorEndpointFilterItemOutputReference {
+    return new NetworkConnectionMonitorEndpointFilterItemOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface NetworkConnectionMonitorEndpointFilter {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor#type NetworkConnectionMonitor#type}
@@ -259,9 +368,9 @@ export class NetworkConnectionMonitorEndpointFilterOutputReference extends cdktf
       hasAnyValues = true;
       internalValueResult.type = this._type;
     }
-    if (this._item !== undefined) {
+    if (this._item?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.item = this._item;
+      internalValueResult.item = this._item?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -270,12 +379,12 @@ export class NetworkConnectionMonitorEndpointFilterOutputReference extends cdktf
     if (value === undefined) {
       this.isEmptyObject = false;
       this._type = undefined;
-      this._item = undefined;
+      this._item.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._type = value.type;
-      this._item = value.item;
+      this._item.internalValue = value.item;
     }
   }
 
@@ -296,20 +405,19 @@ export class NetworkConnectionMonitorEndpointFilterOutputReference extends cdktf
   }
 
   // item - computed: false, optional: true, required: false
-  private _item?: NetworkConnectionMonitorEndpointFilterItem[] | cdktf.IResolvable; 
+  private _item = new NetworkConnectionMonitorEndpointFilterItemList(this, "item", true);
   public get item() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('item')));
+    return this._item;
   }
-  public set item(value: NetworkConnectionMonitorEndpointFilterItem[] | cdktf.IResolvable) {
-    this._item = value;
+  public putItem(value: NetworkConnectionMonitorEndpointFilterItem[] | cdktf.IResolvable) {
+    this._item.internalValue = value;
   }
   public resetItem() {
-    this._item = undefined;
+    this._item.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get itemInput() {
-    return this._item;
+    return this._item.internalValue;
   }
 }
 export interface NetworkConnectionMonitorEndpoint {
@@ -371,6 +479,259 @@ export function networkConnectionMonitorEndpointToTerraform(struct?: NetworkConn
   }
 }
 
+export class NetworkConnectionMonitorEndpointOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): NetworkConnectionMonitorEndpoint | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._address !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.address = this._address;
+    }
+    if (this._coverageLevel !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.coverageLevel = this._coverageLevel;
+    }
+    if (this._excludedIpAddresses !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.excludedIpAddresses = this._excludedIpAddresses;
+    }
+    if (this._includedIpAddresses !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.includedIpAddresses = this._includedIpAddresses;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._targetResourceId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.targetResourceId = this._targetResourceId;
+    }
+    if (this._targetResourceType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.targetResourceType = this._targetResourceType;
+    }
+    if (this._virtualMachineId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.virtualMachineId = this._virtualMachineId;
+    }
+    if (this._filter?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.filter = this._filter?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkConnectionMonitorEndpoint | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._address = undefined;
+      this._coverageLevel = undefined;
+      this._excludedIpAddresses = undefined;
+      this._includedIpAddresses = undefined;
+      this._name = undefined;
+      this._targetResourceId = undefined;
+      this._targetResourceType = undefined;
+      this._virtualMachineId = undefined;
+      this._filter.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._address = value.address;
+      this._coverageLevel = value.coverageLevel;
+      this._excludedIpAddresses = value.excludedIpAddresses;
+      this._includedIpAddresses = value.includedIpAddresses;
+      this._name = value.name;
+      this._targetResourceId = value.targetResourceId;
+      this._targetResourceType = value.targetResourceType;
+      this._virtualMachineId = value.virtualMachineId;
+      this._filter.internalValue = value.filter;
+    }
+  }
+
+  // address - computed: false, optional: true, required: false
+  private _address?: string; 
+  public get address() {
+    return this.getStringAttribute('address');
+  }
+  public set address(value: string) {
+    this._address = value;
+  }
+  public resetAddress() {
+    this._address = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get addressInput() {
+    return this._address;
+  }
+
+  // coverage_level - computed: false, optional: true, required: false
+  private _coverageLevel?: string; 
+  public get coverageLevel() {
+    return this.getStringAttribute('coverage_level');
+  }
+  public set coverageLevel(value: string) {
+    this._coverageLevel = value;
+  }
+  public resetCoverageLevel() {
+    this._coverageLevel = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get coverageLevelInput() {
+    return this._coverageLevel;
+  }
+
+  // excluded_ip_addresses - computed: false, optional: true, required: false
+  private _excludedIpAddresses?: string[]; 
+  public get excludedIpAddresses() {
+    return cdktf.Fn.tolist(this.getListAttribute('excluded_ip_addresses'));
+  }
+  public set excludedIpAddresses(value: string[]) {
+    this._excludedIpAddresses = value;
+  }
+  public resetExcludedIpAddresses() {
+    this._excludedIpAddresses = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get excludedIpAddressesInput() {
+    return this._excludedIpAddresses;
+  }
+
+  // included_ip_addresses - computed: false, optional: true, required: false
+  private _includedIpAddresses?: string[]; 
+  public get includedIpAddresses() {
+    return cdktf.Fn.tolist(this.getListAttribute('included_ip_addresses'));
+  }
+  public set includedIpAddresses(value: string[]) {
+    this._includedIpAddresses = value;
+  }
+  public resetIncludedIpAddresses() {
+    this._includedIpAddresses = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get includedIpAddressesInput() {
+    return this._includedIpAddresses;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // target_resource_id - computed: true, optional: true, required: false
+  private _targetResourceId?: string; 
+  public get targetResourceId() {
+    return this.getStringAttribute('target_resource_id');
+  }
+  public set targetResourceId(value: string) {
+    this._targetResourceId = value;
+  }
+  public resetTargetResourceId() {
+    this._targetResourceId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetResourceIdInput() {
+    return this._targetResourceId;
+  }
+
+  // target_resource_type - computed: false, optional: true, required: false
+  private _targetResourceType?: string; 
+  public get targetResourceType() {
+    return this.getStringAttribute('target_resource_type');
+  }
+  public set targetResourceType(value: string) {
+    this._targetResourceType = value;
+  }
+  public resetTargetResourceType() {
+    this._targetResourceType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetResourceTypeInput() {
+    return this._targetResourceType;
+  }
+
+  // virtual_machine_id - computed: false, optional: true, required: false
+  private _virtualMachineId?: string; 
+  public get virtualMachineId() {
+    return this.getStringAttribute('virtual_machine_id');
+  }
+  public set virtualMachineId(value: string) {
+    this._virtualMachineId = value;
+  }
+  public resetVirtualMachineId() {
+    this._virtualMachineId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get virtualMachineIdInput() {
+    return this._virtualMachineId;
+  }
+
+  // filter - computed: false, optional: true, required: false
+  private _filter = new NetworkConnectionMonitorEndpointFilterOutputReference(this, "filter");
+  public get filter() {
+    return this._filter;
+  }
+  public putFilter(value: NetworkConnectionMonitorEndpointFilter) {
+    this._filter.internalValue = value;
+  }
+  public resetFilter() {
+    this._filter.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get filterInput() {
+    return this._filter.internalValue;
+  }
+}
+
+export class NetworkConnectionMonitorEndpointList extends cdktf.ComplexList {
+  public internalValue? : NetworkConnectionMonitorEndpoint[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): NetworkConnectionMonitorEndpointOutputReference {
+    return new NetworkConnectionMonitorEndpointOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface NetworkConnectionMonitorSource {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor#port NetworkConnectionMonitor#port}
@@ -485,6 +846,102 @@ export function networkConnectionMonitorTestConfigurationHttpConfigurationReques
   }
 }
 
+export class NetworkConnectionMonitorTestConfigurationHttpConfigurationRequestHeaderOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): NetworkConnectionMonitorTestConfigurationHttpConfigurationRequestHeader | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkConnectionMonitorTestConfigurationHttpConfigurationRequestHeader | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._value = value.value;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // value - computed: false, optional: false, required: true
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class NetworkConnectionMonitorTestConfigurationHttpConfigurationRequestHeaderList extends cdktf.ComplexList {
+  public internalValue? : NetworkConnectionMonitorTestConfigurationHttpConfigurationRequestHeader[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): NetworkConnectionMonitorTestConfigurationHttpConfigurationRequestHeaderOutputReference {
+    return new NetworkConnectionMonitorTestConfigurationHttpConfigurationRequestHeaderOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface NetworkConnectionMonitorTestConfigurationHttpConfiguration {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor#method NetworkConnectionMonitor#method}
@@ -563,9 +1020,9 @@ export class NetworkConnectionMonitorTestConfigurationHttpConfigurationOutputRef
       hasAnyValues = true;
       internalValueResult.validStatusCodeRanges = this._validStatusCodeRanges;
     }
-    if (this._requestHeader !== undefined) {
+    if (this._requestHeader?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.requestHeader = this._requestHeader;
+      internalValueResult.requestHeader = this._requestHeader?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -578,7 +1035,7 @@ export class NetworkConnectionMonitorTestConfigurationHttpConfigurationOutputRef
       this._port = undefined;
       this._preferHttps = undefined;
       this._validStatusCodeRanges = undefined;
-      this._requestHeader = undefined;
+      this._requestHeader.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
@@ -587,7 +1044,7 @@ export class NetworkConnectionMonitorTestConfigurationHttpConfigurationOutputRef
       this._port = value.port;
       this._preferHttps = value.preferHttps;
       this._validStatusCodeRanges = value.validStatusCodeRanges;
-      this._requestHeader = value.requestHeader;
+      this._requestHeader.internalValue = value.requestHeader;
     }
   }
 
@@ -672,20 +1129,19 @@ export class NetworkConnectionMonitorTestConfigurationHttpConfigurationOutputRef
   }
 
   // request_header - computed: false, optional: true, required: false
-  private _requestHeader?: NetworkConnectionMonitorTestConfigurationHttpConfigurationRequestHeader[] | cdktf.IResolvable; 
+  private _requestHeader = new NetworkConnectionMonitorTestConfigurationHttpConfigurationRequestHeaderList(this, "request_header", true);
   public get requestHeader() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('request_header')));
+    return this._requestHeader;
   }
-  public set requestHeader(value: NetworkConnectionMonitorTestConfigurationHttpConfigurationRequestHeader[] | cdktf.IResolvable) {
-    this._requestHeader = value;
+  public putRequestHeader(value: NetworkConnectionMonitorTestConfigurationHttpConfigurationRequestHeader[] | cdktf.IResolvable) {
+    this._requestHeader.internalValue = value;
   }
   public resetRequestHeader() {
-    this._requestHeader = undefined;
+    this._requestHeader.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get requestHeaderInput() {
-    return this._requestHeader;
+    return this._requestHeader.internalValue;
   }
 }
 export interface NetworkConnectionMonitorTestConfigurationIcmpConfiguration {
@@ -1021,6 +1477,234 @@ export function networkConnectionMonitorTestConfigurationToTerraform(struct?: Ne
   }
 }
 
+export class NetworkConnectionMonitorTestConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): NetworkConnectionMonitorTestConfiguration | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._preferredIpVersion !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.preferredIpVersion = this._preferredIpVersion;
+    }
+    if (this._protocol !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.protocol = this._protocol;
+    }
+    if (this._testFrequencyInSeconds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.testFrequencyInSeconds = this._testFrequencyInSeconds;
+    }
+    if (this._httpConfiguration?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.httpConfiguration = this._httpConfiguration?.internalValue;
+    }
+    if (this._icmpConfiguration?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.icmpConfiguration = this._icmpConfiguration?.internalValue;
+    }
+    if (this._successThreshold?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.successThreshold = this._successThreshold?.internalValue;
+    }
+    if (this._tcpConfiguration?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.tcpConfiguration = this._tcpConfiguration?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkConnectionMonitorTestConfiguration | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._preferredIpVersion = undefined;
+      this._protocol = undefined;
+      this._testFrequencyInSeconds = undefined;
+      this._httpConfiguration.internalValue = undefined;
+      this._icmpConfiguration.internalValue = undefined;
+      this._successThreshold.internalValue = undefined;
+      this._tcpConfiguration.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._preferredIpVersion = value.preferredIpVersion;
+      this._protocol = value.protocol;
+      this._testFrequencyInSeconds = value.testFrequencyInSeconds;
+      this._httpConfiguration.internalValue = value.httpConfiguration;
+      this._icmpConfiguration.internalValue = value.icmpConfiguration;
+      this._successThreshold.internalValue = value.successThreshold;
+      this._tcpConfiguration.internalValue = value.tcpConfiguration;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // preferred_ip_version - computed: false, optional: true, required: false
+  private _preferredIpVersion?: string; 
+  public get preferredIpVersion() {
+    return this.getStringAttribute('preferred_ip_version');
+  }
+  public set preferredIpVersion(value: string) {
+    this._preferredIpVersion = value;
+  }
+  public resetPreferredIpVersion() {
+    this._preferredIpVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get preferredIpVersionInput() {
+    return this._preferredIpVersion;
+  }
+
+  // protocol - computed: false, optional: false, required: true
+  private _protocol?: string; 
+  public get protocol() {
+    return this.getStringAttribute('protocol');
+  }
+  public set protocol(value: string) {
+    this._protocol = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get protocolInput() {
+    return this._protocol;
+  }
+
+  // test_frequency_in_seconds - computed: false, optional: true, required: false
+  private _testFrequencyInSeconds?: number; 
+  public get testFrequencyInSeconds() {
+    return this.getNumberAttribute('test_frequency_in_seconds');
+  }
+  public set testFrequencyInSeconds(value: number) {
+    this._testFrequencyInSeconds = value;
+  }
+  public resetTestFrequencyInSeconds() {
+    this._testFrequencyInSeconds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get testFrequencyInSecondsInput() {
+    return this._testFrequencyInSeconds;
+  }
+
+  // http_configuration - computed: false, optional: true, required: false
+  private _httpConfiguration = new NetworkConnectionMonitorTestConfigurationHttpConfigurationOutputReference(this, "http_configuration");
+  public get httpConfiguration() {
+    return this._httpConfiguration;
+  }
+  public putHttpConfiguration(value: NetworkConnectionMonitorTestConfigurationHttpConfiguration) {
+    this._httpConfiguration.internalValue = value;
+  }
+  public resetHttpConfiguration() {
+    this._httpConfiguration.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get httpConfigurationInput() {
+    return this._httpConfiguration.internalValue;
+  }
+
+  // icmp_configuration - computed: false, optional: true, required: false
+  private _icmpConfiguration = new NetworkConnectionMonitorTestConfigurationIcmpConfigurationOutputReference(this, "icmp_configuration");
+  public get icmpConfiguration() {
+    return this._icmpConfiguration;
+  }
+  public putIcmpConfiguration(value: NetworkConnectionMonitorTestConfigurationIcmpConfiguration) {
+    this._icmpConfiguration.internalValue = value;
+  }
+  public resetIcmpConfiguration() {
+    this._icmpConfiguration.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get icmpConfigurationInput() {
+    return this._icmpConfiguration.internalValue;
+  }
+
+  // success_threshold - computed: false, optional: true, required: false
+  private _successThreshold = new NetworkConnectionMonitorTestConfigurationSuccessThresholdOutputReference(this, "success_threshold");
+  public get successThreshold() {
+    return this._successThreshold;
+  }
+  public putSuccessThreshold(value: NetworkConnectionMonitorTestConfigurationSuccessThreshold) {
+    this._successThreshold.internalValue = value;
+  }
+  public resetSuccessThreshold() {
+    this._successThreshold.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get successThresholdInput() {
+    return this._successThreshold.internalValue;
+  }
+
+  // tcp_configuration - computed: false, optional: true, required: false
+  private _tcpConfiguration = new NetworkConnectionMonitorTestConfigurationTcpConfigurationOutputReference(this, "tcp_configuration");
+  public get tcpConfiguration() {
+    return this._tcpConfiguration;
+  }
+  public putTcpConfiguration(value: NetworkConnectionMonitorTestConfigurationTcpConfiguration) {
+    this._tcpConfiguration.internalValue = value;
+  }
+  public resetTcpConfiguration() {
+    this._tcpConfiguration.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tcpConfigurationInput() {
+    return this._tcpConfiguration.internalValue;
+  }
+}
+
+export class NetworkConnectionMonitorTestConfigurationList extends cdktf.ComplexList {
+  public internalValue? : NetworkConnectionMonitorTestConfiguration[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): NetworkConnectionMonitorTestConfigurationOutputReference {
+    return new NetworkConnectionMonitorTestConfigurationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface NetworkConnectionMonitorTestGroup {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor#destination_endpoints NetworkConnectionMonitor#destination_endpoints}
@@ -1058,6 +1742,162 @@ export function networkConnectionMonitorTestGroupToTerraform(struct?: NetworkCon
   }
 }
 
+export class NetworkConnectionMonitorTestGroupOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): NetworkConnectionMonitorTestGroup | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._destinationEndpoints !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.destinationEndpoints = this._destinationEndpoints;
+    }
+    if (this._enabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._sourceEndpoints !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sourceEndpoints = this._sourceEndpoints;
+    }
+    if (this._testConfigurationNames !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.testConfigurationNames = this._testConfigurationNames;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkConnectionMonitorTestGroup | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._destinationEndpoints = undefined;
+      this._enabled = undefined;
+      this._name = undefined;
+      this._sourceEndpoints = undefined;
+      this._testConfigurationNames = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._destinationEndpoints = value.destinationEndpoints;
+      this._enabled = value.enabled;
+      this._name = value.name;
+      this._sourceEndpoints = value.sourceEndpoints;
+      this._testConfigurationNames = value.testConfigurationNames;
+    }
+  }
+
+  // destination_endpoints - computed: false, optional: false, required: true
+  private _destinationEndpoints?: string[]; 
+  public get destinationEndpoints() {
+    return cdktf.Fn.tolist(this.getListAttribute('destination_endpoints'));
+  }
+  public set destinationEndpoints(value: string[]) {
+    this._destinationEndpoints = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get destinationEndpointsInput() {
+    return this._destinationEndpoints;
+  }
+
+  // enabled - computed: false, optional: true, required: false
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // source_endpoints - computed: false, optional: false, required: true
+  private _sourceEndpoints?: string[]; 
+  public get sourceEndpoints() {
+    return cdktf.Fn.tolist(this.getListAttribute('source_endpoints'));
+  }
+  public set sourceEndpoints(value: string[]) {
+    this._sourceEndpoints = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceEndpointsInput() {
+    return this._sourceEndpoints;
+  }
+
+  // test_configuration_names - computed: false, optional: false, required: true
+  private _testConfigurationNames?: string[]; 
+  public get testConfigurationNames() {
+    return cdktf.Fn.tolist(this.getListAttribute('test_configuration_names'));
+  }
+  public set testConfigurationNames(value: string[]) {
+    this._testConfigurationNames = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get testConfigurationNamesInput() {
+    return this._testConfigurationNames;
+  }
+}
+
+export class NetworkConnectionMonitorTestGroupList extends cdktf.ComplexList {
+  public internalValue? : NetworkConnectionMonitorTestGroup[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): NetworkConnectionMonitorTestGroupOutputReference {
+    return new NetworkConnectionMonitorTestGroupOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface NetworkConnectionMonitorTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor#create NetworkConnectionMonitor#create}
@@ -1092,6 +1932,7 @@ export function networkConnectionMonitorTimeoutsToTerraform(struct?: NetworkConn
 
 export class NetworkConnectionMonitorTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -1101,7 +1942,10 @@ export class NetworkConnectionMonitorTimeoutsOutputReference extends cdktf.Compl
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): NetworkConnectionMonitorTimeouts | undefined {
+  public get internalValue(): NetworkConnectionMonitorTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -1123,16 +1967,22 @@ export class NetworkConnectionMonitorTimeoutsOutputReference extends cdktf.Compl
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: NetworkConnectionMonitorTimeouts | undefined) {
+  public set internalValue(value: NetworkConnectionMonitorTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -1240,6 +2090,7 @@ export class NetworkConnectionMonitor extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._autoStart = config.autoStart;
+    this._id = config.id;
     this._intervalInSeconds = config.intervalInSeconds;
     this._location = config.location;
     this._name = config.name;
@@ -1248,10 +2099,10 @@ export class NetworkConnectionMonitor extends cdktf.TerraformResource {
     this._outputWorkspaceResourceIds = config.outputWorkspaceResourceIds;
     this._tags = config.tags;
     this._destination.internalValue = config.destination;
-    this._endpoint = config.endpoint;
+    this._endpoint.internalValue = config.endpoint;
     this._source.internalValue = config.source;
-    this._testConfiguration = config.testConfiguration;
-    this._testGroup = config.testGroup;
+    this._testConfiguration.internalValue = config.testConfiguration;
+    this._testGroup.internalValue = config.testGroup;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -1276,8 +2127,19 @@ export class NetworkConnectionMonitor extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // interval_in_seconds - computed: true, optional: true, required: false
@@ -1400,17 +2262,16 @@ export class NetworkConnectionMonitor extends cdktf.TerraformResource {
   }
 
   // endpoint - computed: false, optional: false, required: true
-  private _endpoint?: NetworkConnectionMonitorEndpoint[] | cdktf.IResolvable; 
+  private _endpoint = new NetworkConnectionMonitorEndpointList(this, "endpoint", true);
   public get endpoint() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('endpoint')));
+    return this._endpoint;
   }
-  public set endpoint(value: NetworkConnectionMonitorEndpoint[] | cdktf.IResolvable) {
-    this._endpoint = value;
+  public putEndpoint(value: NetworkConnectionMonitorEndpoint[] | cdktf.IResolvable) {
+    this._endpoint.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get endpointInput() {
-    return this._endpoint;
+    return this._endpoint.internalValue;
   }
 
   // source - computed: false, optional: true, required: false
@@ -1430,31 +2291,29 @@ export class NetworkConnectionMonitor extends cdktf.TerraformResource {
   }
 
   // test_configuration - computed: false, optional: false, required: true
-  private _testConfiguration?: NetworkConnectionMonitorTestConfiguration[] | cdktf.IResolvable; 
+  private _testConfiguration = new NetworkConnectionMonitorTestConfigurationList(this, "test_configuration", true);
   public get testConfiguration() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('test_configuration')));
+    return this._testConfiguration;
   }
-  public set testConfiguration(value: NetworkConnectionMonitorTestConfiguration[] | cdktf.IResolvable) {
-    this._testConfiguration = value;
+  public putTestConfiguration(value: NetworkConnectionMonitorTestConfiguration[] | cdktf.IResolvable) {
+    this._testConfiguration.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get testConfigurationInput() {
-    return this._testConfiguration;
+    return this._testConfiguration.internalValue;
   }
 
   // test_group - computed: false, optional: false, required: true
-  private _testGroup?: NetworkConnectionMonitorTestGroup[] | cdktf.IResolvable; 
+  private _testGroup = new NetworkConnectionMonitorTestGroupList(this, "test_group", true);
   public get testGroup() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('test_group')));
+    return this._testGroup;
   }
-  public set testGroup(value: NetworkConnectionMonitorTestGroup[] | cdktf.IResolvable) {
-    this._testGroup = value;
+  public putTestGroup(value: NetworkConnectionMonitorTestGroup[] | cdktf.IResolvable) {
+    this._testGroup.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get testGroupInput() {
-    return this._testGroup;
+    return this._testGroup.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -1480,6 +2339,7 @@ export class NetworkConnectionMonitor extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       auto_start: cdktf.booleanToTerraform(this._autoStart),
+      id: cdktf.stringToTerraform(this._id),
       interval_in_seconds: cdktf.numberToTerraform(this._intervalInSeconds),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
@@ -1488,10 +2348,10 @@ export class NetworkConnectionMonitor extends cdktf.TerraformResource {
       output_workspace_resource_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._outputWorkspaceResourceIds),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       destination: networkConnectionMonitorDestinationToTerraform(this._destination.internalValue),
-      endpoint: cdktf.listMapper(networkConnectionMonitorEndpointToTerraform)(this._endpoint),
+      endpoint: cdktf.listMapper(networkConnectionMonitorEndpointToTerraform)(this._endpoint.internalValue),
       source: networkConnectionMonitorSourceToTerraform(this._source.internalValue),
-      test_configuration: cdktf.listMapper(networkConnectionMonitorTestConfigurationToTerraform)(this._testConfiguration),
-      test_group: cdktf.listMapper(networkConnectionMonitorTestGroupToTerraform)(this._testGroup),
+      test_configuration: cdktf.listMapper(networkConnectionMonitorTestConfigurationToTerraform)(this._testConfiguration.internalValue),
+      test_group: cdktf.listMapper(networkConnectionMonitorTestGroupToTerraform)(this._testGroup.internalValue),
       timeouts: networkConnectionMonitorTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

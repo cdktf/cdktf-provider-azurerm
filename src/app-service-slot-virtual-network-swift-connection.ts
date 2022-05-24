@@ -12,6 +12,13 @@ export interface AppServiceSlotVirtualNetworkSwiftConnectionConfig extends cdktf
   */
   readonly appServiceId: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot_virtual_network_swift_connection#id AppServiceSlotVirtualNetworkSwiftConnection#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot_virtual_network_swift_connection#slot_name AppServiceSlotVirtualNetworkSwiftConnection#slot_name}
   */
   readonly slotName: string;
@@ -60,6 +67,7 @@ export function appServiceSlotVirtualNetworkSwiftConnectionTimeoutsToTerraform(s
 
 export class AppServiceSlotVirtualNetworkSwiftConnectionTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -69,7 +77,10 @@ export class AppServiceSlotVirtualNetworkSwiftConnectionTimeoutsOutputReference 
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): AppServiceSlotVirtualNetworkSwiftConnectionTimeouts | undefined {
+  public get internalValue(): AppServiceSlotVirtualNetworkSwiftConnectionTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -91,16 +102,22 @@ export class AppServiceSlotVirtualNetworkSwiftConnectionTimeoutsOutputReference 
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: AppServiceSlotVirtualNetworkSwiftConnectionTimeouts | undefined) {
+  public set internalValue(value: AppServiceSlotVirtualNetworkSwiftConnectionTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -208,6 +225,7 @@ export class AppServiceSlotVirtualNetworkSwiftConnection extends cdktf.Terraform
       lifecycle: config.lifecycle
     });
     this._appServiceId = config.appServiceId;
+    this._id = config.id;
     this._slotName = config.slotName;
     this._subnetId = config.subnetId;
     this._timeouts.internalValue = config.timeouts;
@@ -231,8 +249,19 @@ export class AppServiceSlotVirtualNetworkSwiftConnection extends cdktf.Terraform
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // slot_name - computed: false, optional: false, required: true
@@ -284,6 +313,7 @@ export class AppServiceSlotVirtualNetworkSwiftConnection extends cdktf.Terraform
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       app_service_id: cdktf.stringToTerraform(this._appServiceId),
+      id: cdktf.stringToTerraform(this._id),
       slot_name: cdktf.stringToTerraform(this._slotName),
       subnet_id: cdktf.stringToTerraform(this._subnetId),
       timeouts: appServiceSlotVirtualNetworkSwiftConnectionTimeoutsToTerraform(this._timeouts.internalValue),

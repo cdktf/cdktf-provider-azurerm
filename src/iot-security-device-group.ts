@@ -8,6 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface IotSecurityDeviceGroupConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_device_group#id IotSecurityDeviceGroup#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_device_group#iothub_id IotSecurityDeviceGroup#iothub_id}
   */
   readonly iothubId: string;
@@ -293,6 +300,140 @@ export function iotSecurityDeviceGroupRangeRuleToTerraform(struct?: IotSecurityD
   }
 }
 
+export class IotSecurityDeviceGroupRangeRuleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): IotSecurityDeviceGroupRangeRule | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._duration !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.duration = this._duration;
+    }
+    if (this._max !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.max = this._max;
+    }
+    if (this._min !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.min = this._min;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: IotSecurityDeviceGroupRangeRule | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._duration = undefined;
+      this._max = undefined;
+      this._min = undefined;
+      this._type = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._duration = value.duration;
+      this._max = value.max;
+      this._min = value.min;
+      this._type = value.type;
+    }
+  }
+
+  // duration - computed: false, optional: false, required: true
+  private _duration?: string; 
+  public get duration() {
+    return this.getStringAttribute('duration');
+  }
+  public set duration(value: string) {
+    this._duration = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get durationInput() {
+    return this._duration;
+  }
+
+  // max - computed: false, optional: false, required: true
+  private _max?: number; 
+  public get max() {
+    return this.getNumberAttribute('max');
+  }
+  public set max(value: number) {
+    this._max = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxInput() {
+    return this._max;
+  }
+
+  // min - computed: false, optional: false, required: true
+  private _min?: number; 
+  public get min() {
+    return this.getNumberAttribute('min');
+  }
+  public set min(value: number) {
+    this._min = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minInput() {
+    return this._min;
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+}
+
+export class IotSecurityDeviceGroupRangeRuleList extends cdktf.ComplexList {
+  public internalValue? : IotSecurityDeviceGroupRangeRule[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): IotSecurityDeviceGroupRangeRuleOutputReference {
+    return new IotSecurityDeviceGroupRangeRuleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface IotSecurityDeviceGroupTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_device_group#create IotSecurityDeviceGroup#create}
@@ -327,6 +468,7 @@ export function iotSecurityDeviceGroupTimeoutsToTerraform(struct?: IotSecurityDe
 
 export class IotSecurityDeviceGroupTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -336,7 +478,10 @@ export class IotSecurityDeviceGroupTimeoutsOutputReference extends cdktf.Complex
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): IotSecurityDeviceGroupTimeouts | undefined {
+  public get internalValue(): IotSecurityDeviceGroupTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -358,16 +503,22 @@ export class IotSecurityDeviceGroupTimeoutsOutputReference extends cdktf.Complex
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: IotSecurityDeviceGroupTimeouts | undefined) {
+  public set internalValue(value: IotSecurityDeviceGroupTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -474,10 +625,11 @@ export class IotSecurityDeviceGroup extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._id = config.id;
     this._iothubId = config.iothubId;
     this._name = config.name;
     this._allowRule.internalValue = config.allowRule;
-    this._rangeRule = config.rangeRule;
+    this._rangeRule.internalValue = config.rangeRule;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -486,8 +638,19 @@ export class IotSecurityDeviceGroup extends cdktf.TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // iothub_id - computed: false, optional: false, required: true
@@ -533,20 +696,19 @@ export class IotSecurityDeviceGroup extends cdktf.TerraformResource {
   }
 
   // range_rule - computed: false, optional: true, required: false
-  private _rangeRule?: IotSecurityDeviceGroupRangeRule[] | cdktf.IResolvable; 
+  private _rangeRule = new IotSecurityDeviceGroupRangeRuleList(this, "range_rule", true);
   public get rangeRule() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('range_rule')));
+    return this._rangeRule;
   }
-  public set rangeRule(value: IotSecurityDeviceGroupRangeRule[] | cdktf.IResolvable) {
-    this._rangeRule = value;
+  public putRangeRule(value: IotSecurityDeviceGroupRangeRule[] | cdktf.IResolvable) {
+    this._rangeRule.internalValue = value;
   }
   public resetRangeRule() {
-    this._rangeRule = undefined;
+    this._rangeRule.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get rangeRuleInput() {
-    return this._rangeRule;
+    return this._rangeRule.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -571,10 +733,11 @@ export class IotSecurityDeviceGroup extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      id: cdktf.stringToTerraform(this._id),
       iothub_id: cdktf.stringToTerraform(this._iothubId),
       name: cdktf.stringToTerraform(this._name),
       allow_rule: iotSecurityDeviceGroupAllowRuleToTerraform(this._allowRule.internalValue),
-      range_rule: cdktf.listMapper(iotSecurityDeviceGroupRangeRuleToTerraform)(this._rangeRule),
+      range_rule: cdktf.listMapper(iotSecurityDeviceGroupRangeRuleToTerraform)(this._rangeRule.internalValue),
       timeouts: iotSecurityDeviceGroupTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

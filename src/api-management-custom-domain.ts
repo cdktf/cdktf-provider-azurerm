@@ -12,6 +12,13 @@ export interface ApiManagementCustomDomainConfig extends cdktf.TerraformMetaArgu
   */
   readonly apiManagementId: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain#id ApiManagementCustomDomain#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * developer_portal block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain#developer_portal ApiManagementCustomDomain#developer_portal}
@@ -90,6 +97,208 @@ export function apiManagementCustomDomainDeveloperPortalToTerraform(struct?: Api
   }
 }
 
+export class ApiManagementCustomDomainDeveloperPortalOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ApiManagementCustomDomainDeveloperPortal | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._certificate !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.certificate = this._certificate;
+    }
+    if (this._certificatePassword !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.certificatePassword = this._certificatePassword;
+    }
+    if (this._hostName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.hostName = this._hostName;
+    }
+    if (this._keyVaultId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keyVaultId = this._keyVaultId;
+    }
+    if (this._negotiateClientCertificate !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.negotiateClientCertificate = this._negotiateClientCertificate;
+    }
+    if (this._sslKeyvaultIdentityClientId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sslKeyvaultIdentityClientId = this._sslKeyvaultIdentityClientId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementCustomDomainDeveloperPortal | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._certificate = undefined;
+      this._certificatePassword = undefined;
+      this._hostName = undefined;
+      this._keyVaultId = undefined;
+      this._negotiateClientCertificate = undefined;
+      this._sslKeyvaultIdentityClientId = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._certificate = value.certificate;
+      this._certificatePassword = value.certificatePassword;
+      this._hostName = value.hostName;
+      this._keyVaultId = value.keyVaultId;
+      this._negotiateClientCertificate = value.negotiateClientCertificate;
+      this._sslKeyvaultIdentityClientId = value.sslKeyvaultIdentityClientId;
+    }
+  }
+
+  // certificate - computed: false, optional: true, required: false
+  private _certificate?: string; 
+  public get certificate() {
+    return this.getStringAttribute('certificate');
+  }
+  public set certificate(value: string) {
+    this._certificate = value;
+  }
+  public resetCertificate() {
+    this._certificate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get certificateInput() {
+    return this._certificate;
+  }
+
+  // certificate_password - computed: false, optional: true, required: false
+  private _certificatePassword?: string; 
+  public get certificatePassword() {
+    return this.getStringAttribute('certificate_password');
+  }
+  public set certificatePassword(value: string) {
+    this._certificatePassword = value;
+  }
+  public resetCertificatePassword() {
+    this._certificatePassword = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get certificatePasswordInput() {
+    return this._certificatePassword;
+  }
+
+  // expiry - computed: true, optional: false, required: false
+  public get expiry() {
+    return this.getStringAttribute('expiry');
+  }
+
+  // host_name - computed: false, optional: false, required: true
+  private _hostName?: string; 
+  public get hostName() {
+    return this.getStringAttribute('host_name');
+  }
+  public set hostName(value: string) {
+    this._hostName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hostNameInput() {
+    return this._hostName;
+  }
+
+  // key_vault_id - computed: false, optional: true, required: false
+  private _keyVaultId?: string; 
+  public get keyVaultId() {
+    return this.getStringAttribute('key_vault_id');
+  }
+  public set keyVaultId(value: string) {
+    this._keyVaultId = value;
+  }
+  public resetKeyVaultId() {
+    this._keyVaultId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultIdInput() {
+    return this._keyVaultId;
+  }
+
+  // negotiate_client_certificate - computed: false, optional: true, required: false
+  private _negotiateClientCertificate?: boolean | cdktf.IResolvable; 
+  public get negotiateClientCertificate() {
+    return this.getBooleanAttribute('negotiate_client_certificate');
+  }
+  public set negotiateClientCertificate(value: boolean | cdktf.IResolvable) {
+    this._negotiateClientCertificate = value;
+  }
+  public resetNegotiateClientCertificate() {
+    this._negotiateClientCertificate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get negotiateClientCertificateInput() {
+    return this._negotiateClientCertificate;
+  }
+
+  // ssl_keyvault_identity_client_id - computed: false, optional: true, required: false
+  private _sslKeyvaultIdentityClientId?: string; 
+  public get sslKeyvaultIdentityClientId() {
+    return this.getStringAttribute('ssl_keyvault_identity_client_id');
+  }
+  public set sslKeyvaultIdentityClientId(value: string) {
+    this._sslKeyvaultIdentityClientId = value;
+  }
+  public resetSslKeyvaultIdentityClientId() {
+    this._sslKeyvaultIdentityClientId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sslKeyvaultIdentityClientIdInput() {
+    return this._sslKeyvaultIdentityClientId;
+  }
+
+  // subject - computed: true, optional: false, required: false
+  public get subject() {
+    return this.getStringAttribute('subject');
+  }
+
+  // thumbprint - computed: true, optional: false, required: false
+  public get thumbprint() {
+    return this.getStringAttribute('thumbprint');
+  }
+}
+
+export class ApiManagementCustomDomainDeveloperPortalList extends cdktf.ComplexList {
+  public internalValue? : ApiManagementCustomDomainDeveloperPortal[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ApiManagementCustomDomainDeveloperPortalOutputReference {
+    return new ApiManagementCustomDomainDeveloperPortalOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ApiManagementCustomDomainManagement {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain#certificate ApiManagementCustomDomain#certificate}
@@ -132,6 +341,208 @@ export function apiManagementCustomDomainManagementToTerraform(struct?: ApiManag
   }
 }
 
+export class ApiManagementCustomDomainManagementOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ApiManagementCustomDomainManagement | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._certificate !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.certificate = this._certificate;
+    }
+    if (this._certificatePassword !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.certificatePassword = this._certificatePassword;
+    }
+    if (this._hostName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.hostName = this._hostName;
+    }
+    if (this._keyVaultId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keyVaultId = this._keyVaultId;
+    }
+    if (this._negotiateClientCertificate !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.negotiateClientCertificate = this._negotiateClientCertificate;
+    }
+    if (this._sslKeyvaultIdentityClientId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sslKeyvaultIdentityClientId = this._sslKeyvaultIdentityClientId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementCustomDomainManagement | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._certificate = undefined;
+      this._certificatePassword = undefined;
+      this._hostName = undefined;
+      this._keyVaultId = undefined;
+      this._negotiateClientCertificate = undefined;
+      this._sslKeyvaultIdentityClientId = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._certificate = value.certificate;
+      this._certificatePassword = value.certificatePassword;
+      this._hostName = value.hostName;
+      this._keyVaultId = value.keyVaultId;
+      this._negotiateClientCertificate = value.negotiateClientCertificate;
+      this._sslKeyvaultIdentityClientId = value.sslKeyvaultIdentityClientId;
+    }
+  }
+
+  // certificate - computed: false, optional: true, required: false
+  private _certificate?: string; 
+  public get certificate() {
+    return this.getStringAttribute('certificate');
+  }
+  public set certificate(value: string) {
+    this._certificate = value;
+  }
+  public resetCertificate() {
+    this._certificate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get certificateInput() {
+    return this._certificate;
+  }
+
+  // certificate_password - computed: false, optional: true, required: false
+  private _certificatePassword?: string; 
+  public get certificatePassword() {
+    return this.getStringAttribute('certificate_password');
+  }
+  public set certificatePassword(value: string) {
+    this._certificatePassword = value;
+  }
+  public resetCertificatePassword() {
+    this._certificatePassword = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get certificatePasswordInput() {
+    return this._certificatePassword;
+  }
+
+  // expiry - computed: true, optional: false, required: false
+  public get expiry() {
+    return this.getStringAttribute('expiry');
+  }
+
+  // host_name - computed: false, optional: false, required: true
+  private _hostName?: string; 
+  public get hostName() {
+    return this.getStringAttribute('host_name');
+  }
+  public set hostName(value: string) {
+    this._hostName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hostNameInput() {
+    return this._hostName;
+  }
+
+  // key_vault_id - computed: false, optional: true, required: false
+  private _keyVaultId?: string; 
+  public get keyVaultId() {
+    return this.getStringAttribute('key_vault_id');
+  }
+  public set keyVaultId(value: string) {
+    this._keyVaultId = value;
+  }
+  public resetKeyVaultId() {
+    this._keyVaultId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultIdInput() {
+    return this._keyVaultId;
+  }
+
+  // negotiate_client_certificate - computed: false, optional: true, required: false
+  private _negotiateClientCertificate?: boolean | cdktf.IResolvable; 
+  public get negotiateClientCertificate() {
+    return this.getBooleanAttribute('negotiate_client_certificate');
+  }
+  public set negotiateClientCertificate(value: boolean | cdktf.IResolvable) {
+    this._negotiateClientCertificate = value;
+  }
+  public resetNegotiateClientCertificate() {
+    this._negotiateClientCertificate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get negotiateClientCertificateInput() {
+    return this._negotiateClientCertificate;
+  }
+
+  // ssl_keyvault_identity_client_id - computed: false, optional: true, required: false
+  private _sslKeyvaultIdentityClientId?: string; 
+  public get sslKeyvaultIdentityClientId() {
+    return this.getStringAttribute('ssl_keyvault_identity_client_id');
+  }
+  public set sslKeyvaultIdentityClientId(value: string) {
+    this._sslKeyvaultIdentityClientId = value;
+  }
+  public resetSslKeyvaultIdentityClientId() {
+    this._sslKeyvaultIdentityClientId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sslKeyvaultIdentityClientIdInput() {
+    return this._sslKeyvaultIdentityClientId;
+  }
+
+  // subject - computed: true, optional: false, required: false
+  public get subject() {
+    return this.getStringAttribute('subject');
+  }
+
+  // thumbprint - computed: true, optional: false, required: false
+  public get thumbprint() {
+    return this.getStringAttribute('thumbprint');
+  }
+}
+
+export class ApiManagementCustomDomainManagementList extends cdktf.ComplexList {
+  public internalValue? : ApiManagementCustomDomainManagement[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ApiManagementCustomDomainManagementOutputReference {
+    return new ApiManagementCustomDomainManagementOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ApiManagementCustomDomainPortal {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain#certificate ApiManagementCustomDomain#certificate}
@@ -174,6 +585,208 @@ export function apiManagementCustomDomainPortalToTerraform(struct?: ApiManagemen
   }
 }
 
+export class ApiManagementCustomDomainPortalOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ApiManagementCustomDomainPortal | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._certificate !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.certificate = this._certificate;
+    }
+    if (this._certificatePassword !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.certificatePassword = this._certificatePassword;
+    }
+    if (this._hostName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.hostName = this._hostName;
+    }
+    if (this._keyVaultId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keyVaultId = this._keyVaultId;
+    }
+    if (this._negotiateClientCertificate !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.negotiateClientCertificate = this._negotiateClientCertificate;
+    }
+    if (this._sslKeyvaultIdentityClientId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sslKeyvaultIdentityClientId = this._sslKeyvaultIdentityClientId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementCustomDomainPortal | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._certificate = undefined;
+      this._certificatePassword = undefined;
+      this._hostName = undefined;
+      this._keyVaultId = undefined;
+      this._negotiateClientCertificate = undefined;
+      this._sslKeyvaultIdentityClientId = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._certificate = value.certificate;
+      this._certificatePassword = value.certificatePassword;
+      this._hostName = value.hostName;
+      this._keyVaultId = value.keyVaultId;
+      this._negotiateClientCertificate = value.negotiateClientCertificate;
+      this._sslKeyvaultIdentityClientId = value.sslKeyvaultIdentityClientId;
+    }
+  }
+
+  // certificate - computed: false, optional: true, required: false
+  private _certificate?: string; 
+  public get certificate() {
+    return this.getStringAttribute('certificate');
+  }
+  public set certificate(value: string) {
+    this._certificate = value;
+  }
+  public resetCertificate() {
+    this._certificate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get certificateInput() {
+    return this._certificate;
+  }
+
+  // certificate_password - computed: false, optional: true, required: false
+  private _certificatePassword?: string; 
+  public get certificatePassword() {
+    return this.getStringAttribute('certificate_password');
+  }
+  public set certificatePassword(value: string) {
+    this._certificatePassword = value;
+  }
+  public resetCertificatePassword() {
+    this._certificatePassword = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get certificatePasswordInput() {
+    return this._certificatePassword;
+  }
+
+  // expiry - computed: true, optional: false, required: false
+  public get expiry() {
+    return this.getStringAttribute('expiry');
+  }
+
+  // host_name - computed: false, optional: false, required: true
+  private _hostName?: string; 
+  public get hostName() {
+    return this.getStringAttribute('host_name');
+  }
+  public set hostName(value: string) {
+    this._hostName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hostNameInput() {
+    return this._hostName;
+  }
+
+  // key_vault_id - computed: false, optional: true, required: false
+  private _keyVaultId?: string; 
+  public get keyVaultId() {
+    return this.getStringAttribute('key_vault_id');
+  }
+  public set keyVaultId(value: string) {
+    this._keyVaultId = value;
+  }
+  public resetKeyVaultId() {
+    this._keyVaultId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultIdInput() {
+    return this._keyVaultId;
+  }
+
+  // negotiate_client_certificate - computed: false, optional: true, required: false
+  private _negotiateClientCertificate?: boolean | cdktf.IResolvable; 
+  public get negotiateClientCertificate() {
+    return this.getBooleanAttribute('negotiate_client_certificate');
+  }
+  public set negotiateClientCertificate(value: boolean | cdktf.IResolvable) {
+    this._negotiateClientCertificate = value;
+  }
+  public resetNegotiateClientCertificate() {
+    this._negotiateClientCertificate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get negotiateClientCertificateInput() {
+    return this._negotiateClientCertificate;
+  }
+
+  // ssl_keyvault_identity_client_id - computed: false, optional: true, required: false
+  private _sslKeyvaultIdentityClientId?: string; 
+  public get sslKeyvaultIdentityClientId() {
+    return this.getStringAttribute('ssl_keyvault_identity_client_id');
+  }
+  public set sslKeyvaultIdentityClientId(value: string) {
+    this._sslKeyvaultIdentityClientId = value;
+  }
+  public resetSslKeyvaultIdentityClientId() {
+    this._sslKeyvaultIdentityClientId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sslKeyvaultIdentityClientIdInput() {
+    return this._sslKeyvaultIdentityClientId;
+  }
+
+  // subject - computed: true, optional: false, required: false
+  public get subject() {
+    return this.getStringAttribute('subject');
+  }
+
+  // thumbprint - computed: true, optional: false, required: false
+  public get thumbprint() {
+    return this.getStringAttribute('thumbprint');
+  }
+}
+
+export class ApiManagementCustomDomainPortalList extends cdktf.ComplexList {
+  public internalValue? : ApiManagementCustomDomainPortal[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ApiManagementCustomDomainPortalOutputReference {
+    return new ApiManagementCustomDomainPortalOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ApiManagementCustomDomainProxy {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain#certificate ApiManagementCustomDomain#certificate}
@@ -221,6 +834,230 @@ export function apiManagementCustomDomainProxyToTerraform(struct?: ApiManagement
   }
 }
 
+export class ApiManagementCustomDomainProxyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ApiManagementCustomDomainProxy | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._certificate !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.certificate = this._certificate;
+    }
+    if (this._certificatePassword !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.certificatePassword = this._certificatePassword;
+    }
+    if (this._defaultSslBinding !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.defaultSslBinding = this._defaultSslBinding;
+    }
+    if (this._hostName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.hostName = this._hostName;
+    }
+    if (this._keyVaultId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keyVaultId = this._keyVaultId;
+    }
+    if (this._negotiateClientCertificate !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.negotiateClientCertificate = this._negotiateClientCertificate;
+    }
+    if (this._sslKeyvaultIdentityClientId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sslKeyvaultIdentityClientId = this._sslKeyvaultIdentityClientId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementCustomDomainProxy | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._certificate = undefined;
+      this._certificatePassword = undefined;
+      this._defaultSslBinding = undefined;
+      this._hostName = undefined;
+      this._keyVaultId = undefined;
+      this._negotiateClientCertificate = undefined;
+      this._sslKeyvaultIdentityClientId = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._certificate = value.certificate;
+      this._certificatePassword = value.certificatePassword;
+      this._defaultSslBinding = value.defaultSslBinding;
+      this._hostName = value.hostName;
+      this._keyVaultId = value.keyVaultId;
+      this._negotiateClientCertificate = value.negotiateClientCertificate;
+      this._sslKeyvaultIdentityClientId = value.sslKeyvaultIdentityClientId;
+    }
+  }
+
+  // certificate - computed: false, optional: true, required: false
+  private _certificate?: string; 
+  public get certificate() {
+    return this.getStringAttribute('certificate');
+  }
+  public set certificate(value: string) {
+    this._certificate = value;
+  }
+  public resetCertificate() {
+    this._certificate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get certificateInput() {
+    return this._certificate;
+  }
+
+  // certificate_password - computed: false, optional: true, required: false
+  private _certificatePassword?: string; 
+  public get certificatePassword() {
+    return this.getStringAttribute('certificate_password');
+  }
+  public set certificatePassword(value: string) {
+    this._certificatePassword = value;
+  }
+  public resetCertificatePassword() {
+    this._certificatePassword = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get certificatePasswordInput() {
+    return this._certificatePassword;
+  }
+
+  // default_ssl_binding - computed: true, optional: true, required: false
+  private _defaultSslBinding?: boolean | cdktf.IResolvable; 
+  public get defaultSslBinding() {
+    return this.getBooleanAttribute('default_ssl_binding');
+  }
+  public set defaultSslBinding(value: boolean | cdktf.IResolvable) {
+    this._defaultSslBinding = value;
+  }
+  public resetDefaultSslBinding() {
+    this._defaultSslBinding = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultSslBindingInput() {
+    return this._defaultSslBinding;
+  }
+
+  // expiry - computed: true, optional: false, required: false
+  public get expiry() {
+    return this.getStringAttribute('expiry');
+  }
+
+  // host_name - computed: false, optional: false, required: true
+  private _hostName?: string; 
+  public get hostName() {
+    return this.getStringAttribute('host_name');
+  }
+  public set hostName(value: string) {
+    this._hostName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hostNameInput() {
+    return this._hostName;
+  }
+
+  // key_vault_id - computed: false, optional: true, required: false
+  private _keyVaultId?: string; 
+  public get keyVaultId() {
+    return this.getStringAttribute('key_vault_id');
+  }
+  public set keyVaultId(value: string) {
+    this._keyVaultId = value;
+  }
+  public resetKeyVaultId() {
+    this._keyVaultId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultIdInput() {
+    return this._keyVaultId;
+  }
+
+  // negotiate_client_certificate - computed: false, optional: true, required: false
+  private _negotiateClientCertificate?: boolean | cdktf.IResolvable; 
+  public get negotiateClientCertificate() {
+    return this.getBooleanAttribute('negotiate_client_certificate');
+  }
+  public set negotiateClientCertificate(value: boolean | cdktf.IResolvable) {
+    this._negotiateClientCertificate = value;
+  }
+  public resetNegotiateClientCertificate() {
+    this._negotiateClientCertificate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get negotiateClientCertificateInput() {
+    return this._negotiateClientCertificate;
+  }
+
+  // ssl_keyvault_identity_client_id - computed: false, optional: true, required: false
+  private _sslKeyvaultIdentityClientId?: string; 
+  public get sslKeyvaultIdentityClientId() {
+    return this.getStringAttribute('ssl_keyvault_identity_client_id');
+  }
+  public set sslKeyvaultIdentityClientId(value: string) {
+    this._sslKeyvaultIdentityClientId = value;
+  }
+  public resetSslKeyvaultIdentityClientId() {
+    this._sslKeyvaultIdentityClientId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sslKeyvaultIdentityClientIdInput() {
+    return this._sslKeyvaultIdentityClientId;
+  }
+
+  // subject - computed: true, optional: false, required: false
+  public get subject() {
+    return this.getStringAttribute('subject');
+  }
+
+  // thumbprint - computed: true, optional: false, required: false
+  public get thumbprint() {
+    return this.getStringAttribute('thumbprint');
+  }
+}
+
+export class ApiManagementCustomDomainProxyList extends cdktf.ComplexList {
+  public internalValue? : ApiManagementCustomDomainProxy[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ApiManagementCustomDomainProxyOutputReference {
+    return new ApiManagementCustomDomainProxyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ApiManagementCustomDomainScm {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain#certificate ApiManagementCustomDomain#certificate}
@@ -263,6 +1100,208 @@ export function apiManagementCustomDomainScmToTerraform(struct?: ApiManagementCu
   }
 }
 
+export class ApiManagementCustomDomainScmOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ApiManagementCustomDomainScm | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._certificate !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.certificate = this._certificate;
+    }
+    if (this._certificatePassword !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.certificatePassword = this._certificatePassword;
+    }
+    if (this._hostName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.hostName = this._hostName;
+    }
+    if (this._keyVaultId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keyVaultId = this._keyVaultId;
+    }
+    if (this._negotiateClientCertificate !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.negotiateClientCertificate = this._negotiateClientCertificate;
+    }
+    if (this._sslKeyvaultIdentityClientId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sslKeyvaultIdentityClientId = this._sslKeyvaultIdentityClientId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementCustomDomainScm | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._certificate = undefined;
+      this._certificatePassword = undefined;
+      this._hostName = undefined;
+      this._keyVaultId = undefined;
+      this._negotiateClientCertificate = undefined;
+      this._sslKeyvaultIdentityClientId = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._certificate = value.certificate;
+      this._certificatePassword = value.certificatePassword;
+      this._hostName = value.hostName;
+      this._keyVaultId = value.keyVaultId;
+      this._negotiateClientCertificate = value.negotiateClientCertificate;
+      this._sslKeyvaultIdentityClientId = value.sslKeyvaultIdentityClientId;
+    }
+  }
+
+  // certificate - computed: false, optional: true, required: false
+  private _certificate?: string; 
+  public get certificate() {
+    return this.getStringAttribute('certificate');
+  }
+  public set certificate(value: string) {
+    this._certificate = value;
+  }
+  public resetCertificate() {
+    this._certificate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get certificateInput() {
+    return this._certificate;
+  }
+
+  // certificate_password - computed: false, optional: true, required: false
+  private _certificatePassword?: string; 
+  public get certificatePassword() {
+    return this.getStringAttribute('certificate_password');
+  }
+  public set certificatePassword(value: string) {
+    this._certificatePassword = value;
+  }
+  public resetCertificatePassword() {
+    this._certificatePassword = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get certificatePasswordInput() {
+    return this._certificatePassword;
+  }
+
+  // expiry - computed: true, optional: false, required: false
+  public get expiry() {
+    return this.getStringAttribute('expiry');
+  }
+
+  // host_name - computed: false, optional: false, required: true
+  private _hostName?: string; 
+  public get hostName() {
+    return this.getStringAttribute('host_name');
+  }
+  public set hostName(value: string) {
+    this._hostName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hostNameInput() {
+    return this._hostName;
+  }
+
+  // key_vault_id - computed: false, optional: true, required: false
+  private _keyVaultId?: string; 
+  public get keyVaultId() {
+    return this.getStringAttribute('key_vault_id');
+  }
+  public set keyVaultId(value: string) {
+    this._keyVaultId = value;
+  }
+  public resetKeyVaultId() {
+    this._keyVaultId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultIdInput() {
+    return this._keyVaultId;
+  }
+
+  // negotiate_client_certificate - computed: false, optional: true, required: false
+  private _negotiateClientCertificate?: boolean | cdktf.IResolvable; 
+  public get negotiateClientCertificate() {
+    return this.getBooleanAttribute('negotiate_client_certificate');
+  }
+  public set negotiateClientCertificate(value: boolean | cdktf.IResolvable) {
+    this._negotiateClientCertificate = value;
+  }
+  public resetNegotiateClientCertificate() {
+    this._negotiateClientCertificate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get negotiateClientCertificateInput() {
+    return this._negotiateClientCertificate;
+  }
+
+  // ssl_keyvault_identity_client_id - computed: false, optional: true, required: false
+  private _sslKeyvaultIdentityClientId?: string; 
+  public get sslKeyvaultIdentityClientId() {
+    return this.getStringAttribute('ssl_keyvault_identity_client_id');
+  }
+  public set sslKeyvaultIdentityClientId(value: string) {
+    this._sslKeyvaultIdentityClientId = value;
+  }
+  public resetSslKeyvaultIdentityClientId() {
+    this._sslKeyvaultIdentityClientId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sslKeyvaultIdentityClientIdInput() {
+    return this._sslKeyvaultIdentityClientId;
+  }
+
+  // subject - computed: true, optional: false, required: false
+  public get subject() {
+    return this.getStringAttribute('subject');
+  }
+
+  // thumbprint - computed: true, optional: false, required: false
+  public get thumbprint() {
+    return this.getStringAttribute('thumbprint');
+  }
+}
+
+export class ApiManagementCustomDomainScmList extends cdktf.ComplexList {
+  public internalValue? : ApiManagementCustomDomainScm[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ApiManagementCustomDomainScmOutputReference {
+    return new ApiManagementCustomDomainScmOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ApiManagementCustomDomainTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain#create ApiManagementCustomDomain#create}
@@ -297,6 +1336,7 @@ export function apiManagementCustomDomainTimeoutsToTerraform(struct?: ApiManagem
 
 export class ApiManagementCustomDomainTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -306,7 +1346,10 @@ export class ApiManagementCustomDomainTimeoutsOutputReference extends cdktf.Comp
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): ApiManagementCustomDomainTimeouts | undefined {
+  public get internalValue(): ApiManagementCustomDomainTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -328,16 +1371,22 @@ export class ApiManagementCustomDomainTimeoutsOutputReference extends cdktf.Comp
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: ApiManagementCustomDomainTimeouts | undefined) {
+  public set internalValue(value: ApiManagementCustomDomainTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -445,11 +1494,12 @@ export class ApiManagementCustomDomain extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._apiManagementId = config.apiManagementId;
-    this._developerPortal = config.developerPortal;
-    this._management = config.management;
-    this._portal = config.portal;
-    this._proxy = config.proxy;
-    this._scm = config.scm;
+    this._id = config.id;
+    this._developerPortal.internalValue = config.developerPortal;
+    this._management.internalValue = config.management;
+    this._portal.internalValue = config.portal;
+    this._proxy.internalValue = config.proxy;
+    this._scm.internalValue = config.scm;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -471,93 +1521,99 @@ export class ApiManagementCustomDomain extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
   }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
 
   // developer_portal - computed: false, optional: true, required: false
-  private _developerPortal?: ApiManagementCustomDomainDeveloperPortal[] | cdktf.IResolvable; 
+  private _developerPortal = new ApiManagementCustomDomainDeveloperPortalList(this, "developer_portal", false);
   public get developerPortal() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('developer_portal');
+    return this._developerPortal;
   }
-  public set developerPortal(value: ApiManagementCustomDomainDeveloperPortal[] | cdktf.IResolvable) {
-    this._developerPortal = value;
+  public putDeveloperPortal(value: ApiManagementCustomDomainDeveloperPortal[] | cdktf.IResolvable) {
+    this._developerPortal.internalValue = value;
   }
   public resetDeveloperPortal() {
-    this._developerPortal = undefined;
+    this._developerPortal.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get developerPortalInput() {
-    return this._developerPortal;
+    return this._developerPortal.internalValue;
   }
 
   // management - computed: false, optional: true, required: false
-  private _management?: ApiManagementCustomDomainManagement[] | cdktf.IResolvable; 
+  private _management = new ApiManagementCustomDomainManagementList(this, "management", false);
   public get management() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('management');
+    return this._management;
   }
-  public set management(value: ApiManagementCustomDomainManagement[] | cdktf.IResolvable) {
-    this._management = value;
+  public putManagement(value: ApiManagementCustomDomainManagement[] | cdktf.IResolvable) {
+    this._management.internalValue = value;
   }
   public resetManagement() {
-    this._management = undefined;
+    this._management.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get managementInput() {
-    return this._management;
+    return this._management.internalValue;
   }
 
   // portal - computed: false, optional: true, required: false
-  private _portal?: ApiManagementCustomDomainPortal[] | cdktf.IResolvable; 
+  private _portal = new ApiManagementCustomDomainPortalList(this, "portal", false);
   public get portal() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('portal');
+    return this._portal;
   }
-  public set portal(value: ApiManagementCustomDomainPortal[] | cdktf.IResolvable) {
-    this._portal = value;
+  public putPortal(value: ApiManagementCustomDomainPortal[] | cdktf.IResolvable) {
+    this._portal.internalValue = value;
   }
   public resetPortal() {
-    this._portal = undefined;
+    this._portal.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get portalInput() {
-    return this._portal;
+    return this._portal.internalValue;
   }
 
   // proxy - computed: false, optional: true, required: false
-  private _proxy?: ApiManagementCustomDomainProxy[] | cdktf.IResolvable; 
+  private _proxy = new ApiManagementCustomDomainProxyList(this, "proxy", false);
   public get proxy() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('proxy');
+    return this._proxy;
   }
-  public set proxy(value: ApiManagementCustomDomainProxy[] | cdktf.IResolvable) {
-    this._proxy = value;
+  public putProxy(value: ApiManagementCustomDomainProxy[] | cdktf.IResolvable) {
+    this._proxy.internalValue = value;
   }
   public resetProxy() {
-    this._proxy = undefined;
+    this._proxy.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get proxyInput() {
-    return this._proxy;
+    return this._proxy.internalValue;
   }
 
   // scm - computed: false, optional: true, required: false
-  private _scm?: ApiManagementCustomDomainScm[] | cdktf.IResolvable; 
+  private _scm = new ApiManagementCustomDomainScmList(this, "scm", false);
   public get scm() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('scm');
+    return this._scm;
   }
-  public set scm(value: ApiManagementCustomDomainScm[] | cdktf.IResolvable) {
-    this._scm = value;
+  public putScm(value: ApiManagementCustomDomainScm[] | cdktf.IResolvable) {
+    this._scm.internalValue = value;
   }
   public resetScm() {
-    this._scm = undefined;
+    this._scm.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get scmInput() {
-    return this._scm;
+    return this._scm.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -583,11 +1639,12 @@ export class ApiManagementCustomDomain extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       api_management_id: cdktf.stringToTerraform(this._apiManagementId),
-      developer_portal: cdktf.listMapper(apiManagementCustomDomainDeveloperPortalToTerraform)(this._developerPortal),
-      management: cdktf.listMapper(apiManagementCustomDomainManagementToTerraform)(this._management),
-      portal: cdktf.listMapper(apiManagementCustomDomainPortalToTerraform)(this._portal),
-      proxy: cdktf.listMapper(apiManagementCustomDomainProxyToTerraform)(this._proxy),
-      scm: cdktf.listMapper(apiManagementCustomDomainScmToTerraform)(this._scm),
+      id: cdktf.stringToTerraform(this._id),
+      developer_portal: cdktf.listMapper(apiManagementCustomDomainDeveloperPortalToTerraform)(this._developerPortal.internalValue),
+      management: cdktf.listMapper(apiManagementCustomDomainManagementToTerraform)(this._management.internalValue),
+      portal: cdktf.listMapper(apiManagementCustomDomainPortalToTerraform)(this._portal.internalValue),
+      proxy: cdktf.listMapper(apiManagementCustomDomainProxyToTerraform)(this._proxy.internalValue),
+      scm: cdktf.listMapper(apiManagementCustomDomainScmToTerraform)(this._scm.internalValue),
       timeouts: apiManagementCustomDomainTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

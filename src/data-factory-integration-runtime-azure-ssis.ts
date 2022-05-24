@@ -24,6 +24,13 @@ export interface DataFactoryIntegrationRuntimeAzureSsisConfig extends cdktf.Terr
   */
   readonly edition?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis#id DataFactoryIntegrationRuntimeAzureSsis#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis#license_type DataFactoryIntegrationRuntimeAzureSsis#license_type}
   */
   readonly licenseType?: string;
@@ -524,6 +531,146 @@ export function dataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandK
   }
 }
 
+export class DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKey | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._password !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.password = this._password;
+    }
+    if (this._targetName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.targetName = this._targetName;
+    }
+    if (this._userName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.userName = this._userName;
+    }
+    if (this._keyVaultPassword?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keyVaultPassword = this._keyVaultPassword?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKey | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._password = undefined;
+      this._targetName = undefined;
+      this._userName = undefined;
+      this._keyVaultPassword.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._password = value.password;
+      this._targetName = value.targetName;
+      this._userName = value.userName;
+      this._keyVaultPassword.internalValue = value.keyVaultPassword;
+    }
+  }
+
+  // password - computed: false, optional: true, required: false
+  private _password?: string; 
+  public get password() {
+    return this.getStringAttribute('password');
+  }
+  public set password(value: string) {
+    this._password = value;
+  }
+  public resetPassword() {
+    this._password = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get passwordInput() {
+    return this._password;
+  }
+
+  // target_name - computed: false, optional: false, required: true
+  private _targetName?: string; 
+  public get targetName() {
+    return this.getStringAttribute('target_name');
+  }
+  public set targetName(value: string) {
+    this._targetName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetNameInput() {
+    return this._targetName;
+  }
+
+  // user_name - computed: false, optional: false, required: true
+  private _userName?: string; 
+  public get userName() {
+    return this.getStringAttribute('user_name');
+  }
+  public set userName(value: string) {
+    this._userName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userNameInput() {
+    return this._userName;
+  }
+
+  // key_vault_password - computed: false, optional: true, required: false
+  private _keyVaultPassword = new DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyKeyVaultPasswordOutputReference(this, "key_vault_password");
+  public get keyVaultPassword() {
+    return this._keyVaultPassword;
+  }
+  public putKeyVaultPassword(value: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyKeyVaultPassword) {
+    this._keyVaultPassword.internalValue = value;
+  }
+  public resetKeyVaultPassword() {
+    this._keyVaultPassword.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultPasswordInput() {
+    return this._keyVaultPassword.internalValue;
+  }
+}
+
+export class DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyList extends cdktf.ComplexList {
+  public internalValue? : DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKey[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyOutputReference {
+    return new DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentKeyVaultLicense {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis#linked_service_name DataFactoryIntegrationRuntimeAzureSsis#linked_service_name}
@@ -693,6 +840,127 @@ export function dataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponen
   }
 }
 
+export class DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponent | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._license !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.license = this._license;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._keyVaultLicense?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keyVaultLicense = this._keyVaultLicense?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponent | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._license = undefined;
+      this._name = undefined;
+      this._keyVaultLicense.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._license = value.license;
+      this._name = value.name;
+      this._keyVaultLicense.internalValue = value.keyVaultLicense;
+    }
+  }
+
+  // license - computed: false, optional: true, required: false
+  private _license?: string; 
+  public get license() {
+    return this.getStringAttribute('license');
+  }
+  public set license(value: string) {
+    this._license = value;
+  }
+  public resetLicense() {
+    this._license = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get licenseInput() {
+    return this._license;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // key_vault_license - computed: false, optional: true, required: false
+  private _keyVaultLicense = new DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentKeyVaultLicenseOutputReference(this, "key_vault_license");
+  public get keyVaultLicense() {
+    return this._keyVaultLicense;
+  }
+  public putKeyVaultLicense(value: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentKeyVaultLicense) {
+    this._keyVaultLicense.internalValue = value;
+  }
+  public resetKeyVaultLicense() {
+    this._keyVaultLicense.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultLicenseInput() {
+    return this._keyVaultLicense.internalValue;
+  }
+}
+
+export class DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentList extends cdktf.ComplexList {
+  public internalValue? : DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponent[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentOutputReference {
+    return new DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetup {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis#environment DataFactoryIntegrationRuntimeAzureSsis#environment}
@@ -751,13 +1019,13 @@ export class DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupOutputRefer
       hasAnyValues = true;
       internalValueResult.powershellVersion = this._powershellVersion;
     }
-    if (this._commandKey !== undefined) {
+    if (this._commandKey?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.commandKey = this._commandKey;
+      internalValueResult.commandKey = this._commandKey?.internalValue;
     }
-    if (this._component !== undefined) {
+    if (this._component?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.component = this._component;
+      internalValueResult.component = this._component?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -767,15 +1035,15 @@ export class DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupOutputRefer
       this.isEmptyObject = false;
       this._environment = undefined;
       this._powershellVersion = undefined;
-      this._commandKey = undefined;
-      this._component = undefined;
+      this._commandKey.internalValue = undefined;
+      this._component.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._environment = value.environment;
       this._powershellVersion = value.powershellVersion;
-      this._commandKey = value.commandKey;
-      this._component = value.component;
+      this._commandKey.internalValue = value.commandKey;
+      this._component.internalValue = value.component;
     }
   }
 
@@ -812,37 +1080,35 @@ export class DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupOutputRefer
   }
 
   // command_key - computed: false, optional: true, required: false
-  private _commandKey?: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKey[] | cdktf.IResolvable; 
+  private _commandKey = new DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyList(this, "command_key", false);
   public get commandKey() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('command_key');
+    return this._commandKey;
   }
-  public set commandKey(value: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKey[] | cdktf.IResolvable) {
-    this._commandKey = value;
+  public putCommandKey(value: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKey[] | cdktf.IResolvable) {
+    this._commandKey.internalValue = value;
   }
   public resetCommandKey() {
-    this._commandKey = undefined;
+    this._commandKey.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get commandKeyInput() {
-    return this._commandKey;
+    return this._commandKey.internalValue;
   }
 
   // component - computed: false, optional: true, required: false
-  private _component?: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponent[] | cdktf.IResolvable; 
+  private _component = new DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentList(this, "component", false);
   public get component() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('component');
+    return this._component;
   }
-  public set component(value: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponent[] | cdktf.IResolvable) {
-    this._component = value;
+  public putComponent(value: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponent[] | cdktf.IResolvable) {
+    this._component.internalValue = value;
   }
   public resetComponent() {
-    this._component = undefined;
+    this._component.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get componentInput() {
-    return this._component;
+    return this._component.internalValue;
   }
 }
 export interface DataFactoryIntegrationRuntimeAzureSsisPackageStore {
@@ -867,6 +1133,102 @@ export function dataFactoryIntegrationRuntimeAzureSsisPackageStoreToTerraform(st
   }
 }
 
+export class DataFactoryIntegrationRuntimeAzureSsisPackageStoreOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataFactoryIntegrationRuntimeAzureSsisPackageStore | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._linkedServiceName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.linkedServiceName = this._linkedServiceName;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFactoryIntegrationRuntimeAzureSsisPackageStore | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._linkedServiceName = undefined;
+      this._name = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._linkedServiceName = value.linkedServiceName;
+      this._name = value.name;
+    }
+  }
+
+  // linked_service_name - computed: false, optional: false, required: true
+  private _linkedServiceName?: string; 
+  public get linkedServiceName() {
+    return this.getStringAttribute('linked_service_name');
+  }
+  public set linkedServiceName(value: string) {
+    this._linkedServiceName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get linkedServiceNameInput() {
+    return this._linkedServiceName;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+}
+
+export class DataFactoryIntegrationRuntimeAzureSsisPackageStoreList extends cdktf.ComplexList {
+  public internalValue? : DataFactoryIntegrationRuntimeAzureSsisPackageStore[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataFactoryIntegrationRuntimeAzureSsisPackageStoreOutputReference {
+    return new DataFactoryIntegrationRuntimeAzureSsisPackageStoreOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataFactoryIntegrationRuntimeAzureSsisProxy {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis#path DataFactoryIntegrationRuntimeAzureSsis#path}
@@ -1014,6 +1376,7 @@ export function dataFactoryIntegrationRuntimeAzureSsisTimeoutsToTerraform(struct
 
 export class DataFactoryIntegrationRuntimeAzureSsisTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -1023,7 +1386,10 @@ export class DataFactoryIntegrationRuntimeAzureSsisTimeoutsOutputReference exten
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): DataFactoryIntegrationRuntimeAzureSsisTimeouts | undefined {
+  public get internalValue(): DataFactoryIntegrationRuntimeAzureSsisTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -1045,16 +1411,22 @@ export class DataFactoryIntegrationRuntimeAzureSsisTimeoutsOutputReference exten
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: DataFactoryIntegrationRuntimeAzureSsisTimeouts | undefined) {
+  public set internalValue(value: DataFactoryIntegrationRuntimeAzureSsisTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -1311,6 +1683,7 @@ export class DataFactoryIntegrationRuntimeAzureSsis extends cdktf.TerraformResou
     this._dataFactoryName = config.dataFactoryName;
     this._description = config.description;
     this._edition = config.edition;
+    this._id = config.id;
     this._licenseType = config.licenseType;
     this._location = config.location;
     this._maxParallelExecutionsPerNode = config.maxParallelExecutionsPerNode;
@@ -1321,7 +1694,7 @@ export class DataFactoryIntegrationRuntimeAzureSsis extends cdktf.TerraformResou
     this._catalogInfo.internalValue = config.catalogInfo;
     this._customSetupScript.internalValue = config.customSetupScript;
     this._expressCustomSetup.internalValue = config.expressCustomSetup;
-    this._packageStore = config.packageStore;
+    this._packageStore.internalValue = config.packageStore;
     this._proxy.internalValue = config.proxy;
     this._timeouts.internalValue = config.timeouts;
     this._vnetIntegration.internalValue = config.vnetIntegration;
@@ -1396,8 +1769,19 @@ export class DataFactoryIntegrationRuntimeAzureSsis extends cdktf.TerraformResou
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // license_type - computed: false, optional: true, required: false
@@ -1549,20 +1933,19 @@ export class DataFactoryIntegrationRuntimeAzureSsis extends cdktf.TerraformResou
   }
 
   // package_store - computed: false, optional: true, required: false
-  private _packageStore?: DataFactoryIntegrationRuntimeAzureSsisPackageStore[] | cdktf.IResolvable; 
+  private _packageStore = new DataFactoryIntegrationRuntimeAzureSsisPackageStoreList(this, "package_store", false);
   public get packageStore() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('package_store');
+    return this._packageStore;
   }
-  public set packageStore(value: DataFactoryIntegrationRuntimeAzureSsisPackageStore[] | cdktf.IResolvable) {
-    this._packageStore = value;
+  public putPackageStore(value: DataFactoryIntegrationRuntimeAzureSsisPackageStore[] | cdktf.IResolvable) {
+    this._packageStore.internalValue = value;
   }
   public resetPackageStore() {
-    this._packageStore = undefined;
+    this._packageStore.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get packageStoreInput() {
-    return this._packageStore;
+    return this._packageStore.internalValue;
   }
 
   // proxy - computed: false, optional: true, required: false
@@ -1623,6 +2006,7 @@ export class DataFactoryIntegrationRuntimeAzureSsis extends cdktf.TerraformResou
       data_factory_name: cdktf.stringToTerraform(this._dataFactoryName),
       description: cdktf.stringToTerraform(this._description),
       edition: cdktf.stringToTerraform(this._edition),
+      id: cdktf.stringToTerraform(this._id),
       license_type: cdktf.stringToTerraform(this._licenseType),
       location: cdktf.stringToTerraform(this._location),
       max_parallel_executions_per_node: cdktf.numberToTerraform(this._maxParallelExecutionsPerNode),
@@ -1633,7 +2017,7 @@ export class DataFactoryIntegrationRuntimeAzureSsis extends cdktf.TerraformResou
       catalog_info: dataFactoryIntegrationRuntimeAzureSsisCatalogInfoToTerraform(this._catalogInfo.internalValue),
       custom_setup_script: dataFactoryIntegrationRuntimeAzureSsisCustomSetupScriptToTerraform(this._customSetupScript.internalValue),
       express_custom_setup: dataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupToTerraform(this._expressCustomSetup.internalValue),
-      package_store: cdktf.listMapper(dataFactoryIntegrationRuntimeAzureSsisPackageStoreToTerraform)(this._packageStore),
+      package_store: cdktf.listMapper(dataFactoryIntegrationRuntimeAzureSsisPackageStoreToTerraform)(this._packageStore.internalValue),
       proxy: dataFactoryIntegrationRuntimeAzureSsisProxyToTerraform(this._proxy.internalValue),
       timeouts: dataFactoryIntegrationRuntimeAzureSsisTimeoutsToTerraform(this._timeouts.internalValue),
       vnet_integration: dataFactoryIntegrationRuntimeAzureSsisVnetIntegrationToTerraform(this._vnetIntegration.internalValue),

@@ -12,6 +12,13 @@ export interface ServicebusNamespaceNetworkRuleSetConfig extends cdktf.Terraform
   */
   readonly defaultAction?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_network_rule_set#id ServicebusNamespaceNetworkRuleSet#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_network_rule_set#ip_rules ServicebusNamespaceNetworkRuleSet#ip_rules}
   */
   readonly ipRules?: string[];
@@ -70,6 +77,105 @@ export function servicebusNamespaceNetworkRuleSetNetworkRulesToTerraform(struct?
   }
 }
 
+export class ServicebusNamespaceNetworkRuleSetNetworkRulesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ServicebusNamespaceNetworkRuleSetNetworkRules | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._ignoreMissingVnetServiceEndpoint !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ignoreMissingVnetServiceEndpoint = this._ignoreMissingVnetServiceEndpoint;
+    }
+    if (this._subnetId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.subnetId = this._subnetId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ServicebusNamespaceNetworkRuleSetNetworkRules | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._ignoreMissingVnetServiceEndpoint = undefined;
+      this._subnetId = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._ignoreMissingVnetServiceEndpoint = value.ignoreMissingVnetServiceEndpoint;
+      this._subnetId = value.subnetId;
+    }
+  }
+
+  // ignore_missing_vnet_service_endpoint - computed: false, optional: true, required: false
+  private _ignoreMissingVnetServiceEndpoint?: boolean | cdktf.IResolvable; 
+  public get ignoreMissingVnetServiceEndpoint() {
+    return this.getBooleanAttribute('ignore_missing_vnet_service_endpoint');
+  }
+  public set ignoreMissingVnetServiceEndpoint(value: boolean | cdktf.IResolvable) {
+    this._ignoreMissingVnetServiceEndpoint = value;
+  }
+  public resetIgnoreMissingVnetServiceEndpoint() {
+    this._ignoreMissingVnetServiceEndpoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ignoreMissingVnetServiceEndpointInput() {
+    return this._ignoreMissingVnetServiceEndpoint;
+  }
+
+  // subnet_id - computed: false, optional: false, required: true
+  private _subnetId?: string; 
+  public get subnetId() {
+    return this.getStringAttribute('subnet_id');
+  }
+  public set subnetId(value: string) {
+    this._subnetId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetIdInput() {
+    return this._subnetId;
+  }
+}
+
+export class ServicebusNamespaceNetworkRuleSetNetworkRulesList extends cdktf.ComplexList {
+  public internalValue? : ServicebusNamespaceNetworkRuleSetNetworkRules[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ServicebusNamespaceNetworkRuleSetNetworkRulesOutputReference {
+    return new ServicebusNamespaceNetworkRuleSetNetworkRulesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ServicebusNamespaceNetworkRuleSetTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_network_rule_set#create ServicebusNamespaceNetworkRuleSet#create}
@@ -104,6 +210,7 @@ export function servicebusNamespaceNetworkRuleSetTimeoutsToTerraform(struct?: Se
 
 export class ServicebusNamespaceNetworkRuleSetTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -113,7 +220,10 @@ export class ServicebusNamespaceNetworkRuleSetTimeoutsOutputReference extends cd
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): ServicebusNamespaceNetworkRuleSetTimeouts | undefined {
+  public get internalValue(): ServicebusNamespaceNetworkRuleSetTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -135,16 +245,22 @@ export class ServicebusNamespaceNetworkRuleSetTimeoutsOutputReference extends cd
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: ServicebusNamespaceNetworkRuleSetTimeouts | undefined) {
+  public set internalValue(value: ServicebusNamespaceNetworkRuleSetTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -252,13 +368,14 @@ export class ServicebusNamespaceNetworkRuleSet extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._defaultAction = config.defaultAction;
+    this._id = config.id;
     this._ipRules = config.ipRules;
     this._namespaceId = config.namespaceId;
     this._namespaceName = config.namespaceName;
     this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
     this._resourceGroupName = config.resourceGroupName;
     this._trustedServicesAllowed = config.trustedServicesAllowed;
-    this._networkRules = config.networkRules;
+    this._networkRules.internalValue = config.networkRules;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -283,8 +400,19 @@ export class ServicebusNamespaceNetworkRuleSet extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // ip_rules - computed: false, optional: true, required: false
@@ -384,20 +512,19 @@ export class ServicebusNamespaceNetworkRuleSet extends cdktf.TerraformResource {
   }
 
   // network_rules - computed: false, optional: true, required: false
-  private _networkRules?: ServicebusNamespaceNetworkRuleSetNetworkRules[] | cdktf.IResolvable; 
+  private _networkRules = new ServicebusNamespaceNetworkRuleSetNetworkRulesList(this, "network_rules", true);
   public get networkRules() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('network_rules')));
+    return this._networkRules;
   }
-  public set networkRules(value: ServicebusNamespaceNetworkRuleSetNetworkRules[] | cdktf.IResolvable) {
-    this._networkRules = value;
+  public putNetworkRules(value: ServicebusNamespaceNetworkRuleSetNetworkRules[] | cdktf.IResolvable) {
+    this._networkRules.internalValue = value;
   }
   public resetNetworkRules() {
-    this._networkRules = undefined;
+    this._networkRules.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get networkRulesInput() {
-    return this._networkRules;
+    return this._networkRules.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -423,13 +550,14 @@ export class ServicebusNamespaceNetworkRuleSet extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       default_action: cdktf.stringToTerraform(this._defaultAction),
+      id: cdktf.stringToTerraform(this._id),
       ip_rules: cdktf.listMapper(cdktf.stringToTerraform)(this._ipRules),
       namespace_id: cdktf.stringToTerraform(this._namespaceId),
       namespace_name: cdktf.stringToTerraform(this._namespaceName),
       public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       trusted_services_allowed: cdktf.booleanToTerraform(this._trustedServicesAllowed),
-      network_rules: cdktf.listMapper(servicebusNamespaceNetworkRuleSetNetworkRulesToTerraform)(this._networkRules),
+      network_rules: cdktf.listMapper(servicebusNamespaceNetworkRuleSetNetworkRulesToTerraform)(this._networkRules.internalValue),
       timeouts: servicebusNamespaceNetworkRuleSetTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

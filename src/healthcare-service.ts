@@ -20,6 +20,13 @@ export interface HealthcareServiceConfig extends cdktf.TerraformMetaArguments {
   */
   readonly cosmosdbThroughput?: number;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service#id HealthcareService#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service#kind HealthcareService#kind}
   */
   readonly kind?: string;
@@ -388,6 +395,7 @@ export function healthcareServiceTimeoutsToTerraform(struct?: HealthcareServiceT
 
 export class HealthcareServiceTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -397,7 +405,10 @@ export class HealthcareServiceTimeoutsOutputReference extends cdktf.ComplexObjec
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): HealthcareServiceTimeouts | undefined {
+  public get internalValue(): HealthcareServiceTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -419,16 +430,22 @@ export class HealthcareServiceTimeoutsOutputReference extends cdktf.ComplexObjec
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: HealthcareServiceTimeouts | undefined) {
+  public set internalValue(value: HealthcareServiceTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -538,6 +555,7 @@ export class HealthcareService extends cdktf.TerraformResource {
     this._accessPolicyObjectIds = config.accessPolicyObjectIds;
     this._cosmosdbKeyVaultKeyVersionlessId = config.cosmosdbKeyVaultKeyVersionlessId;
     this._cosmosdbThroughput = config.cosmosdbThroughput;
+    this._id = config.id;
     this._kind = config.kind;
     this._location = config.location;
     this._name = config.name;
@@ -602,8 +620,19 @@ export class HealthcareService extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // kind - computed: false, optional: true, required: false
@@ -750,6 +779,7 @@ export class HealthcareService extends cdktf.TerraformResource {
       access_policy_object_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._accessPolicyObjectIds),
       cosmosdb_key_vault_key_versionless_id: cdktf.stringToTerraform(this._cosmosdbKeyVaultKeyVersionlessId),
       cosmosdb_throughput: cdktf.numberToTerraform(this._cosmosdbThroughput),
+      id: cdktf.stringToTerraform(this._id),
       kind: cdktf.stringToTerraform(this._kind),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),

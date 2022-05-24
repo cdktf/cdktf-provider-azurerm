@@ -24,6 +24,13 @@ export interface CosmosdbSqlContainerConfig extends cdktf.TerraformMetaArguments
   */
   readonly defaultTtl?: number;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_container#id CosmosdbSqlContainer#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_container#name CosmosdbSqlContainer#name}
   */
   readonly name: string;
@@ -277,6 +284,102 @@ export function cosmosdbSqlContainerIndexingPolicyCompositeIndexIndexToTerraform
   }
 }
 
+export class CosmosdbSqlContainerIndexingPolicyCompositeIndexIndexOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CosmosdbSqlContainerIndexingPolicyCompositeIndexIndex | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._order !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.order = this._order;
+    }
+    if (this._path !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.path = this._path;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CosmosdbSqlContainerIndexingPolicyCompositeIndexIndex | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._order = undefined;
+      this._path = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._order = value.order;
+      this._path = value.path;
+    }
+  }
+
+  // order - computed: false, optional: false, required: true
+  private _order?: string; 
+  public get order() {
+    return this.getStringAttribute('order');
+  }
+  public set order(value: string) {
+    this._order = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get orderInput() {
+    return this._order;
+  }
+
+  // path - computed: false, optional: false, required: true
+  private _path?: string; 
+  public get path() {
+    return this.getStringAttribute('path');
+  }
+  public set path(value: string) {
+    this._path = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathInput() {
+    return this._path;
+  }
+}
+
+export class CosmosdbSqlContainerIndexingPolicyCompositeIndexIndexList extends cdktf.ComplexList {
+  public internalValue? : CosmosdbSqlContainerIndexingPolicyCompositeIndexIndex[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CosmosdbSqlContainerIndexingPolicyCompositeIndexIndexOutputReference {
+    return new CosmosdbSqlContainerIndexingPolicyCompositeIndexIndexOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CosmosdbSqlContainerIndexingPolicyCompositeIndex {
   /**
   * index block
@@ -296,6 +399,83 @@ export function cosmosdbSqlContainerIndexingPolicyCompositeIndexToTerraform(stru
   }
 }
 
+export class CosmosdbSqlContainerIndexingPolicyCompositeIndexOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CosmosdbSqlContainerIndexingPolicyCompositeIndex | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._index?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.index = this._index?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CosmosdbSqlContainerIndexingPolicyCompositeIndex | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._index.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._index.internalValue = value.index;
+    }
+  }
+
+  // index - computed: false, optional: false, required: true
+  private _index = new CosmosdbSqlContainerIndexingPolicyCompositeIndexIndexList(this, "index", false);
+  public get index() {
+    return this._index;
+  }
+  public putIndex(value: CosmosdbSqlContainerIndexingPolicyCompositeIndexIndex[] | cdktf.IResolvable) {
+    this._index.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get indexInput() {
+    return this._index.internalValue;
+  }
+}
+
+export class CosmosdbSqlContainerIndexingPolicyCompositeIndexList extends cdktf.ComplexList {
+  public internalValue? : CosmosdbSqlContainerIndexingPolicyCompositeIndex[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CosmosdbSqlContainerIndexingPolicyCompositeIndexOutputReference {
+    return new CosmosdbSqlContainerIndexingPolicyCompositeIndexOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CosmosdbSqlContainerIndexingPolicyExcludedPath {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_container#path CosmosdbSqlContainer#path}
@@ -313,6 +493,83 @@ export function cosmosdbSqlContainerIndexingPolicyExcludedPathToTerraform(struct
   }
 }
 
+export class CosmosdbSqlContainerIndexingPolicyExcludedPathOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CosmosdbSqlContainerIndexingPolicyExcludedPath | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._path !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.path = this._path;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CosmosdbSqlContainerIndexingPolicyExcludedPath | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._path = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._path = value.path;
+    }
+  }
+
+  // path - computed: false, optional: false, required: true
+  private _path?: string; 
+  public get path() {
+    return this.getStringAttribute('path');
+  }
+  public set path(value: string) {
+    this._path = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathInput() {
+    return this._path;
+  }
+}
+
+export class CosmosdbSqlContainerIndexingPolicyExcludedPathList extends cdktf.ComplexList {
+  public internalValue? : CosmosdbSqlContainerIndexingPolicyExcludedPath[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CosmosdbSqlContainerIndexingPolicyExcludedPathOutputReference {
+    return new CosmosdbSqlContainerIndexingPolicyExcludedPathOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CosmosdbSqlContainerIndexingPolicyIncludedPath {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_container#path CosmosdbSqlContainer#path}
@@ -330,6 +587,83 @@ export function cosmosdbSqlContainerIndexingPolicyIncludedPathToTerraform(struct
   }
 }
 
+export class CosmosdbSqlContainerIndexingPolicyIncludedPathOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CosmosdbSqlContainerIndexingPolicyIncludedPath | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._path !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.path = this._path;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CosmosdbSqlContainerIndexingPolicyIncludedPath | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._path = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._path = value.path;
+    }
+  }
+
+  // path - computed: false, optional: false, required: true
+  private _path?: string; 
+  public get path() {
+    return this.getStringAttribute('path');
+  }
+  public set path(value: string) {
+    this._path = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathInput() {
+    return this._path;
+  }
+}
+
+export class CosmosdbSqlContainerIndexingPolicyIncludedPathList extends cdktf.ComplexList {
+  public internalValue? : CosmosdbSqlContainerIndexingPolicyIncludedPath[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CosmosdbSqlContainerIndexingPolicyIncludedPathOutputReference {
+    return new CosmosdbSqlContainerIndexingPolicyIncludedPathOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CosmosdbSqlContainerIndexingPolicySpatialIndex {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_container#path CosmosdbSqlContainer#path}
@@ -347,6 +681,88 @@ export function cosmosdbSqlContainerIndexingPolicySpatialIndexToTerraform(struct
   }
 }
 
+export class CosmosdbSqlContainerIndexingPolicySpatialIndexOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CosmosdbSqlContainerIndexingPolicySpatialIndex | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._path !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.path = this._path;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CosmosdbSqlContainerIndexingPolicySpatialIndex | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._path = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._path = value.path;
+    }
+  }
+
+  // path - computed: false, optional: false, required: true
+  private _path?: string; 
+  public get path() {
+    return this.getStringAttribute('path');
+  }
+  public set path(value: string) {
+    this._path = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathInput() {
+    return this._path;
+  }
+
+  // types - computed: true, optional: false, required: false
+  public get types() {
+    return cdktf.Fn.tolist(this.getListAttribute('types'));
+  }
+}
+
+export class CosmosdbSqlContainerIndexingPolicySpatialIndexList extends cdktf.ComplexList {
+  public internalValue? : CosmosdbSqlContainerIndexingPolicySpatialIndex[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CosmosdbSqlContainerIndexingPolicySpatialIndexOutputReference {
+    return new CosmosdbSqlContainerIndexingPolicySpatialIndexOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CosmosdbSqlContainerIndexingPolicy {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_container#indexing_mode CosmosdbSqlContainer#indexing_mode}
@@ -410,21 +826,21 @@ export class CosmosdbSqlContainerIndexingPolicyOutputReference extends cdktf.Com
       hasAnyValues = true;
       internalValueResult.indexingMode = this._indexingMode;
     }
-    if (this._compositeIndex !== undefined) {
+    if (this._compositeIndex?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.compositeIndex = this._compositeIndex;
+      internalValueResult.compositeIndex = this._compositeIndex?.internalValue;
     }
-    if (this._excludedPath !== undefined) {
+    if (this._excludedPath?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.excludedPath = this._excludedPath;
+      internalValueResult.excludedPath = this._excludedPath?.internalValue;
     }
-    if (this._includedPath !== undefined) {
+    if (this._includedPath?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.includedPath = this._includedPath;
+      internalValueResult.includedPath = this._includedPath?.internalValue;
     }
-    if (this._spatialIndex !== undefined) {
+    if (this._spatialIndex?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.spatialIndex = this._spatialIndex;
+      internalValueResult.spatialIndex = this._spatialIndex?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -433,18 +849,18 @@ export class CosmosdbSqlContainerIndexingPolicyOutputReference extends cdktf.Com
     if (value === undefined) {
       this.isEmptyObject = false;
       this._indexingMode = undefined;
-      this._compositeIndex = undefined;
-      this._excludedPath = undefined;
-      this._includedPath = undefined;
-      this._spatialIndex = undefined;
+      this._compositeIndex.internalValue = undefined;
+      this._excludedPath.internalValue = undefined;
+      this._includedPath.internalValue = undefined;
+      this._spatialIndex.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._indexingMode = value.indexingMode;
-      this._compositeIndex = value.compositeIndex;
-      this._excludedPath = value.excludedPath;
-      this._includedPath = value.includedPath;
-      this._spatialIndex = value.spatialIndex;
+      this._compositeIndex.internalValue = value.compositeIndex;
+      this._excludedPath.internalValue = value.excludedPath;
+      this._includedPath.internalValue = value.includedPath;
+      this._spatialIndex.internalValue = value.spatialIndex;
     }
   }
 
@@ -465,71 +881,67 @@ export class CosmosdbSqlContainerIndexingPolicyOutputReference extends cdktf.Com
   }
 
   // composite_index - computed: false, optional: true, required: false
-  private _compositeIndex?: CosmosdbSqlContainerIndexingPolicyCompositeIndex[] | cdktf.IResolvable; 
+  private _compositeIndex = new CosmosdbSqlContainerIndexingPolicyCompositeIndexList(this, "composite_index", false);
   public get compositeIndex() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('composite_index');
+    return this._compositeIndex;
   }
-  public set compositeIndex(value: CosmosdbSqlContainerIndexingPolicyCompositeIndex[] | cdktf.IResolvable) {
-    this._compositeIndex = value;
+  public putCompositeIndex(value: CosmosdbSqlContainerIndexingPolicyCompositeIndex[] | cdktf.IResolvable) {
+    this._compositeIndex.internalValue = value;
   }
   public resetCompositeIndex() {
-    this._compositeIndex = undefined;
+    this._compositeIndex.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get compositeIndexInput() {
-    return this._compositeIndex;
+    return this._compositeIndex.internalValue;
   }
 
   // excluded_path - computed: false, optional: true, required: false
-  private _excludedPath?: CosmosdbSqlContainerIndexingPolicyExcludedPath[] | cdktf.IResolvable; 
+  private _excludedPath = new CosmosdbSqlContainerIndexingPolicyExcludedPathList(this, "excluded_path", false);
   public get excludedPath() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('excluded_path');
+    return this._excludedPath;
   }
-  public set excludedPath(value: CosmosdbSqlContainerIndexingPolicyExcludedPath[] | cdktf.IResolvable) {
-    this._excludedPath = value;
+  public putExcludedPath(value: CosmosdbSqlContainerIndexingPolicyExcludedPath[] | cdktf.IResolvable) {
+    this._excludedPath.internalValue = value;
   }
   public resetExcludedPath() {
-    this._excludedPath = undefined;
+    this._excludedPath.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get excludedPathInput() {
-    return this._excludedPath;
+    return this._excludedPath.internalValue;
   }
 
   // included_path - computed: false, optional: true, required: false
-  private _includedPath?: CosmosdbSqlContainerIndexingPolicyIncludedPath[] | cdktf.IResolvable; 
+  private _includedPath = new CosmosdbSqlContainerIndexingPolicyIncludedPathList(this, "included_path", false);
   public get includedPath() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('included_path');
+    return this._includedPath;
   }
-  public set includedPath(value: CosmosdbSqlContainerIndexingPolicyIncludedPath[] | cdktf.IResolvable) {
-    this._includedPath = value;
+  public putIncludedPath(value: CosmosdbSqlContainerIndexingPolicyIncludedPath[] | cdktf.IResolvable) {
+    this._includedPath.internalValue = value;
   }
   public resetIncludedPath() {
-    this._includedPath = undefined;
+    this._includedPath.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get includedPathInput() {
-    return this._includedPath;
+    return this._includedPath.internalValue;
   }
 
   // spatial_index - computed: false, optional: true, required: false
-  private _spatialIndex?: CosmosdbSqlContainerIndexingPolicySpatialIndex[] | cdktf.IResolvable; 
+  private _spatialIndex = new CosmosdbSqlContainerIndexingPolicySpatialIndexList(this, "spatial_index", false);
   public get spatialIndex() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('spatial_index');
+    return this._spatialIndex;
   }
-  public set spatialIndex(value: CosmosdbSqlContainerIndexingPolicySpatialIndex[] | cdktf.IResolvable) {
-    this._spatialIndex = value;
+  public putSpatialIndex(value: CosmosdbSqlContainerIndexingPolicySpatialIndex[] | cdktf.IResolvable) {
+    this._spatialIndex.internalValue = value;
   }
   public resetSpatialIndex() {
-    this._spatialIndex = undefined;
+    this._spatialIndex.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get spatialIndexInput() {
-    return this._spatialIndex;
+    return this._spatialIndex.internalValue;
   }
 }
 export interface CosmosdbSqlContainerTimeouts {
@@ -566,6 +978,7 @@ export function cosmosdbSqlContainerTimeoutsToTerraform(struct?: CosmosdbSqlCont
 
 export class CosmosdbSqlContainerTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -575,7 +988,10 @@ export class CosmosdbSqlContainerTimeoutsOutputReference extends cdktf.ComplexOb
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): CosmosdbSqlContainerTimeouts | undefined {
+  public get internalValue(): CosmosdbSqlContainerTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -597,16 +1013,22 @@ export class CosmosdbSqlContainerTimeoutsOutputReference extends cdktf.ComplexOb
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: CosmosdbSqlContainerTimeouts | undefined) {
+  public set internalValue(value: CosmosdbSqlContainerTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -695,6 +1117,83 @@ export function cosmosdbSqlContainerUniqueKeyToTerraform(struct?: CosmosdbSqlCon
   }
 }
 
+export class CosmosdbSqlContainerUniqueKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CosmosdbSqlContainerUniqueKey | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._paths !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.paths = this._paths;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CosmosdbSqlContainerUniqueKey | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._paths = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._paths = value.paths;
+    }
+  }
+
+  // paths - computed: false, optional: false, required: true
+  private _paths?: string[]; 
+  public get paths() {
+    return cdktf.Fn.tolist(this.getListAttribute('paths'));
+  }
+  public set paths(value: string[]) {
+    this._paths = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathsInput() {
+    return this._paths;
+  }
+}
+
+export class CosmosdbSqlContainerUniqueKeyList extends cdktf.ComplexList {
+  public internalValue? : CosmosdbSqlContainerUniqueKey[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CosmosdbSqlContainerUniqueKeyOutputReference {
+    return new CosmosdbSqlContainerUniqueKeyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_container azurerm_cosmosdb_sql_container}
@@ -734,6 +1233,7 @@ export class CosmosdbSqlContainer extends cdktf.TerraformResource {
     this._analyticalStorageTtl = config.analyticalStorageTtl;
     this._databaseName = config.databaseName;
     this._defaultTtl = config.defaultTtl;
+    this._id = config.id;
     this._name = config.name;
     this._partitionKeyPath = config.partitionKeyPath;
     this._partitionKeyVersion = config.partitionKeyVersion;
@@ -743,7 +1243,7 @@ export class CosmosdbSqlContainer extends cdktf.TerraformResource {
     this._conflictResolutionPolicy.internalValue = config.conflictResolutionPolicy;
     this._indexingPolicy.internalValue = config.indexingPolicy;
     this._timeouts.internalValue = config.timeouts;
-    this._uniqueKey = config.uniqueKey;
+    this._uniqueKey.internalValue = config.uniqueKey;
   }
 
   // ==========
@@ -809,8 +1309,19 @@ export class CosmosdbSqlContainer extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // name - computed: false, optional: false, required: true
@@ -949,20 +1460,19 @@ export class CosmosdbSqlContainer extends cdktf.TerraformResource {
   }
 
   // unique_key - computed: false, optional: true, required: false
-  private _uniqueKey?: CosmosdbSqlContainerUniqueKey[] | cdktf.IResolvable; 
+  private _uniqueKey = new CosmosdbSqlContainerUniqueKeyList(this, "unique_key", true);
   public get uniqueKey() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('unique_key')));
+    return this._uniqueKey;
   }
-  public set uniqueKey(value: CosmosdbSqlContainerUniqueKey[] | cdktf.IResolvable) {
-    this._uniqueKey = value;
+  public putUniqueKey(value: CosmosdbSqlContainerUniqueKey[] | cdktf.IResolvable) {
+    this._uniqueKey.internalValue = value;
   }
   public resetUniqueKey() {
-    this._uniqueKey = undefined;
+    this._uniqueKey.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get uniqueKeyInput() {
-    return this._uniqueKey;
+    return this._uniqueKey.internalValue;
   }
 
   // =========
@@ -975,6 +1485,7 @@ export class CosmosdbSqlContainer extends cdktf.TerraformResource {
       analytical_storage_ttl: cdktf.numberToTerraform(this._analyticalStorageTtl),
       database_name: cdktf.stringToTerraform(this._databaseName),
       default_ttl: cdktf.numberToTerraform(this._defaultTtl),
+      id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       partition_key_path: cdktf.stringToTerraform(this._partitionKeyPath),
       partition_key_version: cdktf.numberToTerraform(this._partitionKeyVersion),
@@ -984,7 +1495,7 @@ export class CosmosdbSqlContainer extends cdktf.TerraformResource {
       conflict_resolution_policy: cosmosdbSqlContainerConflictResolutionPolicyToTerraform(this._conflictResolutionPolicy.internalValue),
       indexing_policy: cosmosdbSqlContainerIndexingPolicyToTerraform(this._indexingPolicy.internalValue),
       timeouts: cosmosdbSqlContainerTimeoutsToTerraform(this._timeouts.internalValue),
-      unique_key: cdktf.listMapper(cosmosdbSqlContainerUniqueKeyToTerraform)(this._uniqueKey),
+      unique_key: cdktf.listMapper(cosmosdbSqlContainerUniqueKeyToTerraform)(this._uniqueKey.internalValue),
     };
   }
 }

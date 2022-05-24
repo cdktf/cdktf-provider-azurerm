@@ -40,6 +40,13 @@ export interface FunctionAppConfig extends cdktf.TerraformMetaArguments {
   */
   readonly httpsOnly?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app#id FunctionApp#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app#key_vault_reference_identity_id FunctionApp#key_vault_reference_identity_id}
   */
   readonly keyVaultReferenceIdentityId?: string;
@@ -1176,6 +1183,121 @@ export function functionAppConnectionStringToTerraform(struct?: FunctionAppConne
   }
 }
 
+export class FunctionAppConnectionStringOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): FunctionAppConnectionString | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: FunctionAppConnectionString | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._type = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._type = value.type;
+      this._value = value.value;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+
+  // value - computed: false, optional: false, required: true
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class FunctionAppConnectionStringList extends cdktf.ComplexList {
+  public internalValue? : FunctionAppConnectionString[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): FunctionAppConnectionStringOutputReference {
+    return new FunctionAppConnectionStringOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface FunctionAppIdentity {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app#identity_ids FunctionApp#identity_ids}
@@ -1307,6 +1429,152 @@ export function functionAppSiteConfigIpRestrictionHeadersToTerraform(struct?: Fu
   }
 }
 
+export class FunctionAppSiteConfigIpRestrictionHeadersOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): FunctionAppSiteConfigIpRestrictionHeaders | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._xAzureFdid !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.xAzureFdid = this._xAzureFdid;
+    }
+    if (this._xFdHealthProbe !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.xFdHealthProbe = this._xFdHealthProbe;
+    }
+    if (this._xForwardedFor !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.xForwardedFor = this._xForwardedFor;
+    }
+    if (this._xForwardedHost !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.xForwardedHost = this._xForwardedHost;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: FunctionAppSiteConfigIpRestrictionHeaders | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._xAzureFdid = undefined;
+      this._xFdHealthProbe = undefined;
+      this._xForwardedFor = undefined;
+      this._xForwardedHost = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._xAzureFdid = value.xAzureFdid;
+      this._xFdHealthProbe = value.xFdHealthProbe;
+      this._xForwardedFor = value.xForwardedFor;
+      this._xForwardedHost = value.xForwardedHost;
+    }
+  }
+
+  // x_azure_fdid - computed: true, optional: true, required: false
+  private _xAzureFdid?: string[]; 
+  public get xAzureFdid() {
+    return cdktf.Fn.tolist(this.getListAttribute('x_azure_fdid'));
+  }
+  public set xAzureFdid(value: string[]) {
+    this._xAzureFdid = value;
+  }
+  public resetXAzureFdid() {
+    this._xAzureFdid = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get xAzureFdidInput() {
+    return this._xAzureFdid;
+  }
+
+  // x_fd_health_probe - computed: true, optional: true, required: false
+  private _xFdHealthProbe?: string[]; 
+  public get xFdHealthProbe() {
+    return cdktf.Fn.tolist(this.getListAttribute('x_fd_health_probe'));
+  }
+  public set xFdHealthProbe(value: string[]) {
+    this._xFdHealthProbe = value;
+  }
+  public resetXFdHealthProbe() {
+    this._xFdHealthProbe = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get xFdHealthProbeInput() {
+    return this._xFdHealthProbe;
+  }
+
+  // x_forwarded_for - computed: true, optional: true, required: false
+  private _xForwardedFor?: string[]; 
+  public get xForwardedFor() {
+    return cdktf.Fn.tolist(this.getListAttribute('x_forwarded_for'));
+  }
+  public set xForwardedFor(value: string[]) {
+    this._xForwardedFor = value;
+  }
+  public resetXForwardedFor() {
+    this._xForwardedFor = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get xForwardedForInput() {
+    return this._xForwardedFor;
+  }
+
+  // x_forwarded_host - computed: true, optional: true, required: false
+  private _xForwardedHost?: string[]; 
+  public get xForwardedHost() {
+    return cdktf.Fn.tolist(this.getListAttribute('x_forwarded_host'));
+  }
+  public set xForwardedHost(value: string[]) {
+    this._xForwardedHost = value;
+  }
+  public resetXForwardedHost() {
+    this._xForwardedHost = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get xForwardedHostInput() {
+    return this._xForwardedHost;
+  }
+}
+
+export class FunctionAppSiteConfigIpRestrictionHeadersList extends cdktf.ComplexList {
+  public internalValue? : FunctionAppSiteConfigIpRestrictionHeaders[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): FunctionAppSiteConfigIpRestrictionHeadersOutputReference {
+    return new FunctionAppSiteConfigIpRestrictionHeadersOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface FunctionAppSiteConfigIpRestriction {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app#action FunctionApp#action}
@@ -1354,6 +1622,218 @@ export function functionAppSiteConfigIpRestrictionToTerraform(struct?: FunctionA
   }
 }
 
+export class FunctionAppSiteConfigIpRestrictionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): FunctionAppSiteConfigIpRestriction | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._action !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.action = this._action;
+    }
+    if (this._headers?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headers = this._headers?.internalValue;
+    }
+    if (this._ipAddress !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ipAddress = this._ipAddress;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._priority !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.priority = this._priority;
+    }
+    if (this._serviceTag !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.serviceTag = this._serviceTag;
+    }
+    if (this._virtualNetworkSubnetId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.virtualNetworkSubnetId = this._virtualNetworkSubnetId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: FunctionAppSiteConfigIpRestriction | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._action = undefined;
+      this._headers.internalValue = undefined;
+      this._ipAddress = undefined;
+      this._name = undefined;
+      this._priority = undefined;
+      this._serviceTag = undefined;
+      this._virtualNetworkSubnetId = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._action = value.action;
+      this._headers.internalValue = value.headers;
+      this._ipAddress = value.ipAddress;
+      this._name = value.name;
+      this._priority = value.priority;
+      this._serviceTag = value.serviceTag;
+      this._virtualNetworkSubnetId = value.virtualNetworkSubnetId;
+    }
+  }
+
+  // action - computed: true, optional: true, required: false
+  private _action?: string; 
+  public get action() {
+    return this.getStringAttribute('action');
+  }
+  public set action(value: string) {
+    this._action = value;
+  }
+  public resetAction() {
+    this._action = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get actionInput() {
+    return this._action;
+  }
+
+  // headers - computed: true, optional: true, required: false
+  private _headers = new FunctionAppSiteConfigIpRestrictionHeadersList(this, "headers", false);
+  public get headers() {
+    return this._headers;
+  }
+  public putHeaders(value: FunctionAppSiteConfigIpRestrictionHeaders[] | cdktf.IResolvable) {
+    this._headers.internalValue = value;
+  }
+  public resetHeaders() {
+    this._headers.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headersInput() {
+    return this._headers.internalValue;
+  }
+
+  // ip_address - computed: true, optional: true, required: false
+  private _ipAddress?: string; 
+  public get ipAddress() {
+    return this.getStringAttribute('ip_address');
+  }
+  public set ipAddress(value: string) {
+    this._ipAddress = value;
+  }
+  public resetIpAddress() {
+    this._ipAddress = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipAddressInput() {
+    return this._ipAddress;
+  }
+
+  // name - computed: true, optional: true, required: false
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // priority - computed: true, optional: true, required: false
+  private _priority?: number; 
+  public get priority() {
+    return this.getNumberAttribute('priority');
+  }
+  public set priority(value: number) {
+    this._priority = value;
+  }
+  public resetPriority() {
+    this._priority = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get priorityInput() {
+    return this._priority;
+  }
+
+  // service_tag - computed: true, optional: true, required: false
+  private _serviceTag?: string; 
+  public get serviceTag() {
+    return this.getStringAttribute('service_tag');
+  }
+  public set serviceTag(value: string) {
+    this._serviceTag = value;
+  }
+  public resetServiceTag() {
+    this._serviceTag = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceTagInput() {
+    return this._serviceTag;
+  }
+
+  // virtual_network_subnet_id - computed: true, optional: true, required: false
+  private _virtualNetworkSubnetId?: string; 
+  public get virtualNetworkSubnetId() {
+    return this.getStringAttribute('virtual_network_subnet_id');
+  }
+  public set virtualNetworkSubnetId(value: string) {
+    this._virtualNetworkSubnetId = value;
+  }
+  public resetVirtualNetworkSubnetId() {
+    this._virtualNetworkSubnetId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get virtualNetworkSubnetIdInput() {
+    return this._virtualNetworkSubnetId;
+  }
+}
+
+export class FunctionAppSiteConfigIpRestrictionList extends cdktf.ComplexList {
+  public internalValue? : FunctionAppSiteConfigIpRestriction[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): FunctionAppSiteConfigIpRestrictionOutputReference {
+    return new FunctionAppSiteConfigIpRestrictionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface FunctionAppSiteConfigScmIpRestrictionHeaders {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app#x_azure_fdid FunctionApp#x_azure_fdid}
@@ -1386,6 +1866,152 @@ export function functionAppSiteConfigScmIpRestrictionHeadersToTerraform(struct?:
   }
 }
 
+export class FunctionAppSiteConfigScmIpRestrictionHeadersOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): FunctionAppSiteConfigScmIpRestrictionHeaders | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._xAzureFdid !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.xAzureFdid = this._xAzureFdid;
+    }
+    if (this._xFdHealthProbe !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.xFdHealthProbe = this._xFdHealthProbe;
+    }
+    if (this._xForwardedFor !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.xForwardedFor = this._xForwardedFor;
+    }
+    if (this._xForwardedHost !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.xForwardedHost = this._xForwardedHost;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: FunctionAppSiteConfigScmIpRestrictionHeaders | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._xAzureFdid = undefined;
+      this._xFdHealthProbe = undefined;
+      this._xForwardedFor = undefined;
+      this._xForwardedHost = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._xAzureFdid = value.xAzureFdid;
+      this._xFdHealthProbe = value.xFdHealthProbe;
+      this._xForwardedFor = value.xForwardedFor;
+      this._xForwardedHost = value.xForwardedHost;
+    }
+  }
+
+  // x_azure_fdid - computed: true, optional: true, required: false
+  private _xAzureFdid?: string[]; 
+  public get xAzureFdid() {
+    return cdktf.Fn.tolist(this.getListAttribute('x_azure_fdid'));
+  }
+  public set xAzureFdid(value: string[]) {
+    this._xAzureFdid = value;
+  }
+  public resetXAzureFdid() {
+    this._xAzureFdid = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get xAzureFdidInput() {
+    return this._xAzureFdid;
+  }
+
+  // x_fd_health_probe - computed: true, optional: true, required: false
+  private _xFdHealthProbe?: string[]; 
+  public get xFdHealthProbe() {
+    return cdktf.Fn.tolist(this.getListAttribute('x_fd_health_probe'));
+  }
+  public set xFdHealthProbe(value: string[]) {
+    this._xFdHealthProbe = value;
+  }
+  public resetXFdHealthProbe() {
+    this._xFdHealthProbe = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get xFdHealthProbeInput() {
+    return this._xFdHealthProbe;
+  }
+
+  // x_forwarded_for - computed: true, optional: true, required: false
+  private _xForwardedFor?: string[]; 
+  public get xForwardedFor() {
+    return cdktf.Fn.tolist(this.getListAttribute('x_forwarded_for'));
+  }
+  public set xForwardedFor(value: string[]) {
+    this._xForwardedFor = value;
+  }
+  public resetXForwardedFor() {
+    this._xForwardedFor = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get xForwardedForInput() {
+    return this._xForwardedFor;
+  }
+
+  // x_forwarded_host - computed: true, optional: true, required: false
+  private _xForwardedHost?: string[]; 
+  public get xForwardedHost() {
+    return cdktf.Fn.tolist(this.getListAttribute('x_forwarded_host'));
+  }
+  public set xForwardedHost(value: string[]) {
+    this._xForwardedHost = value;
+  }
+  public resetXForwardedHost() {
+    this._xForwardedHost = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get xForwardedHostInput() {
+    return this._xForwardedHost;
+  }
+}
+
+export class FunctionAppSiteConfigScmIpRestrictionHeadersList extends cdktf.ComplexList {
+  public internalValue? : FunctionAppSiteConfigScmIpRestrictionHeaders[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): FunctionAppSiteConfigScmIpRestrictionHeadersOutputReference {
+    return new FunctionAppSiteConfigScmIpRestrictionHeadersOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface FunctionAppSiteConfigScmIpRestriction {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app#action FunctionApp#action}
@@ -1433,6 +2059,218 @@ export function functionAppSiteConfigScmIpRestrictionToTerraform(struct?: Functi
   }
 }
 
+export class FunctionAppSiteConfigScmIpRestrictionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): FunctionAppSiteConfigScmIpRestriction | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._action !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.action = this._action;
+    }
+    if (this._headers?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headers = this._headers?.internalValue;
+    }
+    if (this._ipAddress !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ipAddress = this._ipAddress;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._priority !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.priority = this._priority;
+    }
+    if (this._serviceTag !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.serviceTag = this._serviceTag;
+    }
+    if (this._virtualNetworkSubnetId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.virtualNetworkSubnetId = this._virtualNetworkSubnetId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: FunctionAppSiteConfigScmIpRestriction | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._action = undefined;
+      this._headers.internalValue = undefined;
+      this._ipAddress = undefined;
+      this._name = undefined;
+      this._priority = undefined;
+      this._serviceTag = undefined;
+      this._virtualNetworkSubnetId = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._action = value.action;
+      this._headers.internalValue = value.headers;
+      this._ipAddress = value.ipAddress;
+      this._name = value.name;
+      this._priority = value.priority;
+      this._serviceTag = value.serviceTag;
+      this._virtualNetworkSubnetId = value.virtualNetworkSubnetId;
+    }
+  }
+
+  // action - computed: true, optional: true, required: false
+  private _action?: string; 
+  public get action() {
+    return this.getStringAttribute('action');
+  }
+  public set action(value: string) {
+    this._action = value;
+  }
+  public resetAction() {
+    this._action = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get actionInput() {
+    return this._action;
+  }
+
+  // headers - computed: true, optional: true, required: false
+  private _headers = new FunctionAppSiteConfigScmIpRestrictionHeadersList(this, "headers", false);
+  public get headers() {
+    return this._headers;
+  }
+  public putHeaders(value: FunctionAppSiteConfigScmIpRestrictionHeaders[] | cdktf.IResolvable) {
+    this._headers.internalValue = value;
+  }
+  public resetHeaders() {
+    this._headers.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headersInput() {
+    return this._headers.internalValue;
+  }
+
+  // ip_address - computed: true, optional: true, required: false
+  private _ipAddress?: string; 
+  public get ipAddress() {
+    return this.getStringAttribute('ip_address');
+  }
+  public set ipAddress(value: string) {
+    this._ipAddress = value;
+  }
+  public resetIpAddress() {
+    this._ipAddress = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipAddressInput() {
+    return this._ipAddress;
+  }
+
+  // name - computed: true, optional: true, required: false
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // priority - computed: true, optional: true, required: false
+  private _priority?: number; 
+  public get priority() {
+    return this.getNumberAttribute('priority');
+  }
+  public set priority(value: number) {
+    this._priority = value;
+  }
+  public resetPriority() {
+    this._priority = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get priorityInput() {
+    return this._priority;
+  }
+
+  // service_tag - computed: true, optional: true, required: false
+  private _serviceTag?: string; 
+  public get serviceTag() {
+    return this.getStringAttribute('service_tag');
+  }
+  public set serviceTag(value: string) {
+    this._serviceTag = value;
+  }
+  public resetServiceTag() {
+    this._serviceTag = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceTagInput() {
+    return this._serviceTag;
+  }
+
+  // virtual_network_subnet_id - computed: true, optional: true, required: false
+  private _virtualNetworkSubnetId?: string; 
+  public get virtualNetworkSubnetId() {
+    return this.getStringAttribute('virtual_network_subnet_id');
+  }
+  public set virtualNetworkSubnetId(value: string) {
+    this._virtualNetworkSubnetId = value;
+  }
+  public resetVirtualNetworkSubnetId() {
+    this._virtualNetworkSubnetId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get virtualNetworkSubnetIdInput() {
+    return this._virtualNetworkSubnetId;
+  }
+}
+
+export class FunctionAppSiteConfigScmIpRestrictionList extends cdktf.ComplexList {
+  public internalValue? : FunctionAppSiteConfigScmIpRestriction[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): FunctionAppSiteConfigScmIpRestrictionOutputReference {
+    return new FunctionAppSiteConfigScmIpRestrictionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface FunctionAppSiteConfigCors {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app#allowed_origins FunctionApp#allowed_origins}
@@ -1687,9 +2525,9 @@ export class FunctionAppSiteConfigOutputReference extends cdktf.ComplexObject {
       hasAnyValues = true;
       internalValueResult.http2Enabled = this._http2Enabled;
     }
-    if (this._ipRestriction !== undefined) {
+    if (this._ipRestriction?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.ipRestriction = this._ipRestriction;
+      internalValueResult.ipRestriction = this._ipRestriction?.internalValue;
     }
     if (this._javaVersion !== undefined) {
       hasAnyValues = true;
@@ -1711,9 +2549,9 @@ export class FunctionAppSiteConfigOutputReference extends cdktf.ComplexObject {
       hasAnyValues = true;
       internalValueResult.runtimeScaleMonitoringEnabled = this._runtimeScaleMonitoringEnabled;
     }
-    if (this._scmIpRestriction !== undefined) {
+    if (this._scmIpRestriction?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.scmIpRestriction = this._scmIpRestriction;
+      internalValueResult.scmIpRestriction = this._scmIpRestriction?.internalValue;
     }
     if (this._scmType !== undefined) {
       hasAnyValues = true;
@@ -1753,13 +2591,13 @@ export class FunctionAppSiteConfigOutputReference extends cdktf.ComplexObject {
       this._ftpsState = undefined;
       this._healthCheckPath = undefined;
       this._http2Enabled = undefined;
-      this._ipRestriction = undefined;
+      this._ipRestriction.internalValue = undefined;
       this._javaVersion = undefined;
       this._linuxFxVersion = undefined;
       this._minTlsVersion = undefined;
       this._preWarmedInstanceCount = undefined;
       this._runtimeScaleMonitoringEnabled = undefined;
-      this._scmIpRestriction = undefined;
+      this._scmIpRestriction.internalValue = undefined;
       this._scmType = undefined;
       this._scmUseMainIpRestriction = undefined;
       this._use32BitWorkerProcess = undefined;
@@ -1777,13 +2615,13 @@ export class FunctionAppSiteConfigOutputReference extends cdktf.ComplexObject {
       this._ftpsState = value.ftpsState;
       this._healthCheckPath = value.healthCheckPath;
       this._http2Enabled = value.http2Enabled;
-      this._ipRestriction = value.ipRestriction;
+      this._ipRestriction.internalValue = value.ipRestriction;
       this._javaVersion = value.javaVersion;
       this._linuxFxVersion = value.linuxFxVersion;
       this._minTlsVersion = value.minTlsVersion;
       this._preWarmedInstanceCount = value.preWarmedInstanceCount;
       this._runtimeScaleMonitoringEnabled = value.runtimeScaleMonitoringEnabled;
-      this._scmIpRestriction = value.scmIpRestriction;
+      this._scmIpRestriction.internalValue = value.scmIpRestriction;
       this._scmType = value.scmType;
       this._scmUseMainIpRestriction = value.scmUseMainIpRestriction;
       this._use32BitWorkerProcess = value.use32BitWorkerProcess;
@@ -1922,20 +2760,19 @@ export class FunctionAppSiteConfigOutputReference extends cdktf.ComplexObject {
   }
 
   // ip_restriction - computed: true, optional: true, required: false
-  private _ipRestriction?: FunctionAppSiteConfigIpRestriction[] | cdktf.IResolvable; 
+  private _ipRestriction = new FunctionAppSiteConfigIpRestrictionList(this, "ip_restriction", false);
   public get ipRestriction() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('ip_restriction');
+    return this._ipRestriction;
   }
-  public set ipRestriction(value: FunctionAppSiteConfigIpRestriction[] | cdktf.IResolvable) {
-    this._ipRestriction = value;
+  public putIpRestriction(value: FunctionAppSiteConfigIpRestriction[] | cdktf.IResolvable) {
+    this._ipRestriction.internalValue = value;
   }
   public resetIpRestriction() {
-    this._ipRestriction = undefined;
+    this._ipRestriction.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get ipRestrictionInput() {
-    return this._ipRestriction;
+    return this._ipRestriction.internalValue;
   }
 
   // java_version - computed: false, optional: true, required: false
@@ -2019,20 +2856,19 @@ export class FunctionAppSiteConfigOutputReference extends cdktf.ComplexObject {
   }
 
   // scm_ip_restriction - computed: true, optional: true, required: false
-  private _scmIpRestriction?: FunctionAppSiteConfigScmIpRestriction[] | cdktf.IResolvable; 
+  private _scmIpRestriction = new FunctionAppSiteConfigScmIpRestrictionList(this, "scm_ip_restriction", false);
   public get scmIpRestriction() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('scm_ip_restriction');
+    return this._scmIpRestriction;
   }
-  public set scmIpRestriction(value: FunctionAppSiteConfigScmIpRestriction[] | cdktf.IResolvable) {
-    this._scmIpRestriction = value;
+  public putScmIpRestriction(value: FunctionAppSiteConfigScmIpRestriction[] | cdktf.IResolvable) {
+    this._scmIpRestriction.internalValue = value;
   }
   public resetScmIpRestriction() {
-    this._scmIpRestriction = undefined;
+    this._scmIpRestriction.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get scmIpRestrictionInput() {
-    return this._scmIpRestriction;
+    return this._scmIpRestriction.internalValue;
   }
 
   // scm_type - computed: true, optional: true, required: false
@@ -2338,6 +3174,7 @@ export function functionAppTimeoutsToTerraform(struct?: FunctionAppTimeoutsOutpu
 
 export class FunctionAppTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -2347,7 +3184,10 @@ export class FunctionAppTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): FunctionAppTimeouts | undefined {
+  public get internalValue(): FunctionAppTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -2369,16 +3209,22 @@ export class FunctionAppTimeoutsOutputReference extends cdktf.ComplexObject {
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: FunctionAppTimeouts | undefined) {
+  public set internalValue(value: FunctionAppTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -2493,6 +3339,7 @@ export class FunctionApp extends cdktf.TerraformResource {
     this._enableBuiltinLogging = config.enableBuiltinLogging;
     this._enabled = config.enabled;
     this._httpsOnly = config.httpsOnly;
+    this._id = config.id;
     this._keyVaultReferenceIdentityId = config.keyVaultReferenceIdentityId;
     this._location = config.location;
     this._name = config.name;
@@ -2504,7 +3351,7 @@ export class FunctionApp extends cdktf.TerraformResource {
     this._tags = config.tags;
     this._version = config.version;
     this._authSettings.internalValue = config.authSettings;
-    this._connectionString = config.connectionString;
+    this._connectionString.internalValue = config.connectionString;
     this._identity.internalValue = config.identity;
     this._siteConfig.internalValue = config.siteConfig;
     this._sourceControl.internalValue = config.sourceControl;
@@ -2651,8 +3498,19 @@ export class FunctionApp extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // key_vault_reference_identity_id - computed: true, optional: true, required: false
@@ -2844,20 +3702,19 @@ export class FunctionApp extends cdktf.TerraformResource {
   }
 
   // connection_string - computed: false, optional: true, required: false
-  private _connectionString?: FunctionAppConnectionString[] | cdktf.IResolvable; 
+  private _connectionString = new FunctionAppConnectionStringList(this, "connection_string", true);
   public get connectionString() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('connection_string')));
+    return this._connectionString;
   }
-  public set connectionString(value: FunctionAppConnectionString[] | cdktf.IResolvable) {
-    this._connectionString = value;
+  public putConnectionString(value: FunctionAppConnectionString[] | cdktf.IResolvable) {
+    this._connectionString.internalValue = value;
   }
   public resetConnectionString() {
-    this._connectionString = undefined;
+    this._connectionString.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get connectionStringInput() {
-    return this._connectionString;
+    return this._connectionString.internalValue;
   }
 
   // identity - computed: false, optional: true, required: false
@@ -2938,6 +3795,7 @@ export class FunctionApp extends cdktf.TerraformResource {
       enable_builtin_logging: cdktf.booleanToTerraform(this._enableBuiltinLogging),
       enabled: cdktf.booleanToTerraform(this._enabled),
       https_only: cdktf.booleanToTerraform(this._httpsOnly),
+      id: cdktf.stringToTerraform(this._id),
       key_vault_reference_identity_id: cdktf.stringToTerraform(this._keyVaultReferenceIdentityId),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
@@ -2949,7 +3807,7 @@ export class FunctionApp extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       version: cdktf.stringToTerraform(this._version),
       auth_settings: functionAppAuthSettingsToTerraform(this._authSettings.internalValue),
-      connection_string: cdktf.listMapper(functionAppConnectionStringToTerraform)(this._connectionString),
+      connection_string: cdktf.listMapper(functionAppConnectionStringToTerraform)(this._connectionString.internalValue),
       identity: functionAppIdentityToTerraform(this._identity.internalValue),
       site_config: functionAppSiteConfigToTerraform(this._siteConfig.internalValue),
       source_control: functionAppSourceControlToTerraform(this._sourceControl.internalValue),

@@ -16,6 +16,13 @@ export interface ConsumptionBudgetSubscriptionConfig extends cdktf.TerraformMeta
   */
   readonly etag?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_subscription#id ConsumptionBudgetSubscription#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_subscription#name ConsumptionBudgetSubscription#name}
   */
   readonly name: string;
@@ -79,6 +86,124 @@ export function consumptionBudgetSubscriptionFilterDimensionToTerraform(struct?:
   }
 }
 
+export class ConsumptionBudgetSubscriptionFilterDimensionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ConsumptionBudgetSubscriptionFilterDimension | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._operator !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.operator = this._operator;
+    }
+    if (this._values !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.values = this._values;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ConsumptionBudgetSubscriptionFilterDimension | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._operator = undefined;
+      this._values = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._operator = value.operator;
+      this._values = value.values;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // operator - computed: false, optional: true, required: false
+  private _operator?: string; 
+  public get operator() {
+    return this.getStringAttribute('operator');
+  }
+  public set operator(value: string) {
+    this._operator = value;
+  }
+  public resetOperator() {
+    this._operator = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get operatorInput() {
+    return this._operator;
+  }
+
+  // values - computed: false, optional: false, required: true
+  private _values?: string[]; 
+  public get values() {
+    return this.getListAttribute('values');
+  }
+  public set values(value: string[]) {
+    this._values = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valuesInput() {
+    return this._values;
+  }
+}
+
+export class ConsumptionBudgetSubscriptionFilterDimensionList extends cdktf.ComplexList {
+  public internalValue? : ConsumptionBudgetSubscriptionFilterDimension[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ConsumptionBudgetSubscriptionFilterDimensionOutputReference {
+    return new ConsumptionBudgetSubscriptionFilterDimensionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ConsumptionBudgetSubscriptionFilterNotDimension {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_subscription#name ConsumptionBudgetSubscription#name}
@@ -428,6 +553,124 @@ export function consumptionBudgetSubscriptionFilterTagToTerraform(struct?: Consu
   }
 }
 
+export class ConsumptionBudgetSubscriptionFilterTagOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ConsumptionBudgetSubscriptionFilterTag | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._operator !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.operator = this._operator;
+    }
+    if (this._values !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.values = this._values;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ConsumptionBudgetSubscriptionFilterTag | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._operator = undefined;
+      this._values = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._operator = value.operator;
+      this._values = value.values;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // operator - computed: false, optional: true, required: false
+  private _operator?: string; 
+  public get operator() {
+    return this.getStringAttribute('operator');
+  }
+  public set operator(value: string) {
+    this._operator = value;
+  }
+  public resetOperator() {
+    this._operator = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get operatorInput() {
+    return this._operator;
+  }
+
+  // values - computed: false, optional: false, required: true
+  private _values?: string[]; 
+  public get values() {
+    return this.getListAttribute('values');
+  }
+  public set values(value: string[]) {
+    this._values = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valuesInput() {
+    return this._values;
+  }
+}
+
+export class ConsumptionBudgetSubscriptionFilterTagList extends cdktf.ComplexList {
+  public internalValue? : ConsumptionBudgetSubscriptionFilterTag[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ConsumptionBudgetSubscriptionFilterTagOutputReference {
+    return new ConsumptionBudgetSubscriptionFilterTagOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ConsumptionBudgetSubscriptionFilter {
   /**
   * dimension block
@@ -475,17 +718,17 @@ export class ConsumptionBudgetSubscriptionFilterOutputReference extends cdktf.Co
   public get internalValue(): ConsumptionBudgetSubscriptionFilter | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._dimension !== undefined) {
+    if (this._dimension?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.dimension = this._dimension;
+      internalValueResult.dimension = this._dimension?.internalValue;
     }
     if (this._not?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.not = this._not?.internalValue;
     }
-    if (this._tag !== undefined) {
+    if (this._tag?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.tag = this._tag;
+      internalValueResult.tag = this._tag?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -493,33 +736,32 @@ export class ConsumptionBudgetSubscriptionFilterOutputReference extends cdktf.Co
   public set internalValue(value: ConsumptionBudgetSubscriptionFilter | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
-      this._dimension = undefined;
+      this._dimension.internalValue = undefined;
       this._not.internalValue = undefined;
-      this._tag = undefined;
+      this._tag.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
-      this._dimension = value.dimension;
+      this._dimension.internalValue = value.dimension;
       this._not.internalValue = value.not;
-      this._tag = value.tag;
+      this._tag.internalValue = value.tag;
     }
   }
 
   // dimension - computed: false, optional: true, required: false
-  private _dimension?: ConsumptionBudgetSubscriptionFilterDimension[] | cdktf.IResolvable; 
+  private _dimension = new ConsumptionBudgetSubscriptionFilterDimensionList(this, "dimension", true);
   public get dimension() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('dimension')));
+    return this._dimension;
   }
-  public set dimension(value: ConsumptionBudgetSubscriptionFilterDimension[] | cdktf.IResolvable) {
-    this._dimension = value;
+  public putDimension(value: ConsumptionBudgetSubscriptionFilterDimension[] | cdktf.IResolvable) {
+    this._dimension.internalValue = value;
   }
   public resetDimension() {
-    this._dimension = undefined;
+    this._dimension.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get dimensionInput() {
-    return this._dimension;
+    return this._dimension.internalValue;
   }
 
   // not - computed: false, optional: true, required: false
@@ -539,20 +781,19 @@ export class ConsumptionBudgetSubscriptionFilterOutputReference extends cdktf.Co
   }
 
   // tag - computed: false, optional: true, required: false
-  private _tag?: ConsumptionBudgetSubscriptionFilterTag[] | cdktf.IResolvable; 
+  private _tag = new ConsumptionBudgetSubscriptionFilterTagList(this, "tag", true);
   public get tag() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('tag')));
+    return this._tag;
   }
-  public set tag(value: ConsumptionBudgetSubscriptionFilterTag[] | cdktf.IResolvable) {
-    this._tag = value;
+  public putTag(value: ConsumptionBudgetSubscriptionFilterTag[] | cdktf.IResolvable) {
+    this._tag.internalValue = value;
   }
   public resetTag() {
-    this._tag = undefined;
+    this._tag.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get tagInput() {
-    return this._tag;
+    return this._tag.internalValue;
   }
 }
 export interface ConsumptionBudgetSubscriptionNotification {
@@ -602,6 +843,212 @@ export function consumptionBudgetSubscriptionNotificationToTerraform(struct?: Co
   }
 }
 
+export class ConsumptionBudgetSubscriptionNotificationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ConsumptionBudgetSubscriptionNotification | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._contactEmails !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.contactEmails = this._contactEmails;
+    }
+    if (this._contactGroups !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.contactGroups = this._contactGroups;
+    }
+    if (this._contactRoles !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.contactRoles = this._contactRoles;
+    }
+    if (this._enabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._operator !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.operator = this._operator;
+    }
+    if (this._threshold !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.threshold = this._threshold;
+    }
+    if (this._thresholdType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.thresholdType = this._thresholdType;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ConsumptionBudgetSubscriptionNotification | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._contactEmails = undefined;
+      this._contactGroups = undefined;
+      this._contactRoles = undefined;
+      this._enabled = undefined;
+      this._operator = undefined;
+      this._threshold = undefined;
+      this._thresholdType = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._contactEmails = value.contactEmails;
+      this._contactGroups = value.contactGroups;
+      this._contactRoles = value.contactRoles;
+      this._enabled = value.enabled;
+      this._operator = value.operator;
+      this._threshold = value.threshold;
+      this._thresholdType = value.thresholdType;
+    }
+  }
+
+  // contact_emails - computed: false, optional: true, required: false
+  private _contactEmails?: string[]; 
+  public get contactEmails() {
+    return this.getListAttribute('contact_emails');
+  }
+  public set contactEmails(value: string[]) {
+    this._contactEmails = value;
+  }
+  public resetContactEmails() {
+    this._contactEmails = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get contactEmailsInput() {
+    return this._contactEmails;
+  }
+
+  // contact_groups - computed: false, optional: true, required: false
+  private _contactGroups?: string[]; 
+  public get contactGroups() {
+    return this.getListAttribute('contact_groups');
+  }
+  public set contactGroups(value: string[]) {
+    this._contactGroups = value;
+  }
+  public resetContactGroups() {
+    this._contactGroups = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get contactGroupsInput() {
+    return this._contactGroups;
+  }
+
+  // contact_roles - computed: false, optional: true, required: false
+  private _contactRoles?: string[]; 
+  public get contactRoles() {
+    return this.getListAttribute('contact_roles');
+  }
+  public set contactRoles(value: string[]) {
+    this._contactRoles = value;
+  }
+  public resetContactRoles() {
+    this._contactRoles = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get contactRolesInput() {
+    return this._contactRoles;
+  }
+
+  // enabled - computed: false, optional: true, required: false
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+
+  // operator - computed: false, optional: false, required: true
+  private _operator?: string; 
+  public get operator() {
+    return this.getStringAttribute('operator');
+  }
+  public set operator(value: string) {
+    this._operator = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get operatorInput() {
+    return this._operator;
+  }
+
+  // threshold - computed: false, optional: false, required: true
+  private _threshold?: number; 
+  public get threshold() {
+    return this.getNumberAttribute('threshold');
+  }
+  public set threshold(value: number) {
+    this._threshold = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get thresholdInput() {
+    return this._threshold;
+  }
+
+  // threshold_type - computed: false, optional: true, required: false
+  private _thresholdType?: string; 
+  public get thresholdType() {
+    return this.getStringAttribute('threshold_type');
+  }
+  public set thresholdType(value: string) {
+    this._thresholdType = value;
+  }
+  public resetThresholdType() {
+    this._thresholdType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get thresholdTypeInput() {
+    return this._thresholdType;
+  }
+}
+
+export class ConsumptionBudgetSubscriptionNotificationList extends cdktf.ComplexList {
+  public internalValue? : ConsumptionBudgetSubscriptionNotification[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ConsumptionBudgetSubscriptionNotificationOutputReference {
+    return new ConsumptionBudgetSubscriptionNotificationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ConsumptionBudgetSubscriptionTimePeriod {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_subscription#end_date ConsumptionBudgetSubscription#end_date}
@@ -725,6 +1172,7 @@ export function consumptionBudgetSubscriptionTimeoutsToTerraform(struct?: Consum
 
 export class ConsumptionBudgetSubscriptionTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -734,7 +1182,10 @@ export class ConsumptionBudgetSubscriptionTimeoutsOutputReference extends cdktf.
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): ConsumptionBudgetSubscriptionTimeouts | undefined {
+  public get internalValue(): ConsumptionBudgetSubscriptionTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -756,16 +1207,22 @@ export class ConsumptionBudgetSubscriptionTimeoutsOutputReference extends cdktf.
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: ConsumptionBudgetSubscriptionTimeouts | undefined) {
+  public set internalValue(value: ConsumptionBudgetSubscriptionTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -874,11 +1331,12 @@ export class ConsumptionBudgetSubscription extends cdktf.TerraformResource {
     });
     this._amount = config.amount;
     this._etag = config.etag;
+    this._id = config.id;
     this._name = config.name;
     this._subscriptionId = config.subscriptionId;
     this._timeGrain = config.timeGrain;
     this._filter.internalValue = config.filter;
-    this._notification = config.notification;
+    this._notification.internalValue = config.notification;
     this._timePeriod.internalValue = config.timePeriod;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -917,8 +1375,19 @@ export class ConsumptionBudgetSubscription extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // name - computed: false, optional: false, required: true
@@ -980,17 +1449,16 @@ export class ConsumptionBudgetSubscription extends cdktf.TerraformResource {
   }
 
   // notification - computed: false, optional: false, required: true
-  private _notification?: ConsumptionBudgetSubscriptionNotification[] | cdktf.IResolvable; 
+  private _notification = new ConsumptionBudgetSubscriptionNotificationList(this, "notification", true);
   public get notification() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('notification')));
+    return this._notification;
   }
-  public set notification(value: ConsumptionBudgetSubscriptionNotification[] | cdktf.IResolvable) {
-    this._notification = value;
+  public putNotification(value: ConsumptionBudgetSubscriptionNotification[] | cdktf.IResolvable) {
+    this._notification.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get notificationInput() {
-    return this._notification;
+    return this._notification.internalValue;
   }
 
   // time_period - computed: false, optional: false, required: true
@@ -1030,11 +1498,12 @@ export class ConsumptionBudgetSubscription extends cdktf.TerraformResource {
     return {
       amount: cdktf.numberToTerraform(this._amount),
       etag: cdktf.stringToTerraform(this._etag),
+      id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       subscription_id: cdktf.stringToTerraform(this._subscriptionId),
       time_grain: cdktf.stringToTerraform(this._timeGrain),
       filter: consumptionBudgetSubscriptionFilterToTerraform(this._filter.internalValue),
-      notification: cdktf.listMapper(consumptionBudgetSubscriptionNotificationToTerraform)(this._notification),
+      notification: cdktf.listMapper(consumptionBudgetSubscriptionNotificationToTerraform)(this._notification.internalValue),
       time_period: consumptionBudgetSubscriptionTimePeriodToTerraform(this._timePeriod.internalValue),
       timeouts: consumptionBudgetSubscriptionTimeoutsToTerraform(this._timeouts.internalValue),
     };

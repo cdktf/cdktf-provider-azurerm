@@ -20,6 +20,13 @@ export interface AnalysisServicesServerConfig extends cdktf.TerraformMetaArgumen
   */
   readonly enablePowerBiService?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/analysis_services_server#id AnalysisServicesServer#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/analysis_services_server#location AnalysisServicesServer#location}
   */
   readonly location: string;
@@ -83,6 +90,121 @@ export function analysisServicesServerIpv4FirewallRuleToTerraform(struct?: Analy
   }
 }
 
+export class AnalysisServicesServerIpv4FirewallRuleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AnalysisServicesServerIpv4FirewallRule | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._rangeEnd !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rangeEnd = this._rangeEnd;
+    }
+    if (this._rangeStart !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rangeStart = this._rangeStart;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AnalysisServicesServerIpv4FirewallRule | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._rangeEnd = undefined;
+      this._rangeStart = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._rangeEnd = value.rangeEnd;
+      this._rangeStart = value.rangeStart;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // range_end - computed: false, optional: false, required: true
+  private _rangeEnd?: string; 
+  public get rangeEnd() {
+    return this.getStringAttribute('range_end');
+  }
+  public set rangeEnd(value: string) {
+    this._rangeEnd = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rangeEndInput() {
+    return this._rangeEnd;
+  }
+
+  // range_start - computed: false, optional: false, required: true
+  private _rangeStart?: string; 
+  public get rangeStart() {
+    return this.getStringAttribute('range_start');
+  }
+  public set rangeStart(value: string) {
+    this._rangeStart = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rangeStartInput() {
+    return this._rangeStart;
+  }
+}
+
+export class AnalysisServicesServerIpv4FirewallRuleList extends cdktf.ComplexList {
+  public internalValue? : AnalysisServicesServerIpv4FirewallRule[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AnalysisServicesServerIpv4FirewallRuleOutputReference {
+    return new AnalysisServicesServerIpv4FirewallRuleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface AnalysisServicesServerTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/analysis_services_server#create AnalysisServicesServer#create}
@@ -117,6 +239,7 @@ export function analysisServicesServerTimeoutsToTerraform(struct?: AnalysisServi
 
 export class AnalysisServicesServerTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -126,7 +249,10 @@ export class AnalysisServicesServerTimeoutsOutputReference extends cdktf.Complex
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): AnalysisServicesServerTimeouts | undefined {
+  public get internalValue(): AnalysisServicesServerTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -148,16 +274,22 @@ export class AnalysisServicesServerTimeoutsOutputReference extends cdktf.Complex
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: AnalysisServicesServerTimeouts | undefined) {
+  public set internalValue(value: AnalysisServicesServerTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -267,13 +399,14 @@ export class AnalysisServicesServer extends cdktf.TerraformResource {
     this._adminUsers = config.adminUsers;
     this._backupBlobContainerUri = config.backupBlobContainerUri;
     this._enablePowerBiService = config.enablePowerBiService;
+    this._id = config.id;
     this._location = config.location;
     this._name = config.name;
     this._querypoolConnectionMode = config.querypoolConnectionMode;
     this._resourceGroupName = config.resourceGroupName;
     this._sku = config.sku;
     this._tags = config.tags;
-    this._ipv4FirewallRule = config.ipv4FirewallRule;
+    this._ipv4FirewallRule.internalValue = config.ipv4FirewallRule;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -330,8 +463,19 @@ export class AnalysisServicesServer extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // location - computed: false, optional: false, required: true
@@ -424,20 +568,19 @@ export class AnalysisServicesServer extends cdktf.TerraformResource {
   }
 
   // ipv4_firewall_rule - computed: false, optional: true, required: false
-  private _ipv4FirewallRule?: AnalysisServicesServerIpv4FirewallRule[] | cdktf.IResolvable; 
+  private _ipv4FirewallRule = new AnalysisServicesServerIpv4FirewallRuleList(this, "ipv4_firewall_rule", true);
   public get ipv4FirewallRule() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('ipv4_firewall_rule')));
+    return this._ipv4FirewallRule;
   }
-  public set ipv4FirewallRule(value: AnalysisServicesServerIpv4FirewallRule[] | cdktf.IResolvable) {
-    this._ipv4FirewallRule = value;
+  public putIpv4FirewallRule(value: AnalysisServicesServerIpv4FirewallRule[] | cdktf.IResolvable) {
+    this._ipv4FirewallRule.internalValue = value;
   }
   public resetIpv4FirewallRule() {
-    this._ipv4FirewallRule = undefined;
+    this._ipv4FirewallRule.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get ipv4FirewallRuleInput() {
-    return this._ipv4FirewallRule;
+    return this._ipv4FirewallRule.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -465,13 +608,14 @@ export class AnalysisServicesServer extends cdktf.TerraformResource {
       admin_users: cdktf.listMapper(cdktf.stringToTerraform)(this._adminUsers),
       backup_blob_container_uri: cdktf.stringToTerraform(this._backupBlobContainerUri),
       enable_power_bi_service: cdktf.booleanToTerraform(this._enablePowerBiService),
+      id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       querypool_connection_mode: cdktf.stringToTerraform(this._querypoolConnectionMode),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku: cdktf.stringToTerraform(this._sku),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
-      ipv4_firewall_rule: cdktf.listMapper(analysisServicesServerIpv4FirewallRuleToTerraform)(this._ipv4FirewallRule),
+      ipv4_firewall_rule: cdktf.listMapper(analysisServicesServerIpv4FirewallRuleToTerraform)(this._ipv4FirewallRule.internalValue),
       timeouts: analysisServicesServerTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

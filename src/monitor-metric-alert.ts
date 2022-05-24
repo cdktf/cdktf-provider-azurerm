@@ -24,6 +24,13 @@ export interface MonitorMetricAlertConfig extends cdktf.TerraformMetaArguments {
   */
   readonly frequency?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert#id MonitorMetricAlert#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert#name MonitorMetricAlert#name}
   */
   readonly name: string;
@@ -112,6 +119,105 @@ export function monitorMetricAlertActionToTerraform(struct?: MonitorMetricAlertA
   }
 }
 
+export class MonitorMetricAlertActionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MonitorMetricAlertAction | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._actionGroupId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.actionGroupId = this._actionGroupId;
+    }
+    if (this._webhookProperties !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.webhookProperties = this._webhookProperties;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitorMetricAlertAction | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._actionGroupId = undefined;
+      this._webhookProperties = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._actionGroupId = value.actionGroupId;
+      this._webhookProperties = value.webhookProperties;
+    }
+  }
+
+  // action_group_id - computed: false, optional: false, required: true
+  private _actionGroupId?: string; 
+  public get actionGroupId() {
+    return this.getStringAttribute('action_group_id');
+  }
+  public set actionGroupId(value: string) {
+    this._actionGroupId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get actionGroupIdInput() {
+    return this._actionGroupId;
+  }
+
+  // webhook_properties - computed: false, optional: true, required: false
+  private _webhookProperties?: { [key: string]: string }; 
+  public get webhookProperties() {
+    return this.getStringMapAttribute('webhook_properties');
+  }
+  public set webhookProperties(value: { [key: string]: string }) {
+    this._webhookProperties = value;
+  }
+  public resetWebhookProperties() {
+    this._webhookProperties = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get webhookPropertiesInput() {
+    return this._webhookProperties;
+  }
+}
+
+export class MonitorMetricAlertActionList extends cdktf.ComplexList {
+  public internalValue? : MonitorMetricAlertAction[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MonitorMetricAlertActionOutputReference {
+    return new MonitorMetricAlertActionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface MonitorMetricAlertApplicationInsightsWebTestLocationAvailabilityCriteria {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert#component_id MonitorMetricAlert#component_id}
@@ -249,6 +355,121 @@ export function monitorMetricAlertCriteriaDimensionToTerraform(struct?: MonitorM
   }
 }
 
+export class MonitorMetricAlertCriteriaDimensionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MonitorMetricAlertCriteriaDimension | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._operator !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.operator = this._operator;
+    }
+    if (this._values !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.values = this._values;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitorMetricAlertCriteriaDimension | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._operator = undefined;
+      this._values = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._operator = value.operator;
+      this._values = value.values;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // operator - computed: false, optional: false, required: true
+  private _operator?: string; 
+  public get operator() {
+    return this.getStringAttribute('operator');
+  }
+  public set operator(value: string) {
+    this._operator = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get operatorInput() {
+    return this._operator;
+  }
+
+  // values - computed: false, optional: false, required: true
+  private _values?: string[]; 
+  public get values() {
+    return this.getListAttribute('values');
+  }
+  public set values(value: string[]) {
+    this._values = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valuesInput() {
+    return this._values;
+  }
+}
+
+export class MonitorMetricAlertCriteriaDimensionList extends cdktf.ComplexList {
+  public internalValue? : MonitorMetricAlertCriteriaDimension[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MonitorMetricAlertCriteriaDimensionOutputReference {
+    return new MonitorMetricAlertCriteriaDimensionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface MonitorMetricAlertCriteria {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert#aggregation MonitorMetricAlert#aggregation}
@@ -298,6 +519,203 @@ export function monitorMetricAlertCriteriaToTerraform(struct?: MonitorMetricAler
   }
 }
 
+export class MonitorMetricAlertCriteriaOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MonitorMetricAlertCriteria | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._aggregation !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.aggregation = this._aggregation;
+    }
+    if (this._metricName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.metricName = this._metricName;
+    }
+    if (this._metricNamespace !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.metricNamespace = this._metricNamespace;
+    }
+    if (this._operator !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.operator = this._operator;
+    }
+    if (this._skipMetricValidation !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.skipMetricValidation = this._skipMetricValidation;
+    }
+    if (this._threshold !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.threshold = this._threshold;
+    }
+    if (this._dimension?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dimension = this._dimension?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitorMetricAlertCriteria | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._aggregation = undefined;
+      this._metricName = undefined;
+      this._metricNamespace = undefined;
+      this._operator = undefined;
+      this._skipMetricValidation = undefined;
+      this._threshold = undefined;
+      this._dimension.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._aggregation = value.aggregation;
+      this._metricName = value.metricName;
+      this._metricNamespace = value.metricNamespace;
+      this._operator = value.operator;
+      this._skipMetricValidation = value.skipMetricValidation;
+      this._threshold = value.threshold;
+      this._dimension.internalValue = value.dimension;
+    }
+  }
+
+  // aggregation - computed: false, optional: false, required: true
+  private _aggregation?: string; 
+  public get aggregation() {
+    return this.getStringAttribute('aggregation');
+  }
+  public set aggregation(value: string) {
+    this._aggregation = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get aggregationInput() {
+    return this._aggregation;
+  }
+
+  // metric_name - computed: false, optional: false, required: true
+  private _metricName?: string; 
+  public get metricName() {
+    return this.getStringAttribute('metric_name');
+  }
+  public set metricName(value: string) {
+    this._metricName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get metricNameInput() {
+    return this._metricName;
+  }
+
+  // metric_namespace - computed: false, optional: false, required: true
+  private _metricNamespace?: string; 
+  public get metricNamespace() {
+    return this.getStringAttribute('metric_namespace');
+  }
+  public set metricNamespace(value: string) {
+    this._metricNamespace = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get metricNamespaceInput() {
+    return this._metricNamespace;
+  }
+
+  // operator - computed: false, optional: false, required: true
+  private _operator?: string; 
+  public get operator() {
+    return this.getStringAttribute('operator');
+  }
+  public set operator(value: string) {
+    this._operator = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get operatorInput() {
+    return this._operator;
+  }
+
+  // skip_metric_validation - computed: false, optional: true, required: false
+  private _skipMetricValidation?: boolean | cdktf.IResolvable; 
+  public get skipMetricValidation() {
+    return this.getBooleanAttribute('skip_metric_validation');
+  }
+  public set skipMetricValidation(value: boolean | cdktf.IResolvable) {
+    this._skipMetricValidation = value;
+  }
+  public resetSkipMetricValidation() {
+    this._skipMetricValidation = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get skipMetricValidationInput() {
+    return this._skipMetricValidation;
+  }
+
+  // threshold - computed: false, optional: false, required: true
+  private _threshold?: number; 
+  public get threshold() {
+    return this.getNumberAttribute('threshold');
+  }
+  public set threshold(value: number) {
+    this._threshold = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get thresholdInput() {
+    return this._threshold;
+  }
+
+  // dimension - computed: false, optional: true, required: false
+  private _dimension = new MonitorMetricAlertCriteriaDimensionList(this, "dimension", false);
+  public get dimension() {
+    return this._dimension;
+  }
+  public putDimension(value: MonitorMetricAlertCriteriaDimension[] | cdktf.IResolvable) {
+    this._dimension.internalValue = value;
+  }
+  public resetDimension() {
+    this._dimension.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dimensionInput() {
+    return this._dimension.internalValue;
+  }
+}
+
+export class MonitorMetricAlertCriteriaList extends cdktf.ComplexList {
+  public internalValue? : MonitorMetricAlertCriteria[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MonitorMetricAlertCriteriaOutputReference {
+    return new MonitorMetricAlertCriteriaOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface MonitorMetricAlertDynamicCriteriaDimension {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert#name MonitorMetricAlert#name}
@@ -325,6 +743,121 @@ export function monitorMetricAlertDynamicCriteriaDimensionToTerraform(struct?: M
   }
 }
 
+export class MonitorMetricAlertDynamicCriteriaDimensionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MonitorMetricAlertDynamicCriteriaDimension | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._operator !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.operator = this._operator;
+    }
+    if (this._values !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.values = this._values;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitorMetricAlertDynamicCriteriaDimension | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._operator = undefined;
+      this._values = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._operator = value.operator;
+      this._values = value.values;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // operator - computed: false, optional: false, required: true
+  private _operator?: string; 
+  public get operator() {
+    return this.getStringAttribute('operator');
+  }
+  public set operator(value: string) {
+    this._operator = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get operatorInput() {
+    return this._operator;
+  }
+
+  // values - computed: false, optional: false, required: true
+  private _values?: string[]; 
+  public get values() {
+    return this.getListAttribute('values');
+  }
+  public set values(value: string[]) {
+    this._values = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valuesInput() {
+    return this._values;
+  }
+}
+
+export class MonitorMetricAlertDynamicCriteriaDimensionList extends cdktf.ComplexList {
+  public internalValue? : MonitorMetricAlertDynamicCriteriaDimension[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MonitorMetricAlertDynamicCriteriaDimensionOutputReference {
+    return new MonitorMetricAlertDynamicCriteriaDimensionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface MonitorMetricAlertDynamicCriteria {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert#aggregation MonitorMetricAlert#aggregation}
@@ -439,9 +972,9 @@ export class MonitorMetricAlertDynamicCriteriaOutputReference extends cdktf.Comp
       hasAnyValues = true;
       internalValueResult.skipMetricValidation = this._skipMetricValidation;
     }
-    if (this._dimension !== undefined) {
+    if (this._dimension?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.dimension = this._dimension;
+      internalValueResult.dimension = this._dimension?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -458,7 +991,7 @@ export class MonitorMetricAlertDynamicCriteriaOutputReference extends cdktf.Comp
       this._metricNamespace = undefined;
       this._operator = undefined;
       this._skipMetricValidation = undefined;
-      this._dimension = undefined;
+      this._dimension.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
@@ -471,7 +1004,7 @@ export class MonitorMetricAlertDynamicCriteriaOutputReference extends cdktf.Comp
       this._metricNamespace = value.metricNamespace;
       this._operator = value.operator;
       this._skipMetricValidation = value.skipMetricValidation;
-      this._dimension = value.dimension;
+      this._dimension.internalValue = value.dimension;
     }
   }
 
@@ -605,20 +1138,19 @@ export class MonitorMetricAlertDynamicCriteriaOutputReference extends cdktf.Comp
   }
 
   // dimension - computed: false, optional: true, required: false
-  private _dimension?: MonitorMetricAlertDynamicCriteriaDimension[] | cdktf.IResolvable; 
+  private _dimension = new MonitorMetricAlertDynamicCriteriaDimensionList(this, "dimension", false);
   public get dimension() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('dimension');
+    return this._dimension;
   }
-  public set dimension(value: MonitorMetricAlertDynamicCriteriaDimension[] | cdktf.IResolvable) {
-    this._dimension = value;
+  public putDimension(value: MonitorMetricAlertDynamicCriteriaDimension[] | cdktf.IResolvable) {
+    this._dimension.internalValue = value;
   }
   public resetDimension() {
-    this._dimension = undefined;
+    this._dimension.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get dimensionInput() {
-    return this._dimension;
+    return this._dimension.internalValue;
   }
 }
 export interface MonitorMetricAlertTimeouts {
@@ -655,6 +1187,7 @@ export function monitorMetricAlertTimeoutsToTerraform(struct?: MonitorMetricAler
 
 export class MonitorMetricAlertTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -664,7 +1197,10 @@ export class MonitorMetricAlertTimeoutsOutputReference extends cdktf.ComplexObje
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): MonitorMetricAlertTimeouts | undefined {
+  public get internalValue(): MonitorMetricAlertTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -686,16 +1222,22 @@ export class MonitorMetricAlertTimeoutsOutputReference extends cdktf.ComplexObje
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: MonitorMetricAlertTimeouts | undefined) {
+  public set internalValue(value: MonitorMetricAlertTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -806,6 +1348,7 @@ export class MonitorMetricAlert extends cdktf.TerraformResource {
     this._description = config.description;
     this._enabled = config.enabled;
     this._frequency = config.frequency;
+    this._id = config.id;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._scopes = config.scopes;
@@ -814,9 +1357,9 @@ export class MonitorMetricAlert extends cdktf.TerraformResource {
     this._targetResourceLocation = config.targetResourceLocation;
     this._targetResourceType = config.targetResourceType;
     this._windowSize = config.windowSize;
-    this._action = config.action;
+    this._action.internalValue = config.action;
     this._applicationInsightsWebTestLocationAvailabilityCriteria.internalValue = config.applicationInsightsWebTestLocationAvailabilityCriteria;
-    this._criteria = config.criteria;
+    this._criteria.internalValue = config.criteria;
     this._dynamicCriteria.internalValue = config.dynamicCriteria;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -890,8 +1433,19 @@ export class MonitorMetricAlert extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // name - computed: false, optional: false, required: true
@@ -1014,20 +1568,19 @@ export class MonitorMetricAlert extends cdktf.TerraformResource {
   }
 
   // action - computed: false, optional: true, required: false
-  private _action?: MonitorMetricAlertAction[] | cdktf.IResolvable; 
+  private _action = new MonitorMetricAlertActionList(this, "action", true);
   public get action() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('action')));
+    return this._action;
   }
-  public set action(value: MonitorMetricAlertAction[] | cdktf.IResolvable) {
-    this._action = value;
+  public putAction(value: MonitorMetricAlertAction[] | cdktf.IResolvable) {
+    this._action.internalValue = value;
   }
   public resetAction() {
-    this._action = undefined;
+    this._action.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get actionInput() {
-    return this._action;
+    return this._action.internalValue;
   }
 
   // application_insights_web_test_location_availability_criteria - computed: false, optional: true, required: false
@@ -1047,20 +1600,19 @@ export class MonitorMetricAlert extends cdktf.TerraformResource {
   }
 
   // criteria - computed: false, optional: true, required: false
-  private _criteria?: MonitorMetricAlertCriteria[] | cdktf.IResolvable; 
+  private _criteria = new MonitorMetricAlertCriteriaList(this, "criteria", true);
   public get criteria() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('criteria')));
+    return this._criteria;
   }
-  public set criteria(value: MonitorMetricAlertCriteria[] | cdktf.IResolvable) {
-    this._criteria = value;
+  public putCriteria(value: MonitorMetricAlertCriteria[] | cdktf.IResolvable) {
+    this._criteria.internalValue = value;
   }
   public resetCriteria() {
-    this._criteria = undefined;
+    this._criteria.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get criteriaInput() {
-    return this._criteria;
+    return this._criteria.internalValue;
   }
 
   // dynamic_criteria - computed: false, optional: true, required: false
@@ -1105,6 +1657,7 @@ export class MonitorMetricAlert extends cdktf.TerraformResource {
       description: cdktf.stringToTerraform(this._description),
       enabled: cdktf.booleanToTerraform(this._enabled),
       frequency: cdktf.stringToTerraform(this._frequency),
+      id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       scopes: cdktf.listMapper(cdktf.stringToTerraform)(this._scopes),
@@ -1113,9 +1666,9 @@ export class MonitorMetricAlert extends cdktf.TerraformResource {
       target_resource_location: cdktf.stringToTerraform(this._targetResourceLocation),
       target_resource_type: cdktf.stringToTerraform(this._targetResourceType),
       window_size: cdktf.stringToTerraform(this._windowSize),
-      action: cdktf.listMapper(monitorMetricAlertActionToTerraform)(this._action),
+      action: cdktf.listMapper(monitorMetricAlertActionToTerraform)(this._action.internalValue),
       application_insights_web_test_location_availability_criteria: monitorMetricAlertApplicationInsightsWebTestLocationAvailabilityCriteriaToTerraform(this._applicationInsightsWebTestLocationAvailabilityCriteria.internalValue),
-      criteria: cdktf.listMapper(monitorMetricAlertCriteriaToTerraform)(this._criteria),
+      criteria: cdktf.listMapper(monitorMetricAlertCriteriaToTerraform)(this._criteria.internalValue),
       dynamic_criteria: monitorMetricAlertDynamicCriteriaToTerraform(this._dynamicCriteria.internalValue),
       timeouts: monitorMetricAlertTimeoutsToTerraform(this._timeouts.internalValue),
     };

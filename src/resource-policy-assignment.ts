@@ -20,6 +20,13 @@ export interface ResourcePolicyAssignmentConfig extends cdktf.TerraformMetaArgum
   */
   readonly enforce?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_assignment#id ResourcePolicyAssignment#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_assignment#location ResourcePolicyAssignment#location}
   */
   readonly location?: string;
@@ -160,6 +167,105 @@ export function resourcePolicyAssignmentNonComplianceMessageToTerraform(struct?:
   }
 }
 
+export class ResourcePolicyAssignmentNonComplianceMessageOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ResourcePolicyAssignmentNonComplianceMessage | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._content !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.content = this._content;
+    }
+    if (this._policyDefinitionReferenceId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.policyDefinitionReferenceId = this._policyDefinitionReferenceId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ResourcePolicyAssignmentNonComplianceMessage | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._content = undefined;
+      this._policyDefinitionReferenceId = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._content = value.content;
+      this._policyDefinitionReferenceId = value.policyDefinitionReferenceId;
+    }
+  }
+
+  // content - computed: false, optional: false, required: true
+  private _content?: string; 
+  public get content() {
+    return this.getStringAttribute('content');
+  }
+  public set content(value: string) {
+    this._content = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get contentInput() {
+    return this._content;
+  }
+
+  // policy_definition_reference_id - computed: false, optional: true, required: false
+  private _policyDefinitionReferenceId?: string; 
+  public get policyDefinitionReferenceId() {
+    return this.getStringAttribute('policy_definition_reference_id');
+  }
+  public set policyDefinitionReferenceId(value: string) {
+    this._policyDefinitionReferenceId = value;
+  }
+  public resetPolicyDefinitionReferenceId() {
+    this._policyDefinitionReferenceId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get policyDefinitionReferenceIdInput() {
+    return this._policyDefinitionReferenceId;
+  }
+}
+
+export class ResourcePolicyAssignmentNonComplianceMessageList extends cdktf.ComplexList {
+  public internalValue? : ResourcePolicyAssignmentNonComplianceMessage[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ResourcePolicyAssignmentNonComplianceMessageOutputReference {
+    return new ResourcePolicyAssignmentNonComplianceMessageOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ResourcePolicyAssignmentTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_assignment#create ResourcePolicyAssignment#create}
@@ -194,6 +300,7 @@ export function resourcePolicyAssignmentTimeoutsToTerraform(struct?: ResourcePol
 
 export class ResourcePolicyAssignmentTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -203,7 +310,10 @@ export class ResourcePolicyAssignmentTimeoutsOutputReference extends cdktf.Compl
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): ResourcePolicyAssignmentTimeouts | undefined {
+  public get internalValue(): ResourcePolicyAssignmentTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -225,16 +335,22 @@ export class ResourcePolicyAssignmentTimeoutsOutputReference extends cdktf.Compl
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: ResourcePolicyAssignmentTimeouts | undefined) {
+  public set internalValue(value: ResourcePolicyAssignmentTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -344,6 +460,7 @@ export class ResourcePolicyAssignment extends cdktf.TerraformResource {
     this._description = config.description;
     this._displayName = config.displayName;
     this._enforce = config.enforce;
+    this._id = config.id;
     this._location = config.location;
     this._metadata = config.metadata;
     this._name = config.name;
@@ -352,7 +469,7 @@ export class ResourcePolicyAssignment extends cdktf.TerraformResource {
     this._policyDefinitionId = config.policyDefinitionId;
     this._resourceId = config.resourceId;
     this._identity.internalValue = config.identity;
-    this._nonComplianceMessage = config.nonComplianceMessage;
+    this._nonComplianceMessage.internalValue = config.nonComplianceMessage;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -409,8 +526,19 @@ export class ResourcePolicyAssignment extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // location - computed: false, optional: true, required: false
@@ -533,20 +661,19 @@ export class ResourcePolicyAssignment extends cdktf.TerraformResource {
   }
 
   // non_compliance_message - computed: false, optional: true, required: false
-  private _nonComplianceMessage?: ResourcePolicyAssignmentNonComplianceMessage[] | cdktf.IResolvable; 
+  private _nonComplianceMessage = new ResourcePolicyAssignmentNonComplianceMessageList(this, "non_compliance_message", false);
   public get nonComplianceMessage() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('non_compliance_message');
+    return this._nonComplianceMessage;
   }
-  public set nonComplianceMessage(value: ResourcePolicyAssignmentNonComplianceMessage[] | cdktf.IResolvable) {
-    this._nonComplianceMessage = value;
+  public putNonComplianceMessage(value: ResourcePolicyAssignmentNonComplianceMessage[] | cdktf.IResolvable) {
+    this._nonComplianceMessage.internalValue = value;
   }
   public resetNonComplianceMessage() {
-    this._nonComplianceMessage = undefined;
+    this._nonComplianceMessage.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get nonComplianceMessageInput() {
-    return this._nonComplianceMessage;
+    return this._nonComplianceMessage.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -574,6 +701,7 @@ export class ResourcePolicyAssignment extends cdktf.TerraformResource {
       description: cdktf.stringToTerraform(this._description),
       display_name: cdktf.stringToTerraform(this._displayName),
       enforce: cdktf.booleanToTerraform(this._enforce),
+      id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       metadata: cdktf.stringToTerraform(this._metadata),
       name: cdktf.stringToTerraform(this._name),
@@ -582,7 +710,7 @@ export class ResourcePolicyAssignment extends cdktf.TerraformResource {
       policy_definition_id: cdktf.stringToTerraform(this._policyDefinitionId),
       resource_id: cdktf.stringToTerraform(this._resourceId),
       identity: resourcePolicyAssignmentIdentityToTerraform(this._identity.internalValue),
-      non_compliance_message: cdktf.listMapper(resourcePolicyAssignmentNonComplianceMessageToTerraform)(this._nonComplianceMessage),
+      non_compliance_message: cdktf.listMapper(resourcePolicyAssignmentNonComplianceMessageToTerraform)(this._nonComplianceMessage.internalValue),
       timeouts: resourcePolicyAssignmentTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

@@ -8,6 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface StorageManagementPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_management_policy#id StorageManagementPolicy#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_management_policy#storage_account_id StorageManagementPolicy#storage_account_id}
   */
   readonly storageAccountId: string;
@@ -614,6 +621,124 @@ export function storageManagementPolicyRuleFiltersMatchBlobIndexTagToTerraform(s
   }
 }
 
+export class StorageManagementPolicyRuleFiltersMatchBlobIndexTagOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): StorageManagementPolicyRuleFiltersMatchBlobIndexTag | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._operation !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.operation = this._operation;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageManagementPolicyRuleFiltersMatchBlobIndexTag | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._operation = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._operation = value.operation;
+      this._value = value.value;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // operation - computed: false, optional: true, required: false
+  private _operation?: string; 
+  public get operation() {
+    return this.getStringAttribute('operation');
+  }
+  public set operation(value: string) {
+    this._operation = value;
+  }
+  public resetOperation() {
+    this._operation = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get operationInput() {
+    return this._operation;
+  }
+
+  // value - computed: false, optional: false, required: true
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class StorageManagementPolicyRuleFiltersMatchBlobIndexTagList extends cdktf.ComplexList {
+  public internalValue? : StorageManagementPolicyRuleFiltersMatchBlobIndexTag[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): StorageManagementPolicyRuleFiltersMatchBlobIndexTagOutputReference {
+    return new StorageManagementPolicyRuleFiltersMatchBlobIndexTagOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface StorageManagementPolicyRuleFilters {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_management_policy#blob_types StorageManagementPolicy#blob_types}
@@ -665,9 +790,9 @@ export class StorageManagementPolicyRuleFiltersOutputReference extends cdktf.Com
       hasAnyValues = true;
       internalValueResult.prefixMatch = this._prefixMatch;
     }
-    if (this._matchBlobIndexTag !== undefined) {
+    if (this._matchBlobIndexTag?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.matchBlobIndexTag = this._matchBlobIndexTag;
+      internalValueResult.matchBlobIndexTag = this._matchBlobIndexTag?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -677,13 +802,13 @@ export class StorageManagementPolicyRuleFiltersOutputReference extends cdktf.Com
       this.isEmptyObject = false;
       this._blobTypes = undefined;
       this._prefixMatch = undefined;
-      this._matchBlobIndexTag = undefined;
+      this._matchBlobIndexTag.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._blobTypes = value.blobTypes;
       this._prefixMatch = value.prefixMatch;
-      this._matchBlobIndexTag = value.matchBlobIndexTag;
+      this._matchBlobIndexTag.internalValue = value.matchBlobIndexTag;
     }
   }
 
@@ -720,20 +845,19 @@ export class StorageManagementPolicyRuleFiltersOutputReference extends cdktf.Com
   }
 
   // match_blob_index_tag - computed: false, optional: true, required: false
-  private _matchBlobIndexTag?: StorageManagementPolicyRuleFiltersMatchBlobIndexTag[] | cdktf.IResolvable; 
+  private _matchBlobIndexTag = new StorageManagementPolicyRuleFiltersMatchBlobIndexTagList(this, "match_blob_index_tag", true);
   public get matchBlobIndexTag() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('match_blob_index_tag')));
+    return this._matchBlobIndexTag;
   }
-  public set matchBlobIndexTag(value: StorageManagementPolicyRuleFiltersMatchBlobIndexTag[] | cdktf.IResolvable) {
-    this._matchBlobIndexTag = value;
+  public putMatchBlobIndexTag(value: StorageManagementPolicyRuleFiltersMatchBlobIndexTag[] | cdktf.IResolvable) {
+    this._matchBlobIndexTag.internalValue = value;
   }
   public resetMatchBlobIndexTag() {
-    this._matchBlobIndexTag = undefined;
+    this._matchBlobIndexTag.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get matchBlobIndexTagInput() {
-    return this._matchBlobIndexTag;
+    return this._matchBlobIndexTag.internalValue;
   }
 }
 export interface StorageManagementPolicyRule {
@@ -772,6 +896,143 @@ export function storageManagementPolicyRuleToTerraform(struct?: StorageManagemen
   }
 }
 
+export class StorageManagementPolicyRuleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): StorageManagementPolicyRule | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._enabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._actions?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.actions = this._actions?.internalValue;
+    }
+    if (this._filters?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.filters = this._filters?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageManagementPolicyRule | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._enabled = undefined;
+      this._name = undefined;
+      this._actions.internalValue = undefined;
+      this._filters.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._enabled = value.enabled;
+      this._name = value.name;
+      this._actions.internalValue = value.actions;
+      this._filters.internalValue = value.filters;
+    }
+  }
+
+  // enabled - computed: false, optional: false, required: true
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // actions - computed: false, optional: false, required: true
+  private _actions = new StorageManagementPolicyRuleActionsOutputReference(this, "actions");
+  public get actions() {
+    return this._actions;
+  }
+  public putActions(value: StorageManagementPolicyRuleActions) {
+    this._actions.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get actionsInput() {
+    return this._actions.internalValue;
+  }
+
+  // filters - computed: false, optional: true, required: false
+  private _filters = new StorageManagementPolicyRuleFiltersOutputReference(this, "filters");
+  public get filters() {
+    return this._filters;
+  }
+  public putFilters(value: StorageManagementPolicyRuleFilters) {
+    this._filters.internalValue = value;
+  }
+  public resetFilters() {
+    this._filters.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get filtersInput() {
+    return this._filters.internalValue;
+  }
+}
+
+export class StorageManagementPolicyRuleList extends cdktf.ComplexList {
+  public internalValue? : StorageManagementPolicyRule[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): StorageManagementPolicyRuleOutputReference {
+    return new StorageManagementPolicyRuleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface StorageManagementPolicyTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_management_policy#create StorageManagementPolicy#create}
@@ -806,6 +1067,7 @@ export function storageManagementPolicyTimeoutsToTerraform(struct?: StorageManag
 
 export class StorageManagementPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -815,7 +1077,10 @@ export class StorageManagementPolicyTimeoutsOutputReference extends cdktf.Comple
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): StorageManagementPolicyTimeouts | undefined {
+  public get internalValue(): StorageManagementPolicyTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -837,16 +1102,22 @@ export class StorageManagementPolicyTimeoutsOutputReference extends cdktf.Comple
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: StorageManagementPolicyTimeouts | undefined) {
+  public set internalValue(value: StorageManagementPolicyTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -953,8 +1224,9 @@ export class StorageManagementPolicy extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._id = config.id;
     this._storageAccountId = config.storageAccountId;
-    this._rule = config.rule;
+    this._rule.internalValue = config.rule;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -963,8 +1235,19 @@ export class StorageManagementPolicy extends cdktf.TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // storage_account_id - computed: false, optional: false, required: true
@@ -981,20 +1264,19 @@ export class StorageManagementPolicy extends cdktf.TerraformResource {
   }
 
   // rule - computed: false, optional: true, required: false
-  private _rule?: StorageManagementPolicyRule[] | cdktf.IResolvable; 
+  private _rule = new StorageManagementPolicyRuleList(this, "rule", false);
   public get rule() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('rule');
+    return this._rule;
   }
-  public set rule(value: StorageManagementPolicyRule[] | cdktf.IResolvable) {
-    this._rule = value;
+  public putRule(value: StorageManagementPolicyRule[] | cdktf.IResolvable) {
+    this._rule.internalValue = value;
   }
   public resetRule() {
-    this._rule = undefined;
+    this._rule.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get ruleInput() {
-    return this._rule;
+    return this._rule.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -1019,8 +1301,9 @@ export class StorageManagementPolicy extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      id: cdktf.stringToTerraform(this._id),
       storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
-      rule: cdktf.listMapper(storageManagementPolicyRuleToTerraform)(this._rule),
+      rule: cdktf.listMapper(storageManagementPolicyRuleToTerraform)(this._rule.internalValue),
       timeouts: storageManagementPolicyTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

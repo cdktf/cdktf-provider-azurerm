@@ -20,6 +20,13 @@ export interface TrafficManagerNestedEndpointConfig extends cdktf.TerraformMetaA
   */
   readonly geoMappings?: string[];
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_nested_endpoint#id TrafficManagerNestedEndpoint#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_nested_endpoint#minimum_child_endpoints TrafficManagerNestedEndpoint#minimum_child_endpoints}
   */
   readonly minimumChildEndpoints: number;
@@ -92,6 +99,102 @@ export function trafficManagerNestedEndpointCustomHeaderToTerraform(struct?: Tra
   }
 }
 
+export class TrafficManagerNestedEndpointCustomHeaderOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): TrafficManagerNestedEndpointCustomHeader | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TrafficManagerNestedEndpointCustomHeader | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._value = value.value;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // value - computed: false, optional: false, required: true
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class TrafficManagerNestedEndpointCustomHeaderList extends cdktf.ComplexList {
+  public internalValue? : TrafficManagerNestedEndpointCustomHeader[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): TrafficManagerNestedEndpointCustomHeaderOutputReference {
+    return new TrafficManagerNestedEndpointCustomHeaderOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface TrafficManagerNestedEndpointSubnet {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_nested_endpoint#first TrafficManagerNestedEndpoint#first}
@@ -119,6 +222,127 @@ export function trafficManagerNestedEndpointSubnetToTerraform(struct?: TrafficMa
   }
 }
 
+export class TrafficManagerNestedEndpointSubnetOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): TrafficManagerNestedEndpointSubnet | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._first !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.first = this._first;
+    }
+    if (this._last !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.last = this._last;
+    }
+    if (this._scope !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.scope = this._scope;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TrafficManagerNestedEndpointSubnet | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._first = undefined;
+      this._last = undefined;
+      this._scope = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._first = value.first;
+      this._last = value.last;
+      this._scope = value.scope;
+    }
+  }
+
+  // first - computed: false, optional: false, required: true
+  private _first?: string; 
+  public get first() {
+    return this.getStringAttribute('first');
+  }
+  public set first(value: string) {
+    this._first = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get firstInput() {
+    return this._first;
+  }
+
+  // last - computed: false, optional: true, required: false
+  private _last?: string; 
+  public get last() {
+    return this.getStringAttribute('last');
+  }
+  public set last(value: string) {
+    this._last = value;
+  }
+  public resetLast() {
+    this._last = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get lastInput() {
+    return this._last;
+  }
+
+  // scope - computed: false, optional: true, required: false
+  private _scope?: number; 
+  public get scope() {
+    return this.getNumberAttribute('scope');
+  }
+  public set scope(value: number) {
+    this._scope = value;
+  }
+  public resetScope() {
+    this._scope = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scopeInput() {
+    return this._scope;
+  }
+}
+
+export class TrafficManagerNestedEndpointSubnetList extends cdktf.ComplexList {
+  public internalValue? : TrafficManagerNestedEndpointSubnet[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): TrafficManagerNestedEndpointSubnetOutputReference {
+    return new TrafficManagerNestedEndpointSubnetOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface TrafficManagerNestedEndpointTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_nested_endpoint#create TrafficManagerNestedEndpoint#create}
@@ -153,6 +377,7 @@ export function trafficManagerNestedEndpointTimeoutsToTerraform(struct?: Traffic
 
 export class TrafficManagerNestedEndpointTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -162,7 +387,10 @@ export class TrafficManagerNestedEndpointTimeoutsOutputReference extends cdktf.C
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): TrafficManagerNestedEndpointTimeouts | undefined {
+  public get internalValue(): TrafficManagerNestedEndpointTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -184,16 +412,22 @@ export class TrafficManagerNestedEndpointTimeoutsOutputReference extends cdktf.C
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: TrafficManagerNestedEndpointTimeouts | undefined) {
+  public set internalValue(value: TrafficManagerNestedEndpointTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -303,6 +537,7 @@ export class TrafficManagerNestedEndpoint extends cdktf.TerraformResource {
     this._enabled = config.enabled;
     this._endpointLocation = config.endpointLocation;
     this._geoMappings = config.geoMappings;
+    this._id = config.id;
     this._minimumChildEndpoints = config.minimumChildEndpoints;
     this._minimumRequiredChildEndpointsIpv4 = config.minimumRequiredChildEndpointsIpv4;
     this._minimumRequiredChildEndpointsIpv6 = config.minimumRequiredChildEndpointsIpv6;
@@ -311,8 +546,8 @@ export class TrafficManagerNestedEndpoint extends cdktf.TerraformResource {
     this._profileId = config.profileId;
     this._targetResourceId = config.targetResourceId;
     this._weight = config.weight;
-    this._customHeader = config.customHeader;
-    this._subnet = config.subnet;
+    this._customHeader.internalValue = config.customHeader;
+    this._subnet.internalValue = config.subnet;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -369,8 +604,19 @@ export class TrafficManagerNestedEndpoint extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // minimum_child_endpoints - computed: false, optional: false, required: true
@@ -487,37 +733,35 @@ export class TrafficManagerNestedEndpoint extends cdktf.TerraformResource {
   }
 
   // custom_header - computed: false, optional: true, required: false
-  private _customHeader?: TrafficManagerNestedEndpointCustomHeader[] | cdktf.IResolvable; 
+  private _customHeader = new TrafficManagerNestedEndpointCustomHeaderList(this, "custom_header", false);
   public get customHeader() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('custom_header');
+    return this._customHeader;
   }
-  public set customHeader(value: TrafficManagerNestedEndpointCustomHeader[] | cdktf.IResolvable) {
-    this._customHeader = value;
+  public putCustomHeader(value: TrafficManagerNestedEndpointCustomHeader[] | cdktf.IResolvable) {
+    this._customHeader.internalValue = value;
   }
   public resetCustomHeader() {
-    this._customHeader = undefined;
+    this._customHeader.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get customHeaderInput() {
-    return this._customHeader;
+    return this._customHeader.internalValue;
   }
 
   // subnet - computed: false, optional: true, required: false
-  private _subnet?: TrafficManagerNestedEndpointSubnet[] | cdktf.IResolvable; 
+  private _subnet = new TrafficManagerNestedEndpointSubnetList(this, "subnet", false);
   public get subnet() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('subnet');
+    return this._subnet;
   }
-  public set subnet(value: TrafficManagerNestedEndpointSubnet[] | cdktf.IResolvable) {
-    this._subnet = value;
+  public putSubnet(value: TrafficManagerNestedEndpointSubnet[] | cdktf.IResolvable) {
+    this._subnet.internalValue = value;
   }
   public resetSubnet() {
-    this._subnet = undefined;
+    this._subnet.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get subnetInput() {
-    return this._subnet;
+    return this._subnet.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -545,6 +789,7 @@ export class TrafficManagerNestedEndpoint extends cdktf.TerraformResource {
       enabled: cdktf.booleanToTerraform(this._enabled),
       endpoint_location: cdktf.stringToTerraform(this._endpointLocation),
       geo_mappings: cdktf.listMapper(cdktf.stringToTerraform)(this._geoMappings),
+      id: cdktf.stringToTerraform(this._id),
       minimum_child_endpoints: cdktf.numberToTerraform(this._minimumChildEndpoints),
       minimum_required_child_endpoints_ipv4: cdktf.numberToTerraform(this._minimumRequiredChildEndpointsIpv4),
       minimum_required_child_endpoints_ipv6: cdktf.numberToTerraform(this._minimumRequiredChildEndpointsIpv6),
@@ -553,8 +798,8 @@ export class TrafficManagerNestedEndpoint extends cdktf.TerraformResource {
       profile_id: cdktf.stringToTerraform(this._profileId),
       target_resource_id: cdktf.stringToTerraform(this._targetResourceId),
       weight: cdktf.numberToTerraform(this._weight),
-      custom_header: cdktf.listMapper(trafficManagerNestedEndpointCustomHeaderToTerraform)(this._customHeader),
-      subnet: cdktf.listMapper(trafficManagerNestedEndpointSubnetToTerraform)(this._subnet),
+      custom_header: cdktf.listMapper(trafficManagerNestedEndpointCustomHeaderToTerraform)(this._customHeader.internalValue),
+      subnet: cdktf.listMapper(trafficManagerNestedEndpointSubnetToTerraform)(this._subnet.internalValue),
       timeouts: trafficManagerNestedEndpointTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

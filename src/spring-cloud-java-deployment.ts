@@ -16,6 +16,13 @@ export interface SpringCloudJavaDeploymentConfig extends cdktf.TerraformMetaArgu
   */
   readonly environmentVariables?: { [key: string]: string };
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_java_deployment#id SpringCloudJavaDeployment#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_java_deployment#instance_count SpringCloudJavaDeployment#instance_count}
   */
   readonly instanceCount?: number;
@@ -178,6 +185,7 @@ export function springCloudJavaDeploymentTimeoutsToTerraform(struct?: SpringClou
 
 export class SpringCloudJavaDeploymentTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -187,7 +195,10 @@ export class SpringCloudJavaDeploymentTimeoutsOutputReference extends cdktf.Comp
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): SpringCloudJavaDeploymentTimeouts | undefined {
+  public get internalValue(): SpringCloudJavaDeploymentTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -209,16 +220,22 @@ export class SpringCloudJavaDeploymentTimeoutsOutputReference extends cdktf.Comp
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: SpringCloudJavaDeploymentTimeouts | undefined) {
+  public set internalValue(value: SpringCloudJavaDeploymentTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -327,6 +344,7 @@ export class SpringCloudJavaDeployment extends cdktf.TerraformResource {
     });
     this._cpu = config.cpu;
     this._environmentVariables = config.environmentVariables;
+    this._id = config.id;
     this._instanceCount = config.instanceCount;
     this._jvmOptions = config.jvmOptions;
     this._memoryInGb = config.memoryInGb;
@@ -374,8 +392,19 @@ export class SpringCloudJavaDeployment extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // instance_count - computed: false, optional: true, required: false
@@ -508,6 +537,7 @@ export class SpringCloudJavaDeployment extends cdktf.TerraformResource {
     return {
       cpu: cdktf.numberToTerraform(this._cpu),
       environment_variables: cdktf.hashMapper(cdktf.stringToTerraform)(this._environmentVariables),
+      id: cdktf.stringToTerraform(this._id),
       instance_count: cdktf.numberToTerraform(this._instanceCount),
       jvm_options: cdktf.stringToTerraform(this._jvmOptions),
       memory_in_gb: cdktf.numberToTerraform(this._memoryInGb),

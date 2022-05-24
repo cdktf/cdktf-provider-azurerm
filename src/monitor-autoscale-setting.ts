@@ -12,6 +12,13 @@ export interface MonitorAutoscaleSettingConfig extends cdktf.TerraformMetaArgume
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting#id MonitorAutoscaleSetting#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting#location MonitorAutoscaleSetting#location}
   */
   readonly location: string;
@@ -191,6 +198,105 @@ export function monitorAutoscaleSettingNotificationWebhookToTerraform(struct?: M
   }
 }
 
+export class MonitorAutoscaleSettingNotificationWebhookOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MonitorAutoscaleSettingNotificationWebhook | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._properties !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.properties = this._properties;
+    }
+    if (this._serviceUri !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.serviceUri = this._serviceUri;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitorAutoscaleSettingNotificationWebhook | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._properties = undefined;
+      this._serviceUri = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._properties = value.properties;
+      this._serviceUri = value.serviceUri;
+    }
+  }
+
+  // properties - computed: false, optional: true, required: false
+  private _properties?: { [key: string]: string }; 
+  public get properties() {
+    return this.getStringMapAttribute('properties');
+  }
+  public set properties(value: { [key: string]: string }) {
+    this._properties = value;
+  }
+  public resetProperties() {
+    this._properties = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get propertiesInput() {
+    return this._properties;
+  }
+
+  // service_uri - computed: false, optional: false, required: true
+  private _serviceUri?: string; 
+  public get serviceUri() {
+    return this.getStringAttribute('service_uri');
+  }
+  public set serviceUri(value: string) {
+    this._serviceUri = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceUriInput() {
+    return this._serviceUri;
+  }
+}
+
+export class MonitorAutoscaleSettingNotificationWebhookList extends cdktf.ComplexList {
+  public internalValue? : MonitorAutoscaleSettingNotificationWebhook[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MonitorAutoscaleSettingNotificationWebhookOutputReference {
+    return new MonitorAutoscaleSettingNotificationWebhookOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface MonitorAutoscaleSettingNotification {
   /**
   * email block
@@ -235,9 +341,9 @@ export class MonitorAutoscaleSettingNotificationOutputReference extends cdktf.Co
       hasAnyValues = true;
       internalValueResult.email = this._email?.internalValue;
     }
-    if (this._webhook !== undefined) {
+    if (this._webhook?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.webhook = this._webhook;
+      internalValueResult.webhook = this._webhook?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -246,12 +352,12 @@ export class MonitorAutoscaleSettingNotificationOutputReference extends cdktf.Co
     if (value === undefined) {
       this.isEmptyObject = false;
       this._email.internalValue = undefined;
-      this._webhook = undefined;
+      this._webhook.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._email.internalValue = value.email;
-      this._webhook = value.webhook;
+      this._webhook.internalValue = value.webhook;
     }
   }
 
@@ -272,20 +378,19 @@ export class MonitorAutoscaleSettingNotificationOutputReference extends cdktf.Co
   }
 
   // webhook - computed: false, optional: true, required: false
-  private _webhook?: MonitorAutoscaleSettingNotificationWebhook[] | cdktf.IResolvable; 
+  private _webhook = new MonitorAutoscaleSettingNotificationWebhookList(this, "webhook", false);
   public get webhook() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('webhook');
+    return this._webhook;
   }
-  public set webhook(value: MonitorAutoscaleSettingNotificationWebhook[] | cdktf.IResolvable) {
-    this._webhook = value;
+  public putWebhook(value: MonitorAutoscaleSettingNotificationWebhook[] | cdktf.IResolvable) {
+    this._webhook.internalValue = value;
   }
   public resetWebhook() {
-    this._webhook = undefined;
+    this._webhook.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get webhookInput() {
-    return this._webhook;
+    return this._webhook.internalValue;
   }
 }
 export interface MonitorAutoscaleSettingProfileCapacity {
@@ -675,6 +780,121 @@ export function monitorAutoscaleSettingProfileRuleMetricTriggerDimensionsToTerra
   }
 }
 
+export class MonitorAutoscaleSettingProfileRuleMetricTriggerDimensionsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MonitorAutoscaleSettingProfileRuleMetricTriggerDimensions | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._operator !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.operator = this._operator;
+    }
+    if (this._values !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.values = this._values;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitorAutoscaleSettingProfileRuleMetricTriggerDimensions | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._operator = undefined;
+      this._values = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._operator = value.operator;
+      this._values = value.values;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // operator - computed: false, optional: false, required: true
+  private _operator?: string; 
+  public get operator() {
+    return this.getStringAttribute('operator');
+  }
+  public set operator(value: string) {
+    this._operator = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get operatorInput() {
+    return this._operator;
+  }
+
+  // values - computed: false, optional: false, required: true
+  private _values?: string[]; 
+  public get values() {
+    return this.getListAttribute('values');
+  }
+  public set values(value: string[]) {
+    this._values = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valuesInput() {
+    return this._values;
+  }
+}
+
+export class MonitorAutoscaleSettingProfileRuleMetricTriggerDimensionsList extends cdktf.ComplexList {
+  public internalValue? : MonitorAutoscaleSettingProfileRuleMetricTriggerDimensions[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MonitorAutoscaleSettingProfileRuleMetricTriggerDimensionsOutputReference {
+    return new MonitorAutoscaleSettingProfileRuleMetricTriggerDimensionsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface MonitorAutoscaleSettingProfileRuleMetricTrigger {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting#divide_by_instance_count MonitorAutoscaleSetting#divide_by_instance_count}
@@ -798,9 +1018,9 @@ export class MonitorAutoscaleSettingProfileRuleMetricTriggerOutputReference exte
       hasAnyValues = true;
       internalValueResult.timeWindow = this._timeWindow;
     }
-    if (this._dimensions !== undefined) {
+    if (this._dimensions?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.dimensions = this._dimensions;
+      internalValueResult.dimensions = this._dimensions?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -818,7 +1038,7 @@ export class MonitorAutoscaleSettingProfileRuleMetricTriggerOutputReference exte
       this._timeAggregation = undefined;
       this._timeGrain = undefined;
       this._timeWindow = undefined;
-      this._dimensions = undefined;
+      this._dimensions.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
@@ -832,7 +1052,7 @@ export class MonitorAutoscaleSettingProfileRuleMetricTriggerOutputReference exte
       this._timeAggregation = value.timeAggregation;
       this._timeGrain = value.timeGrain;
       this._timeWindow = value.timeWindow;
-      this._dimensions = value.dimensions;
+      this._dimensions.internalValue = value.dimensions;
     }
   }
 
@@ -973,20 +1193,19 @@ export class MonitorAutoscaleSettingProfileRuleMetricTriggerOutputReference exte
   }
 
   // dimensions - computed: false, optional: true, required: false
-  private _dimensions?: MonitorAutoscaleSettingProfileRuleMetricTriggerDimensions[] | cdktf.IResolvable; 
+  private _dimensions = new MonitorAutoscaleSettingProfileRuleMetricTriggerDimensionsList(this, "dimensions", false);
   public get dimensions() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('dimensions');
+    return this._dimensions;
   }
-  public set dimensions(value: MonitorAutoscaleSettingProfileRuleMetricTriggerDimensions[] | cdktf.IResolvable) {
-    this._dimensions = value;
+  public putDimensions(value: MonitorAutoscaleSettingProfileRuleMetricTriggerDimensions[] | cdktf.IResolvable) {
+    this._dimensions.internalValue = value;
   }
   public resetDimensions() {
-    this._dimensions = undefined;
+    this._dimensions.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get dimensionsInput() {
-    return this._dimensions;
+    return this._dimensions.internalValue;
   }
 }
 export interface MonitorAutoscaleSettingProfileRuleScaleAction {
@@ -1149,6 +1368,102 @@ export function monitorAutoscaleSettingProfileRuleToTerraform(struct?: MonitorAu
   }
 }
 
+export class MonitorAutoscaleSettingProfileRuleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MonitorAutoscaleSettingProfileRule | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._metricTrigger?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.metricTrigger = this._metricTrigger?.internalValue;
+    }
+    if (this._scaleAction?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.scaleAction = this._scaleAction?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitorAutoscaleSettingProfileRule | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._metricTrigger.internalValue = undefined;
+      this._scaleAction.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._metricTrigger.internalValue = value.metricTrigger;
+      this._scaleAction.internalValue = value.scaleAction;
+    }
+  }
+
+  // metric_trigger - computed: false, optional: false, required: true
+  private _metricTrigger = new MonitorAutoscaleSettingProfileRuleMetricTriggerOutputReference(this, "metric_trigger");
+  public get metricTrigger() {
+    return this._metricTrigger;
+  }
+  public putMetricTrigger(value: MonitorAutoscaleSettingProfileRuleMetricTrigger) {
+    this._metricTrigger.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get metricTriggerInput() {
+    return this._metricTrigger.internalValue;
+  }
+
+  // scale_action - computed: false, optional: false, required: true
+  private _scaleAction = new MonitorAutoscaleSettingProfileRuleScaleActionOutputReference(this, "scale_action");
+  public get scaleAction() {
+    return this._scaleAction;
+  }
+  public putScaleAction(value: MonitorAutoscaleSettingProfileRuleScaleAction) {
+    this._scaleAction.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scaleActionInput() {
+    return this._scaleAction.internalValue;
+  }
+}
+
+export class MonitorAutoscaleSettingProfileRuleList extends cdktf.ComplexList {
+  public internalValue? : MonitorAutoscaleSettingProfileRule[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MonitorAutoscaleSettingProfileRuleOutputReference {
+    return new MonitorAutoscaleSettingProfileRuleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface MonitorAutoscaleSettingProfile {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting#name MonitorAutoscaleSetting#name}
@@ -1194,6 +1509,168 @@ export function monitorAutoscaleSettingProfileToTerraform(struct?: MonitorAutosc
   }
 }
 
+export class MonitorAutoscaleSettingProfileOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MonitorAutoscaleSettingProfile | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._capacity?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.capacity = this._capacity?.internalValue;
+    }
+    if (this._fixedDate?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.fixedDate = this._fixedDate?.internalValue;
+    }
+    if (this._recurrence?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.recurrence = this._recurrence?.internalValue;
+    }
+    if (this._rule?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rule = this._rule?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitorAutoscaleSettingProfile | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._capacity.internalValue = undefined;
+      this._fixedDate.internalValue = undefined;
+      this._recurrence.internalValue = undefined;
+      this._rule.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._capacity.internalValue = value.capacity;
+      this._fixedDate.internalValue = value.fixedDate;
+      this._recurrence.internalValue = value.recurrence;
+      this._rule.internalValue = value.rule;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // capacity - computed: false, optional: false, required: true
+  private _capacity = new MonitorAutoscaleSettingProfileCapacityOutputReference(this, "capacity");
+  public get capacity() {
+    return this._capacity;
+  }
+  public putCapacity(value: MonitorAutoscaleSettingProfileCapacity) {
+    this._capacity.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get capacityInput() {
+    return this._capacity.internalValue;
+  }
+
+  // fixed_date - computed: false, optional: true, required: false
+  private _fixedDate = new MonitorAutoscaleSettingProfileFixedDateOutputReference(this, "fixed_date");
+  public get fixedDate() {
+    return this._fixedDate;
+  }
+  public putFixedDate(value: MonitorAutoscaleSettingProfileFixedDate) {
+    this._fixedDate.internalValue = value;
+  }
+  public resetFixedDate() {
+    this._fixedDate.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fixedDateInput() {
+    return this._fixedDate.internalValue;
+  }
+
+  // recurrence - computed: false, optional: true, required: false
+  private _recurrence = new MonitorAutoscaleSettingProfileRecurrenceOutputReference(this, "recurrence");
+  public get recurrence() {
+    return this._recurrence;
+  }
+  public putRecurrence(value: MonitorAutoscaleSettingProfileRecurrence) {
+    this._recurrence.internalValue = value;
+  }
+  public resetRecurrence() {
+    this._recurrence.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get recurrenceInput() {
+    return this._recurrence.internalValue;
+  }
+
+  // rule - computed: false, optional: true, required: false
+  private _rule = new MonitorAutoscaleSettingProfileRuleList(this, "rule", false);
+  public get rule() {
+    return this._rule;
+  }
+  public putRule(value: MonitorAutoscaleSettingProfileRule[] | cdktf.IResolvable) {
+    this._rule.internalValue = value;
+  }
+  public resetRule() {
+    this._rule.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ruleInput() {
+    return this._rule.internalValue;
+  }
+}
+
+export class MonitorAutoscaleSettingProfileList extends cdktf.ComplexList {
+  public internalValue? : MonitorAutoscaleSettingProfile[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MonitorAutoscaleSettingProfileOutputReference {
+    return new MonitorAutoscaleSettingProfileOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface MonitorAutoscaleSettingTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting#create MonitorAutoscaleSetting#create}
@@ -1228,6 +1705,7 @@ export function monitorAutoscaleSettingTimeoutsToTerraform(struct?: MonitorAutos
 
 export class MonitorAutoscaleSettingTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -1237,7 +1715,10 @@ export class MonitorAutoscaleSettingTimeoutsOutputReference extends cdktf.Comple
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): MonitorAutoscaleSettingTimeouts | undefined {
+  public get internalValue(): MonitorAutoscaleSettingTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -1259,16 +1740,22 @@ export class MonitorAutoscaleSettingTimeoutsOutputReference extends cdktf.Comple
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: MonitorAutoscaleSettingTimeouts | undefined) {
+  public set internalValue(value: MonitorAutoscaleSettingTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -1376,13 +1863,14 @@ export class MonitorAutoscaleSetting extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._enabled = config.enabled;
+    this._id = config.id;
     this._location = config.location;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
     this._targetResourceId = config.targetResourceId;
     this._notification.internalValue = config.notification;
-    this._profile = config.profile;
+    this._profile.internalValue = config.profile;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -1407,8 +1895,19 @@ export class MonitorAutoscaleSetting extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // location - computed: false, optional: false, required: true
@@ -1496,17 +1995,16 @@ export class MonitorAutoscaleSetting extends cdktf.TerraformResource {
   }
 
   // profile - computed: false, optional: false, required: true
-  private _profile?: MonitorAutoscaleSettingProfile[] | cdktf.IResolvable; 
+  private _profile = new MonitorAutoscaleSettingProfileList(this, "profile", false);
   public get profile() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('profile');
+    return this._profile;
   }
-  public set profile(value: MonitorAutoscaleSettingProfile[] | cdktf.IResolvable) {
-    this._profile = value;
+  public putProfile(value: MonitorAutoscaleSettingProfile[] | cdktf.IResolvable) {
+    this._profile.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get profileInput() {
-    return this._profile;
+    return this._profile.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -1532,13 +2030,14 @@ export class MonitorAutoscaleSetting extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       enabled: cdktf.booleanToTerraform(this._enabled),
+      id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       target_resource_id: cdktf.stringToTerraform(this._targetResourceId),
       notification: monitorAutoscaleSettingNotificationToTerraform(this._notification.internalValue),
-      profile: cdktf.listMapper(monitorAutoscaleSettingProfileToTerraform)(this._profile),
+      profile: cdktf.listMapper(monitorAutoscaleSettingProfileToTerraform)(this._profile.internalValue),
       timeouts: monitorAutoscaleSettingTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

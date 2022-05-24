@@ -20,6 +20,13 @@ export interface CosmosdbCassandraTableConfig extends cdktf.TerraformMetaArgumen
   */
   readonly defaultTtl?: number;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_table#id CosmosdbCassandraTable#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_table#name CosmosdbCassandraTable#name}
   */
   readonly name: string;
@@ -133,6 +140,102 @@ export function cosmosdbCassandraTableSchemaClusterKeyToTerraform(struct?: Cosmo
   }
 }
 
+export class CosmosdbCassandraTableSchemaClusterKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CosmosdbCassandraTableSchemaClusterKey | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._orderBy !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.orderBy = this._orderBy;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CosmosdbCassandraTableSchemaClusterKey | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._orderBy = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._orderBy = value.orderBy;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // order_by - computed: false, optional: false, required: true
+  private _orderBy?: string; 
+  public get orderBy() {
+    return this.getStringAttribute('order_by');
+  }
+  public set orderBy(value: string) {
+    this._orderBy = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get orderByInput() {
+    return this._orderBy;
+  }
+}
+
+export class CosmosdbCassandraTableSchemaClusterKeyList extends cdktf.ComplexList {
+  public internalValue? : CosmosdbCassandraTableSchemaClusterKey[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CosmosdbCassandraTableSchemaClusterKeyOutputReference {
+    return new CosmosdbCassandraTableSchemaClusterKeyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CosmosdbCassandraTableSchemaColumn {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_table#name CosmosdbCassandraTable#name}
@@ -155,6 +258,102 @@ export function cosmosdbCassandraTableSchemaColumnToTerraform(struct?: CosmosdbC
   }
 }
 
+export class CosmosdbCassandraTableSchemaColumnOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CosmosdbCassandraTableSchemaColumn | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CosmosdbCassandraTableSchemaColumn | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._type = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._type = value.type;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+}
+
+export class CosmosdbCassandraTableSchemaColumnList extends cdktf.ComplexList {
+  public internalValue? : CosmosdbCassandraTableSchemaColumn[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CosmosdbCassandraTableSchemaColumnOutputReference {
+    return new CosmosdbCassandraTableSchemaColumnOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CosmosdbCassandraTableSchemaPartitionKey {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_table#name CosmosdbCassandraTable#name}
@@ -172,6 +371,83 @@ export function cosmosdbCassandraTableSchemaPartitionKeyToTerraform(struct?: Cos
   }
 }
 
+export class CosmosdbCassandraTableSchemaPartitionKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CosmosdbCassandraTableSchemaPartitionKey | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CosmosdbCassandraTableSchemaPartitionKey | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+}
+
+export class CosmosdbCassandraTableSchemaPartitionKeyList extends cdktf.ComplexList {
+  public internalValue? : CosmosdbCassandraTableSchemaPartitionKey[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CosmosdbCassandraTableSchemaPartitionKeyOutputReference {
+    return new CosmosdbCassandraTableSchemaPartitionKeyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CosmosdbCassandraTableSchema {
   /**
   * cluster_key block
@@ -219,17 +495,17 @@ export class CosmosdbCassandraTableSchemaOutputReference extends cdktf.ComplexOb
   public get internalValue(): CosmosdbCassandraTableSchema | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._clusterKey !== undefined) {
+    if (this._clusterKey?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.clusterKey = this._clusterKey;
+      internalValueResult.clusterKey = this._clusterKey?.internalValue;
     }
-    if (this._column !== undefined) {
+    if (this._column?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.column = this._column;
+      internalValueResult.column = this._column?.internalValue;
     }
-    if (this._partitionKey !== undefined) {
+    if (this._partitionKey?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.partitionKey = this._partitionKey;
+      internalValueResult.partitionKey = this._partitionKey?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -237,61 +513,58 @@ export class CosmosdbCassandraTableSchemaOutputReference extends cdktf.ComplexOb
   public set internalValue(value: CosmosdbCassandraTableSchema | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
-      this._clusterKey = undefined;
-      this._column = undefined;
-      this._partitionKey = undefined;
+      this._clusterKey.internalValue = undefined;
+      this._column.internalValue = undefined;
+      this._partitionKey.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
-      this._clusterKey = value.clusterKey;
-      this._column = value.column;
-      this._partitionKey = value.partitionKey;
+      this._clusterKey.internalValue = value.clusterKey;
+      this._column.internalValue = value.column;
+      this._partitionKey.internalValue = value.partitionKey;
     }
   }
 
   // cluster_key - computed: false, optional: true, required: false
-  private _clusterKey?: CosmosdbCassandraTableSchemaClusterKey[] | cdktf.IResolvable; 
+  private _clusterKey = new CosmosdbCassandraTableSchemaClusterKeyList(this, "cluster_key", false);
   public get clusterKey() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('cluster_key');
+    return this._clusterKey;
   }
-  public set clusterKey(value: CosmosdbCassandraTableSchemaClusterKey[] | cdktf.IResolvable) {
-    this._clusterKey = value;
+  public putClusterKey(value: CosmosdbCassandraTableSchemaClusterKey[] | cdktf.IResolvable) {
+    this._clusterKey.internalValue = value;
   }
   public resetClusterKey() {
-    this._clusterKey = undefined;
+    this._clusterKey.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get clusterKeyInput() {
-    return this._clusterKey;
+    return this._clusterKey.internalValue;
   }
 
   // column - computed: false, optional: false, required: true
-  private _column?: CosmosdbCassandraTableSchemaColumn[] | cdktf.IResolvable; 
+  private _column = new CosmosdbCassandraTableSchemaColumnList(this, "column", false);
   public get column() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('column');
+    return this._column;
   }
-  public set column(value: CosmosdbCassandraTableSchemaColumn[] | cdktf.IResolvable) {
-    this._column = value;
+  public putColumn(value: CosmosdbCassandraTableSchemaColumn[] | cdktf.IResolvable) {
+    this._column.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get columnInput() {
-    return this._column;
+    return this._column.internalValue;
   }
 
   // partition_key - computed: false, optional: false, required: true
-  private _partitionKey?: CosmosdbCassandraTableSchemaPartitionKey[] | cdktf.IResolvable; 
+  private _partitionKey = new CosmosdbCassandraTableSchemaPartitionKeyList(this, "partition_key", false);
   public get partitionKey() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('partition_key');
+    return this._partitionKey;
   }
-  public set partitionKey(value: CosmosdbCassandraTableSchemaPartitionKey[] | cdktf.IResolvable) {
-    this._partitionKey = value;
+  public putPartitionKey(value: CosmosdbCassandraTableSchemaPartitionKey[] | cdktf.IResolvable) {
+    this._partitionKey.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get partitionKeyInput() {
-    return this._partitionKey;
+    return this._partitionKey.internalValue;
   }
 }
 export interface CosmosdbCassandraTableTimeouts {
@@ -328,6 +601,7 @@ export function cosmosdbCassandraTableTimeoutsToTerraform(struct?: CosmosdbCassa
 
 export class CosmosdbCassandraTableTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -337,7 +611,10 @@ export class CosmosdbCassandraTableTimeoutsOutputReference extends cdktf.Complex
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): CosmosdbCassandraTableTimeouts | undefined {
+  public get internalValue(): CosmosdbCassandraTableTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -359,16 +636,22 @@ export class CosmosdbCassandraTableTimeoutsOutputReference extends cdktf.Complex
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: CosmosdbCassandraTableTimeouts | undefined) {
+  public set internalValue(value: CosmosdbCassandraTableTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -478,6 +761,7 @@ export class CosmosdbCassandraTable extends cdktf.TerraformResource {
     this._analyticalStorageTtl = config.analyticalStorageTtl;
     this._cassandraKeyspaceId = config.cassandraKeyspaceId;
     this._defaultTtl = config.defaultTtl;
+    this._id = config.id;
     this._name = config.name;
     this._throughput = config.throughput;
     this._autoscaleSettings.internalValue = config.autoscaleSettings;
@@ -535,8 +819,19 @@ export class CosmosdbCassandraTable extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // name - computed: false, optional: false, required: true
@@ -622,6 +917,7 @@ export class CosmosdbCassandraTable extends cdktf.TerraformResource {
       analytical_storage_ttl: cdktf.numberToTerraform(this._analyticalStorageTtl),
       cassandra_keyspace_id: cdktf.stringToTerraform(this._cassandraKeyspaceId),
       default_ttl: cdktf.numberToTerraform(this._defaultTtl),
+      id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       throughput: cdktf.numberToTerraform(this._throughput),
       autoscale_settings: cosmosdbCassandraTableAutoscaleSettingsToTerraform(this._autoscaleSettings.internalValue),

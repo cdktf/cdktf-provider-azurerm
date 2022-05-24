@@ -12,6 +12,13 @@ export interface LogicAppIntegrationAccountBatchConfigurationConfig extends cdkt
   */
   readonly batchGroupName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_batch_configuration#id LogicAppIntegrationAccountBatchConfiguration#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_batch_configuration#integration_account_name LogicAppIntegrationAccountBatchConfiguration#integration_account_name}
   */
   readonly integrationAccountName: string;
@@ -62,6 +69,102 @@ export function logicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecur
   }
 }
 
+export class LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleMonthlyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleMonthly | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._week !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.week = this._week;
+    }
+    if (this._weekday !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.weekday = this._weekday;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleMonthly | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._week = undefined;
+      this._weekday = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._week = value.week;
+      this._weekday = value.weekday;
+    }
+  }
+
+  // week - computed: false, optional: false, required: true
+  private _week?: number; 
+  public get week() {
+    return this.getNumberAttribute('week');
+  }
+  public set week(value: number) {
+    this._week = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get weekInput() {
+    return this._week;
+  }
+
+  // weekday - computed: false, optional: false, required: true
+  private _weekday?: string; 
+  public get weekday() {
+    return this.getStringAttribute('weekday');
+  }
+  public set weekday(value: string) {
+    this._weekday = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get weekdayInput() {
+    return this._weekday;
+  }
+}
+
+export class LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleMonthlyList extends cdktf.ComplexList {
+  public internalValue? : LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleMonthly[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleMonthlyOutputReference {
+    return new LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleMonthlyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceSchedule {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_batch_configuration#hours LogicAppIntegrationAccountBatchConfiguration#hours}
@@ -131,9 +234,9 @@ export class LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurren
       hasAnyValues = true;
       internalValueResult.weekDays = this._weekDays;
     }
-    if (this._monthly !== undefined) {
+    if (this._monthly?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.monthly = this._monthly;
+      internalValueResult.monthly = this._monthly?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -145,7 +248,7 @@ export class LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurren
       this._minutes = undefined;
       this._monthDays = undefined;
       this._weekDays = undefined;
-      this._monthly = undefined;
+      this._monthly.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
@@ -153,7 +256,7 @@ export class LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurren
       this._minutes = value.minutes;
       this._monthDays = value.monthDays;
       this._weekDays = value.weekDays;
-      this._monthly = value.monthly;
+      this._monthly.internalValue = value.monthly;
     }
   }
 
@@ -222,20 +325,19 @@ export class LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurren
   }
 
   // monthly - computed: false, optional: true, required: false
-  private _monthly?: LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleMonthly[] | cdktf.IResolvable; 
+  private _monthly = new LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleMonthlyList(this, "monthly", true);
   public get monthly() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('monthly')));
+    return this._monthly;
   }
-  public set monthly(value: LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleMonthly[] | cdktf.IResolvable) {
-    this._monthly = value;
+  public putMonthly(value: LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleMonthly[] | cdktf.IResolvable) {
+    this._monthly.internalValue = value;
   }
   public resetMonthly() {
-    this._monthly = undefined;
+    this._monthly.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get monthlyInput() {
-    return this._monthly;
+    return this._monthly.internalValue;
   }
 }
 export interface LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrence {
@@ -589,6 +691,7 @@ export function logicAppIntegrationAccountBatchConfigurationTimeoutsToTerraform(
 
 export class LogicAppIntegrationAccountBatchConfigurationTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -598,7 +701,10 @@ export class LogicAppIntegrationAccountBatchConfigurationTimeoutsOutputReference
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): LogicAppIntegrationAccountBatchConfigurationTimeouts | undefined {
+  public get internalValue(): LogicAppIntegrationAccountBatchConfigurationTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -620,16 +726,22 @@ export class LogicAppIntegrationAccountBatchConfigurationTimeoutsOutputReference
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: LogicAppIntegrationAccountBatchConfigurationTimeouts | undefined) {
+  public set internalValue(value: LogicAppIntegrationAccountBatchConfigurationTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -737,6 +849,7 @@ export class LogicAppIntegrationAccountBatchConfiguration extends cdktf.Terrafor
       lifecycle: config.lifecycle
     });
     this._batchGroupName = config.batchGroupName;
+    this._id = config.id;
     this._integrationAccountName = config.integrationAccountName;
     this._metadata = config.metadata;
     this._name = config.name;
@@ -763,8 +876,19 @@ export class LogicAppIntegrationAccountBatchConfiguration extends cdktf.Terrafor
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // integration_account_name - computed: false, optional: false, required: true
@@ -858,6 +982,7 @@ export class LogicAppIntegrationAccountBatchConfiguration extends cdktf.Terrafor
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       batch_group_name: cdktf.stringToTerraform(this._batchGroupName),
+      id: cdktf.stringToTerraform(this._id),
       integration_account_name: cdktf.stringToTerraform(this._integrationAccountName),
       metadata: cdktf.hashMapper(cdktf.stringToTerraform)(this._metadata),
       name: cdktf.stringToTerraform(this._name),

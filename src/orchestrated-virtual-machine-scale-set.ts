@@ -20,6 +20,13 @@ export interface OrchestratedVirtualMachineScaleSetConfig extends cdktf.Terrafor
   */
   readonly extensionsTimeBudget?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#id OrchestratedVirtualMachineScaleSet#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#instances OrchestratedVirtualMachineScaleSet#instances}
   */
   readonly instances?: number;
@@ -369,6 +376,294 @@ export function orchestratedVirtualMachineScaleSetDataDiskToTerraform(struct?: O
   }
 }
 
+export class OrchestratedVirtualMachineScaleSetDataDiskOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): OrchestratedVirtualMachineScaleSetDataDisk | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._caching !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.caching = this._caching;
+    }
+    if (this._createOption !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.createOption = this._createOption;
+    }
+    if (this._diskEncryptionSetId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.diskEncryptionSetId = this._diskEncryptionSetId;
+    }
+    if (this._diskIopsReadWrite !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.diskIopsReadWrite = this._diskIopsReadWrite;
+    }
+    if (this._diskMbpsReadWrite !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.diskMbpsReadWrite = this._diskMbpsReadWrite;
+    }
+    if (this._diskSizeGb !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.diskSizeGb = this._diskSizeGb;
+    }
+    if (this._lun !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.lun = this._lun;
+    }
+    if (this._storageAccountType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.storageAccountType = this._storageAccountType;
+    }
+    if (this._ultraSsdDiskIopsReadWrite !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ultraSsdDiskIopsReadWrite = this._ultraSsdDiskIopsReadWrite;
+    }
+    if (this._ultraSsdDiskMbpsReadWrite !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ultraSsdDiskMbpsReadWrite = this._ultraSsdDiskMbpsReadWrite;
+    }
+    if (this._writeAcceleratorEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.writeAcceleratorEnabled = this._writeAcceleratorEnabled;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OrchestratedVirtualMachineScaleSetDataDisk | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._caching = undefined;
+      this._createOption = undefined;
+      this._diskEncryptionSetId = undefined;
+      this._diskIopsReadWrite = undefined;
+      this._diskMbpsReadWrite = undefined;
+      this._diskSizeGb = undefined;
+      this._lun = undefined;
+      this._storageAccountType = undefined;
+      this._ultraSsdDiskIopsReadWrite = undefined;
+      this._ultraSsdDiskMbpsReadWrite = undefined;
+      this._writeAcceleratorEnabled = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._caching = value.caching;
+      this._createOption = value.createOption;
+      this._diskEncryptionSetId = value.diskEncryptionSetId;
+      this._diskIopsReadWrite = value.diskIopsReadWrite;
+      this._diskMbpsReadWrite = value.diskMbpsReadWrite;
+      this._diskSizeGb = value.diskSizeGb;
+      this._lun = value.lun;
+      this._storageAccountType = value.storageAccountType;
+      this._ultraSsdDiskIopsReadWrite = value.ultraSsdDiskIopsReadWrite;
+      this._ultraSsdDiskMbpsReadWrite = value.ultraSsdDiskMbpsReadWrite;
+      this._writeAcceleratorEnabled = value.writeAcceleratorEnabled;
+    }
+  }
+
+  // caching - computed: false, optional: false, required: true
+  private _caching?: string; 
+  public get caching() {
+    return this.getStringAttribute('caching');
+  }
+  public set caching(value: string) {
+    this._caching = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cachingInput() {
+    return this._caching;
+  }
+
+  // create_option - computed: false, optional: true, required: false
+  private _createOption?: string; 
+  public get createOption() {
+    return this.getStringAttribute('create_option');
+  }
+  public set createOption(value: string) {
+    this._createOption = value;
+  }
+  public resetCreateOption() {
+    this._createOption = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createOptionInput() {
+    return this._createOption;
+  }
+
+  // disk_encryption_set_id - computed: false, optional: true, required: false
+  private _diskEncryptionSetId?: string; 
+  public get diskEncryptionSetId() {
+    return this.getStringAttribute('disk_encryption_set_id');
+  }
+  public set diskEncryptionSetId(value: string) {
+    this._diskEncryptionSetId = value;
+  }
+  public resetDiskEncryptionSetId() {
+    this._diskEncryptionSetId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get diskEncryptionSetIdInput() {
+    return this._diskEncryptionSetId;
+  }
+
+  // disk_iops_read_write - computed: true, optional: true, required: false
+  private _diskIopsReadWrite?: number; 
+  public get diskIopsReadWrite() {
+    return this.getNumberAttribute('disk_iops_read_write');
+  }
+  public set diskIopsReadWrite(value: number) {
+    this._diskIopsReadWrite = value;
+  }
+  public resetDiskIopsReadWrite() {
+    this._diskIopsReadWrite = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get diskIopsReadWriteInput() {
+    return this._diskIopsReadWrite;
+  }
+
+  // disk_mbps_read_write - computed: true, optional: true, required: false
+  private _diskMbpsReadWrite?: number; 
+  public get diskMbpsReadWrite() {
+    return this.getNumberAttribute('disk_mbps_read_write');
+  }
+  public set diskMbpsReadWrite(value: number) {
+    this._diskMbpsReadWrite = value;
+  }
+  public resetDiskMbpsReadWrite() {
+    this._diskMbpsReadWrite = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get diskMbpsReadWriteInput() {
+    return this._diskMbpsReadWrite;
+  }
+
+  // disk_size_gb - computed: false, optional: false, required: true
+  private _diskSizeGb?: number; 
+  public get diskSizeGb() {
+    return this.getNumberAttribute('disk_size_gb');
+  }
+  public set diskSizeGb(value: number) {
+    this._diskSizeGb = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get diskSizeGbInput() {
+    return this._diskSizeGb;
+  }
+
+  // lun - computed: false, optional: false, required: true
+  private _lun?: number; 
+  public get lun() {
+    return this.getNumberAttribute('lun');
+  }
+  public set lun(value: number) {
+    this._lun = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get lunInput() {
+    return this._lun;
+  }
+
+  // storage_account_type - computed: false, optional: false, required: true
+  private _storageAccountType?: string; 
+  public get storageAccountType() {
+    return this.getStringAttribute('storage_account_type');
+  }
+  public set storageAccountType(value: string) {
+    this._storageAccountType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageAccountTypeInput() {
+    return this._storageAccountType;
+  }
+
+  // ultra_ssd_disk_iops_read_write - computed: true, optional: true, required: false
+  private _ultraSsdDiskIopsReadWrite?: number; 
+  public get ultraSsdDiskIopsReadWrite() {
+    return this.getNumberAttribute('ultra_ssd_disk_iops_read_write');
+  }
+  public set ultraSsdDiskIopsReadWrite(value: number) {
+    this._ultraSsdDiskIopsReadWrite = value;
+  }
+  public resetUltraSsdDiskIopsReadWrite() {
+    this._ultraSsdDiskIopsReadWrite = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ultraSsdDiskIopsReadWriteInput() {
+    return this._ultraSsdDiskIopsReadWrite;
+  }
+
+  // ultra_ssd_disk_mbps_read_write - computed: true, optional: true, required: false
+  private _ultraSsdDiskMbpsReadWrite?: number; 
+  public get ultraSsdDiskMbpsReadWrite() {
+    return this.getNumberAttribute('ultra_ssd_disk_mbps_read_write');
+  }
+  public set ultraSsdDiskMbpsReadWrite(value: number) {
+    this._ultraSsdDiskMbpsReadWrite = value;
+  }
+  public resetUltraSsdDiskMbpsReadWrite() {
+    this._ultraSsdDiskMbpsReadWrite = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ultraSsdDiskMbpsReadWriteInput() {
+    return this._ultraSsdDiskMbpsReadWrite;
+  }
+
+  // write_accelerator_enabled - computed: false, optional: true, required: false
+  private _writeAcceleratorEnabled?: boolean | cdktf.IResolvable; 
+  public get writeAcceleratorEnabled() {
+    return this.getBooleanAttribute('write_accelerator_enabled');
+  }
+  public set writeAcceleratorEnabled(value: boolean | cdktf.IResolvable) {
+    this._writeAcceleratorEnabled = value;
+  }
+  public resetWriteAcceleratorEnabled() {
+    this._writeAcceleratorEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get writeAcceleratorEnabledInput() {
+    return this._writeAcceleratorEnabled;
+  }
+}
+
+export class OrchestratedVirtualMachineScaleSetDataDiskList extends cdktf.ComplexList {
+  public internalValue? : OrchestratedVirtualMachineScaleSetDataDisk[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): OrchestratedVirtualMachineScaleSetDataDiskOutputReference {
+    return new OrchestratedVirtualMachineScaleSetDataDiskOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface OrchestratedVirtualMachineScaleSetExtension {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#auto_upgrade_minor_version_enabled OrchestratedVirtualMachineScaleSet#auto_upgrade_minor_version_enabled}
@@ -426,6 +721,250 @@ export function orchestratedVirtualMachineScaleSetExtensionToTerraform(struct?: 
   }
 }
 
+export class OrchestratedVirtualMachineScaleSetExtensionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): OrchestratedVirtualMachineScaleSetExtension | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._autoUpgradeMinorVersionEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.autoUpgradeMinorVersionEnabled = this._autoUpgradeMinorVersionEnabled;
+    }
+    if (this._extensionsToProvisionAfterVmCreation !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.extensionsToProvisionAfterVmCreation = this._extensionsToProvisionAfterVmCreation;
+    }
+    if (this._forceExtensionExecutionOnChange !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.forceExtensionExecutionOnChange = this._forceExtensionExecutionOnChange;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._protectedSettings !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.protectedSettings = this._protectedSettings;
+    }
+    if (this._publisher !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.publisher = this._publisher;
+    }
+    if (this._settings !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.settings = this._settings;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    if (this._typeHandlerVersion !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.typeHandlerVersion = this._typeHandlerVersion;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OrchestratedVirtualMachineScaleSetExtension | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._autoUpgradeMinorVersionEnabled = undefined;
+      this._extensionsToProvisionAfterVmCreation = undefined;
+      this._forceExtensionExecutionOnChange = undefined;
+      this._name = undefined;
+      this._protectedSettings = undefined;
+      this._publisher = undefined;
+      this._settings = undefined;
+      this._type = undefined;
+      this._typeHandlerVersion = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._autoUpgradeMinorVersionEnabled = value.autoUpgradeMinorVersionEnabled;
+      this._extensionsToProvisionAfterVmCreation = value.extensionsToProvisionAfterVmCreation;
+      this._forceExtensionExecutionOnChange = value.forceExtensionExecutionOnChange;
+      this._name = value.name;
+      this._protectedSettings = value.protectedSettings;
+      this._publisher = value.publisher;
+      this._settings = value.settings;
+      this._type = value.type;
+      this._typeHandlerVersion = value.typeHandlerVersion;
+    }
+  }
+
+  // auto_upgrade_minor_version_enabled - computed: false, optional: true, required: false
+  private _autoUpgradeMinorVersionEnabled?: boolean | cdktf.IResolvable; 
+  public get autoUpgradeMinorVersionEnabled() {
+    return this.getBooleanAttribute('auto_upgrade_minor_version_enabled');
+  }
+  public set autoUpgradeMinorVersionEnabled(value: boolean | cdktf.IResolvable) {
+    this._autoUpgradeMinorVersionEnabled = value;
+  }
+  public resetAutoUpgradeMinorVersionEnabled() {
+    this._autoUpgradeMinorVersionEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get autoUpgradeMinorVersionEnabledInput() {
+    return this._autoUpgradeMinorVersionEnabled;
+  }
+
+  // extensions_to_provision_after_vm_creation - computed: false, optional: true, required: false
+  private _extensionsToProvisionAfterVmCreation?: string[]; 
+  public get extensionsToProvisionAfterVmCreation() {
+    return this.getListAttribute('extensions_to_provision_after_vm_creation');
+  }
+  public set extensionsToProvisionAfterVmCreation(value: string[]) {
+    this._extensionsToProvisionAfterVmCreation = value;
+  }
+  public resetExtensionsToProvisionAfterVmCreation() {
+    this._extensionsToProvisionAfterVmCreation = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get extensionsToProvisionAfterVmCreationInput() {
+    return this._extensionsToProvisionAfterVmCreation;
+  }
+
+  // force_extension_execution_on_change - computed: false, optional: true, required: false
+  private _forceExtensionExecutionOnChange?: string; 
+  public get forceExtensionExecutionOnChange() {
+    return this.getStringAttribute('force_extension_execution_on_change');
+  }
+  public set forceExtensionExecutionOnChange(value: string) {
+    this._forceExtensionExecutionOnChange = value;
+  }
+  public resetForceExtensionExecutionOnChange() {
+    this._forceExtensionExecutionOnChange = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get forceExtensionExecutionOnChangeInput() {
+    return this._forceExtensionExecutionOnChange;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // protected_settings - computed: false, optional: true, required: false
+  private _protectedSettings?: string; 
+  public get protectedSettings() {
+    return this.getStringAttribute('protected_settings');
+  }
+  public set protectedSettings(value: string) {
+    this._protectedSettings = value;
+  }
+  public resetProtectedSettings() {
+    this._protectedSettings = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get protectedSettingsInput() {
+    return this._protectedSettings;
+  }
+
+  // publisher - computed: false, optional: false, required: true
+  private _publisher?: string; 
+  public get publisher() {
+    return this.getStringAttribute('publisher');
+  }
+  public set publisher(value: string) {
+    this._publisher = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publisherInput() {
+    return this._publisher;
+  }
+
+  // settings - computed: false, optional: true, required: false
+  private _settings?: string; 
+  public get settings() {
+    return this.getStringAttribute('settings');
+  }
+  public set settings(value: string) {
+    this._settings = value;
+  }
+  public resetSettings() {
+    this._settings = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get settingsInput() {
+    return this._settings;
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+
+  // type_handler_version - computed: false, optional: false, required: true
+  private _typeHandlerVersion?: string; 
+  public get typeHandlerVersion() {
+    return this.getStringAttribute('type_handler_version');
+  }
+  public set typeHandlerVersion(value: string) {
+    this._typeHandlerVersion = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeHandlerVersionInput() {
+    return this._typeHandlerVersion;
+  }
+}
+
+export class OrchestratedVirtualMachineScaleSetExtensionList extends cdktf.ComplexList {
+  public internalValue? : OrchestratedVirtualMachineScaleSetExtension[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): OrchestratedVirtualMachineScaleSetExtensionOutputReference {
+    return new OrchestratedVirtualMachineScaleSetExtensionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface OrchestratedVirtualMachineScaleSetIdentity {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#identity_ids OrchestratedVirtualMachineScaleSet#identity_ids}
@@ -534,6 +1073,102 @@ export function orchestratedVirtualMachineScaleSetNetworkInterfaceIpConfiguratio
   }
 }
 
+export class OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTagOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTag | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._tag !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.tag = this._tag;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTag | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._tag = undefined;
+      this._type = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._tag = value.tag;
+      this._type = value.type;
+    }
+  }
+
+  // tag - computed: false, optional: false, required: true
+  private _tag?: string; 
+  public get tag() {
+    return this.getStringAttribute('tag');
+  }
+  public set tag(value: string) {
+    this._tag = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagInput() {
+    return this._tag;
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+}
+
+export class OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTagList extends cdktf.ComplexList {
+  public internalValue? : OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTag[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTagOutputReference {
+    return new OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTagOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddress {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#domain_name_label OrchestratedVirtualMachineScaleSet#domain_name_label}
@@ -573,6 +1208,171 @@ export function orchestratedVirtualMachineScaleSetNetworkInterfaceIpConfiguratio
   }
 }
 
+export class OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddress | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._domainNameLabel !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.domainNameLabel = this._domainNameLabel;
+    }
+    if (this._idleTimeoutInMinutes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.idleTimeoutInMinutes = this._idleTimeoutInMinutes;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._publicIpPrefixId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.publicIpPrefixId = this._publicIpPrefixId;
+    }
+    if (this._ipTag?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ipTag = this._ipTag?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddress | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._domainNameLabel = undefined;
+      this._idleTimeoutInMinutes = undefined;
+      this._name = undefined;
+      this._publicIpPrefixId = undefined;
+      this._ipTag.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._domainNameLabel = value.domainNameLabel;
+      this._idleTimeoutInMinutes = value.idleTimeoutInMinutes;
+      this._name = value.name;
+      this._publicIpPrefixId = value.publicIpPrefixId;
+      this._ipTag.internalValue = value.ipTag;
+    }
+  }
+
+  // domain_name_label - computed: false, optional: true, required: false
+  private _domainNameLabel?: string; 
+  public get domainNameLabel() {
+    return this.getStringAttribute('domain_name_label');
+  }
+  public set domainNameLabel(value: string) {
+    this._domainNameLabel = value;
+  }
+  public resetDomainNameLabel() {
+    this._domainNameLabel = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get domainNameLabelInput() {
+    return this._domainNameLabel;
+  }
+
+  // idle_timeout_in_minutes - computed: true, optional: true, required: false
+  private _idleTimeoutInMinutes?: number; 
+  public get idleTimeoutInMinutes() {
+    return this.getNumberAttribute('idle_timeout_in_minutes');
+  }
+  public set idleTimeoutInMinutes(value: number) {
+    this._idleTimeoutInMinutes = value;
+  }
+  public resetIdleTimeoutInMinutes() {
+    this._idleTimeoutInMinutes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idleTimeoutInMinutesInput() {
+    return this._idleTimeoutInMinutes;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // public_ip_prefix_id - computed: false, optional: true, required: false
+  private _publicIpPrefixId?: string; 
+  public get publicIpPrefixId() {
+    return this.getStringAttribute('public_ip_prefix_id');
+  }
+  public set publicIpPrefixId(value: string) {
+    this._publicIpPrefixId = value;
+  }
+  public resetPublicIpPrefixId() {
+    this._publicIpPrefixId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicIpPrefixIdInput() {
+    return this._publicIpPrefixId;
+  }
+
+  // ip_tag - computed: false, optional: true, required: false
+  private _ipTag = new OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTagList(this, "ip_tag", false);
+  public get ipTag() {
+    return this._ipTag;
+  }
+  public putIpTag(value: OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTag[] | cdktf.IResolvable) {
+    this._ipTag.internalValue = value;
+  }
+  public resetIpTag() {
+    this._ipTag.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipTagInput() {
+    return this._ipTag.internalValue;
+  }
+}
+
+export class OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressList extends cdktf.ComplexList {
+  public internalValue? : OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddress[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressOutputReference {
+    return new OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfiguration {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#application_gateway_backend_address_pool_ids OrchestratedVirtualMachineScaleSet#application_gateway_backend_address_pool_ids}
@@ -627,6 +1427,237 @@ export function orchestratedVirtualMachineScaleSetNetworkInterfaceIpConfiguratio
   }
 }
 
+export class OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfiguration | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._applicationGatewayBackendAddressPoolIds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.applicationGatewayBackendAddressPoolIds = this._applicationGatewayBackendAddressPoolIds;
+    }
+    if (this._applicationSecurityGroupIds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.applicationSecurityGroupIds = this._applicationSecurityGroupIds;
+    }
+    if (this._loadBalancerBackendAddressPoolIds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.loadBalancerBackendAddressPoolIds = this._loadBalancerBackendAddressPoolIds;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._primary !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.primary = this._primary;
+    }
+    if (this._subnetId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.subnetId = this._subnetId;
+    }
+    if (this._version !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.version = this._version;
+    }
+    if (this._publicIpAddress?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.publicIpAddress = this._publicIpAddress?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfiguration | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._applicationGatewayBackendAddressPoolIds = undefined;
+      this._applicationSecurityGroupIds = undefined;
+      this._loadBalancerBackendAddressPoolIds = undefined;
+      this._name = undefined;
+      this._primary = undefined;
+      this._subnetId = undefined;
+      this._version = undefined;
+      this._publicIpAddress.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._applicationGatewayBackendAddressPoolIds = value.applicationGatewayBackendAddressPoolIds;
+      this._applicationSecurityGroupIds = value.applicationSecurityGroupIds;
+      this._loadBalancerBackendAddressPoolIds = value.loadBalancerBackendAddressPoolIds;
+      this._name = value.name;
+      this._primary = value.primary;
+      this._subnetId = value.subnetId;
+      this._version = value.version;
+      this._publicIpAddress.internalValue = value.publicIpAddress;
+    }
+  }
+
+  // application_gateway_backend_address_pool_ids - computed: false, optional: true, required: false
+  private _applicationGatewayBackendAddressPoolIds?: string[]; 
+  public get applicationGatewayBackendAddressPoolIds() {
+    return cdktf.Fn.tolist(this.getListAttribute('application_gateway_backend_address_pool_ids'));
+  }
+  public set applicationGatewayBackendAddressPoolIds(value: string[]) {
+    this._applicationGatewayBackendAddressPoolIds = value;
+  }
+  public resetApplicationGatewayBackendAddressPoolIds() {
+    this._applicationGatewayBackendAddressPoolIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get applicationGatewayBackendAddressPoolIdsInput() {
+    return this._applicationGatewayBackendAddressPoolIds;
+  }
+
+  // application_security_group_ids - computed: false, optional: true, required: false
+  private _applicationSecurityGroupIds?: string[]; 
+  public get applicationSecurityGroupIds() {
+    return cdktf.Fn.tolist(this.getListAttribute('application_security_group_ids'));
+  }
+  public set applicationSecurityGroupIds(value: string[]) {
+    this._applicationSecurityGroupIds = value;
+  }
+  public resetApplicationSecurityGroupIds() {
+    this._applicationSecurityGroupIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get applicationSecurityGroupIdsInput() {
+    return this._applicationSecurityGroupIds;
+  }
+
+  // load_balancer_backend_address_pool_ids - computed: false, optional: true, required: false
+  private _loadBalancerBackendAddressPoolIds?: string[]; 
+  public get loadBalancerBackendAddressPoolIds() {
+    return cdktf.Fn.tolist(this.getListAttribute('load_balancer_backend_address_pool_ids'));
+  }
+  public set loadBalancerBackendAddressPoolIds(value: string[]) {
+    this._loadBalancerBackendAddressPoolIds = value;
+  }
+  public resetLoadBalancerBackendAddressPoolIds() {
+    this._loadBalancerBackendAddressPoolIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get loadBalancerBackendAddressPoolIdsInput() {
+    return this._loadBalancerBackendAddressPoolIds;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // primary - computed: false, optional: true, required: false
+  private _primary?: boolean | cdktf.IResolvable; 
+  public get primary() {
+    return this.getBooleanAttribute('primary');
+  }
+  public set primary(value: boolean | cdktf.IResolvable) {
+    this._primary = value;
+  }
+  public resetPrimary() {
+    this._primary = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get primaryInput() {
+    return this._primary;
+  }
+
+  // subnet_id - computed: false, optional: true, required: false
+  private _subnetId?: string; 
+  public get subnetId() {
+    return this.getStringAttribute('subnet_id');
+  }
+  public set subnetId(value: string) {
+    this._subnetId = value;
+  }
+  public resetSubnetId() {
+    this._subnetId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetIdInput() {
+    return this._subnetId;
+  }
+
+  // version - computed: false, optional: true, required: false
+  private _version?: string; 
+  public get version() {
+    return this.getStringAttribute('version');
+  }
+  public set version(value: string) {
+    this._version = value;
+  }
+  public resetVersion() {
+    this._version = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get versionInput() {
+    return this._version;
+  }
+
+  // public_ip_address - computed: false, optional: true, required: false
+  private _publicIpAddress = new OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressList(this, "public_ip_address", false);
+  public get publicIpAddress() {
+    return this._publicIpAddress;
+  }
+  public putPublicIpAddress(value: OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddress[] | cdktf.IResolvable) {
+    this._publicIpAddress.internalValue = value;
+  }
+  public resetPublicIpAddress() {
+    this._publicIpAddress.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicIpAddressInput() {
+    return this._publicIpAddress.internalValue;
+  }
+}
+
+export class OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationList extends cdktf.ComplexList {
+  public internalValue? : OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfiguration[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationOutputReference {
+    return new OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface OrchestratedVirtualMachineScaleSetNetworkInterface {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#dns_servers OrchestratedVirtualMachineScaleSet#dns_servers}
@@ -676,6 +1707,212 @@ export function orchestratedVirtualMachineScaleSetNetworkInterfaceToTerraform(st
   }
 }
 
+export class OrchestratedVirtualMachineScaleSetNetworkInterfaceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): OrchestratedVirtualMachineScaleSetNetworkInterface | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._dnsServers !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dnsServers = this._dnsServers;
+    }
+    if (this._enableAcceleratedNetworking !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enableAcceleratedNetworking = this._enableAcceleratedNetworking;
+    }
+    if (this._enableIpForwarding !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enableIpForwarding = this._enableIpForwarding;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._networkSecurityGroupId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.networkSecurityGroupId = this._networkSecurityGroupId;
+    }
+    if (this._primary !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.primary = this._primary;
+    }
+    if (this._ipConfiguration?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ipConfiguration = this._ipConfiguration?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OrchestratedVirtualMachineScaleSetNetworkInterface | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._dnsServers = undefined;
+      this._enableAcceleratedNetworking = undefined;
+      this._enableIpForwarding = undefined;
+      this._name = undefined;
+      this._networkSecurityGroupId = undefined;
+      this._primary = undefined;
+      this._ipConfiguration.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._dnsServers = value.dnsServers;
+      this._enableAcceleratedNetworking = value.enableAcceleratedNetworking;
+      this._enableIpForwarding = value.enableIpForwarding;
+      this._name = value.name;
+      this._networkSecurityGroupId = value.networkSecurityGroupId;
+      this._primary = value.primary;
+      this._ipConfiguration.internalValue = value.ipConfiguration;
+    }
+  }
+
+  // dns_servers - computed: false, optional: true, required: false
+  private _dnsServers?: string[]; 
+  public get dnsServers() {
+    return this.getListAttribute('dns_servers');
+  }
+  public set dnsServers(value: string[]) {
+    this._dnsServers = value;
+  }
+  public resetDnsServers() {
+    this._dnsServers = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dnsServersInput() {
+    return this._dnsServers;
+  }
+
+  // enable_accelerated_networking - computed: false, optional: true, required: false
+  private _enableAcceleratedNetworking?: boolean | cdktf.IResolvable; 
+  public get enableAcceleratedNetworking() {
+    return this.getBooleanAttribute('enable_accelerated_networking');
+  }
+  public set enableAcceleratedNetworking(value: boolean | cdktf.IResolvable) {
+    this._enableAcceleratedNetworking = value;
+  }
+  public resetEnableAcceleratedNetworking() {
+    this._enableAcceleratedNetworking = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableAcceleratedNetworkingInput() {
+    return this._enableAcceleratedNetworking;
+  }
+
+  // enable_ip_forwarding - computed: false, optional: true, required: false
+  private _enableIpForwarding?: boolean | cdktf.IResolvable; 
+  public get enableIpForwarding() {
+    return this.getBooleanAttribute('enable_ip_forwarding');
+  }
+  public set enableIpForwarding(value: boolean | cdktf.IResolvable) {
+    this._enableIpForwarding = value;
+  }
+  public resetEnableIpForwarding() {
+    this._enableIpForwarding = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableIpForwardingInput() {
+    return this._enableIpForwarding;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // network_security_group_id - computed: false, optional: true, required: false
+  private _networkSecurityGroupId?: string; 
+  public get networkSecurityGroupId() {
+    return this.getStringAttribute('network_security_group_id');
+  }
+  public set networkSecurityGroupId(value: string) {
+    this._networkSecurityGroupId = value;
+  }
+  public resetNetworkSecurityGroupId() {
+    this._networkSecurityGroupId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkSecurityGroupIdInput() {
+    return this._networkSecurityGroupId;
+  }
+
+  // primary - computed: false, optional: true, required: false
+  private _primary?: boolean | cdktf.IResolvable; 
+  public get primary() {
+    return this.getBooleanAttribute('primary');
+  }
+  public set primary(value: boolean | cdktf.IResolvable) {
+    this._primary = value;
+  }
+  public resetPrimary() {
+    this._primary = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get primaryInput() {
+    return this._primary;
+  }
+
+  // ip_configuration - computed: false, optional: false, required: true
+  private _ipConfiguration = new OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationList(this, "ip_configuration", false);
+  public get ipConfiguration() {
+    return this._ipConfiguration;
+  }
+  public putIpConfiguration(value: OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfiguration[] | cdktf.IResolvable) {
+    this._ipConfiguration.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipConfigurationInput() {
+    return this._ipConfiguration.internalValue;
+  }
+}
+
+export class OrchestratedVirtualMachineScaleSetNetworkInterfaceList extends cdktf.ComplexList {
+  public internalValue? : OrchestratedVirtualMachineScaleSetNetworkInterface[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): OrchestratedVirtualMachineScaleSetNetworkInterfaceOutputReference {
+    return new OrchestratedVirtualMachineScaleSetNetworkInterfaceOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface OrchestratedVirtualMachineScaleSetOsDiskDiffDiskSettings {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#option OrchestratedVirtualMachineScaleSet#option}
@@ -956,6 +2193,102 @@ export function orchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationAdm
   }
 }
 
+export class OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationAdminSshKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationAdminSshKey | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._publicKey !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.publicKey = this._publicKey;
+    }
+    if (this._username !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.username = this._username;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationAdminSshKey | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._publicKey = undefined;
+      this._username = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._publicKey = value.publicKey;
+      this._username = value.username;
+    }
+  }
+
+  // public_key - computed: false, optional: false, required: true
+  private _publicKey?: string; 
+  public get publicKey() {
+    return this.getStringAttribute('public_key');
+  }
+  public set publicKey(value: string) {
+    this._publicKey = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicKeyInput() {
+    return this._publicKey;
+  }
+
+  // username - computed: false, optional: false, required: true
+  private _username?: string; 
+  public get username() {
+    return this.getStringAttribute('username');
+  }
+  public set username(value: string) {
+    this._username = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get usernameInput() {
+    return this._username;
+  }
+}
+
+export class OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationAdminSshKeyList extends cdktf.ComplexList {
+  public internalValue? : OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationAdminSshKey[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationAdminSshKeyOutputReference {
+    return new OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationAdminSshKeyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationSecretCertificate {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#url OrchestratedVirtualMachineScaleSet#url}
@@ -973,6 +2306,83 @@ export function orchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationSec
   }
 }
 
+export class OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationSecretCertificateOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationSecretCertificate | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._url !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.url = this._url;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationSecretCertificate | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._url = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._url = value.url;
+    }
+  }
+
+  // url - computed: false, optional: false, required: true
+  private _url?: string; 
+  public get url() {
+    return this.getStringAttribute('url');
+  }
+  public set url(value: string) {
+    this._url = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get urlInput() {
+    return this._url;
+  }
+}
+
+export class OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationSecretCertificateList extends cdktf.ComplexList {
+  public internalValue? : OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationSecretCertificate[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationSecretCertificateOutputReference {
+    return new OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationSecretCertificateOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationSecret {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#key_vault_id OrchestratedVirtualMachineScaleSet#key_vault_id}
@@ -997,6 +2407,102 @@ export function orchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationSec
   }
 }
 
+export class OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationSecretOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationSecret | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._keyVaultId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keyVaultId = this._keyVaultId;
+    }
+    if (this._certificate?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.certificate = this._certificate?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationSecret | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._keyVaultId = undefined;
+      this._certificate.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._keyVaultId = value.keyVaultId;
+      this._certificate.internalValue = value.certificate;
+    }
+  }
+
+  // key_vault_id - computed: false, optional: false, required: true
+  private _keyVaultId?: string; 
+  public get keyVaultId() {
+    return this.getStringAttribute('key_vault_id');
+  }
+  public set keyVaultId(value: string) {
+    this._keyVaultId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultIdInput() {
+    return this._keyVaultId;
+  }
+
+  // certificate - computed: false, optional: false, required: true
+  private _certificate = new OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationSecretCertificateList(this, "certificate", true);
+  public get certificate() {
+    return this._certificate;
+  }
+  public putCertificate(value: OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationSecretCertificate[] | cdktf.IResolvable) {
+    this._certificate.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get certificateInput() {
+    return this._certificate.internalValue;
+  }
+}
+
+export class OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationSecretList extends cdktf.ComplexList {
+  public internalValue? : OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationSecret[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationSecretOutputReference {
+    return new OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationSecretOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface OrchestratedVirtualMachineScaleSetOsProfileLinuxConfiguration {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#admin_password OrchestratedVirtualMachineScaleSet#admin_password}
@@ -1091,13 +2597,13 @@ export class OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationOutput
       hasAnyValues = true;
       internalValueResult.provisionVmAgent = this._provisionVmAgent;
     }
-    if (this._adminSshKey !== undefined) {
+    if (this._adminSshKey?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.adminSshKey = this._adminSshKey;
+      internalValueResult.adminSshKey = this._adminSshKey?.internalValue;
     }
-    if (this._secret !== undefined) {
+    if (this._secret?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.secret = this._secret;
+      internalValueResult.secret = this._secret?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -1111,8 +2617,8 @@ export class OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationOutput
       this._disablePasswordAuthentication = undefined;
       this._patchMode = undefined;
       this._provisionVmAgent = undefined;
-      this._adminSshKey = undefined;
-      this._secret = undefined;
+      this._adminSshKey.internalValue = undefined;
+      this._secret.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
@@ -1122,8 +2628,8 @@ export class OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationOutput
       this._disablePasswordAuthentication = value.disablePasswordAuthentication;
       this._patchMode = value.patchMode;
       this._provisionVmAgent = value.provisionVmAgent;
-      this._adminSshKey = value.adminSshKey;
-      this._secret = value.secret;
+      this._adminSshKey.internalValue = value.adminSshKey;
+      this._secret.internalValue = value.secret;
     }
   }
 
@@ -1221,37 +2727,35 @@ export class OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationOutput
   }
 
   // admin_ssh_key - computed: false, optional: true, required: false
-  private _adminSshKey?: OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationAdminSshKey[] | cdktf.IResolvable; 
+  private _adminSshKey = new OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationAdminSshKeyList(this, "admin_ssh_key", true);
   public get adminSshKey() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('admin_ssh_key')));
+    return this._adminSshKey;
   }
-  public set adminSshKey(value: OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationAdminSshKey[] | cdktf.IResolvable) {
-    this._adminSshKey = value;
+  public putAdminSshKey(value: OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationAdminSshKey[] | cdktf.IResolvable) {
+    this._adminSshKey.internalValue = value;
   }
   public resetAdminSshKey() {
-    this._adminSshKey = undefined;
+    this._adminSshKey.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get adminSshKeyInput() {
-    return this._adminSshKey;
+    return this._adminSshKey.internalValue;
   }
 
   // secret - computed: false, optional: true, required: false
-  private _secret?: OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationSecret[] | cdktf.IResolvable; 
+  private _secret = new OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationSecretList(this, "secret", false);
   public get secret() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('secret');
+    return this._secret;
   }
-  public set secret(value: OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationSecret[] | cdktf.IResolvable) {
-    this._secret = value;
+  public putSecret(value: OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationSecret[] | cdktf.IResolvable) {
+    this._secret.internalValue = value;
   }
   public resetSecret() {
-    this._secret = undefined;
+    this._secret.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get secretInput() {
-    return this._secret;
+    return this._secret.internalValue;
   }
 }
 export interface OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationSecretCertificate {
@@ -1276,6 +2780,102 @@ export function orchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationS
   }
 }
 
+export class OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationSecretCertificateOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationSecretCertificate | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._store !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.store = this._store;
+    }
+    if (this._url !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.url = this._url;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationSecretCertificate | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._store = undefined;
+      this._url = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._store = value.store;
+      this._url = value.url;
+    }
+  }
+
+  // store - computed: false, optional: false, required: true
+  private _store?: string; 
+  public get store() {
+    return this.getStringAttribute('store');
+  }
+  public set store(value: string) {
+    this._store = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storeInput() {
+    return this._store;
+  }
+
+  // url - computed: false, optional: false, required: true
+  private _url?: string; 
+  public get url() {
+    return this.getStringAttribute('url');
+  }
+  public set url(value: string) {
+    this._url = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get urlInput() {
+    return this._url;
+  }
+}
+
+export class OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationSecretCertificateList extends cdktf.ComplexList {
+  public internalValue? : OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationSecretCertificate[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationSecretCertificateOutputReference {
+    return new OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationSecretCertificateOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationSecret {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#key_vault_id OrchestratedVirtualMachineScaleSet#key_vault_id}
@@ -1300,6 +2900,102 @@ export function orchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationS
   }
 }
 
+export class OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationSecretOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationSecret | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._keyVaultId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keyVaultId = this._keyVaultId;
+    }
+    if (this._certificate?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.certificate = this._certificate?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationSecret | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._keyVaultId = undefined;
+      this._certificate.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._keyVaultId = value.keyVaultId;
+      this._certificate.internalValue = value.certificate;
+    }
+  }
+
+  // key_vault_id - computed: false, optional: false, required: true
+  private _keyVaultId?: string; 
+  public get keyVaultId() {
+    return this.getStringAttribute('key_vault_id');
+  }
+  public set keyVaultId(value: string) {
+    this._keyVaultId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultIdInput() {
+    return this._keyVaultId;
+  }
+
+  // certificate - computed: false, optional: false, required: true
+  private _certificate = new OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationSecretCertificateList(this, "certificate", true);
+  public get certificate() {
+    return this._certificate;
+  }
+  public putCertificate(value: OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationSecretCertificate[] | cdktf.IResolvable) {
+    this._certificate.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get certificateInput() {
+    return this._certificate.internalValue;
+  }
+}
+
+export class OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationSecretList extends cdktf.ComplexList {
+  public internalValue? : OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationSecret[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationSecretOutputReference {
+    return new OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationSecretOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationWinrmListener {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#certificate_url OrchestratedVirtualMachineScaleSet#certificate_url}
@@ -1322,6 +3018,105 @@ export function orchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationW
   }
 }
 
+export class OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationWinrmListenerOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationWinrmListener | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._certificateUrl !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.certificateUrl = this._certificateUrl;
+    }
+    if (this._protocol !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.protocol = this._protocol;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationWinrmListener | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._certificateUrl = undefined;
+      this._protocol = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._certificateUrl = value.certificateUrl;
+      this._protocol = value.protocol;
+    }
+  }
+
+  // certificate_url - computed: false, optional: true, required: false
+  private _certificateUrl?: string; 
+  public get certificateUrl() {
+    return this.getStringAttribute('certificate_url');
+  }
+  public set certificateUrl(value: string) {
+    this._certificateUrl = value;
+  }
+  public resetCertificateUrl() {
+    this._certificateUrl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get certificateUrlInput() {
+    return this._certificateUrl;
+  }
+
+  // protocol - computed: false, optional: false, required: true
+  private _protocol?: string; 
+  public get protocol() {
+    return this.getStringAttribute('protocol');
+  }
+  public set protocol(value: string) {
+    this._protocol = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get protocolInput() {
+    return this._protocol;
+  }
+}
+
+export class OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationWinrmListenerList extends cdktf.ComplexList {
+  public internalValue? : OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationWinrmListener[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationWinrmListenerOutputReference {
+    return new OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationWinrmListenerOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface OrchestratedVirtualMachineScaleSetOsProfileWindowsConfiguration {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#admin_password OrchestratedVirtualMachineScaleSet#admin_password}
@@ -1434,13 +3229,13 @@ export class OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationOutp
       hasAnyValues = true;
       internalValueResult.timezone = this._timezone;
     }
-    if (this._secret !== undefined) {
+    if (this._secret?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.secret = this._secret;
+      internalValueResult.secret = this._secret?.internalValue;
     }
-    if (this._winrmListener !== undefined) {
+    if (this._winrmListener?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.winrmListener = this._winrmListener;
+      internalValueResult.winrmListener = this._winrmListener?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -1456,8 +3251,8 @@ export class OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationOutp
       this._patchMode = undefined;
       this._provisionVmAgent = undefined;
       this._timezone = undefined;
-      this._secret = undefined;
-      this._winrmListener = undefined;
+      this._secret.internalValue = undefined;
+      this._winrmListener.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
@@ -1469,8 +3264,8 @@ export class OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationOutp
       this._patchMode = value.patchMode;
       this._provisionVmAgent = value.provisionVmAgent;
       this._timezone = value.timezone;
-      this._secret = value.secret;
-      this._winrmListener = value.winrmListener;
+      this._secret.internalValue = value.secret;
+      this._winrmListener.internalValue = value.winrmListener;
     }
   }
 
@@ -1597,37 +3392,35 @@ export class OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationOutp
   }
 
   // secret - computed: false, optional: true, required: false
-  private _secret?: OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationSecret[] | cdktf.IResolvable; 
+  private _secret = new OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationSecretList(this, "secret", false);
   public get secret() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('secret');
+    return this._secret;
   }
-  public set secret(value: OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationSecret[] | cdktf.IResolvable) {
-    this._secret = value;
+  public putSecret(value: OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationSecret[] | cdktf.IResolvable) {
+    this._secret.internalValue = value;
   }
   public resetSecret() {
-    this._secret = undefined;
+    this._secret.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get secretInput() {
-    return this._secret;
+    return this._secret.internalValue;
   }
 
   // winrm_listener - computed: false, optional: true, required: false
-  private _winrmListener?: OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationWinrmListener[] | cdktf.IResolvable; 
+  private _winrmListener = new OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationWinrmListenerList(this, "winrm_listener", true);
   public get winrmListener() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('winrm_listener')));
+    return this._winrmListener;
   }
-  public set winrmListener(value: OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationWinrmListener[] | cdktf.IResolvable) {
-    this._winrmListener = value;
+  public putWinrmListener(value: OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationWinrmListener[] | cdktf.IResolvable) {
+    this._winrmListener.internalValue = value;
   }
   public resetWinrmListener() {
-    this._winrmListener = undefined;
+    this._winrmListener.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get winrmListenerInput() {
-    return this._winrmListener;
+    return this._winrmListener.internalValue;
   }
 }
 export interface OrchestratedVirtualMachineScaleSetOsProfile {
@@ -2120,6 +3913,7 @@ export function orchestratedVirtualMachineScaleSetTimeoutsToTerraform(struct?: O
 
 export class OrchestratedVirtualMachineScaleSetTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -2129,7 +3923,10 @@ export class OrchestratedVirtualMachineScaleSetTimeoutsOutputReference extends c
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): OrchestratedVirtualMachineScaleSetTimeouts | undefined {
+  public get internalValue(): OrchestratedVirtualMachineScaleSetTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -2151,16 +3948,22 @@ export class OrchestratedVirtualMachineScaleSetTimeoutsOutputReference extends c
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: OrchestratedVirtualMachineScaleSetTimeouts | undefined) {
+  public set internalValue(value: OrchestratedVirtualMachineScaleSetTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -2270,6 +4073,7 @@ export class OrchestratedVirtualMachineScaleSet extends cdktf.TerraformResource 
     this._encryptionAtHostEnabled = config.encryptionAtHostEnabled;
     this._evictionPolicy = config.evictionPolicy;
     this._extensionsTimeBudget = config.extensionsTimeBudget;
+    this._id = config.id;
     this._instances = config.instances;
     this._licenseType = config.licenseType;
     this._location = config.location;
@@ -2286,10 +4090,10 @@ export class OrchestratedVirtualMachineScaleSet extends cdktf.TerraformResource 
     this._zones = config.zones;
     this._automaticInstanceRepair.internalValue = config.automaticInstanceRepair;
     this._bootDiagnostics.internalValue = config.bootDiagnostics;
-    this._dataDisk = config.dataDisk;
-    this._extension = config.extension;
+    this._dataDisk.internalValue = config.dataDisk;
+    this._extension.internalValue = config.extension;
     this._identity.internalValue = config.identity;
-    this._networkInterface = config.networkInterface;
+    this._networkInterface.internalValue = config.networkInterface;
     this._osDisk.internalValue = config.osDisk;
     this._osProfile.internalValue = config.osProfile;
     this._plan.internalValue = config.plan;
@@ -2351,8 +4155,19 @@ export class OrchestratedVirtualMachineScaleSet extends cdktf.TerraformResource 
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // instances - computed: true, optional: true, required: false
@@ -2605,37 +4420,35 @@ export class OrchestratedVirtualMachineScaleSet extends cdktf.TerraformResource 
   }
 
   // data_disk - computed: false, optional: true, required: false
-  private _dataDisk?: OrchestratedVirtualMachineScaleSetDataDisk[] | cdktf.IResolvable; 
+  private _dataDisk = new OrchestratedVirtualMachineScaleSetDataDiskList(this, "data_disk", false);
   public get dataDisk() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('data_disk');
+    return this._dataDisk;
   }
-  public set dataDisk(value: OrchestratedVirtualMachineScaleSetDataDisk[] | cdktf.IResolvable) {
-    this._dataDisk = value;
+  public putDataDisk(value: OrchestratedVirtualMachineScaleSetDataDisk[] | cdktf.IResolvable) {
+    this._dataDisk.internalValue = value;
   }
   public resetDataDisk() {
-    this._dataDisk = undefined;
+    this._dataDisk.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get dataDiskInput() {
-    return this._dataDisk;
+    return this._dataDisk.internalValue;
   }
 
   // extension - computed: false, optional: true, required: false
-  private _extension?: OrchestratedVirtualMachineScaleSetExtension[] | cdktf.IResolvable; 
+  private _extension = new OrchestratedVirtualMachineScaleSetExtensionList(this, "extension", true);
   public get extension() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('extension')));
+    return this._extension;
   }
-  public set extension(value: OrchestratedVirtualMachineScaleSetExtension[] | cdktf.IResolvable) {
-    this._extension = value;
+  public putExtension(value: OrchestratedVirtualMachineScaleSetExtension[] | cdktf.IResolvable) {
+    this._extension.internalValue = value;
   }
   public resetExtension() {
-    this._extension = undefined;
+    this._extension.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get extensionInput() {
-    return this._extension;
+    return this._extension.internalValue;
   }
 
   // identity - computed: false, optional: true, required: false
@@ -2655,20 +4468,19 @@ export class OrchestratedVirtualMachineScaleSet extends cdktf.TerraformResource 
   }
 
   // network_interface - computed: false, optional: true, required: false
-  private _networkInterface?: OrchestratedVirtualMachineScaleSetNetworkInterface[] | cdktf.IResolvable; 
+  private _networkInterface = new OrchestratedVirtualMachineScaleSetNetworkInterfaceList(this, "network_interface", false);
   public get networkInterface() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('network_interface');
+    return this._networkInterface;
   }
-  public set networkInterface(value: OrchestratedVirtualMachineScaleSetNetworkInterface[] | cdktf.IResolvable) {
-    this._networkInterface = value;
+  public putNetworkInterface(value: OrchestratedVirtualMachineScaleSetNetworkInterface[] | cdktf.IResolvable) {
+    this._networkInterface.internalValue = value;
   }
   public resetNetworkInterface() {
-    this._networkInterface = undefined;
+    this._networkInterface.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get networkInterfaceInput() {
-    return this._networkInterface;
+    return this._networkInterface.internalValue;
   }
 
   // os_disk - computed: false, optional: true, required: false
@@ -2776,6 +4588,7 @@ export class OrchestratedVirtualMachineScaleSet extends cdktf.TerraformResource 
       encryption_at_host_enabled: cdktf.booleanToTerraform(this._encryptionAtHostEnabled),
       eviction_policy: cdktf.stringToTerraform(this._evictionPolicy),
       extensions_time_budget: cdktf.stringToTerraform(this._extensionsTimeBudget),
+      id: cdktf.stringToTerraform(this._id),
       instances: cdktf.numberToTerraform(this._instances),
       license_type: cdktf.stringToTerraform(this._licenseType),
       location: cdktf.stringToTerraform(this._location),
@@ -2792,10 +4605,10 @@ export class OrchestratedVirtualMachineScaleSet extends cdktf.TerraformResource 
       zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),
       automatic_instance_repair: orchestratedVirtualMachineScaleSetAutomaticInstanceRepairToTerraform(this._automaticInstanceRepair.internalValue),
       boot_diagnostics: orchestratedVirtualMachineScaleSetBootDiagnosticsToTerraform(this._bootDiagnostics.internalValue),
-      data_disk: cdktf.listMapper(orchestratedVirtualMachineScaleSetDataDiskToTerraform)(this._dataDisk),
-      extension: cdktf.listMapper(orchestratedVirtualMachineScaleSetExtensionToTerraform)(this._extension),
+      data_disk: cdktf.listMapper(orchestratedVirtualMachineScaleSetDataDiskToTerraform)(this._dataDisk.internalValue),
+      extension: cdktf.listMapper(orchestratedVirtualMachineScaleSetExtensionToTerraform)(this._extension.internalValue),
       identity: orchestratedVirtualMachineScaleSetIdentityToTerraform(this._identity.internalValue),
-      network_interface: cdktf.listMapper(orchestratedVirtualMachineScaleSetNetworkInterfaceToTerraform)(this._networkInterface),
+      network_interface: cdktf.listMapper(orchestratedVirtualMachineScaleSetNetworkInterfaceToTerraform)(this._networkInterface.internalValue),
       os_disk: orchestratedVirtualMachineScaleSetOsDiskToTerraform(this._osDisk.internalValue),
       os_profile: orchestratedVirtualMachineScaleSetOsProfileToTerraform(this._osProfile.internalValue),
       plan: orchestratedVirtualMachineScaleSetPlanToTerraform(this._plan.internalValue),

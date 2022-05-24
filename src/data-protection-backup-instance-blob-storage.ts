@@ -12,6 +12,13 @@ export interface DataProtectionBackupInstanceBlobStorageConfig extends cdktf.Ter
   */
   readonly backupPolicyId: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_blob_storage#id DataProtectionBackupInstanceBlobStorage#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_blob_storage#location DataProtectionBackupInstanceBlobStorage#location}
   */
   readonly location: string;
@@ -68,6 +75,7 @@ export function dataProtectionBackupInstanceBlobStorageTimeoutsToTerraform(struc
 
 export class DataProtectionBackupInstanceBlobStorageTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -77,7 +85,10 @@ export class DataProtectionBackupInstanceBlobStorageTimeoutsOutputReference exte
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): DataProtectionBackupInstanceBlobStorageTimeouts | undefined {
+  public get internalValue(): DataProtectionBackupInstanceBlobStorageTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -99,16 +110,22 @@ export class DataProtectionBackupInstanceBlobStorageTimeoutsOutputReference exte
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: DataProtectionBackupInstanceBlobStorageTimeouts | undefined) {
+  public set internalValue(value: DataProtectionBackupInstanceBlobStorageTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -216,6 +233,7 @@ export class DataProtectionBackupInstanceBlobStorage extends cdktf.TerraformReso
       lifecycle: config.lifecycle
     });
     this._backupPolicyId = config.backupPolicyId;
+    this._id = config.id;
     this._location = config.location;
     this._name = config.name;
     this._storageAccountId = config.storageAccountId;
@@ -241,8 +259,19 @@ export class DataProtectionBackupInstanceBlobStorage extends cdktf.TerraformReso
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // location - computed: false, optional: false, required: true
@@ -320,6 +349,7 @@ export class DataProtectionBackupInstanceBlobStorage extends cdktf.TerraformReso
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       backup_policy_id: cdktf.stringToTerraform(this._backupPolicyId),
+      id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       storage_account_id: cdktf.stringToTerraform(this._storageAccountId),

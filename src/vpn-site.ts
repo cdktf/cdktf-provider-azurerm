@@ -20,6 +20,13 @@ export interface VpnSiteConfig extends cdktf.TerraformMetaArguments {
   */
   readonly deviceVendor?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_site#id VpnSite#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_site#location VpnSite#location}
   */
   readonly location: string;
@@ -182,6 +189,198 @@ export function vpnSiteLinkToTerraform(struct?: VpnSiteLink | cdktf.IResolvable)
   }
 }
 
+export class VpnSiteLinkOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): VpnSiteLink | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._fqdn !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.fqdn = this._fqdn;
+    }
+    if (this._ipAddress !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ipAddress = this._ipAddress;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._providerName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.providerName = this._providerName;
+    }
+    if (this._speedInMbps !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.speedInMbps = this._speedInMbps;
+    }
+    if (this._bgp?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.bgp = this._bgp?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: VpnSiteLink | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._fqdn = undefined;
+      this._ipAddress = undefined;
+      this._name = undefined;
+      this._providerName = undefined;
+      this._speedInMbps = undefined;
+      this._bgp.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._fqdn = value.fqdn;
+      this._ipAddress = value.ipAddress;
+      this._name = value.name;
+      this._providerName = value.providerName;
+      this._speedInMbps = value.speedInMbps;
+      this._bgp.internalValue = value.bgp;
+    }
+  }
+
+  // fqdn - computed: false, optional: true, required: false
+  private _fqdn?: string; 
+  public get fqdn() {
+    return this.getStringAttribute('fqdn');
+  }
+  public set fqdn(value: string) {
+    this._fqdn = value;
+  }
+  public resetFqdn() {
+    this._fqdn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fqdnInput() {
+    return this._fqdn;
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // ip_address - computed: false, optional: true, required: false
+  private _ipAddress?: string; 
+  public get ipAddress() {
+    return this.getStringAttribute('ip_address');
+  }
+  public set ipAddress(value: string) {
+    this._ipAddress = value;
+  }
+  public resetIpAddress() {
+    this._ipAddress = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipAddressInput() {
+    return this._ipAddress;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // provider_name - computed: false, optional: true, required: false
+  private _providerName?: string; 
+  public get providerName() {
+    return this.getStringAttribute('provider_name');
+  }
+  public set providerName(value: string) {
+    this._providerName = value;
+  }
+  public resetProviderName() {
+    this._providerName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get providerNameInput() {
+    return this._providerName;
+  }
+
+  // speed_in_mbps - computed: false, optional: true, required: false
+  private _speedInMbps?: number; 
+  public get speedInMbps() {
+    return this.getNumberAttribute('speed_in_mbps');
+  }
+  public set speedInMbps(value: number) {
+    this._speedInMbps = value;
+  }
+  public resetSpeedInMbps() {
+    this._speedInMbps = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get speedInMbpsInput() {
+    return this._speedInMbps;
+  }
+
+  // bgp - computed: false, optional: true, required: false
+  private _bgp = new VpnSiteLinkBgpOutputReference(this, "bgp");
+  public get bgp() {
+    return this._bgp;
+  }
+  public putBgp(value: VpnSiteLinkBgp) {
+    this._bgp.internalValue = value;
+  }
+  public resetBgp() {
+    this._bgp.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bgpInput() {
+    return this._bgp.internalValue;
+  }
+}
+
+export class VpnSiteLinkList extends cdktf.ComplexList {
+  public internalValue? : VpnSiteLink[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): VpnSiteLinkOutputReference {
+    return new VpnSiteLinkOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface VpnSiteTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_site#create VpnSite#create}
@@ -216,6 +415,7 @@ export function vpnSiteTimeoutsToTerraform(struct?: VpnSiteTimeoutsOutputReferen
 
 export class VpnSiteTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -225,7 +425,10 @@ export class VpnSiteTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): VpnSiteTimeouts | undefined {
+  public get internalValue(): VpnSiteTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -247,16 +450,22 @@ export class VpnSiteTimeoutsOutputReference extends cdktf.ComplexObject {
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: VpnSiteTimeouts | undefined) {
+  public set internalValue(value: VpnSiteTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -366,12 +575,13 @@ export class VpnSite extends cdktf.TerraformResource {
     this._addressCidrs = config.addressCidrs;
     this._deviceModel = config.deviceModel;
     this._deviceVendor = config.deviceVendor;
+    this._id = config.id;
     this._location = config.location;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
     this._virtualWanId = config.virtualWanId;
-    this._link = config.link;
+    this._link.internalValue = config.link;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -428,8 +638,19 @@ export class VpnSite extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // location - computed: false, optional: false, required: true
@@ -501,20 +722,19 @@ export class VpnSite extends cdktf.TerraformResource {
   }
 
   // link - computed: false, optional: true, required: false
-  private _link?: VpnSiteLink[] | cdktf.IResolvable; 
+  private _link = new VpnSiteLinkList(this, "link", false);
   public get link() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('link');
+    return this._link;
   }
-  public set link(value: VpnSiteLink[] | cdktf.IResolvable) {
-    this._link = value;
+  public putLink(value: VpnSiteLink[] | cdktf.IResolvable) {
+    this._link.internalValue = value;
   }
   public resetLink() {
-    this._link = undefined;
+    this._link.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get linkInput() {
-    return this._link;
+    return this._link.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -542,12 +762,13 @@ export class VpnSite extends cdktf.TerraformResource {
       address_cidrs: cdktf.listMapper(cdktf.stringToTerraform)(this._addressCidrs),
       device_model: cdktf.stringToTerraform(this._deviceModel),
       device_vendor: cdktf.stringToTerraform(this._deviceVendor),
+      id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       virtual_wan_id: cdktf.stringToTerraform(this._virtualWanId),
-      link: cdktf.listMapper(vpnSiteLinkToTerraform)(this._link),
+      link: cdktf.listMapper(vpnSiteLinkToTerraform)(this._link.internalValue),
       timeouts: vpnSiteTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

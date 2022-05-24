@@ -24,6 +24,13 @@ export interface IotSecuritySolutionConfig extends cdktf.TerraformMetaArguments 
   */
   readonly eventsToExport?: string[];
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution#id IotSecuritySolution#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution#iothub_ids IotSecuritySolution#iothub_ids}
   */
   readonly iothubIds: string[];
@@ -100,6 +107,102 @@ export function iotSecuritySolutionAdditionalWorkspaceToTerraform(struct?: IotSe
   }
 }
 
+export class IotSecuritySolutionAdditionalWorkspaceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): IotSecuritySolutionAdditionalWorkspace | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._dataTypes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dataTypes = this._dataTypes;
+    }
+    if (this._workspaceId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.workspaceId = this._workspaceId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: IotSecuritySolutionAdditionalWorkspace | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._dataTypes = undefined;
+      this._workspaceId = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._dataTypes = value.dataTypes;
+      this._workspaceId = value.workspaceId;
+    }
+  }
+
+  // data_types - computed: false, optional: false, required: true
+  private _dataTypes?: string[]; 
+  public get dataTypes() {
+    return cdktf.Fn.tolist(this.getListAttribute('data_types'));
+  }
+  public set dataTypes(value: string[]) {
+    this._dataTypes = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataTypesInput() {
+    return this._dataTypes;
+  }
+
+  // workspace_id - computed: false, optional: false, required: true
+  private _workspaceId?: string; 
+  public get workspaceId() {
+    return this.getStringAttribute('workspace_id');
+  }
+  public set workspaceId(value: string) {
+    this._workspaceId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get workspaceIdInput() {
+    return this._workspaceId;
+  }
+}
+
+export class IotSecuritySolutionAdditionalWorkspaceList extends cdktf.ComplexList {
+  public internalValue? : IotSecuritySolutionAdditionalWorkspace[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): IotSecuritySolutionAdditionalWorkspaceOutputReference {
+    return new IotSecuritySolutionAdditionalWorkspaceOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface IotSecuritySolutionRecommendationsEnabled {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution#acr_authentication IotSecuritySolution#acr_authentication}
@@ -604,6 +707,7 @@ export function iotSecuritySolutionTimeoutsToTerraform(struct?: IotSecuritySolut
 
 export class IotSecuritySolutionTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -613,7 +717,10 @@ export class IotSecuritySolutionTimeoutsOutputReference extends cdktf.ComplexObj
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): IotSecuritySolutionTimeouts | undefined {
+  public get internalValue(): IotSecuritySolutionTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -635,16 +742,22 @@ export class IotSecuritySolutionTimeoutsOutputReference extends cdktf.ComplexObj
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: IotSecuritySolutionTimeouts | undefined) {
+  public set internalValue(value: IotSecuritySolutionTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -755,6 +868,7 @@ export class IotSecuritySolution extends cdktf.TerraformResource {
     this._displayName = config.displayName;
     this._enabled = config.enabled;
     this._eventsToExport = config.eventsToExport;
+    this._id = config.id;
     this._iothubIds = config.iothubIds;
     this._location = config.location;
     this._logAnalyticsWorkspaceId = config.logAnalyticsWorkspaceId;
@@ -764,7 +878,7 @@ export class IotSecuritySolution extends cdktf.TerraformResource {
     this._querySubscriptionIds = config.querySubscriptionIds;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
-    this._additionalWorkspace = config.additionalWorkspace;
+    this._additionalWorkspace.internalValue = config.additionalWorkspace;
     this._recommendationsEnabled.internalValue = config.recommendationsEnabled;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -835,8 +949,19 @@ export class IotSecuritySolution extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // iothub_ids - computed: false, optional: false, required: true
@@ -972,20 +1097,19 @@ export class IotSecuritySolution extends cdktf.TerraformResource {
   }
 
   // additional_workspace - computed: false, optional: true, required: false
-  private _additionalWorkspace?: IotSecuritySolutionAdditionalWorkspace[] | cdktf.IResolvable; 
+  private _additionalWorkspace = new IotSecuritySolutionAdditionalWorkspaceList(this, "additional_workspace", true);
   public get additionalWorkspace() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('additional_workspace')));
+    return this._additionalWorkspace;
   }
-  public set additionalWorkspace(value: IotSecuritySolutionAdditionalWorkspace[] | cdktf.IResolvable) {
-    this._additionalWorkspace = value;
+  public putAdditionalWorkspace(value: IotSecuritySolutionAdditionalWorkspace[] | cdktf.IResolvable) {
+    this._additionalWorkspace.internalValue = value;
   }
   public resetAdditionalWorkspace() {
-    this._additionalWorkspace = undefined;
+    this._additionalWorkspace.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get additionalWorkspaceInput() {
-    return this._additionalWorkspace;
+    return this._additionalWorkspace.internalValue;
   }
 
   // recommendations_enabled - computed: false, optional: true, required: false
@@ -1030,6 +1154,7 @@ export class IotSecuritySolution extends cdktf.TerraformResource {
       display_name: cdktf.stringToTerraform(this._displayName),
       enabled: cdktf.booleanToTerraform(this._enabled),
       events_to_export: cdktf.listMapper(cdktf.stringToTerraform)(this._eventsToExport),
+      id: cdktf.stringToTerraform(this._id),
       iothub_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._iothubIds),
       location: cdktf.stringToTerraform(this._location),
       log_analytics_workspace_id: cdktf.stringToTerraform(this._logAnalyticsWorkspaceId),
@@ -1039,7 +1164,7 @@ export class IotSecuritySolution extends cdktf.TerraformResource {
       query_subscription_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._querySubscriptionIds),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
-      additional_workspace: cdktf.listMapper(iotSecuritySolutionAdditionalWorkspaceToTerraform)(this._additionalWorkspace),
+      additional_workspace: cdktf.listMapper(iotSecuritySolutionAdditionalWorkspaceToTerraform)(this._additionalWorkspace.internalValue),
       recommendations_enabled: iotSecuritySolutionRecommendationsEnabledToTerraform(this._recommendationsEnabled.internalValue),
       timeouts: iotSecuritySolutionTimeoutsToTerraform(this._timeouts.internalValue),
     };

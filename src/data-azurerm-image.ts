@@ -8,6 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermImageConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/image#id DataAzurermImage#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/image#name DataAzurermImage#name}
   */
   readonly name?: string;
@@ -222,6 +229,7 @@ export function dataAzurermImageTimeoutsToTerraform(struct?: DataAzurermImageTim
 
 export class DataAzurermImageTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -231,7 +239,10 @@ export class DataAzurermImageTimeoutsOutputReference extends cdktf.ComplexObject
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): DataAzurermImageTimeouts | undefined {
+  public get internalValue(): DataAzurermImageTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._read !== undefined) {
@@ -241,13 +252,19 @@ export class DataAzurermImageTimeoutsOutputReference extends cdktf.ComplexObject
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: DataAzurermImageTimeouts | undefined) {
+  public set internalValue(value: DataAzurermImageTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._read = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._read = value.read;
     }
   }
@@ -303,6 +320,7 @@ export class DataAzurermImage extends cdktf.TerraformDataSource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._id = config.id;
     this._name = config.name;
     this._nameRegex = config.nameRegex;
     this._resourceGroupName = config.resourceGroupName;
@@ -321,8 +339,19 @@ export class DataAzurermImage extends cdktf.TerraformDataSource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // location - computed: true, optional: false, required: false
@@ -398,8 +427,9 @@ export class DataAzurermImage extends cdktf.TerraformDataSource {
   }
 
   // tags - computed: true, optional: false, required: false
-  public tags(key: string): string | cdktf.IResolvable {
-    return new cdktf.StringMap(this, 'tags').lookup(key);
+  private _tags = new cdktf.StringMap(this, "tags");
+  public get tags() {
+    return this._tags;
   }
 
   // zone_resilient - computed: true, optional: false, required: false
@@ -429,6 +459,7 @@ export class DataAzurermImage extends cdktf.TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       name_regex: cdktf.stringToTerraform(this._nameRegex),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),

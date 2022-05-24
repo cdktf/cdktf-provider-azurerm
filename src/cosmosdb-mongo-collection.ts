@@ -24,6 +24,13 @@ export interface CosmosdbMongoCollectionConfig extends cdktf.TerraformMetaArgume
   */
   readonly defaultTtlSeconds?: number;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_collection#id CosmosdbMongoCollection#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_collection#name CosmosdbMongoCollection#name}
   */
   readonly name: string;
@@ -214,6 +221,105 @@ export function cosmosdbMongoCollectionIndexToTerraform(struct?: CosmosdbMongoCo
   }
 }
 
+export class CosmosdbMongoCollectionIndexOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CosmosdbMongoCollectionIndex | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._keys !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keys = this._keys;
+    }
+    if (this._unique !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.unique = this._unique;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CosmosdbMongoCollectionIndex | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._keys = undefined;
+      this._unique = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._keys = value.keys;
+      this._unique = value.unique;
+    }
+  }
+
+  // keys - computed: false, optional: false, required: true
+  private _keys?: string[]; 
+  public get keys() {
+    return this.getListAttribute('keys');
+  }
+  public set keys(value: string[]) {
+    this._keys = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keysInput() {
+    return this._keys;
+  }
+
+  // unique - computed: false, optional: true, required: false
+  private _unique?: boolean | cdktf.IResolvable; 
+  public get unique() {
+    return this.getBooleanAttribute('unique');
+  }
+  public set unique(value: boolean | cdktf.IResolvable) {
+    this._unique = value;
+  }
+  public resetUnique() {
+    this._unique = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get uniqueInput() {
+    return this._unique;
+  }
+}
+
+export class CosmosdbMongoCollectionIndexList extends cdktf.ComplexList {
+  public internalValue? : CosmosdbMongoCollectionIndex[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CosmosdbMongoCollectionIndexOutputReference {
+    return new CosmosdbMongoCollectionIndexOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CosmosdbMongoCollectionTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_collection#create CosmosdbMongoCollection#create}
@@ -248,6 +354,7 @@ export function cosmosdbMongoCollectionTimeoutsToTerraform(struct?: CosmosdbMong
 
 export class CosmosdbMongoCollectionTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -257,7 +364,10 @@ export class CosmosdbMongoCollectionTimeoutsOutputReference extends cdktf.Comple
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): CosmosdbMongoCollectionTimeouts | undefined {
+  public get internalValue(): CosmosdbMongoCollectionTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -279,16 +389,22 @@ export class CosmosdbMongoCollectionTimeoutsOutputReference extends cdktf.Comple
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: CosmosdbMongoCollectionTimeouts | undefined) {
+  public set internalValue(value: CosmosdbMongoCollectionTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -399,12 +515,13 @@ export class CosmosdbMongoCollection extends cdktf.TerraformResource {
     this._analyticalStorageTtl = config.analyticalStorageTtl;
     this._databaseName = config.databaseName;
     this._defaultTtlSeconds = config.defaultTtlSeconds;
+    this._id = config.id;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._shardKey = config.shardKey;
     this._throughput = config.throughput;
     this._autoscaleSettings.internalValue = config.autoscaleSettings;
-    this._index = config.index;
+    this._index.internalValue = config.index;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -471,8 +588,19 @@ export class CosmosdbMongoCollection extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // name - computed: false, optional: false, required: true
@@ -556,20 +684,19 @@ export class CosmosdbMongoCollection extends cdktf.TerraformResource {
   }
 
   // index - computed: false, optional: true, required: false
-  private _index?: CosmosdbMongoCollectionIndex[] | cdktf.IResolvable; 
+  private _index = new CosmosdbMongoCollectionIndexList(this, "index", true);
   public get index() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('index')));
+    return this._index;
   }
-  public set index(value: CosmosdbMongoCollectionIndex[] | cdktf.IResolvable) {
-    this._index = value;
+  public putIndex(value: CosmosdbMongoCollectionIndex[] | cdktf.IResolvable) {
+    this._index.internalValue = value;
   }
   public resetIndex() {
-    this._index = undefined;
+    this._index.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get indexInput() {
-    return this._index;
+    return this._index.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -598,12 +725,13 @@ export class CosmosdbMongoCollection extends cdktf.TerraformResource {
       analytical_storage_ttl: cdktf.numberToTerraform(this._analyticalStorageTtl),
       database_name: cdktf.stringToTerraform(this._databaseName),
       default_ttl_seconds: cdktf.numberToTerraform(this._defaultTtlSeconds),
+      id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       shard_key: cdktf.stringToTerraform(this._shardKey),
       throughput: cdktf.numberToTerraform(this._throughput),
       autoscale_settings: cosmosdbMongoCollectionAutoscaleSettingsToTerraform(this._autoscaleSettings.internalValue),
-      index: cdktf.listMapper(cosmosdbMongoCollectionIndexToTerraform)(this._index),
+      index: cdktf.listMapper(cosmosdbMongoCollectionIndexToTerraform)(this._index.internalValue),
       timeouts: cosmosdbMongoCollectionTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

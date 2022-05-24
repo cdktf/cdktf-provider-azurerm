@@ -44,6 +44,13 @@ export interface ServicebusQueueConfig extends cdktf.TerraformMetaArguments {
   */
   readonly forwardTo?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue#id ServicebusQueue#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue#lock_duration ServicebusQueue#lock_duration}
   */
   readonly lockDuration?: string;
@@ -128,6 +135,7 @@ export function servicebusQueueTimeoutsToTerraform(struct?: ServicebusQueueTimeo
 
 export class ServicebusQueueTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -137,7 +145,10 @@ export class ServicebusQueueTimeoutsOutputReference extends cdktf.ComplexObject 
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): ServicebusQueueTimeouts | undefined {
+  public get internalValue(): ServicebusQueueTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -159,16 +170,22 @@ export class ServicebusQueueTimeoutsOutputReference extends cdktf.ComplexObject 
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: ServicebusQueueTimeouts | undefined) {
+  public set internalValue(value: ServicebusQueueTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -284,6 +301,7 @@ export class ServicebusQueue extends cdktf.TerraformResource {
     this._enablePartitioning = config.enablePartitioning;
     this._forwardDeadLetteredMessagesTo = config.forwardDeadLetteredMessagesTo;
     this._forwardTo = config.forwardTo;
+    this._id = config.id;
     this._lockDuration = config.lockDuration;
     this._maxDeliveryCount = config.maxDeliveryCount;
     this._maxMessageSizeInKilobytes = config.maxMessageSizeInKilobytes;
@@ -447,8 +465,19 @@ export class ServicebusQueue extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // lock_duration - computed: true, optional: true, required: false
@@ -655,6 +684,7 @@ export class ServicebusQueue extends cdktf.TerraformResource {
       enable_partitioning: cdktf.booleanToTerraform(this._enablePartitioning),
       forward_dead_lettered_messages_to: cdktf.stringToTerraform(this._forwardDeadLetteredMessagesTo),
       forward_to: cdktf.stringToTerraform(this._forwardTo),
+      id: cdktf.stringToTerraform(this._id),
       lock_duration: cdktf.stringToTerraform(this._lockDuration),
       max_delivery_count: cdktf.numberToTerraform(this._maxDeliveryCount),
       max_message_size_in_kilobytes: cdktf.numberToTerraform(this._maxMessageSizeInKilobytes),

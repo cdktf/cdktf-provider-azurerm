@@ -28,6 +28,13 @@ export interface StreamAnalyticsJobConfig extends cdktf.TerraformMetaArguments {
   */
   readonly eventsOutOfOrderPolicy?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_job#id StreamAnalyticsJob#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_job#location StreamAnalyticsJob#location}
   */
   readonly location: string;
@@ -178,6 +185,7 @@ export function streamAnalyticsJobTimeoutsToTerraform(struct?: StreamAnalyticsJo
 
 export class StreamAnalyticsJobTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -187,7 +195,10 @@ export class StreamAnalyticsJobTimeoutsOutputReference extends cdktf.ComplexObje
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): StreamAnalyticsJobTimeouts | undefined {
+  public get internalValue(): StreamAnalyticsJobTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -209,16 +220,22 @@ export class StreamAnalyticsJobTimeoutsOutputReference extends cdktf.ComplexObje
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: StreamAnalyticsJobTimeouts | undefined) {
+  public set internalValue(value: StreamAnalyticsJobTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -330,6 +347,7 @@ export class StreamAnalyticsJob extends cdktf.TerraformResource {
     this._eventsLateArrivalMaxDelayInSeconds = config.eventsLateArrivalMaxDelayInSeconds;
     this._eventsOutOfOrderMaxDelayInSeconds = config.eventsOutOfOrderMaxDelayInSeconds;
     this._eventsOutOfOrderPolicy = config.eventsOutOfOrderPolicy;
+    this._id = config.id;
     this._location = config.location;
     this._name = config.name;
     this._outputErrorPolicy = config.outputErrorPolicy;
@@ -427,8 +445,19 @@ export class StreamAnalyticsJob extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // job_id - computed: true, optional: false, required: false
@@ -592,6 +621,7 @@ export class StreamAnalyticsJob extends cdktf.TerraformResource {
       events_late_arrival_max_delay_in_seconds: cdktf.numberToTerraform(this._eventsLateArrivalMaxDelayInSeconds),
       events_out_of_order_max_delay_in_seconds: cdktf.numberToTerraform(this._eventsOutOfOrderMaxDelayInSeconds),
       events_out_of_order_policy: cdktf.stringToTerraform(this._eventsOutOfOrderPolicy),
+      id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       output_error_policy: cdktf.stringToTerraform(this._outputErrorPolicy),

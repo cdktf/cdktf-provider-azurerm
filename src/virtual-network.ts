@@ -24,6 +24,13 @@ export interface VirtualNetworkConfig extends cdktf.TerraformMetaArguments {
   */
   readonly flowTimeoutInMinutes?: number;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network#id VirtualNetwork#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network#location VirtualNetwork#location}
   */
   readonly location: string;
@@ -67,6 +74,9 @@ export interface VirtualNetworkSubnet {
   readonly addressPrefix?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network#id VirtualNetwork#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
@@ -86,11 +96,158 @@ export function virtualNetworkSubnetToTerraform(struct?: VirtualNetworkSubnet | 
   }
   return {
     address_prefix: struct!.addressPrefix === undefined ? null : cdktf.stringToTerraform(struct!.addressPrefix),
+    id: struct!.id === undefined ? null : cdktf.stringToTerraform(struct!.id),
     name: struct!.name === undefined ? null : cdktf.stringToTerraform(struct!.name),
     security_group: struct!.securityGroup === undefined ? null : cdktf.stringToTerraform(struct!.securityGroup),
   }
 }
 
+export class VirtualNetworkSubnetOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): VirtualNetworkSubnet | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._addressPrefix !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.addressPrefix = this._addressPrefix;
+    }
+    if (this._id !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.id = this._id;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._securityGroup !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.securityGroup = this._securityGroup;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: VirtualNetworkSubnet | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._addressPrefix = undefined;
+      this._id = undefined;
+      this._name = undefined;
+      this._securityGroup = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._addressPrefix = value.addressPrefix;
+      this._id = value.id;
+      this._name = value.name;
+      this._securityGroup = value.securityGroup;
+    }
+  }
+
+  // address_prefix - computed: true, optional: true, required: false
+  private _addressPrefix?: string; 
+  public get addressPrefix() {
+    return this.getStringAttribute('address_prefix');
+  }
+  public set addressPrefix(value: string) {
+    this._addressPrefix = value;
+  }
+  public resetAddressPrefix() {
+    this._addressPrefix = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get addressPrefixInput() {
+    return this._addressPrefix;
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // name - computed: true, optional: true, required: false
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // security_group - computed: true, optional: true, required: false
+  private _securityGroup?: string; 
+  public get securityGroup() {
+    return this.getStringAttribute('security_group');
+  }
+  public set securityGroup(value: string) {
+    this._securityGroup = value;
+  }
+  public resetSecurityGroup() {
+    this._securityGroup = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get securityGroupInput() {
+    return this._securityGroup;
+  }
+}
+
+export class VirtualNetworkSubnetList extends cdktf.ComplexList {
+  public internalValue? : VirtualNetworkSubnet[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): VirtualNetworkSubnetOutputReference {
+    return new VirtualNetworkSubnetOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface VirtualNetworkDdosProtectionPlan {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network#enable VirtualNetwork#enable}
@@ -98,6 +255,9 @@ export interface VirtualNetworkDdosProtectionPlan {
   readonly enable: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network#id VirtualNetwork#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id: string;
 }
@@ -211,6 +371,7 @@ export function virtualNetworkTimeoutsToTerraform(struct?: VirtualNetworkTimeout
 
 export class VirtualNetworkTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -220,7 +381,10 @@ export class VirtualNetworkTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): VirtualNetworkTimeouts | undefined {
+  public get internalValue(): VirtualNetworkTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -242,16 +406,22 @@ export class VirtualNetworkTimeoutsOutputReference extends cdktf.ComplexObject {
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: VirtualNetworkTimeouts | undefined) {
+  public set internalValue(value: VirtualNetworkTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -362,10 +532,11 @@ export class VirtualNetwork extends cdktf.TerraformResource {
     this._bgpCommunity = config.bgpCommunity;
     this._dnsServers = config.dnsServers;
     this._flowTimeoutInMinutes = config.flowTimeoutInMinutes;
+    this._id = config.id;
     this._location = config.location;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
-    this._subnet = config.subnet;
+    this._subnet.internalValue = config.subnet;
     this._tags = config.tags;
     this._vmProtectionEnabled = config.vmProtectionEnabled;
     this._ddosProtectionPlan.internalValue = config.ddosProtectionPlan;
@@ -443,8 +614,19 @@ export class VirtualNetwork extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // location - computed: false, optional: false, required: true
@@ -487,20 +669,19 @@ export class VirtualNetwork extends cdktf.TerraformResource {
   }
 
   // subnet - computed: true, optional: true, required: false
-  private _subnet?: VirtualNetworkSubnet[] | cdktf.IResolvable; 
+  private _subnet = new VirtualNetworkSubnetList(this, "subnet", true);
   public get subnet() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('subnet')));
+    return this._subnet;
   }
-  public set subnet(value: VirtualNetworkSubnet[] | cdktf.IResolvable) {
-    this._subnet = value;
+  public putSubnet(value: VirtualNetworkSubnet[] | cdktf.IResolvable) {
+    this._subnet.internalValue = value;
   }
   public resetSubnet() {
-    this._subnet = undefined;
+    this._subnet.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get subnetInput() {
-    return this._subnet;
+    return this._subnet.internalValue;
   }
 
   // tags - computed: false, optional: true, required: false
@@ -577,10 +758,11 @@ export class VirtualNetwork extends cdktf.TerraformResource {
       bgp_community: cdktf.stringToTerraform(this._bgpCommunity),
       dns_servers: cdktf.listMapper(cdktf.stringToTerraform)(this._dnsServers),
       flow_timeout_in_minutes: cdktf.numberToTerraform(this._flowTimeoutInMinutes),
+      id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      subnet: cdktf.listMapper(virtualNetworkSubnetToTerraform)(this._subnet),
+      subnet: cdktf.listMapper(virtualNetworkSubnetToTerraform)(this._subnet.internalValue),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       vm_protection_enabled: cdktf.booleanToTerraform(this._vmProtectionEnabled),
       ddos_protection_plan: virtualNetworkDdosProtectionPlanToTerraform(this._ddosProtectionPlan.internalValue),

@@ -20,6 +20,13 @@ export interface MssqlServerSecurityAlertPolicyConfig extends cdktf.TerraformMet
   */
   readonly emailAddresses?: string[];
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_security_alert_policy#id MssqlServerSecurityAlertPolicy#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_security_alert_policy#resource_group_name MssqlServerSecurityAlertPolicy#resource_group_name}
   */
   readonly resourceGroupName: string;
@@ -84,6 +91,7 @@ export function mssqlServerSecurityAlertPolicyTimeoutsToTerraform(struct?: Mssql
 
 export class MssqlServerSecurityAlertPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -93,7 +101,10 @@ export class MssqlServerSecurityAlertPolicyTimeoutsOutputReference extends cdktf
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): MssqlServerSecurityAlertPolicyTimeouts | undefined {
+  public get internalValue(): MssqlServerSecurityAlertPolicyTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -115,16 +126,22 @@ export class MssqlServerSecurityAlertPolicyTimeoutsOutputReference extends cdktf
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: MssqlServerSecurityAlertPolicyTimeouts | undefined) {
+  public set internalValue(value: MssqlServerSecurityAlertPolicyTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -234,6 +251,7 @@ export class MssqlServerSecurityAlertPolicy extends cdktf.TerraformResource {
     this._disabledAlerts = config.disabledAlerts;
     this._emailAccountAdmins = config.emailAccountAdmins;
     this._emailAddresses = config.emailAddresses;
+    this._id = config.id;
     this._resourceGroupName = config.resourceGroupName;
     this._retentionDays = config.retentionDays;
     this._serverName = config.serverName;
@@ -296,8 +314,19 @@ export class MssqlServerSecurityAlertPolicy extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -412,6 +441,7 @@ export class MssqlServerSecurityAlertPolicy extends cdktf.TerraformResource {
       disabled_alerts: cdktf.listMapper(cdktf.stringToTerraform)(this._disabledAlerts),
       email_account_admins: cdktf.booleanToTerraform(this._emailAccountAdmins),
       email_addresses: cdktf.listMapper(cdktf.stringToTerraform)(this._emailAddresses),
+      id: cdktf.stringToTerraform(this._id),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       retention_days: cdktf.numberToTerraform(this._retentionDays),
       server_name: cdktf.stringToTerraform(this._serverName),

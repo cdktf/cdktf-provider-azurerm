@@ -12,6 +12,13 @@ export interface MonitorActionGroupConfig extends cdktf.TerraformMetaArguments {
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group#id MonitorActionGroup#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group#name MonitorActionGroup#name}
   */
   readonly name: string;
@@ -127,6 +134,124 @@ export function monitorActionGroupArmRoleReceiverToTerraform(struct?: MonitorAct
   }
 }
 
+export class MonitorActionGroupArmRoleReceiverOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MonitorActionGroupArmRoleReceiver | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._roleId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.roleId = this._roleId;
+    }
+    if (this._useCommonAlertSchema !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.useCommonAlertSchema = this._useCommonAlertSchema;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitorActionGroupArmRoleReceiver | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._roleId = undefined;
+      this._useCommonAlertSchema = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._roleId = value.roleId;
+      this._useCommonAlertSchema = value.useCommonAlertSchema;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // role_id - computed: false, optional: false, required: true
+  private _roleId?: string; 
+  public get roleId() {
+    return this.getStringAttribute('role_id');
+  }
+  public set roleId(value: string) {
+    this._roleId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get roleIdInput() {
+    return this._roleId;
+  }
+
+  // use_common_alert_schema - computed: false, optional: true, required: false
+  private _useCommonAlertSchema?: boolean | cdktf.IResolvable; 
+  public get useCommonAlertSchema() {
+    return this.getBooleanAttribute('use_common_alert_schema');
+  }
+  public set useCommonAlertSchema(value: boolean | cdktf.IResolvable) {
+    this._useCommonAlertSchema = value;
+  }
+  public resetUseCommonAlertSchema() {
+    this._useCommonAlertSchema = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get useCommonAlertSchemaInput() {
+    return this._useCommonAlertSchema;
+  }
+}
+
+export class MonitorActionGroupArmRoleReceiverList extends cdktf.ComplexList {
+  public internalValue? : MonitorActionGroupArmRoleReceiver[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MonitorActionGroupArmRoleReceiverOutputReference {
+    return new MonitorActionGroupArmRoleReceiverOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface MonitorActionGroupAutomationRunbookReceiver {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group#automation_account_id MonitorActionGroup#automation_account_id}
@@ -174,6 +299,200 @@ export function monitorActionGroupAutomationRunbookReceiverToTerraform(struct?: 
   }
 }
 
+export class MonitorActionGroupAutomationRunbookReceiverOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MonitorActionGroupAutomationRunbookReceiver | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._automationAccountId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.automationAccountId = this._automationAccountId;
+    }
+    if (this._isGlobalRunbook !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.isGlobalRunbook = this._isGlobalRunbook;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._runbookName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.runbookName = this._runbookName;
+    }
+    if (this._serviceUri !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.serviceUri = this._serviceUri;
+    }
+    if (this._useCommonAlertSchema !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.useCommonAlertSchema = this._useCommonAlertSchema;
+    }
+    if (this._webhookResourceId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.webhookResourceId = this._webhookResourceId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitorActionGroupAutomationRunbookReceiver | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._automationAccountId = undefined;
+      this._isGlobalRunbook = undefined;
+      this._name = undefined;
+      this._runbookName = undefined;
+      this._serviceUri = undefined;
+      this._useCommonAlertSchema = undefined;
+      this._webhookResourceId = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._automationAccountId = value.automationAccountId;
+      this._isGlobalRunbook = value.isGlobalRunbook;
+      this._name = value.name;
+      this._runbookName = value.runbookName;
+      this._serviceUri = value.serviceUri;
+      this._useCommonAlertSchema = value.useCommonAlertSchema;
+      this._webhookResourceId = value.webhookResourceId;
+    }
+  }
+
+  // automation_account_id - computed: false, optional: false, required: true
+  private _automationAccountId?: string; 
+  public get automationAccountId() {
+    return this.getStringAttribute('automation_account_id');
+  }
+  public set automationAccountId(value: string) {
+    this._automationAccountId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get automationAccountIdInput() {
+    return this._automationAccountId;
+  }
+
+  // is_global_runbook - computed: false, optional: false, required: true
+  private _isGlobalRunbook?: boolean | cdktf.IResolvable; 
+  public get isGlobalRunbook() {
+    return this.getBooleanAttribute('is_global_runbook');
+  }
+  public set isGlobalRunbook(value: boolean | cdktf.IResolvable) {
+    this._isGlobalRunbook = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get isGlobalRunbookInput() {
+    return this._isGlobalRunbook;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // runbook_name - computed: false, optional: false, required: true
+  private _runbookName?: string; 
+  public get runbookName() {
+    return this.getStringAttribute('runbook_name');
+  }
+  public set runbookName(value: string) {
+    this._runbookName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get runbookNameInput() {
+    return this._runbookName;
+  }
+
+  // service_uri - computed: false, optional: false, required: true
+  private _serviceUri?: string; 
+  public get serviceUri() {
+    return this.getStringAttribute('service_uri');
+  }
+  public set serviceUri(value: string) {
+    this._serviceUri = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceUriInput() {
+    return this._serviceUri;
+  }
+
+  // use_common_alert_schema - computed: false, optional: true, required: false
+  private _useCommonAlertSchema?: boolean | cdktf.IResolvable; 
+  public get useCommonAlertSchema() {
+    return this.getBooleanAttribute('use_common_alert_schema');
+  }
+  public set useCommonAlertSchema(value: boolean | cdktf.IResolvable) {
+    this._useCommonAlertSchema = value;
+  }
+  public resetUseCommonAlertSchema() {
+    this._useCommonAlertSchema = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get useCommonAlertSchemaInput() {
+    return this._useCommonAlertSchema;
+  }
+
+  // webhook_resource_id - computed: false, optional: false, required: true
+  private _webhookResourceId?: string; 
+  public get webhookResourceId() {
+    return this.getStringAttribute('webhook_resource_id');
+  }
+  public set webhookResourceId(value: string) {
+    this._webhookResourceId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get webhookResourceIdInput() {
+    return this._webhookResourceId;
+  }
+}
+
+export class MonitorActionGroupAutomationRunbookReceiverList extends cdktf.ComplexList {
+  public internalValue? : MonitorActionGroupAutomationRunbookReceiver[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MonitorActionGroupAutomationRunbookReceiverOutputReference {
+    return new MonitorActionGroupAutomationRunbookReceiverOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface MonitorActionGroupAzureAppPushReceiver {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group#email_address MonitorActionGroup#email_address}
@@ -196,6 +515,102 @@ export function monitorActionGroupAzureAppPushReceiverToTerraform(struct?: Monit
   }
 }
 
+export class MonitorActionGroupAzureAppPushReceiverOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MonitorActionGroupAzureAppPushReceiver | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._emailAddress !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.emailAddress = this._emailAddress;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitorActionGroupAzureAppPushReceiver | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._emailAddress = undefined;
+      this._name = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._emailAddress = value.emailAddress;
+      this._name = value.name;
+    }
+  }
+
+  // email_address - computed: false, optional: false, required: true
+  private _emailAddress?: string; 
+  public get emailAddress() {
+    return this.getStringAttribute('email_address');
+  }
+  public set emailAddress(value: string) {
+    this._emailAddress = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get emailAddressInput() {
+    return this._emailAddress;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+}
+
+export class MonitorActionGroupAzureAppPushReceiverList extends cdktf.ComplexList {
+  public internalValue? : MonitorActionGroupAzureAppPushReceiver[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MonitorActionGroupAzureAppPushReceiverOutputReference {
+    return new MonitorActionGroupAzureAppPushReceiverOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface MonitorActionGroupAzureFunctionReceiver {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group#function_app_resource_id MonitorActionGroup#function_app_resource_id}
@@ -233,6 +648,162 @@ export function monitorActionGroupAzureFunctionReceiverToTerraform(struct?: Moni
   }
 }
 
+export class MonitorActionGroupAzureFunctionReceiverOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MonitorActionGroupAzureFunctionReceiver | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._functionAppResourceId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.functionAppResourceId = this._functionAppResourceId;
+    }
+    if (this._functionName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.functionName = this._functionName;
+    }
+    if (this._httpTriggerUrl !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.httpTriggerUrl = this._httpTriggerUrl;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._useCommonAlertSchema !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.useCommonAlertSchema = this._useCommonAlertSchema;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitorActionGroupAzureFunctionReceiver | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._functionAppResourceId = undefined;
+      this._functionName = undefined;
+      this._httpTriggerUrl = undefined;
+      this._name = undefined;
+      this._useCommonAlertSchema = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._functionAppResourceId = value.functionAppResourceId;
+      this._functionName = value.functionName;
+      this._httpTriggerUrl = value.httpTriggerUrl;
+      this._name = value.name;
+      this._useCommonAlertSchema = value.useCommonAlertSchema;
+    }
+  }
+
+  // function_app_resource_id - computed: false, optional: false, required: true
+  private _functionAppResourceId?: string; 
+  public get functionAppResourceId() {
+    return this.getStringAttribute('function_app_resource_id');
+  }
+  public set functionAppResourceId(value: string) {
+    this._functionAppResourceId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get functionAppResourceIdInput() {
+    return this._functionAppResourceId;
+  }
+
+  // function_name - computed: false, optional: false, required: true
+  private _functionName?: string; 
+  public get functionName() {
+    return this.getStringAttribute('function_name');
+  }
+  public set functionName(value: string) {
+    this._functionName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get functionNameInput() {
+    return this._functionName;
+  }
+
+  // http_trigger_url - computed: false, optional: false, required: true
+  private _httpTriggerUrl?: string; 
+  public get httpTriggerUrl() {
+    return this.getStringAttribute('http_trigger_url');
+  }
+  public set httpTriggerUrl(value: string) {
+    this._httpTriggerUrl = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get httpTriggerUrlInput() {
+    return this._httpTriggerUrl;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // use_common_alert_schema - computed: false, optional: true, required: false
+  private _useCommonAlertSchema?: boolean | cdktf.IResolvable; 
+  public get useCommonAlertSchema() {
+    return this.getBooleanAttribute('use_common_alert_schema');
+  }
+  public set useCommonAlertSchema(value: boolean | cdktf.IResolvable) {
+    this._useCommonAlertSchema = value;
+  }
+  public resetUseCommonAlertSchema() {
+    this._useCommonAlertSchema = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get useCommonAlertSchemaInput() {
+    return this._useCommonAlertSchema;
+  }
+}
+
+export class MonitorActionGroupAzureFunctionReceiverList extends cdktf.ComplexList {
+  public internalValue? : MonitorActionGroupAzureFunctionReceiver[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MonitorActionGroupAzureFunctionReceiverOutputReference {
+    return new MonitorActionGroupAzureFunctionReceiverOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface MonitorActionGroupEmailReceiver {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group#email_address MonitorActionGroup#email_address}
@@ -260,6 +831,124 @@ export function monitorActionGroupEmailReceiverToTerraform(struct?: MonitorActio
   }
 }
 
+export class MonitorActionGroupEmailReceiverOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MonitorActionGroupEmailReceiver | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._emailAddress !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.emailAddress = this._emailAddress;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._useCommonAlertSchema !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.useCommonAlertSchema = this._useCommonAlertSchema;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitorActionGroupEmailReceiver | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._emailAddress = undefined;
+      this._name = undefined;
+      this._useCommonAlertSchema = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._emailAddress = value.emailAddress;
+      this._name = value.name;
+      this._useCommonAlertSchema = value.useCommonAlertSchema;
+    }
+  }
+
+  // email_address - computed: false, optional: false, required: true
+  private _emailAddress?: string; 
+  public get emailAddress() {
+    return this.getStringAttribute('email_address');
+  }
+  public set emailAddress(value: string) {
+    this._emailAddress = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get emailAddressInput() {
+    return this._emailAddress;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // use_common_alert_schema - computed: false, optional: true, required: false
+  private _useCommonAlertSchema?: boolean | cdktf.IResolvable; 
+  public get useCommonAlertSchema() {
+    return this.getBooleanAttribute('use_common_alert_schema');
+  }
+  public set useCommonAlertSchema(value: boolean | cdktf.IResolvable) {
+    this._useCommonAlertSchema = value;
+  }
+  public resetUseCommonAlertSchema() {
+    this._useCommonAlertSchema = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get useCommonAlertSchemaInput() {
+    return this._useCommonAlertSchema;
+  }
+}
+
+export class MonitorActionGroupEmailReceiverList extends cdktf.ComplexList {
+  public internalValue? : MonitorActionGroupEmailReceiver[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MonitorActionGroupEmailReceiverOutputReference {
+    return new MonitorActionGroupEmailReceiverOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface MonitorActionGroupEventHubReceiver {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group#event_hub_id MonitorActionGroup#event_hub_id}
@@ -292,6 +981,146 @@ export function monitorActionGroupEventHubReceiverToTerraform(struct?: MonitorAc
   }
 }
 
+export class MonitorActionGroupEventHubReceiverOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MonitorActionGroupEventHubReceiver | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._eventHubId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.eventHubId = this._eventHubId;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._tenantId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.tenantId = this._tenantId;
+    }
+    if (this._useCommonAlertSchema !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.useCommonAlertSchema = this._useCommonAlertSchema;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitorActionGroupEventHubReceiver | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._eventHubId = undefined;
+      this._name = undefined;
+      this._tenantId = undefined;
+      this._useCommonAlertSchema = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._eventHubId = value.eventHubId;
+      this._name = value.name;
+      this._tenantId = value.tenantId;
+      this._useCommonAlertSchema = value.useCommonAlertSchema;
+    }
+  }
+
+  // event_hub_id - computed: false, optional: false, required: true
+  private _eventHubId?: string; 
+  public get eventHubId() {
+    return this.getStringAttribute('event_hub_id');
+  }
+  public set eventHubId(value: string) {
+    this._eventHubId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get eventHubIdInput() {
+    return this._eventHubId;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // tenant_id - computed: true, optional: true, required: false
+  private _tenantId?: string; 
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
+  }
+  public set tenantId(value: string) {
+    this._tenantId = value;
+  }
+  public resetTenantId() {
+    this._tenantId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tenantIdInput() {
+    return this._tenantId;
+  }
+
+  // use_common_alert_schema - computed: false, optional: true, required: false
+  private _useCommonAlertSchema?: boolean | cdktf.IResolvable; 
+  public get useCommonAlertSchema() {
+    return this.getBooleanAttribute('use_common_alert_schema');
+  }
+  public set useCommonAlertSchema(value: boolean | cdktf.IResolvable) {
+    this._useCommonAlertSchema = value;
+  }
+  public resetUseCommonAlertSchema() {
+    this._useCommonAlertSchema = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get useCommonAlertSchemaInput() {
+    return this._useCommonAlertSchema;
+  }
+}
+
+export class MonitorActionGroupEventHubReceiverList extends cdktf.ComplexList {
+  public internalValue? : MonitorActionGroupEventHubReceiver[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MonitorActionGroupEventHubReceiverOutputReference {
+    return new MonitorActionGroupEventHubReceiverOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface MonitorActionGroupItsmReceiver {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group#connection_id MonitorActionGroup#connection_id}
@@ -329,6 +1158,159 @@ export function monitorActionGroupItsmReceiverToTerraform(struct?: MonitorAction
   }
 }
 
+export class MonitorActionGroupItsmReceiverOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MonitorActionGroupItsmReceiver | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._connectionId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.connectionId = this._connectionId;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._region !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.region = this._region;
+    }
+    if (this._ticketConfiguration !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ticketConfiguration = this._ticketConfiguration;
+    }
+    if (this._workspaceId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.workspaceId = this._workspaceId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitorActionGroupItsmReceiver | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._connectionId = undefined;
+      this._name = undefined;
+      this._region = undefined;
+      this._ticketConfiguration = undefined;
+      this._workspaceId = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._connectionId = value.connectionId;
+      this._name = value.name;
+      this._region = value.region;
+      this._ticketConfiguration = value.ticketConfiguration;
+      this._workspaceId = value.workspaceId;
+    }
+  }
+
+  // connection_id - computed: false, optional: false, required: true
+  private _connectionId?: string; 
+  public get connectionId() {
+    return this.getStringAttribute('connection_id');
+  }
+  public set connectionId(value: string) {
+    this._connectionId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get connectionIdInput() {
+    return this._connectionId;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // region - computed: false, optional: false, required: true
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
+  // ticket_configuration - computed: false, optional: false, required: true
+  private _ticketConfiguration?: string; 
+  public get ticketConfiguration() {
+    return this.getStringAttribute('ticket_configuration');
+  }
+  public set ticketConfiguration(value: string) {
+    this._ticketConfiguration = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ticketConfigurationInput() {
+    return this._ticketConfiguration;
+  }
+
+  // workspace_id - computed: false, optional: false, required: true
+  private _workspaceId?: string; 
+  public get workspaceId() {
+    return this.getStringAttribute('workspace_id');
+  }
+  public set workspaceId(value: string) {
+    this._workspaceId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get workspaceIdInput() {
+    return this._workspaceId;
+  }
+}
+
+export class MonitorActionGroupItsmReceiverList extends cdktf.ComplexList {
+  public internalValue? : MonitorActionGroupItsmReceiver[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MonitorActionGroupItsmReceiverOutputReference {
+    return new MonitorActionGroupItsmReceiverOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface MonitorActionGroupLogicAppReceiver {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group#callback_url MonitorActionGroup#callback_url}
@@ -361,6 +1343,143 @@ export function monitorActionGroupLogicAppReceiverToTerraform(struct?: MonitorAc
   }
 }
 
+export class MonitorActionGroupLogicAppReceiverOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MonitorActionGroupLogicAppReceiver | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._callbackUrl !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.callbackUrl = this._callbackUrl;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._resourceId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.resourceId = this._resourceId;
+    }
+    if (this._useCommonAlertSchema !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.useCommonAlertSchema = this._useCommonAlertSchema;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitorActionGroupLogicAppReceiver | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._callbackUrl = undefined;
+      this._name = undefined;
+      this._resourceId = undefined;
+      this._useCommonAlertSchema = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._callbackUrl = value.callbackUrl;
+      this._name = value.name;
+      this._resourceId = value.resourceId;
+      this._useCommonAlertSchema = value.useCommonAlertSchema;
+    }
+  }
+
+  // callback_url - computed: false, optional: false, required: true
+  private _callbackUrl?: string; 
+  public get callbackUrl() {
+    return this.getStringAttribute('callback_url');
+  }
+  public set callbackUrl(value: string) {
+    this._callbackUrl = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get callbackUrlInput() {
+    return this._callbackUrl;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // resource_id - computed: false, optional: false, required: true
+  private _resourceId?: string; 
+  public get resourceId() {
+    return this.getStringAttribute('resource_id');
+  }
+  public set resourceId(value: string) {
+    this._resourceId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceIdInput() {
+    return this._resourceId;
+  }
+
+  // use_common_alert_schema - computed: false, optional: true, required: false
+  private _useCommonAlertSchema?: boolean | cdktf.IResolvable; 
+  public get useCommonAlertSchema() {
+    return this.getBooleanAttribute('use_common_alert_schema');
+  }
+  public set useCommonAlertSchema(value: boolean | cdktf.IResolvable) {
+    this._useCommonAlertSchema = value;
+  }
+  public resetUseCommonAlertSchema() {
+    this._useCommonAlertSchema = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get useCommonAlertSchemaInput() {
+    return this._useCommonAlertSchema;
+  }
+}
+
+export class MonitorActionGroupLogicAppReceiverList extends cdktf.ComplexList {
+  public internalValue? : MonitorActionGroupLogicAppReceiver[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MonitorActionGroupLogicAppReceiverOutputReference {
+    return new MonitorActionGroupLogicAppReceiverOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface MonitorActionGroupSmsReceiver {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group#country_code MonitorActionGroup#country_code}
@@ -388,6 +1507,121 @@ export function monitorActionGroupSmsReceiverToTerraform(struct?: MonitorActionG
   }
 }
 
+export class MonitorActionGroupSmsReceiverOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MonitorActionGroupSmsReceiver | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._countryCode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.countryCode = this._countryCode;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._phoneNumber !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.phoneNumber = this._phoneNumber;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitorActionGroupSmsReceiver | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._countryCode = undefined;
+      this._name = undefined;
+      this._phoneNumber = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._countryCode = value.countryCode;
+      this._name = value.name;
+      this._phoneNumber = value.phoneNumber;
+    }
+  }
+
+  // country_code - computed: false, optional: false, required: true
+  private _countryCode?: string; 
+  public get countryCode() {
+    return this.getStringAttribute('country_code');
+  }
+  public set countryCode(value: string) {
+    this._countryCode = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get countryCodeInput() {
+    return this._countryCode;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // phone_number - computed: false, optional: false, required: true
+  private _phoneNumber?: string; 
+  public get phoneNumber() {
+    return this.getStringAttribute('phone_number');
+  }
+  public set phoneNumber(value: string) {
+    this._phoneNumber = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get phoneNumberInput() {
+    return this._phoneNumber;
+  }
+}
+
+export class MonitorActionGroupSmsReceiverList extends cdktf.ComplexList {
+  public internalValue? : MonitorActionGroupSmsReceiver[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MonitorActionGroupSmsReceiverOutputReference {
+    return new MonitorActionGroupSmsReceiverOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface MonitorActionGroupTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group#create MonitorActionGroup#create}
@@ -422,6 +1656,7 @@ export function monitorActionGroupTimeoutsToTerraform(struct?: MonitorActionGrou
 
 export class MonitorActionGroupTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -431,7 +1666,10 @@ export class MonitorActionGroupTimeoutsOutputReference extends cdktf.ComplexObje
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): MonitorActionGroupTimeouts | undefined {
+  public get internalValue(): MonitorActionGroupTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -453,16 +1691,22 @@ export class MonitorActionGroupTimeoutsOutputReference extends cdktf.ComplexObje
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: MonitorActionGroupTimeouts | undefined) {
+  public set internalValue(value: MonitorActionGroupTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -561,6 +1805,121 @@ export function monitorActionGroupVoiceReceiverToTerraform(struct?: MonitorActio
   }
 }
 
+export class MonitorActionGroupVoiceReceiverOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MonitorActionGroupVoiceReceiver | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._countryCode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.countryCode = this._countryCode;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._phoneNumber !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.phoneNumber = this._phoneNumber;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitorActionGroupVoiceReceiver | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._countryCode = undefined;
+      this._name = undefined;
+      this._phoneNumber = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._countryCode = value.countryCode;
+      this._name = value.name;
+      this._phoneNumber = value.phoneNumber;
+    }
+  }
+
+  // country_code - computed: false, optional: false, required: true
+  private _countryCode?: string; 
+  public get countryCode() {
+    return this.getStringAttribute('country_code');
+  }
+  public set countryCode(value: string) {
+    this._countryCode = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get countryCodeInput() {
+    return this._countryCode;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // phone_number - computed: false, optional: false, required: true
+  private _phoneNumber?: string; 
+  public get phoneNumber() {
+    return this.getStringAttribute('phone_number');
+  }
+  public set phoneNumber(value: string) {
+    this._phoneNumber = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get phoneNumberInput() {
+    return this._phoneNumber;
+  }
+}
+
+export class MonitorActionGroupVoiceReceiverList extends cdktf.ComplexList {
+  public internalValue? : MonitorActionGroupVoiceReceiver[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MonitorActionGroupVoiceReceiverOutputReference {
+    return new MonitorActionGroupVoiceReceiverOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface MonitorActionGroupWebhookReceiverAadAuth {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group#identifier_uri MonitorActionGroup#identifier_uri}
@@ -711,6 +2070,146 @@ export function monitorActionGroupWebhookReceiverToTerraform(struct?: MonitorAct
   }
 }
 
+export class MonitorActionGroupWebhookReceiverOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MonitorActionGroupWebhookReceiver | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._serviceUri !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.serviceUri = this._serviceUri;
+    }
+    if (this._useCommonAlertSchema !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.useCommonAlertSchema = this._useCommonAlertSchema;
+    }
+    if (this._aadAuth?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.aadAuth = this._aadAuth?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitorActionGroupWebhookReceiver | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._serviceUri = undefined;
+      this._useCommonAlertSchema = undefined;
+      this._aadAuth.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._serviceUri = value.serviceUri;
+      this._useCommonAlertSchema = value.useCommonAlertSchema;
+      this._aadAuth.internalValue = value.aadAuth;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // service_uri - computed: false, optional: false, required: true
+  private _serviceUri?: string; 
+  public get serviceUri() {
+    return this.getStringAttribute('service_uri');
+  }
+  public set serviceUri(value: string) {
+    this._serviceUri = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceUriInput() {
+    return this._serviceUri;
+  }
+
+  // use_common_alert_schema - computed: false, optional: true, required: false
+  private _useCommonAlertSchema?: boolean | cdktf.IResolvable; 
+  public get useCommonAlertSchema() {
+    return this.getBooleanAttribute('use_common_alert_schema');
+  }
+  public set useCommonAlertSchema(value: boolean | cdktf.IResolvable) {
+    this._useCommonAlertSchema = value;
+  }
+  public resetUseCommonAlertSchema() {
+    this._useCommonAlertSchema = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get useCommonAlertSchemaInput() {
+    return this._useCommonAlertSchema;
+  }
+
+  // aad_auth - computed: false, optional: true, required: false
+  private _aadAuth = new MonitorActionGroupWebhookReceiverAadAuthOutputReference(this, "aad_auth");
+  public get aadAuth() {
+    return this._aadAuth;
+  }
+  public putAadAuth(value: MonitorActionGroupWebhookReceiverAadAuth) {
+    this._aadAuth.internalValue = value;
+  }
+  public resetAadAuth() {
+    this._aadAuth.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get aadAuthInput() {
+    return this._aadAuth.internalValue;
+  }
+}
+
+export class MonitorActionGroupWebhookReceiverList extends cdktf.ComplexList {
+  public internalValue? : MonitorActionGroupWebhookReceiver[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MonitorActionGroupWebhookReceiverOutputReference {
+    return new MonitorActionGroupWebhookReceiverOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group azurerm_monitor_action_group}
@@ -747,22 +2246,23 @@ export class MonitorActionGroup extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._enabled = config.enabled;
+    this._id = config.id;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._shortName = config.shortName;
     this._tags = config.tags;
-    this._armRoleReceiver = config.armRoleReceiver;
-    this._automationRunbookReceiver = config.automationRunbookReceiver;
-    this._azureAppPushReceiver = config.azureAppPushReceiver;
-    this._azureFunctionReceiver = config.azureFunctionReceiver;
-    this._emailReceiver = config.emailReceiver;
-    this._eventHubReceiver = config.eventHubReceiver;
-    this._itsmReceiver = config.itsmReceiver;
-    this._logicAppReceiver = config.logicAppReceiver;
-    this._smsReceiver = config.smsReceiver;
+    this._armRoleReceiver.internalValue = config.armRoleReceiver;
+    this._automationRunbookReceiver.internalValue = config.automationRunbookReceiver;
+    this._azureAppPushReceiver.internalValue = config.azureAppPushReceiver;
+    this._azureFunctionReceiver.internalValue = config.azureFunctionReceiver;
+    this._emailReceiver.internalValue = config.emailReceiver;
+    this._eventHubReceiver.internalValue = config.eventHubReceiver;
+    this._itsmReceiver.internalValue = config.itsmReceiver;
+    this._logicAppReceiver.internalValue = config.logicAppReceiver;
+    this._smsReceiver.internalValue = config.smsReceiver;
     this._timeouts.internalValue = config.timeouts;
-    this._voiceReceiver = config.voiceReceiver;
-    this._webhookReceiver = config.webhookReceiver;
+    this._voiceReceiver.internalValue = config.voiceReceiver;
+    this._webhookReceiver.internalValue = config.webhookReceiver;
   }
 
   // ==========
@@ -786,8 +2286,19 @@ export class MonitorActionGroup extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // name - computed: false, optional: false, required: true
@@ -846,156 +2357,147 @@ export class MonitorActionGroup extends cdktf.TerraformResource {
   }
 
   // arm_role_receiver - computed: false, optional: true, required: false
-  private _armRoleReceiver?: MonitorActionGroupArmRoleReceiver[] | cdktf.IResolvable; 
+  private _armRoleReceiver = new MonitorActionGroupArmRoleReceiverList(this, "arm_role_receiver", false);
   public get armRoleReceiver() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('arm_role_receiver');
+    return this._armRoleReceiver;
   }
-  public set armRoleReceiver(value: MonitorActionGroupArmRoleReceiver[] | cdktf.IResolvable) {
-    this._armRoleReceiver = value;
+  public putArmRoleReceiver(value: MonitorActionGroupArmRoleReceiver[] | cdktf.IResolvable) {
+    this._armRoleReceiver.internalValue = value;
   }
   public resetArmRoleReceiver() {
-    this._armRoleReceiver = undefined;
+    this._armRoleReceiver.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get armRoleReceiverInput() {
-    return this._armRoleReceiver;
+    return this._armRoleReceiver.internalValue;
   }
 
   // automation_runbook_receiver - computed: false, optional: true, required: false
-  private _automationRunbookReceiver?: MonitorActionGroupAutomationRunbookReceiver[] | cdktf.IResolvable; 
+  private _automationRunbookReceiver = new MonitorActionGroupAutomationRunbookReceiverList(this, "automation_runbook_receiver", false);
   public get automationRunbookReceiver() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('automation_runbook_receiver');
+    return this._automationRunbookReceiver;
   }
-  public set automationRunbookReceiver(value: MonitorActionGroupAutomationRunbookReceiver[] | cdktf.IResolvable) {
-    this._automationRunbookReceiver = value;
+  public putAutomationRunbookReceiver(value: MonitorActionGroupAutomationRunbookReceiver[] | cdktf.IResolvable) {
+    this._automationRunbookReceiver.internalValue = value;
   }
   public resetAutomationRunbookReceiver() {
-    this._automationRunbookReceiver = undefined;
+    this._automationRunbookReceiver.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get automationRunbookReceiverInput() {
-    return this._automationRunbookReceiver;
+    return this._automationRunbookReceiver.internalValue;
   }
 
   // azure_app_push_receiver - computed: false, optional: true, required: false
-  private _azureAppPushReceiver?: MonitorActionGroupAzureAppPushReceiver[] | cdktf.IResolvable; 
+  private _azureAppPushReceiver = new MonitorActionGroupAzureAppPushReceiverList(this, "azure_app_push_receiver", false);
   public get azureAppPushReceiver() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('azure_app_push_receiver');
+    return this._azureAppPushReceiver;
   }
-  public set azureAppPushReceiver(value: MonitorActionGroupAzureAppPushReceiver[] | cdktf.IResolvable) {
-    this._azureAppPushReceiver = value;
+  public putAzureAppPushReceiver(value: MonitorActionGroupAzureAppPushReceiver[] | cdktf.IResolvable) {
+    this._azureAppPushReceiver.internalValue = value;
   }
   public resetAzureAppPushReceiver() {
-    this._azureAppPushReceiver = undefined;
+    this._azureAppPushReceiver.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get azureAppPushReceiverInput() {
-    return this._azureAppPushReceiver;
+    return this._azureAppPushReceiver.internalValue;
   }
 
   // azure_function_receiver - computed: false, optional: true, required: false
-  private _azureFunctionReceiver?: MonitorActionGroupAzureFunctionReceiver[] | cdktf.IResolvable; 
+  private _azureFunctionReceiver = new MonitorActionGroupAzureFunctionReceiverList(this, "azure_function_receiver", false);
   public get azureFunctionReceiver() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('azure_function_receiver');
+    return this._azureFunctionReceiver;
   }
-  public set azureFunctionReceiver(value: MonitorActionGroupAzureFunctionReceiver[] | cdktf.IResolvable) {
-    this._azureFunctionReceiver = value;
+  public putAzureFunctionReceiver(value: MonitorActionGroupAzureFunctionReceiver[] | cdktf.IResolvable) {
+    this._azureFunctionReceiver.internalValue = value;
   }
   public resetAzureFunctionReceiver() {
-    this._azureFunctionReceiver = undefined;
+    this._azureFunctionReceiver.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get azureFunctionReceiverInput() {
-    return this._azureFunctionReceiver;
+    return this._azureFunctionReceiver.internalValue;
   }
 
   // email_receiver - computed: false, optional: true, required: false
-  private _emailReceiver?: MonitorActionGroupEmailReceiver[] | cdktf.IResolvable; 
+  private _emailReceiver = new MonitorActionGroupEmailReceiverList(this, "email_receiver", false);
   public get emailReceiver() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('email_receiver');
+    return this._emailReceiver;
   }
-  public set emailReceiver(value: MonitorActionGroupEmailReceiver[] | cdktf.IResolvable) {
-    this._emailReceiver = value;
+  public putEmailReceiver(value: MonitorActionGroupEmailReceiver[] | cdktf.IResolvable) {
+    this._emailReceiver.internalValue = value;
   }
   public resetEmailReceiver() {
-    this._emailReceiver = undefined;
+    this._emailReceiver.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get emailReceiverInput() {
-    return this._emailReceiver;
+    return this._emailReceiver.internalValue;
   }
 
   // event_hub_receiver - computed: false, optional: true, required: false
-  private _eventHubReceiver?: MonitorActionGroupEventHubReceiver[] | cdktf.IResolvable; 
+  private _eventHubReceiver = new MonitorActionGroupEventHubReceiverList(this, "event_hub_receiver", false);
   public get eventHubReceiver() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('event_hub_receiver');
+    return this._eventHubReceiver;
   }
-  public set eventHubReceiver(value: MonitorActionGroupEventHubReceiver[] | cdktf.IResolvable) {
-    this._eventHubReceiver = value;
+  public putEventHubReceiver(value: MonitorActionGroupEventHubReceiver[] | cdktf.IResolvable) {
+    this._eventHubReceiver.internalValue = value;
   }
   public resetEventHubReceiver() {
-    this._eventHubReceiver = undefined;
+    this._eventHubReceiver.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get eventHubReceiverInput() {
-    return this._eventHubReceiver;
+    return this._eventHubReceiver.internalValue;
   }
 
   // itsm_receiver - computed: false, optional: true, required: false
-  private _itsmReceiver?: MonitorActionGroupItsmReceiver[] | cdktf.IResolvable; 
+  private _itsmReceiver = new MonitorActionGroupItsmReceiverList(this, "itsm_receiver", false);
   public get itsmReceiver() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('itsm_receiver');
+    return this._itsmReceiver;
   }
-  public set itsmReceiver(value: MonitorActionGroupItsmReceiver[] | cdktf.IResolvable) {
-    this._itsmReceiver = value;
+  public putItsmReceiver(value: MonitorActionGroupItsmReceiver[] | cdktf.IResolvable) {
+    this._itsmReceiver.internalValue = value;
   }
   public resetItsmReceiver() {
-    this._itsmReceiver = undefined;
+    this._itsmReceiver.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get itsmReceiverInput() {
-    return this._itsmReceiver;
+    return this._itsmReceiver.internalValue;
   }
 
   // logic_app_receiver - computed: false, optional: true, required: false
-  private _logicAppReceiver?: MonitorActionGroupLogicAppReceiver[] | cdktf.IResolvable; 
+  private _logicAppReceiver = new MonitorActionGroupLogicAppReceiverList(this, "logic_app_receiver", false);
   public get logicAppReceiver() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('logic_app_receiver');
+    return this._logicAppReceiver;
   }
-  public set logicAppReceiver(value: MonitorActionGroupLogicAppReceiver[] | cdktf.IResolvable) {
-    this._logicAppReceiver = value;
+  public putLogicAppReceiver(value: MonitorActionGroupLogicAppReceiver[] | cdktf.IResolvable) {
+    this._logicAppReceiver.internalValue = value;
   }
   public resetLogicAppReceiver() {
-    this._logicAppReceiver = undefined;
+    this._logicAppReceiver.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get logicAppReceiverInput() {
-    return this._logicAppReceiver;
+    return this._logicAppReceiver.internalValue;
   }
 
   // sms_receiver - computed: false, optional: true, required: false
-  private _smsReceiver?: MonitorActionGroupSmsReceiver[] | cdktf.IResolvable; 
+  private _smsReceiver = new MonitorActionGroupSmsReceiverList(this, "sms_receiver", false);
   public get smsReceiver() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('sms_receiver');
+    return this._smsReceiver;
   }
-  public set smsReceiver(value: MonitorActionGroupSmsReceiver[] | cdktf.IResolvable) {
-    this._smsReceiver = value;
+  public putSmsReceiver(value: MonitorActionGroupSmsReceiver[] | cdktf.IResolvable) {
+    this._smsReceiver.internalValue = value;
   }
   public resetSmsReceiver() {
-    this._smsReceiver = undefined;
+    this._smsReceiver.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get smsReceiverInput() {
-    return this._smsReceiver;
+    return this._smsReceiver.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -1015,37 +2517,35 @@ export class MonitorActionGroup extends cdktf.TerraformResource {
   }
 
   // voice_receiver - computed: false, optional: true, required: false
-  private _voiceReceiver?: MonitorActionGroupVoiceReceiver[] | cdktf.IResolvable; 
+  private _voiceReceiver = new MonitorActionGroupVoiceReceiverList(this, "voice_receiver", false);
   public get voiceReceiver() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('voice_receiver');
+    return this._voiceReceiver;
   }
-  public set voiceReceiver(value: MonitorActionGroupVoiceReceiver[] | cdktf.IResolvable) {
-    this._voiceReceiver = value;
+  public putVoiceReceiver(value: MonitorActionGroupVoiceReceiver[] | cdktf.IResolvable) {
+    this._voiceReceiver.internalValue = value;
   }
   public resetVoiceReceiver() {
-    this._voiceReceiver = undefined;
+    this._voiceReceiver.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get voiceReceiverInput() {
-    return this._voiceReceiver;
+    return this._voiceReceiver.internalValue;
   }
 
   // webhook_receiver - computed: false, optional: true, required: false
-  private _webhookReceiver?: MonitorActionGroupWebhookReceiver[] | cdktf.IResolvable; 
+  private _webhookReceiver = new MonitorActionGroupWebhookReceiverList(this, "webhook_receiver", false);
   public get webhookReceiver() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('webhook_receiver');
+    return this._webhookReceiver;
   }
-  public set webhookReceiver(value: MonitorActionGroupWebhookReceiver[] | cdktf.IResolvable) {
-    this._webhookReceiver = value;
+  public putWebhookReceiver(value: MonitorActionGroupWebhookReceiver[] | cdktf.IResolvable) {
+    this._webhookReceiver.internalValue = value;
   }
   public resetWebhookReceiver() {
-    this._webhookReceiver = undefined;
+    this._webhookReceiver.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get webhookReceiverInput() {
-    return this._webhookReceiver;
+    return this._webhookReceiver.internalValue;
   }
 
   // =========
@@ -1055,22 +2555,23 @@ export class MonitorActionGroup extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       enabled: cdktf.booleanToTerraform(this._enabled),
+      id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       short_name: cdktf.stringToTerraform(this._shortName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
-      arm_role_receiver: cdktf.listMapper(monitorActionGroupArmRoleReceiverToTerraform)(this._armRoleReceiver),
-      automation_runbook_receiver: cdktf.listMapper(monitorActionGroupAutomationRunbookReceiverToTerraform)(this._automationRunbookReceiver),
-      azure_app_push_receiver: cdktf.listMapper(monitorActionGroupAzureAppPushReceiverToTerraform)(this._azureAppPushReceiver),
-      azure_function_receiver: cdktf.listMapper(monitorActionGroupAzureFunctionReceiverToTerraform)(this._azureFunctionReceiver),
-      email_receiver: cdktf.listMapper(monitorActionGroupEmailReceiverToTerraform)(this._emailReceiver),
-      event_hub_receiver: cdktf.listMapper(monitorActionGroupEventHubReceiverToTerraform)(this._eventHubReceiver),
-      itsm_receiver: cdktf.listMapper(monitorActionGroupItsmReceiverToTerraform)(this._itsmReceiver),
-      logic_app_receiver: cdktf.listMapper(monitorActionGroupLogicAppReceiverToTerraform)(this._logicAppReceiver),
-      sms_receiver: cdktf.listMapper(monitorActionGroupSmsReceiverToTerraform)(this._smsReceiver),
+      arm_role_receiver: cdktf.listMapper(monitorActionGroupArmRoleReceiverToTerraform)(this._armRoleReceiver.internalValue),
+      automation_runbook_receiver: cdktf.listMapper(monitorActionGroupAutomationRunbookReceiverToTerraform)(this._automationRunbookReceiver.internalValue),
+      azure_app_push_receiver: cdktf.listMapper(monitorActionGroupAzureAppPushReceiverToTerraform)(this._azureAppPushReceiver.internalValue),
+      azure_function_receiver: cdktf.listMapper(monitorActionGroupAzureFunctionReceiverToTerraform)(this._azureFunctionReceiver.internalValue),
+      email_receiver: cdktf.listMapper(monitorActionGroupEmailReceiverToTerraform)(this._emailReceiver.internalValue),
+      event_hub_receiver: cdktf.listMapper(monitorActionGroupEventHubReceiverToTerraform)(this._eventHubReceiver.internalValue),
+      itsm_receiver: cdktf.listMapper(monitorActionGroupItsmReceiverToTerraform)(this._itsmReceiver.internalValue),
+      logic_app_receiver: cdktf.listMapper(monitorActionGroupLogicAppReceiverToTerraform)(this._logicAppReceiver.internalValue),
+      sms_receiver: cdktf.listMapper(monitorActionGroupSmsReceiverToTerraform)(this._smsReceiver.internalValue),
       timeouts: monitorActionGroupTimeoutsToTerraform(this._timeouts.internalValue),
-      voice_receiver: cdktf.listMapper(monitorActionGroupVoiceReceiverToTerraform)(this._voiceReceiver),
-      webhook_receiver: cdktf.listMapper(monitorActionGroupWebhookReceiverToTerraform)(this._webhookReceiver),
+      voice_receiver: cdktf.listMapper(monitorActionGroupVoiceReceiverToTerraform)(this._voiceReceiver.internalValue),
+      webhook_receiver: cdktf.listMapper(monitorActionGroupWebhookReceiverToTerraform)(this._webhookReceiver.internalValue),
     };
   }
 }

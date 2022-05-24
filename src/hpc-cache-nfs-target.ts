@@ -12,6 +12,13 @@ export interface HpcCacheNfsTargetConfig extends cdktf.TerraformMetaArguments {
   */
   readonly cacheName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_nfs_target#id HpcCacheNfsTarget#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_nfs_target#name HpcCacheNfsTarget#name}
   */
   readonly name: string;
@@ -72,6 +79,146 @@ export function hpcCacheNfsTargetNamespaceJunctionToTerraform(struct?: HpcCacheN
   }
 }
 
+export class HpcCacheNfsTargetNamespaceJunctionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): HpcCacheNfsTargetNamespaceJunction | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._accessPolicyName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.accessPolicyName = this._accessPolicyName;
+    }
+    if (this._namespacePath !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.namespacePath = this._namespacePath;
+    }
+    if (this._nfsExport !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.nfsExport = this._nfsExport;
+    }
+    if (this._targetPath !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.targetPath = this._targetPath;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: HpcCacheNfsTargetNamespaceJunction | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._accessPolicyName = undefined;
+      this._namespacePath = undefined;
+      this._nfsExport = undefined;
+      this._targetPath = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._accessPolicyName = value.accessPolicyName;
+      this._namespacePath = value.namespacePath;
+      this._nfsExport = value.nfsExport;
+      this._targetPath = value.targetPath;
+    }
+  }
+
+  // access_policy_name - computed: false, optional: true, required: false
+  private _accessPolicyName?: string; 
+  public get accessPolicyName() {
+    return this.getStringAttribute('access_policy_name');
+  }
+  public set accessPolicyName(value: string) {
+    this._accessPolicyName = value;
+  }
+  public resetAccessPolicyName() {
+    this._accessPolicyName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get accessPolicyNameInput() {
+    return this._accessPolicyName;
+  }
+
+  // namespace_path - computed: false, optional: false, required: true
+  private _namespacePath?: string; 
+  public get namespacePath() {
+    return this.getStringAttribute('namespace_path');
+  }
+  public set namespacePath(value: string) {
+    this._namespacePath = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get namespacePathInput() {
+    return this._namespacePath;
+  }
+
+  // nfs_export - computed: false, optional: false, required: true
+  private _nfsExport?: string; 
+  public get nfsExport() {
+    return this.getStringAttribute('nfs_export');
+  }
+  public set nfsExport(value: string) {
+    this._nfsExport = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nfsExportInput() {
+    return this._nfsExport;
+  }
+
+  // target_path - computed: false, optional: true, required: false
+  private _targetPath?: string; 
+  public get targetPath() {
+    return this.getStringAttribute('target_path');
+  }
+  public set targetPath(value: string) {
+    this._targetPath = value;
+  }
+  public resetTargetPath() {
+    this._targetPath = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetPathInput() {
+    return this._targetPath;
+  }
+}
+
+export class HpcCacheNfsTargetNamespaceJunctionList extends cdktf.ComplexList {
+  public internalValue? : HpcCacheNfsTargetNamespaceJunction[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): HpcCacheNfsTargetNamespaceJunctionOutputReference {
+    return new HpcCacheNfsTargetNamespaceJunctionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface HpcCacheNfsTargetTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_nfs_target#create HpcCacheNfsTarget#create}
@@ -106,6 +253,7 @@ export function hpcCacheNfsTargetTimeoutsToTerraform(struct?: HpcCacheNfsTargetT
 
 export class HpcCacheNfsTargetTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -115,7 +263,10 @@ export class HpcCacheNfsTargetTimeoutsOutputReference extends cdktf.ComplexObjec
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): HpcCacheNfsTargetTimeouts | undefined {
+  public get internalValue(): HpcCacheNfsTargetTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -137,16 +288,22 @@ export class HpcCacheNfsTargetTimeoutsOutputReference extends cdktf.ComplexObjec
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: HpcCacheNfsTargetTimeouts | undefined) {
+  public set internalValue(value: HpcCacheNfsTargetTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -254,11 +411,12 @@ export class HpcCacheNfsTarget extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._cacheName = config.cacheName;
+    this._id = config.id;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._targetHostName = config.targetHostName;
     this._usageModel = config.usageModel;
-    this._namespaceJunction = config.namespaceJunction;
+    this._namespaceJunction.internalValue = config.namespaceJunction;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -280,8 +438,19 @@ export class HpcCacheNfsTarget extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // name - computed: false, optional: false, required: true
@@ -337,17 +506,16 @@ export class HpcCacheNfsTarget extends cdktf.TerraformResource {
   }
 
   // namespace_junction - computed: false, optional: false, required: true
-  private _namespaceJunction?: HpcCacheNfsTargetNamespaceJunction[] | cdktf.IResolvable; 
+  private _namespaceJunction = new HpcCacheNfsTargetNamespaceJunctionList(this, "namespace_junction", true);
   public get namespaceJunction() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('namespace_junction')));
+    return this._namespaceJunction;
   }
-  public set namespaceJunction(value: HpcCacheNfsTargetNamespaceJunction[] | cdktf.IResolvable) {
-    this._namespaceJunction = value;
+  public putNamespaceJunction(value: HpcCacheNfsTargetNamespaceJunction[] | cdktf.IResolvable) {
+    this._namespaceJunction.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get namespaceJunctionInput() {
-    return this._namespaceJunction;
+    return this._namespaceJunction.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -373,11 +541,12 @@ export class HpcCacheNfsTarget extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       cache_name: cdktf.stringToTerraform(this._cacheName),
+      id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       target_host_name: cdktf.stringToTerraform(this._targetHostName),
       usage_model: cdktf.stringToTerraform(this._usageModel),
-      namespace_junction: cdktf.listMapper(hpcCacheNfsTargetNamespaceJunctionToTerraform)(this._namespaceJunction),
+      namespace_junction: cdktf.listMapper(hpcCacheNfsTargetNamespaceJunctionToTerraform)(this._namespaceJunction.internalValue),
       timeouts: hpcCacheNfsTargetTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

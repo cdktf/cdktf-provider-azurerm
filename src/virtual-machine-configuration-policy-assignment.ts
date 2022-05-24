@@ -8,6 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface VirtualMachineConfigurationPolicyAssignmentConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_configuration_policy_assignment#id VirtualMachineConfigurationPolicyAssignment#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_configuration_policy_assignment#location VirtualMachineConfigurationPolicyAssignment#location}
   */
   readonly location: string;
@@ -54,6 +61,102 @@ export function virtualMachineConfigurationPolicyAssignmentConfigurationParamete
   }
 }
 
+export class VirtualMachineConfigurationPolicyAssignmentConfigurationParameterOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): VirtualMachineConfigurationPolicyAssignmentConfigurationParameter | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: VirtualMachineConfigurationPolicyAssignmentConfigurationParameter | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._value = value.value;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // value - computed: false, optional: false, required: true
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class VirtualMachineConfigurationPolicyAssignmentConfigurationParameterList extends cdktf.ComplexList {
+  public internalValue? : VirtualMachineConfigurationPolicyAssignmentConfigurationParameter[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): VirtualMachineConfigurationPolicyAssignmentConfigurationParameterOutputReference {
+    return new VirtualMachineConfigurationPolicyAssignmentConfigurationParameterOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface VirtualMachineConfigurationPolicyAssignmentConfiguration {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_configuration_policy_assignment#name VirtualMachineConfigurationPolicyAssignment#name}
@@ -105,9 +208,9 @@ export class VirtualMachineConfigurationPolicyAssignmentConfigurationOutputRefer
       hasAnyValues = true;
       internalValueResult.version = this._version;
     }
-    if (this._parameter !== undefined) {
+    if (this._parameter?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.parameter = this._parameter;
+      internalValueResult.parameter = this._parameter?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -117,13 +220,13 @@ export class VirtualMachineConfigurationPolicyAssignmentConfigurationOutputRefer
       this.isEmptyObject = false;
       this._name = undefined;
       this._version = undefined;
-      this._parameter = undefined;
+      this._parameter.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._name = value.name;
       this._version = value.version;
-      this._parameter = value.parameter;
+      this._parameter.internalValue = value.parameter;
     }
   }
 
@@ -157,20 +260,19 @@ export class VirtualMachineConfigurationPolicyAssignmentConfigurationOutputRefer
   }
 
   // parameter - computed: false, optional: true, required: false
-  private _parameter?: VirtualMachineConfigurationPolicyAssignmentConfigurationParameter[] | cdktf.IResolvable; 
+  private _parameter = new VirtualMachineConfigurationPolicyAssignmentConfigurationParameterList(this, "parameter", true);
   public get parameter() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('parameter')));
+    return this._parameter;
   }
-  public set parameter(value: VirtualMachineConfigurationPolicyAssignmentConfigurationParameter[] | cdktf.IResolvable) {
-    this._parameter = value;
+  public putParameter(value: VirtualMachineConfigurationPolicyAssignmentConfigurationParameter[] | cdktf.IResolvable) {
+    this._parameter.internalValue = value;
   }
   public resetParameter() {
-    this._parameter = undefined;
+    this._parameter.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get parameterInput() {
-    return this._parameter;
+    return this._parameter.internalValue;
   }
 }
 export interface VirtualMachineConfigurationPolicyAssignmentTimeouts {
@@ -207,6 +309,7 @@ export function virtualMachineConfigurationPolicyAssignmentTimeoutsToTerraform(s
 
 export class VirtualMachineConfigurationPolicyAssignmentTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -216,7 +319,10 @@ export class VirtualMachineConfigurationPolicyAssignmentTimeoutsOutputReference 
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): VirtualMachineConfigurationPolicyAssignmentTimeouts | undefined {
+  public get internalValue(): VirtualMachineConfigurationPolicyAssignmentTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -238,16 +344,22 @@ export class VirtualMachineConfigurationPolicyAssignmentTimeoutsOutputReference 
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: VirtualMachineConfigurationPolicyAssignmentTimeouts | undefined) {
+  public set internalValue(value: VirtualMachineConfigurationPolicyAssignmentTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -354,6 +466,7 @@ export class VirtualMachineConfigurationPolicyAssignment extends cdktf.Terraform
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._id = config.id;
     this._location = config.location;
     this._name = config.name;
     this._virtualMachineId = config.virtualMachineId;
@@ -366,8 +479,19 @@ export class VirtualMachineConfigurationPolicyAssignment extends cdktf.Terraform
   // ==========
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // location - computed: false, optional: false, required: true
@@ -444,6 +568,7 @@ export class VirtualMachineConfigurationPolicyAssignment extends cdktf.Terraform
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       virtual_machine_id: cdktf.stringToTerraform(this._virtualMachineId),

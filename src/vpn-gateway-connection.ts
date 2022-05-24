@@ -8,6 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface VpnGatewayConnectionConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection#id VpnGatewayConnection#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection#internet_security_enabled VpnGatewayConnection#internet_security_enabled}
   */
   readonly internetSecurityEnabled?: boolean | cdktf.IResolvable;
@@ -289,6 +296,7 @@ export function vpnGatewayConnectionTimeoutsToTerraform(struct?: VpnGatewayConne
 
 export class VpnGatewayConnectionTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -298,7 +306,10 @@ export class VpnGatewayConnectionTimeoutsOutputReference extends cdktf.ComplexOb
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): VpnGatewayConnectionTimeouts | undefined {
+  public get internalValue(): VpnGatewayConnectionTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -320,16 +331,22 @@ export class VpnGatewayConnectionTimeoutsOutputReference extends cdktf.ComplexOb
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: VpnGatewayConnectionTimeouts | undefined) {
+  public set internalValue(value: VpnGatewayConnectionTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -423,6 +440,102 @@ export function vpnGatewayConnectionTrafficSelectorPolicyToTerraform(struct?: Vp
   }
 }
 
+export class VpnGatewayConnectionTrafficSelectorPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): VpnGatewayConnectionTrafficSelectorPolicy | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._localAddressRanges !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.localAddressRanges = this._localAddressRanges;
+    }
+    if (this._remoteAddressRanges !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.remoteAddressRanges = this._remoteAddressRanges;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: VpnGatewayConnectionTrafficSelectorPolicy | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._localAddressRanges = undefined;
+      this._remoteAddressRanges = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._localAddressRanges = value.localAddressRanges;
+      this._remoteAddressRanges = value.remoteAddressRanges;
+    }
+  }
+
+  // local_address_ranges - computed: false, optional: false, required: true
+  private _localAddressRanges?: string[]; 
+  public get localAddressRanges() {
+    return cdktf.Fn.tolist(this.getListAttribute('local_address_ranges'));
+  }
+  public set localAddressRanges(value: string[]) {
+    this._localAddressRanges = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get localAddressRangesInput() {
+    return this._localAddressRanges;
+  }
+
+  // remote_address_ranges - computed: false, optional: false, required: true
+  private _remoteAddressRanges?: string[]; 
+  public get remoteAddressRanges() {
+    return cdktf.Fn.tolist(this.getListAttribute('remote_address_ranges'));
+  }
+  public set remoteAddressRanges(value: string[]) {
+    this._remoteAddressRanges = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get remoteAddressRangesInput() {
+    return this._remoteAddressRanges;
+  }
+}
+
+export class VpnGatewayConnectionTrafficSelectorPolicyList extends cdktf.ComplexList {
+  public internalValue? : VpnGatewayConnectionTrafficSelectorPolicy[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): VpnGatewayConnectionTrafficSelectorPolicyOutputReference {
+    return new VpnGatewayConnectionTrafficSelectorPolicyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface VpnGatewayConnectionVpnLinkIpsecPolicy {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection#dh_group VpnGatewayConnection#dh_group}
@@ -475,6 +588,216 @@ export function vpnGatewayConnectionVpnLinkIpsecPolicyToTerraform(struct?: VpnGa
   }
 }
 
+export class VpnGatewayConnectionVpnLinkIpsecPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): VpnGatewayConnectionVpnLinkIpsecPolicy | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._dhGroup !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dhGroup = this._dhGroup;
+    }
+    if (this._encryptionAlgorithm !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.encryptionAlgorithm = this._encryptionAlgorithm;
+    }
+    if (this._ikeEncryptionAlgorithm !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ikeEncryptionAlgorithm = this._ikeEncryptionAlgorithm;
+    }
+    if (this._ikeIntegrityAlgorithm !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ikeIntegrityAlgorithm = this._ikeIntegrityAlgorithm;
+    }
+    if (this._integrityAlgorithm !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.integrityAlgorithm = this._integrityAlgorithm;
+    }
+    if (this._pfsGroup !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.pfsGroup = this._pfsGroup;
+    }
+    if (this._saDataSizeKb !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.saDataSizeKb = this._saDataSizeKb;
+    }
+    if (this._saLifetimeSec !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.saLifetimeSec = this._saLifetimeSec;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: VpnGatewayConnectionVpnLinkIpsecPolicy | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._dhGroup = undefined;
+      this._encryptionAlgorithm = undefined;
+      this._ikeEncryptionAlgorithm = undefined;
+      this._ikeIntegrityAlgorithm = undefined;
+      this._integrityAlgorithm = undefined;
+      this._pfsGroup = undefined;
+      this._saDataSizeKb = undefined;
+      this._saLifetimeSec = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._dhGroup = value.dhGroup;
+      this._encryptionAlgorithm = value.encryptionAlgorithm;
+      this._ikeEncryptionAlgorithm = value.ikeEncryptionAlgorithm;
+      this._ikeIntegrityAlgorithm = value.ikeIntegrityAlgorithm;
+      this._integrityAlgorithm = value.integrityAlgorithm;
+      this._pfsGroup = value.pfsGroup;
+      this._saDataSizeKb = value.saDataSizeKb;
+      this._saLifetimeSec = value.saLifetimeSec;
+    }
+  }
+
+  // dh_group - computed: false, optional: false, required: true
+  private _dhGroup?: string; 
+  public get dhGroup() {
+    return this.getStringAttribute('dh_group');
+  }
+  public set dhGroup(value: string) {
+    this._dhGroup = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dhGroupInput() {
+    return this._dhGroup;
+  }
+
+  // encryption_algorithm - computed: false, optional: false, required: true
+  private _encryptionAlgorithm?: string; 
+  public get encryptionAlgorithm() {
+    return this.getStringAttribute('encryption_algorithm');
+  }
+  public set encryptionAlgorithm(value: string) {
+    this._encryptionAlgorithm = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get encryptionAlgorithmInput() {
+    return this._encryptionAlgorithm;
+  }
+
+  // ike_encryption_algorithm - computed: false, optional: false, required: true
+  private _ikeEncryptionAlgorithm?: string; 
+  public get ikeEncryptionAlgorithm() {
+    return this.getStringAttribute('ike_encryption_algorithm');
+  }
+  public set ikeEncryptionAlgorithm(value: string) {
+    this._ikeEncryptionAlgorithm = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ikeEncryptionAlgorithmInput() {
+    return this._ikeEncryptionAlgorithm;
+  }
+
+  // ike_integrity_algorithm - computed: false, optional: false, required: true
+  private _ikeIntegrityAlgorithm?: string; 
+  public get ikeIntegrityAlgorithm() {
+    return this.getStringAttribute('ike_integrity_algorithm');
+  }
+  public set ikeIntegrityAlgorithm(value: string) {
+    this._ikeIntegrityAlgorithm = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ikeIntegrityAlgorithmInput() {
+    return this._ikeIntegrityAlgorithm;
+  }
+
+  // integrity_algorithm - computed: false, optional: false, required: true
+  private _integrityAlgorithm?: string; 
+  public get integrityAlgorithm() {
+    return this.getStringAttribute('integrity_algorithm');
+  }
+  public set integrityAlgorithm(value: string) {
+    this._integrityAlgorithm = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get integrityAlgorithmInput() {
+    return this._integrityAlgorithm;
+  }
+
+  // pfs_group - computed: false, optional: false, required: true
+  private _pfsGroup?: string; 
+  public get pfsGroup() {
+    return this.getStringAttribute('pfs_group');
+  }
+  public set pfsGroup(value: string) {
+    this._pfsGroup = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pfsGroupInput() {
+    return this._pfsGroup;
+  }
+
+  // sa_data_size_kb - computed: false, optional: false, required: true
+  private _saDataSizeKb?: number; 
+  public get saDataSizeKb() {
+    return this.getNumberAttribute('sa_data_size_kb');
+  }
+  public set saDataSizeKb(value: number) {
+    this._saDataSizeKb = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get saDataSizeKbInput() {
+    return this._saDataSizeKb;
+  }
+
+  // sa_lifetime_sec - computed: false, optional: false, required: true
+  private _saLifetimeSec?: number; 
+  public get saLifetimeSec() {
+    return this.getNumberAttribute('sa_lifetime_sec');
+  }
+  public set saLifetimeSec(value: number) {
+    this._saLifetimeSec = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get saLifetimeSecInput() {
+    return this._saLifetimeSec;
+  }
+}
+
+export class VpnGatewayConnectionVpnLinkIpsecPolicyList extends cdktf.ComplexList {
+  public internalValue? : VpnGatewayConnectionVpnLinkIpsecPolicy[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): VpnGatewayConnectionVpnLinkIpsecPolicyOutputReference {
+    return new VpnGatewayConnectionVpnLinkIpsecPolicyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface VpnGatewayConnectionVpnLink {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection#bandwidth_mbps VpnGatewayConnection#bandwidth_mbps}
@@ -559,6 +882,366 @@ export function vpnGatewayConnectionVpnLinkToTerraform(struct?: VpnGatewayConnec
   }
 }
 
+export class VpnGatewayConnectionVpnLinkOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): VpnGatewayConnectionVpnLink | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._bandwidthMbps !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.bandwidthMbps = this._bandwidthMbps;
+    }
+    if (this._bgpEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.bgpEnabled = this._bgpEnabled;
+    }
+    if (this._connectionMode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.connectionMode = this._connectionMode;
+    }
+    if (this._egressNatRuleIds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.egressNatRuleIds = this._egressNatRuleIds;
+    }
+    if (this._ingressNatRuleIds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ingressNatRuleIds = this._ingressNatRuleIds;
+    }
+    if (this._localAzureIpAddressEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.localAzureIpAddressEnabled = this._localAzureIpAddressEnabled;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._policyBasedTrafficSelectorEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.policyBasedTrafficSelectorEnabled = this._policyBasedTrafficSelectorEnabled;
+    }
+    if (this._protocol !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.protocol = this._protocol;
+    }
+    if (this._ratelimitEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ratelimitEnabled = this._ratelimitEnabled;
+    }
+    if (this._routeWeight !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.routeWeight = this._routeWeight;
+    }
+    if (this._sharedKey !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sharedKey = this._sharedKey;
+    }
+    if (this._vpnSiteLinkId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.vpnSiteLinkId = this._vpnSiteLinkId;
+    }
+    if (this._ipsecPolicy?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ipsecPolicy = this._ipsecPolicy?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: VpnGatewayConnectionVpnLink | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._bandwidthMbps = undefined;
+      this._bgpEnabled = undefined;
+      this._connectionMode = undefined;
+      this._egressNatRuleIds = undefined;
+      this._ingressNatRuleIds = undefined;
+      this._localAzureIpAddressEnabled = undefined;
+      this._name = undefined;
+      this._policyBasedTrafficSelectorEnabled = undefined;
+      this._protocol = undefined;
+      this._ratelimitEnabled = undefined;
+      this._routeWeight = undefined;
+      this._sharedKey = undefined;
+      this._vpnSiteLinkId = undefined;
+      this._ipsecPolicy.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._bandwidthMbps = value.bandwidthMbps;
+      this._bgpEnabled = value.bgpEnabled;
+      this._connectionMode = value.connectionMode;
+      this._egressNatRuleIds = value.egressNatRuleIds;
+      this._ingressNatRuleIds = value.ingressNatRuleIds;
+      this._localAzureIpAddressEnabled = value.localAzureIpAddressEnabled;
+      this._name = value.name;
+      this._policyBasedTrafficSelectorEnabled = value.policyBasedTrafficSelectorEnabled;
+      this._protocol = value.protocol;
+      this._ratelimitEnabled = value.ratelimitEnabled;
+      this._routeWeight = value.routeWeight;
+      this._sharedKey = value.sharedKey;
+      this._vpnSiteLinkId = value.vpnSiteLinkId;
+      this._ipsecPolicy.internalValue = value.ipsecPolicy;
+    }
+  }
+
+  // bandwidth_mbps - computed: false, optional: true, required: false
+  private _bandwidthMbps?: number; 
+  public get bandwidthMbps() {
+    return this.getNumberAttribute('bandwidth_mbps');
+  }
+  public set bandwidthMbps(value: number) {
+    this._bandwidthMbps = value;
+  }
+  public resetBandwidthMbps() {
+    this._bandwidthMbps = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bandwidthMbpsInput() {
+    return this._bandwidthMbps;
+  }
+
+  // bgp_enabled - computed: false, optional: true, required: false
+  private _bgpEnabled?: boolean | cdktf.IResolvable; 
+  public get bgpEnabled() {
+    return this.getBooleanAttribute('bgp_enabled');
+  }
+  public set bgpEnabled(value: boolean | cdktf.IResolvable) {
+    this._bgpEnabled = value;
+  }
+  public resetBgpEnabled() {
+    this._bgpEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bgpEnabledInput() {
+    return this._bgpEnabled;
+  }
+
+  // connection_mode - computed: false, optional: true, required: false
+  private _connectionMode?: string; 
+  public get connectionMode() {
+    return this.getStringAttribute('connection_mode');
+  }
+  public set connectionMode(value: string) {
+    this._connectionMode = value;
+  }
+  public resetConnectionMode() {
+    this._connectionMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get connectionModeInput() {
+    return this._connectionMode;
+  }
+
+  // egress_nat_rule_ids - computed: false, optional: true, required: false
+  private _egressNatRuleIds?: string[]; 
+  public get egressNatRuleIds() {
+    return cdktf.Fn.tolist(this.getListAttribute('egress_nat_rule_ids'));
+  }
+  public set egressNatRuleIds(value: string[]) {
+    this._egressNatRuleIds = value;
+  }
+  public resetEgressNatRuleIds() {
+    this._egressNatRuleIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get egressNatRuleIdsInput() {
+    return this._egressNatRuleIds;
+  }
+
+  // ingress_nat_rule_ids - computed: false, optional: true, required: false
+  private _ingressNatRuleIds?: string[]; 
+  public get ingressNatRuleIds() {
+    return cdktf.Fn.tolist(this.getListAttribute('ingress_nat_rule_ids'));
+  }
+  public set ingressNatRuleIds(value: string[]) {
+    this._ingressNatRuleIds = value;
+  }
+  public resetIngressNatRuleIds() {
+    this._ingressNatRuleIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ingressNatRuleIdsInput() {
+    return this._ingressNatRuleIds;
+  }
+
+  // local_azure_ip_address_enabled - computed: false, optional: true, required: false
+  private _localAzureIpAddressEnabled?: boolean | cdktf.IResolvable; 
+  public get localAzureIpAddressEnabled() {
+    return this.getBooleanAttribute('local_azure_ip_address_enabled');
+  }
+  public set localAzureIpAddressEnabled(value: boolean | cdktf.IResolvable) {
+    this._localAzureIpAddressEnabled = value;
+  }
+  public resetLocalAzureIpAddressEnabled() {
+    this._localAzureIpAddressEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get localAzureIpAddressEnabledInput() {
+    return this._localAzureIpAddressEnabled;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // policy_based_traffic_selector_enabled - computed: false, optional: true, required: false
+  private _policyBasedTrafficSelectorEnabled?: boolean | cdktf.IResolvable; 
+  public get policyBasedTrafficSelectorEnabled() {
+    return this.getBooleanAttribute('policy_based_traffic_selector_enabled');
+  }
+  public set policyBasedTrafficSelectorEnabled(value: boolean | cdktf.IResolvable) {
+    this._policyBasedTrafficSelectorEnabled = value;
+  }
+  public resetPolicyBasedTrafficSelectorEnabled() {
+    this._policyBasedTrafficSelectorEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get policyBasedTrafficSelectorEnabledInput() {
+    return this._policyBasedTrafficSelectorEnabled;
+  }
+
+  // protocol - computed: false, optional: true, required: false
+  private _protocol?: string; 
+  public get protocol() {
+    return this.getStringAttribute('protocol');
+  }
+  public set protocol(value: string) {
+    this._protocol = value;
+  }
+  public resetProtocol() {
+    this._protocol = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get protocolInput() {
+    return this._protocol;
+  }
+
+  // ratelimit_enabled - computed: false, optional: true, required: false
+  private _ratelimitEnabled?: boolean | cdktf.IResolvable; 
+  public get ratelimitEnabled() {
+    return this.getBooleanAttribute('ratelimit_enabled');
+  }
+  public set ratelimitEnabled(value: boolean | cdktf.IResolvable) {
+    this._ratelimitEnabled = value;
+  }
+  public resetRatelimitEnabled() {
+    this._ratelimitEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ratelimitEnabledInput() {
+    return this._ratelimitEnabled;
+  }
+
+  // route_weight - computed: false, optional: true, required: false
+  private _routeWeight?: number; 
+  public get routeWeight() {
+    return this.getNumberAttribute('route_weight');
+  }
+  public set routeWeight(value: number) {
+    this._routeWeight = value;
+  }
+  public resetRouteWeight() {
+    this._routeWeight = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get routeWeightInput() {
+    return this._routeWeight;
+  }
+
+  // shared_key - computed: false, optional: true, required: false
+  private _sharedKey?: string; 
+  public get sharedKey() {
+    return this.getStringAttribute('shared_key');
+  }
+  public set sharedKey(value: string) {
+    this._sharedKey = value;
+  }
+  public resetSharedKey() {
+    this._sharedKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sharedKeyInput() {
+    return this._sharedKey;
+  }
+
+  // vpn_site_link_id - computed: false, optional: false, required: true
+  private _vpnSiteLinkId?: string; 
+  public get vpnSiteLinkId() {
+    return this.getStringAttribute('vpn_site_link_id');
+  }
+  public set vpnSiteLinkId(value: string) {
+    this._vpnSiteLinkId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get vpnSiteLinkIdInput() {
+    return this._vpnSiteLinkId;
+  }
+
+  // ipsec_policy - computed: false, optional: true, required: false
+  private _ipsecPolicy = new VpnGatewayConnectionVpnLinkIpsecPolicyList(this, "ipsec_policy", false);
+  public get ipsecPolicy() {
+    return this._ipsecPolicy;
+  }
+  public putIpsecPolicy(value: VpnGatewayConnectionVpnLinkIpsecPolicy[] | cdktf.IResolvable) {
+    this._ipsecPolicy.internalValue = value;
+  }
+  public resetIpsecPolicy() {
+    this._ipsecPolicy.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipsecPolicyInput() {
+    return this._ipsecPolicy.internalValue;
+  }
+}
+
+export class VpnGatewayConnectionVpnLinkList extends cdktf.ComplexList {
+  public internalValue? : VpnGatewayConnectionVpnLink[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): VpnGatewayConnectionVpnLinkOutputReference {
+    return new VpnGatewayConnectionVpnLinkOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection azurerm_vpn_gateway_connection}
@@ -594,14 +1277,15 @@ export class VpnGatewayConnection extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._id = config.id;
     this._internetSecurityEnabled = config.internetSecurityEnabled;
     this._name = config.name;
     this._remoteVpnSiteId = config.remoteVpnSiteId;
     this._vpnGatewayId = config.vpnGatewayId;
     this._routing.internalValue = config.routing;
     this._timeouts.internalValue = config.timeouts;
-    this._trafficSelectorPolicy = config.trafficSelectorPolicy;
-    this._vpnLink = config.vpnLink;
+    this._trafficSelectorPolicy.internalValue = config.trafficSelectorPolicy;
+    this._vpnLink.internalValue = config.vpnLink;
   }
 
   // ==========
@@ -609,8 +1293,19 @@ export class VpnGatewayConnection extends cdktf.TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // internet_security_enabled - computed: false, optional: true, required: false
@@ -701,34 +1396,32 @@ export class VpnGatewayConnection extends cdktf.TerraformResource {
   }
 
   // traffic_selector_policy - computed: false, optional: true, required: false
-  private _trafficSelectorPolicy?: VpnGatewayConnectionTrafficSelectorPolicy[] | cdktf.IResolvable; 
+  private _trafficSelectorPolicy = new VpnGatewayConnectionTrafficSelectorPolicyList(this, "traffic_selector_policy", true);
   public get trafficSelectorPolicy() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('traffic_selector_policy')));
+    return this._trafficSelectorPolicy;
   }
-  public set trafficSelectorPolicy(value: VpnGatewayConnectionTrafficSelectorPolicy[] | cdktf.IResolvable) {
-    this._trafficSelectorPolicy = value;
+  public putTrafficSelectorPolicy(value: VpnGatewayConnectionTrafficSelectorPolicy[] | cdktf.IResolvable) {
+    this._trafficSelectorPolicy.internalValue = value;
   }
   public resetTrafficSelectorPolicy() {
-    this._trafficSelectorPolicy = undefined;
+    this._trafficSelectorPolicy.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get trafficSelectorPolicyInput() {
-    return this._trafficSelectorPolicy;
+    return this._trafficSelectorPolicy.internalValue;
   }
 
   // vpn_link - computed: false, optional: false, required: true
-  private _vpnLink?: VpnGatewayConnectionVpnLink[] | cdktf.IResolvable; 
+  private _vpnLink = new VpnGatewayConnectionVpnLinkList(this, "vpn_link", false);
   public get vpnLink() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('vpn_link');
+    return this._vpnLink;
   }
-  public set vpnLink(value: VpnGatewayConnectionVpnLink[] | cdktf.IResolvable) {
-    this._vpnLink = value;
+  public putVpnLink(value: VpnGatewayConnectionVpnLink[] | cdktf.IResolvable) {
+    this._vpnLink.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get vpnLinkInput() {
-    return this._vpnLink;
+    return this._vpnLink.internalValue;
   }
 
   // =========
@@ -737,14 +1430,15 @@ export class VpnGatewayConnection extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      id: cdktf.stringToTerraform(this._id),
       internet_security_enabled: cdktf.booleanToTerraform(this._internetSecurityEnabled),
       name: cdktf.stringToTerraform(this._name),
       remote_vpn_site_id: cdktf.stringToTerraform(this._remoteVpnSiteId),
       vpn_gateway_id: cdktf.stringToTerraform(this._vpnGatewayId),
       routing: vpnGatewayConnectionRoutingToTerraform(this._routing.internalValue),
       timeouts: vpnGatewayConnectionTimeoutsToTerraform(this._timeouts.internalValue),
-      traffic_selector_policy: cdktf.listMapper(vpnGatewayConnectionTrafficSelectorPolicyToTerraform)(this._trafficSelectorPolicy),
-      vpn_link: cdktf.listMapper(vpnGatewayConnectionVpnLinkToTerraform)(this._vpnLink),
+      traffic_selector_policy: cdktf.listMapper(vpnGatewayConnectionTrafficSelectorPolicyToTerraform)(this._trafficSelectorPolicy.internalValue),
+      vpn_link: cdktf.listMapper(vpnGatewayConnectionVpnLinkToTerraform)(this._vpnLink.internalValue),
     };
   }
 }

@@ -28,6 +28,13 @@ export interface EventgridEventSubscriptionConfig extends cdktf.TerraformMetaArg
   */
   readonly hybridConnectionEndpointId?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#id EventgridEventSubscription#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#included_event_types EventgridEventSubscription#included_event_types}
   */
   readonly includedEventTypes?: string[];
@@ -156,6 +163,102 @@ export function eventgridEventSubscriptionAdvancedFilterBoolEqualsToTerraform(st
   }
 }
 
+export class EventgridEventSubscriptionAdvancedFilterBoolEqualsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): EventgridEventSubscriptionAdvancedFilterBoolEquals | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._key !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.key = this._key;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EventgridEventSubscriptionAdvancedFilterBoolEquals | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._key = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._key = value.key;
+      this._value = value.value;
+    }
+  }
+
+  // key - computed: false, optional: false, required: true
+  private _key?: string; 
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+  public set key(value: string) {
+    this._key = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyInput() {
+    return this._key;
+  }
+
+  // value - computed: false, optional: false, required: true
+  private _value?: boolean | cdktf.IResolvable; 
+  public get value() {
+    return this.getBooleanAttribute('value');
+  }
+  public set value(value: boolean | cdktf.IResolvable) {
+    this._value = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class EventgridEventSubscriptionAdvancedFilterBoolEqualsList extends cdktf.ComplexList {
+  public internalValue? : EventgridEventSubscriptionAdvancedFilterBoolEquals[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): EventgridEventSubscriptionAdvancedFilterBoolEqualsOutputReference {
+    return new EventgridEventSubscriptionAdvancedFilterBoolEqualsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface EventgridEventSubscriptionAdvancedFilterIsNotNull {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#key EventgridEventSubscription#key}
@@ -173,6 +276,83 @@ export function eventgridEventSubscriptionAdvancedFilterIsNotNullToTerraform(str
   }
 }
 
+export class EventgridEventSubscriptionAdvancedFilterIsNotNullOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): EventgridEventSubscriptionAdvancedFilterIsNotNull | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._key !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.key = this._key;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EventgridEventSubscriptionAdvancedFilterIsNotNull | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._key = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._key = value.key;
+    }
+  }
+
+  // key - computed: false, optional: false, required: true
+  private _key?: string; 
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+  public set key(value: string) {
+    this._key = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyInput() {
+    return this._key;
+  }
+}
+
+export class EventgridEventSubscriptionAdvancedFilterIsNotNullList extends cdktf.ComplexList {
+  public internalValue? : EventgridEventSubscriptionAdvancedFilterIsNotNull[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): EventgridEventSubscriptionAdvancedFilterIsNotNullOutputReference {
+    return new EventgridEventSubscriptionAdvancedFilterIsNotNullOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface EventgridEventSubscriptionAdvancedFilterIsNullOrUndefined {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#key EventgridEventSubscription#key}
@@ -190,6 +370,83 @@ export function eventgridEventSubscriptionAdvancedFilterIsNullOrUndefinedToTerra
   }
 }
 
+export class EventgridEventSubscriptionAdvancedFilterIsNullOrUndefinedOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): EventgridEventSubscriptionAdvancedFilterIsNullOrUndefined | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._key !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.key = this._key;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EventgridEventSubscriptionAdvancedFilterIsNullOrUndefined | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._key = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._key = value.key;
+    }
+  }
+
+  // key - computed: false, optional: false, required: true
+  private _key?: string; 
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+  public set key(value: string) {
+    this._key = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyInput() {
+    return this._key;
+  }
+}
+
+export class EventgridEventSubscriptionAdvancedFilterIsNullOrUndefinedList extends cdktf.ComplexList {
+  public internalValue? : EventgridEventSubscriptionAdvancedFilterIsNullOrUndefined[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): EventgridEventSubscriptionAdvancedFilterIsNullOrUndefinedOutputReference {
+    return new EventgridEventSubscriptionAdvancedFilterIsNullOrUndefinedOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface EventgridEventSubscriptionAdvancedFilterNumberGreaterThan {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#key EventgridEventSubscription#key}
@@ -212,6 +469,102 @@ export function eventgridEventSubscriptionAdvancedFilterNumberGreaterThanToTerra
   }
 }
 
+export class EventgridEventSubscriptionAdvancedFilterNumberGreaterThanOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): EventgridEventSubscriptionAdvancedFilterNumberGreaterThan | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._key !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.key = this._key;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EventgridEventSubscriptionAdvancedFilterNumberGreaterThan | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._key = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._key = value.key;
+      this._value = value.value;
+    }
+  }
+
+  // key - computed: false, optional: false, required: true
+  private _key?: string; 
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+  public set key(value: string) {
+    this._key = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyInput() {
+    return this._key;
+  }
+
+  // value - computed: false, optional: false, required: true
+  private _value?: number; 
+  public get value() {
+    return this.getNumberAttribute('value');
+  }
+  public set value(value: number) {
+    this._value = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class EventgridEventSubscriptionAdvancedFilterNumberGreaterThanList extends cdktf.ComplexList {
+  public internalValue? : EventgridEventSubscriptionAdvancedFilterNumberGreaterThan[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): EventgridEventSubscriptionAdvancedFilterNumberGreaterThanOutputReference {
+    return new EventgridEventSubscriptionAdvancedFilterNumberGreaterThanOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface EventgridEventSubscriptionAdvancedFilterNumberGreaterThanOrEquals {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#key EventgridEventSubscription#key}
@@ -234,6 +587,102 @@ export function eventgridEventSubscriptionAdvancedFilterNumberGreaterThanOrEqual
   }
 }
 
+export class EventgridEventSubscriptionAdvancedFilterNumberGreaterThanOrEqualsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): EventgridEventSubscriptionAdvancedFilterNumberGreaterThanOrEquals | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._key !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.key = this._key;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EventgridEventSubscriptionAdvancedFilterNumberGreaterThanOrEquals | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._key = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._key = value.key;
+      this._value = value.value;
+    }
+  }
+
+  // key - computed: false, optional: false, required: true
+  private _key?: string; 
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+  public set key(value: string) {
+    this._key = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyInput() {
+    return this._key;
+  }
+
+  // value - computed: false, optional: false, required: true
+  private _value?: number; 
+  public get value() {
+    return this.getNumberAttribute('value');
+  }
+  public set value(value: number) {
+    this._value = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class EventgridEventSubscriptionAdvancedFilterNumberGreaterThanOrEqualsList extends cdktf.ComplexList {
+  public internalValue? : EventgridEventSubscriptionAdvancedFilterNumberGreaterThanOrEquals[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): EventgridEventSubscriptionAdvancedFilterNumberGreaterThanOrEqualsOutputReference {
+    return new EventgridEventSubscriptionAdvancedFilterNumberGreaterThanOrEqualsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface EventgridEventSubscriptionAdvancedFilterNumberIn {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#key EventgridEventSubscription#key}
@@ -256,6 +705,102 @@ export function eventgridEventSubscriptionAdvancedFilterNumberInToTerraform(stru
   }
 }
 
+export class EventgridEventSubscriptionAdvancedFilterNumberInOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): EventgridEventSubscriptionAdvancedFilterNumberIn | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._key !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.key = this._key;
+    }
+    if (this._values !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.values = this._values;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EventgridEventSubscriptionAdvancedFilterNumberIn | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._key = undefined;
+      this._values = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._key = value.key;
+      this._values = value.values;
+    }
+  }
+
+  // key - computed: false, optional: false, required: true
+  private _key?: string; 
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+  public set key(value: string) {
+    this._key = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyInput() {
+    return this._key;
+  }
+
+  // values - computed: false, optional: false, required: true
+  private _values?: number[]; 
+  public get values() {
+    return this.getNumberListAttribute('values');
+  }
+  public set values(value: number[]) {
+    this._values = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valuesInput() {
+    return this._values;
+  }
+}
+
+export class EventgridEventSubscriptionAdvancedFilterNumberInList extends cdktf.ComplexList {
+  public internalValue? : EventgridEventSubscriptionAdvancedFilterNumberIn[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): EventgridEventSubscriptionAdvancedFilterNumberInOutputReference {
+    return new EventgridEventSubscriptionAdvancedFilterNumberInOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface EventgridEventSubscriptionAdvancedFilterNumberInRange {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#key EventgridEventSubscription#key}
@@ -278,6 +823,102 @@ export function eventgridEventSubscriptionAdvancedFilterNumberInRangeToTerraform
   }
 }
 
+export class EventgridEventSubscriptionAdvancedFilterNumberInRangeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): EventgridEventSubscriptionAdvancedFilterNumberInRange | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._key !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.key = this._key;
+    }
+    if (this._values !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.values = this._values;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EventgridEventSubscriptionAdvancedFilterNumberInRange | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._key = undefined;
+      this._values = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._key = value.key;
+      this._values = value.values;
+    }
+  }
+
+  // key - computed: false, optional: false, required: true
+  private _key?: string; 
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+  public set key(value: string) {
+    this._key = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyInput() {
+    return this._key;
+  }
+
+  // values - computed: false, optional: false, required: true
+  private _values?: number[]; 
+  public get values() {
+    return this.getNumberListAttribute('values');
+  }
+  public set values(value: number[]) {
+    this._values = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valuesInput() {
+    return this._values;
+  }
+}
+
+export class EventgridEventSubscriptionAdvancedFilterNumberInRangeList extends cdktf.ComplexList {
+  public internalValue? : EventgridEventSubscriptionAdvancedFilterNumberInRange[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): EventgridEventSubscriptionAdvancedFilterNumberInRangeOutputReference {
+    return new EventgridEventSubscriptionAdvancedFilterNumberInRangeOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface EventgridEventSubscriptionAdvancedFilterNumberLessThan {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#key EventgridEventSubscription#key}
@@ -300,6 +941,102 @@ export function eventgridEventSubscriptionAdvancedFilterNumberLessThanToTerrafor
   }
 }
 
+export class EventgridEventSubscriptionAdvancedFilterNumberLessThanOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): EventgridEventSubscriptionAdvancedFilterNumberLessThan | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._key !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.key = this._key;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EventgridEventSubscriptionAdvancedFilterNumberLessThan | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._key = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._key = value.key;
+      this._value = value.value;
+    }
+  }
+
+  // key - computed: false, optional: false, required: true
+  private _key?: string; 
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+  public set key(value: string) {
+    this._key = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyInput() {
+    return this._key;
+  }
+
+  // value - computed: false, optional: false, required: true
+  private _value?: number; 
+  public get value() {
+    return this.getNumberAttribute('value');
+  }
+  public set value(value: number) {
+    this._value = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class EventgridEventSubscriptionAdvancedFilterNumberLessThanList extends cdktf.ComplexList {
+  public internalValue? : EventgridEventSubscriptionAdvancedFilterNumberLessThan[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): EventgridEventSubscriptionAdvancedFilterNumberLessThanOutputReference {
+    return new EventgridEventSubscriptionAdvancedFilterNumberLessThanOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface EventgridEventSubscriptionAdvancedFilterNumberLessThanOrEquals {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#key EventgridEventSubscription#key}
@@ -322,6 +1059,102 @@ export function eventgridEventSubscriptionAdvancedFilterNumberLessThanOrEqualsTo
   }
 }
 
+export class EventgridEventSubscriptionAdvancedFilterNumberLessThanOrEqualsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): EventgridEventSubscriptionAdvancedFilterNumberLessThanOrEquals | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._key !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.key = this._key;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EventgridEventSubscriptionAdvancedFilterNumberLessThanOrEquals | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._key = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._key = value.key;
+      this._value = value.value;
+    }
+  }
+
+  // key - computed: false, optional: false, required: true
+  private _key?: string; 
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+  public set key(value: string) {
+    this._key = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyInput() {
+    return this._key;
+  }
+
+  // value - computed: false, optional: false, required: true
+  private _value?: number; 
+  public get value() {
+    return this.getNumberAttribute('value');
+  }
+  public set value(value: number) {
+    this._value = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class EventgridEventSubscriptionAdvancedFilterNumberLessThanOrEqualsList extends cdktf.ComplexList {
+  public internalValue? : EventgridEventSubscriptionAdvancedFilterNumberLessThanOrEquals[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): EventgridEventSubscriptionAdvancedFilterNumberLessThanOrEqualsOutputReference {
+    return new EventgridEventSubscriptionAdvancedFilterNumberLessThanOrEqualsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface EventgridEventSubscriptionAdvancedFilterNumberNotIn {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#key EventgridEventSubscription#key}
@@ -344,6 +1177,102 @@ export function eventgridEventSubscriptionAdvancedFilterNumberNotInToTerraform(s
   }
 }
 
+export class EventgridEventSubscriptionAdvancedFilterNumberNotInOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): EventgridEventSubscriptionAdvancedFilterNumberNotIn | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._key !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.key = this._key;
+    }
+    if (this._values !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.values = this._values;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EventgridEventSubscriptionAdvancedFilterNumberNotIn | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._key = undefined;
+      this._values = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._key = value.key;
+      this._values = value.values;
+    }
+  }
+
+  // key - computed: false, optional: false, required: true
+  private _key?: string; 
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+  public set key(value: string) {
+    this._key = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyInput() {
+    return this._key;
+  }
+
+  // values - computed: false, optional: false, required: true
+  private _values?: number[]; 
+  public get values() {
+    return this.getNumberListAttribute('values');
+  }
+  public set values(value: number[]) {
+    this._values = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valuesInput() {
+    return this._values;
+  }
+}
+
+export class EventgridEventSubscriptionAdvancedFilterNumberNotInList extends cdktf.ComplexList {
+  public internalValue? : EventgridEventSubscriptionAdvancedFilterNumberNotIn[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): EventgridEventSubscriptionAdvancedFilterNumberNotInOutputReference {
+    return new EventgridEventSubscriptionAdvancedFilterNumberNotInOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface EventgridEventSubscriptionAdvancedFilterNumberNotInRange {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#key EventgridEventSubscription#key}
@@ -366,6 +1295,102 @@ export function eventgridEventSubscriptionAdvancedFilterNumberNotInRangeToTerraf
   }
 }
 
+export class EventgridEventSubscriptionAdvancedFilterNumberNotInRangeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): EventgridEventSubscriptionAdvancedFilterNumberNotInRange | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._key !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.key = this._key;
+    }
+    if (this._values !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.values = this._values;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EventgridEventSubscriptionAdvancedFilterNumberNotInRange | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._key = undefined;
+      this._values = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._key = value.key;
+      this._values = value.values;
+    }
+  }
+
+  // key - computed: false, optional: false, required: true
+  private _key?: string; 
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+  public set key(value: string) {
+    this._key = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyInput() {
+    return this._key;
+  }
+
+  // values - computed: false, optional: false, required: true
+  private _values?: number[]; 
+  public get values() {
+    return this.getNumberListAttribute('values');
+  }
+  public set values(value: number[]) {
+    this._values = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valuesInput() {
+    return this._values;
+  }
+}
+
+export class EventgridEventSubscriptionAdvancedFilterNumberNotInRangeList extends cdktf.ComplexList {
+  public internalValue? : EventgridEventSubscriptionAdvancedFilterNumberNotInRange[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): EventgridEventSubscriptionAdvancedFilterNumberNotInRangeOutputReference {
+    return new EventgridEventSubscriptionAdvancedFilterNumberNotInRangeOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface EventgridEventSubscriptionAdvancedFilterStringBeginsWith {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#key EventgridEventSubscription#key}
@@ -388,6 +1413,102 @@ export function eventgridEventSubscriptionAdvancedFilterStringBeginsWithToTerraf
   }
 }
 
+export class EventgridEventSubscriptionAdvancedFilterStringBeginsWithOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): EventgridEventSubscriptionAdvancedFilterStringBeginsWith | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._key !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.key = this._key;
+    }
+    if (this._values !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.values = this._values;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EventgridEventSubscriptionAdvancedFilterStringBeginsWith | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._key = undefined;
+      this._values = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._key = value.key;
+      this._values = value.values;
+    }
+  }
+
+  // key - computed: false, optional: false, required: true
+  private _key?: string; 
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+  public set key(value: string) {
+    this._key = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyInput() {
+    return this._key;
+  }
+
+  // values - computed: false, optional: false, required: true
+  private _values?: string[]; 
+  public get values() {
+    return this.getListAttribute('values');
+  }
+  public set values(value: string[]) {
+    this._values = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valuesInput() {
+    return this._values;
+  }
+}
+
+export class EventgridEventSubscriptionAdvancedFilterStringBeginsWithList extends cdktf.ComplexList {
+  public internalValue? : EventgridEventSubscriptionAdvancedFilterStringBeginsWith[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): EventgridEventSubscriptionAdvancedFilterStringBeginsWithOutputReference {
+    return new EventgridEventSubscriptionAdvancedFilterStringBeginsWithOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface EventgridEventSubscriptionAdvancedFilterStringContains {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#key EventgridEventSubscription#key}
@@ -410,6 +1531,102 @@ export function eventgridEventSubscriptionAdvancedFilterStringContainsToTerrafor
   }
 }
 
+export class EventgridEventSubscriptionAdvancedFilterStringContainsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): EventgridEventSubscriptionAdvancedFilterStringContains | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._key !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.key = this._key;
+    }
+    if (this._values !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.values = this._values;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EventgridEventSubscriptionAdvancedFilterStringContains | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._key = undefined;
+      this._values = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._key = value.key;
+      this._values = value.values;
+    }
+  }
+
+  // key - computed: false, optional: false, required: true
+  private _key?: string; 
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+  public set key(value: string) {
+    this._key = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyInput() {
+    return this._key;
+  }
+
+  // values - computed: false, optional: false, required: true
+  private _values?: string[]; 
+  public get values() {
+    return this.getListAttribute('values');
+  }
+  public set values(value: string[]) {
+    this._values = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valuesInput() {
+    return this._values;
+  }
+}
+
+export class EventgridEventSubscriptionAdvancedFilterStringContainsList extends cdktf.ComplexList {
+  public internalValue? : EventgridEventSubscriptionAdvancedFilterStringContains[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): EventgridEventSubscriptionAdvancedFilterStringContainsOutputReference {
+    return new EventgridEventSubscriptionAdvancedFilterStringContainsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface EventgridEventSubscriptionAdvancedFilterStringEndsWith {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#key EventgridEventSubscription#key}
@@ -432,6 +1649,102 @@ export function eventgridEventSubscriptionAdvancedFilterStringEndsWithToTerrafor
   }
 }
 
+export class EventgridEventSubscriptionAdvancedFilterStringEndsWithOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): EventgridEventSubscriptionAdvancedFilterStringEndsWith | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._key !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.key = this._key;
+    }
+    if (this._values !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.values = this._values;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EventgridEventSubscriptionAdvancedFilterStringEndsWith | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._key = undefined;
+      this._values = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._key = value.key;
+      this._values = value.values;
+    }
+  }
+
+  // key - computed: false, optional: false, required: true
+  private _key?: string; 
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+  public set key(value: string) {
+    this._key = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyInput() {
+    return this._key;
+  }
+
+  // values - computed: false, optional: false, required: true
+  private _values?: string[]; 
+  public get values() {
+    return this.getListAttribute('values');
+  }
+  public set values(value: string[]) {
+    this._values = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valuesInput() {
+    return this._values;
+  }
+}
+
+export class EventgridEventSubscriptionAdvancedFilterStringEndsWithList extends cdktf.ComplexList {
+  public internalValue? : EventgridEventSubscriptionAdvancedFilterStringEndsWith[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): EventgridEventSubscriptionAdvancedFilterStringEndsWithOutputReference {
+    return new EventgridEventSubscriptionAdvancedFilterStringEndsWithOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface EventgridEventSubscriptionAdvancedFilterStringIn {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#key EventgridEventSubscription#key}
@@ -454,6 +1767,102 @@ export function eventgridEventSubscriptionAdvancedFilterStringInToTerraform(stru
   }
 }
 
+export class EventgridEventSubscriptionAdvancedFilterStringInOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): EventgridEventSubscriptionAdvancedFilterStringIn | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._key !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.key = this._key;
+    }
+    if (this._values !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.values = this._values;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EventgridEventSubscriptionAdvancedFilterStringIn | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._key = undefined;
+      this._values = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._key = value.key;
+      this._values = value.values;
+    }
+  }
+
+  // key - computed: false, optional: false, required: true
+  private _key?: string; 
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+  public set key(value: string) {
+    this._key = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyInput() {
+    return this._key;
+  }
+
+  // values - computed: false, optional: false, required: true
+  private _values?: string[]; 
+  public get values() {
+    return this.getListAttribute('values');
+  }
+  public set values(value: string[]) {
+    this._values = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valuesInput() {
+    return this._values;
+  }
+}
+
+export class EventgridEventSubscriptionAdvancedFilterStringInList extends cdktf.ComplexList {
+  public internalValue? : EventgridEventSubscriptionAdvancedFilterStringIn[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): EventgridEventSubscriptionAdvancedFilterStringInOutputReference {
+    return new EventgridEventSubscriptionAdvancedFilterStringInOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface EventgridEventSubscriptionAdvancedFilterStringNotBeginsWith {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#key EventgridEventSubscription#key}
@@ -476,6 +1885,102 @@ export function eventgridEventSubscriptionAdvancedFilterStringNotBeginsWithToTer
   }
 }
 
+export class EventgridEventSubscriptionAdvancedFilterStringNotBeginsWithOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): EventgridEventSubscriptionAdvancedFilterStringNotBeginsWith | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._key !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.key = this._key;
+    }
+    if (this._values !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.values = this._values;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EventgridEventSubscriptionAdvancedFilterStringNotBeginsWith | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._key = undefined;
+      this._values = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._key = value.key;
+      this._values = value.values;
+    }
+  }
+
+  // key - computed: false, optional: false, required: true
+  private _key?: string; 
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+  public set key(value: string) {
+    this._key = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyInput() {
+    return this._key;
+  }
+
+  // values - computed: false, optional: false, required: true
+  private _values?: string[]; 
+  public get values() {
+    return this.getListAttribute('values');
+  }
+  public set values(value: string[]) {
+    this._values = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valuesInput() {
+    return this._values;
+  }
+}
+
+export class EventgridEventSubscriptionAdvancedFilterStringNotBeginsWithList extends cdktf.ComplexList {
+  public internalValue? : EventgridEventSubscriptionAdvancedFilterStringNotBeginsWith[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): EventgridEventSubscriptionAdvancedFilterStringNotBeginsWithOutputReference {
+    return new EventgridEventSubscriptionAdvancedFilterStringNotBeginsWithOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface EventgridEventSubscriptionAdvancedFilterStringNotContains {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#key EventgridEventSubscription#key}
@@ -498,6 +2003,102 @@ export function eventgridEventSubscriptionAdvancedFilterStringNotContainsToTerra
   }
 }
 
+export class EventgridEventSubscriptionAdvancedFilterStringNotContainsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): EventgridEventSubscriptionAdvancedFilterStringNotContains | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._key !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.key = this._key;
+    }
+    if (this._values !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.values = this._values;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EventgridEventSubscriptionAdvancedFilterStringNotContains | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._key = undefined;
+      this._values = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._key = value.key;
+      this._values = value.values;
+    }
+  }
+
+  // key - computed: false, optional: false, required: true
+  private _key?: string; 
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+  public set key(value: string) {
+    this._key = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyInput() {
+    return this._key;
+  }
+
+  // values - computed: false, optional: false, required: true
+  private _values?: string[]; 
+  public get values() {
+    return this.getListAttribute('values');
+  }
+  public set values(value: string[]) {
+    this._values = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valuesInput() {
+    return this._values;
+  }
+}
+
+export class EventgridEventSubscriptionAdvancedFilterStringNotContainsList extends cdktf.ComplexList {
+  public internalValue? : EventgridEventSubscriptionAdvancedFilterStringNotContains[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): EventgridEventSubscriptionAdvancedFilterStringNotContainsOutputReference {
+    return new EventgridEventSubscriptionAdvancedFilterStringNotContainsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface EventgridEventSubscriptionAdvancedFilterStringNotEndsWith {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#key EventgridEventSubscription#key}
@@ -520,6 +2121,102 @@ export function eventgridEventSubscriptionAdvancedFilterStringNotEndsWithToTerra
   }
 }
 
+export class EventgridEventSubscriptionAdvancedFilterStringNotEndsWithOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): EventgridEventSubscriptionAdvancedFilterStringNotEndsWith | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._key !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.key = this._key;
+    }
+    if (this._values !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.values = this._values;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EventgridEventSubscriptionAdvancedFilterStringNotEndsWith | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._key = undefined;
+      this._values = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._key = value.key;
+      this._values = value.values;
+    }
+  }
+
+  // key - computed: false, optional: false, required: true
+  private _key?: string; 
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+  public set key(value: string) {
+    this._key = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyInput() {
+    return this._key;
+  }
+
+  // values - computed: false, optional: false, required: true
+  private _values?: string[]; 
+  public get values() {
+    return this.getListAttribute('values');
+  }
+  public set values(value: string[]) {
+    this._values = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valuesInput() {
+    return this._values;
+  }
+}
+
+export class EventgridEventSubscriptionAdvancedFilterStringNotEndsWithList extends cdktf.ComplexList {
+  public internalValue? : EventgridEventSubscriptionAdvancedFilterStringNotEndsWith[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): EventgridEventSubscriptionAdvancedFilterStringNotEndsWithOutputReference {
+    return new EventgridEventSubscriptionAdvancedFilterStringNotEndsWithOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface EventgridEventSubscriptionAdvancedFilterStringNotIn {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#key EventgridEventSubscription#key}
@@ -542,6 +2239,102 @@ export function eventgridEventSubscriptionAdvancedFilterStringNotInToTerraform(s
   }
 }
 
+export class EventgridEventSubscriptionAdvancedFilterStringNotInOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): EventgridEventSubscriptionAdvancedFilterStringNotIn | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._key !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.key = this._key;
+    }
+    if (this._values !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.values = this._values;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EventgridEventSubscriptionAdvancedFilterStringNotIn | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._key = undefined;
+      this._values = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._key = value.key;
+      this._values = value.values;
+    }
+  }
+
+  // key - computed: false, optional: false, required: true
+  private _key?: string; 
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+  public set key(value: string) {
+    this._key = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyInput() {
+    return this._key;
+  }
+
+  // values - computed: false, optional: false, required: true
+  private _values?: string[]; 
+  public get values() {
+    return this.getListAttribute('values');
+  }
+  public set values(value: string[]) {
+    this._values = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valuesInput() {
+    return this._values;
+  }
+}
+
+export class EventgridEventSubscriptionAdvancedFilterStringNotInList extends cdktf.ComplexList {
+  public internalValue? : EventgridEventSubscriptionAdvancedFilterStringNotIn[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): EventgridEventSubscriptionAdvancedFilterStringNotInOutputReference {
+    return new EventgridEventSubscriptionAdvancedFilterStringNotInOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface EventgridEventSubscriptionAdvancedFilter {
   /**
   * bool_equals block
@@ -701,81 +2494,81 @@ export class EventgridEventSubscriptionAdvancedFilterOutputReference extends cdk
   public get internalValue(): EventgridEventSubscriptionAdvancedFilter | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._boolEquals !== undefined) {
+    if (this._boolEquals?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.boolEquals = this._boolEquals;
+      internalValueResult.boolEquals = this._boolEquals?.internalValue;
     }
-    if (this._isNotNull !== undefined) {
+    if (this._isNotNull?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.isNotNull = this._isNotNull;
+      internalValueResult.isNotNull = this._isNotNull?.internalValue;
     }
-    if (this._isNullOrUndefined !== undefined) {
+    if (this._isNullOrUndefined?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.isNullOrUndefined = this._isNullOrUndefined;
+      internalValueResult.isNullOrUndefined = this._isNullOrUndefined?.internalValue;
     }
-    if (this._numberGreaterThan !== undefined) {
+    if (this._numberGreaterThan?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.numberGreaterThan = this._numberGreaterThan;
+      internalValueResult.numberGreaterThan = this._numberGreaterThan?.internalValue;
     }
-    if (this._numberGreaterThanOrEquals !== undefined) {
+    if (this._numberGreaterThanOrEquals?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.numberGreaterThanOrEquals = this._numberGreaterThanOrEquals;
+      internalValueResult.numberGreaterThanOrEquals = this._numberGreaterThanOrEquals?.internalValue;
     }
-    if (this._numberIn !== undefined) {
+    if (this._numberIn?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.numberIn = this._numberIn;
+      internalValueResult.numberIn = this._numberIn?.internalValue;
     }
-    if (this._numberInRange !== undefined) {
+    if (this._numberInRange?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.numberInRange = this._numberInRange;
+      internalValueResult.numberInRange = this._numberInRange?.internalValue;
     }
-    if (this._numberLessThan !== undefined) {
+    if (this._numberLessThan?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.numberLessThan = this._numberLessThan;
+      internalValueResult.numberLessThan = this._numberLessThan?.internalValue;
     }
-    if (this._numberLessThanOrEquals !== undefined) {
+    if (this._numberLessThanOrEquals?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.numberLessThanOrEquals = this._numberLessThanOrEquals;
+      internalValueResult.numberLessThanOrEquals = this._numberLessThanOrEquals?.internalValue;
     }
-    if (this._numberNotIn !== undefined) {
+    if (this._numberNotIn?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.numberNotIn = this._numberNotIn;
+      internalValueResult.numberNotIn = this._numberNotIn?.internalValue;
     }
-    if (this._numberNotInRange !== undefined) {
+    if (this._numberNotInRange?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.numberNotInRange = this._numberNotInRange;
+      internalValueResult.numberNotInRange = this._numberNotInRange?.internalValue;
     }
-    if (this._stringBeginsWith !== undefined) {
+    if (this._stringBeginsWith?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.stringBeginsWith = this._stringBeginsWith;
+      internalValueResult.stringBeginsWith = this._stringBeginsWith?.internalValue;
     }
-    if (this._stringContains !== undefined) {
+    if (this._stringContains?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.stringContains = this._stringContains;
+      internalValueResult.stringContains = this._stringContains?.internalValue;
     }
-    if (this._stringEndsWith !== undefined) {
+    if (this._stringEndsWith?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.stringEndsWith = this._stringEndsWith;
+      internalValueResult.stringEndsWith = this._stringEndsWith?.internalValue;
     }
-    if (this._stringIn !== undefined) {
+    if (this._stringIn?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.stringIn = this._stringIn;
+      internalValueResult.stringIn = this._stringIn?.internalValue;
     }
-    if (this._stringNotBeginsWith !== undefined) {
+    if (this._stringNotBeginsWith?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.stringNotBeginsWith = this._stringNotBeginsWith;
+      internalValueResult.stringNotBeginsWith = this._stringNotBeginsWith?.internalValue;
     }
-    if (this._stringNotContains !== undefined) {
+    if (this._stringNotContains?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.stringNotContains = this._stringNotContains;
+      internalValueResult.stringNotContains = this._stringNotContains?.internalValue;
     }
-    if (this._stringNotEndsWith !== undefined) {
+    if (this._stringNotEndsWith?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.stringNotEndsWith = this._stringNotEndsWith;
+      internalValueResult.stringNotEndsWith = this._stringNotEndsWith?.internalValue;
     }
-    if (this._stringNotIn !== undefined) {
+    if (this._stringNotIn?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.stringNotIn = this._stringNotIn;
+      internalValueResult.stringNotIn = this._stringNotIn?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -783,371 +2576,352 @@ export class EventgridEventSubscriptionAdvancedFilterOutputReference extends cdk
   public set internalValue(value: EventgridEventSubscriptionAdvancedFilter | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
-      this._boolEquals = undefined;
-      this._isNotNull = undefined;
-      this._isNullOrUndefined = undefined;
-      this._numberGreaterThan = undefined;
-      this._numberGreaterThanOrEquals = undefined;
-      this._numberIn = undefined;
-      this._numberInRange = undefined;
-      this._numberLessThan = undefined;
-      this._numberLessThanOrEquals = undefined;
-      this._numberNotIn = undefined;
-      this._numberNotInRange = undefined;
-      this._stringBeginsWith = undefined;
-      this._stringContains = undefined;
-      this._stringEndsWith = undefined;
-      this._stringIn = undefined;
-      this._stringNotBeginsWith = undefined;
-      this._stringNotContains = undefined;
-      this._stringNotEndsWith = undefined;
-      this._stringNotIn = undefined;
+      this._boolEquals.internalValue = undefined;
+      this._isNotNull.internalValue = undefined;
+      this._isNullOrUndefined.internalValue = undefined;
+      this._numberGreaterThan.internalValue = undefined;
+      this._numberGreaterThanOrEquals.internalValue = undefined;
+      this._numberIn.internalValue = undefined;
+      this._numberInRange.internalValue = undefined;
+      this._numberLessThan.internalValue = undefined;
+      this._numberLessThanOrEquals.internalValue = undefined;
+      this._numberNotIn.internalValue = undefined;
+      this._numberNotInRange.internalValue = undefined;
+      this._stringBeginsWith.internalValue = undefined;
+      this._stringContains.internalValue = undefined;
+      this._stringEndsWith.internalValue = undefined;
+      this._stringIn.internalValue = undefined;
+      this._stringNotBeginsWith.internalValue = undefined;
+      this._stringNotContains.internalValue = undefined;
+      this._stringNotEndsWith.internalValue = undefined;
+      this._stringNotIn.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
-      this._boolEquals = value.boolEquals;
-      this._isNotNull = value.isNotNull;
-      this._isNullOrUndefined = value.isNullOrUndefined;
-      this._numberGreaterThan = value.numberGreaterThan;
-      this._numberGreaterThanOrEquals = value.numberGreaterThanOrEquals;
-      this._numberIn = value.numberIn;
-      this._numberInRange = value.numberInRange;
-      this._numberLessThan = value.numberLessThan;
-      this._numberLessThanOrEquals = value.numberLessThanOrEquals;
-      this._numberNotIn = value.numberNotIn;
-      this._numberNotInRange = value.numberNotInRange;
-      this._stringBeginsWith = value.stringBeginsWith;
-      this._stringContains = value.stringContains;
-      this._stringEndsWith = value.stringEndsWith;
-      this._stringIn = value.stringIn;
-      this._stringNotBeginsWith = value.stringNotBeginsWith;
-      this._stringNotContains = value.stringNotContains;
-      this._stringNotEndsWith = value.stringNotEndsWith;
-      this._stringNotIn = value.stringNotIn;
+      this._boolEquals.internalValue = value.boolEquals;
+      this._isNotNull.internalValue = value.isNotNull;
+      this._isNullOrUndefined.internalValue = value.isNullOrUndefined;
+      this._numberGreaterThan.internalValue = value.numberGreaterThan;
+      this._numberGreaterThanOrEquals.internalValue = value.numberGreaterThanOrEquals;
+      this._numberIn.internalValue = value.numberIn;
+      this._numberInRange.internalValue = value.numberInRange;
+      this._numberLessThan.internalValue = value.numberLessThan;
+      this._numberLessThanOrEquals.internalValue = value.numberLessThanOrEquals;
+      this._numberNotIn.internalValue = value.numberNotIn;
+      this._numberNotInRange.internalValue = value.numberNotInRange;
+      this._stringBeginsWith.internalValue = value.stringBeginsWith;
+      this._stringContains.internalValue = value.stringContains;
+      this._stringEndsWith.internalValue = value.stringEndsWith;
+      this._stringIn.internalValue = value.stringIn;
+      this._stringNotBeginsWith.internalValue = value.stringNotBeginsWith;
+      this._stringNotContains.internalValue = value.stringNotContains;
+      this._stringNotEndsWith.internalValue = value.stringNotEndsWith;
+      this._stringNotIn.internalValue = value.stringNotIn;
     }
   }
 
   // bool_equals - computed: false, optional: true, required: false
-  private _boolEquals?: EventgridEventSubscriptionAdvancedFilterBoolEquals[] | cdktf.IResolvable; 
+  private _boolEquals = new EventgridEventSubscriptionAdvancedFilterBoolEqualsList(this, "bool_equals", false);
   public get boolEquals() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('bool_equals');
+    return this._boolEquals;
   }
-  public set boolEquals(value: EventgridEventSubscriptionAdvancedFilterBoolEquals[] | cdktf.IResolvable) {
-    this._boolEquals = value;
+  public putBoolEquals(value: EventgridEventSubscriptionAdvancedFilterBoolEquals[] | cdktf.IResolvable) {
+    this._boolEquals.internalValue = value;
   }
   public resetBoolEquals() {
-    this._boolEquals = undefined;
+    this._boolEquals.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get boolEqualsInput() {
-    return this._boolEquals;
+    return this._boolEquals.internalValue;
   }
 
   // is_not_null - computed: false, optional: true, required: false
-  private _isNotNull?: EventgridEventSubscriptionAdvancedFilterIsNotNull[] | cdktf.IResolvable; 
+  private _isNotNull = new EventgridEventSubscriptionAdvancedFilterIsNotNullList(this, "is_not_null", false);
   public get isNotNull() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('is_not_null');
+    return this._isNotNull;
   }
-  public set isNotNull(value: EventgridEventSubscriptionAdvancedFilterIsNotNull[] | cdktf.IResolvable) {
-    this._isNotNull = value;
+  public putIsNotNull(value: EventgridEventSubscriptionAdvancedFilterIsNotNull[] | cdktf.IResolvable) {
+    this._isNotNull.internalValue = value;
   }
   public resetIsNotNull() {
-    this._isNotNull = undefined;
+    this._isNotNull.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get isNotNullInput() {
-    return this._isNotNull;
+    return this._isNotNull.internalValue;
   }
 
   // is_null_or_undefined - computed: false, optional: true, required: false
-  private _isNullOrUndefined?: EventgridEventSubscriptionAdvancedFilterIsNullOrUndefined[] | cdktf.IResolvable; 
+  private _isNullOrUndefined = new EventgridEventSubscriptionAdvancedFilterIsNullOrUndefinedList(this, "is_null_or_undefined", false);
   public get isNullOrUndefined() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('is_null_or_undefined');
+    return this._isNullOrUndefined;
   }
-  public set isNullOrUndefined(value: EventgridEventSubscriptionAdvancedFilterIsNullOrUndefined[] | cdktf.IResolvable) {
-    this._isNullOrUndefined = value;
+  public putIsNullOrUndefined(value: EventgridEventSubscriptionAdvancedFilterIsNullOrUndefined[] | cdktf.IResolvable) {
+    this._isNullOrUndefined.internalValue = value;
   }
   public resetIsNullOrUndefined() {
-    this._isNullOrUndefined = undefined;
+    this._isNullOrUndefined.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get isNullOrUndefinedInput() {
-    return this._isNullOrUndefined;
+    return this._isNullOrUndefined.internalValue;
   }
 
   // number_greater_than - computed: false, optional: true, required: false
-  private _numberGreaterThan?: EventgridEventSubscriptionAdvancedFilterNumberGreaterThan[] | cdktf.IResolvable; 
+  private _numberGreaterThan = new EventgridEventSubscriptionAdvancedFilterNumberGreaterThanList(this, "number_greater_than", false);
   public get numberGreaterThan() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('number_greater_than');
+    return this._numberGreaterThan;
   }
-  public set numberGreaterThan(value: EventgridEventSubscriptionAdvancedFilterNumberGreaterThan[] | cdktf.IResolvable) {
-    this._numberGreaterThan = value;
+  public putNumberGreaterThan(value: EventgridEventSubscriptionAdvancedFilterNumberGreaterThan[] | cdktf.IResolvable) {
+    this._numberGreaterThan.internalValue = value;
   }
   public resetNumberGreaterThan() {
-    this._numberGreaterThan = undefined;
+    this._numberGreaterThan.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get numberGreaterThanInput() {
-    return this._numberGreaterThan;
+    return this._numberGreaterThan.internalValue;
   }
 
   // number_greater_than_or_equals - computed: false, optional: true, required: false
-  private _numberGreaterThanOrEquals?: EventgridEventSubscriptionAdvancedFilterNumberGreaterThanOrEquals[] | cdktf.IResolvable; 
+  private _numberGreaterThanOrEquals = new EventgridEventSubscriptionAdvancedFilterNumberGreaterThanOrEqualsList(this, "number_greater_than_or_equals", false);
   public get numberGreaterThanOrEquals() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('number_greater_than_or_equals');
+    return this._numberGreaterThanOrEquals;
   }
-  public set numberGreaterThanOrEquals(value: EventgridEventSubscriptionAdvancedFilterNumberGreaterThanOrEquals[] | cdktf.IResolvable) {
-    this._numberGreaterThanOrEquals = value;
+  public putNumberGreaterThanOrEquals(value: EventgridEventSubscriptionAdvancedFilterNumberGreaterThanOrEquals[] | cdktf.IResolvable) {
+    this._numberGreaterThanOrEquals.internalValue = value;
   }
   public resetNumberGreaterThanOrEquals() {
-    this._numberGreaterThanOrEquals = undefined;
+    this._numberGreaterThanOrEquals.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get numberGreaterThanOrEqualsInput() {
-    return this._numberGreaterThanOrEquals;
+    return this._numberGreaterThanOrEquals.internalValue;
   }
 
   // number_in - computed: false, optional: true, required: false
-  private _numberIn?: EventgridEventSubscriptionAdvancedFilterNumberIn[] | cdktf.IResolvable; 
+  private _numberIn = new EventgridEventSubscriptionAdvancedFilterNumberInList(this, "number_in", false);
   public get numberIn() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('number_in');
+    return this._numberIn;
   }
-  public set numberIn(value: EventgridEventSubscriptionAdvancedFilterNumberIn[] | cdktf.IResolvable) {
-    this._numberIn = value;
+  public putNumberIn(value: EventgridEventSubscriptionAdvancedFilterNumberIn[] | cdktf.IResolvable) {
+    this._numberIn.internalValue = value;
   }
   public resetNumberIn() {
-    this._numberIn = undefined;
+    this._numberIn.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get numberInInput() {
-    return this._numberIn;
+    return this._numberIn.internalValue;
   }
 
   // number_in_range - computed: false, optional: true, required: false
-  private _numberInRange?: EventgridEventSubscriptionAdvancedFilterNumberInRange[] | cdktf.IResolvable; 
+  private _numberInRange = new EventgridEventSubscriptionAdvancedFilterNumberInRangeList(this, "number_in_range", false);
   public get numberInRange() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('number_in_range');
+    return this._numberInRange;
   }
-  public set numberInRange(value: EventgridEventSubscriptionAdvancedFilterNumberInRange[] | cdktf.IResolvable) {
-    this._numberInRange = value;
+  public putNumberInRange(value: EventgridEventSubscriptionAdvancedFilterNumberInRange[] | cdktf.IResolvable) {
+    this._numberInRange.internalValue = value;
   }
   public resetNumberInRange() {
-    this._numberInRange = undefined;
+    this._numberInRange.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get numberInRangeInput() {
-    return this._numberInRange;
+    return this._numberInRange.internalValue;
   }
 
   // number_less_than - computed: false, optional: true, required: false
-  private _numberLessThan?: EventgridEventSubscriptionAdvancedFilterNumberLessThan[] | cdktf.IResolvable; 
+  private _numberLessThan = new EventgridEventSubscriptionAdvancedFilterNumberLessThanList(this, "number_less_than", false);
   public get numberLessThan() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('number_less_than');
+    return this._numberLessThan;
   }
-  public set numberLessThan(value: EventgridEventSubscriptionAdvancedFilterNumberLessThan[] | cdktf.IResolvable) {
-    this._numberLessThan = value;
+  public putNumberLessThan(value: EventgridEventSubscriptionAdvancedFilterNumberLessThan[] | cdktf.IResolvable) {
+    this._numberLessThan.internalValue = value;
   }
   public resetNumberLessThan() {
-    this._numberLessThan = undefined;
+    this._numberLessThan.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get numberLessThanInput() {
-    return this._numberLessThan;
+    return this._numberLessThan.internalValue;
   }
 
   // number_less_than_or_equals - computed: false, optional: true, required: false
-  private _numberLessThanOrEquals?: EventgridEventSubscriptionAdvancedFilterNumberLessThanOrEquals[] | cdktf.IResolvable; 
+  private _numberLessThanOrEquals = new EventgridEventSubscriptionAdvancedFilterNumberLessThanOrEqualsList(this, "number_less_than_or_equals", false);
   public get numberLessThanOrEquals() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('number_less_than_or_equals');
+    return this._numberLessThanOrEquals;
   }
-  public set numberLessThanOrEquals(value: EventgridEventSubscriptionAdvancedFilterNumberLessThanOrEquals[] | cdktf.IResolvable) {
-    this._numberLessThanOrEquals = value;
+  public putNumberLessThanOrEquals(value: EventgridEventSubscriptionAdvancedFilterNumberLessThanOrEquals[] | cdktf.IResolvable) {
+    this._numberLessThanOrEquals.internalValue = value;
   }
   public resetNumberLessThanOrEquals() {
-    this._numberLessThanOrEquals = undefined;
+    this._numberLessThanOrEquals.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get numberLessThanOrEqualsInput() {
-    return this._numberLessThanOrEquals;
+    return this._numberLessThanOrEquals.internalValue;
   }
 
   // number_not_in - computed: false, optional: true, required: false
-  private _numberNotIn?: EventgridEventSubscriptionAdvancedFilterNumberNotIn[] | cdktf.IResolvable; 
+  private _numberNotIn = new EventgridEventSubscriptionAdvancedFilterNumberNotInList(this, "number_not_in", false);
   public get numberNotIn() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('number_not_in');
+    return this._numberNotIn;
   }
-  public set numberNotIn(value: EventgridEventSubscriptionAdvancedFilterNumberNotIn[] | cdktf.IResolvable) {
-    this._numberNotIn = value;
+  public putNumberNotIn(value: EventgridEventSubscriptionAdvancedFilterNumberNotIn[] | cdktf.IResolvable) {
+    this._numberNotIn.internalValue = value;
   }
   public resetNumberNotIn() {
-    this._numberNotIn = undefined;
+    this._numberNotIn.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get numberNotInInput() {
-    return this._numberNotIn;
+    return this._numberNotIn.internalValue;
   }
 
   // number_not_in_range - computed: false, optional: true, required: false
-  private _numberNotInRange?: EventgridEventSubscriptionAdvancedFilterNumberNotInRange[] | cdktf.IResolvable; 
+  private _numberNotInRange = new EventgridEventSubscriptionAdvancedFilterNumberNotInRangeList(this, "number_not_in_range", false);
   public get numberNotInRange() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('number_not_in_range');
+    return this._numberNotInRange;
   }
-  public set numberNotInRange(value: EventgridEventSubscriptionAdvancedFilterNumberNotInRange[] | cdktf.IResolvable) {
-    this._numberNotInRange = value;
+  public putNumberNotInRange(value: EventgridEventSubscriptionAdvancedFilterNumberNotInRange[] | cdktf.IResolvable) {
+    this._numberNotInRange.internalValue = value;
   }
   public resetNumberNotInRange() {
-    this._numberNotInRange = undefined;
+    this._numberNotInRange.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get numberNotInRangeInput() {
-    return this._numberNotInRange;
+    return this._numberNotInRange.internalValue;
   }
 
   // string_begins_with - computed: false, optional: true, required: false
-  private _stringBeginsWith?: EventgridEventSubscriptionAdvancedFilterStringBeginsWith[] | cdktf.IResolvable; 
+  private _stringBeginsWith = new EventgridEventSubscriptionAdvancedFilterStringBeginsWithList(this, "string_begins_with", false);
   public get stringBeginsWith() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('string_begins_with');
+    return this._stringBeginsWith;
   }
-  public set stringBeginsWith(value: EventgridEventSubscriptionAdvancedFilterStringBeginsWith[] | cdktf.IResolvable) {
-    this._stringBeginsWith = value;
+  public putStringBeginsWith(value: EventgridEventSubscriptionAdvancedFilterStringBeginsWith[] | cdktf.IResolvable) {
+    this._stringBeginsWith.internalValue = value;
   }
   public resetStringBeginsWith() {
-    this._stringBeginsWith = undefined;
+    this._stringBeginsWith.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get stringBeginsWithInput() {
-    return this._stringBeginsWith;
+    return this._stringBeginsWith.internalValue;
   }
 
   // string_contains - computed: false, optional: true, required: false
-  private _stringContains?: EventgridEventSubscriptionAdvancedFilterStringContains[] | cdktf.IResolvable; 
+  private _stringContains = new EventgridEventSubscriptionAdvancedFilterStringContainsList(this, "string_contains", false);
   public get stringContains() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('string_contains');
+    return this._stringContains;
   }
-  public set stringContains(value: EventgridEventSubscriptionAdvancedFilterStringContains[] | cdktf.IResolvable) {
-    this._stringContains = value;
+  public putStringContains(value: EventgridEventSubscriptionAdvancedFilterStringContains[] | cdktf.IResolvable) {
+    this._stringContains.internalValue = value;
   }
   public resetStringContains() {
-    this._stringContains = undefined;
+    this._stringContains.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get stringContainsInput() {
-    return this._stringContains;
+    return this._stringContains.internalValue;
   }
 
   // string_ends_with - computed: false, optional: true, required: false
-  private _stringEndsWith?: EventgridEventSubscriptionAdvancedFilterStringEndsWith[] | cdktf.IResolvable; 
+  private _stringEndsWith = new EventgridEventSubscriptionAdvancedFilterStringEndsWithList(this, "string_ends_with", false);
   public get stringEndsWith() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('string_ends_with');
+    return this._stringEndsWith;
   }
-  public set stringEndsWith(value: EventgridEventSubscriptionAdvancedFilterStringEndsWith[] | cdktf.IResolvable) {
-    this._stringEndsWith = value;
+  public putStringEndsWith(value: EventgridEventSubscriptionAdvancedFilterStringEndsWith[] | cdktf.IResolvable) {
+    this._stringEndsWith.internalValue = value;
   }
   public resetStringEndsWith() {
-    this._stringEndsWith = undefined;
+    this._stringEndsWith.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get stringEndsWithInput() {
-    return this._stringEndsWith;
+    return this._stringEndsWith.internalValue;
   }
 
   // string_in - computed: false, optional: true, required: false
-  private _stringIn?: EventgridEventSubscriptionAdvancedFilterStringIn[] | cdktf.IResolvable; 
+  private _stringIn = new EventgridEventSubscriptionAdvancedFilterStringInList(this, "string_in", false);
   public get stringIn() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('string_in');
+    return this._stringIn;
   }
-  public set stringIn(value: EventgridEventSubscriptionAdvancedFilterStringIn[] | cdktf.IResolvable) {
-    this._stringIn = value;
+  public putStringIn(value: EventgridEventSubscriptionAdvancedFilterStringIn[] | cdktf.IResolvable) {
+    this._stringIn.internalValue = value;
   }
   public resetStringIn() {
-    this._stringIn = undefined;
+    this._stringIn.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get stringInInput() {
-    return this._stringIn;
+    return this._stringIn.internalValue;
   }
 
   // string_not_begins_with - computed: false, optional: true, required: false
-  private _stringNotBeginsWith?: EventgridEventSubscriptionAdvancedFilterStringNotBeginsWith[] | cdktf.IResolvable; 
+  private _stringNotBeginsWith = new EventgridEventSubscriptionAdvancedFilterStringNotBeginsWithList(this, "string_not_begins_with", false);
   public get stringNotBeginsWith() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('string_not_begins_with');
+    return this._stringNotBeginsWith;
   }
-  public set stringNotBeginsWith(value: EventgridEventSubscriptionAdvancedFilterStringNotBeginsWith[] | cdktf.IResolvable) {
-    this._stringNotBeginsWith = value;
+  public putStringNotBeginsWith(value: EventgridEventSubscriptionAdvancedFilterStringNotBeginsWith[] | cdktf.IResolvable) {
+    this._stringNotBeginsWith.internalValue = value;
   }
   public resetStringNotBeginsWith() {
-    this._stringNotBeginsWith = undefined;
+    this._stringNotBeginsWith.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get stringNotBeginsWithInput() {
-    return this._stringNotBeginsWith;
+    return this._stringNotBeginsWith.internalValue;
   }
 
   // string_not_contains - computed: false, optional: true, required: false
-  private _stringNotContains?: EventgridEventSubscriptionAdvancedFilterStringNotContains[] | cdktf.IResolvable; 
+  private _stringNotContains = new EventgridEventSubscriptionAdvancedFilterStringNotContainsList(this, "string_not_contains", false);
   public get stringNotContains() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('string_not_contains');
+    return this._stringNotContains;
   }
-  public set stringNotContains(value: EventgridEventSubscriptionAdvancedFilterStringNotContains[] | cdktf.IResolvable) {
-    this._stringNotContains = value;
+  public putStringNotContains(value: EventgridEventSubscriptionAdvancedFilterStringNotContains[] | cdktf.IResolvable) {
+    this._stringNotContains.internalValue = value;
   }
   public resetStringNotContains() {
-    this._stringNotContains = undefined;
+    this._stringNotContains.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get stringNotContainsInput() {
-    return this._stringNotContains;
+    return this._stringNotContains.internalValue;
   }
 
   // string_not_ends_with - computed: false, optional: true, required: false
-  private _stringNotEndsWith?: EventgridEventSubscriptionAdvancedFilterStringNotEndsWith[] | cdktf.IResolvable; 
+  private _stringNotEndsWith = new EventgridEventSubscriptionAdvancedFilterStringNotEndsWithList(this, "string_not_ends_with", false);
   public get stringNotEndsWith() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('string_not_ends_with');
+    return this._stringNotEndsWith;
   }
-  public set stringNotEndsWith(value: EventgridEventSubscriptionAdvancedFilterStringNotEndsWith[] | cdktf.IResolvable) {
-    this._stringNotEndsWith = value;
+  public putStringNotEndsWith(value: EventgridEventSubscriptionAdvancedFilterStringNotEndsWith[] | cdktf.IResolvable) {
+    this._stringNotEndsWith.internalValue = value;
   }
   public resetStringNotEndsWith() {
-    this._stringNotEndsWith = undefined;
+    this._stringNotEndsWith.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get stringNotEndsWithInput() {
-    return this._stringNotEndsWith;
+    return this._stringNotEndsWith.internalValue;
   }
 
   // string_not_in - computed: false, optional: true, required: false
-  private _stringNotIn?: EventgridEventSubscriptionAdvancedFilterStringNotIn[] | cdktf.IResolvable; 
+  private _stringNotIn = new EventgridEventSubscriptionAdvancedFilterStringNotInList(this, "string_not_in", false);
   public get stringNotIn() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('string_not_in');
+    return this._stringNotIn;
   }
-  public set stringNotIn(value: EventgridEventSubscriptionAdvancedFilterStringNotIn[] | cdktf.IResolvable) {
-    this._stringNotIn = value;
+  public putStringNotIn(value: EventgridEventSubscriptionAdvancedFilterStringNotIn[] | cdktf.IResolvable) {
+    this._stringNotIn.internalValue = value;
   }
   public resetStringNotIn() {
-    this._stringNotIn = undefined;
+    this._stringNotIn.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get stringNotInInput() {
-    return this._stringNotIn;
+    return this._stringNotIn.internalValue;
   }
 }
 export interface EventgridEventSubscriptionAzureFunctionEndpoint {
@@ -1481,6 +3255,168 @@ export function eventgridEventSubscriptionDeliveryPropertyToTerraform(struct?: E
   }
 }
 
+export class EventgridEventSubscriptionDeliveryPropertyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): EventgridEventSubscriptionDeliveryProperty | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._headerName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headerName = this._headerName;
+    }
+    if (this._secret !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.secret = this._secret;
+    }
+    if (this._sourceField !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sourceField = this._sourceField;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EventgridEventSubscriptionDeliveryProperty | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._headerName = undefined;
+      this._secret = undefined;
+      this._sourceField = undefined;
+      this._type = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._headerName = value.headerName;
+      this._secret = value.secret;
+      this._sourceField = value.sourceField;
+      this._type = value.type;
+      this._value = value.value;
+    }
+  }
+
+  // header_name - computed: false, optional: false, required: true
+  private _headerName?: string; 
+  public get headerName() {
+    return this.getStringAttribute('header_name');
+  }
+  public set headerName(value: string) {
+    this._headerName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headerNameInput() {
+    return this._headerName;
+  }
+
+  // secret - computed: false, optional: true, required: false
+  private _secret?: boolean | cdktf.IResolvable; 
+  public get secret() {
+    return this.getBooleanAttribute('secret');
+  }
+  public set secret(value: boolean | cdktf.IResolvable) {
+    this._secret = value;
+  }
+  public resetSecret() {
+    this._secret = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secretInput() {
+    return this._secret;
+  }
+
+  // source_field - computed: false, optional: true, required: false
+  private _sourceField?: string; 
+  public get sourceField() {
+    return this.getStringAttribute('source_field');
+  }
+  public set sourceField(value: string) {
+    this._sourceField = value;
+  }
+  public resetSourceField() {
+    this._sourceField = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceFieldInput() {
+    return this._sourceField;
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+
+  // value - computed: false, optional: true, required: false
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  public resetValue() {
+    this._value = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class EventgridEventSubscriptionDeliveryPropertyList extends cdktf.ComplexList {
+  public internalValue? : EventgridEventSubscriptionDeliveryProperty[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): EventgridEventSubscriptionDeliveryPropertyOutputReference {
+    return new EventgridEventSubscriptionDeliveryPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface EventgridEventSubscriptionEventhubEndpoint {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#eventhub_id EventgridEventSubscription#eventhub_id}
@@ -2049,6 +3985,7 @@ export function eventgridEventSubscriptionTimeoutsToTerraform(struct?: Eventgrid
 
 export class EventgridEventSubscriptionTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -2058,7 +3995,10 @@ export class EventgridEventSubscriptionTimeoutsOutputReference extends cdktf.Com
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): EventgridEventSubscriptionTimeouts | undefined {
+  public get internalValue(): EventgridEventSubscriptionTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -2080,16 +4020,22 @@ export class EventgridEventSubscriptionTimeoutsOutputReference extends cdktf.Com
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: EventgridEventSubscriptionTimeouts | undefined) {
+  public set internalValue(value: EventgridEventSubscriptionTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -2376,6 +4322,7 @@ export class EventgridEventSubscription extends cdktf.TerraformResource {
     this._eventhubEndpointId = config.eventhubEndpointId;
     this._expirationTimeUtc = config.expirationTimeUtc;
     this._hybridConnectionEndpointId = config.hybridConnectionEndpointId;
+    this._id = config.id;
     this._includedEventTypes = config.includedEventTypes;
     this._labels = config.labels;
     this._name = config.name;
@@ -2387,7 +4334,7 @@ export class EventgridEventSubscription extends cdktf.TerraformResource {
     this._azureFunctionEndpoint.internalValue = config.azureFunctionEndpoint;
     this._deadLetterIdentity.internalValue = config.deadLetterIdentity;
     this._deliveryIdentity.internalValue = config.deliveryIdentity;
-    this._deliveryProperty = config.deliveryProperty;
+    this._deliveryProperty.internalValue = config.deliveryProperty;
     this._eventhubEndpoint.internalValue = config.eventhubEndpoint;
     this._hybridConnectionEndpoint.internalValue = config.hybridConnectionEndpoint;
     this._retryPolicy.internalValue = config.retryPolicy;
@@ -2483,8 +4430,19 @@ export class EventgridEventSubscription extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // included_event_types - computed: true, optional: true, required: false
@@ -2658,20 +4616,19 @@ export class EventgridEventSubscription extends cdktf.TerraformResource {
   }
 
   // delivery_property - computed: false, optional: true, required: false
-  private _deliveryProperty?: EventgridEventSubscriptionDeliveryProperty[] | cdktf.IResolvable; 
+  private _deliveryProperty = new EventgridEventSubscriptionDeliveryPropertyList(this, "delivery_property", false);
   public get deliveryProperty() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('delivery_property');
+    return this._deliveryProperty;
   }
-  public set deliveryProperty(value: EventgridEventSubscriptionDeliveryProperty[] | cdktf.IResolvable) {
-    this._deliveryProperty = value;
+  public putDeliveryProperty(value: EventgridEventSubscriptionDeliveryProperty[] | cdktf.IResolvable) {
+    this._deliveryProperty.internalValue = value;
   }
   public resetDeliveryProperty() {
-    this._deliveryProperty = undefined;
+    this._deliveryProperty.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get deliveryPropertyInput() {
-    return this._deliveryProperty;
+    return this._deliveryProperty.internalValue;
   }
 
   // eventhub_endpoint - computed: false, optional: true, required: false
@@ -2813,6 +4770,7 @@ export class EventgridEventSubscription extends cdktf.TerraformResource {
       eventhub_endpoint_id: cdktf.stringToTerraform(this._eventhubEndpointId),
       expiration_time_utc: cdktf.stringToTerraform(this._expirationTimeUtc),
       hybrid_connection_endpoint_id: cdktf.stringToTerraform(this._hybridConnectionEndpointId),
+      id: cdktf.stringToTerraform(this._id),
       included_event_types: cdktf.listMapper(cdktf.stringToTerraform)(this._includedEventTypes),
       labels: cdktf.listMapper(cdktf.stringToTerraform)(this._labels),
       name: cdktf.stringToTerraform(this._name),
@@ -2824,7 +4782,7 @@ export class EventgridEventSubscription extends cdktf.TerraformResource {
       azure_function_endpoint: eventgridEventSubscriptionAzureFunctionEndpointToTerraform(this._azureFunctionEndpoint.internalValue),
       dead_letter_identity: eventgridEventSubscriptionDeadLetterIdentityToTerraform(this._deadLetterIdentity.internalValue),
       delivery_identity: eventgridEventSubscriptionDeliveryIdentityToTerraform(this._deliveryIdentity.internalValue),
-      delivery_property: cdktf.listMapper(eventgridEventSubscriptionDeliveryPropertyToTerraform)(this._deliveryProperty),
+      delivery_property: cdktf.listMapper(eventgridEventSubscriptionDeliveryPropertyToTerraform)(this._deliveryProperty.internalValue),
       eventhub_endpoint: eventgridEventSubscriptionEventhubEndpointToTerraform(this._eventhubEndpoint.internalValue),
       hybrid_connection_endpoint: eventgridEventSubscriptionHybridConnectionEndpointToTerraform(this._hybridConnectionEndpoint.internalValue),
       retry_policy: eventgridEventSubscriptionRetryPolicyToTerraform(this._retryPolicy.internalValue),

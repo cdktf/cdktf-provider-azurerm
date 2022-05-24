@@ -32,6 +32,13 @@ export interface StorageAccountConfig extends cdktf.TerraformMetaArguments {
   */
   readonly enableHttpsTrafficOnly?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account#id StorageAccount#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account#infrastructure_encryption_enabled StorageAccount#infrastructure_encryption_enabled}
   */
   readonly infrastructureEncryptionEnabled?: boolean | cdktf.IResolvable;
@@ -521,6 +528,159 @@ export function storageAccountBlobPropertiesCorsRuleToTerraform(struct?: Storage
   }
 }
 
+export class StorageAccountBlobPropertiesCorsRuleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): StorageAccountBlobPropertiesCorsRule | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._allowedHeaders !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.allowedHeaders = this._allowedHeaders;
+    }
+    if (this._allowedMethods !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.allowedMethods = this._allowedMethods;
+    }
+    if (this._allowedOrigins !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.allowedOrigins = this._allowedOrigins;
+    }
+    if (this._exposedHeaders !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.exposedHeaders = this._exposedHeaders;
+    }
+    if (this._maxAgeInSeconds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.maxAgeInSeconds = this._maxAgeInSeconds;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageAccountBlobPropertiesCorsRule | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._allowedHeaders = undefined;
+      this._allowedMethods = undefined;
+      this._allowedOrigins = undefined;
+      this._exposedHeaders = undefined;
+      this._maxAgeInSeconds = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._allowedHeaders = value.allowedHeaders;
+      this._allowedMethods = value.allowedMethods;
+      this._allowedOrigins = value.allowedOrigins;
+      this._exposedHeaders = value.exposedHeaders;
+      this._maxAgeInSeconds = value.maxAgeInSeconds;
+    }
+  }
+
+  // allowed_headers - computed: false, optional: false, required: true
+  private _allowedHeaders?: string[]; 
+  public get allowedHeaders() {
+    return this.getListAttribute('allowed_headers');
+  }
+  public set allowedHeaders(value: string[]) {
+    this._allowedHeaders = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowedHeadersInput() {
+    return this._allowedHeaders;
+  }
+
+  // allowed_methods - computed: false, optional: false, required: true
+  private _allowedMethods?: string[]; 
+  public get allowedMethods() {
+    return this.getListAttribute('allowed_methods');
+  }
+  public set allowedMethods(value: string[]) {
+    this._allowedMethods = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowedMethodsInput() {
+    return this._allowedMethods;
+  }
+
+  // allowed_origins - computed: false, optional: false, required: true
+  private _allowedOrigins?: string[]; 
+  public get allowedOrigins() {
+    return this.getListAttribute('allowed_origins');
+  }
+  public set allowedOrigins(value: string[]) {
+    this._allowedOrigins = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowedOriginsInput() {
+    return this._allowedOrigins;
+  }
+
+  // exposed_headers - computed: false, optional: false, required: true
+  private _exposedHeaders?: string[]; 
+  public get exposedHeaders() {
+    return this.getListAttribute('exposed_headers');
+  }
+  public set exposedHeaders(value: string[]) {
+    this._exposedHeaders = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get exposedHeadersInput() {
+    return this._exposedHeaders;
+  }
+
+  // max_age_in_seconds - computed: false, optional: false, required: true
+  private _maxAgeInSeconds?: number; 
+  public get maxAgeInSeconds() {
+    return this.getNumberAttribute('max_age_in_seconds');
+  }
+  public set maxAgeInSeconds(value: number) {
+    this._maxAgeInSeconds = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxAgeInSecondsInput() {
+    return this._maxAgeInSeconds;
+  }
+}
+
+export class StorageAccountBlobPropertiesCorsRuleList extends cdktf.ComplexList {
+  public internalValue? : StorageAccountBlobPropertiesCorsRule[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): StorageAccountBlobPropertiesCorsRuleOutputReference {
+    return new StorageAccountBlobPropertiesCorsRuleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface StorageAccountBlobPropertiesDeleteRetentionPolicy {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account#days StorageAccount#days}
@@ -673,9 +833,9 @@ export class StorageAccountBlobPropertiesOutputReference extends cdktf.ComplexOb
       hasAnyValues = true;
       internalValueResult.containerDeleteRetentionPolicy = this._containerDeleteRetentionPolicy?.internalValue;
     }
-    if (this._corsRule !== undefined) {
+    if (this._corsRule?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.corsRule = this._corsRule;
+      internalValueResult.corsRule = this._corsRule?.internalValue;
     }
     if (this._deleteRetentionPolicy?.internalValue !== undefined) {
       hasAnyValues = true;
@@ -692,7 +852,7 @@ export class StorageAccountBlobPropertiesOutputReference extends cdktf.ComplexOb
       this._lastAccessTimeEnabled = undefined;
       this._versioningEnabled = undefined;
       this._containerDeleteRetentionPolicy.internalValue = undefined;
-      this._corsRule = undefined;
+      this._corsRule.internalValue = undefined;
       this._deleteRetentionPolicy.internalValue = undefined;
     }
     else {
@@ -702,7 +862,7 @@ export class StorageAccountBlobPropertiesOutputReference extends cdktf.ComplexOb
       this._lastAccessTimeEnabled = value.lastAccessTimeEnabled;
       this._versioningEnabled = value.versioningEnabled;
       this._containerDeleteRetentionPolicy.internalValue = value.containerDeleteRetentionPolicy;
-      this._corsRule = value.corsRule;
+      this._corsRule.internalValue = value.corsRule;
       this._deleteRetentionPolicy.internalValue = value.deleteRetentionPolicy;
     }
   }
@@ -788,20 +948,19 @@ export class StorageAccountBlobPropertiesOutputReference extends cdktf.ComplexOb
   }
 
   // cors_rule - computed: false, optional: true, required: false
-  private _corsRule?: StorageAccountBlobPropertiesCorsRule[] | cdktf.IResolvable; 
+  private _corsRule = new StorageAccountBlobPropertiesCorsRuleList(this, "cors_rule", false);
   public get corsRule() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('cors_rule');
+    return this._corsRule;
   }
-  public set corsRule(value: StorageAccountBlobPropertiesCorsRule[] | cdktf.IResolvable) {
-    this._corsRule = value;
+  public putCorsRule(value: StorageAccountBlobPropertiesCorsRule[] | cdktf.IResolvable) {
+    this._corsRule.internalValue = value;
   }
   public resetCorsRule() {
-    this._corsRule = undefined;
+    this._corsRule.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get corsRuleInput() {
-    return this._corsRule;
+    return this._corsRule.internalValue;
   }
 
   // delete_retention_policy - computed: false, optional: true, required: false
@@ -1116,6 +1275,105 @@ export function storageAccountNetworkRulesPrivateLinkAccessToTerraform(struct?: 
   }
 }
 
+export class StorageAccountNetworkRulesPrivateLinkAccessOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): StorageAccountNetworkRulesPrivateLinkAccess | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._endpointResourceId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.endpointResourceId = this._endpointResourceId;
+    }
+    if (this._endpointTenantId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.endpointTenantId = this._endpointTenantId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageAccountNetworkRulesPrivateLinkAccess | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._endpointResourceId = undefined;
+      this._endpointTenantId = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._endpointResourceId = value.endpointResourceId;
+      this._endpointTenantId = value.endpointTenantId;
+    }
+  }
+
+  // endpoint_resource_id - computed: false, optional: false, required: true
+  private _endpointResourceId?: string; 
+  public get endpointResourceId() {
+    return this.getStringAttribute('endpoint_resource_id');
+  }
+  public set endpointResourceId(value: string) {
+    this._endpointResourceId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get endpointResourceIdInput() {
+    return this._endpointResourceId;
+  }
+
+  // endpoint_tenant_id - computed: true, optional: true, required: false
+  private _endpointTenantId?: string; 
+  public get endpointTenantId() {
+    return this.getStringAttribute('endpoint_tenant_id');
+  }
+  public set endpointTenantId(value: string) {
+    this._endpointTenantId = value;
+  }
+  public resetEndpointTenantId() {
+    this._endpointTenantId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get endpointTenantIdInput() {
+    return this._endpointTenantId;
+  }
+}
+
+export class StorageAccountNetworkRulesPrivateLinkAccessList extends cdktf.ComplexList {
+  public internalValue? : StorageAccountNetworkRulesPrivateLinkAccess[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): StorageAccountNetworkRulesPrivateLinkAccessOutputReference {
+    return new StorageAccountNetworkRulesPrivateLinkAccessOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface StorageAccountNetworkRules {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account#bypass StorageAccount#bypass}
@@ -1185,9 +1443,9 @@ export class StorageAccountNetworkRulesOutputReference extends cdktf.ComplexObje
       hasAnyValues = true;
       internalValueResult.virtualNetworkSubnetIds = this._virtualNetworkSubnetIds;
     }
-    if (this._privateLinkAccess !== undefined) {
+    if (this._privateLinkAccess?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.privateLinkAccess = this._privateLinkAccess;
+      internalValueResult.privateLinkAccess = this._privateLinkAccess?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -1199,7 +1457,7 @@ export class StorageAccountNetworkRulesOutputReference extends cdktf.ComplexObje
       this._defaultAction = undefined;
       this._ipRules = undefined;
       this._virtualNetworkSubnetIds = undefined;
-      this._privateLinkAccess = undefined;
+      this._privateLinkAccess.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
@@ -1207,7 +1465,7 @@ export class StorageAccountNetworkRulesOutputReference extends cdktf.ComplexObje
       this._defaultAction = value.defaultAction;
       this._ipRules = value.ipRules;
       this._virtualNetworkSubnetIds = value.virtualNetworkSubnetIds;
-      this._privateLinkAccess = value.privateLinkAccess;
+      this._privateLinkAccess.internalValue = value.privateLinkAccess;
     }
   }
 
@@ -1273,20 +1531,19 @@ export class StorageAccountNetworkRulesOutputReference extends cdktf.ComplexObje
   }
 
   // private_link_access - computed: false, optional: true, required: false
-  private _privateLinkAccess?: StorageAccountNetworkRulesPrivateLinkAccess[] | cdktf.IResolvable; 
+  private _privateLinkAccess = new StorageAccountNetworkRulesPrivateLinkAccessList(this, "private_link_access", false);
   public get privateLinkAccess() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('private_link_access');
+    return this._privateLinkAccess;
   }
-  public set privateLinkAccess(value: StorageAccountNetworkRulesPrivateLinkAccess[] | cdktf.IResolvable) {
-    this._privateLinkAccess = value;
+  public putPrivateLinkAccess(value: StorageAccountNetworkRulesPrivateLinkAccess[] | cdktf.IResolvable) {
+    this._privateLinkAccess.internalValue = value;
   }
   public resetPrivateLinkAccess() {
-    this._privateLinkAccess = undefined;
+    this._privateLinkAccess.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get privateLinkAccessInput() {
-    return this._privateLinkAccess;
+    return this._privateLinkAccess.internalValue;
   }
 }
 export interface StorageAccountQueuePropertiesCorsRule {
@@ -1326,6 +1583,159 @@ export function storageAccountQueuePropertiesCorsRuleToTerraform(struct?: Storag
   }
 }
 
+export class StorageAccountQueuePropertiesCorsRuleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): StorageAccountQueuePropertiesCorsRule | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._allowedHeaders !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.allowedHeaders = this._allowedHeaders;
+    }
+    if (this._allowedMethods !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.allowedMethods = this._allowedMethods;
+    }
+    if (this._allowedOrigins !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.allowedOrigins = this._allowedOrigins;
+    }
+    if (this._exposedHeaders !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.exposedHeaders = this._exposedHeaders;
+    }
+    if (this._maxAgeInSeconds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.maxAgeInSeconds = this._maxAgeInSeconds;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageAccountQueuePropertiesCorsRule | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._allowedHeaders = undefined;
+      this._allowedMethods = undefined;
+      this._allowedOrigins = undefined;
+      this._exposedHeaders = undefined;
+      this._maxAgeInSeconds = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._allowedHeaders = value.allowedHeaders;
+      this._allowedMethods = value.allowedMethods;
+      this._allowedOrigins = value.allowedOrigins;
+      this._exposedHeaders = value.exposedHeaders;
+      this._maxAgeInSeconds = value.maxAgeInSeconds;
+    }
+  }
+
+  // allowed_headers - computed: false, optional: false, required: true
+  private _allowedHeaders?: string[]; 
+  public get allowedHeaders() {
+    return this.getListAttribute('allowed_headers');
+  }
+  public set allowedHeaders(value: string[]) {
+    this._allowedHeaders = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowedHeadersInput() {
+    return this._allowedHeaders;
+  }
+
+  // allowed_methods - computed: false, optional: false, required: true
+  private _allowedMethods?: string[]; 
+  public get allowedMethods() {
+    return this.getListAttribute('allowed_methods');
+  }
+  public set allowedMethods(value: string[]) {
+    this._allowedMethods = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowedMethodsInput() {
+    return this._allowedMethods;
+  }
+
+  // allowed_origins - computed: false, optional: false, required: true
+  private _allowedOrigins?: string[]; 
+  public get allowedOrigins() {
+    return this.getListAttribute('allowed_origins');
+  }
+  public set allowedOrigins(value: string[]) {
+    this._allowedOrigins = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowedOriginsInput() {
+    return this._allowedOrigins;
+  }
+
+  // exposed_headers - computed: false, optional: false, required: true
+  private _exposedHeaders?: string[]; 
+  public get exposedHeaders() {
+    return this.getListAttribute('exposed_headers');
+  }
+  public set exposedHeaders(value: string[]) {
+    this._exposedHeaders = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get exposedHeadersInput() {
+    return this._exposedHeaders;
+  }
+
+  // max_age_in_seconds - computed: false, optional: false, required: true
+  private _maxAgeInSeconds?: number; 
+  public get maxAgeInSeconds() {
+    return this.getNumberAttribute('max_age_in_seconds');
+  }
+  public set maxAgeInSeconds(value: number) {
+    this._maxAgeInSeconds = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxAgeInSecondsInput() {
+    return this._maxAgeInSeconds;
+  }
+}
+
+export class StorageAccountQueuePropertiesCorsRuleList extends cdktf.ComplexList {
+  public internalValue? : StorageAccountQueuePropertiesCorsRule[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): StorageAccountQueuePropertiesCorsRuleOutputReference {
+    return new StorageAccountQueuePropertiesCorsRuleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface StorageAccountQueuePropertiesHourMetrics {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account#enabled StorageAccount#enabled}
@@ -1821,9 +2231,9 @@ export class StorageAccountQueuePropertiesOutputReference extends cdktf.ComplexO
   public get internalValue(): StorageAccountQueueProperties | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._corsRule !== undefined) {
+    if (this._corsRule?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.corsRule = this._corsRule;
+      internalValueResult.corsRule = this._corsRule?.internalValue;
     }
     if (this._hourMetrics?.internalValue !== undefined) {
       hasAnyValues = true;
@@ -1843,14 +2253,14 @@ export class StorageAccountQueuePropertiesOutputReference extends cdktf.ComplexO
   public set internalValue(value: StorageAccountQueueProperties | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
-      this._corsRule = undefined;
+      this._corsRule.internalValue = undefined;
       this._hourMetrics.internalValue = undefined;
       this._logging.internalValue = undefined;
       this._minuteMetrics.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
-      this._corsRule = value.corsRule;
+      this._corsRule.internalValue = value.corsRule;
       this._hourMetrics.internalValue = value.hourMetrics;
       this._logging.internalValue = value.logging;
       this._minuteMetrics.internalValue = value.minuteMetrics;
@@ -1858,20 +2268,19 @@ export class StorageAccountQueuePropertiesOutputReference extends cdktf.ComplexO
   }
 
   // cors_rule - computed: false, optional: true, required: false
-  private _corsRule?: StorageAccountQueuePropertiesCorsRule[] | cdktf.IResolvable; 
+  private _corsRule = new StorageAccountQueuePropertiesCorsRuleList(this, "cors_rule", false);
   public get corsRule() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('cors_rule');
+    return this._corsRule;
   }
-  public set corsRule(value: StorageAccountQueuePropertiesCorsRule[] | cdktf.IResolvable) {
-    this._corsRule = value;
+  public putCorsRule(value: StorageAccountQueuePropertiesCorsRule[] | cdktf.IResolvable) {
+    this._corsRule.internalValue = value;
   }
   public resetCorsRule() {
-    this._corsRule = undefined;
+    this._corsRule.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get corsRuleInput() {
-    return this._corsRule;
+    return this._corsRule.internalValue;
   }
 
   // hour_metrics - computed: false, optional: true, required: false
@@ -2078,6 +2487,159 @@ export function storageAccountSharePropertiesCorsRuleToTerraform(struct?: Storag
   }
 }
 
+export class StorageAccountSharePropertiesCorsRuleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): StorageAccountSharePropertiesCorsRule | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._allowedHeaders !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.allowedHeaders = this._allowedHeaders;
+    }
+    if (this._allowedMethods !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.allowedMethods = this._allowedMethods;
+    }
+    if (this._allowedOrigins !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.allowedOrigins = this._allowedOrigins;
+    }
+    if (this._exposedHeaders !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.exposedHeaders = this._exposedHeaders;
+    }
+    if (this._maxAgeInSeconds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.maxAgeInSeconds = this._maxAgeInSeconds;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageAccountSharePropertiesCorsRule | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._allowedHeaders = undefined;
+      this._allowedMethods = undefined;
+      this._allowedOrigins = undefined;
+      this._exposedHeaders = undefined;
+      this._maxAgeInSeconds = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._allowedHeaders = value.allowedHeaders;
+      this._allowedMethods = value.allowedMethods;
+      this._allowedOrigins = value.allowedOrigins;
+      this._exposedHeaders = value.exposedHeaders;
+      this._maxAgeInSeconds = value.maxAgeInSeconds;
+    }
+  }
+
+  // allowed_headers - computed: false, optional: false, required: true
+  private _allowedHeaders?: string[]; 
+  public get allowedHeaders() {
+    return this.getListAttribute('allowed_headers');
+  }
+  public set allowedHeaders(value: string[]) {
+    this._allowedHeaders = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowedHeadersInput() {
+    return this._allowedHeaders;
+  }
+
+  // allowed_methods - computed: false, optional: false, required: true
+  private _allowedMethods?: string[]; 
+  public get allowedMethods() {
+    return this.getListAttribute('allowed_methods');
+  }
+  public set allowedMethods(value: string[]) {
+    this._allowedMethods = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowedMethodsInput() {
+    return this._allowedMethods;
+  }
+
+  // allowed_origins - computed: false, optional: false, required: true
+  private _allowedOrigins?: string[]; 
+  public get allowedOrigins() {
+    return this.getListAttribute('allowed_origins');
+  }
+  public set allowedOrigins(value: string[]) {
+    this._allowedOrigins = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowedOriginsInput() {
+    return this._allowedOrigins;
+  }
+
+  // exposed_headers - computed: false, optional: false, required: true
+  private _exposedHeaders?: string[]; 
+  public get exposedHeaders() {
+    return this.getListAttribute('exposed_headers');
+  }
+  public set exposedHeaders(value: string[]) {
+    this._exposedHeaders = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get exposedHeadersInput() {
+    return this._exposedHeaders;
+  }
+
+  // max_age_in_seconds - computed: false, optional: false, required: true
+  private _maxAgeInSeconds?: number; 
+  public get maxAgeInSeconds() {
+    return this.getNumberAttribute('max_age_in_seconds');
+  }
+  public set maxAgeInSeconds(value: number) {
+    this._maxAgeInSeconds = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxAgeInSecondsInput() {
+    return this._maxAgeInSeconds;
+  }
+}
+
+export class StorageAccountSharePropertiesCorsRuleList extends cdktf.ComplexList {
+  public internalValue? : StorageAccountSharePropertiesCorsRule[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): StorageAccountSharePropertiesCorsRuleOutputReference {
+    return new StorageAccountSharePropertiesCorsRuleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface StorageAccountSharePropertiesRetentionPolicy {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account#days StorageAccount#days}
@@ -2336,9 +2898,9 @@ export class StorageAccountSharePropertiesOutputReference extends cdktf.ComplexO
   public get internalValue(): StorageAccountShareProperties | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._corsRule !== undefined) {
+    if (this._corsRule?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.corsRule = this._corsRule;
+      internalValueResult.corsRule = this._corsRule?.internalValue;
     }
     if (this._retentionPolicy?.internalValue !== undefined) {
       hasAnyValues = true;
@@ -2354,33 +2916,32 @@ export class StorageAccountSharePropertiesOutputReference extends cdktf.ComplexO
   public set internalValue(value: StorageAccountShareProperties | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
-      this._corsRule = undefined;
+      this._corsRule.internalValue = undefined;
       this._retentionPolicy.internalValue = undefined;
       this._smb.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
-      this._corsRule = value.corsRule;
+      this._corsRule.internalValue = value.corsRule;
       this._retentionPolicy.internalValue = value.retentionPolicy;
       this._smb.internalValue = value.smb;
     }
   }
 
   // cors_rule - computed: false, optional: true, required: false
-  private _corsRule?: StorageAccountSharePropertiesCorsRule[] | cdktf.IResolvable; 
+  private _corsRule = new StorageAccountSharePropertiesCorsRuleList(this, "cors_rule", false);
   public get corsRule() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('cors_rule');
+    return this._corsRule;
   }
-  public set corsRule(value: StorageAccountSharePropertiesCorsRule[] | cdktf.IResolvable) {
-    this._corsRule = value;
+  public putCorsRule(value: StorageAccountSharePropertiesCorsRule[] | cdktf.IResolvable) {
+    this._corsRule.internalValue = value;
   }
   public resetCorsRule() {
-    this._corsRule = undefined;
+    this._corsRule.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get corsRuleInput() {
-    return this._corsRule;
+    return this._corsRule.internalValue;
   }
 
   // retention_policy - computed: false, optional: true, required: false
@@ -2541,6 +3102,7 @@ export function storageAccountTimeoutsToTerraform(struct?: StorageAccountTimeout
 
 export class StorageAccountTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -2550,7 +3112,10 @@ export class StorageAccountTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): StorageAccountTimeouts | undefined {
+  public get internalValue(): StorageAccountTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -2572,16 +3137,22 @@ export class StorageAccountTimeoutsOutputReference extends cdktf.ComplexObject {
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: StorageAccountTimeouts | undefined) {
+  public set internalValue(value: StorageAccountTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -2694,6 +3265,7 @@ export class StorageAccount extends cdktf.TerraformResource {
     this._accountTier = config.accountTier;
     this._allowBlobPublicAccess = config.allowBlobPublicAccess;
     this._enableHttpsTrafficOnly = config.enableHttpsTrafficOnly;
+    this._id = config.id;
     this._infrastructureEncryptionEnabled = config.infrastructureEncryptionEnabled;
     this._isHnsEnabled = config.isHnsEnabled;
     this._largeFileShareEnabled = config.largeFileShareEnabled;
@@ -2814,8 +3386,19 @@ export class StorageAccount extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // infrastructure_encryption_enabled - computed: false, optional: true, required: false
@@ -3349,6 +3932,7 @@ export class StorageAccount extends cdktf.TerraformResource {
       account_tier: cdktf.stringToTerraform(this._accountTier),
       allow_blob_public_access: cdktf.booleanToTerraform(this._allowBlobPublicAccess),
       enable_https_traffic_only: cdktf.booleanToTerraform(this._enableHttpsTrafficOnly),
+      id: cdktf.stringToTerraform(this._id),
       infrastructure_encryption_enabled: cdktf.booleanToTerraform(this._infrastructureEncryptionEnabled),
       is_hns_enabled: cdktf.booleanToTerraform(this._isHnsEnabled),
       large_file_share_enabled: cdktf.booleanToTerraform(this._largeFileShareEnabled),

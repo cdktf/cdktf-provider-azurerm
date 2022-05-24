@@ -8,6 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface SpringCloudServiceConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service#id SpringCloudService#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service#location SpringCloudService#location}
   */
   readonly location: string;
@@ -502,6 +509,212 @@ export function springCloudServiceConfigServerGitSettingRepositoryToTerraform(st
   }
 }
 
+export class SpringCloudServiceConfigServerGitSettingRepositoryOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): SpringCloudServiceConfigServerGitSettingRepository | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._label !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.label = this._label;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._pattern !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.pattern = this._pattern;
+    }
+    if (this._searchPaths !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.searchPaths = this._searchPaths;
+    }
+    if (this._uri !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.uri = this._uri;
+    }
+    if (this._httpBasicAuth?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.httpBasicAuth = this._httpBasicAuth?.internalValue;
+    }
+    if (this._sshAuth?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sshAuth = this._sshAuth?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SpringCloudServiceConfigServerGitSettingRepository | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._label = undefined;
+      this._name = undefined;
+      this._pattern = undefined;
+      this._searchPaths = undefined;
+      this._uri = undefined;
+      this._httpBasicAuth.internalValue = undefined;
+      this._sshAuth.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._label = value.label;
+      this._name = value.name;
+      this._pattern = value.pattern;
+      this._searchPaths = value.searchPaths;
+      this._uri = value.uri;
+      this._httpBasicAuth.internalValue = value.httpBasicAuth;
+      this._sshAuth.internalValue = value.sshAuth;
+    }
+  }
+
+  // label - computed: false, optional: true, required: false
+  private _label?: string; 
+  public get label() {
+    return this.getStringAttribute('label');
+  }
+  public set label(value: string) {
+    this._label = value;
+  }
+  public resetLabel() {
+    this._label = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelInput() {
+    return this._label;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // pattern - computed: false, optional: true, required: false
+  private _pattern?: string[]; 
+  public get pattern() {
+    return this.getListAttribute('pattern');
+  }
+  public set pattern(value: string[]) {
+    this._pattern = value;
+  }
+  public resetPattern() {
+    this._pattern = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get patternInput() {
+    return this._pattern;
+  }
+
+  // search_paths - computed: false, optional: true, required: false
+  private _searchPaths?: string[]; 
+  public get searchPaths() {
+    return this.getListAttribute('search_paths');
+  }
+  public set searchPaths(value: string[]) {
+    this._searchPaths = value;
+  }
+  public resetSearchPaths() {
+    this._searchPaths = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get searchPathsInput() {
+    return this._searchPaths;
+  }
+
+  // uri - computed: false, optional: false, required: true
+  private _uri?: string; 
+  public get uri() {
+    return this.getStringAttribute('uri');
+  }
+  public set uri(value: string) {
+    this._uri = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get uriInput() {
+    return this._uri;
+  }
+
+  // http_basic_auth - computed: false, optional: true, required: false
+  private _httpBasicAuth = new SpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuthOutputReference(this, "http_basic_auth");
+  public get httpBasicAuth() {
+    return this._httpBasicAuth;
+  }
+  public putHttpBasicAuth(value: SpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuth) {
+    this._httpBasicAuth.internalValue = value;
+  }
+  public resetHttpBasicAuth() {
+    this._httpBasicAuth.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get httpBasicAuthInput() {
+    return this._httpBasicAuth.internalValue;
+  }
+
+  // ssh_auth - computed: false, optional: true, required: false
+  private _sshAuth = new SpringCloudServiceConfigServerGitSettingRepositorySshAuthOutputReference(this, "ssh_auth");
+  public get sshAuth() {
+    return this._sshAuth;
+  }
+  public putSshAuth(value: SpringCloudServiceConfigServerGitSettingRepositorySshAuth) {
+    this._sshAuth.internalValue = value;
+  }
+  public resetSshAuth() {
+    this._sshAuth.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sshAuthInput() {
+    return this._sshAuth.internalValue;
+  }
+}
+
+export class SpringCloudServiceConfigServerGitSettingRepositoryList extends cdktf.ComplexList {
+  public internalValue? : SpringCloudServiceConfigServerGitSettingRepository[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): SpringCloudServiceConfigServerGitSettingRepositoryOutputReference {
+    return new SpringCloudServiceConfigServerGitSettingRepositoryOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface SpringCloudServiceConfigServerGitSettingSshAuth {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service#host_key SpringCloudService#host_key}
@@ -723,9 +936,9 @@ export class SpringCloudServiceConfigServerGitSettingOutputReference extends cdk
       hasAnyValues = true;
       internalValueResult.httpBasicAuth = this._httpBasicAuth?.internalValue;
     }
-    if (this._repository !== undefined) {
+    if (this._repository?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.repository = this._repository;
+      internalValueResult.repository = this._repository?.internalValue;
     }
     if (this._sshAuth?.internalValue !== undefined) {
       hasAnyValues = true;
@@ -741,7 +954,7 @@ export class SpringCloudServiceConfigServerGitSettingOutputReference extends cdk
       this._searchPaths = undefined;
       this._uri = undefined;
       this._httpBasicAuth.internalValue = undefined;
-      this._repository = undefined;
+      this._repository.internalValue = undefined;
       this._sshAuth.internalValue = undefined;
     }
     else {
@@ -750,7 +963,7 @@ export class SpringCloudServiceConfigServerGitSettingOutputReference extends cdk
       this._searchPaths = value.searchPaths;
       this._uri = value.uri;
       this._httpBasicAuth.internalValue = value.httpBasicAuth;
-      this._repository = value.repository;
+      this._repository.internalValue = value.repository;
       this._sshAuth.internalValue = value.sshAuth;
     }
   }
@@ -817,20 +1030,19 @@ export class SpringCloudServiceConfigServerGitSettingOutputReference extends cdk
   }
 
   // repository - computed: false, optional: true, required: false
-  private _repository?: SpringCloudServiceConfigServerGitSettingRepository[] | cdktf.IResolvable; 
+  private _repository = new SpringCloudServiceConfigServerGitSettingRepositoryList(this, "repository", false);
   public get repository() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('repository');
+    return this._repository;
   }
-  public set repository(value: SpringCloudServiceConfigServerGitSettingRepository[] | cdktf.IResolvable) {
-    this._repository = value;
+  public putRepository(value: SpringCloudServiceConfigServerGitSettingRepository[] | cdktf.IResolvable) {
+    this._repository.internalValue = value;
   }
   public resetRepository() {
-    this._repository = undefined;
+    this._repository.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get repositoryInput() {
-    return this._repository;
+    return this._repository.internalValue;
   }
 
   // ssh_auth - computed: false, optional: true, required: false
@@ -1047,6 +1259,7 @@ export function springCloudServiceTimeoutsToTerraform(struct?: SpringCloudServic
 
 export class SpringCloudServiceTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -1056,7 +1269,10 @@ export class SpringCloudServiceTimeoutsOutputReference extends cdktf.ComplexObje
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): SpringCloudServiceTimeouts | undefined {
+  public get internalValue(): SpringCloudServiceTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -1078,16 +1294,22 @@ export class SpringCloudServiceTimeoutsOutputReference extends cdktf.ComplexObje
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: SpringCloudServiceTimeouts | undefined) {
+  public set internalValue(value: SpringCloudServiceTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -1313,6 +1535,7 @@ export class SpringCloudService extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._id = config.id;
     this._location = config.location;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
@@ -1329,8 +1552,19 @@ export class SpringCloudService extends cdktf.TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // location - computed: false, optional: false, required: true
@@ -1485,6 +1719,7 @@ export class SpringCloudService extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),

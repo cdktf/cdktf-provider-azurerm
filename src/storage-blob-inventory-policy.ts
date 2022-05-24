@@ -8,6 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface StorageBlobInventoryPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_blob_inventory_policy#id StorageBlobInventoryPolicy#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_blob_inventory_policy#storage_account_id StorageBlobInventoryPolicy#storage_account_id}
   */
   readonly storageAccountId: string;
@@ -220,6 +227,200 @@ export function storageBlobInventoryPolicyRulesToTerraform(struct?: StorageBlobI
   }
 }
 
+export class StorageBlobInventoryPolicyRulesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): StorageBlobInventoryPolicyRules | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._format !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.format = this._format;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._schedule !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.schedule = this._schedule;
+    }
+    if (this._schemaFields !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.schemaFields = this._schemaFields;
+    }
+    if (this._scope !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.scope = this._scope;
+    }
+    if (this._storageContainerName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.storageContainerName = this._storageContainerName;
+    }
+    if (this._filter?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.filter = this._filter?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageBlobInventoryPolicyRules | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._format = undefined;
+      this._name = undefined;
+      this._schedule = undefined;
+      this._schemaFields = undefined;
+      this._scope = undefined;
+      this._storageContainerName = undefined;
+      this._filter.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._format = value.format;
+      this._name = value.name;
+      this._schedule = value.schedule;
+      this._schemaFields = value.schemaFields;
+      this._scope = value.scope;
+      this._storageContainerName = value.storageContainerName;
+      this._filter.internalValue = value.filter;
+    }
+  }
+
+  // format - computed: false, optional: false, required: true
+  private _format?: string; 
+  public get format() {
+    return this.getStringAttribute('format');
+  }
+  public set format(value: string) {
+    this._format = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get formatInput() {
+    return this._format;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // schedule - computed: false, optional: false, required: true
+  private _schedule?: string; 
+  public get schedule() {
+    return this.getStringAttribute('schedule');
+  }
+  public set schedule(value: string) {
+    this._schedule = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scheduleInput() {
+    return this._schedule;
+  }
+
+  // schema_fields - computed: false, optional: false, required: true
+  private _schemaFields?: string[]; 
+  public get schemaFields() {
+    return this.getListAttribute('schema_fields');
+  }
+  public set schemaFields(value: string[]) {
+    this._schemaFields = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get schemaFieldsInput() {
+    return this._schemaFields;
+  }
+
+  // scope - computed: false, optional: false, required: true
+  private _scope?: string; 
+  public get scope() {
+    return this.getStringAttribute('scope');
+  }
+  public set scope(value: string) {
+    this._scope = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scopeInput() {
+    return this._scope;
+  }
+
+  // storage_container_name - computed: false, optional: false, required: true
+  private _storageContainerName?: string; 
+  public get storageContainerName() {
+    return this.getStringAttribute('storage_container_name');
+  }
+  public set storageContainerName(value: string) {
+    this._storageContainerName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageContainerNameInput() {
+    return this._storageContainerName;
+  }
+
+  // filter - computed: false, optional: true, required: false
+  private _filter = new StorageBlobInventoryPolicyRulesFilterOutputReference(this, "filter");
+  public get filter() {
+    return this._filter;
+  }
+  public putFilter(value: StorageBlobInventoryPolicyRulesFilter) {
+    this._filter.internalValue = value;
+  }
+  public resetFilter() {
+    this._filter.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get filterInput() {
+    return this._filter.internalValue;
+  }
+}
+
+export class StorageBlobInventoryPolicyRulesList extends cdktf.ComplexList {
+  public internalValue? : StorageBlobInventoryPolicyRules[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): StorageBlobInventoryPolicyRulesOutputReference {
+    return new StorageBlobInventoryPolicyRulesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface StorageBlobInventoryPolicyTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_blob_inventory_policy#create StorageBlobInventoryPolicy#create}
@@ -254,6 +455,7 @@ export function storageBlobInventoryPolicyTimeoutsToTerraform(struct?: StorageBl
 
 export class StorageBlobInventoryPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -263,7 +465,10 @@ export class StorageBlobInventoryPolicyTimeoutsOutputReference extends cdktf.Com
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): StorageBlobInventoryPolicyTimeouts | undefined {
+  public get internalValue(): StorageBlobInventoryPolicyTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -285,16 +490,22 @@ export class StorageBlobInventoryPolicyTimeoutsOutputReference extends cdktf.Com
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: StorageBlobInventoryPolicyTimeouts | undefined) {
+  public set internalValue(value: StorageBlobInventoryPolicyTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -401,9 +612,10 @@ export class StorageBlobInventoryPolicy extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._id = config.id;
     this._storageAccountId = config.storageAccountId;
     this._storageContainerName = config.storageContainerName;
-    this._rules = config.rules;
+    this._rules.internalValue = config.rules;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -412,8 +624,19 @@ export class StorageBlobInventoryPolicy extends cdktf.TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // storage_account_id - computed: false, optional: false, required: true
@@ -446,17 +669,16 @@ export class StorageBlobInventoryPolicy extends cdktf.TerraformResource {
   }
 
   // rules - computed: false, optional: false, required: true
-  private _rules?: StorageBlobInventoryPolicyRules[] | cdktf.IResolvable; 
+  private _rules = new StorageBlobInventoryPolicyRulesList(this, "rules", true);
   public get rules() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('rules')));
+    return this._rules;
   }
-  public set rules(value: StorageBlobInventoryPolicyRules[] | cdktf.IResolvable) {
-    this._rules = value;
+  public putRules(value: StorageBlobInventoryPolicyRules[] | cdktf.IResolvable) {
+    this._rules.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get rulesInput() {
-    return this._rules;
+    return this._rules.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -481,9 +703,10 @@ export class StorageBlobInventoryPolicy extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      id: cdktf.stringToTerraform(this._id),
       storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
       storage_container_name: cdktf.stringToTerraform(this._storageContainerName),
-      rules: cdktf.listMapper(storageBlobInventoryPolicyRulesToTerraform)(this._rules),
+      rules: cdktf.listMapper(storageBlobInventoryPolicyRulesToTerraform)(this._rules.internalValue),
       timeouts: storageBlobInventoryPolicyTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

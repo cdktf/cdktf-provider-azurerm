@@ -8,6 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface StreamAnalyticsFunctionJavascriptUdfConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_function_javascript_udf#id StreamAnalyticsFunctionJavascriptUdf#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_function_javascript_udf#name StreamAnalyticsFunctionJavascriptUdf#name}
   */
   readonly name: string;
@@ -59,6 +66,83 @@ export function streamAnalyticsFunctionJavascriptUdfInputToTerraform(struct?: St
   }
 }
 
+export class StreamAnalyticsFunctionJavascriptUdfInputOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): StreamAnalyticsFunctionJavascriptUdfInput | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StreamAnalyticsFunctionJavascriptUdfInput | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._type = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._type = value.type;
+    }
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+}
+
+export class StreamAnalyticsFunctionJavascriptUdfInputList extends cdktf.ComplexList {
+  public internalValue? : StreamAnalyticsFunctionJavascriptUdfInput[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): StreamAnalyticsFunctionJavascriptUdfInputOutputReference {
+    return new StreamAnalyticsFunctionJavascriptUdfInputOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface StreamAnalyticsFunctionJavascriptUdfOutput {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_function_javascript_udf#type StreamAnalyticsFunctionJavascriptUdf#type}
@@ -155,6 +239,7 @@ export function streamAnalyticsFunctionJavascriptUdfTimeoutsToTerraform(struct?:
 
 export class StreamAnalyticsFunctionJavascriptUdfTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -164,7 +249,10 @@ export class StreamAnalyticsFunctionJavascriptUdfTimeoutsOutputReference extends
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): StreamAnalyticsFunctionJavascriptUdfTimeouts | undefined {
+  public get internalValue(): StreamAnalyticsFunctionJavascriptUdfTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -186,16 +274,22 @@ export class StreamAnalyticsFunctionJavascriptUdfTimeoutsOutputReference extends
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: StreamAnalyticsFunctionJavascriptUdfTimeouts | undefined) {
+  public set internalValue(value: StreamAnalyticsFunctionJavascriptUdfTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -302,11 +396,12 @@ export class StreamAnalyticsFunctionJavascriptUdf extends cdktf.TerraformResourc
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._id = config.id;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._script = config.script;
     this._streamAnalyticsJobName = config.streamAnalyticsJobName;
-    this._input = config.input;
+    this._input.internalValue = config.input;
     this._output.internalValue = config.output;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -316,8 +411,19 @@ export class StreamAnalyticsFunctionJavascriptUdf extends cdktf.TerraformResourc
   // ==========
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // name - computed: false, optional: false, required: true
@@ -373,17 +479,16 @@ export class StreamAnalyticsFunctionJavascriptUdf extends cdktf.TerraformResourc
   }
 
   // input - computed: false, optional: false, required: true
-  private _input?: StreamAnalyticsFunctionJavascriptUdfInput[] | cdktf.IResolvable; 
+  private _input = new StreamAnalyticsFunctionJavascriptUdfInputList(this, "input", false);
   public get input() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('input');
+    return this._input;
   }
-  public set input(value: StreamAnalyticsFunctionJavascriptUdfInput[] | cdktf.IResolvable) {
-    this._input = value;
+  public putInput(value: StreamAnalyticsFunctionJavascriptUdfInput[] | cdktf.IResolvable) {
+    this._input.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get inputInput() {
-    return this._input;
+    return this._input.internalValue;
   }
 
   // output - computed: false, optional: false, required: true
@@ -421,11 +526,12 @@ export class StreamAnalyticsFunctionJavascriptUdf extends cdktf.TerraformResourc
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       script: cdktf.stringToTerraform(this._script),
       stream_analytics_job_name: cdktf.stringToTerraform(this._streamAnalyticsJobName),
-      input: cdktf.listMapper(streamAnalyticsFunctionJavascriptUdfInputToTerraform)(this._input),
+      input: cdktf.listMapper(streamAnalyticsFunctionJavascriptUdfInputToTerraform)(this._input.internalValue),
       output: streamAnalyticsFunctionJavascriptUdfOutputToTerraform(this._output.internalValue),
       timeouts: streamAnalyticsFunctionJavascriptUdfTimeoutsToTerraform(this._timeouts.internalValue),
     };

@@ -12,6 +12,13 @@ export interface DataAzurermAutomationVariableIntConfig extends cdktf.TerraformM
   */
   readonly automationAccountName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/automation_variable_int#id DataAzurermAutomationVariableInt#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/automation_variable_int#name DataAzurermAutomationVariableInt#name}
   */
   readonly name: string;
@@ -45,6 +52,7 @@ export function dataAzurermAutomationVariableIntTimeoutsToTerraform(struct?: Dat
 
 export class DataAzurermAutomationVariableIntTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -54,7 +62,10 @@ export class DataAzurermAutomationVariableIntTimeoutsOutputReference extends cdk
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): DataAzurermAutomationVariableIntTimeouts | undefined {
+  public get internalValue(): DataAzurermAutomationVariableIntTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._read !== undefined) {
@@ -64,13 +75,19 @@ export class DataAzurermAutomationVariableIntTimeoutsOutputReference extends cdk
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: DataAzurermAutomationVariableIntTimeouts | undefined) {
+  public set internalValue(value: DataAzurermAutomationVariableIntTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._read = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._read = value.read;
     }
   }
@@ -127,6 +144,7 @@ export class DataAzurermAutomationVariableInt extends cdktf.TerraformDataSource 
       lifecycle: config.lifecycle
     });
     this._automationAccountName = config.automationAccountName;
+    this._id = config.id;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._timeouts.internalValue = config.timeouts;
@@ -160,8 +178,19 @@ export class DataAzurermAutomationVariableInt extends cdktf.TerraformDataSource 
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // name - computed: false, optional: false, required: true
@@ -218,6 +247,7 @@ export class DataAzurermAutomationVariableInt extends cdktf.TerraformDataSource 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       automation_account_name: cdktf.stringToTerraform(this._automationAccountName),
+      id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       timeouts: dataAzurermAutomationVariableIntTimeoutsToTerraform(this._timeouts.internalValue),

@@ -20,6 +20,13 @@ export interface BatchJobConfig extends cdktf.TerraformMetaArguments {
   */
   readonly displayName?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_job#id BatchJob#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_job#name BatchJob#name}
   */
   readonly name: string;
@@ -72,6 +79,7 @@ export function batchJobTimeoutsToTerraform(struct?: BatchJobTimeoutsOutputRefer
 
 export class BatchJobTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -81,7 +89,10 @@ export class BatchJobTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): BatchJobTimeouts | undefined {
+  public get internalValue(): BatchJobTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -103,16 +114,22 @@ export class BatchJobTimeoutsOutputReference extends cdktf.ComplexObject {
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: BatchJobTimeouts | undefined) {
+  public set internalValue(value: BatchJobTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -222,6 +239,7 @@ export class BatchJob extends cdktf.TerraformResource {
     this._batchPoolId = config.batchPoolId;
     this._commonEnvironmentProperties = config.commonEnvironmentProperties;
     this._displayName = config.displayName;
+    this._id = config.id;
     this._name = config.name;
     this._priority = config.priority;
     this._taskRetryMaximum = config.taskRetryMaximum;
@@ -278,8 +296,19 @@ export class BatchJob extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // name - computed: false, optional: false, required: true
@@ -352,6 +381,7 @@ export class BatchJob extends cdktf.TerraformResource {
       batch_pool_id: cdktf.stringToTerraform(this._batchPoolId),
       common_environment_properties: cdktf.hashMapper(cdktf.stringToTerraform)(this._commonEnvironmentProperties),
       display_name: cdktf.stringToTerraform(this._displayName),
+      id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       priority: cdktf.numberToTerraform(this._priority),
       task_retry_maximum: cdktf.numberToTerraform(this._taskRetryMaximum),

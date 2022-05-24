@@ -12,6 +12,13 @@ export interface StorageObjectReplicationConfig extends cdktf.TerraformMetaArgum
   */
   readonly destinationStorageAccountId: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_object_replication#id StorageObjectReplication#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_object_replication#source_storage_account_id StorageObjectReplication#source_storage_account_id}
   */
   readonly sourceStorageAccountId: string;
@@ -60,6 +67,151 @@ export function storageObjectReplicationRulesToTerraform(struct?: StorageObjectR
   }
 }
 
+export class StorageObjectReplicationRulesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): StorageObjectReplicationRules | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._copyBlobsCreatedAfter !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.copyBlobsCreatedAfter = this._copyBlobsCreatedAfter;
+    }
+    if (this._destinationContainerName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.destinationContainerName = this._destinationContainerName;
+    }
+    if (this._filterOutBlobsWithPrefix !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.filterOutBlobsWithPrefix = this._filterOutBlobsWithPrefix;
+    }
+    if (this._sourceContainerName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sourceContainerName = this._sourceContainerName;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageObjectReplicationRules | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._copyBlobsCreatedAfter = undefined;
+      this._destinationContainerName = undefined;
+      this._filterOutBlobsWithPrefix = undefined;
+      this._sourceContainerName = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._copyBlobsCreatedAfter = value.copyBlobsCreatedAfter;
+      this._destinationContainerName = value.destinationContainerName;
+      this._filterOutBlobsWithPrefix = value.filterOutBlobsWithPrefix;
+      this._sourceContainerName = value.sourceContainerName;
+    }
+  }
+
+  // copy_blobs_created_after - computed: false, optional: true, required: false
+  private _copyBlobsCreatedAfter?: string; 
+  public get copyBlobsCreatedAfter() {
+    return this.getStringAttribute('copy_blobs_created_after');
+  }
+  public set copyBlobsCreatedAfter(value: string) {
+    this._copyBlobsCreatedAfter = value;
+  }
+  public resetCopyBlobsCreatedAfter() {
+    this._copyBlobsCreatedAfter = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get copyBlobsCreatedAfterInput() {
+    return this._copyBlobsCreatedAfter;
+  }
+
+  // destination_container_name - computed: false, optional: false, required: true
+  private _destinationContainerName?: string; 
+  public get destinationContainerName() {
+    return this.getStringAttribute('destination_container_name');
+  }
+  public set destinationContainerName(value: string) {
+    this._destinationContainerName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get destinationContainerNameInput() {
+    return this._destinationContainerName;
+  }
+
+  // filter_out_blobs_with_prefix - computed: false, optional: true, required: false
+  private _filterOutBlobsWithPrefix?: string[]; 
+  public get filterOutBlobsWithPrefix() {
+    return cdktf.Fn.tolist(this.getListAttribute('filter_out_blobs_with_prefix'));
+  }
+  public set filterOutBlobsWithPrefix(value: string[]) {
+    this._filterOutBlobsWithPrefix = value;
+  }
+  public resetFilterOutBlobsWithPrefix() {
+    this._filterOutBlobsWithPrefix = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get filterOutBlobsWithPrefixInput() {
+    return this._filterOutBlobsWithPrefix;
+  }
+
+  // name - computed: true, optional: false, required: false
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+
+  // source_container_name - computed: false, optional: false, required: true
+  private _sourceContainerName?: string; 
+  public get sourceContainerName() {
+    return this.getStringAttribute('source_container_name');
+  }
+  public set sourceContainerName(value: string) {
+    this._sourceContainerName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceContainerNameInput() {
+    return this._sourceContainerName;
+  }
+}
+
+export class StorageObjectReplicationRulesList extends cdktf.ComplexList {
+  public internalValue? : StorageObjectReplicationRules[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): StorageObjectReplicationRulesOutputReference {
+    return new StorageObjectReplicationRulesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface StorageObjectReplicationTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_object_replication#create StorageObjectReplication#create}
@@ -94,6 +246,7 @@ export function storageObjectReplicationTimeoutsToTerraform(struct?: StorageObje
 
 export class StorageObjectReplicationTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -103,7 +256,10 @@ export class StorageObjectReplicationTimeoutsOutputReference extends cdktf.Compl
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): StorageObjectReplicationTimeouts | undefined {
+  public get internalValue(): StorageObjectReplicationTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -125,16 +281,22 @@ export class StorageObjectReplicationTimeoutsOutputReference extends cdktf.Compl
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: StorageObjectReplicationTimeouts | undefined) {
+  public set internalValue(value: StorageObjectReplicationTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -242,8 +404,9 @@ export class StorageObjectReplication extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._destinationStorageAccountId = config.destinationStorageAccountId;
+    this._id = config.id;
     this._sourceStorageAccountId = config.sourceStorageAccountId;
-    this._rules = config.rules;
+    this._rules.internalValue = config.rules;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -270,8 +433,19 @@ export class StorageObjectReplication extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // source_object_replication_id - computed: true, optional: false, required: false
@@ -293,17 +467,16 @@ export class StorageObjectReplication extends cdktf.TerraformResource {
   }
 
   // rules - computed: false, optional: false, required: true
-  private _rules?: StorageObjectReplicationRules[] | cdktf.IResolvable; 
+  private _rules = new StorageObjectReplicationRulesList(this, "rules", true);
   public get rules() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('rules')));
+    return this._rules;
   }
-  public set rules(value: StorageObjectReplicationRules[] | cdktf.IResolvable) {
-    this._rules = value;
+  public putRules(value: StorageObjectReplicationRules[] | cdktf.IResolvable) {
+    this._rules.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get rulesInput() {
-    return this._rules;
+    return this._rules.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -329,8 +502,9 @@ export class StorageObjectReplication extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       destination_storage_account_id: cdktf.stringToTerraform(this._destinationStorageAccountId),
+      id: cdktf.stringToTerraform(this._id),
       source_storage_account_id: cdktf.stringToTerraform(this._sourceStorageAccountId),
-      rules: cdktf.listMapper(storageObjectReplicationRulesToTerraform)(this._rules),
+      rules: cdktf.listMapper(storageObjectReplicationRulesToTerraform)(this._rules.internalValue),
       timeouts: storageObjectReplicationTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

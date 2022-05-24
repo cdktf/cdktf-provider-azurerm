@@ -16,6 +16,13 @@ export interface FirewallApplicationRuleCollectionConfig extends cdktf.Terraform
   */
   readonly azureFirewallName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_application_rule_collection#id FirewallApplicationRuleCollection#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_application_rule_collection#name FirewallApplicationRuleCollection#name}
   */
   readonly name: string;
@@ -62,6 +69,102 @@ export function firewallApplicationRuleCollectionRuleProtocolToTerraform(struct?
   }
 }
 
+export class FirewallApplicationRuleCollectionRuleProtocolOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): FirewallApplicationRuleCollectionRuleProtocol | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._port !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.port = this._port;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: FirewallApplicationRuleCollectionRuleProtocol | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._port = undefined;
+      this._type = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._port = value.port;
+      this._type = value.type;
+    }
+  }
+
+  // port - computed: false, optional: false, required: true
+  private _port?: number; 
+  public get port() {
+    return this.getNumberAttribute('port');
+  }
+  public set port(value: number) {
+    this._port = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get portInput() {
+    return this._port;
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+}
+
+export class FirewallApplicationRuleCollectionRuleProtocolList extends cdktf.ComplexList {
+  public internalValue? : FirewallApplicationRuleCollectionRuleProtocol[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): FirewallApplicationRuleCollectionRuleProtocolOutputReference {
+    return new FirewallApplicationRuleCollectionRuleProtocolOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface FirewallApplicationRuleCollectionRule {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_application_rule_collection#description FirewallApplicationRuleCollection#description}
@@ -111,6 +214,215 @@ export function firewallApplicationRuleCollectionRuleToTerraform(struct?: Firewa
   }
 }
 
+export class FirewallApplicationRuleCollectionRuleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): FirewallApplicationRuleCollectionRule | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._description !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.description = this._description;
+    }
+    if (this._fqdnTags !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.fqdnTags = this._fqdnTags;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._sourceAddresses !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sourceAddresses = this._sourceAddresses;
+    }
+    if (this._sourceIpGroups !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sourceIpGroups = this._sourceIpGroups;
+    }
+    if (this._targetFqdns !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.targetFqdns = this._targetFqdns;
+    }
+    if (this._protocol?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.protocol = this._protocol?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: FirewallApplicationRuleCollectionRule | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._description = undefined;
+      this._fqdnTags = undefined;
+      this._name = undefined;
+      this._sourceAddresses = undefined;
+      this._sourceIpGroups = undefined;
+      this._targetFqdns = undefined;
+      this._protocol.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._description = value.description;
+      this._fqdnTags = value.fqdnTags;
+      this._name = value.name;
+      this._sourceAddresses = value.sourceAddresses;
+      this._sourceIpGroups = value.sourceIpGroups;
+      this._targetFqdns = value.targetFqdns;
+      this._protocol.internalValue = value.protocol;
+    }
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // fqdn_tags - computed: false, optional: true, required: false
+  private _fqdnTags?: string[]; 
+  public get fqdnTags() {
+    return cdktf.Fn.tolist(this.getListAttribute('fqdn_tags'));
+  }
+  public set fqdnTags(value: string[]) {
+    this._fqdnTags = value;
+  }
+  public resetFqdnTags() {
+    this._fqdnTags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fqdnTagsInput() {
+    return this._fqdnTags;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // source_addresses - computed: false, optional: true, required: false
+  private _sourceAddresses?: string[]; 
+  public get sourceAddresses() {
+    return cdktf.Fn.tolist(this.getListAttribute('source_addresses'));
+  }
+  public set sourceAddresses(value: string[]) {
+    this._sourceAddresses = value;
+  }
+  public resetSourceAddresses() {
+    this._sourceAddresses = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceAddressesInput() {
+    return this._sourceAddresses;
+  }
+
+  // source_ip_groups - computed: false, optional: true, required: false
+  private _sourceIpGroups?: string[]; 
+  public get sourceIpGroups() {
+    return cdktf.Fn.tolist(this.getListAttribute('source_ip_groups'));
+  }
+  public set sourceIpGroups(value: string[]) {
+    this._sourceIpGroups = value;
+  }
+  public resetSourceIpGroups() {
+    this._sourceIpGroups = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceIpGroupsInput() {
+    return this._sourceIpGroups;
+  }
+
+  // target_fqdns - computed: false, optional: true, required: false
+  private _targetFqdns?: string[]; 
+  public get targetFqdns() {
+    return cdktf.Fn.tolist(this.getListAttribute('target_fqdns'));
+  }
+  public set targetFqdns(value: string[]) {
+    this._targetFqdns = value;
+  }
+  public resetTargetFqdns() {
+    this._targetFqdns = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetFqdnsInput() {
+    return this._targetFqdns;
+  }
+
+  // protocol - computed: false, optional: true, required: false
+  private _protocol = new FirewallApplicationRuleCollectionRuleProtocolList(this, "protocol", false);
+  public get protocol() {
+    return this._protocol;
+  }
+  public putProtocol(value: FirewallApplicationRuleCollectionRuleProtocol[] | cdktf.IResolvable) {
+    this._protocol.internalValue = value;
+  }
+  public resetProtocol() {
+    this._protocol.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get protocolInput() {
+    return this._protocol.internalValue;
+  }
+}
+
+export class FirewallApplicationRuleCollectionRuleList extends cdktf.ComplexList {
+  public internalValue? : FirewallApplicationRuleCollectionRule[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): FirewallApplicationRuleCollectionRuleOutputReference {
+    return new FirewallApplicationRuleCollectionRuleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface FirewallApplicationRuleCollectionTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_application_rule_collection#create FirewallApplicationRuleCollection#create}
@@ -145,6 +457,7 @@ export function firewallApplicationRuleCollectionTimeoutsToTerraform(struct?: Fi
 
 export class FirewallApplicationRuleCollectionTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -154,7 +467,10 @@ export class FirewallApplicationRuleCollectionTimeoutsOutputReference extends cd
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): FirewallApplicationRuleCollectionTimeouts | undefined {
+  public get internalValue(): FirewallApplicationRuleCollectionTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -176,16 +492,22 @@ export class FirewallApplicationRuleCollectionTimeoutsOutputReference extends cd
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: FirewallApplicationRuleCollectionTimeouts | undefined) {
+  public set internalValue(value: FirewallApplicationRuleCollectionTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -294,10 +616,11 @@ export class FirewallApplicationRuleCollection extends cdktf.TerraformResource {
     });
     this._action = config.action;
     this._azureFirewallName = config.azureFirewallName;
+    this._id = config.id;
     this._name = config.name;
     this._priority = config.priority;
     this._resourceGroupName = config.resourceGroupName;
-    this._rule = config.rule;
+    this._rule.internalValue = config.rule;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -332,8 +655,19 @@ export class FirewallApplicationRuleCollection extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // name - computed: false, optional: false, required: true
@@ -376,17 +710,16 @@ export class FirewallApplicationRuleCollection extends cdktf.TerraformResource {
   }
 
   // rule - computed: false, optional: false, required: true
-  private _rule?: FirewallApplicationRuleCollectionRule[] | cdktf.IResolvable; 
+  private _rule = new FirewallApplicationRuleCollectionRuleList(this, "rule", false);
   public get rule() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('rule');
+    return this._rule;
   }
-  public set rule(value: FirewallApplicationRuleCollectionRule[] | cdktf.IResolvable) {
-    this._rule = value;
+  public putRule(value: FirewallApplicationRuleCollectionRule[] | cdktf.IResolvable) {
+    this._rule.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get ruleInput() {
-    return this._rule;
+    return this._rule.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -413,10 +746,11 @@ export class FirewallApplicationRuleCollection extends cdktf.TerraformResource {
     return {
       action: cdktf.stringToTerraform(this._action),
       azure_firewall_name: cdktf.stringToTerraform(this._azureFirewallName),
+      id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       priority: cdktf.numberToTerraform(this._priority),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      rule: cdktf.listMapper(firewallApplicationRuleCollectionRuleToTerraform)(this._rule),
+      rule: cdktf.listMapper(firewallApplicationRuleCollectionRuleToTerraform)(this._rule.internalValue),
       timeouts: firewallApplicationRuleCollectionTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

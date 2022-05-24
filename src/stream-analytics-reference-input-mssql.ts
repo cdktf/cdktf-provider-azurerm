@@ -20,6 +20,13 @@ export interface StreamAnalyticsReferenceInputMssqlConfig extends cdktf.Terrafor
   */
   readonly fullSnapshotQuery: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_reference_input_mssql#id StreamAnalyticsReferenceInputMssql#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_reference_input_mssql#name StreamAnalyticsReferenceInputMssql#name}
   */
   readonly name: string;
@@ -92,6 +99,7 @@ export function streamAnalyticsReferenceInputMssqlTimeoutsToTerraform(struct?: S
 
 export class StreamAnalyticsReferenceInputMssqlTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -101,7 +109,10 @@ export class StreamAnalyticsReferenceInputMssqlTimeoutsOutputReference extends c
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): StreamAnalyticsReferenceInputMssqlTimeouts | undefined {
+  public get internalValue(): StreamAnalyticsReferenceInputMssqlTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -123,16 +134,22 @@ export class StreamAnalyticsReferenceInputMssqlTimeoutsOutputReference extends c
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: StreamAnalyticsReferenceInputMssqlTimeouts | undefined) {
+  public set internalValue(value: StreamAnalyticsReferenceInputMssqlTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -242,6 +259,7 @@ export class StreamAnalyticsReferenceInputMssql extends cdktf.TerraformResource 
     this._database = config.database;
     this._deltaSnapshotQuery = config.deltaSnapshotQuery;
     this._fullSnapshotQuery = config.fullSnapshotQuery;
+    this._id = config.id;
     this._name = config.name;
     this._password = config.password;
     this._refreshIntervalDuration = config.refreshIntervalDuration;
@@ -300,8 +318,19 @@ export class StreamAnalyticsReferenceInputMssql extends cdktf.TerraformResource 
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // name - computed: false, optional: false, required: true
@@ -436,6 +465,7 @@ export class StreamAnalyticsReferenceInputMssql extends cdktf.TerraformResource 
       database: cdktf.stringToTerraform(this._database),
       delta_snapshot_query: cdktf.stringToTerraform(this._deltaSnapshotQuery),
       full_snapshot_query: cdktf.stringToTerraform(this._fullSnapshotQuery),
+      id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       password: cdktf.stringToTerraform(this._password),
       refresh_interval_duration: cdktf.stringToTerraform(this._refreshIntervalDuration),

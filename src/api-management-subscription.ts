@@ -24,6 +24,13 @@ export interface ApiManagementSubscriptionConfig extends cdktf.TerraformMetaArgu
   */
   readonly displayName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_subscription#id ApiManagementSubscription#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_subscription#primary_key ApiManagementSubscription#primary_key}
   */
   readonly primaryKey?: string;
@@ -92,6 +99,7 @@ export function apiManagementSubscriptionTimeoutsToTerraform(struct?: ApiManagem
 
 export class ApiManagementSubscriptionTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -101,7 +109,10 @@ export class ApiManagementSubscriptionTimeoutsOutputReference extends cdktf.Comp
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): ApiManagementSubscriptionTimeouts | undefined {
+  public get internalValue(): ApiManagementSubscriptionTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -123,16 +134,22 @@ export class ApiManagementSubscriptionTimeoutsOutputReference extends cdktf.Comp
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: ApiManagementSubscriptionTimeouts | undefined) {
+  public set internalValue(value: ApiManagementSubscriptionTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -243,6 +260,7 @@ export class ApiManagementSubscription extends cdktf.TerraformResource {
     this._apiId = config.apiId;
     this._apiManagementName = config.apiManagementName;
     this._displayName = config.displayName;
+    this._id = config.id;
     this._primaryKey = config.primaryKey;
     this._productId = config.productId;
     this._resourceGroupName = config.resourceGroupName;
@@ -316,8 +334,19 @@ export class ApiManagementSubscription extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // primary_key - computed: true, optional: true, required: false
@@ -455,6 +484,7 @@ export class ApiManagementSubscription extends cdktf.TerraformResource {
       api_id: cdktf.stringToTerraform(this._apiId),
       api_management_name: cdktf.stringToTerraform(this._apiManagementName),
       display_name: cdktf.stringToTerraform(this._displayName),
+      id: cdktf.stringToTerraform(this._id),
       primary_key: cdktf.stringToTerraform(this._primaryKey),
       product_id: cdktf.stringToTerraform(this._productId),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),

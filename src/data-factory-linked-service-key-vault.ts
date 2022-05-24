@@ -28,6 +28,13 @@ export interface DataFactoryLinkedServiceKeyVaultConfig extends cdktf.TerraformM
   */
   readonly description?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_key_vault#id DataFactoryLinkedServiceKeyVault#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_key_vault#integration_runtime_name DataFactoryLinkedServiceKeyVault#integration_runtime_name}
   */
   readonly integrationRuntimeName?: string;
@@ -88,6 +95,7 @@ export function dataFactoryLinkedServiceKeyVaultTimeoutsToTerraform(struct?: Dat
 
 export class DataFactoryLinkedServiceKeyVaultTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -97,7 +105,10 @@ export class DataFactoryLinkedServiceKeyVaultTimeoutsOutputReference extends cdk
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): DataFactoryLinkedServiceKeyVaultTimeouts | undefined {
+  public get internalValue(): DataFactoryLinkedServiceKeyVaultTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -119,16 +130,22 @@ export class DataFactoryLinkedServiceKeyVaultTimeoutsOutputReference extends cdk
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: DataFactoryLinkedServiceKeyVaultTimeouts | undefined) {
+  public set internalValue(value: DataFactoryLinkedServiceKeyVaultTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -240,6 +257,7 @@ export class DataFactoryLinkedServiceKeyVault extends cdktf.TerraformResource {
     this._dataFactoryId = config.dataFactoryId;
     this._dataFactoryName = config.dataFactoryName;
     this._description = config.description;
+    this._id = config.id;
     this._integrationRuntimeName = config.integrationRuntimeName;
     this._keyVaultId = config.keyVaultId;
     this._name = config.name;
@@ -333,8 +351,19 @@ export class DataFactoryLinkedServiceKeyVault extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // integration_runtime_name - computed: false, optional: true, required: false
@@ -435,6 +464,7 @@ export class DataFactoryLinkedServiceKeyVault extends cdktf.TerraformResource {
       data_factory_id: cdktf.stringToTerraform(this._dataFactoryId),
       data_factory_name: cdktf.stringToTerraform(this._dataFactoryName),
       description: cdktf.stringToTerraform(this._description),
+      id: cdktf.stringToTerraform(this._id),
       integration_runtime_name: cdktf.stringToTerraform(this._integrationRuntimeName),
       key_vault_id: cdktf.stringToTerraform(this._keyVaultId),
       name: cdktf.stringToTerraform(this._name),

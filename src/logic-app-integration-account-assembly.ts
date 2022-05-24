@@ -24,6 +24,13 @@ export interface LogicAppIntegrationAccountAssemblyConfig extends cdktf.Terrafor
   */
   readonly contentLinkUri?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_assembly#id LogicAppIntegrationAccountAssembly#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_assembly#integration_account_name LogicAppIntegrationAccountAssembly#integration_account_name}
   */
   readonly integrationAccountName: string;
@@ -80,6 +87,7 @@ export function logicAppIntegrationAccountAssemblyTimeoutsToTerraform(struct?: L
 
 export class LogicAppIntegrationAccountAssemblyTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -89,7 +97,10 @@ export class LogicAppIntegrationAccountAssemblyTimeoutsOutputReference extends c
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): LogicAppIntegrationAccountAssemblyTimeouts | undefined {
+  public get internalValue(): LogicAppIntegrationAccountAssemblyTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -111,16 +122,22 @@ export class LogicAppIntegrationAccountAssemblyTimeoutsOutputReference extends c
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: LogicAppIntegrationAccountAssemblyTimeouts | undefined) {
+  public set internalValue(value: LogicAppIntegrationAccountAssemblyTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -231,6 +248,7 @@ export class LogicAppIntegrationAccountAssembly extends cdktf.TerraformResource 
     this._assemblyVersion = config.assemblyVersion;
     this._content = config.content;
     this._contentLinkUri = config.contentLinkUri;
+    this._id = config.id;
     this._integrationAccountName = config.integrationAccountName;
     this._metadata = config.metadata;
     this._name = config.name;
@@ -304,8 +322,19 @@ export class LogicAppIntegrationAccountAssembly extends cdktf.TerraformResource 
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // integration_account_name - computed: false, optional: false, required: true
@@ -389,6 +418,7 @@ export class LogicAppIntegrationAccountAssembly extends cdktf.TerraformResource 
       assembly_version: cdktf.stringToTerraform(this._assemblyVersion),
       content: cdktf.stringToTerraform(this._content),
       content_link_uri: cdktf.stringToTerraform(this._contentLinkUri),
+      id: cdktf.stringToTerraform(this._id),
       integration_account_name: cdktf.stringToTerraform(this._integrationAccountName),
       metadata: cdktf.hashMapper(cdktf.stringToTerraform)(this._metadata),
       name: cdktf.stringToTerraform(this._name),

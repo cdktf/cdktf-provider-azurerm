@@ -12,6 +12,13 @@ export interface VirtualHubConfig extends cdktf.TerraformMetaArguments {
   */
   readonly addressPrefix?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub#id VirtualHub#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub#location VirtualHub#location}
   */
   readonly location: string;
@@ -70,6 +77,102 @@ export function virtualHubRouteToTerraform(struct?: VirtualHubRoute | cdktf.IRes
   }
 }
 
+export class VirtualHubRouteOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): VirtualHubRoute | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._addressPrefixes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.addressPrefixes = this._addressPrefixes;
+    }
+    if (this._nextHopIpAddress !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.nextHopIpAddress = this._nextHopIpAddress;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: VirtualHubRoute | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._addressPrefixes = undefined;
+      this._nextHopIpAddress = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._addressPrefixes = value.addressPrefixes;
+      this._nextHopIpAddress = value.nextHopIpAddress;
+    }
+  }
+
+  // address_prefixes - computed: false, optional: false, required: true
+  private _addressPrefixes?: string[]; 
+  public get addressPrefixes() {
+    return this.getListAttribute('address_prefixes');
+  }
+  public set addressPrefixes(value: string[]) {
+    this._addressPrefixes = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get addressPrefixesInput() {
+    return this._addressPrefixes;
+  }
+
+  // next_hop_ip_address - computed: false, optional: false, required: true
+  private _nextHopIpAddress?: string; 
+  public get nextHopIpAddress() {
+    return this.getStringAttribute('next_hop_ip_address');
+  }
+  public set nextHopIpAddress(value: string) {
+    this._nextHopIpAddress = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nextHopIpAddressInput() {
+    return this._nextHopIpAddress;
+  }
+}
+
+export class VirtualHubRouteList extends cdktf.ComplexList {
+  public internalValue? : VirtualHubRoute[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): VirtualHubRouteOutputReference {
+    return new VirtualHubRouteOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface VirtualHubTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub#create VirtualHub#create}
@@ -104,6 +207,7 @@ export function virtualHubTimeoutsToTerraform(struct?: VirtualHubTimeoutsOutputR
 
 export class VirtualHubTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -113,7 +217,10 @@ export class VirtualHubTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): VirtualHubTimeouts | undefined {
+  public get internalValue(): VirtualHubTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -135,16 +242,22 @@ export class VirtualHubTimeoutsOutputReference extends cdktf.ComplexObject {
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: VirtualHubTimeouts | undefined) {
+  public set internalValue(value: VirtualHubTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -252,13 +365,14 @@ export class VirtualHub extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._addressPrefix = config.addressPrefix;
+    this._id = config.id;
     this._location = config.location;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._sku = config.sku;
     this._tags = config.tags;
     this._virtualWanId = config.virtualWanId;
-    this._route = config.route;
+    this._route.internalValue = config.route;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -288,8 +402,19 @@ export class VirtualHub extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // location - computed: false, optional: false, required: true
@@ -380,20 +505,19 @@ export class VirtualHub extends cdktf.TerraformResource {
   }
 
   // route - computed: false, optional: true, required: false
-  private _route?: VirtualHubRoute[] | cdktf.IResolvable; 
+  private _route = new VirtualHubRouteList(this, "route", true);
   public get route() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('route')));
+    return this._route;
   }
-  public set route(value: VirtualHubRoute[] | cdktf.IResolvable) {
-    this._route = value;
+  public putRoute(value: VirtualHubRoute[] | cdktf.IResolvable) {
+    this._route.internalValue = value;
   }
   public resetRoute() {
-    this._route = undefined;
+    this._route.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get routeInput() {
-    return this._route;
+    return this._route.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -419,13 +543,14 @@ export class VirtualHub extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       address_prefix: cdktf.stringToTerraform(this._addressPrefix),
+      id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku: cdktf.stringToTerraform(this._sku),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       virtual_wan_id: cdktf.stringToTerraform(this._virtualWanId),
-      route: cdktf.listMapper(virtualHubRouteToTerraform)(this._route),
+      route: cdktf.listMapper(virtualHubRouteToTerraform)(this._route.internalValue),
       timeouts: virtualHubTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

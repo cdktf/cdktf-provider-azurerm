@@ -8,6 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface RouteFilterConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_filter#id RouteFilter#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_filter#location RouteFilter#location}
   */
   readonly location: string;
@@ -66,6 +73,152 @@ export function routeFilterRuleToTerraform(struct?: RouteFilterRule | cdktf.IRes
   }
 }
 
+export class RouteFilterRuleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): RouteFilterRule | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._access !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.access = this._access;
+    }
+    if (this._communities !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.communities = this._communities;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._ruleType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ruleType = this._ruleType;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: RouteFilterRule | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._access = undefined;
+      this._communities = undefined;
+      this._name = undefined;
+      this._ruleType = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._access = value.access;
+      this._communities = value.communities;
+      this._name = value.name;
+      this._ruleType = value.ruleType;
+    }
+  }
+
+  // access - computed: true, optional: true, required: false
+  private _access?: string; 
+  public get access() {
+    return this.getStringAttribute('access');
+  }
+  public set access(value: string) {
+    this._access = value;
+  }
+  public resetAccess() {
+    this._access = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get accessInput() {
+    return this._access;
+  }
+
+  // communities - computed: true, optional: true, required: false
+  private _communities?: string[]; 
+  public get communities() {
+    return this.getListAttribute('communities');
+  }
+  public set communities(value: string[]) {
+    this._communities = value;
+  }
+  public resetCommunities() {
+    this._communities = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get communitiesInput() {
+    return this._communities;
+  }
+
+  // name - computed: true, optional: true, required: false
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // rule_type - computed: true, optional: true, required: false
+  private _ruleType?: string; 
+  public get ruleType() {
+    return this.getStringAttribute('rule_type');
+  }
+  public set ruleType(value: string) {
+    this._ruleType = value;
+  }
+  public resetRuleType() {
+    this._ruleType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ruleTypeInput() {
+    return this._ruleType;
+  }
+}
+
+export class RouteFilterRuleList extends cdktf.ComplexList {
+  public internalValue? : RouteFilterRule[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): RouteFilterRuleOutputReference {
+    return new RouteFilterRuleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface RouteFilterTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_filter#create RouteFilter#create}
@@ -100,6 +253,7 @@ export function routeFilterTimeoutsToTerraform(struct?: RouteFilterTimeoutsOutpu
 
 export class RouteFilterTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -109,7 +263,10 @@ export class RouteFilterTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): RouteFilterTimeouts | undefined {
+  public get internalValue(): RouteFilterTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -131,16 +288,22 @@ export class RouteFilterTimeoutsOutputReference extends cdktf.ComplexObject {
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: RouteFilterTimeouts | undefined) {
+  public set internalValue(value: RouteFilterTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -247,10 +410,11 @@ export class RouteFilter extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._id = config.id;
     this._location = config.location;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
-    this._rule = config.rule;
+    this._rule.internalValue = config.rule;
     this._tags = config.tags;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -260,8 +424,19 @@ export class RouteFilter extends cdktf.TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // location - computed: false, optional: false, required: true
@@ -304,20 +479,19 @@ export class RouteFilter extends cdktf.TerraformResource {
   }
 
   // rule - computed: true, optional: true, required: false
-  private _rule?: RouteFilterRule[] | cdktf.IResolvable; 
+  private _rule = new RouteFilterRuleList(this, "rule", false);
   public get rule() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('rule');
+    return this._rule;
   }
-  public set rule(value: RouteFilterRule[] | cdktf.IResolvable) {
-    this._rule = value;
+  public putRule(value: RouteFilterRule[] | cdktf.IResolvable) {
+    this._rule.internalValue = value;
   }
   public resetRule() {
-    this._rule = undefined;
+    this._rule.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get ruleInput() {
-    return this._rule;
+    return this._rule.internalValue;
   }
 
   // tags - computed: false, optional: true, required: false
@@ -358,10 +532,11 @@ export class RouteFilter extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      rule: cdktf.listMapper(routeFilterRuleToTerraform)(this._rule),
+      rule: cdktf.listMapper(routeFilterRuleToTerraform)(this._rule.internalValue),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       timeouts: routeFilterTimeoutsToTerraform(this._timeouts.internalValue),
     };

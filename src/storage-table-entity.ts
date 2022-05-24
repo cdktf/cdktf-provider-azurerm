@@ -12,6 +12,13 @@ export interface StorageTableEntityConfig extends cdktf.TerraformMetaArguments {
   */
   readonly entity: { [key: string]: string };
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table_entity#id StorageTableEntity#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table_entity#partition_key StorageTableEntity#partition_key}
   */
   readonly partitionKey: string;
@@ -68,6 +75,7 @@ export function storageTableEntityTimeoutsToTerraform(struct?: StorageTableEntit
 
 export class StorageTableEntityTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -77,7 +85,10 @@ export class StorageTableEntityTimeoutsOutputReference extends cdktf.ComplexObje
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): StorageTableEntityTimeouts | undefined {
+  public get internalValue(): StorageTableEntityTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -99,16 +110,22 @@ export class StorageTableEntityTimeoutsOutputReference extends cdktf.ComplexObje
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: StorageTableEntityTimeouts | undefined) {
+  public set internalValue(value: StorageTableEntityTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -216,6 +233,7 @@ export class StorageTableEntity extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._entity = config.entity;
+    this._id = config.id;
     this._partitionKey = config.partitionKey;
     this._rowKey = config.rowKey;
     this._storageAccountName = config.storageAccountName;
@@ -241,8 +259,19 @@ export class StorageTableEntity extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // partition_key - computed: false, optional: false, required: true
@@ -320,6 +349,7 @@ export class StorageTableEntity extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       entity: cdktf.hashMapper(cdktf.stringToTerraform)(this._entity),
+      id: cdktf.stringToTerraform(this._id),
       partition_key: cdktf.stringToTerraform(this._partitionKey),
       row_key: cdktf.stringToTerraform(this._rowKey),
       storage_account_name: cdktf.stringToTerraform(this._storageAccountName),

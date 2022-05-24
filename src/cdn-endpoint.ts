@@ -12,6 +12,13 @@ export interface CdnEndpointConfig extends cdktf.TerraformMetaArguments {
   */
   readonly contentTypesToCompress?: string[];
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint#id CdnEndpoint#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint#is_compression_enabled CdnEndpoint#is_compression_enabled}
   */
   readonly isCompressionEnabled?: boolean | cdktf.IResolvable;
@@ -309,6 +316,168 @@ export function cdnEndpointDeliveryRuleCookiesConditionToTerraform(struct?: CdnE
   }
 }
 
+export class CdnEndpointDeliveryRuleCookiesConditionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CdnEndpointDeliveryRuleCookiesCondition | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._matchValues !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.matchValues = this._matchValues;
+    }
+    if (this._negateCondition !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.negateCondition = this._negateCondition;
+    }
+    if (this._operator !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.operator = this._operator;
+    }
+    if (this._selector !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.selector = this._selector;
+    }
+    if (this._transforms !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.transforms = this._transforms;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CdnEndpointDeliveryRuleCookiesCondition | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._matchValues = undefined;
+      this._negateCondition = undefined;
+      this._operator = undefined;
+      this._selector = undefined;
+      this._transforms = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._matchValues = value.matchValues;
+      this._negateCondition = value.negateCondition;
+      this._operator = value.operator;
+      this._selector = value.selector;
+      this._transforms = value.transforms;
+    }
+  }
+
+  // match_values - computed: false, optional: true, required: false
+  private _matchValues?: string[]; 
+  public get matchValues() {
+    return cdktf.Fn.tolist(this.getListAttribute('match_values'));
+  }
+  public set matchValues(value: string[]) {
+    this._matchValues = value;
+  }
+  public resetMatchValues() {
+    this._matchValues = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get matchValuesInput() {
+    return this._matchValues;
+  }
+
+  // negate_condition - computed: false, optional: true, required: false
+  private _negateCondition?: boolean | cdktf.IResolvable; 
+  public get negateCondition() {
+    return this.getBooleanAttribute('negate_condition');
+  }
+  public set negateCondition(value: boolean | cdktf.IResolvable) {
+    this._negateCondition = value;
+  }
+  public resetNegateCondition() {
+    this._negateCondition = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get negateConditionInput() {
+    return this._negateCondition;
+  }
+
+  // operator - computed: false, optional: false, required: true
+  private _operator?: string; 
+  public get operator() {
+    return this.getStringAttribute('operator');
+  }
+  public set operator(value: string) {
+    this._operator = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get operatorInput() {
+    return this._operator;
+  }
+
+  // selector - computed: false, optional: false, required: true
+  private _selector?: string; 
+  public get selector() {
+    return this.getStringAttribute('selector');
+  }
+  public set selector(value: string) {
+    this._selector = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get selectorInput() {
+    return this._selector;
+  }
+
+  // transforms - computed: false, optional: true, required: false
+  private _transforms?: string[]; 
+  public get transforms() {
+    return this.getListAttribute('transforms');
+  }
+  public set transforms(value: string[]) {
+    this._transforms = value;
+  }
+  public resetTransforms() {
+    this._transforms = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get transformsInput() {
+    return this._transforms;
+  }
+}
+
+export class CdnEndpointDeliveryRuleCookiesConditionList extends cdktf.ComplexList {
+  public internalValue? : CdnEndpointDeliveryRuleCookiesCondition[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CdnEndpointDeliveryRuleCookiesConditionOutputReference {
+    return new CdnEndpointDeliveryRuleCookiesConditionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CdnEndpointDeliveryRuleDeviceCondition {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint#match_values CdnEndpoint#match_values}
@@ -452,6 +621,127 @@ export function cdnEndpointDeliveryRuleHttpVersionConditionToTerraform(struct?: 
   }
 }
 
+export class CdnEndpointDeliveryRuleHttpVersionConditionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CdnEndpointDeliveryRuleHttpVersionCondition | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._matchValues !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.matchValues = this._matchValues;
+    }
+    if (this._negateCondition !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.negateCondition = this._negateCondition;
+    }
+    if (this._operator !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.operator = this._operator;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CdnEndpointDeliveryRuleHttpVersionCondition | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._matchValues = undefined;
+      this._negateCondition = undefined;
+      this._operator = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._matchValues = value.matchValues;
+      this._negateCondition = value.negateCondition;
+      this._operator = value.operator;
+    }
+  }
+
+  // match_values - computed: false, optional: false, required: true
+  private _matchValues?: string[]; 
+  public get matchValues() {
+    return cdktf.Fn.tolist(this.getListAttribute('match_values'));
+  }
+  public set matchValues(value: string[]) {
+    this._matchValues = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get matchValuesInput() {
+    return this._matchValues;
+  }
+
+  // negate_condition - computed: false, optional: true, required: false
+  private _negateCondition?: boolean | cdktf.IResolvable; 
+  public get negateCondition() {
+    return this.getBooleanAttribute('negate_condition');
+  }
+  public set negateCondition(value: boolean | cdktf.IResolvable) {
+    this._negateCondition = value;
+  }
+  public resetNegateCondition() {
+    this._negateCondition = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get negateConditionInput() {
+    return this._negateCondition;
+  }
+
+  // operator - computed: false, optional: true, required: false
+  private _operator?: string; 
+  public get operator() {
+    return this.getStringAttribute('operator');
+  }
+  public set operator(value: string) {
+    this._operator = value;
+  }
+  public resetOperator() {
+    this._operator = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get operatorInput() {
+    return this._operator;
+  }
+}
+
+export class CdnEndpointDeliveryRuleHttpVersionConditionList extends cdktf.ComplexList {
+  public internalValue? : CdnEndpointDeliveryRuleHttpVersionCondition[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CdnEndpointDeliveryRuleHttpVersionConditionOutputReference {
+    return new CdnEndpointDeliveryRuleHttpVersionConditionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CdnEndpointDeliveryRuleModifyRequestHeaderAction {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint#action CdnEndpoint#action}
@@ -479,6 +769,124 @@ export function cdnEndpointDeliveryRuleModifyRequestHeaderActionToTerraform(stru
   }
 }
 
+export class CdnEndpointDeliveryRuleModifyRequestHeaderActionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CdnEndpointDeliveryRuleModifyRequestHeaderAction | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._action !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.action = this._action;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CdnEndpointDeliveryRuleModifyRequestHeaderAction | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._action = undefined;
+      this._name = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._action = value.action;
+      this._name = value.name;
+      this._value = value.value;
+    }
+  }
+
+  // action - computed: false, optional: false, required: true
+  private _action?: string; 
+  public get action() {
+    return this.getStringAttribute('action');
+  }
+  public set action(value: string) {
+    this._action = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get actionInput() {
+    return this._action;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // value - computed: false, optional: true, required: false
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  public resetValue() {
+    this._value = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class CdnEndpointDeliveryRuleModifyRequestHeaderActionList extends cdktf.ComplexList {
+  public internalValue? : CdnEndpointDeliveryRuleModifyRequestHeaderAction[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CdnEndpointDeliveryRuleModifyRequestHeaderActionOutputReference {
+    return new CdnEndpointDeliveryRuleModifyRequestHeaderActionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CdnEndpointDeliveryRuleModifyResponseHeaderAction {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint#action CdnEndpoint#action}
@@ -506,6 +914,124 @@ export function cdnEndpointDeliveryRuleModifyResponseHeaderActionToTerraform(str
   }
 }
 
+export class CdnEndpointDeliveryRuleModifyResponseHeaderActionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CdnEndpointDeliveryRuleModifyResponseHeaderAction | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._action !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.action = this._action;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CdnEndpointDeliveryRuleModifyResponseHeaderAction | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._action = undefined;
+      this._name = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._action = value.action;
+      this._name = value.name;
+      this._value = value.value;
+    }
+  }
+
+  // action - computed: false, optional: false, required: true
+  private _action?: string; 
+  public get action() {
+    return this.getStringAttribute('action');
+  }
+  public set action(value: string) {
+    this._action = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get actionInput() {
+    return this._action;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // value - computed: false, optional: true, required: false
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  public resetValue() {
+    this._value = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class CdnEndpointDeliveryRuleModifyResponseHeaderActionList extends cdktf.ComplexList {
+  public internalValue? : CdnEndpointDeliveryRuleModifyResponseHeaderAction[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CdnEndpointDeliveryRuleModifyResponseHeaderActionOutputReference {
+    return new CdnEndpointDeliveryRuleModifyResponseHeaderActionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CdnEndpointDeliveryRulePostArgCondition {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint#match_values CdnEndpoint#match_values}
@@ -543,6 +1069,168 @@ export function cdnEndpointDeliveryRulePostArgConditionToTerraform(struct?: CdnE
   }
 }
 
+export class CdnEndpointDeliveryRulePostArgConditionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CdnEndpointDeliveryRulePostArgCondition | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._matchValues !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.matchValues = this._matchValues;
+    }
+    if (this._negateCondition !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.negateCondition = this._negateCondition;
+    }
+    if (this._operator !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.operator = this._operator;
+    }
+    if (this._selector !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.selector = this._selector;
+    }
+    if (this._transforms !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.transforms = this._transforms;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CdnEndpointDeliveryRulePostArgCondition | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._matchValues = undefined;
+      this._negateCondition = undefined;
+      this._operator = undefined;
+      this._selector = undefined;
+      this._transforms = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._matchValues = value.matchValues;
+      this._negateCondition = value.negateCondition;
+      this._operator = value.operator;
+      this._selector = value.selector;
+      this._transforms = value.transforms;
+    }
+  }
+
+  // match_values - computed: false, optional: true, required: false
+  private _matchValues?: string[]; 
+  public get matchValues() {
+    return cdktf.Fn.tolist(this.getListAttribute('match_values'));
+  }
+  public set matchValues(value: string[]) {
+    this._matchValues = value;
+  }
+  public resetMatchValues() {
+    this._matchValues = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get matchValuesInput() {
+    return this._matchValues;
+  }
+
+  // negate_condition - computed: false, optional: true, required: false
+  private _negateCondition?: boolean | cdktf.IResolvable; 
+  public get negateCondition() {
+    return this.getBooleanAttribute('negate_condition');
+  }
+  public set negateCondition(value: boolean | cdktf.IResolvable) {
+    this._negateCondition = value;
+  }
+  public resetNegateCondition() {
+    this._negateCondition = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get negateConditionInput() {
+    return this._negateCondition;
+  }
+
+  // operator - computed: false, optional: false, required: true
+  private _operator?: string; 
+  public get operator() {
+    return this.getStringAttribute('operator');
+  }
+  public set operator(value: string) {
+    this._operator = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get operatorInput() {
+    return this._operator;
+  }
+
+  // selector - computed: false, optional: false, required: true
+  private _selector?: string; 
+  public get selector() {
+    return this.getStringAttribute('selector');
+  }
+  public set selector(value: string) {
+    this._selector = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get selectorInput() {
+    return this._selector;
+  }
+
+  // transforms - computed: false, optional: true, required: false
+  private _transforms?: string[]; 
+  public get transforms() {
+    return this.getListAttribute('transforms');
+  }
+  public set transforms(value: string[]) {
+    this._transforms = value;
+  }
+  public resetTransforms() {
+    this._transforms = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get transformsInput() {
+    return this._transforms;
+  }
+}
+
+export class CdnEndpointDeliveryRulePostArgConditionList extends cdktf.ComplexList {
+  public internalValue? : CdnEndpointDeliveryRulePostArgCondition[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CdnEndpointDeliveryRulePostArgConditionOutputReference {
+    return new CdnEndpointDeliveryRulePostArgConditionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CdnEndpointDeliveryRuleQueryStringCondition {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint#match_values CdnEndpoint#match_values}
@@ -575,6 +1263,149 @@ export function cdnEndpointDeliveryRuleQueryStringConditionToTerraform(struct?: 
   }
 }
 
+export class CdnEndpointDeliveryRuleQueryStringConditionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CdnEndpointDeliveryRuleQueryStringCondition | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._matchValues !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.matchValues = this._matchValues;
+    }
+    if (this._negateCondition !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.negateCondition = this._negateCondition;
+    }
+    if (this._operator !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.operator = this._operator;
+    }
+    if (this._transforms !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.transforms = this._transforms;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CdnEndpointDeliveryRuleQueryStringCondition | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._matchValues = undefined;
+      this._negateCondition = undefined;
+      this._operator = undefined;
+      this._transforms = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._matchValues = value.matchValues;
+      this._negateCondition = value.negateCondition;
+      this._operator = value.operator;
+      this._transforms = value.transforms;
+    }
+  }
+
+  // match_values - computed: false, optional: true, required: false
+  private _matchValues?: string[]; 
+  public get matchValues() {
+    return cdktf.Fn.tolist(this.getListAttribute('match_values'));
+  }
+  public set matchValues(value: string[]) {
+    this._matchValues = value;
+  }
+  public resetMatchValues() {
+    this._matchValues = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get matchValuesInput() {
+    return this._matchValues;
+  }
+
+  // negate_condition - computed: false, optional: true, required: false
+  private _negateCondition?: boolean | cdktf.IResolvable; 
+  public get negateCondition() {
+    return this.getBooleanAttribute('negate_condition');
+  }
+  public set negateCondition(value: boolean | cdktf.IResolvable) {
+    this._negateCondition = value;
+  }
+  public resetNegateCondition() {
+    this._negateCondition = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get negateConditionInput() {
+    return this._negateCondition;
+  }
+
+  // operator - computed: false, optional: false, required: true
+  private _operator?: string; 
+  public get operator() {
+    return this.getStringAttribute('operator');
+  }
+  public set operator(value: string) {
+    this._operator = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get operatorInput() {
+    return this._operator;
+  }
+
+  // transforms - computed: false, optional: true, required: false
+  private _transforms?: string[]; 
+  public get transforms() {
+    return this.getListAttribute('transforms');
+  }
+  public set transforms(value: string[]) {
+    this._transforms = value;
+  }
+  public resetTransforms() {
+    this._transforms = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get transformsInput() {
+    return this._transforms;
+  }
+}
+
+export class CdnEndpointDeliveryRuleQueryStringConditionList extends cdktf.ComplexList {
+  public internalValue? : CdnEndpointDeliveryRuleQueryStringCondition[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CdnEndpointDeliveryRuleQueryStringConditionOutputReference {
+    return new CdnEndpointDeliveryRuleQueryStringConditionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CdnEndpointDeliveryRuleRemoteAddressCondition {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint#match_values CdnEndpoint#match_values}
@@ -602,6 +1433,127 @@ export function cdnEndpointDeliveryRuleRemoteAddressConditionToTerraform(struct?
   }
 }
 
+export class CdnEndpointDeliveryRuleRemoteAddressConditionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CdnEndpointDeliveryRuleRemoteAddressCondition | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._matchValues !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.matchValues = this._matchValues;
+    }
+    if (this._negateCondition !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.negateCondition = this._negateCondition;
+    }
+    if (this._operator !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.operator = this._operator;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CdnEndpointDeliveryRuleRemoteAddressCondition | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._matchValues = undefined;
+      this._negateCondition = undefined;
+      this._operator = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._matchValues = value.matchValues;
+      this._negateCondition = value.negateCondition;
+      this._operator = value.operator;
+    }
+  }
+
+  // match_values - computed: false, optional: true, required: false
+  private _matchValues?: string[]; 
+  public get matchValues() {
+    return cdktf.Fn.tolist(this.getListAttribute('match_values'));
+  }
+  public set matchValues(value: string[]) {
+    this._matchValues = value;
+  }
+  public resetMatchValues() {
+    this._matchValues = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get matchValuesInput() {
+    return this._matchValues;
+  }
+
+  // negate_condition - computed: false, optional: true, required: false
+  private _negateCondition?: boolean | cdktf.IResolvable; 
+  public get negateCondition() {
+    return this.getBooleanAttribute('negate_condition');
+  }
+  public set negateCondition(value: boolean | cdktf.IResolvable) {
+    this._negateCondition = value;
+  }
+  public resetNegateCondition() {
+    this._negateCondition = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get negateConditionInput() {
+    return this._negateCondition;
+  }
+
+  // operator - computed: false, optional: false, required: true
+  private _operator?: string; 
+  public get operator() {
+    return this.getStringAttribute('operator');
+  }
+  public set operator(value: string) {
+    this._operator = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get operatorInput() {
+    return this._operator;
+  }
+}
+
+export class CdnEndpointDeliveryRuleRemoteAddressConditionList extends cdktf.ComplexList {
+  public internalValue? : CdnEndpointDeliveryRuleRemoteAddressCondition[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CdnEndpointDeliveryRuleRemoteAddressConditionOutputReference {
+    return new CdnEndpointDeliveryRuleRemoteAddressConditionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CdnEndpointDeliveryRuleRequestBodyCondition {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint#match_values CdnEndpoint#match_values}
@@ -634,6 +1586,149 @@ export function cdnEndpointDeliveryRuleRequestBodyConditionToTerraform(struct?: 
   }
 }
 
+export class CdnEndpointDeliveryRuleRequestBodyConditionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CdnEndpointDeliveryRuleRequestBodyCondition | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._matchValues !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.matchValues = this._matchValues;
+    }
+    if (this._negateCondition !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.negateCondition = this._negateCondition;
+    }
+    if (this._operator !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.operator = this._operator;
+    }
+    if (this._transforms !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.transforms = this._transforms;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CdnEndpointDeliveryRuleRequestBodyCondition | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._matchValues = undefined;
+      this._negateCondition = undefined;
+      this._operator = undefined;
+      this._transforms = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._matchValues = value.matchValues;
+      this._negateCondition = value.negateCondition;
+      this._operator = value.operator;
+      this._transforms = value.transforms;
+    }
+  }
+
+  // match_values - computed: false, optional: true, required: false
+  private _matchValues?: string[]; 
+  public get matchValues() {
+    return cdktf.Fn.tolist(this.getListAttribute('match_values'));
+  }
+  public set matchValues(value: string[]) {
+    this._matchValues = value;
+  }
+  public resetMatchValues() {
+    this._matchValues = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get matchValuesInput() {
+    return this._matchValues;
+  }
+
+  // negate_condition - computed: false, optional: true, required: false
+  private _negateCondition?: boolean | cdktf.IResolvable; 
+  public get negateCondition() {
+    return this.getBooleanAttribute('negate_condition');
+  }
+  public set negateCondition(value: boolean | cdktf.IResolvable) {
+    this._negateCondition = value;
+  }
+  public resetNegateCondition() {
+    this._negateCondition = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get negateConditionInput() {
+    return this._negateCondition;
+  }
+
+  // operator - computed: false, optional: false, required: true
+  private _operator?: string; 
+  public get operator() {
+    return this.getStringAttribute('operator');
+  }
+  public set operator(value: string) {
+    this._operator = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get operatorInput() {
+    return this._operator;
+  }
+
+  // transforms - computed: false, optional: true, required: false
+  private _transforms?: string[]; 
+  public get transforms() {
+    return this.getListAttribute('transforms');
+  }
+  public set transforms(value: string[]) {
+    this._transforms = value;
+  }
+  public resetTransforms() {
+    this._transforms = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get transformsInput() {
+    return this._transforms;
+  }
+}
+
+export class CdnEndpointDeliveryRuleRequestBodyConditionList extends cdktf.ComplexList {
+  public internalValue? : CdnEndpointDeliveryRuleRequestBodyCondition[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CdnEndpointDeliveryRuleRequestBodyConditionOutputReference {
+    return new CdnEndpointDeliveryRuleRequestBodyConditionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CdnEndpointDeliveryRuleRequestHeaderCondition {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint#match_values CdnEndpoint#match_values}
@@ -671,6 +1766,168 @@ export function cdnEndpointDeliveryRuleRequestHeaderConditionToTerraform(struct?
   }
 }
 
+export class CdnEndpointDeliveryRuleRequestHeaderConditionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CdnEndpointDeliveryRuleRequestHeaderCondition | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._matchValues !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.matchValues = this._matchValues;
+    }
+    if (this._negateCondition !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.negateCondition = this._negateCondition;
+    }
+    if (this._operator !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.operator = this._operator;
+    }
+    if (this._selector !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.selector = this._selector;
+    }
+    if (this._transforms !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.transforms = this._transforms;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CdnEndpointDeliveryRuleRequestHeaderCondition | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._matchValues = undefined;
+      this._negateCondition = undefined;
+      this._operator = undefined;
+      this._selector = undefined;
+      this._transforms = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._matchValues = value.matchValues;
+      this._negateCondition = value.negateCondition;
+      this._operator = value.operator;
+      this._selector = value.selector;
+      this._transforms = value.transforms;
+    }
+  }
+
+  // match_values - computed: false, optional: true, required: false
+  private _matchValues?: string[]; 
+  public get matchValues() {
+    return cdktf.Fn.tolist(this.getListAttribute('match_values'));
+  }
+  public set matchValues(value: string[]) {
+    this._matchValues = value;
+  }
+  public resetMatchValues() {
+    this._matchValues = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get matchValuesInput() {
+    return this._matchValues;
+  }
+
+  // negate_condition - computed: false, optional: true, required: false
+  private _negateCondition?: boolean | cdktf.IResolvable; 
+  public get negateCondition() {
+    return this.getBooleanAttribute('negate_condition');
+  }
+  public set negateCondition(value: boolean | cdktf.IResolvable) {
+    this._negateCondition = value;
+  }
+  public resetNegateCondition() {
+    this._negateCondition = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get negateConditionInput() {
+    return this._negateCondition;
+  }
+
+  // operator - computed: false, optional: false, required: true
+  private _operator?: string; 
+  public get operator() {
+    return this.getStringAttribute('operator');
+  }
+  public set operator(value: string) {
+    this._operator = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get operatorInput() {
+    return this._operator;
+  }
+
+  // selector - computed: false, optional: false, required: true
+  private _selector?: string; 
+  public get selector() {
+    return this.getStringAttribute('selector');
+  }
+  public set selector(value: string) {
+    this._selector = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get selectorInput() {
+    return this._selector;
+  }
+
+  // transforms - computed: false, optional: true, required: false
+  private _transforms?: string[]; 
+  public get transforms() {
+    return this.getListAttribute('transforms');
+  }
+  public set transforms(value: string[]) {
+    this._transforms = value;
+  }
+  public resetTransforms() {
+    this._transforms = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get transformsInput() {
+    return this._transforms;
+  }
+}
+
+export class CdnEndpointDeliveryRuleRequestHeaderConditionList extends cdktf.ComplexList {
+  public internalValue? : CdnEndpointDeliveryRuleRequestHeaderCondition[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CdnEndpointDeliveryRuleRequestHeaderConditionOutputReference {
+    return new CdnEndpointDeliveryRuleRequestHeaderConditionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CdnEndpointDeliveryRuleRequestMethodCondition {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint#match_values CdnEndpoint#match_values}
@@ -935,6 +2192,149 @@ export function cdnEndpointDeliveryRuleRequestUriConditionToTerraform(struct?: C
   }
 }
 
+export class CdnEndpointDeliveryRuleRequestUriConditionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CdnEndpointDeliveryRuleRequestUriCondition | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._matchValues !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.matchValues = this._matchValues;
+    }
+    if (this._negateCondition !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.negateCondition = this._negateCondition;
+    }
+    if (this._operator !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.operator = this._operator;
+    }
+    if (this._transforms !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.transforms = this._transforms;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CdnEndpointDeliveryRuleRequestUriCondition | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._matchValues = undefined;
+      this._negateCondition = undefined;
+      this._operator = undefined;
+      this._transforms = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._matchValues = value.matchValues;
+      this._negateCondition = value.negateCondition;
+      this._operator = value.operator;
+      this._transforms = value.transforms;
+    }
+  }
+
+  // match_values - computed: false, optional: true, required: false
+  private _matchValues?: string[]; 
+  public get matchValues() {
+    return cdktf.Fn.tolist(this.getListAttribute('match_values'));
+  }
+  public set matchValues(value: string[]) {
+    this._matchValues = value;
+  }
+  public resetMatchValues() {
+    this._matchValues = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get matchValuesInput() {
+    return this._matchValues;
+  }
+
+  // negate_condition - computed: false, optional: true, required: false
+  private _negateCondition?: boolean | cdktf.IResolvable; 
+  public get negateCondition() {
+    return this.getBooleanAttribute('negate_condition');
+  }
+  public set negateCondition(value: boolean | cdktf.IResolvable) {
+    this._negateCondition = value;
+  }
+  public resetNegateCondition() {
+    this._negateCondition = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get negateConditionInput() {
+    return this._negateCondition;
+  }
+
+  // operator - computed: false, optional: false, required: true
+  private _operator?: string; 
+  public get operator() {
+    return this.getStringAttribute('operator');
+  }
+  public set operator(value: string) {
+    this._operator = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get operatorInput() {
+    return this._operator;
+  }
+
+  // transforms - computed: false, optional: true, required: false
+  private _transforms?: string[]; 
+  public get transforms() {
+    return this.getListAttribute('transforms');
+  }
+  public set transforms(value: string[]) {
+    this._transforms = value;
+  }
+  public resetTransforms() {
+    this._transforms = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get transformsInput() {
+    return this._transforms;
+  }
+}
+
+export class CdnEndpointDeliveryRuleRequestUriConditionList extends cdktf.ComplexList {
+  public internalValue? : CdnEndpointDeliveryRuleRequestUriCondition[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CdnEndpointDeliveryRuleRequestUriConditionOutputReference {
+    return new CdnEndpointDeliveryRuleRequestUriConditionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CdnEndpointDeliveryRuleUrlFileExtensionCondition {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint#match_values CdnEndpoint#match_values}
@@ -967,6 +2367,149 @@ export function cdnEndpointDeliveryRuleUrlFileExtensionConditionToTerraform(stru
   }
 }
 
+export class CdnEndpointDeliveryRuleUrlFileExtensionConditionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CdnEndpointDeliveryRuleUrlFileExtensionCondition | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._matchValues !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.matchValues = this._matchValues;
+    }
+    if (this._negateCondition !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.negateCondition = this._negateCondition;
+    }
+    if (this._operator !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.operator = this._operator;
+    }
+    if (this._transforms !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.transforms = this._transforms;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CdnEndpointDeliveryRuleUrlFileExtensionCondition | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._matchValues = undefined;
+      this._negateCondition = undefined;
+      this._operator = undefined;
+      this._transforms = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._matchValues = value.matchValues;
+      this._negateCondition = value.negateCondition;
+      this._operator = value.operator;
+      this._transforms = value.transforms;
+    }
+  }
+
+  // match_values - computed: false, optional: true, required: false
+  private _matchValues?: string[]; 
+  public get matchValues() {
+    return cdktf.Fn.tolist(this.getListAttribute('match_values'));
+  }
+  public set matchValues(value: string[]) {
+    this._matchValues = value;
+  }
+  public resetMatchValues() {
+    this._matchValues = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get matchValuesInput() {
+    return this._matchValues;
+  }
+
+  // negate_condition - computed: false, optional: true, required: false
+  private _negateCondition?: boolean | cdktf.IResolvable; 
+  public get negateCondition() {
+    return this.getBooleanAttribute('negate_condition');
+  }
+  public set negateCondition(value: boolean | cdktf.IResolvable) {
+    this._negateCondition = value;
+  }
+  public resetNegateCondition() {
+    this._negateCondition = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get negateConditionInput() {
+    return this._negateCondition;
+  }
+
+  // operator - computed: false, optional: false, required: true
+  private _operator?: string; 
+  public get operator() {
+    return this.getStringAttribute('operator');
+  }
+  public set operator(value: string) {
+    this._operator = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get operatorInput() {
+    return this._operator;
+  }
+
+  // transforms - computed: false, optional: true, required: false
+  private _transforms?: string[]; 
+  public get transforms() {
+    return this.getListAttribute('transforms');
+  }
+  public set transforms(value: string[]) {
+    this._transforms = value;
+  }
+  public resetTransforms() {
+    this._transforms = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get transformsInput() {
+    return this._transforms;
+  }
+}
+
+export class CdnEndpointDeliveryRuleUrlFileExtensionConditionList extends cdktf.ComplexList {
+  public internalValue? : CdnEndpointDeliveryRuleUrlFileExtensionCondition[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CdnEndpointDeliveryRuleUrlFileExtensionConditionOutputReference {
+    return new CdnEndpointDeliveryRuleUrlFileExtensionConditionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CdnEndpointDeliveryRuleUrlFileNameCondition {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint#match_values CdnEndpoint#match_values}
@@ -999,6 +2542,149 @@ export function cdnEndpointDeliveryRuleUrlFileNameConditionToTerraform(struct?: 
   }
 }
 
+export class CdnEndpointDeliveryRuleUrlFileNameConditionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CdnEndpointDeliveryRuleUrlFileNameCondition | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._matchValues !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.matchValues = this._matchValues;
+    }
+    if (this._negateCondition !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.negateCondition = this._negateCondition;
+    }
+    if (this._operator !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.operator = this._operator;
+    }
+    if (this._transforms !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.transforms = this._transforms;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CdnEndpointDeliveryRuleUrlFileNameCondition | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._matchValues = undefined;
+      this._negateCondition = undefined;
+      this._operator = undefined;
+      this._transforms = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._matchValues = value.matchValues;
+      this._negateCondition = value.negateCondition;
+      this._operator = value.operator;
+      this._transforms = value.transforms;
+    }
+  }
+
+  // match_values - computed: false, optional: true, required: false
+  private _matchValues?: string[]; 
+  public get matchValues() {
+    return cdktf.Fn.tolist(this.getListAttribute('match_values'));
+  }
+  public set matchValues(value: string[]) {
+    this._matchValues = value;
+  }
+  public resetMatchValues() {
+    this._matchValues = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get matchValuesInput() {
+    return this._matchValues;
+  }
+
+  // negate_condition - computed: false, optional: true, required: false
+  private _negateCondition?: boolean | cdktf.IResolvable; 
+  public get negateCondition() {
+    return this.getBooleanAttribute('negate_condition');
+  }
+  public set negateCondition(value: boolean | cdktf.IResolvable) {
+    this._negateCondition = value;
+  }
+  public resetNegateCondition() {
+    this._negateCondition = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get negateConditionInput() {
+    return this._negateCondition;
+  }
+
+  // operator - computed: false, optional: false, required: true
+  private _operator?: string; 
+  public get operator() {
+    return this.getStringAttribute('operator');
+  }
+  public set operator(value: string) {
+    this._operator = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get operatorInput() {
+    return this._operator;
+  }
+
+  // transforms - computed: false, optional: true, required: false
+  private _transforms?: string[]; 
+  public get transforms() {
+    return this.getListAttribute('transforms');
+  }
+  public set transforms(value: string[]) {
+    this._transforms = value;
+  }
+  public resetTransforms() {
+    this._transforms = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get transformsInput() {
+    return this._transforms;
+  }
+}
+
+export class CdnEndpointDeliveryRuleUrlFileNameConditionList extends cdktf.ComplexList {
+  public internalValue? : CdnEndpointDeliveryRuleUrlFileNameCondition[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CdnEndpointDeliveryRuleUrlFileNameConditionOutputReference {
+    return new CdnEndpointDeliveryRuleUrlFileNameConditionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CdnEndpointDeliveryRuleUrlPathCondition {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint#match_values CdnEndpoint#match_values}
@@ -1031,6 +2717,149 @@ export function cdnEndpointDeliveryRuleUrlPathConditionToTerraform(struct?: CdnE
   }
 }
 
+export class CdnEndpointDeliveryRuleUrlPathConditionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CdnEndpointDeliveryRuleUrlPathCondition | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._matchValues !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.matchValues = this._matchValues;
+    }
+    if (this._negateCondition !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.negateCondition = this._negateCondition;
+    }
+    if (this._operator !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.operator = this._operator;
+    }
+    if (this._transforms !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.transforms = this._transforms;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CdnEndpointDeliveryRuleUrlPathCondition | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._matchValues = undefined;
+      this._negateCondition = undefined;
+      this._operator = undefined;
+      this._transforms = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._matchValues = value.matchValues;
+      this._negateCondition = value.negateCondition;
+      this._operator = value.operator;
+      this._transforms = value.transforms;
+    }
+  }
+
+  // match_values - computed: false, optional: true, required: false
+  private _matchValues?: string[]; 
+  public get matchValues() {
+    return cdktf.Fn.tolist(this.getListAttribute('match_values'));
+  }
+  public set matchValues(value: string[]) {
+    this._matchValues = value;
+  }
+  public resetMatchValues() {
+    this._matchValues = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get matchValuesInput() {
+    return this._matchValues;
+  }
+
+  // negate_condition - computed: false, optional: true, required: false
+  private _negateCondition?: boolean | cdktf.IResolvable; 
+  public get negateCondition() {
+    return this.getBooleanAttribute('negate_condition');
+  }
+  public set negateCondition(value: boolean | cdktf.IResolvable) {
+    this._negateCondition = value;
+  }
+  public resetNegateCondition() {
+    this._negateCondition = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get negateConditionInput() {
+    return this._negateCondition;
+  }
+
+  // operator - computed: false, optional: false, required: true
+  private _operator?: string; 
+  public get operator() {
+    return this.getStringAttribute('operator');
+  }
+  public set operator(value: string) {
+    this._operator = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get operatorInput() {
+    return this._operator;
+  }
+
+  // transforms - computed: false, optional: true, required: false
+  private _transforms?: string[]; 
+  public get transforms() {
+    return this.getListAttribute('transforms');
+  }
+  public set transforms(value: string[]) {
+    this._transforms = value;
+  }
+  public resetTransforms() {
+    this._transforms = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get transformsInput() {
+    return this._transforms;
+  }
+}
+
+export class CdnEndpointDeliveryRuleUrlPathConditionList extends cdktf.ComplexList {
+  public internalValue? : CdnEndpointDeliveryRuleUrlPathCondition[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CdnEndpointDeliveryRuleUrlPathConditionOutputReference {
+    return new CdnEndpointDeliveryRuleUrlPathConditionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CdnEndpointDeliveryRuleUrlRedirectAction {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint#fragment CdnEndpoint#fragment}
@@ -1503,6 +3332,542 @@ export function cdnEndpointDeliveryRuleToTerraform(struct?: CdnEndpointDeliveryR
   }
 }
 
+export class CdnEndpointDeliveryRuleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CdnEndpointDeliveryRule | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._order !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.order = this._order;
+    }
+    if (this._cacheExpirationAction?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.cacheExpirationAction = this._cacheExpirationAction?.internalValue;
+    }
+    if (this._cacheKeyQueryStringAction?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.cacheKeyQueryStringAction = this._cacheKeyQueryStringAction?.internalValue;
+    }
+    if (this._cookiesCondition?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.cookiesCondition = this._cookiesCondition?.internalValue;
+    }
+    if (this._deviceCondition?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.deviceCondition = this._deviceCondition?.internalValue;
+    }
+    if (this._httpVersionCondition?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.httpVersionCondition = this._httpVersionCondition?.internalValue;
+    }
+    if (this._modifyRequestHeaderAction?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.modifyRequestHeaderAction = this._modifyRequestHeaderAction?.internalValue;
+    }
+    if (this._modifyResponseHeaderAction?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.modifyResponseHeaderAction = this._modifyResponseHeaderAction?.internalValue;
+    }
+    if (this._postArgCondition?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.postArgCondition = this._postArgCondition?.internalValue;
+    }
+    if (this._queryStringCondition?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.queryStringCondition = this._queryStringCondition?.internalValue;
+    }
+    if (this._remoteAddressCondition?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.remoteAddressCondition = this._remoteAddressCondition?.internalValue;
+    }
+    if (this._requestBodyCondition?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.requestBodyCondition = this._requestBodyCondition?.internalValue;
+    }
+    if (this._requestHeaderCondition?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.requestHeaderCondition = this._requestHeaderCondition?.internalValue;
+    }
+    if (this._requestMethodCondition?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.requestMethodCondition = this._requestMethodCondition?.internalValue;
+    }
+    if (this._requestSchemeCondition?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.requestSchemeCondition = this._requestSchemeCondition?.internalValue;
+    }
+    if (this._requestUriCondition?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.requestUriCondition = this._requestUriCondition?.internalValue;
+    }
+    if (this._urlFileExtensionCondition?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.urlFileExtensionCondition = this._urlFileExtensionCondition?.internalValue;
+    }
+    if (this._urlFileNameCondition?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.urlFileNameCondition = this._urlFileNameCondition?.internalValue;
+    }
+    if (this._urlPathCondition?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.urlPathCondition = this._urlPathCondition?.internalValue;
+    }
+    if (this._urlRedirectAction?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.urlRedirectAction = this._urlRedirectAction?.internalValue;
+    }
+    if (this._urlRewriteAction?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.urlRewriteAction = this._urlRewriteAction?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CdnEndpointDeliveryRule | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._order = undefined;
+      this._cacheExpirationAction.internalValue = undefined;
+      this._cacheKeyQueryStringAction.internalValue = undefined;
+      this._cookiesCondition.internalValue = undefined;
+      this._deviceCondition.internalValue = undefined;
+      this._httpVersionCondition.internalValue = undefined;
+      this._modifyRequestHeaderAction.internalValue = undefined;
+      this._modifyResponseHeaderAction.internalValue = undefined;
+      this._postArgCondition.internalValue = undefined;
+      this._queryStringCondition.internalValue = undefined;
+      this._remoteAddressCondition.internalValue = undefined;
+      this._requestBodyCondition.internalValue = undefined;
+      this._requestHeaderCondition.internalValue = undefined;
+      this._requestMethodCondition.internalValue = undefined;
+      this._requestSchemeCondition.internalValue = undefined;
+      this._requestUriCondition.internalValue = undefined;
+      this._urlFileExtensionCondition.internalValue = undefined;
+      this._urlFileNameCondition.internalValue = undefined;
+      this._urlPathCondition.internalValue = undefined;
+      this._urlRedirectAction.internalValue = undefined;
+      this._urlRewriteAction.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._order = value.order;
+      this._cacheExpirationAction.internalValue = value.cacheExpirationAction;
+      this._cacheKeyQueryStringAction.internalValue = value.cacheKeyQueryStringAction;
+      this._cookiesCondition.internalValue = value.cookiesCondition;
+      this._deviceCondition.internalValue = value.deviceCondition;
+      this._httpVersionCondition.internalValue = value.httpVersionCondition;
+      this._modifyRequestHeaderAction.internalValue = value.modifyRequestHeaderAction;
+      this._modifyResponseHeaderAction.internalValue = value.modifyResponseHeaderAction;
+      this._postArgCondition.internalValue = value.postArgCondition;
+      this._queryStringCondition.internalValue = value.queryStringCondition;
+      this._remoteAddressCondition.internalValue = value.remoteAddressCondition;
+      this._requestBodyCondition.internalValue = value.requestBodyCondition;
+      this._requestHeaderCondition.internalValue = value.requestHeaderCondition;
+      this._requestMethodCondition.internalValue = value.requestMethodCondition;
+      this._requestSchemeCondition.internalValue = value.requestSchemeCondition;
+      this._requestUriCondition.internalValue = value.requestUriCondition;
+      this._urlFileExtensionCondition.internalValue = value.urlFileExtensionCondition;
+      this._urlFileNameCondition.internalValue = value.urlFileNameCondition;
+      this._urlPathCondition.internalValue = value.urlPathCondition;
+      this._urlRedirectAction.internalValue = value.urlRedirectAction;
+      this._urlRewriteAction.internalValue = value.urlRewriteAction;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // order - computed: false, optional: false, required: true
+  private _order?: number; 
+  public get order() {
+    return this.getNumberAttribute('order');
+  }
+  public set order(value: number) {
+    this._order = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get orderInput() {
+    return this._order;
+  }
+
+  // cache_expiration_action - computed: false, optional: true, required: false
+  private _cacheExpirationAction = new CdnEndpointDeliveryRuleCacheExpirationActionOutputReference(this, "cache_expiration_action");
+  public get cacheExpirationAction() {
+    return this._cacheExpirationAction;
+  }
+  public putCacheExpirationAction(value: CdnEndpointDeliveryRuleCacheExpirationAction) {
+    this._cacheExpirationAction.internalValue = value;
+  }
+  public resetCacheExpirationAction() {
+    this._cacheExpirationAction.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cacheExpirationActionInput() {
+    return this._cacheExpirationAction.internalValue;
+  }
+
+  // cache_key_query_string_action - computed: false, optional: true, required: false
+  private _cacheKeyQueryStringAction = new CdnEndpointDeliveryRuleCacheKeyQueryStringActionOutputReference(this, "cache_key_query_string_action");
+  public get cacheKeyQueryStringAction() {
+    return this._cacheKeyQueryStringAction;
+  }
+  public putCacheKeyQueryStringAction(value: CdnEndpointDeliveryRuleCacheKeyQueryStringAction) {
+    this._cacheKeyQueryStringAction.internalValue = value;
+  }
+  public resetCacheKeyQueryStringAction() {
+    this._cacheKeyQueryStringAction.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cacheKeyQueryStringActionInput() {
+    return this._cacheKeyQueryStringAction.internalValue;
+  }
+
+  // cookies_condition - computed: false, optional: true, required: false
+  private _cookiesCondition = new CdnEndpointDeliveryRuleCookiesConditionList(this, "cookies_condition", false);
+  public get cookiesCondition() {
+    return this._cookiesCondition;
+  }
+  public putCookiesCondition(value: CdnEndpointDeliveryRuleCookiesCondition[] | cdktf.IResolvable) {
+    this._cookiesCondition.internalValue = value;
+  }
+  public resetCookiesCondition() {
+    this._cookiesCondition.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cookiesConditionInput() {
+    return this._cookiesCondition.internalValue;
+  }
+
+  // device_condition - computed: false, optional: true, required: false
+  private _deviceCondition = new CdnEndpointDeliveryRuleDeviceConditionOutputReference(this, "device_condition");
+  public get deviceCondition() {
+    return this._deviceCondition;
+  }
+  public putDeviceCondition(value: CdnEndpointDeliveryRuleDeviceCondition) {
+    this._deviceCondition.internalValue = value;
+  }
+  public resetDeviceCondition() {
+    this._deviceCondition.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deviceConditionInput() {
+    return this._deviceCondition.internalValue;
+  }
+
+  // http_version_condition - computed: false, optional: true, required: false
+  private _httpVersionCondition = new CdnEndpointDeliveryRuleHttpVersionConditionList(this, "http_version_condition", false);
+  public get httpVersionCondition() {
+    return this._httpVersionCondition;
+  }
+  public putHttpVersionCondition(value: CdnEndpointDeliveryRuleHttpVersionCondition[] | cdktf.IResolvable) {
+    this._httpVersionCondition.internalValue = value;
+  }
+  public resetHttpVersionCondition() {
+    this._httpVersionCondition.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get httpVersionConditionInput() {
+    return this._httpVersionCondition.internalValue;
+  }
+
+  // modify_request_header_action - computed: false, optional: true, required: false
+  private _modifyRequestHeaderAction = new CdnEndpointDeliveryRuleModifyRequestHeaderActionList(this, "modify_request_header_action", false);
+  public get modifyRequestHeaderAction() {
+    return this._modifyRequestHeaderAction;
+  }
+  public putModifyRequestHeaderAction(value: CdnEndpointDeliveryRuleModifyRequestHeaderAction[] | cdktf.IResolvable) {
+    this._modifyRequestHeaderAction.internalValue = value;
+  }
+  public resetModifyRequestHeaderAction() {
+    this._modifyRequestHeaderAction.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get modifyRequestHeaderActionInput() {
+    return this._modifyRequestHeaderAction.internalValue;
+  }
+
+  // modify_response_header_action - computed: false, optional: true, required: false
+  private _modifyResponseHeaderAction = new CdnEndpointDeliveryRuleModifyResponseHeaderActionList(this, "modify_response_header_action", false);
+  public get modifyResponseHeaderAction() {
+    return this._modifyResponseHeaderAction;
+  }
+  public putModifyResponseHeaderAction(value: CdnEndpointDeliveryRuleModifyResponseHeaderAction[] | cdktf.IResolvable) {
+    this._modifyResponseHeaderAction.internalValue = value;
+  }
+  public resetModifyResponseHeaderAction() {
+    this._modifyResponseHeaderAction.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get modifyResponseHeaderActionInput() {
+    return this._modifyResponseHeaderAction.internalValue;
+  }
+
+  // post_arg_condition - computed: false, optional: true, required: false
+  private _postArgCondition = new CdnEndpointDeliveryRulePostArgConditionList(this, "post_arg_condition", false);
+  public get postArgCondition() {
+    return this._postArgCondition;
+  }
+  public putPostArgCondition(value: CdnEndpointDeliveryRulePostArgCondition[] | cdktf.IResolvable) {
+    this._postArgCondition.internalValue = value;
+  }
+  public resetPostArgCondition() {
+    this._postArgCondition.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get postArgConditionInput() {
+    return this._postArgCondition.internalValue;
+  }
+
+  // query_string_condition - computed: false, optional: true, required: false
+  private _queryStringCondition = new CdnEndpointDeliveryRuleQueryStringConditionList(this, "query_string_condition", false);
+  public get queryStringCondition() {
+    return this._queryStringCondition;
+  }
+  public putQueryStringCondition(value: CdnEndpointDeliveryRuleQueryStringCondition[] | cdktf.IResolvable) {
+    this._queryStringCondition.internalValue = value;
+  }
+  public resetQueryStringCondition() {
+    this._queryStringCondition.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get queryStringConditionInput() {
+    return this._queryStringCondition.internalValue;
+  }
+
+  // remote_address_condition - computed: false, optional: true, required: false
+  private _remoteAddressCondition = new CdnEndpointDeliveryRuleRemoteAddressConditionList(this, "remote_address_condition", false);
+  public get remoteAddressCondition() {
+    return this._remoteAddressCondition;
+  }
+  public putRemoteAddressCondition(value: CdnEndpointDeliveryRuleRemoteAddressCondition[] | cdktf.IResolvable) {
+    this._remoteAddressCondition.internalValue = value;
+  }
+  public resetRemoteAddressCondition() {
+    this._remoteAddressCondition.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get remoteAddressConditionInput() {
+    return this._remoteAddressCondition.internalValue;
+  }
+
+  // request_body_condition - computed: false, optional: true, required: false
+  private _requestBodyCondition = new CdnEndpointDeliveryRuleRequestBodyConditionList(this, "request_body_condition", false);
+  public get requestBodyCondition() {
+    return this._requestBodyCondition;
+  }
+  public putRequestBodyCondition(value: CdnEndpointDeliveryRuleRequestBodyCondition[] | cdktf.IResolvable) {
+    this._requestBodyCondition.internalValue = value;
+  }
+  public resetRequestBodyCondition() {
+    this._requestBodyCondition.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requestBodyConditionInput() {
+    return this._requestBodyCondition.internalValue;
+  }
+
+  // request_header_condition - computed: false, optional: true, required: false
+  private _requestHeaderCondition = new CdnEndpointDeliveryRuleRequestHeaderConditionList(this, "request_header_condition", false);
+  public get requestHeaderCondition() {
+    return this._requestHeaderCondition;
+  }
+  public putRequestHeaderCondition(value: CdnEndpointDeliveryRuleRequestHeaderCondition[] | cdktf.IResolvable) {
+    this._requestHeaderCondition.internalValue = value;
+  }
+  public resetRequestHeaderCondition() {
+    this._requestHeaderCondition.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requestHeaderConditionInput() {
+    return this._requestHeaderCondition.internalValue;
+  }
+
+  // request_method_condition - computed: false, optional: true, required: false
+  private _requestMethodCondition = new CdnEndpointDeliveryRuleRequestMethodConditionOutputReference(this, "request_method_condition");
+  public get requestMethodCondition() {
+    return this._requestMethodCondition;
+  }
+  public putRequestMethodCondition(value: CdnEndpointDeliveryRuleRequestMethodCondition) {
+    this._requestMethodCondition.internalValue = value;
+  }
+  public resetRequestMethodCondition() {
+    this._requestMethodCondition.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requestMethodConditionInput() {
+    return this._requestMethodCondition.internalValue;
+  }
+
+  // request_scheme_condition - computed: false, optional: true, required: false
+  private _requestSchemeCondition = new CdnEndpointDeliveryRuleRequestSchemeConditionOutputReference(this, "request_scheme_condition");
+  public get requestSchemeCondition() {
+    return this._requestSchemeCondition;
+  }
+  public putRequestSchemeCondition(value: CdnEndpointDeliveryRuleRequestSchemeCondition) {
+    this._requestSchemeCondition.internalValue = value;
+  }
+  public resetRequestSchemeCondition() {
+    this._requestSchemeCondition.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requestSchemeConditionInput() {
+    return this._requestSchemeCondition.internalValue;
+  }
+
+  // request_uri_condition - computed: false, optional: true, required: false
+  private _requestUriCondition = new CdnEndpointDeliveryRuleRequestUriConditionList(this, "request_uri_condition", false);
+  public get requestUriCondition() {
+    return this._requestUriCondition;
+  }
+  public putRequestUriCondition(value: CdnEndpointDeliveryRuleRequestUriCondition[] | cdktf.IResolvable) {
+    this._requestUriCondition.internalValue = value;
+  }
+  public resetRequestUriCondition() {
+    this._requestUriCondition.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requestUriConditionInput() {
+    return this._requestUriCondition.internalValue;
+  }
+
+  // url_file_extension_condition - computed: false, optional: true, required: false
+  private _urlFileExtensionCondition = new CdnEndpointDeliveryRuleUrlFileExtensionConditionList(this, "url_file_extension_condition", false);
+  public get urlFileExtensionCondition() {
+    return this._urlFileExtensionCondition;
+  }
+  public putUrlFileExtensionCondition(value: CdnEndpointDeliveryRuleUrlFileExtensionCondition[] | cdktf.IResolvable) {
+    this._urlFileExtensionCondition.internalValue = value;
+  }
+  public resetUrlFileExtensionCondition() {
+    this._urlFileExtensionCondition.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get urlFileExtensionConditionInput() {
+    return this._urlFileExtensionCondition.internalValue;
+  }
+
+  // url_file_name_condition - computed: false, optional: true, required: false
+  private _urlFileNameCondition = new CdnEndpointDeliveryRuleUrlFileNameConditionList(this, "url_file_name_condition", false);
+  public get urlFileNameCondition() {
+    return this._urlFileNameCondition;
+  }
+  public putUrlFileNameCondition(value: CdnEndpointDeliveryRuleUrlFileNameCondition[] | cdktf.IResolvable) {
+    this._urlFileNameCondition.internalValue = value;
+  }
+  public resetUrlFileNameCondition() {
+    this._urlFileNameCondition.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get urlFileNameConditionInput() {
+    return this._urlFileNameCondition.internalValue;
+  }
+
+  // url_path_condition - computed: false, optional: true, required: false
+  private _urlPathCondition = new CdnEndpointDeliveryRuleUrlPathConditionList(this, "url_path_condition", false);
+  public get urlPathCondition() {
+    return this._urlPathCondition;
+  }
+  public putUrlPathCondition(value: CdnEndpointDeliveryRuleUrlPathCondition[] | cdktf.IResolvable) {
+    this._urlPathCondition.internalValue = value;
+  }
+  public resetUrlPathCondition() {
+    this._urlPathCondition.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get urlPathConditionInput() {
+    return this._urlPathCondition.internalValue;
+  }
+
+  // url_redirect_action - computed: false, optional: true, required: false
+  private _urlRedirectAction = new CdnEndpointDeliveryRuleUrlRedirectActionOutputReference(this, "url_redirect_action");
+  public get urlRedirectAction() {
+    return this._urlRedirectAction;
+  }
+  public putUrlRedirectAction(value: CdnEndpointDeliveryRuleUrlRedirectAction) {
+    this._urlRedirectAction.internalValue = value;
+  }
+  public resetUrlRedirectAction() {
+    this._urlRedirectAction.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get urlRedirectActionInput() {
+    return this._urlRedirectAction.internalValue;
+  }
+
+  // url_rewrite_action - computed: false, optional: true, required: false
+  private _urlRewriteAction = new CdnEndpointDeliveryRuleUrlRewriteActionOutputReference(this, "url_rewrite_action");
+  public get urlRewriteAction() {
+    return this._urlRewriteAction;
+  }
+  public putUrlRewriteAction(value: CdnEndpointDeliveryRuleUrlRewriteAction) {
+    this._urlRewriteAction.internalValue = value;
+  }
+  public resetUrlRewriteAction() {
+    this._urlRewriteAction.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get urlRewriteActionInput() {
+    return this._urlRewriteAction.internalValue;
+  }
+}
+
+export class CdnEndpointDeliveryRuleList extends cdktf.ComplexList {
+  public internalValue? : CdnEndpointDeliveryRule[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CdnEndpointDeliveryRuleOutputReference {
+    return new CdnEndpointDeliveryRuleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CdnEndpointGeoFilter {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint#action CdnEndpoint#action}
@@ -1530,6 +3895,121 @@ export function cdnEndpointGeoFilterToTerraform(struct?: CdnEndpointGeoFilter | 
   }
 }
 
+export class CdnEndpointGeoFilterOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CdnEndpointGeoFilter | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._action !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.action = this._action;
+    }
+    if (this._countryCodes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.countryCodes = this._countryCodes;
+    }
+    if (this._relativePath !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.relativePath = this._relativePath;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CdnEndpointGeoFilter | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._action = undefined;
+      this._countryCodes = undefined;
+      this._relativePath = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._action = value.action;
+      this._countryCodes = value.countryCodes;
+      this._relativePath = value.relativePath;
+    }
+  }
+
+  // action - computed: false, optional: false, required: true
+  private _action?: string; 
+  public get action() {
+    return this.getStringAttribute('action');
+  }
+  public set action(value: string) {
+    this._action = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get actionInput() {
+    return this._action;
+  }
+
+  // country_codes - computed: false, optional: false, required: true
+  private _countryCodes?: string[]; 
+  public get countryCodes() {
+    return this.getListAttribute('country_codes');
+  }
+  public set countryCodes(value: string[]) {
+    this._countryCodes = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get countryCodesInput() {
+    return this._countryCodes;
+  }
+
+  // relative_path - computed: false, optional: false, required: true
+  private _relativePath?: string; 
+  public get relativePath() {
+    return this.getStringAttribute('relative_path');
+  }
+  public set relativePath(value: string) {
+    this._relativePath = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get relativePathInput() {
+    return this._relativePath;
+  }
+}
+
+export class CdnEndpointGeoFilterList extends cdktf.ComplexList {
+  public internalValue? : CdnEndpointGeoFilter[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CdnEndpointGeoFilterOutputReference {
+    return new CdnEndpointGeoFilterOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CdnEndpointGlobalDeliveryRuleCacheExpirationAction {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint#behavior CdnEndpoint#behavior}
@@ -1735,6 +4215,124 @@ export function cdnEndpointGlobalDeliveryRuleModifyRequestHeaderActionToTerrafor
   }
 }
 
+export class CdnEndpointGlobalDeliveryRuleModifyRequestHeaderActionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CdnEndpointGlobalDeliveryRuleModifyRequestHeaderAction | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._action !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.action = this._action;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CdnEndpointGlobalDeliveryRuleModifyRequestHeaderAction | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._action = undefined;
+      this._name = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._action = value.action;
+      this._name = value.name;
+      this._value = value.value;
+    }
+  }
+
+  // action - computed: false, optional: false, required: true
+  private _action?: string; 
+  public get action() {
+    return this.getStringAttribute('action');
+  }
+  public set action(value: string) {
+    this._action = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get actionInput() {
+    return this._action;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // value - computed: false, optional: true, required: false
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  public resetValue() {
+    this._value = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class CdnEndpointGlobalDeliveryRuleModifyRequestHeaderActionList extends cdktf.ComplexList {
+  public internalValue? : CdnEndpointGlobalDeliveryRuleModifyRequestHeaderAction[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CdnEndpointGlobalDeliveryRuleModifyRequestHeaderActionOutputReference {
+    return new CdnEndpointGlobalDeliveryRuleModifyRequestHeaderActionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CdnEndpointGlobalDeliveryRuleModifyResponseHeaderAction {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint#action CdnEndpoint#action}
@@ -1762,6 +4360,124 @@ export function cdnEndpointGlobalDeliveryRuleModifyResponseHeaderActionToTerrafo
   }
 }
 
+export class CdnEndpointGlobalDeliveryRuleModifyResponseHeaderActionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CdnEndpointGlobalDeliveryRuleModifyResponseHeaderAction | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._action !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.action = this._action;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CdnEndpointGlobalDeliveryRuleModifyResponseHeaderAction | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._action = undefined;
+      this._name = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._action = value.action;
+      this._name = value.name;
+      this._value = value.value;
+    }
+  }
+
+  // action - computed: false, optional: false, required: true
+  private _action?: string; 
+  public get action() {
+    return this.getStringAttribute('action');
+  }
+  public set action(value: string) {
+    this._action = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get actionInput() {
+    return this._action;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // value - computed: false, optional: true, required: false
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  public resetValue() {
+    this._value = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class CdnEndpointGlobalDeliveryRuleModifyResponseHeaderActionList extends cdktf.ComplexList {
+  public internalValue? : CdnEndpointGlobalDeliveryRuleModifyResponseHeaderAction[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CdnEndpointGlobalDeliveryRuleModifyResponseHeaderActionOutputReference {
+    return new CdnEndpointGlobalDeliveryRuleModifyResponseHeaderActionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CdnEndpointGlobalDeliveryRuleUrlRedirectAction {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint#fragment CdnEndpoint#fragment}
@@ -2148,13 +4864,13 @@ export class CdnEndpointGlobalDeliveryRuleOutputReference extends cdktf.ComplexO
       hasAnyValues = true;
       internalValueResult.cacheKeyQueryStringAction = this._cacheKeyQueryStringAction?.internalValue;
     }
-    if (this._modifyRequestHeaderAction !== undefined) {
+    if (this._modifyRequestHeaderAction?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.modifyRequestHeaderAction = this._modifyRequestHeaderAction;
+      internalValueResult.modifyRequestHeaderAction = this._modifyRequestHeaderAction?.internalValue;
     }
-    if (this._modifyResponseHeaderAction !== undefined) {
+    if (this._modifyResponseHeaderAction?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.modifyResponseHeaderAction = this._modifyResponseHeaderAction;
+      internalValueResult.modifyResponseHeaderAction = this._modifyResponseHeaderAction?.internalValue;
     }
     if (this._urlRedirectAction?.internalValue !== undefined) {
       hasAnyValues = true;
@@ -2172,8 +4888,8 @@ export class CdnEndpointGlobalDeliveryRuleOutputReference extends cdktf.ComplexO
       this.isEmptyObject = false;
       this._cacheExpirationAction.internalValue = undefined;
       this._cacheKeyQueryStringAction.internalValue = undefined;
-      this._modifyRequestHeaderAction = undefined;
-      this._modifyResponseHeaderAction = undefined;
+      this._modifyRequestHeaderAction.internalValue = undefined;
+      this._modifyResponseHeaderAction.internalValue = undefined;
       this._urlRedirectAction.internalValue = undefined;
       this._urlRewriteAction.internalValue = undefined;
     }
@@ -2181,8 +4897,8 @@ export class CdnEndpointGlobalDeliveryRuleOutputReference extends cdktf.ComplexO
       this.isEmptyObject = Object.keys(value).length === 0;
       this._cacheExpirationAction.internalValue = value.cacheExpirationAction;
       this._cacheKeyQueryStringAction.internalValue = value.cacheKeyQueryStringAction;
-      this._modifyRequestHeaderAction = value.modifyRequestHeaderAction;
-      this._modifyResponseHeaderAction = value.modifyResponseHeaderAction;
+      this._modifyRequestHeaderAction.internalValue = value.modifyRequestHeaderAction;
+      this._modifyResponseHeaderAction.internalValue = value.modifyResponseHeaderAction;
       this._urlRedirectAction.internalValue = value.urlRedirectAction;
       this._urlRewriteAction.internalValue = value.urlRewriteAction;
     }
@@ -2221,37 +4937,35 @@ export class CdnEndpointGlobalDeliveryRuleOutputReference extends cdktf.ComplexO
   }
 
   // modify_request_header_action - computed: false, optional: true, required: false
-  private _modifyRequestHeaderAction?: CdnEndpointGlobalDeliveryRuleModifyRequestHeaderAction[] | cdktf.IResolvable; 
+  private _modifyRequestHeaderAction = new CdnEndpointGlobalDeliveryRuleModifyRequestHeaderActionList(this, "modify_request_header_action", false);
   public get modifyRequestHeaderAction() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('modify_request_header_action');
+    return this._modifyRequestHeaderAction;
   }
-  public set modifyRequestHeaderAction(value: CdnEndpointGlobalDeliveryRuleModifyRequestHeaderAction[] | cdktf.IResolvable) {
-    this._modifyRequestHeaderAction = value;
+  public putModifyRequestHeaderAction(value: CdnEndpointGlobalDeliveryRuleModifyRequestHeaderAction[] | cdktf.IResolvable) {
+    this._modifyRequestHeaderAction.internalValue = value;
   }
   public resetModifyRequestHeaderAction() {
-    this._modifyRequestHeaderAction = undefined;
+    this._modifyRequestHeaderAction.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get modifyRequestHeaderActionInput() {
-    return this._modifyRequestHeaderAction;
+    return this._modifyRequestHeaderAction.internalValue;
   }
 
   // modify_response_header_action - computed: false, optional: true, required: false
-  private _modifyResponseHeaderAction?: CdnEndpointGlobalDeliveryRuleModifyResponseHeaderAction[] | cdktf.IResolvable; 
+  private _modifyResponseHeaderAction = new CdnEndpointGlobalDeliveryRuleModifyResponseHeaderActionList(this, "modify_response_header_action", false);
   public get modifyResponseHeaderAction() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('modify_response_header_action');
+    return this._modifyResponseHeaderAction;
   }
-  public set modifyResponseHeaderAction(value: CdnEndpointGlobalDeliveryRuleModifyResponseHeaderAction[] | cdktf.IResolvable) {
-    this._modifyResponseHeaderAction = value;
+  public putModifyResponseHeaderAction(value: CdnEndpointGlobalDeliveryRuleModifyResponseHeaderAction[] | cdktf.IResolvable) {
+    this._modifyResponseHeaderAction.internalValue = value;
   }
   public resetModifyResponseHeaderAction() {
-    this._modifyResponseHeaderAction = undefined;
+    this._modifyResponseHeaderAction.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get modifyResponseHeaderActionInput() {
-    return this._modifyResponseHeaderAction;
+    return this._modifyResponseHeaderAction.internalValue;
   }
 
   // url_redirect_action - computed: false, optional: true, required: false
@@ -2318,6 +5032,146 @@ export function cdnEndpointOriginToTerraform(struct?: CdnEndpointOrigin | cdktf.
   }
 }
 
+export class CdnEndpointOriginOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CdnEndpointOrigin | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._hostName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.hostName = this._hostName;
+    }
+    if (this._httpPort !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.httpPort = this._httpPort;
+    }
+    if (this._httpsPort !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.httpsPort = this._httpsPort;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CdnEndpointOrigin | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._hostName = undefined;
+      this._httpPort = undefined;
+      this._httpsPort = undefined;
+      this._name = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._hostName = value.hostName;
+      this._httpPort = value.httpPort;
+      this._httpsPort = value.httpsPort;
+      this._name = value.name;
+    }
+  }
+
+  // host_name - computed: false, optional: false, required: true
+  private _hostName?: string; 
+  public get hostName() {
+    return this.getStringAttribute('host_name');
+  }
+  public set hostName(value: string) {
+    this._hostName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hostNameInput() {
+    return this._hostName;
+  }
+
+  // http_port - computed: false, optional: true, required: false
+  private _httpPort?: number; 
+  public get httpPort() {
+    return this.getNumberAttribute('http_port');
+  }
+  public set httpPort(value: number) {
+    this._httpPort = value;
+  }
+  public resetHttpPort() {
+    this._httpPort = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get httpPortInput() {
+    return this._httpPort;
+  }
+
+  // https_port - computed: false, optional: true, required: false
+  private _httpsPort?: number; 
+  public get httpsPort() {
+    return this.getNumberAttribute('https_port');
+  }
+  public set httpsPort(value: number) {
+    this._httpsPort = value;
+  }
+  public resetHttpsPort() {
+    this._httpsPort = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get httpsPortInput() {
+    return this._httpsPort;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+}
+
+export class CdnEndpointOriginList extends cdktf.ComplexList {
+  public internalValue? : CdnEndpointOrigin[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CdnEndpointOriginOutputReference {
+    return new CdnEndpointOriginOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CdnEndpointTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint#create CdnEndpoint#create}
@@ -2352,6 +5206,7 @@ export function cdnEndpointTimeoutsToTerraform(struct?: CdnEndpointTimeoutsOutpu
 
 export class CdnEndpointTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -2361,7 +5216,10 @@ export class CdnEndpointTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): CdnEndpointTimeouts | undefined {
+  public get internalValue(): CdnEndpointTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -2383,16 +5241,22 @@ export class CdnEndpointTimeoutsOutputReference extends cdktf.ComplexObject {
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: CdnEndpointTimeouts | undefined) {
+  public set internalValue(value: CdnEndpointTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -2500,6 +5364,7 @@ export class CdnEndpoint extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._contentTypesToCompress = config.contentTypesToCompress;
+    this._id = config.id;
     this._isCompressionEnabled = config.isCompressionEnabled;
     this._isHttpAllowed = config.isHttpAllowed;
     this._isHttpsAllowed = config.isHttpsAllowed;
@@ -2513,10 +5378,10 @@ export class CdnEndpoint extends cdktf.TerraformResource {
     this._querystringCachingBehaviour = config.querystringCachingBehaviour;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
-    this._deliveryRule = config.deliveryRule;
-    this._geoFilter = config.geoFilter;
+    this._deliveryRule.internalValue = config.deliveryRule;
+    this._geoFilter.internalValue = config.geoFilter;
     this._globalDeliveryRule.internalValue = config.globalDeliveryRule;
-    this._origin = config.origin;
+    this._origin.internalValue = config.origin;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -2546,8 +5411,19 @@ export class CdnEndpoint extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // is_compression_enabled - computed: false, optional: true, required: false
@@ -2747,37 +5623,35 @@ export class CdnEndpoint extends cdktf.TerraformResource {
   }
 
   // delivery_rule - computed: false, optional: true, required: false
-  private _deliveryRule?: CdnEndpointDeliveryRule[] | cdktf.IResolvable; 
+  private _deliveryRule = new CdnEndpointDeliveryRuleList(this, "delivery_rule", false);
   public get deliveryRule() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('delivery_rule');
+    return this._deliveryRule;
   }
-  public set deliveryRule(value: CdnEndpointDeliveryRule[] | cdktf.IResolvable) {
-    this._deliveryRule = value;
+  public putDeliveryRule(value: CdnEndpointDeliveryRule[] | cdktf.IResolvable) {
+    this._deliveryRule.internalValue = value;
   }
   public resetDeliveryRule() {
-    this._deliveryRule = undefined;
+    this._deliveryRule.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get deliveryRuleInput() {
-    return this._deliveryRule;
+    return this._deliveryRule.internalValue;
   }
 
   // geo_filter - computed: false, optional: true, required: false
-  private _geoFilter?: CdnEndpointGeoFilter[] | cdktf.IResolvable; 
+  private _geoFilter = new CdnEndpointGeoFilterList(this, "geo_filter", false);
   public get geoFilter() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('geo_filter');
+    return this._geoFilter;
   }
-  public set geoFilter(value: CdnEndpointGeoFilter[] | cdktf.IResolvable) {
-    this._geoFilter = value;
+  public putGeoFilter(value: CdnEndpointGeoFilter[] | cdktf.IResolvable) {
+    this._geoFilter.internalValue = value;
   }
   public resetGeoFilter() {
-    this._geoFilter = undefined;
+    this._geoFilter.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get geoFilterInput() {
-    return this._geoFilter;
+    return this._geoFilter.internalValue;
   }
 
   // global_delivery_rule - computed: false, optional: true, required: false
@@ -2797,17 +5671,16 @@ export class CdnEndpoint extends cdktf.TerraformResource {
   }
 
   // origin - computed: false, optional: false, required: true
-  private _origin?: CdnEndpointOrigin[] | cdktf.IResolvable; 
+  private _origin = new CdnEndpointOriginList(this, "origin", true);
   public get origin() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('origin')));
+    return this._origin;
   }
-  public set origin(value: CdnEndpointOrigin[] | cdktf.IResolvable) {
-    this._origin = value;
+  public putOrigin(value: CdnEndpointOrigin[] | cdktf.IResolvable) {
+    this._origin.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get originInput() {
-    return this._origin;
+    return this._origin.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -2833,6 +5706,7 @@ export class CdnEndpoint extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       content_types_to_compress: cdktf.listMapper(cdktf.stringToTerraform)(this._contentTypesToCompress),
+      id: cdktf.stringToTerraform(this._id),
       is_compression_enabled: cdktf.booleanToTerraform(this._isCompressionEnabled),
       is_http_allowed: cdktf.booleanToTerraform(this._isHttpAllowed),
       is_https_allowed: cdktf.booleanToTerraform(this._isHttpsAllowed),
@@ -2846,10 +5720,10 @@ export class CdnEndpoint extends cdktf.TerraformResource {
       querystring_caching_behaviour: cdktf.stringToTerraform(this._querystringCachingBehaviour),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
-      delivery_rule: cdktf.listMapper(cdnEndpointDeliveryRuleToTerraform)(this._deliveryRule),
-      geo_filter: cdktf.listMapper(cdnEndpointGeoFilterToTerraform)(this._geoFilter),
+      delivery_rule: cdktf.listMapper(cdnEndpointDeliveryRuleToTerraform)(this._deliveryRule.internalValue),
+      geo_filter: cdktf.listMapper(cdnEndpointGeoFilterToTerraform)(this._geoFilter.internalValue),
       global_delivery_rule: cdnEndpointGlobalDeliveryRuleToTerraform(this._globalDeliveryRule.internalValue),
-      origin: cdktf.listMapper(cdnEndpointOriginToTerraform)(this._origin),
+      origin: cdktf.listMapper(cdnEndpointOriginToTerraform)(this._origin.internalValue),
       timeouts: cdnEndpointTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

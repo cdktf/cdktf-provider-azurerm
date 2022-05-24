@@ -12,6 +12,13 @@ export interface SignalrServiceConfig extends cdktf.TerraformMetaArguments {
   */
   readonly connectivityLogsEnabled?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service#id SignalrService#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service#live_trace_enabled SignalrService#live_trace_enabled}
   */
   readonly liveTraceEnabled?: boolean | cdktf.IResolvable;
@@ -87,6 +94,83 @@ export function signalrServiceCorsToTerraform(struct?: SignalrServiceCors | cdkt
   }
 }
 
+export class SignalrServiceCorsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): SignalrServiceCors | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._allowedOrigins !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.allowedOrigins = this._allowedOrigins;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SignalrServiceCors | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._allowedOrigins = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._allowedOrigins = value.allowedOrigins;
+    }
+  }
+
+  // allowed_origins - computed: false, optional: false, required: true
+  private _allowedOrigins?: string[]; 
+  public get allowedOrigins() {
+    return cdktf.Fn.tolist(this.getListAttribute('allowed_origins'));
+  }
+  public set allowedOrigins(value: string[]) {
+    this._allowedOrigins = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowedOriginsInput() {
+    return this._allowedOrigins;
+  }
+}
+
+export class SignalrServiceCorsList extends cdktf.ComplexList {
+  public internalValue? : SignalrServiceCors[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): SignalrServiceCorsOutputReference {
+    return new SignalrServiceCorsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface SignalrServiceFeatures {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service#flag SignalrService#flag}
@@ -109,6 +193,102 @@ export function signalrServiceFeaturesToTerraform(struct?: SignalrServiceFeature
   }
 }
 
+export class SignalrServiceFeaturesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): SignalrServiceFeatures | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._flag !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.flag = this._flag;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SignalrServiceFeatures | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._flag = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._flag = value.flag;
+      this._value = value.value;
+    }
+  }
+
+  // flag - computed: false, optional: false, required: true
+  private _flag?: string; 
+  public get flag() {
+    return this.getStringAttribute('flag');
+  }
+  public set flag(value: string) {
+    this._flag = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get flagInput() {
+    return this._flag;
+  }
+
+  // value - computed: false, optional: false, required: true
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class SignalrServiceFeaturesList extends cdktf.ComplexList {
+  public internalValue? : SignalrServiceFeatures[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): SignalrServiceFeaturesOutputReference {
+    return new SignalrServiceFeaturesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface SignalrServiceSku {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service#capacity SignalrService#capacity}
@@ -229,6 +409,7 @@ export function signalrServiceTimeoutsToTerraform(struct?: SignalrServiceTimeout
 
 export class SignalrServiceTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -238,7 +419,10 @@ export class SignalrServiceTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): SignalrServiceTimeouts | undefined {
+  public get internalValue(): SignalrServiceTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -260,16 +444,22 @@ export class SignalrServiceTimeoutsOutputReference extends cdktf.ComplexObject {
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: SignalrServiceTimeouts | undefined) {
+  public set internalValue(value: SignalrServiceTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -373,6 +563,140 @@ export function signalrServiceUpstreamEndpointToTerraform(struct?: SignalrServic
   }
 }
 
+export class SignalrServiceUpstreamEndpointOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): SignalrServiceUpstreamEndpoint | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._categoryPattern !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.categoryPattern = this._categoryPattern;
+    }
+    if (this._eventPattern !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.eventPattern = this._eventPattern;
+    }
+    if (this._hubPattern !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.hubPattern = this._hubPattern;
+    }
+    if (this._urlTemplate !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.urlTemplate = this._urlTemplate;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SignalrServiceUpstreamEndpoint | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._categoryPattern = undefined;
+      this._eventPattern = undefined;
+      this._hubPattern = undefined;
+      this._urlTemplate = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._categoryPattern = value.categoryPattern;
+      this._eventPattern = value.eventPattern;
+      this._hubPattern = value.hubPattern;
+      this._urlTemplate = value.urlTemplate;
+    }
+  }
+
+  // category_pattern - computed: false, optional: false, required: true
+  private _categoryPattern?: string[]; 
+  public get categoryPattern() {
+    return this.getListAttribute('category_pattern');
+  }
+  public set categoryPattern(value: string[]) {
+    this._categoryPattern = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get categoryPatternInput() {
+    return this._categoryPattern;
+  }
+
+  // event_pattern - computed: false, optional: false, required: true
+  private _eventPattern?: string[]; 
+  public get eventPattern() {
+    return this.getListAttribute('event_pattern');
+  }
+  public set eventPattern(value: string[]) {
+    this._eventPattern = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get eventPatternInput() {
+    return this._eventPattern;
+  }
+
+  // hub_pattern - computed: false, optional: false, required: true
+  private _hubPattern?: string[]; 
+  public get hubPattern() {
+    return this.getListAttribute('hub_pattern');
+  }
+  public set hubPattern(value: string[]) {
+    this._hubPattern = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hubPatternInput() {
+    return this._hubPattern;
+  }
+
+  // url_template - computed: false, optional: false, required: true
+  private _urlTemplate?: string; 
+  public get urlTemplate() {
+    return this.getStringAttribute('url_template');
+  }
+  public set urlTemplate(value: string) {
+    this._urlTemplate = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get urlTemplateInput() {
+    return this._urlTemplate;
+  }
+}
+
+export class SignalrServiceUpstreamEndpointList extends cdktf.ComplexList {
+  public internalValue? : SignalrServiceUpstreamEndpoint[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): SignalrServiceUpstreamEndpointOutputReference {
+    return new SignalrServiceUpstreamEndpointOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service azurerm_signalr_service}
@@ -409,6 +733,7 @@ export class SignalrService extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._connectivityLogsEnabled = config.connectivityLogsEnabled;
+    this._id = config.id;
     this._liveTraceEnabled = config.liveTraceEnabled;
     this._location = config.location;
     this._messagingLogsEnabled = config.messagingLogsEnabled;
@@ -416,11 +741,11 @@ export class SignalrService extends cdktf.TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._serviceMode = config.serviceMode;
     this._tags = config.tags;
-    this._cors = config.cors;
-    this._features = config.features;
+    this._cors.internalValue = config.cors;
+    this._features.internalValue = config.features;
     this._sku.internalValue = config.sku;
     this._timeouts.internalValue = config.timeouts;
-    this._upstreamEndpoint = config.upstreamEndpoint;
+    this._upstreamEndpoint.internalValue = config.upstreamEndpoint;
   }
 
   // ==========
@@ -449,8 +774,19 @@ export class SignalrService extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // ip_address - computed: true, optional: false, required: false
@@ -592,37 +928,35 @@ export class SignalrService extends cdktf.TerraformResource {
   }
 
   // cors - computed: false, optional: true, required: false
-  private _cors?: SignalrServiceCors[] | cdktf.IResolvable; 
+  private _cors = new SignalrServiceCorsList(this, "cors", false);
   public get cors() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('cors');
+    return this._cors;
   }
-  public set cors(value: SignalrServiceCors[] | cdktf.IResolvable) {
-    this._cors = value;
+  public putCors(value: SignalrServiceCors[] | cdktf.IResolvable) {
+    this._cors.internalValue = value;
   }
   public resetCors() {
-    this._cors = undefined;
+    this._cors.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get corsInput() {
-    return this._cors;
+    return this._cors.internalValue;
   }
 
   // features - computed: false, optional: true, required: false
-  private _features?: SignalrServiceFeatures[] | cdktf.IResolvable; 
+  private _features = new SignalrServiceFeaturesList(this, "features", true);
   public get features() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('features')));
+    return this._features;
   }
-  public set features(value: SignalrServiceFeatures[] | cdktf.IResolvable) {
-    this._features = value;
+  public putFeatures(value: SignalrServiceFeatures[] | cdktf.IResolvable) {
+    this._features.internalValue = value;
   }
   public resetFeatures() {
-    this._features = undefined;
+    this._features.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get featuresInput() {
-    return this._features;
+    return this._features.internalValue;
   }
 
   // sku - computed: false, optional: false, required: true
@@ -655,20 +989,19 @@ export class SignalrService extends cdktf.TerraformResource {
   }
 
   // upstream_endpoint - computed: false, optional: true, required: false
-  private _upstreamEndpoint?: SignalrServiceUpstreamEndpoint[] | cdktf.IResolvable; 
+  private _upstreamEndpoint = new SignalrServiceUpstreamEndpointList(this, "upstream_endpoint", true);
   public get upstreamEndpoint() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('upstream_endpoint')));
+    return this._upstreamEndpoint;
   }
-  public set upstreamEndpoint(value: SignalrServiceUpstreamEndpoint[] | cdktf.IResolvable) {
-    this._upstreamEndpoint = value;
+  public putUpstreamEndpoint(value: SignalrServiceUpstreamEndpoint[] | cdktf.IResolvable) {
+    this._upstreamEndpoint.internalValue = value;
   }
   public resetUpstreamEndpoint() {
-    this._upstreamEndpoint = undefined;
+    this._upstreamEndpoint.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get upstreamEndpointInput() {
-    return this._upstreamEndpoint;
+    return this._upstreamEndpoint.internalValue;
   }
 
   // =========
@@ -678,6 +1011,7 @@ export class SignalrService extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       connectivity_logs_enabled: cdktf.booleanToTerraform(this._connectivityLogsEnabled),
+      id: cdktf.stringToTerraform(this._id),
       live_trace_enabled: cdktf.booleanToTerraform(this._liveTraceEnabled),
       location: cdktf.stringToTerraform(this._location),
       messaging_logs_enabled: cdktf.booleanToTerraform(this._messagingLogsEnabled),
@@ -685,11 +1019,11 @@ export class SignalrService extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       service_mode: cdktf.stringToTerraform(this._serviceMode),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
-      cors: cdktf.listMapper(signalrServiceCorsToTerraform)(this._cors),
-      features: cdktf.listMapper(signalrServiceFeaturesToTerraform)(this._features),
+      cors: cdktf.listMapper(signalrServiceCorsToTerraform)(this._cors.internalValue),
+      features: cdktf.listMapper(signalrServiceFeaturesToTerraform)(this._features.internalValue),
       sku: signalrServiceSkuToTerraform(this._sku.internalValue),
       timeouts: signalrServiceTimeoutsToTerraform(this._timeouts.internalValue),
-      upstream_endpoint: cdktf.listMapper(signalrServiceUpstreamEndpointToTerraform)(this._upstreamEndpoint),
+      upstream_endpoint: cdktf.listMapper(signalrServiceUpstreamEndpointToTerraform)(this._upstreamEndpoint.internalValue),
     };
   }
 }

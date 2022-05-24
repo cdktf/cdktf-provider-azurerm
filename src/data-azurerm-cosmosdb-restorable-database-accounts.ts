@@ -8,6 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermCosmosdbRestorableDatabaseAccountsConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cosmosdb_restorable_database_accounts#id DataAzurermCosmosdbRestorableDatabaseAccounts#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cosmosdb_restorable_database_accounts#location DataAzurermCosmosdbRestorableDatabaseAccounts#location}
   */
   readonly location: string;
@@ -205,6 +212,7 @@ export function dataAzurermCosmosdbRestorableDatabaseAccountsTimeoutsToTerraform
 
 export class DataAzurermCosmosdbRestorableDatabaseAccountsTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -214,7 +222,10 @@ export class DataAzurermCosmosdbRestorableDatabaseAccountsTimeoutsOutputReferenc
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): DataAzurermCosmosdbRestorableDatabaseAccountsTimeouts | undefined {
+  public get internalValue(): DataAzurermCosmosdbRestorableDatabaseAccountsTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._read !== undefined) {
@@ -224,13 +235,19 @@ export class DataAzurermCosmosdbRestorableDatabaseAccountsTimeoutsOutputReferenc
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: DataAzurermCosmosdbRestorableDatabaseAccountsTimeouts | undefined) {
+  public set internalValue(value: DataAzurermCosmosdbRestorableDatabaseAccountsTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._read = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._read = value.read;
     }
   }
@@ -286,6 +303,7 @@ export class DataAzurermCosmosdbRestorableDatabaseAccounts extends cdktf.Terrafo
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._id = config.id;
     this._location = config.location;
     this._name = config.name;
     this._timeouts.internalValue = config.timeouts;
@@ -302,8 +320,19 @@ export class DataAzurermCosmosdbRestorableDatabaseAccounts extends cdktf.Terrafo
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // location - computed: false, optional: false, required: true
@@ -354,6 +383,7 @@ export class DataAzurermCosmosdbRestorableDatabaseAccounts extends cdktf.Terrafo
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       timeouts: dataAzurermCosmosdbRestorableDatabaseAccountsTimeoutsToTerraform(this._timeouts.internalValue),

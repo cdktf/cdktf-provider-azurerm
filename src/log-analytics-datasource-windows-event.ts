@@ -16,6 +16,13 @@ export interface LogAnalyticsDatasourceWindowsEventConfig extends cdktf.Terrafor
   */
   readonly eventTypes: string[];
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_datasource_windows_event#id LogAnalyticsDatasourceWindowsEvent#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_datasource_windows_event#name LogAnalyticsDatasourceWindowsEvent#name}
   */
   readonly name: string;
@@ -68,6 +75,7 @@ export function logAnalyticsDatasourceWindowsEventTimeoutsToTerraform(struct?: L
 
 export class LogAnalyticsDatasourceWindowsEventTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -77,7 +85,10 @@ export class LogAnalyticsDatasourceWindowsEventTimeoutsOutputReference extends c
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): LogAnalyticsDatasourceWindowsEventTimeouts | undefined {
+  public get internalValue(): LogAnalyticsDatasourceWindowsEventTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -99,16 +110,22 @@ export class LogAnalyticsDatasourceWindowsEventTimeoutsOutputReference extends c
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: LogAnalyticsDatasourceWindowsEventTimeouts | undefined) {
+  public set internalValue(value: LogAnalyticsDatasourceWindowsEventTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -217,6 +234,7 @@ export class LogAnalyticsDatasourceWindowsEvent extends cdktf.TerraformResource 
     });
     this._eventLogName = config.eventLogName;
     this._eventTypes = config.eventTypes;
+    this._id = config.id;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._workspaceName = config.workspaceName;
@@ -254,8 +272,19 @@ export class LogAnalyticsDatasourceWindowsEvent extends cdktf.TerraformResource 
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // name - computed: false, optional: false, required: true
@@ -321,6 +350,7 @@ export class LogAnalyticsDatasourceWindowsEvent extends cdktf.TerraformResource 
     return {
       event_log_name: cdktf.stringToTerraform(this._eventLogName),
       event_types: cdktf.listMapper(cdktf.stringToTerraform)(this._eventTypes),
+      id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       workspace_name: cdktf.stringToTerraform(this._workspaceName),

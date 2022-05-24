@@ -12,6 +12,13 @@ export interface StorageShareConfig extends cdktf.TerraformMetaArguments {
   */
   readonly enabledProtocol?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share#id StorageShare#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share#metadata StorageShare#metadata}
   */
   readonly metadata?: { [key: string]: string };
@@ -67,9 +74,133 @@ export function storageShareAclAccessPolicyToTerraform(struct?: StorageShareAclA
   }
 }
 
+export class StorageShareAclAccessPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): StorageShareAclAccessPolicy | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._expiry !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.expiry = this._expiry;
+    }
+    if (this._permissions !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.permissions = this._permissions;
+    }
+    if (this._start !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.start = this._start;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageShareAclAccessPolicy | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._expiry = undefined;
+      this._permissions = undefined;
+      this._start = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._expiry = value.expiry;
+      this._permissions = value.permissions;
+      this._start = value.start;
+    }
+  }
+
+  // expiry - computed: false, optional: true, required: false
+  private _expiry?: string; 
+  public get expiry() {
+    return this.getStringAttribute('expiry');
+  }
+  public set expiry(value: string) {
+    this._expiry = value;
+  }
+  public resetExpiry() {
+    this._expiry = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get expiryInput() {
+    return this._expiry;
+  }
+
+  // permissions - computed: false, optional: false, required: true
+  private _permissions?: string; 
+  public get permissions() {
+    return this.getStringAttribute('permissions');
+  }
+  public set permissions(value: string) {
+    this._permissions = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get permissionsInput() {
+    return this._permissions;
+  }
+
+  // start - computed: false, optional: true, required: false
+  private _start?: string; 
+  public get start() {
+    return this.getStringAttribute('start');
+  }
+  public set start(value: string) {
+    this._start = value;
+  }
+  public resetStart() {
+    this._start = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get startInput() {
+    return this._start;
+  }
+}
+
+export class StorageShareAclAccessPolicyList extends cdktf.ComplexList {
+  public internalValue? : StorageShareAclAccessPolicy[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): StorageShareAclAccessPolicyOutputReference {
+    return new StorageShareAclAccessPolicyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface StorageShareAcl {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share#id StorageShare#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id: string;
   /**
@@ -91,6 +222,105 @@ export function storageShareAclToTerraform(struct?: StorageShareAcl | cdktf.IRes
   }
 }
 
+export class StorageShareAclOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): StorageShareAcl | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._id !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.id = this._id;
+    }
+    if (this._accessPolicy?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.accessPolicy = this._accessPolicy?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageShareAcl | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._id = undefined;
+      this._accessPolicy.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._id = value.id;
+      this._accessPolicy.internalValue = value.accessPolicy;
+    }
+  }
+
+  // id - computed: false, optional: false, required: true
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // access_policy - computed: false, optional: true, required: false
+  private _accessPolicy = new StorageShareAclAccessPolicyList(this, "access_policy", false);
+  public get accessPolicy() {
+    return this._accessPolicy;
+  }
+  public putAccessPolicy(value: StorageShareAclAccessPolicy[] | cdktf.IResolvable) {
+    this._accessPolicy.internalValue = value;
+  }
+  public resetAccessPolicy() {
+    this._accessPolicy.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get accessPolicyInput() {
+    return this._accessPolicy.internalValue;
+  }
+}
+
+export class StorageShareAclList extends cdktf.ComplexList {
+  public internalValue? : StorageShareAcl[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): StorageShareAclOutputReference {
+    return new StorageShareAclOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface StorageShareTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share#create StorageShare#create}
@@ -125,6 +355,7 @@ export function storageShareTimeoutsToTerraform(struct?: StorageShareTimeoutsOut
 
 export class StorageShareTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -134,7 +365,10 @@ export class StorageShareTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): StorageShareTimeouts | undefined {
+  public get internalValue(): StorageShareTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -156,16 +390,22 @@ export class StorageShareTimeoutsOutputReference extends cdktf.ComplexObject {
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: StorageShareTimeouts | undefined) {
+  public set internalValue(value: StorageShareTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -273,11 +513,12 @@ export class StorageShare extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._enabledProtocol = config.enabledProtocol;
+    this._id = config.id;
     this._metadata = config.metadata;
     this._name = config.name;
     this._quota = config.quota;
     this._storageAccountName = config.storageAccountName;
-    this._acl = config.acl;
+    this._acl.internalValue = config.acl;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -302,8 +543,19 @@ export class StorageShare extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // metadata - computed: true, optional: true, required: false
@@ -375,20 +627,19 @@ export class StorageShare extends cdktf.TerraformResource {
   }
 
   // acl - computed: false, optional: true, required: false
-  private _acl?: StorageShareAcl[] | cdktf.IResolvable; 
+  private _acl = new StorageShareAclList(this, "acl", true);
   public get acl() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('acl')));
+    return this._acl;
   }
-  public set acl(value: StorageShareAcl[] | cdktf.IResolvable) {
-    this._acl = value;
+  public putAcl(value: StorageShareAcl[] | cdktf.IResolvable) {
+    this._acl.internalValue = value;
   }
   public resetAcl() {
-    this._acl = undefined;
+    this._acl.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get aclInput() {
-    return this._acl;
+    return this._acl.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -414,11 +665,12 @@ export class StorageShare extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       enabled_protocol: cdktf.stringToTerraform(this._enabledProtocol),
+      id: cdktf.stringToTerraform(this._id),
       metadata: cdktf.hashMapper(cdktf.stringToTerraform)(this._metadata),
       name: cdktf.stringToTerraform(this._name),
       quota: cdktf.numberToTerraform(this._quota),
       storage_account_name: cdktf.stringToTerraform(this._storageAccountName),
-      acl: cdktf.listMapper(storageShareAclToTerraform)(this._acl),
+      acl: cdktf.listMapper(storageShareAclToTerraform)(this._acl.internalValue),
       timeouts: storageShareTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

@@ -12,6 +12,13 @@ export interface HdinsightHbaseClusterConfig extends cdktf.TerraformMetaArgument
   */
   readonly clusterVersion: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hbase_cluster#id HdinsightHbaseCluster#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hbase_cluster#location HdinsightHbaseCluster#location}
   */
   readonly location: string;
@@ -1197,6 +1204,121 @@ export function hdinsightHbaseClusterRolesWorkerNodeAutoscaleRecurrenceScheduleT
   }
 }
 
+export class HdinsightHbaseClusterRolesWorkerNodeAutoscaleRecurrenceScheduleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): HdinsightHbaseClusterRolesWorkerNodeAutoscaleRecurrenceSchedule | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._days !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.days = this._days;
+    }
+    if (this._targetInstanceCount !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.targetInstanceCount = this._targetInstanceCount;
+    }
+    if (this._time !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.time = this._time;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: HdinsightHbaseClusterRolesWorkerNodeAutoscaleRecurrenceSchedule | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._days = undefined;
+      this._targetInstanceCount = undefined;
+      this._time = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._days = value.days;
+      this._targetInstanceCount = value.targetInstanceCount;
+      this._time = value.time;
+    }
+  }
+
+  // days - computed: false, optional: false, required: true
+  private _days?: string[]; 
+  public get days() {
+    return this.getListAttribute('days');
+  }
+  public set days(value: string[]) {
+    this._days = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get daysInput() {
+    return this._days;
+  }
+
+  // target_instance_count - computed: false, optional: false, required: true
+  private _targetInstanceCount?: number; 
+  public get targetInstanceCount() {
+    return this.getNumberAttribute('target_instance_count');
+  }
+  public set targetInstanceCount(value: number) {
+    this._targetInstanceCount = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetInstanceCountInput() {
+    return this._targetInstanceCount;
+  }
+
+  // time - computed: false, optional: false, required: true
+  private _time?: string; 
+  public get time() {
+    return this.getStringAttribute('time');
+  }
+  public set time(value: string) {
+    this._time = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeInput() {
+    return this._time;
+  }
+}
+
+export class HdinsightHbaseClusterRolesWorkerNodeAutoscaleRecurrenceScheduleList extends cdktf.ComplexList {
+  public internalValue? : HdinsightHbaseClusterRolesWorkerNodeAutoscaleRecurrenceSchedule[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): HdinsightHbaseClusterRolesWorkerNodeAutoscaleRecurrenceScheduleOutputReference {
+    return new HdinsightHbaseClusterRolesWorkerNodeAutoscaleRecurrenceScheduleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface HdinsightHbaseClusterRolesWorkerNodeAutoscaleRecurrence {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hbase_cluster#timezone HdinsightHbaseCluster#timezone}
@@ -1239,9 +1361,9 @@ export class HdinsightHbaseClusterRolesWorkerNodeAutoscaleRecurrenceOutputRefere
       hasAnyValues = true;
       internalValueResult.timezone = this._timezone;
     }
-    if (this._schedule !== undefined) {
+    if (this._schedule?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.schedule = this._schedule;
+      internalValueResult.schedule = this._schedule?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -1250,12 +1372,12 @@ export class HdinsightHbaseClusterRolesWorkerNodeAutoscaleRecurrenceOutputRefere
     if (value === undefined) {
       this.isEmptyObject = false;
       this._timezone = undefined;
-      this._schedule = undefined;
+      this._schedule.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._timezone = value.timezone;
-      this._schedule = value.schedule;
+      this._schedule.internalValue = value.schedule;
     }
   }
 
@@ -1273,17 +1395,16 @@ export class HdinsightHbaseClusterRolesWorkerNodeAutoscaleRecurrenceOutputRefere
   }
 
   // schedule - computed: false, optional: false, required: true
-  private _schedule?: HdinsightHbaseClusterRolesWorkerNodeAutoscaleRecurrenceSchedule[] | cdktf.IResolvable; 
+  private _schedule = new HdinsightHbaseClusterRolesWorkerNodeAutoscaleRecurrenceScheduleList(this, "schedule", false);
   public get schedule() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('schedule');
+    return this._schedule;
   }
-  public set schedule(value: HdinsightHbaseClusterRolesWorkerNodeAutoscaleRecurrenceSchedule[] | cdktf.IResolvable) {
-    this._schedule = value;
+  public putSchedule(value: HdinsightHbaseClusterRolesWorkerNodeAutoscaleRecurrenceSchedule[] | cdktf.IResolvable) {
+    this._schedule.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get scheduleInput() {
-    return this._schedule;
+    return this._schedule.internalValue;
   }
 }
 export interface HdinsightHbaseClusterRolesWorkerNodeAutoscale {
@@ -2178,6 +2299,143 @@ export function hdinsightHbaseClusterStorageAccountToTerraform(struct?: Hdinsigh
   }
 }
 
+export class HdinsightHbaseClusterStorageAccountOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): HdinsightHbaseClusterStorageAccount | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._isDefault !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.isDefault = this._isDefault;
+    }
+    if (this._storageAccountKey !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.storageAccountKey = this._storageAccountKey;
+    }
+    if (this._storageContainerId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.storageContainerId = this._storageContainerId;
+    }
+    if (this._storageResourceId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.storageResourceId = this._storageResourceId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: HdinsightHbaseClusterStorageAccount | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._isDefault = undefined;
+      this._storageAccountKey = undefined;
+      this._storageContainerId = undefined;
+      this._storageResourceId = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._isDefault = value.isDefault;
+      this._storageAccountKey = value.storageAccountKey;
+      this._storageContainerId = value.storageContainerId;
+      this._storageResourceId = value.storageResourceId;
+    }
+  }
+
+  // is_default - computed: false, optional: false, required: true
+  private _isDefault?: boolean | cdktf.IResolvable; 
+  public get isDefault() {
+    return this.getBooleanAttribute('is_default');
+  }
+  public set isDefault(value: boolean | cdktf.IResolvable) {
+    this._isDefault = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get isDefaultInput() {
+    return this._isDefault;
+  }
+
+  // storage_account_key - computed: false, optional: false, required: true
+  private _storageAccountKey?: string; 
+  public get storageAccountKey() {
+    return this.getStringAttribute('storage_account_key');
+  }
+  public set storageAccountKey(value: string) {
+    this._storageAccountKey = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageAccountKeyInput() {
+    return this._storageAccountKey;
+  }
+
+  // storage_container_id - computed: false, optional: false, required: true
+  private _storageContainerId?: string; 
+  public get storageContainerId() {
+    return this.getStringAttribute('storage_container_id');
+  }
+  public set storageContainerId(value: string) {
+    this._storageContainerId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageContainerIdInput() {
+    return this._storageContainerId;
+  }
+
+  // storage_resource_id - computed: false, optional: true, required: false
+  private _storageResourceId?: string; 
+  public get storageResourceId() {
+    return this.getStringAttribute('storage_resource_id');
+  }
+  public set storageResourceId(value: string) {
+    this._storageResourceId = value;
+  }
+  public resetStorageResourceId() {
+    this._storageResourceId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageResourceIdInput() {
+    return this._storageResourceId;
+  }
+}
+
+export class HdinsightHbaseClusterStorageAccountList extends cdktf.ComplexList {
+  public internalValue? : HdinsightHbaseClusterStorageAccount[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): HdinsightHbaseClusterStorageAccountOutputReference {
+    return new HdinsightHbaseClusterStorageAccountOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface HdinsightHbaseClusterStorageAccountGen2 {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hbase_cluster#filesystem_id HdinsightHbaseCluster#filesystem_id}
@@ -2346,6 +2604,7 @@ export function hdinsightHbaseClusterTimeoutsToTerraform(struct?: HdinsightHbase
 
 export class HdinsightHbaseClusterTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -2355,7 +2614,10 @@ export class HdinsightHbaseClusterTimeoutsOutputReference extends cdktf.ComplexO
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): HdinsightHbaseClusterTimeouts | undefined {
+  public get internalValue(): HdinsightHbaseClusterTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -2377,16 +2639,22 @@ export class HdinsightHbaseClusterTimeoutsOutputReference extends cdktf.ComplexO
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: HdinsightHbaseClusterTimeouts | undefined) {
+  public set internalValue(value: HdinsightHbaseClusterTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -2494,6 +2762,7 @@ export class HdinsightHbaseCluster extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._clusterVersion = config.clusterVersion;
+    this._id = config.id;
     this._location = config.location;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
@@ -2507,7 +2776,7 @@ export class HdinsightHbaseCluster extends cdktf.TerraformResource {
     this._network.internalValue = config.network;
     this._roles.internalValue = config.roles;
     this._securityProfile.internalValue = config.securityProfile;
-    this._storageAccount = config.storageAccount;
+    this._storageAccount.internalValue = config.storageAccount;
     this._storageAccountGen2.internalValue = config.storageAccountGen2;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -2535,8 +2804,19 @@ export class HdinsightHbaseCluster extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // location - computed: false, optional: false, required: true
@@ -2732,20 +3012,19 @@ export class HdinsightHbaseCluster extends cdktf.TerraformResource {
   }
 
   // storage_account - computed: false, optional: true, required: false
-  private _storageAccount?: HdinsightHbaseClusterStorageAccount[] | cdktf.IResolvable; 
+  private _storageAccount = new HdinsightHbaseClusterStorageAccountList(this, "storage_account", false);
   public get storageAccount() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('storage_account');
+    return this._storageAccount;
   }
-  public set storageAccount(value: HdinsightHbaseClusterStorageAccount[] | cdktf.IResolvable) {
-    this._storageAccount = value;
+  public putStorageAccount(value: HdinsightHbaseClusterStorageAccount[] | cdktf.IResolvable) {
+    this._storageAccount.internalValue = value;
   }
   public resetStorageAccount() {
-    this._storageAccount = undefined;
+    this._storageAccount.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get storageAccountInput() {
-    return this._storageAccount;
+    return this._storageAccount.internalValue;
   }
 
   // storage_account_gen2 - computed: false, optional: true, required: false
@@ -2787,6 +3066,7 @@ export class HdinsightHbaseCluster extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       cluster_version: cdktf.stringToTerraform(this._clusterVersion),
+      id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
@@ -2800,7 +3080,7 @@ export class HdinsightHbaseCluster extends cdktf.TerraformResource {
       network: hdinsightHbaseClusterNetworkToTerraform(this._network.internalValue),
       roles: hdinsightHbaseClusterRolesToTerraform(this._roles.internalValue),
       security_profile: hdinsightHbaseClusterSecurityProfileToTerraform(this._securityProfile.internalValue),
-      storage_account: cdktf.listMapper(hdinsightHbaseClusterStorageAccountToTerraform)(this._storageAccount),
+      storage_account: cdktf.listMapper(hdinsightHbaseClusterStorageAccountToTerraform)(this._storageAccount.internalValue),
       storage_account_gen2: hdinsightHbaseClusterStorageAccountGen2ToTerraform(this._storageAccountGen2.internalValue),
       timeouts: hdinsightHbaseClusterTimeoutsToTerraform(this._timeouts.internalValue),
     };

@@ -36,6 +36,13 @@ export interface IothubEndpointStorageContainerConfig extends cdktf.TerraformMet
   */
   readonly fileNameFormat?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_storage_container#id IothubEndpointStorageContainer#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_storage_container#identity_id IothubEndpointStorageContainer#identity_id}
   */
   readonly identityId?: string;
@@ -100,6 +107,7 @@ export function iothubEndpointStorageContainerTimeoutsToTerraform(struct?: Iothu
 
 export class IothubEndpointStorageContainerTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -109,7 +117,10 @@ export class IothubEndpointStorageContainerTimeoutsOutputReference extends cdktf
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): IothubEndpointStorageContainerTimeouts | undefined {
+  public get internalValue(): IothubEndpointStorageContainerTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -131,16 +142,22 @@ export class IothubEndpointStorageContainerTimeoutsOutputReference extends cdktf
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: IothubEndpointStorageContainerTimeouts | undefined) {
+  public set internalValue(value: IothubEndpointStorageContainerTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -254,6 +271,7 @@ export class IothubEndpointStorageContainer extends cdktf.TerraformResource {
     this._encoding = config.encoding;
     this._endpointUri = config.endpointUri;
     this._fileNameFormat = config.fileNameFormat;
+    this._id = config.id;
     this._identityId = config.identityId;
     this._iothubId = config.iothubId;
     this._iothubName = config.iothubName;
@@ -377,8 +395,19 @@ export class IothubEndpointStorageContainer extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // identity_id - computed: false, optional: true, required: false
@@ -500,6 +529,7 @@ export class IothubEndpointStorageContainer extends cdktf.TerraformResource {
       encoding: cdktf.stringToTerraform(this._encoding),
       endpoint_uri: cdktf.stringToTerraform(this._endpointUri),
       file_name_format: cdktf.stringToTerraform(this._fileNameFormat),
+      id: cdktf.stringToTerraform(this._id),
       identity_id: cdktf.stringToTerraform(this._identityId),
       iothub_id: cdktf.stringToTerraform(this._iothubId),
       iothub_name: cdktf.stringToTerraform(this._iothubName),

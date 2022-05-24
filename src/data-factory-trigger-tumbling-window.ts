@@ -40,6 +40,13 @@ export interface DataFactoryTriggerTumblingWindowConfig extends cdktf.TerraformM
   */
   readonly frequency: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_tumbling_window#id DataFactoryTriggerTumblingWindow#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_tumbling_window#interval DataFactoryTriggerTumblingWindow#interval}
   */
   readonly interval: number;
@@ -292,6 +299,7 @@ export function dataFactoryTriggerTumblingWindowTimeoutsToTerraform(struct?: Dat
 
 export class DataFactoryTriggerTumblingWindowTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -301,7 +309,10 @@ export class DataFactoryTriggerTumblingWindowTimeoutsOutputReference extends cdk
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): DataFactoryTriggerTumblingWindowTimeouts | undefined {
+  public get internalValue(): DataFactoryTriggerTumblingWindowTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -323,16 +334,22 @@ export class DataFactoryTriggerTumblingWindowTimeoutsOutputReference extends cdk
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: DataFactoryTriggerTumblingWindowTimeouts | undefined) {
+  public set internalValue(value: DataFactoryTriggerTumblingWindowTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -431,6 +448,130 @@ export function dataFactoryTriggerTumblingWindowTriggerDependencyToTerraform(str
   }
 }
 
+export class DataFactoryTriggerTumblingWindowTriggerDependencyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataFactoryTriggerTumblingWindowTriggerDependency | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._offset !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.offset = this._offset;
+    }
+    if (this._size !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.size = this._size;
+    }
+    if (this._triggerName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.triggerName = this._triggerName;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFactoryTriggerTumblingWindowTriggerDependency | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._offset = undefined;
+      this._size = undefined;
+      this._triggerName = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._offset = value.offset;
+      this._size = value.size;
+      this._triggerName = value.triggerName;
+    }
+  }
+
+  // offset - computed: false, optional: true, required: false
+  private _offset?: string; 
+  public get offset() {
+    return this.getStringAttribute('offset');
+  }
+  public set offset(value: string) {
+    this._offset = value;
+  }
+  public resetOffset() {
+    this._offset = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get offsetInput() {
+    return this._offset;
+  }
+
+  // size - computed: false, optional: true, required: false
+  private _size?: string; 
+  public get size() {
+    return this.getStringAttribute('size');
+  }
+  public set size(value: string) {
+    this._size = value;
+  }
+  public resetSize() {
+    this._size = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sizeInput() {
+    return this._size;
+  }
+
+  // trigger_name - computed: false, optional: true, required: false
+  private _triggerName?: string; 
+  public get triggerName() {
+    return this.getStringAttribute('trigger_name');
+  }
+  public set triggerName(value: string) {
+    this._triggerName = value;
+  }
+  public resetTriggerName() {
+    this._triggerName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get triggerNameInput() {
+    return this._triggerName;
+  }
+}
+
+export class DataFactoryTriggerTumblingWindowTriggerDependencyList extends cdktf.ComplexList {
+  public internalValue? : DataFactoryTriggerTumblingWindowTriggerDependency[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataFactoryTriggerTumblingWindowTriggerDependencyOutputReference {
+    return new DataFactoryTriggerTumblingWindowTriggerDependencyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_tumbling_window azurerm_data_factory_trigger_tumbling_window}
@@ -474,6 +615,7 @@ export class DataFactoryTriggerTumblingWindow extends cdktf.TerraformResource {
     this._description = config.description;
     this._endTime = config.endTime;
     this._frequency = config.frequency;
+    this._id = config.id;
     this._interval = config.interval;
     this._maxConcurrency = config.maxConcurrency;
     this._name = config.name;
@@ -481,7 +623,7 @@ export class DataFactoryTriggerTumblingWindow extends cdktf.TerraformResource {
     this._pipeline.internalValue = config.pipeline;
     this._retry.internalValue = config.retry;
     this._timeouts.internalValue = config.timeouts;
-    this._triggerDependency = config.triggerDependency;
+    this._triggerDependency.internalValue = config.triggerDependency;
   }
 
   // ==========
@@ -611,8 +753,19 @@ export class DataFactoryTriggerTumblingWindow extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // interval - computed: false, optional: false, required: true
@@ -716,20 +869,19 @@ export class DataFactoryTriggerTumblingWindow extends cdktf.TerraformResource {
   }
 
   // trigger_dependency - computed: false, optional: true, required: false
-  private _triggerDependency?: DataFactoryTriggerTumblingWindowTriggerDependency[] | cdktf.IResolvable; 
+  private _triggerDependency = new DataFactoryTriggerTumblingWindowTriggerDependencyList(this, "trigger_dependency", true);
   public get triggerDependency() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('trigger_dependency')));
+    return this._triggerDependency;
   }
-  public set triggerDependency(value: DataFactoryTriggerTumblingWindowTriggerDependency[] | cdktf.IResolvable) {
-    this._triggerDependency = value;
+  public putTriggerDependency(value: DataFactoryTriggerTumblingWindowTriggerDependency[] | cdktf.IResolvable) {
+    this._triggerDependency.internalValue = value;
   }
   public resetTriggerDependency() {
-    this._triggerDependency = undefined;
+    this._triggerDependency.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get triggerDependencyInput() {
-    return this._triggerDependency;
+    return this._triggerDependency.internalValue;
   }
 
   // =========
@@ -746,6 +898,7 @@ export class DataFactoryTriggerTumblingWindow extends cdktf.TerraformResource {
       description: cdktf.stringToTerraform(this._description),
       end_time: cdktf.stringToTerraform(this._endTime),
       frequency: cdktf.stringToTerraform(this._frequency),
+      id: cdktf.stringToTerraform(this._id),
       interval: cdktf.numberToTerraform(this._interval),
       max_concurrency: cdktf.numberToTerraform(this._maxConcurrency),
       name: cdktf.stringToTerraform(this._name),
@@ -753,7 +906,7 @@ export class DataFactoryTriggerTumblingWindow extends cdktf.TerraformResource {
       pipeline: dataFactoryTriggerTumblingWindowPipelineToTerraform(this._pipeline.internalValue),
       retry: dataFactoryTriggerTumblingWindowRetryToTerraform(this._retry.internalValue),
       timeouts: dataFactoryTriggerTumblingWindowTimeoutsToTerraform(this._timeouts.internalValue),
-      trigger_dependency: cdktf.listMapper(dataFactoryTriggerTumblingWindowTriggerDependencyToTerraform)(this._triggerDependency),
+      trigger_dependency: cdktf.listMapper(dataFactoryTriggerTumblingWindowTriggerDependencyToTerraform)(this._triggerDependency.internalValue),
     };
   }
 }

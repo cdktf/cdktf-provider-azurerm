@@ -12,6 +12,13 @@ export interface VirtualHubConnectionConfig extends cdktf.TerraformMetaArguments
   */
   readonly hubToVitualNetworkTrafficAllowed?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_connection#id VirtualHubConnection#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_connection#internet_security_enabled VirtualHubConnection#internet_security_enabled}
   */
   readonly internetSecurityEnabled?: boolean | cdktf.IResolvable;
@@ -163,6 +170,130 @@ export function virtualHubConnectionRoutingStaticVnetRouteToTerraform(struct?: V
   }
 }
 
+export class VirtualHubConnectionRoutingStaticVnetRouteOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): VirtualHubConnectionRoutingStaticVnetRoute | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._addressPrefixes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.addressPrefixes = this._addressPrefixes;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._nextHopIpAddress !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.nextHopIpAddress = this._nextHopIpAddress;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: VirtualHubConnectionRoutingStaticVnetRoute | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._addressPrefixes = undefined;
+      this._name = undefined;
+      this._nextHopIpAddress = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._addressPrefixes = value.addressPrefixes;
+      this._name = value.name;
+      this._nextHopIpAddress = value.nextHopIpAddress;
+    }
+  }
+
+  // address_prefixes - computed: false, optional: true, required: false
+  private _addressPrefixes?: string[]; 
+  public get addressPrefixes() {
+    return cdktf.Fn.tolist(this.getListAttribute('address_prefixes'));
+  }
+  public set addressPrefixes(value: string[]) {
+    this._addressPrefixes = value;
+  }
+  public resetAddressPrefixes() {
+    this._addressPrefixes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get addressPrefixesInput() {
+    return this._addressPrefixes;
+  }
+
+  // name - computed: false, optional: true, required: false
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // next_hop_ip_address - computed: false, optional: true, required: false
+  private _nextHopIpAddress?: string; 
+  public get nextHopIpAddress() {
+    return this.getStringAttribute('next_hop_ip_address');
+  }
+  public set nextHopIpAddress(value: string) {
+    this._nextHopIpAddress = value;
+  }
+  public resetNextHopIpAddress() {
+    this._nextHopIpAddress = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nextHopIpAddressInput() {
+    return this._nextHopIpAddress;
+  }
+}
+
+export class VirtualHubConnectionRoutingStaticVnetRouteList extends cdktf.ComplexList {
+  public internalValue? : VirtualHubConnectionRoutingStaticVnetRoute[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): VirtualHubConnectionRoutingStaticVnetRouteOutputReference {
+    return new VirtualHubConnectionRoutingStaticVnetRouteOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface VirtualHubConnectionRouting {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_connection#associated_route_table_id VirtualHubConnection#associated_route_table_id}
@@ -216,9 +347,9 @@ export class VirtualHubConnectionRoutingOutputReference extends cdktf.ComplexObj
       hasAnyValues = true;
       internalValueResult.propagatedRouteTable = this._propagatedRouteTable?.internalValue;
     }
-    if (this._staticVnetRoute !== undefined) {
+    if (this._staticVnetRoute?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.staticVnetRoute = this._staticVnetRoute;
+      internalValueResult.staticVnetRoute = this._staticVnetRoute?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -228,13 +359,13 @@ export class VirtualHubConnectionRoutingOutputReference extends cdktf.ComplexObj
       this.isEmptyObject = false;
       this._associatedRouteTableId = undefined;
       this._propagatedRouteTable.internalValue = undefined;
-      this._staticVnetRoute = undefined;
+      this._staticVnetRoute.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._associatedRouteTableId = value.associatedRouteTableId;
       this._propagatedRouteTable.internalValue = value.propagatedRouteTable;
-      this._staticVnetRoute = value.staticVnetRoute;
+      this._staticVnetRoute.internalValue = value.staticVnetRoute;
     }
   }
 
@@ -271,20 +402,19 @@ export class VirtualHubConnectionRoutingOutputReference extends cdktf.ComplexObj
   }
 
   // static_vnet_route - computed: false, optional: true, required: false
-  private _staticVnetRoute?: VirtualHubConnectionRoutingStaticVnetRoute[] | cdktf.IResolvable; 
+  private _staticVnetRoute = new VirtualHubConnectionRoutingStaticVnetRouteList(this, "static_vnet_route", false);
   public get staticVnetRoute() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('static_vnet_route');
+    return this._staticVnetRoute;
   }
-  public set staticVnetRoute(value: VirtualHubConnectionRoutingStaticVnetRoute[] | cdktf.IResolvable) {
-    this._staticVnetRoute = value;
+  public putStaticVnetRoute(value: VirtualHubConnectionRoutingStaticVnetRoute[] | cdktf.IResolvable) {
+    this._staticVnetRoute.internalValue = value;
   }
   public resetStaticVnetRoute() {
-    this._staticVnetRoute = undefined;
+    this._staticVnetRoute.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get staticVnetRouteInput() {
-    return this._staticVnetRoute;
+    return this._staticVnetRoute.internalValue;
   }
 }
 export interface VirtualHubConnectionTimeouts {
@@ -321,6 +451,7 @@ export function virtualHubConnectionTimeoutsToTerraform(struct?: VirtualHubConne
 
 export class VirtualHubConnectionTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -330,7 +461,10 @@ export class VirtualHubConnectionTimeoutsOutputReference extends cdktf.ComplexOb
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): VirtualHubConnectionTimeouts | undefined {
+  public get internalValue(): VirtualHubConnectionTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -352,16 +486,22 @@ export class VirtualHubConnectionTimeoutsOutputReference extends cdktf.ComplexOb
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: VirtualHubConnectionTimeouts | undefined) {
+  public set internalValue(value: VirtualHubConnectionTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -469,6 +609,7 @@ export class VirtualHubConnection extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._hubToVitualNetworkTrafficAllowed = config.hubToVitualNetworkTrafficAllowed;
+    this._id = config.id;
     this._internetSecurityEnabled = config.internetSecurityEnabled;
     this._name = config.name;
     this._remoteVirtualNetworkId = config.remoteVirtualNetworkId;
@@ -499,8 +640,19 @@ export class VirtualHubConnection extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // internet_security_enabled - computed: false, optional: true, required: false
@@ -613,6 +765,7 @@ export class VirtualHubConnection extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       hub_to_vitual_network_traffic_allowed: cdktf.booleanToTerraform(this._hubToVitualNetworkTrafficAllowed),
+      id: cdktf.stringToTerraform(this._id),
       internet_security_enabled: cdktf.booleanToTerraform(this._internetSecurityEnabled),
       name: cdktf.stringToTerraform(this._name),
       remote_virtual_network_id: cdktf.stringToTerraform(this._remoteVirtualNetworkId),

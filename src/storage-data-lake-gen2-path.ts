@@ -16,6 +16,13 @@ export interface StorageDataLakeGen2PathConfig extends cdktf.TerraformMetaArgume
   */
   readonly group?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_data_lake_gen2_path#id StorageDataLakeGen2Path#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_data_lake_gen2_path#owner StorageDataLakeGen2Path#owner}
   */
   readonly owner?: string;
@@ -47,6 +54,9 @@ export interface StorageDataLakeGen2PathConfig extends cdktf.TerraformMetaArgume
 export interface StorageDataLakeGen2PathAce {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_data_lake_gen2_path#id StorageDataLakeGen2Path#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
@@ -76,6 +86,146 @@ export function storageDataLakeGen2PathAceToTerraform(struct?: StorageDataLakeGe
   }
 }
 
+export class StorageDataLakeGen2PathAceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): StorageDataLakeGen2PathAce | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._id !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.id = this._id;
+    }
+    if (this._permissions !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.permissions = this._permissions;
+    }
+    if (this._scope !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.scope = this._scope;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageDataLakeGen2PathAce | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._id = undefined;
+      this._permissions = undefined;
+      this._scope = undefined;
+      this._type = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._id = value.id;
+      this._permissions = value.permissions;
+      this._scope = value.scope;
+      this._type = value.type;
+    }
+  }
+
+  // id - computed: false, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // permissions - computed: false, optional: false, required: true
+  private _permissions?: string; 
+  public get permissions() {
+    return this.getStringAttribute('permissions');
+  }
+  public set permissions(value: string) {
+    this._permissions = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get permissionsInput() {
+    return this._permissions;
+  }
+
+  // scope - computed: false, optional: true, required: false
+  private _scope?: string; 
+  public get scope() {
+    return this.getStringAttribute('scope');
+  }
+  public set scope(value: string) {
+    this._scope = value;
+  }
+  public resetScope() {
+    this._scope = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scopeInput() {
+    return this._scope;
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+}
+
+export class StorageDataLakeGen2PathAceList extends cdktf.ComplexList {
+  public internalValue? : StorageDataLakeGen2PathAce[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): StorageDataLakeGen2PathAceOutputReference {
+    return new StorageDataLakeGen2PathAceOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface StorageDataLakeGen2PathTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_data_lake_gen2_path#create StorageDataLakeGen2Path#create}
@@ -110,6 +260,7 @@ export function storageDataLakeGen2PathTimeoutsToTerraform(struct?: StorageDataL
 
 export class StorageDataLakeGen2PathTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -119,7 +270,10 @@ export class StorageDataLakeGen2PathTimeoutsOutputReference extends cdktf.Comple
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): StorageDataLakeGen2PathTimeouts | undefined {
+  public get internalValue(): StorageDataLakeGen2PathTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -141,16 +295,22 @@ export class StorageDataLakeGen2PathTimeoutsOutputReference extends cdktf.Comple
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: StorageDataLakeGen2PathTimeouts | undefined) {
+  public set internalValue(value: StorageDataLakeGen2PathTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -259,11 +419,12 @@ export class StorageDataLakeGen2Path extends cdktf.TerraformResource {
     });
     this._filesystemName = config.filesystemName;
     this._group = config.group;
+    this._id = config.id;
     this._owner = config.owner;
     this._path = config.path;
     this._resource = config.resource;
     this._storageAccountId = config.storageAccountId;
-    this._ace = config.ace;
+    this._ace.internalValue = config.ace;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -301,8 +462,19 @@ export class StorageDataLakeGen2Path extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // owner - computed: true, optional: true, required: false
@@ -361,20 +533,19 @@ export class StorageDataLakeGen2Path extends cdktf.TerraformResource {
   }
 
   // ace - computed: false, optional: true, required: false
-  private _ace?: StorageDataLakeGen2PathAce[] | cdktf.IResolvable; 
+  private _ace = new StorageDataLakeGen2PathAceList(this, "ace", true);
   public get ace() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('ace')));
+    return this._ace;
   }
-  public set ace(value: StorageDataLakeGen2PathAce[] | cdktf.IResolvable) {
-    this._ace = value;
+  public putAce(value: StorageDataLakeGen2PathAce[] | cdktf.IResolvable) {
+    this._ace.internalValue = value;
   }
   public resetAce() {
-    this._ace = undefined;
+    this._ace.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get aceInput() {
-    return this._ace;
+    return this._ace.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -401,11 +572,12 @@ export class StorageDataLakeGen2Path extends cdktf.TerraformResource {
     return {
       filesystem_name: cdktf.stringToTerraform(this._filesystemName),
       group: cdktf.stringToTerraform(this._group),
+      id: cdktf.stringToTerraform(this._id),
       owner: cdktf.stringToTerraform(this._owner),
       path: cdktf.stringToTerraform(this._path),
       resource: cdktf.stringToTerraform(this._resource),
       storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
-      ace: cdktf.listMapper(storageDataLakeGen2PathAceToTerraform)(this._ace),
+      ace: cdktf.listMapper(storageDataLakeGen2PathAceToTerraform)(this._ace.internalValue),
       timeouts: storageDataLakeGen2PathTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

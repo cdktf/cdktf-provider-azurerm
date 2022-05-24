@@ -8,6 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermDevTestVirtualNetworkConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dev_test_virtual_network#id DataAzurermDevTestVirtualNetwork#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dev_test_virtual_network#lab_name DataAzurermDevTestVirtualNetwork#lab_name}
   */
   readonly labName: string;
@@ -203,6 +210,7 @@ export function dataAzurermDevTestVirtualNetworkTimeoutsToTerraform(struct?: Dat
 
 export class DataAzurermDevTestVirtualNetworkTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -212,7 +220,10 @@ export class DataAzurermDevTestVirtualNetworkTimeoutsOutputReference extends cdk
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): DataAzurermDevTestVirtualNetworkTimeouts | undefined {
+  public get internalValue(): DataAzurermDevTestVirtualNetworkTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._read !== undefined) {
@@ -222,13 +233,19 @@ export class DataAzurermDevTestVirtualNetworkTimeoutsOutputReference extends cdk
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: DataAzurermDevTestVirtualNetworkTimeouts | undefined) {
+  public set internalValue(value: DataAzurermDevTestVirtualNetworkTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._read = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._read = value.read;
     }
   }
@@ -284,6 +301,7 @@ export class DataAzurermDevTestVirtualNetwork extends cdktf.TerraformDataSource 
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._id = config.id;
     this._labName = config.labName;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
@@ -301,8 +319,19 @@ export class DataAzurermDevTestVirtualNetwork extends cdktf.TerraformDataSource 
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // lab_name - computed: false, optional: false, required: true
@@ -377,6 +406,7 @@ export class DataAzurermDevTestVirtualNetwork extends cdktf.TerraformDataSource 
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      id: cdktf.stringToTerraform(this._id),
       lab_name: cdktf.stringToTerraform(this._labName),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),

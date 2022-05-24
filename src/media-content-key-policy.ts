@@ -12,6 +12,13 @@ export interface MediaContentKeyPolicyConfig extends cdktf.TerraformMetaArgument
   */
   readonly description?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy#id MediaContentKeyPolicy#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy#media_services_account_name MediaContentKeyPolicy#media_services_account_name}
   */
   readonly mediaServicesAccountName: string;
@@ -734,6 +741,306 @@ export function mediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicenseTo
   }
 }
 
+export class MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicenseOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicense | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._allowTestDevices !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.allowTestDevices = this._allowTestDevices;
+    }
+    if (this._beginDate !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.beginDate = this._beginDate;
+    }
+    if (this._contentKeyLocationFromHeaderEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.contentKeyLocationFromHeaderEnabled = this._contentKeyLocationFromHeaderEnabled;
+    }
+    if (this._contentKeyLocationFromKeyId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.contentKeyLocationFromKeyId = this._contentKeyLocationFromKeyId;
+    }
+    if (this._contentType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.contentType = this._contentType;
+    }
+    if (this._expirationDate !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.expirationDate = this._expirationDate;
+    }
+    if (this._gracePeriod !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.gracePeriod = this._gracePeriod;
+    }
+    if (this._licenseType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.licenseType = this._licenseType;
+    }
+    if (this._relativeBeginDate !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.relativeBeginDate = this._relativeBeginDate;
+    }
+    if (this._relativeExpirationDate !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.relativeExpirationDate = this._relativeExpirationDate;
+    }
+    if (this._playRight?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.playRight = this._playRight?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicense | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._allowTestDevices = undefined;
+      this._beginDate = undefined;
+      this._contentKeyLocationFromHeaderEnabled = undefined;
+      this._contentKeyLocationFromKeyId = undefined;
+      this._contentType = undefined;
+      this._expirationDate = undefined;
+      this._gracePeriod = undefined;
+      this._licenseType = undefined;
+      this._relativeBeginDate = undefined;
+      this._relativeExpirationDate = undefined;
+      this._playRight.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._allowTestDevices = value.allowTestDevices;
+      this._beginDate = value.beginDate;
+      this._contentKeyLocationFromHeaderEnabled = value.contentKeyLocationFromHeaderEnabled;
+      this._contentKeyLocationFromKeyId = value.contentKeyLocationFromKeyId;
+      this._contentType = value.contentType;
+      this._expirationDate = value.expirationDate;
+      this._gracePeriod = value.gracePeriod;
+      this._licenseType = value.licenseType;
+      this._relativeBeginDate = value.relativeBeginDate;
+      this._relativeExpirationDate = value.relativeExpirationDate;
+      this._playRight.internalValue = value.playRight;
+    }
+  }
+
+  // allow_test_devices - computed: false, optional: true, required: false
+  private _allowTestDevices?: boolean | cdktf.IResolvable; 
+  public get allowTestDevices() {
+    return this.getBooleanAttribute('allow_test_devices');
+  }
+  public set allowTestDevices(value: boolean | cdktf.IResolvable) {
+    this._allowTestDevices = value;
+  }
+  public resetAllowTestDevices() {
+    this._allowTestDevices = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowTestDevicesInput() {
+    return this._allowTestDevices;
+  }
+
+  // begin_date - computed: false, optional: true, required: false
+  private _beginDate?: string; 
+  public get beginDate() {
+    return this.getStringAttribute('begin_date');
+  }
+  public set beginDate(value: string) {
+    this._beginDate = value;
+  }
+  public resetBeginDate() {
+    this._beginDate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get beginDateInput() {
+    return this._beginDate;
+  }
+
+  // content_key_location_from_header_enabled - computed: false, optional: true, required: false
+  private _contentKeyLocationFromHeaderEnabled?: boolean | cdktf.IResolvable; 
+  public get contentKeyLocationFromHeaderEnabled() {
+    return this.getBooleanAttribute('content_key_location_from_header_enabled');
+  }
+  public set contentKeyLocationFromHeaderEnabled(value: boolean | cdktf.IResolvable) {
+    this._contentKeyLocationFromHeaderEnabled = value;
+  }
+  public resetContentKeyLocationFromHeaderEnabled() {
+    this._contentKeyLocationFromHeaderEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get contentKeyLocationFromHeaderEnabledInput() {
+    return this._contentKeyLocationFromHeaderEnabled;
+  }
+
+  // content_key_location_from_key_id - computed: false, optional: true, required: false
+  private _contentKeyLocationFromKeyId?: string; 
+  public get contentKeyLocationFromKeyId() {
+    return this.getStringAttribute('content_key_location_from_key_id');
+  }
+  public set contentKeyLocationFromKeyId(value: string) {
+    this._contentKeyLocationFromKeyId = value;
+  }
+  public resetContentKeyLocationFromKeyId() {
+    this._contentKeyLocationFromKeyId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get contentKeyLocationFromKeyIdInput() {
+    return this._contentKeyLocationFromKeyId;
+  }
+
+  // content_type - computed: false, optional: true, required: false
+  private _contentType?: string; 
+  public get contentType() {
+    return this.getStringAttribute('content_type');
+  }
+  public set contentType(value: string) {
+    this._contentType = value;
+  }
+  public resetContentType() {
+    this._contentType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get contentTypeInput() {
+    return this._contentType;
+  }
+
+  // expiration_date - computed: false, optional: true, required: false
+  private _expirationDate?: string; 
+  public get expirationDate() {
+    return this.getStringAttribute('expiration_date');
+  }
+  public set expirationDate(value: string) {
+    this._expirationDate = value;
+  }
+  public resetExpirationDate() {
+    this._expirationDate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get expirationDateInput() {
+    return this._expirationDate;
+  }
+
+  // grace_period - computed: false, optional: true, required: false
+  private _gracePeriod?: string; 
+  public get gracePeriod() {
+    return this.getStringAttribute('grace_period');
+  }
+  public set gracePeriod(value: string) {
+    this._gracePeriod = value;
+  }
+  public resetGracePeriod() {
+    this._gracePeriod = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get gracePeriodInput() {
+    return this._gracePeriod;
+  }
+
+  // license_type - computed: false, optional: true, required: false
+  private _licenseType?: string; 
+  public get licenseType() {
+    return this.getStringAttribute('license_type');
+  }
+  public set licenseType(value: string) {
+    this._licenseType = value;
+  }
+  public resetLicenseType() {
+    this._licenseType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get licenseTypeInput() {
+    return this._licenseType;
+  }
+
+  // relative_begin_date - computed: false, optional: true, required: false
+  private _relativeBeginDate?: string; 
+  public get relativeBeginDate() {
+    return this.getStringAttribute('relative_begin_date');
+  }
+  public set relativeBeginDate(value: string) {
+    this._relativeBeginDate = value;
+  }
+  public resetRelativeBeginDate() {
+    this._relativeBeginDate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get relativeBeginDateInput() {
+    return this._relativeBeginDate;
+  }
+
+  // relative_expiration_date - computed: false, optional: true, required: false
+  private _relativeExpirationDate?: string; 
+  public get relativeExpirationDate() {
+    return this.getStringAttribute('relative_expiration_date');
+  }
+  public set relativeExpirationDate(value: string) {
+    this._relativeExpirationDate = value;
+  }
+  public resetRelativeExpirationDate() {
+    this._relativeExpirationDate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get relativeExpirationDateInput() {
+    return this._relativeExpirationDate;
+  }
+
+  // play_right - computed: false, optional: true, required: false
+  private _playRight = new MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayRightOutputReference(this, "play_right");
+  public get playRight() {
+    return this._playRight;
+  }
+  public putPlayRight(value: MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayRight) {
+    this._playRight.internalValue = value;
+  }
+  public resetPlayRight() {
+    this._playRight.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get playRightInput() {
+    return this._playRight.internalValue;
+  }
+}
+
+export class MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicenseList extends cdktf.ComplexList {
+  public internalValue? : MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicense[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicenseOutputReference {
+    return new MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicenseOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface MediaContentKeyPolicyPolicyOptionTokenRestrictionRequiredClaim {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy#type MediaContentKeyPolicy#type}
@@ -756,6 +1063,108 @@ export function mediaContentKeyPolicyPolicyOptionTokenRestrictionRequiredClaimTo
   }
 }
 
+export class MediaContentKeyPolicyPolicyOptionTokenRestrictionRequiredClaimOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MediaContentKeyPolicyPolicyOptionTokenRestrictionRequiredClaim | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaContentKeyPolicyPolicyOptionTokenRestrictionRequiredClaim | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._type = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._type = value.type;
+      this._value = value.value;
+    }
+  }
+
+  // type - computed: false, optional: true, required: false
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  public resetType() {
+    this._type = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+
+  // value - computed: false, optional: true, required: false
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  public resetValue() {
+    this._value = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class MediaContentKeyPolicyPolicyOptionTokenRestrictionRequiredClaimList extends cdktf.ComplexList {
+  public internalValue? : MediaContentKeyPolicyPolicyOptionTokenRestrictionRequiredClaim[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MediaContentKeyPolicyPolicyOptionTokenRestrictionRequiredClaimOutputReference {
+    return new MediaContentKeyPolicyPolicyOptionTokenRestrictionRequiredClaimOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface MediaContentKeyPolicyPolicyOptionTokenRestriction {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy#audience MediaContentKeyPolicy#audience}
@@ -861,9 +1270,9 @@ export class MediaContentKeyPolicyPolicyOptionTokenRestrictionOutputReference ex
       hasAnyValues = true;
       internalValueResult.tokenType = this._tokenType;
     }
-    if (this._requiredClaim !== undefined) {
+    if (this._requiredClaim?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.requiredClaim = this._requiredClaim;
+      internalValueResult.requiredClaim = this._requiredClaim?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -879,7 +1288,7 @@ export class MediaContentKeyPolicyPolicyOptionTokenRestrictionOutputReference ex
       this._primarySymmetricTokenKey = undefined;
       this._primaryX509TokenKeyRaw = undefined;
       this._tokenType = undefined;
-      this._requiredClaim = undefined;
+      this._requiredClaim.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
@@ -891,7 +1300,7 @@ export class MediaContentKeyPolicyPolicyOptionTokenRestrictionOutputReference ex
       this._primarySymmetricTokenKey = value.primarySymmetricTokenKey;
       this._primaryX509TokenKeyRaw = value.primaryX509TokenKeyRaw;
       this._tokenType = value.tokenType;
-      this._requiredClaim = value.requiredClaim;
+      this._requiredClaim.internalValue = value.requiredClaim;
     }
   }
 
@@ -1024,20 +1433,19 @@ export class MediaContentKeyPolicyPolicyOptionTokenRestrictionOutputReference ex
   }
 
   // required_claim - computed: false, optional: true, required: false
-  private _requiredClaim?: MediaContentKeyPolicyPolicyOptionTokenRestrictionRequiredClaim[] | cdktf.IResolvable; 
+  private _requiredClaim = new MediaContentKeyPolicyPolicyOptionTokenRestrictionRequiredClaimList(this, "required_claim", false);
   public get requiredClaim() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('required_claim');
+    return this._requiredClaim;
   }
-  public set requiredClaim(value: MediaContentKeyPolicyPolicyOptionTokenRestrictionRequiredClaim[] | cdktf.IResolvable) {
-    this._requiredClaim = value;
+  public putRequiredClaim(value: MediaContentKeyPolicyPolicyOptionTokenRestrictionRequiredClaim[] | cdktf.IResolvable) {
+    this._requiredClaim.internalValue = value;
   }
   public resetRequiredClaim() {
-    this._requiredClaim = undefined;
+    this._requiredClaim.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get requiredClaimInput() {
-    return this._requiredClaim;
+    return this._requiredClaim.internalValue;
   }
 }
 export interface MediaContentKeyPolicyPolicyOption {
@@ -1093,6 +1501,215 @@ export function mediaContentKeyPolicyPolicyOptionToTerraform(struct?: MediaConte
   }
 }
 
+export class MediaContentKeyPolicyPolicyOptionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MediaContentKeyPolicyPolicyOption | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._clearKeyConfigurationEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.clearKeyConfigurationEnabled = this._clearKeyConfigurationEnabled;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._openRestrictionEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.openRestrictionEnabled = this._openRestrictionEnabled;
+    }
+    if (this._widevineConfigurationTemplate !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.widevineConfigurationTemplate = this._widevineConfigurationTemplate;
+    }
+    if (this._fairplayConfiguration?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.fairplayConfiguration = this._fairplayConfiguration?.internalValue;
+    }
+    if (this._playreadyConfigurationLicense?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.playreadyConfigurationLicense = this._playreadyConfigurationLicense?.internalValue;
+    }
+    if (this._tokenRestriction?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.tokenRestriction = this._tokenRestriction?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaContentKeyPolicyPolicyOption | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._clearKeyConfigurationEnabled = undefined;
+      this._name = undefined;
+      this._openRestrictionEnabled = undefined;
+      this._widevineConfigurationTemplate = undefined;
+      this._fairplayConfiguration.internalValue = undefined;
+      this._playreadyConfigurationLicense.internalValue = undefined;
+      this._tokenRestriction.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._clearKeyConfigurationEnabled = value.clearKeyConfigurationEnabled;
+      this._name = value.name;
+      this._openRestrictionEnabled = value.openRestrictionEnabled;
+      this._widevineConfigurationTemplate = value.widevineConfigurationTemplate;
+      this._fairplayConfiguration.internalValue = value.fairplayConfiguration;
+      this._playreadyConfigurationLicense.internalValue = value.playreadyConfigurationLicense;
+      this._tokenRestriction.internalValue = value.tokenRestriction;
+    }
+  }
+
+  // clear_key_configuration_enabled - computed: false, optional: true, required: false
+  private _clearKeyConfigurationEnabled?: boolean | cdktf.IResolvable; 
+  public get clearKeyConfigurationEnabled() {
+    return this.getBooleanAttribute('clear_key_configuration_enabled');
+  }
+  public set clearKeyConfigurationEnabled(value: boolean | cdktf.IResolvable) {
+    this._clearKeyConfigurationEnabled = value;
+  }
+  public resetClearKeyConfigurationEnabled() {
+    this._clearKeyConfigurationEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clearKeyConfigurationEnabledInput() {
+    return this._clearKeyConfigurationEnabled;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // open_restriction_enabled - computed: false, optional: true, required: false
+  private _openRestrictionEnabled?: boolean | cdktf.IResolvable; 
+  public get openRestrictionEnabled() {
+    return this.getBooleanAttribute('open_restriction_enabled');
+  }
+  public set openRestrictionEnabled(value: boolean | cdktf.IResolvable) {
+    this._openRestrictionEnabled = value;
+  }
+  public resetOpenRestrictionEnabled() {
+    this._openRestrictionEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get openRestrictionEnabledInput() {
+    return this._openRestrictionEnabled;
+  }
+
+  // widevine_configuration_template - computed: false, optional: true, required: false
+  private _widevineConfigurationTemplate?: string; 
+  public get widevineConfigurationTemplate() {
+    return this.getStringAttribute('widevine_configuration_template');
+  }
+  public set widevineConfigurationTemplate(value: string) {
+    this._widevineConfigurationTemplate = value;
+  }
+  public resetWidevineConfigurationTemplate() {
+    this._widevineConfigurationTemplate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get widevineConfigurationTemplateInput() {
+    return this._widevineConfigurationTemplate;
+  }
+
+  // fairplay_configuration - computed: false, optional: true, required: false
+  private _fairplayConfiguration = new MediaContentKeyPolicyPolicyOptionFairplayConfigurationOutputReference(this, "fairplay_configuration");
+  public get fairplayConfiguration() {
+    return this._fairplayConfiguration;
+  }
+  public putFairplayConfiguration(value: MediaContentKeyPolicyPolicyOptionFairplayConfiguration) {
+    this._fairplayConfiguration.internalValue = value;
+  }
+  public resetFairplayConfiguration() {
+    this._fairplayConfiguration.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fairplayConfigurationInput() {
+    return this._fairplayConfiguration.internalValue;
+  }
+
+  // playready_configuration_license - computed: false, optional: true, required: false
+  private _playreadyConfigurationLicense = new MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicenseList(this, "playready_configuration_license", false);
+  public get playreadyConfigurationLicense() {
+    return this._playreadyConfigurationLicense;
+  }
+  public putPlayreadyConfigurationLicense(value: MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicense[] | cdktf.IResolvable) {
+    this._playreadyConfigurationLicense.internalValue = value;
+  }
+  public resetPlayreadyConfigurationLicense() {
+    this._playreadyConfigurationLicense.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get playreadyConfigurationLicenseInput() {
+    return this._playreadyConfigurationLicense.internalValue;
+  }
+
+  // token_restriction - computed: false, optional: true, required: false
+  private _tokenRestriction = new MediaContentKeyPolicyPolicyOptionTokenRestrictionOutputReference(this, "token_restriction");
+  public get tokenRestriction() {
+    return this._tokenRestriction;
+  }
+  public putTokenRestriction(value: MediaContentKeyPolicyPolicyOptionTokenRestriction) {
+    this._tokenRestriction.internalValue = value;
+  }
+  public resetTokenRestriction() {
+    this._tokenRestriction.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tokenRestrictionInput() {
+    return this._tokenRestriction.internalValue;
+  }
+}
+
+export class MediaContentKeyPolicyPolicyOptionList extends cdktf.ComplexList {
+  public internalValue? : MediaContentKeyPolicyPolicyOption[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MediaContentKeyPolicyPolicyOptionOutputReference {
+    return new MediaContentKeyPolicyPolicyOptionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface MediaContentKeyPolicyTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy#create MediaContentKeyPolicy#create}
@@ -1127,6 +1744,7 @@ export function mediaContentKeyPolicyTimeoutsToTerraform(struct?: MediaContentKe
 
 export class MediaContentKeyPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -1136,7 +1754,10 @@ export class MediaContentKeyPolicyTimeoutsOutputReference extends cdktf.ComplexO
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): MediaContentKeyPolicyTimeouts | undefined {
+  public get internalValue(): MediaContentKeyPolicyTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -1158,16 +1779,22 @@ export class MediaContentKeyPolicyTimeoutsOutputReference extends cdktf.ComplexO
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: MediaContentKeyPolicyTimeouts | undefined) {
+  public set internalValue(value: MediaContentKeyPolicyTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -1275,10 +1902,11 @@ export class MediaContentKeyPolicy extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._description = config.description;
+    this._id = config.id;
     this._mediaServicesAccountName = config.mediaServicesAccountName;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
-    this._policyOption = config.policyOption;
+    this._policyOption.internalValue = config.policyOption;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -1303,8 +1931,19 @@ export class MediaContentKeyPolicy extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // media_services_account_name - computed: false, optional: false, required: true
@@ -1347,17 +1986,16 @@ export class MediaContentKeyPolicy extends cdktf.TerraformResource {
   }
 
   // policy_option - computed: false, optional: false, required: true
-  private _policyOption?: MediaContentKeyPolicyPolicyOption[] | cdktf.IResolvable; 
+  private _policyOption = new MediaContentKeyPolicyPolicyOptionList(this, "policy_option", true);
   public get policyOption() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('policy_option')));
+    return this._policyOption;
   }
-  public set policyOption(value: MediaContentKeyPolicyPolicyOption[] | cdktf.IResolvable) {
-    this._policyOption = value;
+  public putPolicyOption(value: MediaContentKeyPolicyPolicyOption[] | cdktf.IResolvable) {
+    this._policyOption.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get policyOptionInput() {
-    return this._policyOption;
+    return this._policyOption.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -1383,10 +2021,11 @@ export class MediaContentKeyPolicy extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       description: cdktf.stringToTerraform(this._description),
+      id: cdktf.stringToTerraform(this._id),
       media_services_account_name: cdktf.stringToTerraform(this._mediaServicesAccountName),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      policy_option: cdktf.listMapper(mediaContentKeyPolicyPolicyOptionToTerraform)(this._policyOption),
+      policy_option: cdktf.listMapper(mediaContentKeyPolicyPolicyOptionToTerraform)(this._policyOption.internalValue),
       timeouts: mediaContentKeyPolicyTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

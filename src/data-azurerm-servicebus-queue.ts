@@ -8,6 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermServicebusQueueConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_queue#id DataAzurermServicebusQueue#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_queue#name DataAzurermServicebusQueue#name}
   */
   readonly name: string;
@@ -49,6 +56,7 @@ export function dataAzurermServicebusQueueTimeoutsToTerraform(struct?: DataAzure
 
 export class DataAzurermServicebusQueueTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -58,7 +66,10 @@ export class DataAzurermServicebusQueueTimeoutsOutputReference extends cdktf.Com
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): DataAzurermServicebusQueueTimeouts | undefined {
+  public get internalValue(): DataAzurermServicebusQueueTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._read !== undefined) {
@@ -68,13 +79,19 @@ export class DataAzurermServicebusQueueTimeoutsOutputReference extends cdktf.Com
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: DataAzurermServicebusQueueTimeouts | undefined) {
+  public set internalValue(value: DataAzurermServicebusQueueTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._read = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._read = value.read;
     }
   }
@@ -130,6 +147,7 @@ export class DataAzurermServicebusQueue extends cdktf.TerraformDataSource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._id = config.id;
     this._name = config.name;
     this._namespaceId = config.namespaceId;
     this._namespaceName = config.namespaceName;
@@ -187,8 +205,19 @@ export class DataAzurermServicebusQueue extends cdktf.TerraformDataSource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // lock_duration - computed: true, optional: false, required: false
@@ -304,6 +333,7 @@ export class DataAzurermServicebusQueue extends cdktf.TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       namespace_id: cdktf.stringToTerraform(this._namespaceId),
       namespace_name: cdktf.stringToTerraform(this._namespaceName),

@@ -12,6 +12,13 @@ export interface LbBackendAddressPoolAddressConfig extends cdktf.TerraformMetaAr
   */
   readonly backendAddressPoolId: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_backend_address_pool_address#id LbBackendAddressPoolAddress#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_backend_address_pool_address#ip_address LbBackendAddressPoolAddress#ip_address}
   */
   readonly ipAddress: string;
@@ -64,6 +71,7 @@ export function lbBackendAddressPoolAddressTimeoutsToTerraform(struct?: LbBacken
 
 export class LbBackendAddressPoolAddressTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -73,7 +81,10 @@ export class LbBackendAddressPoolAddressTimeoutsOutputReference extends cdktf.Co
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): LbBackendAddressPoolAddressTimeouts | undefined {
+  public get internalValue(): LbBackendAddressPoolAddressTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -95,16 +106,22 @@ export class LbBackendAddressPoolAddressTimeoutsOutputReference extends cdktf.Co
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: LbBackendAddressPoolAddressTimeouts | undefined) {
+  public set internalValue(value: LbBackendAddressPoolAddressTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -212,6 +229,7 @@ export class LbBackendAddressPoolAddress extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._backendAddressPoolId = config.backendAddressPoolId;
+    this._id = config.id;
     this._ipAddress = config.ipAddress;
     this._name = config.name;
     this._virtualNetworkId = config.virtualNetworkId;
@@ -236,8 +254,19 @@ export class LbBackendAddressPoolAddress extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // ip_address - computed: false, optional: false, required: true
@@ -302,6 +331,7 @@ export class LbBackendAddressPoolAddress extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       backend_address_pool_id: cdktf.stringToTerraform(this._backendAddressPoolId),
+      id: cdktf.stringToTerraform(this._id),
       ip_address: cdktf.stringToTerraform(this._ipAddress),
       name: cdktf.stringToTerraform(this._name),
       virtual_network_id: cdktf.stringToTerraform(this._virtualNetworkId),

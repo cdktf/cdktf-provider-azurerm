@@ -24,6 +24,13 @@ export interface MonitorSmartDetectorAlertRuleConfig extends cdktf.TerraformMeta
   */
   readonly frequency: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_smart_detector_alert_rule#id MonitorSmartDetectorAlertRule#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_smart_detector_alert_rule#name MonitorSmartDetectorAlertRule#name}
   */
   readonly name: string;
@@ -210,6 +217,7 @@ export function monitorSmartDetectorAlertRuleTimeoutsToTerraform(struct?: Monito
 
 export class MonitorSmartDetectorAlertRuleTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -219,7 +227,10 @@ export class MonitorSmartDetectorAlertRuleTimeoutsOutputReference extends cdktf.
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): MonitorSmartDetectorAlertRuleTimeouts | undefined {
+  public get internalValue(): MonitorSmartDetectorAlertRuleTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -241,16 +252,22 @@ export class MonitorSmartDetectorAlertRuleTimeoutsOutputReference extends cdktf.
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: MonitorSmartDetectorAlertRuleTimeouts | undefined) {
+  public set internalValue(value: MonitorSmartDetectorAlertRuleTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -361,6 +378,7 @@ export class MonitorSmartDetectorAlertRule extends cdktf.TerraformResource {
     this._detectorType = config.detectorType;
     this._enabled = config.enabled;
     this._frequency = config.frequency;
+    this._id = config.id;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._scopeResourceIds = config.scopeResourceIds;
@@ -434,8 +452,19 @@ export class MonitorSmartDetectorAlertRule extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // name - computed: false, optional: false, required: true
@@ -561,6 +590,7 @@ export class MonitorSmartDetectorAlertRule extends cdktf.TerraformResource {
       detector_type: cdktf.stringToTerraform(this._detectorType),
       enabled: cdktf.booleanToTerraform(this._enabled),
       frequency: cdktf.stringToTerraform(this._frequency),
+      id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       scope_resource_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._scopeResourceIds),

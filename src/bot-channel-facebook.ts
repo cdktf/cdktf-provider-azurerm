@@ -20,6 +20,13 @@ export interface BotChannelFacebookConfig extends cdktf.TerraformMetaArguments {
   */
   readonly facebookApplicationSecret: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_facebook#id BotChannelFacebook#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_facebook#location BotChannelFacebook#location}
   */
   readonly location: string;
@@ -47,6 +54,9 @@ export interface BotChannelFacebookPage {
   readonly accessToken: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_facebook#id BotChannelFacebook#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id: string;
 }
@@ -62,6 +72,102 @@ export function botChannelFacebookPageToTerraform(struct?: BotChannelFacebookPag
   }
 }
 
+export class BotChannelFacebookPageOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): BotChannelFacebookPage | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._accessToken !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.accessToken = this._accessToken;
+    }
+    if (this._id !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.id = this._id;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BotChannelFacebookPage | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._accessToken = undefined;
+      this._id = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._accessToken = value.accessToken;
+      this._id = value.id;
+    }
+  }
+
+  // access_token - computed: false, optional: false, required: true
+  private _accessToken?: string; 
+  public get accessToken() {
+    return this.getStringAttribute('access_token');
+  }
+  public set accessToken(value: string) {
+    this._accessToken = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get accessTokenInput() {
+    return this._accessToken;
+  }
+
+  // id - computed: false, optional: false, required: true
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+}
+
+export class BotChannelFacebookPageList extends cdktf.ComplexList {
+  public internalValue? : BotChannelFacebookPage[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): BotChannelFacebookPageOutputReference {
+    return new BotChannelFacebookPageOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface BotChannelFacebookTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_facebook#create BotChannelFacebook#create}
@@ -96,6 +202,7 @@ export function botChannelFacebookTimeoutsToTerraform(struct?: BotChannelFaceboo
 
 export class BotChannelFacebookTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -105,7 +212,10 @@ export class BotChannelFacebookTimeoutsOutputReference extends cdktf.ComplexObje
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): BotChannelFacebookTimeouts | undefined {
+  public get internalValue(): BotChannelFacebookTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -127,16 +237,22 @@ export class BotChannelFacebookTimeoutsOutputReference extends cdktf.ComplexObje
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: BotChannelFacebookTimeouts | undefined) {
+  public set internalValue(value: BotChannelFacebookTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -246,9 +362,10 @@ export class BotChannelFacebook extends cdktf.TerraformResource {
     this._botName = config.botName;
     this._facebookApplicationId = config.facebookApplicationId;
     this._facebookApplicationSecret = config.facebookApplicationSecret;
+    this._id = config.id;
     this._location = config.location;
     this._resourceGroupName = config.resourceGroupName;
-    this._page = config.page;
+    this._page.internalValue = config.page;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -296,8 +413,19 @@ export class BotChannelFacebook extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // location - computed: false, optional: false, required: true
@@ -327,17 +455,16 @@ export class BotChannelFacebook extends cdktf.TerraformResource {
   }
 
   // page - computed: false, optional: false, required: true
-  private _page?: BotChannelFacebookPage[] | cdktf.IResolvable; 
+  private _page = new BotChannelFacebookPageList(this, "page", true);
   public get page() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('page')));
+    return this._page;
   }
-  public set page(value: BotChannelFacebookPage[] | cdktf.IResolvable) {
-    this._page = value;
+  public putPage(value: BotChannelFacebookPage[] | cdktf.IResolvable) {
+    this._page.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get pageInput() {
-    return this._page;
+    return this._page.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -365,9 +492,10 @@ export class BotChannelFacebook extends cdktf.TerraformResource {
       bot_name: cdktf.stringToTerraform(this._botName),
       facebook_application_id: cdktf.stringToTerraform(this._facebookApplicationId),
       facebook_application_secret: cdktf.stringToTerraform(this._facebookApplicationSecret),
+      id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      page: cdktf.listMapper(botChannelFacebookPageToTerraform)(this._page),
+      page: cdktf.listMapper(botChannelFacebookPageToTerraform)(this._page.internalValue),
       timeouts: botChannelFacebookTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

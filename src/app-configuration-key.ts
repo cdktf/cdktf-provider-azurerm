@@ -20,6 +20,13 @@ export interface AppConfigurationKeyConfig extends cdktf.TerraformMetaArguments 
   */
   readonly etag?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_key#id AppConfigurationKey#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_key#key AppConfigurationKey#key}
   */
   readonly key: string;
@@ -88,6 +95,7 @@ export function appConfigurationKeyTimeoutsToTerraform(struct?: AppConfiguration
 
 export class AppConfigurationKeyTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -97,7 +105,10 @@ export class AppConfigurationKeyTimeoutsOutputReference extends cdktf.ComplexObj
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): AppConfigurationKeyTimeouts | undefined {
+  public get internalValue(): AppConfigurationKeyTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -119,16 +130,22 @@ export class AppConfigurationKeyTimeoutsOutputReference extends cdktf.ComplexObj
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: AppConfigurationKeyTimeouts | undefined) {
+  public set internalValue(value: AppConfigurationKeyTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -238,6 +255,7 @@ export class AppConfigurationKey extends cdktf.TerraformResource {
     this._configurationStoreId = config.configurationStoreId;
     this._contentType = config.contentType;
     this._etag = config.etag;
+    this._id = config.id;
     this._key = config.key;
     this._label = config.label;
     this._locked = config.locked;
@@ -298,8 +316,19 @@ export class AppConfigurationKey extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // key - computed: false, optional: false, required: true
@@ -436,6 +465,7 @@ export class AppConfigurationKey extends cdktf.TerraformResource {
       configuration_store_id: cdktf.stringToTerraform(this._configurationStoreId),
       content_type: cdktf.stringToTerraform(this._contentType),
       etag: cdktf.stringToTerraform(this._etag),
+      id: cdktf.stringToTerraform(this._id),
       key: cdktf.stringToTerraform(this._key),
       label: cdktf.stringToTerraform(this._label),
       locked: cdktf.booleanToTerraform(this._locked),

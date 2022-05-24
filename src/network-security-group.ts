@@ -8,6 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface NetworkSecurityGroupConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_group#id NetworkSecurityGroup#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_group#location NetworkSecurityGroup#location}
   */
   readonly location: string;
@@ -126,6 +133,416 @@ export function networkSecurityGroupSecurityRuleToTerraform(struct?: NetworkSecu
   }
 }
 
+export class NetworkSecurityGroupSecurityRuleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): NetworkSecurityGroupSecurityRule | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._access !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.access = this._access;
+    }
+    if (this._description !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.description = this._description;
+    }
+    if (this._destinationAddressPrefix !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.destinationAddressPrefix = this._destinationAddressPrefix;
+    }
+    if (this._destinationAddressPrefixes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.destinationAddressPrefixes = this._destinationAddressPrefixes;
+    }
+    if (this._destinationApplicationSecurityGroupIds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.destinationApplicationSecurityGroupIds = this._destinationApplicationSecurityGroupIds;
+    }
+    if (this._destinationPortRange !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.destinationPortRange = this._destinationPortRange;
+    }
+    if (this._destinationPortRanges !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.destinationPortRanges = this._destinationPortRanges;
+    }
+    if (this._direction !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.direction = this._direction;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._priority !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.priority = this._priority;
+    }
+    if (this._protocol !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.protocol = this._protocol;
+    }
+    if (this._sourceAddressPrefix !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sourceAddressPrefix = this._sourceAddressPrefix;
+    }
+    if (this._sourceAddressPrefixes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sourceAddressPrefixes = this._sourceAddressPrefixes;
+    }
+    if (this._sourceApplicationSecurityGroupIds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sourceApplicationSecurityGroupIds = this._sourceApplicationSecurityGroupIds;
+    }
+    if (this._sourcePortRange !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sourcePortRange = this._sourcePortRange;
+    }
+    if (this._sourcePortRanges !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sourcePortRanges = this._sourcePortRanges;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkSecurityGroupSecurityRule | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._access = undefined;
+      this._description = undefined;
+      this._destinationAddressPrefix = undefined;
+      this._destinationAddressPrefixes = undefined;
+      this._destinationApplicationSecurityGroupIds = undefined;
+      this._destinationPortRange = undefined;
+      this._destinationPortRanges = undefined;
+      this._direction = undefined;
+      this._name = undefined;
+      this._priority = undefined;
+      this._protocol = undefined;
+      this._sourceAddressPrefix = undefined;
+      this._sourceAddressPrefixes = undefined;
+      this._sourceApplicationSecurityGroupIds = undefined;
+      this._sourcePortRange = undefined;
+      this._sourcePortRanges = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._access = value.access;
+      this._description = value.description;
+      this._destinationAddressPrefix = value.destinationAddressPrefix;
+      this._destinationAddressPrefixes = value.destinationAddressPrefixes;
+      this._destinationApplicationSecurityGroupIds = value.destinationApplicationSecurityGroupIds;
+      this._destinationPortRange = value.destinationPortRange;
+      this._destinationPortRanges = value.destinationPortRanges;
+      this._direction = value.direction;
+      this._name = value.name;
+      this._priority = value.priority;
+      this._protocol = value.protocol;
+      this._sourceAddressPrefix = value.sourceAddressPrefix;
+      this._sourceAddressPrefixes = value.sourceAddressPrefixes;
+      this._sourceApplicationSecurityGroupIds = value.sourceApplicationSecurityGroupIds;
+      this._sourcePortRange = value.sourcePortRange;
+      this._sourcePortRanges = value.sourcePortRanges;
+    }
+  }
+
+  // access - computed: true, optional: true, required: false
+  private _access?: string; 
+  public get access() {
+    return this.getStringAttribute('access');
+  }
+  public set access(value: string) {
+    this._access = value;
+  }
+  public resetAccess() {
+    this._access = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get accessInput() {
+    return this._access;
+  }
+
+  // description - computed: true, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // destination_address_prefix - computed: true, optional: true, required: false
+  private _destinationAddressPrefix?: string; 
+  public get destinationAddressPrefix() {
+    return this.getStringAttribute('destination_address_prefix');
+  }
+  public set destinationAddressPrefix(value: string) {
+    this._destinationAddressPrefix = value;
+  }
+  public resetDestinationAddressPrefix() {
+    this._destinationAddressPrefix = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get destinationAddressPrefixInput() {
+    return this._destinationAddressPrefix;
+  }
+
+  // destination_address_prefixes - computed: true, optional: true, required: false
+  private _destinationAddressPrefixes?: string[]; 
+  public get destinationAddressPrefixes() {
+    return cdktf.Fn.tolist(this.getListAttribute('destination_address_prefixes'));
+  }
+  public set destinationAddressPrefixes(value: string[]) {
+    this._destinationAddressPrefixes = value;
+  }
+  public resetDestinationAddressPrefixes() {
+    this._destinationAddressPrefixes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get destinationAddressPrefixesInput() {
+    return this._destinationAddressPrefixes;
+  }
+
+  // destination_application_security_group_ids - computed: true, optional: true, required: false
+  private _destinationApplicationSecurityGroupIds?: string[]; 
+  public get destinationApplicationSecurityGroupIds() {
+    return cdktf.Fn.tolist(this.getListAttribute('destination_application_security_group_ids'));
+  }
+  public set destinationApplicationSecurityGroupIds(value: string[]) {
+    this._destinationApplicationSecurityGroupIds = value;
+  }
+  public resetDestinationApplicationSecurityGroupIds() {
+    this._destinationApplicationSecurityGroupIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get destinationApplicationSecurityGroupIdsInput() {
+    return this._destinationApplicationSecurityGroupIds;
+  }
+
+  // destination_port_range - computed: true, optional: true, required: false
+  private _destinationPortRange?: string; 
+  public get destinationPortRange() {
+    return this.getStringAttribute('destination_port_range');
+  }
+  public set destinationPortRange(value: string) {
+    this._destinationPortRange = value;
+  }
+  public resetDestinationPortRange() {
+    this._destinationPortRange = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get destinationPortRangeInput() {
+    return this._destinationPortRange;
+  }
+
+  // destination_port_ranges - computed: true, optional: true, required: false
+  private _destinationPortRanges?: string[]; 
+  public get destinationPortRanges() {
+    return cdktf.Fn.tolist(this.getListAttribute('destination_port_ranges'));
+  }
+  public set destinationPortRanges(value: string[]) {
+    this._destinationPortRanges = value;
+  }
+  public resetDestinationPortRanges() {
+    this._destinationPortRanges = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get destinationPortRangesInput() {
+    return this._destinationPortRanges;
+  }
+
+  // direction - computed: true, optional: true, required: false
+  private _direction?: string; 
+  public get direction() {
+    return this.getStringAttribute('direction');
+  }
+  public set direction(value: string) {
+    this._direction = value;
+  }
+  public resetDirection() {
+    this._direction = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get directionInput() {
+    return this._direction;
+  }
+
+  // name - computed: true, optional: true, required: false
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // priority - computed: true, optional: true, required: false
+  private _priority?: number; 
+  public get priority() {
+    return this.getNumberAttribute('priority');
+  }
+  public set priority(value: number) {
+    this._priority = value;
+  }
+  public resetPriority() {
+    this._priority = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get priorityInput() {
+    return this._priority;
+  }
+
+  // protocol - computed: true, optional: true, required: false
+  private _protocol?: string; 
+  public get protocol() {
+    return this.getStringAttribute('protocol');
+  }
+  public set protocol(value: string) {
+    this._protocol = value;
+  }
+  public resetProtocol() {
+    this._protocol = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get protocolInput() {
+    return this._protocol;
+  }
+
+  // source_address_prefix - computed: true, optional: true, required: false
+  private _sourceAddressPrefix?: string; 
+  public get sourceAddressPrefix() {
+    return this.getStringAttribute('source_address_prefix');
+  }
+  public set sourceAddressPrefix(value: string) {
+    this._sourceAddressPrefix = value;
+  }
+  public resetSourceAddressPrefix() {
+    this._sourceAddressPrefix = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceAddressPrefixInput() {
+    return this._sourceAddressPrefix;
+  }
+
+  // source_address_prefixes - computed: true, optional: true, required: false
+  private _sourceAddressPrefixes?: string[]; 
+  public get sourceAddressPrefixes() {
+    return cdktf.Fn.tolist(this.getListAttribute('source_address_prefixes'));
+  }
+  public set sourceAddressPrefixes(value: string[]) {
+    this._sourceAddressPrefixes = value;
+  }
+  public resetSourceAddressPrefixes() {
+    this._sourceAddressPrefixes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceAddressPrefixesInput() {
+    return this._sourceAddressPrefixes;
+  }
+
+  // source_application_security_group_ids - computed: true, optional: true, required: false
+  private _sourceApplicationSecurityGroupIds?: string[]; 
+  public get sourceApplicationSecurityGroupIds() {
+    return cdktf.Fn.tolist(this.getListAttribute('source_application_security_group_ids'));
+  }
+  public set sourceApplicationSecurityGroupIds(value: string[]) {
+    this._sourceApplicationSecurityGroupIds = value;
+  }
+  public resetSourceApplicationSecurityGroupIds() {
+    this._sourceApplicationSecurityGroupIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceApplicationSecurityGroupIdsInput() {
+    return this._sourceApplicationSecurityGroupIds;
+  }
+
+  // source_port_range - computed: true, optional: true, required: false
+  private _sourcePortRange?: string; 
+  public get sourcePortRange() {
+    return this.getStringAttribute('source_port_range');
+  }
+  public set sourcePortRange(value: string) {
+    this._sourcePortRange = value;
+  }
+  public resetSourcePortRange() {
+    this._sourcePortRange = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourcePortRangeInput() {
+    return this._sourcePortRange;
+  }
+
+  // source_port_ranges - computed: true, optional: true, required: false
+  private _sourcePortRanges?: string[]; 
+  public get sourcePortRanges() {
+    return cdktf.Fn.tolist(this.getListAttribute('source_port_ranges'));
+  }
+  public set sourcePortRanges(value: string[]) {
+    this._sourcePortRanges = value;
+  }
+  public resetSourcePortRanges() {
+    this._sourcePortRanges = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourcePortRangesInput() {
+    return this._sourcePortRanges;
+  }
+}
+
+export class NetworkSecurityGroupSecurityRuleList extends cdktf.ComplexList {
+  public internalValue? : NetworkSecurityGroupSecurityRule[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): NetworkSecurityGroupSecurityRuleOutputReference {
+    return new NetworkSecurityGroupSecurityRuleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface NetworkSecurityGroupTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_group#create NetworkSecurityGroup#create}
@@ -160,6 +577,7 @@ export function networkSecurityGroupTimeoutsToTerraform(struct?: NetworkSecurity
 
 export class NetworkSecurityGroupTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -169,7 +587,10 @@ export class NetworkSecurityGroupTimeoutsOutputReference extends cdktf.ComplexOb
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): NetworkSecurityGroupTimeouts | undefined {
+  public get internalValue(): NetworkSecurityGroupTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -191,16 +612,22 @@ export class NetworkSecurityGroupTimeoutsOutputReference extends cdktf.ComplexOb
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: NetworkSecurityGroupTimeouts | undefined) {
+  public set internalValue(value: NetworkSecurityGroupTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -307,10 +734,11 @@ export class NetworkSecurityGroup extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._id = config.id;
     this._location = config.location;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
-    this._securityRule = config.securityRule;
+    this._securityRule.internalValue = config.securityRule;
     this._tags = config.tags;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -320,8 +748,19 @@ export class NetworkSecurityGroup extends cdktf.TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // location - computed: false, optional: false, required: true
@@ -364,20 +803,19 @@ export class NetworkSecurityGroup extends cdktf.TerraformResource {
   }
 
   // security_rule - computed: true, optional: true, required: false
-  private _securityRule?: NetworkSecurityGroupSecurityRule[] | cdktf.IResolvable; 
+  private _securityRule = new NetworkSecurityGroupSecurityRuleList(this, "security_rule", true);
   public get securityRule() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('security_rule')));
+    return this._securityRule;
   }
-  public set securityRule(value: NetworkSecurityGroupSecurityRule[] | cdktf.IResolvable) {
-    this._securityRule = value;
+  public putSecurityRule(value: NetworkSecurityGroupSecurityRule[] | cdktf.IResolvable) {
+    this._securityRule.internalValue = value;
   }
   public resetSecurityRule() {
-    this._securityRule = undefined;
+    this._securityRule.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get securityRuleInput() {
-    return this._securityRule;
+    return this._securityRule.internalValue;
   }
 
   // tags - computed: false, optional: true, required: false
@@ -418,10 +856,11 @@ export class NetworkSecurityGroup extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      security_rule: cdktf.listMapper(networkSecurityGroupSecurityRuleToTerraform)(this._securityRule),
+      security_rule: cdktf.listMapper(networkSecurityGroupSecurityRuleToTerraform)(this._securityRule.internalValue),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       timeouts: networkSecurityGroupTimeoutsToTerraform(this._timeouts.internalValue),
     };

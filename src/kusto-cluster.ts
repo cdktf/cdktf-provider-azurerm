@@ -40,6 +40,13 @@ export interface KustoClusterConfig extends cdktf.TerraformMetaArguments {
   */
   readonly engine?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster#id KustoCluster#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster#language_extensions KustoCluster#language_extensions}
   */
   readonly languageExtensions?: string[];
@@ -418,6 +425,7 @@ export function kustoClusterTimeoutsToTerraform(struct?: KustoClusterTimeoutsOut
 
 export class KustoClusterTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -427,7 +435,10 @@ export class KustoClusterTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): KustoClusterTimeouts | undefined {
+  public get internalValue(): KustoClusterTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -449,16 +460,22 @@ export class KustoClusterTimeoutsOutputReference extends cdktf.ComplexObject {
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: KustoClusterTimeouts | undefined) {
+  public set internalValue(value: KustoClusterTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -683,6 +700,7 @@ export class KustoCluster extends cdktf.TerraformResource {
     this._enablePurge = config.enablePurge;
     this._enableStreamingIngest = config.enableStreamingIngest;
     this._engine = config.engine;
+    this._id = config.id;
     this._languageExtensions = config.languageExtensions;
     this._location = config.location;
     this._name = config.name;
@@ -838,8 +856,19 @@ export class KustoCluster extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // language_extensions - computed: false, optional: true, required: false
@@ -1089,6 +1118,7 @@ export class KustoCluster extends cdktf.TerraformResource {
       enable_purge: cdktf.booleanToTerraform(this._enablePurge),
       enable_streaming_ingest: cdktf.booleanToTerraform(this._enableStreamingIngest),
       engine: cdktf.stringToTerraform(this._engine),
+      id: cdktf.stringToTerraform(this._id),
       language_extensions: cdktf.listMapper(cdktf.stringToTerraform)(this._languageExtensions),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),

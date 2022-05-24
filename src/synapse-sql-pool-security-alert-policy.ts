@@ -20,6 +20,13 @@ export interface SynapseSqlPoolSecurityAlertPolicyConfig extends cdktf.Terraform
   */
   readonly emailAddresses?: string[];
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool_security_alert_policy#id SynapseSqlPoolSecurityAlertPolicy#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool_security_alert_policy#policy_state SynapseSqlPoolSecurityAlertPolicy#policy_state}
   */
   readonly policyState: string;
@@ -80,6 +87,7 @@ export function synapseSqlPoolSecurityAlertPolicyTimeoutsToTerraform(struct?: Sy
 
 export class SynapseSqlPoolSecurityAlertPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -89,7 +97,10 @@ export class SynapseSqlPoolSecurityAlertPolicyTimeoutsOutputReference extends cd
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): SynapseSqlPoolSecurityAlertPolicyTimeouts | undefined {
+  public get internalValue(): SynapseSqlPoolSecurityAlertPolicyTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -111,16 +122,22 @@ export class SynapseSqlPoolSecurityAlertPolicyTimeoutsOutputReference extends cd
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: SynapseSqlPoolSecurityAlertPolicyTimeouts | undefined) {
+  public set internalValue(value: SynapseSqlPoolSecurityAlertPolicyTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -230,6 +247,7 @@ export class SynapseSqlPoolSecurityAlertPolicy extends cdktf.TerraformResource {
     this._disabledAlerts = config.disabledAlerts;
     this._emailAccountAdminsEnabled = config.emailAccountAdminsEnabled;
     this._emailAddresses = config.emailAddresses;
+    this._id = config.id;
     this._policyState = config.policyState;
     this._retentionDays = config.retentionDays;
     this._sqlPoolId = config.sqlPoolId;
@@ -291,8 +309,19 @@ export class SynapseSqlPoolSecurityAlertPolicy extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // policy_state - computed: false, optional: false, required: true
@@ -394,6 +423,7 @@ export class SynapseSqlPoolSecurityAlertPolicy extends cdktf.TerraformResource {
       disabled_alerts: cdktf.listMapper(cdktf.stringToTerraform)(this._disabledAlerts),
       email_account_admins_enabled: cdktf.booleanToTerraform(this._emailAccountAdminsEnabled),
       email_addresses: cdktf.listMapper(cdktf.stringToTerraform)(this._emailAddresses),
+      id: cdktf.stringToTerraform(this._id),
       policy_state: cdktf.stringToTerraform(this._policyState),
       retention_days: cdktf.numberToTerraform(this._retentionDays),
       sql_pool_id: cdktf.stringToTerraform(this._sqlPoolId),

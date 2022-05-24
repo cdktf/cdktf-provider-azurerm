@@ -12,6 +12,13 @@ export interface SqlManagedInstanceActiveDirectoryAdministratorConfig extends cd
   */
   readonly azureadAuthenticationOnly?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_managed_instance_active_directory_administrator#id SqlManagedInstanceActiveDirectoryAdministrator#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_managed_instance_active_directory_administrator#login SqlManagedInstanceActiveDirectoryAdministrator#login}
   */
   readonly login: string;
@@ -72,6 +79,7 @@ export function sqlManagedInstanceActiveDirectoryAdministratorTimeoutsToTerrafor
 
 export class SqlManagedInstanceActiveDirectoryAdministratorTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -81,7 +89,10 @@ export class SqlManagedInstanceActiveDirectoryAdministratorTimeoutsOutputReferen
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): SqlManagedInstanceActiveDirectoryAdministratorTimeouts | undefined {
+  public get internalValue(): SqlManagedInstanceActiveDirectoryAdministratorTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -103,16 +114,22 @@ export class SqlManagedInstanceActiveDirectoryAdministratorTimeoutsOutputReferen
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: SqlManagedInstanceActiveDirectoryAdministratorTimeouts | undefined) {
+  public set internalValue(value: SqlManagedInstanceActiveDirectoryAdministratorTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -220,6 +237,7 @@ export class SqlManagedInstanceActiveDirectoryAdministrator extends cdktf.Terraf
       lifecycle: config.lifecycle
     });
     this._azureadAuthenticationOnly = config.azureadAuthenticationOnly;
+    this._id = config.id;
     this._login = config.login;
     this._managedInstanceName = config.managedInstanceName;
     this._objectId = config.objectId;
@@ -249,8 +267,19 @@ export class SqlManagedInstanceActiveDirectoryAdministrator extends cdktf.Terraf
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // login - computed: false, optional: false, required: true
@@ -341,6 +370,7 @@ export class SqlManagedInstanceActiveDirectoryAdministrator extends cdktf.Terraf
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       azuread_authentication_only: cdktf.booleanToTerraform(this._azureadAuthenticationOnly),
+      id: cdktf.stringToTerraform(this._id),
       login: cdktf.stringToTerraform(this._login),
       managed_instance_name: cdktf.stringToTerraform(this._managedInstanceName),
       object_id: cdktf.stringToTerraform(this._objectId),

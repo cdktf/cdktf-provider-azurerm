@@ -20,6 +20,13 @@ export interface FrontdoorConfig extends cdktf.TerraformMetaArguments {
   */
   readonly friendlyName?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor#id Frontdoor#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor#load_balancer_enabled Frontdoor#load_balancer_enabled}
   */
   readonly loadBalancerEnabled?: boolean | cdktf.IResolvable;
@@ -207,6 +214,206 @@ export function frontdoorBackendPoolBackendToTerraform(struct?: FrontdoorBackend
   }
 }
 
+export class FrontdoorBackendPoolBackendOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): FrontdoorBackendPoolBackend | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._address !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.address = this._address;
+    }
+    if (this._enabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._hostHeader !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.hostHeader = this._hostHeader;
+    }
+    if (this._httpPort !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.httpPort = this._httpPort;
+    }
+    if (this._httpsPort !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.httpsPort = this._httpsPort;
+    }
+    if (this._priority !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.priority = this._priority;
+    }
+    if (this._weight !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.weight = this._weight;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: FrontdoorBackendPoolBackend | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._address = undefined;
+      this._enabled = undefined;
+      this._hostHeader = undefined;
+      this._httpPort = undefined;
+      this._httpsPort = undefined;
+      this._priority = undefined;
+      this._weight = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._address = value.address;
+      this._enabled = value.enabled;
+      this._hostHeader = value.hostHeader;
+      this._httpPort = value.httpPort;
+      this._httpsPort = value.httpsPort;
+      this._priority = value.priority;
+      this._weight = value.weight;
+    }
+  }
+
+  // address - computed: false, optional: false, required: true
+  private _address?: string; 
+  public get address() {
+    return this.getStringAttribute('address');
+  }
+  public set address(value: string) {
+    this._address = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get addressInput() {
+    return this._address;
+  }
+
+  // enabled - computed: false, optional: true, required: false
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+
+  // host_header - computed: false, optional: false, required: true
+  private _hostHeader?: string; 
+  public get hostHeader() {
+    return this.getStringAttribute('host_header');
+  }
+  public set hostHeader(value: string) {
+    this._hostHeader = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hostHeaderInput() {
+    return this._hostHeader;
+  }
+
+  // http_port - computed: false, optional: false, required: true
+  private _httpPort?: number; 
+  public get httpPort() {
+    return this.getNumberAttribute('http_port');
+  }
+  public set httpPort(value: number) {
+    this._httpPort = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get httpPortInput() {
+    return this._httpPort;
+  }
+
+  // https_port - computed: false, optional: false, required: true
+  private _httpsPort?: number; 
+  public get httpsPort() {
+    return this.getNumberAttribute('https_port');
+  }
+  public set httpsPort(value: number) {
+    this._httpsPort = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get httpsPortInput() {
+    return this._httpsPort;
+  }
+
+  // priority - computed: false, optional: true, required: false
+  private _priority?: number; 
+  public get priority() {
+    return this.getNumberAttribute('priority');
+  }
+  public set priority(value: number) {
+    this._priority = value;
+  }
+  public resetPriority() {
+    this._priority = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get priorityInput() {
+    return this._priority;
+  }
+
+  // weight - computed: false, optional: true, required: false
+  private _weight?: number; 
+  public get weight() {
+    return this.getNumberAttribute('weight');
+  }
+  public set weight(value: number) {
+    this._weight = value;
+  }
+  public resetWeight() {
+    this._weight = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get weightInput() {
+    return this._weight;
+  }
+}
+
+export class FrontdoorBackendPoolBackendList extends cdktf.ComplexList {
+  public internalValue? : FrontdoorBackendPoolBackend[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): FrontdoorBackendPoolBackendOutputReference {
+    return new FrontdoorBackendPoolBackendOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface FrontdoorBackendPool {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor#health_probe_name Frontdoor#health_probe_name}
@@ -241,6 +448,145 @@ export function frontdoorBackendPoolToTerraform(struct?: FrontdoorBackendPool | 
   }
 }
 
+export class FrontdoorBackendPoolOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): FrontdoorBackendPool | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._healthProbeName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.healthProbeName = this._healthProbeName;
+    }
+    if (this._loadBalancingName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.loadBalancingName = this._loadBalancingName;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._backend?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.backend = this._backend?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: FrontdoorBackendPool | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._healthProbeName = undefined;
+      this._loadBalancingName = undefined;
+      this._name = undefined;
+      this._backend.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._healthProbeName = value.healthProbeName;
+      this._loadBalancingName = value.loadBalancingName;
+      this._name = value.name;
+      this._backend.internalValue = value.backend;
+    }
+  }
+
+  // health_probe_name - computed: false, optional: false, required: true
+  private _healthProbeName?: string; 
+  public get healthProbeName() {
+    return this.getStringAttribute('health_probe_name');
+  }
+  public set healthProbeName(value: string) {
+    this._healthProbeName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get healthProbeNameInput() {
+    return this._healthProbeName;
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // load_balancing_name - computed: false, optional: false, required: true
+  private _loadBalancingName?: string; 
+  public get loadBalancingName() {
+    return this.getStringAttribute('load_balancing_name');
+  }
+  public set loadBalancingName(value: string) {
+    this._loadBalancingName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get loadBalancingNameInput() {
+    return this._loadBalancingName;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // backend - computed: false, optional: false, required: true
+  private _backend = new FrontdoorBackendPoolBackendList(this, "backend", false);
+  public get backend() {
+    return this._backend;
+  }
+  public putBackend(value: FrontdoorBackendPoolBackend[] | cdktf.IResolvable) {
+    this._backend.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get backendInput() {
+    return this._backend.internalValue;
+  }
+}
+
+export class FrontdoorBackendPoolList extends cdktf.ComplexList {
+  public internalValue? : FrontdoorBackendPool[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): FrontdoorBackendPoolOutputReference {
+    return new FrontdoorBackendPoolOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface FrontdoorBackendPoolHealthProbe {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor#enabled Frontdoor#enabled}
@@ -283,6 +629,198 @@ export function frontdoorBackendPoolHealthProbeToTerraform(struct?: FrontdoorBac
   }
 }
 
+export class FrontdoorBackendPoolHealthProbeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): FrontdoorBackendPoolHealthProbe | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._enabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._intervalInSeconds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.intervalInSeconds = this._intervalInSeconds;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._path !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.path = this._path;
+    }
+    if (this._probeMethod !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.probeMethod = this._probeMethod;
+    }
+    if (this._protocol !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.protocol = this._protocol;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: FrontdoorBackendPoolHealthProbe | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._enabled = undefined;
+      this._intervalInSeconds = undefined;
+      this._name = undefined;
+      this._path = undefined;
+      this._probeMethod = undefined;
+      this._protocol = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._enabled = value.enabled;
+      this._intervalInSeconds = value.intervalInSeconds;
+      this._name = value.name;
+      this._path = value.path;
+      this._probeMethod = value.probeMethod;
+      this._protocol = value.protocol;
+    }
+  }
+
+  // enabled - computed: false, optional: true, required: false
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // interval_in_seconds - computed: false, optional: true, required: false
+  private _intervalInSeconds?: number; 
+  public get intervalInSeconds() {
+    return this.getNumberAttribute('interval_in_seconds');
+  }
+  public set intervalInSeconds(value: number) {
+    this._intervalInSeconds = value;
+  }
+  public resetIntervalInSeconds() {
+    this._intervalInSeconds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get intervalInSecondsInput() {
+    return this._intervalInSeconds;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // path - computed: false, optional: true, required: false
+  private _path?: string; 
+  public get path() {
+    return this.getStringAttribute('path');
+  }
+  public set path(value: string) {
+    this._path = value;
+  }
+  public resetPath() {
+    this._path = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathInput() {
+    return this._path;
+  }
+
+  // probe_method - computed: false, optional: true, required: false
+  private _probeMethod?: string; 
+  public get probeMethod() {
+    return this.getStringAttribute('probe_method');
+  }
+  public set probeMethod(value: string) {
+    this._probeMethod = value;
+  }
+  public resetProbeMethod() {
+    this._probeMethod = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get probeMethodInput() {
+    return this._probeMethod;
+  }
+
+  // protocol - computed: false, optional: true, required: false
+  private _protocol?: string; 
+  public get protocol() {
+    return this.getStringAttribute('protocol');
+  }
+  public set protocol(value: string) {
+    this._protocol = value;
+  }
+  public resetProtocol() {
+    this._protocol = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get protocolInput() {
+    return this._protocol;
+  }
+}
+
+export class FrontdoorBackendPoolHealthProbeList extends cdktf.ComplexList {
+  public internalValue? : FrontdoorBackendPoolHealthProbe[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): FrontdoorBackendPoolHealthProbeOutputReference {
+    return new FrontdoorBackendPoolHealthProbeOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface FrontdoorBackendPoolLoadBalancing {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor#additional_latency_milliseconds Frontdoor#additional_latency_milliseconds}
@@ -315,6 +853,154 @@ export function frontdoorBackendPoolLoadBalancingToTerraform(struct?: FrontdoorB
   }
 }
 
+export class FrontdoorBackendPoolLoadBalancingOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): FrontdoorBackendPoolLoadBalancing | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._additionalLatencyMilliseconds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.additionalLatencyMilliseconds = this._additionalLatencyMilliseconds;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._sampleSize !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sampleSize = this._sampleSize;
+    }
+    if (this._successfulSamplesRequired !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.successfulSamplesRequired = this._successfulSamplesRequired;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: FrontdoorBackendPoolLoadBalancing | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._additionalLatencyMilliseconds = undefined;
+      this._name = undefined;
+      this._sampleSize = undefined;
+      this._successfulSamplesRequired = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._additionalLatencyMilliseconds = value.additionalLatencyMilliseconds;
+      this._name = value.name;
+      this._sampleSize = value.sampleSize;
+      this._successfulSamplesRequired = value.successfulSamplesRequired;
+    }
+  }
+
+  // additional_latency_milliseconds - computed: false, optional: true, required: false
+  private _additionalLatencyMilliseconds?: number; 
+  public get additionalLatencyMilliseconds() {
+    return this.getNumberAttribute('additional_latency_milliseconds');
+  }
+  public set additionalLatencyMilliseconds(value: number) {
+    this._additionalLatencyMilliseconds = value;
+  }
+  public resetAdditionalLatencyMilliseconds() {
+    this._additionalLatencyMilliseconds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get additionalLatencyMillisecondsInput() {
+    return this._additionalLatencyMilliseconds;
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // sample_size - computed: false, optional: true, required: false
+  private _sampleSize?: number; 
+  public get sampleSize() {
+    return this.getNumberAttribute('sample_size');
+  }
+  public set sampleSize(value: number) {
+    this._sampleSize = value;
+  }
+  public resetSampleSize() {
+    this._sampleSize = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sampleSizeInput() {
+    return this._sampleSize;
+  }
+
+  // successful_samples_required - computed: false, optional: true, required: false
+  private _successfulSamplesRequired?: number; 
+  public get successfulSamplesRequired() {
+    return this.getNumberAttribute('successful_samples_required');
+  }
+  public set successfulSamplesRequired(value: number) {
+    this._successfulSamplesRequired = value;
+  }
+  public resetSuccessfulSamplesRequired() {
+    this._successfulSamplesRequired = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get successfulSamplesRequiredInput() {
+    return this._successfulSamplesRequired;
+  }
+}
+
+export class FrontdoorBackendPoolLoadBalancingList extends cdktf.ComplexList {
+  public internalValue? : FrontdoorBackendPoolLoadBalancing[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): FrontdoorBackendPoolLoadBalancingOutputReference {
+    return new FrontdoorBackendPoolLoadBalancingOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface FrontdoorFrontendEndpoint {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor#host_name Frontdoor#host_name}
@@ -352,6 +1038,173 @@ export function frontdoorFrontendEndpointToTerraform(struct?: FrontdoorFrontendE
   }
 }
 
+export class FrontdoorFrontendEndpointOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): FrontdoorFrontendEndpoint | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._hostName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.hostName = this._hostName;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._sessionAffinityEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sessionAffinityEnabled = this._sessionAffinityEnabled;
+    }
+    if (this._sessionAffinityTtlSeconds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sessionAffinityTtlSeconds = this._sessionAffinityTtlSeconds;
+    }
+    if (this._webApplicationFirewallPolicyLinkId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.webApplicationFirewallPolicyLinkId = this._webApplicationFirewallPolicyLinkId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: FrontdoorFrontendEndpoint | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._hostName = undefined;
+      this._name = undefined;
+      this._sessionAffinityEnabled = undefined;
+      this._sessionAffinityTtlSeconds = undefined;
+      this._webApplicationFirewallPolicyLinkId = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._hostName = value.hostName;
+      this._name = value.name;
+      this._sessionAffinityEnabled = value.sessionAffinityEnabled;
+      this._sessionAffinityTtlSeconds = value.sessionAffinityTtlSeconds;
+      this._webApplicationFirewallPolicyLinkId = value.webApplicationFirewallPolicyLinkId;
+    }
+  }
+
+  // host_name - computed: false, optional: false, required: true
+  private _hostName?: string; 
+  public get hostName() {
+    return this.getStringAttribute('host_name');
+  }
+  public set hostName(value: string) {
+    this._hostName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hostNameInput() {
+    return this._hostName;
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // session_affinity_enabled - computed: false, optional: true, required: false
+  private _sessionAffinityEnabled?: boolean | cdktf.IResolvable; 
+  public get sessionAffinityEnabled() {
+    return this.getBooleanAttribute('session_affinity_enabled');
+  }
+  public set sessionAffinityEnabled(value: boolean | cdktf.IResolvable) {
+    this._sessionAffinityEnabled = value;
+  }
+  public resetSessionAffinityEnabled() {
+    this._sessionAffinityEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sessionAffinityEnabledInput() {
+    return this._sessionAffinityEnabled;
+  }
+
+  // session_affinity_ttl_seconds - computed: false, optional: true, required: false
+  private _sessionAffinityTtlSeconds?: number; 
+  public get sessionAffinityTtlSeconds() {
+    return this.getNumberAttribute('session_affinity_ttl_seconds');
+  }
+  public set sessionAffinityTtlSeconds(value: number) {
+    this._sessionAffinityTtlSeconds = value;
+  }
+  public resetSessionAffinityTtlSeconds() {
+    this._sessionAffinityTtlSeconds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sessionAffinityTtlSecondsInput() {
+    return this._sessionAffinityTtlSeconds;
+  }
+
+  // web_application_firewall_policy_link_id - computed: false, optional: true, required: false
+  private _webApplicationFirewallPolicyLinkId?: string; 
+  public get webApplicationFirewallPolicyLinkId() {
+    return this.getStringAttribute('web_application_firewall_policy_link_id');
+  }
+  public set webApplicationFirewallPolicyLinkId(value: string) {
+    this._webApplicationFirewallPolicyLinkId = value;
+  }
+  public resetWebApplicationFirewallPolicyLinkId() {
+    this._webApplicationFirewallPolicyLinkId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get webApplicationFirewallPolicyLinkIdInput() {
+    return this._webApplicationFirewallPolicyLinkId;
+  }
+}
+
+export class FrontdoorFrontendEndpointList extends cdktf.ComplexList {
+  public internalValue? : FrontdoorFrontendEndpoint[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): FrontdoorFrontendEndpointOutputReference {
+    return new FrontdoorFrontendEndpointOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface FrontdoorRoutingRuleForwardingConfiguration {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor#backend_pool_name Frontdoor#backend_pool_name}
@@ -848,6 +1701,211 @@ export function frontdoorRoutingRuleToTerraform(struct?: FrontdoorRoutingRule | 
   }
 }
 
+export class FrontdoorRoutingRuleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): FrontdoorRoutingRule | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._acceptedProtocols !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.acceptedProtocols = this._acceptedProtocols;
+    }
+    if (this._enabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._frontendEndpoints !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.frontendEndpoints = this._frontendEndpoints;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._patternsToMatch !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.patternsToMatch = this._patternsToMatch;
+    }
+    if (this._forwardingConfiguration?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.forwardingConfiguration = this._forwardingConfiguration?.internalValue;
+    }
+    if (this._redirectConfiguration?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.redirectConfiguration = this._redirectConfiguration?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: FrontdoorRoutingRule | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._acceptedProtocols = undefined;
+      this._enabled = undefined;
+      this._frontendEndpoints = undefined;
+      this._name = undefined;
+      this._patternsToMatch = undefined;
+      this._forwardingConfiguration.internalValue = undefined;
+      this._redirectConfiguration.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._acceptedProtocols = value.acceptedProtocols;
+      this._enabled = value.enabled;
+      this._frontendEndpoints = value.frontendEndpoints;
+      this._name = value.name;
+      this._patternsToMatch = value.patternsToMatch;
+      this._forwardingConfiguration.internalValue = value.forwardingConfiguration;
+      this._redirectConfiguration.internalValue = value.redirectConfiguration;
+    }
+  }
+
+  // accepted_protocols - computed: false, optional: false, required: true
+  private _acceptedProtocols?: string[]; 
+  public get acceptedProtocols() {
+    return this.getListAttribute('accepted_protocols');
+  }
+  public set acceptedProtocols(value: string[]) {
+    this._acceptedProtocols = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get acceptedProtocolsInput() {
+    return this._acceptedProtocols;
+  }
+
+  // enabled - computed: false, optional: true, required: false
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+
+  // frontend_endpoints - computed: false, optional: false, required: true
+  private _frontendEndpoints?: string[]; 
+  public get frontendEndpoints() {
+    return this.getListAttribute('frontend_endpoints');
+  }
+  public set frontendEndpoints(value: string[]) {
+    this._frontendEndpoints = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get frontendEndpointsInput() {
+    return this._frontendEndpoints;
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // patterns_to_match - computed: false, optional: false, required: true
+  private _patternsToMatch?: string[]; 
+  public get patternsToMatch() {
+    return this.getListAttribute('patterns_to_match');
+  }
+  public set patternsToMatch(value: string[]) {
+    this._patternsToMatch = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get patternsToMatchInput() {
+    return this._patternsToMatch;
+  }
+
+  // forwarding_configuration - computed: false, optional: true, required: false
+  private _forwardingConfiguration = new FrontdoorRoutingRuleForwardingConfigurationOutputReference(this, "forwarding_configuration");
+  public get forwardingConfiguration() {
+    return this._forwardingConfiguration;
+  }
+  public putForwardingConfiguration(value: FrontdoorRoutingRuleForwardingConfiguration) {
+    this._forwardingConfiguration.internalValue = value;
+  }
+  public resetForwardingConfiguration() {
+    this._forwardingConfiguration.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get forwardingConfigurationInput() {
+    return this._forwardingConfiguration.internalValue;
+  }
+
+  // redirect_configuration - computed: false, optional: true, required: false
+  private _redirectConfiguration = new FrontdoorRoutingRuleRedirectConfigurationOutputReference(this, "redirect_configuration");
+  public get redirectConfiguration() {
+    return this._redirectConfiguration;
+  }
+  public putRedirectConfiguration(value: FrontdoorRoutingRuleRedirectConfiguration) {
+    this._redirectConfiguration.internalValue = value;
+  }
+  public resetRedirectConfiguration() {
+    this._redirectConfiguration.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get redirectConfigurationInput() {
+    return this._redirectConfiguration.internalValue;
+  }
+}
+
+export class FrontdoorRoutingRuleList extends cdktf.ComplexList {
+  public internalValue? : FrontdoorRoutingRule[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): FrontdoorRoutingRuleOutputReference {
+    return new FrontdoorRoutingRuleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface FrontdoorTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor#create Frontdoor#create}
@@ -882,6 +1940,7 @@ export function frontdoorTimeoutsToTerraform(struct?: FrontdoorTimeoutsOutputRef
 
 export class FrontdoorTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -891,7 +1950,10 @@ export class FrontdoorTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): FrontdoorTimeouts | undefined {
+  public get internalValue(): FrontdoorTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -913,16 +1975,22 @@ export class FrontdoorTimeoutsOutputReference extends cdktf.ComplexObject {
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: FrontdoorTimeouts | undefined) {
+  public set internalValue(value: FrontdoorTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -1032,16 +2100,17 @@ export class Frontdoor extends cdktf.TerraformResource {
     this._backendPoolsSendReceiveTimeoutSeconds = config.backendPoolsSendReceiveTimeoutSeconds;
     this._enforceBackendPoolsCertificateNameCheck = config.enforceBackendPoolsCertificateNameCheck;
     this._friendlyName = config.friendlyName;
+    this._id = config.id;
     this._loadBalancerEnabled = config.loadBalancerEnabled;
     this._location = config.location;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
-    this._backendPool = config.backendPool;
-    this._backendPoolHealthProbe = config.backendPoolHealthProbe;
-    this._backendPoolLoadBalancing = config.backendPoolLoadBalancing;
-    this._frontendEndpoint = config.frontendEndpoint;
-    this._routingRule = config.routingRule;
+    this._backendPool.internalValue = config.backendPool;
+    this._backendPoolHealthProbe.internalValue = config.backendPoolHealthProbe;
+    this._backendPoolLoadBalancing.internalValue = config.backendPoolLoadBalancing;
+    this._frontendEndpoint.internalValue = config.frontendEndpoint;
+    this._routingRule.internalValue = config.routingRule;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -1050,18 +2119,21 @@ export class Frontdoor extends cdktf.TerraformResource {
   // ==========
 
   // backend_pool_health_probes - computed: true, optional: false, required: false
-  public backendPoolHealthProbes(key: string): string | cdktf.IResolvable {
-    return new cdktf.StringMap(this, 'backend_pool_health_probes').lookup(key);
+  private _backendPoolHealthProbes = new cdktf.StringMap(this, "backend_pool_health_probes");
+  public get backendPoolHealthProbes() {
+    return this._backendPoolHealthProbes;
   }
 
   // backend_pool_load_balancing_settings - computed: true, optional: false, required: false
-  public backendPoolLoadBalancingSettings(key: string): string | cdktf.IResolvable {
-    return new cdktf.StringMap(this, 'backend_pool_load_balancing_settings').lookup(key);
+  private _backendPoolLoadBalancingSettings = new cdktf.StringMap(this, "backend_pool_load_balancing_settings");
+  public get backendPoolLoadBalancingSettings() {
+    return this._backendPoolLoadBalancingSettings;
   }
 
   // backend_pools - computed: true, optional: false, required: false
-  public backendPools(key: string): string | cdktf.IResolvable {
-    return new cdktf.StringMap(this, 'backend_pools').lookup(key);
+  private _backendPools = new cdktf.StringMap(this, "backend_pools");
+  public get backendPools() {
+    return this._backendPools;
   }
 
   // backend_pools_send_receive_timeout_seconds - computed: false, optional: true, required: false
@@ -1121,8 +2193,9 @@ export class Frontdoor extends cdktf.TerraformResource {
   }
 
   // frontend_endpoints - computed: true, optional: false, required: false
-  public frontendEndpoints(key: string): string | cdktf.IResolvable {
-    return new cdktf.StringMap(this, 'frontend_endpoints').lookup(key);
+  private _frontendEndpoints = new cdktf.StringMap(this, "frontend_endpoints");
+  public get frontendEndpoints() {
+    return this._frontendEndpoints;
   }
 
   // header_frontdoor_id - computed: true, optional: false, required: false
@@ -1131,8 +2204,19 @@ export class Frontdoor extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // load_balancer_enabled - computed: false, optional: true, required: false
@@ -1194,8 +2278,9 @@ export class Frontdoor extends cdktf.TerraformResource {
   }
 
   // routing_rules - computed: true, optional: false, required: false
-  public routingRules(key: string): string | cdktf.IResolvable {
-    return new cdktf.StringMap(this, 'routing_rules').lookup(key);
+  private _routingRules = new cdktf.StringMap(this, "routing_rules");
+  public get routingRules() {
+    return this._routingRules;
   }
 
   // tags - computed: false, optional: true, required: false
@@ -1215,73 +2300,68 @@ export class Frontdoor extends cdktf.TerraformResource {
   }
 
   // backend_pool - computed: false, optional: false, required: true
-  private _backendPool?: FrontdoorBackendPool[] | cdktf.IResolvable; 
+  private _backendPool = new FrontdoorBackendPoolList(this, "backend_pool", false);
   public get backendPool() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('backend_pool');
+    return this._backendPool;
   }
-  public set backendPool(value: FrontdoorBackendPool[] | cdktf.IResolvable) {
-    this._backendPool = value;
+  public putBackendPool(value: FrontdoorBackendPool[] | cdktf.IResolvable) {
+    this._backendPool.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get backendPoolInput() {
-    return this._backendPool;
+    return this._backendPool.internalValue;
   }
 
   // backend_pool_health_probe - computed: false, optional: false, required: true
-  private _backendPoolHealthProbe?: FrontdoorBackendPoolHealthProbe[] | cdktf.IResolvable; 
+  private _backendPoolHealthProbe = new FrontdoorBackendPoolHealthProbeList(this, "backend_pool_health_probe", false);
   public get backendPoolHealthProbe() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('backend_pool_health_probe');
+    return this._backendPoolHealthProbe;
   }
-  public set backendPoolHealthProbe(value: FrontdoorBackendPoolHealthProbe[] | cdktf.IResolvable) {
-    this._backendPoolHealthProbe = value;
+  public putBackendPoolHealthProbe(value: FrontdoorBackendPoolHealthProbe[] | cdktf.IResolvable) {
+    this._backendPoolHealthProbe.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get backendPoolHealthProbeInput() {
-    return this._backendPoolHealthProbe;
+    return this._backendPoolHealthProbe.internalValue;
   }
 
   // backend_pool_load_balancing - computed: false, optional: false, required: true
-  private _backendPoolLoadBalancing?: FrontdoorBackendPoolLoadBalancing[] | cdktf.IResolvable; 
+  private _backendPoolLoadBalancing = new FrontdoorBackendPoolLoadBalancingList(this, "backend_pool_load_balancing", false);
   public get backendPoolLoadBalancing() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('backend_pool_load_balancing');
+    return this._backendPoolLoadBalancing;
   }
-  public set backendPoolLoadBalancing(value: FrontdoorBackendPoolLoadBalancing[] | cdktf.IResolvable) {
-    this._backendPoolLoadBalancing = value;
+  public putBackendPoolLoadBalancing(value: FrontdoorBackendPoolLoadBalancing[] | cdktf.IResolvable) {
+    this._backendPoolLoadBalancing.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get backendPoolLoadBalancingInput() {
-    return this._backendPoolLoadBalancing;
+    return this._backendPoolLoadBalancing.internalValue;
   }
 
   // frontend_endpoint - computed: false, optional: false, required: true
-  private _frontendEndpoint?: FrontdoorFrontendEndpoint[] | cdktf.IResolvable; 
+  private _frontendEndpoint = new FrontdoorFrontendEndpointList(this, "frontend_endpoint", false);
   public get frontendEndpoint() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('frontend_endpoint');
+    return this._frontendEndpoint;
   }
-  public set frontendEndpoint(value: FrontdoorFrontendEndpoint[] | cdktf.IResolvable) {
-    this._frontendEndpoint = value;
+  public putFrontendEndpoint(value: FrontdoorFrontendEndpoint[] | cdktf.IResolvable) {
+    this._frontendEndpoint.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get frontendEndpointInput() {
-    return this._frontendEndpoint;
+    return this._frontendEndpoint.internalValue;
   }
 
   // routing_rule - computed: false, optional: false, required: true
-  private _routingRule?: FrontdoorRoutingRule[] | cdktf.IResolvable; 
+  private _routingRule = new FrontdoorRoutingRuleList(this, "routing_rule", false);
   public get routingRule() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('routing_rule');
+    return this._routingRule;
   }
-  public set routingRule(value: FrontdoorRoutingRule[] | cdktf.IResolvable) {
-    this._routingRule = value;
+  public putRoutingRule(value: FrontdoorRoutingRule[] | cdktf.IResolvable) {
+    this._routingRule.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get routingRuleInput() {
-    return this._routingRule;
+    return this._routingRule.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -1309,16 +2389,17 @@ export class Frontdoor extends cdktf.TerraformResource {
       backend_pools_send_receive_timeout_seconds: cdktf.numberToTerraform(this._backendPoolsSendReceiveTimeoutSeconds),
       enforce_backend_pools_certificate_name_check: cdktf.booleanToTerraform(this._enforceBackendPoolsCertificateNameCheck),
       friendly_name: cdktf.stringToTerraform(this._friendlyName),
+      id: cdktf.stringToTerraform(this._id),
       load_balancer_enabled: cdktf.booleanToTerraform(this._loadBalancerEnabled),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
-      backend_pool: cdktf.listMapper(frontdoorBackendPoolToTerraform)(this._backendPool),
-      backend_pool_health_probe: cdktf.listMapper(frontdoorBackendPoolHealthProbeToTerraform)(this._backendPoolHealthProbe),
-      backend_pool_load_balancing: cdktf.listMapper(frontdoorBackendPoolLoadBalancingToTerraform)(this._backendPoolLoadBalancing),
-      frontend_endpoint: cdktf.listMapper(frontdoorFrontendEndpointToTerraform)(this._frontendEndpoint),
-      routing_rule: cdktf.listMapper(frontdoorRoutingRuleToTerraform)(this._routingRule),
+      backend_pool: cdktf.listMapper(frontdoorBackendPoolToTerraform)(this._backendPool.internalValue),
+      backend_pool_health_probe: cdktf.listMapper(frontdoorBackendPoolHealthProbeToTerraform)(this._backendPoolHealthProbe.internalValue),
+      backend_pool_load_balancing: cdktf.listMapper(frontdoorBackendPoolLoadBalancingToTerraform)(this._backendPoolLoadBalancing.internalValue),
+      frontend_endpoint: cdktf.listMapper(frontdoorFrontendEndpointToTerraform)(this._frontendEndpoint.internalValue),
+      routing_rule: cdktf.listMapper(frontdoorRoutingRuleToTerraform)(this._routingRule.internalValue),
       timeouts: frontdoorTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

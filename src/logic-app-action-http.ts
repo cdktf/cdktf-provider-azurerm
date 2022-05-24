@@ -16,6 +16,13 @@ export interface LogicAppActionHttpConfig extends cdktf.TerraformMetaArguments {
   */
   readonly headers?: { [key: string]: string };
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http#id LogicAppActionHttp#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http#logic_app_id LogicAppActionHttp#logic_app_id}
   */
   readonly logicAppId: string;
@@ -66,6 +73,102 @@ export function logicAppActionHttpRunAfterToTerraform(struct?: LogicAppActionHtt
   }
 }
 
+export class LogicAppActionHttpRunAfterOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): LogicAppActionHttpRunAfter | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._actionName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.actionName = this._actionName;
+    }
+    if (this._actionResult !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.actionResult = this._actionResult;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LogicAppActionHttpRunAfter | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._actionName = undefined;
+      this._actionResult = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._actionName = value.actionName;
+      this._actionResult = value.actionResult;
+    }
+  }
+
+  // action_name - computed: false, optional: false, required: true
+  private _actionName?: string; 
+  public get actionName() {
+    return this.getStringAttribute('action_name');
+  }
+  public set actionName(value: string) {
+    this._actionName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get actionNameInput() {
+    return this._actionName;
+  }
+
+  // action_result - computed: false, optional: false, required: true
+  private _actionResult?: string; 
+  public get actionResult() {
+    return this.getStringAttribute('action_result');
+  }
+  public set actionResult(value: string) {
+    this._actionResult = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get actionResultInput() {
+    return this._actionResult;
+  }
+}
+
+export class LogicAppActionHttpRunAfterList extends cdktf.ComplexList {
+  public internalValue? : LogicAppActionHttpRunAfter[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): LogicAppActionHttpRunAfterOutputReference {
+    return new LogicAppActionHttpRunAfterOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface LogicAppActionHttpTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http#create LogicAppActionHttp#create}
@@ -100,6 +203,7 @@ export function logicAppActionHttpTimeoutsToTerraform(struct?: LogicAppActionHtt
 
 export class LogicAppActionHttpTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -109,7 +213,10 @@ export class LogicAppActionHttpTimeoutsOutputReference extends cdktf.ComplexObje
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): LogicAppActionHttpTimeouts | undefined {
+  public get internalValue(): LogicAppActionHttpTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -131,16 +238,22 @@ export class LogicAppActionHttpTimeoutsOutputReference extends cdktf.ComplexObje
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: LogicAppActionHttpTimeouts | undefined) {
+  public set internalValue(value: LogicAppActionHttpTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -249,11 +362,12 @@ export class LogicAppActionHttp extends cdktf.TerraformResource {
     });
     this._body = config.body;
     this._headers = config.headers;
+    this._id = config.id;
     this._logicAppId = config.logicAppId;
     this._method = config.method;
     this._name = config.name;
     this._uri = config.uri;
-    this._runAfter = config.runAfter;
+    this._runAfter.internalValue = config.runAfter;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -294,8 +408,19 @@ export class LogicAppActionHttp extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // logic_app_id - computed: false, optional: false, required: true
@@ -351,20 +476,19 @@ export class LogicAppActionHttp extends cdktf.TerraformResource {
   }
 
   // run_after - computed: false, optional: true, required: false
-  private _runAfter?: LogicAppActionHttpRunAfter[] | cdktf.IResolvable; 
+  private _runAfter = new LogicAppActionHttpRunAfterList(this, "run_after", true);
   public get runAfter() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('run_after')));
+    return this._runAfter;
   }
-  public set runAfter(value: LogicAppActionHttpRunAfter[] | cdktf.IResolvable) {
-    this._runAfter = value;
+  public putRunAfter(value: LogicAppActionHttpRunAfter[] | cdktf.IResolvable) {
+    this._runAfter.internalValue = value;
   }
   public resetRunAfter() {
-    this._runAfter = undefined;
+    this._runAfter.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get runAfterInput() {
-    return this._runAfter;
+    return this._runAfter.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -391,11 +515,12 @@ export class LogicAppActionHttp extends cdktf.TerraformResource {
     return {
       body: cdktf.stringToTerraform(this._body),
       headers: cdktf.hashMapper(cdktf.stringToTerraform)(this._headers),
+      id: cdktf.stringToTerraform(this._id),
       logic_app_id: cdktf.stringToTerraform(this._logicAppId),
       method: cdktf.stringToTerraform(this._method),
       name: cdktf.stringToTerraform(this._name),
       uri: cdktf.stringToTerraform(this._uri),
-      run_after: cdktf.listMapper(logicAppActionHttpRunAfterToTerraform)(this._runAfter),
+      run_after: cdktf.listMapper(logicAppActionHttpRunAfterToTerraform)(this._runAfter.internalValue),
       timeouts: logicAppActionHttpTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

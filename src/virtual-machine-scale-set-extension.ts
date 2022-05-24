@@ -20,6 +20,13 @@ export interface VirtualMachineScaleSetExtensionAConfig extends cdktf.TerraformM
   */
   readonly forceUpdateTag?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set_extension#id VirtualMachineScaleSetExtensionA#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set_extension#name VirtualMachineScaleSetExtensionA#name}
   */
   readonly name: string;
@@ -92,6 +99,7 @@ export function virtualMachineScaleSetExtensionTimeoutsToTerraform(struct?: Virt
 
 export class VirtualMachineScaleSetExtensionTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -101,7 +109,10 @@ export class VirtualMachineScaleSetExtensionTimeoutsOutputReference extends cdkt
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): VirtualMachineScaleSetExtensionTimeouts | undefined {
+  public get internalValue(): VirtualMachineScaleSetExtensionTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -123,16 +134,22 @@ export class VirtualMachineScaleSetExtensionTimeoutsOutputReference extends cdkt
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: VirtualMachineScaleSetExtensionTimeouts | undefined) {
+  public set internalValue(value: VirtualMachineScaleSetExtensionTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -242,6 +259,7 @@ export class VirtualMachineScaleSetExtensionA extends cdktf.TerraformResource {
     this._autoUpgradeMinorVersion = config.autoUpgradeMinorVersion;
     this._automaticUpgradeEnabled = config.automaticUpgradeEnabled;
     this._forceUpdateTag = config.forceUpdateTag;
+    this._id = config.id;
     this._name = config.name;
     this._protectedSettings = config.protectedSettings;
     this._provisionAfterExtensions = config.provisionAfterExtensions;
@@ -306,8 +324,19 @@ export class VirtualMachineScaleSetExtensionA extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // name - computed: false, optional: false, required: true
@@ -448,6 +477,7 @@ export class VirtualMachineScaleSetExtensionA extends cdktf.TerraformResource {
       auto_upgrade_minor_version: cdktf.booleanToTerraform(this._autoUpgradeMinorVersion),
       automatic_upgrade_enabled: cdktf.booleanToTerraform(this._automaticUpgradeEnabled),
       force_update_tag: cdktf.stringToTerraform(this._forceUpdateTag),
+      id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       protected_settings: cdktf.stringToTerraform(this._protectedSettings),
       provision_after_extensions: cdktf.listMapper(cdktf.stringToTerraform)(this._provisionAfterExtensions),

@@ -8,6 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermApplicationGatewayConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/application_gateway#id DataAzurermApplicationGateway#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/application_gateway#name DataAzurermApplicationGateway#name}
   */
   readonly name: string;
@@ -110,6 +117,7 @@ export function dataAzurermApplicationGatewayTimeoutsToTerraform(struct?: DataAz
 
 export class DataAzurermApplicationGatewayTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -119,7 +127,10 @@ export class DataAzurermApplicationGatewayTimeoutsOutputReference extends cdktf.
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): DataAzurermApplicationGatewayTimeouts | undefined {
+  public get internalValue(): DataAzurermApplicationGatewayTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._read !== undefined) {
@@ -129,13 +140,19 @@ export class DataAzurermApplicationGatewayTimeoutsOutputReference extends cdktf.
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: DataAzurermApplicationGatewayTimeouts | undefined) {
+  public set internalValue(value: DataAzurermApplicationGatewayTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._read = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._read = value.read;
     }
   }
@@ -191,6 +208,7 @@ export class DataAzurermApplicationGateway extends cdktf.TerraformDataSource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._id = config.id;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._timeouts.internalValue = config.timeouts;
@@ -201,8 +219,19 @@ export class DataAzurermApplicationGateway extends cdktf.TerraformDataSource {
   // ==========
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // identity - computed: true, optional: false, required: false
@@ -243,8 +272,9 @@ export class DataAzurermApplicationGateway extends cdktf.TerraformDataSource {
   }
 
   // tags - computed: true, optional: false, required: false
-  public tags(key: string): string | cdktf.IResolvable {
-    return new cdktf.StringMap(this, 'tags').lookup(key);
+  private _tags = new cdktf.StringMap(this, "tags");
+  public get tags() {
+    return this._tags;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -269,6 +299,7 @@ export class DataAzurermApplicationGateway extends cdktf.TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       timeouts: dataAzurermApplicationGatewayTimeoutsToTerraform(this._timeouts.internalValue),

@@ -24,6 +24,13 @@ export interface AppConfigurationFeatureConfig extends cdktf.TerraformMetaArgume
   */
   readonly etag?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature#id AppConfigurationFeature#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature#label AppConfigurationFeature#label}
   */
   readonly label?: string;
@@ -84,6 +91,102 @@ export function appConfigurationFeatureTargetingFilterGroupsToTerraform(struct?:
   }
 }
 
+export class AppConfigurationFeatureTargetingFilterGroupsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AppConfigurationFeatureTargetingFilterGroups | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._rolloutPercentage !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rolloutPercentage = this._rolloutPercentage;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppConfigurationFeatureTargetingFilterGroups | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._rolloutPercentage = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._rolloutPercentage = value.rolloutPercentage;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // rollout_percentage - computed: false, optional: false, required: true
+  private _rolloutPercentage?: number; 
+  public get rolloutPercentage() {
+    return this.getNumberAttribute('rollout_percentage');
+  }
+  public set rolloutPercentage(value: number) {
+    this._rolloutPercentage = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rolloutPercentageInput() {
+    return this._rolloutPercentage;
+  }
+}
+
+export class AppConfigurationFeatureTargetingFilterGroupsList extends cdktf.ComplexList {
+  public internalValue? : AppConfigurationFeatureTargetingFilterGroups[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AppConfigurationFeatureTargetingFilterGroupsOutputReference {
+    return new AppConfigurationFeatureTargetingFilterGroupsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface AppConfigurationFeatureTargetingFilter {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature#default_rollout_percentage AppConfigurationFeature#default_rollout_percentage}
@@ -113,6 +216,127 @@ export function appConfigurationFeatureTargetingFilterToTerraform(struct?: AppCo
   }
 }
 
+export class AppConfigurationFeatureTargetingFilterOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AppConfigurationFeatureTargetingFilter | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._defaultRolloutPercentage !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.defaultRolloutPercentage = this._defaultRolloutPercentage;
+    }
+    if (this._users !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.users = this._users;
+    }
+    if (this._groups?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.groups = this._groups?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppConfigurationFeatureTargetingFilter | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._defaultRolloutPercentage = undefined;
+      this._users = undefined;
+      this._groups.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._defaultRolloutPercentage = value.defaultRolloutPercentage;
+      this._users = value.users;
+      this._groups.internalValue = value.groups;
+    }
+  }
+
+  // default_rollout_percentage - computed: false, optional: false, required: true
+  private _defaultRolloutPercentage?: number; 
+  public get defaultRolloutPercentage() {
+    return this.getNumberAttribute('default_rollout_percentage');
+  }
+  public set defaultRolloutPercentage(value: number) {
+    this._defaultRolloutPercentage = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultRolloutPercentageInput() {
+    return this._defaultRolloutPercentage;
+  }
+
+  // users - computed: false, optional: true, required: false
+  private _users?: string[]; 
+  public get users() {
+    return this.getListAttribute('users');
+  }
+  public set users(value: string[]) {
+    this._users = value;
+  }
+  public resetUsers() {
+    this._users = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get usersInput() {
+    return this._users;
+  }
+
+  // groups - computed: false, optional: true, required: false
+  private _groups = new AppConfigurationFeatureTargetingFilterGroupsList(this, "groups", false);
+  public get groups() {
+    return this._groups;
+  }
+  public putGroups(value: AppConfigurationFeatureTargetingFilterGroups[] | cdktf.IResolvable) {
+    this._groups.internalValue = value;
+  }
+  public resetGroups() {
+    this._groups.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get groupsInput() {
+    return this._groups.internalValue;
+  }
+}
+
+export class AppConfigurationFeatureTargetingFilterList extends cdktf.ComplexList {
+  public internalValue? : AppConfigurationFeatureTargetingFilter[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AppConfigurationFeatureTargetingFilterOutputReference {
+    return new AppConfigurationFeatureTargetingFilterOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface AppConfigurationFeatureTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature#create AppConfigurationFeature#create}
@@ -147,6 +371,7 @@ export function appConfigurationFeatureTimeoutsToTerraform(struct?: AppConfigura
 
 export class AppConfigurationFeatureTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -156,7 +381,10 @@ export class AppConfigurationFeatureTimeoutsOutputReference extends cdktf.Comple
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): AppConfigurationFeatureTimeouts | undefined {
+  public get internalValue(): AppConfigurationFeatureTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -178,16 +406,22 @@ export class AppConfigurationFeatureTimeoutsOutputReference extends cdktf.Comple
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: AppConfigurationFeatureTimeouts | undefined) {
+  public set internalValue(value: AppConfigurationFeatureTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -281,6 +515,108 @@ export function appConfigurationFeatureTimewindowFilterToTerraform(struct?: AppC
   }
 }
 
+export class AppConfigurationFeatureTimewindowFilterOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AppConfigurationFeatureTimewindowFilter | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._end !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.end = this._end;
+    }
+    if (this._start !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.start = this._start;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppConfigurationFeatureTimewindowFilter | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._end = undefined;
+      this._start = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._end = value.end;
+      this._start = value.start;
+    }
+  }
+
+  // end - computed: false, optional: true, required: false
+  private _end?: string; 
+  public get end() {
+    return this.getStringAttribute('end');
+  }
+  public set end(value: string) {
+    this._end = value;
+  }
+  public resetEnd() {
+    this._end = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get endInput() {
+    return this._end;
+  }
+
+  // start - computed: false, optional: true, required: false
+  private _start?: string; 
+  public get start() {
+    return this.getStringAttribute('start');
+  }
+  public set start(value: string) {
+    this._start = value;
+  }
+  public resetStart() {
+    this._start = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get startInput() {
+    return this._start;
+  }
+}
+
+export class AppConfigurationFeatureTimewindowFilterList extends cdktf.ComplexList {
+  public internalValue? : AppConfigurationFeatureTimewindowFilter[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AppConfigurationFeatureTimewindowFilterOutputReference {
+    return new AppConfigurationFeatureTimewindowFilterOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature azurerm_app_configuration_feature}
@@ -320,14 +656,15 @@ export class AppConfigurationFeature extends cdktf.TerraformResource {
     this._description = config.description;
     this._enabled = config.enabled;
     this._etag = config.etag;
+    this._id = config.id;
     this._label = config.label;
     this._locked = config.locked;
     this._name = config.name;
     this._percentageFilterValue = config.percentageFilterValue;
     this._tags = config.tags;
-    this._targetingFilter = config.targetingFilter;
+    this._targetingFilter.internalValue = config.targetingFilter;
     this._timeouts.internalValue = config.timeouts;
-    this._timewindowFilter = config.timewindowFilter;
+    this._timewindowFilter.internalValue = config.timewindowFilter;
   }
 
   // ==========
@@ -396,8 +733,19 @@ export class AppConfigurationFeature extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // label - computed: false, optional: true, required: false
@@ -478,20 +826,19 @@ export class AppConfigurationFeature extends cdktf.TerraformResource {
   }
 
   // targeting_filter - computed: false, optional: true, required: false
-  private _targetingFilter?: AppConfigurationFeatureTargetingFilter[] | cdktf.IResolvable; 
+  private _targetingFilter = new AppConfigurationFeatureTargetingFilterList(this, "targeting_filter", false);
   public get targetingFilter() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('targeting_filter');
+    return this._targetingFilter;
   }
-  public set targetingFilter(value: AppConfigurationFeatureTargetingFilter[] | cdktf.IResolvable) {
-    this._targetingFilter = value;
+  public putTargetingFilter(value: AppConfigurationFeatureTargetingFilter[] | cdktf.IResolvable) {
+    this._targetingFilter.internalValue = value;
   }
   public resetTargetingFilter() {
-    this._targetingFilter = undefined;
+    this._targetingFilter.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get targetingFilterInput() {
-    return this._targetingFilter;
+    return this._targetingFilter.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -511,20 +858,19 @@ export class AppConfigurationFeature extends cdktf.TerraformResource {
   }
 
   // timewindow_filter - computed: false, optional: true, required: false
-  private _timewindowFilter?: AppConfigurationFeatureTimewindowFilter[] | cdktf.IResolvable; 
+  private _timewindowFilter = new AppConfigurationFeatureTimewindowFilterList(this, "timewindow_filter", false);
   public get timewindowFilter() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('timewindow_filter');
+    return this._timewindowFilter;
   }
-  public set timewindowFilter(value: AppConfigurationFeatureTimewindowFilter[] | cdktf.IResolvable) {
-    this._timewindowFilter = value;
+  public putTimewindowFilter(value: AppConfigurationFeatureTimewindowFilter[] | cdktf.IResolvable) {
+    this._timewindowFilter.internalValue = value;
   }
   public resetTimewindowFilter() {
-    this._timewindowFilter = undefined;
+    this._timewindowFilter.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timewindowFilterInput() {
-    return this._timewindowFilter;
+    return this._timewindowFilter.internalValue;
   }
 
   // =========
@@ -537,14 +883,15 @@ export class AppConfigurationFeature extends cdktf.TerraformResource {
       description: cdktf.stringToTerraform(this._description),
       enabled: cdktf.booleanToTerraform(this._enabled),
       etag: cdktf.stringToTerraform(this._etag),
+      id: cdktf.stringToTerraform(this._id),
       label: cdktf.stringToTerraform(this._label),
       locked: cdktf.booleanToTerraform(this._locked),
       name: cdktf.stringToTerraform(this._name),
       percentage_filter_value: cdktf.numberToTerraform(this._percentageFilterValue),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
-      targeting_filter: cdktf.listMapper(appConfigurationFeatureTargetingFilterToTerraform)(this._targetingFilter),
+      targeting_filter: cdktf.listMapper(appConfigurationFeatureTargetingFilterToTerraform)(this._targetingFilter.internalValue),
       timeouts: appConfigurationFeatureTimeoutsToTerraform(this._timeouts.internalValue),
-      timewindow_filter: cdktf.listMapper(appConfigurationFeatureTimewindowFilterToTerraform)(this._timewindowFilter),
+      timewindow_filter: cdktf.listMapper(appConfigurationFeatureTimewindowFilterToTerraform)(this._timewindowFilter.internalValue),
     };
   }
 }

@@ -12,6 +12,13 @@ export interface LogicAppWorkflowConfig extends cdktf.TerraformMetaArguments {
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_workflow#id LogicAppWorkflow#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_workflow#integration_service_environment_id LogicAppWorkflow#integration_service_environment_id}
   */
   readonly integrationServiceEnvironmentId?: string;
@@ -216,6 +223,102 @@ export function logicAppWorkflowAccessControlTriggerOpenAuthenticationPolicyClai
   }
 }
 
+export class LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicyClaimOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicyClaim | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicyClaim | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._value = value.value;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // value - computed: false, optional: false, required: true
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicyClaimList extends cdktf.ComplexList {
+  public internalValue? : LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicyClaim[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicyClaimOutputReference {
+    return new LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicyClaimOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicy {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_workflow#name LogicAppWorkflow#name}
@@ -240,6 +343,102 @@ export function logicAppWorkflowAccessControlTriggerOpenAuthenticationPolicyToTe
   }
 }
 
+export class LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicy | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._claim?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.claim = this._claim?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicy | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._claim.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._claim.internalValue = value.claim;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // claim - computed: false, optional: false, required: true
+  private _claim = new LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicyClaimList(this, "claim", true);
+  public get claim() {
+    return this._claim;
+  }
+  public putClaim(value: LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicyClaim[] | cdktf.IResolvable) {
+    this._claim.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get claimInput() {
+    return this._claim.internalValue;
+  }
+}
+
+export class LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicyList extends cdktf.ComplexList {
+  public internalValue? : LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicy[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicyOutputReference {
+    return new LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface LogicAppWorkflowAccessControlTrigger {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_workflow#allowed_caller_ip_address_range LogicAppWorkflow#allowed_caller_ip_address_range}
@@ -282,9 +481,9 @@ export class LogicAppWorkflowAccessControlTriggerOutputReference extends cdktf.C
       hasAnyValues = true;
       internalValueResult.allowedCallerIpAddressRange = this._allowedCallerIpAddressRange;
     }
-    if (this._openAuthenticationPolicy !== undefined) {
+    if (this._openAuthenticationPolicy?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.openAuthenticationPolicy = this._openAuthenticationPolicy;
+      internalValueResult.openAuthenticationPolicy = this._openAuthenticationPolicy?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -293,12 +492,12 @@ export class LogicAppWorkflowAccessControlTriggerOutputReference extends cdktf.C
     if (value === undefined) {
       this.isEmptyObject = false;
       this._allowedCallerIpAddressRange = undefined;
-      this._openAuthenticationPolicy = undefined;
+      this._openAuthenticationPolicy.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._allowedCallerIpAddressRange = value.allowedCallerIpAddressRange;
-      this._openAuthenticationPolicy = value.openAuthenticationPolicy;
+      this._openAuthenticationPolicy.internalValue = value.openAuthenticationPolicy;
     }
   }
 
@@ -316,20 +515,19 @@ export class LogicAppWorkflowAccessControlTriggerOutputReference extends cdktf.C
   }
 
   // open_authentication_policy - computed: false, optional: true, required: false
-  private _openAuthenticationPolicy?: LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicy[] | cdktf.IResolvable; 
+  private _openAuthenticationPolicy = new LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicyList(this, "open_authentication_policy", true);
   public get openAuthenticationPolicy() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('open_authentication_policy')));
+    return this._openAuthenticationPolicy;
   }
-  public set openAuthenticationPolicy(value: LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicy[] | cdktf.IResolvable) {
-    this._openAuthenticationPolicy = value;
+  public putOpenAuthenticationPolicy(value: LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicy[] | cdktf.IResolvable) {
+    this._openAuthenticationPolicy.internalValue = value;
   }
   public resetOpenAuthenticationPolicy() {
-    this._openAuthenticationPolicy = undefined;
+    this._openAuthenticationPolicy.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get openAuthenticationPolicyInput() {
-    return this._openAuthenticationPolicy;
+    return this._openAuthenticationPolicy.internalValue;
   }
 }
 export interface LogicAppWorkflowAccessControlWorkflowManagement {
@@ -681,6 +879,7 @@ export function logicAppWorkflowTimeoutsToTerraform(struct?: LogicAppWorkflowTim
 
 export class LogicAppWorkflowTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -690,7 +889,10 @@ export class LogicAppWorkflowTimeoutsOutputReference extends cdktf.ComplexObject
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): LogicAppWorkflowTimeouts | undefined {
+  public get internalValue(): LogicAppWorkflowTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -712,16 +914,22 @@ export class LogicAppWorkflowTimeoutsOutputReference extends cdktf.ComplexObject
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: LogicAppWorkflowTimeouts | undefined) {
+  public set internalValue(value: LogicAppWorkflowTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -829,6 +1037,7 @@ export class LogicAppWorkflow extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._enabled = config.enabled;
+    this._id = config.id;
     this._integrationServiceEnvironmentId = config.integrationServiceEnvironmentId;
     this._location = config.location;
     this._logicAppIntegrationAccountId = config.logicAppIntegrationAccountId;
@@ -880,8 +1089,19 @@ export class LogicAppWorkflow extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // integration_service_environment_id - computed: false, optional: true, required: false
@@ -1100,6 +1320,7 @@ export class LogicAppWorkflow extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       enabled: cdktf.booleanToTerraform(this._enabled),
+      id: cdktf.stringToTerraform(this._id),
       integration_service_environment_id: cdktf.stringToTerraform(this._integrationServiceEnvironmentId),
       location: cdktf.stringToTerraform(this._location),
       logic_app_integration_account_id: cdktf.stringToTerraform(this._logicAppIntegrationAccountId),

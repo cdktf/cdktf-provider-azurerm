@@ -36,6 +36,13 @@ export interface CosmosdbAccountConfig extends cdktf.TerraformMetaArguments {
   */
   readonly enableMultipleWriteLocations?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account#id CosmosdbAccount#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account#ip_range_filter CosmosdbAccount#ip_range_filter}
   */
   readonly ipRangeFilter?: string;
@@ -380,6 +387,83 @@ export function cosmosdbAccountCapabilitiesToTerraform(struct?: CosmosdbAccountC
   }
 }
 
+export class CosmosdbAccountCapabilitiesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CosmosdbAccountCapabilities | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CosmosdbAccountCapabilities | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+}
+
+export class CosmosdbAccountCapabilitiesList extends cdktf.ComplexList {
+  public internalValue? : CosmosdbAccountCapabilities[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CosmosdbAccountCapabilitiesOutputReference {
+    return new CosmosdbAccountCapabilitiesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CosmosdbAccountCapacity {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account#total_throughput_limit CosmosdbAccount#total_throughput_limit}
@@ -748,6 +832,151 @@ export function cosmosdbAccountGeoLocationToTerraform(struct?: CosmosdbAccountGe
   }
 }
 
+export class CosmosdbAccountGeoLocationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CosmosdbAccountGeoLocation | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._failoverPriority !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.failoverPriority = this._failoverPriority;
+    }
+    if (this._location !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.location = this._location;
+    }
+    if (this._prefix !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.prefix = this._prefix;
+    }
+    if (this._zoneRedundant !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.zoneRedundant = this._zoneRedundant;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CosmosdbAccountGeoLocation | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._failoverPriority = undefined;
+      this._location = undefined;
+      this._prefix = undefined;
+      this._zoneRedundant = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._failoverPriority = value.failoverPriority;
+      this._location = value.location;
+      this._prefix = value.prefix;
+      this._zoneRedundant = value.zoneRedundant;
+    }
+  }
+
+  // failover_priority - computed: false, optional: false, required: true
+  private _failoverPriority?: number; 
+  public get failoverPriority() {
+    return this.getNumberAttribute('failover_priority');
+  }
+  public set failoverPriority(value: number) {
+    this._failoverPriority = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get failoverPriorityInput() {
+    return this._failoverPriority;
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // location - computed: false, optional: false, required: true
+  private _location?: string; 
+  public get location() {
+    return this.getStringAttribute('location');
+  }
+  public set location(value: string) {
+    this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location;
+  }
+
+  // prefix - computed: false, optional: true, required: false
+  private _prefix?: string; 
+  public get prefix() {
+    return this.getStringAttribute('prefix');
+  }
+  public set prefix(value: string) {
+    this._prefix = value;
+  }
+  public resetPrefix() {
+    this._prefix = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get prefixInput() {
+    return this._prefix;
+  }
+
+  // zone_redundant - computed: false, optional: true, required: false
+  private _zoneRedundant?: boolean | cdktf.IResolvable; 
+  public get zoneRedundant() {
+    return this.getBooleanAttribute('zone_redundant');
+  }
+  public set zoneRedundant(value: boolean | cdktf.IResolvable) {
+    this._zoneRedundant = value;
+  }
+  public resetZoneRedundant() {
+    this._zoneRedundant = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get zoneRedundantInput() {
+    return this._zoneRedundant;
+  }
+}
+
+export class CosmosdbAccountGeoLocationList extends cdktf.ComplexList {
+  public internalValue? : CosmosdbAccountGeoLocation[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CosmosdbAccountGeoLocationOutputReference {
+    return new CosmosdbAccountGeoLocationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CosmosdbAccountIdentity {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account#type CosmosdbAccount#type}
@@ -842,6 +1071,105 @@ export function cosmosdbAccountRestoreDatabaseToTerraform(struct?: CosmosdbAccou
   }
 }
 
+export class CosmosdbAccountRestoreDatabaseOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CosmosdbAccountRestoreDatabase | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._collectionNames !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.collectionNames = this._collectionNames;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CosmosdbAccountRestoreDatabase | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._collectionNames = undefined;
+      this._name = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._collectionNames = value.collectionNames;
+      this._name = value.name;
+    }
+  }
+
+  // collection_names - computed: false, optional: true, required: false
+  private _collectionNames?: string[]; 
+  public get collectionNames() {
+    return cdktf.Fn.tolist(this.getListAttribute('collection_names'));
+  }
+  public set collectionNames(value: string[]) {
+    this._collectionNames = value;
+  }
+  public resetCollectionNames() {
+    this._collectionNames = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get collectionNamesInput() {
+    return this._collectionNames;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+}
+
+export class CosmosdbAccountRestoreDatabaseList extends cdktf.ComplexList {
+  public internalValue? : CosmosdbAccountRestoreDatabase[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CosmosdbAccountRestoreDatabaseOutputReference {
+    return new CosmosdbAccountRestoreDatabaseOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CosmosdbAccountRestore {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account#restore_timestamp_in_utc CosmosdbAccount#restore_timestamp_in_utc}
@@ -893,9 +1221,9 @@ export class CosmosdbAccountRestoreOutputReference extends cdktf.ComplexObject {
       hasAnyValues = true;
       internalValueResult.sourceCosmosdbAccountId = this._sourceCosmosdbAccountId;
     }
-    if (this._database !== undefined) {
+    if (this._database?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.database = this._database;
+      internalValueResult.database = this._database?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -905,13 +1233,13 @@ export class CosmosdbAccountRestoreOutputReference extends cdktf.ComplexObject {
       this.isEmptyObject = false;
       this._restoreTimestampInUtc = undefined;
       this._sourceCosmosdbAccountId = undefined;
-      this._database = undefined;
+      this._database.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._restoreTimestampInUtc = value.restoreTimestampInUtc;
       this._sourceCosmosdbAccountId = value.sourceCosmosdbAccountId;
-      this._database = value.database;
+      this._database.internalValue = value.database;
     }
   }
 
@@ -942,20 +1270,19 @@ export class CosmosdbAccountRestoreOutputReference extends cdktf.ComplexObject {
   }
 
   // database - computed: false, optional: true, required: false
-  private _database?: CosmosdbAccountRestoreDatabase[] | cdktf.IResolvable; 
+  private _database = new CosmosdbAccountRestoreDatabaseList(this, "database", true);
   public get database() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('database')));
+    return this._database;
   }
-  public set database(value: CosmosdbAccountRestoreDatabase[] | cdktf.IResolvable) {
-    this._database = value;
+  public putDatabase(value: CosmosdbAccountRestoreDatabase[] | cdktf.IResolvable) {
+    this._database.internalValue = value;
   }
   public resetDatabase() {
-    this._database = undefined;
+    this._database.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get databaseInput() {
-    return this._database;
+    return this._database.internalValue;
   }
 }
 export interface CosmosdbAccountTimeouts {
@@ -992,6 +1319,7 @@ export function cosmosdbAccountTimeoutsToTerraform(struct?: CosmosdbAccountTimeo
 
 export class CosmosdbAccountTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -1001,7 +1329,10 @@ export class CosmosdbAccountTimeoutsOutputReference extends cdktf.ComplexObject 
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): CosmosdbAccountTimeouts | undefined {
+  public get internalValue(): CosmosdbAccountTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -1023,16 +1354,22 @@ export class CosmosdbAccountTimeoutsOutputReference extends cdktf.ComplexObject 
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: CosmosdbAccountTimeouts | undefined) {
+  public set internalValue(value: CosmosdbAccountTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -1107,6 +1444,9 @@ export class CosmosdbAccountTimeoutsOutputReference extends cdktf.ComplexObject 
 export interface CosmosdbAccountVirtualNetworkRule {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account#id CosmosdbAccount#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id: string;
   /**
@@ -1126,6 +1466,105 @@ export function cosmosdbAccountVirtualNetworkRuleToTerraform(struct?: CosmosdbAc
   }
 }
 
+export class CosmosdbAccountVirtualNetworkRuleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CosmosdbAccountVirtualNetworkRule | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._id !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.id = this._id;
+    }
+    if (this._ignoreMissingVnetServiceEndpoint !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ignoreMissingVnetServiceEndpoint = this._ignoreMissingVnetServiceEndpoint;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CosmosdbAccountVirtualNetworkRule | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._id = undefined;
+      this._ignoreMissingVnetServiceEndpoint = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._id = value.id;
+      this._ignoreMissingVnetServiceEndpoint = value.ignoreMissingVnetServiceEndpoint;
+    }
+  }
+
+  // id - computed: false, optional: false, required: true
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // ignore_missing_vnet_service_endpoint - computed: false, optional: true, required: false
+  private _ignoreMissingVnetServiceEndpoint?: boolean | cdktf.IResolvable; 
+  public get ignoreMissingVnetServiceEndpoint() {
+    return this.getBooleanAttribute('ignore_missing_vnet_service_endpoint');
+  }
+  public set ignoreMissingVnetServiceEndpoint(value: boolean | cdktf.IResolvable) {
+    this._ignoreMissingVnetServiceEndpoint = value;
+  }
+  public resetIgnoreMissingVnetServiceEndpoint() {
+    this._ignoreMissingVnetServiceEndpoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ignoreMissingVnetServiceEndpointInput() {
+    return this._ignoreMissingVnetServiceEndpoint;
+  }
+}
+
+export class CosmosdbAccountVirtualNetworkRuleList extends cdktf.ComplexList {
+  public internalValue? : CosmosdbAccountVirtualNetworkRule[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CosmosdbAccountVirtualNetworkRuleOutputReference {
+    return new CosmosdbAccountVirtualNetworkRuleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account azurerm_cosmosdb_account}
@@ -1168,6 +1607,7 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
     this._enableAutomaticFailover = config.enableAutomaticFailover;
     this._enableFreeTier = config.enableFreeTier;
     this._enableMultipleWriteLocations = config.enableMultipleWriteLocations;
+    this._id = config.id;
     this._ipRangeFilter = config.ipRangeFilter;
     this._isVirtualNetworkFilterEnabled = config.isVirtualNetworkFilterEnabled;
     this._keyVaultKeyId = config.keyVaultKeyId;
@@ -1184,15 +1624,15 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
     this._tags = config.tags;
     this._analyticalStorage.internalValue = config.analyticalStorage;
     this._backup.internalValue = config.backup;
-    this._capabilities = config.capabilities;
+    this._capabilities.internalValue = config.capabilities;
     this._capacity.internalValue = config.capacity;
     this._consistencyPolicy.internalValue = config.consistencyPolicy;
     this._corsRule.internalValue = config.corsRule;
-    this._geoLocation = config.geoLocation;
+    this._geoLocation.internalValue = config.geoLocation;
     this._identity.internalValue = config.identity;
     this._restore.internalValue = config.restore;
     this._timeouts.internalValue = config.timeouts;
-    this._virtualNetworkRule = config.virtualNetworkRule;
+    this._virtualNetworkRule.internalValue = config.virtualNetworkRule;
   }
 
   // ==========
@@ -1322,8 +1762,19 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // ip_range_filter - computed: false, optional: true, required: false
@@ -1621,20 +2072,19 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   }
 
   // capabilities - computed: false, optional: true, required: false
-  private _capabilities?: CosmosdbAccountCapabilities[] | cdktf.IResolvable; 
+  private _capabilities = new CosmosdbAccountCapabilitiesList(this, "capabilities", true);
   public get capabilities() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('capabilities')));
+    return this._capabilities;
   }
-  public set capabilities(value: CosmosdbAccountCapabilities[] | cdktf.IResolvable) {
-    this._capabilities = value;
+  public putCapabilities(value: CosmosdbAccountCapabilities[] | cdktf.IResolvable) {
+    this._capabilities.internalValue = value;
   }
   public resetCapabilities() {
-    this._capabilities = undefined;
+    this._capabilities.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get capabilitiesInput() {
-    return this._capabilities;
+    return this._capabilities.internalValue;
   }
 
   // capacity - computed: false, optional: true, required: false
@@ -1683,17 +2133,16 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   }
 
   // geo_location - computed: false, optional: false, required: true
-  private _geoLocation?: CosmosdbAccountGeoLocation[] | cdktf.IResolvable; 
+  private _geoLocation = new CosmosdbAccountGeoLocationList(this, "geo_location", true);
   public get geoLocation() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('geo_location')));
+    return this._geoLocation;
   }
-  public set geoLocation(value: CosmosdbAccountGeoLocation[] | cdktf.IResolvable) {
-    this._geoLocation = value;
+  public putGeoLocation(value: CosmosdbAccountGeoLocation[] | cdktf.IResolvable) {
+    this._geoLocation.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get geoLocationInput() {
-    return this._geoLocation;
+    return this._geoLocation.internalValue;
   }
 
   // identity - computed: false, optional: true, required: false
@@ -1745,20 +2194,19 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   }
 
   // virtual_network_rule - computed: false, optional: true, required: false
-  private _virtualNetworkRule?: CosmosdbAccountVirtualNetworkRule[] | cdktf.IResolvable; 
+  private _virtualNetworkRule = new CosmosdbAccountVirtualNetworkRuleList(this, "virtual_network_rule", true);
   public get virtualNetworkRule() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('virtual_network_rule')));
+    return this._virtualNetworkRule;
   }
-  public set virtualNetworkRule(value: CosmosdbAccountVirtualNetworkRule[] | cdktf.IResolvable) {
-    this._virtualNetworkRule = value;
+  public putVirtualNetworkRule(value: CosmosdbAccountVirtualNetworkRule[] | cdktf.IResolvable) {
+    this._virtualNetworkRule.internalValue = value;
   }
   public resetVirtualNetworkRule() {
-    this._virtualNetworkRule = undefined;
+    this._virtualNetworkRule.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get virtualNetworkRuleInput() {
-    return this._virtualNetworkRule;
+    return this._virtualNetworkRule.internalValue;
   }
 
   // =========
@@ -1774,6 +2222,7 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
       enable_automatic_failover: cdktf.booleanToTerraform(this._enableAutomaticFailover),
       enable_free_tier: cdktf.booleanToTerraform(this._enableFreeTier),
       enable_multiple_write_locations: cdktf.booleanToTerraform(this._enableMultipleWriteLocations),
+      id: cdktf.stringToTerraform(this._id),
       ip_range_filter: cdktf.stringToTerraform(this._ipRangeFilter),
       is_virtual_network_filter_enabled: cdktf.booleanToTerraform(this._isVirtualNetworkFilterEnabled),
       key_vault_key_id: cdktf.stringToTerraform(this._keyVaultKeyId),
@@ -1790,15 +2239,15 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       analytical_storage: cosmosdbAccountAnalyticalStorageToTerraform(this._analyticalStorage.internalValue),
       backup: cosmosdbAccountBackupToTerraform(this._backup.internalValue),
-      capabilities: cdktf.listMapper(cosmosdbAccountCapabilitiesToTerraform)(this._capabilities),
+      capabilities: cdktf.listMapper(cosmosdbAccountCapabilitiesToTerraform)(this._capabilities.internalValue),
       capacity: cosmosdbAccountCapacityToTerraform(this._capacity.internalValue),
       consistency_policy: cosmosdbAccountConsistencyPolicyToTerraform(this._consistencyPolicy.internalValue),
       cors_rule: cosmosdbAccountCorsRuleToTerraform(this._corsRule.internalValue),
-      geo_location: cdktf.listMapper(cosmosdbAccountGeoLocationToTerraform)(this._geoLocation),
+      geo_location: cdktf.listMapper(cosmosdbAccountGeoLocationToTerraform)(this._geoLocation.internalValue),
       identity: cosmosdbAccountIdentityToTerraform(this._identity.internalValue),
       restore: cosmosdbAccountRestoreToTerraform(this._restore.internalValue),
       timeouts: cosmosdbAccountTimeoutsToTerraform(this._timeouts.internalValue),
-      virtual_network_rule: cdktf.listMapper(cosmosdbAccountVirtualNetworkRuleToTerraform)(this._virtualNetworkRule),
+      virtual_network_rule: cdktf.listMapper(cosmosdbAccountVirtualNetworkRuleToTerraform)(this._virtualNetworkRule.internalValue),
     };
   }
 }
