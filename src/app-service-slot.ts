@@ -32,6 +32,13 @@ export interface AppServiceSlotConfig extends cdktf.TerraformMetaArguments {
   */
   readonly httpsOnly?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot#id AppServiceSlot#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot#key_vault_reference_identity_id AppServiceSlot#key_vault_reference_identity_id}
   */
   readonly keyVaultReferenceIdentityId?: string;
@@ -1154,6 +1161,121 @@ export function appServiceSlotConnectionStringToTerraform(struct?: AppServiceSlo
   }
 }
 
+export class AppServiceSlotConnectionStringOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AppServiceSlotConnectionString | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppServiceSlotConnectionString | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._type = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._type = value.type;
+      this._value = value.value;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+
+  // value - computed: false, optional: false, required: true
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class AppServiceSlotConnectionStringList extends cdktf.ComplexList {
+  public internalValue? : AppServiceSlotConnectionString[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AppServiceSlotConnectionStringOutputReference {
+    return new AppServiceSlotConnectionStringOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface AppServiceSlotIdentity {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot#identity_ids AppServiceSlot#identity_ids}
@@ -1907,6 +2029,152 @@ export function appServiceSlotSiteConfigIpRestrictionHeadersToTerraform(struct?:
   }
 }
 
+export class AppServiceSlotSiteConfigIpRestrictionHeadersOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AppServiceSlotSiteConfigIpRestrictionHeaders | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._xAzureFdid !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.xAzureFdid = this._xAzureFdid;
+    }
+    if (this._xFdHealthProbe !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.xFdHealthProbe = this._xFdHealthProbe;
+    }
+    if (this._xForwardedFor !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.xForwardedFor = this._xForwardedFor;
+    }
+    if (this._xForwardedHost !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.xForwardedHost = this._xForwardedHost;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppServiceSlotSiteConfigIpRestrictionHeaders | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._xAzureFdid = undefined;
+      this._xFdHealthProbe = undefined;
+      this._xForwardedFor = undefined;
+      this._xForwardedHost = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._xAzureFdid = value.xAzureFdid;
+      this._xFdHealthProbe = value.xFdHealthProbe;
+      this._xForwardedFor = value.xForwardedFor;
+      this._xForwardedHost = value.xForwardedHost;
+    }
+  }
+
+  // x_azure_fdid - computed: true, optional: true, required: false
+  private _xAzureFdid?: string[]; 
+  public get xAzureFdid() {
+    return cdktf.Fn.tolist(this.getListAttribute('x_azure_fdid'));
+  }
+  public set xAzureFdid(value: string[]) {
+    this._xAzureFdid = value;
+  }
+  public resetXAzureFdid() {
+    this._xAzureFdid = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get xAzureFdidInput() {
+    return this._xAzureFdid;
+  }
+
+  // x_fd_health_probe - computed: true, optional: true, required: false
+  private _xFdHealthProbe?: string[]; 
+  public get xFdHealthProbe() {
+    return cdktf.Fn.tolist(this.getListAttribute('x_fd_health_probe'));
+  }
+  public set xFdHealthProbe(value: string[]) {
+    this._xFdHealthProbe = value;
+  }
+  public resetXFdHealthProbe() {
+    this._xFdHealthProbe = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get xFdHealthProbeInput() {
+    return this._xFdHealthProbe;
+  }
+
+  // x_forwarded_for - computed: true, optional: true, required: false
+  private _xForwardedFor?: string[]; 
+  public get xForwardedFor() {
+    return cdktf.Fn.tolist(this.getListAttribute('x_forwarded_for'));
+  }
+  public set xForwardedFor(value: string[]) {
+    this._xForwardedFor = value;
+  }
+  public resetXForwardedFor() {
+    this._xForwardedFor = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get xForwardedForInput() {
+    return this._xForwardedFor;
+  }
+
+  // x_forwarded_host - computed: true, optional: true, required: false
+  private _xForwardedHost?: string[]; 
+  public get xForwardedHost() {
+    return cdktf.Fn.tolist(this.getListAttribute('x_forwarded_host'));
+  }
+  public set xForwardedHost(value: string[]) {
+    this._xForwardedHost = value;
+  }
+  public resetXForwardedHost() {
+    this._xForwardedHost = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get xForwardedHostInput() {
+    return this._xForwardedHost;
+  }
+}
+
+export class AppServiceSlotSiteConfigIpRestrictionHeadersList extends cdktf.ComplexList {
+  public internalValue? : AppServiceSlotSiteConfigIpRestrictionHeaders[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AppServiceSlotSiteConfigIpRestrictionHeadersOutputReference {
+    return new AppServiceSlotSiteConfigIpRestrictionHeadersOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface AppServiceSlotSiteConfigIpRestriction {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot#action AppServiceSlot#action}
@@ -1954,6 +2222,218 @@ export function appServiceSlotSiteConfigIpRestrictionToTerraform(struct?: AppSer
   }
 }
 
+export class AppServiceSlotSiteConfigIpRestrictionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AppServiceSlotSiteConfigIpRestriction | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._action !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.action = this._action;
+    }
+    if (this._headers?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headers = this._headers?.internalValue;
+    }
+    if (this._ipAddress !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ipAddress = this._ipAddress;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._priority !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.priority = this._priority;
+    }
+    if (this._serviceTag !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.serviceTag = this._serviceTag;
+    }
+    if (this._virtualNetworkSubnetId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.virtualNetworkSubnetId = this._virtualNetworkSubnetId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppServiceSlotSiteConfigIpRestriction | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._action = undefined;
+      this._headers.internalValue = undefined;
+      this._ipAddress = undefined;
+      this._name = undefined;
+      this._priority = undefined;
+      this._serviceTag = undefined;
+      this._virtualNetworkSubnetId = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._action = value.action;
+      this._headers.internalValue = value.headers;
+      this._ipAddress = value.ipAddress;
+      this._name = value.name;
+      this._priority = value.priority;
+      this._serviceTag = value.serviceTag;
+      this._virtualNetworkSubnetId = value.virtualNetworkSubnetId;
+    }
+  }
+
+  // action - computed: true, optional: true, required: false
+  private _action?: string; 
+  public get action() {
+    return this.getStringAttribute('action');
+  }
+  public set action(value: string) {
+    this._action = value;
+  }
+  public resetAction() {
+    this._action = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get actionInput() {
+    return this._action;
+  }
+
+  // headers - computed: true, optional: true, required: false
+  private _headers = new AppServiceSlotSiteConfigIpRestrictionHeadersList(this, "headers", false);
+  public get headers() {
+    return this._headers;
+  }
+  public putHeaders(value: AppServiceSlotSiteConfigIpRestrictionHeaders[] | cdktf.IResolvable) {
+    this._headers.internalValue = value;
+  }
+  public resetHeaders() {
+    this._headers.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headersInput() {
+    return this._headers.internalValue;
+  }
+
+  // ip_address - computed: true, optional: true, required: false
+  private _ipAddress?: string; 
+  public get ipAddress() {
+    return this.getStringAttribute('ip_address');
+  }
+  public set ipAddress(value: string) {
+    this._ipAddress = value;
+  }
+  public resetIpAddress() {
+    this._ipAddress = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipAddressInput() {
+    return this._ipAddress;
+  }
+
+  // name - computed: true, optional: true, required: false
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // priority - computed: true, optional: true, required: false
+  private _priority?: number; 
+  public get priority() {
+    return this.getNumberAttribute('priority');
+  }
+  public set priority(value: number) {
+    this._priority = value;
+  }
+  public resetPriority() {
+    this._priority = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get priorityInput() {
+    return this._priority;
+  }
+
+  // service_tag - computed: true, optional: true, required: false
+  private _serviceTag?: string; 
+  public get serviceTag() {
+    return this.getStringAttribute('service_tag');
+  }
+  public set serviceTag(value: string) {
+    this._serviceTag = value;
+  }
+  public resetServiceTag() {
+    this._serviceTag = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceTagInput() {
+    return this._serviceTag;
+  }
+
+  // virtual_network_subnet_id - computed: true, optional: true, required: false
+  private _virtualNetworkSubnetId?: string; 
+  public get virtualNetworkSubnetId() {
+    return this.getStringAttribute('virtual_network_subnet_id');
+  }
+  public set virtualNetworkSubnetId(value: string) {
+    this._virtualNetworkSubnetId = value;
+  }
+  public resetVirtualNetworkSubnetId() {
+    this._virtualNetworkSubnetId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get virtualNetworkSubnetIdInput() {
+    return this._virtualNetworkSubnetId;
+  }
+}
+
+export class AppServiceSlotSiteConfigIpRestrictionList extends cdktf.ComplexList {
+  public internalValue? : AppServiceSlotSiteConfigIpRestriction[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AppServiceSlotSiteConfigIpRestrictionOutputReference {
+    return new AppServiceSlotSiteConfigIpRestrictionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface AppServiceSlotSiteConfigScmIpRestrictionHeaders {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot#x_azure_fdid AppServiceSlot#x_azure_fdid}
@@ -1986,6 +2466,152 @@ export function appServiceSlotSiteConfigScmIpRestrictionHeadersToTerraform(struc
   }
 }
 
+export class AppServiceSlotSiteConfigScmIpRestrictionHeadersOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AppServiceSlotSiteConfigScmIpRestrictionHeaders | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._xAzureFdid !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.xAzureFdid = this._xAzureFdid;
+    }
+    if (this._xFdHealthProbe !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.xFdHealthProbe = this._xFdHealthProbe;
+    }
+    if (this._xForwardedFor !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.xForwardedFor = this._xForwardedFor;
+    }
+    if (this._xForwardedHost !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.xForwardedHost = this._xForwardedHost;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppServiceSlotSiteConfigScmIpRestrictionHeaders | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._xAzureFdid = undefined;
+      this._xFdHealthProbe = undefined;
+      this._xForwardedFor = undefined;
+      this._xForwardedHost = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._xAzureFdid = value.xAzureFdid;
+      this._xFdHealthProbe = value.xFdHealthProbe;
+      this._xForwardedFor = value.xForwardedFor;
+      this._xForwardedHost = value.xForwardedHost;
+    }
+  }
+
+  // x_azure_fdid - computed: true, optional: true, required: false
+  private _xAzureFdid?: string[]; 
+  public get xAzureFdid() {
+    return cdktf.Fn.tolist(this.getListAttribute('x_azure_fdid'));
+  }
+  public set xAzureFdid(value: string[]) {
+    this._xAzureFdid = value;
+  }
+  public resetXAzureFdid() {
+    this._xAzureFdid = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get xAzureFdidInput() {
+    return this._xAzureFdid;
+  }
+
+  // x_fd_health_probe - computed: true, optional: true, required: false
+  private _xFdHealthProbe?: string[]; 
+  public get xFdHealthProbe() {
+    return cdktf.Fn.tolist(this.getListAttribute('x_fd_health_probe'));
+  }
+  public set xFdHealthProbe(value: string[]) {
+    this._xFdHealthProbe = value;
+  }
+  public resetXFdHealthProbe() {
+    this._xFdHealthProbe = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get xFdHealthProbeInput() {
+    return this._xFdHealthProbe;
+  }
+
+  // x_forwarded_for - computed: true, optional: true, required: false
+  private _xForwardedFor?: string[]; 
+  public get xForwardedFor() {
+    return cdktf.Fn.tolist(this.getListAttribute('x_forwarded_for'));
+  }
+  public set xForwardedFor(value: string[]) {
+    this._xForwardedFor = value;
+  }
+  public resetXForwardedFor() {
+    this._xForwardedFor = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get xForwardedForInput() {
+    return this._xForwardedFor;
+  }
+
+  // x_forwarded_host - computed: true, optional: true, required: false
+  private _xForwardedHost?: string[]; 
+  public get xForwardedHost() {
+    return cdktf.Fn.tolist(this.getListAttribute('x_forwarded_host'));
+  }
+  public set xForwardedHost(value: string[]) {
+    this._xForwardedHost = value;
+  }
+  public resetXForwardedHost() {
+    this._xForwardedHost = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get xForwardedHostInput() {
+    return this._xForwardedHost;
+  }
+}
+
+export class AppServiceSlotSiteConfigScmIpRestrictionHeadersList extends cdktf.ComplexList {
+  public internalValue? : AppServiceSlotSiteConfigScmIpRestrictionHeaders[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AppServiceSlotSiteConfigScmIpRestrictionHeadersOutputReference {
+    return new AppServiceSlotSiteConfigScmIpRestrictionHeadersOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface AppServiceSlotSiteConfigScmIpRestriction {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot#action AppServiceSlot#action}
@@ -2033,6 +2659,218 @@ export function appServiceSlotSiteConfigScmIpRestrictionToTerraform(struct?: App
   }
 }
 
+export class AppServiceSlotSiteConfigScmIpRestrictionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AppServiceSlotSiteConfigScmIpRestriction | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._action !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.action = this._action;
+    }
+    if (this._headers?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headers = this._headers?.internalValue;
+    }
+    if (this._ipAddress !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ipAddress = this._ipAddress;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._priority !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.priority = this._priority;
+    }
+    if (this._serviceTag !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.serviceTag = this._serviceTag;
+    }
+    if (this._virtualNetworkSubnetId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.virtualNetworkSubnetId = this._virtualNetworkSubnetId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppServiceSlotSiteConfigScmIpRestriction | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._action = undefined;
+      this._headers.internalValue = undefined;
+      this._ipAddress = undefined;
+      this._name = undefined;
+      this._priority = undefined;
+      this._serviceTag = undefined;
+      this._virtualNetworkSubnetId = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._action = value.action;
+      this._headers.internalValue = value.headers;
+      this._ipAddress = value.ipAddress;
+      this._name = value.name;
+      this._priority = value.priority;
+      this._serviceTag = value.serviceTag;
+      this._virtualNetworkSubnetId = value.virtualNetworkSubnetId;
+    }
+  }
+
+  // action - computed: true, optional: true, required: false
+  private _action?: string; 
+  public get action() {
+    return this.getStringAttribute('action');
+  }
+  public set action(value: string) {
+    this._action = value;
+  }
+  public resetAction() {
+    this._action = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get actionInput() {
+    return this._action;
+  }
+
+  // headers - computed: true, optional: true, required: false
+  private _headers = new AppServiceSlotSiteConfigScmIpRestrictionHeadersList(this, "headers", false);
+  public get headers() {
+    return this._headers;
+  }
+  public putHeaders(value: AppServiceSlotSiteConfigScmIpRestrictionHeaders[] | cdktf.IResolvable) {
+    this._headers.internalValue = value;
+  }
+  public resetHeaders() {
+    this._headers.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headersInput() {
+    return this._headers.internalValue;
+  }
+
+  // ip_address - computed: true, optional: true, required: false
+  private _ipAddress?: string; 
+  public get ipAddress() {
+    return this.getStringAttribute('ip_address');
+  }
+  public set ipAddress(value: string) {
+    this._ipAddress = value;
+  }
+  public resetIpAddress() {
+    this._ipAddress = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipAddressInput() {
+    return this._ipAddress;
+  }
+
+  // name - computed: true, optional: true, required: false
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // priority - computed: true, optional: true, required: false
+  private _priority?: number; 
+  public get priority() {
+    return this.getNumberAttribute('priority');
+  }
+  public set priority(value: number) {
+    this._priority = value;
+  }
+  public resetPriority() {
+    this._priority = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get priorityInput() {
+    return this._priority;
+  }
+
+  // service_tag - computed: true, optional: true, required: false
+  private _serviceTag?: string; 
+  public get serviceTag() {
+    return this.getStringAttribute('service_tag');
+  }
+  public set serviceTag(value: string) {
+    this._serviceTag = value;
+  }
+  public resetServiceTag() {
+    this._serviceTag = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceTagInput() {
+    return this._serviceTag;
+  }
+
+  // virtual_network_subnet_id - computed: true, optional: true, required: false
+  private _virtualNetworkSubnetId?: string; 
+  public get virtualNetworkSubnetId() {
+    return this.getStringAttribute('virtual_network_subnet_id');
+  }
+  public set virtualNetworkSubnetId(value: string) {
+    this._virtualNetworkSubnetId = value;
+  }
+  public resetVirtualNetworkSubnetId() {
+    this._virtualNetworkSubnetId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get virtualNetworkSubnetIdInput() {
+    return this._virtualNetworkSubnetId;
+  }
+}
+
+export class AppServiceSlotSiteConfigScmIpRestrictionList extends cdktf.ComplexList {
+  public internalValue? : AppServiceSlotSiteConfigScmIpRestriction[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AppServiceSlotSiteConfigScmIpRestrictionOutputReference {
+    return new AppServiceSlotSiteConfigScmIpRestrictionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface AppServiceSlotSiteConfigCors {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot#allowed_origins AppServiceSlot#allowed_origins}
@@ -2345,9 +3183,9 @@ export class AppServiceSlotSiteConfigOutputReference extends cdktf.ComplexObject
       hasAnyValues = true;
       internalValueResult.http2Enabled = this._http2Enabled;
     }
-    if (this._ipRestriction !== undefined) {
+    if (this._ipRestriction?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.ipRestriction = this._ipRestriction;
+      internalValueResult.ipRestriction = this._ipRestriction?.internalValue;
     }
     if (this._javaContainer !== undefined) {
       hasAnyValues = true;
@@ -2397,9 +3235,9 @@ export class AppServiceSlotSiteConfigOutputReference extends cdktf.ComplexObject
       hasAnyValues = true;
       internalValueResult.remoteDebuggingVersion = this._remoteDebuggingVersion;
     }
-    if (this._scmIpRestriction !== undefined) {
+    if (this._scmIpRestriction?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.scmIpRestriction = this._scmIpRestriction;
+      internalValueResult.scmIpRestriction = this._scmIpRestriction?.internalValue;
     }
     if (this._scmType !== undefined) {
       hasAnyValues = true;
@@ -2445,7 +3283,7 @@ export class AppServiceSlotSiteConfigOutputReference extends cdktf.ComplexObject
       this._ftpsState = undefined;
       this._healthCheckPath = undefined;
       this._http2Enabled = undefined;
-      this._ipRestriction = undefined;
+      this._ipRestriction.internalValue = undefined;
       this._javaContainer = undefined;
       this._javaContainerVersion = undefined;
       this._javaVersion = undefined;
@@ -2458,7 +3296,7 @@ export class AppServiceSlotSiteConfigOutputReference extends cdktf.ComplexObject
       this._pythonVersion = undefined;
       this._remoteDebuggingEnabled = undefined;
       this._remoteDebuggingVersion = undefined;
-      this._scmIpRestriction = undefined;
+      this._scmIpRestriction.internalValue = undefined;
       this._scmType = undefined;
       this._scmUseMainIpRestriction = undefined;
       this._use32BitWorkerProcess = undefined;
@@ -2479,7 +3317,7 @@ export class AppServiceSlotSiteConfigOutputReference extends cdktf.ComplexObject
       this._ftpsState = value.ftpsState;
       this._healthCheckPath = value.healthCheckPath;
       this._http2Enabled = value.http2Enabled;
-      this._ipRestriction = value.ipRestriction;
+      this._ipRestriction.internalValue = value.ipRestriction;
       this._javaContainer = value.javaContainer;
       this._javaContainerVersion = value.javaContainerVersion;
       this._javaVersion = value.javaVersion;
@@ -2492,7 +3330,7 @@ export class AppServiceSlotSiteConfigOutputReference extends cdktf.ComplexObject
       this._pythonVersion = value.pythonVersion;
       this._remoteDebuggingEnabled = value.remoteDebuggingEnabled;
       this._remoteDebuggingVersion = value.remoteDebuggingVersion;
-      this._scmIpRestriction = value.scmIpRestriction;
+      this._scmIpRestriction.internalValue = value.scmIpRestriction;
       this._scmType = value.scmType;
       this._scmUseMainIpRestriction = value.scmUseMainIpRestriction;
       this._use32BitWorkerProcess = value.use32BitWorkerProcess;
@@ -2664,20 +3502,19 @@ export class AppServiceSlotSiteConfigOutputReference extends cdktf.ComplexObject
   }
 
   // ip_restriction - computed: true, optional: true, required: false
-  private _ipRestriction?: AppServiceSlotSiteConfigIpRestriction[] | cdktf.IResolvable; 
+  private _ipRestriction = new AppServiceSlotSiteConfigIpRestrictionList(this, "ip_restriction", false);
   public get ipRestriction() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('ip_restriction');
+    return this._ipRestriction;
   }
-  public set ipRestriction(value: AppServiceSlotSiteConfigIpRestriction[] | cdktf.IResolvable) {
-    this._ipRestriction = value;
+  public putIpRestriction(value: AppServiceSlotSiteConfigIpRestriction[] | cdktf.IResolvable) {
+    this._ipRestriction.internalValue = value;
   }
   public resetIpRestriction() {
-    this._ipRestriction = undefined;
+    this._ipRestriction.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get ipRestrictionInput() {
-    return this._ipRestriction;
+    return this._ipRestriction.internalValue;
   }
 
   // java_container - computed: false, optional: true, required: false
@@ -2873,20 +3710,19 @@ export class AppServiceSlotSiteConfigOutputReference extends cdktf.ComplexObject
   }
 
   // scm_ip_restriction - computed: true, optional: true, required: false
-  private _scmIpRestriction?: AppServiceSlotSiteConfigScmIpRestriction[] | cdktf.IResolvable; 
+  private _scmIpRestriction = new AppServiceSlotSiteConfigScmIpRestrictionList(this, "scm_ip_restriction", false);
   public get scmIpRestriction() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('scm_ip_restriction');
+    return this._scmIpRestriction;
   }
-  public set scmIpRestriction(value: AppServiceSlotSiteConfigScmIpRestriction[] | cdktf.IResolvable) {
-    this._scmIpRestriction = value;
+  public putScmIpRestriction(value: AppServiceSlotSiteConfigScmIpRestriction[] | cdktf.IResolvable) {
+    this._scmIpRestriction.internalValue = value;
   }
   public resetScmIpRestriction() {
-    this._scmIpRestriction = undefined;
+    this._scmIpRestriction.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get scmIpRestrictionInput() {
-    return this._scmIpRestriction;
+    return this._scmIpRestriction.internalValue;
   }
 
   // scm_type - computed: true, optional: true, required: false
@@ -3043,6 +3879,181 @@ export function appServiceSlotStorageAccountToTerraform(struct?: AppServiceSlotS
   }
 }
 
+export class AppServiceSlotStorageAccountOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AppServiceSlotStorageAccount | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._accessKey !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.accessKey = this._accessKey;
+    }
+    if (this._accountName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.accountName = this._accountName;
+    }
+    if (this._mountPath !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.mountPath = this._mountPath;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._shareName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.shareName = this._shareName;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppServiceSlotStorageAccount | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._accessKey = undefined;
+      this._accountName = undefined;
+      this._mountPath = undefined;
+      this._name = undefined;
+      this._shareName = undefined;
+      this._type = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._accessKey = value.accessKey;
+      this._accountName = value.accountName;
+      this._mountPath = value.mountPath;
+      this._name = value.name;
+      this._shareName = value.shareName;
+      this._type = value.type;
+    }
+  }
+
+  // access_key - computed: false, optional: false, required: true
+  private _accessKey?: string; 
+  public get accessKey() {
+    return this.getStringAttribute('access_key');
+  }
+  public set accessKey(value: string) {
+    this._accessKey = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get accessKeyInput() {
+    return this._accessKey;
+  }
+
+  // account_name - computed: false, optional: false, required: true
+  private _accountName?: string; 
+  public get accountName() {
+    return this.getStringAttribute('account_name');
+  }
+  public set accountName(value: string) {
+    this._accountName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get accountNameInput() {
+    return this._accountName;
+  }
+
+  // mount_path - computed: false, optional: true, required: false
+  private _mountPath?: string; 
+  public get mountPath() {
+    return this.getStringAttribute('mount_path');
+  }
+  public set mountPath(value: string) {
+    this._mountPath = value;
+  }
+  public resetMountPath() {
+    this._mountPath = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get mountPathInput() {
+    return this._mountPath;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // share_name - computed: false, optional: false, required: true
+  private _shareName?: string; 
+  public get shareName() {
+    return this.getStringAttribute('share_name');
+  }
+  public set shareName(value: string) {
+    this._shareName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get shareNameInput() {
+    return this._shareName;
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+}
+
+export class AppServiceSlotStorageAccountList extends cdktf.ComplexList {
+  public internalValue? : AppServiceSlotStorageAccount[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AppServiceSlotStorageAccountOutputReference {
+    return new AppServiceSlotStorageAccountOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface AppServiceSlotTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot#create AppServiceSlot#create}
@@ -3077,6 +4088,7 @@ export function appServiceSlotTimeoutsToTerraform(struct?: AppServiceSlotTimeout
 
 export class AppServiceSlotTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -3086,7 +4098,10 @@ export class AppServiceSlotTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): AppServiceSlotTimeouts | undefined {
+  public get internalValue(): AppServiceSlotTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -3108,16 +4123,22 @@ export class AppServiceSlotTimeoutsOutputReference extends cdktf.ComplexObject {
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: AppServiceSlotTimeouts | undefined) {
+  public set internalValue(value: AppServiceSlotTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -3230,17 +4251,18 @@ export class AppServiceSlot extends cdktf.TerraformResource {
     this._clientAffinityEnabled = config.clientAffinityEnabled;
     this._enabled = config.enabled;
     this._httpsOnly = config.httpsOnly;
+    this._id = config.id;
     this._keyVaultReferenceIdentityId = config.keyVaultReferenceIdentityId;
     this._location = config.location;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
     this._authSettings.internalValue = config.authSettings;
-    this._connectionString = config.connectionString;
+    this._connectionString.internalValue = config.connectionString;
     this._identity.internalValue = config.identity;
     this._logs.internalValue = config.logs;
     this._siteConfig.internalValue = config.siteConfig;
-    this._storageAccount = config.storageAccount;
+    this._storageAccount.internalValue = config.storageAccount;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -3344,8 +4366,19 @@ export class AppServiceSlot extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // key_vault_reference_identity_id - computed: true, optional: true, required: false
@@ -3442,20 +4475,19 @@ export class AppServiceSlot extends cdktf.TerraformResource {
   }
 
   // connection_string - computed: false, optional: true, required: false
-  private _connectionString?: AppServiceSlotConnectionString[] | cdktf.IResolvable; 
+  private _connectionString = new AppServiceSlotConnectionStringList(this, "connection_string", true);
   public get connectionString() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('connection_string')));
+    return this._connectionString;
   }
-  public set connectionString(value: AppServiceSlotConnectionString[] | cdktf.IResolvable) {
-    this._connectionString = value;
+  public putConnectionString(value: AppServiceSlotConnectionString[] | cdktf.IResolvable) {
+    this._connectionString.internalValue = value;
   }
   public resetConnectionString() {
-    this._connectionString = undefined;
+    this._connectionString.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get connectionStringInput() {
-    return this._connectionString;
+    return this._connectionString.internalValue;
   }
 
   // identity - computed: false, optional: true, required: false
@@ -3507,20 +4539,19 @@ export class AppServiceSlot extends cdktf.TerraformResource {
   }
 
   // storage_account - computed: false, optional: true, required: false
-  private _storageAccount?: AppServiceSlotStorageAccount[] | cdktf.IResolvable; 
+  private _storageAccount = new AppServiceSlotStorageAccountList(this, "storage_account", true);
   public get storageAccount() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('storage_account')));
+    return this._storageAccount;
   }
-  public set storageAccount(value: AppServiceSlotStorageAccount[] | cdktf.IResolvable) {
-    this._storageAccount = value;
+  public putStorageAccount(value: AppServiceSlotStorageAccount[] | cdktf.IResolvable) {
+    this._storageAccount.internalValue = value;
   }
   public resetStorageAccount() {
-    this._storageAccount = undefined;
+    this._storageAccount.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get storageAccountInput() {
-    return this._storageAccount;
+    return this._storageAccount.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -3551,17 +4582,18 @@ export class AppServiceSlot extends cdktf.TerraformResource {
       client_affinity_enabled: cdktf.booleanToTerraform(this._clientAffinityEnabled),
       enabled: cdktf.booleanToTerraform(this._enabled),
       https_only: cdktf.booleanToTerraform(this._httpsOnly),
+      id: cdktf.stringToTerraform(this._id),
       key_vault_reference_identity_id: cdktf.stringToTerraform(this._keyVaultReferenceIdentityId),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       auth_settings: appServiceSlotAuthSettingsToTerraform(this._authSettings.internalValue),
-      connection_string: cdktf.listMapper(appServiceSlotConnectionStringToTerraform)(this._connectionString),
+      connection_string: cdktf.listMapper(appServiceSlotConnectionStringToTerraform)(this._connectionString.internalValue),
       identity: appServiceSlotIdentityToTerraform(this._identity.internalValue),
       logs: appServiceSlotLogsToTerraform(this._logs.internalValue),
       site_config: appServiceSlotSiteConfigToTerraform(this._siteConfig.internalValue),
-      storage_account: cdktf.listMapper(appServiceSlotStorageAccountToTerraform)(this._storageAccount),
+      storage_account: cdktf.listMapper(appServiceSlotStorageAccountToTerraform)(this._storageAccount.internalValue),
       timeouts: appServiceSlotTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

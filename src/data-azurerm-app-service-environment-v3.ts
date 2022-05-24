@@ -8,6 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermAppServiceEnvironmentV3Config extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_environment_v3#id DataAzurermAppServiceEnvironmentV3#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_environment_v3#name DataAzurermAppServiceEnvironmentV3#name}
   */
   readonly name: string;
@@ -184,6 +191,7 @@ export function dataAzurermAppServiceEnvironmentV3TimeoutsToTerraform(struct?: D
 
 export class DataAzurermAppServiceEnvironmentV3TimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -193,7 +201,10 @@ export class DataAzurermAppServiceEnvironmentV3TimeoutsOutputReference extends c
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): DataAzurermAppServiceEnvironmentV3Timeouts | undefined {
+  public get internalValue(): DataAzurermAppServiceEnvironmentV3Timeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._read !== undefined) {
@@ -203,13 +214,19 @@ export class DataAzurermAppServiceEnvironmentV3TimeoutsOutputReference extends c
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: DataAzurermAppServiceEnvironmentV3Timeouts | undefined) {
+  public set internalValue(value: DataAzurermAppServiceEnvironmentV3Timeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._read = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._read = value.read;
     }
   }
@@ -265,6 +282,7 @@ export class DataAzurermAppServiceEnvironmentV3 extends cdktf.TerraformDataSourc
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._id = config.id;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._timeouts.internalValue = config.timeouts;
@@ -301,8 +319,19 @@ export class DataAzurermAppServiceEnvironmentV3 extends cdktf.TerraformDataSourc
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // inbound_network_dependencies - computed: true, optional: false, required: false
@@ -373,8 +402,9 @@ export class DataAzurermAppServiceEnvironmentV3 extends cdktf.TerraformDataSourc
   }
 
   // tags - computed: true, optional: false, required: false
-  public tags(key: string): string | cdktf.IResolvable {
-    return new cdktf.StringMap(this, 'tags').lookup(key);
+  private _tags = new cdktf.StringMap(this, "tags");
+  public get tags() {
+    return this._tags;
   }
 
   // windows_outbound_ip_addresses - computed: true, optional: false, required: false
@@ -409,6 +439,7 @@ export class DataAzurermAppServiceEnvironmentV3 extends cdktf.TerraformDataSourc
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       timeouts: dataAzurermAppServiceEnvironmentV3TimeoutsToTerraform(this._timeouts.internalValue),

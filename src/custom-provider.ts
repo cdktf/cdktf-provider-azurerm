@@ -8,6 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface CustomProviderConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/custom_provider#id CustomProvider#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/custom_provider#location CustomProvider#location}
   */
   readonly location: string;
@@ -70,6 +77,102 @@ export function customProviderActionToTerraform(struct?: CustomProviderAction | 
   }
 }
 
+export class CustomProviderActionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CustomProviderAction | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._endpoint !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.endpoint = this._endpoint;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CustomProviderAction | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._endpoint = undefined;
+      this._name = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._endpoint = value.endpoint;
+      this._name = value.name;
+    }
+  }
+
+  // endpoint - computed: false, optional: false, required: true
+  private _endpoint?: string; 
+  public get endpoint() {
+    return this.getStringAttribute('endpoint');
+  }
+  public set endpoint(value: string) {
+    this._endpoint = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get endpointInput() {
+    return this._endpoint;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+}
+
+export class CustomProviderActionList extends cdktf.ComplexList {
+  public internalValue? : CustomProviderAction[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CustomProviderActionOutputReference {
+    return new CustomProviderActionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CustomProviderResourceType {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/custom_provider#endpoint CustomProvider#endpoint}
@@ -97,6 +200,124 @@ export function customProviderResourceTypeToTerraform(struct?: CustomProviderRes
   }
 }
 
+export class CustomProviderResourceTypeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CustomProviderResourceType | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._endpoint !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.endpoint = this._endpoint;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._routingType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.routingType = this._routingType;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CustomProviderResourceType | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._endpoint = undefined;
+      this._name = undefined;
+      this._routingType = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._endpoint = value.endpoint;
+      this._name = value.name;
+      this._routingType = value.routingType;
+    }
+  }
+
+  // endpoint - computed: false, optional: false, required: true
+  private _endpoint?: string; 
+  public get endpoint() {
+    return this.getStringAttribute('endpoint');
+  }
+  public set endpoint(value: string) {
+    this._endpoint = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get endpointInput() {
+    return this._endpoint;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // routing_type - computed: false, optional: true, required: false
+  private _routingType?: string; 
+  public get routingType() {
+    return this.getStringAttribute('routing_type');
+  }
+  public set routingType(value: string) {
+    this._routingType = value;
+  }
+  public resetRoutingType() {
+    this._routingType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get routingTypeInput() {
+    return this._routingType;
+  }
+}
+
+export class CustomProviderResourceTypeList extends cdktf.ComplexList {
+  public internalValue? : CustomProviderResourceType[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CustomProviderResourceTypeOutputReference {
+    return new CustomProviderResourceTypeOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CustomProviderTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/custom_provider#create CustomProvider#create}
@@ -131,6 +352,7 @@ export function customProviderTimeoutsToTerraform(struct?: CustomProviderTimeout
 
 export class CustomProviderTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -140,7 +362,10 @@ export class CustomProviderTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): CustomProviderTimeouts | undefined {
+  public get internalValue(): CustomProviderTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -162,16 +387,22 @@ export class CustomProviderTimeoutsOutputReference extends cdktf.ComplexObject {
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: CustomProviderTimeouts | undefined) {
+  public set internalValue(value: CustomProviderTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -260,6 +491,83 @@ export function customProviderValidationToTerraform(struct?: CustomProviderValid
   }
 }
 
+export class CustomProviderValidationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CustomProviderValidation | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._specification !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.specification = this._specification;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CustomProviderValidation | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._specification = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._specification = value.specification;
+    }
+  }
+
+  // specification - computed: false, optional: false, required: true
+  private _specification?: string; 
+  public get specification() {
+    return this.getStringAttribute('specification');
+  }
+  public set specification(value: string) {
+    this._specification = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get specificationInput() {
+    return this._specification;
+  }
+}
+
+export class CustomProviderValidationList extends cdktf.ComplexList {
+  public internalValue? : CustomProviderValidation[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CustomProviderValidationOutputReference {
+    return new CustomProviderValidationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/custom_provider azurerm_custom_provider}
@@ -295,14 +603,15 @@ export class CustomProvider extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._id = config.id;
     this._location = config.location;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
-    this._action = config.action;
-    this._resourceType = config.resourceType;
+    this._action.internalValue = config.action;
+    this._resourceType.internalValue = config.resourceType;
     this._timeouts.internalValue = config.timeouts;
-    this._validation = config.validation;
+    this._validation.internalValue = config.validation;
   }
 
   // ==========
@@ -310,8 +619,19 @@ export class CustomProvider extends cdktf.TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // location - computed: false, optional: false, required: true
@@ -370,37 +690,35 @@ export class CustomProvider extends cdktf.TerraformResource {
   }
 
   // action - computed: false, optional: true, required: false
-  private _action?: CustomProviderAction[] | cdktf.IResolvable; 
+  private _action = new CustomProviderActionList(this, "action", true);
   public get action() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('action')));
+    return this._action;
   }
-  public set action(value: CustomProviderAction[] | cdktf.IResolvable) {
-    this._action = value;
+  public putAction(value: CustomProviderAction[] | cdktf.IResolvable) {
+    this._action.internalValue = value;
   }
   public resetAction() {
-    this._action = undefined;
+    this._action.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get actionInput() {
-    return this._action;
+    return this._action.internalValue;
   }
 
   // resource_type - computed: false, optional: true, required: false
-  private _resourceType?: CustomProviderResourceType[] | cdktf.IResolvable; 
+  private _resourceType = new CustomProviderResourceTypeList(this, "resource_type", true);
   public get resourceType() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('resource_type')));
+    return this._resourceType;
   }
-  public set resourceType(value: CustomProviderResourceType[] | cdktf.IResolvable) {
-    this._resourceType = value;
+  public putResourceType(value: CustomProviderResourceType[] | cdktf.IResolvable) {
+    this._resourceType.internalValue = value;
   }
   public resetResourceType() {
-    this._resourceType = undefined;
+    this._resourceType.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get resourceTypeInput() {
-    return this._resourceType;
+    return this._resourceType.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -420,20 +738,19 @@ export class CustomProvider extends cdktf.TerraformResource {
   }
 
   // validation - computed: false, optional: true, required: false
-  private _validation?: CustomProviderValidation[] | cdktf.IResolvable; 
+  private _validation = new CustomProviderValidationList(this, "validation", true);
   public get validation() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('validation')));
+    return this._validation;
   }
-  public set validation(value: CustomProviderValidation[] | cdktf.IResolvable) {
-    this._validation = value;
+  public putValidation(value: CustomProviderValidation[] | cdktf.IResolvable) {
+    this._validation.internalValue = value;
   }
   public resetValidation() {
-    this._validation = undefined;
+    this._validation.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get validationInput() {
-    return this._validation;
+    return this._validation.internalValue;
   }
 
   // =========
@@ -442,14 +759,15 @@ export class CustomProvider extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
-      action: cdktf.listMapper(customProviderActionToTerraform)(this._action),
-      resource_type: cdktf.listMapper(customProviderResourceTypeToTerraform)(this._resourceType),
+      action: cdktf.listMapper(customProviderActionToTerraform)(this._action.internalValue),
+      resource_type: cdktf.listMapper(customProviderResourceTypeToTerraform)(this._resourceType.internalValue),
       timeouts: customProviderTimeoutsToTerraform(this._timeouts.internalValue),
-      validation: cdktf.listMapper(customProviderValidationToTerraform)(this._validation),
+      validation: cdktf.listMapper(customProviderValidationToTerraform)(this._validation.internalValue),
     };
   }
 }

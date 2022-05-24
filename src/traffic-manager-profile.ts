@@ -8,6 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface TrafficManagerProfileConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile#id TrafficManagerProfile#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile#max_return TrafficManagerProfile#max_return}
   */
   readonly maxReturn?: number;
@@ -162,6 +169,102 @@ export function trafficManagerProfileMonitorConfigCustomHeaderToTerraform(struct
   }
 }
 
+export class TrafficManagerProfileMonitorConfigCustomHeaderOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): TrafficManagerProfileMonitorConfigCustomHeader | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TrafficManagerProfileMonitorConfigCustomHeader | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._value = value.value;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // value - computed: false, optional: false, required: true
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class TrafficManagerProfileMonitorConfigCustomHeaderList extends cdktf.ComplexList {
+  public internalValue? : TrafficManagerProfileMonitorConfigCustomHeader[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): TrafficManagerProfileMonitorConfigCustomHeaderOutputReference {
+    return new TrafficManagerProfileMonitorConfigCustomHeaderOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface TrafficManagerProfileMonitorConfig {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile#expected_status_code_ranges TrafficManagerProfile#expected_status_code_ranges}
@@ -258,9 +361,9 @@ export class TrafficManagerProfileMonitorConfigOutputReference extends cdktf.Com
       hasAnyValues = true;
       internalValueResult.toleratedNumberOfFailures = this._toleratedNumberOfFailures;
     }
-    if (this._customHeader !== undefined) {
+    if (this._customHeader?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.customHeader = this._customHeader;
+      internalValueResult.customHeader = this._customHeader?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -275,7 +378,7 @@ export class TrafficManagerProfileMonitorConfigOutputReference extends cdktf.Com
       this._protocol = undefined;
       this._timeoutInSeconds = undefined;
       this._toleratedNumberOfFailures = undefined;
-      this._customHeader = undefined;
+      this._customHeader.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
@@ -286,7 +389,7 @@ export class TrafficManagerProfileMonitorConfigOutputReference extends cdktf.Com
       this._protocol = value.protocol;
       this._timeoutInSeconds = value.timeoutInSeconds;
       this._toleratedNumberOfFailures = value.toleratedNumberOfFailures;
-      this._customHeader = value.customHeader;
+      this._customHeader.internalValue = value.customHeader;
     }
   }
 
@@ -397,20 +500,19 @@ export class TrafficManagerProfileMonitorConfigOutputReference extends cdktf.Com
   }
 
   // custom_header - computed: false, optional: true, required: false
-  private _customHeader?: TrafficManagerProfileMonitorConfigCustomHeader[] | cdktf.IResolvable; 
+  private _customHeader = new TrafficManagerProfileMonitorConfigCustomHeaderList(this, "custom_header", false);
   public get customHeader() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('custom_header');
+    return this._customHeader;
   }
-  public set customHeader(value: TrafficManagerProfileMonitorConfigCustomHeader[] | cdktf.IResolvable) {
-    this._customHeader = value;
+  public putCustomHeader(value: TrafficManagerProfileMonitorConfigCustomHeader[] | cdktf.IResolvable) {
+    this._customHeader.internalValue = value;
   }
   public resetCustomHeader() {
-    this._customHeader = undefined;
+    this._customHeader.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get customHeaderInput() {
-    return this._customHeader;
+    return this._customHeader.internalValue;
   }
 }
 export interface TrafficManagerProfileTimeouts {
@@ -447,6 +549,7 @@ export function trafficManagerProfileTimeoutsToTerraform(struct?: TrafficManager
 
 export class TrafficManagerProfileTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -456,7 +559,10 @@ export class TrafficManagerProfileTimeoutsOutputReference extends cdktf.ComplexO
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): TrafficManagerProfileTimeouts | undefined {
+  public get internalValue(): TrafficManagerProfileTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -478,16 +584,22 @@ export class TrafficManagerProfileTimeoutsOutputReference extends cdktf.ComplexO
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: TrafficManagerProfileTimeouts | undefined) {
+  public set internalValue(value: TrafficManagerProfileTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -594,6 +706,7 @@ export class TrafficManagerProfile extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._id = config.id;
     this._maxReturn = config.maxReturn;
     this._name = config.name;
     this._profileStatus = config.profileStatus;
@@ -616,8 +729,19 @@ export class TrafficManagerProfile extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // max_return - computed: false, optional: true, required: false
@@ -771,6 +895,7 @@ export class TrafficManagerProfile extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      id: cdktf.stringToTerraform(this._id),
       max_return: cdktf.numberToTerraform(this._maxReturn),
       name: cdktf.stringToTerraform(this._name),
       profile_status: cdktf.stringToTerraform(this._profileStatus),

@@ -20,6 +20,13 @@ export interface ExpressRouteCircuitConnectionConfig extends cdktf.TerraformMeta
   */
   readonly authorizationKey?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_connection#id ExpressRouteCircuitConnection#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_connection#name ExpressRouteCircuitConnection#name}
   */
   readonly name: string;
@@ -72,6 +79,7 @@ export function expressRouteCircuitConnectionTimeoutsToTerraform(struct?: Expres
 
 export class ExpressRouteCircuitConnectionTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -81,7 +89,10 @@ export class ExpressRouteCircuitConnectionTimeoutsOutputReference extends cdktf.
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): ExpressRouteCircuitConnectionTimeouts | undefined {
+  public get internalValue(): ExpressRouteCircuitConnectionTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -103,16 +114,22 @@ export class ExpressRouteCircuitConnectionTimeoutsOutputReference extends cdktf.
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: ExpressRouteCircuitConnectionTimeouts | undefined) {
+  public set internalValue(value: ExpressRouteCircuitConnectionTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -222,6 +239,7 @@ export class ExpressRouteCircuitConnection extends cdktf.TerraformResource {
     this._addressPrefixIpv4 = config.addressPrefixIpv4;
     this._addressPrefixIpv6 = config.addressPrefixIpv6;
     this._authorizationKey = config.authorizationKey;
+    this._id = config.id;
     this._name = config.name;
     this._peerPeeringId = config.peerPeeringId;
     this._peeringId = config.peeringId;
@@ -278,8 +296,19 @@ export class ExpressRouteCircuitConnection extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // name - computed: false, optional: false, required: true
@@ -346,6 +375,7 @@ export class ExpressRouteCircuitConnection extends cdktf.TerraformResource {
       address_prefix_ipv4: cdktf.stringToTerraform(this._addressPrefixIpv4),
       address_prefix_ipv6: cdktf.stringToTerraform(this._addressPrefixIpv6),
       authorization_key: cdktf.stringToTerraform(this._authorizationKey),
+      id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       peer_peering_id: cdktf.stringToTerraform(this._peerPeeringId),
       peering_id: cdktf.stringToTerraform(this._peeringId),

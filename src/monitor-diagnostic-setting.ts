@@ -16,6 +16,13 @@ export interface MonitorDiagnosticSettingConfig extends cdktf.TerraformMetaArgum
   */
   readonly eventhubName?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_diagnostic_setting#id MonitorDiagnosticSetting#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_diagnostic_setting#log_analytics_destination_type MonitorDiagnosticSetting#log_analytics_destination_type}
   */
   readonly logAnalyticsDestinationType?: string;
@@ -172,6 +179,127 @@ export function monitorDiagnosticSettingLogToTerraform(struct?: MonitorDiagnosti
   }
 }
 
+export class MonitorDiagnosticSettingLogOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MonitorDiagnosticSettingLog | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._category !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.category = this._category;
+    }
+    if (this._enabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._retentionPolicy?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.retentionPolicy = this._retentionPolicy?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitorDiagnosticSettingLog | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._category = undefined;
+      this._enabled = undefined;
+      this._retentionPolicy.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._category = value.category;
+      this._enabled = value.enabled;
+      this._retentionPolicy.internalValue = value.retentionPolicy;
+    }
+  }
+
+  // category - computed: false, optional: false, required: true
+  private _category?: string; 
+  public get category() {
+    return this.getStringAttribute('category');
+  }
+  public set category(value: string) {
+    this._category = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get categoryInput() {
+    return this._category;
+  }
+
+  // enabled - computed: false, optional: true, required: false
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+
+  // retention_policy - computed: false, optional: true, required: false
+  private _retentionPolicy = new MonitorDiagnosticSettingLogRetentionPolicyOutputReference(this, "retention_policy");
+  public get retentionPolicy() {
+    return this._retentionPolicy;
+  }
+  public putRetentionPolicy(value: MonitorDiagnosticSettingLogRetentionPolicy) {
+    this._retentionPolicy.internalValue = value;
+  }
+  public resetRetentionPolicy() {
+    this._retentionPolicy.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get retentionPolicyInput() {
+    return this._retentionPolicy.internalValue;
+  }
+}
+
+export class MonitorDiagnosticSettingLogList extends cdktf.ComplexList {
+  public internalValue? : MonitorDiagnosticSettingLog[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MonitorDiagnosticSettingLogOutputReference {
+    return new MonitorDiagnosticSettingLogOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface MonitorDiagnosticSettingMetricRetentionPolicy {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_diagnostic_setting#days MonitorDiagnosticSetting#days}
@@ -290,6 +418,127 @@ export function monitorDiagnosticSettingMetricToTerraform(struct?: MonitorDiagno
   }
 }
 
+export class MonitorDiagnosticSettingMetricOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MonitorDiagnosticSettingMetric | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._category !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.category = this._category;
+    }
+    if (this._enabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._retentionPolicy?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.retentionPolicy = this._retentionPolicy?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitorDiagnosticSettingMetric | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._category = undefined;
+      this._enabled = undefined;
+      this._retentionPolicy.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._category = value.category;
+      this._enabled = value.enabled;
+      this._retentionPolicy.internalValue = value.retentionPolicy;
+    }
+  }
+
+  // category - computed: false, optional: false, required: true
+  private _category?: string; 
+  public get category() {
+    return this.getStringAttribute('category');
+  }
+  public set category(value: string) {
+    this._category = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get categoryInput() {
+    return this._category;
+  }
+
+  // enabled - computed: false, optional: true, required: false
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+
+  // retention_policy - computed: false, optional: true, required: false
+  private _retentionPolicy = new MonitorDiagnosticSettingMetricRetentionPolicyOutputReference(this, "retention_policy");
+  public get retentionPolicy() {
+    return this._retentionPolicy;
+  }
+  public putRetentionPolicy(value: MonitorDiagnosticSettingMetricRetentionPolicy) {
+    this._retentionPolicy.internalValue = value;
+  }
+  public resetRetentionPolicy() {
+    this._retentionPolicy.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get retentionPolicyInput() {
+    return this._retentionPolicy.internalValue;
+  }
+}
+
+export class MonitorDiagnosticSettingMetricList extends cdktf.ComplexList {
+  public internalValue? : MonitorDiagnosticSettingMetric[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MonitorDiagnosticSettingMetricOutputReference {
+    return new MonitorDiagnosticSettingMetricOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface MonitorDiagnosticSettingTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_diagnostic_setting#create MonitorDiagnosticSetting#create}
@@ -324,6 +573,7 @@ export function monitorDiagnosticSettingTimeoutsToTerraform(struct?: MonitorDiag
 
 export class MonitorDiagnosticSettingTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -333,7 +583,10 @@ export class MonitorDiagnosticSettingTimeoutsOutputReference extends cdktf.Compl
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): MonitorDiagnosticSettingTimeouts | undefined {
+  public get internalValue(): MonitorDiagnosticSettingTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -355,16 +608,22 @@ export class MonitorDiagnosticSettingTimeoutsOutputReference extends cdktf.Compl
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: MonitorDiagnosticSettingTimeouts | undefined) {
+  public set internalValue(value: MonitorDiagnosticSettingTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -473,13 +732,14 @@ export class MonitorDiagnosticSetting extends cdktf.TerraformResource {
     });
     this._eventhubAuthorizationRuleId = config.eventhubAuthorizationRuleId;
     this._eventhubName = config.eventhubName;
+    this._id = config.id;
     this._logAnalyticsDestinationType = config.logAnalyticsDestinationType;
     this._logAnalyticsWorkspaceId = config.logAnalyticsWorkspaceId;
     this._name = config.name;
     this._storageAccountId = config.storageAccountId;
     this._targetResourceId = config.targetResourceId;
-    this._log = config.log;
-    this._metric = config.metric;
+    this._log.internalValue = config.log;
+    this._metric.internalValue = config.metric;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -520,8 +780,19 @@ export class MonitorDiagnosticSetting extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // log_analytics_destination_type - computed: false, optional: true, required: false
@@ -599,37 +870,35 @@ export class MonitorDiagnosticSetting extends cdktf.TerraformResource {
   }
 
   // log - computed: false, optional: true, required: false
-  private _log?: MonitorDiagnosticSettingLog[] | cdktf.IResolvable; 
+  private _log = new MonitorDiagnosticSettingLogList(this, "log", true);
   public get log() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('log')));
+    return this._log;
   }
-  public set log(value: MonitorDiagnosticSettingLog[] | cdktf.IResolvable) {
-    this._log = value;
+  public putLog(value: MonitorDiagnosticSettingLog[] | cdktf.IResolvable) {
+    this._log.internalValue = value;
   }
   public resetLog() {
-    this._log = undefined;
+    this._log.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get logInput() {
-    return this._log;
+    return this._log.internalValue;
   }
 
   // metric - computed: false, optional: true, required: false
-  private _metric?: MonitorDiagnosticSettingMetric[] | cdktf.IResolvable; 
+  private _metric = new MonitorDiagnosticSettingMetricList(this, "metric", true);
   public get metric() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('metric')));
+    return this._metric;
   }
-  public set metric(value: MonitorDiagnosticSettingMetric[] | cdktf.IResolvable) {
-    this._metric = value;
+  public putMetric(value: MonitorDiagnosticSettingMetric[] | cdktf.IResolvable) {
+    this._metric.internalValue = value;
   }
   public resetMetric() {
-    this._metric = undefined;
+    this._metric.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get metricInput() {
-    return this._metric;
+    return this._metric.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -656,13 +925,14 @@ export class MonitorDiagnosticSetting extends cdktf.TerraformResource {
     return {
       eventhub_authorization_rule_id: cdktf.stringToTerraform(this._eventhubAuthorizationRuleId),
       eventhub_name: cdktf.stringToTerraform(this._eventhubName),
+      id: cdktf.stringToTerraform(this._id),
       log_analytics_destination_type: cdktf.stringToTerraform(this._logAnalyticsDestinationType),
       log_analytics_workspace_id: cdktf.stringToTerraform(this._logAnalyticsWorkspaceId),
       name: cdktf.stringToTerraform(this._name),
       storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
       target_resource_id: cdktf.stringToTerraform(this._targetResourceId),
-      log: cdktf.listMapper(monitorDiagnosticSettingLogToTerraform)(this._log),
-      metric: cdktf.listMapper(monitorDiagnosticSettingMetricToTerraform)(this._metric),
+      log: cdktf.listMapper(monitorDiagnosticSettingLogToTerraform)(this._log.internalValue),
+      metric: cdktf.listMapper(monitorDiagnosticSettingMetricToTerraform)(this._metric.internalValue),
       timeouts: monitorDiagnosticSettingTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

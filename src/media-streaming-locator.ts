@@ -24,6 +24,13 @@ export interface MediaStreamingLocatorConfig extends cdktf.TerraformMetaArgument
   */
   readonly endTime?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_locator#id MediaStreamingLocator#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_locator#media_services_account_name MediaStreamingLocator#media_services_account_name}
   */
   readonly mediaServicesAccountName: string;
@@ -97,6 +104,174 @@ export function mediaStreamingLocatorContentKeyToTerraform(struct?: MediaStreami
   }
 }
 
+export class MediaStreamingLocatorContentKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MediaStreamingLocatorContentKey | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._contentKeyId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.contentKeyId = this._contentKeyId;
+    }
+    if (this._labelReferenceInStreamingPolicy !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.labelReferenceInStreamingPolicy = this._labelReferenceInStreamingPolicy;
+    }
+    if (this._policyName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.policyName = this._policyName;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaStreamingLocatorContentKey | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._contentKeyId = undefined;
+      this._labelReferenceInStreamingPolicy = undefined;
+      this._policyName = undefined;
+      this._type = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._contentKeyId = value.contentKeyId;
+      this._labelReferenceInStreamingPolicy = value.labelReferenceInStreamingPolicy;
+      this._policyName = value.policyName;
+      this._type = value.type;
+      this._value = value.value;
+    }
+  }
+
+  // content_key_id - computed: false, optional: true, required: false
+  private _contentKeyId?: string; 
+  public get contentKeyId() {
+    return this.getStringAttribute('content_key_id');
+  }
+  public set contentKeyId(value: string) {
+    this._contentKeyId = value;
+  }
+  public resetContentKeyId() {
+    this._contentKeyId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get contentKeyIdInput() {
+    return this._contentKeyId;
+  }
+
+  // label_reference_in_streaming_policy - computed: false, optional: true, required: false
+  private _labelReferenceInStreamingPolicy?: string; 
+  public get labelReferenceInStreamingPolicy() {
+    return this.getStringAttribute('label_reference_in_streaming_policy');
+  }
+  public set labelReferenceInStreamingPolicy(value: string) {
+    this._labelReferenceInStreamingPolicy = value;
+  }
+  public resetLabelReferenceInStreamingPolicy() {
+    this._labelReferenceInStreamingPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelReferenceInStreamingPolicyInput() {
+    return this._labelReferenceInStreamingPolicy;
+  }
+
+  // policy_name - computed: false, optional: true, required: false
+  private _policyName?: string; 
+  public get policyName() {
+    return this.getStringAttribute('policy_name');
+  }
+  public set policyName(value: string) {
+    this._policyName = value;
+  }
+  public resetPolicyName() {
+    this._policyName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get policyNameInput() {
+    return this._policyName;
+  }
+
+  // type - computed: false, optional: true, required: false
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  public resetType() {
+    this._type = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+
+  // value - computed: false, optional: true, required: false
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  public resetValue() {
+    this._value = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class MediaStreamingLocatorContentKeyList extends cdktf.ComplexList {
+  public internalValue? : MediaStreamingLocatorContentKey[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MediaStreamingLocatorContentKeyOutputReference {
+    return new MediaStreamingLocatorContentKeyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface MediaStreamingLocatorTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_locator#create MediaStreamingLocator#create}
@@ -126,6 +301,7 @@ export function mediaStreamingLocatorTimeoutsToTerraform(struct?: MediaStreaming
 
 export class MediaStreamingLocatorTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -135,7 +311,10 @@ export class MediaStreamingLocatorTimeoutsOutputReference extends cdktf.ComplexO
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): MediaStreamingLocatorTimeouts | undefined {
+  public get internalValue(): MediaStreamingLocatorTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -153,15 +332,21 @@ export class MediaStreamingLocatorTimeoutsOutputReference extends cdktf.ComplexO
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: MediaStreamingLocatorTimeouts | undefined) {
+  public set internalValue(value: MediaStreamingLocatorTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -255,13 +440,14 @@ export class MediaStreamingLocator extends cdktf.TerraformResource {
     this._assetName = config.assetName;
     this._defaultContentKeyPolicyName = config.defaultContentKeyPolicyName;
     this._endTime = config.endTime;
+    this._id = config.id;
     this._mediaServicesAccountName = config.mediaServicesAccountName;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._startTime = config.startTime;
     this._streamingLocatorId = config.streamingLocatorId;
     this._streamingPolicyName = config.streamingPolicyName;
-    this._contentKey = config.contentKey;
+    this._contentKey.internalValue = config.contentKey;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -331,8 +517,19 @@ export class MediaStreamingLocator extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // media_services_account_name - computed: false, optional: false, required: true
@@ -420,20 +617,19 @@ export class MediaStreamingLocator extends cdktf.TerraformResource {
   }
 
   // content_key - computed: false, optional: true, required: false
-  private _contentKey?: MediaStreamingLocatorContentKey[] | cdktf.IResolvable; 
+  private _contentKey = new MediaStreamingLocatorContentKeyList(this, "content_key", false);
   public get contentKey() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('content_key');
+    return this._contentKey;
   }
-  public set contentKey(value: MediaStreamingLocatorContentKey[] | cdktf.IResolvable) {
-    this._contentKey = value;
+  public putContentKey(value: MediaStreamingLocatorContentKey[] | cdktf.IResolvable) {
+    this._contentKey.internalValue = value;
   }
   public resetContentKey() {
-    this._contentKey = undefined;
+    this._contentKey.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get contentKeyInput() {
-    return this._contentKey;
+    return this._contentKey.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -462,13 +658,14 @@ export class MediaStreamingLocator extends cdktf.TerraformResource {
       asset_name: cdktf.stringToTerraform(this._assetName),
       default_content_key_policy_name: cdktf.stringToTerraform(this._defaultContentKeyPolicyName),
       end_time: cdktf.stringToTerraform(this._endTime),
+      id: cdktf.stringToTerraform(this._id),
       media_services_account_name: cdktf.stringToTerraform(this._mediaServicesAccountName),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       start_time: cdktf.stringToTerraform(this._startTime),
       streaming_locator_id: cdktf.stringToTerraform(this._streamingLocatorId),
       streaming_policy_name: cdktf.stringToTerraform(this._streamingPolicyName),
-      content_key: cdktf.listMapper(mediaStreamingLocatorContentKeyToTerraform)(this._contentKey),
+      content_key: cdktf.listMapper(mediaStreamingLocatorContentKeyToTerraform)(this._contentKey.internalValue),
       timeouts: mediaStreamingLocatorTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

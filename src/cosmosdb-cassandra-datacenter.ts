@@ -24,6 +24,13 @@ export interface CosmosdbCassandraDatacenterConfig extends cdktf.TerraformMetaAr
   */
   readonly diskCount?: number;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_datacenter#id CosmosdbCassandraDatacenter#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_datacenter#location CosmosdbCassandraDatacenter#location}
   */
   readonly location: string;
@@ -80,6 +87,7 @@ export function cosmosdbCassandraDatacenterTimeoutsToTerraform(struct?: Cosmosdb
 
 export class CosmosdbCassandraDatacenterTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -89,7 +97,10 @@ export class CosmosdbCassandraDatacenterTimeoutsOutputReference extends cdktf.Co
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): CosmosdbCassandraDatacenterTimeouts | undefined {
+  public get internalValue(): CosmosdbCassandraDatacenterTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -111,16 +122,22 @@ export class CosmosdbCassandraDatacenterTimeoutsOutputReference extends cdktf.Co
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: CosmosdbCassandraDatacenterTimeouts | undefined) {
+  public set internalValue(value: CosmosdbCassandraDatacenterTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -231,6 +248,7 @@ export class CosmosdbCassandraDatacenter extends cdktf.TerraformResource {
     this._cassandraClusterId = config.cassandraClusterId;
     this._delegatedManagementSubnetId = config.delegatedManagementSubnetId;
     this._diskCount = config.diskCount;
+    this._id = config.id;
     this._location = config.location;
     this._name = config.name;
     this._nodeCount = config.nodeCount;
@@ -301,8 +319,19 @@ export class CosmosdbCassandraDatacenter extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // location - computed: false, optional: false, required: true
@@ -389,6 +418,7 @@ export class CosmosdbCassandraDatacenter extends cdktf.TerraformResource {
       cassandra_cluster_id: cdktf.stringToTerraform(this._cassandraClusterId),
       delegated_management_subnet_id: cdktf.stringToTerraform(this._delegatedManagementSubnetId),
       disk_count: cdktf.numberToTerraform(this._diskCount),
+      id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       node_count: cdktf.numberToTerraform(this._nodeCount),

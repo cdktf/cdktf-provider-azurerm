@@ -16,6 +16,13 @@ export interface FirewallConfig extends cdktf.TerraformMetaArguments {
   */
   readonly firewallPolicyId?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall#id Firewall#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall#location Firewall#location}
   */
   readonly location: string;
@@ -103,6 +110,129 @@ export function firewallIpConfigurationToTerraform(struct?: FirewallIpConfigurat
   }
 }
 
+export class FirewallIpConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): FirewallIpConfiguration | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._publicIpAddressId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.publicIpAddressId = this._publicIpAddressId;
+    }
+    if (this._subnetId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.subnetId = this._subnetId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: FirewallIpConfiguration | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._publicIpAddressId = undefined;
+      this._subnetId = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._publicIpAddressId = value.publicIpAddressId;
+      this._subnetId = value.subnetId;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // private_ip_address - computed: true, optional: false, required: false
+  public get privateIpAddress() {
+    return this.getStringAttribute('private_ip_address');
+  }
+
+  // public_ip_address_id - computed: false, optional: false, required: true
+  private _publicIpAddressId?: string; 
+  public get publicIpAddressId() {
+    return this.getStringAttribute('public_ip_address_id');
+  }
+  public set publicIpAddressId(value: string) {
+    this._publicIpAddressId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicIpAddressIdInput() {
+    return this._publicIpAddressId;
+  }
+
+  // subnet_id - computed: false, optional: true, required: false
+  private _subnetId?: string; 
+  public get subnetId() {
+    return this.getStringAttribute('subnet_id');
+  }
+  public set subnetId(value: string) {
+    this._subnetId = value;
+  }
+  public resetSubnetId() {
+    this._subnetId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetIdInput() {
+    return this._subnetId;
+  }
+}
+
+export class FirewallIpConfigurationList extends cdktf.ComplexList {
+  public internalValue? : FirewallIpConfiguration[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): FirewallIpConfigurationOutputReference {
+    return new FirewallIpConfigurationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface FirewallManagementIpConfiguration {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall#name Firewall#name}
@@ -252,6 +382,7 @@ export function firewallTimeoutsToTerraform(struct?: FirewallTimeoutsOutputRefer
 
 export class FirewallTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -261,7 +392,10 @@ export class FirewallTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): FirewallTimeouts | undefined {
+  public get internalValue(): FirewallTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -283,16 +417,22 @@ export class FirewallTimeoutsOutputReference extends cdktf.ComplexObject {
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: FirewallTimeouts | undefined) {
+  public set internalValue(value: FirewallTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -500,6 +640,7 @@ export class Firewall extends cdktf.TerraformResource {
     });
     this._dnsServers = config.dnsServers;
     this._firewallPolicyId = config.firewallPolicyId;
+    this._id = config.id;
     this._location = config.location;
     this._name = config.name;
     this._privateIpRanges = config.privateIpRanges;
@@ -509,7 +650,7 @@ export class Firewall extends cdktf.TerraformResource {
     this._tags = config.tags;
     this._threatIntelMode = config.threatIntelMode;
     this._zones = config.zones;
-    this._ipConfiguration = config.ipConfiguration;
+    this._ipConfiguration.internalValue = config.ipConfiguration;
     this._managementIpConfiguration.internalValue = config.managementIpConfiguration;
     this._timeouts.internalValue = config.timeouts;
     this._virtualHub.internalValue = config.virtualHub;
@@ -552,8 +693,19 @@ export class Firewall extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // location - computed: false, optional: false, required: true
@@ -692,20 +844,19 @@ export class Firewall extends cdktf.TerraformResource {
   }
 
   // ip_configuration - computed: false, optional: true, required: false
-  private _ipConfiguration?: FirewallIpConfiguration[] | cdktf.IResolvable; 
+  private _ipConfiguration = new FirewallIpConfigurationList(this, "ip_configuration", false);
   public get ipConfiguration() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('ip_configuration');
+    return this._ipConfiguration;
   }
-  public set ipConfiguration(value: FirewallIpConfiguration[] | cdktf.IResolvable) {
-    this._ipConfiguration = value;
+  public putIpConfiguration(value: FirewallIpConfiguration[] | cdktf.IResolvable) {
+    this._ipConfiguration.internalValue = value;
   }
   public resetIpConfiguration() {
-    this._ipConfiguration = undefined;
+    this._ipConfiguration.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get ipConfigurationInput() {
-    return this._ipConfiguration;
+    return this._ipConfiguration.internalValue;
   }
 
   // management_ip_configuration - computed: false, optional: true, required: false
@@ -764,6 +915,7 @@ export class Firewall extends cdktf.TerraformResource {
     return {
       dns_servers: cdktf.listMapper(cdktf.stringToTerraform)(this._dnsServers),
       firewall_policy_id: cdktf.stringToTerraform(this._firewallPolicyId),
+      id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       private_ip_ranges: cdktf.listMapper(cdktf.stringToTerraform)(this._privateIpRanges),
@@ -773,7 +925,7 @@ export class Firewall extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       threat_intel_mode: cdktf.stringToTerraform(this._threatIntelMode),
       zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),
-      ip_configuration: cdktf.listMapper(firewallIpConfigurationToTerraform)(this._ipConfiguration),
+      ip_configuration: cdktf.listMapper(firewallIpConfigurationToTerraform)(this._ipConfiguration.internalValue),
       management_ip_configuration: firewallManagementIpConfigurationToTerraform(this._managementIpConfiguration.internalValue),
       timeouts: firewallTimeoutsToTerraform(this._timeouts.internalValue),
       virtual_hub: firewallVirtualHubToTerraform(this._virtualHub.internalValue),

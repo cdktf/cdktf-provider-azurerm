@@ -16,6 +16,13 @@ export interface FrontdoorRulesEngineConfig extends cdktf.TerraformMetaArguments
   */
   readonly frontdoorName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_rules_engine#id FrontdoorRulesEngine#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_rules_engine#name FrontdoorRulesEngine#name}
   */
   readonly name: string;
@@ -63,6 +70,130 @@ export function frontdoorRulesEngineRuleActionRequestHeaderToTerraform(struct?: 
   }
 }
 
+export class FrontdoorRulesEngineRuleActionRequestHeaderOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): FrontdoorRulesEngineRuleActionRequestHeader | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._headerActionType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headerActionType = this._headerActionType;
+    }
+    if (this._headerName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headerName = this._headerName;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: FrontdoorRulesEngineRuleActionRequestHeader | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._headerActionType = undefined;
+      this._headerName = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._headerActionType = value.headerActionType;
+      this._headerName = value.headerName;
+      this._value = value.value;
+    }
+  }
+
+  // header_action_type - computed: false, optional: true, required: false
+  private _headerActionType?: string; 
+  public get headerActionType() {
+    return this.getStringAttribute('header_action_type');
+  }
+  public set headerActionType(value: string) {
+    this._headerActionType = value;
+  }
+  public resetHeaderActionType() {
+    this._headerActionType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headerActionTypeInput() {
+    return this._headerActionType;
+  }
+
+  // header_name - computed: false, optional: true, required: false
+  private _headerName?: string; 
+  public get headerName() {
+    return this.getStringAttribute('header_name');
+  }
+  public set headerName(value: string) {
+    this._headerName = value;
+  }
+  public resetHeaderName() {
+    this._headerName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headerNameInput() {
+    return this._headerName;
+  }
+
+  // value - computed: false, optional: true, required: false
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  public resetValue() {
+    this._value = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class FrontdoorRulesEngineRuleActionRequestHeaderList extends cdktf.ComplexList {
+  public internalValue? : FrontdoorRulesEngineRuleActionRequestHeader[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): FrontdoorRulesEngineRuleActionRequestHeaderOutputReference {
+    return new FrontdoorRulesEngineRuleActionRequestHeaderOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface FrontdoorRulesEngineRuleActionResponseHeader {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_rules_engine#header_action_type FrontdoorRulesEngine#header_action_type}
@@ -90,6 +221,130 @@ export function frontdoorRulesEngineRuleActionResponseHeaderToTerraform(struct?:
   }
 }
 
+export class FrontdoorRulesEngineRuleActionResponseHeaderOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): FrontdoorRulesEngineRuleActionResponseHeader | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._headerActionType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headerActionType = this._headerActionType;
+    }
+    if (this._headerName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headerName = this._headerName;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: FrontdoorRulesEngineRuleActionResponseHeader | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._headerActionType = undefined;
+      this._headerName = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._headerActionType = value.headerActionType;
+      this._headerName = value.headerName;
+      this._value = value.value;
+    }
+  }
+
+  // header_action_type - computed: false, optional: true, required: false
+  private _headerActionType?: string; 
+  public get headerActionType() {
+    return this.getStringAttribute('header_action_type');
+  }
+  public set headerActionType(value: string) {
+    this._headerActionType = value;
+  }
+  public resetHeaderActionType() {
+    this._headerActionType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headerActionTypeInput() {
+    return this._headerActionType;
+  }
+
+  // header_name - computed: false, optional: true, required: false
+  private _headerName?: string; 
+  public get headerName() {
+    return this.getStringAttribute('header_name');
+  }
+  public set headerName(value: string) {
+    this._headerName = value;
+  }
+  public resetHeaderName() {
+    this._headerName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headerNameInput() {
+    return this._headerName;
+  }
+
+  // value - computed: false, optional: true, required: false
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  public resetValue() {
+    this._value = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class FrontdoorRulesEngineRuleActionResponseHeaderList extends cdktf.ComplexList {
+  public internalValue? : FrontdoorRulesEngineRuleActionResponseHeader[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): FrontdoorRulesEngineRuleActionResponseHeaderOutputReference {
+    return new FrontdoorRulesEngineRuleActionResponseHeaderOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface FrontdoorRulesEngineRuleAction {
   /**
   * request_header block
@@ -130,13 +385,13 @@ export class FrontdoorRulesEngineRuleActionOutputReference extends cdktf.Complex
   public get internalValue(): FrontdoorRulesEngineRuleAction | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._requestHeader !== undefined) {
+    if (this._requestHeader?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.requestHeader = this._requestHeader;
+      internalValueResult.requestHeader = this._requestHeader?.internalValue;
     }
-    if (this._responseHeader !== undefined) {
+    if (this._responseHeader?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.responseHeader = this._responseHeader;
+      internalValueResult.responseHeader = this._responseHeader?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -144,48 +399,46 @@ export class FrontdoorRulesEngineRuleActionOutputReference extends cdktf.Complex
   public set internalValue(value: FrontdoorRulesEngineRuleAction | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
-      this._requestHeader = undefined;
-      this._responseHeader = undefined;
+      this._requestHeader.internalValue = undefined;
+      this._responseHeader.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
-      this._requestHeader = value.requestHeader;
-      this._responseHeader = value.responseHeader;
+      this._requestHeader.internalValue = value.requestHeader;
+      this._responseHeader.internalValue = value.responseHeader;
     }
   }
 
   // request_header - computed: false, optional: true, required: false
-  private _requestHeader?: FrontdoorRulesEngineRuleActionRequestHeader[] | cdktf.IResolvable; 
+  private _requestHeader = new FrontdoorRulesEngineRuleActionRequestHeaderList(this, "request_header", false);
   public get requestHeader() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('request_header');
+    return this._requestHeader;
   }
-  public set requestHeader(value: FrontdoorRulesEngineRuleActionRequestHeader[] | cdktf.IResolvable) {
-    this._requestHeader = value;
+  public putRequestHeader(value: FrontdoorRulesEngineRuleActionRequestHeader[] | cdktf.IResolvable) {
+    this._requestHeader.internalValue = value;
   }
   public resetRequestHeader() {
-    this._requestHeader = undefined;
+    this._requestHeader.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get requestHeaderInput() {
-    return this._requestHeader;
+    return this._requestHeader.internalValue;
   }
 
   // response_header - computed: false, optional: true, required: false
-  private _responseHeader?: FrontdoorRulesEngineRuleActionResponseHeader[] | cdktf.IResolvable; 
+  private _responseHeader = new FrontdoorRulesEngineRuleActionResponseHeaderList(this, "response_header", false);
   public get responseHeader() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('response_header');
+    return this._responseHeader;
   }
-  public set responseHeader(value: FrontdoorRulesEngineRuleActionResponseHeader[] | cdktf.IResolvable) {
-    this._responseHeader = value;
+  public putResponseHeader(value: FrontdoorRulesEngineRuleActionResponseHeader[] | cdktf.IResolvable) {
+    this._responseHeader.internalValue = value;
   }
   public resetResponseHeader() {
-    this._responseHeader = undefined;
+    this._responseHeader.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get responseHeaderInput() {
-    return this._responseHeader;
+    return this._responseHeader.internalValue;
   }
 }
 export interface FrontdoorRulesEngineRuleMatchCondition {
@@ -230,6 +483,193 @@ export function frontdoorRulesEngineRuleMatchConditionToTerraform(struct?: Front
   }
 }
 
+export class FrontdoorRulesEngineRuleMatchConditionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): FrontdoorRulesEngineRuleMatchCondition | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._negateCondition !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.negateCondition = this._negateCondition;
+    }
+    if (this._operator !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.operator = this._operator;
+    }
+    if (this._selector !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.selector = this._selector;
+    }
+    if (this._transform !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.transform = this._transform;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    if (this._variable !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.variable = this._variable;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: FrontdoorRulesEngineRuleMatchCondition | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._negateCondition = undefined;
+      this._operator = undefined;
+      this._selector = undefined;
+      this._transform = undefined;
+      this._value = undefined;
+      this._variable = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._negateCondition = value.negateCondition;
+      this._operator = value.operator;
+      this._selector = value.selector;
+      this._transform = value.transform;
+      this._value = value.value;
+      this._variable = value.variable;
+    }
+  }
+
+  // negate_condition - computed: false, optional: true, required: false
+  private _negateCondition?: boolean | cdktf.IResolvable; 
+  public get negateCondition() {
+    return this.getBooleanAttribute('negate_condition');
+  }
+  public set negateCondition(value: boolean | cdktf.IResolvable) {
+    this._negateCondition = value;
+  }
+  public resetNegateCondition() {
+    this._negateCondition = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get negateConditionInput() {
+    return this._negateCondition;
+  }
+
+  // operator - computed: false, optional: false, required: true
+  private _operator?: string; 
+  public get operator() {
+    return this.getStringAttribute('operator');
+  }
+  public set operator(value: string) {
+    this._operator = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get operatorInput() {
+    return this._operator;
+  }
+
+  // selector - computed: false, optional: true, required: false
+  private _selector?: string; 
+  public get selector() {
+    return this.getStringAttribute('selector');
+  }
+  public set selector(value: string) {
+    this._selector = value;
+  }
+  public resetSelector() {
+    this._selector = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get selectorInput() {
+    return this._selector;
+  }
+
+  // transform - computed: false, optional: true, required: false
+  private _transform?: string[]; 
+  public get transform() {
+    return this.getListAttribute('transform');
+  }
+  public set transform(value: string[]) {
+    this._transform = value;
+  }
+  public resetTransform() {
+    this._transform = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get transformInput() {
+    return this._transform;
+  }
+
+  // value - computed: false, optional: true, required: false
+  private _value?: string[]; 
+  public get value() {
+    return this.getListAttribute('value');
+  }
+  public set value(value: string[]) {
+    this._value = value;
+  }
+  public resetValue() {
+    this._value = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+
+  // variable - computed: false, optional: true, required: false
+  private _variable?: string; 
+  public get variable() {
+    return this.getStringAttribute('variable');
+  }
+  public set variable(value: string) {
+    this._variable = value;
+  }
+  public resetVariable() {
+    this._variable = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get variableInput() {
+    return this._variable;
+  }
+}
+
+export class FrontdoorRulesEngineRuleMatchConditionList extends cdktf.ComplexList {
+  public internalValue? : FrontdoorRulesEngineRuleMatchCondition[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): FrontdoorRulesEngineRuleMatchConditionOutputReference {
+    return new FrontdoorRulesEngineRuleMatchConditionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface FrontdoorRulesEngineRule {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_rules_engine#name FrontdoorRulesEngine#name}
@@ -266,6 +706,146 @@ export function frontdoorRulesEngineRuleToTerraform(struct?: FrontdoorRulesEngin
   }
 }
 
+export class FrontdoorRulesEngineRuleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): FrontdoorRulesEngineRule | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._priority !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.priority = this._priority;
+    }
+    if (this._action?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.action = this._action?.internalValue;
+    }
+    if (this._matchCondition?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.matchCondition = this._matchCondition?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: FrontdoorRulesEngineRule | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._priority = undefined;
+      this._action.internalValue = undefined;
+      this._matchCondition.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._priority = value.priority;
+      this._action.internalValue = value.action;
+      this._matchCondition.internalValue = value.matchCondition;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // priority - computed: false, optional: false, required: true
+  private _priority?: number; 
+  public get priority() {
+    return this.getNumberAttribute('priority');
+  }
+  public set priority(value: number) {
+    this._priority = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get priorityInput() {
+    return this._priority;
+  }
+
+  // action - computed: false, optional: true, required: false
+  private _action = new FrontdoorRulesEngineRuleActionOutputReference(this, "action");
+  public get action() {
+    return this._action;
+  }
+  public putAction(value: FrontdoorRulesEngineRuleAction) {
+    this._action.internalValue = value;
+  }
+  public resetAction() {
+    this._action.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get actionInput() {
+    return this._action.internalValue;
+  }
+
+  // match_condition - computed: false, optional: true, required: false
+  private _matchCondition = new FrontdoorRulesEngineRuleMatchConditionList(this, "match_condition", false);
+  public get matchCondition() {
+    return this._matchCondition;
+  }
+  public putMatchCondition(value: FrontdoorRulesEngineRuleMatchCondition[] | cdktf.IResolvable) {
+    this._matchCondition.internalValue = value;
+  }
+  public resetMatchCondition() {
+    this._matchCondition.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get matchConditionInput() {
+    return this._matchCondition.internalValue;
+  }
+}
+
+export class FrontdoorRulesEngineRuleList extends cdktf.ComplexList {
+  public internalValue? : FrontdoorRulesEngineRule[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): FrontdoorRulesEngineRuleOutputReference {
+    return new FrontdoorRulesEngineRuleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface FrontdoorRulesEngineTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_rules_engine#create FrontdoorRulesEngine#create}
@@ -300,6 +880,7 @@ export function frontdoorRulesEngineTimeoutsToTerraform(struct?: FrontdoorRulesE
 
 export class FrontdoorRulesEngineTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -309,7 +890,10 @@ export class FrontdoorRulesEngineTimeoutsOutputReference extends cdktf.ComplexOb
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): FrontdoorRulesEngineTimeouts | undefined {
+  public get internalValue(): FrontdoorRulesEngineTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -331,16 +915,22 @@ export class FrontdoorRulesEngineTimeoutsOutputReference extends cdktf.ComplexOb
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: FrontdoorRulesEngineTimeouts | undefined) {
+  public set internalValue(value: FrontdoorRulesEngineTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -449,9 +1039,10 @@ export class FrontdoorRulesEngine extends cdktf.TerraformResource {
     });
     this._enabled = config.enabled;
     this._frontdoorName = config.frontdoorName;
+    this._id = config.id;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
-    this._rule = config.rule;
+    this._rule.internalValue = config.rule;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -489,8 +1080,19 @@ export class FrontdoorRulesEngine extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // location - computed: true, optional: false, required: false
@@ -525,20 +1127,19 @@ export class FrontdoorRulesEngine extends cdktf.TerraformResource {
   }
 
   // rule - computed: false, optional: true, required: false
-  private _rule?: FrontdoorRulesEngineRule[] | cdktf.IResolvable; 
+  private _rule = new FrontdoorRulesEngineRuleList(this, "rule", false);
   public get rule() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('rule');
+    return this._rule;
   }
-  public set rule(value: FrontdoorRulesEngineRule[] | cdktf.IResolvable) {
-    this._rule = value;
+  public putRule(value: FrontdoorRulesEngineRule[] | cdktf.IResolvable) {
+    this._rule.internalValue = value;
   }
   public resetRule() {
-    this._rule = undefined;
+    this._rule.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get ruleInput() {
-    return this._rule;
+    return this._rule.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -565,9 +1166,10 @@ export class FrontdoorRulesEngine extends cdktf.TerraformResource {
     return {
       enabled: cdktf.booleanToTerraform(this._enabled),
       frontdoor_name: cdktf.stringToTerraform(this._frontdoorName),
+      id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      rule: cdktf.listMapper(frontdoorRulesEngineRuleToTerraform)(this._rule),
+      rule: cdktf.listMapper(frontdoorRulesEngineRuleToTerraform)(this._rule.internalValue),
       timeouts: frontdoorRulesEngineTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

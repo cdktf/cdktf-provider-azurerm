@@ -28,6 +28,13 @@ export interface ApiManagementApiDiagnosticConfig extends cdktf.TerraformMetaArg
   */
   readonly httpCorrelationProtocol?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_diagnostic#id ApiManagementApiDiagnostic#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_diagnostic#identifier ApiManagementApiDiagnostic#identifier}
   */
   readonly identifier: string;
@@ -104,6 +111,102 @@ export function apiManagementApiDiagnosticBackendRequestDataMaskingHeadersToTerr
   }
 }
 
+export class ApiManagementApiDiagnosticBackendRequestDataMaskingHeadersOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ApiManagementApiDiagnosticBackendRequestDataMaskingHeaders | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._mode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.mode = this._mode;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementApiDiagnosticBackendRequestDataMaskingHeaders | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._mode = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._mode = value.mode;
+      this._value = value.value;
+    }
+  }
+
+  // mode - computed: false, optional: false, required: true
+  private _mode?: string; 
+  public get mode() {
+    return this.getStringAttribute('mode');
+  }
+  public set mode(value: string) {
+    this._mode = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get modeInput() {
+    return this._mode;
+  }
+
+  // value - computed: false, optional: false, required: true
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class ApiManagementApiDiagnosticBackendRequestDataMaskingHeadersList extends cdktf.ComplexList {
+  public internalValue? : ApiManagementApiDiagnosticBackendRequestDataMaskingHeaders[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ApiManagementApiDiagnosticBackendRequestDataMaskingHeadersOutputReference {
+    return new ApiManagementApiDiagnosticBackendRequestDataMaskingHeadersOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ApiManagementApiDiagnosticBackendRequestDataMaskingQueryParams {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_diagnostic#mode ApiManagementApiDiagnostic#mode}
@@ -126,6 +229,102 @@ export function apiManagementApiDiagnosticBackendRequestDataMaskingQueryParamsTo
   }
 }
 
+export class ApiManagementApiDiagnosticBackendRequestDataMaskingQueryParamsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ApiManagementApiDiagnosticBackendRequestDataMaskingQueryParams | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._mode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.mode = this._mode;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementApiDiagnosticBackendRequestDataMaskingQueryParams | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._mode = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._mode = value.mode;
+      this._value = value.value;
+    }
+  }
+
+  // mode - computed: false, optional: false, required: true
+  private _mode?: string; 
+  public get mode() {
+    return this.getStringAttribute('mode');
+  }
+  public set mode(value: string) {
+    this._mode = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get modeInput() {
+    return this._mode;
+  }
+
+  // value - computed: false, optional: false, required: true
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class ApiManagementApiDiagnosticBackendRequestDataMaskingQueryParamsList extends cdktf.ComplexList {
+  public internalValue? : ApiManagementApiDiagnosticBackendRequestDataMaskingQueryParams[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ApiManagementApiDiagnosticBackendRequestDataMaskingQueryParamsOutputReference {
+    return new ApiManagementApiDiagnosticBackendRequestDataMaskingQueryParamsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ApiManagementApiDiagnosticBackendRequestDataMasking {
   /**
   * headers block
@@ -166,13 +365,13 @@ export class ApiManagementApiDiagnosticBackendRequestDataMaskingOutputReference 
   public get internalValue(): ApiManagementApiDiagnosticBackendRequestDataMasking | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._headers !== undefined) {
+    if (this._headers?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.headers = this._headers;
+      internalValueResult.headers = this._headers?.internalValue;
     }
-    if (this._queryParams !== undefined) {
+    if (this._queryParams?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.queryParams = this._queryParams;
+      internalValueResult.queryParams = this._queryParams?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -180,48 +379,46 @@ export class ApiManagementApiDiagnosticBackendRequestDataMaskingOutputReference 
   public set internalValue(value: ApiManagementApiDiagnosticBackendRequestDataMasking | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
-      this._headers = undefined;
-      this._queryParams = undefined;
+      this._headers.internalValue = undefined;
+      this._queryParams.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
-      this._headers = value.headers;
-      this._queryParams = value.queryParams;
+      this._headers.internalValue = value.headers;
+      this._queryParams.internalValue = value.queryParams;
     }
   }
 
   // headers - computed: false, optional: true, required: false
-  private _headers?: ApiManagementApiDiagnosticBackendRequestDataMaskingHeaders[] | cdktf.IResolvable; 
+  private _headers = new ApiManagementApiDiagnosticBackendRequestDataMaskingHeadersList(this, "headers", false);
   public get headers() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('headers');
+    return this._headers;
   }
-  public set headers(value: ApiManagementApiDiagnosticBackendRequestDataMaskingHeaders[] | cdktf.IResolvable) {
-    this._headers = value;
+  public putHeaders(value: ApiManagementApiDiagnosticBackendRequestDataMaskingHeaders[] | cdktf.IResolvable) {
+    this._headers.internalValue = value;
   }
   public resetHeaders() {
-    this._headers = undefined;
+    this._headers.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get headersInput() {
-    return this._headers;
+    return this._headers.internalValue;
   }
 
   // query_params - computed: false, optional: true, required: false
-  private _queryParams?: ApiManagementApiDiagnosticBackendRequestDataMaskingQueryParams[] | cdktf.IResolvable; 
+  private _queryParams = new ApiManagementApiDiagnosticBackendRequestDataMaskingQueryParamsList(this, "query_params", false);
   public get queryParams() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('query_params');
+    return this._queryParams;
   }
-  public set queryParams(value: ApiManagementApiDiagnosticBackendRequestDataMaskingQueryParams[] | cdktf.IResolvable) {
-    this._queryParams = value;
+  public putQueryParams(value: ApiManagementApiDiagnosticBackendRequestDataMaskingQueryParams[] | cdktf.IResolvable) {
+    this._queryParams.internalValue = value;
   }
   public resetQueryParams() {
-    this._queryParams = undefined;
+    this._queryParams.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get queryParamsInput() {
-    return this._queryParams;
+    return this._queryParams.internalValue;
   }
 }
 export interface ApiManagementApiDiagnosticBackendRequest {
@@ -367,6 +564,102 @@ export function apiManagementApiDiagnosticBackendResponseDataMaskingHeadersToTer
   }
 }
 
+export class ApiManagementApiDiagnosticBackendResponseDataMaskingHeadersOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ApiManagementApiDiagnosticBackendResponseDataMaskingHeaders | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._mode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.mode = this._mode;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementApiDiagnosticBackendResponseDataMaskingHeaders | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._mode = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._mode = value.mode;
+      this._value = value.value;
+    }
+  }
+
+  // mode - computed: false, optional: false, required: true
+  private _mode?: string; 
+  public get mode() {
+    return this.getStringAttribute('mode');
+  }
+  public set mode(value: string) {
+    this._mode = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get modeInput() {
+    return this._mode;
+  }
+
+  // value - computed: false, optional: false, required: true
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class ApiManagementApiDiagnosticBackendResponseDataMaskingHeadersList extends cdktf.ComplexList {
+  public internalValue? : ApiManagementApiDiagnosticBackendResponseDataMaskingHeaders[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ApiManagementApiDiagnosticBackendResponseDataMaskingHeadersOutputReference {
+    return new ApiManagementApiDiagnosticBackendResponseDataMaskingHeadersOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ApiManagementApiDiagnosticBackendResponseDataMaskingQueryParams {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_diagnostic#mode ApiManagementApiDiagnostic#mode}
@@ -389,6 +682,102 @@ export function apiManagementApiDiagnosticBackendResponseDataMaskingQueryParamsT
   }
 }
 
+export class ApiManagementApiDiagnosticBackendResponseDataMaskingQueryParamsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ApiManagementApiDiagnosticBackendResponseDataMaskingQueryParams | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._mode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.mode = this._mode;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementApiDiagnosticBackendResponseDataMaskingQueryParams | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._mode = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._mode = value.mode;
+      this._value = value.value;
+    }
+  }
+
+  // mode - computed: false, optional: false, required: true
+  private _mode?: string; 
+  public get mode() {
+    return this.getStringAttribute('mode');
+  }
+  public set mode(value: string) {
+    this._mode = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get modeInput() {
+    return this._mode;
+  }
+
+  // value - computed: false, optional: false, required: true
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class ApiManagementApiDiagnosticBackendResponseDataMaskingQueryParamsList extends cdktf.ComplexList {
+  public internalValue? : ApiManagementApiDiagnosticBackendResponseDataMaskingQueryParams[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ApiManagementApiDiagnosticBackendResponseDataMaskingQueryParamsOutputReference {
+    return new ApiManagementApiDiagnosticBackendResponseDataMaskingQueryParamsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ApiManagementApiDiagnosticBackendResponseDataMasking {
   /**
   * headers block
@@ -429,13 +818,13 @@ export class ApiManagementApiDiagnosticBackendResponseDataMaskingOutputReference
   public get internalValue(): ApiManagementApiDiagnosticBackendResponseDataMasking | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._headers !== undefined) {
+    if (this._headers?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.headers = this._headers;
+      internalValueResult.headers = this._headers?.internalValue;
     }
-    if (this._queryParams !== undefined) {
+    if (this._queryParams?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.queryParams = this._queryParams;
+      internalValueResult.queryParams = this._queryParams?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -443,48 +832,46 @@ export class ApiManagementApiDiagnosticBackendResponseDataMaskingOutputReference
   public set internalValue(value: ApiManagementApiDiagnosticBackendResponseDataMasking | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
-      this._headers = undefined;
-      this._queryParams = undefined;
+      this._headers.internalValue = undefined;
+      this._queryParams.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
-      this._headers = value.headers;
-      this._queryParams = value.queryParams;
+      this._headers.internalValue = value.headers;
+      this._queryParams.internalValue = value.queryParams;
     }
   }
 
   // headers - computed: false, optional: true, required: false
-  private _headers?: ApiManagementApiDiagnosticBackendResponseDataMaskingHeaders[] | cdktf.IResolvable; 
+  private _headers = new ApiManagementApiDiagnosticBackendResponseDataMaskingHeadersList(this, "headers", false);
   public get headers() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('headers');
+    return this._headers;
   }
-  public set headers(value: ApiManagementApiDiagnosticBackendResponseDataMaskingHeaders[] | cdktf.IResolvable) {
-    this._headers = value;
+  public putHeaders(value: ApiManagementApiDiagnosticBackendResponseDataMaskingHeaders[] | cdktf.IResolvable) {
+    this._headers.internalValue = value;
   }
   public resetHeaders() {
-    this._headers = undefined;
+    this._headers.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get headersInput() {
-    return this._headers;
+    return this._headers.internalValue;
   }
 
   // query_params - computed: false, optional: true, required: false
-  private _queryParams?: ApiManagementApiDiagnosticBackendResponseDataMaskingQueryParams[] | cdktf.IResolvable; 
+  private _queryParams = new ApiManagementApiDiagnosticBackendResponseDataMaskingQueryParamsList(this, "query_params", false);
   public get queryParams() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('query_params');
+    return this._queryParams;
   }
-  public set queryParams(value: ApiManagementApiDiagnosticBackendResponseDataMaskingQueryParams[] | cdktf.IResolvable) {
-    this._queryParams = value;
+  public putQueryParams(value: ApiManagementApiDiagnosticBackendResponseDataMaskingQueryParams[] | cdktf.IResolvable) {
+    this._queryParams.internalValue = value;
   }
   public resetQueryParams() {
-    this._queryParams = undefined;
+    this._queryParams.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get queryParamsInput() {
-    return this._queryParams;
+    return this._queryParams.internalValue;
   }
 }
 export interface ApiManagementApiDiagnosticBackendResponse {
@@ -630,6 +1017,102 @@ export function apiManagementApiDiagnosticFrontendRequestDataMaskingHeadersToTer
   }
 }
 
+export class ApiManagementApiDiagnosticFrontendRequestDataMaskingHeadersOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ApiManagementApiDiagnosticFrontendRequestDataMaskingHeaders | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._mode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.mode = this._mode;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementApiDiagnosticFrontendRequestDataMaskingHeaders | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._mode = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._mode = value.mode;
+      this._value = value.value;
+    }
+  }
+
+  // mode - computed: false, optional: false, required: true
+  private _mode?: string; 
+  public get mode() {
+    return this.getStringAttribute('mode');
+  }
+  public set mode(value: string) {
+    this._mode = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get modeInput() {
+    return this._mode;
+  }
+
+  // value - computed: false, optional: false, required: true
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class ApiManagementApiDiagnosticFrontendRequestDataMaskingHeadersList extends cdktf.ComplexList {
+  public internalValue? : ApiManagementApiDiagnosticFrontendRequestDataMaskingHeaders[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ApiManagementApiDiagnosticFrontendRequestDataMaskingHeadersOutputReference {
+    return new ApiManagementApiDiagnosticFrontendRequestDataMaskingHeadersOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ApiManagementApiDiagnosticFrontendRequestDataMaskingQueryParams {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_diagnostic#mode ApiManagementApiDiagnostic#mode}
@@ -652,6 +1135,102 @@ export function apiManagementApiDiagnosticFrontendRequestDataMaskingQueryParamsT
   }
 }
 
+export class ApiManagementApiDiagnosticFrontendRequestDataMaskingQueryParamsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ApiManagementApiDiagnosticFrontendRequestDataMaskingQueryParams | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._mode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.mode = this._mode;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementApiDiagnosticFrontendRequestDataMaskingQueryParams | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._mode = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._mode = value.mode;
+      this._value = value.value;
+    }
+  }
+
+  // mode - computed: false, optional: false, required: true
+  private _mode?: string; 
+  public get mode() {
+    return this.getStringAttribute('mode');
+  }
+  public set mode(value: string) {
+    this._mode = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get modeInput() {
+    return this._mode;
+  }
+
+  // value - computed: false, optional: false, required: true
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class ApiManagementApiDiagnosticFrontendRequestDataMaskingQueryParamsList extends cdktf.ComplexList {
+  public internalValue? : ApiManagementApiDiagnosticFrontendRequestDataMaskingQueryParams[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ApiManagementApiDiagnosticFrontendRequestDataMaskingQueryParamsOutputReference {
+    return new ApiManagementApiDiagnosticFrontendRequestDataMaskingQueryParamsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ApiManagementApiDiagnosticFrontendRequestDataMasking {
   /**
   * headers block
@@ -692,13 +1271,13 @@ export class ApiManagementApiDiagnosticFrontendRequestDataMaskingOutputReference
   public get internalValue(): ApiManagementApiDiagnosticFrontendRequestDataMasking | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._headers !== undefined) {
+    if (this._headers?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.headers = this._headers;
+      internalValueResult.headers = this._headers?.internalValue;
     }
-    if (this._queryParams !== undefined) {
+    if (this._queryParams?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.queryParams = this._queryParams;
+      internalValueResult.queryParams = this._queryParams?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -706,48 +1285,46 @@ export class ApiManagementApiDiagnosticFrontendRequestDataMaskingOutputReference
   public set internalValue(value: ApiManagementApiDiagnosticFrontendRequestDataMasking | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
-      this._headers = undefined;
-      this._queryParams = undefined;
+      this._headers.internalValue = undefined;
+      this._queryParams.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
-      this._headers = value.headers;
-      this._queryParams = value.queryParams;
+      this._headers.internalValue = value.headers;
+      this._queryParams.internalValue = value.queryParams;
     }
   }
 
   // headers - computed: false, optional: true, required: false
-  private _headers?: ApiManagementApiDiagnosticFrontendRequestDataMaskingHeaders[] | cdktf.IResolvable; 
+  private _headers = new ApiManagementApiDiagnosticFrontendRequestDataMaskingHeadersList(this, "headers", false);
   public get headers() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('headers');
+    return this._headers;
   }
-  public set headers(value: ApiManagementApiDiagnosticFrontendRequestDataMaskingHeaders[] | cdktf.IResolvable) {
-    this._headers = value;
+  public putHeaders(value: ApiManagementApiDiagnosticFrontendRequestDataMaskingHeaders[] | cdktf.IResolvable) {
+    this._headers.internalValue = value;
   }
   public resetHeaders() {
-    this._headers = undefined;
+    this._headers.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get headersInput() {
-    return this._headers;
+    return this._headers.internalValue;
   }
 
   // query_params - computed: false, optional: true, required: false
-  private _queryParams?: ApiManagementApiDiagnosticFrontendRequestDataMaskingQueryParams[] | cdktf.IResolvable; 
+  private _queryParams = new ApiManagementApiDiagnosticFrontendRequestDataMaskingQueryParamsList(this, "query_params", false);
   public get queryParams() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('query_params');
+    return this._queryParams;
   }
-  public set queryParams(value: ApiManagementApiDiagnosticFrontendRequestDataMaskingQueryParams[] | cdktf.IResolvable) {
-    this._queryParams = value;
+  public putQueryParams(value: ApiManagementApiDiagnosticFrontendRequestDataMaskingQueryParams[] | cdktf.IResolvable) {
+    this._queryParams.internalValue = value;
   }
   public resetQueryParams() {
-    this._queryParams = undefined;
+    this._queryParams.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get queryParamsInput() {
-    return this._queryParams;
+    return this._queryParams.internalValue;
   }
 }
 export interface ApiManagementApiDiagnosticFrontendRequest {
@@ -893,6 +1470,102 @@ export function apiManagementApiDiagnosticFrontendResponseDataMaskingHeadersToTe
   }
 }
 
+export class ApiManagementApiDiagnosticFrontendResponseDataMaskingHeadersOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ApiManagementApiDiagnosticFrontendResponseDataMaskingHeaders | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._mode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.mode = this._mode;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementApiDiagnosticFrontendResponseDataMaskingHeaders | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._mode = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._mode = value.mode;
+      this._value = value.value;
+    }
+  }
+
+  // mode - computed: false, optional: false, required: true
+  private _mode?: string; 
+  public get mode() {
+    return this.getStringAttribute('mode');
+  }
+  public set mode(value: string) {
+    this._mode = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get modeInput() {
+    return this._mode;
+  }
+
+  // value - computed: false, optional: false, required: true
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class ApiManagementApiDiagnosticFrontendResponseDataMaskingHeadersList extends cdktf.ComplexList {
+  public internalValue? : ApiManagementApiDiagnosticFrontendResponseDataMaskingHeaders[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ApiManagementApiDiagnosticFrontendResponseDataMaskingHeadersOutputReference {
+    return new ApiManagementApiDiagnosticFrontendResponseDataMaskingHeadersOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ApiManagementApiDiagnosticFrontendResponseDataMaskingQueryParams {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_diagnostic#mode ApiManagementApiDiagnostic#mode}
@@ -915,6 +1588,102 @@ export function apiManagementApiDiagnosticFrontendResponseDataMaskingQueryParams
   }
 }
 
+export class ApiManagementApiDiagnosticFrontendResponseDataMaskingQueryParamsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ApiManagementApiDiagnosticFrontendResponseDataMaskingQueryParams | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._mode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.mode = this._mode;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementApiDiagnosticFrontendResponseDataMaskingQueryParams | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._mode = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._mode = value.mode;
+      this._value = value.value;
+    }
+  }
+
+  // mode - computed: false, optional: false, required: true
+  private _mode?: string; 
+  public get mode() {
+    return this.getStringAttribute('mode');
+  }
+  public set mode(value: string) {
+    this._mode = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get modeInput() {
+    return this._mode;
+  }
+
+  // value - computed: false, optional: false, required: true
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class ApiManagementApiDiagnosticFrontendResponseDataMaskingQueryParamsList extends cdktf.ComplexList {
+  public internalValue? : ApiManagementApiDiagnosticFrontendResponseDataMaskingQueryParams[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ApiManagementApiDiagnosticFrontendResponseDataMaskingQueryParamsOutputReference {
+    return new ApiManagementApiDiagnosticFrontendResponseDataMaskingQueryParamsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ApiManagementApiDiagnosticFrontendResponseDataMasking {
   /**
   * headers block
@@ -955,13 +1724,13 @@ export class ApiManagementApiDiagnosticFrontendResponseDataMaskingOutputReferenc
   public get internalValue(): ApiManagementApiDiagnosticFrontendResponseDataMasking | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._headers !== undefined) {
+    if (this._headers?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.headers = this._headers;
+      internalValueResult.headers = this._headers?.internalValue;
     }
-    if (this._queryParams !== undefined) {
+    if (this._queryParams?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.queryParams = this._queryParams;
+      internalValueResult.queryParams = this._queryParams?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -969,48 +1738,46 @@ export class ApiManagementApiDiagnosticFrontendResponseDataMaskingOutputReferenc
   public set internalValue(value: ApiManagementApiDiagnosticFrontendResponseDataMasking | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
-      this._headers = undefined;
-      this._queryParams = undefined;
+      this._headers.internalValue = undefined;
+      this._queryParams.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
-      this._headers = value.headers;
-      this._queryParams = value.queryParams;
+      this._headers.internalValue = value.headers;
+      this._queryParams.internalValue = value.queryParams;
     }
   }
 
   // headers - computed: false, optional: true, required: false
-  private _headers?: ApiManagementApiDiagnosticFrontendResponseDataMaskingHeaders[] | cdktf.IResolvable; 
+  private _headers = new ApiManagementApiDiagnosticFrontendResponseDataMaskingHeadersList(this, "headers", false);
   public get headers() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('headers');
+    return this._headers;
   }
-  public set headers(value: ApiManagementApiDiagnosticFrontendResponseDataMaskingHeaders[] | cdktf.IResolvable) {
-    this._headers = value;
+  public putHeaders(value: ApiManagementApiDiagnosticFrontendResponseDataMaskingHeaders[] | cdktf.IResolvable) {
+    this._headers.internalValue = value;
   }
   public resetHeaders() {
-    this._headers = undefined;
+    this._headers.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get headersInput() {
-    return this._headers;
+    return this._headers.internalValue;
   }
 
   // query_params - computed: false, optional: true, required: false
-  private _queryParams?: ApiManagementApiDiagnosticFrontendResponseDataMaskingQueryParams[] | cdktf.IResolvable; 
+  private _queryParams = new ApiManagementApiDiagnosticFrontendResponseDataMaskingQueryParamsList(this, "query_params", false);
   public get queryParams() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('query_params');
+    return this._queryParams;
   }
-  public set queryParams(value: ApiManagementApiDiagnosticFrontendResponseDataMaskingQueryParams[] | cdktf.IResolvable) {
-    this._queryParams = value;
+  public putQueryParams(value: ApiManagementApiDiagnosticFrontendResponseDataMaskingQueryParams[] | cdktf.IResolvable) {
+    this._queryParams.internalValue = value;
   }
   public resetQueryParams() {
-    this._queryParams = undefined;
+    this._queryParams.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get queryParamsInput() {
-    return this._queryParams;
+    return this._queryParams.internalValue;
   }
 }
 export interface ApiManagementApiDiagnosticFrontendResponse {
@@ -1168,6 +1935,7 @@ export function apiManagementApiDiagnosticTimeoutsToTerraform(struct?: ApiManage
 
 export class ApiManagementApiDiagnosticTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -1177,7 +1945,10 @@ export class ApiManagementApiDiagnosticTimeoutsOutputReference extends cdktf.Com
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): ApiManagementApiDiagnosticTimeouts | undefined {
+  public get internalValue(): ApiManagementApiDiagnosticTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -1199,16 +1970,22 @@ export class ApiManagementApiDiagnosticTimeoutsOutputReference extends cdktf.Com
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: ApiManagementApiDiagnosticTimeouts | undefined) {
+  public set internalValue(value: ApiManagementApiDiagnosticTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -1320,6 +2097,7 @@ export class ApiManagementApiDiagnostic extends cdktf.TerraformResource {
     this._apiManagementName = config.apiManagementName;
     this._apiName = config.apiName;
     this._httpCorrelationProtocol = config.httpCorrelationProtocol;
+    this._id = config.id;
     this._identifier = config.identifier;
     this._logClientIp = config.logClientIp;
     this._operationNameFormat = config.operationNameFormat;
@@ -1409,8 +2187,19 @@ export class ApiManagementApiDiagnostic extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // identifier - computed: false, optional: false, required: true
@@ -1594,6 +2383,7 @@ export class ApiManagementApiDiagnostic extends cdktf.TerraformResource {
       api_management_name: cdktf.stringToTerraform(this._apiManagementName),
       api_name: cdktf.stringToTerraform(this._apiName),
       http_correlation_protocol: cdktf.stringToTerraform(this._httpCorrelationProtocol),
+      id: cdktf.stringToTerraform(this._id),
       identifier: cdktf.stringToTerraform(this._identifier),
       log_client_ip: cdktf.booleanToTerraform(this._logClientIp),
       operation_name_format: cdktf.stringToTerraform(this._operationNameFormat),

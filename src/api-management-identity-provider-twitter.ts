@@ -20,6 +20,13 @@ export interface ApiManagementIdentityProviderTwitterConfig extends cdktf.Terraf
   */
   readonly apiSecretKey: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_twitter#id ApiManagementIdentityProviderTwitter#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_twitter#resource_group_name ApiManagementIdentityProviderTwitter#resource_group_name}
   */
   readonly resourceGroupName: string;
@@ -64,6 +71,7 @@ export function apiManagementIdentityProviderTwitterTimeoutsToTerraform(struct?:
 
 export class ApiManagementIdentityProviderTwitterTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -73,7 +81,10 @@ export class ApiManagementIdentityProviderTwitterTimeoutsOutputReference extends
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): ApiManagementIdentityProviderTwitterTimeouts | undefined {
+  public get internalValue(): ApiManagementIdentityProviderTwitterTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -95,16 +106,22 @@ export class ApiManagementIdentityProviderTwitterTimeoutsOutputReference extends
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: ApiManagementIdentityProviderTwitterTimeouts | undefined) {
+  public set internalValue(value: ApiManagementIdentityProviderTwitterTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -214,6 +231,7 @@ export class ApiManagementIdentityProviderTwitter extends cdktf.TerraformResourc
     this._apiKey = config.apiKey;
     this._apiManagementName = config.apiManagementName;
     this._apiSecretKey = config.apiSecretKey;
+    this._id = config.id;
     this._resourceGroupName = config.resourceGroupName;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -262,8 +280,19 @@ export class ApiManagementIdentityProviderTwitter extends cdktf.TerraformResourc
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -304,6 +333,7 @@ export class ApiManagementIdentityProviderTwitter extends cdktf.TerraformResourc
       api_key: cdktf.stringToTerraform(this._apiKey),
       api_management_name: cdktf.stringToTerraform(this._apiManagementName),
       api_secret_key: cdktf.stringToTerraform(this._apiSecretKey),
+      id: cdktf.stringToTerraform(this._id),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       timeouts: apiManagementIdentityProviderTwitterTimeoutsToTerraform(this._timeouts.internalValue),
     };

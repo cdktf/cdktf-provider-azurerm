@@ -20,6 +20,13 @@ export interface DataAzurermStorageAccountSasConfig extends cdktf.TerraformMetaA
   */
   readonly httpsOnly?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas#id DataAzurermStorageAccountSas#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas#ip_addresses DataAzurermStorageAccountSas#ip_addresses}
   */
   readonly ipAddresses?: string;
@@ -549,6 +556,7 @@ export function dataAzurermStorageAccountSasTimeoutsToTerraform(struct?: DataAzu
 
 export class DataAzurermStorageAccountSasTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -558,7 +566,10 @@ export class DataAzurermStorageAccountSasTimeoutsOutputReference extends cdktf.C
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): DataAzurermStorageAccountSasTimeouts | undefined {
+  public get internalValue(): DataAzurermStorageAccountSasTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._read !== undefined) {
@@ -568,13 +579,19 @@ export class DataAzurermStorageAccountSasTimeoutsOutputReference extends cdktf.C
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: DataAzurermStorageAccountSasTimeouts | undefined) {
+  public set internalValue(value: DataAzurermStorageAccountSasTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._read = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._read = value.read;
     }
   }
@@ -633,6 +650,7 @@ export class DataAzurermStorageAccountSas extends cdktf.TerraformDataSource {
     this._connectionString = config.connectionString;
     this._expiry = config.expiry;
     this._httpsOnly = config.httpsOnly;
+    this._id = config.id;
     this._ipAddresses = config.ipAddresses;
     this._signedVersion = config.signedVersion;
     this._start = config.start;
@@ -689,8 +707,19 @@ export class DataAzurermStorageAccountSas extends cdktf.TerraformDataSource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // ip_addresses - computed: false, optional: true, required: false
@@ -807,6 +836,7 @@ export class DataAzurermStorageAccountSas extends cdktf.TerraformDataSource {
       connection_string: cdktf.stringToTerraform(this._connectionString),
       expiry: cdktf.stringToTerraform(this._expiry),
       https_only: cdktf.booleanToTerraform(this._httpsOnly),
+      id: cdktf.stringToTerraform(this._id),
       ip_addresses: cdktf.stringToTerraform(this._ipAddresses),
       signed_version: cdktf.stringToTerraform(this._signedVersion),
       start: cdktf.stringToTerraform(this._start),

@@ -28,6 +28,13 @@ export interface KeyVaultConfig extends cdktf.TerraformMetaArguments {
   */
   readonly enabledForTemplateDeployment?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault#id KeyVault#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault#location KeyVault#location}
   */
   readonly location: string;
@@ -129,6 +136,218 @@ export function keyVaultAccessPolicyToTerraform(struct?: KeyVaultAccessPolicy | 
   }
 }
 
+export class KeyVaultAccessPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): KeyVaultAccessPolicy | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._applicationId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.applicationId = this._applicationId;
+    }
+    if (this._certificatePermissions !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.certificatePermissions = this._certificatePermissions;
+    }
+    if (this._keyPermissions !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keyPermissions = this._keyPermissions;
+    }
+    if (this._objectId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.objectId = this._objectId;
+    }
+    if (this._secretPermissions !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.secretPermissions = this._secretPermissions;
+    }
+    if (this._storagePermissions !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.storagePermissions = this._storagePermissions;
+    }
+    if (this._tenantId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.tenantId = this._tenantId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KeyVaultAccessPolicy | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._applicationId = undefined;
+      this._certificatePermissions = undefined;
+      this._keyPermissions = undefined;
+      this._objectId = undefined;
+      this._secretPermissions = undefined;
+      this._storagePermissions = undefined;
+      this._tenantId = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._applicationId = value.applicationId;
+      this._certificatePermissions = value.certificatePermissions;
+      this._keyPermissions = value.keyPermissions;
+      this._objectId = value.objectId;
+      this._secretPermissions = value.secretPermissions;
+      this._storagePermissions = value.storagePermissions;
+      this._tenantId = value.tenantId;
+    }
+  }
+
+  // application_id - computed: true, optional: true, required: false
+  private _applicationId?: string; 
+  public get applicationId() {
+    return this.getStringAttribute('application_id');
+  }
+  public set applicationId(value: string) {
+    this._applicationId = value;
+  }
+  public resetApplicationId() {
+    this._applicationId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get applicationIdInput() {
+    return this._applicationId;
+  }
+
+  // certificate_permissions - computed: true, optional: true, required: false
+  private _certificatePermissions?: string[]; 
+  public get certificatePermissions() {
+    return this.getListAttribute('certificate_permissions');
+  }
+  public set certificatePermissions(value: string[]) {
+    this._certificatePermissions = value;
+  }
+  public resetCertificatePermissions() {
+    this._certificatePermissions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get certificatePermissionsInput() {
+    return this._certificatePermissions;
+  }
+
+  // key_permissions - computed: true, optional: true, required: false
+  private _keyPermissions?: string[]; 
+  public get keyPermissions() {
+    return this.getListAttribute('key_permissions');
+  }
+  public set keyPermissions(value: string[]) {
+    this._keyPermissions = value;
+  }
+  public resetKeyPermissions() {
+    this._keyPermissions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyPermissionsInput() {
+    return this._keyPermissions;
+  }
+
+  // object_id - computed: true, optional: true, required: false
+  private _objectId?: string; 
+  public get objectId() {
+    return this.getStringAttribute('object_id');
+  }
+  public set objectId(value: string) {
+    this._objectId = value;
+  }
+  public resetObjectId() {
+    this._objectId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get objectIdInput() {
+    return this._objectId;
+  }
+
+  // secret_permissions - computed: true, optional: true, required: false
+  private _secretPermissions?: string[]; 
+  public get secretPermissions() {
+    return this.getListAttribute('secret_permissions');
+  }
+  public set secretPermissions(value: string[]) {
+    this._secretPermissions = value;
+  }
+  public resetSecretPermissions() {
+    this._secretPermissions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secretPermissionsInput() {
+    return this._secretPermissions;
+  }
+
+  // storage_permissions - computed: true, optional: true, required: false
+  private _storagePermissions?: string[]; 
+  public get storagePermissions() {
+    return this.getListAttribute('storage_permissions');
+  }
+  public set storagePermissions(value: string[]) {
+    this._storagePermissions = value;
+  }
+  public resetStoragePermissions() {
+    this._storagePermissions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storagePermissionsInput() {
+    return this._storagePermissions;
+  }
+
+  // tenant_id - computed: true, optional: true, required: false
+  private _tenantId?: string; 
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
+  }
+  public set tenantId(value: string) {
+    this._tenantId = value;
+  }
+  public resetTenantId() {
+    this._tenantId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tenantIdInput() {
+    return this._tenantId;
+  }
+}
+
+export class KeyVaultAccessPolicyList extends cdktf.ComplexList {
+  public internalValue? : KeyVaultAccessPolicy[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): KeyVaultAccessPolicyOutputReference {
+    return new KeyVaultAccessPolicyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface KeyVaultContact {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault#email KeyVault#email}
@@ -156,6 +375,127 @@ export function keyVaultContactToTerraform(struct?: KeyVaultContact | cdktf.IRes
   }
 }
 
+export class KeyVaultContactOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): KeyVaultContact | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._email !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.email = this._email;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._phone !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.phone = this._phone;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KeyVaultContact | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._email = undefined;
+      this._name = undefined;
+      this._phone = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._email = value.email;
+      this._name = value.name;
+      this._phone = value.phone;
+    }
+  }
+
+  // email - computed: false, optional: false, required: true
+  private _email?: string; 
+  public get email() {
+    return this.getStringAttribute('email');
+  }
+  public set email(value: string) {
+    this._email = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get emailInput() {
+    return this._email;
+  }
+
+  // name - computed: false, optional: true, required: false
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // phone - computed: false, optional: true, required: false
+  private _phone?: string; 
+  public get phone() {
+    return this.getStringAttribute('phone');
+  }
+  public set phone(value: string) {
+    this._phone = value;
+  }
+  public resetPhone() {
+    this._phone = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get phoneInput() {
+    return this._phone;
+  }
+}
+
+export class KeyVaultContactList extends cdktf.ComplexList {
+  public internalValue? : KeyVaultContact[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): KeyVaultContactOutputReference {
+    return new KeyVaultContactOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface KeyVaultNetworkAcls {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault#bypass KeyVault#bypass}
@@ -330,6 +670,7 @@ export function keyVaultTimeoutsToTerraform(struct?: KeyVaultTimeoutsOutputRefer
 
 export class KeyVaultTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -339,7 +680,10 @@ export class KeyVaultTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): KeyVaultTimeouts | undefined {
+  public get internalValue(): KeyVaultTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -361,16 +705,22 @@ export class KeyVaultTimeoutsOutputReference extends cdktf.ComplexObject {
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: KeyVaultTimeouts | undefined) {
+  public set internalValue(value: KeyVaultTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -477,11 +827,12 @@ export class KeyVault extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
-    this._accessPolicy = config.accessPolicy;
+    this._accessPolicy.internalValue = config.accessPolicy;
     this._enableRbacAuthorization = config.enableRbacAuthorization;
     this._enabledForDeployment = config.enabledForDeployment;
     this._enabledForDiskEncryption = config.enabledForDiskEncryption;
     this._enabledForTemplateDeployment = config.enabledForTemplateDeployment;
+    this._id = config.id;
     this._location = config.location;
     this._name = config.name;
     this._purgeProtectionEnabled = config.purgeProtectionEnabled;
@@ -491,7 +842,7 @@ export class KeyVault extends cdktf.TerraformResource {
     this._softDeleteRetentionDays = config.softDeleteRetentionDays;
     this._tags = config.tags;
     this._tenantId = config.tenantId;
-    this._contact = config.contact;
+    this._contact.internalValue = config.contact;
     this._networkAcls.internalValue = config.networkAcls;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -501,20 +852,19 @@ export class KeyVault extends cdktf.TerraformResource {
   // ==========
 
   // access_policy - computed: true, optional: true, required: false
-  private _accessPolicy?: KeyVaultAccessPolicy[] | cdktf.IResolvable; 
+  private _accessPolicy = new KeyVaultAccessPolicyList(this, "access_policy", false);
   public get accessPolicy() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('access_policy');
+    return this._accessPolicy;
   }
-  public set accessPolicy(value: KeyVaultAccessPolicy[] | cdktf.IResolvable) {
-    this._accessPolicy = value;
+  public putAccessPolicy(value: KeyVaultAccessPolicy[] | cdktf.IResolvable) {
+    this._accessPolicy.internalValue = value;
   }
   public resetAccessPolicy() {
-    this._accessPolicy = undefined;
+    this._accessPolicy.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get accessPolicyInput() {
-    return this._accessPolicy;
+    return this._accessPolicy.internalValue;
   }
 
   // enable_rbac_authorization - computed: false, optional: true, required: false
@@ -582,8 +932,19 @@ export class KeyVault extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // location - computed: false, optional: false, required: true
@@ -721,20 +1082,19 @@ export class KeyVault extends cdktf.TerraformResource {
   }
 
   // contact - computed: false, optional: true, required: false
-  private _contact?: KeyVaultContact[] | cdktf.IResolvable; 
+  private _contact = new KeyVaultContactList(this, "contact", true);
   public get contact() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('contact')));
+    return this._contact;
   }
-  public set contact(value: KeyVaultContact[] | cdktf.IResolvable) {
-    this._contact = value;
+  public putContact(value: KeyVaultContact[] | cdktf.IResolvable) {
+    this._contact.internalValue = value;
   }
   public resetContact() {
-    this._contact = undefined;
+    this._contact.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get contactInput() {
-    return this._contact;
+    return this._contact.internalValue;
   }
 
   // network_acls - computed: false, optional: true, required: false
@@ -775,11 +1135,12 @@ export class KeyVault extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      access_policy: cdktf.listMapper(keyVaultAccessPolicyToTerraform)(this._accessPolicy),
+      access_policy: cdktf.listMapper(keyVaultAccessPolicyToTerraform)(this._accessPolicy.internalValue),
       enable_rbac_authorization: cdktf.booleanToTerraform(this._enableRbacAuthorization),
       enabled_for_deployment: cdktf.booleanToTerraform(this._enabledForDeployment),
       enabled_for_disk_encryption: cdktf.booleanToTerraform(this._enabledForDiskEncryption),
       enabled_for_template_deployment: cdktf.booleanToTerraform(this._enabledForTemplateDeployment),
+      id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       purge_protection_enabled: cdktf.booleanToTerraform(this._purgeProtectionEnabled),
@@ -789,7 +1150,7 @@ export class KeyVault extends cdktf.TerraformResource {
       soft_delete_retention_days: cdktf.numberToTerraform(this._softDeleteRetentionDays),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       tenant_id: cdktf.stringToTerraform(this._tenantId),
-      contact: cdktf.listMapper(keyVaultContactToTerraform)(this._contact),
+      contact: cdktf.listMapper(keyVaultContactToTerraform)(this._contact.internalValue),
       network_acls: keyVaultNetworkAclsToTerraform(this._networkAcls.internalValue),
       timeouts: keyVaultTimeoutsToTerraform(this._timeouts.internalValue),
     };

@@ -16,6 +16,13 @@ export interface MonitorActivityLogAlertConfig extends cdktf.TerraformMetaArgume
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_activity_log_alert#id MonitorActivityLogAlert#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_activity_log_alert#name MonitorActivityLogAlert#name}
   */
   readonly name: string;
@@ -72,6 +79,105 @@ export function monitorActivityLogAlertActionToTerraform(struct?: MonitorActivit
   }
 }
 
+export class MonitorActivityLogAlertActionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MonitorActivityLogAlertAction | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._actionGroupId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.actionGroupId = this._actionGroupId;
+    }
+    if (this._webhookProperties !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.webhookProperties = this._webhookProperties;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitorActivityLogAlertAction | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._actionGroupId = undefined;
+      this._webhookProperties = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._actionGroupId = value.actionGroupId;
+      this._webhookProperties = value.webhookProperties;
+    }
+  }
+
+  // action_group_id - computed: false, optional: false, required: true
+  private _actionGroupId?: string; 
+  public get actionGroupId() {
+    return this.getStringAttribute('action_group_id');
+  }
+  public set actionGroupId(value: string) {
+    this._actionGroupId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get actionGroupIdInput() {
+    return this._actionGroupId;
+  }
+
+  // webhook_properties - computed: false, optional: true, required: false
+  private _webhookProperties?: { [key: string]: string }; 
+  public get webhookProperties() {
+    return this.getStringMapAttribute('webhook_properties');
+  }
+  public set webhookProperties(value: { [key: string]: string }) {
+    this._webhookProperties = value;
+  }
+  public resetWebhookProperties() {
+    this._webhookProperties = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get webhookPropertiesInput() {
+    return this._webhookProperties;
+  }
+}
+
+export class MonitorActivityLogAlertActionList extends cdktf.ComplexList {
+  public internalValue? : MonitorActivityLogAlertAction[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MonitorActivityLogAlertActionOutputReference {
+    return new MonitorActivityLogAlertActionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface MonitorActivityLogAlertCriteriaResourceHealth {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_activity_log_alert#current MonitorActivityLogAlert#current}
@@ -99,6 +205,130 @@ export function monitorActivityLogAlertCriteriaResourceHealthToTerraform(struct?
   }
 }
 
+export class MonitorActivityLogAlertCriteriaResourceHealthOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MonitorActivityLogAlertCriteriaResourceHealth | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._current !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.current = this._current;
+    }
+    if (this._previous !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.previous = this._previous;
+    }
+    if (this._reason !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.reason = this._reason;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitorActivityLogAlertCriteriaResourceHealth | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._current = undefined;
+      this._previous = undefined;
+      this._reason = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._current = value.current;
+      this._previous = value.previous;
+      this._reason = value.reason;
+    }
+  }
+
+  // current - computed: false, optional: true, required: false
+  private _current?: string[]; 
+  public get current() {
+    return cdktf.Fn.tolist(this.getListAttribute('current'));
+  }
+  public set current(value: string[]) {
+    this._current = value;
+  }
+  public resetCurrent() {
+    this._current = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get currentInput() {
+    return this._current;
+  }
+
+  // previous - computed: false, optional: true, required: false
+  private _previous?: string[]; 
+  public get previous() {
+    return cdktf.Fn.tolist(this.getListAttribute('previous'));
+  }
+  public set previous(value: string[]) {
+    this._previous = value;
+  }
+  public resetPrevious() {
+    this._previous = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get previousInput() {
+    return this._previous;
+  }
+
+  // reason - computed: false, optional: true, required: false
+  private _reason?: string[]; 
+  public get reason() {
+    return cdktf.Fn.tolist(this.getListAttribute('reason'));
+  }
+  public set reason(value: string[]) {
+    this._reason = value;
+  }
+  public resetReason() {
+    this._reason = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get reasonInput() {
+    return this._reason;
+  }
+}
+
+export class MonitorActivityLogAlertCriteriaResourceHealthList extends cdktf.ComplexList {
+  public internalValue? : MonitorActivityLogAlertCriteriaResourceHealth[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MonitorActivityLogAlertCriteriaResourceHealthOutputReference {
+    return new MonitorActivityLogAlertCriteriaResourceHealthOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface MonitorActivityLogAlertCriteriaServiceHealth {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_activity_log_alert#events MonitorActivityLogAlert#events}
@@ -126,6 +356,130 @@ export function monitorActivityLogAlertCriteriaServiceHealthToTerraform(struct?:
   }
 }
 
+export class MonitorActivityLogAlertCriteriaServiceHealthOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MonitorActivityLogAlertCriteriaServiceHealth | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._events !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.events = this._events;
+    }
+    if (this._locations !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.locations = this._locations;
+    }
+    if (this._services !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.services = this._services;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitorActivityLogAlertCriteriaServiceHealth | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._events = undefined;
+      this._locations = undefined;
+      this._services = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._events = value.events;
+      this._locations = value.locations;
+      this._services = value.services;
+    }
+  }
+
+  // events - computed: false, optional: true, required: false
+  private _events?: string[]; 
+  public get events() {
+    return cdktf.Fn.tolist(this.getListAttribute('events'));
+  }
+  public set events(value: string[]) {
+    this._events = value;
+  }
+  public resetEvents() {
+    this._events = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get eventsInput() {
+    return this._events;
+  }
+
+  // locations - computed: false, optional: true, required: false
+  private _locations?: string[]; 
+  public get locations() {
+    return cdktf.Fn.tolist(this.getListAttribute('locations'));
+  }
+  public set locations(value: string[]) {
+    this._locations = value;
+  }
+  public resetLocations() {
+    this._locations = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationsInput() {
+    return this._locations;
+  }
+
+  // services - computed: false, optional: true, required: false
+  private _services?: string[]; 
+  public get services() {
+    return cdktf.Fn.tolist(this.getListAttribute('services'));
+  }
+  public set services(value: string[]) {
+    this._services = value;
+  }
+  public resetServices() {
+    this._services = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get servicesInput() {
+    return this._services;
+  }
+}
+
+export class MonitorActivityLogAlertCriteriaServiceHealthList extends cdktf.ComplexList {
+  public internalValue? : MonitorActivityLogAlertCriteriaServiceHealth[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MonitorActivityLogAlertCriteriaServiceHealthOutputReference {
+    return new MonitorActivityLogAlertCriteriaServiceHealthOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface MonitorActivityLogAlertCriteria {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_activity_log_alert#caller MonitorActivityLogAlert#caller}
@@ -283,13 +637,13 @@ export class MonitorActivityLogAlertCriteriaOutputReference extends cdktf.Comple
       hasAnyValues = true;
       internalValueResult.subStatus = this._subStatus;
     }
-    if (this._resourceHealth !== undefined) {
+    if (this._resourceHealth?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.resourceHealth = this._resourceHealth;
+      internalValueResult.resourceHealth = this._resourceHealth?.internalValue;
     }
-    if (this._serviceHealth !== undefined) {
+    if (this._serviceHealth?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.serviceHealth = this._serviceHealth;
+      internalValueResult.serviceHealth = this._serviceHealth?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -310,8 +664,8 @@ export class MonitorActivityLogAlertCriteriaOutputReference extends cdktf.Comple
       this._resourceType = undefined;
       this._status = undefined;
       this._subStatus = undefined;
-      this._resourceHealth = undefined;
-      this._serviceHealth = undefined;
+      this._resourceHealth.internalValue = undefined;
+      this._serviceHealth.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
@@ -328,8 +682,8 @@ export class MonitorActivityLogAlertCriteriaOutputReference extends cdktf.Comple
       this._resourceType = value.resourceType;
       this._status = value.status;
       this._subStatus = value.subStatus;
-      this._resourceHealth = value.resourceHealth;
-      this._serviceHealth = value.serviceHealth;
+      this._resourceHealth.internalValue = value.resourceHealth;
+      this._serviceHealth.internalValue = value.serviceHealth;
     }
   }
 
@@ -539,37 +893,35 @@ export class MonitorActivityLogAlertCriteriaOutputReference extends cdktf.Comple
   }
 
   // resource_health - computed: false, optional: true, required: false
-  private _resourceHealth?: MonitorActivityLogAlertCriteriaResourceHealth[] | cdktf.IResolvable; 
+  private _resourceHealth = new MonitorActivityLogAlertCriteriaResourceHealthList(this, "resource_health", false);
   public get resourceHealth() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('resource_health');
+    return this._resourceHealth;
   }
-  public set resourceHealth(value: MonitorActivityLogAlertCriteriaResourceHealth[] | cdktf.IResolvable) {
-    this._resourceHealth = value;
+  public putResourceHealth(value: MonitorActivityLogAlertCriteriaResourceHealth[] | cdktf.IResolvable) {
+    this._resourceHealth.internalValue = value;
   }
   public resetResourceHealth() {
-    this._resourceHealth = undefined;
+    this._resourceHealth.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get resourceHealthInput() {
-    return this._resourceHealth;
+    return this._resourceHealth.internalValue;
   }
 
   // service_health - computed: false, optional: true, required: false
-  private _serviceHealth?: MonitorActivityLogAlertCriteriaServiceHealth[] | cdktf.IResolvable; 
+  private _serviceHealth = new MonitorActivityLogAlertCriteriaServiceHealthList(this, "service_health", false);
   public get serviceHealth() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('service_health');
+    return this._serviceHealth;
   }
-  public set serviceHealth(value: MonitorActivityLogAlertCriteriaServiceHealth[] | cdktf.IResolvable) {
-    this._serviceHealth = value;
+  public putServiceHealth(value: MonitorActivityLogAlertCriteriaServiceHealth[] | cdktf.IResolvable) {
+    this._serviceHealth.internalValue = value;
   }
   public resetServiceHealth() {
-    this._serviceHealth = undefined;
+    this._serviceHealth.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get serviceHealthInput() {
-    return this._serviceHealth;
+    return this._serviceHealth.internalValue;
   }
 }
 export interface MonitorActivityLogAlertTimeouts {
@@ -606,6 +958,7 @@ export function monitorActivityLogAlertTimeoutsToTerraform(struct?: MonitorActiv
 
 export class MonitorActivityLogAlertTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -615,7 +968,10 @@ export class MonitorActivityLogAlertTimeoutsOutputReference extends cdktf.Comple
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): MonitorActivityLogAlertTimeouts | undefined {
+  public get internalValue(): MonitorActivityLogAlertTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -637,16 +993,22 @@ export class MonitorActivityLogAlertTimeoutsOutputReference extends cdktf.Comple
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: MonitorActivityLogAlertTimeouts | undefined) {
+  public set internalValue(value: MonitorActivityLogAlertTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -755,11 +1117,12 @@ export class MonitorActivityLogAlert extends cdktf.TerraformResource {
     });
     this._description = config.description;
     this._enabled = config.enabled;
+    this._id = config.id;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._scopes = config.scopes;
     this._tags = config.tags;
-    this._action = config.action;
+    this._action.internalValue = config.action;
     this._criteria.internalValue = config.criteria;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -801,8 +1164,19 @@ export class MonitorActivityLogAlert extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // name - computed: false, optional: false, required: true
@@ -861,20 +1235,19 @@ export class MonitorActivityLogAlert extends cdktf.TerraformResource {
   }
 
   // action - computed: false, optional: true, required: false
-  private _action?: MonitorActivityLogAlertAction[] | cdktf.IResolvable; 
+  private _action = new MonitorActivityLogAlertActionList(this, "action", true);
   public get action() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('action')));
+    return this._action;
   }
-  public set action(value: MonitorActivityLogAlertAction[] | cdktf.IResolvable) {
-    this._action = value;
+  public putAction(value: MonitorActivityLogAlertAction[] | cdktf.IResolvable) {
+    this._action.internalValue = value;
   }
   public resetAction() {
-    this._action = undefined;
+    this._action.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get actionInput() {
-    return this._action;
+    return this._action.internalValue;
   }
 
   // criteria - computed: false, optional: false, required: true
@@ -914,11 +1287,12 @@ export class MonitorActivityLogAlert extends cdktf.TerraformResource {
     return {
       description: cdktf.stringToTerraform(this._description),
       enabled: cdktf.booleanToTerraform(this._enabled),
+      id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       scopes: cdktf.listMapper(cdktf.stringToTerraform)(this._scopes),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
-      action: cdktf.listMapper(monitorActivityLogAlertActionToTerraform)(this._action),
+      action: cdktf.listMapper(monitorActivityLogAlertActionToTerraform)(this._action.internalValue),
       criteria: monitorActivityLogAlertCriteriaToTerraform(this._criteria.internalValue),
       timeouts: monitorActivityLogAlertTimeoutsToTerraform(this._timeouts.internalValue),
     };

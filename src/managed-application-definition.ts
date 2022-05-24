@@ -20,6 +20,13 @@ export interface ManagedApplicationDefinitionConfig extends cdktf.TerraformMetaA
   */
   readonly displayName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application_definition#id ManagedApplicationDefinition#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application_definition#location ManagedApplicationDefinition#location}
   */
   readonly location: string;
@@ -86,6 +93,102 @@ export function managedApplicationDefinitionAuthorizationToTerraform(struct?: Ma
   }
 }
 
+export class ManagedApplicationDefinitionAuthorizationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ManagedApplicationDefinitionAuthorization | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._roleDefinitionId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.roleDefinitionId = this._roleDefinitionId;
+    }
+    if (this._servicePrincipalId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.servicePrincipalId = this._servicePrincipalId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ManagedApplicationDefinitionAuthorization | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._roleDefinitionId = undefined;
+      this._servicePrincipalId = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._roleDefinitionId = value.roleDefinitionId;
+      this._servicePrincipalId = value.servicePrincipalId;
+    }
+  }
+
+  // role_definition_id - computed: false, optional: false, required: true
+  private _roleDefinitionId?: string; 
+  public get roleDefinitionId() {
+    return this.getStringAttribute('role_definition_id');
+  }
+  public set roleDefinitionId(value: string) {
+    this._roleDefinitionId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get roleDefinitionIdInput() {
+    return this._roleDefinitionId;
+  }
+
+  // service_principal_id - computed: false, optional: false, required: true
+  private _servicePrincipalId?: string; 
+  public get servicePrincipalId() {
+    return this.getStringAttribute('service_principal_id');
+  }
+  public set servicePrincipalId(value: string) {
+    this._servicePrincipalId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get servicePrincipalIdInput() {
+    return this._servicePrincipalId;
+  }
+}
+
+export class ManagedApplicationDefinitionAuthorizationList extends cdktf.ComplexList {
+  public internalValue? : ManagedApplicationDefinitionAuthorization[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ManagedApplicationDefinitionAuthorizationOutputReference {
+    return new ManagedApplicationDefinitionAuthorizationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ManagedApplicationDefinitionTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application_definition#create ManagedApplicationDefinition#create}
@@ -120,6 +223,7 @@ export function managedApplicationDefinitionTimeoutsToTerraform(struct?: Managed
 
 export class ManagedApplicationDefinitionTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -129,7 +233,10 @@ export class ManagedApplicationDefinitionTimeoutsOutputReference extends cdktf.C
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): ManagedApplicationDefinitionTimeouts | undefined {
+  public get internalValue(): ManagedApplicationDefinitionTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -151,16 +258,22 @@ export class ManagedApplicationDefinitionTimeoutsOutputReference extends cdktf.C
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: ManagedApplicationDefinitionTimeouts | undefined) {
+  public set internalValue(value: ManagedApplicationDefinitionTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -270,6 +383,7 @@ export class ManagedApplicationDefinition extends cdktf.TerraformResource {
     this._createUiDefinition = config.createUiDefinition;
     this._description = config.description;
     this._displayName = config.displayName;
+    this._id = config.id;
     this._location = config.location;
     this._lockLevel = config.lockLevel;
     this._mainTemplate = config.mainTemplate;
@@ -278,7 +392,7 @@ export class ManagedApplicationDefinition extends cdktf.TerraformResource {
     this._packageFileUri = config.packageFileUri;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
-    this._authorization = config.authorization;
+    this._authorization.internalValue = config.authorization;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -332,8 +446,19 @@ export class ManagedApplicationDefinition extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // location - computed: false, optional: false, required: true
@@ -453,20 +578,19 @@ export class ManagedApplicationDefinition extends cdktf.TerraformResource {
   }
 
   // authorization - computed: false, optional: true, required: false
-  private _authorization?: ManagedApplicationDefinitionAuthorization[] | cdktf.IResolvable; 
+  private _authorization = new ManagedApplicationDefinitionAuthorizationList(this, "authorization", true);
   public get authorization() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('authorization')));
+    return this._authorization;
   }
-  public set authorization(value: ManagedApplicationDefinitionAuthorization[] | cdktf.IResolvable) {
-    this._authorization = value;
+  public putAuthorization(value: ManagedApplicationDefinitionAuthorization[] | cdktf.IResolvable) {
+    this._authorization.internalValue = value;
   }
   public resetAuthorization() {
-    this._authorization = undefined;
+    this._authorization.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get authorizationInput() {
-    return this._authorization;
+    return this._authorization.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -494,6 +618,7 @@ export class ManagedApplicationDefinition extends cdktf.TerraformResource {
       create_ui_definition: cdktf.stringToTerraform(this._createUiDefinition),
       description: cdktf.stringToTerraform(this._description),
       display_name: cdktf.stringToTerraform(this._displayName),
+      id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       lock_level: cdktf.stringToTerraform(this._lockLevel),
       main_template: cdktf.stringToTerraform(this._mainTemplate),
@@ -502,7 +627,7 @@ export class ManagedApplicationDefinition extends cdktf.TerraformResource {
       package_file_uri: cdktf.stringToTerraform(this._packageFileUri),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
-      authorization: cdktf.listMapper(managedApplicationDefinitionAuthorizationToTerraform)(this._authorization),
+      authorization: cdktf.listMapper(managedApplicationDefinitionAuthorizationToTerraform)(this._authorization.internalValue),
       timeouts: managedApplicationDefinitionTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

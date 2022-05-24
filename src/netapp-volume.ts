@@ -16,6 +16,13 @@ export interface NetappVolumeConfig extends cdktf.TerraformMetaArguments {
   */
   readonly createFromSnapshotResourceId?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_volume#id NetappVolume#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_volume#location NetappVolume#location}
   */
   readonly location: string;
@@ -348,6 +355,256 @@ export function netappVolumeExportPolicyRuleToTerraform(struct?: NetappVolumeExp
   }
 }
 
+export class NetappVolumeExportPolicyRuleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): NetappVolumeExportPolicyRule | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._allowedClients !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.allowedClients = this._allowedClients;
+    }
+    if (this._cifsEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.cifsEnabled = this._cifsEnabled;
+    }
+    if (this._nfsv3Enabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.nfsv3Enabled = this._nfsv3Enabled;
+    }
+    if (this._nfsv4Enabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.nfsv4Enabled = this._nfsv4Enabled;
+    }
+    if (this._protocolsEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.protocolsEnabled = this._protocolsEnabled;
+    }
+    if (this._rootAccessEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rootAccessEnabled = this._rootAccessEnabled;
+    }
+    if (this._ruleIndex !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ruleIndex = this._ruleIndex;
+    }
+    if (this._unixReadOnly !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.unixReadOnly = this._unixReadOnly;
+    }
+    if (this._unixReadWrite !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.unixReadWrite = this._unixReadWrite;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetappVolumeExportPolicyRule | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._allowedClients = undefined;
+      this._cifsEnabled = undefined;
+      this._nfsv3Enabled = undefined;
+      this._nfsv4Enabled = undefined;
+      this._protocolsEnabled = undefined;
+      this._rootAccessEnabled = undefined;
+      this._ruleIndex = undefined;
+      this._unixReadOnly = undefined;
+      this._unixReadWrite = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._allowedClients = value.allowedClients;
+      this._cifsEnabled = value.cifsEnabled;
+      this._nfsv3Enabled = value.nfsv3Enabled;
+      this._nfsv4Enabled = value.nfsv4Enabled;
+      this._protocolsEnabled = value.protocolsEnabled;
+      this._rootAccessEnabled = value.rootAccessEnabled;
+      this._ruleIndex = value.ruleIndex;
+      this._unixReadOnly = value.unixReadOnly;
+      this._unixReadWrite = value.unixReadWrite;
+    }
+  }
+
+  // allowed_clients - computed: false, optional: false, required: true
+  private _allowedClients?: string[]; 
+  public get allowedClients() {
+    return cdktf.Fn.tolist(this.getListAttribute('allowed_clients'));
+  }
+  public set allowedClients(value: string[]) {
+    this._allowedClients = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowedClientsInput() {
+    return this._allowedClients;
+  }
+
+  // cifs_enabled - computed: true, optional: true, required: false
+  private _cifsEnabled?: boolean | cdktf.IResolvable; 
+  public get cifsEnabled() {
+    return this.getBooleanAttribute('cifs_enabled');
+  }
+  public set cifsEnabled(value: boolean | cdktf.IResolvable) {
+    this._cifsEnabled = value;
+  }
+  public resetCifsEnabled() {
+    this._cifsEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cifsEnabledInput() {
+    return this._cifsEnabled;
+  }
+
+  // nfsv3_enabled - computed: true, optional: true, required: false
+  private _nfsv3Enabled?: boolean | cdktf.IResolvable; 
+  public get nfsv3Enabled() {
+    return this.getBooleanAttribute('nfsv3_enabled');
+  }
+  public set nfsv3Enabled(value: boolean | cdktf.IResolvable) {
+    this._nfsv3Enabled = value;
+  }
+  public resetNfsv3Enabled() {
+    this._nfsv3Enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nfsv3EnabledInput() {
+    return this._nfsv3Enabled;
+  }
+
+  // nfsv4_enabled - computed: true, optional: true, required: false
+  private _nfsv4Enabled?: boolean | cdktf.IResolvable; 
+  public get nfsv4Enabled() {
+    return this.getBooleanAttribute('nfsv4_enabled');
+  }
+  public set nfsv4Enabled(value: boolean | cdktf.IResolvable) {
+    this._nfsv4Enabled = value;
+  }
+  public resetNfsv4Enabled() {
+    this._nfsv4Enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nfsv4EnabledInput() {
+    return this._nfsv4Enabled;
+  }
+
+  // protocols_enabled - computed: true, optional: true, required: false
+  private _protocolsEnabled?: string[]; 
+  public get protocolsEnabled() {
+    return this.getListAttribute('protocols_enabled');
+  }
+  public set protocolsEnabled(value: string[]) {
+    this._protocolsEnabled = value;
+  }
+  public resetProtocolsEnabled() {
+    this._protocolsEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get protocolsEnabledInput() {
+    return this._protocolsEnabled;
+  }
+
+  // root_access_enabled - computed: false, optional: true, required: false
+  private _rootAccessEnabled?: boolean | cdktf.IResolvable; 
+  public get rootAccessEnabled() {
+    return this.getBooleanAttribute('root_access_enabled');
+  }
+  public set rootAccessEnabled(value: boolean | cdktf.IResolvable) {
+    this._rootAccessEnabled = value;
+  }
+  public resetRootAccessEnabled() {
+    this._rootAccessEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rootAccessEnabledInput() {
+    return this._rootAccessEnabled;
+  }
+
+  // rule_index - computed: false, optional: false, required: true
+  private _ruleIndex?: number; 
+  public get ruleIndex() {
+    return this.getNumberAttribute('rule_index');
+  }
+  public set ruleIndex(value: number) {
+    this._ruleIndex = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ruleIndexInput() {
+    return this._ruleIndex;
+  }
+
+  // unix_read_only - computed: false, optional: true, required: false
+  private _unixReadOnly?: boolean | cdktf.IResolvable; 
+  public get unixReadOnly() {
+    return this.getBooleanAttribute('unix_read_only');
+  }
+  public set unixReadOnly(value: boolean | cdktf.IResolvable) {
+    this._unixReadOnly = value;
+  }
+  public resetUnixReadOnly() {
+    this._unixReadOnly = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get unixReadOnlyInput() {
+    return this._unixReadOnly;
+  }
+
+  // unix_read_write - computed: false, optional: true, required: false
+  private _unixReadWrite?: boolean | cdktf.IResolvable; 
+  public get unixReadWrite() {
+    return this.getBooleanAttribute('unix_read_write');
+  }
+  public set unixReadWrite(value: boolean | cdktf.IResolvable) {
+    this._unixReadWrite = value;
+  }
+  public resetUnixReadWrite() {
+    this._unixReadWrite = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get unixReadWriteInput() {
+    return this._unixReadWrite;
+  }
+}
+
+export class NetappVolumeExportPolicyRuleList extends cdktf.ComplexList {
+  public internalValue? : NetappVolumeExportPolicyRule[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): NetappVolumeExportPolicyRuleOutputReference {
+    return new NetappVolumeExportPolicyRuleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface NetappVolumeTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_volume#create NetappVolume#create}
@@ -382,6 +639,7 @@ export function netappVolumeTimeoutsToTerraform(struct?: NetappVolumeTimeoutsOut
 
 export class NetappVolumeTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -391,7 +649,10 @@ export class NetappVolumeTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): NetappVolumeTimeouts | undefined {
+  public get internalValue(): NetappVolumeTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -413,16 +674,22 @@ export class NetappVolumeTimeoutsOutputReference extends cdktf.ComplexObject {
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: NetappVolumeTimeouts | undefined) {
+  public set internalValue(value: NetappVolumeTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -531,6 +798,7 @@ export class NetappVolume extends cdktf.TerraformResource {
     });
     this._accountName = config.accountName;
     this._createFromSnapshotResourceId = config.createFromSnapshotResourceId;
+    this._id = config.id;
     this._location = config.location;
     this._name = config.name;
     this._poolName = config.poolName;
@@ -546,7 +814,7 @@ export class NetappVolume extends cdktf.TerraformResource {
     this._volumePath = config.volumePath;
     this._dataProtectionReplication.internalValue = config.dataProtectionReplication;
     this._dataProtectionSnapshotPolicy.internalValue = config.dataProtectionSnapshotPolicy;
-    this._exportPolicyRule = config.exportPolicyRule;
+    this._exportPolicyRule.internalValue = config.exportPolicyRule;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -584,8 +852,19 @@ export class NetappVolume extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // location - computed: false, optional: false, required: true
@@ -810,20 +1089,19 @@ export class NetappVolume extends cdktf.TerraformResource {
   }
 
   // export_policy_rule - computed: false, optional: true, required: false
-  private _exportPolicyRule?: NetappVolumeExportPolicyRule[] | cdktf.IResolvable; 
+  private _exportPolicyRule = new NetappVolumeExportPolicyRuleList(this, "export_policy_rule", false);
   public get exportPolicyRule() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('export_policy_rule');
+    return this._exportPolicyRule;
   }
-  public set exportPolicyRule(value: NetappVolumeExportPolicyRule[] | cdktf.IResolvable) {
-    this._exportPolicyRule = value;
+  public putExportPolicyRule(value: NetappVolumeExportPolicyRule[] | cdktf.IResolvable) {
+    this._exportPolicyRule.internalValue = value;
   }
   public resetExportPolicyRule() {
-    this._exportPolicyRule = undefined;
+    this._exportPolicyRule.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get exportPolicyRuleInput() {
-    return this._exportPolicyRule;
+    return this._exportPolicyRule.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -850,6 +1128,7 @@ export class NetappVolume extends cdktf.TerraformResource {
     return {
       account_name: cdktf.stringToTerraform(this._accountName),
       create_from_snapshot_resource_id: cdktf.stringToTerraform(this._createFromSnapshotResourceId),
+      id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       pool_name: cdktf.stringToTerraform(this._poolName),
@@ -865,7 +1144,7 @@ export class NetappVolume extends cdktf.TerraformResource {
       volume_path: cdktf.stringToTerraform(this._volumePath),
       data_protection_replication: netappVolumeDataProtectionReplicationToTerraform(this._dataProtectionReplication.internalValue),
       data_protection_snapshot_policy: netappVolumeDataProtectionSnapshotPolicyToTerraform(this._dataProtectionSnapshotPolicy.internalValue),
-      export_policy_rule: cdktf.listMapper(netappVolumeExportPolicyRuleToTerraform)(this._exportPolicyRule),
+      export_policy_rule: cdktf.listMapper(netappVolumeExportPolicyRuleToTerraform)(this._exportPolicyRule.internalValue),
       timeouts: netappVolumeTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

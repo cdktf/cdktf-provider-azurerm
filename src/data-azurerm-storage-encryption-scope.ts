@@ -8,6 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermStorageEncryptionScopeConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_encryption_scope#id DataAzurermStorageEncryptionScope#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_encryption_scope#name DataAzurermStorageEncryptionScope#name}
   */
   readonly name: string;
@@ -41,6 +48,7 @@ export function dataAzurermStorageEncryptionScopeTimeoutsToTerraform(struct?: Da
 
 export class DataAzurermStorageEncryptionScopeTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -50,7 +58,10 @@ export class DataAzurermStorageEncryptionScopeTimeoutsOutputReference extends cd
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): DataAzurermStorageEncryptionScopeTimeouts | undefined {
+  public get internalValue(): DataAzurermStorageEncryptionScopeTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._read !== undefined) {
@@ -60,13 +71,19 @@ export class DataAzurermStorageEncryptionScopeTimeoutsOutputReference extends cd
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: DataAzurermStorageEncryptionScopeTimeouts | undefined) {
+  public set internalValue(value: DataAzurermStorageEncryptionScopeTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._read = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._read = value.read;
     }
   }
@@ -122,6 +139,7 @@ export class DataAzurermStorageEncryptionScope extends cdktf.TerraformDataSource
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._id = config.id;
     this._name = config.name;
     this._storageAccountId = config.storageAccountId;
     this._timeouts.internalValue = config.timeouts;
@@ -132,8 +150,19 @@ export class DataAzurermStorageEncryptionScope extends cdktf.TerraformDataSource
   // ==========
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // key_vault_key_id - computed: true, optional: false, required: false
@@ -194,6 +223,7 @@ export class DataAzurermStorageEncryptionScope extends cdktf.TerraformDataSource
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
       timeouts: dataAzurermStorageEncryptionScopeTimeoutsToTerraform(this._timeouts.internalValue),

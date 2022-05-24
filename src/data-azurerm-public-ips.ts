@@ -20,6 +20,13 @@ export interface DataAzurermPublicIpsConfig extends cdktf.TerraformMetaArguments
   */
   readonly attachmentStatus?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/public_ips#id DataAzurermPublicIps#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/public_ips#name_prefix DataAzurermPublicIps#name_prefix}
   */
   readonly namePrefix?: string;
@@ -137,6 +144,7 @@ export function dataAzurermPublicIpsTimeoutsToTerraform(struct?: DataAzurermPubl
 
 export class DataAzurermPublicIpsTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -146,7 +154,10 @@ export class DataAzurermPublicIpsTimeoutsOutputReference extends cdktf.ComplexOb
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): DataAzurermPublicIpsTimeouts | undefined {
+  public get internalValue(): DataAzurermPublicIpsTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._read !== undefined) {
@@ -156,13 +167,19 @@ export class DataAzurermPublicIpsTimeoutsOutputReference extends cdktf.ComplexOb
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: DataAzurermPublicIpsTimeouts | undefined) {
+  public set internalValue(value: DataAzurermPublicIpsTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._read = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._read = value.read;
     }
   }
@@ -221,6 +238,7 @@ export class DataAzurermPublicIps extends cdktf.TerraformDataSource {
     this._allocationType = config.allocationType;
     this._attached = config.attached;
     this._attachmentStatus = config.attachmentStatus;
+    this._id = config.id;
     this._namePrefix = config.namePrefix;
     this._resourceGroupName = config.resourceGroupName;
     this._timeouts.internalValue = config.timeouts;
@@ -279,8 +297,19 @@ export class DataAzurermPublicIps extends cdktf.TerraformDataSource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // name_prefix - computed: false, optional: true, required: false
@@ -343,6 +372,7 @@ export class DataAzurermPublicIps extends cdktf.TerraformDataSource {
       allocation_type: cdktf.stringToTerraform(this._allocationType),
       attached: cdktf.booleanToTerraform(this._attached),
       attachment_status: cdktf.stringToTerraform(this._attachmentStatus),
+      id: cdktf.stringToTerraform(this._id),
       name_prefix: cdktf.stringToTerraform(this._namePrefix),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       timeouts: dataAzurermPublicIpsTimeoutsToTerraform(this._timeouts.internalValue),

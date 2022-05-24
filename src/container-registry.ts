@@ -36,6 +36,13 @@ export interface ContainerRegistryConfig extends cdktf.TerraformMetaArguments {
   */
   readonly georeplications?: ContainerRegistryGeoreplications[] | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry#id ContainerRegistry#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry#location ContainerRegistry#location}
   */
   readonly location: string;
@@ -127,6 +134,130 @@ export function containerRegistryEncryptionToTerraform(struct?: ContainerRegistr
   }
 }
 
+export class ContainerRegistryEncryptionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ContainerRegistryEncryption | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._enabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._identityClientId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.identityClientId = this._identityClientId;
+    }
+    if (this._keyVaultKeyId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keyVaultKeyId = this._keyVaultKeyId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerRegistryEncryption | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._enabled = undefined;
+      this._identityClientId = undefined;
+      this._keyVaultKeyId = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._enabled = value.enabled;
+      this._identityClientId = value.identityClientId;
+      this._keyVaultKeyId = value.keyVaultKeyId;
+    }
+  }
+
+  // enabled - computed: true, optional: true, required: false
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+
+  // identity_client_id - computed: true, optional: true, required: false
+  private _identityClientId?: string; 
+  public get identityClientId() {
+    return this.getStringAttribute('identity_client_id');
+  }
+  public set identityClientId(value: string) {
+    this._identityClientId = value;
+  }
+  public resetIdentityClientId() {
+    this._identityClientId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityClientIdInput() {
+    return this._identityClientId;
+  }
+
+  // key_vault_key_id - computed: true, optional: true, required: false
+  private _keyVaultKeyId?: string; 
+  public get keyVaultKeyId() {
+    return this.getStringAttribute('key_vault_key_id');
+  }
+  public set keyVaultKeyId(value: string) {
+    this._keyVaultKeyId = value;
+  }
+  public resetKeyVaultKeyId() {
+    this._keyVaultKeyId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultKeyIdInput() {
+    return this._keyVaultKeyId;
+  }
+}
+
+export class ContainerRegistryEncryptionList extends cdktf.ComplexList {
+  public internalValue? : ContainerRegistryEncryption[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ContainerRegistryEncryptionOutputReference {
+    return new ContainerRegistryEncryptionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ContainerRegistryGeoreplications {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry#location ContainerRegistry#location}
@@ -159,6 +290,152 @@ export function containerRegistryGeoreplicationsToTerraform(struct?: ContainerRe
   }
 }
 
+export class ContainerRegistryGeoreplicationsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ContainerRegistryGeoreplications | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._location !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.location = this._location;
+    }
+    if (this._regionalEndpointEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.regionalEndpointEnabled = this._regionalEndpointEnabled;
+    }
+    if (this._tags !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.tags = this._tags;
+    }
+    if (this._zoneRedundancyEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.zoneRedundancyEnabled = this._zoneRedundancyEnabled;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerRegistryGeoreplications | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._location = undefined;
+      this._regionalEndpointEnabled = undefined;
+      this._tags = undefined;
+      this._zoneRedundancyEnabled = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._location = value.location;
+      this._regionalEndpointEnabled = value.regionalEndpointEnabled;
+      this._tags = value.tags;
+      this._zoneRedundancyEnabled = value.zoneRedundancyEnabled;
+    }
+  }
+
+  // location - computed: true, optional: true, required: false
+  private _location?: string; 
+  public get location() {
+    return this.getStringAttribute('location');
+  }
+  public set location(value: string) {
+    this._location = value;
+  }
+  public resetLocation() {
+    this._location = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location;
+  }
+
+  // regional_endpoint_enabled - computed: true, optional: true, required: false
+  private _regionalEndpointEnabled?: boolean | cdktf.IResolvable; 
+  public get regionalEndpointEnabled() {
+    return this.getBooleanAttribute('regional_endpoint_enabled');
+  }
+  public set regionalEndpointEnabled(value: boolean | cdktf.IResolvable) {
+    this._regionalEndpointEnabled = value;
+  }
+  public resetRegionalEndpointEnabled() {
+    this._regionalEndpointEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionalEndpointEnabledInput() {
+    return this._regionalEndpointEnabled;
+  }
+
+  // tags - computed: true, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // zone_redundancy_enabled - computed: true, optional: true, required: false
+  private _zoneRedundancyEnabled?: boolean | cdktf.IResolvable; 
+  public get zoneRedundancyEnabled() {
+    return this.getBooleanAttribute('zone_redundancy_enabled');
+  }
+  public set zoneRedundancyEnabled(value: boolean | cdktf.IResolvable) {
+    this._zoneRedundancyEnabled = value;
+  }
+  public resetZoneRedundancyEnabled() {
+    this._zoneRedundancyEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get zoneRedundancyEnabledInput() {
+    return this._zoneRedundancyEnabled;
+  }
+}
+
+export class ContainerRegistryGeoreplicationsList extends cdktf.ComplexList {
+  public internalValue? : ContainerRegistryGeoreplications[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ContainerRegistryGeoreplicationsOutputReference {
+    return new ContainerRegistryGeoreplicationsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ContainerRegistryNetworkRuleSetIpRule {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry#action ContainerRegistry#action}
@@ -181,6 +458,108 @@ export function containerRegistryNetworkRuleSetIpRuleToTerraform(struct?: Contai
   }
 }
 
+export class ContainerRegistryNetworkRuleSetIpRuleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ContainerRegistryNetworkRuleSetIpRule | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._action !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.action = this._action;
+    }
+    if (this._ipRange !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ipRange = this._ipRange;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerRegistryNetworkRuleSetIpRule | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._action = undefined;
+      this._ipRange = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._action = value.action;
+      this._ipRange = value.ipRange;
+    }
+  }
+
+  // action - computed: true, optional: true, required: false
+  private _action?: string; 
+  public get action() {
+    return this.getStringAttribute('action');
+  }
+  public set action(value: string) {
+    this._action = value;
+  }
+  public resetAction() {
+    this._action = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get actionInput() {
+    return this._action;
+  }
+
+  // ip_range - computed: true, optional: true, required: false
+  private _ipRange?: string; 
+  public get ipRange() {
+    return this.getStringAttribute('ip_range');
+  }
+  public set ipRange(value: string) {
+    this._ipRange = value;
+  }
+  public resetIpRange() {
+    this._ipRange = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipRangeInput() {
+    return this._ipRange;
+  }
+}
+
+export class ContainerRegistryNetworkRuleSetIpRuleList extends cdktf.ComplexList {
+  public internalValue? : ContainerRegistryNetworkRuleSetIpRule[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ContainerRegistryNetworkRuleSetIpRuleOutputReference {
+    return new ContainerRegistryNetworkRuleSetIpRuleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ContainerRegistryNetworkRuleSetVirtualNetwork {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry#action ContainerRegistry#action}
@@ -203,6 +582,108 @@ export function containerRegistryNetworkRuleSetVirtualNetworkToTerraform(struct?
   }
 }
 
+export class ContainerRegistryNetworkRuleSetVirtualNetworkOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ContainerRegistryNetworkRuleSetVirtualNetwork | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._action !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.action = this._action;
+    }
+    if (this._subnetId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.subnetId = this._subnetId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerRegistryNetworkRuleSetVirtualNetwork | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._action = undefined;
+      this._subnetId = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._action = value.action;
+      this._subnetId = value.subnetId;
+    }
+  }
+
+  // action - computed: true, optional: true, required: false
+  private _action?: string; 
+  public get action() {
+    return this.getStringAttribute('action');
+  }
+  public set action(value: string) {
+    this._action = value;
+  }
+  public resetAction() {
+    this._action = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get actionInput() {
+    return this._action;
+  }
+
+  // subnet_id - computed: true, optional: true, required: false
+  private _subnetId?: string; 
+  public get subnetId() {
+    return this.getStringAttribute('subnet_id');
+  }
+  public set subnetId(value: string) {
+    this._subnetId = value;
+  }
+  public resetSubnetId() {
+    this._subnetId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetIdInput() {
+    return this._subnetId;
+  }
+}
+
+export class ContainerRegistryNetworkRuleSetVirtualNetworkList extends cdktf.ComplexList {
+  public internalValue? : ContainerRegistryNetworkRuleSetVirtualNetwork[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ContainerRegistryNetworkRuleSetVirtualNetworkOutputReference {
+    return new ContainerRegistryNetworkRuleSetVirtualNetworkOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ContainerRegistryNetworkRuleSet {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry#default_action ContainerRegistry#default_action}
@@ -230,6 +711,130 @@ export function containerRegistryNetworkRuleSetToTerraform(struct?: ContainerReg
   }
 }
 
+export class ContainerRegistryNetworkRuleSetOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ContainerRegistryNetworkRuleSet | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._defaultAction !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.defaultAction = this._defaultAction;
+    }
+    if (this._ipRule?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ipRule = this._ipRule?.internalValue;
+    }
+    if (this._virtualNetwork?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.virtualNetwork = this._virtualNetwork?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerRegistryNetworkRuleSet | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._defaultAction = undefined;
+      this._ipRule.internalValue = undefined;
+      this._virtualNetwork.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._defaultAction = value.defaultAction;
+      this._ipRule.internalValue = value.ipRule;
+      this._virtualNetwork.internalValue = value.virtualNetwork;
+    }
+  }
+
+  // default_action - computed: true, optional: true, required: false
+  private _defaultAction?: string; 
+  public get defaultAction() {
+    return this.getStringAttribute('default_action');
+  }
+  public set defaultAction(value: string) {
+    this._defaultAction = value;
+  }
+  public resetDefaultAction() {
+    this._defaultAction = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultActionInput() {
+    return this._defaultAction;
+  }
+
+  // ip_rule - computed: true, optional: true, required: false
+  private _ipRule = new ContainerRegistryNetworkRuleSetIpRuleList(this, "ip_rule", true);
+  public get ipRule() {
+    return this._ipRule;
+  }
+  public putIpRule(value: ContainerRegistryNetworkRuleSetIpRule[] | cdktf.IResolvable) {
+    this._ipRule.internalValue = value;
+  }
+  public resetIpRule() {
+    this._ipRule.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipRuleInput() {
+    return this._ipRule.internalValue;
+  }
+
+  // virtual_network - computed: true, optional: true, required: false
+  private _virtualNetwork = new ContainerRegistryNetworkRuleSetVirtualNetworkList(this, "virtual_network", true);
+  public get virtualNetwork() {
+    return this._virtualNetwork;
+  }
+  public putVirtualNetwork(value: ContainerRegistryNetworkRuleSetVirtualNetwork[] | cdktf.IResolvable) {
+    this._virtualNetwork.internalValue = value;
+  }
+  public resetVirtualNetwork() {
+    this._virtualNetwork.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get virtualNetworkInput() {
+    return this._virtualNetwork.internalValue;
+  }
+}
+
+export class ContainerRegistryNetworkRuleSetList extends cdktf.ComplexList {
+  public internalValue? : ContainerRegistryNetworkRuleSet[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ContainerRegistryNetworkRuleSetOutputReference {
+    return new ContainerRegistryNetworkRuleSetOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ContainerRegistryRetentionPolicy {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry#days ContainerRegistry#days}
@@ -252,6 +857,108 @@ export function containerRegistryRetentionPolicyToTerraform(struct?: ContainerRe
   }
 }
 
+export class ContainerRegistryRetentionPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ContainerRegistryRetentionPolicy | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._days !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.days = this._days;
+    }
+    if (this._enabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerRegistryRetentionPolicy | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._days = undefined;
+      this._enabled = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._days = value.days;
+      this._enabled = value.enabled;
+    }
+  }
+
+  // days - computed: true, optional: true, required: false
+  private _days?: number; 
+  public get days() {
+    return this.getNumberAttribute('days');
+  }
+  public set days(value: number) {
+    this._days = value;
+  }
+  public resetDays() {
+    this._days = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get daysInput() {
+    return this._days;
+  }
+
+  // enabled - computed: true, optional: true, required: false
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+}
+
+export class ContainerRegistryRetentionPolicyList extends cdktf.ComplexList {
+  public internalValue? : ContainerRegistryRetentionPolicy[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ContainerRegistryRetentionPolicyOutputReference {
+    return new ContainerRegistryRetentionPolicyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ContainerRegistryTrustPolicy {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry#enabled ContainerRegistry#enabled}
@@ -269,6 +976,86 @@ export function containerRegistryTrustPolicyToTerraform(struct?: ContainerRegist
   }
 }
 
+export class ContainerRegistryTrustPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ContainerRegistryTrustPolicy | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._enabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerRegistryTrustPolicy | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._enabled = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._enabled = value.enabled;
+    }
+  }
+
+  // enabled - computed: true, optional: true, required: false
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+}
+
+export class ContainerRegistryTrustPolicyList extends cdktf.ComplexList {
+  public internalValue? : ContainerRegistryTrustPolicy[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ContainerRegistryTrustPolicyOutputReference {
+    return new ContainerRegistryTrustPolicyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ContainerRegistryIdentity {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry#identity_ids ContainerRegistry#identity_ids}
@@ -402,6 +1189,7 @@ export function containerRegistryTimeoutsToTerraform(struct?: ContainerRegistryT
 
 export class ContainerRegistryTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -411,7 +1199,10 @@ export class ContainerRegistryTimeoutsOutputReference extends cdktf.ComplexObjec
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): ContainerRegistryTimeouts | undefined {
+  public get internalValue(): ContainerRegistryTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -433,16 +1224,22 @@ export class ContainerRegistryTimeoutsOutputReference extends cdktf.ComplexObjec
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: ContainerRegistryTimeouts | undefined) {
+  public set internalValue(value: ContainerRegistryTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -552,22 +1349,23 @@ export class ContainerRegistry extends cdktf.TerraformResource {
     this._adminEnabled = config.adminEnabled;
     this._anonymousPullEnabled = config.anonymousPullEnabled;
     this._dataEndpointEnabled = config.dataEndpointEnabled;
-    this._encryption = config.encryption;
+    this._encryption.internalValue = config.encryption;
     this._exportPolicyEnabled = config.exportPolicyEnabled;
     this._georeplicationLocations = config.georeplicationLocations;
-    this._georeplications = config.georeplications;
+    this._georeplications.internalValue = config.georeplications;
+    this._id = config.id;
     this._location = config.location;
     this._name = config.name;
     this._networkRuleBypassOption = config.networkRuleBypassOption;
-    this._networkRuleSet = config.networkRuleSet;
+    this._networkRuleSet.internalValue = config.networkRuleSet;
     this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
     this._quarantinePolicyEnabled = config.quarantinePolicyEnabled;
     this._resourceGroupName = config.resourceGroupName;
-    this._retentionPolicy = config.retentionPolicy;
+    this._retentionPolicy.internalValue = config.retentionPolicy;
     this._sku = config.sku;
     this._storageAccountId = config.storageAccountId;
     this._tags = config.tags;
-    this._trustPolicy = config.trustPolicy;
+    this._trustPolicy.internalValue = config.trustPolicy;
     this._zoneRedundancyEnabled = config.zoneRedundancyEnabled;
     this._identity.internalValue = config.identity;
     this._timeouts.internalValue = config.timeouts;
@@ -636,20 +1434,19 @@ export class ContainerRegistry extends cdktf.TerraformResource {
   }
 
   // encryption - computed: true, optional: true, required: false
-  private _encryption?: ContainerRegistryEncryption[] | cdktf.IResolvable; 
+  private _encryption = new ContainerRegistryEncryptionList(this, "encryption", false);
   public get encryption() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('encryption');
+    return this._encryption;
   }
-  public set encryption(value: ContainerRegistryEncryption[] | cdktf.IResolvable) {
-    this._encryption = value;
+  public putEncryption(value: ContainerRegistryEncryption[] | cdktf.IResolvable) {
+    this._encryption.internalValue = value;
   }
   public resetEncryption() {
-    this._encryption = undefined;
+    this._encryption.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get encryptionInput() {
-    return this._encryption;
+    return this._encryption.internalValue;
   }
 
   // export_policy_enabled - computed: false, optional: true, required: false
@@ -685,25 +1482,35 @@ export class ContainerRegistry extends cdktf.TerraformResource {
   }
 
   // georeplications - computed: true, optional: true, required: false
-  private _georeplications?: ContainerRegistryGeoreplications[] | cdktf.IResolvable; 
+  private _georeplications = new ContainerRegistryGeoreplicationsList(this, "georeplications", false);
   public get georeplications() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('georeplications');
+    return this._georeplications;
   }
-  public set georeplications(value: ContainerRegistryGeoreplications[] | cdktf.IResolvable) {
-    this._georeplications = value;
+  public putGeoreplications(value: ContainerRegistryGeoreplications[] | cdktf.IResolvable) {
+    this._georeplications.internalValue = value;
   }
   public resetGeoreplications() {
-    this._georeplications = undefined;
+    this._georeplications.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get georeplicationsInput() {
-    return this._georeplications;
+    return this._georeplications.internalValue;
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // location - computed: false, optional: false, required: true
@@ -754,20 +1561,19 @@ export class ContainerRegistry extends cdktf.TerraformResource {
   }
 
   // network_rule_set - computed: true, optional: true, required: false
-  private _networkRuleSet?: ContainerRegistryNetworkRuleSet[] | cdktf.IResolvable; 
+  private _networkRuleSet = new ContainerRegistryNetworkRuleSetList(this, "network_rule_set", false);
   public get networkRuleSet() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('network_rule_set');
+    return this._networkRuleSet;
   }
-  public set networkRuleSet(value: ContainerRegistryNetworkRuleSet[] | cdktf.IResolvable) {
-    this._networkRuleSet = value;
+  public putNetworkRuleSet(value: ContainerRegistryNetworkRuleSet[] | cdktf.IResolvable) {
+    this._networkRuleSet.internalValue = value;
   }
   public resetNetworkRuleSet() {
-    this._networkRuleSet = undefined;
+    this._networkRuleSet.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get networkRuleSetInput() {
-    return this._networkRuleSet;
+    return this._networkRuleSet.internalValue;
   }
 
   // public_network_access_enabled - computed: false, optional: true, required: false
@@ -816,20 +1622,19 @@ export class ContainerRegistry extends cdktf.TerraformResource {
   }
 
   // retention_policy - computed: true, optional: true, required: false
-  private _retentionPolicy?: ContainerRegistryRetentionPolicy[] | cdktf.IResolvable; 
+  private _retentionPolicy = new ContainerRegistryRetentionPolicyList(this, "retention_policy", false);
   public get retentionPolicy() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('retention_policy');
+    return this._retentionPolicy;
   }
-  public set retentionPolicy(value: ContainerRegistryRetentionPolicy[] | cdktf.IResolvable) {
-    this._retentionPolicy = value;
+  public putRetentionPolicy(value: ContainerRegistryRetentionPolicy[] | cdktf.IResolvable) {
+    this._retentionPolicy.internalValue = value;
   }
   public resetRetentionPolicy() {
-    this._retentionPolicy = undefined;
+    this._retentionPolicy.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get retentionPolicyInput() {
-    return this._retentionPolicy;
+    return this._retentionPolicy.internalValue;
   }
 
   // sku - computed: false, optional: true, required: false
@@ -881,20 +1686,19 @@ export class ContainerRegistry extends cdktf.TerraformResource {
   }
 
   // trust_policy - computed: true, optional: true, required: false
-  private _trustPolicy?: ContainerRegistryTrustPolicy[] | cdktf.IResolvable; 
+  private _trustPolicy = new ContainerRegistryTrustPolicyList(this, "trust_policy", false);
   public get trustPolicy() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('trust_policy');
+    return this._trustPolicy;
   }
-  public set trustPolicy(value: ContainerRegistryTrustPolicy[] | cdktf.IResolvable) {
-    this._trustPolicy = value;
+  public putTrustPolicy(value: ContainerRegistryTrustPolicy[] | cdktf.IResolvable) {
+    this._trustPolicy.internalValue = value;
   }
   public resetTrustPolicy() {
-    this._trustPolicy = undefined;
+    this._trustPolicy.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get trustPolicyInput() {
-    return this._trustPolicy;
+    return this._trustPolicy.internalValue;
   }
 
   // zone_redundancy_enabled - computed: false, optional: true, required: false
@@ -954,22 +1758,23 @@ export class ContainerRegistry extends cdktf.TerraformResource {
       admin_enabled: cdktf.booleanToTerraform(this._adminEnabled),
       anonymous_pull_enabled: cdktf.booleanToTerraform(this._anonymousPullEnabled),
       data_endpoint_enabled: cdktf.booleanToTerraform(this._dataEndpointEnabled),
-      encryption: cdktf.listMapper(containerRegistryEncryptionToTerraform)(this._encryption),
+      encryption: cdktf.listMapper(containerRegistryEncryptionToTerraform)(this._encryption.internalValue),
       export_policy_enabled: cdktf.booleanToTerraform(this._exportPolicyEnabled),
       georeplication_locations: cdktf.listMapper(cdktf.stringToTerraform)(this._georeplicationLocations),
-      georeplications: cdktf.listMapper(containerRegistryGeoreplicationsToTerraform)(this._georeplications),
+      georeplications: cdktf.listMapper(containerRegistryGeoreplicationsToTerraform)(this._georeplications.internalValue),
+      id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       network_rule_bypass_option: cdktf.stringToTerraform(this._networkRuleBypassOption),
-      network_rule_set: cdktf.listMapper(containerRegistryNetworkRuleSetToTerraform)(this._networkRuleSet),
+      network_rule_set: cdktf.listMapper(containerRegistryNetworkRuleSetToTerraform)(this._networkRuleSet.internalValue),
       public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       quarantine_policy_enabled: cdktf.booleanToTerraform(this._quarantinePolicyEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      retention_policy: cdktf.listMapper(containerRegistryRetentionPolicyToTerraform)(this._retentionPolicy),
+      retention_policy: cdktf.listMapper(containerRegistryRetentionPolicyToTerraform)(this._retentionPolicy.internalValue),
       sku: cdktf.stringToTerraform(this._sku),
       storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
-      trust_policy: cdktf.listMapper(containerRegistryTrustPolicyToTerraform)(this._trustPolicy),
+      trust_policy: cdktf.listMapper(containerRegistryTrustPolicyToTerraform)(this._trustPolicy.internalValue),
       zone_redundancy_enabled: cdktf.booleanToTerraform(this._zoneRedundancyEnabled),
       identity: containerRegistryIdentityToTerraform(this._identity.internalValue),
       timeouts: containerRegistryTimeoutsToTerraform(this._timeouts.internalValue),

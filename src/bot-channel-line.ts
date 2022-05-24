@@ -12,6 +12,13 @@ export interface BotChannelLineConfig extends cdktf.TerraformMetaArguments {
   */
   readonly botName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_line#id BotChannelLine#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_line#location BotChannelLine#location}
   */
   readonly location: string;
@@ -54,6 +61,102 @@ export function botChannelLineLineChannelToTerraform(struct?: BotChannelLineLine
   }
 }
 
+export class BotChannelLineLineChannelOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): BotChannelLineLineChannel | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._accessToken !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.accessToken = this._accessToken;
+    }
+    if (this._secret !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.secret = this._secret;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BotChannelLineLineChannel | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._accessToken = undefined;
+      this._secret = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._accessToken = value.accessToken;
+      this._secret = value.secret;
+    }
+  }
+
+  // access_token - computed: false, optional: false, required: true
+  private _accessToken?: string; 
+  public get accessToken() {
+    return this.getStringAttribute('access_token');
+  }
+  public set accessToken(value: string) {
+    this._accessToken = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get accessTokenInput() {
+    return this._accessToken;
+  }
+
+  // secret - computed: false, optional: false, required: true
+  private _secret?: string; 
+  public get secret() {
+    return this.getStringAttribute('secret');
+  }
+  public set secret(value: string) {
+    this._secret = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secretInput() {
+    return this._secret;
+  }
+}
+
+export class BotChannelLineLineChannelList extends cdktf.ComplexList {
+  public internalValue? : BotChannelLineLineChannel[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): BotChannelLineLineChannelOutputReference {
+    return new BotChannelLineLineChannelOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface BotChannelLineTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_line#create BotChannelLine#create}
@@ -88,6 +191,7 @@ export function botChannelLineTimeoutsToTerraform(struct?: BotChannelLineTimeout
 
 export class BotChannelLineTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -97,7 +201,10 @@ export class BotChannelLineTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): BotChannelLineTimeouts | undefined {
+  public get internalValue(): BotChannelLineTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -119,16 +226,22 @@ export class BotChannelLineTimeoutsOutputReference extends cdktf.ComplexObject {
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: BotChannelLineTimeouts | undefined) {
+  public set internalValue(value: BotChannelLineTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -236,9 +349,10 @@ export class BotChannelLine extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._botName = config.botName;
+    this._id = config.id;
     this._location = config.location;
     this._resourceGroupName = config.resourceGroupName;
-    this._lineChannel = config.lineChannel;
+    this._lineChannel.internalValue = config.lineChannel;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -260,8 +374,19 @@ export class BotChannelLine extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // location - computed: false, optional: false, required: true
@@ -291,17 +416,16 @@ export class BotChannelLine extends cdktf.TerraformResource {
   }
 
   // line_channel - computed: false, optional: false, required: true
-  private _lineChannel?: BotChannelLineLineChannel[] | cdktf.IResolvable; 
+  private _lineChannel = new BotChannelLineLineChannelList(this, "line_channel", true);
   public get lineChannel() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('line_channel')));
+    return this._lineChannel;
   }
-  public set lineChannel(value: BotChannelLineLineChannel[] | cdktf.IResolvable) {
-    this._lineChannel = value;
+  public putLineChannel(value: BotChannelLineLineChannel[] | cdktf.IResolvable) {
+    this._lineChannel.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get lineChannelInput() {
-    return this._lineChannel;
+    return this._lineChannel.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -327,9 +451,10 @@ export class BotChannelLine extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       bot_name: cdktf.stringToTerraform(this._botName),
+      id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      line_channel: cdktf.listMapper(botChannelLineLineChannelToTerraform)(this._lineChannel),
+      line_channel: cdktf.listMapper(botChannelLineLineChannelToTerraform)(this._lineChannel.internalValue),
       timeouts: botChannelLineTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

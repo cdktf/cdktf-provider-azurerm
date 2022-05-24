@@ -12,6 +12,13 @@ export interface HpcCacheAccessPolicyConfig extends cdktf.TerraformMetaArguments
   */
   readonly hpcCacheId: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_access_policy#id HpcCacheAccessPolicy#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_access_policy#name HpcCacheAccessPolicy#name}
   */
   readonly name: string;
@@ -80,6 +87,234 @@ export function hpcCacheAccessPolicyAccessRuleToTerraform(struct?: HpcCacheAcces
   }
 }
 
+export class HpcCacheAccessPolicyAccessRuleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): HpcCacheAccessPolicyAccessRule | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._access !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.access = this._access;
+    }
+    if (this._anonymousGid !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.anonymousGid = this._anonymousGid;
+    }
+    if (this._anonymousUid !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.anonymousUid = this._anonymousUid;
+    }
+    if (this._filter !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.filter = this._filter;
+    }
+    if (this._rootSquashEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rootSquashEnabled = this._rootSquashEnabled;
+    }
+    if (this._scope !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.scope = this._scope;
+    }
+    if (this._submountAccessEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.submountAccessEnabled = this._submountAccessEnabled;
+    }
+    if (this._suidEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.suidEnabled = this._suidEnabled;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: HpcCacheAccessPolicyAccessRule | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._access = undefined;
+      this._anonymousGid = undefined;
+      this._anonymousUid = undefined;
+      this._filter = undefined;
+      this._rootSquashEnabled = undefined;
+      this._scope = undefined;
+      this._submountAccessEnabled = undefined;
+      this._suidEnabled = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._access = value.access;
+      this._anonymousGid = value.anonymousGid;
+      this._anonymousUid = value.anonymousUid;
+      this._filter = value.filter;
+      this._rootSquashEnabled = value.rootSquashEnabled;
+      this._scope = value.scope;
+      this._submountAccessEnabled = value.submountAccessEnabled;
+      this._suidEnabled = value.suidEnabled;
+    }
+  }
+
+  // access - computed: false, optional: false, required: true
+  private _access?: string; 
+  public get access() {
+    return this.getStringAttribute('access');
+  }
+  public set access(value: string) {
+    this._access = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get accessInput() {
+    return this._access;
+  }
+
+  // anonymous_gid - computed: false, optional: true, required: false
+  private _anonymousGid?: number; 
+  public get anonymousGid() {
+    return this.getNumberAttribute('anonymous_gid');
+  }
+  public set anonymousGid(value: number) {
+    this._anonymousGid = value;
+  }
+  public resetAnonymousGid() {
+    this._anonymousGid = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get anonymousGidInput() {
+    return this._anonymousGid;
+  }
+
+  // anonymous_uid - computed: false, optional: true, required: false
+  private _anonymousUid?: number; 
+  public get anonymousUid() {
+    return this.getNumberAttribute('anonymous_uid');
+  }
+  public set anonymousUid(value: number) {
+    this._anonymousUid = value;
+  }
+  public resetAnonymousUid() {
+    this._anonymousUid = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get anonymousUidInput() {
+    return this._anonymousUid;
+  }
+
+  // filter - computed: false, optional: true, required: false
+  private _filter?: string; 
+  public get filter() {
+    return this.getStringAttribute('filter');
+  }
+  public set filter(value: string) {
+    this._filter = value;
+  }
+  public resetFilter() {
+    this._filter = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get filterInput() {
+    return this._filter;
+  }
+
+  // root_squash_enabled - computed: false, optional: true, required: false
+  private _rootSquashEnabled?: boolean | cdktf.IResolvable; 
+  public get rootSquashEnabled() {
+    return this.getBooleanAttribute('root_squash_enabled');
+  }
+  public set rootSquashEnabled(value: boolean | cdktf.IResolvable) {
+    this._rootSquashEnabled = value;
+  }
+  public resetRootSquashEnabled() {
+    this._rootSquashEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rootSquashEnabledInput() {
+    return this._rootSquashEnabled;
+  }
+
+  // scope - computed: false, optional: false, required: true
+  private _scope?: string; 
+  public get scope() {
+    return this.getStringAttribute('scope');
+  }
+  public set scope(value: string) {
+    this._scope = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scopeInput() {
+    return this._scope;
+  }
+
+  // submount_access_enabled - computed: false, optional: true, required: false
+  private _submountAccessEnabled?: boolean | cdktf.IResolvable; 
+  public get submountAccessEnabled() {
+    return this.getBooleanAttribute('submount_access_enabled');
+  }
+  public set submountAccessEnabled(value: boolean | cdktf.IResolvable) {
+    this._submountAccessEnabled = value;
+  }
+  public resetSubmountAccessEnabled() {
+    this._submountAccessEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get submountAccessEnabledInput() {
+    return this._submountAccessEnabled;
+  }
+
+  // suid_enabled - computed: false, optional: true, required: false
+  private _suidEnabled?: boolean | cdktf.IResolvable; 
+  public get suidEnabled() {
+    return this.getBooleanAttribute('suid_enabled');
+  }
+  public set suidEnabled(value: boolean | cdktf.IResolvable) {
+    this._suidEnabled = value;
+  }
+  public resetSuidEnabled() {
+    this._suidEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get suidEnabledInput() {
+    return this._suidEnabled;
+  }
+}
+
+export class HpcCacheAccessPolicyAccessRuleList extends cdktf.ComplexList {
+  public internalValue? : HpcCacheAccessPolicyAccessRule[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): HpcCacheAccessPolicyAccessRuleOutputReference {
+    return new HpcCacheAccessPolicyAccessRuleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface HpcCacheAccessPolicyTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_access_policy#create HpcCacheAccessPolicy#create}
@@ -114,6 +349,7 @@ export function hpcCacheAccessPolicyTimeoutsToTerraform(struct?: HpcCacheAccessP
 
 export class HpcCacheAccessPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -123,7 +359,10 @@ export class HpcCacheAccessPolicyTimeoutsOutputReference extends cdktf.ComplexOb
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): HpcCacheAccessPolicyTimeouts | undefined {
+  public get internalValue(): HpcCacheAccessPolicyTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -145,16 +384,22 @@ export class HpcCacheAccessPolicyTimeoutsOutputReference extends cdktf.ComplexOb
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: HpcCacheAccessPolicyTimeouts | undefined) {
+  public set internalValue(value: HpcCacheAccessPolicyTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -262,8 +507,9 @@ export class HpcCacheAccessPolicy extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._hpcCacheId = config.hpcCacheId;
+    this._id = config.id;
     this._name = config.name;
-    this._accessRule = config.accessRule;
+    this._accessRule.internalValue = config.accessRule;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -285,8 +531,19 @@ export class HpcCacheAccessPolicy extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // name - computed: false, optional: false, required: true
@@ -303,17 +560,16 @@ export class HpcCacheAccessPolicy extends cdktf.TerraformResource {
   }
 
   // access_rule - computed: false, optional: false, required: true
-  private _accessRule?: HpcCacheAccessPolicyAccessRule[] | cdktf.IResolvable; 
+  private _accessRule = new HpcCacheAccessPolicyAccessRuleList(this, "access_rule", true);
   public get accessRule() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('access_rule')));
+    return this._accessRule;
   }
-  public set accessRule(value: HpcCacheAccessPolicyAccessRule[] | cdktf.IResolvable) {
-    this._accessRule = value;
+  public putAccessRule(value: HpcCacheAccessPolicyAccessRule[] | cdktf.IResolvable) {
+    this._accessRule.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get accessRuleInput() {
-    return this._accessRule;
+    return this._accessRule.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -339,8 +595,9 @@ export class HpcCacheAccessPolicy extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       hpc_cache_id: cdktf.stringToTerraform(this._hpcCacheId),
+      id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
-      access_rule: cdktf.listMapper(hpcCacheAccessPolicyAccessRuleToTerraform)(this._accessRule),
+      access_rule: cdktf.listMapper(hpcCacheAccessPolicyAccessRuleToTerraform)(this._accessRule.internalValue),
       timeouts: hpcCacheAccessPolicyTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

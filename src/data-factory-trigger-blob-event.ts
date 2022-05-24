@@ -40,6 +40,13 @@ export interface DataFactoryTriggerBlobEventConfig extends cdktf.TerraformMetaAr
   */
   readonly events: string[];
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_blob_event#id DataFactoryTriggerBlobEvent#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_blob_event#ignore_empty_blobs DataFactoryTriggerBlobEvent#ignore_empty_blobs}
   */
   readonly ignoreEmptyBlobs?: boolean | cdktf.IResolvable;
@@ -86,6 +93,105 @@ export function dataFactoryTriggerBlobEventPipelineToTerraform(struct?: DataFact
   }
 }
 
+export class DataFactoryTriggerBlobEventPipelineOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataFactoryTriggerBlobEventPipeline | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._parameters !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.parameters = this._parameters;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFactoryTriggerBlobEventPipeline | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._parameters = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._parameters = value.parameters;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // parameters - computed: false, optional: true, required: false
+  private _parameters?: { [key: string]: string }; 
+  public get parameters() {
+    return this.getStringMapAttribute('parameters');
+  }
+  public set parameters(value: { [key: string]: string }) {
+    this._parameters = value;
+  }
+  public resetParameters() {
+    this._parameters = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parametersInput() {
+    return this._parameters;
+  }
+}
+
+export class DataFactoryTriggerBlobEventPipelineList extends cdktf.ComplexList {
+  public internalValue? : DataFactoryTriggerBlobEventPipeline[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataFactoryTriggerBlobEventPipelineOutputReference {
+    return new DataFactoryTriggerBlobEventPipelineOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataFactoryTriggerBlobEventTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_blob_event#create DataFactoryTriggerBlobEvent#create}
@@ -120,6 +226,7 @@ export function dataFactoryTriggerBlobEventTimeoutsToTerraform(struct?: DataFact
 
 export class DataFactoryTriggerBlobEventTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -129,7 +236,10 @@ export class DataFactoryTriggerBlobEventTimeoutsOutputReference extends cdktf.Co
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): DataFactoryTriggerBlobEventTimeouts | undefined {
+  public get internalValue(): DataFactoryTriggerBlobEventTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -151,16 +261,22 @@ export class DataFactoryTriggerBlobEventTimeoutsOutputReference extends cdktf.Co
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: DataFactoryTriggerBlobEventTimeouts | undefined) {
+  public set internalValue(value: DataFactoryTriggerBlobEventTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -275,10 +391,11 @@ export class DataFactoryTriggerBlobEvent extends cdktf.TerraformResource {
     this._dataFactoryId = config.dataFactoryId;
     this._description = config.description;
     this._events = config.events;
+    this._id = config.id;
     this._ignoreEmptyBlobs = config.ignoreEmptyBlobs;
     this._name = config.name;
     this._storageAccountId = config.storageAccountId;
-    this._pipeline = config.pipeline;
+    this._pipeline.internalValue = config.pipeline;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -409,8 +526,19 @@ export class DataFactoryTriggerBlobEvent extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // ignore_empty_blobs - computed: false, optional: true, required: false
@@ -456,17 +584,16 @@ export class DataFactoryTriggerBlobEvent extends cdktf.TerraformResource {
   }
 
   // pipeline - computed: false, optional: false, required: true
-  private _pipeline?: DataFactoryTriggerBlobEventPipeline[] | cdktf.IResolvable; 
+  private _pipeline = new DataFactoryTriggerBlobEventPipelineList(this, "pipeline", true);
   public get pipeline() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('pipeline')));
+    return this._pipeline;
   }
-  public set pipeline(value: DataFactoryTriggerBlobEventPipeline[] | cdktf.IResolvable) {
-    this._pipeline = value;
+  public putPipeline(value: DataFactoryTriggerBlobEventPipeline[] | cdktf.IResolvable) {
+    this._pipeline.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get pipelineInput() {
-    return this._pipeline;
+    return this._pipeline.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -499,10 +626,11 @@ export class DataFactoryTriggerBlobEvent extends cdktf.TerraformResource {
       data_factory_id: cdktf.stringToTerraform(this._dataFactoryId),
       description: cdktf.stringToTerraform(this._description),
       events: cdktf.listMapper(cdktf.stringToTerraform)(this._events),
+      id: cdktf.stringToTerraform(this._id),
       ignore_empty_blobs: cdktf.booleanToTerraform(this._ignoreEmptyBlobs),
       name: cdktf.stringToTerraform(this._name),
       storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
-      pipeline: cdktf.listMapper(dataFactoryTriggerBlobEventPipelineToTerraform)(this._pipeline),
+      pipeline: cdktf.listMapper(dataFactoryTriggerBlobEventPipelineToTerraform)(this._pipeline.internalValue),
       timeouts: dataFactoryTriggerBlobEventTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

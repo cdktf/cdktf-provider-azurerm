@@ -20,6 +20,13 @@ export interface SynapseWorkspaceConfig extends cdktf.TerraformMetaArguments {
   */
   readonly dataExfiltrationProtectionEnabled?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#id SynapseWorkspace#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#linking_allowed_for_aad_tenant_ids SynapseWorkspace#linking_allowed_for_aad_tenant_ids}
   */
   readonly linkingAllowedForAadTenantIds?: string[];
@@ -127,6 +134,130 @@ export function synapseWorkspaceAadAdminToTerraform(struct?: SynapseWorkspaceAad
   }
 }
 
+export class SynapseWorkspaceAadAdminOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): SynapseWorkspaceAadAdmin | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._login !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.login = this._login;
+    }
+    if (this._objectId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.objectId = this._objectId;
+    }
+    if (this._tenantId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.tenantId = this._tenantId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SynapseWorkspaceAadAdmin | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._login = undefined;
+      this._objectId = undefined;
+      this._tenantId = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._login = value.login;
+      this._objectId = value.objectId;
+      this._tenantId = value.tenantId;
+    }
+  }
+
+  // login - computed: true, optional: true, required: false
+  private _login?: string; 
+  public get login() {
+    return this.getStringAttribute('login');
+  }
+  public set login(value: string) {
+    this._login = value;
+  }
+  public resetLogin() {
+    this._login = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get loginInput() {
+    return this._login;
+  }
+
+  // object_id - computed: true, optional: true, required: false
+  private _objectId?: string; 
+  public get objectId() {
+    return this.getStringAttribute('object_id');
+  }
+  public set objectId(value: string) {
+    this._objectId = value;
+  }
+  public resetObjectId() {
+    this._objectId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get objectIdInput() {
+    return this._objectId;
+  }
+
+  // tenant_id - computed: true, optional: true, required: false
+  private _tenantId?: string; 
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
+  }
+  public set tenantId(value: string) {
+    this._tenantId = value;
+  }
+  public resetTenantId() {
+    this._tenantId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tenantIdInput() {
+    return this._tenantId;
+  }
+}
+
+export class SynapseWorkspaceAadAdminList extends cdktf.ComplexList {
+  public internalValue? : SynapseWorkspaceAadAdmin[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): SynapseWorkspaceAadAdminOutputReference {
+    return new SynapseWorkspaceAadAdminOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface SynapseWorkspaceIdentity {
 }
 
@@ -228,6 +359,130 @@ export function synapseWorkspaceSqlAadAdminToTerraform(struct?: SynapseWorkspace
   }
 }
 
+export class SynapseWorkspaceSqlAadAdminOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): SynapseWorkspaceSqlAadAdmin | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._login !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.login = this._login;
+    }
+    if (this._objectId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.objectId = this._objectId;
+    }
+    if (this._tenantId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.tenantId = this._tenantId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SynapseWorkspaceSqlAadAdmin | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._login = undefined;
+      this._objectId = undefined;
+      this._tenantId = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._login = value.login;
+      this._objectId = value.objectId;
+      this._tenantId = value.tenantId;
+    }
+  }
+
+  // login - computed: true, optional: true, required: false
+  private _login?: string; 
+  public get login() {
+    return this.getStringAttribute('login');
+  }
+  public set login(value: string) {
+    this._login = value;
+  }
+  public resetLogin() {
+    this._login = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get loginInput() {
+    return this._login;
+  }
+
+  // object_id - computed: true, optional: true, required: false
+  private _objectId?: string; 
+  public get objectId() {
+    return this.getStringAttribute('object_id');
+  }
+  public set objectId(value: string) {
+    this._objectId = value;
+  }
+  public resetObjectId() {
+    this._objectId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get objectIdInput() {
+    return this._objectId;
+  }
+
+  // tenant_id - computed: true, optional: true, required: false
+  private _tenantId?: string; 
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
+  }
+  public set tenantId(value: string) {
+    this._tenantId = value;
+  }
+  public resetTenantId() {
+    this._tenantId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tenantIdInput() {
+    return this._tenantId;
+  }
+}
+
+export class SynapseWorkspaceSqlAadAdminList extends cdktf.ComplexList {
+  public internalValue? : SynapseWorkspaceSqlAadAdmin[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): SynapseWorkspaceSqlAadAdminOutputReference {
+    return new SynapseWorkspaceSqlAadAdminOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface SynapseWorkspaceAzureDevopsRepo {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#account_name SynapseWorkspace#account_name}
@@ -751,6 +1006,7 @@ export function synapseWorkspaceTimeoutsToTerraform(struct?: SynapseWorkspaceTim
 
 export class SynapseWorkspaceTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -760,7 +1016,10 @@ export class SynapseWorkspaceTimeoutsOutputReference extends cdktf.ComplexObject
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): SynapseWorkspaceTimeouts | undefined {
+  public get internalValue(): SynapseWorkspaceTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -782,16 +1041,22 @@ export class SynapseWorkspaceTimeoutsOutputReference extends cdktf.ComplexObject
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: SynapseWorkspaceTimeouts | undefined) {
+  public set internalValue(value: SynapseWorkspaceTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -898,9 +1163,10 @@ export class SynapseWorkspace extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
-    this._aadAdmin = config.aadAdmin;
+    this._aadAdmin.internalValue = config.aadAdmin;
     this._computeSubnetId = config.computeSubnetId;
     this._dataExfiltrationProtectionEnabled = config.dataExfiltrationProtectionEnabled;
+    this._id = config.id;
     this._linkingAllowedForAadTenantIds = config.linkingAllowedForAadTenantIds;
     this._location = config.location;
     this._managedResourceGroupName = config.managedResourceGroupName;
@@ -909,7 +1175,7 @@ export class SynapseWorkspace extends cdktf.TerraformResource {
     this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
     this._purviewId = config.purviewId;
     this._resourceGroupName = config.resourceGroupName;
-    this._sqlAadAdmin = config.sqlAadAdmin;
+    this._sqlAadAdmin.internalValue = config.sqlAadAdmin;
     this._sqlAdministratorLogin = config.sqlAdministratorLogin;
     this._sqlAdministratorLoginPassword = config.sqlAdministratorLoginPassword;
     this._sqlIdentityControlEnabled = config.sqlIdentityControlEnabled;
@@ -926,20 +1192,19 @@ export class SynapseWorkspace extends cdktf.TerraformResource {
   // ==========
 
   // aad_admin - computed: true, optional: true, required: false
-  private _aadAdmin?: SynapseWorkspaceAadAdmin[] | cdktf.IResolvable; 
+  private _aadAdmin = new SynapseWorkspaceAadAdminList(this, "aad_admin", false);
   public get aadAdmin() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('aad_admin');
+    return this._aadAdmin;
   }
-  public set aadAdmin(value: SynapseWorkspaceAadAdmin[] | cdktf.IResolvable) {
-    this._aadAdmin = value;
+  public putAadAdmin(value: SynapseWorkspaceAadAdmin[] | cdktf.IResolvable) {
+    this._aadAdmin.internalValue = value;
   }
   public resetAadAdmin() {
-    this._aadAdmin = undefined;
+    this._aadAdmin.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get aadAdminInput() {
-    return this._aadAdmin;
+    return this._aadAdmin.internalValue;
   }
 
   // compute_subnet_id - computed: false, optional: true, required: false
@@ -959,8 +1224,9 @@ export class SynapseWorkspace extends cdktf.TerraformResource {
   }
 
   // connectivity_endpoints - computed: true, optional: false, required: false
-  public connectivityEndpoints(key: string): string | cdktf.IResolvable {
-    return new cdktf.StringMap(this, 'connectivity_endpoints').lookup(key);
+  private _connectivityEndpoints = new cdktf.StringMap(this, "connectivity_endpoints");
+  public get connectivityEndpoints() {
+    return this._connectivityEndpoints;
   }
 
   // data_exfiltration_protection_enabled - computed: false, optional: true, required: false
@@ -980,8 +1246,19 @@ export class SynapseWorkspace extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // identity - computed: true, optional: false, required: false
@@ -1110,20 +1387,19 @@ export class SynapseWorkspace extends cdktf.TerraformResource {
   }
 
   // sql_aad_admin - computed: true, optional: true, required: false
-  private _sqlAadAdmin?: SynapseWorkspaceSqlAadAdmin[] | cdktf.IResolvable; 
+  private _sqlAadAdmin = new SynapseWorkspaceSqlAadAdminList(this, "sql_aad_admin", false);
   public get sqlAadAdmin() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('sql_aad_admin');
+    return this._sqlAadAdmin;
   }
-  public set sqlAadAdmin(value: SynapseWorkspaceSqlAadAdmin[] | cdktf.IResolvable) {
-    this._sqlAadAdmin = value;
+  public putSqlAadAdmin(value: SynapseWorkspaceSqlAadAdmin[] | cdktf.IResolvable) {
+    this._sqlAadAdmin.internalValue = value;
   }
   public resetSqlAadAdmin() {
-    this._sqlAadAdmin = undefined;
+    this._sqlAadAdmin.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get sqlAadAdminInput() {
-    return this._sqlAadAdmin;
+    return this._sqlAadAdmin.internalValue;
   }
 
   // sql_administrator_login - computed: false, optional: false, required: true
@@ -1267,9 +1543,10 @@ export class SynapseWorkspace extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      aad_admin: cdktf.listMapper(synapseWorkspaceAadAdminToTerraform)(this._aadAdmin),
+      aad_admin: cdktf.listMapper(synapseWorkspaceAadAdminToTerraform)(this._aadAdmin.internalValue),
       compute_subnet_id: cdktf.stringToTerraform(this._computeSubnetId),
       data_exfiltration_protection_enabled: cdktf.booleanToTerraform(this._dataExfiltrationProtectionEnabled),
+      id: cdktf.stringToTerraform(this._id),
       linking_allowed_for_aad_tenant_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._linkingAllowedForAadTenantIds),
       location: cdktf.stringToTerraform(this._location),
       managed_resource_group_name: cdktf.stringToTerraform(this._managedResourceGroupName),
@@ -1278,7 +1555,7 @@ export class SynapseWorkspace extends cdktf.TerraformResource {
       public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       purview_id: cdktf.stringToTerraform(this._purviewId),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      sql_aad_admin: cdktf.listMapper(synapseWorkspaceSqlAadAdminToTerraform)(this._sqlAadAdmin),
+      sql_aad_admin: cdktf.listMapper(synapseWorkspaceSqlAadAdminToTerraform)(this._sqlAadAdmin.internalValue),
       sql_administrator_login: cdktf.stringToTerraform(this._sqlAdministratorLogin),
       sql_administrator_login_password: cdktf.stringToTerraform(this._sqlAdministratorLoginPassword),
       sql_identity_control_enabled: cdktf.booleanToTerraform(this._sqlIdentityControlEnabled),

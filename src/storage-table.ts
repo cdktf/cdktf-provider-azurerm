@@ -8,6 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface StorageTableConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table#id StorageTable#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table#name StorageTable#name}
   */
   readonly name: string;
@@ -55,9 +62,127 @@ export function storageTableAclAccessPolicyToTerraform(struct?: StorageTableAclA
   }
 }
 
+export class StorageTableAclAccessPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): StorageTableAclAccessPolicy | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._expiry !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.expiry = this._expiry;
+    }
+    if (this._permissions !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.permissions = this._permissions;
+    }
+    if (this._start !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.start = this._start;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageTableAclAccessPolicy | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._expiry = undefined;
+      this._permissions = undefined;
+      this._start = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._expiry = value.expiry;
+      this._permissions = value.permissions;
+      this._start = value.start;
+    }
+  }
+
+  // expiry - computed: false, optional: false, required: true
+  private _expiry?: string; 
+  public get expiry() {
+    return this.getStringAttribute('expiry');
+  }
+  public set expiry(value: string) {
+    this._expiry = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get expiryInput() {
+    return this._expiry;
+  }
+
+  // permissions - computed: false, optional: false, required: true
+  private _permissions?: string; 
+  public get permissions() {
+    return this.getStringAttribute('permissions');
+  }
+  public set permissions(value: string) {
+    this._permissions = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get permissionsInput() {
+    return this._permissions;
+  }
+
+  // start - computed: false, optional: false, required: true
+  private _start?: string; 
+  public get start() {
+    return this.getStringAttribute('start');
+  }
+  public set start(value: string) {
+    this._start = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get startInput() {
+    return this._start;
+  }
+}
+
+export class StorageTableAclAccessPolicyList extends cdktf.ComplexList {
+  public internalValue? : StorageTableAclAccessPolicy[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): StorageTableAclAccessPolicyOutputReference {
+    return new StorageTableAclAccessPolicyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface StorageTableAcl {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table#id StorageTable#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id: string;
   /**
@@ -79,6 +204,105 @@ export function storageTableAclToTerraform(struct?: StorageTableAcl | cdktf.IRes
   }
 }
 
+export class StorageTableAclOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): StorageTableAcl | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._id !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.id = this._id;
+    }
+    if (this._accessPolicy?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.accessPolicy = this._accessPolicy?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageTableAcl | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._id = undefined;
+      this._accessPolicy.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._id = value.id;
+      this._accessPolicy.internalValue = value.accessPolicy;
+    }
+  }
+
+  // id - computed: false, optional: false, required: true
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // access_policy - computed: false, optional: true, required: false
+  private _accessPolicy = new StorageTableAclAccessPolicyList(this, "access_policy", false);
+  public get accessPolicy() {
+    return this._accessPolicy;
+  }
+  public putAccessPolicy(value: StorageTableAclAccessPolicy[] | cdktf.IResolvable) {
+    this._accessPolicy.internalValue = value;
+  }
+  public resetAccessPolicy() {
+    this._accessPolicy.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get accessPolicyInput() {
+    return this._accessPolicy.internalValue;
+  }
+}
+
+export class StorageTableAclList extends cdktf.ComplexList {
+  public internalValue? : StorageTableAcl[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): StorageTableAclOutputReference {
+    return new StorageTableAclOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface StorageTableTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table#create StorageTable#create}
@@ -113,6 +337,7 @@ export function storageTableTimeoutsToTerraform(struct?: StorageTableTimeoutsOut
 
 export class StorageTableTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -122,7 +347,10 @@ export class StorageTableTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): StorageTableTimeouts | undefined {
+  public get internalValue(): StorageTableTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -144,16 +372,22 @@ export class StorageTableTimeoutsOutputReference extends cdktf.ComplexObject {
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: StorageTableTimeouts | undefined) {
+  public set internalValue(value: StorageTableTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -260,9 +494,10 @@ export class StorageTable extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._id = config.id;
     this._name = config.name;
     this._storageAccountName = config.storageAccountName;
-    this._acl = config.acl;
+    this._acl.internalValue = config.acl;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -271,8 +506,19 @@ export class StorageTable extends cdktf.TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // name - computed: false, optional: false, required: true
@@ -302,20 +548,19 @@ export class StorageTable extends cdktf.TerraformResource {
   }
 
   // acl - computed: false, optional: true, required: false
-  private _acl?: StorageTableAcl[] | cdktf.IResolvable; 
+  private _acl = new StorageTableAclList(this, "acl", true);
   public get acl() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('acl')));
+    return this._acl;
   }
-  public set acl(value: StorageTableAcl[] | cdktf.IResolvable) {
-    this._acl = value;
+  public putAcl(value: StorageTableAcl[] | cdktf.IResolvable) {
+    this._acl.internalValue = value;
   }
   public resetAcl() {
-    this._acl = undefined;
+    this._acl.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get aclInput() {
-    return this._acl;
+    return this._acl.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -340,9 +585,10 @@ export class StorageTable extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       storage_account_name: cdktf.stringToTerraform(this._storageAccountName),
-      acl: cdktf.listMapper(storageTableAclToTerraform)(this._acl),
+      acl: cdktf.listMapper(storageTableAclToTerraform)(this._acl.internalValue),
       timeouts: storageTableTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

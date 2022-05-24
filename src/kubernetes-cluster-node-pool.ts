@@ -32,6 +32,13 @@ export interface KubernetesClusterNodePoolConfig extends cdktf.TerraformMetaArgu
   */
   readonly fipsEnabled?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool#id KubernetesClusterNodePool#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool#kubelet_disk_type KubernetesClusterNodePool#kubelet_disk_type}
   */
   readonly kubeletDiskType?: string;
@@ -1471,6 +1478,7 @@ export function kubernetesClusterNodePoolTimeoutsToTerraform(struct?: Kubernetes
 
 export class KubernetesClusterNodePoolTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -1480,7 +1488,10 @@ export class KubernetesClusterNodePoolTimeoutsOutputReference extends cdktf.Comp
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): KubernetesClusterNodePoolTimeouts | undefined {
+  public get internalValue(): KubernetesClusterNodePoolTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -1502,16 +1513,22 @@ export class KubernetesClusterNodePoolTimeoutsOutputReference extends cdktf.Comp
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: KubernetesClusterNodePoolTimeouts | undefined) {
+  public set internalValue(value: KubernetesClusterNodePoolTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -1686,6 +1703,7 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
     this._enableNodePublicIp = config.enableNodePublicIp;
     this._evictionPolicy = config.evictionPolicy;
     this._fipsEnabled = config.fipsEnabled;
+    this._id = config.id;
     this._kubeletDiskType = config.kubeletDiskType;
     this._kubernetesClusterId = config.kubernetesClusterId;
     this._maxCount = config.maxCount;
@@ -1819,8 +1837,19 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // kubelet_disk_type - computed: true, optional: true, required: false
@@ -2306,6 +2335,7 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
       enable_node_public_ip: cdktf.booleanToTerraform(this._enableNodePublicIp),
       eviction_policy: cdktf.stringToTerraform(this._evictionPolicy),
       fips_enabled: cdktf.booleanToTerraform(this._fipsEnabled),
+      id: cdktf.stringToTerraform(this._id),
       kubelet_disk_type: cdktf.stringToTerraform(this._kubeletDiskType),
       kubernetes_cluster_id: cdktf.stringToTerraform(this._kubernetesClusterId),
       max_count: cdktf.numberToTerraform(this._maxCount),

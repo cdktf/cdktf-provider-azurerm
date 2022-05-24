@@ -8,6 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface LogicAppIntegrationAccountPartnerConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_partner#id LogicAppIntegrationAccountPartner#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_partner#integration_account_name LogicAppIntegrationAccountPartner#integration_account_name}
   */
   readonly integrationAccountName: string;
@@ -58,6 +65,102 @@ export function logicAppIntegrationAccountPartnerBusinessIdentityToTerraform(str
   }
 }
 
+export class LogicAppIntegrationAccountPartnerBusinessIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): LogicAppIntegrationAccountPartnerBusinessIdentity | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._qualifier !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.qualifier = this._qualifier;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LogicAppIntegrationAccountPartnerBusinessIdentity | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._qualifier = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._qualifier = value.qualifier;
+      this._value = value.value;
+    }
+  }
+
+  // qualifier - computed: false, optional: false, required: true
+  private _qualifier?: string; 
+  public get qualifier() {
+    return this.getStringAttribute('qualifier');
+  }
+  public set qualifier(value: string) {
+    this._qualifier = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get qualifierInput() {
+    return this._qualifier;
+  }
+
+  // value - computed: false, optional: false, required: true
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class LogicAppIntegrationAccountPartnerBusinessIdentityList extends cdktf.ComplexList {
+  public internalValue? : LogicAppIntegrationAccountPartnerBusinessIdentity[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): LogicAppIntegrationAccountPartnerBusinessIdentityOutputReference {
+    return new LogicAppIntegrationAccountPartnerBusinessIdentityOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface LogicAppIntegrationAccountPartnerTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_partner#create LogicAppIntegrationAccountPartner#create}
@@ -92,6 +195,7 @@ export function logicAppIntegrationAccountPartnerTimeoutsToTerraform(struct?: Lo
 
 export class LogicAppIntegrationAccountPartnerTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -101,7 +205,10 @@ export class LogicAppIntegrationAccountPartnerTimeoutsOutputReference extends cd
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): LogicAppIntegrationAccountPartnerTimeouts | undefined {
+  public get internalValue(): LogicAppIntegrationAccountPartnerTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -123,16 +230,22 @@ export class LogicAppIntegrationAccountPartnerTimeoutsOutputReference extends cd
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: LogicAppIntegrationAccountPartnerTimeouts | undefined) {
+  public set internalValue(value: LogicAppIntegrationAccountPartnerTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -239,11 +352,12 @@ export class LogicAppIntegrationAccountPartner extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._id = config.id;
     this._integrationAccountName = config.integrationAccountName;
     this._metadata = config.metadata;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
-    this._businessIdentity = config.businessIdentity;
+    this._businessIdentity.internalValue = config.businessIdentity;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -252,8 +366,19 @@ export class LogicAppIntegrationAccountPartner extends cdktf.TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // integration_account_name - computed: false, optional: false, required: true
@@ -312,17 +437,16 @@ export class LogicAppIntegrationAccountPartner extends cdktf.TerraformResource {
   }
 
   // business_identity - computed: false, optional: false, required: true
-  private _businessIdentity?: LogicAppIntegrationAccountPartnerBusinessIdentity[] | cdktf.IResolvable; 
+  private _businessIdentity = new LogicAppIntegrationAccountPartnerBusinessIdentityList(this, "business_identity", true);
   public get businessIdentity() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('business_identity')));
+    return this._businessIdentity;
   }
-  public set businessIdentity(value: LogicAppIntegrationAccountPartnerBusinessIdentity[] | cdktf.IResolvable) {
-    this._businessIdentity = value;
+  public putBusinessIdentity(value: LogicAppIntegrationAccountPartnerBusinessIdentity[] | cdktf.IResolvable) {
+    this._businessIdentity.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get businessIdentityInput() {
-    return this._businessIdentity;
+    return this._businessIdentity.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -347,11 +471,12 @@ export class LogicAppIntegrationAccountPartner extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      id: cdktf.stringToTerraform(this._id),
       integration_account_name: cdktf.stringToTerraform(this._integrationAccountName),
       metadata: cdktf.stringToTerraform(this._metadata),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      business_identity: cdktf.listMapper(logicAppIntegrationAccountPartnerBusinessIdentityToTerraform)(this._businessIdentity),
+      business_identity: cdktf.listMapper(logicAppIntegrationAccountPartnerBusinessIdentityToTerraform)(this._businessIdentity.internalValue),
       timeouts: logicAppIntegrationAccountPartnerTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

@@ -44,6 +44,13 @@ export interface DataAzurermStorageAccountBlobContainerSasConfig extends cdktf.T
   */
   readonly httpsOnly?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_blob_container_sas#id DataAzurermStorageAccountBlobContainerSas#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_blob_container_sas#ip_address DataAzurermStorageAccountBlobContainerSas#ip_address}
   */
   readonly ipAddress?: string;
@@ -265,6 +272,7 @@ export function dataAzurermStorageAccountBlobContainerSasTimeoutsToTerraform(str
 
 export class DataAzurermStorageAccountBlobContainerSasTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -274,7 +282,10 @@ export class DataAzurermStorageAccountBlobContainerSasTimeoutsOutputReference ex
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): DataAzurermStorageAccountBlobContainerSasTimeouts | undefined {
+  public get internalValue(): DataAzurermStorageAccountBlobContainerSasTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._read !== undefined) {
@@ -284,13 +295,19 @@ export class DataAzurermStorageAccountBlobContainerSasTimeoutsOutputReference ex
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: DataAzurermStorageAccountBlobContainerSasTimeouts | undefined) {
+  public set internalValue(value: DataAzurermStorageAccountBlobContainerSasTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._read = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._read = value.read;
     }
   }
@@ -355,6 +372,7 @@ export class DataAzurermStorageAccountBlobContainerSas extends cdktf.TerraformDa
     this._contentType = config.contentType;
     this._expiry = config.expiry;
     this._httpsOnly = config.httpsOnly;
+    this._id = config.id;
     this._ipAddress = config.ipAddress;
     this._start = config.start;
     this._permissions.internalValue = config.permissions;
@@ -501,8 +519,19 @@ export class DataAzurermStorageAccountBlobContainerSas extends cdktf.TerraformDa
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // ip_address - computed: false, optional: true, required: false
@@ -583,6 +612,7 @@ export class DataAzurermStorageAccountBlobContainerSas extends cdktf.TerraformDa
       content_type: cdktf.stringToTerraform(this._contentType),
       expiry: cdktf.stringToTerraform(this._expiry),
       https_only: cdktf.booleanToTerraform(this._httpsOnly),
+      id: cdktf.stringToTerraform(this._id),
       ip_address: cdktf.stringToTerraform(this._ipAddress),
       start: cdktf.stringToTerraform(this._start),
       permissions: dataAzurermStorageAccountBlobContainerSasPermissionsToTerraform(this._permissions.internalValue),

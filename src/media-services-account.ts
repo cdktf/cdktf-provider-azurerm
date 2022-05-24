@@ -8,6 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface MediaServicesAccountConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_services_account#id MediaServicesAccount#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_services_account#location MediaServicesAccount#location}
   */
   readonly location: string;
@@ -219,6 +226,9 @@ export class MediaServicesAccountKeyDeliveryAccessControlOutputReference extends
 export interface MediaServicesAccountStorageAccount {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_services_account#id MediaServicesAccount#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id: string;
   /**
@@ -238,6 +248,105 @@ export function mediaServicesAccountStorageAccountToTerraform(struct?: MediaServ
   }
 }
 
+export class MediaServicesAccountStorageAccountOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MediaServicesAccountStorageAccount | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._id !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.id = this._id;
+    }
+    if (this._isPrimary !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.isPrimary = this._isPrimary;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaServicesAccountStorageAccount | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._id = undefined;
+      this._isPrimary = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._id = value.id;
+      this._isPrimary = value.isPrimary;
+    }
+  }
+
+  // id - computed: false, optional: false, required: true
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // is_primary - computed: false, optional: true, required: false
+  private _isPrimary?: boolean | cdktf.IResolvable; 
+  public get isPrimary() {
+    return this.getBooleanAttribute('is_primary');
+  }
+  public set isPrimary(value: boolean | cdktf.IResolvable) {
+    this._isPrimary = value;
+  }
+  public resetIsPrimary() {
+    this._isPrimary = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get isPrimaryInput() {
+    return this._isPrimary;
+  }
+}
+
+export class MediaServicesAccountStorageAccountList extends cdktf.ComplexList {
+  public internalValue? : MediaServicesAccountStorageAccount[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MediaServicesAccountStorageAccountOutputReference {
+    return new MediaServicesAccountStorageAccountOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface MediaServicesAccountTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_services_account#create MediaServicesAccount#create}
@@ -272,6 +381,7 @@ export function mediaServicesAccountTimeoutsToTerraform(struct?: MediaServicesAc
 
 export class MediaServicesAccountTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -281,7 +391,10 @@ export class MediaServicesAccountTimeoutsOutputReference extends cdktf.ComplexOb
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): MediaServicesAccountTimeouts | undefined {
+  public get internalValue(): MediaServicesAccountTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -303,16 +416,22 @@ export class MediaServicesAccountTimeoutsOutputReference extends cdktf.ComplexOb
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: MediaServicesAccountTimeouts | undefined) {
+  public set internalValue(value: MediaServicesAccountTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -419,6 +538,7 @@ export class MediaServicesAccount extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._id = config.id;
     this._location = config.location;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
@@ -426,7 +546,7 @@ export class MediaServicesAccount extends cdktf.TerraformResource {
     this._tags = config.tags;
     this._identity.internalValue = config.identity;
     this._keyDeliveryAccessControl.internalValue = config.keyDeliveryAccessControl;
-    this._storageAccount = config.storageAccount;
+    this._storageAccount.internalValue = config.storageAccount;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -435,8 +555,19 @@ export class MediaServicesAccount extends cdktf.TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // location - computed: false, optional: false, required: true
@@ -543,17 +674,16 @@ export class MediaServicesAccount extends cdktf.TerraformResource {
   }
 
   // storage_account - computed: false, optional: false, required: true
-  private _storageAccount?: MediaServicesAccountStorageAccount[] | cdktf.IResolvable; 
+  private _storageAccount = new MediaServicesAccountStorageAccountList(this, "storage_account", true);
   public get storageAccount() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('storage_account')));
+    return this._storageAccount;
   }
-  public set storageAccount(value: MediaServicesAccountStorageAccount[] | cdktf.IResolvable) {
-    this._storageAccount = value;
+  public putStorageAccount(value: MediaServicesAccountStorageAccount[] | cdktf.IResolvable) {
+    this._storageAccount.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get storageAccountInput() {
-    return this._storageAccount;
+    return this._storageAccount.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -578,6 +708,7 @@ export class MediaServicesAccount extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
@@ -585,7 +716,7 @@ export class MediaServicesAccount extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       identity: mediaServicesAccountIdentityToTerraform(this._identity.internalValue),
       key_delivery_access_control: mediaServicesAccountKeyDeliveryAccessControlToTerraform(this._keyDeliveryAccessControl.internalValue),
-      storage_account: cdktf.listMapper(mediaServicesAccountStorageAccountToTerraform)(this._storageAccount),
+      storage_account: cdktf.listMapper(mediaServicesAccountStorageAccountToTerraform)(this._storageAccount.internalValue),
       timeouts: mediaServicesAccountTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

@@ -12,6 +12,13 @@ export interface IothubDpsConfig extends cdktf.TerraformMetaArguments {
   */
   readonly allocationPolicy?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps#id IothubDps#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps#location IothubDps#location}
   */
   readonly location: string;
@@ -88,6 +95,143 @@ export function iothubDpsIpFilterRuleToTerraform(struct?: IothubDpsIpFilterRule 
   }
 }
 
+export class IothubDpsIpFilterRuleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): IothubDpsIpFilterRule | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._action !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.action = this._action;
+    }
+    if (this._ipMask !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ipMask = this._ipMask;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._target !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.target = this._target;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: IothubDpsIpFilterRule | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._action = undefined;
+      this._ipMask = undefined;
+      this._name = undefined;
+      this._target = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._action = value.action;
+      this._ipMask = value.ipMask;
+      this._name = value.name;
+      this._target = value.target;
+    }
+  }
+
+  // action - computed: false, optional: false, required: true
+  private _action?: string; 
+  public get action() {
+    return this.getStringAttribute('action');
+  }
+  public set action(value: string) {
+    this._action = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get actionInput() {
+    return this._action;
+  }
+
+  // ip_mask - computed: false, optional: false, required: true
+  private _ipMask?: string; 
+  public get ipMask() {
+    return this.getStringAttribute('ip_mask');
+  }
+  public set ipMask(value: string) {
+    this._ipMask = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipMaskInput() {
+    return this._ipMask;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // target - computed: false, optional: true, required: false
+  private _target?: string; 
+  public get target() {
+    return this.getStringAttribute('target');
+  }
+  public set target(value: string) {
+    this._target = value;
+  }
+  public resetTarget() {
+    this._target = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetInput() {
+    return this._target;
+  }
+}
+
+export class IothubDpsIpFilterRuleList extends cdktf.ComplexList {
+  public internalValue? : IothubDpsIpFilterRule[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): IothubDpsIpFilterRuleOutputReference {
+    return new IothubDpsIpFilterRuleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface IothubDpsLinkedHub {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps#allocation_weight IothubDps#allocation_weight}
@@ -120,6 +264,151 @@ export function iothubDpsLinkedHubToTerraform(struct?: IothubDpsLinkedHub | cdkt
   }
 }
 
+export class IothubDpsLinkedHubOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): IothubDpsLinkedHub | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._allocationWeight !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.allocationWeight = this._allocationWeight;
+    }
+    if (this._applyAllocationPolicy !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.applyAllocationPolicy = this._applyAllocationPolicy;
+    }
+    if (this._connectionString !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.connectionString = this._connectionString;
+    }
+    if (this._location !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.location = this._location;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: IothubDpsLinkedHub | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._allocationWeight = undefined;
+      this._applyAllocationPolicy = undefined;
+      this._connectionString = undefined;
+      this._location = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._allocationWeight = value.allocationWeight;
+      this._applyAllocationPolicy = value.applyAllocationPolicy;
+      this._connectionString = value.connectionString;
+      this._location = value.location;
+    }
+  }
+
+  // allocation_weight - computed: false, optional: true, required: false
+  private _allocationWeight?: number; 
+  public get allocationWeight() {
+    return this.getNumberAttribute('allocation_weight');
+  }
+  public set allocationWeight(value: number) {
+    this._allocationWeight = value;
+  }
+  public resetAllocationWeight() {
+    this._allocationWeight = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allocationWeightInput() {
+    return this._allocationWeight;
+  }
+
+  // apply_allocation_policy - computed: false, optional: true, required: false
+  private _applyAllocationPolicy?: boolean | cdktf.IResolvable; 
+  public get applyAllocationPolicy() {
+    return this.getBooleanAttribute('apply_allocation_policy');
+  }
+  public set applyAllocationPolicy(value: boolean | cdktf.IResolvable) {
+    this._applyAllocationPolicy = value;
+  }
+  public resetApplyAllocationPolicy() {
+    this._applyAllocationPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get applyAllocationPolicyInput() {
+    return this._applyAllocationPolicy;
+  }
+
+  // connection_string - computed: false, optional: false, required: true
+  private _connectionString?: string; 
+  public get connectionString() {
+    return this.getStringAttribute('connection_string');
+  }
+  public set connectionString(value: string) {
+    this._connectionString = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get connectionStringInput() {
+    return this._connectionString;
+  }
+
+  // hostname - computed: true, optional: false, required: false
+  public get hostname() {
+    return this.getStringAttribute('hostname');
+  }
+
+  // location - computed: false, optional: false, required: true
+  private _location?: string; 
+  public get location() {
+    return this.getStringAttribute('location');
+  }
+  public set location(value: string) {
+    this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location;
+  }
+}
+
+export class IothubDpsLinkedHubList extends cdktf.ComplexList {
+  public internalValue? : IothubDpsLinkedHub[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): IothubDpsLinkedHubOutputReference {
+    return new IothubDpsLinkedHubOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface IothubDpsSku {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps#capacity IothubDps#capacity}
@@ -240,6 +529,7 @@ export function iothubDpsTimeoutsToTerraform(struct?: IothubDpsTimeoutsOutputRef
 
 export class IothubDpsTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -249,7 +539,10 @@ export class IothubDpsTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): IothubDpsTimeouts | undefined {
+  public get internalValue(): IothubDpsTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -271,16 +564,22 @@ export class IothubDpsTimeoutsOutputReference extends cdktf.ComplexObject {
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: IothubDpsTimeouts | undefined) {
+  public set internalValue(value: IothubDpsTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -388,13 +687,14 @@ export class IothubDps extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._allocationPolicy = config.allocationPolicy;
+    this._id = config.id;
     this._location = config.location;
     this._name = config.name;
     this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
-    this._ipFilterRule = config.ipFilterRule;
-    this._linkedHub = config.linkedHub;
+    this._ipFilterRule.internalValue = config.ipFilterRule;
+    this._linkedHub.internalValue = config.linkedHub;
     this._sku.internalValue = config.sku;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -425,8 +725,19 @@ export class IothubDps extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // id_scope - computed: true, optional: false, required: false
@@ -511,37 +822,35 @@ export class IothubDps extends cdktf.TerraformResource {
   }
 
   // ip_filter_rule - computed: false, optional: true, required: false
-  private _ipFilterRule?: IothubDpsIpFilterRule[] | cdktf.IResolvable; 
+  private _ipFilterRule = new IothubDpsIpFilterRuleList(this, "ip_filter_rule", false);
   public get ipFilterRule() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('ip_filter_rule');
+    return this._ipFilterRule;
   }
-  public set ipFilterRule(value: IothubDpsIpFilterRule[] | cdktf.IResolvable) {
-    this._ipFilterRule = value;
+  public putIpFilterRule(value: IothubDpsIpFilterRule[] | cdktf.IResolvable) {
+    this._ipFilterRule.internalValue = value;
   }
   public resetIpFilterRule() {
-    this._ipFilterRule = undefined;
+    this._ipFilterRule.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get ipFilterRuleInput() {
-    return this._ipFilterRule;
+    return this._ipFilterRule.internalValue;
   }
 
   // linked_hub - computed: false, optional: true, required: false
-  private _linkedHub?: IothubDpsLinkedHub[] | cdktf.IResolvable; 
+  private _linkedHub = new IothubDpsLinkedHubList(this, "linked_hub", false);
   public get linkedHub() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('linked_hub');
+    return this._linkedHub;
   }
-  public set linkedHub(value: IothubDpsLinkedHub[] | cdktf.IResolvable) {
-    this._linkedHub = value;
+  public putLinkedHub(value: IothubDpsLinkedHub[] | cdktf.IResolvable) {
+    this._linkedHub.internalValue = value;
   }
   public resetLinkedHub() {
-    this._linkedHub = undefined;
+    this._linkedHub.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get linkedHubInput() {
-    return this._linkedHub;
+    return this._linkedHub.internalValue;
   }
 
   // sku - computed: false, optional: false, required: true
@@ -580,13 +889,14 @@ export class IothubDps extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       allocation_policy: cdktf.stringToTerraform(this._allocationPolicy),
+      id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
-      ip_filter_rule: cdktf.listMapper(iothubDpsIpFilterRuleToTerraform)(this._ipFilterRule),
-      linked_hub: cdktf.listMapper(iothubDpsLinkedHubToTerraform)(this._linkedHub),
+      ip_filter_rule: cdktf.listMapper(iothubDpsIpFilterRuleToTerraform)(this._ipFilterRule.internalValue),
+      linked_hub: cdktf.listMapper(iothubDpsLinkedHubToTerraform)(this._linkedHub.internalValue),
       sku: iothubDpsSkuToTerraform(this._sku.internalValue),
       timeouts: iothubDpsTimeoutsToTerraform(this._timeouts.internalValue),
     };

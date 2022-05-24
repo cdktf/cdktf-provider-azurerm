@@ -60,6 +60,13 @@ export interface WindowsVirtualMachineConfig extends cdktf.TerraformMetaArgument
   */
   readonly hotpatchingEnabled?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine#id WindowsVirtualMachine#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine#license_type WindowsVirtualMachine#license_type}
   */
   readonly licenseType?: string;
@@ -287,6 +294,102 @@ export function windowsVirtualMachineAdditionalUnattendContentToTerraform(struct
   }
 }
 
+export class WindowsVirtualMachineAdditionalUnattendContentOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): WindowsVirtualMachineAdditionalUnattendContent | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._content !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.content = this._content;
+    }
+    if (this._setting !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.setting = this._setting;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: WindowsVirtualMachineAdditionalUnattendContent | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._content = undefined;
+      this._setting = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._content = value.content;
+      this._setting = value.setting;
+    }
+  }
+
+  // content - computed: false, optional: false, required: true
+  private _content?: string; 
+  public get content() {
+    return this.getStringAttribute('content');
+  }
+  public set content(value: string) {
+    this._content = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get contentInput() {
+    return this._content;
+  }
+
+  // setting - computed: false, optional: false, required: true
+  private _setting?: string; 
+  public get setting() {
+    return this.getStringAttribute('setting');
+  }
+  public set setting(value: string) {
+    this._setting = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get settingInput() {
+    return this._setting;
+  }
+}
+
+export class WindowsVirtualMachineAdditionalUnattendContentList extends cdktf.ComplexList {
+  public internalValue? : WindowsVirtualMachineAdditionalUnattendContent[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): WindowsVirtualMachineAdditionalUnattendContentOutputReference {
+    return new WindowsVirtualMachineAdditionalUnattendContentOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface WindowsVirtualMachineBootDiagnostics {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine#storage_account_uri WindowsVirtualMachine#storage_account_uri}
@@ -868,6 +971,102 @@ export function windowsVirtualMachineSecretCertificateToTerraform(struct?: Windo
   }
 }
 
+export class WindowsVirtualMachineSecretCertificateOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): WindowsVirtualMachineSecretCertificate | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._store !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.store = this._store;
+    }
+    if (this._url !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.url = this._url;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: WindowsVirtualMachineSecretCertificate | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._store = undefined;
+      this._url = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._store = value.store;
+      this._url = value.url;
+    }
+  }
+
+  // store - computed: false, optional: false, required: true
+  private _store?: string; 
+  public get store() {
+    return this.getStringAttribute('store');
+  }
+  public set store(value: string) {
+    this._store = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storeInput() {
+    return this._store;
+  }
+
+  // url - computed: false, optional: false, required: true
+  private _url?: string; 
+  public get url() {
+    return this.getStringAttribute('url');
+  }
+  public set url(value: string) {
+    this._url = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get urlInput() {
+    return this._url;
+  }
+}
+
+export class WindowsVirtualMachineSecretCertificateList extends cdktf.ComplexList {
+  public internalValue? : WindowsVirtualMachineSecretCertificate[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): WindowsVirtualMachineSecretCertificateOutputReference {
+    return new WindowsVirtualMachineSecretCertificateOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface WindowsVirtualMachineSecret {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine#key_vault_id WindowsVirtualMachine#key_vault_id}
@@ -892,6 +1091,102 @@ export function windowsVirtualMachineSecretToTerraform(struct?: WindowsVirtualMa
   }
 }
 
+export class WindowsVirtualMachineSecretOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): WindowsVirtualMachineSecret | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._keyVaultId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keyVaultId = this._keyVaultId;
+    }
+    if (this._certificate?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.certificate = this._certificate?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: WindowsVirtualMachineSecret | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._keyVaultId = undefined;
+      this._certificate.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._keyVaultId = value.keyVaultId;
+      this._certificate.internalValue = value.certificate;
+    }
+  }
+
+  // key_vault_id - computed: false, optional: false, required: true
+  private _keyVaultId?: string; 
+  public get keyVaultId() {
+    return this.getStringAttribute('key_vault_id');
+  }
+  public set keyVaultId(value: string) {
+    this._keyVaultId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultIdInput() {
+    return this._keyVaultId;
+  }
+
+  // certificate - computed: false, optional: false, required: true
+  private _certificate = new WindowsVirtualMachineSecretCertificateList(this, "certificate", true);
+  public get certificate() {
+    return this._certificate;
+  }
+  public putCertificate(value: WindowsVirtualMachineSecretCertificate[] | cdktf.IResolvable) {
+    this._certificate.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get certificateInput() {
+    return this._certificate.internalValue;
+  }
+}
+
+export class WindowsVirtualMachineSecretList extends cdktf.ComplexList {
+  public internalValue? : WindowsVirtualMachineSecret[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): WindowsVirtualMachineSecretOutputReference {
+    return new WindowsVirtualMachineSecretOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface WindowsVirtualMachineSourceImageReference {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine#offer WindowsVirtualMachine#offer}
@@ -1060,6 +1355,7 @@ export function windowsVirtualMachineTimeoutsToTerraform(struct?: WindowsVirtual
 
 export class WindowsVirtualMachineTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -1069,7 +1365,10 @@ export class WindowsVirtualMachineTimeoutsOutputReference extends cdktf.ComplexO
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): WindowsVirtualMachineTimeouts | undefined {
+  public get internalValue(): WindowsVirtualMachineTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -1091,16 +1390,22 @@ export class WindowsVirtualMachineTimeoutsOutputReference extends cdktf.ComplexO
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: WindowsVirtualMachineTimeouts | undefined) {
+  public set internalValue(value: WindowsVirtualMachineTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -1194,6 +1499,105 @@ export function windowsVirtualMachineWinrmListenerToTerraform(struct?: WindowsVi
   }
 }
 
+export class WindowsVirtualMachineWinrmListenerOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): WindowsVirtualMachineWinrmListener | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._certificateUrl !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.certificateUrl = this._certificateUrl;
+    }
+    if (this._protocol !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.protocol = this._protocol;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: WindowsVirtualMachineWinrmListener | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._certificateUrl = undefined;
+      this._protocol = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._certificateUrl = value.certificateUrl;
+      this._protocol = value.protocol;
+    }
+  }
+
+  // certificate_url - computed: false, optional: true, required: false
+  private _certificateUrl?: string; 
+  public get certificateUrl() {
+    return this.getStringAttribute('certificate_url');
+  }
+  public set certificateUrl(value: string) {
+    this._certificateUrl = value;
+  }
+  public resetCertificateUrl() {
+    this._certificateUrl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get certificateUrlInput() {
+    return this._certificateUrl;
+  }
+
+  // protocol - computed: false, optional: false, required: true
+  private _protocol?: string; 
+  public get protocol() {
+    return this.getStringAttribute('protocol');
+  }
+  public set protocol(value: string) {
+    this._protocol = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get protocolInput() {
+    return this._protocol;
+  }
+}
+
+export class WindowsVirtualMachineWinrmListenerList extends cdktf.ComplexList {
+  public internalValue? : WindowsVirtualMachineWinrmListener[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): WindowsVirtualMachineWinrmListenerOutputReference {
+    return new WindowsVirtualMachineWinrmListenerOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine azurerm_windows_virtual_machine}
@@ -1242,6 +1646,7 @@ export class WindowsVirtualMachine extends cdktf.TerraformResource {
     this._evictionPolicy = config.evictionPolicy;
     this._extensionsTimeBudget = config.extensionsTimeBudget;
     this._hotpatchingEnabled = config.hotpatchingEnabled;
+    this._id = config.id;
     this._licenseType = config.licenseType;
     this._location = config.location;
     this._maxBidPrice = config.maxBidPrice;
@@ -1263,15 +1668,15 @@ export class WindowsVirtualMachine extends cdktf.TerraformResource {
     this._vtpmEnabled = config.vtpmEnabled;
     this._zone = config.zone;
     this._additionalCapabilities.internalValue = config.additionalCapabilities;
-    this._additionalUnattendContent = config.additionalUnattendContent;
+    this._additionalUnattendContent.internalValue = config.additionalUnattendContent;
     this._bootDiagnostics.internalValue = config.bootDiagnostics;
     this._identity.internalValue = config.identity;
     this._osDisk.internalValue = config.osDisk;
     this._plan.internalValue = config.plan;
-    this._secret = config.secret;
+    this._secret.internalValue = config.secret;
     this._sourceImageReference.internalValue = config.sourceImageReference;
     this._timeouts.internalValue = config.timeouts;
-    this._winrmListener = config.winrmListener;
+    this._winrmListener.internalValue = config.winrmListener;
   }
 
   // ==========
@@ -1481,8 +1886,19 @@ export class WindowsVirtualMachine extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // license_type - computed: false, optional: true, required: false
@@ -1832,20 +2248,19 @@ export class WindowsVirtualMachine extends cdktf.TerraformResource {
   }
 
   // additional_unattend_content - computed: false, optional: true, required: false
-  private _additionalUnattendContent?: WindowsVirtualMachineAdditionalUnattendContent[] | cdktf.IResolvable; 
+  private _additionalUnattendContent = new WindowsVirtualMachineAdditionalUnattendContentList(this, "additional_unattend_content", false);
   public get additionalUnattendContent() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('additional_unattend_content');
+    return this._additionalUnattendContent;
   }
-  public set additionalUnattendContent(value: WindowsVirtualMachineAdditionalUnattendContent[] | cdktf.IResolvable) {
-    this._additionalUnattendContent = value;
+  public putAdditionalUnattendContent(value: WindowsVirtualMachineAdditionalUnattendContent[] | cdktf.IResolvable) {
+    this._additionalUnattendContent.internalValue = value;
   }
   public resetAdditionalUnattendContent() {
-    this._additionalUnattendContent = undefined;
+    this._additionalUnattendContent.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get additionalUnattendContentInput() {
-    return this._additionalUnattendContent;
+    return this._additionalUnattendContent.internalValue;
   }
 
   // boot_diagnostics - computed: false, optional: true, required: false
@@ -1910,20 +2325,19 @@ export class WindowsVirtualMachine extends cdktf.TerraformResource {
   }
 
   // secret - computed: false, optional: true, required: false
-  private _secret?: WindowsVirtualMachineSecret[] | cdktf.IResolvable; 
+  private _secret = new WindowsVirtualMachineSecretList(this, "secret", false);
   public get secret() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('secret');
+    return this._secret;
   }
-  public set secret(value: WindowsVirtualMachineSecret[] | cdktf.IResolvable) {
-    this._secret = value;
+  public putSecret(value: WindowsVirtualMachineSecret[] | cdktf.IResolvable) {
+    this._secret.internalValue = value;
   }
   public resetSecret() {
-    this._secret = undefined;
+    this._secret.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get secretInput() {
-    return this._secret;
+    return this._secret.internalValue;
   }
 
   // source_image_reference - computed: false, optional: true, required: false
@@ -1959,20 +2373,19 @@ export class WindowsVirtualMachine extends cdktf.TerraformResource {
   }
 
   // winrm_listener - computed: false, optional: true, required: false
-  private _winrmListener?: WindowsVirtualMachineWinrmListener[] | cdktf.IResolvable; 
+  private _winrmListener = new WindowsVirtualMachineWinrmListenerList(this, "winrm_listener", true);
   public get winrmListener() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('winrm_listener')));
+    return this._winrmListener;
   }
-  public set winrmListener(value: WindowsVirtualMachineWinrmListener[] | cdktf.IResolvable) {
-    this._winrmListener = value;
+  public putWinrmListener(value: WindowsVirtualMachineWinrmListener[] | cdktf.IResolvable) {
+    this._winrmListener.internalValue = value;
   }
   public resetWinrmListener() {
-    this._winrmListener = undefined;
+    this._winrmListener.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get winrmListenerInput() {
-    return this._winrmListener;
+    return this._winrmListener.internalValue;
   }
 
   // =========
@@ -1994,6 +2407,7 @@ export class WindowsVirtualMachine extends cdktf.TerraformResource {
       eviction_policy: cdktf.stringToTerraform(this._evictionPolicy),
       extensions_time_budget: cdktf.stringToTerraform(this._extensionsTimeBudget),
       hotpatching_enabled: cdktf.booleanToTerraform(this._hotpatchingEnabled),
+      id: cdktf.stringToTerraform(this._id),
       license_type: cdktf.stringToTerraform(this._licenseType),
       location: cdktf.stringToTerraform(this._location),
       max_bid_price: cdktf.numberToTerraform(this._maxBidPrice),
@@ -2015,15 +2429,15 @@ export class WindowsVirtualMachine extends cdktf.TerraformResource {
       vtpm_enabled: cdktf.booleanToTerraform(this._vtpmEnabled),
       zone: cdktf.stringToTerraform(this._zone),
       additional_capabilities: windowsVirtualMachineAdditionalCapabilitiesToTerraform(this._additionalCapabilities.internalValue),
-      additional_unattend_content: cdktf.listMapper(windowsVirtualMachineAdditionalUnattendContentToTerraform)(this._additionalUnattendContent),
+      additional_unattend_content: cdktf.listMapper(windowsVirtualMachineAdditionalUnattendContentToTerraform)(this._additionalUnattendContent.internalValue),
       boot_diagnostics: windowsVirtualMachineBootDiagnosticsToTerraform(this._bootDiagnostics.internalValue),
       identity: windowsVirtualMachineIdentityToTerraform(this._identity.internalValue),
       os_disk: windowsVirtualMachineOsDiskToTerraform(this._osDisk.internalValue),
       plan: windowsVirtualMachinePlanToTerraform(this._plan.internalValue),
-      secret: cdktf.listMapper(windowsVirtualMachineSecretToTerraform)(this._secret),
+      secret: cdktf.listMapper(windowsVirtualMachineSecretToTerraform)(this._secret.internalValue),
       source_image_reference: windowsVirtualMachineSourceImageReferenceToTerraform(this._sourceImageReference.internalValue),
       timeouts: windowsVirtualMachineTimeoutsToTerraform(this._timeouts.internalValue),
-      winrm_listener: cdktf.listMapper(windowsVirtualMachineWinrmListenerToTerraform)(this._winrmListener),
+      winrm_listener: cdktf.listMapper(windowsVirtualMachineWinrmListenerToTerraform)(this._winrmListener.internalValue),
     };
   }
 }

@@ -40,6 +40,13 @@ export interface BotChannelsRegistrationConfig extends cdktf.TerraformMetaArgume
   */
   readonly iconUrl?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration#id BotChannelsRegistration#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration#isolated_network_enabled BotChannelsRegistration#isolated_network_enabled}
   */
   readonly isolatedNetworkEnabled?: boolean | cdktf.IResolvable;
@@ -108,6 +115,7 @@ export function botChannelsRegistrationTimeoutsToTerraform(struct?: BotChannelsR
 
 export class BotChannelsRegistrationTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -117,7 +125,10 @@ export class BotChannelsRegistrationTimeoutsOutputReference extends cdktf.Comple
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): BotChannelsRegistrationTimeouts | undefined {
+  public get internalValue(): BotChannelsRegistrationTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -139,16 +150,22 @@ export class BotChannelsRegistrationTimeoutsOutputReference extends cdktf.Comple
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: BotChannelsRegistrationTimeouts | undefined) {
+  public set internalValue(value: BotChannelsRegistrationTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -263,6 +280,7 @@ export class BotChannelsRegistration extends cdktf.TerraformResource {
     this._displayName = config.displayName;
     this._endpoint = config.endpoint;
     this._iconUrl = config.iconUrl;
+    this._id = config.id;
     this._isolatedNetworkEnabled = config.isolatedNetworkEnabled;
     this._location = config.location;
     this._microsoftAppId = config.microsoftAppId;
@@ -406,8 +424,19 @@ export class BotChannelsRegistration extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // isolated_network_enabled - computed: false, optional: true, required: false
@@ -537,6 +566,7 @@ export class BotChannelsRegistration extends cdktf.TerraformResource {
       display_name: cdktf.stringToTerraform(this._displayName),
       endpoint: cdktf.stringToTerraform(this._endpoint),
       icon_url: cdktf.stringToTerraform(this._iconUrl),
+      id: cdktf.stringToTerraform(this._id),
       isolated_network_enabled: cdktf.booleanToTerraform(this._isolatedNetworkEnabled),
       location: cdktf.stringToTerraform(this._location),
       microsoft_app_id: cdktf.stringToTerraform(this._microsoftAppId),

@@ -16,6 +16,13 @@ export interface ApiManagementNotificationRecipientEmailConfig extends cdktf.Ter
   */
   readonly email: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_notification_recipient_email#id ApiManagementNotificationRecipientEmail#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_notification_recipient_email#notification_type ApiManagementNotificationRecipientEmail#notification_type}
   */
   readonly notificationType: string;
@@ -55,6 +62,7 @@ export function apiManagementNotificationRecipientEmailTimeoutsToTerraform(struc
 
 export class ApiManagementNotificationRecipientEmailTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -64,7 +72,10 @@ export class ApiManagementNotificationRecipientEmailTimeoutsOutputReference exte
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): ApiManagementNotificationRecipientEmailTimeouts | undefined {
+  public get internalValue(): ApiManagementNotificationRecipientEmailTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -82,15 +93,21 @@ export class ApiManagementNotificationRecipientEmailTimeoutsOutputReference exte
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: ApiManagementNotificationRecipientEmailTimeouts | undefined) {
+  public set internalValue(value: ApiManagementNotificationRecipientEmailTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -182,6 +199,7 @@ export class ApiManagementNotificationRecipientEmail extends cdktf.TerraformReso
     });
     this._apiManagementId = config.apiManagementId;
     this._email = config.email;
+    this._id = config.id;
     this._notificationType = config.notificationType;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -217,8 +235,19 @@ export class ApiManagementNotificationRecipientEmail extends cdktf.TerraformReso
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // notification_type - computed: false, optional: false, required: true
@@ -258,6 +287,7 @@ export class ApiManagementNotificationRecipientEmail extends cdktf.TerraformReso
     return {
       api_management_id: cdktf.stringToTerraform(this._apiManagementId),
       email: cdktf.stringToTerraform(this._email),
+      id: cdktf.stringToTerraform(this._id),
       notification_type: cdktf.stringToTerraform(this._notificationType),
       timeouts: apiManagementNotificationRecipientEmailTimeoutsToTerraform(this._timeouts.internalValue),
     };

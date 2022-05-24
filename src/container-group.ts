@@ -16,6 +16,13 @@ export interface ContainerGroupConfig extends cdktf.TerraformMetaArguments {
   */
   readonly exposedPort?: ContainerGroupExposedPort[] | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#id ContainerGroup#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#ip_address_type ContainerGroup#ip_address_type}
   */
   readonly ipAddressType?: string;
@@ -106,6 +113,108 @@ export function containerGroupExposedPortToTerraform(struct?: ContainerGroupExpo
   }
 }
 
+export class ContainerGroupExposedPortOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ContainerGroupExposedPort | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._port !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.port = this._port;
+    }
+    if (this._protocol !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.protocol = this._protocol;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerGroupExposedPort | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._port = undefined;
+      this._protocol = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._port = value.port;
+      this._protocol = value.protocol;
+    }
+  }
+
+  // port - computed: true, optional: true, required: false
+  private _port?: number; 
+  public get port() {
+    return this.getNumberAttribute('port');
+  }
+  public set port(value: number) {
+    this._port = value;
+  }
+  public resetPort() {
+    this._port = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get portInput() {
+    return this._port;
+  }
+
+  // protocol - computed: true, optional: true, required: false
+  private _protocol?: string; 
+  public get protocol() {
+    return this.getStringAttribute('protocol');
+  }
+  public set protocol(value: string) {
+    this._protocol = value;
+  }
+  public resetProtocol() {
+    this._protocol = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get protocolInput() {
+    return this._protocol;
+  }
+}
+
+export class ContainerGroupExposedPortList extends cdktf.ComplexList {
+  public internalValue? : ContainerGroupExposedPort[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ContainerGroupExposedPortOutputReference {
+    return new ContainerGroupExposedPortOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ContainerGroupContainerGpu {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#count ContainerGroup#count}
@@ -225,6 +334,130 @@ export function containerGroupContainerLivenessProbeHttpGetToTerraform(struct?: 
   }
 }
 
+export class ContainerGroupContainerLivenessProbeHttpGetOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ContainerGroupContainerLivenessProbeHttpGet | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._path !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.path = this._path;
+    }
+    if (this._port !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.port = this._port;
+    }
+    if (this._scheme !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.scheme = this._scheme;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerGroupContainerLivenessProbeHttpGet | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._path = undefined;
+      this._port = undefined;
+      this._scheme = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._path = value.path;
+      this._port = value.port;
+      this._scheme = value.scheme;
+    }
+  }
+
+  // path - computed: false, optional: true, required: false
+  private _path?: string; 
+  public get path() {
+    return this.getStringAttribute('path');
+  }
+  public set path(value: string) {
+    this._path = value;
+  }
+  public resetPath() {
+    this._path = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathInput() {
+    return this._path;
+  }
+
+  // port - computed: false, optional: true, required: false
+  private _port?: number; 
+  public get port() {
+    return this.getNumberAttribute('port');
+  }
+  public set port(value: number) {
+    this._port = value;
+  }
+  public resetPort() {
+    this._port = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get portInput() {
+    return this._port;
+  }
+
+  // scheme - computed: false, optional: true, required: false
+  private _scheme?: string; 
+  public get scheme() {
+    return this.getStringAttribute('scheme');
+  }
+  public set scheme(value: string) {
+    this._scheme = value;
+  }
+  public resetScheme() {
+    this._scheme = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get schemeInput() {
+    return this._scheme;
+  }
+}
+
+export class ContainerGroupContainerLivenessProbeHttpGetList extends cdktf.ComplexList {
+  public internalValue? : ContainerGroupContainerLivenessProbeHttpGet[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ContainerGroupContainerLivenessProbeHttpGetOutputReference {
+    return new ContainerGroupContainerLivenessProbeHttpGetOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ContainerGroupContainerLivenessProbe {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#exec ContainerGroup#exec}
@@ -312,9 +545,9 @@ export class ContainerGroupContainerLivenessProbeOutputReference extends cdktf.C
       hasAnyValues = true;
       internalValueResult.timeoutSeconds = this._timeoutSeconds;
     }
-    if (this._httpGet !== undefined) {
+    if (this._httpGet?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.httpGet = this._httpGet;
+      internalValueResult.httpGet = this._httpGet?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -328,7 +561,7 @@ export class ContainerGroupContainerLivenessProbeOutputReference extends cdktf.C
       this._periodSeconds = undefined;
       this._successThreshold = undefined;
       this._timeoutSeconds = undefined;
-      this._httpGet = undefined;
+      this._httpGet.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
@@ -338,7 +571,7 @@ export class ContainerGroupContainerLivenessProbeOutputReference extends cdktf.C
       this._periodSeconds = value.periodSeconds;
       this._successThreshold = value.successThreshold;
       this._timeoutSeconds = value.timeoutSeconds;
-      this._httpGet = value.httpGet;
+      this._httpGet.internalValue = value.httpGet;
     }
   }
 
@@ -439,20 +672,19 @@ export class ContainerGroupContainerLivenessProbeOutputReference extends cdktf.C
   }
 
   // http_get - computed: false, optional: true, required: false
-  private _httpGet?: ContainerGroupContainerLivenessProbeHttpGet[] | cdktf.IResolvable; 
+  private _httpGet = new ContainerGroupContainerLivenessProbeHttpGetList(this, "http_get", false);
   public get httpGet() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('http_get');
+    return this._httpGet;
   }
-  public set httpGet(value: ContainerGroupContainerLivenessProbeHttpGet[] | cdktf.IResolvable) {
-    this._httpGet = value;
+  public putHttpGet(value: ContainerGroupContainerLivenessProbeHttpGet[] | cdktf.IResolvable) {
+    this._httpGet.internalValue = value;
   }
   public resetHttpGet() {
-    this._httpGet = undefined;
+    this._httpGet.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get httpGetInput() {
-    return this._httpGet;
+    return this._httpGet.internalValue;
   }
 }
 export interface ContainerGroupContainerPorts {
@@ -477,6 +709,108 @@ export function containerGroupContainerPortsToTerraform(struct?: ContainerGroupC
   }
 }
 
+export class ContainerGroupContainerPortsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ContainerGroupContainerPorts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._port !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.port = this._port;
+    }
+    if (this._protocol !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.protocol = this._protocol;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerGroupContainerPorts | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._port = undefined;
+      this._protocol = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._port = value.port;
+      this._protocol = value.protocol;
+    }
+  }
+
+  // port - computed: false, optional: true, required: false
+  private _port?: number; 
+  public get port() {
+    return this.getNumberAttribute('port');
+  }
+  public set port(value: number) {
+    this._port = value;
+  }
+  public resetPort() {
+    this._port = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get portInput() {
+    return this._port;
+  }
+
+  // protocol - computed: false, optional: true, required: false
+  private _protocol?: string; 
+  public get protocol() {
+    return this.getStringAttribute('protocol');
+  }
+  public set protocol(value: string) {
+    this._protocol = value;
+  }
+  public resetProtocol() {
+    this._protocol = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get protocolInput() {
+    return this._protocol;
+  }
+}
+
+export class ContainerGroupContainerPortsList extends cdktf.ComplexList {
+  public internalValue? : ContainerGroupContainerPorts[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ContainerGroupContainerPortsOutputReference {
+    return new ContainerGroupContainerPortsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ContainerGroupContainerReadinessProbeHttpGet {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#path ContainerGroup#path}
@@ -504,6 +838,130 @@ export function containerGroupContainerReadinessProbeHttpGetToTerraform(struct?:
   }
 }
 
+export class ContainerGroupContainerReadinessProbeHttpGetOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ContainerGroupContainerReadinessProbeHttpGet | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._path !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.path = this._path;
+    }
+    if (this._port !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.port = this._port;
+    }
+    if (this._scheme !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.scheme = this._scheme;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerGroupContainerReadinessProbeHttpGet | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._path = undefined;
+      this._port = undefined;
+      this._scheme = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._path = value.path;
+      this._port = value.port;
+      this._scheme = value.scheme;
+    }
+  }
+
+  // path - computed: false, optional: true, required: false
+  private _path?: string; 
+  public get path() {
+    return this.getStringAttribute('path');
+  }
+  public set path(value: string) {
+    this._path = value;
+  }
+  public resetPath() {
+    this._path = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathInput() {
+    return this._path;
+  }
+
+  // port - computed: false, optional: true, required: false
+  private _port?: number; 
+  public get port() {
+    return this.getNumberAttribute('port');
+  }
+  public set port(value: number) {
+    this._port = value;
+  }
+  public resetPort() {
+    this._port = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get portInput() {
+    return this._port;
+  }
+
+  // scheme - computed: false, optional: true, required: false
+  private _scheme?: string; 
+  public get scheme() {
+    return this.getStringAttribute('scheme');
+  }
+  public set scheme(value: string) {
+    this._scheme = value;
+  }
+  public resetScheme() {
+    this._scheme = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get schemeInput() {
+    return this._scheme;
+  }
+}
+
+export class ContainerGroupContainerReadinessProbeHttpGetList extends cdktf.ComplexList {
+  public internalValue? : ContainerGroupContainerReadinessProbeHttpGet[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ContainerGroupContainerReadinessProbeHttpGetOutputReference {
+    return new ContainerGroupContainerReadinessProbeHttpGetOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ContainerGroupContainerReadinessProbe {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#exec ContainerGroup#exec}
@@ -591,9 +1049,9 @@ export class ContainerGroupContainerReadinessProbeOutputReference extends cdktf.
       hasAnyValues = true;
       internalValueResult.timeoutSeconds = this._timeoutSeconds;
     }
-    if (this._httpGet !== undefined) {
+    if (this._httpGet?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.httpGet = this._httpGet;
+      internalValueResult.httpGet = this._httpGet?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -607,7 +1065,7 @@ export class ContainerGroupContainerReadinessProbeOutputReference extends cdktf.
       this._periodSeconds = undefined;
       this._successThreshold = undefined;
       this._timeoutSeconds = undefined;
-      this._httpGet = undefined;
+      this._httpGet.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
@@ -617,7 +1075,7 @@ export class ContainerGroupContainerReadinessProbeOutputReference extends cdktf.
       this._periodSeconds = value.periodSeconds;
       this._successThreshold = value.successThreshold;
       this._timeoutSeconds = value.timeoutSeconds;
-      this._httpGet = value.httpGet;
+      this._httpGet.internalValue = value.httpGet;
     }
   }
 
@@ -718,20 +1176,19 @@ export class ContainerGroupContainerReadinessProbeOutputReference extends cdktf.
   }
 
   // http_get - computed: false, optional: true, required: false
-  private _httpGet?: ContainerGroupContainerReadinessProbeHttpGet[] | cdktf.IResolvable; 
+  private _httpGet = new ContainerGroupContainerReadinessProbeHttpGetList(this, "http_get", false);
   public get httpGet() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('http_get');
+    return this._httpGet;
   }
-  public set httpGet(value: ContainerGroupContainerReadinessProbeHttpGet[] | cdktf.IResolvable) {
-    this._httpGet = value;
+  public putHttpGet(value: ContainerGroupContainerReadinessProbeHttpGet[] | cdktf.IResolvable) {
+    this._httpGet.internalValue = value;
   }
   public resetHttpGet() {
-    this._httpGet = undefined;
+    this._httpGet.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get httpGetInput() {
-    return this._httpGet;
+    return this._httpGet.internalValue;
   }
 }
 export interface ContainerGroupContainerVolumeGitRepo {
@@ -909,6 +1366,256 @@ export function containerGroupContainerVolumeToTerraform(struct?: ContainerGroup
   }
 }
 
+export class ContainerGroupContainerVolumeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ContainerGroupContainerVolume | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._emptyDir !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.emptyDir = this._emptyDir;
+    }
+    if (this._mountPath !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.mountPath = this._mountPath;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._readOnly !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.readOnly = this._readOnly;
+    }
+    if (this._secret !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.secret = this._secret;
+    }
+    if (this._shareName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.shareName = this._shareName;
+    }
+    if (this._storageAccountKey !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.storageAccountKey = this._storageAccountKey;
+    }
+    if (this._storageAccountName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.storageAccountName = this._storageAccountName;
+    }
+    if (this._gitRepo?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.gitRepo = this._gitRepo?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerGroupContainerVolume | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._emptyDir = undefined;
+      this._mountPath = undefined;
+      this._name = undefined;
+      this._readOnly = undefined;
+      this._secret = undefined;
+      this._shareName = undefined;
+      this._storageAccountKey = undefined;
+      this._storageAccountName = undefined;
+      this._gitRepo.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._emptyDir = value.emptyDir;
+      this._mountPath = value.mountPath;
+      this._name = value.name;
+      this._readOnly = value.readOnly;
+      this._secret = value.secret;
+      this._shareName = value.shareName;
+      this._storageAccountKey = value.storageAccountKey;
+      this._storageAccountName = value.storageAccountName;
+      this._gitRepo.internalValue = value.gitRepo;
+    }
+  }
+
+  // empty_dir - computed: false, optional: true, required: false
+  private _emptyDir?: boolean | cdktf.IResolvable; 
+  public get emptyDir() {
+    return this.getBooleanAttribute('empty_dir');
+  }
+  public set emptyDir(value: boolean | cdktf.IResolvable) {
+    this._emptyDir = value;
+  }
+  public resetEmptyDir() {
+    this._emptyDir = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get emptyDirInput() {
+    return this._emptyDir;
+  }
+
+  // mount_path - computed: false, optional: false, required: true
+  private _mountPath?: string; 
+  public get mountPath() {
+    return this.getStringAttribute('mount_path');
+  }
+  public set mountPath(value: string) {
+    this._mountPath = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get mountPathInput() {
+    return this._mountPath;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // read_only - computed: false, optional: true, required: false
+  private _readOnly?: boolean | cdktf.IResolvable; 
+  public get readOnly() {
+    return this.getBooleanAttribute('read_only');
+  }
+  public set readOnly(value: boolean | cdktf.IResolvable) {
+    this._readOnly = value;
+  }
+  public resetReadOnly() {
+    this._readOnly = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readOnlyInput() {
+    return this._readOnly;
+  }
+
+  // secret - computed: false, optional: true, required: false
+  private _secret?: { [key: string]: string }; 
+  public get secret() {
+    return this.getStringMapAttribute('secret');
+  }
+  public set secret(value: { [key: string]: string }) {
+    this._secret = value;
+  }
+  public resetSecret() {
+    this._secret = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secretInput() {
+    return this._secret;
+  }
+
+  // share_name - computed: false, optional: true, required: false
+  private _shareName?: string; 
+  public get shareName() {
+    return this.getStringAttribute('share_name');
+  }
+  public set shareName(value: string) {
+    this._shareName = value;
+  }
+  public resetShareName() {
+    this._shareName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get shareNameInput() {
+    return this._shareName;
+  }
+
+  // storage_account_key - computed: false, optional: true, required: false
+  private _storageAccountKey?: string; 
+  public get storageAccountKey() {
+    return this.getStringAttribute('storage_account_key');
+  }
+  public set storageAccountKey(value: string) {
+    this._storageAccountKey = value;
+  }
+  public resetStorageAccountKey() {
+    this._storageAccountKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageAccountKeyInput() {
+    return this._storageAccountKey;
+  }
+
+  // storage_account_name - computed: false, optional: true, required: false
+  private _storageAccountName?: string; 
+  public get storageAccountName() {
+    return this.getStringAttribute('storage_account_name');
+  }
+  public set storageAccountName(value: string) {
+    this._storageAccountName = value;
+  }
+  public resetStorageAccountName() {
+    this._storageAccountName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageAccountNameInput() {
+    return this._storageAccountName;
+  }
+
+  // git_repo - computed: false, optional: true, required: false
+  private _gitRepo = new ContainerGroupContainerVolumeGitRepoOutputReference(this, "git_repo");
+  public get gitRepo() {
+    return this._gitRepo;
+  }
+  public putGitRepo(value: ContainerGroupContainerVolumeGitRepo) {
+    this._gitRepo.internalValue = value;
+  }
+  public resetGitRepo() {
+    this._gitRepo.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get gitRepoInput() {
+    return this._gitRepo.internalValue;
+  }
+}
+
+export class ContainerGroupContainerVolumeList extends cdktf.ComplexList {
+  public internalValue? : ContainerGroupContainerVolume[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ContainerGroupContainerVolumeOutputReference {
+    return new ContainerGroupContainerVolumeOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ContainerGroupContainer {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#commands ContainerGroup#commands}
@@ -991,6 +1698,316 @@ export function containerGroupContainerToTerraform(struct?: ContainerGroupContai
   }
 }
 
+export class ContainerGroupContainerOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ContainerGroupContainer | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._commands !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.commands = this._commands;
+    }
+    if (this._cpu !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.cpu = this._cpu;
+    }
+    if (this._environmentVariables !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.environmentVariables = this._environmentVariables;
+    }
+    if (this._image !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.image = this._image;
+    }
+    if (this._memory !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.memory = this._memory;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._secureEnvironmentVariables !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.secureEnvironmentVariables = this._secureEnvironmentVariables;
+    }
+    if (this._gpu?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.gpu = this._gpu?.internalValue;
+    }
+    if (this._livenessProbe?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.livenessProbe = this._livenessProbe?.internalValue;
+    }
+    if (this._ports?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ports = this._ports?.internalValue;
+    }
+    if (this._readinessProbe?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.readinessProbe = this._readinessProbe?.internalValue;
+    }
+    if (this._volume?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.volume = this._volume?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerGroupContainer | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._commands = undefined;
+      this._cpu = undefined;
+      this._environmentVariables = undefined;
+      this._image = undefined;
+      this._memory = undefined;
+      this._name = undefined;
+      this._secureEnvironmentVariables = undefined;
+      this._gpu.internalValue = undefined;
+      this._livenessProbe.internalValue = undefined;
+      this._ports.internalValue = undefined;
+      this._readinessProbe.internalValue = undefined;
+      this._volume.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._commands = value.commands;
+      this._cpu = value.cpu;
+      this._environmentVariables = value.environmentVariables;
+      this._image = value.image;
+      this._memory = value.memory;
+      this._name = value.name;
+      this._secureEnvironmentVariables = value.secureEnvironmentVariables;
+      this._gpu.internalValue = value.gpu;
+      this._livenessProbe.internalValue = value.livenessProbe;
+      this._ports.internalValue = value.ports;
+      this._readinessProbe.internalValue = value.readinessProbe;
+      this._volume.internalValue = value.volume;
+    }
+  }
+
+  // commands - computed: true, optional: true, required: false
+  private _commands?: string[]; 
+  public get commands() {
+    return this.getListAttribute('commands');
+  }
+  public set commands(value: string[]) {
+    this._commands = value;
+  }
+  public resetCommands() {
+    this._commands = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get commandsInput() {
+    return this._commands;
+  }
+
+  // cpu - computed: false, optional: false, required: true
+  private _cpu?: number; 
+  public get cpu() {
+    return this.getNumberAttribute('cpu');
+  }
+  public set cpu(value: number) {
+    this._cpu = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cpuInput() {
+    return this._cpu;
+  }
+
+  // environment_variables - computed: false, optional: true, required: false
+  private _environmentVariables?: { [key: string]: string }; 
+  public get environmentVariables() {
+    return this.getStringMapAttribute('environment_variables');
+  }
+  public set environmentVariables(value: { [key: string]: string }) {
+    this._environmentVariables = value;
+  }
+  public resetEnvironmentVariables() {
+    this._environmentVariables = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get environmentVariablesInput() {
+    return this._environmentVariables;
+  }
+
+  // image - computed: false, optional: false, required: true
+  private _image?: string; 
+  public get image() {
+    return this.getStringAttribute('image');
+  }
+  public set image(value: string) {
+    this._image = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get imageInput() {
+    return this._image;
+  }
+
+  // memory - computed: false, optional: false, required: true
+  private _memory?: number; 
+  public get memory() {
+    return this.getNumberAttribute('memory');
+  }
+  public set memory(value: number) {
+    this._memory = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get memoryInput() {
+    return this._memory;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // secure_environment_variables - computed: false, optional: true, required: false
+  private _secureEnvironmentVariables?: { [key: string]: string }; 
+  public get secureEnvironmentVariables() {
+    return this.getStringMapAttribute('secure_environment_variables');
+  }
+  public set secureEnvironmentVariables(value: { [key: string]: string }) {
+    this._secureEnvironmentVariables = value;
+  }
+  public resetSecureEnvironmentVariables() {
+    this._secureEnvironmentVariables = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secureEnvironmentVariablesInput() {
+    return this._secureEnvironmentVariables;
+  }
+
+  // gpu - computed: false, optional: true, required: false
+  private _gpu = new ContainerGroupContainerGpuOutputReference(this, "gpu");
+  public get gpu() {
+    return this._gpu;
+  }
+  public putGpu(value: ContainerGroupContainerGpu) {
+    this._gpu.internalValue = value;
+  }
+  public resetGpu() {
+    this._gpu.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get gpuInput() {
+    return this._gpu.internalValue;
+  }
+
+  // liveness_probe - computed: false, optional: true, required: false
+  private _livenessProbe = new ContainerGroupContainerLivenessProbeOutputReference(this, "liveness_probe");
+  public get livenessProbe() {
+    return this._livenessProbe;
+  }
+  public putLivenessProbe(value: ContainerGroupContainerLivenessProbe) {
+    this._livenessProbe.internalValue = value;
+  }
+  public resetLivenessProbe() {
+    this._livenessProbe.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get livenessProbeInput() {
+    return this._livenessProbe.internalValue;
+  }
+
+  // ports - computed: false, optional: true, required: false
+  private _ports = new ContainerGroupContainerPortsList(this, "ports", true);
+  public get ports() {
+    return this._ports;
+  }
+  public putPorts(value: ContainerGroupContainerPorts[] | cdktf.IResolvable) {
+    this._ports.internalValue = value;
+  }
+  public resetPorts() {
+    this._ports.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get portsInput() {
+    return this._ports.internalValue;
+  }
+
+  // readiness_probe - computed: false, optional: true, required: false
+  private _readinessProbe = new ContainerGroupContainerReadinessProbeOutputReference(this, "readiness_probe");
+  public get readinessProbe() {
+    return this._readinessProbe;
+  }
+  public putReadinessProbe(value: ContainerGroupContainerReadinessProbe) {
+    this._readinessProbe.internalValue = value;
+  }
+  public resetReadinessProbe() {
+    this._readinessProbe.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readinessProbeInput() {
+    return this._readinessProbe.internalValue;
+  }
+
+  // volume - computed: false, optional: true, required: false
+  private _volume = new ContainerGroupContainerVolumeList(this, "volume", false);
+  public get volume() {
+    return this._volume;
+  }
+  public putVolume(value: ContainerGroupContainerVolume[] | cdktf.IResolvable) {
+    this._volume.internalValue = value;
+  }
+  public resetVolume() {
+    this._volume.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get volumeInput() {
+    return this._volume.internalValue;
+  }
+}
+
+export class ContainerGroupContainerList extends cdktf.ComplexList {
+  public internalValue? : ContainerGroupContainer[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ContainerGroupContainerOutputReference {
+    return new ContainerGroupContainerOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ContainerGroupDiagnosticsLogAnalytics {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#log_type ContainerGroup#log_type}
@@ -1437,6 +2454,121 @@ export function containerGroupImageRegistryCredentialToTerraform(struct?: Contai
   }
 }
 
+export class ContainerGroupImageRegistryCredentialOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ContainerGroupImageRegistryCredential | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._password !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.password = this._password;
+    }
+    if (this._server !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.server = this._server;
+    }
+    if (this._username !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.username = this._username;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerGroupImageRegistryCredential | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._password = undefined;
+      this._server = undefined;
+      this._username = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._password = value.password;
+      this._server = value.server;
+      this._username = value.username;
+    }
+  }
+
+  // password - computed: false, optional: false, required: true
+  private _password?: string; 
+  public get password() {
+    return this.getStringAttribute('password');
+  }
+  public set password(value: string) {
+    this._password = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get passwordInput() {
+    return this._password;
+  }
+
+  // server - computed: false, optional: false, required: true
+  private _server?: string; 
+  public get server() {
+    return this.getStringAttribute('server');
+  }
+  public set server(value: string) {
+    this._server = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serverInput() {
+    return this._server;
+  }
+
+  // username - computed: false, optional: false, required: true
+  private _username?: string; 
+  public get username() {
+    return this.getStringAttribute('username');
+  }
+  public set username(value: string) {
+    this._username = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get usernameInput() {
+    return this._username;
+  }
+}
+
+export class ContainerGroupImageRegistryCredentialList extends cdktf.ComplexList {
+  public internalValue? : ContainerGroupImageRegistryCredential[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ContainerGroupImageRegistryCredentialOutputReference {
+    return new ContainerGroupImageRegistryCredentialOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ContainerGroupTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#create ContainerGroup#create}
@@ -1471,6 +2603,7 @@ export function containerGroupTimeoutsToTerraform(struct?: ContainerGroupTimeout
 
 export class ContainerGroupTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -1480,7 +2613,10 @@ export class ContainerGroupTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): ContainerGroupTimeouts | undefined {
+  public get internalValue(): ContainerGroupTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -1502,16 +2638,22 @@ export class ContainerGroupTimeoutsOutputReference extends cdktf.ComplexObject {
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: ContainerGroupTimeouts | undefined) {
+  public set internalValue(value: ContainerGroupTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -1619,7 +2761,8 @@ export class ContainerGroup extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._dnsNameLabel = config.dnsNameLabel;
-    this._exposedPort = config.exposedPort;
+    this._exposedPort.internalValue = config.exposedPort;
+    this._id = config.id;
     this._ipAddressType = config.ipAddressType;
     this._location = config.location;
     this._name = config.name;
@@ -1628,11 +2771,11 @@ export class ContainerGroup extends cdktf.TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._restartPolicy = config.restartPolicy;
     this._tags = config.tags;
-    this._container = config.container;
+    this._container.internalValue = config.container;
     this._diagnostics.internalValue = config.diagnostics;
     this._dnsConfig.internalValue = config.dnsConfig;
     this._identity.internalValue = config.identity;
-    this._imageRegistryCredential = config.imageRegistryCredential;
+    this._imageRegistryCredential.internalValue = config.imageRegistryCredential;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -1657,20 +2800,19 @@ export class ContainerGroup extends cdktf.TerraformResource {
   }
 
   // exposed_port - computed: true, optional: true, required: false
-  private _exposedPort?: ContainerGroupExposedPort[] | cdktf.IResolvable; 
+  private _exposedPort = new ContainerGroupExposedPortList(this, "exposed_port", true);
   public get exposedPort() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('exposed_port')));
+    return this._exposedPort;
   }
-  public set exposedPort(value: ContainerGroupExposedPort[] | cdktf.IResolvable) {
-    this._exposedPort = value;
+  public putExposedPort(value: ContainerGroupExposedPort[] | cdktf.IResolvable) {
+    this._exposedPort.internalValue = value;
   }
   public resetExposedPort() {
-    this._exposedPort = undefined;
+    this._exposedPort.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get exposedPortInput() {
-    return this._exposedPort;
+    return this._exposedPort.internalValue;
   }
 
   // fqdn - computed: true, optional: false, required: false
@@ -1679,8 +2821,19 @@ export class ContainerGroup extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // ip_address - computed: true, optional: false, required: false
@@ -1805,17 +2958,16 @@ export class ContainerGroup extends cdktf.TerraformResource {
   }
 
   // container - computed: false, optional: false, required: true
-  private _container?: ContainerGroupContainer[] | cdktf.IResolvable; 
+  private _container = new ContainerGroupContainerList(this, "container", false);
   public get container() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('container');
+    return this._container;
   }
-  public set container(value: ContainerGroupContainer[] | cdktf.IResolvable) {
-    this._container = value;
+  public putContainer(value: ContainerGroupContainer[] | cdktf.IResolvable) {
+    this._container.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get containerInput() {
-    return this._container;
+    return this._container.internalValue;
   }
 
   // diagnostics - computed: false, optional: true, required: false
@@ -1867,20 +3019,19 @@ export class ContainerGroup extends cdktf.TerraformResource {
   }
 
   // image_registry_credential - computed: false, optional: true, required: false
-  private _imageRegistryCredential?: ContainerGroupImageRegistryCredential[] | cdktf.IResolvable; 
+  private _imageRegistryCredential = new ContainerGroupImageRegistryCredentialList(this, "image_registry_credential", false);
   public get imageRegistryCredential() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('image_registry_credential');
+    return this._imageRegistryCredential;
   }
-  public set imageRegistryCredential(value: ContainerGroupImageRegistryCredential[] | cdktf.IResolvable) {
-    this._imageRegistryCredential = value;
+  public putImageRegistryCredential(value: ContainerGroupImageRegistryCredential[] | cdktf.IResolvable) {
+    this._imageRegistryCredential.internalValue = value;
   }
   public resetImageRegistryCredential() {
-    this._imageRegistryCredential = undefined;
+    this._imageRegistryCredential.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get imageRegistryCredentialInput() {
-    return this._imageRegistryCredential;
+    return this._imageRegistryCredential.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -1906,7 +3057,8 @@ export class ContainerGroup extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       dns_name_label: cdktf.stringToTerraform(this._dnsNameLabel),
-      exposed_port: cdktf.listMapper(containerGroupExposedPortToTerraform)(this._exposedPort),
+      exposed_port: cdktf.listMapper(containerGroupExposedPortToTerraform)(this._exposedPort.internalValue),
+      id: cdktf.stringToTerraform(this._id),
       ip_address_type: cdktf.stringToTerraform(this._ipAddressType),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
@@ -1915,11 +3067,11 @@ export class ContainerGroup extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       restart_policy: cdktf.stringToTerraform(this._restartPolicy),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
-      container: cdktf.listMapper(containerGroupContainerToTerraform)(this._container),
+      container: cdktf.listMapper(containerGroupContainerToTerraform)(this._container.internalValue),
       diagnostics: containerGroupDiagnosticsToTerraform(this._diagnostics.internalValue),
       dns_config: containerGroupDnsConfigToTerraform(this._dnsConfig.internalValue),
       identity: containerGroupIdentityToTerraform(this._identity.internalValue),
-      image_registry_credential: cdktf.listMapper(containerGroupImageRegistryCredentialToTerraform)(this._imageRegistryCredential),
+      image_registry_credential: cdktf.listMapper(containerGroupImageRegistryCredentialToTerraform)(this._imageRegistryCredential.internalValue),
       timeouts: containerGroupTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

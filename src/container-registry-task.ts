@@ -20,6 +20,13 @@ export interface ContainerRegistryTaskConfig extends cdktf.TerraformMetaArgument
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_task#id ContainerRegistryTask#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_task#is_system_task ContainerRegistryTask#is_system_task}
   */
   readonly isSystemTask?: boolean | cdktf.IResolvable;
@@ -1248,6 +1255,149 @@ export function containerRegistryTaskRegistryCredentialCustomToTerraform(struct?
   }
 }
 
+export class ContainerRegistryTaskRegistryCredentialCustomOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ContainerRegistryTaskRegistryCredentialCustom | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._identity !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.identity = this._identity;
+    }
+    if (this._loginServer !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.loginServer = this._loginServer;
+    }
+    if (this._password !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.password = this._password;
+    }
+    if (this._username !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.username = this._username;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerRegistryTaskRegistryCredentialCustom | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._identity = undefined;
+      this._loginServer = undefined;
+      this._password = undefined;
+      this._username = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._identity = value.identity;
+      this._loginServer = value.loginServer;
+      this._password = value.password;
+      this._username = value.username;
+    }
+  }
+
+  // identity - computed: false, optional: true, required: false
+  private _identity?: string; 
+  public get identity() {
+    return this.getStringAttribute('identity');
+  }
+  public set identity(value: string) {
+    this._identity = value;
+  }
+  public resetIdentity() {
+    this._identity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityInput() {
+    return this._identity;
+  }
+
+  // login_server - computed: false, optional: false, required: true
+  private _loginServer?: string; 
+  public get loginServer() {
+    return this.getStringAttribute('login_server');
+  }
+  public set loginServer(value: string) {
+    this._loginServer = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get loginServerInput() {
+    return this._loginServer;
+  }
+
+  // password - computed: false, optional: true, required: false
+  private _password?: string; 
+  public get password() {
+    return this.getStringAttribute('password');
+  }
+  public set password(value: string) {
+    this._password = value;
+  }
+  public resetPassword() {
+    this._password = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get passwordInput() {
+    return this._password;
+  }
+
+  // username - computed: false, optional: true, required: false
+  private _username?: string; 
+  public get username() {
+    return this.getStringAttribute('username');
+  }
+  public set username(value: string) {
+    this._username = value;
+  }
+  public resetUsername() {
+    this._username = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get usernameInput() {
+    return this._username;
+  }
+}
+
+export class ContainerRegistryTaskRegistryCredentialCustomList extends cdktf.ComplexList {
+  public internalValue? : ContainerRegistryTaskRegistryCredentialCustom[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ContainerRegistryTaskRegistryCredentialCustomOutputReference {
+    return new ContainerRegistryTaskRegistryCredentialCustomOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ContainerRegistryTaskRegistryCredentialSource {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_task#login_mode ContainerRegistryTask#login_mode}
@@ -1350,9 +1500,9 @@ export class ContainerRegistryTaskRegistryCredentialOutputReference extends cdkt
   public get internalValue(): ContainerRegistryTaskRegistryCredential | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._custom !== undefined) {
+    if (this._custom?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.custom = this._custom;
+      internalValueResult.custom = this._custom?.internalValue;
     }
     if (this._source?.internalValue !== undefined) {
       hasAnyValues = true;
@@ -1364,31 +1514,30 @@ export class ContainerRegistryTaskRegistryCredentialOutputReference extends cdkt
   public set internalValue(value: ContainerRegistryTaskRegistryCredential | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
-      this._custom = undefined;
+      this._custom.internalValue = undefined;
       this._source.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
-      this._custom = value.custom;
+      this._custom.internalValue = value.custom;
       this._source.internalValue = value.source;
     }
   }
 
   // custom - computed: false, optional: true, required: false
-  private _custom?: ContainerRegistryTaskRegistryCredentialCustom[] | cdktf.IResolvable; 
+  private _custom = new ContainerRegistryTaskRegistryCredentialCustomList(this, "custom", true);
   public get custom() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('custom')));
+    return this._custom;
   }
-  public set custom(value: ContainerRegistryTaskRegistryCredentialCustom[] | cdktf.IResolvable) {
-    this._custom = value;
+  public putCustom(value: ContainerRegistryTaskRegistryCredentialCustom[] | cdktf.IResolvable) {
+    this._custom.internalValue = value;
   }
   public resetCustom() {
-    this._custom = undefined;
+    this._custom.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get customInput() {
-    return this._custom;
+    return this._custom.internalValue;
   }
 
   // source - computed: false, optional: true, required: false
@@ -1623,6 +1772,206 @@ export function containerRegistryTaskSourceTriggerToTerraform(struct?: Container
   }
 }
 
+export class ContainerRegistryTaskSourceTriggerOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ContainerRegistryTaskSourceTrigger | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._branch !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.branch = this._branch;
+    }
+    if (this._enabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._events !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.events = this._events;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._repositoryUrl !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.repositoryUrl = this._repositoryUrl;
+    }
+    if (this._sourceType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sourceType = this._sourceType;
+    }
+    if (this._authentication?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.authentication = this._authentication?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerRegistryTaskSourceTrigger | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._branch = undefined;
+      this._enabled = undefined;
+      this._events = undefined;
+      this._name = undefined;
+      this._repositoryUrl = undefined;
+      this._sourceType = undefined;
+      this._authentication.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._branch = value.branch;
+      this._enabled = value.enabled;
+      this._events = value.events;
+      this._name = value.name;
+      this._repositoryUrl = value.repositoryUrl;
+      this._sourceType = value.sourceType;
+      this._authentication.internalValue = value.authentication;
+    }
+  }
+
+  // branch - computed: false, optional: true, required: false
+  private _branch?: string; 
+  public get branch() {
+    return this.getStringAttribute('branch');
+  }
+  public set branch(value: string) {
+    this._branch = value;
+  }
+  public resetBranch() {
+    this._branch = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get branchInput() {
+    return this._branch;
+  }
+
+  // enabled - computed: false, optional: true, required: false
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+
+  // events - computed: false, optional: false, required: true
+  private _events?: string[]; 
+  public get events() {
+    return this.getListAttribute('events');
+  }
+  public set events(value: string[]) {
+    this._events = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get eventsInput() {
+    return this._events;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // repository_url - computed: false, optional: false, required: true
+  private _repositoryUrl?: string; 
+  public get repositoryUrl() {
+    return this.getStringAttribute('repository_url');
+  }
+  public set repositoryUrl(value: string) {
+    this._repositoryUrl = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get repositoryUrlInput() {
+    return this._repositoryUrl;
+  }
+
+  // source_type - computed: false, optional: false, required: true
+  private _sourceType?: string; 
+  public get sourceType() {
+    return this.getStringAttribute('source_type');
+  }
+  public set sourceType(value: string) {
+    this._sourceType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceTypeInput() {
+    return this._sourceType;
+  }
+
+  // authentication - computed: false, optional: true, required: false
+  private _authentication = new ContainerRegistryTaskSourceTriggerAuthenticationOutputReference(this, "authentication");
+  public get authentication() {
+    return this._authentication;
+  }
+  public putAuthentication(value: ContainerRegistryTaskSourceTriggerAuthentication) {
+    this._authentication.internalValue = value;
+  }
+  public resetAuthentication() {
+    this._authentication.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get authenticationInput() {
+    return this._authentication.internalValue;
+  }
+}
+
+export class ContainerRegistryTaskSourceTriggerList extends cdktf.ComplexList {
+  public internalValue? : ContainerRegistryTaskSourceTrigger[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ContainerRegistryTaskSourceTriggerOutputReference {
+    return new ContainerRegistryTaskSourceTriggerOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ContainerRegistryTaskTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_task#create ContainerRegistryTask#create}
@@ -1657,6 +2006,7 @@ export function containerRegistryTaskTimeoutsToTerraform(struct?: ContainerRegis
 
 export class ContainerRegistryTaskTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -1666,7 +2016,10 @@ export class ContainerRegistryTaskTimeoutsOutputReference extends cdktf.ComplexO
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): ContainerRegistryTaskTimeouts | undefined {
+  public get internalValue(): ContainerRegistryTaskTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -1688,16 +2041,22 @@ export class ContainerRegistryTaskTimeoutsOutputReference extends cdktf.ComplexO
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: ContainerRegistryTaskTimeouts | undefined) {
+  public set internalValue(value: ContainerRegistryTaskTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -1796,6 +2155,124 @@ export function containerRegistryTaskTimerTriggerToTerraform(struct?: ContainerR
   }
 }
 
+export class ContainerRegistryTaskTimerTriggerOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ContainerRegistryTaskTimerTrigger | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._enabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._schedule !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.schedule = this._schedule;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerRegistryTaskTimerTrigger | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._enabled = undefined;
+      this._name = undefined;
+      this._schedule = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._enabled = value.enabled;
+      this._name = value.name;
+      this._schedule = value.schedule;
+    }
+  }
+
+  // enabled - computed: false, optional: true, required: false
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // schedule - computed: false, optional: false, required: true
+  private _schedule?: string; 
+  public get schedule() {
+    return this.getStringAttribute('schedule');
+  }
+  public set schedule(value: string) {
+    this._schedule = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scheduleInput() {
+    return this._schedule;
+  }
+}
+
+export class ContainerRegistryTaskTimerTriggerList extends cdktf.ComplexList {
+  public internalValue? : ContainerRegistryTaskTimerTrigger[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ContainerRegistryTaskTimerTriggerOutputReference {
+    return new ContainerRegistryTaskTimerTriggerOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_task azurerm_container_registry_task}
@@ -1834,6 +2311,7 @@ export class ContainerRegistryTask extends cdktf.TerraformResource {
     this._agentPoolName = config.agentPoolName;
     this._containerRegistryId = config.containerRegistryId;
     this._enabled = config.enabled;
+    this._id = config.id;
     this._isSystemTask = config.isSystemTask;
     this._logTemplate = config.logTemplate;
     this._name = config.name;
@@ -1847,9 +2325,9 @@ export class ContainerRegistryTask extends cdktf.TerraformResource {
     this._identity.internalValue = config.identity;
     this._platform.internalValue = config.platform;
     this._registryCredential.internalValue = config.registryCredential;
-    this._sourceTrigger = config.sourceTrigger;
+    this._sourceTrigger.internalValue = config.sourceTrigger;
     this._timeouts.internalValue = config.timeouts;
-    this._timerTrigger = config.timerTrigger;
+    this._timerTrigger.internalValue = config.timerTrigger;
   }
 
   // ==========
@@ -1902,8 +2380,19 @@ export class ContainerRegistryTask extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // is_system_task - computed: false, optional: true, required: false
@@ -2112,20 +2601,19 @@ export class ContainerRegistryTask extends cdktf.TerraformResource {
   }
 
   // source_trigger - computed: false, optional: true, required: false
-  private _sourceTrigger?: ContainerRegistryTaskSourceTrigger[] | cdktf.IResolvable; 
+  private _sourceTrigger = new ContainerRegistryTaskSourceTriggerList(this, "source_trigger", false);
   public get sourceTrigger() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('source_trigger');
+    return this._sourceTrigger;
   }
-  public set sourceTrigger(value: ContainerRegistryTaskSourceTrigger[] | cdktf.IResolvable) {
-    this._sourceTrigger = value;
+  public putSourceTrigger(value: ContainerRegistryTaskSourceTrigger[] | cdktf.IResolvable) {
+    this._sourceTrigger.internalValue = value;
   }
   public resetSourceTrigger() {
-    this._sourceTrigger = undefined;
+    this._sourceTrigger.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get sourceTriggerInput() {
-    return this._sourceTrigger;
+    return this._sourceTrigger.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -2145,20 +2633,19 @@ export class ContainerRegistryTask extends cdktf.TerraformResource {
   }
 
   // timer_trigger - computed: false, optional: true, required: false
-  private _timerTrigger?: ContainerRegistryTaskTimerTrigger[] | cdktf.IResolvable; 
+  private _timerTrigger = new ContainerRegistryTaskTimerTriggerList(this, "timer_trigger", false);
   public get timerTrigger() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('timer_trigger');
+    return this._timerTrigger;
   }
-  public set timerTrigger(value: ContainerRegistryTaskTimerTrigger[] | cdktf.IResolvable) {
-    this._timerTrigger = value;
+  public putTimerTrigger(value: ContainerRegistryTaskTimerTrigger[] | cdktf.IResolvable) {
+    this._timerTrigger.internalValue = value;
   }
   public resetTimerTrigger() {
-    this._timerTrigger = undefined;
+    this._timerTrigger.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timerTriggerInput() {
-    return this._timerTrigger;
+    return this._timerTrigger.internalValue;
   }
 
   // =========
@@ -2170,6 +2657,7 @@ export class ContainerRegistryTask extends cdktf.TerraformResource {
       agent_pool_name: cdktf.stringToTerraform(this._agentPoolName),
       container_registry_id: cdktf.stringToTerraform(this._containerRegistryId),
       enabled: cdktf.booleanToTerraform(this._enabled),
+      id: cdktf.stringToTerraform(this._id),
       is_system_task: cdktf.booleanToTerraform(this._isSystemTask),
       log_template: cdktf.stringToTerraform(this._logTemplate),
       name: cdktf.stringToTerraform(this._name),
@@ -2183,9 +2671,9 @@ export class ContainerRegistryTask extends cdktf.TerraformResource {
       identity: containerRegistryTaskIdentityToTerraform(this._identity.internalValue),
       platform: containerRegistryTaskPlatformToTerraform(this._platform.internalValue),
       registry_credential: containerRegistryTaskRegistryCredentialToTerraform(this._registryCredential.internalValue),
-      source_trigger: cdktf.listMapper(containerRegistryTaskSourceTriggerToTerraform)(this._sourceTrigger),
+      source_trigger: cdktf.listMapper(containerRegistryTaskSourceTriggerToTerraform)(this._sourceTrigger.internalValue),
       timeouts: containerRegistryTaskTimeoutsToTerraform(this._timeouts.internalValue),
-      timer_trigger: cdktf.listMapper(containerRegistryTaskTimerTriggerToTerraform)(this._timerTrigger),
+      timer_trigger: cdktf.listMapper(containerRegistryTaskTimerTriggerToTerraform)(this._timerTrigger.internalValue),
     };
   }
 }

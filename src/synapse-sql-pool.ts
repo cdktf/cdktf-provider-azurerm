@@ -20,6 +20,13 @@ export interface SynapseSqlPoolConfig extends cdktf.TerraformMetaArguments {
   */
   readonly dataEncrypted?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool#id SynapseSqlPool#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool#name SynapseSqlPool#name}
   */
   readonly name: string;
@@ -172,6 +179,7 @@ export function synapseSqlPoolTimeoutsToTerraform(struct?: SynapseSqlPoolTimeout
 
 export class SynapseSqlPoolTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -181,7 +189,10 @@ export class SynapseSqlPoolTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): SynapseSqlPoolTimeouts | undefined {
+  public get internalValue(): SynapseSqlPoolTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -203,16 +214,22 @@ export class SynapseSqlPoolTimeoutsOutputReference extends cdktf.ComplexObject {
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: SynapseSqlPoolTimeouts | undefined) {
+  public set internalValue(value: SynapseSqlPoolTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -322,6 +339,7 @@ export class SynapseSqlPool extends cdktf.TerraformResource {
     this._collation = config.collation;
     this._createMode = config.createMode;
     this._dataEncrypted = config.dataEncrypted;
+    this._id = config.id;
     this._name = config.name;
     this._recoveryDatabaseId = config.recoveryDatabaseId;
     this._skuName = config.skuName;
@@ -384,8 +402,19 @@ export class SynapseSqlPool extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // name - computed: false, optional: false, required: true
@@ -500,6 +529,7 @@ export class SynapseSqlPool extends cdktf.TerraformResource {
       collation: cdktf.stringToTerraform(this._collation),
       create_mode: cdktf.stringToTerraform(this._createMode),
       data_encrypted: cdktf.booleanToTerraform(this._dataEncrypted),
+      id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       recovery_database_id: cdktf.stringToTerraform(this._recoveryDatabaseId),
       sku_name: cdktf.stringToTerraform(this._skuName),

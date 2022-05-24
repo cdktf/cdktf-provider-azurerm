@@ -16,6 +16,13 @@ export interface AppServiceEnvironmentV3Config extends cdktf.TerraformMetaArgume
   */
   readonly dedicatedHostCount?: number;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment_v3#id AppServiceEnvironmentV3#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment_v3#internal_load_balancing_mode AppServiceEnvironmentV3#internal_load_balancing_mode}
   */
   readonly internalLoadBalancingMode?: string;
@@ -148,6 +155,102 @@ export function appServiceEnvironmentV3ClusterSettingToTerraform(struct?: AppSer
   }
 }
 
+export class AppServiceEnvironmentV3ClusterSettingOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AppServiceEnvironmentV3ClusterSetting | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppServiceEnvironmentV3ClusterSetting | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._value = value.value;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // value - computed: false, optional: false, required: true
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class AppServiceEnvironmentV3ClusterSettingList extends cdktf.ComplexList {
+  public internalValue? : AppServiceEnvironmentV3ClusterSetting[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AppServiceEnvironmentV3ClusterSettingOutputReference {
+    return new AppServiceEnvironmentV3ClusterSettingOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface AppServiceEnvironmentV3Timeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment_v3#create AppServiceEnvironmentV3#create}
@@ -182,6 +285,7 @@ export function appServiceEnvironmentV3TimeoutsToTerraform(struct?: AppServiceEn
 
 export class AppServiceEnvironmentV3TimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -191,7 +295,10 @@ export class AppServiceEnvironmentV3TimeoutsOutputReference extends cdktf.Comple
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): AppServiceEnvironmentV3Timeouts | undefined {
+  public get internalValue(): AppServiceEnvironmentV3Timeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -213,16 +320,22 @@ export class AppServiceEnvironmentV3TimeoutsOutputReference extends cdktf.Comple
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: AppServiceEnvironmentV3Timeouts | undefined) {
+  public set internalValue(value: AppServiceEnvironmentV3Timeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -331,13 +444,14 @@ export class AppServiceEnvironmentV3 extends cdktf.TerraformResource {
     });
     this._allowNewPrivateEndpointConnections = config.allowNewPrivateEndpointConnections;
     this._dedicatedHostCount = config.dedicatedHostCount;
+    this._id = config.id;
     this._internalLoadBalancingMode = config.internalLoadBalancingMode;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._subnetId = config.subnetId;
     this._tags = config.tags;
     this._zoneRedundant = config.zoneRedundant;
-    this._clusterSetting = config.clusterSetting;
+    this._clusterSetting.internalValue = config.clusterSetting;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -388,8 +502,19 @@ export class AppServiceEnvironmentV3 extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // inbound_network_dependencies - computed: true, optional: false, required: false
@@ -516,20 +641,19 @@ export class AppServiceEnvironmentV3 extends cdktf.TerraformResource {
   }
 
   // cluster_setting - computed: false, optional: true, required: false
-  private _clusterSetting?: AppServiceEnvironmentV3ClusterSetting[] | cdktf.IResolvable; 
+  private _clusterSetting = new AppServiceEnvironmentV3ClusterSettingList(this, "cluster_setting", false);
   public get clusterSetting() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('cluster_setting');
+    return this._clusterSetting;
   }
-  public set clusterSetting(value: AppServiceEnvironmentV3ClusterSetting[] | cdktf.IResolvable) {
-    this._clusterSetting = value;
+  public putClusterSetting(value: AppServiceEnvironmentV3ClusterSetting[] | cdktf.IResolvable) {
+    this._clusterSetting.internalValue = value;
   }
   public resetClusterSetting() {
-    this._clusterSetting = undefined;
+    this._clusterSetting.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get clusterSettingInput() {
-    return this._clusterSetting;
+    return this._clusterSetting.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -556,13 +680,14 @@ export class AppServiceEnvironmentV3 extends cdktf.TerraformResource {
     return {
       allow_new_private_endpoint_connections: cdktf.booleanToTerraform(this._allowNewPrivateEndpointConnections),
       dedicated_host_count: cdktf.numberToTerraform(this._dedicatedHostCount),
+      id: cdktf.stringToTerraform(this._id),
       internal_load_balancing_mode: cdktf.stringToTerraform(this._internalLoadBalancingMode),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       subnet_id: cdktf.stringToTerraform(this._subnetId),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       zone_redundant: cdktf.booleanToTerraform(this._zoneRedundant),
-      cluster_setting: cdktf.listMapper(appServiceEnvironmentV3ClusterSettingToTerraform)(this._clusterSetting),
+      cluster_setting: cdktf.listMapper(appServiceEnvironmentV3ClusterSettingToTerraform)(this._clusterSetting.internalValue),
       timeouts: appServiceEnvironmentV3TimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

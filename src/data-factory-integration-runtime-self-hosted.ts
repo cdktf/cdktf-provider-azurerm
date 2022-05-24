@@ -20,6 +20,13 @@ export interface DataFactoryIntegrationRuntimeSelfHostedConfig extends cdktf.Ter
   */
   readonly description?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_self_hosted#id DataFactoryIntegrationRuntimeSelfHosted#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_self_hosted#name DataFactoryIntegrationRuntimeSelfHosted#name}
   */
   readonly name: string;
@@ -57,6 +64,83 @@ export function dataFactoryIntegrationRuntimeSelfHostedRbacAuthorizationToTerraf
   }
 }
 
+export class DataFactoryIntegrationRuntimeSelfHostedRbacAuthorizationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataFactoryIntegrationRuntimeSelfHostedRbacAuthorization | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._resourceId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.resourceId = this._resourceId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFactoryIntegrationRuntimeSelfHostedRbacAuthorization | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._resourceId = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._resourceId = value.resourceId;
+    }
+  }
+
+  // resource_id - computed: false, optional: false, required: true
+  private _resourceId?: string; 
+  public get resourceId() {
+    return this.getStringAttribute('resource_id');
+  }
+  public set resourceId(value: string) {
+    this._resourceId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceIdInput() {
+    return this._resourceId;
+  }
+}
+
+export class DataFactoryIntegrationRuntimeSelfHostedRbacAuthorizationList extends cdktf.ComplexList {
+  public internalValue? : DataFactoryIntegrationRuntimeSelfHostedRbacAuthorization[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataFactoryIntegrationRuntimeSelfHostedRbacAuthorizationOutputReference {
+    return new DataFactoryIntegrationRuntimeSelfHostedRbacAuthorizationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataFactoryIntegrationRuntimeSelfHostedTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_self_hosted#create DataFactoryIntegrationRuntimeSelfHosted#create}
@@ -91,6 +175,7 @@ export function dataFactoryIntegrationRuntimeSelfHostedTimeoutsToTerraform(struc
 
 export class DataFactoryIntegrationRuntimeSelfHostedTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -100,7 +185,10 @@ export class DataFactoryIntegrationRuntimeSelfHostedTimeoutsOutputReference exte
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): DataFactoryIntegrationRuntimeSelfHostedTimeouts | undefined {
+  public get internalValue(): DataFactoryIntegrationRuntimeSelfHostedTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -122,16 +210,22 @@ export class DataFactoryIntegrationRuntimeSelfHostedTimeoutsOutputReference exte
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: DataFactoryIntegrationRuntimeSelfHostedTimeouts | undefined) {
+  public set internalValue(value: DataFactoryIntegrationRuntimeSelfHostedTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -241,9 +335,10 @@ export class DataFactoryIntegrationRuntimeSelfHosted extends cdktf.TerraformReso
     this._dataFactoryId = config.dataFactoryId;
     this._dataFactoryName = config.dataFactoryName;
     this._description = config.description;
+    this._id = config.id;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
-    this._rbacAuthorization = config.rbacAuthorization;
+    this._rbacAuthorization.internalValue = config.rbacAuthorization;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -310,8 +405,19 @@ export class DataFactoryIntegrationRuntimeSelfHosted extends cdktf.TerraformReso
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // name - computed: false, optional: false, required: true
@@ -341,20 +447,19 @@ export class DataFactoryIntegrationRuntimeSelfHosted extends cdktf.TerraformReso
   }
 
   // rbac_authorization - computed: false, optional: true, required: false
-  private _rbacAuthorization?: DataFactoryIntegrationRuntimeSelfHostedRbacAuthorization[] | cdktf.IResolvable; 
+  private _rbacAuthorization = new DataFactoryIntegrationRuntimeSelfHostedRbacAuthorizationList(this, "rbac_authorization", true);
   public get rbacAuthorization() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('rbac_authorization')));
+    return this._rbacAuthorization;
   }
-  public set rbacAuthorization(value: DataFactoryIntegrationRuntimeSelfHostedRbacAuthorization[] | cdktf.IResolvable) {
-    this._rbacAuthorization = value;
+  public putRbacAuthorization(value: DataFactoryIntegrationRuntimeSelfHostedRbacAuthorization[] | cdktf.IResolvable) {
+    this._rbacAuthorization.internalValue = value;
   }
   public resetRbacAuthorization() {
-    this._rbacAuthorization = undefined;
+    this._rbacAuthorization.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get rbacAuthorizationInput() {
-    return this._rbacAuthorization;
+    return this._rbacAuthorization.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -382,9 +487,10 @@ export class DataFactoryIntegrationRuntimeSelfHosted extends cdktf.TerraformReso
       data_factory_id: cdktf.stringToTerraform(this._dataFactoryId),
       data_factory_name: cdktf.stringToTerraform(this._dataFactoryName),
       description: cdktf.stringToTerraform(this._description),
+      id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      rbac_authorization: cdktf.listMapper(dataFactoryIntegrationRuntimeSelfHostedRbacAuthorizationToTerraform)(this._rbacAuthorization),
+      rbac_authorization: cdktf.listMapper(dataFactoryIntegrationRuntimeSelfHostedRbacAuthorizationToTerraform)(this._rbacAuthorization.internalValue),
       timeouts: dataFactoryIntegrationRuntimeSelfHostedTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

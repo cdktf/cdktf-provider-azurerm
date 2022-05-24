@@ -20,6 +20,13 @@ export interface AutomationRunbookConfig extends cdktf.TerraformMetaArguments {
   */
   readonly description?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook#id AutomationRunbook#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook#job_schedule AutomationRunbook#job_schedule}
   */
   readonly jobSchedule?: AutomationRunbookJobSchedule[] | cdktf.IResolvable;
@@ -96,6 +103,152 @@ export function automationRunbookJobScheduleToTerraform(struct?: AutomationRunbo
   }
 }
 
+export class AutomationRunbookJobScheduleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AutomationRunbookJobSchedule | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._jobScheduleId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.jobScheduleId = this._jobScheduleId;
+    }
+    if (this._parameters !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.parameters = this._parameters;
+    }
+    if (this._runOn !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.runOn = this._runOn;
+    }
+    if (this._scheduleName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.scheduleName = this._scheduleName;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AutomationRunbookJobSchedule | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._jobScheduleId = undefined;
+      this._parameters = undefined;
+      this._runOn = undefined;
+      this._scheduleName = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._jobScheduleId = value.jobScheduleId;
+      this._parameters = value.parameters;
+      this._runOn = value.runOn;
+      this._scheduleName = value.scheduleName;
+    }
+  }
+
+  // job_schedule_id - computed: true, optional: true, required: false
+  private _jobScheduleId?: string; 
+  public get jobScheduleId() {
+    return this.getStringAttribute('job_schedule_id');
+  }
+  public set jobScheduleId(value: string) {
+    this._jobScheduleId = value;
+  }
+  public resetJobScheduleId() {
+    this._jobScheduleId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get jobScheduleIdInput() {
+    return this._jobScheduleId;
+  }
+
+  // parameters - computed: true, optional: true, required: false
+  private _parameters?: { [key: string]: string }; 
+  public get parameters() {
+    return this.getStringMapAttribute('parameters');
+  }
+  public set parameters(value: { [key: string]: string }) {
+    this._parameters = value;
+  }
+  public resetParameters() {
+    this._parameters = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parametersInput() {
+    return this._parameters;
+  }
+
+  // run_on - computed: true, optional: true, required: false
+  private _runOn?: string; 
+  public get runOn() {
+    return this.getStringAttribute('run_on');
+  }
+  public set runOn(value: string) {
+    this._runOn = value;
+  }
+  public resetRunOn() {
+    this._runOn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get runOnInput() {
+    return this._runOn;
+  }
+
+  // schedule_name - computed: true, optional: true, required: false
+  private _scheduleName?: string; 
+  public get scheduleName() {
+    return this.getStringAttribute('schedule_name');
+  }
+  public set scheduleName(value: string) {
+    this._scheduleName = value;
+  }
+  public resetScheduleName() {
+    this._scheduleName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scheduleNameInput() {
+    return this._scheduleName;
+  }
+}
+
+export class AutomationRunbookJobScheduleList extends cdktf.ComplexList {
+  public internalValue? : AutomationRunbookJobSchedule[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AutomationRunbookJobScheduleOutputReference {
+    return new AutomationRunbookJobScheduleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface AutomationRunbookPublishContentLinkHash {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook#algorithm AutomationRunbook#algorithm}
@@ -334,6 +487,7 @@ export function automationRunbookTimeoutsToTerraform(struct?: AutomationRunbookT
 
 export class AutomationRunbookTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -343,7 +497,10 @@ export class AutomationRunbookTimeoutsOutputReference extends cdktf.ComplexObjec
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): AutomationRunbookTimeouts | undefined {
+  public get internalValue(): AutomationRunbookTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -365,16 +522,22 @@ export class AutomationRunbookTimeoutsOutputReference extends cdktf.ComplexObjec
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: AutomationRunbookTimeouts | undefined) {
+  public set internalValue(value: AutomationRunbookTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -484,7 +647,8 @@ export class AutomationRunbook extends cdktf.TerraformResource {
     this._automationAccountName = config.automationAccountName;
     this._content = config.content;
     this._description = config.description;
-    this._jobSchedule = config.jobSchedule;
+    this._id = config.id;
+    this._jobSchedule.internalValue = config.jobSchedule;
     this._location = config.location;
     this._logProgress = config.logProgress;
     this._logVerbose = config.logVerbose;
@@ -546,25 +710,35 @@ export class AutomationRunbook extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
   }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
 
   // job_schedule - computed: true, optional: true, required: false
-  private _jobSchedule?: AutomationRunbookJobSchedule[] | cdktf.IResolvable; 
+  private _jobSchedule = new AutomationRunbookJobScheduleList(this, "job_schedule", true);
   public get jobSchedule() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('job_schedule')));
+    return this._jobSchedule;
   }
-  public set jobSchedule(value: AutomationRunbookJobSchedule[] | cdktf.IResolvable) {
-    this._jobSchedule = value;
+  public putJobSchedule(value: AutomationRunbookJobSchedule[] | cdktf.IResolvable) {
+    this._jobSchedule.internalValue = value;
   }
   public resetJobSchedule() {
-    this._jobSchedule = undefined;
+    this._jobSchedule.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get jobScheduleInput() {
-    return this._jobSchedule;
+    return this._jobSchedule.internalValue;
   }
 
   // location - computed: false, optional: false, required: true
@@ -702,7 +876,8 @@ export class AutomationRunbook extends cdktf.TerraformResource {
       automation_account_name: cdktf.stringToTerraform(this._automationAccountName),
       content: cdktf.stringToTerraform(this._content),
       description: cdktf.stringToTerraform(this._description),
-      job_schedule: cdktf.listMapper(automationRunbookJobScheduleToTerraform)(this._jobSchedule),
+      id: cdktf.stringToTerraform(this._id),
+      job_schedule: cdktf.listMapper(automationRunbookJobScheduleToTerraform)(this._jobSchedule.internalValue),
       location: cdktf.stringToTerraform(this._location),
       log_progress: cdktf.booleanToTerraform(this._logProgress),
       log_verbose: cdktf.booleanToTerraform(this._logVerbose),

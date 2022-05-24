@@ -16,6 +16,13 @@ export interface KeyVaultAccessPolicyAConfig extends cdktf.TerraformMetaArgument
   */
   readonly certificatePermissions?: string[];
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_access_policy#id KeyVaultAccessPolicyA#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_access_policy#key_permissions KeyVaultAccessPolicyA#key_permissions}
   */
   readonly keyPermissions?: string[];
@@ -80,6 +87,7 @@ export function keyVaultAccessPolicyTimeoutsToTerraform(struct?: KeyVaultAccessP
 
 export class KeyVaultAccessPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -89,7 +97,10 @@ export class KeyVaultAccessPolicyTimeoutsOutputReference extends cdktf.ComplexOb
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): KeyVaultAccessPolicyTimeouts | undefined {
+  public get internalValue(): KeyVaultAccessPolicyTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -111,16 +122,22 @@ export class KeyVaultAccessPolicyTimeoutsOutputReference extends cdktf.ComplexOb
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: KeyVaultAccessPolicyTimeouts | undefined) {
+  public set internalValue(value: KeyVaultAccessPolicyTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -229,6 +246,7 @@ export class KeyVaultAccessPolicyA extends cdktf.TerraformResource {
     });
     this._applicationId = config.applicationId;
     this._certificatePermissions = config.certificatePermissions;
+    this._id = config.id;
     this._keyPermissions = config.keyPermissions;
     this._keyVaultId = config.keyVaultId;
     this._objectId = config.objectId;
@@ -275,8 +293,19 @@ export class KeyVaultAccessPolicyA extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // key_permissions - computed: false, optional: true, required: false
@@ -390,6 +419,7 @@ export class KeyVaultAccessPolicyA extends cdktf.TerraformResource {
     return {
       application_id: cdktf.stringToTerraform(this._applicationId),
       certificate_permissions: cdktf.listMapper(cdktf.stringToTerraform)(this._certificatePermissions),
+      id: cdktf.stringToTerraform(this._id),
       key_permissions: cdktf.listMapper(cdktf.stringToTerraform)(this._keyPermissions),
       key_vault_id: cdktf.stringToTerraform(this._keyVaultId),
       object_id: cdktf.stringToTerraform(this._objectId),

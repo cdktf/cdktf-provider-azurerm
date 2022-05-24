@@ -16,6 +16,13 @@ export interface PolicySetDefinitionConfig extends cdktf.TerraformMetaArguments 
   */
   readonly displayName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_set_definition#id PolicySetDefinition#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_set_definition#management_group_id PolicySetDefinition#management_group_id}
   */
   readonly managementGroupId?: string;
@@ -99,6 +106,171 @@ export function policySetDefinitionPolicyDefinitionGroupToTerraform(struct?: Pol
   }
 }
 
+export class PolicySetDefinitionPolicyDefinitionGroupOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): PolicySetDefinitionPolicyDefinitionGroup | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._additionalMetadataResourceId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.additionalMetadataResourceId = this._additionalMetadataResourceId;
+    }
+    if (this._category !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.category = this._category;
+    }
+    if (this._description !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.description = this._description;
+    }
+    if (this._displayName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.displayName = this._displayName;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PolicySetDefinitionPolicyDefinitionGroup | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._additionalMetadataResourceId = undefined;
+      this._category = undefined;
+      this._description = undefined;
+      this._displayName = undefined;
+      this._name = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._additionalMetadataResourceId = value.additionalMetadataResourceId;
+      this._category = value.category;
+      this._description = value.description;
+      this._displayName = value.displayName;
+      this._name = value.name;
+    }
+  }
+
+  // additional_metadata_resource_id - computed: false, optional: true, required: false
+  private _additionalMetadataResourceId?: string; 
+  public get additionalMetadataResourceId() {
+    return this.getStringAttribute('additional_metadata_resource_id');
+  }
+  public set additionalMetadataResourceId(value: string) {
+    this._additionalMetadataResourceId = value;
+  }
+  public resetAdditionalMetadataResourceId() {
+    this._additionalMetadataResourceId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get additionalMetadataResourceIdInput() {
+    return this._additionalMetadataResourceId;
+  }
+
+  // category - computed: false, optional: true, required: false
+  private _category?: string; 
+  public get category() {
+    return this.getStringAttribute('category');
+  }
+  public set category(value: string) {
+    this._category = value;
+  }
+  public resetCategory() {
+    this._category = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get categoryInput() {
+    return this._category;
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // display_name - computed: false, optional: true, required: false
+  private _displayName?: string; 
+  public get displayName() {
+    return this.getStringAttribute('display_name');
+  }
+  public set displayName(value: string) {
+    this._displayName = value;
+  }
+  public resetDisplayName() {
+    this._displayName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get displayNameInput() {
+    return this._displayName;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+}
+
+export class PolicySetDefinitionPolicyDefinitionGroupList extends cdktf.ComplexList {
+  public internalValue? : PolicySetDefinitionPolicyDefinitionGroup[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): PolicySetDefinitionPolicyDefinitionGroupOutputReference {
+    return new PolicySetDefinitionPolicyDefinitionGroupOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface PolicySetDefinitionPolicyDefinitionReference {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_set_definition#parameter_values PolicySetDefinition#parameter_values}
@@ -136,6 +308,171 @@ export function policySetDefinitionPolicyDefinitionReferenceToTerraform(struct?:
   }
 }
 
+export class PolicySetDefinitionPolicyDefinitionReferenceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): PolicySetDefinitionPolicyDefinitionReference | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._parameterValues !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.parameterValues = this._parameterValues;
+    }
+    if (this._parameters !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.parameters = this._parameters;
+    }
+    if (this._policyDefinitionId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.policyDefinitionId = this._policyDefinitionId;
+    }
+    if (this._policyGroupNames !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.policyGroupNames = this._policyGroupNames;
+    }
+    if (this._referenceId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.referenceId = this._referenceId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PolicySetDefinitionPolicyDefinitionReference | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._parameterValues = undefined;
+      this._parameters = undefined;
+      this._policyDefinitionId = undefined;
+      this._policyGroupNames = undefined;
+      this._referenceId = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._parameterValues = value.parameterValues;
+      this._parameters = value.parameters;
+      this._policyDefinitionId = value.policyDefinitionId;
+      this._policyGroupNames = value.policyGroupNames;
+      this._referenceId = value.referenceId;
+    }
+  }
+
+  // parameter_values - computed: true, optional: true, required: false
+  private _parameterValues?: string; 
+  public get parameterValues() {
+    return this.getStringAttribute('parameter_values');
+  }
+  public set parameterValues(value: string) {
+    this._parameterValues = value;
+  }
+  public resetParameterValues() {
+    this._parameterValues = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parameterValuesInput() {
+    return this._parameterValues;
+  }
+
+  // parameters - computed: true, optional: true, required: false
+  private _parameters?: { [key: string]: string }; 
+  public get parameters() {
+    return this.getStringMapAttribute('parameters');
+  }
+  public set parameters(value: { [key: string]: string }) {
+    this._parameters = value;
+  }
+  public resetParameters() {
+    this._parameters = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parametersInput() {
+    return this._parameters;
+  }
+
+  // policy_definition_id - computed: false, optional: false, required: true
+  private _policyDefinitionId?: string; 
+  public get policyDefinitionId() {
+    return this.getStringAttribute('policy_definition_id');
+  }
+  public set policyDefinitionId(value: string) {
+    this._policyDefinitionId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get policyDefinitionIdInput() {
+    return this._policyDefinitionId;
+  }
+
+  // policy_group_names - computed: false, optional: true, required: false
+  private _policyGroupNames?: string[]; 
+  public get policyGroupNames() {
+    return cdktf.Fn.tolist(this.getListAttribute('policy_group_names'));
+  }
+  public set policyGroupNames(value: string[]) {
+    this._policyGroupNames = value;
+  }
+  public resetPolicyGroupNames() {
+    this._policyGroupNames = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get policyGroupNamesInput() {
+    return this._policyGroupNames;
+  }
+
+  // reference_id - computed: true, optional: true, required: false
+  private _referenceId?: string; 
+  public get referenceId() {
+    return this.getStringAttribute('reference_id');
+  }
+  public set referenceId(value: string) {
+    this._referenceId = value;
+  }
+  public resetReferenceId() {
+    this._referenceId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get referenceIdInput() {
+    return this._referenceId;
+  }
+}
+
+export class PolicySetDefinitionPolicyDefinitionReferenceList extends cdktf.ComplexList {
+  public internalValue? : PolicySetDefinitionPolicyDefinitionReference[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): PolicySetDefinitionPolicyDefinitionReferenceOutputReference {
+    return new PolicySetDefinitionPolicyDefinitionReferenceOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface PolicySetDefinitionTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_set_definition#create PolicySetDefinition#create}
@@ -170,6 +507,7 @@ export function policySetDefinitionTimeoutsToTerraform(struct?: PolicySetDefinit
 
 export class PolicySetDefinitionTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -179,7 +517,10 @@ export class PolicySetDefinitionTimeoutsOutputReference extends cdktf.ComplexObj
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): PolicySetDefinitionTimeouts | undefined {
+  public get internalValue(): PolicySetDefinitionTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -201,16 +542,22 @@ export class PolicySetDefinitionTimeoutsOutputReference extends cdktf.ComplexObj
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: PolicySetDefinitionTimeouts | undefined) {
+  public set internalValue(value: PolicySetDefinitionTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -319,6 +666,7 @@ export class PolicySetDefinition extends cdktf.TerraformResource {
     });
     this._description = config.description;
     this._displayName = config.displayName;
+    this._id = config.id;
     this._managementGroupId = config.managementGroupId;
     this._managementGroupName = config.managementGroupName;
     this._metadata = config.metadata;
@@ -326,8 +674,8 @@ export class PolicySetDefinition extends cdktf.TerraformResource {
     this._parameters = config.parameters;
     this._policyDefinitions = config.policyDefinitions;
     this._policyType = config.policyType;
-    this._policyDefinitionGroup = config.policyDefinitionGroup;
-    this._policyDefinitionReference = config.policyDefinitionReference;
+    this._policyDefinitionGroup.internalValue = config.policyDefinitionGroup;
+    this._policyDefinitionReference.internalValue = config.policyDefinitionReference;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -365,8 +713,19 @@ export class PolicySetDefinition extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // management_group_id - computed: true, optional: true, required: false
@@ -476,37 +835,35 @@ export class PolicySetDefinition extends cdktf.TerraformResource {
   }
 
   // policy_definition_group - computed: false, optional: true, required: false
-  private _policyDefinitionGroup?: PolicySetDefinitionPolicyDefinitionGroup[] | cdktf.IResolvable; 
+  private _policyDefinitionGroup = new PolicySetDefinitionPolicyDefinitionGroupList(this, "policy_definition_group", true);
   public get policyDefinitionGroup() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('policy_definition_group')));
+    return this._policyDefinitionGroup;
   }
-  public set policyDefinitionGroup(value: PolicySetDefinitionPolicyDefinitionGroup[] | cdktf.IResolvable) {
-    this._policyDefinitionGroup = value;
+  public putPolicyDefinitionGroup(value: PolicySetDefinitionPolicyDefinitionGroup[] | cdktf.IResolvable) {
+    this._policyDefinitionGroup.internalValue = value;
   }
   public resetPolicyDefinitionGroup() {
-    this._policyDefinitionGroup = undefined;
+    this._policyDefinitionGroup.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get policyDefinitionGroupInput() {
-    return this._policyDefinitionGroup;
+    return this._policyDefinitionGroup.internalValue;
   }
 
   // policy_definition_reference - computed: false, optional: true, required: false
-  private _policyDefinitionReference?: PolicySetDefinitionPolicyDefinitionReference[] | cdktf.IResolvable; 
+  private _policyDefinitionReference = new PolicySetDefinitionPolicyDefinitionReferenceList(this, "policy_definition_reference", false);
   public get policyDefinitionReference() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('policy_definition_reference');
+    return this._policyDefinitionReference;
   }
-  public set policyDefinitionReference(value: PolicySetDefinitionPolicyDefinitionReference[] | cdktf.IResolvable) {
-    this._policyDefinitionReference = value;
+  public putPolicyDefinitionReference(value: PolicySetDefinitionPolicyDefinitionReference[] | cdktf.IResolvable) {
+    this._policyDefinitionReference.internalValue = value;
   }
   public resetPolicyDefinitionReference() {
-    this._policyDefinitionReference = undefined;
+    this._policyDefinitionReference.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get policyDefinitionReferenceInput() {
-    return this._policyDefinitionReference;
+    return this._policyDefinitionReference.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -533,6 +890,7 @@ export class PolicySetDefinition extends cdktf.TerraformResource {
     return {
       description: cdktf.stringToTerraform(this._description),
       display_name: cdktf.stringToTerraform(this._displayName),
+      id: cdktf.stringToTerraform(this._id),
       management_group_id: cdktf.stringToTerraform(this._managementGroupId),
       management_group_name: cdktf.stringToTerraform(this._managementGroupName),
       metadata: cdktf.stringToTerraform(this._metadata),
@@ -540,8 +898,8 @@ export class PolicySetDefinition extends cdktf.TerraformResource {
       parameters: cdktf.stringToTerraform(this._parameters),
       policy_definitions: cdktf.stringToTerraform(this._policyDefinitions),
       policy_type: cdktf.stringToTerraform(this._policyType),
-      policy_definition_group: cdktf.listMapper(policySetDefinitionPolicyDefinitionGroupToTerraform)(this._policyDefinitionGroup),
-      policy_definition_reference: cdktf.listMapper(policySetDefinitionPolicyDefinitionReferenceToTerraform)(this._policyDefinitionReference),
+      policy_definition_group: cdktf.listMapper(policySetDefinitionPolicyDefinitionGroupToTerraform)(this._policyDefinitionGroup.internalValue),
+      policy_definition_reference: cdktf.listMapper(policySetDefinitionPolicyDefinitionReferenceToTerraform)(this._policyDefinitionReference.internalValue),
       timeouts: policySetDefinitionTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

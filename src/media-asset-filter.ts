@@ -16,6 +16,13 @@ export interface MediaAssetFilterConfig extends cdktf.TerraformMetaArguments {
   */
   readonly firstQualityBitrate?: number;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset_filter#id MediaAssetFilter#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset_filter#name MediaAssetFilter#name}
   */
   readonly name: string;
@@ -272,6 +279,7 @@ export function mediaAssetFilterTimeoutsToTerraform(struct?: MediaAssetFilterTim
 
 export class MediaAssetFilterTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -281,7 +289,10 @@ export class MediaAssetFilterTimeoutsOutputReference extends cdktf.ComplexObject
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): MediaAssetFilterTimeouts | undefined {
+  public get internalValue(): MediaAssetFilterTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -303,16 +314,22 @@ export class MediaAssetFilterTimeoutsOutputReference extends cdktf.ComplexObject
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: MediaAssetFilterTimeouts | undefined) {
+  public set internalValue(value: MediaAssetFilterTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -411,6 +428,130 @@ export function mediaAssetFilterTrackSelectionConditionToTerraform(struct?: Medi
   }
 }
 
+export class MediaAssetFilterTrackSelectionConditionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MediaAssetFilterTrackSelectionCondition | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._operation !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.operation = this._operation;
+    }
+    if (this._property !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.property = this._property;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaAssetFilterTrackSelectionCondition | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._operation = undefined;
+      this._property = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._operation = value.operation;
+      this._property = value.property;
+      this._value = value.value;
+    }
+  }
+
+  // operation - computed: false, optional: true, required: false
+  private _operation?: string; 
+  public get operation() {
+    return this.getStringAttribute('operation');
+  }
+  public set operation(value: string) {
+    this._operation = value;
+  }
+  public resetOperation() {
+    this._operation = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get operationInput() {
+    return this._operation;
+  }
+
+  // property - computed: false, optional: true, required: false
+  private _property?: string; 
+  public get property() {
+    return this.getStringAttribute('property');
+  }
+  public set property(value: string) {
+    this._property = value;
+  }
+  public resetProperty() {
+    this._property = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get propertyInput() {
+    return this._property;
+  }
+
+  // value - computed: false, optional: true, required: false
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  public resetValue() {
+    this._value = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class MediaAssetFilterTrackSelectionConditionList extends cdktf.ComplexList {
+  public internalValue? : MediaAssetFilterTrackSelectionCondition[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MediaAssetFilterTrackSelectionConditionOutputReference {
+    return new MediaAssetFilterTrackSelectionConditionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface MediaAssetFilterTrackSelection {
   /**
   * condition block
@@ -430,6 +571,83 @@ export function mediaAssetFilterTrackSelectionToTerraform(struct?: MediaAssetFil
   }
 }
 
+export class MediaAssetFilterTrackSelectionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): MediaAssetFilterTrackSelection | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._condition?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.condition = this._condition?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaAssetFilterTrackSelection | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._condition.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._condition.internalValue = value.condition;
+    }
+  }
+
+  // condition - computed: false, optional: false, required: true
+  private _condition = new MediaAssetFilterTrackSelectionConditionList(this, "condition", false);
+  public get condition() {
+    return this._condition;
+  }
+  public putCondition(value: MediaAssetFilterTrackSelectionCondition[] | cdktf.IResolvable) {
+    this._condition.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get conditionInput() {
+    return this._condition.internalValue;
+  }
+}
+
+export class MediaAssetFilterTrackSelectionList extends cdktf.ComplexList {
+  public internalValue? : MediaAssetFilterTrackSelection[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): MediaAssetFilterTrackSelectionOutputReference {
+    return new MediaAssetFilterTrackSelectionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset_filter azurerm_media_asset_filter}
@@ -467,10 +685,11 @@ export class MediaAssetFilter extends cdktf.TerraformResource {
     });
     this._assetId = config.assetId;
     this._firstQualityBitrate = config.firstQualityBitrate;
+    this._id = config.id;
     this._name = config.name;
     this._presentationTimeRange.internalValue = config.presentationTimeRange;
     this._timeouts.internalValue = config.timeouts;
-    this._trackSelection = config.trackSelection;
+    this._trackSelection.internalValue = config.trackSelection;
   }
 
   // ==========
@@ -507,8 +726,19 @@ export class MediaAssetFilter extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // name - computed: false, optional: false, required: true
@@ -557,20 +787,19 @@ export class MediaAssetFilter extends cdktf.TerraformResource {
   }
 
   // track_selection - computed: false, optional: true, required: false
-  private _trackSelection?: MediaAssetFilterTrackSelection[] | cdktf.IResolvable; 
+  private _trackSelection = new MediaAssetFilterTrackSelectionList(this, "track_selection", false);
   public get trackSelection() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('track_selection');
+    return this._trackSelection;
   }
-  public set trackSelection(value: MediaAssetFilterTrackSelection[] | cdktf.IResolvable) {
-    this._trackSelection = value;
+  public putTrackSelection(value: MediaAssetFilterTrackSelection[] | cdktf.IResolvable) {
+    this._trackSelection.internalValue = value;
   }
   public resetTrackSelection() {
-    this._trackSelection = undefined;
+    this._trackSelection.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get trackSelectionInput() {
-    return this._trackSelection;
+    return this._trackSelection.internalValue;
   }
 
   // =========
@@ -581,10 +810,11 @@ export class MediaAssetFilter extends cdktf.TerraformResource {
     return {
       asset_id: cdktf.stringToTerraform(this._assetId),
       first_quality_bitrate: cdktf.numberToTerraform(this._firstQualityBitrate),
+      id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       presentation_time_range: mediaAssetFilterPresentationTimeRangeToTerraform(this._presentationTimeRange.internalValue),
       timeouts: mediaAssetFilterTimeoutsToTerraform(this._timeouts.internalValue),
-      track_selection: cdktf.listMapper(mediaAssetFilterTrackSelectionToTerraform)(this._trackSelection),
+      track_selection: cdktf.listMapper(mediaAssetFilterTrackSelectionToTerraform)(this._trackSelection.internalValue),
     };
   }
 }

@@ -16,6 +16,13 @@ export interface VirtualMachineDataDiskAttachmentConfig extends cdktf.TerraformM
   */
   readonly createOption?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_data_disk_attachment#id VirtualMachineDataDiskAttachment#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_data_disk_attachment#lun VirtualMachineDataDiskAttachment#lun}
   */
   readonly lun: number;
@@ -72,6 +79,7 @@ export function virtualMachineDataDiskAttachmentTimeoutsToTerraform(struct?: Vir
 
 export class VirtualMachineDataDiskAttachmentTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -81,7 +89,10 @@ export class VirtualMachineDataDiskAttachmentTimeoutsOutputReference extends cdk
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): VirtualMachineDataDiskAttachmentTimeouts | undefined {
+  public get internalValue(): VirtualMachineDataDiskAttachmentTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -103,16 +114,22 @@ export class VirtualMachineDataDiskAttachmentTimeoutsOutputReference extends cdk
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: VirtualMachineDataDiskAttachmentTimeouts | undefined) {
+  public set internalValue(value: VirtualMachineDataDiskAttachmentTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -221,6 +238,7 @@ export class VirtualMachineDataDiskAttachment extends cdktf.TerraformResource {
     });
     this._caching = config.caching;
     this._createOption = config.createOption;
+    this._id = config.id;
     this._lun = config.lun;
     this._managedDiskId = config.managedDiskId;
     this._virtualMachineId = config.virtualMachineId;
@@ -262,8 +280,19 @@ export class VirtualMachineDataDiskAttachment extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // lun - computed: false, optional: false, required: true
@@ -345,6 +374,7 @@ export class VirtualMachineDataDiskAttachment extends cdktf.TerraformResource {
     return {
       caching: cdktf.stringToTerraform(this._caching),
       create_option: cdktf.stringToTerraform(this._createOption),
+      id: cdktf.stringToTerraform(this._id),
       lun: cdktf.numberToTerraform(this._lun),
       managed_disk_id: cdktf.stringToTerraform(this._managedDiskId),
       virtual_machine_id: cdktf.stringToTerraform(this._virtualMachineId),

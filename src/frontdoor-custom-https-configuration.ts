@@ -16,6 +16,13 @@ export interface FrontdoorCustomHttpsConfigurationConfig extends cdktf.Terraform
   */
   readonly frontendEndpointId: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_custom_https_configuration#id FrontdoorCustomHttpsConfiguration#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * custom_https_configuration block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_custom_https_configuration#custom_https_configuration FrontdoorCustomHttpsConfiguration#custom_https_configuration}
@@ -223,6 +230,7 @@ export function frontdoorCustomHttpsConfigurationTimeoutsToTerraform(struct?: Fr
 
 export class FrontdoorCustomHttpsConfigurationTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -232,7 +240,10 @@ export class FrontdoorCustomHttpsConfigurationTimeoutsOutputReference extends cd
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): FrontdoorCustomHttpsConfigurationTimeouts | undefined {
+  public get internalValue(): FrontdoorCustomHttpsConfigurationTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -254,16 +265,22 @@ export class FrontdoorCustomHttpsConfigurationTimeoutsOutputReference extends cd
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: FrontdoorCustomHttpsConfigurationTimeouts | undefined) {
+  public set internalValue(value: FrontdoorCustomHttpsConfigurationTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -372,6 +389,7 @@ export class FrontdoorCustomHttpsConfiguration extends cdktf.TerraformResource {
     });
     this._customHttpsProvisioningEnabled = config.customHttpsProvisioningEnabled;
     this._frontendEndpointId = config.frontendEndpointId;
+    this._id = config.id;
     this._customHttpsConfiguration.internalValue = config.customHttpsConfiguration;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -407,8 +425,19 @@ export class FrontdoorCustomHttpsConfiguration extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // custom_https_configuration - computed: false, optional: true, required: false
@@ -451,6 +480,7 @@ export class FrontdoorCustomHttpsConfiguration extends cdktf.TerraformResource {
     return {
       custom_https_provisioning_enabled: cdktf.booleanToTerraform(this._customHttpsProvisioningEnabled),
       frontend_endpoint_id: cdktf.stringToTerraform(this._frontendEndpointId),
+      id: cdktf.stringToTerraform(this._id),
       custom_https_configuration: frontdoorCustomHttpsConfigurationCustomHttpsConfigurationToTerraform(this._customHttpsConfiguration.internalValue),
       timeouts: frontdoorCustomHttpsConfigurationTimeoutsToTerraform(this._timeouts.internalValue),
     };

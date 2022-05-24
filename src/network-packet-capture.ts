@@ -8,6 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface NetworkPacketCaptureConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_packet_capture#id NetworkPacketCapture#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_packet_capture#maximum_bytes_per_packet NetworkPacketCapture#maximum_bytes_per_packet}
   */
   readonly maximumBytesPerPacket?: number;
@@ -91,6 +98,171 @@ export function networkPacketCaptureFilterToTerraform(struct?: NetworkPacketCapt
   }
 }
 
+export class NetworkPacketCaptureFilterOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): NetworkPacketCaptureFilter | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._localIpAddress !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.localIpAddress = this._localIpAddress;
+    }
+    if (this._localPort !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.localPort = this._localPort;
+    }
+    if (this._protocol !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.protocol = this._protocol;
+    }
+    if (this._remoteIpAddress !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.remoteIpAddress = this._remoteIpAddress;
+    }
+    if (this._remotePort !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.remotePort = this._remotePort;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkPacketCaptureFilter | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._localIpAddress = undefined;
+      this._localPort = undefined;
+      this._protocol = undefined;
+      this._remoteIpAddress = undefined;
+      this._remotePort = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._localIpAddress = value.localIpAddress;
+      this._localPort = value.localPort;
+      this._protocol = value.protocol;
+      this._remoteIpAddress = value.remoteIpAddress;
+      this._remotePort = value.remotePort;
+    }
+  }
+
+  // local_ip_address - computed: false, optional: true, required: false
+  private _localIpAddress?: string; 
+  public get localIpAddress() {
+    return this.getStringAttribute('local_ip_address');
+  }
+  public set localIpAddress(value: string) {
+    this._localIpAddress = value;
+  }
+  public resetLocalIpAddress() {
+    this._localIpAddress = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get localIpAddressInput() {
+    return this._localIpAddress;
+  }
+
+  // local_port - computed: false, optional: true, required: false
+  private _localPort?: string; 
+  public get localPort() {
+    return this.getStringAttribute('local_port');
+  }
+  public set localPort(value: string) {
+    this._localPort = value;
+  }
+  public resetLocalPort() {
+    this._localPort = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get localPortInput() {
+    return this._localPort;
+  }
+
+  // protocol - computed: false, optional: false, required: true
+  private _protocol?: string; 
+  public get protocol() {
+    return this.getStringAttribute('protocol');
+  }
+  public set protocol(value: string) {
+    this._protocol = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get protocolInput() {
+    return this._protocol;
+  }
+
+  // remote_ip_address - computed: false, optional: true, required: false
+  private _remoteIpAddress?: string; 
+  public get remoteIpAddress() {
+    return this.getStringAttribute('remote_ip_address');
+  }
+  public set remoteIpAddress(value: string) {
+    this._remoteIpAddress = value;
+  }
+  public resetRemoteIpAddress() {
+    this._remoteIpAddress = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get remoteIpAddressInput() {
+    return this._remoteIpAddress;
+  }
+
+  // remote_port - computed: false, optional: true, required: false
+  private _remotePort?: string; 
+  public get remotePort() {
+    return this.getStringAttribute('remote_port');
+  }
+  public set remotePort(value: string) {
+    this._remotePort = value;
+  }
+  public resetRemotePort() {
+    this._remotePort = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get remotePortInput() {
+    return this._remotePort;
+  }
+}
+
+export class NetworkPacketCaptureFilterList extends cdktf.ComplexList {
+  public internalValue? : NetworkPacketCaptureFilter[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): NetworkPacketCaptureFilterOutputReference {
+    return new NetworkPacketCaptureFilterOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface NetworkPacketCaptureStorageLocation {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_packet_capture#file_path NetworkPacketCapture#file_path}
@@ -222,6 +394,7 @@ export function networkPacketCaptureTimeoutsToTerraform(struct?: NetworkPacketCa
 
 export class NetworkPacketCaptureTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -231,7 +404,10 @@ export class NetworkPacketCaptureTimeoutsOutputReference extends cdktf.ComplexOb
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): NetworkPacketCaptureTimeouts | undefined {
+  public get internalValue(): NetworkPacketCaptureTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -253,16 +429,22 @@ export class NetworkPacketCaptureTimeoutsOutputReference extends cdktf.ComplexOb
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: NetworkPacketCaptureTimeouts | undefined) {
+  public set internalValue(value: NetworkPacketCaptureTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -369,6 +551,7 @@ export class NetworkPacketCapture extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._id = config.id;
     this._maximumBytesPerPacket = config.maximumBytesPerPacket;
     this._maximumBytesPerSession = config.maximumBytesPerSession;
     this._maximumCaptureDuration = config.maximumCaptureDuration;
@@ -376,7 +559,7 @@ export class NetworkPacketCapture extends cdktf.TerraformResource {
     this._networkWatcherName = config.networkWatcherName;
     this._resourceGroupName = config.resourceGroupName;
     this._targetResourceId = config.targetResourceId;
-    this._filter = config.filter;
+    this._filter.internalValue = config.filter;
     this._storageLocation.internalValue = config.storageLocation;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -386,8 +569,19 @@ export class NetworkPacketCapture extends cdktf.TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // maximum_bytes_per_packet - computed: false, optional: true, required: false
@@ -491,20 +685,19 @@ export class NetworkPacketCapture extends cdktf.TerraformResource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter?: NetworkPacketCaptureFilter[] | cdktf.IResolvable; 
+  private _filter = new NetworkPacketCaptureFilterList(this, "filter", false);
   public get filter() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('filter');
+    return this._filter;
   }
-  public set filter(value: NetworkPacketCaptureFilter[] | cdktf.IResolvable) {
-    this._filter = value;
+  public putFilter(value: NetworkPacketCaptureFilter[] | cdktf.IResolvable) {
+    this._filter.internalValue = value;
   }
   public resetFilter() {
-    this._filter = undefined;
+    this._filter.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get filterInput() {
-    return this._filter;
+    return this._filter.internalValue;
   }
 
   // storage_location - computed: false, optional: false, required: true
@@ -542,6 +735,7 @@ export class NetworkPacketCapture extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      id: cdktf.stringToTerraform(this._id),
       maximum_bytes_per_packet: cdktf.numberToTerraform(this._maximumBytesPerPacket),
       maximum_bytes_per_session: cdktf.numberToTerraform(this._maximumBytesPerSession),
       maximum_capture_duration: cdktf.numberToTerraform(this._maximumCaptureDuration),
@@ -549,7 +743,7 @@ export class NetworkPacketCapture extends cdktf.TerraformResource {
       network_watcher_name: cdktf.stringToTerraform(this._networkWatcherName),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       target_resource_id: cdktf.stringToTerraform(this._targetResourceId),
-      filter: cdktf.listMapper(networkPacketCaptureFilterToTerraform)(this._filter),
+      filter: cdktf.listMapper(networkPacketCaptureFilterToTerraform)(this._filter.internalValue),
       storage_location: networkPacketCaptureStorageLocationToTerraform(this._storageLocation.internalValue),
       timeouts: networkPacketCaptureTimeoutsToTerraform(this._timeouts.internalValue),
     };

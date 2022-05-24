@@ -32,6 +32,13 @@ export interface Aadb2CDirectoryConfig extends cdktf.TerraformMetaArguments {
   */
   readonly domainName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/aadb2c_directory#id Aadb2CDirectory#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/aadb2c_directory#resource_group_name Aadb2CDirectory#resource_group_name}
   */
   readonly resourceGroupName: string;
@@ -86,6 +93,7 @@ export function aadb2CDirectoryTimeoutsToTerraform(struct?: Aadb2CDirectoryTimeo
 
 export class Aadb2CDirectoryTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -95,7 +103,10 @@ export class Aadb2CDirectoryTimeoutsOutputReference extends cdktf.ComplexObject 
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): Aadb2CDirectoryTimeouts | undefined {
+  public get internalValue(): Aadb2CDirectoryTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -117,16 +128,22 @@ export class Aadb2CDirectoryTimeoutsOutputReference extends cdktf.ComplexObject 
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: Aadb2CDirectoryTimeouts | undefined) {
+  public set internalValue(value: Aadb2CDirectoryTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -237,6 +254,7 @@ export class Aadb2CDirectory extends cdktf.TerraformResource {
     this._dataResidencyLocation = config.dataResidencyLocation;
     this._displayName = config.displayName;
     this._domainName = config.domainName;
+    this._id = config.id;
     this._resourceGroupName = config.resourceGroupName;
     this._skuName = config.skuName;
     this._tags = config.tags;
@@ -316,8 +334,19 @@ export class Aadb2CDirectory extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -393,6 +422,7 @@ export class Aadb2CDirectory extends cdktf.TerraformResource {
       data_residency_location: cdktf.stringToTerraform(this._dataResidencyLocation),
       display_name: cdktf.stringToTerraform(this._displayName),
       domain_name: cdktf.stringToTerraform(this._domainName),
+      id: cdktf.stringToTerraform(this._id),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku_name: cdktf.stringToTerraform(this._skuName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),

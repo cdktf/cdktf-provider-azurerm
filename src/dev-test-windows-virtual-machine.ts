@@ -16,6 +16,13 @@ export interface DevTestWindowsVirtualMachineConfig extends cdktf.TerraformMetaA
   */
   readonly disallowPublicIpAddress?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_windows_virtual_machine#id DevTestWindowsVirtualMachine#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_windows_virtual_machine#lab_name DevTestWindowsVirtualMachine#lab_name}
   */
   readonly labName: string;
@@ -238,6 +245,107 @@ export function devTestWindowsVirtualMachineInboundNatRuleToTerraform(struct?: D
   }
 }
 
+export class DevTestWindowsVirtualMachineInboundNatRuleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DevTestWindowsVirtualMachineInboundNatRule | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._backendPort !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.backendPort = this._backendPort;
+    }
+    if (this._protocol !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.protocol = this._protocol;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DevTestWindowsVirtualMachineInboundNatRule | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._backendPort = undefined;
+      this._protocol = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._backendPort = value.backendPort;
+      this._protocol = value.protocol;
+    }
+  }
+
+  // backend_port - computed: false, optional: false, required: true
+  private _backendPort?: number; 
+  public get backendPort() {
+    return this.getNumberAttribute('backend_port');
+  }
+  public set backendPort(value: number) {
+    this._backendPort = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get backendPortInput() {
+    return this._backendPort;
+  }
+
+  // frontend_port - computed: true, optional: false, required: false
+  public get frontendPort() {
+    return this.getNumberAttribute('frontend_port');
+  }
+
+  // protocol - computed: false, optional: false, required: true
+  private _protocol?: string; 
+  public get protocol() {
+    return this.getStringAttribute('protocol');
+  }
+  public set protocol(value: string) {
+    this._protocol = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get protocolInput() {
+    return this._protocol;
+  }
+}
+
+export class DevTestWindowsVirtualMachineInboundNatRuleList extends cdktf.ComplexList {
+  public internalValue? : DevTestWindowsVirtualMachineInboundNatRule[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DevTestWindowsVirtualMachineInboundNatRuleOutputReference {
+    return new DevTestWindowsVirtualMachineInboundNatRuleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DevTestWindowsVirtualMachineTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_windows_virtual_machine#create DevTestWindowsVirtualMachine#create}
@@ -272,6 +380,7 @@ export function devTestWindowsVirtualMachineTimeoutsToTerraform(struct?: DevTest
 
 export class DevTestWindowsVirtualMachineTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -281,7 +390,10 @@ export class DevTestWindowsVirtualMachineTimeoutsOutputReference extends cdktf.C
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): DevTestWindowsVirtualMachineTimeouts | undefined {
+  public get internalValue(): DevTestWindowsVirtualMachineTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -303,16 +415,22 @@ export class DevTestWindowsVirtualMachineTimeoutsOutputReference extends cdktf.C
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: DevTestWindowsVirtualMachineTimeouts | undefined) {
+  public set internalValue(value: DevTestWindowsVirtualMachineTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -421,6 +539,7 @@ export class DevTestWindowsVirtualMachine extends cdktf.TerraformResource {
     });
     this._allowClaim = config.allowClaim;
     this._disallowPublicIpAddress = config.disallowPublicIpAddress;
+    this._id = config.id;
     this._labName = config.labName;
     this._labSubnetName = config.labSubnetName;
     this._labVirtualNetworkId = config.labVirtualNetworkId;
@@ -434,7 +553,7 @@ export class DevTestWindowsVirtualMachine extends cdktf.TerraformResource {
     this._tags = config.tags;
     this._username = config.username;
     this._galleryImageReference.internalValue = config.galleryImageReference;
-    this._inboundNatRule = config.inboundNatRule;
+    this._inboundNatRule.internalValue = config.inboundNatRule;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -480,8 +599,19 @@ export class DevTestWindowsVirtualMachine extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // lab_name - computed: false, optional: false, required: true
@@ -665,20 +795,19 @@ export class DevTestWindowsVirtualMachine extends cdktf.TerraformResource {
   }
 
   // inbound_nat_rule - computed: false, optional: true, required: false
-  private _inboundNatRule?: DevTestWindowsVirtualMachineInboundNatRule[] | cdktf.IResolvable; 
+  private _inboundNatRule = new DevTestWindowsVirtualMachineInboundNatRuleList(this, "inbound_nat_rule", true);
   public get inboundNatRule() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('inbound_nat_rule')));
+    return this._inboundNatRule;
   }
-  public set inboundNatRule(value: DevTestWindowsVirtualMachineInboundNatRule[] | cdktf.IResolvable) {
-    this._inboundNatRule = value;
+  public putInboundNatRule(value: DevTestWindowsVirtualMachineInboundNatRule[] | cdktf.IResolvable) {
+    this._inboundNatRule.internalValue = value;
   }
   public resetInboundNatRule() {
-    this._inboundNatRule = undefined;
+    this._inboundNatRule.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get inboundNatRuleInput() {
-    return this._inboundNatRule;
+    return this._inboundNatRule.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -705,6 +834,7 @@ export class DevTestWindowsVirtualMachine extends cdktf.TerraformResource {
     return {
       allow_claim: cdktf.booleanToTerraform(this._allowClaim),
       disallow_public_ip_address: cdktf.booleanToTerraform(this._disallowPublicIpAddress),
+      id: cdktf.stringToTerraform(this._id),
       lab_name: cdktf.stringToTerraform(this._labName),
       lab_subnet_name: cdktf.stringToTerraform(this._labSubnetName),
       lab_virtual_network_id: cdktf.stringToTerraform(this._labVirtualNetworkId),
@@ -718,7 +848,7 @@ export class DevTestWindowsVirtualMachine extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       username: cdktf.stringToTerraform(this._username),
       gallery_image_reference: devTestWindowsVirtualMachineGalleryImageReferenceToTerraform(this._galleryImageReference.internalValue),
-      inbound_nat_rule: cdktf.listMapper(devTestWindowsVirtualMachineInboundNatRuleToTerraform)(this._inboundNatRule),
+      inbound_nat_rule: cdktf.listMapper(devTestWindowsVirtualMachineInboundNatRuleToTerraform)(this._inboundNatRule.internalValue),
       timeouts: devTestWindowsVirtualMachineTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

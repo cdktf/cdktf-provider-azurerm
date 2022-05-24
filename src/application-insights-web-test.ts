@@ -32,6 +32,13 @@ export interface ApplicationInsightsWebTestConfig extends cdktf.TerraformMetaArg
   */
   readonly geoLocations: string[];
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_web_test#id ApplicationInsightsWebTest#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_web_test#kind ApplicationInsightsWebTest#kind}
   */
   readonly kind: string;
@@ -100,6 +107,7 @@ export function applicationInsightsWebTestTimeoutsToTerraform(struct?: Applicati
 
 export class ApplicationInsightsWebTestTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -109,7 +117,10 @@ export class ApplicationInsightsWebTestTimeoutsOutputReference extends cdktf.Com
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): ApplicationInsightsWebTestTimeouts | undefined {
+  public get internalValue(): ApplicationInsightsWebTestTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -131,16 +142,22 @@ export class ApplicationInsightsWebTestTimeoutsOutputReference extends cdktf.Com
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: ApplicationInsightsWebTestTimeouts | undefined) {
+  public set internalValue(value: ApplicationInsightsWebTestTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -253,6 +270,7 @@ export class ApplicationInsightsWebTest extends cdktf.TerraformResource {
     this._enabled = config.enabled;
     this._frequency = config.frequency;
     this._geoLocations = config.geoLocations;
+    this._id = config.id;
     this._kind = config.kind;
     this._location = config.location;
     this._name = config.name;
@@ -355,8 +373,19 @@ export class ApplicationInsightsWebTest extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // kind - computed: false, optional: false, required: true
@@ -492,6 +521,7 @@ export class ApplicationInsightsWebTest extends cdktf.TerraformResource {
       enabled: cdktf.booleanToTerraform(this._enabled),
       frequency: cdktf.numberToTerraform(this._frequency),
       geo_locations: cdktf.listMapper(cdktf.stringToTerraform)(this._geoLocations),
+      id: cdktf.stringToTerraform(this._id),
       kind: cdktf.stringToTerraform(this._kind),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),

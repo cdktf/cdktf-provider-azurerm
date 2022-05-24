@@ -8,6 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermEventgridDomainConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventgrid_domain#id DataAzurermEventgridDomain#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventgrid_domain#inbound_ip_rule DataAzurermEventgridDomain#inbound_ip_rule}
   */
   readonly inboundIpRule?: DataAzurermEventgridDomainInboundIpRule[] | cdktf.IResolvable;
@@ -56,6 +63,108 @@ export function dataAzurermEventgridDomainInboundIpRuleToTerraform(struct?: Data
   }
 }
 
+export class DataAzurermEventgridDomainInboundIpRuleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermEventgridDomainInboundIpRule | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._action !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.action = this._action;
+    }
+    if (this._ipMask !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ipMask = this._ipMask;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermEventgridDomainInboundIpRule | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._action = undefined;
+      this._ipMask = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._action = value.action;
+      this._ipMask = value.ipMask;
+    }
+  }
+
+  // action - computed: false, optional: true, required: false
+  private _action?: string; 
+  public get action() {
+    return this.getStringAttribute('action');
+  }
+  public set action(value: string) {
+    this._action = value;
+  }
+  public resetAction() {
+    this._action = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get actionInput() {
+    return this._action;
+  }
+
+  // ip_mask - computed: false, optional: true, required: false
+  private _ipMask?: string; 
+  public get ipMask() {
+    return this.getStringAttribute('ip_mask');
+  }
+  public set ipMask(value: string) {
+    this._ipMask = value;
+  }
+  public resetIpMask() {
+    this._ipMask = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipMaskInput() {
+    return this._ipMask;
+  }
+}
+
+export class DataAzurermEventgridDomainInboundIpRuleList extends cdktf.ComplexList {
+  public internalValue? : DataAzurermEventgridDomainInboundIpRule[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermEventgridDomainInboundIpRuleOutputReference {
+    return new DataAzurermEventgridDomainInboundIpRuleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataAzurermEventgridDomainInputMappingDefaultValues {
 }
 
@@ -238,6 +347,7 @@ export function dataAzurermEventgridDomainTimeoutsToTerraform(struct?: DataAzure
 
 export class DataAzurermEventgridDomainTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -247,7 +357,10 @@ export class DataAzurermEventgridDomainTimeoutsOutputReference extends cdktf.Com
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): DataAzurermEventgridDomainTimeouts | undefined {
+  public get internalValue(): DataAzurermEventgridDomainTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._read !== undefined) {
@@ -257,13 +370,19 @@ export class DataAzurermEventgridDomainTimeoutsOutputReference extends cdktf.Com
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: DataAzurermEventgridDomainTimeouts | undefined) {
+  public set internalValue(value: DataAzurermEventgridDomainTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._read = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._read = value.read;
     }
   }
@@ -319,7 +438,8 @@ export class DataAzurermEventgridDomain extends cdktf.TerraformDataSource {
       count: config.count,
       lifecycle: config.lifecycle
     });
-    this._inboundIpRule = config.inboundIpRule;
+    this._id = config.id;
+    this._inboundIpRule.internalValue = config.inboundIpRule;
     this._name = config.name;
     this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
     this._resourceGroupName = config.resourceGroupName;
@@ -337,25 +457,35 @@ export class DataAzurermEventgridDomain extends cdktf.TerraformDataSource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
   }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
 
   // inbound_ip_rule - computed: false, optional: true, required: false
-  private _inboundIpRule?: DataAzurermEventgridDomainInboundIpRule[] | cdktf.IResolvable; 
+  private _inboundIpRule = new DataAzurermEventgridDomainInboundIpRuleList(this, "inbound_ip_rule", false);
   public get inboundIpRule() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('inbound_ip_rule');
+    return this._inboundIpRule;
   }
-  public set inboundIpRule(value: DataAzurermEventgridDomainInboundIpRule[] | cdktf.IResolvable) {
-    this._inboundIpRule = value;
+  public putInboundIpRule(value: DataAzurermEventgridDomainInboundIpRule[] | cdktf.IResolvable) {
+    this._inboundIpRule.internalValue = value;
   }
   public resetInboundIpRule() {
-    this._inboundIpRule = undefined;
+    this._inboundIpRule.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get inboundIpRuleInput() {
-    return this._inboundIpRule;
+    return this._inboundIpRule.internalValue;
   }
 
   // input_mapping_default_values - computed: true, optional: false, required: false
@@ -470,7 +600,8 @@ export class DataAzurermEventgridDomain extends cdktf.TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      inbound_ip_rule: cdktf.listMapper(dataAzurermEventgridDomainInboundIpRuleToTerraform)(this._inboundIpRule),
+      id: cdktf.stringToTerraform(this._id),
+      inbound_ip_rule: cdktf.listMapper(dataAzurermEventgridDomainInboundIpRuleToTerraform)(this._inboundIpRule.internalValue),
       name: cdktf.stringToTerraform(this._name),
       public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),

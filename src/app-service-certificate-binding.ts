@@ -16,6 +16,13 @@ export interface AppServiceCertificateBindingConfig extends cdktf.TerraformMetaA
   */
   readonly hostnameBindingId: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate_binding#id AppServiceCertificateBinding#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate_binding#ssl_state AppServiceCertificateBinding#ssl_state}
   */
   readonly sslState: string;
@@ -55,6 +62,7 @@ export function appServiceCertificateBindingTimeoutsToTerraform(struct?: AppServ
 
 export class AppServiceCertificateBindingTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -64,7 +72,10 @@ export class AppServiceCertificateBindingTimeoutsOutputReference extends cdktf.C
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): AppServiceCertificateBindingTimeouts | undefined {
+  public get internalValue(): AppServiceCertificateBindingTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -82,15 +93,21 @@ export class AppServiceCertificateBindingTimeoutsOutputReference extends cdktf.C
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: AppServiceCertificateBindingTimeouts | undefined) {
+  public set internalValue(value: AppServiceCertificateBindingTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -182,6 +199,7 @@ export class AppServiceCertificateBinding extends cdktf.TerraformResource {
     });
     this._certificateId = config.certificateId;
     this._hostnameBindingId = config.hostnameBindingId;
+    this._id = config.id;
     this._sslState = config.sslState;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -227,8 +245,19 @@ export class AppServiceCertificateBinding extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // ssl_state - computed: false, optional: false, required: true
@@ -273,6 +302,7 @@ export class AppServiceCertificateBinding extends cdktf.TerraformResource {
     return {
       certificate_id: cdktf.stringToTerraform(this._certificateId),
       hostname_binding_id: cdktf.stringToTerraform(this._hostnameBindingId),
+      id: cdktf.stringToTerraform(this._id),
       ssl_state: cdktf.stringToTerraform(this._sslState),
       timeouts: appServiceCertificateBindingTimeoutsToTerraform(this._timeouts.internalValue),
     };

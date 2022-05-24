@@ -36,6 +36,13 @@ export interface DataFactoryTriggerScheduleConfig extends cdktf.TerraformMetaArg
   */
   readonly frequency?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_schedule#id DataFactoryTriggerSchedule#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_schedule#interval DataFactoryTriggerSchedule#interval}
   */
   readonly interval?: number;
@@ -94,6 +101,105 @@ export function dataFactoryTriggerScheduleScheduleMonthlyToTerraform(struct?: Da
   }
 }
 
+export class DataFactoryTriggerScheduleScheduleMonthlyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataFactoryTriggerScheduleScheduleMonthly | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._week !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.week = this._week;
+    }
+    if (this._weekday !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.weekday = this._weekday;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFactoryTriggerScheduleScheduleMonthly | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._week = undefined;
+      this._weekday = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._week = value.week;
+      this._weekday = value.weekday;
+    }
+  }
+
+  // week - computed: false, optional: true, required: false
+  private _week?: number; 
+  public get week() {
+    return this.getNumberAttribute('week');
+  }
+  public set week(value: number) {
+    this._week = value;
+  }
+  public resetWeek() {
+    this._week = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get weekInput() {
+    return this._week;
+  }
+
+  // weekday - computed: false, optional: false, required: true
+  private _weekday?: string; 
+  public get weekday() {
+    return this.getStringAttribute('weekday');
+  }
+  public set weekday(value: string) {
+    this._weekday = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get weekdayInput() {
+    return this._weekday;
+  }
+}
+
+export class DataFactoryTriggerScheduleScheduleMonthlyList extends cdktf.ComplexList {
+  public internalValue? : DataFactoryTriggerScheduleScheduleMonthly[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataFactoryTriggerScheduleScheduleMonthlyOutputReference {
+    return new DataFactoryTriggerScheduleScheduleMonthlyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataFactoryTriggerScheduleSchedule {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_schedule#days_of_month DataFactoryTriggerSchedule#days_of_month}
@@ -163,9 +269,9 @@ export class DataFactoryTriggerScheduleScheduleOutputReference extends cdktf.Com
       hasAnyValues = true;
       internalValueResult.minutes = this._minutes;
     }
-    if (this._monthly !== undefined) {
+    if (this._monthly?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.monthly = this._monthly;
+      internalValueResult.monthly = this._monthly?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -177,7 +283,7 @@ export class DataFactoryTriggerScheduleScheduleOutputReference extends cdktf.Com
       this._daysOfWeek = undefined;
       this._hours = undefined;
       this._minutes = undefined;
-      this._monthly = undefined;
+      this._monthly.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
@@ -185,7 +291,7 @@ export class DataFactoryTriggerScheduleScheduleOutputReference extends cdktf.Com
       this._daysOfWeek = value.daysOfWeek;
       this._hours = value.hours;
       this._minutes = value.minutes;
-      this._monthly = value.monthly;
+      this._monthly.internalValue = value.monthly;
     }
   }
 
@@ -254,20 +360,19 @@ export class DataFactoryTriggerScheduleScheduleOutputReference extends cdktf.Com
   }
 
   // monthly - computed: false, optional: true, required: false
-  private _monthly?: DataFactoryTriggerScheduleScheduleMonthly[] | cdktf.IResolvable; 
+  private _monthly = new DataFactoryTriggerScheduleScheduleMonthlyList(this, "monthly", false);
   public get monthly() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('monthly');
+    return this._monthly;
   }
-  public set monthly(value: DataFactoryTriggerScheduleScheduleMonthly[] | cdktf.IResolvable) {
-    this._monthly = value;
+  public putMonthly(value: DataFactoryTriggerScheduleScheduleMonthly[] | cdktf.IResolvable) {
+    this._monthly.internalValue = value;
   }
   public resetMonthly() {
-    this._monthly = undefined;
+    this._monthly.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get monthlyInput() {
-    return this._monthly;
+    return this._monthly.internalValue;
   }
 }
 export interface DataFactoryTriggerScheduleTimeouts {
@@ -304,6 +409,7 @@ export function dataFactoryTriggerScheduleTimeoutsToTerraform(struct?: DataFacto
 
 export class DataFactoryTriggerScheduleTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -313,7 +419,10 @@ export class DataFactoryTriggerScheduleTimeoutsOutputReference extends cdktf.Com
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): DataFactoryTriggerScheduleTimeouts | undefined {
+  public get internalValue(): DataFactoryTriggerScheduleTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -335,16 +444,22 @@ export class DataFactoryTriggerScheduleTimeoutsOutputReference extends cdktf.Com
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: DataFactoryTriggerScheduleTimeouts | undefined) {
+  public set internalValue(value: DataFactoryTriggerScheduleTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -458,6 +573,7 @@ export class DataFactoryTriggerSchedule extends cdktf.TerraformResource {
     this._description = config.description;
     this._endTime = config.endTime;
     this._frequency = config.frequency;
+    this._id = config.id;
     this._interval = config.interval;
     this._name = config.name;
     this._pipelineName = config.pipelineName;
@@ -585,8 +701,19 @@ export class DataFactoryTriggerSchedule extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // interval - computed: false, optional: true, required: false
@@ -721,6 +848,7 @@ export class DataFactoryTriggerSchedule extends cdktf.TerraformResource {
       description: cdktf.stringToTerraform(this._description),
       end_time: cdktf.stringToTerraform(this._endTime),
       frequency: cdktf.stringToTerraform(this._frequency),
+      id: cdktf.stringToTerraform(this._id),
       interval: cdktf.numberToTerraform(this._interval),
       name: cdktf.stringToTerraform(this._name),
       pipeline_name: cdktf.stringToTerraform(this._pipelineName),

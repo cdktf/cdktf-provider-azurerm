@@ -8,6 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface LbBackendAddressPoolConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_backend_address_pool#id LbBackendAddressPool#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_backend_address_pool#loadbalancer_id LbBackendAddressPool#loadbalancer_id}
   */
   readonly loadbalancerId: string;
@@ -65,6 +72,121 @@ export function lbBackendAddressPoolBackendAddressToTerraform(struct?: LbBackend
   }
 }
 
+export class LbBackendAddressPoolBackendAddressOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): LbBackendAddressPoolBackendAddress | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._ipAddress !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ipAddress = this._ipAddress;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._virtualNetworkId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.virtualNetworkId = this._virtualNetworkId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LbBackendAddressPoolBackendAddress | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._ipAddress = undefined;
+      this._name = undefined;
+      this._virtualNetworkId = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._ipAddress = value.ipAddress;
+      this._name = value.name;
+      this._virtualNetworkId = value.virtualNetworkId;
+    }
+  }
+
+  // ip_address - computed: false, optional: false, required: true
+  private _ipAddress?: string; 
+  public get ipAddress() {
+    return this.getStringAttribute('ip_address');
+  }
+  public set ipAddress(value: string) {
+    this._ipAddress = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipAddressInput() {
+    return this._ipAddress;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // virtual_network_id - computed: false, optional: false, required: true
+  private _virtualNetworkId?: string; 
+  public get virtualNetworkId() {
+    return this.getStringAttribute('virtual_network_id');
+  }
+  public set virtualNetworkId(value: string) {
+    this._virtualNetworkId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get virtualNetworkIdInput() {
+    return this._virtualNetworkId;
+  }
+}
+
+export class LbBackendAddressPoolBackendAddressList extends cdktf.ComplexList {
+  public internalValue? : LbBackendAddressPoolBackendAddress[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): LbBackendAddressPoolBackendAddressOutputReference {
+    return new LbBackendAddressPoolBackendAddressOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface LbBackendAddressPoolTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_backend_address_pool#create LbBackendAddressPool#create}
@@ -99,6 +221,7 @@ export function lbBackendAddressPoolTimeoutsToTerraform(struct?: LbBackendAddres
 
 export class LbBackendAddressPoolTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -108,7 +231,10 @@ export class LbBackendAddressPoolTimeoutsOutputReference extends cdktf.ComplexOb
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): LbBackendAddressPoolTimeouts | undefined {
+  public get internalValue(): LbBackendAddressPoolTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -130,16 +256,22 @@ export class LbBackendAddressPoolTimeoutsOutputReference extends cdktf.ComplexOb
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: LbBackendAddressPoolTimeouts | undefined) {
+  public set internalValue(value: LbBackendAddressPoolTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -243,6 +375,140 @@ export function lbBackendAddressPoolTunnelInterfaceToTerraform(struct?: LbBacken
   }
 }
 
+export class LbBackendAddressPoolTunnelInterfaceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): LbBackendAddressPoolTunnelInterface | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._identifier !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.identifier = this._identifier;
+    }
+    if (this._port !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.port = this._port;
+    }
+    if (this._protocol !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.protocol = this._protocol;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LbBackendAddressPoolTunnelInterface | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._identifier = undefined;
+      this._port = undefined;
+      this._protocol = undefined;
+      this._type = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._identifier = value.identifier;
+      this._port = value.port;
+      this._protocol = value.protocol;
+      this._type = value.type;
+    }
+  }
+
+  // identifier - computed: false, optional: false, required: true
+  private _identifier?: number; 
+  public get identifier() {
+    return this.getNumberAttribute('identifier');
+  }
+  public set identifier(value: number) {
+    this._identifier = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identifierInput() {
+    return this._identifier;
+  }
+
+  // port - computed: false, optional: false, required: true
+  private _port?: number; 
+  public get port() {
+    return this.getNumberAttribute('port');
+  }
+  public set port(value: number) {
+    this._port = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get portInput() {
+    return this._port;
+  }
+
+  // protocol - computed: false, optional: false, required: true
+  private _protocol?: string; 
+  public get protocol() {
+    return this.getStringAttribute('protocol');
+  }
+  public set protocol(value: string) {
+    this._protocol = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get protocolInput() {
+    return this._protocol;
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+}
+
+export class LbBackendAddressPoolTunnelInterfaceList extends cdktf.ComplexList {
+  public internalValue? : LbBackendAddressPoolTunnelInterface[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): LbBackendAddressPoolTunnelInterfaceOutputReference {
+    return new LbBackendAddressPoolTunnelInterfaceOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/lb_backend_address_pool azurerm_lb_backend_address_pool}
@@ -278,12 +544,13 @@ export class LbBackendAddressPool extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._id = config.id;
     this._loadbalancerId = config.loadbalancerId;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
-    this._backendAddress = config.backendAddress;
+    this._backendAddress.internalValue = config.backendAddress;
     this._timeouts.internalValue = config.timeouts;
-    this._tunnelInterface = config.tunnelInterface;
+    this._tunnelInterface.internalValue = config.tunnelInterface;
   }
 
   // ==========
@@ -296,8 +563,19 @@ export class LbBackendAddressPool extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // load_balancing_rules - computed: true, optional: false, required: false
@@ -353,20 +631,19 @@ export class LbBackendAddressPool extends cdktf.TerraformResource {
   }
 
   // backend_address - computed: false, optional: true, required: false
-  private _backendAddress?: LbBackendAddressPoolBackendAddress[] | cdktf.IResolvable; 
+  private _backendAddress = new LbBackendAddressPoolBackendAddressList(this, "backend_address", true);
   public get backendAddress() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('backend_address')));
+    return this._backendAddress;
   }
-  public set backendAddress(value: LbBackendAddressPoolBackendAddress[] | cdktf.IResolvable) {
-    this._backendAddress = value;
+  public putBackendAddress(value: LbBackendAddressPoolBackendAddress[] | cdktf.IResolvable) {
+    this._backendAddress.internalValue = value;
   }
   public resetBackendAddress() {
-    this._backendAddress = undefined;
+    this._backendAddress.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get backendAddressInput() {
-    return this._backendAddress;
+    return this._backendAddress.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -386,20 +663,19 @@ export class LbBackendAddressPool extends cdktf.TerraformResource {
   }
 
   // tunnel_interface - computed: false, optional: true, required: false
-  private _tunnelInterface?: LbBackendAddressPoolTunnelInterface[] | cdktf.IResolvable; 
+  private _tunnelInterface = new LbBackendAddressPoolTunnelInterfaceList(this, "tunnel_interface", false);
   public get tunnelInterface() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('tunnel_interface');
+    return this._tunnelInterface;
   }
-  public set tunnelInterface(value: LbBackendAddressPoolTunnelInterface[] | cdktf.IResolvable) {
-    this._tunnelInterface = value;
+  public putTunnelInterface(value: LbBackendAddressPoolTunnelInterface[] | cdktf.IResolvable) {
+    this._tunnelInterface.internalValue = value;
   }
   public resetTunnelInterface() {
-    this._tunnelInterface = undefined;
+    this._tunnelInterface.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get tunnelInterfaceInput() {
-    return this._tunnelInterface;
+    return this._tunnelInterface.internalValue;
   }
 
   // =========
@@ -408,12 +684,13 @@ export class LbBackendAddressPool extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      id: cdktf.stringToTerraform(this._id),
       loadbalancer_id: cdktf.stringToTerraform(this._loadbalancerId),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      backend_address: cdktf.listMapper(lbBackendAddressPoolBackendAddressToTerraform)(this._backendAddress),
+      backend_address: cdktf.listMapper(lbBackendAddressPoolBackendAddressToTerraform)(this._backendAddress.internalValue),
       timeouts: lbBackendAddressPoolTimeoutsToTerraform(this._timeouts.internalValue),
-      tunnel_interface: cdktf.listMapper(lbBackendAddressPoolTunnelInterfaceToTerraform)(this._tunnelInterface),
+      tunnel_interface: cdktf.listMapper(lbBackendAddressPoolTunnelInterfaceToTerraform)(this._tunnelInterface.internalValue),
     };
   }
 }

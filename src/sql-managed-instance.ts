@@ -24,6 +24,13 @@ export interface SqlManagedInstanceConfig extends cdktf.TerraformMetaArguments {
   */
   readonly dnsZonePartnerId?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_managed_instance#id SqlManagedInstance#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_managed_instance#license_type SqlManagedInstance#license_type}
   */
   readonly licenseType: string;
@@ -198,6 +205,7 @@ export function sqlManagedInstanceTimeoutsToTerraform(struct?: SqlManagedInstanc
 
 export class SqlManagedInstanceTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -207,7 +215,10 @@ export class SqlManagedInstanceTimeoutsOutputReference extends cdktf.ComplexObje
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): SqlManagedInstanceTimeouts | undefined {
+  public get internalValue(): SqlManagedInstanceTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -229,16 +240,22 @@ export class SqlManagedInstanceTimeoutsOutputReference extends cdktf.ComplexObje
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: SqlManagedInstanceTimeouts | undefined) {
+  public set internalValue(value: SqlManagedInstanceTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -349,6 +366,7 @@ export class SqlManagedInstance extends cdktf.TerraformResource {
     this._administratorLoginPassword = config.administratorLoginPassword;
     this._collation = config.collation;
     this._dnsZonePartnerId = config.dnsZonePartnerId;
+    this._id = config.id;
     this._licenseType = config.licenseType;
     this._location = config.location;
     this._minimumTlsVersion = config.minimumTlsVersion;
@@ -435,8 +453,19 @@ export class SqlManagedInstance extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // license_type - computed: false, optional: false, required: true
@@ -681,6 +710,7 @@ export class SqlManagedInstance extends cdktf.TerraformResource {
       administrator_login_password: cdktf.stringToTerraform(this._administratorLoginPassword),
       collation: cdktf.stringToTerraform(this._collation),
       dns_zone_partner_id: cdktf.stringToTerraform(this._dnsZonePartnerId),
+      id: cdktf.stringToTerraform(this._id),
       license_type: cdktf.stringToTerraform(this._licenseType),
       location: cdktf.stringToTerraform(this._location),
       minimum_tls_version: cdktf.stringToTerraform(this._minimumTlsVersion),

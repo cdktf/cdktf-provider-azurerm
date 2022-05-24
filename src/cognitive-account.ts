@@ -16,6 +16,13 @@ export interface CognitiveAccountConfig extends cdktf.TerraformMetaArguments {
   */
   readonly fqdns?: string[];
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#id CognitiveAccount#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#kind CognitiveAccount#kind}
   */
   readonly kind: string;
@@ -217,6 +224,108 @@ export function cognitiveAccountNetworkAclsVirtualNetworkRulesToTerraform(struct
   }
 }
 
+export class CognitiveAccountNetworkAclsVirtualNetworkRulesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CognitiveAccountNetworkAclsVirtualNetworkRules | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._ignoreMissingVnetServiceEndpoint !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ignoreMissingVnetServiceEndpoint = this._ignoreMissingVnetServiceEndpoint;
+    }
+    if (this._subnetId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.subnetId = this._subnetId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CognitiveAccountNetworkAclsVirtualNetworkRules | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._ignoreMissingVnetServiceEndpoint = undefined;
+      this._subnetId = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._ignoreMissingVnetServiceEndpoint = value.ignoreMissingVnetServiceEndpoint;
+      this._subnetId = value.subnetId;
+    }
+  }
+
+  // ignore_missing_vnet_service_endpoint - computed: true, optional: true, required: false
+  private _ignoreMissingVnetServiceEndpoint?: boolean | cdktf.IResolvable; 
+  public get ignoreMissingVnetServiceEndpoint() {
+    return this.getBooleanAttribute('ignore_missing_vnet_service_endpoint');
+  }
+  public set ignoreMissingVnetServiceEndpoint(value: boolean | cdktf.IResolvable) {
+    this._ignoreMissingVnetServiceEndpoint = value;
+  }
+  public resetIgnoreMissingVnetServiceEndpoint() {
+    this._ignoreMissingVnetServiceEndpoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ignoreMissingVnetServiceEndpointInput() {
+    return this._ignoreMissingVnetServiceEndpoint;
+  }
+
+  // subnet_id - computed: true, optional: true, required: false
+  private _subnetId?: string; 
+  public get subnetId() {
+    return this.getStringAttribute('subnet_id');
+  }
+  public set subnetId(value: string) {
+    this._subnetId = value;
+  }
+  public resetSubnetId() {
+    this._subnetId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetIdInput() {
+    return this._subnetId;
+  }
+}
+
+export class CognitiveAccountNetworkAclsVirtualNetworkRulesList extends cdktf.ComplexList {
+  public internalValue? : CognitiveAccountNetworkAclsVirtualNetworkRules[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CognitiveAccountNetworkAclsVirtualNetworkRulesOutputReference {
+    return new CognitiveAccountNetworkAclsVirtualNetworkRulesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CognitiveAccountNetworkAcls {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#default_action CognitiveAccount#default_action}
@@ -271,9 +380,9 @@ export class CognitiveAccountNetworkAclsOutputReference extends cdktf.ComplexObj
       hasAnyValues = true;
       internalValueResult.ipRules = this._ipRules;
     }
-    if (this._virtualNetworkRules !== undefined) {
+    if (this._virtualNetworkRules?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.virtualNetworkRules = this._virtualNetworkRules;
+      internalValueResult.virtualNetworkRules = this._virtualNetworkRules?.internalValue;
     }
     if (this._virtualNetworkSubnetIds !== undefined) {
       hasAnyValues = true;
@@ -287,14 +396,14 @@ export class CognitiveAccountNetworkAclsOutputReference extends cdktf.ComplexObj
       this.isEmptyObject = false;
       this._defaultAction = undefined;
       this._ipRules = undefined;
-      this._virtualNetworkRules = undefined;
+      this._virtualNetworkRules.internalValue = undefined;
       this._virtualNetworkSubnetIds = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._defaultAction = value.defaultAction;
       this._ipRules = value.ipRules;
-      this._virtualNetworkRules = value.virtualNetworkRules;
+      this._virtualNetworkRules.internalValue = value.virtualNetworkRules;
       this._virtualNetworkSubnetIds = value.virtualNetworkSubnetIds;
     }
   }
@@ -329,20 +438,19 @@ export class CognitiveAccountNetworkAclsOutputReference extends cdktf.ComplexObj
   }
 
   // virtual_network_rules - computed: true, optional: true, required: false
-  private _virtualNetworkRules?: CognitiveAccountNetworkAclsVirtualNetworkRules[] | cdktf.IResolvable; 
+  private _virtualNetworkRules = new CognitiveAccountNetworkAclsVirtualNetworkRulesList(this, "virtual_network_rules", true);
   public get virtualNetworkRules() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('virtual_network_rules')));
+    return this._virtualNetworkRules;
   }
-  public set virtualNetworkRules(value: CognitiveAccountNetworkAclsVirtualNetworkRules[] | cdktf.IResolvable) {
-    this._virtualNetworkRules = value;
+  public putVirtualNetworkRules(value: CognitiveAccountNetworkAclsVirtualNetworkRules[] | cdktf.IResolvable) {
+    this._virtualNetworkRules.internalValue = value;
   }
   public resetVirtualNetworkRules() {
-    this._virtualNetworkRules = undefined;
+    this._virtualNetworkRules.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get virtualNetworkRulesInput() {
-    return this._virtualNetworkRules;
+    return this._virtualNetworkRules.internalValue;
   }
 
   // virtual_network_subnet_ids - computed: true, optional: true, required: false
@@ -383,6 +491,105 @@ export function cognitiveAccountStorageToTerraform(struct?: CognitiveAccountStor
   }
 }
 
+export class CognitiveAccountStorageOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CognitiveAccountStorage | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._identityClientId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.identityClientId = this._identityClientId;
+    }
+    if (this._storageAccountId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.storageAccountId = this._storageAccountId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CognitiveAccountStorage | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._identityClientId = undefined;
+      this._storageAccountId = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._identityClientId = value.identityClientId;
+      this._storageAccountId = value.storageAccountId;
+    }
+  }
+
+  // identity_client_id - computed: false, optional: true, required: false
+  private _identityClientId?: string; 
+  public get identityClientId() {
+    return this.getStringAttribute('identity_client_id');
+  }
+  public set identityClientId(value: string) {
+    this._identityClientId = value;
+  }
+  public resetIdentityClientId() {
+    this._identityClientId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityClientIdInput() {
+    return this._identityClientId;
+  }
+
+  // storage_account_id - computed: false, optional: false, required: true
+  private _storageAccountId?: string; 
+  public get storageAccountId() {
+    return this.getStringAttribute('storage_account_id');
+  }
+  public set storageAccountId(value: string) {
+    this._storageAccountId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageAccountIdInput() {
+    return this._storageAccountId;
+  }
+}
+
+export class CognitiveAccountStorageList extends cdktf.ComplexList {
+  public internalValue? : CognitiveAccountStorage[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CognitiveAccountStorageOutputReference {
+    return new CognitiveAccountStorageOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CognitiveAccountTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#create CognitiveAccount#create}
@@ -417,6 +624,7 @@ export function cognitiveAccountTimeoutsToTerraform(struct?: CognitiveAccountTim
 
 export class CognitiveAccountTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -426,7 +634,10 @@ export class CognitiveAccountTimeoutsOutputReference extends cdktf.ComplexObject
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): CognitiveAccountTimeouts | undefined {
+  public get internalValue(): CognitiveAccountTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -448,16 +659,22 @@ export class CognitiveAccountTimeoutsOutputReference extends cdktf.ComplexObject
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: CognitiveAccountTimeouts | undefined) {
+  public set internalValue(value: CognitiveAccountTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -566,6 +783,7 @@ export class CognitiveAccount extends cdktf.TerraformResource {
     });
     this._customSubdomainName = config.customSubdomainName;
     this._fqdns = config.fqdns;
+    this._id = config.id;
     this._kind = config.kind;
     this._localAuthEnabled = config.localAuthEnabled;
     this._location = config.location;
@@ -582,7 +800,7 @@ export class CognitiveAccount extends cdktf.TerraformResource {
     this._tags = config.tags;
     this._identity.internalValue = config.identity;
     this._networkAcls.internalValue = config.networkAcls;
-    this._storage = config.storage;
+    this._storage.internalValue = config.storage;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -628,8 +846,19 @@ export class CognitiveAccount extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // kind - computed: false, optional: false, required: true
@@ -884,20 +1113,19 @@ export class CognitiveAccount extends cdktf.TerraformResource {
   }
 
   // storage - computed: false, optional: true, required: false
-  private _storage?: CognitiveAccountStorage[] | cdktf.IResolvable; 
+  private _storage = new CognitiveAccountStorageList(this, "storage", false);
   public get storage() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('storage');
+    return this._storage;
   }
-  public set storage(value: CognitiveAccountStorage[] | cdktf.IResolvable) {
-    this._storage = value;
+  public putStorage(value: CognitiveAccountStorage[] | cdktf.IResolvable) {
+    this._storage.internalValue = value;
   }
   public resetStorage() {
-    this._storage = undefined;
+    this._storage.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get storageInput() {
-    return this._storage;
+    return this._storage.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -924,6 +1152,7 @@ export class CognitiveAccount extends cdktf.TerraformResource {
     return {
       custom_subdomain_name: cdktf.stringToTerraform(this._customSubdomainName),
       fqdns: cdktf.listMapper(cdktf.stringToTerraform)(this._fqdns),
+      id: cdktf.stringToTerraform(this._id),
       kind: cdktf.stringToTerraform(this._kind),
       local_auth_enabled: cdktf.booleanToTerraform(this._localAuthEnabled),
       location: cdktf.stringToTerraform(this._location),
@@ -940,7 +1169,7 @@ export class CognitiveAccount extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       identity: cognitiveAccountIdentityToTerraform(this._identity.internalValue),
       network_acls: cognitiveAccountNetworkAclsToTerraform(this._networkAcls.internalValue),
-      storage: cdktf.listMapper(cognitiveAccountStorageToTerraform)(this._storage),
+      storage: cdktf.listMapper(cognitiveAccountStorageToTerraform)(this._storage.internalValue),
       timeouts: cognitiveAccountTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

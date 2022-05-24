@@ -28,6 +28,13 @@ export interface KustoIothubDataConnectionConfig extends cdktf.TerraformMetaArgu
   */
   readonly eventSystemProperties?: string[];
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_iothub_data_connection#id KustoIothubDataConnection#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_iothub_data_connection#iothub_id KustoIothubDataConnection#iothub_id}
   */
   readonly iothubId: string;
@@ -91,6 +98,7 @@ export function kustoIothubDataConnectionTimeoutsToTerraform(struct?: KustoIothu
 
 export class KustoIothubDataConnectionTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -100,7 +108,10 @@ export class KustoIothubDataConnectionTimeoutsOutputReference extends cdktf.Comp
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): KustoIothubDataConnectionTimeouts | undefined {
+  public get internalValue(): KustoIothubDataConnectionTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -118,15 +129,21 @@ export class KustoIothubDataConnectionTimeoutsOutputReference extends cdktf.Comp
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: KustoIothubDataConnectionTimeouts | undefined) {
+  public set internalValue(value: KustoIothubDataConnectionTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -221,6 +238,7 @@ export class KustoIothubDataConnection extends cdktf.TerraformResource {
     this._dataFormat = config.dataFormat;
     this._databaseName = config.databaseName;
     this._eventSystemProperties = config.eventSystemProperties;
+    this._id = config.id;
     this._iothubId = config.iothubId;
     this._location = config.location;
     this._mappingRuleName = config.mappingRuleName;
@@ -307,8 +325,19 @@ export class KustoIothubDataConnection extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // iothub_id - computed: false, optional: false, required: true
@@ -435,6 +464,7 @@ export class KustoIothubDataConnection extends cdktf.TerraformResource {
       data_format: cdktf.stringToTerraform(this._dataFormat),
       database_name: cdktf.stringToTerraform(this._databaseName),
       event_system_properties: cdktf.listMapper(cdktf.stringToTerraform)(this._eventSystemProperties),
+      id: cdktf.stringToTerraform(this._id),
       iothub_id: cdktf.stringToTerraform(this._iothubId),
       location: cdktf.stringToTerraform(this._location),
       mapping_rule_name: cdktf.stringToTerraform(this._mappingRuleName),

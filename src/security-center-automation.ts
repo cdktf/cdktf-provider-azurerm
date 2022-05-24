@@ -16,6 +16,13 @@ export interface SecurityCenterAutomationConfig extends cdktf.TerraformMetaArgum
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_automation#id SecurityCenterAutomation#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_automation#location SecurityCenterAutomation#location}
   */
   readonly location: string;
@@ -86,6 +93,146 @@ export function securityCenterAutomationActionToTerraform(struct?: SecurityCente
   }
 }
 
+export class SecurityCenterAutomationActionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): SecurityCenterAutomationAction | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._connectionString !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.connectionString = this._connectionString;
+    }
+    if (this._resourceId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.resourceId = this._resourceId;
+    }
+    if (this._triggerUrl !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.triggerUrl = this._triggerUrl;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SecurityCenterAutomationAction | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._connectionString = undefined;
+      this._resourceId = undefined;
+      this._triggerUrl = undefined;
+      this._type = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._connectionString = value.connectionString;
+      this._resourceId = value.resourceId;
+      this._triggerUrl = value.triggerUrl;
+      this._type = value.type;
+    }
+  }
+
+  // connection_string - computed: false, optional: true, required: false
+  private _connectionString?: string; 
+  public get connectionString() {
+    return this.getStringAttribute('connection_string');
+  }
+  public set connectionString(value: string) {
+    this._connectionString = value;
+  }
+  public resetConnectionString() {
+    this._connectionString = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get connectionStringInput() {
+    return this._connectionString;
+  }
+
+  // resource_id - computed: false, optional: false, required: true
+  private _resourceId?: string; 
+  public get resourceId() {
+    return this.getStringAttribute('resource_id');
+  }
+  public set resourceId(value: string) {
+    this._resourceId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceIdInput() {
+    return this._resourceId;
+  }
+
+  // trigger_url - computed: false, optional: true, required: false
+  private _triggerUrl?: string; 
+  public get triggerUrl() {
+    return this.getStringAttribute('trigger_url');
+  }
+  public set triggerUrl(value: string) {
+    this._triggerUrl = value;
+  }
+  public resetTriggerUrl() {
+    this._triggerUrl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get triggerUrlInput() {
+    return this._triggerUrl;
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+}
+
+export class SecurityCenterAutomationActionList extends cdktf.ComplexList {
+  public internalValue? : SecurityCenterAutomationAction[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): SecurityCenterAutomationActionOutputReference {
+    return new SecurityCenterAutomationActionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface SecurityCenterAutomationSourceRuleSetRule {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_automation#expected_value SecurityCenterAutomation#expected_value}
@@ -118,6 +265,140 @@ export function securityCenterAutomationSourceRuleSetRuleToTerraform(struct?: Se
   }
 }
 
+export class SecurityCenterAutomationSourceRuleSetRuleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): SecurityCenterAutomationSourceRuleSetRule | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._expectedValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.expectedValue = this._expectedValue;
+    }
+    if (this._operator !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.operator = this._operator;
+    }
+    if (this._propertyPath !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.propertyPath = this._propertyPath;
+    }
+    if (this._propertyType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.propertyType = this._propertyType;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SecurityCenterAutomationSourceRuleSetRule | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._expectedValue = undefined;
+      this._operator = undefined;
+      this._propertyPath = undefined;
+      this._propertyType = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._expectedValue = value.expectedValue;
+      this._operator = value.operator;
+      this._propertyPath = value.propertyPath;
+      this._propertyType = value.propertyType;
+    }
+  }
+
+  // expected_value - computed: false, optional: false, required: true
+  private _expectedValue?: string; 
+  public get expectedValue() {
+    return this.getStringAttribute('expected_value');
+  }
+  public set expectedValue(value: string) {
+    this._expectedValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get expectedValueInput() {
+    return this._expectedValue;
+  }
+
+  // operator - computed: false, optional: false, required: true
+  private _operator?: string; 
+  public get operator() {
+    return this.getStringAttribute('operator');
+  }
+  public set operator(value: string) {
+    this._operator = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get operatorInput() {
+    return this._operator;
+  }
+
+  // property_path - computed: false, optional: false, required: true
+  private _propertyPath?: string; 
+  public get propertyPath() {
+    return this.getStringAttribute('property_path');
+  }
+  public set propertyPath(value: string) {
+    this._propertyPath = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get propertyPathInput() {
+    return this._propertyPath;
+  }
+
+  // property_type - computed: false, optional: false, required: true
+  private _propertyType?: string; 
+  public get propertyType() {
+    return this.getStringAttribute('property_type');
+  }
+  public set propertyType(value: string) {
+    this._propertyType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get propertyTypeInput() {
+    return this._propertyType;
+  }
+}
+
+export class SecurityCenterAutomationSourceRuleSetRuleList extends cdktf.ComplexList {
+  public internalValue? : SecurityCenterAutomationSourceRuleSetRule[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): SecurityCenterAutomationSourceRuleSetRuleOutputReference {
+    return new SecurityCenterAutomationSourceRuleSetRuleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface SecurityCenterAutomationSourceRuleSet {
   /**
   * rule block
@@ -137,6 +418,83 @@ export function securityCenterAutomationSourceRuleSetToTerraform(struct?: Securi
   }
 }
 
+export class SecurityCenterAutomationSourceRuleSetOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): SecurityCenterAutomationSourceRuleSet | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._rule?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rule = this._rule?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SecurityCenterAutomationSourceRuleSet | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._rule.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._rule.internalValue = value.rule;
+    }
+  }
+
+  // rule - computed: false, optional: false, required: true
+  private _rule = new SecurityCenterAutomationSourceRuleSetRuleList(this, "rule", false);
+  public get rule() {
+    return this._rule;
+  }
+  public putRule(value: SecurityCenterAutomationSourceRuleSetRule[] | cdktf.IResolvable) {
+    this._rule.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ruleInput() {
+    return this._rule.internalValue;
+  }
+}
+
+export class SecurityCenterAutomationSourceRuleSetList extends cdktf.ComplexList {
+  public internalValue? : SecurityCenterAutomationSourceRuleSet[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): SecurityCenterAutomationSourceRuleSetOutputReference {
+    return new SecurityCenterAutomationSourceRuleSetOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface SecurityCenterAutomationSource {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_automation#event_source SecurityCenterAutomation#event_source}
@@ -161,6 +519,105 @@ export function securityCenterAutomationSourceToTerraform(struct?: SecurityCente
   }
 }
 
+export class SecurityCenterAutomationSourceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): SecurityCenterAutomationSource | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._eventSource !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.eventSource = this._eventSource;
+    }
+    if (this._ruleSet?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ruleSet = this._ruleSet?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SecurityCenterAutomationSource | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._eventSource = undefined;
+      this._ruleSet.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._eventSource = value.eventSource;
+      this._ruleSet.internalValue = value.ruleSet;
+    }
+  }
+
+  // event_source - computed: false, optional: false, required: true
+  private _eventSource?: string; 
+  public get eventSource() {
+    return this.getStringAttribute('event_source');
+  }
+  public set eventSource(value: string) {
+    this._eventSource = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get eventSourceInput() {
+    return this._eventSource;
+  }
+
+  // rule_set - computed: false, optional: true, required: false
+  private _ruleSet = new SecurityCenterAutomationSourceRuleSetList(this, "rule_set", false);
+  public get ruleSet() {
+    return this._ruleSet;
+  }
+  public putRuleSet(value: SecurityCenterAutomationSourceRuleSet[] | cdktf.IResolvable) {
+    this._ruleSet.internalValue = value;
+  }
+  public resetRuleSet() {
+    this._ruleSet.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ruleSetInput() {
+    return this._ruleSet.internalValue;
+  }
+}
+
+export class SecurityCenterAutomationSourceList extends cdktf.ComplexList {
+  public internalValue? : SecurityCenterAutomationSource[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): SecurityCenterAutomationSourceOutputReference {
+    return new SecurityCenterAutomationSourceOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface SecurityCenterAutomationTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_automation#create SecurityCenterAutomation#create}
@@ -195,6 +652,7 @@ export function securityCenterAutomationTimeoutsToTerraform(struct?: SecurityCen
 
 export class SecurityCenterAutomationTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -204,7 +662,10 @@ export class SecurityCenterAutomationTimeoutsOutputReference extends cdktf.Compl
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): SecurityCenterAutomationTimeouts | undefined {
+  public get internalValue(): SecurityCenterAutomationTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -226,16 +687,22 @@ export class SecurityCenterAutomationTimeoutsOutputReference extends cdktf.Compl
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: SecurityCenterAutomationTimeouts | undefined) {
+  public set internalValue(value: SecurityCenterAutomationTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -344,13 +811,14 @@ export class SecurityCenterAutomation extends cdktf.TerraformResource {
     });
     this._description = config.description;
     this._enabled = config.enabled;
+    this._id = config.id;
     this._location = config.location;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._scopes = config.scopes;
     this._tags = config.tags;
-    this._action = config.action;
-    this._source = config.source;
+    this._action.internalValue = config.action;
+    this._source.internalValue = config.source;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -391,8 +859,19 @@ export class SecurityCenterAutomation extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // location - computed: false, optional: false, required: true
@@ -464,31 +943,29 @@ export class SecurityCenterAutomation extends cdktf.TerraformResource {
   }
 
   // action - computed: false, optional: false, required: true
-  private _action?: SecurityCenterAutomationAction[] | cdktf.IResolvable; 
+  private _action = new SecurityCenterAutomationActionList(this, "action", false);
   public get action() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('action');
+    return this._action;
   }
-  public set action(value: SecurityCenterAutomationAction[] | cdktf.IResolvable) {
-    this._action = value;
+  public putAction(value: SecurityCenterAutomationAction[] | cdktf.IResolvable) {
+    this._action.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get actionInput() {
-    return this._action;
+    return this._action.internalValue;
   }
 
   // source - computed: false, optional: false, required: true
-  private _source?: SecurityCenterAutomationSource[] | cdktf.IResolvable; 
+  private _source = new SecurityCenterAutomationSourceList(this, "source", false);
   public get source() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('source');
+    return this._source;
   }
-  public set source(value: SecurityCenterAutomationSource[] | cdktf.IResolvable) {
-    this._source = value;
+  public putSource(value: SecurityCenterAutomationSource[] | cdktf.IResolvable) {
+    this._source.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get sourceInput() {
-    return this._source;
+    return this._source.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -515,13 +992,14 @@ export class SecurityCenterAutomation extends cdktf.TerraformResource {
     return {
       description: cdktf.stringToTerraform(this._description),
       enabled: cdktf.booleanToTerraform(this._enabled),
+      id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       scopes: cdktf.listMapper(cdktf.stringToTerraform)(this._scopes),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
-      action: cdktf.listMapper(securityCenterAutomationActionToTerraform)(this._action),
-      source: cdktf.listMapper(securityCenterAutomationSourceToTerraform)(this._source),
+      action: cdktf.listMapper(securityCenterAutomationActionToTerraform)(this._action.internalValue),
+      source: cdktf.listMapper(securityCenterAutomationSourceToTerraform)(this._source.internalValue),
       timeouts: securityCenterAutomationTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

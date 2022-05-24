@@ -24,6 +24,13 @@ export interface SharedImageConfig extends cdktf.TerraformMetaArguments {
   */
   readonly hyperVGeneration?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image#id SharedImage#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image#location SharedImage#location}
   */
   readonly location: string;
@@ -338,6 +345,7 @@ export function sharedImageTimeoutsToTerraform(struct?: SharedImageTimeoutsOutpu
 
 export class SharedImageTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -347,7 +355,10 @@ export class SharedImageTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): SharedImageTimeouts | undefined {
+  public get internalValue(): SharedImageTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -369,16 +380,22 @@ export class SharedImageTimeoutsOutputReference extends cdktf.ComplexObject {
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: SharedImageTimeouts | undefined) {
+  public set internalValue(value: SharedImageTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -489,6 +506,7 @@ export class SharedImage extends cdktf.TerraformResource {
     this._eula = config.eula;
     this._galleryName = config.galleryName;
     this._hyperVGeneration = config.hyperVGeneration;
+    this._id = config.id;
     this._location = config.location;
     this._name = config.name;
     this._osType = config.osType;
@@ -569,8 +587,19 @@ export class SharedImage extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // location - computed: false, optional: false, required: true
@@ -760,6 +789,7 @@ export class SharedImage extends cdktf.TerraformResource {
       eula: cdktf.stringToTerraform(this._eula),
       gallery_name: cdktf.stringToTerraform(this._galleryName),
       hyper_v_generation: cdktf.stringToTerraform(this._hyperVGeneration),
+      id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       os_type: cdktf.stringToTerraform(this._osType),

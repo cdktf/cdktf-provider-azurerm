@@ -20,6 +20,13 @@ export interface EventhubNamespaceConfig extends cdktf.TerraformMetaArguments {
   */
   readonly dedicatedClusterId?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace#id EventhubNamespace#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace#location EventhubNamespace#location}
   */
   readonly location: string;
@@ -86,6 +93,108 @@ export function eventhubNamespaceNetworkRulesetsIpRuleToTerraform(struct?: Event
   }
 }
 
+export class EventhubNamespaceNetworkRulesetsIpRuleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): EventhubNamespaceNetworkRulesetsIpRule | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._action !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.action = this._action;
+    }
+    if (this._ipMask !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ipMask = this._ipMask;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EventhubNamespaceNetworkRulesetsIpRule | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._action = undefined;
+      this._ipMask = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._action = value.action;
+      this._ipMask = value.ipMask;
+    }
+  }
+
+  // action - computed: true, optional: true, required: false
+  private _action?: string; 
+  public get action() {
+    return this.getStringAttribute('action');
+  }
+  public set action(value: string) {
+    this._action = value;
+  }
+  public resetAction() {
+    this._action = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get actionInput() {
+    return this._action;
+  }
+
+  // ip_mask - computed: true, optional: true, required: false
+  private _ipMask?: string; 
+  public get ipMask() {
+    return this.getStringAttribute('ip_mask');
+  }
+  public set ipMask(value: string) {
+    this._ipMask = value;
+  }
+  public resetIpMask() {
+    this._ipMask = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipMaskInput() {
+    return this._ipMask;
+  }
+}
+
+export class EventhubNamespaceNetworkRulesetsIpRuleList extends cdktf.ComplexList {
+  public internalValue? : EventhubNamespaceNetworkRulesetsIpRule[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): EventhubNamespaceNetworkRulesetsIpRuleOutputReference {
+    return new EventhubNamespaceNetworkRulesetsIpRuleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface EventhubNamespaceNetworkRulesetsVirtualNetworkRule {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace#ignore_missing_virtual_network_service_endpoint EventhubNamespace#ignore_missing_virtual_network_service_endpoint}
@@ -108,6 +217,108 @@ export function eventhubNamespaceNetworkRulesetsVirtualNetworkRuleToTerraform(st
   }
 }
 
+export class EventhubNamespaceNetworkRulesetsVirtualNetworkRuleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): EventhubNamespaceNetworkRulesetsVirtualNetworkRule | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._ignoreMissingVirtualNetworkServiceEndpoint !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ignoreMissingVirtualNetworkServiceEndpoint = this._ignoreMissingVirtualNetworkServiceEndpoint;
+    }
+    if (this._subnetId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.subnetId = this._subnetId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EventhubNamespaceNetworkRulesetsVirtualNetworkRule | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._ignoreMissingVirtualNetworkServiceEndpoint = undefined;
+      this._subnetId = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._ignoreMissingVirtualNetworkServiceEndpoint = value.ignoreMissingVirtualNetworkServiceEndpoint;
+      this._subnetId = value.subnetId;
+    }
+  }
+
+  // ignore_missing_virtual_network_service_endpoint - computed: true, optional: true, required: false
+  private _ignoreMissingVirtualNetworkServiceEndpoint?: boolean | cdktf.IResolvable; 
+  public get ignoreMissingVirtualNetworkServiceEndpoint() {
+    return this.getBooleanAttribute('ignore_missing_virtual_network_service_endpoint');
+  }
+  public set ignoreMissingVirtualNetworkServiceEndpoint(value: boolean | cdktf.IResolvable) {
+    this._ignoreMissingVirtualNetworkServiceEndpoint = value;
+  }
+  public resetIgnoreMissingVirtualNetworkServiceEndpoint() {
+    this._ignoreMissingVirtualNetworkServiceEndpoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ignoreMissingVirtualNetworkServiceEndpointInput() {
+    return this._ignoreMissingVirtualNetworkServiceEndpoint;
+  }
+
+  // subnet_id - computed: true, optional: true, required: false
+  private _subnetId?: string; 
+  public get subnetId() {
+    return this.getStringAttribute('subnet_id');
+  }
+  public set subnetId(value: string) {
+    this._subnetId = value;
+  }
+  public resetSubnetId() {
+    this._subnetId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetIdInput() {
+    return this._subnetId;
+  }
+}
+
+export class EventhubNamespaceNetworkRulesetsVirtualNetworkRuleList extends cdktf.ComplexList {
+  public internalValue? : EventhubNamespaceNetworkRulesetsVirtualNetworkRule[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): EventhubNamespaceNetworkRulesetsVirtualNetworkRuleOutputReference {
+    return new EventhubNamespaceNetworkRulesetsVirtualNetworkRuleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface EventhubNamespaceNetworkRulesets {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace#default_action EventhubNamespace#default_action}
@@ -140,6 +351,152 @@ export function eventhubNamespaceNetworkRulesetsToTerraform(struct?: EventhubNam
   }
 }
 
+export class EventhubNamespaceNetworkRulesetsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): EventhubNamespaceNetworkRulesets | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._defaultAction !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.defaultAction = this._defaultAction;
+    }
+    if (this._ipRule?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ipRule = this._ipRule?.internalValue;
+    }
+    if (this._trustedServiceAccessEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.trustedServiceAccessEnabled = this._trustedServiceAccessEnabled;
+    }
+    if (this._virtualNetworkRule?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.virtualNetworkRule = this._virtualNetworkRule?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EventhubNamespaceNetworkRulesets | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._defaultAction = undefined;
+      this._ipRule.internalValue = undefined;
+      this._trustedServiceAccessEnabled = undefined;
+      this._virtualNetworkRule.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._defaultAction = value.defaultAction;
+      this._ipRule.internalValue = value.ipRule;
+      this._trustedServiceAccessEnabled = value.trustedServiceAccessEnabled;
+      this._virtualNetworkRule.internalValue = value.virtualNetworkRule;
+    }
+  }
+
+  // default_action - computed: true, optional: true, required: false
+  private _defaultAction?: string; 
+  public get defaultAction() {
+    return this.getStringAttribute('default_action');
+  }
+  public set defaultAction(value: string) {
+    this._defaultAction = value;
+  }
+  public resetDefaultAction() {
+    this._defaultAction = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultActionInput() {
+    return this._defaultAction;
+  }
+
+  // ip_rule - computed: true, optional: true, required: false
+  private _ipRule = new EventhubNamespaceNetworkRulesetsIpRuleList(this, "ip_rule", false);
+  public get ipRule() {
+    return this._ipRule;
+  }
+  public putIpRule(value: EventhubNamespaceNetworkRulesetsIpRule[] | cdktf.IResolvable) {
+    this._ipRule.internalValue = value;
+  }
+  public resetIpRule() {
+    this._ipRule.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipRuleInput() {
+    return this._ipRule.internalValue;
+  }
+
+  // trusted_service_access_enabled - computed: true, optional: true, required: false
+  private _trustedServiceAccessEnabled?: boolean | cdktf.IResolvable; 
+  public get trustedServiceAccessEnabled() {
+    return this.getBooleanAttribute('trusted_service_access_enabled');
+  }
+  public set trustedServiceAccessEnabled(value: boolean | cdktf.IResolvable) {
+    this._trustedServiceAccessEnabled = value;
+  }
+  public resetTrustedServiceAccessEnabled() {
+    this._trustedServiceAccessEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get trustedServiceAccessEnabledInput() {
+    return this._trustedServiceAccessEnabled;
+  }
+
+  // virtual_network_rule - computed: true, optional: true, required: false
+  private _virtualNetworkRule = new EventhubNamespaceNetworkRulesetsVirtualNetworkRuleList(this, "virtual_network_rule", false);
+  public get virtualNetworkRule() {
+    return this._virtualNetworkRule;
+  }
+  public putVirtualNetworkRule(value: EventhubNamespaceNetworkRulesetsVirtualNetworkRule[] | cdktf.IResolvable) {
+    this._virtualNetworkRule.internalValue = value;
+  }
+  public resetVirtualNetworkRule() {
+    this._virtualNetworkRule.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get virtualNetworkRuleInput() {
+    return this._virtualNetworkRule.internalValue;
+  }
+}
+
+export class EventhubNamespaceNetworkRulesetsList extends cdktf.ComplexList {
+  public internalValue? : EventhubNamespaceNetworkRulesets[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): EventhubNamespaceNetworkRulesetsOutputReference {
+    return new EventhubNamespaceNetworkRulesetsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface EventhubNamespaceIdentity {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace#type EventhubNamespace#type}
@@ -246,6 +603,7 @@ export function eventhubNamespaceTimeoutsToTerraform(struct?: EventhubNamespaceT
 
 export class EventhubNamespaceTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -255,7 +613,10 @@ export class EventhubNamespaceTimeoutsOutputReference extends cdktf.ComplexObjec
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): EventhubNamespaceTimeouts | undefined {
+  public get internalValue(): EventhubNamespaceTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -277,16 +638,22 @@ export class EventhubNamespaceTimeoutsOutputReference extends cdktf.ComplexObjec
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: EventhubNamespaceTimeouts | undefined) {
+  public set internalValue(value: EventhubNamespaceTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -396,10 +763,11 @@ export class EventhubNamespace extends cdktf.TerraformResource {
     this._autoInflateEnabled = config.autoInflateEnabled;
     this._capacity = config.capacity;
     this._dedicatedClusterId = config.dedicatedClusterId;
+    this._id = config.id;
     this._location = config.location;
     this._maximumThroughputUnits = config.maximumThroughputUnits;
     this._name = config.name;
-    this._networkRulesets = config.networkRulesets;
+    this._networkRulesets.internalValue = config.networkRulesets;
     this._resourceGroupName = config.resourceGroupName;
     this._sku = config.sku;
     this._tags = config.tags;
@@ -491,8 +859,19 @@ export class EventhubNamespace extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // location - computed: false, optional: false, required: true
@@ -538,20 +917,19 @@ export class EventhubNamespace extends cdktf.TerraformResource {
   }
 
   // network_rulesets - computed: true, optional: true, required: false
-  private _networkRulesets?: EventhubNamespaceNetworkRulesets[] | cdktf.IResolvable; 
+  private _networkRulesets = new EventhubNamespaceNetworkRulesetsList(this, "network_rulesets", false);
   public get networkRulesets() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('network_rulesets');
+    return this._networkRulesets;
   }
-  public set networkRulesets(value: EventhubNamespaceNetworkRulesets[] | cdktf.IResolvable) {
-    this._networkRulesets = value;
+  public putNetworkRulesets(value: EventhubNamespaceNetworkRulesets[] | cdktf.IResolvable) {
+    this._networkRulesets.internalValue = value;
   }
   public resetNetworkRulesets() {
-    this._networkRulesets = undefined;
+    this._networkRulesets.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get networkRulesetsInput() {
-    return this._networkRulesets;
+    return this._networkRulesets.internalValue;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -653,10 +1031,11 @@ export class EventhubNamespace extends cdktf.TerraformResource {
       auto_inflate_enabled: cdktf.booleanToTerraform(this._autoInflateEnabled),
       capacity: cdktf.numberToTerraform(this._capacity),
       dedicated_cluster_id: cdktf.stringToTerraform(this._dedicatedClusterId),
+      id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       maximum_throughput_units: cdktf.numberToTerraform(this._maximumThroughputUnits),
       name: cdktf.stringToTerraform(this._name),
-      network_rulesets: cdktf.listMapper(eventhubNamespaceNetworkRulesetsToTerraform)(this._networkRulesets),
+      network_rulesets: cdktf.listMapper(eventhubNamespaceNetworkRulesetsToTerraform)(this._networkRulesets.internalValue),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku: cdktf.stringToTerraform(this._sku),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),

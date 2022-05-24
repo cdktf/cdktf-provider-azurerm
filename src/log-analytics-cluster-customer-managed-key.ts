@@ -8,6 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface LogAnalyticsClusterCustomerManagedKeyConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_cluster_customer_managed_key#id LogAnalyticsClusterCustomerManagedKey#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_cluster_customer_managed_key#key_vault_key_id LogAnalyticsClusterCustomerManagedKey#key_vault_key_id}
   */
   readonly keyVaultKeyId: string;
@@ -56,6 +63,7 @@ export function logAnalyticsClusterCustomerManagedKeyTimeoutsToTerraform(struct?
 
 export class LogAnalyticsClusterCustomerManagedKeyTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -65,7 +73,10 @@ export class LogAnalyticsClusterCustomerManagedKeyTimeoutsOutputReference extend
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): LogAnalyticsClusterCustomerManagedKeyTimeouts | undefined {
+  public get internalValue(): LogAnalyticsClusterCustomerManagedKeyTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -87,16 +98,22 @@ export class LogAnalyticsClusterCustomerManagedKeyTimeoutsOutputReference extend
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: LogAnalyticsClusterCustomerManagedKeyTimeouts | undefined) {
+  public set internalValue(value: LogAnalyticsClusterCustomerManagedKeyTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -203,6 +220,7 @@ export class LogAnalyticsClusterCustomerManagedKey extends cdktf.TerraformResour
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._id = config.id;
     this._keyVaultKeyId = config.keyVaultKeyId;
     this._logAnalyticsClusterId = config.logAnalyticsClusterId;
     this._timeouts.internalValue = config.timeouts;
@@ -213,8 +231,19 @@ export class LogAnalyticsClusterCustomerManagedKey extends cdktf.TerraformResour
   // ==========
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // key_vault_key_id - computed: false, optional: false, required: true
@@ -265,6 +294,7 @@ export class LogAnalyticsClusterCustomerManagedKey extends cdktf.TerraformResour
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      id: cdktf.stringToTerraform(this._id),
       key_vault_key_id: cdktf.stringToTerraform(this._keyVaultKeyId),
       log_analytics_cluster_id: cdktf.stringToTerraform(this._logAnalyticsClusterId),
       timeouts: logAnalyticsClusterCustomerManagedKeyTimeoutsToTerraform(this._timeouts.internalValue),

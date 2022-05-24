@@ -8,6 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface LbConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb#id Lb#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb#location Lb#location}
   */
   readonly location: string;
@@ -106,6 +113,301 @@ export function lbFrontendIpConfigurationToTerraform(struct?: LbFrontendIpConfig
   }
 }
 
+export class LbFrontendIpConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): LbFrontendIpConfiguration | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._availabilityZone !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.availabilityZone = this._availabilityZone;
+    }
+    if (this._gatewayLoadBalancerFrontendIpConfigurationId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.gatewayLoadBalancerFrontendIpConfigurationId = this._gatewayLoadBalancerFrontendIpConfigurationId;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._privateIpAddress !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.privateIpAddress = this._privateIpAddress;
+    }
+    if (this._privateIpAddressAllocation !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.privateIpAddressAllocation = this._privateIpAddressAllocation;
+    }
+    if (this._privateIpAddressVersion !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.privateIpAddressVersion = this._privateIpAddressVersion;
+    }
+    if (this._publicIpAddressId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.publicIpAddressId = this._publicIpAddressId;
+    }
+    if (this._publicIpPrefixId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.publicIpPrefixId = this._publicIpPrefixId;
+    }
+    if (this._subnetId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.subnetId = this._subnetId;
+    }
+    if (this._zones !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.zones = this._zones;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LbFrontendIpConfiguration | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._availabilityZone = undefined;
+      this._gatewayLoadBalancerFrontendIpConfigurationId = undefined;
+      this._name = undefined;
+      this._privateIpAddress = undefined;
+      this._privateIpAddressAllocation = undefined;
+      this._privateIpAddressVersion = undefined;
+      this._publicIpAddressId = undefined;
+      this._publicIpPrefixId = undefined;
+      this._subnetId = undefined;
+      this._zones = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._availabilityZone = value.availabilityZone;
+      this._gatewayLoadBalancerFrontendIpConfigurationId = value.gatewayLoadBalancerFrontendIpConfigurationId;
+      this._name = value.name;
+      this._privateIpAddress = value.privateIpAddress;
+      this._privateIpAddressAllocation = value.privateIpAddressAllocation;
+      this._privateIpAddressVersion = value.privateIpAddressVersion;
+      this._publicIpAddressId = value.publicIpAddressId;
+      this._publicIpPrefixId = value.publicIpPrefixId;
+      this._subnetId = value.subnetId;
+      this._zones = value.zones;
+    }
+  }
+
+  // availability_zone - computed: true, optional: true, required: false
+  private _availabilityZone?: string; 
+  public get availabilityZone() {
+    return this.getStringAttribute('availability_zone');
+  }
+  public set availabilityZone(value: string) {
+    this._availabilityZone = value;
+  }
+  public resetAvailabilityZone() {
+    this._availabilityZone = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get availabilityZoneInput() {
+    return this._availabilityZone;
+  }
+
+  // gateway_load_balancer_frontend_ip_configuration_id - computed: true, optional: true, required: false
+  private _gatewayLoadBalancerFrontendIpConfigurationId?: string; 
+  public get gatewayLoadBalancerFrontendIpConfigurationId() {
+    return this.getStringAttribute('gateway_load_balancer_frontend_ip_configuration_id');
+  }
+  public set gatewayLoadBalancerFrontendIpConfigurationId(value: string) {
+    this._gatewayLoadBalancerFrontendIpConfigurationId = value;
+  }
+  public resetGatewayLoadBalancerFrontendIpConfigurationId() {
+    this._gatewayLoadBalancerFrontendIpConfigurationId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get gatewayLoadBalancerFrontendIpConfigurationIdInput() {
+    return this._gatewayLoadBalancerFrontendIpConfigurationId;
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // inbound_nat_rules - computed: true, optional: false, required: false
+  public get inboundNatRules() {
+    return cdktf.Fn.tolist(this.getListAttribute('inbound_nat_rules'));
+  }
+
+  // load_balancer_rules - computed: true, optional: false, required: false
+  public get loadBalancerRules() {
+    return cdktf.Fn.tolist(this.getListAttribute('load_balancer_rules'));
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // outbound_rules - computed: true, optional: false, required: false
+  public get outboundRules() {
+    return cdktf.Fn.tolist(this.getListAttribute('outbound_rules'));
+  }
+
+  // private_ip_address - computed: true, optional: true, required: false
+  private _privateIpAddress?: string; 
+  public get privateIpAddress() {
+    return this.getStringAttribute('private_ip_address');
+  }
+  public set privateIpAddress(value: string) {
+    this._privateIpAddress = value;
+  }
+  public resetPrivateIpAddress() {
+    this._privateIpAddress = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateIpAddressInput() {
+    return this._privateIpAddress;
+  }
+
+  // private_ip_address_allocation - computed: true, optional: true, required: false
+  private _privateIpAddressAllocation?: string; 
+  public get privateIpAddressAllocation() {
+    return this.getStringAttribute('private_ip_address_allocation');
+  }
+  public set privateIpAddressAllocation(value: string) {
+    this._privateIpAddressAllocation = value;
+  }
+  public resetPrivateIpAddressAllocation() {
+    this._privateIpAddressAllocation = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateIpAddressAllocationInput() {
+    return this._privateIpAddressAllocation;
+  }
+
+  // private_ip_address_version - computed: true, optional: true, required: false
+  private _privateIpAddressVersion?: string; 
+  public get privateIpAddressVersion() {
+    return this.getStringAttribute('private_ip_address_version');
+  }
+  public set privateIpAddressVersion(value: string) {
+    this._privateIpAddressVersion = value;
+  }
+  public resetPrivateIpAddressVersion() {
+    this._privateIpAddressVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateIpAddressVersionInput() {
+    return this._privateIpAddressVersion;
+  }
+
+  // public_ip_address_id - computed: true, optional: true, required: false
+  private _publicIpAddressId?: string; 
+  public get publicIpAddressId() {
+    return this.getStringAttribute('public_ip_address_id');
+  }
+  public set publicIpAddressId(value: string) {
+    this._publicIpAddressId = value;
+  }
+  public resetPublicIpAddressId() {
+    this._publicIpAddressId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicIpAddressIdInput() {
+    return this._publicIpAddressId;
+  }
+
+  // public_ip_prefix_id - computed: true, optional: true, required: false
+  private _publicIpPrefixId?: string; 
+  public get publicIpPrefixId() {
+    return this.getStringAttribute('public_ip_prefix_id');
+  }
+  public set publicIpPrefixId(value: string) {
+    this._publicIpPrefixId = value;
+  }
+  public resetPublicIpPrefixId() {
+    this._publicIpPrefixId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicIpPrefixIdInput() {
+    return this._publicIpPrefixId;
+  }
+
+  // subnet_id - computed: true, optional: true, required: false
+  private _subnetId?: string; 
+  public get subnetId() {
+    return this.getStringAttribute('subnet_id');
+  }
+  public set subnetId(value: string) {
+    this._subnetId = value;
+  }
+  public resetSubnetId() {
+    this._subnetId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetIdInput() {
+    return this._subnetId;
+  }
+
+  // zones - computed: true, optional: true, required: false
+  private _zones?: string[]; 
+  public get zones() {
+    return this.getListAttribute('zones');
+  }
+  public set zones(value: string[]) {
+    this._zones = value;
+  }
+  public resetZones() {
+    this._zones = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get zonesInput() {
+    return this._zones;
+  }
+}
+
+export class LbFrontendIpConfigurationList extends cdktf.ComplexList {
+  public internalValue? : LbFrontendIpConfiguration[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): LbFrontendIpConfigurationOutputReference {
+    return new LbFrontendIpConfigurationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface LbTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb#create Lb#create}
@@ -140,6 +442,7 @@ export function lbTimeoutsToTerraform(struct?: LbTimeoutsOutputReference | LbTim
 
 export class LbTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -149,7 +452,10 @@ export class LbTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): LbTimeouts | undefined {
+  public get internalValue(): LbTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -171,16 +477,22 @@ export class LbTimeoutsOutputReference extends cdktf.ComplexObject {
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: LbTimeouts | undefined) {
+  public set internalValue(value: LbTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -287,13 +599,14 @@ export class Lb extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._id = config.id;
     this._location = config.location;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._sku = config.sku;
     this._skuTier = config.skuTier;
     this._tags = config.tags;
-    this._frontendIpConfiguration = config.frontendIpConfiguration;
+    this._frontendIpConfiguration.internalValue = config.frontendIpConfiguration;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -302,8 +615,19 @@ export class Lb extends cdktf.TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // location - computed: false, optional: false, required: true
@@ -404,20 +728,19 @@ export class Lb extends cdktf.TerraformResource {
   }
 
   // frontend_ip_configuration - computed: false, optional: true, required: false
-  private _frontendIpConfiguration?: LbFrontendIpConfiguration[] | cdktf.IResolvable; 
+  private _frontendIpConfiguration = new LbFrontendIpConfigurationList(this, "frontend_ip_configuration", false);
   public get frontendIpConfiguration() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('frontend_ip_configuration');
+    return this._frontendIpConfiguration;
   }
-  public set frontendIpConfiguration(value: LbFrontendIpConfiguration[] | cdktf.IResolvable) {
-    this._frontendIpConfiguration = value;
+  public putFrontendIpConfiguration(value: LbFrontendIpConfiguration[] | cdktf.IResolvable) {
+    this._frontendIpConfiguration.internalValue = value;
   }
   public resetFrontendIpConfiguration() {
-    this._frontendIpConfiguration = undefined;
+    this._frontendIpConfiguration.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get frontendIpConfigurationInput() {
-    return this._frontendIpConfiguration;
+    return this._frontendIpConfiguration.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -442,13 +765,14 @@ export class Lb extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku: cdktf.stringToTerraform(this._sku),
       sku_tier: cdktf.stringToTerraform(this._skuTier),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
-      frontend_ip_configuration: cdktf.listMapper(lbFrontendIpConfigurationToTerraform)(this._frontendIpConfiguration),
+      frontend_ip_configuration: cdktf.listMapper(lbFrontendIpConfigurationToTerraform)(this._frontendIpConfiguration.internalValue),
       timeouts: lbTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

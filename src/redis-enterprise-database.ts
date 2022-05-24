@@ -24,6 +24,13 @@ export interface RedisEnterpriseDatabaseConfig extends cdktf.TerraformMetaArgume
   */
   readonly evictionPolicy?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_enterprise_database#id RedisEnterpriseDatabase#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_enterprise_database#name RedisEnterpriseDatabase#name}
   */
   readonly name?: string;
@@ -70,6 +77,110 @@ export function redisEnterpriseDatabaseModuleToTerraform(struct?: RedisEnterpris
   }
 }
 
+export class RedisEnterpriseDatabaseModuleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): RedisEnterpriseDatabaseModule | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._args !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.args = this._args;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: RedisEnterpriseDatabaseModule | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._args = undefined;
+      this._name = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._args = value.args;
+      this._name = value.name;
+    }
+  }
+
+  // args - computed: false, optional: true, required: false
+  private _args?: string; 
+  public get args() {
+    return this.getStringAttribute('args');
+  }
+  public set args(value: string) {
+    this._args = value;
+  }
+  public resetArgs() {
+    this._args = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get argsInput() {
+    return this._args;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // version - computed: true, optional: false, required: false
+  public get version() {
+    return this.getStringAttribute('version');
+  }
+}
+
+export class RedisEnterpriseDatabaseModuleList extends cdktf.ComplexList {
+  public internalValue? : RedisEnterpriseDatabaseModule[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): RedisEnterpriseDatabaseModuleOutputReference {
+    return new RedisEnterpriseDatabaseModuleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface RedisEnterpriseDatabaseTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_enterprise_database#create RedisEnterpriseDatabase#create}
@@ -99,6 +210,7 @@ export function redisEnterpriseDatabaseTimeoutsToTerraform(struct?: RedisEnterpr
 
 export class RedisEnterpriseDatabaseTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -108,7 +220,10 @@ export class RedisEnterpriseDatabaseTimeoutsOutputReference extends cdktf.Comple
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): RedisEnterpriseDatabaseTimeouts | undefined {
+  public get internalValue(): RedisEnterpriseDatabaseTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -126,15 +241,21 @@ export class RedisEnterpriseDatabaseTimeoutsOutputReference extends cdktf.Comple
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: RedisEnterpriseDatabaseTimeouts | undefined) {
+  public set internalValue(value: RedisEnterpriseDatabaseTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -228,10 +349,11 @@ export class RedisEnterpriseDatabase extends cdktf.TerraformResource {
     this._clusterId = config.clusterId;
     this._clusteringPolicy = config.clusteringPolicy;
     this._evictionPolicy = config.evictionPolicy;
+    this._id = config.id;
     this._name = config.name;
     this._port = config.port;
     this._resourceGroupName = config.resourceGroupName;
-    this._module = config.module;
+    this._module.internalValue = config.module;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -301,8 +423,19 @@ export class RedisEnterpriseDatabase extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // name - computed: false, optional: true, required: false
@@ -364,20 +497,19 @@ export class RedisEnterpriseDatabase extends cdktf.TerraformResource {
   }
 
   // module - computed: false, optional: true, required: false
-  private _module?: RedisEnterpriseDatabaseModule[] | cdktf.IResolvable; 
+  private _module = new RedisEnterpriseDatabaseModuleList(this, "module", false);
   public get module() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('module');
+    return this._module;
   }
-  public set module(value: RedisEnterpriseDatabaseModule[] | cdktf.IResolvable) {
-    this._module = value;
+  public putModule(value: RedisEnterpriseDatabaseModule[] | cdktf.IResolvable) {
+    this._module.internalValue = value;
   }
   public resetModule() {
-    this._module = undefined;
+    this._module.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get moduleInput() {
-    return this._module;
+    return this._module.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -406,10 +538,11 @@ export class RedisEnterpriseDatabase extends cdktf.TerraformResource {
       cluster_id: cdktf.stringToTerraform(this._clusterId),
       clustering_policy: cdktf.stringToTerraform(this._clusteringPolicy),
       eviction_policy: cdktf.stringToTerraform(this._evictionPolicy),
+      id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       port: cdktf.numberToTerraform(this._port),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      module: cdktf.listMapper(redisEnterpriseDatabaseModuleToTerraform)(this._module),
+      module: cdktf.listMapper(redisEnterpriseDatabaseModuleToTerraform)(this._module.internalValue),
       timeouts: redisEnterpriseDatabaseTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

@@ -16,6 +16,13 @@ export interface RoleDefinitionConfig extends cdktf.TerraformMetaArguments {
   */
   readonly description?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/role_definition#id RoleDefinition#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/role_definition#name RoleDefinition#name}
   */
   readonly name: string;
@@ -72,6 +79,152 @@ export function roleDefinitionPermissionsToTerraform(struct?: RoleDefinitionPerm
   }
 }
 
+export class RoleDefinitionPermissionsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): RoleDefinitionPermissions | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._actions !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.actions = this._actions;
+    }
+    if (this._dataActions !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dataActions = this._dataActions;
+    }
+    if (this._notActions !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.notActions = this._notActions;
+    }
+    if (this._notDataActions !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.notDataActions = this._notDataActions;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: RoleDefinitionPermissions | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._actions = undefined;
+      this._dataActions = undefined;
+      this._notActions = undefined;
+      this._notDataActions = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._actions = value.actions;
+      this._dataActions = value.dataActions;
+      this._notActions = value.notActions;
+      this._notDataActions = value.notDataActions;
+    }
+  }
+
+  // actions - computed: false, optional: true, required: false
+  private _actions?: string[]; 
+  public get actions() {
+    return this.getListAttribute('actions');
+  }
+  public set actions(value: string[]) {
+    this._actions = value;
+  }
+  public resetActions() {
+    this._actions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get actionsInput() {
+    return this._actions;
+  }
+
+  // data_actions - computed: false, optional: true, required: false
+  private _dataActions?: string[]; 
+  public get dataActions() {
+    return cdktf.Fn.tolist(this.getListAttribute('data_actions'));
+  }
+  public set dataActions(value: string[]) {
+    this._dataActions = value;
+  }
+  public resetDataActions() {
+    this._dataActions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataActionsInput() {
+    return this._dataActions;
+  }
+
+  // not_actions - computed: false, optional: true, required: false
+  private _notActions?: string[]; 
+  public get notActions() {
+    return this.getListAttribute('not_actions');
+  }
+  public set notActions(value: string[]) {
+    this._notActions = value;
+  }
+  public resetNotActions() {
+    this._notActions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get notActionsInput() {
+    return this._notActions;
+  }
+
+  // not_data_actions - computed: false, optional: true, required: false
+  private _notDataActions?: string[]; 
+  public get notDataActions() {
+    return cdktf.Fn.tolist(this.getListAttribute('not_data_actions'));
+  }
+  public set notDataActions(value: string[]) {
+    this._notDataActions = value;
+  }
+  public resetNotDataActions() {
+    this._notDataActions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get notDataActionsInput() {
+    return this._notDataActions;
+  }
+}
+
+export class RoleDefinitionPermissionsList extends cdktf.ComplexList {
+  public internalValue? : RoleDefinitionPermissions[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): RoleDefinitionPermissionsOutputReference {
+    return new RoleDefinitionPermissionsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface RoleDefinitionTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/role_definition#create RoleDefinition#create}
@@ -106,6 +259,7 @@ export function roleDefinitionTimeoutsToTerraform(struct?: RoleDefinitionTimeout
 
 export class RoleDefinitionTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -115,7 +269,10 @@ export class RoleDefinitionTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): RoleDefinitionTimeouts | undefined {
+  public get internalValue(): RoleDefinitionTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -137,16 +294,22 @@ export class RoleDefinitionTimeoutsOutputReference extends cdktf.ComplexObject {
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: RoleDefinitionTimeouts | undefined) {
+  public set internalValue(value: RoleDefinitionTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -255,10 +418,11 @@ export class RoleDefinition extends cdktf.TerraformResource {
     });
     this._assignableScopes = config.assignableScopes;
     this._description = config.description;
+    this._id = config.id;
     this._name = config.name;
     this._roleDefinitionId = config.roleDefinitionId;
     this._scope = config.scope;
-    this._permissions = config.permissions;
+    this._permissions.internalValue = config.permissions;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -299,8 +463,19 @@ export class RoleDefinition extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // name - computed: false, optional: false, required: true
@@ -351,20 +526,19 @@ export class RoleDefinition extends cdktf.TerraformResource {
   }
 
   // permissions - computed: false, optional: true, required: false
-  private _permissions?: RoleDefinitionPermissions[] | cdktf.IResolvable; 
+  private _permissions = new RoleDefinitionPermissionsList(this, "permissions", false);
   public get permissions() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('permissions');
+    return this._permissions;
   }
-  public set permissions(value: RoleDefinitionPermissions[] | cdktf.IResolvable) {
-    this._permissions = value;
+  public putPermissions(value: RoleDefinitionPermissions[] | cdktf.IResolvable) {
+    this._permissions.internalValue = value;
   }
   public resetPermissions() {
-    this._permissions = undefined;
+    this._permissions.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get permissionsInput() {
-    return this._permissions;
+    return this._permissions.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -391,10 +565,11 @@ export class RoleDefinition extends cdktf.TerraformResource {
     return {
       assignable_scopes: cdktf.listMapper(cdktf.stringToTerraform)(this._assignableScopes),
       description: cdktf.stringToTerraform(this._description),
+      id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       role_definition_id: cdktf.stringToTerraform(this._roleDefinitionId),
       scope: cdktf.stringToTerraform(this._scope),
-      permissions: cdktf.listMapper(roleDefinitionPermissionsToTerraform)(this._permissions),
+      permissions: cdktf.listMapper(roleDefinitionPermissionsToTerraform)(this._permissions.internalValue),
       timeouts: roleDefinitionTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

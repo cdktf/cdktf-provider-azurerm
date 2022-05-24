@@ -8,6 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermKubernetesServiceVersionsConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_service_versions#id DataAzurermKubernetesServiceVersions#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_service_versions#include_preview DataAzurermKubernetesServiceVersions#include_preview}
   */
   readonly includePreview?: boolean | cdktf.IResolvable;
@@ -45,6 +52,7 @@ export function dataAzurermKubernetesServiceVersionsTimeoutsToTerraform(struct?:
 
 export class DataAzurermKubernetesServiceVersionsTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -54,7 +62,10 @@ export class DataAzurermKubernetesServiceVersionsTimeoutsOutputReference extends
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): DataAzurermKubernetesServiceVersionsTimeouts | undefined {
+  public get internalValue(): DataAzurermKubernetesServiceVersionsTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._read !== undefined) {
@@ -64,13 +75,19 @@ export class DataAzurermKubernetesServiceVersionsTimeoutsOutputReference extends
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: DataAzurermKubernetesServiceVersionsTimeouts | undefined) {
+  public set internalValue(value: DataAzurermKubernetesServiceVersionsTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._read = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._read = value.read;
     }
   }
@@ -126,6 +143,7 @@ export class DataAzurermKubernetesServiceVersions extends cdktf.TerraformDataSou
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._id = config.id;
     this._includePreview = config.includePreview;
     this._location = config.location;
     this._versionPrefix = config.versionPrefix;
@@ -137,8 +155,19 @@ export class DataAzurermKubernetesServiceVersions extends cdktf.TerraformDataSou
   // ==========
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // include_preview - computed: false, optional: true, required: false
@@ -218,6 +247,7 @@ export class DataAzurermKubernetesServiceVersions extends cdktf.TerraformDataSou
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      id: cdktf.stringToTerraform(this._id),
       include_preview: cdktf.booleanToTerraform(this._includePreview),
       location: cdktf.stringToTerraform(this._location),
       version_prefix: cdktf.stringToTerraform(this._versionPrefix),

@@ -8,6 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface ServiceFabricMeshApplicationConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application#id ServiceFabricMeshApplication#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application#location ServiceFabricMeshApplication#location}
   */
   readonly location: string;
@@ -330,6 +337,121 @@ export function serviceFabricMeshApplicationServiceCodePackageToTerraform(struct
   }
 }
 
+export class ServiceFabricMeshApplicationServiceCodePackageOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ServiceFabricMeshApplicationServiceCodePackage | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._imageName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.imageName = this._imageName;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._resources?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.resources = this._resources?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ServiceFabricMeshApplicationServiceCodePackage | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._imageName = undefined;
+      this._name = undefined;
+      this._resources.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._imageName = value.imageName;
+      this._name = value.name;
+      this._resources.internalValue = value.resources;
+    }
+  }
+
+  // image_name - computed: false, optional: false, required: true
+  private _imageName?: string; 
+  public get imageName() {
+    return this.getStringAttribute('image_name');
+  }
+  public set imageName(value: string) {
+    this._imageName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get imageNameInput() {
+    return this._imageName;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // resources - computed: false, optional: false, required: true
+  private _resources = new ServiceFabricMeshApplicationServiceCodePackageResourcesOutputReference(this, "resources");
+  public get resources() {
+    return this._resources;
+  }
+  public putResources(value: ServiceFabricMeshApplicationServiceCodePackageResources) {
+    this._resources.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourcesInput() {
+    return this._resources.internalValue;
+  }
+}
+
+export class ServiceFabricMeshApplicationServiceCodePackageList extends cdktf.ComplexList {
+  public internalValue? : ServiceFabricMeshApplicationServiceCodePackage[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ServiceFabricMeshApplicationServiceCodePackageOutputReference {
+    return new ServiceFabricMeshApplicationServiceCodePackageOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ServiceFabricMeshApplicationService {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application#name ServiceFabricMeshApplication#name}
@@ -359,6 +481,121 @@ export function serviceFabricMeshApplicationServiceToTerraform(struct?: ServiceF
   }
 }
 
+export class ServiceFabricMeshApplicationServiceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ServiceFabricMeshApplicationService | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._osType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.osType = this._osType;
+    }
+    if (this._codePackage?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.codePackage = this._codePackage?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ServiceFabricMeshApplicationService | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._osType = undefined;
+      this._codePackage.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._osType = value.osType;
+      this._codePackage.internalValue = value.codePackage;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // os_type - computed: false, optional: false, required: true
+  private _osType?: string; 
+  public get osType() {
+    return this.getStringAttribute('os_type');
+  }
+  public set osType(value: string) {
+    this._osType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get osTypeInput() {
+    return this._osType;
+  }
+
+  // code_package - computed: false, optional: false, required: true
+  private _codePackage = new ServiceFabricMeshApplicationServiceCodePackageList(this, "code_package", true);
+  public get codePackage() {
+    return this._codePackage;
+  }
+  public putCodePackage(value: ServiceFabricMeshApplicationServiceCodePackage[] | cdktf.IResolvable) {
+    this._codePackage.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get codePackageInput() {
+    return this._codePackage.internalValue;
+  }
+}
+
+export class ServiceFabricMeshApplicationServiceList extends cdktf.ComplexList {
+  public internalValue? : ServiceFabricMeshApplicationService[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ServiceFabricMeshApplicationServiceOutputReference {
+    return new ServiceFabricMeshApplicationServiceOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ServiceFabricMeshApplicationTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application#create ServiceFabricMeshApplication#create}
@@ -393,6 +630,7 @@ export function serviceFabricMeshApplicationTimeoutsToTerraform(struct?: Service
 
 export class ServiceFabricMeshApplicationTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -402,7 +640,10 @@ export class ServiceFabricMeshApplicationTimeoutsOutputReference extends cdktf.C
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): ServiceFabricMeshApplicationTimeouts | undefined {
+  public get internalValue(): ServiceFabricMeshApplicationTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -424,16 +665,22 @@ export class ServiceFabricMeshApplicationTimeoutsOutputReference extends cdktf.C
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: ServiceFabricMeshApplicationTimeouts | undefined) {
+  public set internalValue(value: ServiceFabricMeshApplicationTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -540,11 +787,12 @@ export class ServiceFabricMeshApplication extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._id = config.id;
     this._location = config.location;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
-    this._service = config.service;
+    this._service.internalValue = config.service;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -553,8 +801,19 @@ export class ServiceFabricMeshApplication extends cdktf.TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // location - computed: false, optional: false, required: true
@@ -613,17 +872,16 @@ export class ServiceFabricMeshApplication extends cdktf.TerraformResource {
   }
 
   // service - computed: false, optional: false, required: true
-  private _service?: ServiceFabricMeshApplicationService[] | cdktf.IResolvable; 
+  private _service = new ServiceFabricMeshApplicationServiceList(this, "service", true);
   public get service() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('service')));
+    return this._service;
   }
-  public set service(value: ServiceFabricMeshApplicationService[] | cdktf.IResolvable) {
-    this._service = value;
+  public putService(value: ServiceFabricMeshApplicationService[] | cdktf.IResolvable) {
+    this._service.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get serviceInput() {
-    return this._service;
+    return this._service.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -648,11 +906,12 @@ export class ServiceFabricMeshApplication extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
-      service: cdktf.listMapper(serviceFabricMeshApplicationServiceToTerraform)(this._service),
+      service: cdktf.listMapper(serviceFabricMeshApplicationServiceToTerraform)(this._service.internalValue),
       timeouts: serviceFabricMeshApplicationTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

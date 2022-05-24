@@ -16,6 +16,13 @@ export interface DigitalTwinsEndpointServicebusConfig extends cdktf.TerraformMet
   */
   readonly digitalTwinsId: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/digital_twins_endpoint_servicebus#id DigitalTwinsEndpointServicebus#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/digital_twins_endpoint_servicebus#name DigitalTwinsEndpointServicebus#name}
   */
   readonly name: string;
@@ -68,6 +75,7 @@ export function digitalTwinsEndpointServicebusTimeoutsToTerraform(struct?: Digit
 
 export class DigitalTwinsEndpointServicebusTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -77,7 +85,10 @@ export class DigitalTwinsEndpointServicebusTimeoutsOutputReference extends cdktf
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): DigitalTwinsEndpointServicebusTimeouts | undefined {
+  public get internalValue(): DigitalTwinsEndpointServicebusTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -99,16 +110,22 @@ export class DigitalTwinsEndpointServicebusTimeoutsOutputReference extends cdktf
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: DigitalTwinsEndpointServicebusTimeouts | undefined) {
+  public set internalValue(value: DigitalTwinsEndpointServicebusTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -217,6 +234,7 @@ export class DigitalTwinsEndpointServicebus extends cdktf.TerraformResource {
     });
     this._deadLetterStorageSecret = config.deadLetterStorageSecret;
     this._digitalTwinsId = config.digitalTwinsId;
+    this._id = config.id;
     this._name = config.name;
     this._servicebusPrimaryConnectionString = config.servicebusPrimaryConnectionString;
     this._servicebusSecondaryConnectionString = config.servicebusSecondaryConnectionString;
@@ -257,8 +275,19 @@ export class DigitalTwinsEndpointServicebus extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // name - computed: false, optional: false, required: true
@@ -324,6 +353,7 @@ export class DigitalTwinsEndpointServicebus extends cdktf.TerraformResource {
     return {
       dead_letter_storage_secret: cdktf.stringToTerraform(this._deadLetterStorageSecret),
       digital_twins_id: cdktf.stringToTerraform(this._digitalTwinsId),
+      id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       servicebus_primary_connection_string: cdktf.stringToTerraform(this._servicebusPrimaryConnectionString),
       servicebus_secondary_connection_string: cdktf.stringToTerraform(this._servicebusSecondaryConnectionString),

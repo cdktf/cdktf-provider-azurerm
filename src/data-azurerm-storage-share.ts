@@ -8,6 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermStorageShareConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_share#id DataAzurermStorageShare#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_share#metadata DataAzurermStorageShare#metadata}
   */
   readonly metadata?: { [key: string]: string };
@@ -118,6 +125,75 @@ export function dataAzurermStorageShareAclToTerraform(struct?: DataAzurermStorag
   }
 }
 
+export class DataAzurermStorageShareAclOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermStorageShareAcl | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermStorageShareAcl | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+    }
+  }
+
+  // access_policy - computed: true, optional: false, required: false
+  private _accessPolicy = new DataAzurermStorageShareAclAccessPolicyList(this, "access_policy", false);
+  public get accessPolicy() {
+    return this._accessPolicy;
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+}
+
+export class DataAzurermStorageShareAclList extends cdktf.ComplexList {
+  public internalValue? : DataAzurermStorageShareAcl[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermStorageShareAclOutputReference {
+    return new DataAzurermStorageShareAclOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataAzurermStorageShareTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_share#read DataAzurermStorageShare#read}
@@ -137,6 +213,7 @@ export function dataAzurermStorageShareTimeoutsToTerraform(struct?: DataAzurermS
 
 export class DataAzurermStorageShareTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -146,7 +223,10 @@ export class DataAzurermStorageShareTimeoutsOutputReference extends cdktf.Comple
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): DataAzurermStorageShareTimeouts | undefined {
+  public get internalValue(): DataAzurermStorageShareTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._read !== undefined) {
@@ -156,13 +236,19 @@ export class DataAzurermStorageShareTimeoutsOutputReference extends cdktf.Comple
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: DataAzurermStorageShareTimeouts | undefined) {
+  public set internalValue(value: DataAzurermStorageShareTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._read = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._read = value.read;
     }
   }
@@ -218,10 +304,11 @@ export class DataAzurermStorageShare extends cdktf.TerraformDataSource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._id = config.id;
     this._metadata = config.metadata;
     this._name = config.name;
     this._storageAccountName = config.storageAccountName;
-    this._acl = config.acl;
+    this._acl.internalValue = config.acl;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -230,8 +317,19 @@ export class DataAzurermStorageShare extends cdktf.TerraformDataSource {
   // ==========
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // metadata - computed: true, optional: true, required: false
@@ -287,20 +385,19 @@ export class DataAzurermStorageShare extends cdktf.TerraformDataSource {
   }
 
   // acl - computed: false, optional: true, required: false
-  private _acl?: DataAzurermStorageShareAcl[] | cdktf.IResolvable; 
+  private _acl = new DataAzurermStorageShareAclList(this, "acl", false);
   public get acl() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('acl');
+    return this._acl;
   }
-  public set acl(value: DataAzurermStorageShareAcl[] | cdktf.IResolvable) {
-    this._acl = value;
+  public putAcl(value: DataAzurermStorageShareAcl[] | cdktf.IResolvable) {
+    this._acl.internalValue = value;
   }
   public resetAcl() {
-    this._acl = undefined;
+    this._acl.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get aclInput() {
-    return this._acl;
+    return this._acl.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -325,10 +422,11 @@ export class DataAzurermStorageShare extends cdktf.TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      id: cdktf.stringToTerraform(this._id),
       metadata: cdktf.hashMapper(cdktf.stringToTerraform)(this._metadata),
       name: cdktf.stringToTerraform(this._name),
       storage_account_name: cdktf.stringToTerraform(this._storageAccountName),
-      acl: cdktf.listMapper(dataAzurermStorageShareAclToTerraform)(this._acl),
+      acl: cdktf.listMapper(dataAzurermStorageShareAclToTerraform)(this._acl.internalValue),
       timeouts: dataAzurermStorageShareTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

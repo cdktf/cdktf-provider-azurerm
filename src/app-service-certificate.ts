@@ -16,6 +16,13 @@ export interface AppServiceCertificateConfig extends cdktf.TerraformMetaArgument
   */
   readonly hostingEnvironmentProfileId?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate#id AppServiceCertificate#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate#key_vault_secret_id AppServiceCertificate#key_vault_secret_id}
   */
   readonly keyVaultSecretId?: string;
@@ -84,6 +91,7 @@ export function appServiceCertificateTimeoutsToTerraform(struct?: AppServiceCert
 
 export class AppServiceCertificateTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -93,7 +101,10 @@ export class AppServiceCertificateTimeoutsOutputReference extends cdktf.ComplexO
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): AppServiceCertificateTimeouts | undefined {
+  public get internalValue(): AppServiceCertificateTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -115,16 +126,22 @@ export class AppServiceCertificateTimeoutsOutputReference extends cdktf.ComplexO
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: AppServiceCertificateTimeouts | undefined) {
+  public set internalValue(value: AppServiceCertificateTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -233,6 +250,7 @@ export class AppServiceCertificate extends cdktf.TerraformResource {
     });
     this._appServicePlanId = config.appServicePlanId;
     this._hostingEnvironmentProfileId = config.hostingEnvironmentProfileId;
+    this._id = config.id;
     this._keyVaultSecretId = config.keyVaultSecretId;
     this._location = config.location;
     this._name = config.name;
@@ -295,8 +313,19 @@ export class AppServiceCertificate extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // issue_date - computed: true, optional: false, required: false
@@ -446,6 +475,7 @@ export class AppServiceCertificate extends cdktf.TerraformResource {
     return {
       app_service_plan_id: cdktf.stringToTerraform(this._appServicePlanId),
       hosting_environment_profile_id: cdktf.stringToTerraform(this._hostingEnvironmentProfileId),
+      id: cdktf.stringToTerraform(this._id),
       key_vault_secret_id: cdktf.stringToTerraform(this._keyVaultSecretId),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),

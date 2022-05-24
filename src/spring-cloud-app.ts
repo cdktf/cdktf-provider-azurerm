@@ -12,6 +12,13 @@ export interface SpringCloudAppConfig extends cdktf.TerraformMetaArguments {
   */
   readonly httpsOnly?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app#id SpringCloudApp#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app#is_public SpringCloudApp#is_public}
   */
   readonly isPublic?: boolean | cdktf.IResolvable;
@@ -93,6 +100,165 @@ export function springCloudAppCustomPersistentDiskToTerraform(struct?: SpringClo
   }
 }
 
+export class SpringCloudAppCustomPersistentDiskOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): SpringCloudAppCustomPersistentDisk | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._mountOptions !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.mountOptions = this._mountOptions;
+    }
+    if (this._mountPath !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.mountPath = this._mountPath;
+    }
+    if (this._readOnlyEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.readOnlyEnabled = this._readOnlyEnabled;
+    }
+    if (this._shareName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.shareName = this._shareName;
+    }
+    if (this._storageName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.storageName = this._storageName;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SpringCloudAppCustomPersistentDisk | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._mountOptions = undefined;
+      this._mountPath = undefined;
+      this._readOnlyEnabled = undefined;
+      this._shareName = undefined;
+      this._storageName = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._mountOptions = value.mountOptions;
+      this._mountPath = value.mountPath;
+      this._readOnlyEnabled = value.readOnlyEnabled;
+      this._shareName = value.shareName;
+      this._storageName = value.storageName;
+    }
+  }
+
+  // mount_options - computed: false, optional: true, required: false
+  private _mountOptions?: string[]; 
+  public get mountOptions() {
+    return cdktf.Fn.tolist(this.getListAttribute('mount_options'));
+  }
+  public set mountOptions(value: string[]) {
+    this._mountOptions = value;
+  }
+  public resetMountOptions() {
+    this._mountOptions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get mountOptionsInput() {
+    return this._mountOptions;
+  }
+
+  // mount_path - computed: false, optional: false, required: true
+  private _mountPath?: string; 
+  public get mountPath() {
+    return this.getStringAttribute('mount_path');
+  }
+  public set mountPath(value: string) {
+    this._mountPath = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get mountPathInput() {
+    return this._mountPath;
+  }
+
+  // read_only_enabled - computed: false, optional: true, required: false
+  private _readOnlyEnabled?: boolean | cdktf.IResolvable; 
+  public get readOnlyEnabled() {
+    return this.getBooleanAttribute('read_only_enabled');
+  }
+  public set readOnlyEnabled(value: boolean | cdktf.IResolvable) {
+    this._readOnlyEnabled = value;
+  }
+  public resetReadOnlyEnabled() {
+    this._readOnlyEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readOnlyEnabledInput() {
+    return this._readOnlyEnabled;
+  }
+
+  // share_name - computed: false, optional: false, required: true
+  private _shareName?: string; 
+  public get shareName() {
+    return this.getStringAttribute('share_name');
+  }
+  public set shareName(value: string) {
+    this._shareName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get shareNameInput() {
+    return this._shareName;
+  }
+
+  // storage_name - computed: false, optional: false, required: true
+  private _storageName?: string; 
+  public get storageName() {
+    return this.getStringAttribute('storage_name');
+  }
+  public set storageName(value: string) {
+    this._storageName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageNameInput() {
+    return this._storageName;
+  }
+}
+
+export class SpringCloudAppCustomPersistentDiskList extends cdktf.ComplexList {
+  public internalValue? : SpringCloudAppCustomPersistentDisk[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): SpringCloudAppCustomPersistentDiskOutputReference {
+    return new SpringCloudAppCustomPersistentDiskOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface SpringCloudAppIdentity {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app#type SpringCloudApp#type}
@@ -288,6 +454,7 @@ export function springCloudAppTimeoutsToTerraform(struct?: SpringCloudAppTimeout
 
 export class SpringCloudAppTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -297,7 +464,10 @@ export class SpringCloudAppTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): SpringCloudAppTimeouts | undefined {
+  public get internalValue(): SpringCloudAppTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -319,16 +489,22 @@ export class SpringCloudAppTimeoutsOutputReference extends cdktf.ComplexObject {
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: SpringCloudAppTimeouts | undefined) {
+  public set internalValue(value: SpringCloudAppTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -436,12 +612,13 @@ export class SpringCloudApp extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._httpsOnly = config.httpsOnly;
+    this._id = config.id;
     this._isPublic = config.isPublic;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._serviceName = config.serviceName;
     this._tlsEnabled = config.tlsEnabled;
-    this._customPersistentDisk = config.customPersistentDisk;
+    this._customPersistentDisk.internalValue = config.customPersistentDisk;
     this._identity.internalValue = config.identity;
     this._persistentDisk.internalValue = config.persistentDisk;
     this._timeouts.internalValue = config.timeouts;
@@ -473,8 +650,19 @@ export class SpringCloudApp extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // is_public - computed: false, optional: true, required: false
@@ -554,20 +742,19 @@ export class SpringCloudApp extends cdktf.TerraformResource {
   }
 
   // custom_persistent_disk - computed: false, optional: true, required: false
-  private _customPersistentDisk?: SpringCloudAppCustomPersistentDisk[] | cdktf.IResolvable; 
+  private _customPersistentDisk = new SpringCloudAppCustomPersistentDiskList(this, "custom_persistent_disk", false);
   public get customPersistentDisk() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('custom_persistent_disk');
+    return this._customPersistentDisk;
   }
-  public set customPersistentDisk(value: SpringCloudAppCustomPersistentDisk[] | cdktf.IResolvable) {
-    this._customPersistentDisk = value;
+  public putCustomPersistentDisk(value: SpringCloudAppCustomPersistentDisk[] | cdktf.IResolvable) {
+    this._customPersistentDisk.internalValue = value;
   }
   public resetCustomPersistentDisk() {
-    this._customPersistentDisk = undefined;
+    this._customPersistentDisk.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get customPersistentDiskInput() {
-    return this._customPersistentDisk;
+    return this._customPersistentDisk.internalValue;
   }
 
   // identity - computed: false, optional: true, required: false
@@ -625,12 +812,13 @@ export class SpringCloudApp extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       https_only: cdktf.booleanToTerraform(this._httpsOnly),
+      id: cdktf.stringToTerraform(this._id),
       is_public: cdktf.booleanToTerraform(this._isPublic),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       service_name: cdktf.stringToTerraform(this._serviceName),
       tls_enabled: cdktf.booleanToTerraform(this._tlsEnabled),
-      custom_persistent_disk: cdktf.listMapper(springCloudAppCustomPersistentDiskToTerraform)(this._customPersistentDisk),
+      custom_persistent_disk: cdktf.listMapper(springCloudAppCustomPersistentDiskToTerraform)(this._customPersistentDisk.internalValue),
       identity: springCloudAppIdentityToTerraform(this._identity.internalValue),
       persistent_disk: springCloudAppPersistentDiskToTerraform(this._persistentDisk.internalValue),
       timeouts: springCloudAppTimeoutsToTerraform(this._timeouts.internalValue),

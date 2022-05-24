@@ -16,6 +16,13 @@ export interface ServiceFabricClusterConfig extends cdktf.TerraformMetaArguments
   */
   readonly clusterCodeVersion?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster#id ServiceFabricCluster#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster#location ServiceFabricCluster#location}
   */
   readonly location: string;
@@ -373,6 +380,105 @@ export function serviceFabricClusterCertificateCommonNamesCommonNamesToTerraform
   }
 }
 
+export class ServiceFabricClusterCertificateCommonNamesCommonNamesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ServiceFabricClusterCertificateCommonNamesCommonNames | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._certificateCommonName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.certificateCommonName = this._certificateCommonName;
+    }
+    if (this._certificateIssuerThumbprint !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.certificateIssuerThumbprint = this._certificateIssuerThumbprint;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ServiceFabricClusterCertificateCommonNamesCommonNames | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._certificateCommonName = undefined;
+      this._certificateIssuerThumbprint = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._certificateCommonName = value.certificateCommonName;
+      this._certificateIssuerThumbprint = value.certificateIssuerThumbprint;
+    }
+  }
+
+  // certificate_common_name - computed: false, optional: false, required: true
+  private _certificateCommonName?: string; 
+  public get certificateCommonName() {
+    return this.getStringAttribute('certificate_common_name');
+  }
+  public set certificateCommonName(value: string) {
+    this._certificateCommonName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get certificateCommonNameInput() {
+    return this._certificateCommonName;
+  }
+
+  // certificate_issuer_thumbprint - computed: false, optional: true, required: false
+  private _certificateIssuerThumbprint?: string; 
+  public get certificateIssuerThumbprint() {
+    return this.getStringAttribute('certificate_issuer_thumbprint');
+  }
+  public set certificateIssuerThumbprint(value: string) {
+    this._certificateIssuerThumbprint = value;
+  }
+  public resetCertificateIssuerThumbprint() {
+    this._certificateIssuerThumbprint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get certificateIssuerThumbprintInput() {
+    return this._certificateIssuerThumbprint;
+  }
+}
+
+export class ServiceFabricClusterCertificateCommonNamesCommonNamesList extends cdktf.ComplexList {
+  public internalValue? : ServiceFabricClusterCertificateCommonNamesCommonNames[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ServiceFabricClusterCertificateCommonNamesCommonNamesOutputReference {
+    return new ServiceFabricClusterCertificateCommonNamesCommonNamesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ServiceFabricClusterCertificateCommonNames {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster#x509_store_name ServiceFabricCluster#x509_store_name}
@@ -415,9 +521,9 @@ export class ServiceFabricClusterCertificateCommonNamesOutputReference extends c
       hasAnyValues = true;
       internalValueResult.x509StoreName = this._x509StoreName;
     }
-    if (this._commonNames !== undefined) {
+    if (this._commonNames?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.commonNames = this._commonNames;
+      internalValueResult.commonNames = this._commonNames?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -426,12 +532,12 @@ export class ServiceFabricClusterCertificateCommonNamesOutputReference extends c
     if (value === undefined) {
       this.isEmptyObject = false;
       this._x509StoreName = undefined;
-      this._commonNames = undefined;
+      this._commonNames.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._x509StoreName = value.x509StoreName;
-      this._commonNames = value.commonNames;
+      this._commonNames.internalValue = value.commonNames;
     }
   }
 
@@ -449,17 +555,16 @@ export class ServiceFabricClusterCertificateCommonNamesOutputReference extends c
   }
 
   // common_names - computed: false, optional: false, required: true
-  private _commonNames?: ServiceFabricClusterCertificateCommonNamesCommonNames[] | cdktf.IResolvable; 
+  private _commonNames = new ServiceFabricClusterCertificateCommonNamesCommonNamesList(this, "common_names", true);
   public get commonNames() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('common_names')));
+    return this._commonNames;
   }
-  public set commonNames(value: ServiceFabricClusterCertificateCommonNamesCommonNames[] | cdktf.IResolvable) {
-    this._commonNames = value;
+  public putCommonNames(value: ServiceFabricClusterCertificateCommonNamesCommonNames[] | cdktf.IResolvable) {
+    this._commonNames.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get commonNamesInput() {
-    return this._commonNames;
+    return this._commonNames.internalValue;
   }
 }
 export interface ServiceFabricClusterClientCertificateCommonName {
@@ -489,6 +594,124 @@ export function serviceFabricClusterClientCertificateCommonNameToTerraform(struc
   }
 }
 
+export class ServiceFabricClusterClientCertificateCommonNameOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ServiceFabricClusterClientCertificateCommonName | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._commonName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.commonName = this._commonName;
+    }
+    if (this._isAdmin !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.isAdmin = this._isAdmin;
+    }
+    if (this._issuerThumbprint !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.issuerThumbprint = this._issuerThumbprint;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ServiceFabricClusterClientCertificateCommonName | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._commonName = undefined;
+      this._isAdmin = undefined;
+      this._issuerThumbprint = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._commonName = value.commonName;
+      this._isAdmin = value.isAdmin;
+      this._issuerThumbprint = value.issuerThumbprint;
+    }
+  }
+
+  // common_name - computed: false, optional: false, required: true
+  private _commonName?: string; 
+  public get commonName() {
+    return this.getStringAttribute('common_name');
+  }
+  public set commonName(value: string) {
+    this._commonName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get commonNameInput() {
+    return this._commonName;
+  }
+
+  // is_admin - computed: false, optional: false, required: true
+  private _isAdmin?: boolean | cdktf.IResolvable; 
+  public get isAdmin() {
+    return this.getBooleanAttribute('is_admin');
+  }
+  public set isAdmin(value: boolean | cdktf.IResolvable) {
+    this._isAdmin = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get isAdminInput() {
+    return this._isAdmin;
+  }
+
+  // issuer_thumbprint - computed: false, optional: true, required: false
+  private _issuerThumbprint?: string; 
+  public get issuerThumbprint() {
+    return this.getStringAttribute('issuer_thumbprint');
+  }
+  public set issuerThumbprint(value: string) {
+    this._issuerThumbprint = value;
+  }
+  public resetIssuerThumbprint() {
+    this._issuerThumbprint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get issuerThumbprintInput() {
+    return this._issuerThumbprint;
+  }
+}
+
+export class ServiceFabricClusterClientCertificateCommonNameList extends cdktf.ComplexList {
+  public internalValue? : ServiceFabricClusterClientCertificateCommonName[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ServiceFabricClusterClientCertificateCommonNameOutputReference {
+    return new ServiceFabricClusterClientCertificateCommonNameOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ServiceFabricClusterClientCertificateThumbprint {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster#is_admin ServiceFabricCluster#is_admin}
@@ -511,6 +734,102 @@ export function serviceFabricClusterClientCertificateThumbprintToTerraform(struc
   }
 }
 
+export class ServiceFabricClusterClientCertificateThumbprintOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ServiceFabricClusterClientCertificateThumbprint | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._isAdmin !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.isAdmin = this._isAdmin;
+    }
+    if (this._thumbprint !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.thumbprint = this._thumbprint;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ServiceFabricClusterClientCertificateThumbprint | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._isAdmin = undefined;
+      this._thumbprint = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._isAdmin = value.isAdmin;
+      this._thumbprint = value.thumbprint;
+    }
+  }
+
+  // is_admin - computed: false, optional: false, required: true
+  private _isAdmin?: boolean | cdktf.IResolvable; 
+  public get isAdmin() {
+    return this.getBooleanAttribute('is_admin');
+  }
+  public set isAdmin(value: boolean | cdktf.IResolvable) {
+    this._isAdmin = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get isAdminInput() {
+    return this._isAdmin;
+  }
+
+  // thumbprint - computed: false, optional: false, required: true
+  private _thumbprint?: string; 
+  public get thumbprint() {
+    return this.getStringAttribute('thumbprint');
+  }
+  public set thumbprint(value: string) {
+    this._thumbprint = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get thumbprintInput() {
+    return this._thumbprint;
+  }
+}
+
+export class ServiceFabricClusterClientCertificateThumbprintList extends cdktf.ComplexList {
+  public internalValue? : ServiceFabricClusterClientCertificateThumbprint[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ServiceFabricClusterClientCertificateThumbprintOutputReference {
+    return new ServiceFabricClusterClientCertificateThumbprintOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ServiceFabricClusterDiagnosticsConfig {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster#blob_endpoint ServiceFabricCluster#blob_endpoint}
@@ -691,6 +1010,105 @@ export function serviceFabricClusterFabricSettingsToTerraform(struct?: ServiceFa
   }
 }
 
+export class ServiceFabricClusterFabricSettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ServiceFabricClusterFabricSettings | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._parameters !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.parameters = this._parameters;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ServiceFabricClusterFabricSettings | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._parameters = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._parameters = value.parameters;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // parameters - computed: false, optional: true, required: false
+  private _parameters?: { [key: string]: string }; 
+  public get parameters() {
+    return this.getStringMapAttribute('parameters');
+  }
+  public set parameters(value: { [key: string]: string }) {
+    this._parameters = value;
+  }
+  public resetParameters() {
+    this._parameters = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parametersInput() {
+    return this._parameters;
+  }
+}
+
+export class ServiceFabricClusterFabricSettingsList extends cdktf.ComplexList {
+  public internalValue? : ServiceFabricClusterFabricSettings[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ServiceFabricClusterFabricSettingsOutputReference {
+    return new ServiceFabricClusterFabricSettingsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ServiceFabricClusterNodeTypeApplicationPorts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster#end_port ServiceFabricCluster#end_port}
@@ -944,6 +1362,335 @@ export function serviceFabricClusterNodeTypeToTerraform(struct?: ServiceFabricCl
   }
 }
 
+export class ServiceFabricClusterNodeTypeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ServiceFabricClusterNodeType | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._capacities !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.capacities = this._capacities;
+    }
+    if (this._clientEndpointPort !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.clientEndpointPort = this._clientEndpointPort;
+    }
+    if (this._durabilityLevel !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.durabilityLevel = this._durabilityLevel;
+    }
+    if (this._httpEndpointPort !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.httpEndpointPort = this._httpEndpointPort;
+    }
+    if (this._instanceCount !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.instanceCount = this._instanceCount;
+    }
+    if (this._isPrimary !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.isPrimary = this._isPrimary;
+    }
+    if (this._isStateless !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.isStateless = this._isStateless;
+    }
+    if (this._multipleAvailabilityZones !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.multipleAvailabilityZones = this._multipleAvailabilityZones;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._placementProperties !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.placementProperties = this._placementProperties;
+    }
+    if (this._reverseProxyEndpointPort !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.reverseProxyEndpointPort = this._reverseProxyEndpointPort;
+    }
+    if (this._applicationPorts?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.applicationPorts = this._applicationPorts?.internalValue;
+    }
+    if (this._ephemeralPorts?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ephemeralPorts = this._ephemeralPorts?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ServiceFabricClusterNodeType | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._capacities = undefined;
+      this._clientEndpointPort = undefined;
+      this._durabilityLevel = undefined;
+      this._httpEndpointPort = undefined;
+      this._instanceCount = undefined;
+      this._isPrimary = undefined;
+      this._isStateless = undefined;
+      this._multipleAvailabilityZones = undefined;
+      this._name = undefined;
+      this._placementProperties = undefined;
+      this._reverseProxyEndpointPort = undefined;
+      this._applicationPorts.internalValue = undefined;
+      this._ephemeralPorts.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._capacities = value.capacities;
+      this._clientEndpointPort = value.clientEndpointPort;
+      this._durabilityLevel = value.durabilityLevel;
+      this._httpEndpointPort = value.httpEndpointPort;
+      this._instanceCount = value.instanceCount;
+      this._isPrimary = value.isPrimary;
+      this._isStateless = value.isStateless;
+      this._multipleAvailabilityZones = value.multipleAvailabilityZones;
+      this._name = value.name;
+      this._placementProperties = value.placementProperties;
+      this._reverseProxyEndpointPort = value.reverseProxyEndpointPort;
+      this._applicationPorts.internalValue = value.applicationPorts;
+      this._ephemeralPorts.internalValue = value.ephemeralPorts;
+    }
+  }
+
+  // capacities - computed: false, optional: true, required: false
+  private _capacities?: { [key: string]: string }; 
+  public get capacities() {
+    return this.getStringMapAttribute('capacities');
+  }
+  public set capacities(value: { [key: string]: string }) {
+    this._capacities = value;
+  }
+  public resetCapacities() {
+    this._capacities = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get capacitiesInput() {
+    return this._capacities;
+  }
+
+  // client_endpoint_port - computed: false, optional: false, required: true
+  private _clientEndpointPort?: number; 
+  public get clientEndpointPort() {
+    return this.getNumberAttribute('client_endpoint_port');
+  }
+  public set clientEndpointPort(value: number) {
+    this._clientEndpointPort = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientEndpointPortInput() {
+    return this._clientEndpointPort;
+  }
+
+  // durability_level - computed: false, optional: true, required: false
+  private _durabilityLevel?: string; 
+  public get durabilityLevel() {
+    return this.getStringAttribute('durability_level');
+  }
+  public set durabilityLevel(value: string) {
+    this._durabilityLevel = value;
+  }
+  public resetDurabilityLevel() {
+    this._durabilityLevel = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get durabilityLevelInput() {
+    return this._durabilityLevel;
+  }
+
+  // http_endpoint_port - computed: false, optional: false, required: true
+  private _httpEndpointPort?: number; 
+  public get httpEndpointPort() {
+    return this.getNumberAttribute('http_endpoint_port');
+  }
+  public set httpEndpointPort(value: number) {
+    this._httpEndpointPort = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get httpEndpointPortInput() {
+    return this._httpEndpointPort;
+  }
+
+  // instance_count - computed: false, optional: false, required: true
+  private _instanceCount?: number; 
+  public get instanceCount() {
+    return this.getNumberAttribute('instance_count');
+  }
+  public set instanceCount(value: number) {
+    this._instanceCount = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get instanceCountInput() {
+    return this._instanceCount;
+  }
+
+  // is_primary - computed: false, optional: false, required: true
+  private _isPrimary?: boolean | cdktf.IResolvable; 
+  public get isPrimary() {
+    return this.getBooleanAttribute('is_primary');
+  }
+  public set isPrimary(value: boolean | cdktf.IResolvable) {
+    this._isPrimary = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get isPrimaryInput() {
+    return this._isPrimary;
+  }
+
+  // is_stateless - computed: false, optional: true, required: false
+  private _isStateless?: boolean | cdktf.IResolvable; 
+  public get isStateless() {
+    return this.getBooleanAttribute('is_stateless');
+  }
+  public set isStateless(value: boolean | cdktf.IResolvable) {
+    this._isStateless = value;
+  }
+  public resetIsStateless() {
+    this._isStateless = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get isStatelessInput() {
+    return this._isStateless;
+  }
+
+  // multiple_availability_zones - computed: false, optional: true, required: false
+  private _multipleAvailabilityZones?: boolean | cdktf.IResolvable; 
+  public get multipleAvailabilityZones() {
+    return this.getBooleanAttribute('multiple_availability_zones');
+  }
+  public set multipleAvailabilityZones(value: boolean | cdktf.IResolvable) {
+    this._multipleAvailabilityZones = value;
+  }
+  public resetMultipleAvailabilityZones() {
+    this._multipleAvailabilityZones = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get multipleAvailabilityZonesInput() {
+    return this._multipleAvailabilityZones;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // placement_properties - computed: false, optional: true, required: false
+  private _placementProperties?: { [key: string]: string }; 
+  public get placementProperties() {
+    return this.getStringMapAttribute('placement_properties');
+  }
+  public set placementProperties(value: { [key: string]: string }) {
+    this._placementProperties = value;
+  }
+  public resetPlacementProperties() {
+    this._placementProperties = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get placementPropertiesInput() {
+    return this._placementProperties;
+  }
+
+  // reverse_proxy_endpoint_port - computed: false, optional: true, required: false
+  private _reverseProxyEndpointPort?: number; 
+  public get reverseProxyEndpointPort() {
+    return this.getNumberAttribute('reverse_proxy_endpoint_port');
+  }
+  public set reverseProxyEndpointPort(value: number) {
+    this._reverseProxyEndpointPort = value;
+  }
+  public resetReverseProxyEndpointPort() {
+    this._reverseProxyEndpointPort = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get reverseProxyEndpointPortInput() {
+    return this._reverseProxyEndpointPort;
+  }
+
+  // application_ports - computed: false, optional: true, required: false
+  private _applicationPorts = new ServiceFabricClusterNodeTypeApplicationPortsOutputReference(this, "application_ports");
+  public get applicationPorts() {
+    return this._applicationPorts;
+  }
+  public putApplicationPorts(value: ServiceFabricClusterNodeTypeApplicationPorts) {
+    this._applicationPorts.internalValue = value;
+  }
+  public resetApplicationPorts() {
+    this._applicationPorts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get applicationPortsInput() {
+    return this._applicationPorts.internalValue;
+  }
+
+  // ephemeral_ports - computed: false, optional: true, required: false
+  private _ephemeralPorts = new ServiceFabricClusterNodeTypeEphemeralPortsOutputReference(this, "ephemeral_ports");
+  public get ephemeralPorts() {
+    return this._ephemeralPorts;
+  }
+  public putEphemeralPorts(value: ServiceFabricClusterNodeTypeEphemeralPorts) {
+    this._ephemeralPorts.internalValue = value;
+  }
+  public resetEphemeralPorts() {
+    this._ephemeralPorts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ephemeralPortsInput() {
+    return this._ephemeralPorts.internalValue;
+  }
+}
+
+export class ServiceFabricClusterNodeTypeList extends cdktf.ComplexList {
+  public internalValue? : ServiceFabricClusterNodeType[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ServiceFabricClusterNodeTypeOutputReference {
+    return new ServiceFabricClusterNodeTypeOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ServiceFabricClusterReverseProxyCertificate {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster#thumbprint ServiceFabricCluster#thumbprint}
@@ -1079,6 +1826,105 @@ export function serviceFabricClusterReverseProxyCertificateCommonNamesCommonName
   }
 }
 
+export class ServiceFabricClusterReverseProxyCertificateCommonNamesCommonNamesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ServiceFabricClusterReverseProxyCertificateCommonNamesCommonNames | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._certificateCommonName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.certificateCommonName = this._certificateCommonName;
+    }
+    if (this._certificateIssuerThumbprint !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.certificateIssuerThumbprint = this._certificateIssuerThumbprint;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ServiceFabricClusterReverseProxyCertificateCommonNamesCommonNames | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._certificateCommonName = undefined;
+      this._certificateIssuerThumbprint = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._certificateCommonName = value.certificateCommonName;
+      this._certificateIssuerThumbprint = value.certificateIssuerThumbprint;
+    }
+  }
+
+  // certificate_common_name - computed: false, optional: false, required: true
+  private _certificateCommonName?: string; 
+  public get certificateCommonName() {
+    return this.getStringAttribute('certificate_common_name');
+  }
+  public set certificateCommonName(value: string) {
+    this._certificateCommonName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get certificateCommonNameInput() {
+    return this._certificateCommonName;
+  }
+
+  // certificate_issuer_thumbprint - computed: false, optional: true, required: false
+  private _certificateIssuerThumbprint?: string; 
+  public get certificateIssuerThumbprint() {
+    return this.getStringAttribute('certificate_issuer_thumbprint');
+  }
+  public set certificateIssuerThumbprint(value: string) {
+    this._certificateIssuerThumbprint = value;
+  }
+  public resetCertificateIssuerThumbprint() {
+    this._certificateIssuerThumbprint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get certificateIssuerThumbprintInput() {
+    return this._certificateIssuerThumbprint;
+  }
+}
+
+export class ServiceFabricClusterReverseProxyCertificateCommonNamesCommonNamesList extends cdktf.ComplexList {
+  public internalValue? : ServiceFabricClusterReverseProxyCertificateCommonNamesCommonNames[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ServiceFabricClusterReverseProxyCertificateCommonNamesCommonNamesOutputReference {
+    return new ServiceFabricClusterReverseProxyCertificateCommonNamesCommonNamesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ServiceFabricClusterReverseProxyCertificateCommonNames {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster#x509_store_name ServiceFabricCluster#x509_store_name}
@@ -1121,9 +1967,9 @@ export class ServiceFabricClusterReverseProxyCertificateCommonNamesOutputReferen
       hasAnyValues = true;
       internalValueResult.x509StoreName = this._x509StoreName;
     }
-    if (this._commonNames !== undefined) {
+    if (this._commonNames?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.commonNames = this._commonNames;
+      internalValueResult.commonNames = this._commonNames?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -1132,12 +1978,12 @@ export class ServiceFabricClusterReverseProxyCertificateCommonNamesOutputReferen
     if (value === undefined) {
       this.isEmptyObject = false;
       this._x509StoreName = undefined;
-      this._commonNames = undefined;
+      this._commonNames.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._x509StoreName = value.x509StoreName;
-      this._commonNames = value.commonNames;
+      this._commonNames.internalValue = value.commonNames;
     }
   }
 
@@ -1155,17 +2001,16 @@ export class ServiceFabricClusterReverseProxyCertificateCommonNamesOutputReferen
   }
 
   // common_names - computed: false, optional: false, required: true
-  private _commonNames?: ServiceFabricClusterReverseProxyCertificateCommonNamesCommonNames[] | cdktf.IResolvable; 
+  private _commonNames = new ServiceFabricClusterReverseProxyCertificateCommonNamesCommonNamesList(this, "common_names", true);
   public get commonNames() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('common_names')));
+    return this._commonNames;
   }
-  public set commonNames(value: ServiceFabricClusterReverseProxyCertificateCommonNamesCommonNames[] | cdktf.IResolvable) {
-    this._commonNames = value;
+  public putCommonNames(value: ServiceFabricClusterReverseProxyCertificateCommonNamesCommonNames[] | cdktf.IResolvable) {
+    this._commonNames.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get commonNamesInput() {
-    return this._commonNames;
+    return this._commonNames.internalValue;
   }
 }
 export interface ServiceFabricClusterTimeouts {
@@ -1202,6 +2047,7 @@ export function serviceFabricClusterTimeoutsToTerraform(struct?: ServiceFabricCl
 
 export class ServiceFabricClusterTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -1211,7 +2057,10 @@ export class ServiceFabricClusterTimeoutsOutputReference extends cdktf.ComplexOb
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): ServiceFabricClusterTimeouts | undefined {
+  public get internalValue(): ServiceFabricClusterTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -1233,16 +2082,22 @@ export class ServiceFabricClusterTimeoutsOutputReference extends cdktf.ComplexOb
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: ServiceFabricClusterTimeouts | undefined) {
+  public set internalValue(value: ServiceFabricClusterTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -1847,6 +2702,7 @@ export class ServiceFabricCluster extends cdktf.TerraformResource {
     });
     this._addOnFeatures = config.addOnFeatures;
     this._clusterCodeVersion = config.clusterCodeVersion;
+    this._id = config.id;
     this._location = config.location;
     this._managementEndpoint = config.managementEndpoint;
     this._name = config.name;
@@ -1860,11 +2716,11 @@ export class ServiceFabricCluster extends cdktf.TerraformResource {
     this._azureActiveDirectory.internalValue = config.azureActiveDirectory;
     this._certificate.internalValue = config.certificate;
     this._certificateCommonNames.internalValue = config.certificateCommonNames;
-    this._clientCertificateCommonName = config.clientCertificateCommonName;
-    this._clientCertificateThumbprint = config.clientCertificateThumbprint;
+    this._clientCertificateCommonName.internalValue = config.clientCertificateCommonName;
+    this._clientCertificateThumbprint.internalValue = config.clientCertificateThumbprint;
     this._diagnosticsConfig.internalValue = config.diagnosticsConfig;
-    this._fabricSettings = config.fabricSettings;
-    this._nodeType = config.nodeType;
+    this._fabricSettings.internalValue = config.fabricSettings;
+    this._nodeType.internalValue = config.nodeType;
     this._reverseProxyCertificate.internalValue = config.reverseProxyCertificate;
     this._reverseProxyCertificateCommonNames.internalValue = config.reverseProxyCertificateCommonNames;
     this._timeouts.internalValue = config.timeouts;
@@ -1913,8 +2769,19 @@ export class ServiceFabricCluster extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // location - computed: false, optional: false, required: true
@@ -2105,37 +2972,35 @@ export class ServiceFabricCluster extends cdktf.TerraformResource {
   }
 
   // client_certificate_common_name - computed: false, optional: true, required: false
-  private _clientCertificateCommonName?: ServiceFabricClusterClientCertificateCommonName[] | cdktf.IResolvable; 
+  private _clientCertificateCommonName = new ServiceFabricClusterClientCertificateCommonNameList(this, "client_certificate_common_name", false);
   public get clientCertificateCommonName() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('client_certificate_common_name');
+    return this._clientCertificateCommonName;
   }
-  public set clientCertificateCommonName(value: ServiceFabricClusterClientCertificateCommonName[] | cdktf.IResolvable) {
-    this._clientCertificateCommonName = value;
+  public putClientCertificateCommonName(value: ServiceFabricClusterClientCertificateCommonName[] | cdktf.IResolvable) {
+    this._clientCertificateCommonName.internalValue = value;
   }
   public resetClientCertificateCommonName() {
-    this._clientCertificateCommonName = undefined;
+    this._clientCertificateCommonName.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get clientCertificateCommonNameInput() {
-    return this._clientCertificateCommonName;
+    return this._clientCertificateCommonName.internalValue;
   }
 
   // client_certificate_thumbprint - computed: false, optional: true, required: false
-  private _clientCertificateThumbprint?: ServiceFabricClusterClientCertificateThumbprint[] | cdktf.IResolvable; 
+  private _clientCertificateThumbprint = new ServiceFabricClusterClientCertificateThumbprintList(this, "client_certificate_thumbprint", false);
   public get clientCertificateThumbprint() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('client_certificate_thumbprint');
+    return this._clientCertificateThumbprint;
   }
-  public set clientCertificateThumbprint(value: ServiceFabricClusterClientCertificateThumbprint[] | cdktf.IResolvable) {
-    this._clientCertificateThumbprint = value;
+  public putClientCertificateThumbprint(value: ServiceFabricClusterClientCertificateThumbprint[] | cdktf.IResolvable) {
+    this._clientCertificateThumbprint.internalValue = value;
   }
   public resetClientCertificateThumbprint() {
-    this._clientCertificateThumbprint = undefined;
+    this._clientCertificateThumbprint.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get clientCertificateThumbprintInput() {
-    return this._clientCertificateThumbprint;
+    return this._clientCertificateThumbprint.internalValue;
   }
 
   // diagnostics_config - computed: false, optional: true, required: false
@@ -2155,34 +3020,32 @@ export class ServiceFabricCluster extends cdktf.TerraformResource {
   }
 
   // fabric_settings - computed: false, optional: true, required: false
-  private _fabricSettings?: ServiceFabricClusterFabricSettings[] | cdktf.IResolvable; 
+  private _fabricSettings = new ServiceFabricClusterFabricSettingsList(this, "fabric_settings", false);
   public get fabricSettings() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('fabric_settings');
+    return this._fabricSettings;
   }
-  public set fabricSettings(value: ServiceFabricClusterFabricSettings[] | cdktf.IResolvable) {
-    this._fabricSettings = value;
+  public putFabricSettings(value: ServiceFabricClusterFabricSettings[] | cdktf.IResolvable) {
+    this._fabricSettings.internalValue = value;
   }
   public resetFabricSettings() {
-    this._fabricSettings = undefined;
+    this._fabricSettings.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get fabricSettingsInput() {
-    return this._fabricSettings;
+    return this._fabricSettings.internalValue;
   }
 
   // node_type - computed: false, optional: false, required: true
-  private _nodeType?: ServiceFabricClusterNodeType[] | cdktf.IResolvable; 
+  private _nodeType = new ServiceFabricClusterNodeTypeList(this, "node_type", false);
   public get nodeType() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('node_type');
+    return this._nodeType;
   }
-  public set nodeType(value: ServiceFabricClusterNodeType[] | cdktf.IResolvable) {
-    this._nodeType = value;
+  public putNodeType(value: ServiceFabricClusterNodeType[] | cdktf.IResolvable) {
+    this._nodeType.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get nodeTypeInput() {
-    return this._nodeType;
+    return this._nodeType.internalValue;
   }
 
   // reverse_proxy_certificate - computed: false, optional: true, required: false
@@ -2257,6 +3120,7 @@ export class ServiceFabricCluster extends cdktf.TerraformResource {
     return {
       add_on_features: cdktf.listMapper(cdktf.stringToTerraform)(this._addOnFeatures),
       cluster_code_version: cdktf.stringToTerraform(this._clusterCodeVersion),
+      id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       management_endpoint: cdktf.stringToTerraform(this._managementEndpoint),
       name: cdktf.stringToTerraform(this._name),
@@ -2270,11 +3134,11 @@ export class ServiceFabricCluster extends cdktf.TerraformResource {
       azure_active_directory: serviceFabricClusterAzureActiveDirectoryToTerraform(this._azureActiveDirectory.internalValue),
       certificate: serviceFabricClusterCertificateToTerraform(this._certificate.internalValue),
       certificate_common_names: serviceFabricClusterCertificateCommonNamesToTerraform(this._certificateCommonNames.internalValue),
-      client_certificate_common_name: cdktf.listMapper(serviceFabricClusterClientCertificateCommonNameToTerraform)(this._clientCertificateCommonName),
-      client_certificate_thumbprint: cdktf.listMapper(serviceFabricClusterClientCertificateThumbprintToTerraform)(this._clientCertificateThumbprint),
+      client_certificate_common_name: cdktf.listMapper(serviceFabricClusterClientCertificateCommonNameToTerraform)(this._clientCertificateCommonName.internalValue),
+      client_certificate_thumbprint: cdktf.listMapper(serviceFabricClusterClientCertificateThumbprintToTerraform)(this._clientCertificateThumbprint.internalValue),
       diagnostics_config: serviceFabricClusterDiagnosticsConfigToTerraform(this._diagnosticsConfig.internalValue),
-      fabric_settings: cdktf.listMapper(serviceFabricClusterFabricSettingsToTerraform)(this._fabricSettings),
-      node_type: cdktf.listMapper(serviceFabricClusterNodeTypeToTerraform)(this._nodeType),
+      fabric_settings: cdktf.listMapper(serviceFabricClusterFabricSettingsToTerraform)(this._fabricSettings.internalValue),
+      node_type: cdktf.listMapper(serviceFabricClusterNodeTypeToTerraform)(this._nodeType.internalValue),
       reverse_proxy_certificate: serviceFabricClusterReverseProxyCertificateToTerraform(this._reverseProxyCertificate.internalValue),
       reverse_proxy_certificate_common_names: serviceFabricClusterReverseProxyCertificateCommonNamesToTerraform(this._reverseProxyCertificateCommonNames.internalValue),
       timeouts: serviceFabricClusterTimeoutsToTerraform(this._timeouts.internalValue),

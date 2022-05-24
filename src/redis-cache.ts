@@ -20,6 +20,13 @@ export interface RedisCacheConfig extends cdktf.TerraformMetaArguments {
   */
   readonly family: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache#id RedisCache#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache#location RedisCache#location}
   */
   readonly location: string;
@@ -125,6 +132,127 @@ export function redisCachePatchScheduleToTerraform(struct?: RedisCachePatchSched
   }
 }
 
+export class RedisCachePatchScheduleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): RedisCachePatchSchedule | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._dayOfWeek !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dayOfWeek = this._dayOfWeek;
+    }
+    if (this._maintenanceWindow !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.maintenanceWindow = this._maintenanceWindow;
+    }
+    if (this._startHourUtc !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.startHourUtc = this._startHourUtc;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: RedisCachePatchSchedule | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._dayOfWeek = undefined;
+      this._maintenanceWindow = undefined;
+      this._startHourUtc = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._dayOfWeek = value.dayOfWeek;
+      this._maintenanceWindow = value.maintenanceWindow;
+      this._startHourUtc = value.startHourUtc;
+    }
+  }
+
+  // day_of_week - computed: false, optional: false, required: true
+  private _dayOfWeek?: string; 
+  public get dayOfWeek() {
+    return this.getStringAttribute('day_of_week');
+  }
+  public set dayOfWeek(value: string) {
+    this._dayOfWeek = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dayOfWeekInput() {
+    return this._dayOfWeek;
+  }
+
+  // maintenance_window - computed: false, optional: true, required: false
+  private _maintenanceWindow?: string; 
+  public get maintenanceWindow() {
+    return this.getStringAttribute('maintenance_window');
+  }
+  public set maintenanceWindow(value: string) {
+    this._maintenanceWindow = value;
+  }
+  public resetMaintenanceWindow() {
+    this._maintenanceWindow = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maintenanceWindowInput() {
+    return this._maintenanceWindow;
+  }
+
+  // start_hour_utc - computed: false, optional: true, required: false
+  private _startHourUtc?: number; 
+  public get startHourUtc() {
+    return this.getNumberAttribute('start_hour_utc');
+  }
+  public set startHourUtc(value: number) {
+    this._startHourUtc = value;
+  }
+  public resetStartHourUtc() {
+    this._startHourUtc = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get startHourUtcInput() {
+    return this._startHourUtc;
+  }
+}
+
+export class RedisCachePatchScheduleList extends cdktf.ComplexList {
+  public internalValue? : RedisCachePatchSchedule[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): RedisCachePatchScheduleOutputReference {
+    return new RedisCachePatchScheduleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface RedisCacheRedisConfiguration {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache#aof_backup_enabled RedisCache#aof_backup_enabled}
@@ -553,6 +681,7 @@ export function redisCacheTimeoutsToTerraform(struct?: RedisCacheTimeoutsOutputR
 
 export class RedisCacheTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -562,7 +691,10 @@ export class RedisCacheTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): RedisCacheTimeouts | undefined {
+  public get internalValue(): RedisCacheTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -584,16 +716,22 @@ export class RedisCacheTimeoutsOutputReference extends cdktf.ComplexObject {
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: RedisCacheTimeouts | undefined) {
+  public set internalValue(value: RedisCacheTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -703,6 +841,7 @@ export class RedisCache extends cdktf.TerraformResource {
     this._capacity = config.capacity;
     this._enableNonSslPort = config.enableNonSslPort;
     this._family = config.family;
+    this._id = config.id;
     this._location = config.location;
     this._minimumTlsVersion = config.minimumTlsVersion;
     this._name = config.name;
@@ -718,7 +857,7 @@ export class RedisCache extends cdktf.TerraformResource {
     this._tags = config.tags;
     this._tenantSettings = config.tenantSettings;
     this._zones = config.zones;
-    this._patchSchedule = config.patchSchedule;
+    this._patchSchedule.internalValue = config.patchSchedule;
     this._redisConfiguration.internalValue = config.redisConfiguration;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -775,8 +914,19 @@ export class RedisCache extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // location - computed: false, optional: false, required: true
@@ -1038,20 +1188,19 @@ export class RedisCache extends cdktf.TerraformResource {
   }
 
   // patch_schedule - computed: false, optional: true, required: false
-  private _patchSchedule?: RedisCachePatchSchedule[] | cdktf.IResolvable; 
+  private _patchSchedule = new RedisCachePatchScheduleList(this, "patch_schedule", false);
   public get patchSchedule() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('patch_schedule');
+    return this._patchSchedule;
   }
-  public set patchSchedule(value: RedisCachePatchSchedule[] | cdktf.IResolvable) {
-    this._patchSchedule = value;
+  public putPatchSchedule(value: RedisCachePatchSchedule[] | cdktf.IResolvable) {
+    this._patchSchedule.internalValue = value;
   }
   public resetPatchSchedule() {
-    this._patchSchedule = undefined;
+    this._patchSchedule.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get patchScheduleInput() {
-    return this._patchSchedule;
+    return this._patchSchedule.internalValue;
   }
 
   // redis_configuration - computed: false, optional: true, required: false
@@ -1095,6 +1244,7 @@ export class RedisCache extends cdktf.TerraformResource {
       capacity: cdktf.numberToTerraform(this._capacity),
       enable_non_ssl_port: cdktf.booleanToTerraform(this._enableNonSslPort),
       family: cdktf.stringToTerraform(this._family),
+      id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       minimum_tls_version: cdktf.stringToTerraform(this._minimumTlsVersion),
       name: cdktf.stringToTerraform(this._name),
@@ -1110,7 +1260,7 @@ export class RedisCache extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       tenant_settings: cdktf.hashMapper(cdktf.stringToTerraform)(this._tenantSettings),
       zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),
-      patch_schedule: cdktf.listMapper(redisCachePatchScheduleToTerraform)(this._patchSchedule),
+      patch_schedule: cdktf.listMapper(redisCachePatchScheduleToTerraform)(this._patchSchedule.internalValue),
       redis_configuration: redisCacheRedisConfigurationToTerraform(this._redisConfiguration.internalValue),
       timeouts: redisCacheTimeoutsToTerraform(this._timeouts.internalValue),
     };

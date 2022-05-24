@@ -20,6 +20,13 @@ export interface KustoDatabasePrincipalConfig extends cdktf.TerraformMetaArgumen
   */
   readonly databaseName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal#id KustoDatabasePrincipal#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal#object_id KustoDatabasePrincipal#object_id}
   */
   readonly objectId: string;
@@ -76,6 +83,7 @@ export function kustoDatabasePrincipalTimeoutsToTerraform(struct?: KustoDatabase
 
 export class KustoDatabasePrincipalTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -85,7 +93,10 @@ export class KustoDatabasePrincipalTimeoutsOutputReference extends cdktf.Complex
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): KustoDatabasePrincipalTimeouts | undefined {
+  public get internalValue(): KustoDatabasePrincipalTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -107,16 +118,22 @@ export class KustoDatabasePrincipalTimeoutsOutputReference extends cdktf.Complex
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: KustoDatabasePrincipalTimeouts | undefined) {
+  public set internalValue(value: KustoDatabasePrincipalTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -226,6 +243,7 @@ export class KustoDatabasePrincipal extends cdktf.TerraformResource {
     this._clientId = config.clientId;
     this._clusterName = config.clusterName;
     this._databaseName = config.databaseName;
+    this._id = config.id;
     this._objectId = config.objectId;
     this._resourceGroupName = config.resourceGroupName;
     this._role = config.role;
@@ -292,8 +310,19 @@ export class KustoDatabasePrincipal extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // name - computed: true, optional: false, required: false
@@ -378,6 +407,7 @@ export class KustoDatabasePrincipal extends cdktf.TerraformResource {
       client_id: cdktf.stringToTerraform(this._clientId),
       cluster_name: cdktf.stringToTerraform(this._clusterName),
       database_name: cdktf.stringToTerraform(this._databaseName),
+      id: cdktf.stringToTerraform(this._id),
       object_id: cdktf.stringToTerraform(this._objectId),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       role: cdktf.stringToTerraform(this._role),

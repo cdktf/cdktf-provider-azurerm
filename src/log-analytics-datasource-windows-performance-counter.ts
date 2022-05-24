@@ -12,6 +12,13 @@ export interface LogAnalyticsDatasourceWindowsPerformanceCounterConfig extends c
   */
   readonly counterName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_datasource_windows_performance_counter#id LogAnalyticsDatasourceWindowsPerformanceCounter#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_datasource_windows_performance_counter#instance_name LogAnalyticsDatasourceWindowsPerformanceCounter#instance_name}
   */
   readonly instanceName: string;
@@ -76,6 +83,7 @@ export function logAnalyticsDatasourceWindowsPerformanceCounterTimeoutsToTerrafo
 
 export class LogAnalyticsDatasourceWindowsPerformanceCounterTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -85,7 +93,10 @@ export class LogAnalyticsDatasourceWindowsPerformanceCounterTimeoutsOutputRefere
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): LogAnalyticsDatasourceWindowsPerformanceCounterTimeouts | undefined {
+  public get internalValue(): LogAnalyticsDatasourceWindowsPerformanceCounterTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -107,16 +118,22 @@ export class LogAnalyticsDatasourceWindowsPerformanceCounterTimeoutsOutputRefere
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: LogAnalyticsDatasourceWindowsPerformanceCounterTimeouts | undefined) {
+  public set internalValue(value: LogAnalyticsDatasourceWindowsPerformanceCounterTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -224,6 +241,7 @@ export class LogAnalyticsDatasourceWindowsPerformanceCounter extends cdktf.Terra
       lifecycle: config.lifecycle
     });
     this._counterName = config.counterName;
+    this._id = config.id;
     this._instanceName = config.instanceName;
     this._intervalSeconds = config.intervalSeconds;
     this._name = config.name;
@@ -251,8 +269,19 @@ export class LogAnalyticsDatasourceWindowsPerformanceCounter extends cdktf.Terra
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // instance_name - computed: false, optional: false, required: true
@@ -356,6 +385,7 @@ export class LogAnalyticsDatasourceWindowsPerformanceCounter extends cdktf.Terra
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       counter_name: cdktf.stringToTerraform(this._counterName),
+      id: cdktf.stringToTerraform(this._id),
       instance_name: cdktf.stringToTerraform(this._instanceName),
       interval_seconds: cdktf.numberToTerraform(this._intervalSeconds),
       name: cdktf.stringToTerraform(this._name),

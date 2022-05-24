@@ -16,6 +16,13 @@ export interface AppServiceSlotCustomHostnameBindingConfig extends cdktf.Terrafo
   */
   readonly hostname: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot_custom_hostname_binding#id AppServiceSlotCustomHostnameBinding#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot_custom_hostname_binding#ssl_state AppServiceSlotCustomHostnameBinding#ssl_state}
   */
   readonly sslState?: string;
@@ -59,6 +66,7 @@ export function appServiceSlotCustomHostnameBindingTimeoutsToTerraform(struct?: 
 
 export class AppServiceSlotCustomHostnameBindingTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -68,7 +76,10 @@ export class AppServiceSlotCustomHostnameBindingTimeoutsOutputReference extends 
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): AppServiceSlotCustomHostnameBindingTimeouts | undefined {
+  public get internalValue(): AppServiceSlotCustomHostnameBindingTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -86,15 +97,21 @@ export class AppServiceSlotCustomHostnameBindingTimeoutsOutputReference extends 
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: AppServiceSlotCustomHostnameBindingTimeouts | undefined) {
+  public set internalValue(value: AppServiceSlotCustomHostnameBindingTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -186,6 +203,7 @@ export class AppServiceSlotCustomHostnameBinding extends cdktf.TerraformResource
     });
     this._appServiceSlotId = config.appServiceSlotId;
     this._hostname = config.hostname;
+    this._id = config.id;
     this._sslState = config.sslState;
     this._thumbprint = config.thumbprint;
     this._timeouts.internalValue = config.timeouts;
@@ -222,8 +240,19 @@ export class AppServiceSlotCustomHostnameBinding extends cdktf.TerraformResource
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // ssl_state - computed: true, optional: true, required: false
@@ -287,6 +316,7 @@ export class AppServiceSlotCustomHostnameBinding extends cdktf.TerraformResource
     return {
       app_service_slot_id: cdktf.stringToTerraform(this._appServiceSlotId),
       hostname: cdktf.stringToTerraform(this._hostname),
+      id: cdktf.stringToTerraform(this._id),
       ssl_state: cdktf.stringToTerraform(this._sslState),
       thumbprint: cdktf.stringToTerraform(this._thumbprint),
       timeouts: appServiceSlotCustomHostnameBindingTimeoutsToTerraform(this._timeouts.internalValue),

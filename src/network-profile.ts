@@ -8,6 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface NetworkProfileConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_profile#id NetworkProfile#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_profile#location NetworkProfile#location}
   */
   readonly location: string;
@@ -58,6 +65,102 @@ export function networkProfileContainerNetworkInterfaceIpConfigurationToTerrafor
   }
 }
 
+export class NetworkProfileContainerNetworkInterfaceIpConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): NetworkProfileContainerNetworkInterfaceIpConfiguration | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._subnetId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.subnetId = this._subnetId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkProfileContainerNetworkInterfaceIpConfiguration | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._subnetId = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._subnetId = value.subnetId;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // subnet_id - computed: false, optional: false, required: true
+  private _subnetId?: string; 
+  public get subnetId() {
+    return this.getStringAttribute('subnet_id');
+  }
+  public set subnetId(value: string) {
+    this._subnetId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetIdInput() {
+    return this._subnetId;
+  }
+}
+
+export class NetworkProfileContainerNetworkInterfaceIpConfigurationList extends cdktf.ComplexList {
+  public internalValue? : NetworkProfileContainerNetworkInterfaceIpConfiguration[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): NetworkProfileContainerNetworkInterfaceIpConfigurationOutputReference {
+    return new NetworkProfileContainerNetworkInterfaceIpConfigurationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface NetworkProfileContainerNetworkInterface {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_profile#name NetworkProfile#name}
@@ -100,9 +203,9 @@ export class NetworkProfileContainerNetworkInterfaceOutputReference extends cdkt
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
-    if (this._ipConfiguration !== undefined) {
+    if (this._ipConfiguration?.internalValue !== undefined) {
       hasAnyValues = true;
-      internalValueResult.ipConfiguration = this._ipConfiguration;
+      internalValueResult.ipConfiguration = this._ipConfiguration?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -111,12 +214,12 @@ export class NetworkProfileContainerNetworkInterfaceOutputReference extends cdkt
     if (value === undefined) {
       this.isEmptyObject = false;
       this._name = undefined;
-      this._ipConfiguration = undefined;
+      this._ipConfiguration.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._name = value.name;
-      this._ipConfiguration = value.ipConfiguration;
+      this._ipConfiguration.internalValue = value.ipConfiguration;
     }
   }
 
@@ -134,17 +237,16 @@ export class NetworkProfileContainerNetworkInterfaceOutputReference extends cdkt
   }
 
   // ip_configuration - computed: false, optional: false, required: true
-  private _ipConfiguration?: NetworkProfileContainerNetworkInterfaceIpConfiguration[] | cdktf.IResolvable; 
+  private _ipConfiguration = new NetworkProfileContainerNetworkInterfaceIpConfigurationList(this, "ip_configuration", false);
   public get ipConfiguration() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('ip_configuration');
+    return this._ipConfiguration;
   }
-  public set ipConfiguration(value: NetworkProfileContainerNetworkInterfaceIpConfiguration[] | cdktf.IResolvable) {
-    this._ipConfiguration = value;
+  public putIpConfiguration(value: NetworkProfileContainerNetworkInterfaceIpConfiguration[] | cdktf.IResolvable) {
+    this._ipConfiguration.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get ipConfigurationInput() {
-    return this._ipConfiguration;
+    return this._ipConfiguration.internalValue;
   }
 }
 export interface NetworkProfileTimeouts {
@@ -181,6 +283,7 @@ export function networkProfileTimeoutsToTerraform(struct?: NetworkProfileTimeout
 
 export class NetworkProfileTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -190,7 +293,10 @@ export class NetworkProfileTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): NetworkProfileTimeouts | undefined {
+  public get internalValue(): NetworkProfileTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -212,16 +318,22 @@ export class NetworkProfileTimeoutsOutputReference extends cdktf.ComplexObject {
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: NetworkProfileTimeouts | undefined) {
+  public set internalValue(value: NetworkProfileTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -328,6 +440,7 @@ export class NetworkProfile extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._id = config.id;
     this._location = config.location;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
@@ -346,8 +459,19 @@ export class NetworkProfile extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // location - computed: false, optional: false, required: true
@@ -440,6 +564,7 @@ export class NetworkProfile extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),

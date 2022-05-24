@@ -28,6 +28,13 @@ export interface ApplicationInsightsConfig extends cdktf.TerraformMetaArguments 
   */
   readonly forceCustomerStorageForProfiler?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights#id ApplicationInsights#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights#internet_ingestion_enabled ApplicationInsights#internet_ingestion_enabled}
   */
   readonly internetIngestionEnabled?: boolean | cdktf.IResolvable;
@@ -108,6 +115,7 @@ export function applicationInsightsTimeoutsToTerraform(struct?: ApplicationInsig
 
 export class ApplicationInsightsTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -117,7 +125,10 @@ export class ApplicationInsightsTimeoutsOutputReference extends cdktf.ComplexObj
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): ApplicationInsightsTimeouts | undefined {
+  public get internalValue(): ApplicationInsightsTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -139,16 +150,22 @@ export class ApplicationInsightsTimeoutsOutputReference extends cdktf.ComplexObj
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: ApplicationInsightsTimeouts | undefined) {
+  public set internalValue(value: ApplicationInsightsTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -260,6 +277,7 @@ export class ApplicationInsights extends cdktf.TerraformResource {
     this._dailyDataCapNotificationsDisabled = config.dailyDataCapNotificationsDisabled;
     this._disableIpMasking = config.disableIpMasking;
     this._forceCustomerStorageForProfiler = config.forceCustomerStorageForProfiler;
+    this._id = config.id;
     this._internetIngestionEnabled = config.internetIngestionEnabled;
     this._internetQueryEnabled = config.internetQueryEnabled;
     this._localAuthenticationDisabled = config.localAuthenticationDisabled;
@@ -365,8 +383,19 @@ export class ApplicationInsights extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // instrumentation_key - computed: true, optional: false, required: false
@@ -552,6 +581,7 @@ export class ApplicationInsights extends cdktf.TerraformResource {
       daily_data_cap_notifications_disabled: cdktf.booleanToTerraform(this._dailyDataCapNotificationsDisabled),
       disable_ip_masking: cdktf.booleanToTerraform(this._disableIpMasking),
       force_customer_storage_for_profiler: cdktf.booleanToTerraform(this._forceCustomerStorageForProfiler),
+      id: cdktf.stringToTerraform(this._id),
       internet_ingestion_enabled: cdktf.booleanToTerraform(this._internetIngestionEnabled),
       internet_query_enabled: cdktf.booleanToTerraform(this._internetQueryEnabled),
       local_authentication_disabled: cdktf.booleanToTerraform(this._localAuthenticationDisabled),

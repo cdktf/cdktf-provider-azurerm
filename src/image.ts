@@ -12,6 +12,13 @@ export interface ImageConfig extends cdktf.TerraformMetaArguments {
   */
   readonly hyperVGeneration?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image#id Image#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image#location Image#location}
   */
   readonly location: string;
@@ -91,6 +98,174 @@ export function imageDataDiskToTerraform(struct?: ImageDataDisk | cdktf.IResolva
   }
 }
 
+export class ImageDataDiskOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ImageDataDisk | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._blobUri !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.blobUri = this._blobUri;
+    }
+    if (this._caching !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.caching = this._caching;
+    }
+    if (this._lun !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.lun = this._lun;
+    }
+    if (this._managedDiskId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.managedDiskId = this._managedDiskId;
+    }
+    if (this._sizeGb !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sizeGb = this._sizeGb;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ImageDataDisk | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._blobUri = undefined;
+      this._caching = undefined;
+      this._lun = undefined;
+      this._managedDiskId = undefined;
+      this._sizeGb = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._blobUri = value.blobUri;
+      this._caching = value.caching;
+      this._lun = value.lun;
+      this._managedDiskId = value.managedDiskId;
+      this._sizeGb = value.sizeGb;
+    }
+  }
+
+  // blob_uri - computed: true, optional: true, required: false
+  private _blobUri?: string; 
+  public get blobUri() {
+    return this.getStringAttribute('blob_uri');
+  }
+  public set blobUri(value: string) {
+    this._blobUri = value;
+  }
+  public resetBlobUri() {
+    this._blobUri = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get blobUriInput() {
+    return this._blobUri;
+  }
+
+  // caching - computed: false, optional: true, required: false
+  private _caching?: string; 
+  public get caching() {
+    return this.getStringAttribute('caching');
+  }
+  public set caching(value: string) {
+    this._caching = value;
+  }
+  public resetCaching() {
+    this._caching = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cachingInput() {
+    return this._caching;
+  }
+
+  // lun - computed: false, optional: true, required: false
+  private _lun?: number; 
+  public get lun() {
+    return this.getNumberAttribute('lun');
+  }
+  public set lun(value: number) {
+    this._lun = value;
+  }
+  public resetLun() {
+    this._lun = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get lunInput() {
+    return this._lun;
+  }
+
+  // managed_disk_id - computed: false, optional: true, required: false
+  private _managedDiskId?: string; 
+  public get managedDiskId() {
+    return this.getStringAttribute('managed_disk_id');
+  }
+  public set managedDiskId(value: string) {
+    this._managedDiskId = value;
+  }
+  public resetManagedDiskId() {
+    this._managedDiskId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get managedDiskIdInput() {
+    return this._managedDiskId;
+  }
+
+  // size_gb - computed: true, optional: true, required: false
+  private _sizeGb?: number; 
+  public get sizeGb() {
+    return this.getNumberAttribute('size_gb');
+  }
+  public set sizeGb(value: number) {
+    this._sizeGb = value;
+  }
+  public resetSizeGb() {
+    this._sizeGb = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sizeGbInput() {
+    return this._sizeGb;
+  }
+}
+
+export class ImageDataDiskList extends cdktf.ComplexList {
+  public internalValue? : ImageDataDisk[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ImageDataDiskOutputReference {
+    return new ImageDataDiskOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ImageOsDisk {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image#blob_uri Image#blob_uri}
@@ -325,6 +500,7 @@ export function imageTimeoutsToTerraform(struct?: ImageTimeoutsOutputReference |
 
 export class ImageTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -334,7 +510,10 @@ export class ImageTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): ImageTimeouts | undefined {
+  public get internalValue(): ImageTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -356,16 +535,22 @@ export class ImageTimeoutsOutputReference extends cdktf.ComplexObject {
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: ImageTimeouts | undefined) {
+  public set internalValue(value: ImageTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -473,13 +658,14 @@ export class Image extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._hyperVGeneration = config.hyperVGeneration;
+    this._id = config.id;
     this._location = config.location;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._sourceVirtualMachineId = config.sourceVirtualMachineId;
     this._tags = config.tags;
     this._zoneResilient = config.zoneResilient;
-    this._dataDisk = config.dataDisk;
+    this._dataDisk.internalValue = config.dataDisk;
     this._osDisk.internalValue = config.osDisk;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -505,8 +691,19 @@ export class Image extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // location - computed: false, optional: false, required: true
@@ -597,20 +794,19 @@ export class Image extends cdktf.TerraformResource {
   }
 
   // data_disk - computed: false, optional: true, required: false
-  private _dataDisk?: ImageDataDisk[] | cdktf.IResolvable; 
+  private _dataDisk = new ImageDataDiskList(this, "data_disk", false);
   public get dataDisk() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('data_disk');
+    return this._dataDisk;
   }
-  public set dataDisk(value: ImageDataDisk[] | cdktf.IResolvable) {
-    this._dataDisk = value;
+  public putDataDisk(value: ImageDataDisk[] | cdktf.IResolvable) {
+    this._dataDisk.internalValue = value;
   }
   public resetDataDisk() {
-    this._dataDisk = undefined;
+    this._dataDisk.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get dataDiskInput() {
-    return this._dataDisk;
+    return this._dataDisk.internalValue;
   }
 
   // os_disk - computed: false, optional: true, required: false
@@ -652,13 +848,14 @@ export class Image extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       hyper_v_generation: cdktf.stringToTerraform(this._hyperVGeneration),
+      id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       source_virtual_machine_id: cdktf.stringToTerraform(this._sourceVirtualMachineId),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       zone_resilient: cdktf.booleanToTerraform(this._zoneResilient),
-      data_disk: cdktf.listMapper(imageDataDiskToTerraform)(this._dataDisk),
+      data_disk: cdktf.listMapper(imageDataDiskToTerraform)(this._dataDisk.internalValue),
       os_disk: imageOsDiskToTerraform(this._osDisk.internalValue),
       timeouts: imageTimeoutsToTerraform(this._timeouts.internalValue),
     };

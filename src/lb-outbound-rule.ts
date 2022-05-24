@@ -20,6 +20,13 @@ export interface LbOutboundRuleConfig extends cdktf.TerraformMetaArguments {
   */
   readonly enableTcpReset?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_outbound_rule#id LbOutboundRule#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_outbound_rule#idle_timeout_in_minutes LbOutboundRule#idle_timeout_in_minutes}
   */
   readonly idleTimeoutInMinutes?: number;
@@ -69,6 +76,88 @@ export function lbOutboundRuleFrontendIpConfigurationToTerraform(struct?: LbOutb
   }
 }
 
+export class LbOutboundRuleFrontendIpConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): LbOutboundRuleFrontendIpConfiguration | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LbOutboundRuleFrontendIpConfiguration | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+    }
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+}
+
+export class LbOutboundRuleFrontendIpConfigurationList extends cdktf.ComplexList {
+  public internalValue? : LbOutboundRuleFrontendIpConfiguration[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): LbOutboundRuleFrontendIpConfigurationOutputReference {
+    return new LbOutboundRuleFrontendIpConfigurationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface LbOutboundRuleTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_outbound_rule#create LbOutboundRule#create}
@@ -103,6 +192,7 @@ export function lbOutboundRuleTimeoutsToTerraform(struct?: LbOutboundRuleTimeout
 
 export class LbOutboundRuleTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -112,7 +202,10 @@ export class LbOutboundRuleTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): LbOutboundRuleTimeouts | undefined {
+  public get internalValue(): LbOutboundRuleTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -134,16 +227,22 @@ export class LbOutboundRuleTimeoutsOutputReference extends cdktf.ComplexObject {
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: LbOutboundRuleTimeouts | undefined) {
+  public set internalValue(value: LbOutboundRuleTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -253,12 +352,13 @@ export class LbOutboundRule extends cdktf.TerraformResource {
     this._allocatedOutboundPorts = config.allocatedOutboundPorts;
     this._backendAddressPoolId = config.backendAddressPoolId;
     this._enableTcpReset = config.enableTcpReset;
+    this._id = config.id;
     this._idleTimeoutInMinutes = config.idleTimeoutInMinutes;
     this._loadbalancerId = config.loadbalancerId;
     this._name = config.name;
     this._protocol = config.protocol;
     this._resourceGroupName = config.resourceGroupName;
-    this._frontendIpConfiguration = config.frontendIpConfiguration;
+    this._frontendIpConfiguration.internalValue = config.frontendIpConfiguration;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -312,8 +412,19 @@ export class LbOutboundRule extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // idle_timeout_in_minutes - computed: false, optional: true, required: false
@@ -385,20 +496,19 @@ export class LbOutboundRule extends cdktf.TerraformResource {
   }
 
   // frontend_ip_configuration - computed: false, optional: true, required: false
-  private _frontendIpConfiguration?: LbOutboundRuleFrontendIpConfiguration[] | cdktf.IResolvable; 
+  private _frontendIpConfiguration = new LbOutboundRuleFrontendIpConfigurationList(this, "frontend_ip_configuration", false);
   public get frontendIpConfiguration() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('frontend_ip_configuration');
+    return this._frontendIpConfiguration;
   }
-  public set frontendIpConfiguration(value: LbOutboundRuleFrontendIpConfiguration[] | cdktf.IResolvable) {
-    this._frontendIpConfiguration = value;
+  public putFrontendIpConfiguration(value: LbOutboundRuleFrontendIpConfiguration[] | cdktf.IResolvable) {
+    this._frontendIpConfiguration.internalValue = value;
   }
   public resetFrontendIpConfiguration() {
-    this._frontendIpConfiguration = undefined;
+    this._frontendIpConfiguration.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get frontendIpConfigurationInput() {
-    return this._frontendIpConfiguration;
+    return this._frontendIpConfiguration.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -426,12 +536,13 @@ export class LbOutboundRule extends cdktf.TerraformResource {
       allocated_outbound_ports: cdktf.numberToTerraform(this._allocatedOutboundPorts),
       backend_address_pool_id: cdktf.stringToTerraform(this._backendAddressPoolId),
       enable_tcp_reset: cdktf.booleanToTerraform(this._enableTcpReset),
+      id: cdktf.stringToTerraform(this._id),
       idle_timeout_in_minutes: cdktf.numberToTerraform(this._idleTimeoutInMinutes),
       loadbalancer_id: cdktf.stringToTerraform(this._loadbalancerId),
       name: cdktf.stringToTerraform(this._name),
       protocol: cdktf.stringToTerraform(this._protocol),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      frontend_ip_configuration: cdktf.listMapper(lbOutboundRuleFrontendIpConfigurationToTerraform)(this._frontendIpConfiguration),
+      frontend_ip_configuration: cdktf.listMapper(lbOutboundRuleFrontendIpConfigurationToTerraform)(this._frontendIpConfiguration.internalValue),
       timeouts: lbOutboundRuleTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

@@ -56,6 +56,13 @@ export interface ApiManagementAuthorizationServerConfig extends cdktf.TerraformM
   */
   readonly grantTypes: string[];
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server#id ApiManagementAuthorizationServer#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server#name ApiManagementAuthorizationServer#name}
   */
   readonly name: string;
@@ -126,6 +133,7 @@ export function apiManagementAuthorizationServerTimeoutsToTerraform(struct?: Api
 
 export class ApiManagementAuthorizationServerTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -135,7 +143,10 @@ export class ApiManagementAuthorizationServerTimeoutsOutputReference extends cdk
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): ApiManagementAuthorizationServerTimeouts | undefined {
+  public get internalValue(): ApiManagementAuthorizationServerTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -157,16 +168,22 @@ export class ApiManagementAuthorizationServerTimeoutsOutputReference extends cdk
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: ApiManagementAuthorizationServerTimeouts | undefined) {
+  public set internalValue(value: ApiManagementAuthorizationServerTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -260,6 +277,102 @@ export function apiManagementAuthorizationServerTokenBodyParameterToTerraform(st
   }
 }
 
+export class ApiManagementAuthorizationServerTokenBodyParameterOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ApiManagementAuthorizationServerTokenBodyParameter | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementAuthorizationServerTokenBodyParameter | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._value = value.value;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // value - computed: false, optional: false, required: true
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class ApiManagementAuthorizationServerTokenBodyParameterList extends cdktf.ComplexList {
+  public internalValue? : ApiManagementAuthorizationServerTokenBodyParameter[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ApiManagementAuthorizationServerTokenBodyParameterOutputReference {
+    return new ApiManagementAuthorizationServerTokenBodyParameterOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server azurerm_api_management_authorization_server}
@@ -307,6 +420,7 @@ export class ApiManagementAuthorizationServer extends cdktf.TerraformResource {
     this._description = config.description;
     this._displayName = config.displayName;
     this._grantTypes = config.grantTypes;
+    this._id = config.id;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._resourceOwnerPassword = config.resourceOwnerPassword;
@@ -314,7 +428,7 @@ export class ApiManagementAuthorizationServer extends cdktf.TerraformResource {
     this._supportState = config.supportState;
     this._tokenEndpoint = config.tokenEndpoint;
     this._timeouts.internalValue = config.timeouts;
-    this._tokenBodyParameter = config.tokenBodyParameter;
+    this._tokenBodyParameter.internalValue = config.tokenBodyParameter;
   }
 
   // ==========
@@ -493,8 +607,19 @@ export class ApiManagementAuthorizationServer extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // name - computed: false, optional: false, required: true
@@ -604,20 +729,19 @@ export class ApiManagementAuthorizationServer extends cdktf.TerraformResource {
   }
 
   // token_body_parameter - computed: false, optional: true, required: false
-  private _tokenBodyParameter?: ApiManagementAuthorizationServerTokenBodyParameter[] | cdktf.IResolvable; 
+  private _tokenBodyParameter = new ApiManagementAuthorizationServerTokenBodyParameterList(this, "token_body_parameter", false);
   public get tokenBodyParameter() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('token_body_parameter');
+    return this._tokenBodyParameter;
   }
-  public set tokenBodyParameter(value: ApiManagementAuthorizationServerTokenBodyParameter[] | cdktf.IResolvable) {
-    this._tokenBodyParameter = value;
+  public putTokenBodyParameter(value: ApiManagementAuthorizationServerTokenBodyParameter[] | cdktf.IResolvable) {
+    this._tokenBodyParameter.internalValue = value;
   }
   public resetTokenBodyParameter() {
-    this._tokenBodyParameter = undefined;
+    this._tokenBodyParameter.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get tokenBodyParameterInput() {
-    return this._tokenBodyParameter;
+    return this._tokenBodyParameter.internalValue;
   }
 
   // =========
@@ -638,6 +762,7 @@ export class ApiManagementAuthorizationServer extends cdktf.TerraformResource {
       description: cdktf.stringToTerraform(this._description),
       display_name: cdktf.stringToTerraform(this._displayName),
       grant_types: cdktf.listMapper(cdktf.stringToTerraform)(this._grantTypes),
+      id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       resource_owner_password: cdktf.stringToTerraform(this._resourceOwnerPassword),
@@ -645,7 +770,7 @@ export class ApiManagementAuthorizationServer extends cdktf.TerraformResource {
       support_state: cdktf.booleanToTerraform(this._supportState),
       token_endpoint: cdktf.stringToTerraform(this._tokenEndpoint),
       timeouts: apiManagementAuthorizationServerTimeoutsToTerraform(this._timeouts.internalValue),
-      token_body_parameter: cdktf.listMapper(apiManagementAuthorizationServerTokenBodyParameterToTerraform)(this._tokenBodyParameter),
+      token_body_parameter: cdktf.listMapper(apiManagementAuthorizationServerTokenBodyParameterToTerraform)(this._tokenBodyParameter.internalValue),
     };
   }
 }

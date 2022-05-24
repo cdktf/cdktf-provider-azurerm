@@ -16,6 +16,13 @@ export interface DataProtectionBackupPolicyDiskConfig extends cdktf.TerraformMet
   */
   readonly defaultRetentionDuration: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_disk#id DataProtectionBackupPolicyDisk#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_disk#name DataProtectionBackupPolicyDisk#name}
   */
   readonly name: string;
@@ -135,6 +142,140 @@ export function dataProtectionBackupPolicyDiskRetentionRuleToTerraform(struct?: 
   }
 }
 
+export class DataProtectionBackupPolicyDiskRetentionRuleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataProtectionBackupPolicyDiskRetentionRule | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._duration !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.duration = this._duration;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._priority !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.priority = this._priority;
+    }
+    if (this._criteria?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.criteria = this._criteria?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataProtectionBackupPolicyDiskRetentionRule | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._duration = undefined;
+      this._name = undefined;
+      this._priority = undefined;
+      this._criteria.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._duration = value.duration;
+      this._name = value.name;
+      this._priority = value.priority;
+      this._criteria.internalValue = value.criteria;
+    }
+  }
+
+  // duration - computed: false, optional: false, required: true
+  private _duration?: string; 
+  public get duration() {
+    return this.getStringAttribute('duration');
+  }
+  public set duration(value: string) {
+    this._duration = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get durationInput() {
+    return this._duration;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // priority - computed: false, optional: false, required: true
+  private _priority?: number; 
+  public get priority() {
+    return this.getNumberAttribute('priority');
+  }
+  public set priority(value: number) {
+    this._priority = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get priorityInput() {
+    return this._priority;
+  }
+
+  // criteria - computed: false, optional: false, required: true
+  private _criteria = new DataProtectionBackupPolicyDiskRetentionRuleCriteriaOutputReference(this, "criteria");
+  public get criteria() {
+    return this._criteria;
+  }
+  public putCriteria(value: DataProtectionBackupPolicyDiskRetentionRuleCriteria) {
+    this._criteria.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get criteriaInput() {
+    return this._criteria.internalValue;
+  }
+}
+
+export class DataProtectionBackupPolicyDiskRetentionRuleList extends cdktf.ComplexList {
+  public internalValue? : DataProtectionBackupPolicyDiskRetentionRule[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataProtectionBackupPolicyDiskRetentionRuleOutputReference {
+    return new DataProtectionBackupPolicyDiskRetentionRuleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataProtectionBackupPolicyDiskTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_disk#create DataProtectionBackupPolicyDisk#create}
@@ -169,6 +310,7 @@ export function dataProtectionBackupPolicyDiskTimeoutsToTerraform(struct?: DataP
 
 export class DataProtectionBackupPolicyDiskTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -178,7 +320,10 @@ export class DataProtectionBackupPolicyDiskTimeoutsOutputReference extends cdktf
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): DataProtectionBackupPolicyDiskTimeouts | undefined {
+  public get internalValue(): DataProtectionBackupPolicyDiskTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -200,16 +345,22 @@ export class DataProtectionBackupPolicyDiskTimeoutsOutputReference extends cdktf
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: DataProtectionBackupPolicyDiskTimeouts | undefined) {
+  public set internalValue(value: DataProtectionBackupPolicyDiskTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -318,9 +469,10 @@ export class DataProtectionBackupPolicyDisk extends cdktf.TerraformResource {
     });
     this._backupRepeatingTimeIntervals = config.backupRepeatingTimeIntervals;
     this._defaultRetentionDuration = config.defaultRetentionDuration;
+    this._id = config.id;
     this._name = config.name;
     this._vaultId = config.vaultId;
-    this._retentionRule = config.retentionRule;
+    this._retentionRule.internalValue = config.retentionRule;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -355,8 +507,19 @@ export class DataProtectionBackupPolicyDisk extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // name - computed: false, optional: false, required: true
@@ -386,20 +549,19 @@ export class DataProtectionBackupPolicyDisk extends cdktf.TerraformResource {
   }
 
   // retention_rule - computed: false, optional: true, required: false
-  private _retentionRule?: DataProtectionBackupPolicyDiskRetentionRule[] | cdktf.IResolvable; 
+  private _retentionRule = new DataProtectionBackupPolicyDiskRetentionRuleList(this, "retention_rule", false);
   public get retentionRule() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('retention_rule');
+    return this._retentionRule;
   }
-  public set retentionRule(value: DataProtectionBackupPolicyDiskRetentionRule[] | cdktf.IResolvable) {
-    this._retentionRule = value;
+  public putRetentionRule(value: DataProtectionBackupPolicyDiskRetentionRule[] | cdktf.IResolvable) {
+    this._retentionRule.internalValue = value;
   }
   public resetRetentionRule() {
-    this._retentionRule = undefined;
+    this._retentionRule.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get retentionRuleInput() {
-    return this._retentionRule;
+    return this._retentionRule.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -426,9 +588,10 @@ export class DataProtectionBackupPolicyDisk extends cdktf.TerraformResource {
     return {
       backup_repeating_time_intervals: cdktf.listMapper(cdktf.stringToTerraform)(this._backupRepeatingTimeIntervals),
       default_retention_duration: cdktf.stringToTerraform(this._defaultRetentionDuration),
+      id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       vault_id: cdktf.stringToTerraform(this._vaultId),
-      retention_rule: cdktf.listMapper(dataProtectionBackupPolicyDiskRetentionRuleToTerraform)(this._retentionRule),
+      retention_rule: cdktf.listMapper(dataProtectionBackupPolicyDiskRetentionRuleToTerraform)(this._retentionRule.internalValue),
       timeouts: dataProtectionBackupPolicyDiskTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

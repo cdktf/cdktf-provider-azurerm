@@ -16,6 +16,13 @@ export interface CosmosdbSqlRoleDefinitionConfig extends cdktf.TerraformMetaArgu
   */
   readonly assignableScopes: string[];
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_role_definition#id CosmosdbSqlRoleDefinition#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_role_definition#name CosmosdbSqlRoleDefinition#name}
   */
   readonly name: string;
@@ -61,6 +68,83 @@ export function cosmosdbSqlRoleDefinitionPermissionsToTerraform(struct?: Cosmosd
   }
 }
 
+export class CosmosdbSqlRoleDefinitionPermissionsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CosmosdbSqlRoleDefinitionPermissions | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._dataActions !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dataActions = this._dataActions;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CosmosdbSqlRoleDefinitionPermissions | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._dataActions = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._dataActions = value.dataActions;
+    }
+  }
+
+  // data_actions - computed: false, optional: false, required: true
+  private _dataActions?: string[]; 
+  public get dataActions() {
+    return cdktf.Fn.tolist(this.getListAttribute('data_actions'));
+  }
+  public set dataActions(value: string[]) {
+    this._dataActions = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataActionsInput() {
+    return this._dataActions;
+  }
+}
+
+export class CosmosdbSqlRoleDefinitionPermissionsList extends cdktf.ComplexList {
+  public internalValue? : CosmosdbSqlRoleDefinitionPermissions[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CosmosdbSqlRoleDefinitionPermissionsOutputReference {
+    return new CosmosdbSqlRoleDefinitionPermissionsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CosmosdbSqlRoleDefinitionTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_role_definition#create CosmosdbSqlRoleDefinition#create}
@@ -95,6 +179,7 @@ export function cosmosdbSqlRoleDefinitionTimeoutsToTerraform(struct?: CosmosdbSq
 
 export class CosmosdbSqlRoleDefinitionTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -104,7 +189,10 @@ export class CosmosdbSqlRoleDefinitionTimeoutsOutputReference extends cdktf.Comp
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): CosmosdbSqlRoleDefinitionTimeouts | undefined {
+  public get internalValue(): CosmosdbSqlRoleDefinitionTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -126,16 +214,22 @@ export class CosmosdbSqlRoleDefinitionTimeoutsOutputReference extends cdktf.Comp
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: CosmosdbSqlRoleDefinitionTimeouts | undefined) {
+  public set internalValue(value: CosmosdbSqlRoleDefinitionTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -244,11 +338,12 @@ export class CosmosdbSqlRoleDefinition extends cdktf.TerraformResource {
     });
     this._accountName = config.accountName;
     this._assignableScopes = config.assignableScopes;
+    this._id = config.id;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._roleDefinitionId = config.roleDefinitionId;
     this._type = config.type;
-    this._permissions = config.permissions;
+    this._permissions.internalValue = config.permissions;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -283,8 +378,19 @@ export class CosmosdbSqlRoleDefinition extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // name - computed: false, optional: false, required: true
@@ -346,17 +452,16 @@ export class CosmosdbSqlRoleDefinition extends cdktf.TerraformResource {
   }
 
   // permissions - computed: false, optional: false, required: true
-  private _permissions?: CosmosdbSqlRoleDefinitionPermissions[] | cdktf.IResolvable; 
+  private _permissions = new CosmosdbSqlRoleDefinitionPermissionsList(this, "permissions", true);
   public get permissions() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('permissions')));
+    return this._permissions;
   }
-  public set permissions(value: CosmosdbSqlRoleDefinitionPermissions[] | cdktf.IResolvable) {
-    this._permissions = value;
+  public putPermissions(value: CosmosdbSqlRoleDefinitionPermissions[] | cdktf.IResolvable) {
+    this._permissions.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get permissionsInput() {
-    return this._permissions;
+    return this._permissions.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -383,11 +488,12 @@ export class CosmosdbSqlRoleDefinition extends cdktf.TerraformResource {
     return {
       account_name: cdktf.stringToTerraform(this._accountName),
       assignable_scopes: cdktf.listMapper(cdktf.stringToTerraform)(this._assignableScopes),
+      id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       role_definition_id: cdktf.stringToTerraform(this._roleDefinitionId),
       type: cdktf.stringToTerraform(this._type),
-      permissions: cdktf.listMapper(cosmosdbSqlRoleDefinitionPermissionsToTerraform)(this._permissions),
+      permissions: cdktf.listMapper(cosmosdbSqlRoleDefinitionPermissionsToTerraform)(this._permissions.internalValue),
       timeouts: cosmosdbSqlRoleDefinitionTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

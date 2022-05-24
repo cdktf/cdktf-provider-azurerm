@@ -20,6 +20,13 @@ export interface VirtualDesktopScalingPlanConfig extends cdktf.TerraformMetaArgu
   */
   readonly friendlyName?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_scaling_plan#id VirtualDesktopScalingPlan#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_scaling_plan#location VirtualDesktopScalingPlan#location}
   */
   readonly location: string;
@@ -80,6 +87,102 @@ export function virtualDesktopScalingPlanHostPoolToTerraform(struct?: VirtualDes
   }
 }
 
+export class VirtualDesktopScalingPlanHostPoolOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): VirtualDesktopScalingPlanHostPool | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._hostpoolId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.hostpoolId = this._hostpoolId;
+    }
+    if (this._scalingPlanEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.scalingPlanEnabled = this._scalingPlanEnabled;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: VirtualDesktopScalingPlanHostPool | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._hostpoolId = undefined;
+      this._scalingPlanEnabled = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._hostpoolId = value.hostpoolId;
+      this._scalingPlanEnabled = value.scalingPlanEnabled;
+    }
+  }
+
+  // hostpool_id - computed: false, optional: false, required: true
+  private _hostpoolId?: string; 
+  public get hostpoolId() {
+    return this.getStringAttribute('hostpool_id');
+  }
+  public set hostpoolId(value: string) {
+    this._hostpoolId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hostpoolIdInput() {
+    return this._hostpoolId;
+  }
+
+  // scaling_plan_enabled - computed: false, optional: false, required: true
+  private _scalingPlanEnabled?: boolean | cdktf.IResolvable; 
+  public get scalingPlanEnabled() {
+    return this.getBooleanAttribute('scaling_plan_enabled');
+  }
+  public set scalingPlanEnabled(value: boolean | cdktf.IResolvable) {
+    this._scalingPlanEnabled = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scalingPlanEnabledInput() {
+    return this._scalingPlanEnabled;
+  }
+}
+
+export class VirtualDesktopScalingPlanHostPoolList extends cdktf.ComplexList {
+  public internalValue? : VirtualDesktopScalingPlanHostPool[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): VirtualDesktopScalingPlanHostPoolOutputReference {
+    return new VirtualDesktopScalingPlanHostPoolOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface VirtualDesktopScalingPlanSchedule {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_scaling_plan#days_of_week VirtualDesktopScalingPlan#days_of_week}
@@ -182,6 +285,412 @@ export function virtualDesktopScalingPlanScheduleToTerraform(struct?: VirtualDes
   }
 }
 
+export class VirtualDesktopScalingPlanScheduleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): VirtualDesktopScalingPlanSchedule | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._daysOfWeek !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.daysOfWeek = this._daysOfWeek;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._offPeakLoadBalancingAlgorithm !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.offPeakLoadBalancingAlgorithm = this._offPeakLoadBalancingAlgorithm;
+    }
+    if (this._offPeakStartTime !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.offPeakStartTime = this._offPeakStartTime;
+    }
+    if (this._peakLoadBalancingAlgorithm !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.peakLoadBalancingAlgorithm = this._peakLoadBalancingAlgorithm;
+    }
+    if (this._peakStartTime !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.peakStartTime = this._peakStartTime;
+    }
+    if (this._rampDownCapacityThresholdPercent !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rampDownCapacityThresholdPercent = this._rampDownCapacityThresholdPercent;
+    }
+    if (this._rampDownForceLogoffUsers !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rampDownForceLogoffUsers = this._rampDownForceLogoffUsers;
+    }
+    if (this._rampDownLoadBalancingAlgorithm !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rampDownLoadBalancingAlgorithm = this._rampDownLoadBalancingAlgorithm;
+    }
+    if (this._rampDownMinimumHostsPercent !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rampDownMinimumHostsPercent = this._rampDownMinimumHostsPercent;
+    }
+    if (this._rampDownNotificationMessage !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rampDownNotificationMessage = this._rampDownNotificationMessage;
+    }
+    if (this._rampDownStartTime !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rampDownStartTime = this._rampDownStartTime;
+    }
+    if (this._rampDownStopHostsWhen !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rampDownStopHostsWhen = this._rampDownStopHostsWhen;
+    }
+    if (this._rampDownWaitTimeMinutes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rampDownWaitTimeMinutes = this._rampDownWaitTimeMinutes;
+    }
+    if (this._rampUpCapacityThresholdPercent !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rampUpCapacityThresholdPercent = this._rampUpCapacityThresholdPercent;
+    }
+    if (this._rampUpLoadBalancingAlgorithm !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rampUpLoadBalancingAlgorithm = this._rampUpLoadBalancingAlgorithm;
+    }
+    if (this._rampUpMinimumHostsPercent !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rampUpMinimumHostsPercent = this._rampUpMinimumHostsPercent;
+    }
+    if (this._rampUpStartTime !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rampUpStartTime = this._rampUpStartTime;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: VirtualDesktopScalingPlanSchedule | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._daysOfWeek = undefined;
+      this._name = undefined;
+      this._offPeakLoadBalancingAlgorithm = undefined;
+      this._offPeakStartTime = undefined;
+      this._peakLoadBalancingAlgorithm = undefined;
+      this._peakStartTime = undefined;
+      this._rampDownCapacityThresholdPercent = undefined;
+      this._rampDownForceLogoffUsers = undefined;
+      this._rampDownLoadBalancingAlgorithm = undefined;
+      this._rampDownMinimumHostsPercent = undefined;
+      this._rampDownNotificationMessage = undefined;
+      this._rampDownStartTime = undefined;
+      this._rampDownStopHostsWhen = undefined;
+      this._rampDownWaitTimeMinutes = undefined;
+      this._rampUpCapacityThresholdPercent = undefined;
+      this._rampUpLoadBalancingAlgorithm = undefined;
+      this._rampUpMinimumHostsPercent = undefined;
+      this._rampUpStartTime = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._daysOfWeek = value.daysOfWeek;
+      this._name = value.name;
+      this._offPeakLoadBalancingAlgorithm = value.offPeakLoadBalancingAlgorithm;
+      this._offPeakStartTime = value.offPeakStartTime;
+      this._peakLoadBalancingAlgorithm = value.peakLoadBalancingAlgorithm;
+      this._peakStartTime = value.peakStartTime;
+      this._rampDownCapacityThresholdPercent = value.rampDownCapacityThresholdPercent;
+      this._rampDownForceLogoffUsers = value.rampDownForceLogoffUsers;
+      this._rampDownLoadBalancingAlgorithm = value.rampDownLoadBalancingAlgorithm;
+      this._rampDownMinimumHostsPercent = value.rampDownMinimumHostsPercent;
+      this._rampDownNotificationMessage = value.rampDownNotificationMessage;
+      this._rampDownStartTime = value.rampDownStartTime;
+      this._rampDownStopHostsWhen = value.rampDownStopHostsWhen;
+      this._rampDownWaitTimeMinutes = value.rampDownWaitTimeMinutes;
+      this._rampUpCapacityThresholdPercent = value.rampUpCapacityThresholdPercent;
+      this._rampUpLoadBalancingAlgorithm = value.rampUpLoadBalancingAlgorithm;
+      this._rampUpMinimumHostsPercent = value.rampUpMinimumHostsPercent;
+      this._rampUpStartTime = value.rampUpStartTime;
+    }
+  }
+
+  // days_of_week - computed: false, optional: false, required: true
+  private _daysOfWeek?: string[]; 
+  public get daysOfWeek() {
+    return cdktf.Fn.tolist(this.getListAttribute('days_of_week'));
+  }
+  public set daysOfWeek(value: string[]) {
+    this._daysOfWeek = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get daysOfWeekInput() {
+    return this._daysOfWeek;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // off_peak_load_balancing_algorithm - computed: false, optional: false, required: true
+  private _offPeakLoadBalancingAlgorithm?: string; 
+  public get offPeakLoadBalancingAlgorithm() {
+    return this.getStringAttribute('off_peak_load_balancing_algorithm');
+  }
+  public set offPeakLoadBalancingAlgorithm(value: string) {
+    this._offPeakLoadBalancingAlgorithm = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get offPeakLoadBalancingAlgorithmInput() {
+    return this._offPeakLoadBalancingAlgorithm;
+  }
+
+  // off_peak_start_time - computed: false, optional: false, required: true
+  private _offPeakStartTime?: string; 
+  public get offPeakStartTime() {
+    return this.getStringAttribute('off_peak_start_time');
+  }
+  public set offPeakStartTime(value: string) {
+    this._offPeakStartTime = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get offPeakStartTimeInput() {
+    return this._offPeakStartTime;
+  }
+
+  // peak_load_balancing_algorithm - computed: false, optional: false, required: true
+  private _peakLoadBalancingAlgorithm?: string; 
+  public get peakLoadBalancingAlgorithm() {
+    return this.getStringAttribute('peak_load_balancing_algorithm');
+  }
+  public set peakLoadBalancingAlgorithm(value: string) {
+    this._peakLoadBalancingAlgorithm = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get peakLoadBalancingAlgorithmInput() {
+    return this._peakLoadBalancingAlgorithm;
+  }
+
+  // peak_start_time - computed: false, optional: false, required: true
+  private _peakStartTime?: string; 
+  public get peakStartTime() {
+    return this.getStringAttribute('peak_start_time');
+  }
+  public set peakStartTime(value: string) {
+    this._peakStartTime = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get peakStartTimeInput() {
+    return this._peakStartTime;
+  }
+
+  // ramp_down_capacity_threshold_percent - computed: false, optional: false, required: true
+  private _rampDownCapacityThresholdPercent?: number; 
+  public get rampDownCapacityThresholdPercent() {
+    return this.getNumberAttribute('ramp_down_capacity_threshold_percent');
+  }
+  public set rampDownCapacityThresholdPercent(value: number) {
+    this._rampDownCapacityThresholdPercent = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rampDownCapacityThresholdPercentInput() {
+    return this._rampDownCapacityThresholdPercent;
+  }
+
+  // ramp_down_force_logoff_users - computed: false, optional: false, required: true
+  private _rampDownForceLogoffUsers?: boolean | cdktf.IResolvable; 
+  public get rampDownForceLogoffUsers() {
+    return this.getBooleanAttribute('ramp_down_force_logoff_users');
+  }
+  public set rampDownForceLogoffUsers(value: boolean | cdktf.IResolvable) {
+    this._rampDownForceLogoffUsers = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rampDownForceLogoffUsersInput() {
+    return this._rampDownForceLogoffUsers;
+  }
+
+  // ramp_down_load_balancing_algorithm - computed: false, optional: false, required: true
+  private _rampDownLoadBalancingAlgorithm?: string; 
+  public get rampDownLoadBalancingAlgorithm() {
+    return this.getStringAttribute('ramp_down_load_balancing_algorithm');
+  }
+  public set rampDownLoadBalancingAlgorithm(value: string) {
+    this._rampDownLoadBalancingAlgorithm = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rampDownLoadBalancingAlgorithmInput() {
+    return this._rampDownLoadBalancingAlgorithm;
+  }
+
+  // ramp_down_minimum_hosts_percent - computed: false, optional: false, required: true
+  private _rampDownMinimumHostsPercent?: number; 
+  public get rampDownMinimumHostsPercent() {
+    return this.getNumberAttribute('ramp_down_minimum_hosts_percent');
+  }
+  public set rampDownMinimumHostsPercent(value: number) {
+    this._rampDownMinimumHostsPercent = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rampDownMinimumHostsPercentInput() {
+    return this._rampDownMinimumHostsPercent;
+  }
+
+  // ramp_down_notification_message - computed: false, optional: false, required: true
+  private _rampDownNotificationMessage?: string; 
+  public get rampDownNotificationMessage() {
+    return this.getStringAttribute('ramp_down_notification_message');
+  }
+  public set rampDownNotificationMessage(value: string) {
+    this._rampDownNotificationMessage = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rampDownNotificationMessageInput() {
+    return this._rampDownNotificationMessage;
+  }
+
+  // ramp_down_start_time - computed: false, optional: false, required: true
+  private _rampDownStartTime?: string; 
+  public get rampDownStartTime() {
+    return this.getStringAttribute('ramp_down_start_time');
+  }
+  public set rampDownStartTime(value: string) {
+    this._rampDownStartTime = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rampDownStartTimeInput() {
+    return this._rampDownStartTime;
+  }
+
+  // ramp_down_stop_hosts_when - computed: false, optional: false, required: true
+  private _rampDownStopHostsWhen?: string; 
+  public get rampDownStopHostsWhen() {
+    return this.getStringAttribute('ramp_down_stop_hosts_when');
+  }
+  public set rampDownStopHostsWhen(value: string) {
+    this._rampDownStopHostsWhen = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rampDownStopHostsWhenInput() {
+    return this._rampDownStopHostsWhen;
+  }
+
+  // ramp_down_wait_time_minutes - computed: false, optional: false, required: true
+  private _rampDownWaitTimeMinutes?: number; 
+  public get rampDownWaitTimeMinutes() {
+    return this.getNumberAttribute('ramp_down_wait_time_minutes');
+  }
+  public set rampDownWaitTimeMinutes(value: number) {
+    this._rampDownWaitTimeMinutes = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rampDownWaitTimeMinutesInput() {
+    return this._rampDownWaitTimeMinutes;
+  }
+
+  // ramp_up_capacity_threshold_percent - computed: false, optional: true, required: false
+  private _rampUpCapacityThresholdPercent?: number; 
+  public get rampUpCapacityThresholdPercent() {
+    return this.getNumberAttribute('ramp_up_capacity_threshold_percent');
+  }
+  public set rampUpCapacityThresholdPercent(value: number) {
+    this._rampUpCapacityThresholdPercent = value;
+  }
+  public resetRampUpCapacityThresholdPercent() {
+    this._rampUpCapacityThresholdPercent = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rampUpCapacityThresholdPercentInput() {
+    return this._rampUpCapacityThresholdPercent;
+  }
+
+  // ramp_up_load_balancing_algorithm - computed: false, optional: false, required: true
+  private _rampUpLoadBalancingAlgorithm?: string; 
+  public get rampUpLoadBalancingAlgorithm() {
+    return this.getStringAttribute('ramp_up_load_balancing_algorithm');
+  }
+  public set rampUpLoadBalancingAlgorithm(value: string) {
+    this._rampUpLoadBalancingAlgorithm = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rampUpLoadBalancingAlgorithmInput() {
+    return this._rampUpLoadBalancingAlgorithm;
+  }
+
+  // ramp_up_minimum_hosts_percent - computed: false, optional: true, required: false
+  private _rampUpMinimumHostsPercent?: number; 
+  public get rampUpMinimumHostsPercent() {
+    return this.getNumberAttribute('ramp_up_minimum_hosts_percent');
+  }
+  public set rampUpMinimumHostsPercent(value: number) {
+    this._rampUpMinimumHostsPercent = value;
+  }
+  public resetRampUpMinimumHostsPercent() {
+    this._rampUpMinimumHostsPercent = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rampUpMinimumHostsPercentInput() {
+    return this._rampUpMinimumHostsPercent;
+  }
+
+  // ramp_up_start_time - computed: false, optional: false, required: true
+  private _rampUpStartTime?: string; 
+  public get rampUpStartTime() {
+    return this.getStringAttribute('ramp_up_start_time');
+  }
+  public set rampUpStartTime(value: string) {
+    this._rampUpStartTime = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rampUpStartTimeInput() {
+    return this._rampUpStartTime;
+  }
+}
+
+export class VirtualDesktopScalingPlanScheduleList extends cdktf.ComplexList {
+  public internalValue? : VirtualDesktopScalingPlanSchedule[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): VirtualDesktopScalingPlanScheduleOutputReference {
+    return new VirtualDesktopScalingPlanScheduleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface VirtualDesktopScalingPlanTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_scaling_plan#create VirtualDesktopScalingPlan#create}
@@ -216,6 +725,7 @@ export function virtualDesktopScalingPlanTimeoutsToTerraform(struct?: VirtualDes
 
 export class VirtualDesktopScalingPlanTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -225,7 +735,10 @@ export class VirtualDesktopScalingPlanTimeoutsOutputReference extends cdktf.Comp
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): VirtualDesktopScalingPlanTimeouts | undefined {
+  public get internalValue(): VirtualDesktopScalingPlanTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -247,16 +760,22 @@ export class VirtualDesktopScalingPlanTimeoutsOutputReference extends cdktf.Comp
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: VirtualDesktopScalingPlanTimeouts | undefined) {
+  public set internalValue(value: VirtualDesktopScalingPlanTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -366,13 +885,14 @@ export class VirtualDesktopScalingPlan extends cdktf.TerraformResource {
     this._description = config.description;
     this._exclusionTag = config.exclusionTag;
     this._friendlyName = config.friendlyName;
+    this._id = config.id;
     this._location = config.location;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
     this._timeZone = config.timeZone;
-    this._hostPool = config.hostPool;
-    this._schedule = config.schedule;
+    this._hostPool.internalValue = config.hostPool;
+    this._schedule.internalValue = config.schedule;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -429,8 +949,19 @@ export class VirtualDesktopScalingPlan extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // location - computed: false, optional: false, required: true
@@ -502,34 +1033,32 @@ export class VirtualDesktopScalingPlan extends cdktf.TerraformResource {
   }
 
   // host_pool - computed: false, optional: true, required: false
-  private _hostPool?: VirtualDesktopScalingPlanHostPool[] | cdktf.IResolvable; 
+  private _hostPool = new VirtualDesktopScalingPlanHostPoolList(this, "host_pool", false);
   public get hostPool() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('host_pool');
+    return this._hostPool;
   }
-  public set hostPool(value: VirtualDesktopScalingPlanHostPool[] | cdktf.IResolvable) {
-    this._hostPool = value;
+  public putHostPool(value: VirtualDesktopScalingPlanHostPool[] | cdktf.IResolvable) {
+    this._hostPool.internalValue = value;
   }
   public resetHostPool() {
-    this._hostPool = undefined;
+    this._hostPool.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get hostPoolInput() {
-    return this._hostPool;
+    return this._hostPool.internalValue;
   }
 
   // schedule - computed: false, optional: false, required: true
-  private _schedule?: VirtualDesktopScalingPlanSchedule[] | cdktf.IResolvable; 
+  private _schedule = new VirtualDesktopScalingPlanScheduleList(this, "schedule", false);
   public get schedule() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('schedule');
+    return this._schedule;
   }
-  public set schedule(value: VirtualDesktopScalingPlanSchedule[] | cdktf.IResolvable) {
-    this._schedule = value;
+  public putSchedule(value: VirtualDesktopScalingPlanSchedule[] | cdktf.IResolvable) {
+    this._schedule.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get scheduleInput() {
-    return this._schedule;
+    return this._schedule.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -557,13 +1086,14 @@ export class VirtualDesktopScalingPlan extends cdktf.TerraformResource {
       description: cdktf.stringToTerraform(this._description),
       exclusion_tag: cdktf.stringToTerraform(this._exclusionTag),
       friendly_name: cdktf.stringToTerraform(this._friendlyName),
+      id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       time_zone: cdktf.stringToTerraform(this._timeZone),
-      host_pool: cdktf.listMapper(virtualDesktopScalingPlanHostPoolToTerraform)(this._hostPool),
-      schedule: cdktf.listMapper(virtualDesktopScalingPlanScheduleToTerraform)(this._schedule),
+      host_pool: cdktf.listMapper(virtualDesktopScalingPlanHostPoolToTerraform)(this._hostPool.internalValue),
+      schedule: cdktf.listMapper(virtualDesktopScalingPlanScheduleToTerraform)(this._schedule.internalValue),
       timeouts: virtualDesktopScalingPlanTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

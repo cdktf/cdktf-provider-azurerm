@@ -12,6 +12,13 @@ export interface DataAzurermAppConfigurationKeyConfig extends cdktf.TerraformMet
   */
   readonly configurationStoreId: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_configuration_key#id DataAzurermAppConfigurationKey#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_configuration_key#key DataAzurermAppConfigurationKey#key}
   */
   readonly key: string;
@@ -45,6 +52,7 @@ export function dataAzurermAppConfigurationKeyTimeoutsToTerraform(struct?: DataA
 
 export class DataAzurermAppConfigurationKeyTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -54,7 +62,10 @@ export class DataAzurermAppConfigurationKeyTimeoutsOutputReference extends cdktf
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): DataAzurermAppConfigurationKeyTimeouts | undefined {
+  public get internalValue(): DataAzurermAppConfigurationKeyTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._read !== undefined) {
@@ -64,13 +75,19 @@ export class DataAzurermAppConfigurationKeyTimeoutsOutputReference extends cdktf
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: DataAzurermAppConfigurationKeyTimeouts | undefined) {
+  public set internalValue(value: DataAzurermAppConfigurationKeyTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._read = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._read = value.read;
     }
   }
@@ -127,6 +144,7 @@ export class DataAzurermAppConfigurationKey extends cdktf.TerraformDataSource {
       lifecycle: config.lifecycle
     });
     this._configurationStoreId = config.configurationStoreId;
+    this._id = config.id;
     this._key = config.key;
     this._label = config.label;
     this._timeouts.internalValue = config.timeouts;
@@ -160,8 +178,19 @@ export class DataAzurermAppConfigurationKey extends cdktf.TerraformDataSource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // key - computed: false, optional: false, required: true
@@ -199,8 +228,9 @@ export class DataAzurermAppConfigurationKey extends cdktf.TerraformDataSource {
   }
 
   // tags - computed: true, optional: false, required: false
-  public tags(key: string): string | cdktf.IResolvable {
-    return new cdktf.StringMap(this, 'tags').lookup(key);
+  private _tags = new cdktf.StringMap(this, "tags");
+  public get tags() {
+    return this._tags;
   }
 
   // type - computed: true, optional: false, required: false
@@ -241,6 +271,7 @@ export class DataAzurermAppConfigurationKey extends cdktf.TerraformDataSource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       configuration_store_id: cdktf.stringToTerraform(this._configurationStoreId),
+      id: cdktf.stringToTerraform(this._id),
       key: cdktf.stringToTerraform(this._key),
       label: cdktf.stringToTerraform(this._label),
       timeouts: dataAzurermAppConfigurationKeyTimeoutsToTerraform(this._timeouts.internalValue),

@@ -40,6 +40,13 @@ export interface LbRuleConfig extends cdktf.TerraformMetaArguments {
   */
   readonly frontendPort: number;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_rule#id LbRule#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_rule#idle_timeout_in_minutes LbRule#idle_timeout_in_minutes}
   */
   readonly idleTimeoutInMinutes?: number;
@@ -108,6 +115,7 @@ export function lbRuleTimeoutsToTerraform(struct?: LbRuleTimeoutsOutputReference
 
 export class LbRuleTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -117,7 +125,10 @@ export class LbRuleTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): LbRuleTimeouts | undefined {
+  public get internalValue(): LbRuleTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -139,16 +150,22 @@ export class LbRuleTimeoutsOutputReference extends cdktf.ComplexObject {
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: LbRuleTimeouts | undefined) {
+  public set internalValue(value: LbRuleTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -263,6 +280,7 @@ export class LbRule extends cdktf.TerraformResource {
     this._enableTcpReset = config.enableTcpReset;
     this._frontendIpConfigurationName = config.frontendIpConfigurationName;
     this._frontendPort = config.frontendPort;
+    this._id = config.id;
     this._idleTimeoutInMinutes = config.idleTimeoutInMinutes;
     this._loadDistribution = config.loadDistribution;
     this._loadbalancerId = config.loadbalancerId;
@@ -402,8 +420,19 @@ export class LbRule extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // idle_timeout_in_minutes - computed: true, optional: true, required: false
@@ -536,6 +565,7 @@ export class LbRule extends cdktf.TerraformResource {
       enable_tcp_reset: cdktf.booleanToTerraform(this._enableTcpReset),
       frontend_ip_configuration_name: cdktf.stringToTerraform(this._frontendIpConfigurationName),
       frontend_port: cdktf.numberToTerraform(this._frontendPort),
+      id: cdktf.stringToTerraform(this._id),
       idle_timeout_in_minutes: cdktf.numberToTerraform(this._idleTimeoutInMinutes),
       load_distribution: cdktf.stringToTerraform(this._loadDistribution),
       loadbalancer_id: cdktf.stringToTerraform(this._loadbalancerId),

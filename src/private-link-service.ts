@@ -16,6 +16,13 @@ export interface PrivateLinkServiceConfig extends cdktf.TerraformMetaArguments {
   */
   readonly enableProxyProtocol?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_link_service#id PrivateLinkService#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_link_service#load_balancer_frontend_ip_configuration_ids PrivateLinkService#load_balancer_frontend_ip_configuration_ids}
   */
   readonly loadBalancerFrontendIpConfigurationIds: string[];
@@ -89,6 +96,165 @@ export function privateLinkServiceNatIpConfigurationToTerraform(struct?: Private
   }
 }
 
+export class PrivateLinkServiceNatIpConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): PrivateLinkServiceNatIpConfiguration | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._primary !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.primary = this._primary;
+    }
+    if (this._privateIpAddress !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.privateIpAddress = this._privateIpAddress;
+    }
+    if (this._privateIpAddressVersion !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.privateIpAddressVersion = this._privateIpAddressVersion;
+    }
+    if (this._subnetId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.subnetId = this._subnetId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PrivateLinkServiceNatIpConfiguration | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._primary = undefined;
+      this._privateIpAddress = undefined;
+      this._privateIpAddressVersion = undefined;
+      this._subnetId = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._primary = value.primary;
+      this._privateIpAddress = value.privateIpAddress;
+      this._privateIpAddressVersion = value.privateIpAddressVersion;
+      this._subnetId = value.subnetId;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // primary - computed: false, optional: false, required: true
+  private _primary?: boolean | cdktf.IResolvable; 
+  public get primary() {
+    return this.getBooleanAttribute('primary');
+  }
+  public set primary(value: boolean | cdktf.IResolvable) {
+    this._primary = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get primaryInput() {
+    return this._primary;
+  }
+
+  // private_ip_address - computed: false, optional: true, required: false
+  private _privateIpAddress?: string; 
+  public get privateIpAddress() {
+    return this.getStringAttribute('private_ip_address');
+  }
+  public set privateIpAddress(value: string) {
+    this._privateIpAddress = value;
+  }
+  public resetPrivateIpAddress() {
+    this._privateIpAddress = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateIpAddressInput() {
+    return this._privateIpAddress;
+  }
+
+  // private_ip_address_version - computed: false, optional: true, required: false
+  private _privateIpAddressVersion?: string; 
+  public get privateIpAddressVersion() {
+    return this.getStringAttribute('private_ip_address_version');
+  }
+  public set privateIpAddressVersion(value: string) {
+    this._privateIpAddressVersion = value;
+  }
+  public resetPrivateIpAddressVersion() {
+    this._privateIpAddressVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateIpAddressVersionInput() {
+    return this._privateIpAddressVersion;
+  }
+
+  // subnet_id - computed: false, optional: false, required: true
+  private _subnetId?: string; 
+  public get subnetId() {
+    return this.getStringAttribute('subnet_id');
+  }
+  public set subnetId(value: string) {
+    this._subnetId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetIdInput() {
+    return this._subnetId;
+  }
+}
+
+export class PrivateLinkServiceNatIpConfigurationList extends cdktf.ComplexList {
+  public internalValue? : PrivateLinkServiceNatIpConfiguration[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): PrivateLinkServiceNatIpConfigurationOutputReference {
+    return new PrivateLinkServiceNatIpConfigurationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface PrivateLinkServiceTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_link_service#create PrivateLinkService#create}
@@ -123,6 +289,7 @@ export function privateLinkServiceTimeoutsToTerraform(struct?: PrivateLinkServic
 
 export class PrivateLinkServiceTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -132,7 +299,10 @@ export class PrivateLinkServiceTimeoutsOutputReference extends cdktf.ComplexObje
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): PrivateLinkServiceTimeouts | undefined {
+  public get internalValue(): PrivateLinkServiceTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -154,16 +324,22 @@ export class PrivateLinkServiceTimeoutsOutputReference extends cdktf.ComplexObje
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: PrivateLinkServiceTimeouts | undefined) {
+  public set internalValue(value: PrivateLinkServiceTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -272,13 +448,14 @@ export class PrivateLinkService extends cdktf.TerraformResource {
     });
     this._autoApprovalSubscriptionIds = config.autoApprovalSubscriptionIds;
     this._enableProxyProtocol = config.enableProxyProtocol;
+    this._id = config.id;
     this._loadBalancerFrontendIpConfigurationIds = config.loadBalancerFrontendIpConfigurationIds;
     this._location = config.location;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
     this._visibilitySubscriptionIds = config.visibilitySubscriptionIds;
-    this._natIpConfiguration = config.natIpConfiguration;
+    this._natIpConfiguration.internalValue = config.natIpConfiguration;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -324,8 +501,19 @@ export class PrivateLinkService extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // load_balancer_frontend_ip_configuration_ids - computed: false, optional: false, required: true
@@ -413,17 +601,16 @@ export class PrivateLinkService extends cdktf.TerraformResource {
   }
 
   // nat_ip_configuration - computed: false, optional: false, required: true
-  private _natIpConfiguration?: PrivateLinkServiceNatIpConfiguration[] | cdktf.IResolvable; 
+  private _natIpConfiguration = new PrivateLinkServiceNatIpConfigurationList(this, "nat_ip_configuration", false);
   public get natIpConfiguration() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('nat_ip_configuration');
+    return this._natIpConfiguration;
   }
-  public set natIpConfiguration(value: PrivateLinkServiceNatIpConfiguration[] | cdktf.IResolvable) {
-    this._natIpConfiguration = value;
+  public putNatIpConfiguration(value: PrivateLinkServiceNatIpConfiguration[] | cdktf.IResolvable) {
+    this._natIpConfiguration.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get natIpConfigurationInput() {
-    return this._natIpConfiguration;
+    return this._natIpConfiguration.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -450,13 +637,14 @@ export class PrivateLinkService extends cdktf.TerraformResource {
     return {
       auto_approval_subscription_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._autoApprovalSubscriptionIds),
       enable_proxy_protocol: cdktf.booleanToTerraform(this._enableProxyProtocol),
+      id: cdktf.stringToTerraform(this._id),
       load_balancer_frontend_ip_configuration_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._loadBalancerFrontendIpConfigurationIds),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       visibility_subscription_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._visibilitySubscriptionIds),
-      nat_ip_configuration: cdktf.listMapper(privateLinkServiceNatIpConfigurationToTerraform)(this._natIpConfiguration),
+      nat_ip_configuration: cdktf.listMapper(privateLinkServiceNatIpConfigurationToTerraform)(this._natIpConfiguration.internalValue),
       timeouts: privateLinkServiceTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

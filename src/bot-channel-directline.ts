@@ -12,6 +12,13 @@ export interface BotChannelDirectlineConfig extends cdktf.TerraformMetaArguments
   */
   readonly botName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_directline#id BotChannelDirectline#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_directline#location BotChannelDirectline#location}
   */
   readonly location: string;
@@ -74,6 +81,208 @@ export function botChannelDirectlineSiteToTerraform(struct?: BotChannelDirectlin
   }
 }
 
+export class BotChannelDirectlineSiteOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): BotChannelDirectlineSite | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._enabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._enhancedAuthenticationEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enhancedAuthenticationEnabled = this._enhancedAuthenticationEnabled;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._trustedOrigins !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.trustedOrigins = this._trustedOrigins;
+    }
+    if (this._v1Allowed !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.v1Allowed = this._v1Allowed;
+    }
+    if (this._v3Allowed !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.v3Allowed = this._v3Allowed;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BotChannelDirectlineSite | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._enabled = undefined;
+      this._enhancedAuthenticationEnabled = undefined;
+      this._name = undefined;
+      this._trustedOrigins = undefined;
+      this._v1Allowed = undefined;
+      this._v3Allowed = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._enabled = value.enabled;
+      this._enhancedAuthenticationEnabled = value.enhancedAuthenticationEnabled;
+      this._name = value.name;
+      this._trustedOrigins = value.trustedOrigins;
+      this._v1Allowed = value.v1Allowed;
+      this._v3Allowed = value.v3Allowed;
+    }
+  }
+
+  // enabled - computed: false, optional: true, required: false
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+
+  // enhanced_authentication_enabled - computed: false, optional: true, required: false
+  private _enhancedAuthenticationEnabled?: boolean | cdktf.IResolvable; 
+  public get enhancedAuthenticationEnabled() {
+    return this.getBooleanAttribute('enhanced_authentication_enabled');
+  }
+  public set enhancedAuthenticationEnabled(value: boolean | cdktf.IResolvable) {
+    this._enhancedAuthenticationEnabled = value;
+  }
+  public resetEnhancedAuthenticationEnabled() {
+    this._enhancedAuthenticationEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enhancedAuthenticationEnabledInput() {
+    return this._enhancedAuthenticationEnabled;
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // key - computed: true, optional: false, required: false
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+
+  // key2 - computed: true, optional: false, required: false
+  public get key2() {
+    return this.getStringAttribute('key2');
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // trusted_origins - computed: false, optional: true, required: false
+  private _trustedOrigins?: string[]; 
+  public get trustedOrigins() {
+    return cdktf.Fn.tolist(this.getListAttribute('trusted_origins'));
+  }
+  public set trustedOrigins(value: string[]) {
+    this._trustedOrigins = value;
+  }
+  public resetTrustedOrigins() {
+    this._trustedOrigins = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get trustedOriginsInput() {
+    return this._trustedOrigins;
+  }
+
+  // v1_allowed - computed: false, optional: true, required: false
+  private _v1Allowed?: boolean | cdktf.IResolvable; 
+  public get v1Allowed() {
+    return this.getBooleanAttribute('v1_allowed');
+  }
+  public set v1Allowed(value: boolean | cdktf.IResolvable) {
+    this._v1Allowed = value;
+  }
+  public resetV1Allowed() {
+    this._v1Allowed = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get v1AllowedInput() {
+    return this._v1Allowed;
+  }
+
+  // v3_allowed - computed: false, optional: true, required: false
+  private _v3Allowed?: boolean | cdktf.IResolvable; 
+  public get v3Allowed() {
+    return this.getBooleanAttribute('v3_allowed');
+  }
+  public set v3Allowed(value: boolean | cdktf.IResolvable) {
+    this._v3Allowed = value;
+  }
+  public resetV3Allowed() {
+    this._v3Allowed = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get v3AllowedInput() {
+    return this._v3Allowed;
+  }
+}
+
+export class BotChannelDirectlineSiteList extends cdktf.ComplexList {
+  public internalValue? : BotChannelDirectlineSite[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): BotChannelDirectlineSiteOutputReference {
+    return new BotChannelDirectlineSiteOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface BotChannelDirectlineTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_directline#create BotChannelDirectline#create}
@@ -108,6 +317,7 @@ export function botChannelDirectlineTimeoutsToTerraform(struct?: BotChannelDirec
 
 export class BotChannelDirectlineTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -117,7 +327,10 @@ export class BotChannelDirectlineTimeoutsOutputReference extends cdktf.ComplexOb
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): BotChannelDirectlineTimeouts | undefined {
+  public get internalValue(): BotChannelDirectlineTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -139,16 +352,22 @@ export class BotChannelDirectlineTimeoutsOutputReference extends cdktf.ComplexOb
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: BotChannelDirectlineTimeouts | undefined) {
+  public set internalValue(value: BotChannelDirectlineTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -256,9 +475,10 @@ export class BotChannelDirectline extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._botName = config.botName;
+    this._id = config.id;
     this._location = config.location;
     this._resourceGroupName = config.resourceGroupName;
-    this._site = config.site;
+    this._site.internalValue = config.site;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -280,8 +500,19 @@ export class BotChannelDirectline extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // location - computed: false, optional: false, required: true
@@ -311,17 +542,16 @@ export class BotChannelDirectline extends cdktf.TerraformResource {
   }
 
   // site - computed: false, optional: false, required: true
-  private _site?: BotChannelDirectlineSite[] | cdktf.IResolvable; 
+  private _site = new BotChannelDirectlineSiteList(this, "site", true);
   public get site() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('site')));
+    return this._site;
   }
-  public set site(value: BotChannelDirectlineSite[] | cdktf.IResolvable) {
-    this._site = value;
+  public putSite(value: BotChannelDirectlineSite[] | cdktf.IResolvable) {
+    this._site.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get siteInput() {
-    return this._site;
+    return this._site.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -347,9 +577,10 @@ export class BotChannelDirectline extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       bot_name: cdktf.stringToTerraform(this._botName),
+      id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      site: cdktf.listMapper(botChannelDirectlineSiteToTerraform)(this._site),
+      site: cdktf.listMapper(botChannelDirectlineSiteToTerraform)(this._site.internalValue),
       timeouts: botChannelDirectlineTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

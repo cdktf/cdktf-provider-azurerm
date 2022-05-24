@@ -24,6 +24,13 @@ export interface AutomationScheduleConfig extends cdktf.TerraformMetaArguments {
   */
   readonly frequency: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_schedule#id AutomationSchedule#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_schedule#interval AutomationSchedule#interval}
   */
   readonly interval?: number;
@@ -86,6 +93,102 @@ export function automationScheduleMonthlyOccurrenceToTerraform(struct?: Automati
   }
 }
 
+export class AutomationScheduleMonthlyOccurrenceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AutomationScheduleMonthlyOccurrence | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._day !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.day = this._day;
+    }
+    if (this._occurrence !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.occurrence = this._occurrence;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AutomationScheduleMonthlyOccurrence | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._day = undefined;
+      this._occurrence = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._day = value.day;
+      this._occurrence = value.occurrence;
+    }
+  }
+
+  // day - computed: false, optional: false, required: true
+  private _day?: string; 
+  public get day() {
+    return this.getStringAttribute('day');
+  }
+  public set day(value: string) {
+    this._day = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dayInput() {
+    return this._day;
+  }
+
+  // occurrence - computed: false, optional: false, required: true
+  private _occurrence?: number; 
+  public get occurrence() {
+    return this.getNumberAttribute('occurrence');
+  }
+  public set occurrence(value: number) {
+    this._occurrence = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get occurrenceInput() {
+    return this._occurrence;
+  }
+}
+
+export class AutomationScheduleMonthlyOccurrenceList extends cdktf.ComplexList {
+  public internalValue? : AutomationScheduleMonthlyOccurrence[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AutomationScheduleMonthlyOccurrenceOutputReference {
+    return new AutomationScheduleMonthlyOccurrenceOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface AutomationScheduleTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_schedule#create AutomationSchedule#create}
@@ -120,6 +223,7 @@ export function automationScheduleTimeoutsToTerraform(struct?: AutomationSchedul
 
 export class AutomationScheduleTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -129,7 +233,10 @@ export class AutomationScheduleTimeoutsOutputReference extends cdktf.ComplexObje
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): AutomationScheduleTimeouts | undefined {
+  public get internalValue(): AutomationScheduleTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -151,16 +258,22 @@ export class AutomationScheduleTimeoutsOutputReference extends cdktf.ComplexObje
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: AutomationScheduleTimeouts | undefined) {
+  public set internalValue(value: AutomationScheduleTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -271,6 +384,7 @@ export class AutomationSchedule extends cdktf.TerraformResource {
     this._description = config.description;
     this._expiryTime = config.expiryTime;
     this._frequency = config.frequency;
+    this._id = config.id;
     this._interval = config.interval;
     this._monthDays = config.monthDays;
     this._name = config.name;
@@ -278,7 +392,7 @@ export class AutomationSchedule extends cdktf.TerraformResource {
     this._startTime = config.startTime;
     this._timezone = config.timezone;
     this._weekDays = config.weekDays;
-    this._monthlyOccurrence = config.monthlyOccurrence;
+    this._monthlyOccurrence.internalValue = config.monthlyOccurrence;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -345,8 +459,19 @@ export class AutomationSchedule extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // interval - computed: true, optional: true, required: false
@@ -456,20 +581,19 @@ export class AutomationSchedule extends cdktf.TerraformResource {
   }
 
   // monthly_occurrence - computed: false, optional: true, required: false
-  private _monthlyOccurrence?: AutomationScheduleMonthlyOccurrence[] | cdktf.IResolvable; 
+  private _monthlyOccurrence = new AutomationScheduleMonthlyOccurrenceList(this, "monthly_occurrence", false);
   public get monthlyOccurrence() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('monthly_occurrence');
+    return this._monthlyOccurrence;
   }
-  public set monthlyOccurrence(value: AutomationScheduleMonthlyOccurrence[] | cdktf.IResolvable) {
-    this._monthlyOccurrence = value;
+  public putMonthlyOccurrence(value: AutomationScheduleMonthlyOccurrence[] | cdktf.IResolvable) {
+    this._monthlyOccurrence.internalValue = value;
   }
   public resetMonthlyOccurrence() {
-    this._monthlyOccurrence = undefined;
+    this._monthlyOccurrence.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get monthlyOccurrenceInput() {
-    return this._monthlyOccurrence;
+    return this._monthlyOccurrence.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -498,6 +622,7 @@ export class AutomationSchedule extends cdktf.TerraformResource {
       description: cdktf.stringToTerraform(this._description),
       expiry_time: cdktf.stringToTerraform(this._expiryTime),
       frequency: cdktf.stringToTerraform(this._frequency),
+      id: cdktf.stringToTerraform(this._id),
       interval: cdktf.numberToTerraform(this._interval),
       month_days: cdktf.listMapper(cdktf.numberToTerraform)(this._monthDays),
       name: cdktf.stringToTerraform(this._name),
@@ -505,7 +630,7 @@ export class AutomationSchedule extends cdktf.TerraformResource {
       start_time: cdktf.stringToTerraform(this._startTime),
       timezone: cdktf.stringToTerraform(this._timezone),
       week_days: cdktf.listMapper(cdktf.stringToTerraform)(this._weekDays),
-      monthly_occurrence: cdktf.listMapper(automationScheduleMonthlyOccurrenceToTerraform)(this._monthlyOccurrence),
+      monthly_occurrence: cdktf.listMapper(automationScheduleMonthlyOccurrenceToTerraform)(this._monthlyOccurrence.internalValue),
       timeouts: automationScheduleTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

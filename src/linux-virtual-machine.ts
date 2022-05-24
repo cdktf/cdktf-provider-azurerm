@@ -56,6 +56,13 @@ export interface LinuxVirtualMachineConfig extends cdktf.TerraformMetaArguments 
   */
   readonly extensionsTimeBudget?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine#id LinuxVirtualMachine#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine#license_type LinuxVirtualMachine#license_type}
   */
   readonly licenseType?: string;
@@ -273,6 +280,102 @@ export function linuxVirtualMachineAdminSshKeyToTerraform(struct?: LinuxVirtualM
   }
 }
 
+export class LinuxVirtualMachineAdminSshKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): LinuxVirtualMachineAdminSshKey | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._publicKey !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.publicKey = this._publicKey;
+    }
+    if (this._username !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.username = this._username;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LinuxVirtualMachineAdminSshKey | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._publicKey = undefined;
+      this._username = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._publicKey = value.publicKey;
+      this._username = value.username;
+    }
+  }
+
+  // public_key - computed: false, optional: false, required: true
+  private _publicKey?: string; 
+  public get publicKey() {
+    return this.getStringAttribute('public_key');
+  }
+  public set publicKey(value: string) {
+    this._publicKey = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicKeyInput() {
+    return this._publicKey;
+  }
+
+  // username - computed: false, optional: false, required: true
+  private _username?: string; 
+  public get username() {
+    return this.getStringAttribute('username');
+  }
+  public set username(value: string) {
+    this._username = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get usernameInput() {
+    return this._username;
+  }
+}
+
+export class LinuxVirtualMachineAdminSshKeyList extends cdktf.ComplexList {
+  public internalValue? : LinuxVirtualMachineAdminSshKey[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): LinuxVirtualMachineAdminSshKeyOutputReference {
+    return new LinuxVirtualMachineAdminSshKeyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface LinuxVirtualMachineBootDiagnostics {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine#storage_account_uri LinuxVirtualMachine#storage_account_uri}
@@ -849,6 +952,83 @@ export function linuxVirtualMachineSecretCertificateToTerraform(struct?: LinuxVi
   }
 }
 
+export class LinuxVirtualMachineSecretCertificateOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): LinuxVirtualMachineSecretCertificate | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._url !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.url = this._url;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LinuxVirtualMachineSecretCertificate | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._url = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._url = value.url;
+    }
+  }
+
+  // url - computed: false, optional: false, required: true
+  private _url?: string; 
+  public get url() {
+    return this.getStringAttribute('url');
+  }
+  public set url(value: string) {
+    this._url = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get urlInput() {
+    return this._url;
+  }
+}
+
+export class LinuxVirtualMachineSecretCertificateList extends cdktf.ComplexList {
+  public internalValue? : LinuxVirtualMachineSecretCertificate[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): LinuxVirtualMachineSecretCertificateOutputReference {
+    return new LinuxVirtualMachineSecretCertificateOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface LinuxVirtualMachineSecret {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine#key_vault_id LinuxVirtualMachine#key_vault_id}
@@ -873,6 +1053,102 @@ export function linuxVirtualMachineSecretToTerraform(struct?: LinuxVirtualMachin
   }
 }
 
+export class LinuxVirtualMachineSecretOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): LinuxVirtualMachineSecret | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._keyVaultId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keyVaultId = this._keyVaultId;
+    }
+    if (this._certificate?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.certificate = this._certificate?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LinuxVirtualMachineSecret | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._keyVaultId = undefined;
+      this._certificate.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._keyVaultId = value.keyVaultId;
+      this._certificate.internalValue = value.certificate;
+    }
+  }
+
+  // key_vault_id - computed: false, optional: false, required: true
+  private _keyVaultId?: string; 
+  public get keyVaultId() {
+    return this.getStringAttribute('key_vault_id');
+  }
+  public set keyVaultId(value: string) {
+    this._keyVaultId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultIdInput() {
+    return this._keyVaultId;
+  }
+
+  // certificate - computed: false, optional: false, required: true
+  private _certificate = new LinuxVirtualMachineSecretCertificateList(this, "certificate", true);
+  public get certificate() {
+    return this._certificate;
+  }
+  public putCertificate(value: LinuxVirtualMachineSecretCertificate[] | cdktf.IResolvable) {
+    this._certificate.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get certificateInput() {
+    return this._certificate.internalValue;
+  }
+}
+
+export class LinuxVirtualMachineSecretList extends cdktf.ComplexList {
+  public internalValue? : LinuxVirtualMachineSecret[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): LinuxVirtualMachineSecretOutputReference {
+    return new LinuxVirtualMachineSecretOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface LinuxVirtualMachineSourceImageReference {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine#offer LinuxVirtualMachine#offer}
@@ -1041,6 +1317,7 @@ export function linuxVirtualMachineTimeoutsToTerraform(struct?: LinuxVirtualMach
 
 export class LinuxVirtualMachineTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -1050,7 +1327,10 @@ export class LinuxVirtualMachineTimeoutsOutputReference extends cdktf.ComplexObj
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): LinuxVirtualMachineTimeouts | undefined {
+  public get internalValue(): LinuxVirtualMachineTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create !== undefined) {
@@ -1072,16 +1352,22 @@ export class LinuxVirtualMachineTimeoutsOutputReference extends cdktf.ComplexObj
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: LinuxVirtualMachineTimeouts | undefined) {
+  public set internalValue(value: LinuxVirtualMachineTimeouts | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -1200,6 +1486,7 @@ export class LinuxVirtualMachine extends cdktf.TerraformResource {
     this._encryptionAtHostEnabled = config.encryptionAtHostEnabled;
     this._evictionPolicy = config.evictionPolicy;
     this._extensionsTimeBudget = config.extensionsTimeBudget;
+    this._id = config.id;
     this._licenseType = config.licenseType;
     this._location = config.location;
     this._maxBidPrice = config.maxBidPrice;
@@ -1220,12 +1507,12 @@ export class LinuxVirtualMachine extends cdktf.TerraformResource {
     this._vtpmEnabled = config.vtpmEnabled;
     this._zone = config.zone;
     this._additionalCapabilities.internalValue = config.additionalCapabilities;
-    this._adminSshKey = config.adminSshKey;
+    this._adminSshKey.internalValue = config.adminSshKey;
     this._bootDiagnostics.internalValue = config.bootDiagnostics;
     this._identity.internalValue = config.identity;
     this._osDisk.internalValue = config.osDisk;
     this._plan.internalValue = config.plan;
-    this._secret = config.secret;
+    this._secret.internalValue = config.secret;
     this._sourceImageReference.internalValue = config.sourceImageReference;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -1424,8 +1711,19 @@ export class LinuxVirtualMachine extends cdktf.TerraformResource {
   }
 
   // id - computed: true, optional: true, required: false
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
   }
 
   // license_type - computed: false, optional: true, required: false
@@ -1759,20 +2057,19 @@ export class LinuxVirtualMachine extends cdktf.TerraformResource {
   }
 
   // admin_ssh_key - computed: false, optional: true, required: false
-  private _adminSshKey?: LinuxVirtualMachineAdminSshKey[] | cdktf.IResolvable; 
+  private _adminSshKey = new LinuxVirtualMachineAdminSshKeyList(this, "admin_ssh_key", true);
   public get adminSshKey() {
-    // Getting the computed value is not yet implemented
-    return cdktf.Token.asAny(cdktf.Fn.tolist(this.interpolationForAttribute('admin_ssh_key')));
+    return this._adminSshKey;
   }
-  public set adminSshKey(value: LinuxVirtualMachineAdminSshKey[] | cdktf.IResolvable) {
-    this._adminSshKey = value;
+  public putAdminSshKey(value: LinuxVirtualMachineAdminSshKey[] | cdktf.IResolvable) {
+    this._adminSshKey.internalValue = value;
   }
   public resetAdminSshKey() {
-    this._adminSshKey = undefined;
+    this._adminSshKey.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get adminSshKeyInput() {
-    return this._adminSshKey;
+    return this._adminSshKey.internalValue;
   }
 
   // boot_diagnostics - computed: false, optional: true, required: false
@@ -1837,20 +2134,19 @@ export class LinuxVirtualMachine extends cdktf.TerraformResource {
   }
 
   // secret - computed: false, optional: true, required: false
-  private _secret?: LinuxVirtualMachineSecret[] | cdktf.IResolvable; 
+  private _secret = new LinuxVirtualMachineSecretList(this, "secret", false);
   public get secret() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('secret');
+    return this._secret;
   }
-  public set secret(value: LinuxVirtualMachineSecret[] | cdktf.IResolvable) {
-    this._secret = value;
+  public putSecret(value: LinuxVirtualMachineSecret[] | cdktf.IResolvable) {
+    this._secret.internalValue = value;
   }
   public resetSecret() {
-    this._secret = undefined;
+    this._secret.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get secretInput() {
-    return this._secret;
+    return this._secret.internalValue;
   }
 
   // source_image_reference - computed: false, optional: true, required: false
@@ -1903,6 +2199,7 @@ export class LinuxVirtualMachine extends cdktf.TerraformResource {
       encryption_at_host_enabled: cdktf.booleanToTerraform(this._encryptionAtHostEnabled),
       eviction_policy: cdktf.stringToTerraform(this._evictionPolicy),
       extensions_time_budget: cdktf.stringToTerraform(this._extensionsTimeBudget),
+      id: cdktf.stringToTerraform(this._id),
       license_type: cdktf.stringToTerraform(this._licenseType),
       location: cdktf.stringToTerraform(this._location),
       max_bid_price: cdktf.numberToTerraform(this._maxBidPrice),
@@ -1923,12 +2220,12 @@ export class LinuxVirtualMachine extends cdktf.TerraformResource {
       vtpm_enabled: cdktf.booleanToTerraform(this._vtpmEnabled),
       zone: cdktf.stringToTerraform(this._zone),
       additional_capabilities: linuxVirtualMachineAdditionalCapabilitiesToTerraform(this._additionalCapabilities.internalValue),
-      admin_ssh_key: cdktf.listMapper(linuxVirtualMachineAdminSshKeyToTerraform)(this._adminSshKey),
+      admin_ssh_key: cdktf.listMapper(linuxVirtualMachineAdminSshKeyToTerraform)(this._adminSshKey.internalValue),
       boot_diagnostics: linuxVirtualMachineBootDiagnosticsToTerraform(this._bootDiagnostics.internalValue),
       identity: linuxVirtualMachineIdentityToTerraform(this._identity.internalValue),
       os_disk: linuxVirtualMachineOsDiskToTerraform(this._osDisk.internalValue),
       plan: linuxVirtualMachinePlanToTerraform(this._plan.internalValue),
-      secret: cdktf.listMapper(linuxVirtualMachineSecretToTerraform)(this._secret),
+      secret: cdktf.listMapper(linuxVirtualMachineSecretToTerraform)(this._secret.internalValue),
       source_image_reference: linuxVirtualMachineSourceImageReferenceToTerraform(this._sourceImageReference.internalValue),
       timeouts: linuxVirtualMachineTimeoutsToTerraform(this._timeouts.internalValue),
     };
