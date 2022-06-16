@@ -39,10 +39,6 @@ export interface LogAnalyticsStorageInsightsConfig extends cdktf.TerraformMetaAr
   */
   readonly tableNames?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_storage_insights#tags LogAnalyticsStorageInsights#tags}
-  */
-  readonly tags?: { [key: string]: string };
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_storage_insights#workspace_id LogAnalyticsStorageInsights#workspace_id}
   */
   readonly workspaceId: string;
@@ -236,8 +232,8 @@ export class LogAnalyticsStorageInsights extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_log_analytics_storage_insights',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -251,7 +247,6 @@ export class LogAnalyticsStorageInsights extends cdktf.TerraformResource {
     this._storageAccountId = config.storageAccountId;
     this._storageAccountKey = config.storageAccountKey;
     this._tableNames = config.tableNames;
-    this._tags = config.tags;
     this._workspaceId = config.workspaceId;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -360,22 +355,6 @@ export class LogAnalyticsStorageInsights extends cdktf.TerraformResource {
     return this._tableNames;
   }
 
-  // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string }; 
-  public get tags() {
-    return this.getStringMapAttribute('tags');
-  }
-  public set tags(value: { [key: string]: string }) {
-    this._tags = value;
-  }
-  public resetTags() {
-    this._tags = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get tagsInput() {
-    return this._tags;
-  }
-
   // workspace_id - computed: false, optional: false, required: true
   private _workspaceId?: string; 
   public get workspaceId() {
@@ -418,7 +397,6 @@ export class LogAnalyticsStorageInsights extends cdktf.TerraformResource {
       storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
       storage_account_key: cdktf.stringToTerraform(this._storageAccountKey),
       table_names: cdktf.listMapper(cdktf.stringToTerraform)(this._tableNames),
-      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       workspace_id: cdktf.stringToTerraform(this._workspaceId),
       timeouts: logAnalyticsStorageInsightsTimeoutsToTerraform(this._timeouts.internalValue),
     };

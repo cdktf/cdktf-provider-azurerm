@@ -27,29 +27,13 @@ export interface ServicebusSubscriptionRuleConfig extends cdktf.TerraformMetaArg
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription_rule#namespace_name ServicebusSubscriptionRule#namespace_name}
-  */
-  readonly namespaceName?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription_rule#resource_group_name ServicebusSubscriptionRule#resource_group_name}
-  */
-  readonly resourceGroupName?: string;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription_rule#sql_filter ServicebusSubscriptionRule#sql_filter}
   */
   readonly sqlFilter?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription_rule#subscription_id ServicebusSubscriptionRule#subscription_id}
   */
-  readonly subscriptionId?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription_rule#subscription_name ServicebusSubscriptionRule#subscription_name}
-  */
-  readonly subscriptionName?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription_rule#topic_name ServicebusSubscriptionRule#topic_name}
-  */
-  readonly topicName?: string;
+  readonly subscriptionId: string;
   /**
   * correlation_filter block
   * 
@@ -527,8 +511,8 @@ export class ServicebusSubscriptionRule extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_servicebus_subscription_rule',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -539,12 +523,8 @@ export class ServicebusSubscriptionRule extends cdktf.TerraformResource {
     this._filterType = config.filterType;
     this._id = config.id;
     this._name = config.name;
-    this._namespaceName = config.namespaceName;
-    this._resourceGroupName = config.resourceGroupName;
     this._sqlFilter = config.sqlFilter;
     this._subscriptionId = config.subscriptionId;
-    this._subscriptionName = config.subscriptionName;
-    this._topicName = config.topicName;
     this._correlationFilter.internalValue = config.correlationFilter;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -611,38 +591,6 @@ export class ServicebusSubscriptionRule extends cdktf.TerraformResource {
     return this._name;
   }
 
-  // namespace_name - computed: true, optional: true, required: false
-  private _namespaceName?: string; 
-  public get namespaceName() {
-    return this.getStringAttribute('namespace_name');
-  }
-  public set namespaceName(value: string) {
-    this._namespaceName = value;
-  }
-  public resetNamespaceName() {
-    this._namespaceName = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get namespaceNameInput() {
-    return this._namespaceName;
-  }
-
-  // resource_group_name - computed: true, optional: true, required: false
-  private _resourceGroupName?: string; 
-  public get resourceGroupName() {
-    return this.getStringAttribute('resource_group_name');
-  }
-  public set resourceGroupName(value: string) {
-    this._resourceGroupName = value;
-  }
-  public resetResourceGroupName() {
-    this._resourceGroupName = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get resourceGroupNameInput() {
-    return this._resourceGroupName;
-  }
-
   // sql_filter - computed: false, optional: true, required: false
   private _sqlFilter?: string; 
   public get sqlFilter() {
@@ -659,7 +607,7 @@ export class ServicebusSubscriptionRule extends cdktf.TerraformResource {
     return this._sqlFilter;
   }
 
-  // subscription_id - computed: true, optional: true, required: false
+  // subscription_id - computed: false, optional: false, required: true
   private _subscriptionId?: string; 
   public get subscriptionId() {
     return this.getStringAttribute('subscription_id');
@@ -667,44 +615,9 @@ export class ServicebusSubscriptionRule extends cdktf.TerraformResource {
   public set subscriptionId(value: string) {
     this._subscriptionId = value;
   }
-  public resetSubscriptionId() {
-    this._subscriptionId = undefined;
-  }
   // Temporarily expose input value. Use with caution.
   public get subscriptionIdInput() {
     return this._subscriptionId;
-  }
-
-  // subscription_name - computed: true, optional: true, required: false
-  private _subscriptionName?: string; 
-  public get subscriptionName() {
-    return this.getStringAttribute('subscription_name');
-  }
-  public set subscriptionName(value: string) {
-    this._subscriptionName = value;
-  }
-  public resetSubscriptionName() {
-    this._subscriptionName = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get subscriptionNameInput() {
-    return this._subscriptionName;
-  }
-
-  // topic_name - computed: true, optional: true, required: false
-  private _topicName?: string; 
-  public get topicName() {
-    return this.getStringAttribute('topic_name');
-  }
-  public set topicName(value: string) {
-    this._topicName = value;
-  }
-  public resetTopicName() {
-    this._topicName = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get topicNameInput() {
-    return this._topicName;
   }
 
   // correlation_filter - computed: false, optional: true, required: false
@@ -749,12 +662,8 @@ export class ServicebusSubscriptionRule extends cdktf.TerraformResource {
       filter_type: cdktf.stringToTerraform(this._filterType),
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
-      namespace_name: cdktf.stringToTerraform(this._namespaceName),
-      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sql_filter: cdktf.stringToTerraform(this._sqlFilter),
       subscription_id: cdktf.stringToTerraform(this._subscriptionId),
-      subscription_name: cdktf.stringToTerraform(this._subscriptionName),
-      topic_name: cdktf.stringToTerraform(this._topicName),
       correlation_filter: servicebusSubscriptionRuleCorrelationFilterToTerraform(this._correlationFilter.internalValue),
       timeouts: servicebusSubscriptionRuleTimeoutsToTerraform(this._timeouts.internalValue),
     };

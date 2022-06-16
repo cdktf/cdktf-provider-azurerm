@@ -135,8 +135,8 @@ export class DataAzurermRedisEnterpriseDatabase extends cdktf.TerraformDataSourc
       terraformResourceType: 'azurerm_redis_enterprise_database',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -181,6 +181,16 @@ export class DataAzurermRedisEnterpriseDatabase extends cdktf.TerraformDataSourc
   // Temporarily expose input value. Use with caution.
   public get idInput() {
     return this._id;
+  }
+
+  // linked_database_group_nickname - computed: true, optional: false, required: false
+  public get linkedDatabaseGroupNickname() {
+    return this.getStringAttribute('linked_database_group_nickname');
+  }
+
+  // linked_database_id - computed: true, optional: false, required: false
+  public get linkedDatabaseId() {
+    return this.getListAttribute('linked_database_id');
   }
 
   // name - computed: false, optional: false, required: true

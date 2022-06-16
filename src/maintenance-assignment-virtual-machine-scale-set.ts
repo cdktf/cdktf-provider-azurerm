@@ -189,8 +189,8 @@ export class MaintenanceAssignmentVirtualMachineScaleSet extends cdktf.Terraform
       terraformResourceType: 'azurerm_maintenance_assignment_virtual_machine_scale_set',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

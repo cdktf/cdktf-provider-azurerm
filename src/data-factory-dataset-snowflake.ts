@@ -18,11 +18,7 @@ export interface DataFactoryDatasetSnowflakeConfig extends cdktf.TerraformMetaAr
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_snowflake#data_factory_id DataFactoryDatasetSnowflake#data_factory_id}
   */
-  readonly dataFactoryId?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_snowflake#data_factory_name DataFactoryDatasetSnowflake#data_factory_name}
-  */
-  readonly dataFactoryName?: string;
+  readonly dataFactoryId: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_snowflake#description DataFactoryDatasetSnowflake#description}
   */
@@ -51,10 +47,6 @@ export interface DataFactoryDatasetSnowflakeConfig extends cdktf.TerraformMetaAr
   */
   readonly parameters?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_snowflake#resource_group_name DataFactoryDatasetSnowflake#resource_group_name}
-  */
-  readonly resourceGroupName: string;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_snowflake#schema_name DataFactoryDatasetSnowflake#schema_name}
   */
   readonly schemaName?: string;
@@ -68,12 +60,6 @@ export interface DataFactoryDatasetSnowflakeConfig extends cdktf.TerraformMetaAr
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_snowflake#schema_column DataFactoryDatasetSnowflake#schema_column}
   */
   readonly schemaColumn?: DataFactoryDatasetSnowflakeSchemaColumn[] | cdktf.IResolvable;
-  /**
-  * structure_column block
-  * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_snowflake#structure_column DataFactoryDatasetSnowflake#structure_column}
-  */
-  readonly structureColumn?: DataFactoryDatasetSnowflakeStructureColumn[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -254,154 +240,6 @@ export class DataFactoryDatasetSnowflakeSchemaColumnList extends cdktf.ComplexLi
   */
   public get(index: number): DataFactoryDatasetSnowflakeSchemaColumnOutputReference {
     return new DataFactoryDatasetSnowflakeSchemaColumnOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-  }
-}
-export interface DataFactoryDatasetSnowflakeStructureColumn {
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_snowflake#description DataFactoryDatasetSnowflake#description}
-  */
-  readonly description?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_snowflake#name DataFactoryDatasetSnowflake#name}
-  */
-  readonly name: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_snowflake#type DataFactoryDatasetSnowflake#type}
-  */
-  readonly type?: string;
-}
-
-export function dataFactoryDatasetSnowflakeStructureColumnToTerraform(struct?: DataFactoryDatasetSnowflakeStructureColumn | cdktf.IResolvable): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-    description: cdktf.stringToTerraform(struct!.description),
-    name: cdktf.stringToTerraform(struct!.name),
-    type: cdktf.stringToTerraform(struct!.type),
-  }
-}
-
-export class DataFactoryDatasetSnowflakeStructureColumnOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-  private resolvableValue?: cdktf.IResolvable;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
-  }
-
-  public get internalValue(): DataFactoryDatasetSnowflakeStructureColumn | cdktf.IResolvable | undefined {
-    if (this.resolvableValue) {
-      return this.resolvableValue;
-    }
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    if (this._description !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.description = this._description;
-    }
-    if (this._name !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.name = this._name;
-    }
-    if (this._type !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.type = this._type;
-    }
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: DataFactoryDatasetSnowflakeStructureColumn | cdktf.IResolvable | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-      this.resolvableValue = undefined;
-      this._description = undefined;
-      this._name = undefined;
-      this._type = undefined;
-    }
-    else if (cdktf.Tokenization.isResolvable(value)) {
-      this.isEmptyObject = false;
-      this.resolvableValue = value;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-      this.resolvableValue = undefined;
-      this._description = value.description;
-      this._name = value.name;
-      this._type = value.type;
-    }
-  }
-
-  // description - computed: false, optional: true, required: false
-  private _description?: string; 
-  public get description() {
-    return this.getStringAttribute('description');
-  }
-  public set description(value: string) {
-    this._description = value;
-  }
-  public resetDescription() {
-    this._description = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get descriptionInput() {
-    return this._description;
-  }
-
-  // name - computed: false, optional: false, required: true
-  private _name?: string; 
-  public get name() {
-    return this.getStringAttribute('name');
-  }
-  public set name(value: string) {
-    this._name = value;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get nameInput() {
-    return this._name;
-  }
-
-  // type - computed: false, optional: true, required: false
-  private _type?: string; 
-  public get type() {
-    return this.getStringAttribute('type');
-  }
-  public set type(value: string) {
-    this._type = value;
-  }
-  public resetType() {
-    this._type = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get typeInput() {
-    return this._type;
-  }
-}
-
-export class DataFactoryDatasetSnowflakeStructureColumnList extends cdktf.ComplexList {
-  public internalValue? : DataFactoryDatasetSnowflakeStructureColumn[] | cdktf.IResolvable
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): DataFactoryDatasetSnowflakeStructureColumnOutputReference {
-    return new DataFactoryDatasetSnowflakeStructureColumnOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataFactoryDatasetSnowflakeTimeouts {
@@ -587,8 +425,8 @@ export class DataFactoryDatasetSnowflake extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_data_factory_dataset_snowflake',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -598,18 +436,15 @@ export class DataFactoryDatasetSnowflake extends cdktf.TerraformResource {
     this._additionalProperties = config.additionalProperties;
     this._annotations = config.annotations;
     this._dataFactoryId = config.dataFactoryId;
-    this._dataFactoryName = config.dataFactoryName;
     this._description = config.description;
     this._folder = config.folder;
     this._id = config.id;
     this._linkedServiceName = config.linkedServiceName;
     this._name = config.name;
     this._parameters = config.parameters;
-    this._resourceGroupName = config.resourceGroupName;
     this._schemaName = config.schemaName;
     this._tableName = config.tableName;
     this._schemaColumn.internalValue = config.schemaColumn;
-    this._structureColumn.internalValue = config.structureColumn;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -649,7 +484,7 @@ export class DataFactoryDatasetSnowflake extends cdktf.TerraformResource {
     return this._annotations;
   }
 
-  // data_factory_id - computed: true, optional: true, required: false
+  // data_factory_id - computed: false, optional: false, required: true
   private _dataFactoryId?: string; 
   public get dataFactoryId() {
     return this.getStringAttribute('data_factory_id');
@@ -657,28 +492,9 @@ export class DataFactoryDatasetSnowflake extends cdktf.TerraformResource {
   public set dataFactoryId(value: string) {
     this._dataFactoryId = value;
   }
-  public resetDataFactoryId() {
-    this._dataFactoryId = undefined;
-  }
   // Temporarily expose input value. Use with caution.
   public get dataFactoryIdInput() {
     return this._dataFactoryId;
-  }
-
-  // data_factory_name - computed: true, optional: true, required: false
-  private _dataFactoryName?: string; 
-  public get dataFactoryName() {
-    return this.getStringAttribute('data_factory_name');
-  }
-  public set dataFactoryName(value: string) {
-    this._dataFactoryName = value;
-  }
-  public resetDataFactoryName() {
-    this._dataFactoryName = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get dataFactoryNameInput() {
-    return this._dataFactoryName;
   }
 
   // description - computed: false, optional: true, required: false
@@ -771,19 +587,6 @@ export class DataFactoryDatasetSnowflake extends cdktf.TerraformResource {
     return this._parameters;
   }
 
-  // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName?: string; 
-  public get resourceGroupName() {
-    return this.getStringAttribute('resource_group_name');
-  }
-  public set resourceGroupName(value: string) {
-    this._resourceGroupName = value;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get resourceGroupNameInput() {
-    return this._resourceGroupName;
-  }
-
   // schema_name - computed: false, optional: true, required: false
   private _schemaName?: string; 
   public get schemaName() {
@@ -832,22 +635,6 @@ export class DataFactoryDatasetSnowflake extends cdktf.TerraformResource {
     return this._schemaColumn.internalValue;
   }
 
-  // structure_column - computed: false, optional: true, required: false
-  private _structureColumn = new DataFactoryDatasetSnowflakeStructureColumnList(this, "structure_column", false);
-  public get structureColumn() {
-    return this._structureColumn;
-  }
-  public putStructureColumn(value: DataFactoryDatasetSnowflakeStructureColumn[] | cdktf.IResolvable) {
-    this._structureColumn.internalValue = value;
-  }
-  public resetStructureColumn() {
-    this._structureColumn.internalValue = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get structureColumnInput() {
-    return this._structureColumn.internalValue;
-  }
-
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new DataFactoryDatasetSnowflakeTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -873,18 +660,15 @@ export class DataFactoryDatasetSnowflake extends cdktf.TerraformResource {
       additional_properties: cdktf.hashMapper(cdktf.stringToTerraform)(this._additionalProperties),
       annotations: cdktf.listMapper(cdktf.stringToTerraform)(this._annotations),
       data_factory_id: cdktf.stringToTerraform(this._dataFactoryId),
-      data_factory_name: cdktf.stringToTerraform(this._dataFactoryName),
       description: cdktf.stringToTerraform(this._description),
       folder: cdktf.stringToTerraform(this._folder),
       id: cdktf.stringToTerraform(this._id),
       linked_service_name: cdktf.stringToTerraform(this._linkedServiceName),
       name: cdktf.stringToTerraform(this._name),
       parameters: cdktf.hashMapper(cdktf.stringToTerraform)(this._parameters),
-      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       schema_name: cdktf.stringToTerraform(this._schemaName),
       table_name: cdktf.stringToTerraform(this._tableName),
       schema_column: cdktf.listMapper(dataFactoryDatasetSnowflakeSchemaColumnToTerraform)(this._schemaColumn.internalValue),
-      structure_column: cdktf.listMapper(dataFactoryDatasetSnowflakeStructureColumnToTerraform)(this._structureColumn.internalValue),
       timeouts: dataFactoryDatasetSnowflakeTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

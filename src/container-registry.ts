@@ -28,14 +28,6 @@ export interface ContainerRegistryConfig extends cdktf.TerraformMetaArguments {
   */
   readonly exportPolicyEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry#georeplication_locations ContainerRegistry#georeplication_locations}
-  */
-  readonly georeplicationLocations?: string[];
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry#georeplications ContainerRegistry#georeplications}
-  */
-  readonly georeplications?: ContainerRegistryGeoreplications[] | cdktf.IResolvable;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry#id ContainerRegistry#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
@@ -77,11 +69,7 @@ export interface ContainerRegistryConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry#sku ContainerRegistry#sku}
   */
-  readonly sku?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry#storage_account_id ContainerRegistry#storage_account_id}
-  */
-  readonly storageAccountId?: string;
+  readonly sku: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry#tags ContainerRegistry#tags}
   */
@@ -94,6 +82,12 @@ export interface ContainerRegistryConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry#zone_redundancy_enabled ContainerRegistry#zone_redundancy_enabled}
   */
   readonly zoneRedundancyEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * georeplications block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry#georeplications ContainerRegistry#georeplications}
+  */
+  readonly georeplications?: ContainerRegistryGeoreplications[] | cdktf.IResolvable;
   /**
   * identity block
   * 
@@ -256,184 +250,6 @@ export class ContainerRegistryEncryptionList extends cdktf.ComplexList {
   */
   public get(index: number): ContainerRegistryEncryptionOutputReference {
     return new ContainerRegistryEncryptionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-  }
-}
-export interface ContainerRegistryGeoreplications {
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry#location ContainerRegistry#location}
-  */
-  readonly location?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry#regional_endpoint_enabled ContainerRegistry#regional_endpoint_enabled}
-  */
-  readonly regionalEndpointEnabled?: boolean | cdktf.IResolvable;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry#tags ContainerRegistry#tags}
-  */
-  readonly tags?: { [key: string]: string };
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry#zone_redundancy_enabled ContainerRegistry#zone_redundancy_enabled}
-  */
-  readonly zoneRedundancyEnabled?: boolean | cdktf.IResolvable;
-}
-
-export function containerRegistryGeoreplicationsToTerraform(struct?: ContainerRegistryGeoreplications | cdktf.IResolvable): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-    location: cdktf.stringToTerraform(struct!.location),
-    regional_endpoint_enabled: cdktf.booleanToTerraform(struct!.regionalEndpointEnabled),
-    tags: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.tags),
-    zone_redundancy_enabled: cdktf.booleanToTerraform(struct!.zoneRedundancyEnabled),
-  }
-}
-
-export class ContainerRegistryGeoreplicationsOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-  private resolvableValue?: cdktf.IResolvable;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
-  }
-
-  public get internalValue(): ContainerRegistryGeoreplications | cdktf.IResolvable | undefined {
-    if (this.resolvableValue) {
-      return this.resolvableValue;
-    }
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    if (this._location !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.location = this._location;
-    }
-    if (this._regionalEndpointEnabled !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.regionalEndpointEnabled = this._regionalEndpointEnabled;
-    }
-    if (this._tags !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.tags = this._tags;
-    }
-    if (this._zoneRedundancyEnabled !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.zoneRedundancyEnabled = this._zoneRedundancyEnabled;
-    }
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: ContainerRegistryGeoreplications | cdktf.IResolvable | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-      this.resolvableValue = undefined;
-      this._location = undefined;
-      this._regionalEndpointEnabled = undefined;
-      this._tags = undefined;
-      this._zoneRedundancyEnabled = undefined;
-    }
-    else if (cdktf.Tokenization.isResolvable(value)) {
-      this.isEmptyObject = false;
-      this.resolvableValue = value;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-      this.resolvableValue = undefined;
-      this._location = value.location;
-      this._regionalEndpointEnabled = value.regionalEndpointEnabled;
-      this._tags = value.tags;
-      this._zoneRedundancyEnabled = value.zoneRedundancyEnabled;
-    }
-  }
-
-  // location - computed: true, optional: true, required: false
-  private _location?: string; 
-  public get location() {
-    return this.getStringAttribute('location');
-  }
-  public set location(value: string) {
-    this._location = value;
-  }
-  public resetLocation() {
-    this._location = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get locationInput() {
-    return this._location;
-  }
-
-  // regional_endpoint_enabled - computed: true, optional: true, required: false
-  private _regionalEndpointEnabled?: boolean | cdktf.IResolvable; 
-  public get regionalEndpointEnabled() {
-    return this.getBooleanAttribute('regional_endpoint_enabled');
-  }
-  public set regionalEndpointEnabled(value: boolean | cdktf.IResolvable) {
-    this._regionalEndpointEnabled = value;
-  }
-  public resetRegionalEndpointEnabled() {
-    this._regionalEndpointEnabled = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get regionalEndpointEnabledInput() {
-    return this._regionalEndpointEnabled;
-  }
-
-  // tags - computed: true, optional: true, required: false
-  private _tags?: { [key: string]: string }; 
-  public get tags() {
-    return this.getStringMapAttribute('tags');
-  }
-  public set tags(value: { [key: string]: string }) {
-    this._tags = value;
-  }
-  public resetTags() {
-    this._tags = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get tagsInput() {
-    return this._tags;
-  }
-
-  // zone_redundancy_enabled - computed: true, optional: true, required: false
-  private _zoneRedundancyEnabled?: boolean | cdktf.IResolvable; 
-  public get zoneRedundancyEnabled() {
-    return this.getBooleanAttribute('zone_redundancy_enabled');
-  }
-  public set zoneRedundancyEnabled(value: boolean | cdktf.IResolvable) {
-    this._zoneRedundancyEnabled = value;
-  }
-  public resetZoneRedundancyEnabled() {
-    this._zoneRedundancyEnabled = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get zoneRedundancyEnabledInput() {
-    return this._zoneRedundancyEnabled;
-  }
-}
-
-export class ContainerRegistryGeoreplicationsList extends cdktf.ComplexList {
-  public internalValue? : ContainerRegistryGeoreplications[] | cdktf.IResolvable
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): ContainerRegistryGeoreplicationsOutputReference {
-    return new ContainerRegistryGeoreplicationsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface ContainerRegistryNetworkRuleSetIpRule {
@@ -1056,6 +872,181 @@ export class ContainerRegistryTrustPolicyList extends cdktf.ComplexList {
     return new ContainerRegistryTrustPolicyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface ContainerRegistryGeoreplications {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry#location ContainerRegistry#location}
+  */
+  readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry#regional_endpoint_enabled ContainerRegistry#regional_endpoint_enabled}
+  */
+  readonly regionalEndpointEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry#tags ContainerRegistry#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry#zone_redundancy_enabled ContainerRegistry#zone_redundancy_enabled}
+  */
+  readonly zoneRedundancyEnabled?: boolean | cdktf.IResolvable;
+}
+
+export function containerRegistryGeoreplicationsToTerraform(struct?: ContainerRegistryGeoreplications | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    location: cdktf.stringToTerraform(struct!.location),
+    regional_endpoint_enabled: cdktf.booleanToTerraform(struct!.regionalEndpointEnabled),
+    tags: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.tags),
+    zone_redundancy_enabled: cdktf.booleanToTerraform(struct!.zoneRedundancyEnabled),
+  }
+}
+
+export class ContainerRegistryGeoreplicationsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ContainerRegistryGeoreplications | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._location !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.location = this._location;
+    }
+    if (this._regionalEndpointEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.regionalEndpointEnabled = this._regionalEndpointEnabled;
+    }
+    if (this._tags !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.tags = this._tags;
+    }
+    if (this._zoneRedundancyEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.zoneRedundancyEnabled = this._zoneRedundancyEnabled;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerRegistryGeoreplications | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._location = undefined;
+      this._regionalEndpointEnabled = undefined;
+      this._tags = undefined;
+      this._zoneRedundancyEnabled = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._location = value.location;
+      this._regionalEndpointEnabled = value.regionalEndpointEnabled;
+      this._tags = value.tags;
+      this._zoneRedundancyEnabled = value.zoneRedundancyEnabled;
+    }
+  }
+
+  // location - computed: false, optional: false, required: true
+  private _location?: string; 
+  public get location() {
+    return this.getStringAttribute('location');
+  }
+  public set location(value: string) {
+    this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location;
+  }
+
+  // regional_endpoint_enabled - computed: false, optional: true, required: false
+  private _regionalEndpointEnabled?: boolean | cdktf.IResolvable; 
+  public get regionalEndpointEnabled() {
+    return this.getBooleanAttribute('regional_endpoint_enabled');
+  }
+  public set regionalEndpointEnabled(value: boolean | cdktf.IResolvable) {
+    this._regionalEndpointEnabled = value;
+  }
+  public resetRegionalEndpointEnabled() {
+    this._regionalEndpointEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionalEndpointEnabledInput() {
+    return this._regionalEndpointEnabled;
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // zone_redundancy_enabled - computed: false, optional: true, required: false
+  private _zoneRedundancyEnabled?: boolean | cdktf.IResolvable; 
+  public get zoneRedundancyEnabled() {
+    return this.getBooleanAttribute('zone_redundancy_enabled');
+  }
+  public set zoneRedundancyEnabled(value: boolean | cdktf.IResolvable) {
+    this._zoneRedundancyEnabled = value;
+  }
+  public resetZoneRedundancyEnabled() {
+    this._zoneRedundancyEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get zoneRedundancyEnabledInput() {
+    return this._zoneRedundancyEnabled;
+  }
+}
+
+export class ContainerRegistryGeoreplicationsList extends cdktf.ComplexList {
+  public internalValue? : ContainerRegistryGeoreplications[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ContainerRegistryGeoreplicationsOutputReference {
+    return new ContainerRegistryGeoreplicationsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ContainerRegistryIdentity {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry#identity_ids ContainerRegistry#identity_ids}
@@ -1338,8 +1329,8 @@ export class ContainerRegistry extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_container_registry',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1351,8 +1342,6 @@ export class ContainerRegistry extends cdktf.TerraformResource {
     this._dataEndpointEnabled = config.dataEndpointEnabled;
     this._encryption.internalValue = config.encryption;
     this._exportPolicyEnabled = config.exportPolicyEnabled;
-    this._georeplicationLocations = config.georeplicationLocations;
-    this._georeplications.internalValue = config.georeplications;
     this._id = config.id;
     this._location = config.location;
     this._name = config.name;
@@ -1363,10 +1352,10 @@ export class ContainerRegistry extends cdktf.TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._retentionPolicy.internalValue = config.retentionPolicy;
     this._sku = config.sku;
-    this._storageAccountId = config.storageAccountId;
     this._tags = config.tags;
     this._trustPolicy.internalValue = config.trustPolicy;
     this._zoneRedundancyEnabled = config.zoneRedundancyEnabled;
+    this._georeplications.internalValue = config.georeplications;
     this._identity.internalValue = config.identity;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -1463,38 +1452,6 @@ export class ContainerRegistry extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get exportPolicyEnabledInput() {
     return this._exportPolicyEnabled;
-  }
-
-  // georeplication_locations - computed: true, optional: true, required: false
-  private _georeplicationLocations?: string[]; 
-  public get georeplicationLocations() {
-    return cdktf.Fn.tolist(this.getListAttribute('georeplication_locations'));
-  }
-  public set georeplicationLocations(value: string[]) {
-    this._georeplicationLocations = value;
-  }
-  public resetGeoreplicationLocations() {
-    this._georeplicationLocations = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get georeplicationLocationsInput() {
-    return this._georeplicationLocations;
-  }
-
-  // georeplications - computed: true, optional: true, required: false
-  private _georeplications = new ContainerRegistryGeoreplicationsList(this, "georeplications", false);
-  public get georeplications() {
-    return this._georeplications;
-  }
-  public putGeoreplications(value: ContainerRegistryGeoreplications[] | cdktf.IResolvable) {
-    this._georeplications.internalValue = value;
-  }
-  public resetGeoreplications() {
-    this._georeplications.internalValue = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get georeplicationsInput() {
-    return this._georeplications.internalValue;
   }
 
   // id - computed: true, optional: true, required: false
@@ -1637,7 +1594,7 @@ export class ContainerRegistry extends cdktf.TerraformResource {
     return this._retentionPolicy.internalValue;
   }
 
-  // sku - computed: false, optional: true, required: false
+  // sku - computed: false, optional: false, required: true
   private _sku?: string; 
   public get sku() {
     return this.getStringAttribute('sku');
@@ -1645,28 +1602,9 @@ export class ContainerRegistry extends cdktf.TerraformResource {
   public set sku(value: string) {
     this._sku = value;
   }
-  public resetSku() {
-    this._sku = undefined;
-  }
   // Temporarily expose input value. Use with caution.
   public get skuInput() {
     return this._sku;
-  }
-
-  // storage_account_id - computed: true, optional: true, required: false
-  private _storageAccountId?: string; 
-  public get storageAccountId() {
-    return this.getStringAttribute('storage_account_id');
-  }
-  public set storageAccountId(value: string) {
-    this._storageAccountId = value;
-  }
-  public resetStorageAccountId() {
-    this._storageAccountId = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get storageAccountIdInput() {
-    return this._storageAccountId;
   }
 
   // tags - computed: false, optional: true, required: false
@@ -1717,6 +1655,22 @@ export class ContainerRegistry extends cdktf.TerraformResource {
     return this._zoneRedundancyEnabled;
   }
 
+  // georeplications - computed: false, optional: true, required: false
+  private _georeplications = new ContainerRegistryGeoreplicationsList(this, "georeplications", false);
+  public get georeplications() {
+    return this._georeplications;
+  }
+  public putGeoreplications(value: ContainerRegistryGeoreplications[] | cdktf.IResolvable) {
+    this._georeplications.internalValue = value;
+  }
+  public resetGeoreplications() {
+    this._georeplications.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get georeplicationsInput() {
+    return this._georeplications.internalValue;
+  }
+
   // identity - computed: false, optional: true, required: false
   private _identity = new ContainerRegistryIdentityOutputReference(this, "identity");
   public get identity() {
@@ -1760,8 +1714,6 @@ export class ContainerRegistry extends cdktf.TerraformResource {
       data_endpoint_enabled: cdktf.booleanToTerraform(this._dataEndpointEnabled),
       encryption: cdktf.listMapper(containerRegistryEncryptionToTerraform)(this._encryption.internalValue),
       export_policy_enabled: cdktf.booleanToTerraform(this._exportPolicyEnabled),
-      georeplication_locations: cdktf.listMapper(cdktf.stringToTerraform)(this._georeplicationLocations),
-      georeplications: cdktf.listMapper(containerRegistryGeoreplicationsToTerraform)(this._georeplications.internalValue),
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
@@ -1772,10 +1724,10 @@ export class ContainerRegistry extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       retention_policy: cdktf.listMapper(containerRegistryRetentionPolicyToTerraform)(this._retentionPolicy.internalValue),
       sku: cdktf.stringToTerraform(this._sku),
-      storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       trust_policy: cdktf.listMapper(containerRegistryTrustPolicyToTerraform)(this._trustPolicy.internalValue),
       zone_redundancy_enabled: cdktf.booleanToTerraform(this._zoneRedundancyEnabled),
+      georeplications: cdktf.listMapper(containerRegistryGeoreplicationsToTerraform)(this._georeplications.internalValue),
       identity: containerRegistryIdentityToTerraform(this._identity.internalValue),
       timeouts: containerRegistryTimeoutsToTerraform(this._timeouts.internalValue),
     };

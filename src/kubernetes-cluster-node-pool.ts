@@ -8,10 +8,6 @@ import * as cdktf from 'cdktf';
 
 export interface KubernetesClusterNodePoolConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool#availability_zones KubernetesClusterNodePool#availability_zones}
-  */
-  readonly availabilityZones?: string[];
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool#enable_auto_scaling KubernetesClusterNodePool#enable_auto_scaling}
   */
   readonly enableAutoScaling?: boolean | cdktf.IResolvable;
@@ -142,6 +138,10 @@ export interface KubernetesClusterNodePoolConfig extends cdktf.TerraformMetaArgu
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool#workload_runtime KubernetesClusterNodePool#workload_runtime}
   */
   readonly workloadRuntime?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool#zones KubernetesClusterNodePool#zones}
+  */
+  readonly zones?: string[];
   /**
   * kubelet_config block
   * 
@@ -1689,15 +1689,14 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_kubernetes_cluster_node_pool',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
       lifecycle: config.lifecycle
     });
-    this._availabilityZones = config.availabilityZones;
     this._enableAutoScaling = config.enableAutoScaling;
     this._enableHostEncryption = config.enableHostEncryption;
     this._enableNodePublicIp = config.enableNodePublicIp;
@@ -1730,6 +1729,7 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
     this._vmSize = config.vmSize;
     this._vnetSubnetId = config.vnetSubnetId;
     this._workloadRuntime = config.workloadRuntime;
+    this._zones = config.zones;
     this._kubeletConfig.internalValue = config.kubeletConfig;
     this._linuxOsConfig.internalValue = config.linuxOsConfig;
     this._timeouts.internalValue = config.timeouts;
@@ -1739,22 +1739,6 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
-
-  // availability_zones - computed: false, optional: true, required: false
-  private _availabilityZones?: string[]; 
-  public get availabilityZones() {
-    return this.getListAttribute('availability_zones');
-  }
-  public set availabilityZones(value: string[]) {
-    this._availabilityZones = value;
-  }
-  public resetAvailabilityZones() {
-    this._availabilityZones = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get availabilityZonesInput() {
-    return this._availabilityZones;
-  }
 
   // enable_auto_scaling - computed: false, optional: true, required: false
   private _enableAutoScaling?: boolean | cdktf.IResolvable; 
@@ -2259,6 +2243,22 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
     return this._workloadRuntime;
   }
 
+  // zones - computed: false, optional: true, required: false
+  private _zones?: string[]; 
+  public get zones() {
+    return cdktf.Fn.tolist(this.getListAttribute('zones'));
+  }
+  public set zones(value: string[]) {
+    this._zones = value;
+  }
+  public resetZones() {
+    this._zones = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get zonesInput() {
+    return this._zones;
+  }
+
   // kubelet_config - computed: false, optional: true, required: false
   private _kubeletConfig = new KubernetesClusterNodePoolKubeletConfigOutputReference(this, "kubelet_config");
   public get kubeletConfig() {
@@ -2329,7 +2329,6 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      availability_zones: cdktf.listMapper(cdktf.stringToTerraform)(this._availabilityZones),
       enable_auto_scaling: cdktf.booleanToTerraform(this._enableAutoScaling),
       enable_host_encryption: cdktf.booleanToTerraform(this._enableHostEncryption),
       enable_node_public_ip: cdktf.booleanToTerraform(this._enableNodePublicIp),
@@ -2362,6 +2361,7 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
       vm_size: cdktf.stringToTerraform(this._vmSize),
       vnet_subnet_id: cdktf.stringToTerraform(this._vnetSubnetId),
       workload_runtime: cdktf.stringToTerraform(this._workloadRuntime),
+      zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),
       kubelet_config: kubernetesClusterNodePoolKubeletConfigToTerraform(this._kubeletConfig.internalValue),
       linux_os_config: kubernetesClusterNodePoolLinuxOsConfigToTerraform(this._linuxOsConfig.internalValue),
       timeouts: kubernetesClusterNodePoolTimeoutsToTerraform(this._timeouts.internalValue),

@@ -27,17 +27,9 @@ export interface StorageAccountNetworkRulesAConfig extends cdktf.TerraformMetaAr
   */
   readonly ipRules?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_network_rules#resource_group_name StorageAccountNetworkRulesA#resource_group_name}
-  */
-  readonly resourceGroupName?: string;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_network_rules#storage_account_id StorageAccountNetworkRulesA#storage_account_id}
   */
-  readonly storageAccountId?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_network_rules#storage_account_name StorageAccountNetworkRulesA#storage_account_name}
-  */
-  readonly storageAccountName?: string;
+  readonly storageAccountId: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_network_rules#virtual_network_subnet_ids StorageAccountNetworkRulesA#virtual_network_subnet_ids}
   */
@@ -359,8 +351,8 @@ export class StorageAccountNetworkRulesA extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_storage_account_network_rules',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -371,9 +363,7 @@ export class StorageAccountNetworkRulesA extends cdktf.TerraformResource {
     this._defaultAction = config.defaultAction;
     this._id = config.id;
     this._ipRules = config.ipRules;
-    this._resourceGroupName = config.resourceGroupName;
     this._storageAccountId = config.storageAccountId;
-    this._storageAccountName = config.storageAccountName;
     this._virtualNetworkSubnetIds = config.virtualNetworkSubnetIds;
     this._privateLinkAccess.internalValue = config.privateLinkAccess;
     this._timeouts.internalValue = config.timeouts;
@@ -444,23 +434,7 @@ export class StorageAccountNetworkRulesA extends cdktf.TerraformResource {
     return this._ipRules;
   }
 
-  // resource_group_name - computed: true, optional: true, required: false
-  private _resourceGroupName?: string; 
-  public get resourceGroupName() {
-    return this.getStringAttribute('resource_group_name');
-  }
-  public set resourceGroupName(value: string) {
-    this._resourceGroupName = value;
-  }
-  public resetResourceGroupName() {
-    this._resourceGroupName = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get resourceGroupNameInput() {
-    return this._resourceGroupName;
-  }
-
-  // storage_account_id - computed: true, optional: true, required: false
+  // storage_account_id - computed: false, optional: false, required: true
   private _storageAccountId?: string; 
   public get storageAccountId() {
     return this.getStringAttribute('storage_account_id');
@@ -468,28 +442,9 @@ export class StorageAccountNetworkRulesA extends cdktf.TerraformResource {
   public set storageAccountId(value: string) {
     this._storageAccountId = value;
   }
-  public resetStorageAccountId() {
-    this._storageAccountId = undefined;
-  }
   // Temporarily expose input value. Use with caution.
   public get storageAccountIdInput() {
     return this._storageAccountId;
-  }
-
-  // storage_account_name - computed: true, optional: true, required: false
-  private _storageAccountName?: string; 
-  public get storageAccountName() {
-    return this.getStringAttribute('storage_account_name');
-  }
-  public set storageAccountName(value: string) {
-    this._storageAccountName = value;
-  }
-  public resetStorageAccountName() {
-    this._storageAccountName = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get storageAccountNameInput() {
-    return this._storageAccountName;
   }
 
   // virtual_network_subnet_ids - computed: true, optional: true, required: false
@@ -550,9 +505,7 @@ export class StorageAccountNetworkRulesA extends cdktf.TerraformResource {
       default_action: cdktf.stringToTerraform(this._defaultAction),
       id: cdktf.stringToTerraform(this._id),
       ip_rules: cdktf.listMapper(cdktf.stringToTerraform)(this._ipRules),
-      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
-      storage_account_name: cdktf.stringToTerraform(this._storageAccountName),
       virtual_network_subnet_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._virtualNetworkSubnetIds),
       private_link_access: cdktf.listMapper(storageAccountNetworkRulesPrivateLinkAccessAToTerraform)(this._privateLinkAccess.internalValue),
       timeouts: storageAccountNetworkRulesTimeoutsToTerraform(this._timeouts.internalValue),

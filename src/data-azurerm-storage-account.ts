@@ -199,8 +199,8 @@ export class DataAzurermStorageAccount extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_storage_account',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -238,9 +238,9 @@ export class DataAzurermStorageAccount extends cdktf.TerraformDataSource {
     return this.getStringAttribute('account_tier');
   }
 
-  // allow_blob_public_access - computed: true, optional: false, required: false
-  public get allowBlobPublicAccess() {
-    return this.getBooleanAttribute('allow_blob_public_access');
+  // allow_nested_items_to_be_public - computed: true, optional: false, required: false
+  public get allowNestedItemsToBePublic() {
+    return this.getBooleanAttribute('allow_nested_items_to_be_public');
   }
 
   // custom_domain - computed: true, optional: false, required: false
@@ -312,6 +312,11 @@ export class DataAzurermStorageAccount extends cdktf.TerraformDataSource {
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name;
+  }
+
+  // nfsv3_enabled - computed: true, optional: false, required: false
+  public get nfsv3Enabled() {
+    return this.getBooleanAttribute('nfsv3_enabled');
   }
 
   // primary_access_key - computed: true, optional: false, required: false

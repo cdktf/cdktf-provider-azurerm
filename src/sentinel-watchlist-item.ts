@@ -216,8 +216,8 @@ export class SentinelWatchlistItem extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_sentinel_watchlist_item',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

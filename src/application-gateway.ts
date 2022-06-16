@@ -562,7 +562,7 @@ export class ApplicationGatewayBackendAddressPoolOutputReference extends cdktf.C
   // fqdns - computed: false, optional: true, required: false
   private _fqdns?: string[]; 
   public get fqdns() {
-    return this.getListAttribute('fqdns');
+    return cdktf.Fn.tolist(this.getListAttribute('fqdns'));
   }
   public set fqdns(value: string[]) {
     this._fqdns = value;
@@ -583,7 +583,7 @@ export class ApplicationGatewayBackendAddressPoolOutputReference extends cdktf.C
   // ip_addresses - computed: false, optional: true, required: false
   private _ipAddresses?: string[]; 
   public get ipAddresses() {
-    return this.getListAttribute('ip_addresses');
+    return cdktf.Fn.tolist(this.getListAttribute('ip_addresses'));
   }
   public set ipAddresses(value: string[]) {
     this._ipAddresses = value;
@@ -1494,7 +1494,7 @@ export class ApplicationGatewayFrontendIpConfigurationOutputReference extends cd
     return this._name;
   }
 
-  // private_ip_address - computed: true, optional: true, required: false
+  // private_ip_address - computed: false, optional: true, required: false
   private _privateIpAddress?: string; 
   public get privateIpAddress() {
     return this.getStringAttribute('private_ip_address');
@@ -1510,7 +1510,7 @@ export class ApplicationGatewayFrontendIpConfigurationOutputReference extends cd
     return this._privateIpAddress;
   }
 
-  // private_ip_address_allocation - computed: true, optional: true, required: false
+  // private_ip_address_allocation - computed: false, optional: true, required: false
   private _privateIpAddressAllocation?: string; 
   public get privateIpAddressAllocation() {
     return this.getStringAttribute('private_ip_address_allocation');
@@ -1547,7 +1547,7 @@ export class ApplicationGatewayFrontendIpConfigurationOutputReference extends cd
     return this._privateLinkConfigurationName;
   }
 
-  // public_ip_address_id - computed: true, optional: true, required: false
+  // public_ip_address_id - computed: false, optional: true, required: false
   private _publicIpAddressId?: string; 
   public get publicIpAddressId() {
     return this.getStringAttribute('public_ip_address_id');
@@ -1563,7 +1563,7 @@ export class ApplicationGatewayFrontendIpConfigurationOutputReference extends cd
     return this._publicIpAddressId;
   }
 
-  // subnet_id - computed: true, optional: true, required: false
+  // subnet_id - computed: false, optional: true, required: false
   private _subnetId?: string; 
   public get subnetId() {
     return this.getStringAttribute('subnet_id');
@@ -2758,11 +2758,11 @@ export interface ApplicationGatewayProbeMatch {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway#body ApplicationGateway#body}
   */
-  readonly body?: string;
+  readonly body: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway#status_code ApplicationGateway#status_code}
   */
-  readonly statusCode?: string[];
+  readonly statusCode: string[];
 }
 
 export function applicationGatewayProbeMatchToTerraform(struct?: ApplicationGatewayProbeMatchOutputReference | ApplicationGatewayProbeMatch): any {
@@ -2814,7 +2814,7 @@ export class ApplicationGatewayProbeMatchOutputReference extends cdktf.ComplexOb
     }
   }
 
-  // body - computed: false, optional: true, required: false
+  // body - computed: false, optional: false, required: true
   private _body?: string; 
   public get body() {
     return this.getStringAttribute('body');
@@ -2822,24 +2822,18 @@ export class ApplicationGatewayProbeMatchOutputReference extends cdktf.ComplexOb
   public set body(value: string) {
     this._body = value;
   }
-  public resetBody() {
-    this._body = undefined;
-  }
   // Temporarily expose input value. Use with caution.
   public get bodyInput() {
     return this._body;
   }
 
-  // status_code - computed: false, optional: true, required: false
+  // status_code - computed: false, optional: false, required: true
   private _statusCode?: string[]; 
   public get statusCode() {
     return this.getListAttribute('status_code');
   }
   public set statusCode(value: string[]) {
     this._statusCode = value;
-  }
-  public resetStatusCode() {
-    this._statusCode = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get statusCodeInput() {
@@ -3458,7 +3452,7 @@ export interface ApplicationGatewayRequestRoutingRule {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway#priority ApplicationGateway#priority}
   */
-  readonly priority?: number;
+  readonly priority: number;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway#redirect_configuration_name ApplicationGateway#redirect_configuration_name}
   */
@@ -3665,16 +3659,13 @@ export class ApplicationGatewayRequestRoutingRuleOutputReference extends cdktf.C
     return this._name;
   }
 
-  // priority - computed: false, optional: true, required: false
+  // priority - computed: false, optional: false, required: true
   private _priority?: number; 
   public get priority() {
     return this.getNumberAttribute('priority');
   }
   public set priority(value: number) {
     this._priority = value;
-  }
-  public resetPriority() {
-    this._priority = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get priorityInput() {
@@ -7027,8 +7018,8 @@ export class ApplicationGateway extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_application_gateway',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -7219,7 +7210,7 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   // zones - computed: false, optional: true, required: false
   private _zones?: string[]; 
   public get zones() {
-    return this.getListAttribute('zones');
+    return cdktf.Fn.tolist(this.getListAttribute('zones'));
   }
   public set zones(value: string[]) {
     this._zones = value;
@@ -7265,7 +7256,7 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   }
 
   // backend_address_pool - computed: false, optional: false, required: true
-  private _backendAddressPool = new ApplicationGatewayBackendAddressPoolList(this, "backend_address_pool", false);
+  private _backendAddressPool = new ApplicationGatewayBackendAddressPoolList(this, "backend_address_pool", true);
   public get backendAddressPool() {
     return this._backendAddressPool;
   }
@@ -7278,7 +7269,7 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   }
 
   // backend_http_settings - computed: false, optional: false, required: true
-  private _backendHttpSettings = new ApplicationGatewayBackendHttpSettingsList(this, "backend_http_settings", false);
+  private _backendHttpSettings = new ApplicationGatewayBackendHttpSettingsList(this, "backend_http_settings", true);
   public get backendHttpSettings() {
     return this._backendHttpSettings;
   }
@@ -7346,7 +7337,7 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   }
 
   // http_listener - computed: false, optional: false, required: true
-  private _httpListener = new ApplicationGatewayHttpListenerList(this, "http_listener", false);
+  private _httpListener = new ApplicationGatewayHttpListenerList(this, "http_listener", true);
   public get httpListener() {
     return this._httpListener;
   }
@@ -7391,7 +7382,7 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   }
 
   // probe - computed: false, optional: true, required: false
-  private _probe = new ApplicationGatewayProbeList(this, "probe", false);
+  private _probe = new ApplicationGatewayProbeList(this, "probe", true);
   public get probe() {
     return this._probe;
   }
@@ -7465,7 +7456,7 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   }
 
   // ssl_certificate - computed: false, optional: true, required: false
-  private _sslCertificate = new ApplicationGatewaySslCertificateList(this, "ssl_certificate", false);
+  private _sslCertificate = new ApplicationGatewaySslCertificateList(this, "ssl_certificate", true);
   public get sslCertificate() {
     return this._sslCertificate;
   }

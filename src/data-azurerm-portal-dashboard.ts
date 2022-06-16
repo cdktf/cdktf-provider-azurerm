@@ -12,6 +12,10 @@ export interface DataAzurermPortalDashboardConfig extends cdktf.TerraformMetaArg
   */
   readonly dashboardProperties?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/portal_dashboard#display_name DataAzurermPortalDashboard#display_name}
+  */
+  readonly displayName?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/portal_dashboard#id DataAzurermPortalDashboard#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
@@ -21,7 +25,7 @@ export interface DataAzurermPortalDashboardConfig extends cdktf.TerraformMetaArg
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/portal_dashboard#name DataAzurermPortalDashboard#name}
   */
-  readonly name: string;
+  readonly name?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/portal_dashboard#resource_group_name DataAzurermPortalDashboard#resource_group_name}
   */
@@ -135,8 +139,8 @@ export class DataAzurermPortalDashboard extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_portal_dashboard',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -144,6 +148,7 @@ export class DataAzurermPortalDashboard extends cdktf.TerraformDataSource {
       lifecycle: config.lifecycle
     });
     this._dashboardProperties = config.dashboardProperties;
+    this._displayName = config.displayName;
     this._id = config.id;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
@@ -170,6 +175,22 @@ export class DataAzurermPortalDashboard extends cdktf.TerraformDataSource {
     return this._dashboardProperties;
   }
 
+  // display_name - computed: false, optional: true, required: false
+  private _displayName?: string; 
+  public get displayName() {
+    return this.getStringAttribute('display_name');
+  }
+  public set displayName(value: string) {
+    this._displayName = value;
+  }
+  public resetDisplayName() {
+    this._displayName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get displayNameInput() {
+    return this._displayName;
+  }
+
   // id - computed: true, optional: true, required: false
   private _id?: string; 
   public get id() {
@@ -191,13 +212,16 @@ export class DataAzurermPortalDashboard extends cdktf.TerraformDataSource {
     return this.getStringAttribute('location');
   }
 
-  // name - computed: false, optional: false, required: true
+  // name - computed: false, optional: true, required: false
   private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
@@ -246,6 +270,7 @@ export class DataAzurermPortalDashboard extends cdktf.TerraformDataSource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       dashboard_properties: cdktf.stringToTerraform(this._dashboardProperties),
+      display_name: cdktf.stringToTerraform(this._displayName),
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),

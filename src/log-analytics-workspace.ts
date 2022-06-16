@@ -39,10 +39,6 @@ export interface LogAnalyticsWorkspaceConfig extends cdktf.TerraformMetaArgument
   */
   readonly reservationCapacityInGbPerDay?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_workspace#reservation_capcity_in_gb_per_day LogAnalyticsWorkspace#reservation_capcity_in_gb_per_day}
-  */
-  readonly reservationCapcityInGbPerDay?: number;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_workspace#resource_group_name LogAnalyticsWorkspace#resource_group_name}
   */
   readonly resourceGroupName: string;
@@ -248,8 +244,8 @@ export class LogAnalyticsWorkspace extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_log_analytics_workspace',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -263,7 +259,6 @@ export class LogAnalyticsWorkspace extends cdktf.TerraformResource {
     this._location = config.location;
     this._name = config.name;
     this._reservationCapacityInGbPerDay = config.reservationCapacityInGbPerDay;
-    this._reservationCapcityInGbPerDay = config.reservationCapcityInGbPerDay;
     this._resourceGroupName = config.resourceGroupName;
     this._retentionInDays = config.retentionInDays;
     this._sku = config.sku;
@@ -365,11 +360,6 @@ export class LogAnalyticsWorkspace extends cdktf.TerraformResource {
     return this._name;
   }
 
-  // portal_url - computed: true, optional: false, required: false
-  public get portalUrl() {
-    return this.getStringAttribute('portal_url');
-  }
-
   // primary_shared_key - computed: true, optional: false, required: false
   public get primarySharedKey() {
     return this.getStringAttribute('primary_shared_key');
@@ -389,22 +379,6 @@ export class LogAnalyticsWorkspace extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get reservationCapacityInGbPerDayInput() {
     return this._reservationCapacityInGbPerDay;
-  }
-
-  // reservation_capcity_in_gb_per_day - computed: true, optional: true, required: false
-  private _reservationCapcityInGbPerDay?: number; 
-  public get reservationCapcityInGbPerDay() {
-    return this.getNumberAttribute('reservation_capcity_in_gb_per_day');
-  }
-  public set reservationCapcityInGbPerDay(value: number) {
-    this._reservationCapcityInGbPerDay = value;
-  }
-  public resetReservationCapcityInGbPerDay() {
-    this._reservationCapcityInGbPerDay = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get reservationCapcityInGbPerDayInput() {
-    return this._reservationCapcityInGbPerDay;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -441,7 +415,7 @@ export class LogAnalyticsWorkspace extends cdktf.TerraformResource {
     return this.getStringAttribute('secondary_shared_key');
   }
 
-  // sku - computed: false, optional: true, required: false
+  // sku - computed: true, optional: true, required: false
   private _sku?: string; 
   public get sku() {
     return this.getStringAttribute('sku');
@@ -507,7 +481,6 @@ export class LogAnalyticsWorkspace extends cdktf.TerraformResource {
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       reservation_capacity_in_gb_per_day: cdktf.numberToTerraform(this._reservationCapacityInGbPerDay),
-      reservation_capcity_in_gb_per_day: cdktf.numberToTerraform(this._reservationCapcityInGbPerDay),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       retention_in_days: cdktf.numberToTerraform(this._retentionInDays),
       sku: cdktf.stringToTerraform(this._sku),

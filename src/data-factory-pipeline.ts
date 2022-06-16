@@ -22,11 +22,7 @@ export interface DataFactoryPipelineConfig extends cdktf.TerraformMetaArguments 
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_pipeline#data_factory_id DataFactoryPipeline#data_factory_id}
   */
-  readonly dataFactoryId?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_pipeline#data_factory_name DataFactoryPipeline#data_factory_name}
-  */
-  readonly dataFactoryName?: string;
+  readonly dataFactoryId: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_pipeline#description DataFactoryPipeline#description}
   */
@@ -54,10 +50,6 @@ export interface DataFactoryPipelineConfig extends cdktf.TerraformMetaArguments 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_pipeline#parameters DataFactoryPipeline#parameters}
   */
   readonly parameters?: { [key: string]: string };
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_pipeline#resource_group_name DataFactoryPipeline#resource_group_name}
-  */
-  readonly resourceGroupName: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_pipeline#variables DataFactoryPipeline#variables}
   */
@@ -252,8 +244,8 @@ export class DataFactoryPipeline extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_data_factory_pipeline',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -264,14 +256,12 @@ export class DataFactoryPipeline extends cdktf.TerraformResource {
     this._annotations = config.annotations;
     this._concurrency = config.concurrency;
     this._dataFactoryId = config.dataFactoryId;
-    this._dataFactoryName = config.dataFactoryName;
     this._description = config.description;
     this._folder = config.folder;
     this._id = config.id;
     this._moniterMetricsAfterDuration = config.moniterMetricsAfterDuration;
     this._name = config.name;
     this._parameters = config.parameters;
-    this._resourceGroupName = config.resourceGroupName;
     this._variables = config.variables;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -328,7 +318,7 @@ export class DataFactoryPipeline extends cdktf.TerraformResource {
     return this._concurrency;
   }
 
-  // data_factory_id - computed: true, optional: true, required: false
+  // data_factory_id - computed: false, optional: false, required: true
   private _dataFactoryId?: string; 
   public get dataFactoryId() {
     return this.getStringAttribute('data_factory_id');
@@ -336,28 +326,9 @@ export class DataFactoryPipeline extends cdktf.TerraformResource {
   public set dataFactoryId(value: string) {
     this._dataFactoryId = value;
   }
-  public resetDataFactoryId() {
-    this._dataFactoryId = undefined;
-  }
   // Temporarily expose input value. Use with caution.
   public get dataFactoryIdInput() {
     return this._dataFactoryId;
-  }
-
-  // data_factory_name - computed: true, optional: true, required: false
-  private _dataFactoryName?: string; 
-  public get dataFactoryName() {
-    return this.getStringAttribute('data_factory_name');
-  }
-  public set dataFactoryName(value: string) {
-    this._dataFactoryName = value;
-  }
-  public resetDataFactoryName() {
-    this._dataFactoryName = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get dataFactoryNameInput() {
-    return this._dataFactoryName;
   }
 
   // description - computed: false, optional: true, required: false
@@ -453,19 +424,6 @@ export class DataFactoryPipeline extends cdktf.TerraformResource {
     return this._parameters;
   }
 
-  // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName?: string; 
-  public get resourceGroupName() {
-    return this.getStringAttribute('resource_group_name');
-  }
-  public set resourceGroupName(value: string) {
-    this._resourceGroupName = value;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get resourceGroupNameInput() {
-    return this._resourceGroupName;
-  }
-
   // variables - computed: false, optional: true, required: false
   private _variables?: { [key: string]: string }; 
   public get variables() {
@@ -508,14 +466,12 @@ export class DataFactoryPipeline extends cdktf.TerraformResource {
       annotations: cdktf.listMapper(cdktf.stringToTerraform)(this._annotations),
       concurrency: cdktf.numberToTerraform(this._concurrency),
       data_factory_id: cdktf.stringToTerraform(this._dataFactoryId),
-      data_factory_name: cdktf.stringToTerraform(this._dataFactoryName),
       description: cdktf.stringToTerraform(this._description),
       folder: cdktf.stringToTerraform(this._folder),
       id: cdktf.stringToTerraform(this._id),
       moniter_metrics_after_duration: cdktf.stringToTerraform(this._moniterMetricsAfterDuration),
       name: cdktf.stringToTerraform(this._name),
       parameters: cdktf.hashMapper(cdktf.stringToTerraform)(this._parameters),
-      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       variables: cdktf.hashMapper(cdktf.stringToTerraform)(this._variables),
       timeouts: dataFactoryPipelineTimeoutsToTerraform(this._timeouts.internalValue),
     };

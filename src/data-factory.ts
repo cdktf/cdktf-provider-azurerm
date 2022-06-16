@@ -12,6 +12,10 @@ export interface DataFactoryConfig extends cdktf.TerraformMetaArguments {
   */
   readonly customerManagedKeyId?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory#customer_managed_key_identity_id DataFactory#customer_managed_key_identity_id}
+  */
+  readonly customerManagedKeyIdentityId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory#id DataFactory#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
@@ -436,7 +440,7 @@ export class DataFactoryIdentityOutputReference extends cdktf.ComplexObject {
   // identity_ids - computed: false, optional: true, required: false
   private _identityIds?: string[]; 
   public get identityIds() {
-    return this.getListAttribute('identity_ids');
+    return cdktf.Fn.tolist(this.getListAttribute('identity_ids'));
   }
   public set identityIds(value: string[]) {
     this._identityIds = value;
@@ -837,8 +841,8 @@ export class DataFactory extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_data_factory',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -846,6 +850,7 @@ export class DataFactory extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._customerManagedKeyId = config.customerManagedKeyId;
+    this._customerManagedKeyIdentityId = config.customerManagedKeyIdentityId;
     this._id = config.id;
     this._location = config.location;
     this._managedVirtualNetworkEnabled = config.managedVirtualNetworkEnabled;
@@ -878,6 +883,22 @@ export class DataFactory extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get customerManagedKeyIdInput() {
     return this._customerManagedKeyId;
+  }
+
+  // customer_managed_key_identity_id - computed: false, optional: true, required: false
+  private _customerManagedKeyIdentityId?: string; 
+  public get customerManagedKeyIdentityId() {
+    return this.getStringAttribute('customer_managed_key_identity_id');
+  }
+  public set customerManagedKeyIdentityId(value: string) {
+    this._customerManagedKeyIdentityId = value;
+  }
+  public resetCustomerManagedKeyIdentityId() {
+    this._customerManagedKeyIdentityId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customerManagedKeyIdentityIdInput() {
+    return this._customerManagedKeyIdentityId;
   }
 
   // id - computed: true, optional: true, required: false
@@ -1070,6 +1091,7 @@ export class DataFactory extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       customer_managed_key_id: cdktf.stringToTerraform(this._customerManagedKeyId),
+      customer_managed_key_identity_id: cdktf.stringToTerraform(this._customerManagedKeyIdentityId),
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       managed_virtual_network_enabled: cdktf.booleanToTerraform(this._managedVirtualNetworkEnabled),

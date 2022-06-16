@@ -324,8 +324,8 @@ export class DedicatedHardwareSecurityModule extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_dedicated_hardware_security_module',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -451,7 +451,7 @@ export class DedicatedHardwareSecurityModule extends cdktf.TerraformResource {
   // zones - computed: false, optional: true, required: false
   private _zones?: string[]; 
   public get zones() {
-    return this.getListAttribute('zones');
+    return cdktf.Fn.tolist(this.getListAttribute('zones'));
   }
   public set zones(value: string[]) {
     this._zones = value;

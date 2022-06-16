@@ -236,8 +236,8 @@ export class ManagementGroupTemplateDeployment extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_management_group_template_deployment',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

@@ -6,68 +6,68 @@ import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface MssqlServerExtendedAuditingPolicyAConfig extends cdktf.TerraformMetaArguments {
+export interface MssqlServerExtendedAuditingPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_extended_auditing_policy#enabled MssqlServerExtendedAuditingPolicyA#enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_extended_auditing_policy#enabled MssqlServerExtendedAuditingPolicy#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_extended_auditing_policy#id MssqlServerExtendedAuditingPolicyA#id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_extended_auditing_policy#id MssqlServerExtendedAuditingPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_extended_auditing_policy#log_monitoring_enabled MssqlServerExtendedAuditingPolicyA#log_monitoring_enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_extended_auditing_policy#log_monitoring_enabled MssqlServerExtendedAuditingPolicy#log_monitoring_enabled}
   */
   readonly logMonitoringEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_extended_auditing_policy#retention_in_days MssqlServerExtendedAuditingPolicyA#retention_in_days}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_extended_auditing_policy#retention_in_days MssqlServerExtendedAuditingPolicy#retention_in_days}
   */
   readonly retentionInDays?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_extended_auditing_policy#server_id MssqlServerExtendedAuditingPolicyA#server_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_extended_auditing_policy#server_id MssqlServerExtendedAuditingPolicy#server_id}
   */
   readonly serverId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_extended_auditing_policy#storage_account_access_key MssqlServerExtendedAuditingPolicyA#storage_account_access_key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_extended_auditing_policy#storage_account_access_key MssqlServerExtendedAuditingPolicy#storage_account_access_key}
   */
   readonly storageAccountAccessKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_extended_auditing_policy#storage_account_access_key_is_secondary MssqlServerExtendedAuditingPolicyA#storage_account_access_key_is_secondary}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_extended_auditing_policy#storage_account_access_key_is_secondary MssqlServerExtendedAuditingPolicy#storage_account_access_key_is_secondary}
   */
   readonly storageAccountAccessKeyIsSecondary?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_extended_auditing_policy#storage_account_subscription_id MssqlServerExtendedAuditingPolicyA#storage_account_subscription_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_extended_auditing_policy#storage_account_subscription_id MssqlServerExtendedAuditingPolicy#storage_account_subscription_id}
   */
   readonly storageAccountSubscriptionId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_extended_auditing_policy#storage_endpoint MssqlServerExtendedAuditingPolicyA#storage_endpoint}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_extended_auditing_policy#storage_endpoint MssqlServerExtendedAuditingPolicy#storage_endpoint}
   */
   readonly storageEndpoint?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_extended_auditing_policy#timeouts MssqlServerExtendedAuditingPolicyA#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_extended_auditing_policy#timeouts MssqlServerExtendedAuditingPolicy#timeouts}
   */
   readonly timeouts?: MssqlServerExtendedAuditingPolicyTimeouts;
 }
 export interface MssqlServerExtendedAuditingPolicyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_extended_auditing_policy#create MssqlServerExtendedAuditingPolicyA#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_extended_auditing_policy#create MssqlServerExtendedAuditingPolicy#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_extended_auditing_policy#delete MssqlServerExtendedAuditingPolicyA#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_extended_auditing_policy#delete MssqlServerExtendedAuditingPolicy#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_extended_auditing_policy#read MssqlServerExtendedAuditingPolicyA#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_extended_auditing_policy#read MssqlServerExtendedAuditingPolicy#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_extended_auditing_policy#update MssqlServerExtendedAuditingPolicyA#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_extended_auditing_policy#update MssqlServerExtendedAuditingPolicy#update}
   */
   readonly update?: string;
 }
@@ -213,7 +213,7 @@ export class MssqlServerExtendedAuditingPolicyTimeoutsOutputReference extends cd
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_extended_auditing_policy azurerm_mssql_server_extended_auditing_policy}
 */
-export class MssqlServerExtendedAuditingPolicyA extends cdktf.TerraformResource {
+export class MssqlServerExtendedAuditingPolicy extends cdktf.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -229,15 +229,15 @@ export class MssqlServerExtendedAuditingPolicyA extends cdktf.TerraformResource 
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options MssqlServerExtendedAuditingPolicyAConfig
+  * @param options MssqlServerExtendedAuditingPolicyConfig
   */
-  public constructor(scope: Construct, id: string, config: MssqlServerExtendedAuditingPolicyAConfig) {
+  public constructor(scope: Construct, id: string, config: MssqlServerExtendedAuditingPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_mssql_server_extended_auditing_policy',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

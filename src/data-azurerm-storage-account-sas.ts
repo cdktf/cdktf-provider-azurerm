@@ -77,6 +77,10 @@ export interface DataAzurermStorageAccountSasPermissions {
   */
   readonly delete: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas#filter DataAzurermStorageAccountSas#filter}
+  */
+  readonly filter: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas#list DataAzurermStorageAccountSas#list}
   */
   readonly list: boolean | cdktf.IResolvable;
@@ -88,6 +92,10 @@ export interface DataAzurermStorageAccountSasPermissions {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas#read DataAzurermStorageAccountSas#read}
   */
   readonly read: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas#tag DataAzurermStorageAccountSas#tag}
+  */
+  readonly tag: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas#update DataAzurermStorageAccountSas#update}
   */
@@ -107,9 +115,11 @@ export function dataAzurermStorageAccountSasPermissionsToTerraform(struct?: Data
     add: cdktf.booleanToTerraform(struct!.add),
     create: cdktf.booleanToTerraform(struct!.create),
     delete: cdktf.booleanToTerraform(struct!.delete),
+    filter: cdktf.booleanToTerraform(struct!.filter),
     list: cdktf.booleanToTerraform(struct!.list),
     process: cdktf.booleanToTerraform(struct!.process),
     read: cdktf.booleanToTerraform(struct!.read),
+    tag: cdktf.booleanToTerraform(struct!.tag),
     update: cdktf.booleanToTerraform(struct!.update),
     write: cdktf.booleanToTerraform(struct!.write),
   }
@@ -141,6 +151,10 @@ export class DataAzurermStorageAccountSasPermissionsOutputReference extends cdkt
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
+    if (this._filter !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.filter = this._filter;
+    }
     if (this._list !== undefined) {
       hasAnyValues = true;
       internalValueResult.list = this._list;
@@ -152,6 +166,10 @@ export class DataAzurermStorageAccountSasPermissionsOutputReference extends cdkt
     if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
+    }
+    if (this._tag !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.tag = this._tag;
     }
     if (this._update !== undefined) {
       hasAnyValues = true;
@@ -170,9 +188,11 @@ export class DataAzurermStorageAccountSasPermissionsOutputReference extends cdkt
       this._add = undefined;
       this._create = undefined;
       this._delete = undefined;
+      this._filter = undefined;
       this._list = undefined;
       this._process = undefined;
       this._read = undefined;
+      this._tag = undefined;
       this._update = undefined;
       this._write = undefined;
     }
@@ -181,9 +201,11 @@ export class DataAzurermStorageAccountSasPermissionsOutputReference extends cdkt
       this._add = value.add;
       this._create = value.create;
       this._delete = value.delete;
+      this._filter = value.filter;
       this._list = value.list;
       this._process = value.process;
       this._read = value.read;
+      this._tag = value.tag;
       this._update = value.update;
       this._write = value.write;
     }
@@ -228,6 +250,19 @@ export class DataAzurermStorageAccountSasPermissionsOutputReference extends cdkt
     return this._delete;
   }
 
+  // filter - computed: false, optional: false, required: true
+  private _filter?: boolean | cdktf.IResolvable; 
+  public get filter() {
+    return this.getBooleanAttribute('filter');
+  }
+  public set filter(value: boolean | cdktf.IResolvable) {
+    this._filter = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get filterInput() {
+    return this._filter;
+  }
+
   // list - computed: false, optional: false, required: true
   private _list?: boolean | cdktf.IResolvable; 
   public get list() {
@@ -265,6 +300,19 @@ export class DataAzurermStorageAccountSasPermissionsOutputReference extends cdkt
   // Temporarily expose input value. Use with caution.
   public get readInput() {
     return this._read;
+  }
+
+  // tag - computed: false, optional: false, required: true
+  private _tag?: boolean | cdktf.IResolvable; 
+  public get tag() {
+    return this.getBooleanAttribute('tag');
+  }
+  public set tag(value: boolean | cdktf.IResolvable) {
+    this._tag = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagInput() {
+    return this._tag;
   }
 
   // update - computed: false, optional: false, required: true
@@ -639,8 +687,8 @@ export class DataAzurermStorageAccountSas extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_storage_account_sas',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

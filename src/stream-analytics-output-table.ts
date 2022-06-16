@@ -12,6 +12,10 @@ export interface StreamAnalyticsOutputTableConfig extends cdktf.TerraformMetaArg
   */
   readonly batchSize: number;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_table#columns_to_remove StreamAnalyticsOutputTable#columns_to_remove}
+  */
+  readonly columnsToRemove?: string[];
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_table#id StreamAnalyticsOutputTable#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
@@ -240,8 +244,8 @@ export class StreamAnalyticsOutputTable extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_stream_analytics_output_table',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -249,6 +253,7 @@ export class StreamAnalyticsOutputTable extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._batchSize = config.batchSize;
+    this._columnsToRemove = config.columnsToRemove;
     this._id = config.id;
     this._name = config.name;
     this._partitionKey = config.partitionKey;
@@ -276,6 +281,22 @@ export class StreamAnalyticsOutputTable extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get batchSizeInput() {
     return this._batchSize;
+  }
+
+  // columns_to_remove - computed: false, optional: true, required: false
+  private _columnsToRemove?: string[]; 
+  public get columnsToRemove() {
+    return this.getListAttribute('columns_to_remove');
+  }
+  public set columnsToRemove(value: string[]) {
+    this._columnsToRemove = value;
+  }
+  public resetColumnsToRemove() {
+    this._columnsToRemove = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get columnsToRemoveInput() {
+    return this._columnsToRemove;
   }
 
   // id - computed: true, optional: true, required: false
@@ -421,6 +442,7 @@ export class StreamAnalyticsOutputTable extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       batch_size: cdktf.numberToTerraform(this._batchSize),
+      columns_to_remove: cdktf.listMapper(cdktf.stringToTerraform)(this._columnsToRemove),
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       partition_key: cdktf.stringToTerraform(this._partitionKey),

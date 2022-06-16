@@ -8,14 +8,6 @@ import * as cdktf from 'cdktf';
 
 export interface FrontdoorConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor#backend_pools_send_receive_timeout_seconds Frontdoor#backend_pools_send_receive_timeout_seconds}
-  */
-  readonly backendPoolsSendReceiveTimeoutSeconds?: number;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor#enforce_backend_pools_certificate_name_check Frontdoor#enforce_backend_pools_certificate_name_check}
-  */
-  readonly enforceBackendPoolsCertificateNameCheck: boolean | cdktf.IResolvable;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor#friendly_name Frontdoor#friendly_name}
   */
   readonly friendlyName?: string;
@@ -30,10 +22,6 @@ export interface FrontdoorConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor#load_balancer_enabled Frontdoor#load_balancer_enabled}
   */
   readonly loadBalancerEnabled?: boolean | cdktf.IResolvable;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor#location Frontdoor#location}
-  */
-  readonly location?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor#name Frontdoor#name}
   */
@@ -64,6 +52,12 @@ export interface FrontdoorConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor#backend_pool_load_balancing Frontdoor#backend_pool_load_balancing}
   */
   readonly backendPoolLoadBalancing: FrontdoorBackendPoolLoadBalancing[] | cdktf.IResolvable;
+  /**
+  * backend_pool_settings block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor#backend_pool_settings Frontdoor#backend_pool_settings}
+  */
+  readonly backendPoolSettings?: FrontdoorBackendPoolSettings[] | cdktf.IResolvable;
   /**
   * frontend_endpoint block
   * 
@@ -999,6 +993,127 @@ export class FrontdoorBackendPoolLoadBalancingList extends cdktf.ComplexList {
   */
   public get(index: number): FrontdoorBackendPoolLoadBalancingOutputReference {
     return new FrontdoorBackendPoolLoadBalancingOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface FrontdoorBackendPoolSettings {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor#backend_pools_send_receive_timeout_seconds Frontdoor#backend_pools_send_receive_timeout_seconds}
+  */
+  readonly backendPoolsSendReceiveTimeoutSeconds?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor#enforce_backend_pools_certificate_name_check Frontdoor#enforce_backend_pools_certificate_name_check}
+  */
+  readonly enforceBackendPoolsCertificateNameCheck: boolean | cdktf.IResolvable;
+}
+
+export function frontdoorBackendPoolSettingsToTerraform(struct?: FrontdoorBackendPoolSettings | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    backend_pools_send_receive_timeout_seconds: cdktf.numberToTerraform(struct!.backendPoolsSendReceiveTimeoutSeconds),
+    enforce_backend_pools_certificate_name_check: cdktf.booleanToTerraform(struct!.enforceBackendPoolsCertificateNameCheck),
+  }
+}
+
+export class FrontdoorBackendPoolSettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): FrontdoorBackendPoolSettings | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._backendPoolsSendReceiveTimeoutSeconds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.backendPoolsSendReceiveTimeoutSeconds = this._backendPoolsSendReceiveTimeoutSeconds;
+    }
+    if (this._enforceBackendPoolsCertificateNameCheck !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enforceBackendPoolsCertificateNameCheck = this._enforceBackendPoolsCertificateNameCheck;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: FrontdoorBackendPoolSettings | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._backendPoolsSendReceiveTimeoutSeconds = undefined;
+      this._enforceBackendPoolsCertificateNameCheck = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._backendPoolsSendReceiveTimeoutSeconds = value.backendPoolsSendReceiveTimeoutSeconds;
+      this._enforceBackendPoolsCertificateNameCheck = value.enforceBackendPoolsCertificateNameCheck;
+    }
+  }
+
+  // backend_pools_send_receive_timeout_seconds - computed: false, optional: true, required: false
+  private _backendPoolsSendReceiveTimeoutSeconds?: number; 
+  public get backendPoolsSendReceiveTimeoutSeconds() {
+    return this.getNumberAttribute('backend_pools_send_receive_timeout_seconds');
+  }
+  public set backendPoolsSendReceiveTimeoutSeconds(value: number) {
+    this._backendPoolsSendReceiveTimeoutSeconds = value;
+  }
+  public resetBackendPoolsSendReceiveTimeoutSeconds() {
+    this._backendPoolsSendReceiveTimeoutSeconds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get backendPoolsSendReceiveTimeoutSecondsInput() {
+    return this._backendPoolsSendReceiveTimeoutSeconds;
+  }
+
+  // enforce_backend_pools_certificate_name_check - computed: false, optional: false, required: true
+  private _enforceBackendPoolsCertificateNameCheck?: boolean | cdktf.IResolvable; 
+  public get enforceBackendPoolsCertificateNameCheck() {
+    return this.getBooleanAttribute('enforce_backend_pools_certificate_name_check');
+  }
+  public set enforceBackendPoolsCertificateNameCheck(value: boolean | cdktf.IResolvable) {
+    this._enforceBackendPoolsCertificateNameCheck = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enforceBackendPoolsCertificateNameCheckInput() {
+    return this._enforceBackendPoolsCertificateNameCheck;
+  }
+}
+
+export class FrontdoorBackendPoolSettingsList extends cdktf.ComplexList {
+  public internalValue? : FrontdoorBackendPoolSettings[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): FrontdoorBackendPoolSettingsOutputReference {
+    return new FrontdoorBackendPoolSettingsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface FrontdoorFrontendEndpoint {
@@ -2089,26 +2204,24 @@ export class Frontdoor extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_frontdoor',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
       lifecycle: config.lifecycle
     });
-    this._backendPoolsSendReceiveTimeoutSeconds = config.backendPoolsSendReceiveTimeoutSeconds;
-    this._enforceBackendPoolsCertificateNameCheck = config.enforceBackendPoolsCertificateNameCheck;
     this._friendlyName = config.friendlyName;
     this._id = config.id;
     this._loadBalancerEnabled = config.loadBalancerEnabled;
-    this._location = config.location;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
     this._backendPool.internalValue = config.backendPool;
     this._backendPoolHealthProbe.internalValue = config.backendPoolHealthProbe;
     this._backendPoolLoadBalancing.internalValue = config.backendPoolLoadBalancing;
+    this._backendPoolSettings.internalValue = config.backendPoolSettings;
     this._frontendEndpoint.internalValue = config.frontendEndpoint;
     this._routingRule.internalValue = config.routingRule;
     this._timeouts.internalValue = config.timeouts;
@@ -2136,38 +2249,9 @@ export class Frontdoor extends cdktf.TerraformResource {
     return this._backendPools;
   }
 
-  // backend_pools_send_receive_timeout_seconds - computed: false, optional: true, required: false
-  private _backendPoolsSendReceiveTimeoutSeconds?: number; 
-  public get backendPoolsSendReceiveTimeoutSeconds() {
-    return this.getNumberAttribute('backend_pools_send_receive_timeout_seconds');
-  }
-  public set backendPoolsSendReceiveTimeoutSeconds(value: number) {
-    this._backendPoolsSendReceiveTimeoutSeconds = value;
-  }
-  public resetBackendPoolsSendReceiveTimeoutSeconds() {
-    this._backendPoolsSendReceiveTimeoutSeconds = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get backendPoolsSendReceiveTimeoutSecondsInput() {
-    return this._backendPoolsSendReceiveTimeoutSeconds;
-  }
-
   // cname - computed: true, optional: false, required: false
   public get cname() {
     return this.getStringAttribute('cname');
-  }
-
-  // enforce_backend_pools_certificate_name_check - computed: false, optional: false, required: true
-  private _enforceBackendPoolsCertificateNameCheck?: boolean | cdktf.IResolvable; 
-  public get enforceBackendPoolsCertificateNameCheck() {
-    return this.getBooleanAttribute('enforce_backend_pools_certificate_name_check');
-  }
-  public set enforceBackendPoolsCertificateNameCheck(value: boolean | cdktf.IResolvable) {
-    this._enforceBackendPoolsCertificateNameCheck = value;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get enforceBackendPoolsCertificateNameCheckInput() {
-    return this._enforceBackendPoolsCertificateNameCheck;
   }
 
   // explicit_resource_order - computed: true, optional: false, required: false
@@ -2233,22 +2317,6 @@ export class Frontdoor extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get loadBalancerEnabledInput() {
     return this._loadBalancerEnabled;
-  }
-
-  // location - computed: true, optional: true, required: false
-  private _location?: string; 
-  public get location() {
-    return this.getStringAttribute('location');
-  }
-  public set location(value: string) {
-    this._location = value;
-  }
-  public resetLocation() {
-    this._location = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get locationInput() {
-    return this._location;
   }
 
   // name - computed: false, optional: false, required: true
@@ -2338,6 +2406,22 @@ export class Frontdoor extends cdktf.TerraformResource {
     return this._backendPoolLoadBalancing.internalValue;
   }
 
+  // backend_pool_settings - computed: false, optional: true, required: false
+  private _backendPoolSettings = new FrontdoorBackendPoolSettingsList(this, "backend_pool_settings", false);
+  public get backendPoolSettings() {
+    return this._backendPoolSettings;
+  }
+  public putBackendPoolSettings(value: FrontdoorBackendPoolSettings[] | cdktf.IResolvable) {
+    this._backendPoolSettings.internalValue = value;
+  }
+  public resetBackendPoolSettings() {
+    this._backendPoolSettings.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get backendPoolSettingsInput() {
+    return this._backendPoolSettings.internalValue;
+  }
+
   // frontend_endpoint - computed: false, optional: false, required: true
   private _frontendEndpoint = new FrontdoorFrontendEndpointList(this, "frontend_endpoint", false);
   public get frontendEndpoint() {
@@ -2386,18 +2470,16 @@ export class Frontdoor extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      backend_pools_send_receive_timeout_seconds: cdktf.numberToTerraform(this._backendPoolsSendReceiveTimeoutSeconds),
-      enforce_backend_pools_certificate_name_check: cdktf.booleanToTerraform(this._enforceBackendPoolsCertificateNameCheck),
       friendly_name: cdktf.stringToTerraform(this._friendlyName),
       id: cdktf.stringToTerraform(this._id),
       load_balancer_enabled: cdktf.booleanToTerraform(this._loadBalancerEnabled),
-      location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       backend_pool: cdktf.listMapper(frontdoorBackendPoolToTerraform)(this._backendPool.internalValue),
       backend_pool_health_probe: cdktf.listMapper(frontdoorBackendPoolHealthProbeToTerraform)(this._backendPoolHealthProbe.internalValue),
       backend_pool_load_balancing: cdktf.listMapper(frontdoorBackendPoolLoadBalancingToTerraform)(this._backendPoolLoadBalancing.internalValue),
+      backend_pool_settings: cdktf.listMapper(frontdoorBackendPoolSettingsToTerraform)(this._backendPoolSettings.internalValue),
       frontend_endpoint: cdktf.listMapper(frontdoorFrontendEndpointToTerraform)(this._frontendEndpoint.internalValue),
       routing_rule: cdktf.listMapper(frontdoorRoutingRuleToTerraform)(this._routingRule.internalValue),
       timeouts: frontdoorTimeoutsToTerraform(this._timeouts.internalValue),

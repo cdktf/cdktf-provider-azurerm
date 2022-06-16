@@ -45,7 +45,7 @@ export interface ApiManagementProductConfig extends cdktf.TerraformMetaArguments
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_product#subscription_required ApiManagementProduct#subscription_required}
   */
-  readonly subscriptionRequired: boolean | cdktf.IResolvable;
+  readonly subscriptionRequired?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_product#subscriptions_limit ApiManagementProduct#subscriptions_limit}
   */
@@ -244,8 +244,8 @@ export class ApiManagementProduct extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_api_management_product',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -383,13 +383,16 @@ export class ApiManagementProduct extends cdktf.TerraformResource {
     return this._resourceGroupName;
   }
 
-  // subscription_required - computed: false, optional: false, required: true
+  // subscription_required - computed: false, optional: true, required: false
   private _subscriptionRequired?: boolean | cdktf.IResolvable; 
   public get subscriptionRequired() {
     return this.getBooleanAttribute('subscription_required');
   }
   public set subscriptionRequired(value: boolean | cdktf.IResolvable) {
     this._subscriptionRequired = value;
+  }
+  public resetSubscriptionRequired() {
+    this._subscriptionRequired = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get subscriptionRequiredInput() {

@@ -171,10 +171,6 @@ export interface PolicyVirtualMachineConfigurationAssignmentConfiguration {
   */
   readonly contentUri?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_virtual_machine_configuration_assignment#name PolicyVirtualMachineConfigurationAssignment#name}
-  */
-  readonly name?: string;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_virtual_machine_configuration_assignment#version PolicyVirtualMachineConfigurationAssignment#version}
   */
   readonly version?: string;
@@ -195,7 +191,6 @@ export function policyVirtualMachineConfigurationAssignmentConfigurationToTerraf
     assignment_type: cdktf.stringToTerraform(struct!.assignmentType),
     content_hash: cdktf.stringToTerraform(struct!.contentHash),
     content_uri: cdktf.stringToTerraform(struct!.contentUri),
-    name: cdktf.stringToTerraform(struct!.name),
     version: cdktf.stringToTerraform(struct!.version),
     parameter: cdktf.listMapper(policyVirtualMachineConfigurationAssignmentConfigurationParameterToTerraform)(struct!.parameter),
   }
@@ -227,10 +222,6 @@ export class PolicyVirtualMachineConfigurationAssignmentConfigurationOutputRefer
       hasAnyValues = true;
       internalValueResult.contentUri = this._contentUri;
     }
-    if (this._name !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.name = this._name;
-    }
     if (this._version !== undefined) {
       hasAnyValues = true;
       internalValueResult.version = this._version;
@@ -248,7 +239,6 @@ export class PolicyVirtualMachineConfigurationAssignmentConfigurationOutputRefer
       this._assignmentType = undefined;
       this._contentHash = undefined;
       this._contentUri = undefined;
-      this._name = undefined;
       this._version = undefined;
       this._parameter.internalValue = undefined;
     }
@@ -257,7 +247,6 @@ export class PolicyVirtualMachineConfigurationAssignmentConfigurationOutputRefer
       this._assignmentType = value.assignmentType;
       this._contentHash = value.contentHash;
       this._contentUri = value.contentUri;
-      this._name = value.name;
       this._version = value.version;
       this._parameter.internalValue = value.parameter;
     }
@@ -309,22 +298,6 @@ export class PolicyVirtualMachineConfigurationAssignmentConfigurationOutputRefer
   // Temporarily expose input value. Use with caution.
   public get contentUriInput() {
     return this._contentUri;
-  }
-
-  // name - computed: false, optional: true, required: false
-  private _name?: string; 
-  public get name() {
-    return this.getStringAttribute('name');
-  }
-  public set name(value: string) {
-    this._name = value;
-  }
-  public resetName() {
-    this._name = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get nameInput() {
-    return this._name;
   }
 
   // version - computed: false, optional: true, required: false
@@ -542,8 +515,8 @@ export class PolicyVirtualMachineConfigurationAssignment extends cdktf.Terraform
       terraformResourceType: 'azurerm_policy_virtual_machine_configuration_assignment',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

@@ -39,6 +39,10 @@ export interface MssqlManagedInstanceConfig extends cdktf.TerraformMetaArguments
   */
   readonly location: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_managed_instance#maintenance_configuration_name MssqlManagedInstance#maintenance_configuration_name}
+  */
+  readonly maintenanceConfigurationName?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_managed_instance#minimum_tls_version MssqlManagedInstance#minimum_tls_version}
   */
   readonly minimumTlsVersion?: string;
@@ -354,8 +358,8 @@ export class MssqlManagedInstance extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_mssql_managed_instance',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -369,6 +373,7 @@ export class MssqlManagedInstance extends cdktf.TerraformResource {
     this._id = config.id;
     this._licenseType = config.licenseType;
     this._location = config.location;
+    this._maintenanceConfigurationName = config.maintenanceConfigurationName;
     this._minimumTlsVersion = config.minimumTlsVersion;
     this._name = config.name;
     this._proxyOverride = config.proxyOverride;
@@ -492,6 +497,22 @@ export class MssqlManagedInstance extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
     return this._location;
+  }
+
+  // maintenance_configuration_name - computed: false, optional: true, required: false
+  private _maintenanceConfigurationName?: string; 
+  public get maintenanceConfigurationName() {
+    return this.getStringAttribute('maintenance_configuration_name');
+  }
+  public set maintenanceConfigurationName(value: string) {
+    this._maintenanceConfigurationName = value;
+  }
+  public resetMaintenanceConfigurationName() {
+    this._maintenanceConfigurationName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maintenanceConfigurationNameInput() {
+    return this._maintenanceConfigurationName;
   }
 
   // minimum_tls_version - computed: false, optional: true, required: false
@@ -713,6 +734,7 @@ export class MssqlManagedInstance extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       license_type: cdktf.stringToTerraform(this._licenseType),
       location: cdktf.stringToTerraform(this._location),
+      maintenance_configuration_name: cdktf.stringToTerraform(this._maintenanceConfigurationName),
       minimum_tls_version: cdktf.stringToTerraform(this._minimumTlsVersion),
       name: cdktf.stringToTerraform(this._name),
       proxy_override: cdktf.stringToTerraform(this._proxyOverride),

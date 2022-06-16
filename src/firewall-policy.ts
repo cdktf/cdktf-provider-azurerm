@@ -91,10 +91,6 @@ export interface FirewallPolicyConfig extends cdktf.TerraformMetaArguments {
 }
 export interface FirewallPolicyDns {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy#network_rule_fqdn_enabled FirewallPolicy#network_rule_fqdn_enabled}
-  */
-  readonly networkRuleFqdnEnabled?: boolean | cdktf.IResolvable;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy#proxy_enabled FirewallPolicy#proxy_enabled}
   */
   readonly proxyEnabled?: boolean | cdktf.IResolvable;
@@ -110,7 +106,6 @@ export function firewallPolicyDnsToTerraform(struct?: FirewallPolicyDnsOutputRef
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    network_rule_fqdn_enabled: cdktf.booleanToTerraform(struct!.networkRuleFqdnEnabled),
     proxy_enabled: cdktf.booleanToTerraform(struct!.proxyEnabled),
     servers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.servers),
   }
@@ -130,10 +125,6 @@ export class FirewallPolicyDnsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): FirewallPolicyDns | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._networkRuleFqdnEnabled !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.networkRuleFqdnEnabled = this._networkRuleFqdnEnabled;
-    }
     if (this._proxyEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.proxyEnabled = this._proxyEnabled;
@@ -148,32 +139,14 @@ export class FirewallPolicyDnsOutputReference extends cdktf.ComplexObject {
   public set internalValue(value: FirewallPolicyDns | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
-      this._networkRuleFqdnEnabled = undefined;
       this._proxyEnabled = undefined;
       this._servers = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
-      this._networkRuleFqdnEnabled = value.networkRuleFqdnEnabled;
       this._proxyEnabled = value.proxyEnabled;
       this._servers = value.servers;
     }
-  }
-
-  // network_rule_fqdn_enabled - computed: true, optional: true, required: false
-  private _networkRuleFqdnEnabled?: boolean | cdktf.IResolvable; 
-  public get networkRuleFqdnEnabled() {
-    return this.getBooleanAttribute('network_rule_fqdn_enabled');
-  }
-  public set networkRuleFqdnEnabled(value: boolean | cdktf.IResolvable) {
-    this._networkRuleFqdnEnabled = value;
-  }
-  public resetNetworkRuleFqdnEnabled() {
-    this._networkRuleFqdnEnabled = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get networkRuleFqdnEnabledInput() {
-    return this._networkRuleFqdnEnabled;
   }
 
   // proxy_enabled - computed: false, optional: true, required: false
@@ -210,13 +183,13 @@ export class FirewallPolicyDnsOutputReference extends cdktf.ComplexObject {
 }
 export interface FirewallPolicyIdentity {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy#identity_ids FirewallPolicy#identity_ids}
+  */
+  readonly identityIds: string[];
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy#type FirewallPolicy#type}
   */
   readonly type: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy#user_assigned_identity_ids FirewallPolicy#user_assigned_identity_ids}
-  */
-  readonly userAssignedIdentityIds?: string[];
 }
 
 export function firewallPolicyIdentityToTerraform(struct?: FirewallPolicyIdentityOutputReference | FirewallPolicyIdentity): any {
@@ -225,8 +198,8 @@ export function firewallPolicyIdentityToTerraform(struct?: FirewallPolicyIdentit
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
     type: cdktf.stringToTerraform(struct!.type),
-    user_assigned_identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.userAssignedIdentityIds),
   }
 }
 
@@ -244,13 +217,13 @@ export class FirewallPolicyIdentityOutputReference extends cdktf.ComplexObject {
   public get internalValue(): FirewallPolicyIdentity | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._identityIds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.identityIds = this._identityIds;
+    }
     if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
-    }
-    if (this._userAssignedIdentityIds !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.userAssignedIdentityIds = this._userAssignedIdentityIds;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -258,24 +231,27 @@ export class FirewallPolicyIdentityOutputReference extends cdktf.ComplexObject {
   public set internalValue(value: FirewallPolicyIdentity | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this._identityIds = undefined;
       this._type = undefined;
-      this._userAssignedIdentityIds = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this._identityIds = value.identityIds;
       this._type = value.type;
-      this._userAssignedIdentityIds = value.userAssignedIdentityIds;
     }
   }
 
-  // principal_id - computed: true, optional: false, required: false
-  public get principalId() {
-    return this.getStringAttribute('principal_id');
+  // identity_ids - computed: false, optional: false, required: true
+  private _identityIds?: string[]; 
+  public get identityIds() {
+    return cdktf.Fn.tolist(this.getListAttribute('identity_ids'));
   }
-
-  // tenant_id - computed: true, optional: false, required: false
-  public get tenantId() {
-    return this.getStringAttribute('tenant_id');
+  public set identityIds(value: string[]) {
+    this._identityIds = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityIdsInput() {
+    return this._identityIds;
   }
 
   // type - computed: false, optional: false, required: true
@@ -289,22 +265,6 @@ export class FirewallPolicyIdentityOutputReference extends cdktf.ComplexObject {
   // Temporarily expose input value. Use with caution.
   public get typeInput() {
     return this._type;
-  }
-
-  // user_assigned_identity_ids - computed: false, optional: true, required: false
-  private _userAssignedIdentityIds?: string[]; 
-  public get userAssignedIdentityIds() {
-    return cdktf.Fn.tolist(this.getListAttribute('user_assigned_identity_ids'));
-  }
-  public set userAssignedIdentityIds(value: string[]) {
-    this._userAssignedIdentityIds = value;
-  }
-  public resetUserAssignedIdentityIds() {
-    this._userAssignedIdentityIds = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get userAssignedIdentityIdsInput() {
-    return this._userAssignedIdentityIds;
   }
 }
 export interface FirewallPolicyInsightsLogAnalyticsWorkspace {
@@ -1461,8 +1421,8 @@ export class FirewallPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_firewall_policy',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

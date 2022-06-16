@@ -1,0 +1,3166 @@
+// https://www.terraform.io/docs/providers/azurerm/d/linux_web_app
+// generated from terraform resource schema
+
+import { Construct } from 'constructs';
+import * as cdktf from 'cdktf';
+
+// Configuration
+
+export interface DataAzurermLinuxWebAppConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/linux_web_app#id DataAzurermLinuxWebApp#id}
+  *
+  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/linux_web_app#name DataAzurermLinuxWebApp#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/linux_web_app#resource_group_name DataAzurermLinuxWebApp#resource_group_name}
+  */
+  readonly resourceGroupName: string;
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/linux_web_app#timeouts DataAzurermLinuxWebApp#timeouts}
+  */
+  readonly timeouts?: DataAzurermLinuxWebAppTimeouts;
+}
+export interface DataAzurermLinuxWebAppAuthSettingsActiveDirectory {
+}
+
+export function dataAzurermLinuxWebAppAuthSettingsActiveDirectoryToTerraform(struct?: DataAzurermLinuxWebAppAuthSettingsActiveDirectory): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermLinuxWebAppAuthSettingsActiveDirectoryOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermLinuxWebAppAuthSettingsActiveDirectory | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermLinuxWebAppAuthSettingsActiveDirectory | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // allowed_audiences - computed: true, optional: false, required: false
+  public get allowedAudiences() {
+    return this.getListAttribute('allowed_audiences');
+  }
+
+  // client_id - computed: true, optional: false, required: false
+  public get clientId() {
+    return this.getStringAttribute('client_id');
+  }
+
+  // client_secret - computed: true, optional: false, required: false
+  public get clientSecret() {
+    return this.getStringAttribute('client_secret');
+  }
+
+  // client_secret_setting_name - computed: true, optional: false, required: false
+  public get clientSecretSettingName() {
+    return this.getStringAttribute('client_secret_setting_name');
+  }
+}
+
+export class DataAzurermLinuxWebAppAuthSettingsActiveDirectoryList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermLinuxWebAppAuthSettingsActiveDirectoryOutputReference {
+    return new DataAzurermLinuxWebAppAuthSettingsActiveDirectoryOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermLinuxWebAppAuthSettingsFacebook {
+}
+
+export function dataAzurermLinuxWebAppAuthSettingsFacebookToTerraform(struct?: DataAzurermLinuxWebAppAuthSettingsFacebook): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermLinuxWebAppAuthSettingsFacebookOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermLinuxWebAppAuthSettingsFacebook | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermLinuxWebAppAuthSettingsFacebook | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // app_id - computed: true, optional: false, required: false
+  public get appId() {
+    return this.getStringAttribute('app_id');
+  }
+
+  // app_secret - computed: true, optional: false, required: false
+  public get appSecret() {
+    return this.getStringAttribute('app_secret');
+  }
+
+  // app_secret_setting_name - computed: true, optional: false, required: false
+  public get appSecretSettingName() {
+    return this.getStringAttribute('app_secret_setting_name');
+  }
+
+  // oauth_scopes - computed: true, optional: false, required: false
+  public get oauthScopes() {
+    return this.getListAttribute('oauth_scopes');
+  }
+}
+
+export class DataAzurermLinuxWebAppAuthSettingsFacebookList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermLinuxWebAppAuthSettingsFacebookOutputReference {
+    return new DataAzurermLinuxWebAppAuthSettingsFacebookOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermLinuxWebAppAuthSettingsGithub {
+}
+
+export function dataAzurermLinuxWebAppAuthSettingsGithubToTerraform(struct?: DataAzurermLinuxWebAppAuthSettingsGithub): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermLinuxWebAppAuthSettingsGithubOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermLinuxWebAppAuthSettingsGithub | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermLinuxWebAppAuthSettingsGithub | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // client_id - computed: true, optional: false, required: false
+  public get clientId() {
+    return this.getStringAttribute('client_id');
+  }
+
+  // client_secret - computed: true, optional: false, required: false
+  public get clientSecret() {
+    return this.getStringAttribute('client_secret');
+  }
+
+  // client_secret_setting_name - computed: true, optional: false, required: false
+  public get clientSecretSettingName() {
+    return this.getStringAttribute('client_secret_setting_name');
+  }
+
+  // oauth_scopes - computed: true, optional: false, required: false
+  public get oauthScopes() {
+    return this.getListAttribute('oauth_scopes');
+  }
+}
+
+export class DataAzurermLinuxWebAppAuthSettingsGithubList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermLinuxWebAppAuthSettingsGithubOutputReference {
+    return new DataAzurermLinuxWebAppAuthSettingsGithubOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermLinuxWebAppAuthSettingsGoogle {
+}
+
+export function dataAzurermLinuxWebAppAuthSettingsGoogleToTerraform(struct?: DataAzurermLinuxWebAppAuthSettingsGoogle): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermLinuxWebAppAuthSettingsGoogleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermLinuxWebAppAuthSettingsGoogle | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermLinuxWebAppAuthSettingsGoogle | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // client_id - computed: true, optional: false, required: false
+  public get clientId() {
+    return this.getStringAttribute('client_id');
+  }
+
+  // client_secret - computed: true, optional: false, required: false
+  public get clientSecret() {
+    return this.getStringAttribute('client_secret');
+  }
+
+  // client_secret_setting_name - computed: true, optional: false, required: false
+  public get clientSecretSettingName() {
+    return this.getStringAttribute('client_secret_setting_name');
+  }
+
+  // oauth_scopes - computed: true, optional: false, required: false
+  public get oauthScopes() {
+    return this.getListAttribute('oauth_scopes');
+  }
+}
+
+export class DataAzurermLinuxWebAppAuthSettingsGoogleList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermLinuxWebAppAuthSettingsGoogleOutputReference {
+    return new DataAzurermLinuxWebAppAuthSettingsGoogleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermLinuxWebAppAuthSettingsMicrosoft {
+}
+
+export function dataAzurermLinuxWebAppAuthSettingsMicrosoftToTerraform(struct?: DataAzurermLinuxWebAppAuthSettingsMicrosoft): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermLinuxWebAppAuthSettingsMicrosoftOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermLinuxWebAppAuthSettingsMicrosoft | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermLinuxWebAppAuthSettingsMicrosoft | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // client_id - computed: true, optional: false, required: false
+  public get clientId() {
+    return this.getStringAttribute('client_id');
+  }
+
+  // client_secret - computed: true, optional: false, required: false
+  public get clientSecret() {
+    return this.getStringAttribute('client_secret');
+  }
+
+  // client_secret_setting_name - computed: true, optional: false, required: false
+  public get clientSecretSettingName() {
+    return this.getStringAttribute('client_secret_setting_name');
+  }
+
+  // oauth_scopes - computed: true, optional: false, required: false
+  public get oauthScopes() {
+    return this.getListAttribute('oauth_scopes');
+  }
+}
+
+export class DataAzurermLinuxWebAppAuthSettingsMicrosoftList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermLinuxWebAppAuthSettingsMicrosoftOutputReference {
+    return new DataAzurermLinuxWebAppAuthSettingsMicrosoftOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermLinuxWebAppAuthSettingsTwitter {
+}
+
+export function dataAzurermLinuxWebAppAuthSettingsTwitterToTerraform(struct?: DataAzurermLinuxWebAppAuthSettingsTwitter): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermLinuxWebAppAuthSettingsTwitterOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermLinuxWebAppAuthSettingsTwitter | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermLinuxWebAppAuthSettingsTwitter | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // consumer_key - computed: true, optional: false, required: false
+  public get consumerKey() {
+    return this.getStringAttribute('consumer_key');
+  }
+
+  // consumer_secret - computed: true, optional: false, required: false
+  public get consumerSecret() {
+    return this.getStringAttribute('consumer_secret');
+  }
+
+  // consumer_secret_setting_name - computed: true, optional: false, required: false
+  public get consumerSecretSettingName() {
+    return this.getStringAttribute('consumer_secret_setting_name');
+  }
+}
+
+export class DataAzurermLinuxWebAppAuthSettingsTwitterList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermLinuxWebAppAuthSettingsTwitterOutputReference {
+    return new DataAzurermLinuxWebAppAuthSettingsTwitterOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermLinuxWebAppAuthSettings {
+}
+
+export function dataAzurermLinuxWebAppAuthSettingsToTerraform(struct?: DataAzurermLinuxWebAppAuthSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermLinuxWebAppAuthSettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermLinuxWebAppAuthSettings | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermLinuxWebAppAuthSettings | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // active_directory - computed: true, optional: false, required: false
+  private _activeDirectory = new DataAzurermLinuxWebAppAuthSettingsActiveDirectoryList(this, "active_directory", false);
+  public get activeDirectory() {
+    return this._activeDirectory;
+  }
+
+  // additional_login_parameters - computed: true, optional: false, required: false
+  private _additionalLoginParameters = new cdktf.StringMap(this, "additional_login_parameters");
+  public get additionalLoginParameters() {
+    return this._additionalLoginParameters;
+  }
+
+  // allowed_external_redirect_urls - computed: true, optional: false, required: false
+  public get allowedExternalRedirectUrls() {
+    return this.getListAttribute('allowed_external_redirect_urls');
+  }
+
+  // default_provider - computed: true, optional: false, required: false
+  public get defaultProvider() {
+    return this.getStringAttribute('default_provider');
+  }
+
+  // enabled - computed: true, optional: false, required: false
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+
+  // facebook - computed: true, optional: false, required: false
+  private _facebook = new DataAzurermLinuxWebAppAuthSettingsFacebookList(this, "facebook", false);
+  public get facebook() {
+    return this._facebook;
+  }
+
+  // github - computed: true, optional: false, required: false
+  private _github = new DataAzurermLinuxWebAppAuthSettingsGithubList(this, "github", false);
+  public get github() {
+    return this._github;
+  }
+
+  // google - computed: true, optional: false, required: false
+  private _google = new DataAzurermLinuxWebAppAuthSettingsGoogleList(this, "google", false);
+  public get google() {
+    return this._google;
+  }
+
+  // issuer - computed: true, optional: false, required: false
+  public get issuer() {
+    return this.getStringAttribute('issuer');
+  }
+
+  // microsoft - computed: true, optional: false, required: false
+  private _microsoft = new DataAzurermLinuxWebAppAuthSettingsMicrosoftList(this, "microsoft", false);
+  public get microsoft() {
+    return this._microsoft;
+  }
+
+  // runtime_version - computed: true, optional: false, required: false
+  public get runtimeVersion() {
+    return this.getStringAttribute('runtime_version');
+  }
+
+  // token_refresh_extension_hours - computed: true, optional: false, required: false
+  public get tokenRefreshExtensionHours() {
+    return this.getNumberAttribute('token_refresh_extension_hours');
+  }
+
+  // token_store_enabled - computed: true, optional: false, required: false
+  public get tokenStoreEnabled() {
+    return this.getBooleanAttribute('token_store_enabled');
+  }
+
+  // twitter - computed: true, optional: false, required: false
+  private _twitter = new DataAzurermLinuxWebAppAuthSettingsTwitterList(this, "twitter", false);
+  public get twitter() {
+    return this._twitter;
+  }
+
+  // unauthenticated_client_action - computed: true, optional: false, required: false
+  public get unauthenticatedClientAction() {
+    return this.getStringAttribute('unauthenticated_client_action');
+  }
+}
+
+export class DataAzurermLinuxWebAppAuthSettingsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermLinuxWebAppAuthSettingsOutputReference {
+    return new DataAzurermLinuxWebAppAuthSettingsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermLinuxWebAppBackupSchedule {
+}
+
+export function dataAzurermLinuxWebAppBackupScheduleToTerraform(struct?: DataAzurermLinuxWebAppBackupSchedule): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermLinuxWebAppBackupScheduleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermLinuxWebAppBackupSchedule | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermLinuxWebAppBackupSchedule | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // frequency_interval - computed: true, optional: false, required: false
+  public get frequencyInterval() {
+    return this.getNumberAttribute('frequency_interval');
+  }
+
+  // frequency_unit - computed: true, optional: false, required: false
+  public get frequencyUnit() {
+    return this.getStringAttribute('frequency_unit');
+  }
+
+  // keep_at_least_one_backup - computed: true, optional: false, required: false
+  public get keepAtLeastOneBackup() {
+    return this.getBooleanAttribute('keep_at_least_one_backup');
+  }
+
+  // last_execution_time - computed: true, optional: false, required: false
+  public get lastExecutionTime() {
+    return this.getStringAttribute('last_execution_time');
+  }
+
+  // retention_period_days - computed: true, optional: false, required: false
+  public get retentionPeriodDays() {
+    return this.getNumberAttribute('retention_period_days');
+  }
+
+  // start_time - computed: true, optional: false, required: false
+  public get startTime() {
+    return this.getStringAttribute('start_time');
+  }
+}
+
+export class DataAzurermLinuxWebAppBackupScheduleList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermLinuxWebAppBackupScheduleOutputReference {
+    return new DataAzurermLinuxWebAppBackupScheduleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermLinuxWebAppBackup {
+}
+
+export function dataAzurermLinuxWebAppBackupToTerraform(struct?: DataAzurermLinuxWebAppBackup): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermLinuxWebAppBackupOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermLinuxWebAppBackup | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermLinuxWebAppBackup | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // enabled - computed: true, optional: false, required: false
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+
+  // name - computed: true, optional: false, required: false
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+
+  // schedule - computed: true, optional: false, required: false
+  private _schedule = new DataAzurermLinuxWebAppBackupScheduleList(this, "schedule", false);
+  public get schedule() {
+    return this._schedule;
+  }
+
+  // storage_account_url - computed: true, optional: false, required: false
+  public get storageAccountUrl() {
+    return this.getStringAttribute('storage_account_url');
+  }
+}
+
+export class DataAzurermLinuxWebAppBackupList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermLinuxWebAppBackupOutputReference {
+    return new DataAzurermLinuxWebAppBackupOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermLinuxWebAppConnectionString {
+}
+
+export function dataAzurermLinuxWebAppConnectionStringToTerraform(struct?: DataAzurermLinuxWebAppConnectionString): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermLinuxWebAppConnectionStringOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermLinuxWebAppConnectionString | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermLinuxWebAppConnectionString | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // name - computed: true, optional: false, required: false
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+
+  // type - computed: true, optional: false, required: false
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+
+  // value - computed: true, optional: false, required: false
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+}
+
+export class DataAzurermLinuxWebAppConnectionStringList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermLinuxWebAppConnectionStringOutputReference {
+    return new DataAzurermLinuxWebAppConnectionStringOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermLinuxWebAppIdentity {
+}
+
+export function dataAzurermLinuxWebAppIdentityToTerraform(struct?: DataAzurermLinuxWebAppIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermLinuxWebAppIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermLinuxWebAppIdentity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermLinuxWebAppIdentity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // identity_ids - computed: true, optional: false, required: false
+  public get identityIds() {
+    return this.getListAttribute('identity_ids');
+  }
+
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
+  }
+
+  // type - computed: true, optional: false, required: false
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+}
+
+export class DataAzurermLinuxWebAppIdentityList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermLinuxWebAppIdentityOutputReference {
+    return new DataAzurermLinuxWebAppIdentityOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermLinuxWebAppLogsApplicationLogsAzureBlobStorage {
+}
+
+export function dataAzurermLinuxWebAppLogsApplicationLogsAzureBlobStorageToTerraform(struct?: DataAzurermLinuxWebAppLogsApplicationLogsAzureBlobStorage): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermLinuxWebAppLogsApplicationLogsAzureBlobStorageOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermLinuxWebAppLogsApplicationLogsAzureBlobStorage | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermLinuxWebAppLogsApplicationLogsAzureBlobStorage | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // level - computed: true, optional: false, required: false
+  public get level() {
+    return this.getStringAttribute('level');
+  }
+
+  // retention_in_days - computed: true, optional: false, required: false
+  public get retentionInDays() {
+    return this.getNumberAttribute('retention_in_days');
+  }
+
+  // sas_url - computed: true, optional: false, required: false
+  public get sasUrl() {
+    return this.getStringAttribute('sas_url');
+  }
+}
+
+export class DataAzurermLinuxWebAppLogsApplicationLogsAzureBlobStorageList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermLinuxWebAppLogsApplicationLogsAzureBlobStorageOutputReference {
+    return new DataAzurermLinuxWebAppLogsApplicationLogsAzureBlobStorageOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermLinuxWebAppLogsApplicationLogs {
+}
+
+export function dataAzurermLinuxWebAppLogsApplicationLogsToTerraform(struct?: DataAzurermLinuxWebAppLogsApplicationLogs): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermLinuxWebAppLogsApplicationLogsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermLinuxWebAppLogsApplicationLogs | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermLinuxWebAppLogsApplicationLogs | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // azure_blob_storage - computed: true, optional: false, required: false
+  private _azureBlobStorage = new DataAzurermLinuxWebAppLogsApplicationLogsAzureBlobStorageList(this, "azure_blob_storage", false);
+  public get azureBlobStorage() {
+    return this._azureBlobStorage;
+  }
+
+  // file_system_level - computed: true, optional: false, required: false
+  public get fileSystemLevel() {
+    return this.getStringAttribute('file_system_level');
+  }
+}
+
+export class DataAzurermLinuxWebAppLogsApplicationLogsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermLinuxWebAppLogsApplicationLogsOutputReference {
+    return new DataAzurermLinuxWebAppLogsApplicationLogsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermLinuxWebAppLogsHttpLogsAzureBlobStorage {
+}
+
+export function dataAzurermLinuxWebAppLogsHttpLogsAzureBlobStorageToTerraform(struct?: DataAzurermLinuxWebAppLogsHttpLogsAzureBlobStorage): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermLinuxWebAppLogsHttpLogsAzureBlobStorageOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermLinuxWebAppLogsHttpLogsAzureBlobStorage | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermLinuxWebAppLogsHttpLogsAzureBlobStorage | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // retention_in_days - computed: true, optional: false, required: false
+  public get retentionInDays() {
+    return this.getNumberAttribute('retention_in_days');
+  }
+
+  // sas_url - computed: true, optional: false, required: false
+  public get sasUrl() {
+    return this.getStringAttribute('sas_url');
+  }
+}
+
+export class DataAzurermLinuxWebAppLogsHttpLogsAzureBlobStorageList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermLinuxWebAppLogsHttpLogsAzureBlobStorageOutputReference {
+    return new DataAzurermLinuxWebAppLogsHttpLogsAzureBlobStorageOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermLinuxWebAppLogsHttpLogsFileSystem {
+}
+
+export function dataAzurermLinuxWebAppLogsHttpLogsFileSystemToTerraform(struct?: DataAzurermLinuxWebAppLogsHttpLogsFileSystem): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermLinuxWebAppLogsHttpLogsFileSystemOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermLinuxWebAppLogsHttpLogsFileSystem | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermLinuxWebAppLogsHttpLogsFileSystem | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // retention_in_days - computed: true, optional: false, required: false
+  public get retentionInDays() {
+    return this.getNumberAttribute('retention_in_days');
+  }
+
+  // retention_in_mb - computed: true, optional: false, required: false
+  public get retentionInMb() {
+    return this.getNumberAttribute('retention_in_mb');
+  }
+}
+
+export class DataAzurermLinuxWebAppLogsHttpLogsFileSystemList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermLinuxWebAppLogsHttpLogsFileSystemOutputReference {
+    return new DataAzurermLinuxWebAppLogsHttpLogsFileSystemOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermLinuxWebAppLogsHttpLogs {
+}
+
+export function dataAzurermLinuxWebAppLogsHttpLogsToTerraform(struct?: DataAzurermLinuxWebAppLogsHttpLogs): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermLinuxWebAppLogsHttpLogsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermLinuxWebAppLogsHttpLogs | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermLinuxWebAppLogsHttpLogs | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // azure_blob_storage - computed: true, optional: false, required: false
+  private _azureBlobStorage = new DataAzurermLinuxWebAppLogsHttpLogsAzureBlobStorageList(this, "azure_blob_storage", false);
+  public get azureBlobStorage() {
+    return this._azureBlobStorage;
+  }
+
+  // file_system - computed: true, optional: false, required: false
+  private _fileSystem = new DataAzurermLinuxWebAppLogsHttpLogsFileSystemList(this, "file_system", false);
+  public get fileSystem() {
+    return this._fileSystem;
+  }
+}
+
+export class DataAzurermLinuxWebAppLogsHttpLogsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermLinuxWebAppLogsHttpLogsOutputReference {
+    return new DataAzurermLinuxWebAppLogsHttpLogsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermLinuxWebAppLogs {
+}
+
+export function dataAzurermLinuxWebAppLogsToTerraform(struct?: DataAzurermLinuxWebAppLogs): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermLinuxWebAppLogsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermLinuxWebAppLogs | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermLinuxWebAppLogs | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // application_logs - computed: true, optional: false, required: false
+  private _applicationLogs = new DataAzurermLinuxWebAppLogsApplicationLogsList(this, "application_logs", false);
+  public get applicationLogs() {
+    return this._applicationLogs;
+  }
+
+  // detailed_error_messages - computed: true, optional: false, required: false
+  public get detailedErrorMessages() {
+    return this.getBooleanAttribute('detailed_error_messages');
+  }
+
+  // failed_request_tracing - computed: true, optional: false, required: false
+  public get failedRequestTracing() {
+    return this.getBooleanAttribute('failed_request_tracing');
+  }
+
+  // http_logs - computed: true, optional: false, required: false
+  private _httpLogs = new DataAzurermLinuxWebAppLogsHttpLogsList(this, "http_logs", false);
+  public get httpLogs() {
+    return this._httpLogs;
+  }
+}
+
+export class DataAzurermLinuxWebAppLogsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermLinuxWebAppLogsOutputReference {
+    return new DataAzurermLinuxWebAppLogsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermLinuxWebAppSiteConfigApplicationStack {
+}
+
+export function dataAzurermLinuxWebAppSiteConfigApplicationStackToTerraform(struct?: DataAzurermLinuxWebAppSiteConfigApplicationStack): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermLinuxWebAppSiteConfigApplicationStackOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermLinuxWebAppSiteConfigApplicationStack | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermLinuxWebAppSiteConfigApplicationStack | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // docker_image - computed: true, optional: false, required: false
+  public get dockerImage() {
+    return this.getStringAttribute('docker_image');
+  }
+
+  // docker_image_tag - computed: true, optional: false, required: false
+  public get dockerImageTag() {
+    return this.getStringAttribute('docker_image_tag');
+  }
+
+  // dotnet_version - computed: true, optional: false, required: false
+  public get dotnetVersion() {
+    return this.getStringAttribute('dotnet_version');
+  }
+
+  // java_server - computed: true, optional: false, required: false
+  public get javaServer() {
+    return this.getStringAttribute('java_server');
+  }
+
+  // java_server_version - computed: true, optional: false, required: false
+  public get javaServerVersion() {
+    return this.getStringAttribute('java_server_version');
+  }
+
+  // java_version - computed: true, optional: false, required: false
+  public get javaVersion() {
+    return this.getStringAttribute('java_version');
+  }
+
+  // node_version - computed: true, optional: false, required: false
+  public get nodeVersion() {
+    return this.getStringAttribute('node_version');
+  }
+
+  // php_version - computed: true, optional: false, required: false
+  public get phpVersion() {
+    return this.getStringAttribute('php_version');
+  }
+
+  // python_version - computed: true, optional: false, required: false
+  public get pythonVersion() {
+    return this.getStringAttribute('python_version');
+  }
+
+  // ruby_version - computed: true, optional: false, required: false
+  public get rubyVersion() {
+    return this.getStringAttribute('ruby_version');
+  }
+}
+
+export class DataAzurermLinuxWebAppSiteConfigApplicationStackList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermLinuxWebAppSiteConfigApplicationStackOutputReference {
+    return new DataAzurermLinuxWebAppSiteConfigApplicationStackOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermLinuxWebAppSiteConfigAutoHealSettingAction {
+}
+
+export function dataAzurermLinuxWebAppSiteConfigAutoHealSettingActionToTerraform(struct?: DataAzurermLinuxWebAppSiteConfigAutoHealSettingAction): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermLinuxWebAppSiteConfigAutoHealSettingActionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermLinuxWebAppSiteConfigAutoHealSettingAction | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermLinuxWebAppSiteConfigAutoHealSettingAction | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // action_type - computed: true, optional: false, required: false
+  public get actionType() {
+    return this.getStringAttribute('action_type');
+  }
+
+  // minimum_process_execution_time - computed: true, optional: false, required: false
+  public get minimumProcessExecutionTime() {
+    return this.getStringAttribute('minimum_process_execution_time');
+  }
+}
+
+export class DataAzurermLinuxWebAppSiteConfigAutoHealSettingActionList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermLinuxWebAppSiteConfigAutoHealSettingActionOutputReference {
+    return new DataAzurermLinuxWebAppSiteConfigAutoHealSettingActionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerRequests {
+}
+
+export function dataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerRequestsToTerraform(struct?: DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerRequests): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerRequestsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerRequests | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerRequests | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // count - computed: true, optional: false, required: false
+  public get count() {
+    return this.getNumberAttribute('count');
+  }
+
+  // interval - computed: true, optional: false, required: false
+  public get interval() {
+    return this.getStringAttribute('interval');
+  }
+}
+
+export class DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerRequestsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerRequestsOutputReference {
+    return new DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerRequestsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequest {
+}
+
+export function dataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestToTerraform(struct?: DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequest): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequest | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequest | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // count - computed: true, optional: false, required: false
+  public get count() {
+    return this.getNumberAttribute('count');
+  }
+
+  // interval - computed: true, optional: false, required: false
+  public get interval() {
+    return this.getStringAttribute('interval');
+  }
+
+  // path - computed: true, optional: false, required: false
+  public get path() {
+    return this.getStringAttribute('path');
+  }
+
+  // time_taken - computed: true, optional: false, required: false
+  public get timeTaken() {
+    return this.getStringAttribute('time_taken');
+  }
+}
+
+export class DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestOutputReference {
+    return new DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerStatusCode {
+}
+
+export function dataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerStatusCodeToTerraform(struct?: DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerStatusCode): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerStatusCodeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerStatusCode | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerStatusCode | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // count - computed: true, optional: false, required: false
+  public get count() {
+    return this.getNumberAttribute('count');
+  }
+
+  // interval - computed: true, optional: false, required: false
+  public get interval() {
+    return this.getStringAttribute('interval');
+  }
+
+  // path - computed: true, optional: false, required: false
+  public get path() {
+    return this.getStringAttribute('path');
+  }
+
+  // status_code_range - computed: true, optional: false, required: false
+  public get statusCodeRange() {
+    return this.getStringAttribute('status_code_range');
+  }
+
+  // sub_status - computed: true, optional: false, required: false
+  public get subStatus() {
+    return this.getNumberAttribute('sub_status');
+  }
+
+  // win32_status - computed: true, optional: false, required: false
+  public get win32Status() {
+    return this.getStringAttribute('win32_status');
+  }
+}
+
+export class DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerStatusCodeList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerStatusCodeOutputReference {
+    return new DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerStatusCodeOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermLinuxWebAppSiteConfigAutoHealSettingTrigger {
+}
+
+export function dataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerToTerraform(struct?: DataAzurermLinuxWebAppSiteConfigAutoHealSettingTrigger): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermLinuxWebAppSiteConfigAutoHealSettingTrigger | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermLinuxWebAppSiteConfigAutoHealSettingTrigger | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // requests - computed: true, optional: false, required: false
+  private _requests = new DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerRequestsList(this, "requests", false);
+  public get requests() {
+    return this._requests;
+  }
+
+  // slow_request - computed: true, optional: false, required: false
+  private _slowRequest = new DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestList(this, "slow_request", false);
+  public get slowRequest() {
+    return this._slowRequest;
+  }
+
+  // status_code - computed: true, optional: false, required: false
+  private _statusCode = new DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerStatusCodeList(this, "status_code", false);
+  public get statusCode() {
+    return this._statusCode;
+  }
+}
+
+export class DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerOutputReference {
+    return new DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermLinuxWebAppSiteConfigAutoHealSetting {
+}
+
+export function dataAzurermLinuxWebAppSiteConfigAutoHealSettingToTerraform(struct?: DataAzurermLinuxWebAppSiteConfigAutoHealSetting): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermLinuxWebAppSiteConfigAutoHealSettingOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermLinuxWebAppSiteConfigAutoHealSetting | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermLinuxWebAppSiteConfigAutoHealSetting | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // action - computed: true, optional: false, required: false
+  private _action = new DataAzurermLinuxWebAppSiteConfigAutoHealSettingActionList(this, "action", false);
+  public get action() {
+    return this._action;
+  }
+
+  // trigger - computed: true, optional: false, required: false
+  private _trigger = new DataAzurermLinuxWebAppSiteConfigAutoHealSettingTriggerList(this, "trigger", false);
+  public get trigger() {
+    return this._trigger;
+  }
+}
+
+export class DataAzurermLinuxWebAppSiteConfigAutoHealSettingList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermLinuxWebAppSiteConfigAutoHealSettingOutputReference {
+    return new DataAzurermLinuxWebAppSiteConfigAutoHealSettingOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermLinuxWebAppSiteConfigCors {
+}
+
+export function dataAzurermLinuxWebAppSiteConfigCorsToTerraform(struct?: DataAzurermLinuxWebAppSiteConfigCors): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermLinuxWebAppSiteConfigCorsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermLinuxWebAppSiteConfigCors | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermLinuxWebAppSiteConfigCors | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // allowed_origins - computed: true, optional: false, required: false
+  public get allowedOrigins() {
+    return this.getListAttribute('allowed_origins');
+  }
+
+  // support_credentials - computed: true, optional: false, required: false
+  public get supportCredentials() {
+    return this.getBooleanAttribute('support_credentials');
+  }
+}
+
+export class DataAzurermLinuxWebAppSiteConfigCorsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermLinuxWebAppSiteConfigCorsOutputReference {
+    return new DataAzurermLinuxWebAppSiteConfigCorsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermLinuxWebAppSiteConfigIpRestrictionHeaders {
+}
+
+export function dataAzurermLinuxWebAppSiteConfigIpRestrictionHeadersToTerraform(struct?: DataAzurermLinuxWebAppSiteConfigIpRestrictionHeaders): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermLinuxWebAppSiteConfigIpRestrictionHeadersOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermLinuxWebAppSiteConfigIpRestrictionHeaders | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermLinuxWebAppSiteConfigIpRestrictionHeaders | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // x_azure_fdid - computed: true, optional: false, required: false
+  public get xAzureFdid() {
+    return this.getListAttribute('x_azure_fdid');
+  }
+
+  // x_fd_health_probe - computed: true, optional: false, required: false
+  public get xFdHealthProbe() {
+    return this.getListAttribute('x_fd_health_probe');
+  }
+
+  // x_forwarded_for - computed: true, optional: false, required: false
+  public get xForwardedFor() {
+    return this.getListAttribute('x_forwarded_for');
+  }
+
+  // x_forwarded_host - computed: true, optional: false, required: false
+  public get xForwardedHost() {
+    return this.getListAttribute('x_forwarded_host');
+  }
+}
+
+export class DataAzurermLinuxWebAppSiteConfigIpRestrictionHeadersList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermLinuxWebAppSiteConfigIpRestrictionHeadersOutputReference {
+    return new DataAzurermLinuxWebAppSiteConfigIpRestrictionHeadersOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermLinuxWebAppSiteConfigIpRestriction {
+}
+
+export function dataAzurermLinuxWebAppSiteConfigIpRestrictionToTerraform(struct?: DataAzurermLinuxWebAppSiteConfigIpRestriction): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermLinuxWebAppSiteConfigIpRestrictionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermLinuxWebAppSiteConfigIpRestriction | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermLinuxWebAppSiteConfigIpRestriction | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // action - computed: true, optional: false, required: false
+  public get action() {
+    return this.getStringAttribute('action');
+  }
+
+  // headers - computed: true, optional: false, required: false
+  private _headers = new DataAzurermLinuxWebAppSiteConfigIpRestrictionHeadersList(this, "headers", false);
+  public get headers() {
+    return this._headers;
+  }
+
+  // ip_address - computed: true, optional: false, required: false
+  public get ipAddress() {
+    return this.getStringAttribute('ip_address');
+  }
+
+  // name - computed: true, optional: false, required: false
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+
+  // priority - computed: true, optional: false, required: false
+  public get priority() {
+    return this.getNumberAttribute('priority');
+  }
+
+  // service_tag - computed: true, optional: false, required: false
+  public get serviceTag() {
+    return this.getStringAttribute('service_tag');
+  }
+
+  // virtual_network_subnet_id - computed: true, optional: false, required: false
+  public get virtualNetworkSubnetId() {
+    return this.getStringAttribute('virtual_network_subnet_id');
+  }
+}
+
+export class DataAzurermLinuxWebAppSiteConfigIpRestrictionList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermLinuxWebAppSiteConfigIpRestrictionOutputReference {
+    return new DataAzurermLinuxWebAppSiteConfigIpRestrictionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermLinuxWebAppSiteConfigScmIpRestrictionHeaders {
+}
+
+export function dataAzurermLinuxWebAppSiteConfigScmIpRestrictionHeadersToTerraform(struct?: DataAzurermLinuxWebAppSiteConfigScmIpRestrictionHeaders): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermLinuxWebAppSiteConfigScmIpRestrictionHeadersOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermLinuxWebAppSiteConfigScmIpRestrictionHeaders | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermLinuxWebAppSiteConfigScmIpRestrictionHeaders | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // x_azure_fdid - computed: true, optional: false, required: false
+  public get xAzureFdid() {
+    return this.getListAttribute('x_azure_fdid');
+  }
+
+  // x_fd_health_probe - computed: true, optional: false, required: false
+  public get xFdHealthProbe() {
+    return this.getListAttribute('x_fd_health_probe');
+  }
+
+  // x_forwarded_for - computed: true, optional: false, required: false
+  public get xForwardedFor() {
+    return this.getListAttribute('x_forwarded_for');
+  }
+
+  // x_forwarded_host - computed: true, optional: false, required: false
+  public get xForwardedHost() {
+    return this.getListAttribute('x_forwarded_host');
+  }
+}
+
+export class DataAzurermLinuxWebAppSiteConfigScmIpRestrictionHeadersList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermLinuxWebAppSiteConfigScmIpRestrictionHeadersOutputReference {
+    return new DataAzurermLinuxWebAppSiteConfigScmIpRestrictionHeadersOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermLinuxWebAppSiteConfigScmIpRestriction {
+}
+
+export function dataAzurermLinuxWebAppSiteConfigScmIpRestrictionToTerraform(struct?: DataAzurermLinuxWebAppSiteConfigScmIpRestriction): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermLinuxWebAppSiteConfigScmIpRestrictionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermLinuxWebAppSiteConfigScmIpRestriction | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermLinuxWebAppSiteConfigScmIpRestriction | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // action - computed: true, optional: false, required: false
+  public get action() {
+    return this.getStringAttribute('action');
+  }
+
+  // headers - computed: true, optional: false, required: false
+  private _headers = new DataAzurermLinuxWebAppSiteConfigScmIpRestrictionHeadersList(this, "headers", false);
+  public get headers() {
+    return this._headers;
+  }
+
+  // ip_address - computed: true, optional: false, required: false
+  public get ipAddress() {
+    return this.getStringAttribute('ip_address');
+  }
+
+  // name - computed: true, optional: false, required: false
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+
+  // priority - computed: true, optional: false, required: false
+  public get priority() {
+    return this.getNumberAttribute('priority');
+  }
+
+  // service_tag - computed: true, optional: false, required: false
+  public get serviceTag() {
+    return this.getStringAttribute('service_tag');
+  }
+
+  // virtual_network_subnet_id - computed: true, optional: false, required: false
+  public get virtualNetworkSubnetId() {
+    return this.getStringAttribute('virtual_network_subnet_id');
+  }
+}
+
+export class DataAzurermLinuxWebAppSiteConfigScmIpRestrictionList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermLinuxWebAppSiteConfigScmIpRestrictionOutputReference {
+    return new DataAzurermLinuxWebAppSiteConfigScmIpRestrictionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermLinuxWebAppSiteConfig {
+}
+
+export function dataAzurermLinuxWebAppSiteConfigToTerraform(struct?: DataAzurermLinuxWebAppSiteConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermLinuxWebAppSiteConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermLinuxWebAppSiteConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermLinuxWebAppSiteConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // always_on - computed: true, optional: false, required: false
+  public get alwaysOn() {
+    return this.getBooleanAttribute('always_on');
+  }
+
+  // api_definition_url - computed: true, optional: false, required: false
+  public get apiDefinitionUrl() {
+    return this.getStringAttribute('api_definition_url');
+  }
+
+  // api_management_api_id - computed: true, optional: false, required: false
+  public get apiManagementApiId() {
+    return this.getStringAttribute('api_management_api_id');
+  }
+
+  // app_command_line - computed: true, optional: false, required: false
+  public get appCommandLine() {
+    return this.getStringAttribute('app_command_line');
+  }
+
+  // application_stack - computed: true, optional: false, required: false
+  private _applicationStack = new DataAzurermLinuxWebAppSiteConfigApplicationStackList(this, "application_stack", false);
+  public get applicationStack() {
+    return this._applicationStack;
+  }
+
+  // auto_heal_enabled - computed: true, optional: false, required: false
+  public get autoHealEnabled() {
+    return this.getBooleanAttribute('auto_heal_enabled');
+  }
+
+  // auto_heal_setting - computed: true, optional: false, required: false
+  private _autoHealSetting = new DataAzurermLinuxWebAppSiteConfigAutoHealSettingList(this, "auto_heal_setting", false);
+  public get autoHealSetting() {
+    return this._autoHealSetting;
+  }
+
+  // container_registry_managed_identity_client_id - computed: true, optional: false, required: false
+  public get containerRegistryManagedIdentityClientId() {
+    return this.getStringAttribute('container_registry_managed_identity_client_id');
+  }
+
+  // container_registry_use_managed_identity - computed: true, optional: false, required: false
+  public get containerRegistryUseManagedIdentity() {
+    return this.getBooleanAttribute('container_registry_use_managed_identity');
+  }
+
+  // cors - computed: true, optional: false, required: false
+  private _cors = new DataAzurermLinuxWebAppSiteConfigCorsList(this, "cors", false);
+  public get cors() {
+    return this._cors;
+  }
+
+  // default_documents - computed: true, optional: false, required: false
+  public get defaultDocuments() {
+    return this.getListAttribute('default_documents');
+  }
+
+  // detailed_error_logging_enabled - computed: true, optional: false, required: false
+  public get detailedErrorLoggingEnabled() {
+    return this.getBooleanAttribute('detailed_error_logging_enabled');
+  }
+
+  // ftps_state - computed: true, optional: false, required: false
+  public get ftpsState() {
+    return this.getStringAttribute('ftps_state');
+  }
+
+  // health_check_eviction_time_in_min - computed: true, optional: false, required: false
+  public get healthCheckEvictionTimeInMin() {
+    return this.getNumberAttribute('health_check_eviction_time_in_min');
+  }
+
+  // health_check_path - computed: true, optional: false, required: false
+  public get healthCheckPath() {
+    return this.getStringAttribute('health_check_path');
+  }
+
+  // http2_enabled - computed: true, optional: false, required: false
+  public get http2Enabled() {
+    return this.getBooleanAttribute('http2_enabled');
+  }
+
+  // ip_restriction - computed: true, optional: false, required: false
+  private _ipRestriction = new DataAzurermLinuxWebAppSiteConfigIpRestrictionList(this, "ip_restriction", false);
+  public get ipRestriction() {
+    return this._ipRestriction;
+  }
+
+  // linux_fx_version - computed: true, optional: false, required: false
+  public get linuxFxVersion() {
+    return this.getStringAttribute('linux_fx_version');
+  }
+
+  // load_balancing_mode - computed: true, optional: false, required: false
+  public get loadBalancingMode() {
+    return this.getStringAttribute('load_balancing_mode');
+  }
+
+  // local_mysql_enabled - computed: true, optional: false, required: false
+  public get localMysqlEnabled() {
+    return this.getBooleanAttribute('local_mysql_enabled');
+  }
+
+  // managed_pipeline_mode - computed: true, optional: false, required: false
+  public get managedPipelineMode() {
+    return this.getStringAttribute('managed_pipeline_mode');
+  }
+
+  // minimum_tls_version - computed: true, optional: false, required: false
+  public get minimumTlsVersion() {
+    return this.getStringAttribute('minimum_tls_version');
+  }
+
+  // remote_debugging_enabled - computed: true, optional: false, required: false
+  public get remoteDebuggingEnabled() {
+    return this.getBooleanAttribute('remote_debugging_enabled');
+  }
+
+  // remote_debugging_version - computed: true, optional: false, required: false
+  public get remoteDebuggingVersion() {
+    return this.getStringAttribute('remote_debugging_version');
+  }
+
+  // scm_ip_restriction - computed: true, optional: false, required: false
+  private _scmIpRestriction = new DataAzurermLinuxWebAppSiteConfigScmIpRestrictionList(this, "scm_ip_restriction", false);
+  public get scmIpRestriction() {
+    return this._scmIpRestriction;
+  }
+
+  // scm_minimum_tls_version - computed: true, optional: false, required: false
+  public get scmMinimumTlsVersion() {
+    return this.getStringAttribute('scm_minimum_tls_version');
+  }
+
+  // scm_type - computed: true, optional: false, required: false
+  public get scmType() {
+    return this.getStringAttribute('scm_type');
+  }
+
+  // scm_use_main_ip_restriction - computed: true, optional: false, required: false
+  public get scmUseMainIpRestriction() {
+    return this.getBooleanAttribute('scm_use_main_ip_restriction');
+  }
+
+  // use_32_bit_worker - computed: true, optional: false, required: false
+  public get use32BitWorker() {
+    return this.getBooleanAttribute('use_32_bit_worker');
+  }
+
+  // vnet_route_all_enabled - computed: true, optional: false, required: false
+  public get vnetRouteAllEnabled() {
+    return this.getBooleanAttribute('vnet_route_all_enabled');
+  }
+
+  // websockets_enabled - computed: true, optional: false, required: false
+  public get websocketsEnabled() {
+    return this.getBooleanAttribute('websockets_enabled');
+  }
+
+  // worker_count - computed: true, optional: false, required: false
+  public get workerCount() {
+    return this.getNumberAttribute('worker_count');
+  }
+}
+
+export class DataAzurermLinuxWebAppSiteConfigList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermLinuxWebAppSiteConfigOutputReference {
+    return new DataAzurermLinuxWebAppSiteConfigOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermLinuxWebAppSiteCredential {
+}
+
+export function dataAzurermLinuxWebAppSiteCredentialToTerraform(struct?: DataAzurermLinuxWebAppSiteCredential): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermLinuxWebAppSiteCredentialOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermLinuxWebAppSiteCredential | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermLinuxWebAppSiteCredential | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // name - computed: true, optional: false, required: false
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+
+  // password - computed: true, optional: false, required: false
+  public get password() {
+    return this.getStringAttribute('password');
+  }
+}
+
+export class DataAzurermLinuxWebAppSiteCredentialList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermLinuxWebAppSiteCredentialOutputReference {
+    return new DataAzurermLinuxWebAppSiteCredentialOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermLinuxWebAppStickySettings {
+}
+
+export function dataAzurermLinuxWebAppStickySettingsToTerraform(struct?: DataAzurermLinuxWebAppStickySettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermLinuxWebAppStickySettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermLinuxWebAppStickySettings | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermLinuxWebAppStickySettings | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // app_setting_names - computed: true, optional: false, required: false
+  public get appSettingNames() {
+    return this.getListAttribute('app_setting_names');
+  }
+
+  // connection_string_names - computed: true, optional: false, required: false
+  public get connectionStringNames() {
+    return this.getListAttribute('connection_string_names');
+  }
+}
+
+export class DataAzurermLinuxWebAppStickySettingsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermLinuxWebAppStickySettingsOutputReference {
+    return new DataAzurermLinuxWebAppStickySettingsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermLinuxWebAppStorageAccount {
+}
+
+export function dataAzurermLinuxWebAppStorageAccountToTerraform(struct?: DataAzurermLinuxWebAppStorageAccount): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermLinuxWebAppStorageAccountOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermLinuxWebAppStorageAccount | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermLinuxWebAppStorageAccount | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // access_key - computed: true, optional: false, required: false
+  public get accessKey() {
+    return this.getStringAttribute('access_key');
+  }
+
+  // account_name - computed: true, optional: false, required: false
+  public get accountName() {
+    return this.getStringAttribute('account_name');
+  }
+
+  // mount_path - computed: true, optional: false, required: false
+  public get mountPath() {
+    return this.getStringAttribute('mount_path');
+  }
+
+  // name - computed: true, optional: false, required: false
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+
+  // share_name - computed: true, optional: false, required: false
+  public get shareName() {
+    return this.getStringAttribute('share_name');
+  }
+
+  // type - computed: true, optional: false, required: false
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+}
+
+export class DataAzurermLinuxWebAppStorageAccountList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermLinuxWebAppStorageAccountOutputReference {
+    return new DataAzurermLinuxWebAppStorageAccountOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermLinuxWebAppTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/linux_web_app#read DataAzurermLinuxWebApp#read}
+  */
+  readonly read?: string;
+}
+
+export function dataAzurermLinuxWebAppTimeoutsToTerraform(struct?: DataAzurermLinuxWebAppTimeoutsOutputReference | DataAzurermLinuxWebAppTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+export class DataAzurermLinuxWebAppTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DataAzurermLinuxWebAppTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._read !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermLinuxWebAppTimeouts | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._read = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._read = value.read;
+    }
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read;
+  }
+}
+
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/linux_web_app azurerm_linux_web_app}
+*/
+export class DataAzurermLinuxWebApp extends cdktf.TerraformDataSource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType = "azurerm_linux_web_app";
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/linux_web_app azurerm_linux_web_app} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermLinuxWebAppConfig
+  */
+  public constructor(scope: Construct, id: string, config: DataAzurermLinuxWebAppConfig) {
+    super(scope, id, {
+      terraformResourceType: 'azurerm_linux_web_app',
+      terraformGeneratorMetadata: {
+        providerName: 'azurerm',
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle
+    });
+    this._id = config.id;
+    this._name = config.name;
+    this._resourceGroupName = config.resourceGroupName;
+    this._timeouts.internalValue = config.timeouts;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // app_metadata - computed: true, optional: false, required: false
+  private _appMetadata = new cdktf.StringMap(this, "app_metadata");
+  public get appMetadata() {
+    return this._appMetadata;
+  }
+
+  // app_settings - computed: true, optional: false, required: false
+  private _appSettings = new cdktf.StringMap(this, "app_settings");
+  public get appSettings() {
+    return this._appSettings;
+  }
+
+  // auth_settings - computed: true, optional: false, required: false
+  private _authSettings = new DataAzurermLinuxWebAppAuthSettingsList(this, "auth_settings", false);
+  public get authSettings() {
+    return this._authSettings;
+  }
+
+  // backup - computed: true, optional: false, required: false
+  private _backup = new DataAzurermLinuxWebAppBackupList(this, "backup", false);
+  public get backup() {
+    return this._backup;
+  }
+
+  // client_affinity_enabled - computed: true, optional: false, required: false
+  public get clientAffinityEnabled() {
+    return this.getBooleanAttribute('client_affinity_enabled');
+  }
+
+  // client_certificate_enabled - computed: true, optional: false, required: false
+  public get clientCertificateEnabled() {
+    return this.getBooleanAttribute('client_certificate_enabled');
+  }
+
+  // client_certificate_mode - computed: true, optional: false, required: false
+  public get clientCertificateMode() {
+    return this.getStringAttribute('client_certificate_mode');
+  }
+
+  // connection_string - computed: true, optional: false, required: false
+  private _connectionString = new DataAzurermLinuxWebAppConnectionStringList(this, "connection_string", true);
+  public get connectionString() {
+    return this._connectionString;
+  }
+
+  // custom_domain_verification_id - computed: true, optional: false, required: false
+  public get customDomainVerificationId() {
+    return this.getStringAttribute('custom_domain_verification_id');
+  }
+
+  // default_hostname - computed: true, optional: false, required: false
+  public get defaultHostname() {
+    return this.getStringAttribute('default_hostname');
+  }
+
+  // enabled - computed: true, optional: false, required: false
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+
+  // https_only - computed: true, optional: false, required: false
+  public get httpsOnly() {
+    return this.getBooleanAttribute('https_only');
+  }
+
+  // id - computed: true, optional: true, required: false
+  private _id?: string; 
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+  public set id(value: string) {
+    this._id = value;
+  }
+  public resetId() {
+    this._id = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idInput() {
+    return this._id;
+  }
+
+  // identity - computed: true, optional: false, required: false
+  private _identity = new DataAzurermLinuxWebAppIdentityList(this, "identity", false);
+  public get identity() {
+    return this._identity;
+  }
+
+  // key_vault_reference_identity_id - computed: true, optional: false, required: false
+  public get keyVaultReferenceIdentityId() {
+    return this.getStringAttribute('key_vault_reference_identity_id');
+  }
+
+  // kind - computed: true, optional: false, required: false
+  public get kind() {
+    return this.getStringAttribute('kind');
+  }
+
+  // location - computed: true, optional: false, required: false
+  public get location() {
+    return this.getStringAttribute('location');
+  }
+
+  // logs - computed: true, optional: false, required: false
+  private _logs = new DataAzurermLinuxWebAppLogsList(this, "logs", false);
+  public get logs() {
+    return this._logs;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // outbound_ip_address_list - computed: true, optional: false, required: false
+  public get outboundIpAddressList() {
+    return this.getListAttribute('outbound_ip_address_list');
+  }
+
+  // outbound_ip_addresses - computed: true, optional: false, required: false
+  public get outboundIpAddresses() {
+    return this.getStringAttribute('outbound_ip_addresses');
+  }
+
+  // possible_outbound_ip_address_list - computed: true, optional: false, required: false
+  public get possibleOutboundIpAddressList() {
+    return this.getListAttribute('possible_outbound_ip_address_list');
+  }
+
+  // possible_outbound_ip_addresses - computed: true, optional: false, required: false
+  public get possibleOutboundIpAddresses() {
+    return this.getStringAttribute('possible_outbound_ip_addresses');
+  }
+
+  // resource_group_name - computed: false, optional: false, required: true
+  private _resourceGroupName?: string; 
+  public get resourceGroupName() {
+    return this.getStringAttribute('resource_group_name');
+  }
+  public set resourceGroupName(value: string) {
+    this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName;
+  }
+
+  // service_plan_id - computed: true, optional: false, required: false
+  public get servicePlanId() {
+    return this.getStringAttribute('service_plan_id');
+  }
+
+  // site_config - computed: true, optional: false, required: false
+  private _siteConfig = new DataAzurermLinuxWebAppSiteConfigList(this, "site_config", false);
+  public get siteConfig() {
+    return this._siteConfig;
+  }
+
+  // site_credential - computed: true, optional: false, required: false
+  private _siteCredential = new DataAzurermLinuxWebAppSiteCredentialList(this, "site_credential", false);
+  public get siteCredential() {
+    return this._siteCredential;
+  }
+
+  // sticky_settings - computed: true, optional: false, required: false
+  private _stickySettings = new DataAzurermLinuxWebAppStickySettingsList(this, "sticky_settings", false);
+  public get stickySettings() {
+    return this._stickySettings;
+  }
+
+  // storage_account - computed: true, optional: false, required: false
+  private _storageAccount = new DataAzurermLinuxWebAppStorageAccountList(this, "storage_account", false);
+  public get storageAccount() {
+    return this._storageAccount;
+  }
+
+  // tags - computed: true, optional: false, required: false
+  private _tags = new cdktf.StringMap(this, "tags");
+  public get tags() {
+    return this._tags;
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts = new DataAzurermLinuxWebAppTimeoutsOutputReference(this, "timeouts");
+  public get timeouts() {
+    return this._timeouts;
+  }
+  public putTimeouts(value: DataAzurermLinuxWebAppTimeouts) {
+    this._timeouts.internalValue = value;
+  }
+  public resetTimeouts() {
+    this._timeouts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      id: cdktf.stringToTerraform(this._id),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: dataAzurermLinuxWebAppTimeoutsToTerraform(this._timeouts.internalValue),
+    };
+  }
+}

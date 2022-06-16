@@ -100,11 +100,6 @@ export class DataAzurermNetappVolumeDataProtectionReplicationOutputReference ext
   public get replicationFrequency() {
     return this.getStringAttribute('replication_frequency');
   }
-
-  // replication_schedule - computed: true, optional: false, required: false
-  public get replicationSchedule() {
-    return this.getStringAttribute('replication_schedule');
-  }
 }
 
 export class DataAzurermNetappVolumeDataProtectionReplicationList extends cdktf.ComplexList {
@@ -227,8 +222,8 @@ export class DataAzurermNetappVolume extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_netapp_volume',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -304,6 +299,11 @@ export class DataAzurermNetappVolume extends cdktf.TerraformDataSource {
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name;
+  }
+
+  // network_features - computed: true, optional: false, required: false
+  public get networkFeatures() {
+    return this.getStringAttribute('network_features');
   }
 
   // pool_name - computed: false, optional: false, required: true

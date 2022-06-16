@@ -47,10 +47,6 @@ export interface DataFactoryLinkedServiceOdbcConfig extends cdktf.TerraformMetaA
   */
   readonly parameters?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_odbc#resource_group_name DataFactoryLinkedServiceOdbc#resource_group_name}
-  */
-  readonly resourceGroupName: string;
-  /**
   * basic_authentication block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_odbc#basic_authentication DataFactoryLinkedServiceOdbc#basic_authentication}
@@ -332,8 +328,8 @@ export class DataFactoryLinkedServiceOdbc extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_data_factory_linked_service_odbc',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -349,7 +345,6 @@ export class DataFactoryLinkedServiceOdbc extends cdktf.TerraformResource {
     this._integrationRuntimeName = config.integrationRuntimeName;
     this._name = config.name;
     this._parameters = config.parameters;
-    this._resourceGroupName = config.resourceGroupName;
     this._basicAuthentication.internalValue = config.basicAuthentication;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -493,19 +488,6 @@ export class DataFactoryLinkedServiceOdbc extends cdktf.TerraformResource {
     return this._parameters;
   }
 
-  // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName?: string; 
-  public get resourceGroupName() {
-    return this.getStringAttribute('resource_group_name');
-  }
-  public set resourceGroupName(value: string) {
-    this._resourceGroupName = value;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get resourceGroupNameInput() {
-    return this._resourceGroupName;
-  }
-
   // basic_authentication - computed: false, optional: true, required: false
   private _basicAuthentication = new DataFactoryLinkedServiceOdbcBasicAuthenticationOutputReference(this, "basic_authentication");
   public get basicAuthentication() {
@@ -553,7 +535,6 @@ export class DataFactoryLinkedServiceOdbc extends cdktf.TerraformResource {
       integration_runtime_name: cdktf.stringToTerraform(this._integrationRuntimeName),
       name: cdktf.stringToTerraform(this._name),
       parameters: cdktf.hashMapper(cdktf.stringToTerraform)(this._parameters),
-      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       basic_authentication: dataFactoryLinkedServiceOdbcBasicAuthenticationToTerraform(this._basicAuthentication.internalValue),
       timeouts: dataFactoryLinkedServiceOdbcTimeoutsToTerraform(this._timeouts.internalValue),
     };

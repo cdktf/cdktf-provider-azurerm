@@ -55,17 +55,9 @@ export interface ServicebusSubscriptionConfig extends cdktf.TerraformMetaArgumen
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription#namespace_name ServicebusSubscription#namespace_name}
-  */
-  readonly namespaceName?: string;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription#requires_session ServicebusSubscription#requires_session}
   */
   readonly requiresSession?: boolean | cdktf.IResolvable;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription#resource_group_name ServicebusSubscription#resource_group_name}
-  */
-  readonly resourceGroupName?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription#status ServicebusSubscription#status}
   */
@@ -73,11 +65,7 @@ export interface ServicebusSubscriptionConfig extends cdktf.TerraformMetaArgumen
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription#topic_id ServicebusSubscription#topic_id}
   */
-  readonly topicId?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription#topic_name ServicebusSubscription#topic_name}
-  */
-  readonly topicName?: string;
+  readonly topicId: string;
   /**
   * timeouts block
   * 
@@ -268,8 +256,8 @@ export class ServicebusSubscription extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_servicebus_subscription',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -287,12 +275,9 @@ export class ServicebusSubscription extends cdktf.TerraformResource {
     this._lockDuration = config.lockDuration;
     this._maxDeliveryCount = config.maxDeliveryCount;
     this._name = config.name;
-    this._namespaceName = config.namespaceName;
     this._requiresSession = config.requiresSession;
-    this._resourceGroupName = config.resourceGroupName;
     this._status = config.status;
     this._topicId = config.topicId;
-    this._topicName = config.topicName;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -470,22 +455,6 @@ export class ServicebusSubscription extends cdktf.TerraformResource {
     return this._name;
   }
 
-  // namespace_name - computed: true, optional: true, required: false
-  private _namespaceName?: string; 
-  public get namespaceName() {
-    return this.getStringAttribute('namespace_name');
-  }
-  public set namespaceName(value: string) {
-    this._namespaceName = value;
-  }
-  public resetNamespaceName() {
-    this._namespaceName = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get namespaceNameInput() {
-    return this._namespaceName;
-  }
-
   // requires_session - computed: false, optional: true, required: false
   private _requiresSession?: boolean | cdktf.IResolvable; 
   public get requiresSession() {
@@ -500,22 +469,6 @@ export class ServicebusSubscription extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get requiresSessionInput() {
     return this._requiresSession;
-  }
-
-  // resource_group_name - computed: true, optional: true, required: false
-  private _resourceGroupName?: string; 
-  public get resourceGroupName() {
-    return this.getStringAttribute('resource_group_name');
-  }
-  public set resourceGroupName(value: string) {
-    this._resourceGroupName = value;
-  }
-  public resetResourceGroupName() {
-    this._resourceGroupName = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get resourceGroupNameInput() {
-    return this._resourceGroupName;
   }
 
   // status - computed: false, optional: true, required: false
@@ -534,7 +487,7 @@ export class ServicebusSubscription extends cdktf.TerraformResource {
     return this._status;
   }
 
-  // topic_id - computed: true, optional: true, required: false
+  // topic_id - computed: false, optional: false, required: true
   private _topicId?: string; 
   public get topicId() {
     return this.getStringAttribute('topic_id');
@@ -542,28 +495,9 @@ export class ServicebusSubscription extends cdktf.TerraformResource {
   public set topicId(value: string) {
     this._topicId = value;
   }
-  public resetTopicId() {
-    this._topicId = undefined;
-  }
   // Temporarily expose input value. Use with caution.
   public get topicIdInput() {
     return this._topicId;
-  }
-
-  // topic_name - computed: true, optional: true, required: false
-  private _topicName?: string; 
-  public get topicName() {
-    return this.getStringAttribute('topic_name');
-  }
-  public set topicName(value: string) {
-    this._topicName = value;
-  }
-  public resetTopicName() {
-    this._topicName = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get topicNameInput() {
-    return this._topicName;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -599,12 +533,9 @@ export class ServicebusSubscription extends cdktf.TerraformResource {
       lock_duration: cdktf.stringToTerraform(this._lockDuration),
       max_delivery_count: cdktf.numberToTerraform(this._maxDeliveryCount),
       name: cdktf.stringToTerraform(this._name),
-      namespace_name: cdktf.stringToTerraform(this._namespaceName),
       requires_session: cdktf.booleanToTerraform(this._requiresSession),
-      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       status: cdktf.stringToTerraform(this._status),
       topic_id: cdktf.stringToTerraform(this._topicId),
-      topic_name: cdktf.stringToTerraform(this._topicName),
       timeouts: servicebusSubscriptionTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

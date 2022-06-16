@@ -8,6 +8,10 @@ import * as cdktf from 'cdktf';
 
 export interface VpnGatewayConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway#bgp_route_translation_for_nat_enabled VpnGateway#bgp_route_translation_for_nat_enabled}
+  */
+  readonly bgpRouteTranslationForNatEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway#id VpnGateway#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
@@ -541,14 +545,15 @@ export class VpnGateway extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_vpn_gateway',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._bgpRouteTranslationForNatEnabled = config.bgpRouteTranslationForNatEnabled;
     this._id = config.id;
     this._location = config.location;
     this._name = config.name;
@@ -564,6 +569,22 @@ export class VpnGateway extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // bgp_route_translation_for_nat_enabled - computed: false, optional: true, required: false
+  private _bgpRouteTranslationForNatEnabled?: boolean | cdktf.IResolvable; 
+  public get bgpRouteTranslationForNatEnabled() {
+    return this.getBooleanAttribute('bgp_route_translation_for_nat_enabled');
+  }
+  public set bgpRouteTranslationForNatEnabled(value: boolean | cdktf.IResolvable) {
+    this._bgpRouteTranslationForNatEnabled = value;
+  }
+  public resetBgpRouteTranslationForNatEnabled() {
+    this._bgpRouteTranslationForNatEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bgpRouteTranslationForNatEnabledInput() {
+    return this._bgpRouteTranslationForNatEnabled;
+  }
 
   // id - computed: true, optional: true, required: false
   private _id?: string; 
@@ -719,6 +740,7 @@ export class VpnGateway extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      bgp_route_translation_for_nat_enabled: cdktf.booleanToTerraform(this._bgpRouteTranslationForNatEnabled),
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),

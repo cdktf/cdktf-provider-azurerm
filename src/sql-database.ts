@@ -24,10 +24,6 @@ export interface SqlDatabaseConfig extends cdktf.TerraformMetaArguments {
   */
   readonly elasticPoolName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#extended_auditing_policy SqlDatabase#extended_auditing_policy}
-  */
-  readonly extendedAuditingPolicy?: SqlDatabaseExtendedAuditingPolicy[] | cdktf.IResolvable;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#id SqlDatabase#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
@@ -108,211 +104,6 @@ export interface SqlDatabaseConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#timeouts SqlDatabase#timeouts}
   */
   readonly timeouts?: SqlDatabaseTimeouts;
-}
-export interface SqlDatabaseExtendedAuditingPolicy {
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#log_monitoring_enabled SqlDatabase#log_monitoring_enabled}
-  */
-  readonly logMonitoringEnabled?: boolean | cdktf.IResolvable;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#retention_in_days SqlDatabase#retention_in_days}
-  */
-  readonly retentionInDays?: number;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#storage_account_access_key SqlDatabase#storage_account_access_key}
-  */
-  readonly storageAccountAccessKey?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#storage_account_access_key_is_secondary SqlDatabase#storage_account_access_key_is_secondary}
-  */
-  readonly storageAccountAccessKeyIsSecondary?: boolean | cdktf.IResolvable;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#storage_endpoint SqlDatabase#storage_endpoint}
-  */
-  readonly storageEndpoint?: string;
-}
-
-export function sqlDatabaseExtendedAuditingPolicyToTerraform(struct?: SqlDatabaseExtendedAuditingPolicy | cdktf.IResolvable): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-    log_monitoring_enabled: cdktf.booleanToTerraform(struct!.logMonitoringEnabled),
-    retention_in_days: cdktf.numberToTerraform(struct!.retentionInDays),
-    storage_account_access_key: cdktf.stringToTerraform(struct!.storageAccountAccessKey),
-    storage_account_access_key_is_secondary: cdktf.booleanToTerraform(struct!.storageAccountAccessKeyIsSecondary),
-    storage_endpoint: cdktf.stringToTerraform(struct!.storageEndpoint),
-  }
-}
-
-export class SqlDatabaseExtendedAuditingPolicyOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-  private resolvableValue?: cdktf.IResolvable;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
-  }
-
-  public get internalValue(): SqlDatabaseExtendedAuditingPolicy | cdktf.IResolvable | undefined {
-    if (this.resolvableValue) {
-      return this.resolvableValue;
-    }
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    if (this._logMonitoringEnabled !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.logMonitoringEnabled = this._logMonitoringEnabled;
-    }
-    if (this._retentionInDays !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.retentionInDays = this._retentionInDays;
-    }
-    if (this._storageAccountAccessKey !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.storageAccountAccessKey = this._storageAccountAccessKey;
-    }
-    if (this._storageAccountAccessKeyIsSecondary !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.storageAccountAccessKeyIsSecondary = this._storageAccountAccessKeyIsSecondary;
-    }
-    if (this._storageEndpoint !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.storageEndpoint = this._storageEndpoint;
-    }
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: SqlDatabaseExtendedAuditingPolicy | cdktf.IResolvable | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-      this.resolvableValue = undefined;
-      this._logMonitoringEnabled = undefined;
-      this._retentionInDays = undefined;
-      this._storageAccountAccessKey = undefined;
-      this._storageAccountAccessKeyIsSecondary = undefined;
-      this._storageEndpoint = undefined;
-    }
-    else if (cdktf.Tokenization.isResolvable(value)) {
-      this.isEmptyObject = false;
-      this.resolvableValue = value;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-      this.resolvableValue = undefined;
-      this._logMonitoringEnabled = value.logMonitoringEnabled;
-      this._retentionInDays = value.retentionInDays;
-      this._storageAccountAccessKey = value.storageAccountAccessKey;
-      this._storageAccountAccessKeyIsSecondary = value.storageAccountAccessKeyIsSecondary;
-      this._storageEndpoint = value.storageEndpoint;
-    }
-  }
-
-  // log_monitoring_enabled - computed: true, optional: true, required: false
-  private _logMonitoringEnabled?: boolean | cdktf.IResolvable; 
-  public get logMonitoringEnabled() {
-    return this.getBooleanAttribute('log_monitoring_enabled');
-  }
-  public set logMonitoringEnabled(value: boolean | cdktf.IResolvable) {
-    this._logMonitoringEnabled = value;
-  }
-  public resetLogMonitoringEnabled() {
-    this._logMonitoringEnabled = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get logMonitoringEnabledInput() {
-    return this._logMonitoringEnabled;
-  }
-
-  // retention_in_days - computed: true, optional: true, required: false
-  private _retentionInDays?: number; 
-  public get retentionInDays() {
-    return this.getNumberAttribute('retention_in_days');
-  }
-  public set retentionInDays(value: number) {
-    this._retentionInDays = value;
-  }
-  public resetRetentionInDays() {
-    this._retentionInDays = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get retentionInDaysInput() {
-    return this._retentionInDays;
-  }
-
-  // storage_account_access_key - computed: true, optional: true, required: false
-  private _storageAccountAccessKey?: string; 
-  public get storageAccountAccessKey() {
-    return this.getStringAttribute('storage_account_access_key');
-  }
-  public set storageAccountAccessKey(value: string) {
-    this._storageAccountAccessKey = value;
-  }
-  public resetStorageAccountAccessKey() {
-    this._storageAccountAccessKey = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get storageAccountAccessKeyInput() {
-    return this._storageAccountAccessKey;
-  }
-
-  // storage_account_access_key_is_secondary - computed: true, optional: true, required: false
-  private _storageAccountAccessKeyIsSecondary?: boolean | cdktf.IResolvable; 
-  public get storageAccountAccessKeyIsSecondary() {
-    return this.getBooleanAttribute('storage_account_access_key_is_secondary');
-  }
-  public set storageAccountAccessKeyIsSecondary(value: boolean | cdktf.IResolvable) {
-    this._storageAccountAccessKeyIsSecondary = value;
-  }
-  public resetStorageAccountAccessKeyIsSecondary() {
-    this._storageAccountAccessKeyIsSecondary = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get storageAccountAccessKeyIsSecondaryInput() {
-    return this._storageAccountAccessKeyIsSecondary;
-  }
-
-  // storage_endpoint - computed: true, optional: true, required: false
-  private _storageEndpoint?: string; 
-  public get storageEndpoint() {
-    return this.getStringAttribute('storage_endpoint');
-  }
-  public set storageEndpoint(value: string) {
-    this._storageEndpoint = value;
-  }
-  public resetStorageEndpoint() {
-    this._storageEndpoint = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get storageEndpointInput() {
-    return this._storageEndpoint;
-  }
-}
-
-export class SqlDatabaseExtendedAuditingPolicyList extends cdktf.ComplexList {
-  public internalValue? : SqlDatabaseExtendedAuditingPolicy[] | cdktf.IResolvable
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): SqlDatabaseExtendedAuditingPolicyOutputReference {
-    return new SqlDatabaseExtendedAuditingPolicyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-  }
 }
 export interface SqlDatabaseImport {
   /**
@@ -552,10 +343,6 @@ export interface SqlDatabaseThreatDetectionPolicy {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#storage_endpoint SqlDatabase#storage_endpoint}
   */
   readonly storageEndpoint?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#use_server_default SqlDatabase#use_server_default}
-  */
-  readonly useServerDefault?: string;
 }
 
 export function sqlDatabaseThreatDetectionPolicyToTerraform(struct?: SqlDatabaseThreatDetectionPolicyOutputReference | SqlDatabaseThreatDetectionPolicy): any {
@@ -571,7 +358,6 @@ export function sqlDatabaseThreatDetectionPolicyToTerraform(struct?: SqlDatabase
     state: cdktf.stringToTerraform(struct!.state),
     storage_account_access_key: cdktf.stringToTerraform(struct!.storageAccountAccessKey),
     storage_endpoint: cdktf.stringToTerraform(struct!.storageEndpoint),
-    use_server_default: cdktf.stringToTerraform(struct!.useServerDefault),
   }
 }
 
@@ -617,10 +403,6 @@ export class SqlDatabaseThreatDetectionPolicyOutputReference extends cdktf.Compl
       hasAnyValues = true;
       internalValueResult.storageEndpoint = this._storageEndpoint;
     }
-    if (this._useServerDefault !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.useServerDefault = this._useServerDefault;
-    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -634,7 +416,6 @@ export class SqlDatabaseThreatDetectionPolicyOutputReference extends cdktf.Compl
       this._state = undefined;
       this._storageAccountAccessKey = undefined;
       this._storageEndpoint = undefined;
-      this._useServerDefault = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
@@ -645,7 +426,6 @@ export class SqlDatabaseThreatDetectionPolicyOutputReference extends cdktf.Compl
       this._state = value.state;
       this._storageAccountAccessKey = value.storageAccountAccessKey;
       this._storageEndpoint = value.storageEndpoint;
-      this._useServerDefault = value.useServerDefault;
     }
   }
 
@@ -759,22 +539,6 @@ export class SqlDatabaseThreatDetectionPolicyOutputReference extends cdktf.Compl
   // Temporarily expose input value. Use with caution.
   public get storageEndpointInput() {
     return this._storageEndpoint;
-  }
-
-  // use_server_default - computed: false, optional: true, required: false
-  private _useServerDefault?: string; 
-  public get useServerDefault() {
-    return this.getStringAttribute('use_server_default');
-  }
-  public set useServerDefault(value: string) {
-    this._useServerDefault = value;
-  }
-  public resetUseServerDefault() {
-    this._useServerDefault = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get useServerDefaultInput() {
-    return this._useServerDefault;
   }
 }
 export interface SqlDatabaseTimeouts {
@@ -960,8 +724,8 @@ export class SqlDatabase extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_sql_database',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -972,7 +736,6 @@ export class SqlDatabase extends cdktf.TerraformResource {
     this._createMode = config.createMode;
     this._edition = config.edition;
     this._elasticPoolName = config.elasticPoolName;
-    this._extendedAuditingPolicy.internalValue = config.extendedAuditingPolicy;
     this._id = config.id;
     this._location = config.location;
     this._maxSizeBytes = config.maxSizeBytes;
@@ -1074,22 +837,6 @@ export class SqlDatabase extends cdktf.TerraformResource {
   // encryption - computed: true, optional: false, required: false
   public get encryption() {
     return this.getStringAttribute('encryption');
-  }
-
-  // extended_auditing_policy - computed: true, optional: true, required: false
-  private _extendedAuditingPolicy = new SqlDatabaseExtendedAuditingPolicyList(this, "extended_auditing_policy", false);
-  public get extendedAuditingPolicy() {
-    return this._extendedAuditingPolicy;
-  }
-  public putExtendedAuditingPolicy(value: SqlDatabaseExtendedAuditingPolicy[] | cdktf.IResolvable) {
-    this._extendedAuditingPolicy.internalValue = value;
-  }
-  public resetExtendedAuditingPolicy() {
-    this._extendedAuditingPolicy.internalValue = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get extendedAuditingPolicyInput() {
-    return this._extendedAuditingPolicy.internalValue;
   }
 
   // id - computed: true, optional: true, required: false
@@ -1378,7 +1125,6 @@ export class SqlDatabase extends cdktf.TerraformResource {
       create_mode: cdktf.stringToTerraform(this._createMode),
       edition: cdktf.stringToTerraform(this._edition),
       elastic_pool_name: cdktf.stringToTerraform(this._elasticPoolName),
-      extended_auditing_policy: cdktf.listMapper(sqlDatabaseExtendedAuditingPolicyToTerraform)(this._extendedAuditingPolicy.internalValue),
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       max_size_bytes: cdktf.stringToTerraform(this._maxSizeBytes),

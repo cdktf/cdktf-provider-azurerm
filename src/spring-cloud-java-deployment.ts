@@ -8,10 +8,6 @@ import * as cdktf from 'cdktf';
 
 export interface SpringCloudJavaDeploymentConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_java_deployment#cpu SpringCloudJavaDeployment#cpu}
-  */
-  readonly cpu?: number;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_java_deployment#environment_variables SpringCloudJavaDeployment#environment_variables}
   */
   readonly environmentVariables?: { [key: string]: string };
@@ -30,10 +26,6 @@ export interface SpringCloudJavaDeploymentConfig extends cdktf.TerraformMetaArgu
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_java_deployment#jvm_options SpringCloudJavaDeployment#jvm_options}
   */
   readonly jvmOptions?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_java_deployment#memory_in_gb SpringCloudJavaDeployment#memory_in_gb}
-  */
-  readonly memoryInGb?: number;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_java_deployment#name SpringCloudJavaDeployment#name}
   */
@@ -334,20 +326,18 @@ export class SpringCloudJavaDeployment extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_spring_cloud_java_deployment',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
       lifecycle: config.lifecycle
     });
-    this._cpu = config.cpu;
     this._environmentVariables = config.environmentVariables;
     this._id = config.id;
     this._instanceCount = config.instanceCount;
     this._jvmOptions = config.jvmOptions;
-    this._memoryInGb = config.memoryInGb;
     this._name = config.name;
     this._runtimeVersion = config.runtimeVersion;
     this._springCloudAppId = config.springCloudAppId;
@@ -358,22 +348,6 @@ export class SpringCloudJavaDeployment extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
-
-  // cpu - computed: true, optional: true, required: false
-  private _cpu?: number; 
-  public get cpu() {
-    return this.getNumberAttribute('cpu');
-  }
-  public set cpu(value: number) {
-    this._cpu = value;
-  }
-  public resetCpu() {
-    this._cpu = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get cpuInput() {
-    return this._cpu;
-  }
 
   // environment_variables - computed: false, optional: true, required: false
   private _environmentVariables?: { [key: string]: string }; 
@@ -437,22 +411,6 @@ export class SpringCloudJavaDeployment extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get jvmOptionsInput() {
     return this._jvmOptions;
-  }
-
-  // memory_in_gb - computed: true, optional: true, required: false
-  private _memoryInGb?: number; 
-  public get memoryInGb() {
-    return this.getNumberAttribute('memory_in_gb');
-  }
-  public set memoryInGb(value: number) {
-    this._memoryInGb = value;
-  }
-  public resetMemoryInGb() {
-    this._memoryInGb = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get memoryInGbInput() {
-    return this._memoryInGb;
   }
 
   // name - computed: false, optional: false, required: true
@@ -535,12 +493,10 @@ export class SpringCloudJavaDeployment extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      cpu: cdktf.numberToTerraform(this._cpu),
       environment_variables: cdktf.hashMapper(cdktf.stringToTerraform)(this._environmentVariables),
       id: cdktf.stringToTerraform(this._id),
       instance_count: cdktf.numberToTerraform(this._instanceCount),
       jvm_options: cdktf.stringToTerraform(this._jvmOptions),
-      memory_in_gb: cdktf.numberToTerraform(this._memoryInGb),
       name: cdktf.stringToTerraform(this._name),
       runtime_version: cdktf.stringToTerraform(this._runtimeVersion),
       spring_cloud_app_id: cdktf.stringToTerraform(this._springCloudAppId),

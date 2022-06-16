@@ -8,6 +8,14 @@ import * as cdktf from 'cdktf';
 
 export interface CosmosdbCassandraClusterConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_cluster#authentication_method CosmosdbCassandraCluster#authentication_method}
+  */
+  readonly authenticationMethod?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_cluster#client_certificate_pems CosmosdbCassandraCluster#client_certificate_pems}
+  */
+  readonly clientCertificatePems?: string[];
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_cluster#default_admin_password CosmosdbCassandraCluster#default_admin_password}
   */
   readonly defaultAdminPassword: string;
@@ -15,6 +23,14 @@ export interface CosmosdbCassandraClusterConfig extends cdktf.TerraformMetaArgum
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_cluster#delegated_management_subnet_id CosmosdbCassandraCluster#delegated_management_subnet_id}
   */
   readonly delegatedManagementSubnetId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_cluster#external_gossip_certificate_pems CosmosdbCassandraCluster#external_gossip_certificate_pems}
+  */
+  readonly externalGossipCertificatePems?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_cluster#external_seed_node_ip_addresses CosmosdbCassandraCluster#external_seed_node_ip_addresses}
+  */
+  readonly externalSeedNodeIpAddresses?: string[];
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_cluster#id CosmosdbCassandraCluster#id}
   *
@@ -31,15 +47,105 @@ export interface CosmosdbCassandraClusterConfig extends cdktf.TerraformMetaArgum
   */
   readonly name: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_cluster#repair_enabled CosmosdbCassandraCluster#repair_enabled}
+  */
+  readonly repairEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_cluster#resource_group_name CosmosdbCassandraCluster#resource_group_name}
   */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_cluster#tags CosmosdbCassandraCluster#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_cluster#version CosmosdbCassandraCluster#version}
+  */
+  readonly version?: string;
+  /**
+  * identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_cluster#identity CosmosdbCassandraCluster#identity}
+  */
+  readonly identity?: CosmosdbCassandraClusterIdentity;
   /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_cluster#timeouts CosmosdbCassandraCluster#timeouts}
   */
   readonly timeouts?: CosmosdbCassandraClusterTimeouts;
+}
+export interface CosmosdbCassandraClusterIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_cluster#type CosmosdbCassandraCluster#type}
+  */
+  readonly type: string;
+}
+
+export function cosmosdbCassandraClusterIdentityToTerraform(struct?: CosmosdbCassandraClusterIdentityOutputReference | CosmosdbCassandraClusterIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
+export class CosmosdbCassandraClusterIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): CosmosdbCassandraClusterIdentity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CosmosdbCassandraClusterIdentity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._type = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._type = value.type;
+    }
+  }
+
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
 }
 export interface CosmosdbCassandraClusterTimeouts {
   /**
@@ -54,6 +160,10 @@ export interface CosmosdbCassandraClusterTimeouts {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_cluster#read CosmosdbCassandraCluster#read}
   */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_cluster#update CosmosdbCassandraCluster#update}
+  */
+  readonly update?: string;
 }
 
 export function cosmosdbCassandraClusterTimeoutsToTerraform(struct?: CosmosdbCassandraClusterTimeoutsOutputReference | CosmosdbCassandraClusterTimeouts | cdktf.IResolvable): any {
@@ -65,6 +175,7 @@ export function cosmosdbCassandraClusterTimeoutsToTerraform(struct?: CosmosdbCas
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
     read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
   }
 }
 
@@ -98,6 +209,10 @@ export class CosmosdbCassandraClusterTimeoutsOutputReference extends cdktf.Compl
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
+    if (this._update !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -108,6 +223,7 @@ export class CosmosdbCassandraClusterTimeoutsOutputReference extends cdktf.Compl
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
+      this._update = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
       this.isEmptyObject = false;
@@ -119,6 +235,7 @@ export class CosmosdbCassandraClusterTimeoutsOutputReference extends cdktf.Compl
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
+      this._update = value.update;
     }
   }
 
@@ -169,6 +286,22 @@ export class CosmosdbCassandraClusterTimeoutsOutputReference extends cdktf.Compl
   public get readInput() {
     return this._read;
   }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update;
+  }
 }
 
 /**
@@ -197,26 +330,66 @@ export class CosmosdbCassandraCluster extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_cosmosdb_cassandra_cluster',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._authenticationMethod = config.authenticationMethod;
+    this._clientCertificatePems = config.clientCertificatePems;
     this._defaultAdminPassword = config.defaultAdminPassword;
     this._delegatedManagementSubnetId = config.delegatedManagementSubnetId;
+    this._externalGossipCertificatePems = config.externalGossipCertificatePems;
+    this._externalSeedNodeIpAddresses = config.externalSeedNodeIpAddresses;
     this._id = config.id;
     this._location = config.location;
     this._name = config.name;
+    this._repairEnabled = config.repairEnabled;
     this._resourceGroupName = config.resourceGroupName;
+    this._tags = config.tags;
+    this._version = config.version;
+    this._identity.internalValue = config.identity;
     this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // authentication_method - computed: false, optional: true, required: false
+  private _authenticationMethod?: string; 
+  public get authenticationMethod() {
+    return this.getStringAttribute('authentication_method');
+  }
+  public set authenticationMethod(value: string) {
+    this._authenticationMethod = value;
+  }
+  public resetAuthenticationMethod() {
+    this._authenticationMethod = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get authenticationMethodInput() {
+    return this._authenticationMethod;
+  }
+
+  // client_certificate_pems - computed: false, optional: true, required: false
+  private _clientCertificatePems?: string[]; 
+  public get clientCertificatePems() {
+    return this.getListAttribute('client_certificate_pems');
+  }
+  public set clientCertificatePems(value: string[]) {
+    this._clientCertificatePems = value;
+  }
+  public resetClientCertificatePems() {
+    this._clientCertificatePems = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientCertificatePemsInput() {
+    return this._clientCertificatePems;
+  }
 
   // default_admin_password - computed: false, optional: false, required: true
   private _defaultAdminPassword?: string; 
@@ -242,6 +415,38 @@ export class CosmosdbCassandraCluster extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get delegatedManagementSubnetIdInput() {
     return this._delegatedManagementSubnetId;
+  }
+
+  // external_gossip_certificate_pems - computed: false, optional: true, required: false
+  private _externalGossipCertificatePems?: string[]; 
+  public get externalGossipCertificatePems() {
+    return this.getListAttribute('external_gossip_certificate_pems');
+  }
+  public set externalGossipCertificatePems(value: string[]) {
+    this._externalGossipCertificatePems = value;
+  }
+  public resetExternalGossipCertificatePems() {
+    this._externalGossipCertificatePems = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get externalGossipCertificatePemsInput() {
+    return this._externalGossipCertificatePems;
+  }
+
+  // external_seed_node_ip_addresses - computed: false, optional: true, required: false
+  private _externalSeedNodeIpAddresses?: string[]; 
+  public get externalSeedNodeIpAddresses() {
+    return this.getListAttribute('external_seed_node_ip_addresses');
+  }
+  public set externalSeedNodeIpAddresses(value: string[]) {
+    this._externalSeedNodeIpAddresses = value;
+  }
+  public resetExternalSeedNodeIpAddresses() {
+    this._externalSeedNodeIpAddresses = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get externalSeedNodeIpAddressesInput() {
+    return this._externalSeedNodeIpAddresses;
   }
 
   // id - computed: true, optional: true, required: false
@@ -286,6 +491,22 @@ export class CosmosdbCassandraCluster extends cdktf.TerraformResource {
     return this._name;
   }
 
+  // repair_enabled - computed: false, optional: true, required: false
+  private _repairEnabled?: boolean | cdktf.IResolvable; 
+  public get repairEnabled() {
+    return this.getBooleanAttribute('repair_enabled');
+  }
+  public set repairEnabled(value: boolean | cdktf.IResolvable) {
+    this._repairEnabled = value;
+  }
+  public resetRepairEnabled() {
+    this._repairEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get repairEnabledInput() {
+    return this._repairEnabled;
+  }
+
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName?: string; 
   public get resourceGroupName() {
@@ -297,6 +518,54 @@ export class CosmosdbCassandraCluster extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
     return this._resourceGroupName;
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
+  public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
+  }
+
+  // version - computed: false, optional: true, required: false
+  private _version?: string; 
+  public get version() {
+    return this.getStringAttribute('version');
+  }
+  public set version(value: string) {
+    this._version = value;
+  }
+  public resetVersion() {
+    this._version = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get versionInput() {
+    return this._version;
+  }
+
+  // identity - computed: false, optional: true, required: false
+  private _identity = new CosmosdbCassandraClusterIdentityOutputReference(this, "identity");
+  public get identity() {
+    return this._identity;
+  }
+  public putIdentity(value: CosmosdbCassandraClusterIdentity) {
+    this._identity.internalValue = value;
+  }
+  public resetIdentity() {
+    this._identity.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityInput() {
+    return this._identity.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -321,12 +590,20 @@ export class CosmosdbCassandraCluster extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      authentication_method: cdktf.stringToTerraform(this._authenticationMethod),
+      client_certificate_pems: cdktf.listMapper(cdktf.stringToTerraform)(this._clientCertificatePems),
       default_admin_password: cdktf.stringToTerraform(this._defaultAdminPassword),
       delegated_management_subnet_id: cdktf.stringToTerraform(this._delegatedManagementSubnetId),
+      external_gossip_certificate_pems: cdktf.listMapper(cdktf.stringToTerraform)(this._externalGossipCertificatePems),
+      external_seed_node_ip_addresses: cdktf.listMapper(cdktf.stringToTerraform)(this._externalSeedNodeIpAddresses),
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
+      repair_enabled: cdktf.booleanToTerraform(this._repairEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
+      version: cdktf.stringToTerraform(this._version),
+      identity: cosmosdbCassandraClusterIdentityToTerraform(this._identity.internalValue),
       timeouts: cosmosdbCassandraClusterTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

@@ -8,10 +8,6 @@ import * as cdktf from 'cdktf';
 
 export interface PublicIpPrefixConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip_prefix#availability_zone PublicIpPrefix#availability_zone}
-  */
-  readonly availabilityZone?: string;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip_prefix#id PublicIpPrefix#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
@@ -240,15 +236,14 @@ export class PublicIpPrefix extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_public_ip_prefix',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
       lifecycle: config.lifecycle
     });
-    this._availabilityZone = config.availabilityZone;
     this._id = config.id;
     this._ipVersion = config.ipVersion;
     this._location = config.location;
@@ -264,22 +259,6 @@ export class PublicIpPrefix extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
-
-  // availability_zone - computed: true, optional: true, required: false
-  private _availabilityZone?: string; 
-  public get availabilityZone() {
-    return this.getStringAttribute('availability_zone');
-  }
-  public set availabilityZone(value: string) {
-    this._availabilityZone = value;
-  }
-  public resetAvailabilityZone() {
-    this._availabilityZone = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get availabilityZoneInput() {
-    return this._availabilityZone;
-  }
 
   // id - computed: true, optional: true, required: false
   private _id?: string; 
@@ -405,10 +384,10 @@ export class PublicIpPrefix extends cdktf.TerraformResource {
     return this._tags;
   }
 
-  // zones - computed: true, optional: true, required: false
+  // zones - computed: false, optional: true, required: false
   private _zones?: string[]; 
   public get zones() {
-    return this.getListAttribute('zones');
+    return cdktf.Fn.tolist(this.getListAttribute('zones'));
   }
   public set zones(value: string[]) {
     this._zones = value;
@@ -443,7 +422,6 @@ export class PublicIpPrefix extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      availability_zone: cdktf.stringToTerraform(this._availabilityZone),
       id: cdktf.stringToTerraform(this._id),
       ip_version: cdktf.stringToTerraform(this._ipVersion),
       location: cdktf.stringToTerraform(this._location),

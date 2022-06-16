@@ -27,10 +27,6 @@ export interface PolicyDefinitionConfig extends cdktf.TerraformMetaArguments {
   */
   readonly managementGroupId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_definition#management_group_name PolicyDefinition#management_group_name}
-  */
-  readonly managementGroupName?: string;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_definition#metadata PolicyDefinition#metadata}
   */
   readonly metadata?: string;
@@ -244,8 +240,8 @@ export class PolicyDefinition extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_policy_definition',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -256,7 +252,6 @@ export class PolicyDefinition extends cdktf.TerraformResource {
     this._displayName = config.displayName;
     this._id = config.id;
     this._managementGroupId = config.managementGroupId;
-    this._managementGroupName = config.managementGroupName;
     this._metadata = config.metadata;
     this._mode = config.mode;
     this._name = config.name;
@@ -315,7 +310,7 @@ export class PolicyDefinition extends cdktf.TerraformResource {
     return this._id;
   }
 
-  // management_group_id - computed: true, optional: true, required: false
+  // management_group_id - computed: false, optional: true, required: false
   private _managementGroupId?: string; 
   public get managementGroupId() {
     return this.getStringAttribute('management_group_id');
@@ -329,22 +324,6 @@ export class PolicyDefinition extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get managementGroupIdInput() {
     return this._managementGroupId;
-  }
-
-  // management_group_name - computed: true, optional: true, required: false
-  private _managementGroupName?: string; 
-  public get managementGroupName() {
-    return this.getStringAttribute('management_group_name');
-  }
-  public set managementGroupName(value: string) {
-    this._managementGroupName = value;
-  }
-  public resetManagementGroupName() {
-    this._managementGroupName = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get managementGroupNameInput() {
-    return this._managementGroupName;
   }
 
   // metadata - computed: true, optional: true, required: false
@@ -460,7 +439,6 @@ export class PolicyDefinition extends cdktf.TerraformResource {
       display_name: cdktf.stringToTerraform(this._displayName),
       id: cdktf.stringToTerraform(this._id),
       management_group_id: cdktf.stringToTerraform(this._managementGroupId),
-      management_group_name: cdktf.stringToTerraform(this._managementGroupName),
       metadata: cdktf.stringToTerraform(this._metadata),
       mode: cdktf.stringToTerraform(this._mode),
       name: cdktf.stringToTerraform(this._name),

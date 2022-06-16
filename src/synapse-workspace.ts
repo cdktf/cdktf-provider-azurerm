@@ -101,6 +101,12 @@ export interface SynapseWorkspaceConfig extends cdktf.TerraformMetaArguments {
   */
   readonly githubRepo?: SynapseWorkspaceGithubRepo;
   /**
+  * identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#identity SynapseWorkspace#identity}
+  */
+  readonly identity: SynapseWorkspaceIdentity;
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#timeouts SynapseWorkspace#timeouts}
@@ -256,80 +262,6 @@ export class SynapseWorkspaceAadAdminList extends cdktf.ComplexList {
   */
   public get(index: number): SynapseWorkspaceAadAdminOutputReference {
     return new SynapseWorkspaceAadAdminOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-  }
-}
-export interface SynapseWorkspaceIdentity {
-}
-
-export function synapseWorkspaceIdentityToTerraform(struct?: SynapseWorkspaceIdentity): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-  }
-}
-
-export class SynapseWorkspaceIdentityOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
-  }
-
-  public get internalValue(): SynapseWorkspaceIdentity | undefined {
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: SynapseWorkspaceIdentity | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-    }
-  }
-
-  // principal_id - computed: true, optional: false, required: false
-  public get principalId() {
-    return this.getStringAttribute('principal_id');
-  }
-
-  // tenant_id - computed: true, optional: false, required: false
-  public get tenantId() {
-    return this.getStringAttribute('tenant_id');
-  }
-
-  // type - computed: true, optional: false, required: false
-  public get type() {
-    return this.getStringAttribute('type');
-  }
-}
-
-export class SynapseWorkspaceIdentityList extends cdktf.ComplexList {
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): SynapseWorkspaceIdentityOutputReference {
-    return new SynapseWorkspaceIdentityOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface SynapseWorkspaceSqlAadAdmin {
@@ -972,6 +904,78 @@ export class SynapseWorkspaceGithubRepoOutputReference extends cdktf.ComplexObje
     return this._rootFolder;
   }
 }
+export interface SynapseWorkspaceIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#type SynapseWorkspace#type}
+  */
+  readonly type: string;
+}
+
+export function synapseWorkspaceIdentityToTerraform(struct?: SynapseWorkspaceIdentityOutputReference | SynapseWorkspaceIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
+export class SynapseWorkspaceIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): SynapseWorkspaceIdentity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SynapseWorkspaceIdentity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._type = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._type = value.type;
+    }
+  }
+
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+}
 export interface SynapseWorkspaceTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#create SynapseWorkspace#create}
@@ -1155,8 +1159,8 @@ export class SynapseWorkspace extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_synapse_workspace',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1184,6 +1188,7 @@ export class SynapseWorkspace extends cdktf.TerraformResource {
     this._azureDevopsRepo.internalValue = config.azureDevopsRepo;
     this._customerManagedKey.internalValue = config.customerManagedKey;
     this._githubRepo.internalValue = config.githubRepo;
+    this._identity.internalValue = config.identity;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -1259,12 +1264,6 @@ export class SynapseWorkspace extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get idInput() {
     return this._id;
-  }
-
-  // identity - computed: true, optional: false, required: false
-  private _identity = new SynapseWorkspaceIdentityList(this, "identity", false);
-  public get identity() {
-    return this._identity;
   }
 
   // linking_allowed_for_aad_tenant_ids - computed: false, optional: true, required: false
@@ -1521,6 +1520,19 @@ export class SynapseWorkspace extends cdktf.TerraformResource {
     return this._githubRepo.internalValue;
   }
 
+  // identity - computed: false, optional: false, required: true
+  private _identity = new SynapseWorkspaceIdentityOutputReference(this, "identity");
+  public get identity() {
+    return this._identity;
+  }
+  public putIdentity(value: SynapseWorkspaceIdentity) {
+    this._identity.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityInput() {
+    return this._identity.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new SynapseWorkspaceTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -1564,6 +1576,7 @@ export class SynapseWorkspace extends cdktf.TerraformResource {
       azure_devops_repo: synapseWorkspaceAzureDevopsRepoToTerraform(this._azureDevopsRepo.internalValue),
       customer_managed_key: synapseWorkspaceCustomerManagedKeyToTerraform(this._customerManagedKey.internalValue),
       github_repo: synapseWorkspaceGithubRepoToTerraform(this._githubRepo.internalValue),
+      identity: synapseWorkspaceIdentityToTerraform(this._identity.internalValue),
       timeouts: synapseWorkspaceTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

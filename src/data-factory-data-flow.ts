@@ -37,7 +37,11 @@ export interface DataFactoryDataFlowConfig extends cdktf.TerraformMetaArguments 
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow#script DataFactoryDataFlow#script}
   */
-  readonly script: string;
+  readonly script?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow#script_lines DataFactoryDataFlow#script_lines}
+  */
+  readonly scriptLines?: string[];
   /**
   * sink block
   * 
@@ -1169,6 +1173,184 @@ export class DataFactoryDataFlowTimeoutsOutputReference extends cdktf.ComplexObj
     return this._update;
   }
 }
+export interface DataFactoryDataFlowTransformationDataset {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow#name DataFactoryDataFlow#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow#parameters DataFactoryDataFlow#parameters}
+  */
+  readonly parameters?: { [key: string]: string };
+}
+
+export function dataFactoryDataFlowTransformationDatasetToTerraform(struct?: DataFactoryDataFlowTransformationDatasetOutputReference | DataFactoryDataFlowTransformationDataset): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    parameters: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.parameters),
+  }
+}
+
+export class DataFactoryDataFlowTransformationDatasetOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DataFactoryDataFlowTransformationDataset | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._parameters !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.parameters = this._parameters;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFactoryDataFlowTransformationDataset | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._name = undefined;
+      this._parameters = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._name = value.name;
+      this._parameters = value.parameters;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // parameters - computed: false, optional: true, required: false
+  private _parameters?: { [key: string]: string }; 
+  public get parameters() {
+    return this.getStringMapAttribute('parameters');
+  }
+  public set parameters(value: { [key: string]: string }) {
+    this._parameters = value;
+  }
+  public resetParameters() {
+    this._parameters = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parametersInput() {
+    return this._parameters;
+  }
+}
+export interface DataFactoryDataFlowTransformationLinkedService {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow#name DataFactoryDataFlow#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow#parameters DataFactoryDataFlow#parameters}
+  */
+  readonly parameters?: { [key: string]: string };
+}
+
+export function dataFactoryDataFlowTransformationLinkedServiceToTerraform(struct?: DataFactoryDataFlowTransformationLinkedServiceOutputReference | DataFactoryDataFlowTransformationLinkedService): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    parameters: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.parameters),
+  }
+}
+
+export class DataFactoryDataFlowTransformationLinkedServiceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DataFactoryDataFlowTransformationLinkedService | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._parameters !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.parameters = this._parameters;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFactoryDataFlowTransformationLinkedService | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._name = undefined;
+      this._parameters = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._name = value.name;
+      this._parameters = value.parameters;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // parameters - computed: false, optional: true, required: false
+  private _parameters?: { [key: string]: string }; 
+  public get parameters() {
+    return this.getStringMapAttribute('parameters');
+  }
+  public set parameters(value: { [key: string]: string }) {
+    this._parameters = value;
+  }
+  public resetParameters() {
+    this._parameters = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parametersInput() {
+    return this._parameters;
+  }
+}
 export interface DataFactoryDataFlowTransformation {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow#description DataFactoryDataFlow#description}
@@ -1178,6 +1360,18 @@ export interface DataFactoryDataFlowTransformation {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow#name DataFactoryDataFlow#name}
   */
   readonly name: string;
+  /**
+  * dataset block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow#dataset DataFactoryDataFlow#dataset}
+  */
+  readonly dataset?: DataFactoryDataFlowTransformationDataset;
+  /**
+  * linked_service block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow#linked_service DataFactoryDataFlow#linked_service}
+  */
+  readonly linkedService?: DataFactoryDataFlowTransformationLinkedService;
 }
 
 export function dataFactoryDataFlowTransformationToTerraform(struct?: DataFactoryDataFlowTransformation | cdktf.IResolvable): any {
@@ -1188,6 +1382,8 @@ export function dataFactoryDataFlowTransformationToTerraform(struct?: DataFactor
   return {
     description: cdktf.stringToTerraform(struct!.description),
     name: cdktf.stringToTerraform(struct!.name),
+    dataset: dataFactoryDataFlowTransformationDatasetToTerraform(struct!.dataset),
+    linked_service: dataFactoryDataFlowTransformationLinkedServiceToTerraform(struct!.linkedService),
   }
 }
 
@@ -1219,6 +1415,14 @@ export class DataFactoryDataFlowTransformationOutputReference extends cdktf.Comp
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
+    if (this._dataset?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dataset = this._dataset?.internalValue;
+    }
+    if (this._linkedService?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.linkedService = this._linkedService?.internalValue;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -1228,6 +1432,8 @@ export class DataFactoryDataFlowTransformationOutputReference extends cdktf.Comp
       this.resolvableValue = undefined;
       this._description = undefined;
       this._name = undefined;
+      this._dataset.internalValue = undefined;
+      this._linkedService.internalValue = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
       this.isEmptyObject = false;
@@ -1238,6 +1444,8 @@ export class DataFactoryDataFlowTransformationOutputReference extends cdktf.Comp
       this.resolvableValue = undefined;
       this._description = value.description;
       this._name = value.name;
+      this._dataset.internalValue = value.dataset;
+      this._linkedService.internalValue = value.linkedService;
     }
   }
 
@@ -1268,6 +1476,38 @@ export class DataFactoryDataFlowTransformationOutputReference extends cdktf.Comp
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name;
+  }
+
+  // dataset - computed: false, optional: true, required: false
+  private _dataset = new DataFactoryDataFlowTransformationDatasetOutputReference(this, "dataset");
+  public get dataset() {
+    return this._dataset;
+  }
+  public putDataset(value: DataFactoryDataFlowTransformationDataset) {
+    this._dataset.internalValue = value;
+  }
+  public resetDataset() {
+    this._dataset.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get datasetInput() {
+    return this._dataset.internalValue;
+  }
+
+  // linked_service - computed: false, optional: true, required: false
+  private _linkedService = new DataFactoryDataFlowTransformationLinkedServiceOutputReference(this, "linked_service");
+  public get linkedService() {
+    return this._linkedService;
+  }
+  public putLinkedService(value: DataFactoryDataFlowTransformationLinkedService) {
+    this._linkedService.internalValue = value;
+  }
+  public resetLinkedService() {
+    this._linkedService.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get linkedServiceInput() {
+    return this._linkedService.internalValue;
   }
 }
 
@@ -1317,8 +1557,8 @@ export class DataFactoryDataFlow extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_data_factory_data_flow',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1332,6 +1572,7 @@ export class DataFactoryDataFlow extends cdktf.TerraformResource {
     this._id = config.id;
     this._name = config.name;
     this._script = config.script;
+    this._scriptLines = config.scriptLines;
     this._sink.internalValue = config.sink;
     this._source.internalValue = config.source;
     this._timeouts.internalValue = config.timeouts;
@@ -1432,7 +1673,7 @@ export class DataFactoryDataFlow extends cdktf.TerraformResource {
     return this._name;
   }
 
-  // script - computed: false, optional: false, required: true
+  // script - computed: false, optional: true, required: false
   private _script?: string; 
   public get script() {
     return this.getStringAttribute('script');
@@ -1440,9 +1681,28 @@ export class DataFactoryDataFlow extends cdktf.TerraformResource {
   public set script(value: string) {
     this._script = value;
   }
+  public resetScript() {
+    this._script = undefined;
+  }
   // Temporarily expose input value. Use with caution.
   public get scriptInput() {
     return this._script;
+  }
+
+  // script_lines - computed: false, optional: true, required: false
+  private _scriptLines?: string[]; 
+  public get scriptLines() {
+    return this.getListAttribute('script_lines');
+  }
+  public set scriptLines(value: string[]) {
+    this._scriptLines = value;
+  }
+  public resetScriptLines() {
+    this._scriptLines = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scriptLinesInput() {
+    return this._scriptLines;
   }
 
   // sink - computed: false, optional: false, required: true
@@ -1516,6 +1776,7 @@ export class DataFactoryDataFlow extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       script: cdktf.stringToTerraform(this._script),
+      script_lines: cdktf.listMapper(cdktf.stringToTerraform)(this._scriptLines),
       sink: cdktf.listMapper(dataFactoryDataFlowSinkToTerraform)(this._sink.internalValue),
       source: cdktf.listMapper(dataFactoryDataFlowSourceToTerraform)(this._source.internalValue),
       timeouts: dataFactoryDataFlowTimeoutsToTerraform(this._timeouts.internalValue),

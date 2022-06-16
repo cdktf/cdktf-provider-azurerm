@@ -215,7 +215,7 @@ export class FirewallNatRuleCollectionRuleOutputReference extends cdktf.ComplexO
   // destination_addresses - computed: false, optional: false, required: true
   private _destinationAddresses?: string[]; 
   public get destinationAddresses() {
-    return cdktf.Fn.tolist(this.getListAttribute('destination_addresses'));
+    return this.getListAttribute('destination_addresses');
   }
   public set destinationAddresses(value: string[]) {
     this._destinationAddresses = value;
@@ -228,7 +228,7 @@ export class FirewallNatRuleCollectionRuleOutputReference extends cdktf.ComplexO
   // destination_ports - computed: false, optional: false, required: true
   private _destinationPorts?: string[]; 
   public get destinationPorts() {
-    return cdktf.Fn.tolist(this.getListAttribute('destination_ports'));
+    return this.getListAttribute('destination_ports');
   }
   public set destinationPorts(value: string[]) {
     this._destinationPorts = value;
@@ -254,7 +254,7 @@ export class FirewallNatRuleCollectionRuleOutputReference extends cdktf.ComplexO
   // protocols - computed: false, optional: false, required: true
   private _protocols?: string[]; 
   public get protocols() {
-    return cdktf.Fn.tolist(this.getListAttribute('protocols'));
+    return this.getListAttribute('protocols');
   }
   public set protocols(value: string[]) {
     this._protocols = value;
@@ -267,7 +267,7 @@ export class FirewallNatRuleCollectionRuleOutputReference extends cdktf.ComplexO
   // source_addresses - computed: false, optional: true, required: false
   private _sourceAddresses?: string[]; 
   public get sourceAddresses() {
-    return cdktf.Fn.tolist(this.getListAttribute('source_addresses'));
+    return this.getListAttribute('source_addresses');
   }
   public set sourceAddresses(value: string[]) {
     this._sourceAddresses = value;
@@ -283,7 +283,7 @@ export class FirewallNatRuleCollectionRuleOutputReference extends cdktf.ComplexO
   // source_ip_groups - computed: false, optional: true, required: false
   private _sourceIpGroups?: string[]; 
   public get sourceIpGroups() {
-    return cdktf.Fn.tolist(this.getListAttribute('source_ip_groups'));
+    return this.getListAttribute('source_ip_groups');
   }
   public set sourceIpGroups(value: string[]) {
     this._sourceIpGroups = value;
@@ -525,8 +525,8 @@ export class FirewallNatRuleCollection extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_firewall_nat_rule_collection',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -629,7 +629,7 @@ export class FirewallNatRuleCollection extends cdktf.TerraformResource {
   }
 
   // rule - computed: false, optional: false, required: true
-  private _rule = new FirewallNatRuleCollectionRuleList(this, "rule", true);
+  private _rule = new FirewallNatRuleCollectionRuleList(this, "rule", false);
   public get rule() {
     return this._rule;
   }

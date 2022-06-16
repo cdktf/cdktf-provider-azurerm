@@ -948,10 +948,6 @@ export interface ApiManagementApiOperationRequestRepresentation {
   */
   readonly contentType: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#sample ApiManagementApiOperation#sample}
-  */
-  readonly sample?: string;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#schema_id ApiManagementApiOperation#schema_id}
   */
   readonly schemaId?: string;
@@ -980,7 +976,6 @@ export function apiManagementApiOperationRequestRepresentationToTerraform(struct
   }
   return {
     content_type: cdktf.stringToTerraform(struct!.contentType),
-    sample: cdktf.stringToTerraform(struct!.sample),
     schema_id: cdktf.stringToTerraform(struct!.schemaId),
     type_name: cdktf.stringToTerraform(struct!.typeName),
     example: cdktf.listMapper(apiManagementApiOperationRequestRepresentationExampleToTerraform)(struct!.example),
@@ -1012,10 +1007,6 @@ export class ApiManagementApiOperationRequestRepresentationOutputReference exten
       hasAnyValues = true;
       internalValueResult.contentType = this._contentType;
     }
-    if (this._sample !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.sample = this._sample;
-    }
     if (this._schemaId !== undefined) {
       hasAnyValues = true;
       internalValueResult.schemaId = this._schemaId;
@@ -1040,7 +1031,6 @@ export class ApiManagementApiOperationRequestRepresentationOutputReference exten
       this.isEmptyObject = false;
       this.resolvableValue = undefined;
       this._contentType = undefined;
-      this._sample = undefined;
       this._schemaId = undefined;
       this._typeName = undefined;
       this._example.internalValue = undefined;
@@ -1054,7 +1044,6 @@ export class ApiManagementApiOperationRequestRepresentationOutputReference exten
       this.isEmptyObject = Object.keys(value).length === 0;
       this.resolvableValue = undefined;
       this._contentType = value.contentType;
-      this._sample = value.sample;
       this._schemaId = value.schemaId;
       this._typeName = value.typeName;
       this._example.internalValue = value.example;
@@ -1073,22 +1062,6 @@ export class ApiManagementApiOperationRequestRepresentationOutputReference exten
   // Temporarily expose input value. Use with caution.
   public get contentTypeInput() {
     return this._contentType;
-  }
-
-  // sample - computed: true, optional: true, required: false
-  private _sample?: string; 
-  public get sample() {
-    return this.getStringAttribute('sample');
-  }
-  public set sample(value: string) {
-    this._sample = value;
-  }
-  public resetSample() {
-    this._sample = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get sampleInput() {
-    return this._sample;
   }
 
   // schema_id - computed: false, optional: true, required: false
@@ -1981,10 +1954,6 @@ export interface ApiManagementApiOperationResponseRepresentation {
   */
   readonly contentType: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#sample ApiManagementApiOperation#sample}
-  */
-  readonly sample?: string;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation#schema_id ApiManagementApiOperation#schema_id}
   */
   readonly schemaId?: string;
@@ -2013,7 +1982,6 @@ export function apiManagementApiOperationResponseRepresentationToTerraform(struc
   }
   return {
     content_type: cdktf.stringToTerraform(struct!.contentType),
-    sample: cdktf.stringToTerraform(struct!.sample),
     schema_id: cdktf.stringToTerraform(struct!.schemaId),
     type_name: cdktf.stringToTerraform(struct!.typeName),
     example: cdktf.listMapper(apiManagementApiOperationResponseRepresentationExampleToTerraform)(struct!.example),
@@ -2045,10 +2013,6 @@ export class ApiManagementApiOperationResponseRepresentationOutputReference exte
       hasAnyValues = true;
       internalValueResult.contentType = this._contentType;
     }
-    if (this._sample !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.sample = this._sample;
-    }
     if (this._schemaId !== undefined) {
       hasAnyValues = true;
       internalValueResult.schemaId = this._schemaId;
@@ -2073,7 +2037,6 @@ export class ApiManagementApiOperationResponseRepresentationOutputReference exte
       this.isEmptyObject = false;
       this.resolvableValue = undefined;
       this._contentType = undefined;
-      this._sample = undefined;
       this._schemaId = undefined;
       this._typeName = undefined;
       this._example.internalValue = undefined;
@@ -2087,7 +2050,6 @@ export class ApiManagementApiOperationResponseRepresentationOutputReference exte
       this.isEmptyObject = Object.keys(value).length === 0;
       this.resolvableValue = undefined;
       this._contentType = value.contentType;
-      this._sample = value.sample;
       this._schemaId = value.schemaId;
       this._typeName = value.typeName;
       this._example.internalValue = value.example;
@@ -2106,22 +2068,6 @@ export class ApiManagementApiOperationResponseRepresentationOutputReference exte
   // Temporarily expose input value. Use with caution.
   public get contentTypeInput() {
     return this._contentType;
-  }
-
-  // sample - computed: true, optional: true, required: false
-  private _sample?: string; 
-  public get sample() {
-    return this.getStringAttribute('sample');
-  }
-  public set sample(value: string) {
-    this._sample = value;
-  }
-  public resetSample() {
-    this._sample = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get sampleInput() {
-    return this._sample;
   }
 
   // schema_id - computed: false, optional: true, required: false
@@ -2793,8 +2739,8 @@ export class ApiManagementApiOperation extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_api_management_api_operation',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

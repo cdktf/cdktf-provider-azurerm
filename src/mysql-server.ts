@@ -71,13 +71,9 @@ export interface MysqlServerConfig extends cdktf.TerraformMetaArguments {
   */
   readonly skuName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server#ssl_enforcement MysqlServer#ssl_enforcement}
-  */
-  readonly sslEnforcement?: string;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server#ssl_enforcement_enabled MysqlServer#ssl_enforcement_enabled}
   */
-  readonly sslEnforcementEnabled?: boolean | cdktf.IResolvable;
+  readonly sslEnforcementEnabled: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server#ssl_minimal_tls_version_enforced MysqlServer#ssl_minimal_tls_version_enforced}
   */
@@ -100,12 +96,6 @@ export interface MysqlServerConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server#identity MysqlServer#identity}
   */
   readonly identity?: MysqlServerIdentity;
-  /**
-  * storage_profile block
-  * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server#storage_profile MysqlServer#storage_profile}
-  */
-  readonly storageProfile?: MysqlServerStorageProfile;
   /**
   * threat_detection_policy block
   * 
@@ -189,152 +179,6 @@ export class MysqlServerIdentityOutputReference extends cdktf.ComplexObject {
   // Temporarily expose input value. Use with caution.
   public get typeInput() {
     return this._type;
-  }
-}
-export interface MysqlServerStorageProfile {
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server#auto_grow MysqlServer#auto_grow}
-  */
-  readonly autoGrow?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server#backup_retention_days MysqlServer#backup_retention_days}
-  */
-  readonly backupRetentionDays?: number;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server#geo_redundant_backup MysqlServer#geo_redundant_backup}
-  */
-  readonly geoRedundantBackup?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server#storage_mb MysqlServer#storage_mb}
-  */
-  readonly storageMb?: number;
-}
-
-export function mysqlServerStorageProfileToTerraform(struct?: MysqlServerStorageProfileOutputReference | MysqlServerStorageProfile): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-    auto_grow: cdktf.stringToTerraform(struct!.autoGrow),
-    backup_retention_days: cdktf.numberToTerraform(struct!.backupRetentionDays),
-    geo_redundant_backup: cdktf.stringToTerraform(struct!.geoRedundantBackup),
-    storage_mb: cdktf.numberToTerraform(struct!.storageMb),
-  }
-}
-
-export class MysqlServerStorageProfileOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
-  }
-
-  public get internalValue(): MysqlServerStorageProfile | undefined {
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    if (this._autoGrow !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.autoGrow = this._autoGrow;
-    }
-    if (this._backupRetentionDays !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.backupRetentionDays = this._backupRetentionDays;
-    }
-    if (this._geoRedundantBackup !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.geoRedundantBackup = this._geoRedundantBackup;
-    }
-    if (this._storageMb !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.storageMb = this._storageMb;
-    }
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: MysqlServerStorageProfile | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-      this._autoGrow = undefined;
-      this._backupRetentionDays = undefined;
-      this._geoRedundantBackup = undefined;
-      this._storageMb = undefined;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-      this._autoGrow = value.autoGrow;
-      this._backupRetentionDays = value.backupRetentionDays;
-      this._geoRedundantBackup = value.geoRedundantBackup;
-      this._storageMb = value.storageMb;
-    }
-  }
-
-  // auto_grow - computed: true, optional: true, required: false
-  private _autoGrow?: string; 
-  public get autoGrow() {
-    return this.getStringAttribute('auto_grow');
-  }
-  public set autoGrow(value: string) {
-    this._autoGrow = value;
-  }
-  public resetAutoGrow() {
-    this._autoGrow = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get autoGrowInput() {
-    return this._autoGrow;
-  }
-
-  // backup_retention_days - computed: true, optional: true, required: false
-  private _backupRetentionDays?: number; 
-  public get backupRetentionDays() {
-    return this.getNumberAttribute('backup_retention_days');
-  }
-  public set backupRetentionDays(value: number) {
-    this._backupRetentionDays = value;
-  }
-  public resetBackupRetentionDays() {
-    this._backupRetentionDays = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get backupRetentionDaysInput() {
-    return this._backupRetentionDays;
-  }
-
-  // geo_redundant_backup - computed: true, optional: true, required: false
-  private _geoRedundantBackup?: string; 
-  public get geoRedundantBackup() {
-    return this.getStringAttribute('geo_redundant_backup');
-  }
-  public set geoRedundantBackup(value: string) {
-    this._geoRedundantBackup = value;
-  }
-  public resetGeoRedundantBackup() {
-    this._geoRedundantBackup = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get geoRedundantBackupInput() {
-    return this._geoRedundantBackup;
-  }
-
-  // storage_mb - computed: false, optional: true, required: false
-  private _storageMb?: number; 
-  public get storageMb() {
-    return this.getNumberAttribute('storage_mb');
-  }
-  public set storageMb(value: number) {
-    this._storageMb = value;
-  }
-  public resetStorageMb() {
-    this._storageMb = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get storageMbInput() {
-    return this._storageMb;
   }
 }
 export interface MysqlServerThreatDetectionPolicy {
@@ -747,8 +591,8 @@ export class MysqlServer extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_mysql_server',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -770,14 +614,12 @@ export class MysqlServer extends cdktf.TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._restorePointInTime = config.restorePointInTime;
     this._skuName = config.skuName;
-    this._sslEnforcement = config.sslEnforcement;
     this._sslEnforcementEnabled = config.sslEnforcementEnabled;
     this._sslMinimalTlsVersionEnforced = config.sslMinimalTlsVersionEnforced;
     this._storageMb = config.storageMb;
     this._tags = config.tags;
     this._version = config.version;
     this._identity.internalValue = config.identity;
-    this._storageProfile.internalValue = config.storageProfile;
     this._threatDetectionPolicy.internalValue = config.threatDetectionPolicy;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -818,7 +660,7 @@ export class MysqlServer extends cdktf.TerraformResource {
     return this._administratorLoginPassword;
   }
 
-  // auto_grow_enabled - computed: true, optional: true, required: false
+  // auto_grow_enabled - computed: false, optional: true, required: false
   private _autoGrowEnabled?: boolean | cdktf.IResolvable; 
   public get autoGrowEnabled() {
     return this.getBooleanAttribute('auto_grow_enabled');
@@ -1019,32 +861,13 @@ export class MysqlServer extends cdktf.TerraformResource {
     return this._skuName;
   }
 
-  // ssl_enforcement - computed: true, optional: true, required: false
-  private _sslEnforcement?: string; 
-  public get sslEnforcement() {
-    return this.getStringAttribute('ssl_enforcement');
-  }
-  public set sslEnforcement(value: string) {
-    this._sslEnforcement = value;
-  }
-  public resetSslEnforcement() {
-    this._sslEnforcement = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get sslEnforcementInput() {
-    return this._sslEnforcement;
-  }
-
-  // ssl_enforcement_enabled - computed: false, optional: true, required: false
+  // ssl_enforcement_enabled - computed: false, optional: false, required: true
   private _sslEnforcementEnabled?: boolean | cdktf.IResolvable; 
   public get sslEnforcementEnabled() {
     return this.getBooleanAttribute('ssl_enforcement_enabled');
   }
   public set sslEnforcementEnabled(value: boolean | cdktf.IResolvable) {
     this._sslEnforcementEnabled = value;
-  }
-  public resetSslEnforcementEnabled() {
-    this._sslEnforcementEnabled = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get sslEnforcementEnabledInput() {
@@ -1128,22 +951,6 @@ export class MysqlServer extends cdktf.TerraformResource {
     return this._identity.internalValue;
   }
 
-  // storage_profile - computed: false, optional: true, required: false
-  private _storageProfile = new MysqlServerStorageProfileOutputReference(this, "storage_profile");
-  public get storageProfile() {
-    return this._storageProfile;
-  }
-  public putStorageProfile(value: MysqlServerStorageProfile) {
-    this._storageProfile.internalValue = value;
-  }
-  public resetStorageProfile() {
-    this._storageProfile.internalValue = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get storageProfileInput() {
-    return this._storageProfile.internalValue;
-  }
-
   // threat_detection_policy - computed: false, optional: true, required: false
   private _threatDetectionPolicy = new MysqlServerThreatDetectionPolicyOutputReference(this, "threat_detection_policy");
   public get threatDetectionPolicy() {
@@ -1197,14 +1004,12 @@ export class MysqlServer extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       restore_point_in_time: cdktf.stringToTerraform(this._restorePointInTime),
       sku_name: cdktf.stringToTerraform(this._skuName),
-      ssl_enforcement: cdktf.stringToTerraform(this._sslEnforcement),
       ssl_enforcement_enabled: cdktf.booleanToTerraform(this._sslEnforcementEnabled),
       ssl_minimal_tls_version_enforced: cdktf.stringToTerraform(this._sslMinimalTlsVersionEnforced),
       storage_mb: cdktf.numberToTerraform(this._storageMb),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       version: cdktf.stringToTerraform(this._version),
       identity: mysqlServerIdentityToTerraform(this._identity.internalValue),
-      storage_profile: mysqlServerStorageProfileToTerraform(this._storageProfile.internalValue),
       threat_detection_policy: mysqlServerThreatDetectionPolicyToTerraform(this._threatDetectionPolicy.internalValue),
       timeouts: mysqlServerTimeoutsToTerraform(this._timeouts.internalValue),
     };

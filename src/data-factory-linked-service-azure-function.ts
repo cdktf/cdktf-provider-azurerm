@@ -18,11 +18,7 @@ export interface DataFactoryLinkedServiceAzureFunctionConfig extends cdktf.Terra
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_function#data_factory_id DataFactoryLinkedServiceAzureFunction#data_factory_id}
   */
-  readonly dataFactoryId?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_function#data_factory_name DataFactoryLinkedServiceAzureFunction#data_factory_name}
-  */
-  readonly dataFactoryName?: string;
+  readonly dataFactoryId: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_function#description DataFactoryLinkedServiceAzureFunction#description}
   */
@@ -50,10 +46,6 @@ export interface DataFactoryLinkedServiceAzureFunctionConfig extends cdktf.Terra
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_function#parameters DataFactoryLinkedServiceAzureFunction#parameters}
   */
   readonly parameters?: { [key: string]: string };
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_function#resource_group_name DataFactoryLinkedServiceAzureFunction#resource_group_name}
-  */
-  readonly resourceGroupName: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_function#url DataFactoryLinkedServiceAzureFunction#url}
   */
@@ -340,8 +332,8 @@ export class DataFactoryLinkedServiceAzureFunction extends cdktf.TerraformResour
       terraformResourceType: 'azurerm_data_factory_linked_service_azure_function',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -351,14 +343,12 @@ export class DataFactoryLinkedServiceAzureFunction extends cdktf.TerraformResour
     this._additionalProperties = config.additionalProperties;
     this._annotations = config.annotations;
     this._dataFactoryId = config.dataFactoryId;
-    this._dataFactoryName = config.dataFactoryName;
     this._description = config.description;
     this._id = config.id;
     this._integrationRuntimeName = config.integrationRuntimeName;
     this._key = config.key;
     this._name = config.name;
     this._parameters = config.parameters;
-    this._resourceGroupName = config.resourceGroupName;
     this._url = config.url;
     this._keyVaultKey.internalValue = config.keyVaultKey;
     this._timeouts.internalValue = config.timeouts;
@@ -400,7 +390,7 @@ export class DataFactoryLinkedServiceAzureFunction extends cdktf.TerraformResour
     return this._annotations;
   }
 
-  // data_factory_id - computed: true, optional: true, required: false
+  // data_factory_id - computed: false, optional: false, required: true
   private _dataFactoryId?: string; 
   public get dataFactoryId() {
     return this.getStringAttribute('data_factory_id');
@@ -408,28 +398,9 @@ export class DataFactoryLinkedServiceAzureFunction extends cdktf.TerraformResour
   public set dataFactoryId(value: string) {
     this._dataFactoryId = value;
   }
-  public resetDataFactoryId() {
-    this._dataFactoryId = undefined;
-  }
   // Temporarily expose input value. Use with caution.
   public get dataFactoryIdInput() {
     return this._dataFactoryId;
-  }
-
-  // data_factory_name - computed: true, optional: true, required: false
-  private _dataFactoryName?: string; 
-  public get dataFactoryName() {
-    return this.getStringAttribute('data_factory_name');
-  }
-  public set dataFactoryName(value: string) {
-    this._dataFactoryName = value;
-  }
-  public resetDataFactoryName() {
-    this._dataFactoryName = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get dataFactoryNameInput() {
-    return this._dataFactoryName;
   }
 
   // description - computed: false, optional: true, required: false
@@ -525,19 +496,6 @@ export class DataFactoryLinkedServiceAzureFunction extends cdktf.TerraformResour
     return this._parameters;
   }
 
-  // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName?: string; 
-  public get resourceGroupName() {
-    return this.getStringAttribute('resource_group_name');
-  }
-  public set resourceGroupName(value: string) {
-    this._resourceGroupName = value;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get resourceGroupNameInput() {
-    return this._resourceGroupName;
-  }
-
   // url - computed: false, optional: false, required: true
   private _url?: string; 
   public get url() {
@@ -592,14 +550,12 @@ export class DataFactoryLinkedServiceAzureFunction extends cdktf.TerraformResour
       additional_properties: cdktf.hashMapper(cdktf.stringToTerraform)(this._additionalProperties),
       annotations: cdktf.listMapper(cdktf.stringToTerraform)(this._annotations),
       data_factory_id: cdktf.stringToTerraform(this._dataFactoryId),
-      data_factory_name: cdktf.stringToTerraform(this._dataFactoryName),
       description: cdktf.stringToTerraform(this._description),
       id: cdktf.stringToTerraform(this._id),
       integration_runtime_name: cdktf.stringToTerraform(this._integrationRuntimeName),
       key: cdktf.stringToTerraform(this._key),
       name: cdktf.stringToTerraform(this._name),
       parameters: cdktf.hashMapper(cdktf.stringToTerraform)(this._parameters),
-      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       url: cdktf.stringToTerraform(this._url),
       key_vault_key: dataFactoryLinkedServiceAzureFunctionKeyVaultKeyToTerraform(this._keyVaultKey.internalValue),
       timeouts: dataFactoryLinkedServiceAzureFunctionTimeoutsToTerraform(this._timeouts.internalValue),

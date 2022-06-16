@@ -501,7 +501,7 @@ export class ApiManagementAdditionalLocationOutputReference extends cdktf.Comple
   // zones - computed: false, optional: true, required: false
   private _zones?: string[]; 
   public get zones() {
-    return this.getListAttribute('zones');
+    return cdktf.Fn.tolist(this.getListAttribute('zones'));
   }
   public set zones(value: string[]) {
     this._zones = value;
@@ -2330,10 +2330,6 @@ export interface ApiManagementSecurity {
   */
   readonly enableFrontendTls11?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management#enable_triple_des_ciphers ApiManagement#enable_triple_des_ciphers}
-  */
-  readonly enableTripleDesCiphers?: boolean | cdktf.IResolvable;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management#tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled ApiManagement#tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled}
   */
   readonly tlsEcdheEcdsaWithAes128CbcShaCiphersEnabled?: boolean | cdktf.IResolvable;
@@ -2387,7 +2383,6 @@ export function apiManagementSecurityToTerraform(struct?: ApiManagementSecurityO
     enable_frontend_ssl30: cdktf.booleanToTerraform(struct!.enableFrontendSsl30),
     enable_frontend_tls10: cdktf.booleanToTerraform(struct!.enableFrontendTls10),
     enable_frontend_tls11: cdktf.booleanToTerraform(struct!.enableFrontendTls11),
-    enable_triple_des_ciphers: cdktf.booleanToTerraform(struct!.enableTripleDesCiphers),
     tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled: cdktf.booleanToTerraform(struct!.tlsEcdheEcdsaWithAes128CbcShaCiphersEnabled),
     tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled: cdktf.booleanToTerraform(struct!.tlsEcdheEcdsaWithAes256CbcShaCiphersEnabled),
     tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled: cdktf.booleanToTerraform(struct!.tlsEcdheRsaWithAes128CbcShaCiphersEnabled),
@@ -2438,10 +2433,6 @@ export class ApiManagementSecurityOutputReference extends cdktf.ComplexObject {
     if (this._enableFrontendTls11 !== undefined) {
       hasAnyValues = true;
       internalValueResult.enableFrontendTls11 = this._enableFrontendTls11;
-    }
-    if (this._enableTripleDesCiphers !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.enableTripleDesCiphers = this._enableTripleDesCiphers;
     }
     if (this._tlsEcdheEcdsaWithAes128CbcShaCiphersEnabled !== undefined) {
       hasAnyValues = true;
@@ -2495,7 +2486,6 @@ export class ApiManagementSecurityOutputReference extends cdktf.ComplexObject {
       this._enableFrontendSsl30 = undefined;
       this._enableFrontendTls10 = undefined;
       this._enableFrontendTls11 = undefined;
-      this._enableTripleDesCiphers = undefined;
       this._tlsEcdheEcdsaWithAes128CbcShaCiphersEnabled = undefined;
       this._tlsEcdheEcdsaWithAes256CbcShaCiphersEnabled = undefined;
       this._tlsEcdheRsaWithAes128CbcShaCiphersEnabled = undefined;
@@ -2515,7 +2505,6 @@ export class ApiManagementSecurityOutputReference extends cdktf.ComplexObject {
       this._enableFrontendSsl30 = value.enableFrontendSsl30;
       this._enableFrontendTls10 = value.enableFrontendTls10;
       this._enableFrontendTls11 = value.enableFrontendTls11;
-      this._enableTripleDesCiphers = value.enableTripleDesCiphers;
       this._tlsEcdheEcdsaWithAes128CbcShaCiphersEnabled = value.tlsEcdheEcdsaWithAes128CbcShaCiphersEnabled;
       this._tlsEcdheEcdsaWithAes256CbcShaCiphersEnabled = value.tlsEcdheEcdsaWithAes256CbcShaCiphersEnabled;
       this._tlsEcdheRsaWithAes128CbcShaCiphersEnabled = value.tlsEcdheRsaWithAes128CbcShaCiphersEnabled;
@@ -2623,22 +2612,6 @@ export class ApiManagementSecurityOutputReference extends cdktf.ComplexObject {
   // Temporarily expose input value. Use with caution.
   public get enableFrontendTls11Input() {
     return this._enableFrontendTls11;
-  }
-
-  // enable_triple_des_ciphers - computed: true, optional: true, required: false
-  private _enableTripleDesCiphers?: boolean | cdktf.IResolvable; 
-  public get enableTripleDesCiphers() {
-    return this.getBooleanAttribute('enable_triple_des_ciphers');
-  }
-  public set enableTripleDesCiphers(value: boolean | cdktf.IResolvable) {
-    this._enableTripleDesCiphers = value;
-  }
-  public resetEnableTripleDesCiphers() {
-    this._enableTripleDesCiphers = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get enableTripleDesCiphersInput() {
-    return this._enableTripleDesCiphers;
   }
 
   // tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled - computed: false, optional: true, required: false
@@ -2785,7 +2758,7 @@ export class ApiManagementSecurityOutputReference extends cdktf.ComplexObject {
     return this._tlsRsaWithAes256CbcShaCiphersEnabled;
   }
 
-  // triple_des_ciphers_enabled - computed: true, optional: true, required: false
+  // triple_des_ciphers_enabled - computed: false, optional: true, required: false
   private _tripleDesCiphersEnabled?: boolean | cdktf.IResolvable; 
   public get tripleDesCiphersEnabled() {
     return this.getBooleanAttribute('triple_des_ciphers_enabled');
@@ -3386,8 +3359,8 @@ export class ApiManagement extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_api_management',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -3709,7 +3682,7 @@ export class ApiManagement extends cdktf.TerraformResource {
   // zones - computed: false, optional: true, required: false
   private _zones?: string[]; 
   public get zones() {
-    return this.getListAttribute('zones');
+    return cdktf.Fn.tolist(this.getListAttribute('zones'));
   }
   public set zones(value: string[]) {
     this._zones = value;

@@ -26,11 +26,7 @@ export interface DataFactoryDatasetParquetConfig extends cdktf.TerraformMetaArgu
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_parquet#data_factory_id DataFactoryDatasetParquet#data_factory_id}
   */
-  readonly dataFactoryId?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_parquet#data_factory_name DataFactoryDatasetParquet#data_factory_name}
-  */
-  readonly dataFactoryName?: string;
+  readonly dataFactoryId: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_parquet#description DataFactoryDatasetParquet#description}
   */
@@ -58,10 +54,6 @@ export interface DataFactoryDatasetParquetConfig extends cdktf.TerraformMetaArgu
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_parquet#parameters DataFactoryDatasetParquet#parameters}
   */
   readonly parameters?: { [key: string]: string };
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_parquet#resource_group_name DataFactoryDatasetParquet#resource_group_name}
-  */
-  readonly resourceGroupName: string;
   /**
   * azure_blob_storage_location block
   * 
@@ -93,6 +85,10 @@ export interface DataFactoryDatasetParquetAzureBlobStorageLocation {
   */
   readonly container: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_parquet#dynamic_container_enabled DataFactoryDatasetParquet#dynamic_container_enabled}
+  */
+  readonly dynamicContainerEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_parquet#dynamic_filename_enabled DataFactoryDatasetParquet#dynamic_filename_enabled}
   */
   readonly dynamicFilenameEnabled?: boolean | cdktf.IResolvable;
@@ -117,6 +113,7 @@ export function dataFactoryDatasetParquetAzureBlobStorageLocationToTerraform(str
   }
   return {
     container: cdktf.stringToTerraform(struct!.container),
+    dynamic_container_enabled: cdktf.booleanToTerraform(struct!.dynamicContainerEnabled),
     dynamic_filename_enabled: cdktf.booleanToTerraform(struct!.dynamicFilenameEnabled),
     dynamic_path_enabled: cdktf.booleanToTerraform(struct!.dynamicPathEnabled),
     filename: cdktf.stringToTerraform(struct!.filename),
@@ -142,6 +139,10 @@ export class DataFactoryDatasetParquetAzureBlobStorageLocationOutputReference ex
       hasAnyValues = true;
       internalValueResult.container = this._container;
     }
+    if (this._dynamicContainerEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dynamicContainerEnabled = this._dynamicContainerEnabled;
+    }
     if (this._dynamicFilenameEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.dynamicFilenameEnabled = this._dynamicFilenameEnabled;
@@ -165,6 +166,7 @@ export class DataFactoryDatasetParquetAzureBlobStorageLocationOutputReference ex
     if (value === undefined) {
       this.isEmptyObject = false;
       this._container = undefined;
+      this._dynamicContainerEnabled = undefined;
       this._dynamicFilenameEnabled = undefined;
       this._dynamicPathEnabled = undefined;
       this._filename = undefined;
@@ -173,6 +175,7 @@ export class DataFactoryDatasetParquetAzureBlobStorageLocationOutputReference ex
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._container = value.container;
+      this._dynamicContainerEnabled = value.dynamicContainerEnabled;
       this._dynamicFilenameEnabled = value.dynamicFilenameEnabled;
       this._dynamicPathEnabled = value.dynamicPathEnabled;
       this._filename = value.filename;
@@ -191,6 +194,22 @@ export class DataFactoryDatasetParquetAzureBlobStorageLocationOutputReference ex
   // Temporarily expose input value. Use with caution.
   public get containerInput() {
     return this._container;
+  }
+
+  // dynamic_container_enabled - computed: false, optional: true, required: false
+  private _dynamicContainerEnabled?: boolean | cdktf.IResolvable; 
+  public get dynamicContainerEnabled() {
+    return this.getBooleanAttribute('dynamic_container_enabled');
+  }
+  public set dynamicContainerEnabled(value: boolean | cdktf.IResolvable) {
+    this._dynamicContainerEnabled = value;
+  }
+  public resetDynamicContainerEnabled() {
+    this._dynamicContainerEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dynamicContainerEnabledInput() {
+    return this._dynamicContainerEnabled;
   }
 
   // dynamic_filename_enabled - computed: false, optional: true, required: false
@@ -749,8 +768,8 @@ export class DataFactoryDatasetParquet extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_data_factory_dataset_parquet',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -762,14 +781,12 @@ export class DataFactoryDatasetParquet extends cdktf.TerraformResource {
     this._compressionCodec = config.compressionCodec;
     this._compressionLevel = config.compressionLevel;
     this._dataFactoryId = config.dataFactoryId;
-    this._dataFactoryName = config.dataFactoryName;
     this._description = config.description;
     this._folder = config.folder;
     this._id = config.id;
     this._linkedServiceName = config.linkedServiceName;
     this._name = config.name;
     this._parameters = config.parameters;
-    this._resourceGroupName = config.resourceGroupName;
     this._azureBlobStorageLocation.internalValue = config.azureBlobStorageLocation;
     this._httpServerLocation.internalValue = config.httpServerLocation;
     this._schemaColumn.internalValue = config.schemaColumn;
@@ -844,7 +861,7 @@ export class DataFactoryDatasetParquet extends cdktf.TerraformResource {
     return this._compressionLevel;
   }
 
-  // data_factory_id - computed: true, optional: true, required: false
+  // data_factory_id - computed: false, optional: false, required: true
   private _dataFactoryId?: string; 
   public get dataFactoryId() {
     return this.getStringAttribute('data_factory_id');
@@ -852,28 +869,9 @@ export class DataFactoryDatasetParquet extends cdktf.TerraformResource {
   public set dataFactoryId(value: string) {
     this._dataFactoryId = value;
   }
-  public resetDataFactoryId() {
-    this._dataFactoryId = undefined;
-  }
   // Temporarily expose input value. Use with caution.
   public get dataFactoryIdInput() {
     return this._dataFactoryId;
-  }
-
-  // data_factory_name - computed: true, optional: true, required: false
-  private _dataFactoryName?: string; 
-  public get dataFactoryName() {
-    return this.getStringAttribute('data_factory_name');
-  }
-  public set dataFactoryName(value: string) {
-    this._dataFactoryName = value;
-  }
-  public resetDataFactoryName() {
-    this._dataFactoryName = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get dataFactoryNameInput() {
-    return this._dataFactoryName;
   }
 
   // description - computed: false, optional: true, required: false
@@ -966,19 +964,6 @@ export class DataFactoryDatasetParquet extends cdktf.TerraformResource {
     return this._parameters;
   }
 
-  // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName?: string; 
-  public get resourceGroupName() {
-    return this.getStringAttribute('resource_group_name');
-  }
-  public set resourceGroupName(value: string) {
-    this._resourceGroupName = value;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get resourceGroupNameInput() {
-    return this._resourceGroupName;
-  }
-
   // azure_blob_storage_location - computed: false, optional: true, required: false
   private _azureBlobStorageLocation = new DataFactoryDatasetParquetAzureBlobStorageLocationOutputReference(this, "azure_blob_storage_location");
   public get azureBlobStorageLocation() {
@@ -1054,14 +1039,12 @@ export class DataFactoryDatasetParquet extends cdktf.TerraformResource {
       compression_codec: cdktf.stringToTerraform(this._compressionCodec),
       compression_level: cdktf.stringToTerraform(this._compressionLevel),
       data_factory_id: cdktf.stringToTerraform(this._dataFactoryId),
-      data_factory_name: cdktf.stringToTerraform(this._dataFactoryName),
       description: cdktf.stringToTerraform(this._description),
       folder: cdktf.stringToTerraform(this._folder),
       id: cdktf.stringToTerraform(this._id),
       linked_service_name: cdktf.stringToTerraform(this._linkedServiceName),
       name: cdktf.stringToTerraform(this._name),
       parameters: cdktf.hashMapper(cdktf.stringToTerraform)(this._parameters),
-      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       azure_blob_storage_location: dataFactoryDatasetParquetAzureBlobStorageLocationToTerraform(this._azureBlobStorageLocation.internalValue),
       http_server_location: dataFactoryDatasetParquetHttpServerLocationToTerraform(this._httpServerLocation.internalValue),
       schema_column: cdktf.listMapper(dataFactoryDatasetParquetSchemaColumnToTerraform)(this._schemaColumn.internalValue),

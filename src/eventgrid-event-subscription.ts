@@ -59,10 +59,6 @@ export interface EventgridEventSubscriptionConfig extends cdktf.TerraformMetaArg
   */
   readonly serviceBusTopicEndpointId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#topic_name EventgridEventSubscription#topic_name}
-  */
-  readonly topicName?: string;
-  /**
   * advanced_filter block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#advanced_filter EventgridEventSubscription#advanced_filter}
@@ -92,18 +88,6 @@ export interface EventgridEventSubscriptionConfig extends cdktf.TerraformMetaArg
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#delivery_property EventgridEventSubscription#delivery_property}
   */
   readonly deliveryProperty?: EventgridEventSubscriptionDeliveryProperty[] | cdktf.IResolvable;
-  /**
-  * eventhub_endpoint block
-  * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#eventhub_endpoint EventgridEventSubscription#eventhub_endpoint}
-  */
-  readonly eventhubEndpoint?: EventgridEventSubscriptionEventhubEndpoint;
-  /**
-  * hybrid_connection_endpoint block
-  * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#hybrid_connection_endpoint EventgridEventSubscription#hybrid_connection_endpoint}
-  */
-  readonly hybridConnectionEndpoint?: EventgridEventSubscriptionHybridConnectionEndpoint;
   /**
   * retry_policy block
   * 
@@ -3417,136 +3401,6 @@ export class EventgridEventSubscriptionDeliveryPropertyList extends cdktf.Comple
     return new EventgridEventSubscriptionDeliveryPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
-export interface EventgridEventSubscriptionEventhubEndpoint {
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#eventhub_id EventgridEventSubscription#eventhub_id}
-  */
-  readonly eventhubId?: string;
-}
-
-export function eventgridEventSubscriptionEventhubEndpointToTerraform(struct?: EventgridEventSubscriptionEventhubEndpointOutputReference | EventgridEventSubscriptionEventhubEndpoint): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-    eventhub_id: cdktf.stringToTerraform(struct!.eventhubId),
-  }
-}
-
-export class EventgridEventSubscriptionEventhubEndpointOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
-  }
-
-  public get internalValue(): EventgridEventSubscriptionEventhubEndpoint | undefined {
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    if (this._eventhubId !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.eventhubId = this._eventhubId;
-    }
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: EventgridEventSubscriptionEventhubEndpoint | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-      this._eventhubId = undefined;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-      this._eventhubId = value.eventhubId;
-    }
-  }
-
-  // eventhub_id - computed: true, optional: true, required: false
-  private _eventhubId?: string; 
-  public get eventhubId() {
-    return this.getStringAttribute('eventhub_id');
-  }
-  public set eventhubId(value: string) {
-    this._eventhubId = value;
-  }
-  public resetEventhubId() {
-    this._eventhubId = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get eventhubIdInput() {
-    return this._eventhubId;
-  }
-}
-export interface EventgridEventSubscriptionHybridConnectionEndpoint {
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#hybrid_connection_id EventgridEventSubscription#hybrid_connection_id}
-  */
-  readonly hybridConnectionId?: string;
-}
-
-export function eventgridEventSubscriptionHybridConnectionEndpointToTerraform(struct?: EventgridEventSubscriptionHybridConnectionEndpointOutputReference | EventgridEventSubscriptionHybridConnectionEndpoint): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-    hybrid_connection_id: cdktf.stringToTerraform(struct!.hybridConnectionId),
-  }
-}
-
-export class EventgridEventSubscriptionHybridConnectionEndpointOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
-  }
-
-  public get internalValue(): EventgridEventSubscriptionHybridConnectionEndpoint | undefined {
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    if (this._hybridConnectionId !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.hybridConnectionId = this._hybridConnectionId;
-    }
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: EventgridEventSubscriptionHybridConnectionEndpoint | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-      this._hybridConnectionId = undefined;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-      this._hybridConnectionId = value.hybridConnectionId;
-    }
-  }
-
-  // hybrid_connection_id - computed: true, optional: true, required: false
-  private _hybridConnectionId?: string; 
-  public get hybridConnectionId() {
-    return this.getStringAttribute('hybrid_connection_id');
-  }
-  public set hybridConnectionId(value: string) {
-    this._hybridConnectionId = value;
-  }
-  public resetHybridConnectionId() {
-    this._hybridConnectionId = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get hybridConnectionIdInput() {
-    return this._hybridConnectionId;
-  }
-}
 export interface EventgridEventSubscriptionRetryPolicy {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#event_time_to_live EventgridEventSubscription#event_time_to_live}
@@ -4309,8 +4163,8 @@ export class EventgridEventSubscription extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_eventgrid_event_subscription',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -4329,14 +4183,11 @@ export class EventgridEventSubscription extends cdktf.TerraformResource {
     this._scope = config.scope;
     this._serviceBusQueueEndpointId = config.serviceBusQueueEndpointId;
     this._serviceBusTopicEndpointId = config.serviceBusTopicEndpointId;
-    this._topicName = config.topicName;
     this._advancedFilter.internalValue = config.advancedFilter;
     this._azureFunctionEndpoint.internalValue = config.azureFunctionEndpoint;
     this._deadLetterIdentity.internalValue = config.deadLetterIdentity;
     this._deliveryIdentity.internalValue = config.deliveryIdentity;
     this._deliveryProperty.internalValue = config.deliveryProperty;
-    this._eventhubEndpoint.internalValue = config.eventhubEndpoint;
-    this._hybridConnectionEndpoint.internalValue = config.hybridConnectionEndpoint;
     this._retryPolicy.internalValue = config.retryPolicy;
     this._storageBlobDeadLetterDestination.internalValue = config.storageBlobDeadLetterDestination;
     this._storageQueueEndpoint.internalValue = config.storageQueueEndpoint;
@@ -4535,22 +4386,6 @@ export class EventgridEventSubscription extends cdktf.TerraformResource {
     return this._serviceBusTopicEndpointId;
   }
 
-  // topic_name - computed: true, optional: true, required: false
-  private _topicName?: string; 
-  public get topicName() {
-    return this.getStringAttribute('topic_name');
-  }
-  public set topicName(value: string) {
-    this._topicName = value;
-  }
-  public resetTopicName() {
-    this._topicName = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get topicNameInput() {
-    return this._topicName;
-  }
-
   // advanced_filter - computed: false, optional: true, required: false
   private _advancedFilter = new EventgridEventSubscriptionAdvancedFilterOutputReference(this, "advanced_filter");
   public get advancedFilter() {
@@ -4629,38 +4464,6 @@ export class EventgridEventSubscription extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get deliveryPropertyInput() {
     return this._deliveryProperty.internalValue;
-  }
-
-  // eventhub_endpoint - computed: false, optional: true, required: false
-  private _eventhubEndpoint = new EventgridEventSubscriptionEventhubEndpointOutputReference(this, "eventhub_endpoint");
-  public get eventhubEndpoint() {
-    return this._eventhubEndpoint;
-  }
-  public putEventhubEndpoint(value: EventgridEventSubscriptionEventhubEndpoint) {
-    this._eventhubEndpoint.internalValue = value;
-  }
-  public resetEventhubEndpoint() {
-    this._eventhubEndpoint.internalValue = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get eventhubEndpointInput() {
-    return this._eventhubEndpoint.internalValue;
-  }
-
-  // hybrid_connection_endpoint - computed: false, optional: true, required: false
-  private _hybridConnectionEndpoint = new EventgridEventSubscriptionHybridConnectionEndpointOutputReference(this, "hybrid_connection_endpoint");
-  public get hybridConnectionEndpoint() {
-    return this._hybridConnectionEndpoint;
-  }
-  public putHybridConnectionEndpoint(value: EventgridEventSubscriptionHybridConnectionEndpoint) {
-    this._hybridConnectionEndpoint.internalValue = value;
-  }
-  public resetHybridConnectionEndpoint() {
-    this._hybridConnectionEndpoint.internalValue = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get hybridConnectionEndpointInput() {
-    return this._hybridConnectionEndpoint.internalValue;
   }
 
   // retry_policy - computed: false, optional: true, required: false
@@ -4777,14 +4580,11 @@ export class EventgridEventSubscription extends cdktf.TerraformResource {
       scope: cdktf.stringToTerraform(this._scope),
       service_bus_queue_endpoint_id: cdktf.stringToTerraform(this._serviceBusQueueEndpointId),
       service_bus_topic_endpoint_id: cdktf.stringToTerraform(this._serviceBusTopicEndpointId),
-      topic_name: cdktf.stringToTerraform(this._topicName),
       advanced_filter: eventgridEventSubscriptionAdvancedFilterToTerraform(this._advancedFilter.internalValue),
       azure_function_endpoint: eventgridEventSubscriptionAzureFunctionEndpointToTerraform(this._azureFunctionEndpoint.internalValue),
       dead_letter_identity: eventgridEventSubscriptionDeadLetterIdentityToTerraform(this._deadLetterIdentity.internalValue),
       delivery_identity: eventgridEventSubscriptionDeliveryIdentityToTerraform(this._deliveryIdentity.internalValue),
       delivery_property: cdktf.listMapper(eventgridEventSubscriptionDeliveryPropertyToTerraform)(this._deliveryProperty.internalValue),
-      eventhub_endpoint: eventgridEventSubscriptionEventhubEndpointToTerraform(this._eventhubEndpoint.internalValue),
-      hybrid_connection_endpoint: eventgridEventSubscriptionHybridConnectionEndpointToTerraform(this._hybridConnectionEndpoint.internalValue),
       retry_policy: eventgridEventSubscriptionRetryPolicyToTerraform(this._retryPolicy.internalValue),
       storage_blob_dead_letter_destination: eventgridEventSubscriptionStorageBlobDeadLetterDestinationToTerraform(this._storageBlobDeadLetterDestination.internalValue),
       storage_queue_endpoint: eventgridEventSubscriptionStorageQueueEndpointToTerraform(this._storageQueueEndpoint.internalValue),

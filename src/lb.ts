@@ -8,6 +8,10 @@ import * as cdktf from 'cdktf';
 
 export interface LbConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb#edge_zone Lb#edge_zone}
+  */
+  readonly edgeZone?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb#id Lb#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
@@ -53,10 +57,6 @@ export interface LbConfig extends cdktf.TerraformMetaArguments {
 }
 export interface LbFrontendIpConfiguration {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb#availability_zone Lb#availability_zone}
-  */
-  readonly availabilityZone?: string;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb#gateway_load_balancer_frontend_ip_configuration_id Lb#gateway_load_balancer_frontend_ip_configuration_id}
   */
   readonly gatewayLoadBalancerFrontendIpConfigurationId?: string;
@@ -100,7 +100,6 @@ export function lbFrontendIpConfigurationToTerraform(struct?: LbFrontendIpConfig
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    availability_zone: cdktf.stringToTerraform(struct!.availabilityZone),
     gateway_load_balancer_frontend_ip_configuration_id: cdktf.stringToTerraform(struct!.gatewayLoadBalancerFrontendIpConfigurationId),
     name: cdktf.stringToTerraform(struct!.name),
     private_ip_address: cdktf.stringToTerraform(struct!.privateIpAddress),
@@ -133,10 +132,6 @@ export class LbFrontendIpConfigurationOutputReference extends cdktf.ComplexObjec
     }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._availabilityZone !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.availabilityZone = this._availabilityZone;
-    }
     if (this._gatewayLoadBalancerFrontendIpConfigurationId !== undefined) {
       hasAnyValues = true;
       internalValueResult.gatewayLoadBalancerFrontendIpConfigurationId = this._gatewayLoadBalancerFrontendIpConfigurationId;
@@ -180,7 +175,6 @@ export class LbFrontendIpConfigurationOutputReference extends cdktf.ComplexObjec
     if (value === undefined) {
       this.isEmptyObject = false;
       this.resolvableValue = undefined;
-      this._availabilityZone = undefined;
       this._gatewayLoadBalancerFrontendIpConfigurationId = undefined;
       this._name = undefined;
       this._privateIpAddress = undefined;
@@ -198,7 +192,6 @@ export class LbFrontendIpConfigurationOutputReference extends cdktf.ComplexObjec
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this.resolvableValue = undefined;
-      this._availabilityZone = value.availabilityZone;
       this._gatewayLoadBalancerFrontendIpConfigurationId = value.gatewayLoadBalancerFrontendIpConfigurationId;
       this._name = value.name;
       this._privateIpAddress = value.privateIpAddress;
@@ -209,22 +202,6 @@ export class LbFrontendIpConfigurationOutputReference extends cdktf.ComplexObjec
       this._subnetId = value.subnetId;
       this._zones = value.zones;
     }
-  }
-
-  // availability_zone - computed: true, optional: true, required: false
-  private _availabilityZone?: string; 
-  public get availabilityZone() {
-    return this.getStringAttribute('availability_zone');
-  }
-  public set availabilityZone(value: string) {
-    this._availabilityZone = value;
-  }
-  public resetAvailabilityZone() {
-    this._availabilityZone = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get availabilityZoneInput() {
-    return this._availabilityZone;
   }
 
   // gateway_load_balancer_frontend_ip_configuration_id - computed: true, optional: true, required: false
@@ -372,10 +349,10 @@ export class LbFrontendIpConfigurationOutputReference extends cdktf.ComplexObjec
     return this._subnetId;
   }
 
-  // zones - computed: true, optional: true, required: false
+  // zones - computed: false, optional: true, required: false
   private _zones?: string[]; 
   public get zones() {
-    return this.getListAttribute('zones');
+    return cdktf.Fn.tolist(this.getListAttribute('zones'));
   }
   public set zones(value: string[]) {
     this._zones = value;
@@ -591,14 +568,15 @@ export class Lb extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_lb',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._edgeZone = config.edgeZone;
     this._id = config.id;
     this._location = config.location;
     this._name = config.name;
@@ -613,6 +591,22 @@ export class Lb extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // edge_zone - computed: false, optional: true, required: false
+  private _edgeZone?: string; 
+  public get edgeZone() {
+    return this.getStringAttribute('edge_zone');
+  }
+  public set edgeZone(value: string) {
+    this._edgeZone = value;
+  }
+  public resetEdgeZone() {
+    this._edgeZone = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get edgeZoneInput() {
+    return this._edgeZone;
+  }
 
   // id - computed: true, optional: true, required: false
   private _id?: string; 
@@ -765,6 +759,7 @@ export class Lb extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      edge_zone: cdktf.stringToTerraform(this._edgeZone),
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),

@@ -177,7 +177,7 @@ export class MonitorScheduledQueryRulesAlertActionOutputReference extends cdktf.
     return this._actionGroup;
   }
 
-  // custom_webhook_payload - computed: true, optional: true, required: false
+  // custom_webhook_payload - computed: false, optional: true, required: false
   private _customWebhookPayload?: string; 
   public get customWebhookPayload() {
     return this.getStringAttribute('custom_webhook_payload');
@@ -641,8 +641,8 @@ export class MonitorScheduledQueryRulesAlert extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_monitor_scheduled_query_rules_alert',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

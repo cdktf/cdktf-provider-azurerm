@@ -609,6 +609,16 @@ export class DataAzurermBatchPoolNetworkConfigurationOutputReference extends cdk
     return this._endpointConfiguration;
   }
 
+  // public_address_provisioning_type - computed: true, optional: false, required: false
+  public get publicAddressProvisioningType() {
+    return this.getStringAttribute('public_address_provisioning_type');
+  }
+
+  // public_ips - computed: true, optional: false, required: false
+  public get publicIps() {
+    return cdktf.Fn.tolist(this.getListAttribute('public_ips'));
+  }
+
   // subnet_id - computed: true, optional: false, required: false
   public get subnetId() {
     return this.getStringAttribute('subnet_id');
@@ -912,17 +922,6 @@ export class DataAzurermBatchPoolStartTaskOutputReference extends cdktf.ComplexO
     return this._commonEnvironmentProperties;
   }
 
-  // environment - computed: true, optional: false, required: false
-  private _environment = new cdktf.StringMap(this, "environment");
-  public get environment() {
-    return this._environment;
-  }
-
-  // max_task_retry_count - computed: true, optional: false, required: false
-  public get maxTaskRetryCount() {
-    return this.getNumberAttribute('max_task_retry_count');
-  }
-
   // resource_file - computed: true, optional: false, required: false
   private _resourceFile = new DataAzurermBatchPoolStartTaskResourceFileList(this, "resource_file", false);
   public get resourceFile() {
@@ -1150,8 +1149,8 @@ export class DataAzurermBatchPool extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_batch_pool',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

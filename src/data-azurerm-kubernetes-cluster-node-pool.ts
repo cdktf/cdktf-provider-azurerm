@@ -199,8 +199,8 @@ export class DataAzurermKubernetesClusterNodePool extends cdktf.TerraformDataSou
       terraformResourceType: 'azurerm_kubernetes_cluster_node_pool',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -217,11 +217,6 @@ export class DataAzurermKubernetesClusterNodePool extends cdktf.TerraformDataSou
   // ==========
   // ATTRIBUTES
   // ==========
-
-  // availability_zones - computed: true, optional: false, required: false
-  public get availabilityZones() {
-    return this.getListAttribute('availability_zones');
-  }
 
   // enable_auto_scaling - computed: true, optional: false, required: false
   public get enableAutoScaling() {

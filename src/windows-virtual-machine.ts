@@ -40,6 +40,10 @@ export interface WindowsVirtualMachineConfig extends cdktf.TerraformMetaArgument
   */
   readonly dedicatedHostId?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine#edge_zone WindowsVirtualMachine#edge_zone}
+  */
+  readonly edgeZone?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine#enable_automatic_updates WindowsVirtualMachine#enable_automatic_updates}
   */
   readonly enableAutomaticUpdates?: boolean | cdktf.IResolvable;
@@ -194,6 +198,12 @@ export interface WindowsVirtualMachineConfig extends cdktf.TerraformMetaArgument
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine#source_image_reference WindowsVirtualMachine#source_image_reference}
   */
   readonly sourceImageReference?: WindowsVirtualMachineSourceImageReference;
+  /**
+  * termination_notification block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine#termination_notification WindowsVirtualMachine#termination_notification}
+  */
+  readonly terminationNotification?: WindowsVirtualMachineTerminationNotification;
   /**
   * timeouts block
   * 
@@ -559,6 +569,10 @@ export interface WindowsVirtualMachineOsDiskDiffDiskSettings {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine#option WindowsVirtualMachine#option}
   */
   readonly option: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine#placement WindowsVirtualMachine#placement}
+  */
+  readonly placement?: string;
 }
 
 export function windowsVirtualMachineOsDiskDiffDiskSettingsToTerraform(struct?: WindowsVirtualMachineOsDiskDiffDiskSettingsOutputReference | WindowsVirtualMachineOsDiskDiffDiskSettings): any {
@@ -568,6 +582,7 @@ export function windowsVirtualMachineOsDiskDiffDiskSettingsToTerraform(struct?: 
   }
   return {
     option: cdktf.stringToTerraform(struct!.option),
+    placement: cdktf.stringToTerraform(struct!.placement),
   }
 }
 
@@ -589,6 +604,10 @@ export class WindowsVirtualMachineOsDiskDiffDiskSettingsOutputReference extends 
       hasAnyValues = true;
       internalValueResult.option = this._option;
     }
+    if (this._placement !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.placement = this._placement;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -596,10 +615,12 @@ export class WindowsVirtualMachineOsDiskDiffDiskSettingsOutputReference extends 
     if (value === undefined) {
       this.isEmptyObject = false;
       this._option = undefined;
+      this._placement = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._option = value.option;
+      this._placement = value.placement;
     }
   }
 
@@ -614,6 +635,22 @@ export class WindowsVirtualMachineOsDiskDiffDiskSettingsOutputReference extends 
   // Temporarily expose input value. Use with caution.
   public get optionInput() {
     return this._option;
+  }
+
+  // placement - computed: false, optional: true, required: false
+  private _placement?: string; 
+  public get placement() {
+    return this.getStringAttribute('placement');
+  }
+  public set placement(value: string) {
+    this._placement = value;
+  }
+  public resetPlacement() {
+    this._placement = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get placementInput() {
+    return this._placement;
   }
 }
 export interface WindowsVirtualMachineOsDisk {
@@ -633,6 +670,14 @@ export interface WindowsVirtualMachineOsDisk {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine#name WindowsVirtualMachine#name}
   */
   readonly name?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine#secure_vm_disk_encryption_set_id WindowsVirtualMachine#secure_vm_disk_encryption_set_id}
+  */
+  readonly secureVmDiskEncryptionSetId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine#security_encryption_type WindowsVirtualMachine#security_encryption_type}
+  */
+  readonly securityEncryptionType?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine#storage_account_type WindowsVirtualMachine#storage_account_type}
   */
@@ -659,6 +704,8 @@ export function windowsVirtualMachineOsDiskToTerraform(struct?: WindowsVirtualMa
     disk_encryption_set_id: cdktf.stringToTerraform(struct!.diskEncryptionSetId),
     disk_size_gb: cdktf.numberToTerraform(struct!.diskSizeGb),
     name: cdktf.stringToTerraform(struct!.name),
+    secure_vm_disk_encryption_set_id: cdktf.stringToTerraform(struct!.secureVmDiskEncryptionSetId),
+    security_encryption_type: cdktf.stringToTerraform(struct!.securityEncryptionType),
     storage_account_type: cdktf.stringToTerraform(struct!.storageAccountType),
     write_accelerator_enabled: cdktf.booleanToTerraform(struct!.writeAcceleratorEnabled),
     diff_disk_settings: windowsVirtualMachineOsDiskDiffDiskSettingsToTerraform(struct!.diffDiskSettings),
@@ -695,6 +742,14 @@ export class WindowsVirtualMachineOsDiskOutputReference extends cdktf.ComplexObj
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
+    if (this._secureVmDiskEncryptionSetId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.secureVmDiskEncryptionSetId = this._secureVmDiskEncryptionSetId;
+    }
+    if (this._securityEncryptionType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.securityEncryptionType = this._securityEncryptionType;
+    }
     if (this._storageAccountType !== undefined) {
       hasAnyValues = true;
       internalValueResult.storageAccountType = this._storageAccountType;
@@ -717,6 +772,8 @@ export class WindowsVirtualMachineOsDiskOutputReference extends cdktf.ComplexObj
       this._diskEncryptionSetId = undefined;
       this._diskSizeGb = undefined;
       this._name = undefined;
+      this._secureVmDiskEncryptionSetId = undefined;
+      this._securityEncryptionType = undefined;
       this._storageAccountType = undefined;
       this._writeAcceleratorEnabled = undefined;
       this._diffDiskSettings.internalValue = undefined;
@@ -727,6 +784,8 @@ export class WindowsVirtualMachineOsDiskOutputReference extends cdktf.ComplexObj
       this._diskEncryptionSetId = value.diskEncryptionSetId;
       this._diskSizeGb = value.diskSizeGb;
       this._name = value.name;
+      this._secureVmDiskEncryptionSetId = value.secureVmDiskEncryptionSetId;
+      this._securityEncryptionType = value.securityEncryptionType;
       this._storageAccountType = value.storageAccountType;
       this._writeAcceleratorEnabled = value.writeAcceleratorEnabled;
       this._diffDiskSettings.internalValue = value.diffDiskSettings;
@@ -792,6 +851,38 @@ export class WindowsVirtualMachineOsDiskOutputReference extends cdktf.ComplexObj
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name;
+  }
+
+  // secure_vm_disk_encryption_set_id - computed: false, optional: true, required: false
+  private _secureVmDiskEncryptionSetId?: string; 
+  public get secureVmDiskEncryptionSetId() {
+    return this.getStringAttribute('secure_vm_disk_encryption_set_id');
+  }
+  public set secureVmDiskEncryptionSetId(value: string) {
+    this._secureVmDiskEncryptionSetId = value;
+  }
+  public resetSecureVmDiskEncryptionSetId() {
+    this._secureVmDiskEncryptionSetId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secureVmDiskEncryptionSetIdInput() {
+    return this._secureVmDiskEncryptionSetId;
+  }
+
+  // security_encryption_type - computed: false, optional: true, required: false
+  private _securityEncryptionType?: string; 
+  public get securityEncryptionType() {
+    return this.getStringAttribute('security_encryption_type');
+  }
+  public set securityEncryptionType(value: string) {
+    this._securityEncryptionType = value;
+  }
+  public resetSecurityEncryptionType() {
+    this._securityEncryptionType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get securityEncryptionTypeInput() {
+    return this._securityEncryptionType;
   }
 
   // storage_account_type - computed: false, optional: false, required: true
@@ -1321,6 +1412,95 @@ export class WindowsVirtualMachineSourceImageReferenceOutputReference extends cd
     return this._version;
   }
 }
+export interface WindowsVirtualMachineTerminationNotification {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine#enabled WindowsVirtualMachine#enabled}
+  */
+  readonly enabled: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine#timeout WindowsVirtualMachine#timeout}
+  */
+  readonly timeout?: string;
+}
+
+export function windowsVirtualMachineTerminationNotificationToTerraform(struct?: WindowsVirtualMachineTerminationNotificationOutputReference | WindowsVirtualMachineTerminationNotification): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    timeout: cdktf.stringToTerraform(struct!.timeout),
+  }
+}
+
+export class WindowsVirtualMachineTerminationNotificationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): WindowsVirtualMachineTerminationNotification | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._enabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._timeout !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.timeout = this._timeout;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: WindowsVirtualMachineTerminationNotification | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._enabled = undefined;
+      this._timeout = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._enabled = value.enabled;
+      this._timeout = value.timeout;
+    }
+  }
+
+  // enabled - computed: false, optional: false, required: true
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+
+  // timeout - computed: false, optional: true, required: false
+  private _timeout?: string; 
+  public get timeout() {
+    return this.getStringAttribute('timeout');
+  }
+  public set timeout(value: string) {
+    this._timeout = value;
+  }
+  public resetTimeout() {
+    this._timeout = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutInput() {
+    return this._timeout;
+  }
+}
 export interface WindowsVirtualMachineTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine#create WindowsVirtualMachine#create}
@@ -1625,8 +1805,8 @@ export class WindowsVirtualMachine extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_windows_virtual_machine',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1641,6 +1821,7 @@ export class WindowsVirtualMachine extends cdktf.TerraformResource {
     this._customData = config.customData;
     this._dedicatedHostGroupId = config.dedicatedHostGroupId;
     this._dedicatedHostId = config.dedicatedHostId;
+    this._edgeZone = config.edgeZone;
     this._enableAutomaticUpdates = config.enableAutomaticUpdates;
     this._encryptionAtHostEnabled = config.encryptionAtHostEnabled;
     this._evictionPolicy = config.evictionPolicy;
@@ -1675,6 +1856,7 @@ export class WindowsVirtualMachine extends cdktf.TerraformResource {
     this._plan.internalValue = config.plan;
     this._secret.internalValue = config.secret;
     this._sourceImageReference.internalValue = config.sourceImageReference;
+    this._terminationNotification.internalValue = config.terminationNotification;
     this._timeouts.internalValue = config.timeouts;
     this._winrmListener.internalValue = config.winrmListener;
   }
@@ -1803,6 +1985,22 @@ export class WindowsVirtualMachine extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get dedicatedHostIdInput() {
     return this._dedicatedHostId;
+  }
+
+  // edge_zone - computed: false, optional: true, required: false
+  private _edgeZone?: string; 
+  public get edgeZone() {
+    return this.getStringAttribute('edge_zone');
+  }
+  public set edgeZone(value: string) {
+    this._edgeZone = value;
+  }
+  public resetEdgeZone() {
+    this._edgeZone = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get edgeZoneInput() {
+    return this._edgeZone;
   }
 
   // enable_automatic_updates - computed: false, optional: true, required: false
@@ -2215,7 +2413,7 @@ export class WindowsVirtualMachine extends cdktf.TerraformResource {
     return this._vtpmEnabled;
   }
 
-  // zone - computed: true, optional: true, required: false
+  // zone - computed: false, optional: true, required: false
   private _zone?: string; 
   public get zone() {
     return this.getStringAttribute('zone');
@@ -2356,6 +2554,22 @@ export class WindowsVirtualMachine extends cdktf.TerraformResource {
     return this._sourceImageReference.internalValue;
   }
 
+  // termination_notification - computed: false, optional: true, required: false
+  private _terminationNotification = new WindowsVirtualMachineTerminationNotificationOutputReference(this, "termination_notification");
+  public get terminationNotification() {
+    return this._terminationNotification;
+  }
+  public putTerminationNotification(value: WindowsVirtualMachineTerminationNotification) {
+    this._terminationNotification.internalValue = value;
+  }
+  public resetTerminationNotification() {
+    this._terminationNotification.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get terminationNotificationInput() {
+    return this._terminationNotification.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new WindowsVirtualMachineTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -2402,6 +2616,7 @@ export class WindowsVirtualMachine extends cdktf.TerraformResource {
       custom_data: cdktf.stringToTerraform(this._customData),
       dedicated_host_group_id: cdktf.stringToTerraform(this._dedicatedHostGroupId),
       dedicated_host_id: cdktf.stringToTerraform(this._dedicatedHostId),
+      edge_zone: cdktf.stringToTerraform(this._edgeZone),
       enable_automatic_updates: cdktf.booleanToTerraform(this._enableAutomaticUpdates),
       encryption_at_host_enabled: cdktf.booleanToTerraform(this._encryptionAtHostEnabled),
       eviction_policy: cdktf.stringToTerraform(this._evictionPolicy),
@@ -2436,6 +2651,7 @@ export class WindowsVirtualMachine extends cdktf.TerraformResource {
       plan: windowsVirtualMachinePlanToTerraform(this._plan.internalValue),
       secret: cdktf.listMapper(windowsVirtualMachineSecretToTerraform)(this._secret.internalValue),
       source_image_reference: windowsVirtualMachineSourceImageReferenceToTerraform(this._sourceImageReference.internalValue),
+      termination_notification: windowsVirtualMachineTerminationNotificationToTerraform(this._terminationNotification.internalValue),
       timeouts: windowsVirtualMachineTimeoutsToTerraform(this._timeouts.internalValue),
       winrm_listener: cdktf.listMapper(windowsVirtualMachineWinrmListenerToTerraform)(this._winrmListener.internalValue),
     };

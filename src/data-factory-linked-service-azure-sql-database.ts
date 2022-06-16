@@ -22,11 +22,7 @@ export interface DataFactoryLinkedServiceAzureSqlDatabaseConfig extends cdktf.Te
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_sql_database#data_factory_id DataFactoryLinkedServiceAzureSqlDatabase#data_factory_id}
   */
-  readonly dataFactoryId?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_sql_database#data_factory_name DataFactoryLinkedServiceAzureSqlDatabase#data_factory_name}
-  */
-  readonly dataFactoryName?: string;
+  readonly dataFactoryId: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_sql_database#description DataFactoryLinkedServiceAzureSqlDatabase#description}
   */
@@ -50,10 +46,6 @@ export interface DataFactoryLinkedServiceAzureSqlDatabaseConfig extends cdktf.Te
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_sql_database#parameters DataFactoryLinkedServiceAzureSqlDatabase#parameters}
   */
   readonly parameters?: { [key: string]: string };
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_sql_database#resource_group_name DataFactoryLinkedServiceAzureSqlDatabase#resource_group_name}
-  */
-  readonly resourceGroupName: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_sql_database#service_principal_id DataFactoryLinkedServiceAzureSqlDatabase#service_principal_id}
   */
@@ -444,8 +436,8 @@ export class DataFactoryLinkedServiceAzureSqlDatabase extends cdktf.TerraformRes
       terraformResourceType: 'azurerm_data_factory_linked_service_azure_sql_database',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -456,13 +448,11 @@ export class DataFactoryLinkedServiceAzureSqlDatabase extends cdktf.TerraformRes
     this._annotations = config.annotations;
     this._connectionString = config.connectionString;
     this._dataFactoryId = config.dataFactoryId;
-    this._dataFactoryName = config.dataFactoryName;
     this._description = config.description;
     this._id = config.id;
     this._integrationRuntimeName = config.integrationRuntimeName;
     this._name = config.name;
     this._parameters = config.parameters;
-    this._resourceGroupName = config.resourceGroupName;
     this._servicePrincipalId = config.servicePrincipalId;
     this._servicePrincipalKey = config.servicePrincipalKey;
     this._tenantId = config.tenantId;
@@ -524,7 +514,7 @@ export class DataFactoryLinkedServiceAzureSqlDatabase extends cdktf.TerraformRes
     return this._connectionString;
   }
 
-  // data_factory_id - computed: true, optional: true, required: false
+  // data_factory_id - computed: false, optional: false, required: true
   private _dataFactoryId?: string; 
   public get dataFactoryId() {
     return this.getStringAttribute('data_factory_id');
@@ -532,28 +522,9 @@ export class DataFactoryLinkedServiceAzureSqlDatabase extends cdktf.TerraformRes
   public set dataFactoryId(value: string) {
     this._dataFactoryId = value;
   }
-  public resetDataFactoryId() {
-    this._dataFactoryId = undefined;
-  }
   // Temporarily expose input value. Use with caution.
   public get dataFactoryIdInput() {
     return this._dataFactoryId;
-  }
-
-  // data_factory_name - computed: true, optional: true, required: false
-  private _dataFactoryName?: string; 
-  public get dataFactoryName() {
-    return this.getStringAttribute('data_factory_name');
-  }
-  public set dataFactoryName(value: string) {
-    this._dataFactoryName = value;
-  }
-  public resetDataFactoryName() {
-    this._dataFactoryName = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get dataFactoryNameInput() {
-    return this._dataFactoryName;
   }
 
   // description - computed: false, optional: true, required: false
@@ -631,19 +602,6 @@ export class DataFactoryLinkedServiceAzureSqlDatabase extends cdktf.TerraformRes
   // Temporarily expose input value. Use with caution.
   public get parametersInput() {
     return this._parameters;
-  }
-
-  // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName?: string; 
-  public get resourceGroupName() {
-    return this.getStringAttribute('resource_group_name');
-  }
-  public set resourceGroupName(value: string) {
-    this._resourceGroupName = value;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get resourceGroupNameInput() {
-    return this._resourceGroupName;
   }
 
   // service_principal_id - computed: false, optional: true, required: false
@@ -768,13 +726,11 @@ export class DataFactoryLinkedServiceAzureSqlDatabase extends cdktf.TerraformRes
       annotations: cdktf.listMapper(cdktf.stringToTerraform)(this._annotations),
       connection_string: cdktf.stringToTerraform(this._connectionString),
       data_factory_id: cdktf.stringToTerraform(this._dataFactoryId),
-      data_factory_name: cdktf.stringToTerraform(this._dataFactoryName),
       description: cdktf.stringToTerraform(this._description),
       id: cdktf.stringToTerraform(this._id),
       integration_runtime_name: cdktf.stringToTerraform(this._integrationRuntimeName),
       name: cdktf.stringToTerraform(this._name),
       parameters: cdktf.hashMapper(cdktf.stringToTerraform)(this._parameters),
-      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       service_principal_id: cdktf.stringToTerraform(this._servicePrincipalId),
       service_principal_key: cdktf.stringToTerraform(this._servicePrincipalKey),
       tenant_id: cdktf.stringToTerraform(this._tenantId),

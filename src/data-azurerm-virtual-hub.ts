@@ -131,8 +131,8 @@ export class DataAzurermVirtualHub extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_virtual_hub',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -210,6 +210,16 @@ export class DataAzurermVirtualHub extends cdktf.TerraformDataSource {
   private _tags = new cdktf.StringMap(this, "tags");
   public get tags() {
     return this._tags;
+  }
+
+  // virtual_router_asn - computed: true, optional: false, required: false
+  public get virtualRouterAsn() {
+    return this.getNumberAttribute('virtual_router_asn');
+  }
+
+  // virtual_router_ips - computed: true, optional: false, required: false
+  public get virtualRouterIps() {
+    return this.getListAttribute('virtual_router_ips');
   }
 
   // virtual_wan_id - computed: true, optional: false, required: false

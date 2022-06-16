@@ -232,8 +232,8 @@ export class RedisEnterpriseCluster extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_redis_enterprise_cluster',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -360,15 +360,10 @@ export class RedisEnterpriseCluster extends cdktf.TerraformResource {
     return this._tags;
   }
 
-  // version - computed: true, optional: false, required: false
-  public get version() {
-    return this.getStringAttribute('version');
-  }
-
   // zones - computed: false, optional: true, required: false
   private _zones?: string[]; 
   public get zones() {
-    return this.getListAttribute('zones');
+    return cdktf.Fn.tolist(this.getListAttribute('zones'));
   }
   public set zones(value: string[]) {
     this._zones = value;

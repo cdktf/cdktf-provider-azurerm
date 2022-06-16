@@ -8,10 +8,6 @@ import * as cdktf from 'cdktf';
 
 export interface VirtualHubConnectionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_connection#hub_to_vitual_network_traffic_allowed VirtualHubConnection#hub_to_vitual_network_traffic_allowed}
-  */
-  readonly hubToVitualNetworkTrafficAllowed?: boolean | cdktf.IResolvable;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_connection#id VirtualHubConnection#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
@@ -34,10 +30,6 @@ export interface VirtualHubConnectionConfig extends cdktf.TerraformMetaArguments
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_connection#virtual_hub_id VirtualHubConnection#virtual_hub_id}
   */
   readonly virtualHubId: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_connection#vitual_network_to_hub_gateways_traffic_allowed VirtualHubConnection#vitual_network_to_hub_gateways_traffic_allowed}
-  */
-  readonly vitualNetworkToHubGatewaysTrafficAllowed?: boolean | cdktf.IResolvable;
   /**
   * routing block
   * 
@@ -600,21 +592,19 @@ export class VirtualHubConnection extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_virtual_hub_connection',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
       lifecycle: config.lifecycle
     });
-    this._hubToVitualNetworkTrafficAllowed = config.hubToVitualNetworkTrafficAllowed;
     this._id = config.id;
     this._internetSecurityEnabled = config.internetSecurityEnabled;
     this._name = config.name;
     this._remoteVirtualNetworkId = config.remoteVirtualNetworkId;
     this._virtualHubId = config.virtualHubId;
-    this._vitualNetworkToHubGatewaysTrafficAllowed = config.vitualNetworkToHubGatewaysTrafficAllowed;
     this._routing.internalValue = config.routing;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -622,22 +612,6 @@ export class VirtualHubConnection extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
-
-  // hub_to_vitual_network_traffic_allowed - computed: false, optional: true, required: false
-  private _hubToVitualNetworkTrafficAllowed?: boolean | cdktf.IResolvable; 
-  public get hubToVitualNetworkTrafficAllowed() {
-    return this.getBooleanAttribute('hub_to_vitual_network_traffic_allowed');
-  }
-  public set hubToVitualNetworkTrafficAllowed(value: boolean | cdktf.IResolvable) {
-    this._hubToVitualNetworkTrafficAllowed = value;
-  }
-  public resetHubToVitualNetworkTrafficAllowed() {
-    this._hubToVitualNetworkTrafficAllowed = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get hubToVitualNetworkTrafficAllowedInput() {
-    return this._hubToVitualNetworkTrafficAllowed;
-  }
 
   // id - computed: true, optional: true, required: false
   private _id?: string; 
@@ -710,22 +684,6 @@ export class VirtualHubConnection extends cdktf.TerraformResource {
     return this._virtualHubId;
   }
 
-  // vitual_network_to_hub_gateways_traffic_allowed - computed: false, optional: true, required: false
-  private _vitualNetworkToHubGatewaysTrafficAllowed?: boolean | cdktf.IResolvable; 
-  public get vitualNetworkToHubGatewaysTrafficAllowed() {
-    return this.getBooleanAttribute('vitual_network_to_hub_gateways_traffic_allowed');
-  }
-  public set vitualNetworkToHubGatewaysTrafficAllowed(value: boolean | cdktf.IResolvable) {
-    this._vitualNetworkToHubGatewaysTrafficAllowed = value;
-  }
-  public resetVitualNetworkToHubGatewaysTrafficAllowed() {
-    this._vitualNetworkToHubGatewaysTrafficAllowed = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get vitualNetworkToHubGatewaysTrafficAllowedInput() {
-    return this._vitualNetworkToHubGatewaysTrafficAllowed;
-  }
-
   // routing - computed: false, optional: true, required: false
   private _routing = new VirtualHubConnectionRoutingOutputReference(this, "routing");
   public get routing() {
@@ -764,13 +722,11 @@ export class VirtualHubConnection extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      hub_to_vitual_network_traffic_allowed: cdktf.booleanToTerraform(this._hubToVitualNetworkTrafficAllowed),
       id: cdktf.stringToTerraform(this._id),
       internet_security_enabled: cdktf.booleanToTerraform(this._internetSecurityEnabled),
       name: cdktf.stringToTerraform(this._name),
       remote_virtual_network_id: cdktf.stringToTerraform(this._remoteVirtualNetworkId),
       virtual_hub_id: cdktf.stringToTerraform(this._virtualHubId),
-      vitual_network_to_hub_gateways_traffic_allowed: cdktf.booleanToTerraform(this._vitualNetworkToHubGatewaysTrafficAllowed),
       routing: virtualHubConnectionRoutingToTerraform(this._routing.internalValue),
       timeouts: virtualHubConnectionTimeoutsToTerraform(this._timeouts.internalValue),
     };

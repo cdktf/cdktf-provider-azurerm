@@ -12,10 +12,6 @@ export interface AppServiceCertificateConfig extends cdktf.TerraformMetaArgument
   */
   readonly appServicePlanId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate#hosting_environment_profile_id AppServiceCertificate#hosting_environment_profile_id}
-  */
-  readonly hostingEnvironmentProfileId?: string;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate#id AppServiceCertificate#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
@@ -240,8 +236,8 @@ export class AppServiceCertificate extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_app_service_certificate',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -249,7 +245,6 @@ export class AppServiceCertificate extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._appServicePlanId = config.appServicePlanId;
-    this._hostingEnvironmentProfileId = config.hostingEnvironmentProfileId;
     this._id = config.id;
     this._keyVaultSecretId = config.keyVaultSecretId;
     this._location = config.location;
@@ -294,22 +289,6 @@ export class AppServiceCertificate extends cdktf.TerraformResource {
   // host_names - computed: true, optional: false, required: false
   public get hostNames() {
     return this.getListAttribute('host_names');
-  }
-
-  // hosting_environment_profile_id - computed: true, optional: true, required: false
-  private _hostingEnvironmentProfileId?: string; 
-  public get hostingEnvironmentProfileId() {
-    return this.getStringAttribute('hosting_environment_profile_id');
-  }
-  public set hostingEnvironmentProfileId(value: string) {
-    this._hostingEnvironmentProfileId = value;
-  }
-  public resetHostingEnvironmentProfileId() {
-    this._hostingEnvironmentProfileId = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get hostingEnvironmentProfileIdInput() {
-    return this._hostingEnvironmentProfileId;
   }
 
   // id - computed: true, optional: true, required: false
@@ -474,7 +453,6 @@ export class AppServiceCertificate extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       app_service_plan_id: cdktf.stringToTerraform(this._appServicePlanId),
-      hosting_environment_profile_id: cdktf.stringToTerraform(this._hostingEnvironmentProfileId),
       id: cdktf.stringToTerraform(this._id),
       key_vault_secret_id: cdktf.stringToTerraform(this._keyVaultSecretId),
       location: cdktf.stringToTerraform(this._location),

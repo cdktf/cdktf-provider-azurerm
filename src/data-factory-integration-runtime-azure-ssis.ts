@@ -10,11 +10,7 @@ export interface DataFactoryIntegrationRuntimeAzureSsisConfig extends cdktf.Terr
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis#data_factory_id DataFactoryIntegrationRuntimeAzureSsis#data_factory_id}
   */
-  readonly dataFactoryId?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis#data_factory_name DataFactoryIntegrationRuntimeAzureSsis#data_factory_name}
-  */
-  readonly dataFactoryName?: string;
+  readonly dataFactoryId: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis#description DataFactoryIntegrationRuntimeAzureSsis#description}
   */
@@ -54,10 +50,6 @@ export interface DataFactoryIntegrationRuntimeAzureSsisConfig extends cdktf.Terr
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis#number_of_nodes DataFactoryIntegrationRuntimeAzureSsis#number_of_nodes}
   */
   readonly numberOfNodes?: number;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis#resource_group_name DataFactoryIntegrationRuntimeAzureSsis#resource_group_name}
-  */
-  readonly resourceGroupName: string;
   /**
   * catalog_info block
   * 
@@ -1671,8 +1663,8 @@ export class DataFactoryIntegrationRuntimeAzureSsis extends cdktf.TerraformResou
       terraformResourceType: 'azurerm_data_factory_integration_runtime_azure_ssis',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1680,7 +1672,6 @@ export class DataFactoryIntegrationRuntimeAzureSsis extends cdktf.TerraformResou
       lifecycle: config.lifecycle
     });
     this._dataFactoryId = config.dataFactoryId;
-    this._dataFactoryName = config.dataFactoryName;
     this._description = config.description;
     this._edition = config.edition;
     this._id = config.id;
@@ -1690,7 +1681,6 @@ export class DataFactoryIntegrationRuntimeAzureSsis extends cdktf.TerraformResou
     this._name = config.name;
     this._nodeSize = config.nodeSize;
     this._numberOfNodes = config.numberOfNodes;
-    this._resourceGroupName = config.resourceGroupName;
     this._catalogInfo.internalValue = config.catalogInfo;
     this._customSetupScript.internalValue = config.customSetupScript;
     this._expressCustomSetup.internalValue = config.expressCustomSetup;
@@ -1704,7 +1694,7 @@ export class DataFactoryIntegrationRuntimeAzureSsis extends cdktf.TerraformResou
   // ATTRIBUTES
   // ==========
 
-  // data_factory_id - computed: true, optional: true, required: false
+  // data_factory_id - computed: false, optional: false, required: true
   private _dataFactoryId?: string; 
   public get dataFactoryId() {
     return this.getStringAttribute('data_factory_id');
@@ -1712,28 +1702,9 @@ export class DataFactoryIntegrationRuntimeAzureSsis extends cdktf.TerraformResou
   public set dataFactoryId(value: string) {
     this._dataFactoryId = value;
   }
-  public resetDataFactoryId() {
-    this._dataFactoryId = undefined;
-  }
   // Temporarily expose input value. Use with caution.
   public get dataFactoryIdInput() {
     return this._dataFactoryId;
-  }
-
-  // data_factory_name - computed: true, optional: true, required: false
-  private _dataFactoryName?: string; 
-  public get dataFactoryName() {
-    return this.getStringAttribute('data_factory_name');
-  }
-  public set dataFactoryName(value: string) {
-    this._dataFactoryName = value;
-  }
-  public resetDataFactoryName() {
-    this._dataFactoryName = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get dataFactoryNameInput() {
-    return this._dataFactoryName;
   }
 
   // description - computed: false, optional: true, required: false
@@ -1871,19 +1842,6 @@ export class DataFactoryIntegrationRuntimeAzureSsis extends cdktf.TerraformResou
     return this._numberOfNodes;
   }
 
-  // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName?: string; 
-  public get resourceGroupName() {
-    return this.getStringAttribute('resource_group_name');
-  }
-  public set resourceGroupName(value: string) {
-    this._resourceGroupName = value;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get resourceGroupNameInput() {
-    return this._resourceGroupName;
-  }
-
   // catalog_info - computed: false, optional: true, required: false
   private _catalogInfo = new DataFactoryIntegrationRuntimeAzureSsisCatalogInfoOutputReference(this, "catalog_info");
   public get catalogInfo() {
@@ -2003,7 +1961,6 @@ export class DataFactoryIntegrationRuntimeAzureSsis extends cdktf.TerraformResou
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       data_factory_id: cdktf.stringToTerraform(this._dataFactoryId),
-      data_factory_name: cdktf.stringToTerraform(this._dataFactoryName),
       description: cdktf.stringToTerraform(this._description),
       edition: cdktf.stringToTerraform(this._edition),
       id: cdktf.stringToTerraform(this._id),
@@ -2013,7 +1970,6 @@ export class DataFactoryIntegrationRuntimeAzureSsis extends cdktf.TerraformResou
       name: cdktf.stringToTerraform(this._name),
       node_size: cdktf.stringToTerraform(this._nodeSize),
       number_of_nodes: cdktf.numberToTerraform(this._numberOfNodes),
-      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       catalog_info: dataFactoryIntegrationRuntimeAzureSsisCatalogInfoToTerraform(this._catalogInfo.internalValue),
       custom_setup_script: dataFactoryIntegrationRuntimeAzureSsisCustomSetupScriptToTerraform(this._customSetupScript.internalValue),
       express_custom_setup: dataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupToTerraform(this._expressCustomSetup.internalValue),

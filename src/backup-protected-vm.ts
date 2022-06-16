@@ -37,11 +37,7 @@ export interface BackupProtectedVmConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_protected_vm#source_vm_id BackupProtectedVm#source_vm_id}
   */
-  readonly sourceVmId: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_protected_vm#tags BackupProtectedVm#tags}
-  */
-  readonly tags?: { [key: string]: string };
+  readonly sourceVmId?: string;
   /**
   * timeouts block
   * 
@@ -232,8 +228,8 @@ export class BackupProtectedVm extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_backup_protected_vm',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -247,7 +243,6 @@ export class BackupProtectedVm extends cdktf.TerraformResource {
     this._recoveryVaultName = config.recoveryVaultName;
     this._resourceGroupName = config.resourceGroupName;
     this._sourceVmId = config.sourceVmId;
-    this._tags = config.tags;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -342,7 +337,7 @@ export class BackupProtectedVm extends cdktf.TerraformResource {
     return this._resourceGroupName;
   }
 
-  // source_vm_id - computed: false, optional: false, required: true
+  // source_vm_id - computed: true, optional: true, required: false
   private _sourceVmId?: string; 
   public get sourceVmId() {
     return this.getStringAttribute('source_vm_id');
@@ -350,25 +345,12 @@ export class BackupProtectedVm extends cdktf.TerraformResource {
   public set sourceVmId(value: string) {
     this._sourceVmId = value;
   }
+  public resetSourceVmId() {
+    this._sourceVmId = undefined;
+  }
   // Temporarily expose input value. Use with caution.
   public get sourceVmIdInput() {
     return this._sourceVmId;
-  }
-
-  // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string }; 
-  public get tags() {
-    return this.getStringMapAttribute('tags');
-  }
-  public set tags(value: { [key: string]: string }) {
-    this._tags = value;
-  }
-  public resetTags() {
-    this._tags = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get tagsInput() {
-    return this._tags;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -400,7 +382,6 @@ export class BackupProtectedVm extends cdktf.TerraformResource {
       recovery_vault_name: cdktf.stringToTerraform(this._recoveryVaultName),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       source_vm_id: cdktf.stringToTerraform(this._sourceVmId),
-      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       timeouts: backupProtectedVmTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

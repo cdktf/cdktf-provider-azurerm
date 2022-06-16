@@ -22,11 +22,7 @@ export interface DataFactoryLinkedServiceCosmosdbMongoapiConfig extends cdktf.Te
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_cosmosdb_mongoapi#data_factory_id DataFactoryLinkedServiceCosmosdbMongoapi#data_factory_id}
   */
-  readonly dataFactoryId?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_cosmosdb_mongoapi#data_factory_name DataFactoryLinkedServiceCosmosdbMongoapi#data_factory_name}
-  */
-  readonly dataFactoryName?: string;
+  readonly dataFactoryId: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_cosmosdb_mongoapi#database DataFactoryLinkedServiceCosmosdbMongoapi#database}
   */
@@ -54,10 +50,6 @@ export interface DataFactoryLinkedServiceCosmosdbMongoapiConfig extends cdktf.Te
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_cosmosdb_mongoapi#parameters DataFactoryLinkedServiceCosmosdbMongoapi#parameters}
   */
   readonly parameters?: { [key: string]: string };
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_cosmosdb_mongoapi#resource_group_name DataFactoryLinkedServiceCosmosdbMongoapi#resource_group_name}
-  */
-  readonly resourceGroupName: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_cosmosdb_mongoapi#server_version_is_32_or_higher DataFactoryLinkedServiceCosmosdbMongoapi#server_version_is_32_or_higher}
   */
@@ -252,8 +244,8 @@ export class DataFactoryLinkedServiceCosmosdbMongoapi extends cdktf.TerraformRes
       terraformResourceType: 'azurerm_data_factory_linked_service_cosmosdb_mongoapi',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -264,14 +256,12 @@ export class DataFactoryLinkedServiceCosmosdbMongoapi extends cdktf.TerraformRes
     this._annotations = config.annotations;
     this._connectionString = config.connectionString;
     this._dataFactoryId = config.dataFactoryId;
-    this._dataFactoryName = config.dataFactoryName;
     this._database = config.database;
     this._description = config.description;
     this._id = config.id;
     this._integrationRuntimeName = config.integrationRuntimeName;
     this._name = config.name;
     this._parameters = config.parameters;
-    this._resourceGroupName = config.resourceGroupName;
     this._serverVersionIs32OrHigher = config.serverVersionIs32OrHigher;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -328,7 +318,7 @@ export class DataFactoryLinkedServiceCosmosdbMongoapi extends cdktf.TerraformRes
     return this._connectionString;
   }
 
-  // data_factory_id - computed: true, optional: true, required: false
+  // data_factory_id - computed: false, optional: false, required: true
   private _dataFactoryId?: string; 
   public get dataFactoryId() {
     return this.getStringAttribute('data_factory_id');
@@ -336,28 +326,9 @@ export class DataFactoryLinkedServiceCosmosdbMongoapi extends cdktf.TerraformRes
   public set dataFactoryId(value: string) {
     this._dataFactoryId = value;
   }
-  public resetDataFactoryId() {
-    this._dataFactoryId = undefined;
-  }
   // Temporarily expose input value. Use with caution.
   public get dataFactoryIdInput() {
     return this._dataFactoryId;
-  }
-
-  // data_factory_name - computed: true, optional: true, required: false
-  private _dataFactoryName?: string; 
-  public get dataFactoryName() {
-    return this.getStringAttribute('data_factory_name');
-  }
-  public set dataFactoryName(value: string) {
-    this._dataFactoryName = value;
-  }
-  public resetDataFactoryName() {
-    this._dataFactoryName = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get dataFactoryNameInput() {
-    return this._dataFactoryName;
   }
 
   // database - computed: false, optional: true, required: false
@@ -453,19 +424,6 @@ export class DataFactoryLinkedServiceCosmosdbMongoapi extends cdktf.TerraformRes
     return this._parameters;
   }
 
-  // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName?: string; 
-  public get resourceGroupName() {
-    return this.getStringAttribute('resource_group_name');
-  }
-  public set resourceGroupName(value: string) {
-    this._resourceGroupName = value;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get resourceGroupNameInput() {
-    return this._resourceGroupName;
-  }
-
   // server_version_is_32_or_higher - computed: false, optional: true, required: false
   private _serverVersionIs32OrHigher?: boolean | cdktf.IResolvable; 
   public get serverVersionIs32OrHigher() {
@@ -508,14 +466,12 @@ export class DataFactoryLinkedServiceCosmosdbMongoapi extends cdktf.TerraformRes
       annotations: cdktf.listMapper(cdktf.stringToTerraform)(this._annotations),
       connection_string: cdktf.stringToTerraform(this._connectionString),
       data_factory_id: cdktf.stringToTerraform(this._dataFactoryId),
-      data_factory_name: cdktf.stringToTerraform(this._dataFactoryName),
       database: cdktf.stringToTerraform(this._database),
       description: cdktf.stringToTerraform(this._description),
       id: cdktf.stringToTerraform(this._id),
       integration_runtime_name: cdktf.stringToTerraform(this._integrationRuntimeName),
       name: cdktf.stringToTerraform(this._name),
       parameters: cdktf.hashMapper(cdktf.stringToTerraform)(this._parameters),
-      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       server_version_is_32_or_higher: cdktf.booleanToTerraform(this._serverVersionIs32OrHigher),
       timeouts: dataFactoryLinkedServiceCosmosdbMongoapiTimeoutsToTerraform(this._timeouts.internalValue),
     };

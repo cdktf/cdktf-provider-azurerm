@@ -8,6 +8,10 @@ import * as cdktf from 'cdktf';
 
 export interface SpringCloudAppConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app#addon_json SpringCloudApp#addon_json}
+  */
+  readonly addonJson?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app#https_only SpringCloudApp#https_only}
   */
   readonly httpsOnly?: boolean | cdktf.IResolvable;
@@ -261,6 +265,10 @@ export class SpringCloudAppCustomPersistentDiskList extends cdktf.ComplexList {
 }
 export interface SpringCloudAppIdentity {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app#identity_ids SpringCloudApp#identity_ids}
+  */
+  readonly identityIds?: string[];
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app#type SpringCloudApp#type}
   */
   readonly type: string;
@@ -272,6 +280,7 @@ export function springCloudAppIdentityToTerraform(struct?: SpringCloudAppIdentit
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
@@ -290,6 +299,10 @@ export class SpringCloudAppIdentityOutputReference extends cdktf.ComplexObject {
   public get internalValue(): SpringCloudAppIdentity | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._identityIds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.identityIds = this._identityIds;
+    }
     if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
@@ -300,12 +313,30 @@ export class SpringCloudAppIdentityOutputReference extends cdktf.ComplexObject {
   public set internalValue(value: SpringCloudAppIdentity | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this._identityIds = undefined;
       this._type = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this._identityIds = value.identityIds;
       this._type = value.type;
     }
+  }
+
+  // identity_ids - computed: false, optional: true, required: false
+  private _identityIds?: string[]; 
+  public get identityIds() {
+    return cdktf.Fn.tolist(this.getListAttribute('identity_ids'));
+  }
+  public set identityIds(value: string[]) {
+    this._identityIds = value;
+  }
+  public resetIdentityIds() {
+    this._identityIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityIdsInput() {
+    return this._identityIds;
   }
 
   // principal_id - computed: true, optional: false, required: false
@@ -603,14 +634,15 @@ export class SpringCloudApp extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_spring_cloud_app',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._addonJson = config.addonJson;
     this._httpsOnly = config.httpsOnly;
     this._id = config.id;
     this._isPublic = config.isPublic;
@@ -627,6 +659,22 @@ export class SpringCloudApp extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // addon_json - computed: true, optional: true, required: false
+  private _addonJson?: string; 
+  public get addonJson() {
+    return this.getStringAttribute('addon_json');
+  }
+  public set addonJson(value: string) {
+    this._addonJson = value;
+  }
+  public resetAddonJson() {
+    this._addonJson = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get addonJsonInput() {
+    return this._addonJson;
+  }
 
   // fqdn - computed: true, optional: false, required: false
   public get fqdn() {
@@ -811,6 +859,7 @@ export class SpringCloudApp extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      addon_json: cdktf.stringToTerraform(this._addonJson),
       https_only: cdktf.booleanToTerraform(this._httpsOnly),
       id: cdktf.stringToTerraform(this._id),
       is_public: cdktf.booleanToTerraform(this._isPublic),

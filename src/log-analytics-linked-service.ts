@@ -15,10 +15,6 @@ export interface LogAnalyticsLinkedServiceConfig extends cdktf.TerraformMetaArgu
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_service#linked_service_name LogAnalyticsLinkedService#linked_service_name}
-  */
-  readonly linkedServiceName?: string;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_service#read_access_id LogAnalyticsLinkedService#read_access_id}
   */
   readonly readAccessId?: string;
@@ -27,21 +23,9 @@ export interface LogAnalyticsLinkedServiceConfig extends cdktf.TerraformMetaArgu
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_service#resource_id LogAnalyticsLinkedService#resource_id}
-  */
-  readonly resourceId?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_service#tags LogAnalyticsLinkedService#tags}
-  */
-  readonly tags?: { [key: string]: string };
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_service#workspace_id LogAnalyticsLinkedService#workspace_id}
   */
-  readonly workspaceId?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_service#workspace_name LogAnalyticsLinkedService#workspace_name}
-  */
-  readonly workspaceName?: string;
+  readonly workspaceId: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_service#write_access_id LogAnalyticsLinkedService#write_access_id}
   */
@@ -236,8 +220,8 @@ export class LogAnalyticsLinkedService extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_log_analytics_linked_service',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -245,13 +229,9 @@ export class LogAnalyticsLinkedService extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._id = config.id;
-    this._linkedServiceName = config.linkedServiceName;
     this._readAccessId = config.readAccessId;
     this._resourceGroupName = config.resourceGroupName;
-    this._resourceId = config.resourceId;
-    this._tags = config.tags;
     this._workspaceId = config.workspaceId;
-    this._workspaceName = config.workspaceName;
     this._writeAccessId = config.writeAccessId;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -274,22 +254,6 @@ export class LogAnalyticsLinkedService extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get idInput() {
     return this._id;
-  }
-
-  // linked_service_name - computed: true, optional: true, required: false
-  private _linkedServiceName?: string; 
-  public get linkedServiceName() {
-    return this.getStringAttribute('linked_service_name');
-  }
-  public set linkedServiceName(value: string) {
-    this._linkedServiceName = value;
-  }
-  public resetLinkedServiceName() {
-    this._linkedServiceName = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get linkedServiceNameInput() {
-    return this._linkedServiceName;
   }
 
   // name - computed: true, optional: false, required: false
@@ -326,39 +290,7 @@ export class LogAnalyticsLinkedService extends cdktf.TerraformResource {
     return this._resourceGroupName;
   }
 
-  // resource_id - computed: true, optional: true, required: false
-  private _resourceId?: string; 
-  public get resourceId() {
-    return this.getStringAttribute('resource_id');
-  }
-  public set resourceId(value: string) {
-    this._resourceId = value;
-  }
-  public resetResourceId() {
-    this._resourceId = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get resourceIdInput() {
-    return this._resourceId;
-  }
-
-  // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string }; 
-  public get tags() {
-    return this.getStringMapAttribute('tags');
-  }
-  public set tags(value: { [key: string]: string }) {
-    this._tags = value;
-  }
-  public resetTags() {
-    this._tags = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get tagsInput() {
-    return this._tags;
-  }
-
-  // workspace_id - computed: true, optional: true, required: false
+  // workspace_id - computed: false, optional: false, required: true
   private _workspaceId?: string; 
   public get workspaceId() {
     return this.getStringAttribute('workspace_id');
@@ -366,28 +298,9 @@ export class LogAnalyticsLinkedService extends cdktf.TerraformResource {
   public set workspaceId(value: string) {
     this._workspaceId = value;
   }
-  public resetWorkspaceId() {
-    this._workspaceId = undefined;
-  }
   // Temporarily expose input value. Use with caution.
   public get workspaceIdInput() {
     return this._workspaceId;
-  }
-
-  // workspace_name - computed: true, optional: true, required: false
-  private _workspaceName?: string; 
-  public get workspaceName() {
-    return this.getStringAttribute('workspace_name');
-  }
-  public set workspaceName(value: string) {
-    this._workspaceName = value;
-  }
-  public resetWorkspaceName() {
-    this._workspaceName = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get workspaceNameInput() {
-    return this._workspaceName;
   }
 
   // write_access_id - computed: false, optional: true, required: false
@@ -429,13 +342,9 @@ export class LogAnalyticsLinkedService extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       id: cdktf.stringToTerraform(this._id),
-      linked_service_name: cdktf.stringToTerraform(this._linkedServiceName),
       read_access_id: cdktf.stringToTerraform(this._readAccessId),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      resource_id: cdktf.stringToTerraform(this._resourceId),
-      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       workspace_id: cdktf.stringToTerraform(this._workspaceId),
-      workspace_name: cdktf.stringToTerraform(this._workspaceName),
       write_access_id: cdktf.stringToTerraform(this._writeAccessId),
       timeouts: logAnalyticsLinkedServiceTimeoutsToTerraform(this._timeouts.internalValue),
     };

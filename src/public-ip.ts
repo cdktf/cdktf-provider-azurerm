@@ -12,13 +12,13 @@ export interface PublicIpConfig extends cdktf.TerraformMetaArguments {
   */
   readonly allocationMethod: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip#availability_zone PublicIp#availability_zone}
-  */
-  readonly availabilityZone?: string;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip#domain_name_label PublicIp#domain_name_label}
   */
   readonly domainNameLabel?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip#edge_zone PublicIp#edge_zone}
+  */
+  readonly edgeZone?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip#id PublicIp#id}
   *
@@ -264,8 +264,8 @@ export class PublicIp extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_public_ip',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -273,8 +273,8 @@ export class PublicIp extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._allocationMethod = config.allocationMethod;
-    this._availabilityZone = config.availabilityZone;
     this._domainNameLabel = config.domainNameLabel;
+    this._edgeZone = config.edgeZone;
     this._id = config.id;
     this._idleTimeoutInMinutes = config.idleTimeoutInMinutes;
     this._ipTags = config.ipTags;
@@ -308,22 +308,6 @@ export class PublicIp extends cdktf.TerraformResource {
     return this._allocationMethod;
   }
 
-  // availability_zone - computed: true, optional: true, required: false
-  private _availabilityZone?: string; 
-  public get availabilityZone() {
-    return this.getStringAttribute('availability_zone');
-  }
-  public set availabilityZone(value: string) {
-    this._availabilityZone = value;
-  }
-  public resetAvailabilityZone() {
-    this._availabilityZone = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get availabilityZoneInput() {
-    return this._availabilityZone;
-  }
-
   // domain_name_label - computed: false, optional: true, required: false
   private _domainNameLabel?: string; 
   public get domainNameLabel() {
@@ -338,6 +322,22 @@ export class PublicIp extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get domainNameLabelInput() {
     return this._domainNameLabel;
+  }
+
+  // edge_zone - computed: false, optional: true, required: false
+  private _edgeZone?: string; 
+  public get edgeZone() {
+    return this.getStringAttribute('edge_zone');
+  }
+  public set edgeZone(value: string) {
+    this._edgeZone = value;
+  }
+  public resetEdgeZone() {
+    this._edgeZone = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get edgeZoneInput() {
+    return this._edgeZone;
   }
 
   // fqdn - computed: true, optional: false, required: false
@@ -533,10 +533,10 @@ export class PublicIp extends cdktf.TerraformResource {
     return this._tags;
   }
 
-  // zones - computed: true, optional: true, required: false
+  // zones - computed: false, optional: true, required: false
   private _zones?: string[]; 
   public get zones() {
-    return this.getListAttribute('zones');
+    return cdktf.Fn.tolist(this.getListAttribute('zones'));
   }
   public set zones(value: string[]) {
     this._zones = value;
@@ -572,8 +572,8 @@ export class PublicIp extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       allocation_method: cdktf.stringToTerraform(this._allocationMethod),
-      availability_zone: cdktf.stringToTerraform(this._availabilityZone),
       domain_name_label: cdktf.stringToTerraform(this._domainNameLabel),
+      edge_zone: cdktf.stringToTerraform(this._edgeZone),
       id: cdktf.stringToTerraform(this._id),
       idle_timeout_in_minutes: cdktf.numberToTerraform(this._idleTimeoutInMinutes),
       ip_tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._ipTags),

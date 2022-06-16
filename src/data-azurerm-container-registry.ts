@@ -131,8 +131,8 @@ export class DataAzurermContainerRegistry extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_container_registry',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -219,11 +219,6 @@ export class DataAzurermContainerRegistry extends cdktf.TerraformDataSource {
   // sku - computed: true, optional: false, required: false
   public get sku() {
     return this.getStringAttribute('sku');
-  }
-
-  // storage_account_id - computed: true, optional: false, required: false
-  public get storageAccountId() {
-    return this.getStringAttribute('storage_account_id');
   }
 
   // tags - computed: true, optional: false, required: false

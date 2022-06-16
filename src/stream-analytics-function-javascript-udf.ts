@@ -51,6 +51,10 @@ export interface StreamAnalyticsFunctionJavascriptUdfConfig extends cdktf.Terraf
 }
 export interface StreamAnalyticsFunctionJavascriptUdfInput {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_function_javascript_udf#configuration_parameter StreamAnalyticsFunctionJavascriptUdf#configuration_parameter}
+  */
+  readonly configurationParameter?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_function_javascript_udf#type StreamAnalyticsFunctionJavascriptUdf#type}
   */
   readonly type: string;
@@ -62,6 +66,7 @@ export function streamAnalyticsFunctionJavascriptUdfInputToTerraform(struct?: St
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    configuration_parameter: cdktf.booleanToTerraform(struct!.configurationParameter),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
@@ -86,6 +91,10 @@ export class StreamAnalyticsFunctionJavascriptUdfInputOutputReference extends cd
     }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._configurationParameter !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.configurationParameter = this._configurationParameter;
+    }
     if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
@@ -97,6 +106,7 @@ export class StreamAnalyticsFunctionJavascriptUdfInputOutputReference extends cd
     if (value === undefined) {
       this.isEmptyObject = false;
       this.resolvableValue = undefined;
+      this._configurationParameter = undefined;
       this._type = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
@@ -106,8 +116,25 @@ export class StreamAnalyticsFunctionJavascriptUdfInputOutputReference extends cd
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this.resolvableValue = undefined;
+      this._configurationParameter = value.configurationParameter;
       this._type = value.type;
     }
+  }
+
+  // configuration_parameter - computed: false, optional: true, required: false
+  private _configurationParameter?: boolean | cdktf.IResolvable; 
+  public get configurationParameter() {
+    return this.getBooleanAttribute('configuration_parameter');
+  }
+  public set configurationParameter(value: boolean | cdktf.IResolvable) {
+    this._configurationParameter = value;
+  }
+  public resetConfigurationParameter() {
+    this._configurationParameter = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get configurationParameterInput() {
+    return this._configurationParameter;
   }
 
   // type - computed: false, optional: false, required: true
@@ -388,8 +415,8 @@ export class StreamAnalyticsFunctionJavascriptUdf extends cdktf.TerraformResourc
       terraformResourceType: 'azurerm_stream_analytics_function_javascript_udf',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

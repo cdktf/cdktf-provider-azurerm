@@ -20,6 +20,10 @@ export interface VirtualNetworkConfig extends cdktf.TerraformMetaArguments {
   */
   readonly dnsServers?: string[];
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network#edge_zone VirtualNetwork#edge_zone}
+  */
+  readonly edgeZone?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network#flow_timeout_in_minutes VirtualNetwork#flow_timeout_in_minutes}
   */
   readonly flowTimeoutInMinutes?: number;
@@ -50,10 +54,6 @@ export interface VirtualNetworkConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network#tags VirtualNetwork#tags}
   */
   readonly tags?: { [key: string]: string };
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network#vm_protection_enabled VirtualNetwork#vm_protection_enabled}
-  */
-  readonly vmProtectionEnabled?: boolean | cdktf.IResolvable;
   /**
   * ddos_protection_plan block
   * 
@@ -520,8 +520,8 @@ export class VirtualNetwork extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_virtual_network',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -531,6 +531,7 @@ export class VirtualNetwork extends cdktf.TerraformResource {
     this._addressSpace = config.addressSpace;
     this._bgpCommunity = config.bgpCommunity;
     this._dnsServers = config.dnsServers;
+    this._edgeZone = config.edgeZone;
     this._flowTimeoutInMinutes = config.flowTimeoutInMinutes;
     this._id = config.id;
     this._location = config.location;
@@ -538,7 +539,6 @@ export class VirtualNetwork extends cdktf.TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._subnet.internalValue = config.subnet;
     this._tags = config.tags;
-    this._vmProtectionEnabled = config.vmProtectionEnabled;
     this._ddosProtectionPlan.internalValue = config.ddosProtectionPlan;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -590,6 +590,22 @@ export class VirtualNetwork extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get dnsServersInput() {
     return this._dnsServers;
+  }
+
+  // edge_zone - computed: false, optional: true, required: false
+  private _edgeZone?: string; 
+  public get edgeZone() {
+    return this.getStringAttribute('edge_zone');
+  }
+  public set edgeZone(value: string) {
+    this._edgeZone = value;
+  }
+  public resetEdgeZone() {
+    this._edgeZone = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get edgeZoneInput() {
+    return this._edgeZone;
   }
 
   // flow_timeout_in_minutes - computed: false, optional: true, required: false
@@ -700,22 +716,6 @@ export class VirtualNetwork extends cdktf.TerraformResource {
     return this._tags;
   }
 
-  // vm_protection_enabled - computed: false, optional: true, required: false
-  private _vmProtectionEnabled?: boolean | cdktf.IResolvable; 
-  public get vmProtectionEnabled() {
-    return this.getBooleanAttribute('vm_protection_enabled');
-  }
-  public set vmProtectionEnabled(value: boolean | cdktf.IResolvable) {
-    this._vmProtectionEnabled = value;
-  }
-  public resetVmProtectionEnabled() {
-    this._vmProtectionEnabled = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get vmProtectionEnabledInput() {
-    return this._vmProtectionEnabled;
-  }
-
   // ddos_protection_plan - computed: false, optional: true, required: false
   private _ddosProtectionPlan = new VirtualNetworkDdosProtectionPlanOutputReference(this, "ddos_protection_plan");
   public get ddosProtectionPlan() {
@@ -757,6 +757,7 @@ export class VirtualNetwork extends cdktf.TerraformResource {
       address_space: cdktf.listMapper(cdktf.stringToTerraform)(this._addressSpace),
       bgp_community: cdktf.stringToTerraform(this._bgpCommunity),
       dns_servers: cdktf.listMapper(cdktf.stringToTerraform)(this._dnsServers),
+      edge_zone: cdktf.stringToTerraform(this._edgeZone),
       flow_timeout_in_minutes: cdktf.numberToTerraform(this._flowTimeoutInMinutes),
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
@@ -764,7 +765,6 @@ export class VirtualNetwork extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       subnet: cdktf.listMapper(virtualNetworkSubnetToTerraform)(this._subnet.internalValue),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
-      vm_protection_enabled: cdktf.booleanToTerraform(this._vmProtectionEnabled),
       ddos_protection_plan: virtualNetworkDdosProtectionPlanToTerraform(this._ddosProtectionPlan.internalValue),
       timeouts: virtualNetworkTimeoutsToTerraform(this._timeouts.internalValue),
     };

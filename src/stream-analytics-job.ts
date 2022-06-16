@@ -57,7 +57,7 @@ export interface StreamAnalyticsJobConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_job#streaming_units StreamAnalyticsJob#streaming_units}
   */
-  readonly streamingUnits: number;
+  readonly streamingUnits?: number;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_job#tags StreamAnalyticsJob#tags}
   */
@@ -66,6 +66,10 @@ export interface StreamAnalyticsJobConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_job#transformation_query StreamAnalyticsJob#transformation_query}
   */
   readonly transformationQuery: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_job#type StreamAnalyticsJob#type}
+  */
+  readonly type?: string;
   /**
   * identity block
   * 
@@ -334,8 +338,8 @@ export class StreamAnalyticsJob extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_stream_analytics_job',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -356,6 +360,7 @@ export class StreamAnalyticsJob extends cdktf.TerraformResource {
     this._streamingUnits = config.streamingUnits;
     this._tags = config.tags;
     this._transformationQuery = config.transformationQuery;
+    this._type = config.type;
     this._identity.internalValue = config.identity;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -536,13 +541,16 @@ export class StreamAnalyticsJob extends cdktf.TerraformResource {
     return this._streamAnalyticsClusterId;
   }
 
-  // streaming_units - computed: false, optional: false, required: true
+  // streaming_units - computed: false, optional: true, required: false
   private _streamingUnits?: number; 
   public get streamingUnits() {
     return this.getNumberAttribute('streaming_units');
   }
   public set streamingUnits(value: number) {
     this._streamingUnits = value;
+  }
+  public resetStreamingUnits() {
+    this._streamingUnits = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get streamingUnitsInput() {
@@ -576,6 +584,22 @@ export class StreamAnalyticsJob extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get transformationQueryInput() {
     return this._transformationQuery;
+  }
+
+  // type - computed: false, optional: true, required: false
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  public resetType() {
+    this._type = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
   }
 
   // identity - computed: false, optional: true, required: false
@@ -630,6 +654,7 @@ export class StreamAnalyticsJob extends cdktf.TerraformResource {
       streaming_units: cdktf.numberToTerraform(this._streamingUnits),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       transformation_query: cdktf.stringToTerraform(this._transformationQuery),
+      type: cdktf.stringToTerraform(this._type),
       identity: streamAnalyticsJobIdentityToTerraform(this._identity.internalValue),
       timeouts: streamAnalyticsJobTimeoutsToTerraform(this._timeouts.internalValue),
     };

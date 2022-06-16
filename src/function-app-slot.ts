@@ -16,10 +16,6 @@ export interface FunctionAppSlotConfig extends cdktf.TerraformMetaArguments {
   */
   readonly appSettings?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app_slot#client_affinity_enabled FunctionAppSlot#client_affinity_enabled}
-  */
-  readonly clientAffinityEnabled?: boolean | cdktf.IResolvable;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app_slot#daily_memory_time_quota FunctionAppSlot#daily_memory_time_quota}
   */
   readonly dailyMemoryTimeQuota?: number;
@@ -1347,7 +1343,7 @@ export class FunctionAppSlotIdentityOutputReference extends cdktf.ComplexObject 
   // identity_ids - computed: false, optional: true, required: false
   private _identityIds?: string[]; 
   public get identityIds() {
-    return this.getListAttribute('identity_ids');
+    return cdktf.Fn.tolist(this.getListAttribute('identity_ids'));
   }
   public set identityIds(value: string[]) {
     this._identityIds = value;
@@ -3136,8 +3132,8 @@ export class FunctionAppSlot extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_function_app_slot',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -3146,7 +3142,6 @@ export class FunctionAppSlot extends cdktf.TerraformResource {
     });
     this._appServicePlanId = config.appServicePlanId;
     this._appSettings = config.appSettings;
-    this._clientAffinityEnabled = config.clientAffinityEnabled;
     this._dailyMemoryTimeQuota = config.dailyMemoryTimeQuota;
     this._enableBuiltinLogging = config.enableBuiltinLogging;
     this._enabled = config.enabled;
@@ -3199,22 +3194,6 @@ export class FunctionAppSlot extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get appSettingsInput() {
     return this._appSettings;
-  }
-
-  // client_affinity_enabled - computed: true, optional: true, required: false
-  private _clientAffinityEnabled?: boolean | cdktf.IResolvable; 
-  public get clientAffinityEnabled() {
-    return this.getBooleanAttribute('client_affinity_enabled');
-  }
-  public set clientAffinityEnabled(value: boolean | cdktf.IResolvable) {
-    this._clientAffinityEnabled = value;
-  }
-  public resetClientAffinityEnabled() {
-    this._clientAffinityEnabled = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get clientAffinityEnabledInput() {
-    return this._clientAffinityEnabled;
   }
 
   // daily_memory_time_quota - computed: false, optional: true, required: false
@@ -3537,7 +3516,6 @@ export class FunctionAppSlot extends cdktf.TerraformResource {
     return {
       app_service_plan_id: cdktf.stringToTerraform(this._appServicePlanId),
       app_settings: cdktf.hashMapper(cdktf.stringToTerraform)(this._appSettings),
-      client_affinity_enabled: cdktf.booleanToTerraform(this._clientAffinityEnabled),
       daily_memory_time_quota: cdktf.numberToTerraform(this._dailyMemoryTimeQuota),
       enable_builtin_logging: cdktf.booleanToTerraform(this._enableBuiltinLogging),
       enabled: cdktf.booleanToTerraform(this._enabled),

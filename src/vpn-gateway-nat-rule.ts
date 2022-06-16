@@ -10,7 +10,7 @@ export interface VpnGatewayNatRuleConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_nat_rule#external_address_space_mappings VpnGatewayNatRule#external_address_space_mappings}
   */
-  readonly externalAddressSpaceMappings: string[];
+  readonly externalAddressSpaceMappings?: string[];
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_nat_rule#id VpnGatewayNatRule#id}
   *
@@ -21,7 +21,7 @@ export interface VpnGatewayNatRuleConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_nat_rule#internal_address_space_mappings VpnGatewayNatRule#internal_address_space_mappings}
   */
-  readonly internalAddressSpaceMappings: string[];
+  readonly internalAddressSpaceMappings?: string[];
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_nat_rule#ip_configuration_id VpnGatewayNatRule#ip_configuration_id}
   */
@@ -47,11 +47,265 @@ export interface VpnGatewayNatRuleConfig extends cdktf.TerraformMetaArguments {
   */
   readonly vpnGatewayId: string;
   /**
+  * external_mapping block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_nat_rule#external_mapping VpnGatewayNatRule#external_mapping}
+  */
+  readonly externalMapping?: VpnGatewayNatRuleExternalMapping[] | cdktf.IResolvable;
+  /**
+  * internal_mapping block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_nat_rule#internal_mapping VpnGatewayNatRule#internal_mapping}
+  */
+  readonly internalMapping?: VpnGatewayNatRuleInternalMapping[] | cdktf.IResolvable;
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_nat_rule#timeouts VpnGatewayNatRule#timeouts}
   */
   readonly timeouts?: VpnGatewayNatRuleTimeouts;
+}
+export interface VpnGatewayNatRuleExternalMapping {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_nat_rule#address_space VpnGatewayNatRule#address_space}
+  */
+  readonly addressSpace: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_nat_rule#port_range VpnGatewayNatRule#port_range}
+  */
+  readonly portRange?: string;
+}
+
+export function vpnGatewayNatRuleExternalMappingToTerraform(struct?: VpnGatewayNatRuleExternalMapping | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    address_space: cdktf.stringToTerraform(struct!.addressSpace),
+    port_range: cdktf.stringToTerraform(struct!.portRange),
+  }
+}
+
+export class VpnGatewayNatRuleExternalMappingOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): VpnGatewayNatRuleExternalMapping | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._addressSpace !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.addressSpace = this._addressSpace;
+    }
+    if (this._portRange !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.portRange = this._portRange;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: VpnGatewayNatRuleExternalMapping | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._addressSpace = undefined;
+      this._portRange = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._addressSpace = value.addressSpace;
+      this._portRange = value.portRange;
+    }
+  }
+
+  // address_space - computed: false, optional: false, required: true
+  private _addressSpace?: string; 
+  public get addressSpace() {
+    return this.getStringAttribute('address_space');
+  }
+  public set addressSpace(value: string) {
+    this._addressSpace = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get addressSpaceInput() {
+    return this._addressSpace;
+  }
+
+  // port_range - computed: false, optional: true, required: false
+  private _portRange?: string; 
+  public get portRange() {
+    return this.getStringAttribute('port_range');
+  }
+  public set portRange(value: string) {
+    this._portRange = value;
+  }
+  public resetPortRange() {
+    this._portRange = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get portRangeInput() {
+    return this._portRange;
+  }
+}
+
+export class VpnGatewayNatRuleExternalMappingList extends cdktf.ComplexList {
+  public internalValue? : VpnGatewayNatRuleExternalMapping[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): VpnGatewayNatRuleExternalMappingOutputReference {
+    return new VpnGatewayNatRuleExternalMappingOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface VpnGatewayNatRuleInternalMapping {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_nat_rule#address_space VpnGatewayNatRule#address_space}
+  */
+  readonly addressSpace: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_nat_rule#port_range VpnGatewayNatRule#port_range}
+  */
+  readonly portRange?: string;
+}
+
+export function vpnGatewayNatRuleInternalMappingToTerraform(struct?: VpnGatewayNatRuleInternalMapping | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    address_space: cdktf.stringToTerraform(struct!.addressSpace),
+    port_range: cdktf.stringToTerraform(struct!.portRange),
+  }
+}
+
+export class VpnGatewayNatRuleInternalMappingOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): VpnGatewayNatRuleInternalMapping | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._addressSpace !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.addressSpace = this._addressSpace;
+    }
+    if (this._portRange !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.portRange = this._portRange;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: VpnGatewayNatRuleInternalMapping | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._addressSpace = undefined;
+      this._portRange = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._addressSpace = value.addressSpace;
+      this._portRange = value.portRange;
+    }
+  }
+
+  // address_space - computed: false, optional: false, required: true
+  private _addressSpace?: string; 
+  public get addressSpace() {
+    return this.getStringAttribute('address_space');
+  }
+  public set addressSpace(value: string) {
+    this._addressSpace = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get addressSpaceInput() {
+    return this._addressSpace;
+  }
+
+  // port_range - computed: false, optional: true, required: false
+  private _portRange?: string; 
+  public get portRange() {
+    return this.getStringAttribute('port_range');
+  }
+  public set portRange(value: string) {
+    this._portRange = value;
+  }
+  public resetPortRange() {
+    this._portRange = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get portRangeInput() {
+    return this._portRange;
+  }
+}
+
+export class VpnGatewayNatRuleInternalMappingList extends cdktf.ComplexList {
+  public internalValue? : VpnGatewayNatRuleInternalMapping[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): VpnGatewayNatRuleInternalMappingOutputReference {
+    return new VpnGatewayNatRuleInternalMappingOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
 }
 export interface VpnGatewayNatRuleTimeouts {
   /**
@@ -236,8 +490,8 @@ export class VpnGatewayNatRule extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_vpn_gateway_nat_rule',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -253,6 +507,8 @@ export class VpnGatewayNatRule extends cdktf.TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._type = config.type;
     this._vpnGatewayId = config.vpnGatewayId;
+    this._externalMapping.internalValue = config.externalMapping;
+    this._internalMapping.internalValue = config.internalMapping;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -260,13 +516,16 @@ export class VpnGatewayNatRule extends cdktf.TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // external_address_space_mappings - computed: false, optional: false, required: true
+  // external_address_space_mappings - computed: true, optional: true, required: false
   private _externalAddressSpaceMappings?: string[]; 
   public get externalAddressSpaceMappings() {
-    return cdktf.Fn.tolist(this.getListAttribute('external_address_space_mappings'));
+    return this.getListAttribute('external_address_space_mappings');
   }
   public set externalAddressSpaceMappings(value: string[]) {
     this._externalAddressSpaceMappings = value;
+  }
+  public resetExternalAddressSpaceMappings() {
+    this._externalAddressSpaceMappings = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get externalAddressSpaceMappingsInput() {
@@ -289,13 +548,16 @@ export class VpnGatewayNatRule extends cdktf.TerraformResource {
     return this._id;
   }
 
-  // internal_address_space_mappings - computed: false, optional: false, required: true
+  // internal_address_space_mappings - computed: true, optional: true, required: false
   private _internalAddressSpaceMappings?: string[]; 
   public get internalAddressSpaceMappings() {
-    return cdktf.Fn.tolist(this.getListAttribute('internal_address_space_mappings'));
+    return this.getListAttribute('internal_address_space_mappings');
   }
   public set internalAddressSpaceMappings(value: string[]) {
     this._internalAddressSpaceMappings = value;
+  }
+  public resetInternalAddressSpaceMappings() {
+    this._internalAddressSpaceMappings = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get internalAddressSpaceMappingsInput() {
@@ -389,6 +651,38 @@ export class VpnGatewayNatRule extends cdktf.TerraformResource {
     return this._vpnGatewayId;
   }
 
+  // external_mapping - computed: false, optional: true, required: false
+  private _externalMapping = new VpnGatewayNatRuleExternalMappingList(this, "external_mapping", false);
+  public get externalMapping() {
+    return this._externalMapping;
+  }
+  public putExternalMapping(value: VpnGatewayNatRuleExternalMapping[] | cdktf.IResolvable) {
+    this._externalMapping.internalValue = value;
+  }
+  public resetExternalMapping() {
+    this._externalMapping.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get externalMappingInput() {
+    return this._externalMapping.internalValue;
+  }
+
+  // internal_mapping - computed: false, optional: true, required: false
+  private _internalMapping = new VpnGatewayNatRuleInternalMappingList(this, "internal_mapping", false);
+  public get internalMapping() {
+    return this._internalMapping;
+  }
+  public putInternalMapping(value: VpnGatewayNatRuleInternalMapping[] | cdktf.IResolvable) {
+    this._internalMapping.internalValue = value;
+  }
+  public resetInternalMapping() {
+    this._internalMapping.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get internalMappingInput() {
+    return this._internalMapping.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new VpnGatewayNatRuleTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -420,6 +714,8 @@ export class VpnGatewayNatRule extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       type: cdktf.stringToTerraform(this._type),
       vpn_gateway_id: cdktf.stringToTerraform(this._vpnGatewayId),
+      external_mapping: cdktf.listMapper(vpnGatewayNatRuleExternalMappingToTerraform)(this._externalMapping.internalValue),
+      internal_mapping: cdktf.listMapper(vpnGatewayNatRuleInternalMappingToTerraform)(this._internalMapping.internalValue),
       timeouts: vpnGatewayNatRuleTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

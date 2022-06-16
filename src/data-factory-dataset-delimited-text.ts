@@ -30,11 +30,7 @@ export interface DataFactoryDatasetDelimitedTextConfig extends cdktf.TerraformMe
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text#data_factory_id DataFactoryDatasetDelimitedText#data_factory_id}
   */
-  readonly dataFactoryId?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text#data_factory_name DataFactoryDatasetDelimitedText#data_factory_name}
-  */
-  readonly dataFactoryName?: string;
+  readonly dataFactoryId: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text#description DataFactoryDatasetDelimitedText#description}
   */
@@ -82,10 +78,6 @@ export interface DataFactoryDatasetDelimitedTextConfig extends cdktf.TerraformMe
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text#quote_character DataFactoryDatasetDelimitedText#quote_character}
   */
   readonly quoteCharacter?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text#resource_group_name DataFactoryDatasetDelimitedText#resource_group_name}
-  */
-  readonly resourceGroupName: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text#row_delimiter DataFactoryDatasetDelimitedText#row_delimiter}
   */
@@ -243,6 +235,10 @@ export interface DataFactoryDatasetDelimitedTextAzureBlobStorageLocation {
   */
   readonly container: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text#dynamic_container_enabled DataFactoryDatasetDelimitedText#dynamic_container_enabled}
+  */
+  readonly dynamicContainerEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text#dynamic_filename_enabled DataFactoryDatasetDelimitedText#dynamic_filename_enabled}
   */
   readonly dynamicFilenameEnabled?: boolean | cdktf.IResolvable;
@@ -267,6 +263,7 @@ export function dataFactoryDatasetDelimitedTextAzureBlobStorageLocationToTerrafo
   }
   return {
     container: cdktf.stringToTerraform(struct!.container),
+    dynamic_container_enabled: cdktf.booleanToTerraform(struct!.dynamicContainerEnabled),
     dynamic_filename_enabled: cdktf.booleanToTerraform(struct!.dynamicFilenameEnabled),
     dynamic_path_enabled: cdktf.booleanToTerraform(struct!.dynamicPathEnabled),
     filename: cdktf.stringToTerraform(struct!.filename),
@@ -292,6 +289,10 @@ export class DataFactoryDatasetDelimitedTextAzureBlobStorageLocationOutputRefere
       hasAnyValues = true;
       internalValueResult.container = this._container;
     }
+    if (this._dynamicContainerEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dynamicContainerEnabled = this._dynamicContainerEnabled;
+    }
     if (this._dynamicFilenameEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.dynamicFilenameEnabled = this._dynamicFilenameEnabled;
@@ -315,6 +316,7 @@ export class DataFactoryDatasetDelimitedTextAzureBlobStorageLocationOutputRefere
     if (value === undefined) {
       this.isEmptyObject = false;
       this._container = undefined;
+      this._dynamicContainerEnabled = undefined;
       this._dynamicFilenameEnabled = undefined;
       this._dynamicPathEnabled = undefined;
       this._filename = undefined;
@@ -323,6 +325,7 @@ export class DataFactoryDatasetDelimitedTextAzureBlobStorageLocationOutputRefere
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._container = value.container;
+      this._dynamicContainerEnabled = value.dynamicContainerEnabled;
       this._dynamicFilenameEnabled = value.dynamicFilenameEnabled;
       this._dynamicPathEnabled = value.dynamicPathEnabled;
       this._filename = value.filename;
@@ -341,6 +344,22 @@ export class DataFactoryDatasetDelimitedTextAzureBlobStorageLocationOutputRefere
   // Temporarily expose input value. Use with caution.
   public get containerInput() {
     return this._container;
+  }
+
+  // dynamic_container_enabled - computed: false, optional: true, required: false
+  private _dynamicContainerEnabled?: boolean | cdktf.IResolvable; 
+  public get dynamicContainerEnabled() {
+    return this.getBooleanAttribute('dynamic_container_enabled');
+  }
+  public set dynamicContainerEnabled(value: boolean | cdktf.IResolvable) {
+    this._dynamicContainerEnabled = value;
+  }
+  public resetDynamicContainerEnabled() {
+    this._dynamicContainerEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dynamicContainerEnabledInput() {
+    return this._dynamicContainerEnabled;
   }
 
   // dynamic_filename_enabled - computed: false, optional: true, required: false
@@ -902,8 +921,8 @@ export class DataFactoryDatasetDelimitedText extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_data_factory_dataset_delimited_text',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -916,7 +935,6 @@ export class DataFactoryDatasetDelimitedText extends cdktf.TerraformResource {
     this._compressionCodec = config.compressionCodec;
     this._compressionLevel = config.compressionLevel;
     this._dataFactoryId = config.dataFactoryId;
-    this._dataFactoryName = config.dataFactoryName;
     this._description = config.description;
     this._encoding = config.encoding;
     this._escapeCharacter = config.escapeCharacter;
@@ -928,7 +946,6 @@ export class DataFactoryDatasetDelimitedText extends cdktf.TerraformResource {
     this._nullValue = config.nullValue;
     this._parameters = config.parameters;
     this._quoteCharacter = config.quoteCharacter;
-    this._resourceGroupName = config.resourceGroupName;
     this._rowDelimiter = config.rowDelimiter;
     this._azureBlobFsLocation.internalValue = config.azureBlobFsLocation;
     this._azureBlobStorageLocation.internalValue = config.azureBlobStorageLocation;
@@ -1021,7 +1038,7 @@ export class DataFactoryDatasetDelimitedText extends cdktf.TerraformResource {
     return this._compressionLevel;
   }
 
-  // data_factory_id - computed: true, optional: true, required: false
+  // data_factory_id - computed: false, optional: false, required: true
   private _dataFactoryId?: string; 
   public get dataFactoryId() {
     return this.getStringAttribute('data_factory_id');
@@ -1029,28 +1046,9 @@ export class DataFactoryDatasetDelimitedText extends cdktf.TerraformResource {
   public set dataFactoryId(value: string) {
     this._dataFactoryId = value;
   }
-  public resetDataFactoryId() {
-    this._dataFactoryId = undefined;
-  }
   // Temporarily expose input value. Use with caution.
   public get dataFactoryIdInput() {
     return this._dataFactoryId;
-  }
-
-  // data_factory_name - computed: true, optional: true, required: false
-  private _dataFactoryName?: string; 
-  public get dataFactoryName() {
-    return this.getStringAttribute('data_factory_name');
-  }
-  public set dataFactoryName(value: string) {
-    this._dataFactoryName = value;
-  }
-  public resetDataFactoryName() {
-    this._dataFactoryName = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get dataFactoryNameInput() {
-    return this._dataFactoryName;
   }
 
   // description - computed: false, optional: true, required: false
@@ -1223,19 +1221,6 @@ export class DataFactoryDatasetDelimitedText extends cdktf.TerraformResource {
     return this._quoteCharacter;
   }
 
-  // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName?: string; 
-  public get resourceGroupName() {
-    return this.getStringAttribute('resource_group_name');
-  }
-  public set resourceGroupName(value: string) {
-    this._resourceGroupName = value;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get resourceGroupNameInput() {
-    return this._resourceGroupName;
-  }
-
   // row_delimiter - computed: false, optional: true, required: false
   private _rowDelimiter?: string; 
   public get rowDelimiter() {
@@ -1344,7 +1329,6 @@ export class DataFactoryDatasetDelimitedText extends cdktf.TerraformResource {
       compression_codec: cdktf.stringToTerraform(this._compressionCodec),
       compression_level: cdktf.stringToTerraform(this._compressionLevel),
       data_factory_id: cdktf.stringToTerraform(this._dataFactoryId),
-      data_factory_name: cdktf.stringToTerraform(this._dataFactoryName),
       description: cdktf.stringToTerraform(this._description),
       encoding: cdktf.stringToTerraform(this._encoding),
       escape_character: cdktf.stringToTerraform(this._escapeCharacter),
@@ -1356,7 +1340,6 @@ export class DataFactoryDatasetDelimitedText extends cdktf.TerraformResource {
       null_value: cdktf.stringToTerraform(this._nullValue),
       parameters: cdktf.hashMapper(cdktf.stringToTerraform)(this._parameters),
       quote_character: cdktf.stringToTerraform(this._quoteCharacter),
-      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       row_delimiter: cdktf.stringToTerraform(this._rowDelimiter),
       azure_blob_fs_location: dataFactoryDatasetDelimitedTextAzureBlobFsLocationToTerraform(this._azureBlobFsLocation.internalValue),
       azure_blob_storage_location: dataFactoryDatasetDelimitedTextAzureBlobStorageLocationToTerraform(this._azureBlobStorageLocation.internalValue),

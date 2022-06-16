@@ -22,11 +22,7 @@ export interface DataFactoryLinkedServiceSftpConfig extends cdktf.TerraformMetaA
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sftp#data_factory_id DataFactoryLinkedServiceSftp#data_factory_id}
   */
-  readonly dataFactoryId?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sftp#data_factory_name DataFactoryLinkedServiceSftp#data_factory_name}
-  */
-  readonly dataFactoryName?: string;
+  readonly dataFactoryId: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sftp#description DataFactoryLinkedServiceSftp#description}
   */
@@ -66,10 +62,6 @@ export interface DataFactoryLinkedServiceSftpConfig extends cdktf.TerraformMetaA
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sftp#port DataFactoryLinkedServiceSftp#port}
   */
   readonly port: number;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sftp#resource_group_name DataFactoryLinkedServiceSftp#resource_group_name}
-  */
-  readonly resourceGroupName: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sftp#skip_host_key_validation DataFactoryLinkedServiceSftp#skip_host_key_validation}
   */
@@ -268,8 +260,8 @@ export class DataFactoryLinkedServiceSftp extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_data_factory_linked_service_sftp',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -280,7 +272,6 @@ export class DataFactoryLinkedServiceSftp extends cdktf.TerraformResource {
     this._annotations = config.annotations;
     this._authenticationType = config.authenticationType;
     this._dataFactoryId = config.dataFactoryId;
-    this._dataFactoryName = config.dataFactoryName;
     this._description = config.description;
     this._host = config.host;
     this._hostKeyFingerprint = config.hostKeyFingerprint;
@@ -290,7 +281,6 @@ export class DataFactoryLinkedServiceSftp extends cdktf.TerraformResource {
     this._parameters = config.parameters;
     this._password = config.password;
     this._port = config.port;
-    this._resourceGroupName = config.resourceGroupName;
     this._skipHostKeyValidation = config.skipHostKeyValidation;
     this._username = config.username;
     this._timeouts.internalValue = config.timeouts;
@@ -345,7 +335,7 @@ export class DataFactoryLinkedServiceSftp extends cdktf.TerraformResource {
     return this._authenticationType;
   }
 
-  // data_factory_id - computed: true, optional: true, required: false
+  // data_factory_id - computed: false, optional: false, required: true
   private _dataFactoryId?: string; 
   public get dataFactoryId() {
     return this.getStringAttribute('data_factory_id');
@@ -353,28 +343,9 @@ export class DataFactoryLinkedServiceSftp extends cdktf.TerraformResource {
   public set dataFactoryId(value: string) {
     this._dataFactoryId = value;
   }
-  public resetDataFactoryId() {
-    this._dataFactoryId = undefined;
-  }
   // Temporarily expose input value. Use with caution.
   public get dataFactoryIdInput() {
     return this._dataFactoryId;
-  }
-
-  // data_factory_name - computed: true, optional: true, required: false
-  private _dataFactoryName?: string; 
-  public get dataFactoryName() {
-    return this.getStringAttribute('data_factory_name');
-  }
-  public set dataFactoryName(value: string) {
-    this._dataFactoryName = value;
-  }
-  public resetDataFactoryName() {
-    this._dataFactoryName = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get dataFactoryNameInput() {
-    return this._dataFactoryName;
   }
 
   // description - computed: false, optional: true, required: false
@@ -509,19 +480,6 @@ export class DataFactoryLinkedServiceSftp extends cdktf.TerraformResource {
     return this._port;
   }
 
-  // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName?: string; 
-  public get resourceGroupName() {
-    return this.getStringAttribute('resource_group_name');
-  }
-  public set resourceGroupName(value: string) {
-    this._resourceGroupName = value;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get resourceGroupNameInput() {
-    return this._resourceGroupName;
-  }
-
   // skip_host_key_validation - computed: false, optional: true, required: false
   private _skipHostKeyValidation?: boolean | cdktf.IResolvable; 
   public get skipHostKeyValidation() {
@@ -577,7 +535,6 @@ export class DataFactoryLinkedServiceSftp extends cdktf.TerraformResource {
       annotations: cdktf.listMapper(cdktf.stringToTerraform)(this._annotations),
       authentication_type: cdktf.stringToTerraform(this._authenticationType),
       data_factory_id: cdktf.stringToTerraform(this._dataFactoryId),
-      data_factory_name: cdktf.stringToTerraform(this._dataFactoryName),
       description: cdktf.stringToTerraform(this._description),
       host: cdktf.stringToTerraform(this._host),
       host_key_fingerprint: cdktf.stringToTerraform(this._hostKeyFingerprint),
@@ -587,7 +544,6 @@ export class DataFactoryLinkedServiceSftp extends cdktf.TerraformResource {
       parameters: cdktf.hashMapper(cdktf.stringToTerraform)(this._parameters),
       password: cdktf.stringToTerraform(this._password),
       port: cdktf.numberToTerraform(this._port),
-      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       skip_host_key_validation: cdktf.booleanToTerraform(this._skipHostKeyValidation),
       username: cdktf.stringToTerraform(this._username),
       timeouts: dataFactoryLinkedServiceSftpTimeoutsToTerraform(this._timeouts.internalValue),

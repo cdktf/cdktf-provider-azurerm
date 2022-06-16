@@ -31,7 +31,7 @@ export interface WebPubsubHubConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_pubsub_hub#event_handler WebPubsubHub#event_handler}
   */
-  readonly eventHandler: WebPubsubHubEventHandler[] | cdktf.IResolvable;
+  readonly eventHandler?: WebPubsubHubEventHandler[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -461,8 +461,8 @@ export class WebPubsubHub extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_web_pubsub_hub',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -539,13 +539,16 @@ export class WebPubsubHub extends cdktf.TerraformResource {
     return this._webPubsubId;
   }
 
-  // event_handler - computed: false, optional: false, required: true
+  // event_handler - computed: false, optional: true, required: false
   private _eventHandler = new WebPubsubHubEventHandlerList(this, "event_handler", true);
   public get eventHandler() {
     return this._eventHandler;
   }
   public putEventHandler(value: WebPubsubHubEventHandler[] | cdktf.IResolvable) {
     this._eventHandler.internalValue = value;
+  }
+  public resetEventHandler() {
+    this._eventHandler.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get eventHandlerInput() {

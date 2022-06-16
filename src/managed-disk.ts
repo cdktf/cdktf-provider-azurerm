@@ -40,6 +40,10 @@ export interface ManagedDiskConfig extends cdktf.TerraformMetaArguments {
   */
   readonly diskSizeGb?: number;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk#edge_zone ManagedDisk#edge_zone}
+  */
+  readonly edgeZone?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk#gallery_image_reference_id ManagedDisk#gallery_image_reference_id}
   */
   readonly galleryImageReferenceId?: string;
@@ -95,6 +99,14 @@ export interface ManagedDiskConfig extends cdktf.TerraformMetaArguments {
   */
   readonly resourceGroupName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk#secure_vm_disk_encryption_set_id ManagedDisk#secure_vm_disk_encryption_set_id}
+  */
+  readonly secureVmDiskEncryptionSetId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk#security_type ManagedDisk#security_type}
+  */
+  readonly securityType?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk#source_resource_id ManagedDisk#source_resource_id}
   */
   readonly sourceResourceId?: string;
@@ -123,9 +135,9 @@ export interface ManagedDiskConfig extends cdktf.TerraformMetaArguments {
   */
   readonly trustedLaunchEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk#zones ManagedDisk#zones}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk#zone ManagedDisk#zone}
   */
-  readonly zones?: string[];
+  readonly zone?: string;
   /**
   * encryption_settings block
   * 
@@ -614,8 +626,8 @@ export class ManagedDisk extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_managed_disk',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -630,6 +642,7 @@ export class ManagedDisk extends cdktf.TerraformResource {
     this._diskMbpsReadOnly = config.diskMbpsReadOnly;
     this._diskMbpsReadWrite = config.diskMbpsReadWrite;
     this._diskSizeGb = config.diskSizeGb;
+    this._edgeZone = config.edgeZone;
     this._galleryImageReferenceId = config.galleryImageReferenceId;
     this._hyperVGeneration = config.hyperVGeneration;
     this._id = config.id;
@@ -643,6 +656,8 @@ export class ManagedDisk extends cdktf.TerraformResource {
     this._osType = config.osType;
     this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
     this._resourceGroupName = config.resourceGroupName;
+    this._secureVmDiskEncryptionSetId = config.secureVmDiskEncryptionSetId;
+    this._securityType = config.securityType;
     this._sourceResourceId = config.sourceResourceId;
     this._sourceUri = config.sourceUri;
     this._storageAccountId = config.storageAccountId;
@@ -650,7 +665,7 @@ export class ManagedDisk extends cdktf.TerraformResource {
     this._tags = config.tags;
     this._tier = config.tier;
     this._trustedLaunchEnabled = config.trustedLaunchEnabled;
-    this._zones = config.zones;
+    this._zone = config.zone;
     this._encryptionSettings.internalValue = config.encryptionSettings;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -782,6 +797,22 @@ export class ManagedDisk extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get diskSizeGbInput() {
     return this._diskSizeGb;
+  }
+
+  // edge_zone - computed: false, optional: true, required: false
+  private _edgeZone?: string; 
+  public get edgeZone() {
+    return this.getStringAttribute('edge_zone');
+  }
+  public set edgeZone(value: string) {
+    this._edgeZone = value;
+  }
+  public resetEdgeZone() {
+    this._edgeZone = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get edgeZoneInput() {
+    return this._edgeZone;
   }
 
   // gallery_image_reference_id - computed: false, optional: true, required: false
@@ -983,6 +1014,38 @@ export class ManagedDisk extends cdktf.TerraformResource {
     return this._resourceGroupName;
   }
 
+  // secure_vm_disk_encryption_set_id - computed: false, optional: true, required: false
+  private _secureVmDiskEncryptionSetId?: string; 
+  public get secureVmDiskEncryptionSetId() {
+    return this.getStringAttribute('secure_vm_disk_encryption_set_id');
+  }
+  public set secureVmDiskEncryptionSetId(value: string) {
+    this._secureVmDiskEncryptionSetId = value;
+  }
+  public resetSecureVmDiskEncryptionSetId() {
+    this._secureVmDiskEncryptionSetId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secureVmDiskEncryptionSetIdInput() {
+    return this._secureVmDiskEncryptionSetId;
+  }
+
+  // security_type - computed: false, optional: true, required: false
+  private _securityType?: string; 
+  public get securityType() {
+    return this.getStringAttribute('security_type');
+  }
+  public set securityType(value: string) {
+    this._securityType = value;
+  }
+  public resetSecurityType() {
+    this._securityType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get securityTypeInput() {
+    return this._securityType;
+  }
+
   // source_resource_id - computed: false, optional: true, required: false
   private _sourceResourceId?: string; 
   public get sourceResourceId() {
@@ -1092,20 +1155,20 @@ export class ManagedDisk extends cdktf.TerraformResource {
     return this._trustedLaunchEnabled;
   }
 
-  // zones - computed: false, optional: true, required: false
-  private _zones?: string[]; 
-  public get zones() {
-    return this.getListAttribute('zones');
+  // zone - computed: false, optional: true, required: false
+  private _zone?: string; 
+  public get zone() {
+    return this.getStringAttribute('zone');
   }
-  public set zones(value: string[]) {
-    this._zones = value;
+  public set zone(value: string) {
+    this._zone = value;
   }
-  public resetZones() {
-    this._zones = undefined;
+  public resetZone() {
+    this._zone = undefined;
   }
   // Temporarily expose input value. Use with caution.
-  public get zonesInput() {
-    return this._zones;
+  public get zoneInput() {
+    return this._zone;
   }
 
   // encryption_settings - computed: false, optional: true, required: false
@@ -1154,6 +1217,7 @@ export class ManagedDisk extends cdktf.TerraformResource {
       disk_mbps_read_only: cdktf.numberToTerraform(this._diskMbpsReadOnly),
       disk_mbps_read_write: cdktf.numberToTerraform(this._diskMbpsReadWrite),
       disk_size_gb: cdktf.numberToTerraform(this._diskSizeGb),
+      edge_zone: cdktf.stringToTerraform(this._edgeZone),
       gallery_image_reference_id: cdktf.stringToTerraform(this._galleryImageReferenceId),
       hyper_v_generation: cdktf.stringToTerraform(this._hyperVGeneration),
       id: cdktf.stringToTerraform(this._id),
@@ -1167,6 +1231,8 @@ export class ManagedDisk extends cdktf.TerraformResource {
       os_type: cdktf.stringToTerraform(this._osType),
       public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      secure_vm_disk_encryption_set_id: cdktf.stringToTerraform(this._secureVmDiskEncryptionSetId),
+      security_type: cdktf.stringToTerraform(this._securityType),
       source_resource_id: cdktf.stringToTerraform(this._sourceResourceId),
       source_uri: cdktf.stringToTerraform(this._sourceUri),
       storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
@@ -1174,7 +1240,7 @@ export class ManagedDisk extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       tier: cdktf.stringToTerraform(this._tier),
       trusted_launch_enabled: cdktf.booleanToTerraform(this._trustedLaunchEnabled),
-      zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),
+      zone: cdktf.stringToTerraform(this._zone),
       encryption_settings: managedDiskEncryptionSettingsToTerraform(this._encryptionSettings.internalValue),
       timeouts: managedDiskTimeoutsToTerraform(this._timeouts.internalValue),
     };

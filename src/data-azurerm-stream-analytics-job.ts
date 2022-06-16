@@ -205,8 +205,8 @@ export class DataAzurermStreamAnalyticsJob extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_stream_analytics_job',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -275,6 +275,11 @@ export class DataAzurermStreamAnalyticsJob extends cdktf.TerraformDataSource {
     return this.getStringAttribute('job_id');
   }
 
+  // last_output_time - computed: true, optional: false, required: false
+  public get lastOutputTime() {
+    return this.getStringAttribute('last_output_time');
+  }
+
   // location - computed: true, optional: false, required: false
   public get location() {
     return this.getStringAttribute('location');
@@ -309,6 +314,16 @@ export class DataAzurermStreamAnalyticsJob extends cdktf.TerraformDataSource {
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
     return this._resourceGroupName;
+  }
+
+  // start_mode - computed: true, optional: false, required: false
+  public get startMode() {
+    return this.getStringAttribute('start_mode');
+  }
+
+  // start_time - computed: true, optional: false, required: false
+  public get startTime() {
+    return this.getStringAttribute('start_time');
   }
 
   // streaming_units - computed: true, optional: false, required: false

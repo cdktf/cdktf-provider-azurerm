@@ -55,10 +55,6 @@ export interface KeyVaultConfig extends cdktf.TerraformMetaArguments {
   */
   readonly skuName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault#soft_delete_enabled KeyVault#soft_delete_enabled}
-  */
-  readonly softDeleteEnabled?: boolean | cdktf.IResolvable;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault#soft_delete_retention_days KeyVault#soft_delete_retention_days}
   */
   readonly softDeleteRetentionDays?: number;
@@ -819,8 +815,8 @@ export class KeyVault extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_key_vault',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -838,7 +834,6 @@ export class KeyVault extends cdktf.TerraformResource {
     this._purgeProtectionEnabled = config.purgeProtectionEnabled;
     this._resourceGroupName = config.resourceGroupName;
     this._skuName = config.skuName;
-    this._softDeleteEnabled = config.softDeleteEnabled;
     this._softDeleteRetentionDays = config.softDeleteRetentionDays;
     this._tags = config.tags;
     this._tenantId = config.tenantId;
@@ -1015,22 +1010,6 @@ export class KeyVault extends cdktf.TerraformResource {
     return this._skuName;
   }
 
-  // soft_delete_enabled - computed: true, optional: true, required: false
-  private _softDeleteEnabled?: boolean | cdktf.IResolvable; 
-  public get softDeleteEnabled() {
-    return this.getBooleanAttribute('soft_delete_enabled');
-  }
-  public set softDeleteEnabled(value: boolean | cdktf.IResolvable) {
-    this._softDeleteEnabled = value;
-  }
-  public resetSoftDeleteEnabled() {
-    this._softDeleteEnabled = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get softDeleteEnabledInput() {
-    return this._softDeleteEnabled;
-  }
-
   // soft_delete_retention_days - computed: false, optional: true, required: false
   private _softDeleteRetentionDays?: number; 
   public get softDeleteRetentionDays() {
@@ -1146,7 +1125,6 @@ export class KeyVault extends cdktf.TerraformResource {
       purge_protection_enabled: cdktf.booleanToTerraform(this._purgeProtectionEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku_name: cdktf.stringToTerraform(this._skuName),
-      soft_delete_enabled: cdktf.booleanToTerraform(this._softDeleteEnabled),
       soft_delete_retention_days: cdktf.numberToTerraform(this._softDeleteRetentionDays),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       tenant_id: cdktf.stringToTerraform(this._tenantId),

@@ -216,8 +216,8 @@ export class BackupContainerStorageAccount extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_backup_container_storage_account',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

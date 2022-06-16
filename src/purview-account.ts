@@ -35,93 +35,21 @@ export interface PurviewAccountConfig extends cdktf.TerraformMetaArguments {
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/purview_account#sku_name PurviewAccount#sku_name}
-  */
-  readonly skuName?: string;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/purview_account#tags PurviewAccount#tags}
   */
   readonly tags?: { [key: string]: string };
+  /**
+  * identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/purview_account#identity PurviewAccount#identity}
+  */
+  readonly identity: PurviewAccountIdentity;
   /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/purview_account#timeouts PurviewAccount#timeouts}
   */
   readonly timeouts?: PurviewAccountTimeouts;
-}
-export interface PurviewAccountIdentity {
-}
-
-export function purviewAccountIdentityToTerraform(struct?: PurviewAccountIdentity): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-  }
-}
-
-export class PurviewAccountIdentityOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
-  }
-
-  public get internalValue(): PurviewAccountIdentity | undefined {
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: PurviewAccountIdentity | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-    }
-  }
-
-  // principal_id - computed: true, optional: false, required: false
-  public get principalId() {
-    return this.getStringAttribute('principal_id');
-  }
-
-  // tenant_id - computed: true, optional: false, required: false
-  public get tenantId() {
-    return this.getStringAttribute('tenant_id');
-  }
-
-  // type - computed: true, optional: false, required: false
-  public get type() {
-    return this.getStringAttribute('type');
-  }
-}
-
-export class PurviewAccountIdentityList extends cdktf.ComplexList {
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): PurviewAccountIdentityOutputReference {
-    return new PurviewAccountIdentityOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-  }
 }
 export interface PurviewAccountManagedResources {
 }
@@ -195,6 +123,78 @@ export class PurviewAccountManagedResourcesList extends cdktf.ComplexList {
   */
   public get(index: number): PurviewAccountManagedResourcesOutputReference {
     return new PurviewAccountManagedResourcesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface PurviewAccountIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/purview_account#type PurviewAccount#type}
+  */
+  readonly type: string;
+}
+
+export function purviewAccountIdentityToTerraform(struct?: PurviewAccountIdentityOutputReference | PurviewAccountIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
+export class PurviewAccountIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): PurviewAccountIdentity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PurviewAccountIdentity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._type = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._type = value.type;
+    }
+  }
+
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
   }
 }
 export interface PurviewAccountTimeouts {
@@ -380,8 +380,8 @@ export class PurviewAccount extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_purview_account',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -394,8 +394,8 @@ export class PurviewAccount extends cdktf.TerraformResource {
     this._name = config.name;
     this._publicNetworkEnabled = config.publicNetworkEnabled;
     this._resourceGroupName = config.resourceGroupName;
-    this._skuName = config.skuName;
     this._tags = config.tags;
+    this._identity.internalValue = config.identity;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -437,12 +437,6 @@ export class PurviewAccount extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get idInput() {
     return this._id;
-  }
-
-  // identity - computed: true, optional: false, required: false
-  private _identity = new PurviewAccountIdentityList(this, "identity", false);
-  public get identity() {
-    return this._identity;
   }
 
   // location - computed: false, optional: false, required: true
@@ -527,22 +521,6 @@ export class PurviewAccount extends cdktf.TerraformResource {
     return this.getStringAttribute('scan_endpoint');
   }
 
-  // sku_name - computed: false, optional: true, required: false
-  private _skuName?: string; 
-  public get skuName() {
-    return this.getStringAttribute('sku_name');
-  }
-  public set skuName(value: string) {
-    this._skuName = value;
-  }
-  public resetSkuName() {
-    this._skuName = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get skuNameInput() {
-    return this._skuName;
-  }
-
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string }; 
   public get tags() {
@@ -557,6 +535,19 @@ export class PurviewAccount extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
     return this._tags;
+  }
+
+  // identity - computed: false, optional: false, required: true
+  private _identity = new PurviewAccountIdentityOutputReference(this, "identity");
+  public get identity() {
+    return this._identity;
+  }
+  public putIdentity(value: PurviewAccountIdentity) {
+    this._identity.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityInput() {
+    return this._identity.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -587,8 +578,8 @@ export class PurviewAccount extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       public_network_enabled: cdktf.booleanToTerraform(this._publicNetworkEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      sku_name: cdktf.stringToTerraform(this._skuName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
+      identity: purviewAccountIdentityToTerraform(this._identity.internalValue),
       timeouts: purviewAccountTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

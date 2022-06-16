@@ -313,7 +313,7 @@ export class FirewallApplicationRuleCollectionRuleOutputReference extends cdktf.
   // fqdn_tags - computed: false, optional: true, required: false
   private _fqdnTags?: string[]; 
   public get fqdnTags() {
-    return cdktf.Fn.tolist(this.getListAttribute('fqdn_tags'));
+    return this.getListAttribute('fqdn_tags');
   }
   public set fqdnTags(value: string[]) {
     this._fqdnTags = value;
@@ -342,7 +342,7 @@ export class FirewallApplicationRuleCollectionRuleOutputReference extends cdktf.
   // source_addresses - computed: false, optional: true, required: false
   private _sourceAddresses?: string[]; 
   public get sourceAddresses() {
-    return cdktf.Fn.tolist(this.getListAttribute('source_addresses'));
+    return this.getListAttribute('source_addresses');
   }
   public set sourceAddresses(value: string[]) {
     this._sourceAddresses = value;
@@ -358,7 +358,7 @@ export class FirewallApplicationRuleCollectionRuleOutputReference extends cdktf.
   // source_ip_groups - computed: false, optional: true, required: false
   private _sourceIpGroups?: string[]; 
   public get sourceIpGroups() {
-    return cdktf.Fn.tolist(this.getListAttribute('source_ip_groups'));
+    return this.getListAttribute('source_ip_groups');
   }
   public set sourceIpGroups(value: string[]) {
     this._sourceIpGroups = value;
@@ -374,7 +374,7 @@ export class FirewallApplicationRuleCollectionRuleOutputReference extends cdktf.
   // target_fqdns - computed: false, optional: true, required: false
   private _targetFqdns?: string[]; 
   public get targetFqdns() {
-    return cdktf.Fn.tolist(this.getListAttribute('target_fqdns'));
+    return this.getListAttribute('target_fqdns');
   }
   public set targetFqdns(value: string[]) {
     this._targetFqdns = value;
@@ -606,8 +606,8 @@ export class FirewallApplicationRuleCollection extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_firewall_application_rule_collection',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

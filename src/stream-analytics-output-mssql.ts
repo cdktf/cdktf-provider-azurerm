@@ -19,6 +19,14 @@ export interface StreamAnalyticsOutputMssqlConfig extends cdktf.TerraformMetaArg
   */
   readonly id?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_mssql#max_batch_count StreamAnalyticsOutputMssql#max_batch_count}
+  */
+  readonly maxBatchCount?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_mssql#max_writer_count StreamAnalyticsOutputMssql#max_writer_count}
+  */
+  readonly maxWriterCount?: number;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_mssql#name StreamAnalyticsOutputMssql#name}
   */
   readonly name: string;
@@ -236,8 +244,8 @@ export class StreamAnalyticsOutputMssql extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_stream_analytics_output_mssql',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -246,6 +254,8 @@ export class StreamAnalyticsOutputMssql extends cdktf.TerraformResource {
     });
     this._database = config.database;
     this._id = config.id;
+    this._maxBatchCount = config.maxBatchCount;
+    this._maxWriterCount = config.maxWriterCount;
     this._name = config.name;
     this._password = config.password;
     this._resourceGroupName = config.resourceGroupName;
@@ -287,6 +297,38 @@ export class StreamAnalyticsOutputMssql extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get idInput() {
     return this._id;
+  }
+
+  // max_batch_count - computed: false, optional: true, required: false
+  private _maxBatchCount?: number; 
+  public get maxBatchCount() {
+    return this.getNumberAttribute('max_batch_count');
+  }
+  public set maxBatchCount(value: number) {
+    this._maxBatchCount = value;
+  }
+  public resetMaxBatchCount() {
+    this._maxBatchCount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxBatchCountInput() {
+    return this._maxBatchCount;
+  }
+
+  // max_writer_count - computed: false, optional: true, required: false
+  private _maxWriterCount?: number; 
+  public get maxWriterCount() {
+    return this.getNumberAttribute('max_writer_count');
+  }
+  public set maxWriterCount(value: number) {
+    this._maxWriterCount = value;
+  }
+  public resetMaxWriterCount() {
+    this._maxWriterCount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxWriterCountInput() {
+    return this._maxWriterCount;
   }
 
   // name - computed: false, optional: false, required: true
@@ -404,6 +446,8 @@ export class StreamAnalyticsOutputMssql extends cdktf.TerraformResource {
     return {
       database: cdktf.stringToTerraform(this._database),
       id: cdktf.stringToTerraform(this._id),
+      max_batch_count: cdktf.numberToTerraform(this._maxBatchCount),
+      max_writer_count: cdktf.numberToTerraform(this._maxWriterCount),
       name: cdktf.stringToTerraform(this._name),
       password: cdktf.stringToTerraform(this._password),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),

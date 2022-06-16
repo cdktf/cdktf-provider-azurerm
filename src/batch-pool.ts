@@ -1754,14 +1754,6 @@ export interface BatchPoolStartTask {
   */
   readonly commonEnvironmentProperties?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#environment BatchPool#environment}
-  */
-  readonly environment?: { [key: string]: string };
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#max_task_retry_count BatchPool#max_task_retry_count}
-  */
-  readonly maxTaskRetryCount?: number;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#task_retry_maximum BatchPool#task_retry_maximum}
   */
   readonly taskRetryMaximum?: number;
@@ -1791,8 +1783,6 @@ export function batchPoolStartTaskToTerraform(struct?: BatchPoolStartTaskOutputR
   return {
     command_line: cdktf.stringToTerraform(struct!.commandLine),
     common_environment_properties: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.commonEnvironmentProperties),
-    environment: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.environment),
-    max_task_retry_count: cdktf.numberToTerraform(struct!.maxTaskRetryCount),
     task_retry_maximum: cdktf.numberToTerraform(struct!.taskRetryMaximum),
     wait_for_success: cdktf.booleanToTerraform(struct!.waitForSuccess),
     resource_file: cdktf.listMapper(batchPoolStartTaskResourceFileToTerraform)(struct!.resourceFile),
@@ -1822,14 +1812,6 @@ export class BatchPoolStartTaskOutputReference extends cdktf.ComplexObject {
       hasAnyValues = true;
       internalValueResult.commonEnvironmentProperties = this._commonEnvironmentProperties;
     }
-    if (this._environment !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.environment = this._environment;
-    }
-    if (this._maxTaskRetryCount !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.maxTaskRetryCount = this._maxTaskRetryCount;
-    }
     if (this._taskRetryMaximum !== undefined) {
       hasAnyValues = true;
       internalValueResult.taskRetryMaximum = this._taskRetryMaximum;
@@ -1854,8 +1836,6 @@ export class BatchPoolStartTaskOutputReference extends cdktf.ComplexObject {
       this.isEmptyObject = false;
       this._commandLine = undefined;
       this._commonEnvironmentProperties = undefined;
-      this._environment = undefined;
-      this._maxTaskRetryCount = undefined;
       this._taskRetryMaximum = undefined;
       this._waitForSuccess = undefined;
       this._resourceFile.internalValue = undefined;
@@ -1865,8 +1845,6 @@ export class BatchPoolStartTaskOutputReference extends cdktf.ComplexObject {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._commandLine = value.commandLine;
       this._commonEnvironmentProperties = value.commonEnvironmentProperties;
-      this._environment = value.environment;
-      this._maxTaskRetryCount = value.maxTaskRetryCount;
       this._taskRetryMaximum = value.taskRetryMaximum;
       this._waitForSuccess = value.waitForSuccess;
       this._resourceFile.internalValue = value.resourceFile;
@@ -1887,7 +1865,7 @@ export class BatchPoolStartTaskOutputReference extends cdktf.ComplexObject {
     return this._commandLine;
   }
 
-  // common_environment_properties - computed: true, optional: true, required: false
+  // common_environment_properties - computed: false, optional: true, required: false
   private _commonEnvironmentProperties?: { [key: string]: string }; 
   public get commonEnvironmentProperties() {
     return this.getStringMapAttribute('common_environment_properties');
@@ -1903,39 +1881,7 @@ export class BatchPoolStartTaskOutputReference extends cdktf.ComplexObject {
     return this._commonEnvironmentProperties;
   }
 
-  // environment - computed: true, optional: true, required: false
-  private _environment?: { [key: string]: string }; 
-  public get environment() {
-    return this.getStringMapAttribute('environment');
-  }
-  public set environment(value: { [key: string]: string }) {
-    this._environment = value;
-  }
-  public resetEnvironment() {
-    this._environment = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get environmentInput() {
-    return this._environment;
-  }
-
-  // max_task_retry_count - computed: true, optional: true, required: false
-  private _maxTaskRetryCount?: number; 
-  public get maxTaskRetryCount() {
-    return this.getNumberAttribute('max_task_retry_count');
-  }
-  public set maxTaskRetryCount(value: number) {
-    this._maxTaskRetryCount = value;
-  }
-  public resetMaxTaskRetryCount() {
-    this._maxTaskRetryCount = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get maxTaskRetryCountInput() {
-    return this._maxTaskRetryCount;
-  }
-
-  // task_retry_maximum - computed: true, optional: true, required: false
+  // task_retry_maximum - computed: false, optional: true, required: false
   private _taskRetryMaximum?: number; 
   public get taskRetryMaximum() {
     return this.getNumberAttribute('task_retry_maximum');
@@ -2355,8 +2301,8 @@ export class BatchPool extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_batch_pool',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

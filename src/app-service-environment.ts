@@ -37,7 +37,7 @@ export interface AppServiceEnvironmentConfig extends cdktf.TerraformMetaArgument
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment#resource_group_name AppServiceEnvironment#resource_group_name}
   */
-  readonly resourceGroupName?: string;
+  readonly resourceGroupName: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment#subnet_id AppServiceEnvironment#subnet_id}
   */
@@ -46,10 +46,6 @@ export interface AppServiceEnvironmentConfig extends cdktf.TerraformMetaArgument
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment#tags AppServiceEnvironment#tags}
   */
   readonly tags?: { [key: string]: string };
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment#user_whitelisted_ip_ranges AppServiceEnvironment#user_whitelisted_ip_ranges}
-  */
-  readonly userWhitelistedIpRanges?: string[];
   /**
   * cluster_setting block
   * 
@@ -364,8 +360,8 @@ export class AppServiceEnvironment extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_app_service_environment',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -381,7 +377,6 @@ export class AppServiceEnvironment extends cdktf.TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._subnetId = config.subnetId;
     this._tags = config.tags;
-    this._userWhitelistedIpRanges = config.userWhitelistedIpRanges;
     this._clusterSetting.internalValue = config.clusterSetting;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -390,7 +385,7 @@ export class AppServiceEnvironment extends cdktf.TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // allowed_user_ip_cidrs - computed: true, optional: true, required: false
+  // allowed_user_ip_cidrs - computed: false, optional: true, required: false
   private _allowedUserIpCidrs?: string[]; 
   public get allowedUserIpCidrs() {
     return cdktf.Fn.tolist(this.getListAttribute('allowed_user_ip_cidrs'));
@@ -498,16 +493,13 @@ export class AppServiceEnvironment extends cdktf.TerraformResource {
     return this._pricingTier;
   }
 
-  // resource_group_name - computed: true, optional: true, required: false
+  // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
-  }
-  public resetResourceGroupName() {
-    this._resourceGroupName = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
@@ -546,22 +538,6 @@ export class AppServiceEnvironment extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
     return this._tags;
-  }
-
-  // user_whitelisted_ip_ranges - computed: true, optional: true, required: false
-  private _userWhitelistedIpRanges?: string[]; 
-  public get userWhitelistedIpRanges() {
-    return cdktf.Fn.tolist(this.getListAttribute('user_whitelisted_ip_ranges'));
-  }
-  public set userWhitelistedIpRanges(value: string[]) {
-    this._userWhitelistedIpRanges = value;
-  }
-  public resetUserWhitelistedIpRanges() {
-    this._userWhitelistedIpRanges = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get userWhitelistedIpRangesInput() {
-    return this._userWhitelistedIpRanges;
   }
 
   // cluster_setting - computed: false, optional: true, required: false
@@ -611,7 +587,6 @@ export class AppServiceEnvironment extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       subnet_id: cdktf.stringToTerraform(this._subnetId),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
-      user_whitelisted_ip_ranges: cdktf.listMapper(cdktf.stringToTerraform)(this._userWhitelistedIpRanges),
       cluster_setting: cdktf.listMapper(appServiceEnvironmentClusterSettingToTerraform)(this._clusterSetting.internalValue),
       timeouts: appServiceEnvironmentTimeoutsToTerraform(this._timeouts.internalValue),
     };
