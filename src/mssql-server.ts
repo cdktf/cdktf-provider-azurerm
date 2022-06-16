@@ -20,10 +20,6 @@ export interface MssqlServerConfig extends cdktf.TerraformMetaArguments {
   */
   readonly connectionPolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server#extended_auditing_policy MssqlServer#extended_auditing_policy}
-  */
-  readonly extendedAuditingPolicy?: MssqlServerExtendedAuditingPolicy[] | cdktf.IResolvable;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server#id MssqlServer#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
@@ -73,12 +69,6 @@ export interface MssqlServerConfig extends cdktf.TerraformMetaArguments {
   */
   readonly azureadAdministrator?: MssqlServerAzureadAdministrator;
   /**
-  * foo block
-  * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server#foo MssqlServer#foo}
-  */
-  readonly foo?: MssqlServerFoo;
-  /**
   * identity block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server#identity MssqlServer#identity}
@@ -90,238 +80,6 @@ export interface MssqlServerConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server#timeouts MssqlServer#timeouts}
   */
   readonly timeouts?: MssqlServerTimeouts;
-}
-export interface MssqlServerExtendedAuditingPolicy {
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server#log_monitoring_enabled MssqlServer#log_monitoring_enabled}
-  */
-  readonly logMonitoringEnabled?: boolean | cdktf.IResolvable;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server#retention_in_days MssqlServer#retention_in_days}
-  */
-  readonly retentionInDays?: number;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server#storage_account_access_key MssqlServer#storage_account_access_key}
-  */
-  readonly storageAccountAccessKey?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server#storage_account_access_key_is_secondary MssqlServer#storage_account_access_key_is_secondary}
-  */
-  readonly storageAccountAccessKeyIsSecondary?: boolean | cdktf.IResolvable;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server#storage_account_subscription_id MssqlServer#storage_account_subscription_id}
-  */
-  readonly storageAccountSubscriptionId?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server#storage_endpoint MssqlServer#storage_endpoint}
-  */
-  readonly storageEndpoint?: string;
-}
-
-export function mssqlServerExtendedAuditingPolicyToTerraform(struct?: MssqlServerExtendedAuditingPolicy | cdktf.IResolvable): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-    log_monitoring_enabled: cdktf.booleanToTerraform(struct!.logMonitoringEnabled),
-    retention_in_days: struct!.retentionInDays === undefined ? null : cdktf.numberToTerraform(struct!.retentionInDays),
-    storage_account_access_key: struct!.storageAccountAccessKey === undefined ? null : cdktf.stringToTerraform(struct!.storageAccountAccessKey),
-    storage_account_access_key_is_secondary: struct!.storageAccountAccessKeyIsSecondary === undefined ? null : cdktf.booleanToTerraform(struct!.storageAccountAccessKeyIsSecondary),
-    storage_account_subscription_id: cdktf.stringToTerraform(struct!.storageAccountSubscriptionId),
-    storage_endpoint: struct!.storageEndpoint === undefined ? null : cdktf.stringToTerraform(struct!.storageEndpoint),
-  }
-}
-
-export class MssqlServerExtendedAuditingPolicyOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-  private resolvableValue?: cdktf.IResolvable;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
-  }
-
-  public get internalValue(): MssqlServerExtendedAuditingPolicy | cdktf.IResolvable | undefined {
-    if (this.resolvableValue) {
-      return this.resolvableValue;
-    }
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    if (this._logMonitoringEnabled !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.logMonitoringEnabled = this._logMonitoringEnabled;
-    }
-    if (this._retentionInDays !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.retentionInDays = this._retentionInDays;
-    }
-    if (this._storageAccountAccessKey !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.storageAccountAccessKey = this._storageAccountAccessKey;
-    }
-    if (this._storageAccountAccessKeyIsSecondary !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.storageAccountAccessKeyIsSecondary = this._storageAccountAccessKeyIsSecondary;
-    }
-    if (this._storageAccountSubscriptionId !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.storageAccountSubscriptionId = this._storageAccountSubscriptionId;
-    }
-    if (this._storageEndpoint !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.storageEndpoint = this._storageEndpoint;
-    }
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: MssqlServerExtendedAuditingPolicy | cdktf.IResolvable | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-      this.resolvableValue = undefined;
-      this._logMonitoringEnabled = undefined;
-      this._retentionInDays = undefined;
-      this._storageAccountAccessKey = undefined;
-      this._storageAccountAccessKeyIsSecondary = undefined;
-      this._storageAccountSubscriptionId = undefined;
-      this._storageEndpoint = undefined;
-    }
-    else if (cdktf.Tokenization.isResolvable(value)) {
-      this.isEmptyObject = false;
-      this.resolvableValue = value;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-      this.resolvableValue = undefined;
-      this._logMonitoringEnabled = value.logMonitoringEnabled;
-      this._retentionInDays = value.retentionInDays;
-      this._storageAccountAccessKey = value.storageAccountAccessKey;
-      this._storageAccountAccessKeyIsSecondary = value.storageAccountAccessKeyIsSecondary;
-      this._storageAccountSubscriptionId = value.storageAccountSubscriptionId;
-      this._storageEndpoint = value.storageEndpoint;
-    }
-  }
-
-  // log_monitoring_enabled - computed: true, optional: true, required: false
-  private _logMonitoringEnabled?: boolean | cdktf.IResolvable; 
-  public get logMonitoringEnabled() {
-    return this.getBooleanAttribute('log_monitoring_enabled');
-  }
-  public set logMonitoringEnabled(value: boolean | cdktf.IResolvable) {
-    this._logMonitoringEnabled = value;
-  }
-  public resetLogMonitoringEnabled() {
-    this._logMonitoringEnabled = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get logMonitoringEnabledInput() {
-    return this._logMonitoringEnabled;
-  }
-
-  // retention_in_days - computed: true, optional: true, required: false
-  private _retentionInDays?: number; 
-  public get retentionInDays() {
-    return this.getNumberAttribute('retention_in_days');
-  }
-  public set retentionInDays(value: number) {
-    this._retentionInDays = value;
-  }
-  public resetRetentionInDays() {
-    this._retentionInDays = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get retentionInDaysInput() {
-    return this._retentionInDays;
-  }
-
-  // storage_account_access_key - computed: true, optional: true, required: false
-  private _storageAccountAccessKey?: string; 
-  public get storageAccountAccessKey() {
-    return this.getStringAttribute('storage_account_access_key');
-  }
-  public set storageAccountAccessKey(value: string) {
-    this._storageAccountAccessKey = value;
-  }
-  public resetStorageAccountAccessKey() {
-    this._storageAccountAccessKey = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get storageAccountAccessKeyInput() {
-    return this._storageAccountAccessKey;
-  }
-
-  // storage_account_access_key_is_secondary - computed: true, optional: true, required: false
-  private _storageAccountAccessKeyIsSecondary?: boolean | cdktf.IResolvable; 
-  public get storageAccountAccessKeyIsSecondary() {
-    return this.getBooleanAttribute('storage_account_access_key_is_secondary');
-  }
-  public set storageAccountAccessKeyIsSecondary(value: boolean | cdktf.IResolvable) {
-    this._storageAccountAccessKeyIsSecondary = value;
-  }
-  public resetStorageAccountAccessKeyIsSecondary() {
-    this._storageAccountAccessKeyIsSecondary = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get storageAccountAccessKeyIsSecondaryInput() {
-    return this._storageAccountAccessKeyIsSecondary;
-  }
-
-  // storage_account_subscription_id - computed: true, optional: true, required: false
-  private _storageAccountSubscriptionId?: string; 
-  public get storageAccountSubscriptionId() {
-    return this.getStringAttribute('storage_account_subscription_id');
-  }
-  public set storageAccountSubscriptionId(value: string) {
-    this._storageAccountSubscriptionId = value;
-  }
-  public resetStorageAccountSubscriptionId() {
-    this._storageAccountSubscriptionId = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get storageAccountSubscriptionIdInput() {
-    return this._storageAccountSubscriptionId;
-  }
-
-  // storage_endpoint - computed: true, optional: true, required: false
-  private _storageEndpoint?: string; 
-  public get storageEndpoint() {
-    return this.getStringAttribute('storage_endpoint');
-  }
-  public set storageEndpoint(value: string) {
-    this._storageEndpoint = value;
-  }
-  public resetStorageEndpoint() {
-    this._storageEndpoint = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get storageEndpointInput() {
-    return this._storageEndpoint;
-  }
-}
-
-export class MssqlServerExtendedAuditingPolicyList extends cdktf.ComplexList {
-  public internalValue? : MssqlServerExtendedAuditingPolicy[] | cdktf.IResolvable
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): MssqlServerExtendedAuditingPolicyOutputReference {
-    return new MssqlServerExtendedAuditingPolicyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-  }
 }
 export interface MssqlServerAzureadAdministrator {
   /**
@@ -463,7 +221,7 @@ export class MssqlServerAzureadAdministratorOutputReference extends cdktf.Comple
     return this._tenantId;
   }
 }
-export interface MssqlServerFoo {
+export interface MssqlServerIdentity {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server#identity_ids MssqlServer#identity_ids}
   */
@@ -474,7 +232,7 @@ export interface MssqlServerFoo {
   readonly type: string;
 }
 
-export function mssqlServerFooToTerraform(struct?: MssqlServerFooOutputReference | MssqlServerFoo): any {
+export function mssqlServerIdentityToTerraform(struct?: MssqlServerIdentityOutputReference | MssqlServerIdentity): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -485,7 +243,7 @@ export function mssqlServerFooToTerraform(struct?: MssqlServerFooOutputReference
   }
 }
 
-export class MssqlServerFooOutputReference extends cdktf.ComplexObject {
+export class MssqlServerIdentityOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
   /**
@@ -496,7 +254,7 @@ export class MssqlServerFooOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): MssqlServerFoo | undefined {
+  public get internalValue(): MssqlServerIdentity | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._identityIds !== undefined) {
@@ -510,7 +268,7 @@ export class MssqlServerFooOutputReference extends cdktf.ComplexObject {
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: MssqlServerFoo | undefined) {
+  public set internalValue(value: MssqlServerIdentity | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
       this._identityIds = undefined;
@@ -560,105 +318,6 @@ export class MssqlServerFooOutputReference extends cdktf.ComplexObject {
   // Temporarily expose input value. Use with caution.
   public get typeInput() {
     return this._type;
-  }
-}
-export interface MssqlServerIdentity {
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server#type MssqlServer#type}
-  */
-  readonly type: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server#user_assigned_identity_ids MssqlServer#user_assigned_identity_ids}
-  */
-  readonly userAssignedIdentityIds?: string[];
-}
-
-export function mssqlServerIdentityToTerraform(struct?: MssqlServerIdentityOutputReference | MssqlServerIdentity): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-    type: cdktf.stringToTerraform(struct!.type),
-    user_assigned_identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.userAssignedIdentityIds),
-  }
-}
-
-export class MssqlServerIdentityOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
-  }
-
-  public get internalValue(): MssqlServerIdentity | undefined {
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    if (this._type !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.type = this._type;
-    }
-    if (this._userAssignedIdentityIds !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.userAssignedIdentityIds = this._userAssignedIdentityIds;
-    }
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: MssqlServerIdentity | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-      this._type = undefined;
-      this._userAssignedIdentityIds = undefined;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-      this._type = value.type;
-      this._userAssignedIdentityIds = value.userAssignedIdentityIds;
-    }
-  }
-
-  // principal_id - computed: true, optional: false, required: false
-  public get principalId() {
-    return this.getStringAttribute('principal_id');
-  }
-
-  // tenant_id - computed: true, optional: false, required: false
-  public get tenantId() {
-    return this.getStringAttribute('tenant_id');
-  }
-
-  // type - computed: false, optional: false, required: true
-  private _type?: string; 
-  public get type() {
-    return this.getStringAttribute('type');
-  }
-  public set type(value: string) {
-    this._type = value;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get typeInput() {
-    return this._type;
-  }
-
-  // user_assigned_identity_ids - computed: false, optional: true, required: false
-  private _userAssignedIdentityIds?: string[]; 
-  public get userAssignedIdentityIds() {
-    return cdktf.Fn.tolist(this.getListAttribute('user_assigned_identity_ids'));
-  }
-  public set userAssignedIdentityIds(value: string[]) {
-    this._userAssignedIdentityIds = value;
-  }
-  public resetUserAssignedIdentityIds() {
-    this._userAssignedIdentityIds = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get userAssignedIdentityIdsInput() {
-    return this._userAssignedIdentityIds;
   }
 }
 export interface MssqlServerTimeouts {
@@ -844,8 +503,8 @@ export class MssqlServer extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_mssql_server',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -855,7 +514,6 @@ export class MssqlServer extends cdktf.TerraformResource {
     this._administratorLogin = config.administratorLogin;
     this._administratorLoginPassword = config.administratorLoginPassword;
     this._connectionPolicy = config.connectionPolicy;
-    this._extendedAuditingPolicy.internalValue = config.extendedAuditingPolicy;
     this._id = config.id;
     this._location = config.location;
     this._minimumTlsVersion = config.minimumTlsVersion;
@@ -867,7 +525,6 @@ export class MssqlServer extends cdktf.TerraformResource {
     this._tags = config.tags;
     this._version = config.version;
     this._azureadAdministrator.internalValue = config.azureadAdministrator;
-    this._foo.internalValue = config.foo;
     this._identity.internalValue = config.identity;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -922,22 +579,6 @@ export class MssqlServer extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get connectionPolicyInput() {
     return this._connectionPolicy;
-  }
-
-  // extended_auditing_policy - computed: true, optional: true, required: false
-  private _extendedAuditingPolicy = new MssqlServerExtendedAuditingPolicyList(this, "extended_auditing_policy", false);
-  public get extendedAuditingPolicy() {
-    return this._extendedAuditingPolicy;
-  }
-  public putExtendedAuditingPolicy(value: MssqlServerExtendedAuditingPolicy[] | cdktf.IResolvable) {
-    this._extendedAuditingPolicy.internalValue = value;
-  }
-  public resetExtendedAuditingPolicy() {
-    this._extendedAuditingPolicy.internalValue = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get extendedAuditingPolicyInput() {
-    return this._extendedAuditingPolicy.internalValue;
   }
 
   // fully_qualified_domain_name - computed: true, optional: false, required: false
@@ -1114,22 +755,6 @@ export class MssqlServer extends cdktf.TerraformResource {
     return this._azureadAdministrator.internalValue;
   }
 
-  // foo - computed: false, optional: true, required: false
-  private _foo = new MssqlServerFooOutputReference(this, "foo");
-  public get foo() {
-    return this._foo;
-  }
-  public putFoo(value: MssqlServerFoo) {
-    this._foo.internalValue = value;
-  }
-  public resetFoo() {
-    this._foo.internalValue = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get fooInput() {
-    return this._foo.internalValue;
-  }
-
   // identity - computed: false, optional: true, required: false
   private _identity = new MssqlServerIdentityOutputReference(this, "identity");
   public get identity() {
@@ -1171,7 +796,6 @@ export class MssqlServer extends cdktf.TerraformResource {
       administrator_login: cdktf.stringToTerraform(this._administratorLogin),
       administrator_login_password: cdktf.stringToTerraform(this._administratorLoginPassword),
       connection_policy: cdktf.stringToTerraform(this._connectionPolicy),
-      extended_auditing_policy: cdktf.listMapper(mssqlServerExtendedAuditingPolicyToTerraform)(this._extendedAuditingPolicy.internalValue),
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       minimum_tls_version: cdktf.stringToTerraform(this._minimumTlsVersion),
@@ -1183,7 +807,6 @@ export class MssqlServer extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       version: cdktf.stringToTerraform(this._version),
       azuread_administrator: mssqlServerAzureadAdministratorToTerraform(this._azureadAdministrator.internalValue),
-      foo: mssqlServerFooToTerraform(this._foo.internalValue),
       identity: mssqlServerIdentityToTerraform(this._identity.internalValue),
       timeouts: mssqlServerTimeoutsToTerraform(this._timeouts.internalValue),
     };

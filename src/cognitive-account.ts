@@ -8,6 +8,10 @@ import * as cdktf from 'cdktf';
 
 export interface CognitiveAccountConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#custom_question_answering_search_service_id CognitiveAccount#custom_question_answering_search_service_id}
+  */
+  readonly customQuestionAnsweringSearchServiceId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#custom_subdomain_name CognitiveAccount#custom_subdomain_name}
   */
   readonly customSubdomainName?: string;
@@ -55,9 +59,9 @@ export interface CognitiveAccountConfig extends cdktf.TerraformMetaArguments {
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#outbound_network_access_restrited CognitiveAccount#outbound_network_access_restrited}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#outbound_network_access_restricted CognitiveAccount#outbound_network_access_restricted}
   */
-  readonly outboundNetworkAccessRestrited?: boolean | cdktf.IResolvable;
+  readonly outboundNetworkAccessRestricted?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#public_network_access_enabled CognitiveAccount#public_network_access_enabled}
   */
@@ -210,7 +214,7 @@ export interface CognitiveAccountNetworkAclsVirtualNetworkRules {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#subnet_id CognitiveAccount#subnet_id}
   */
-  readonly subnetId?: string;
+  readonly subnetId: string;
 }
 
 export function cognitiveAccountNetworkAclsVirtualNetworkRulesToTerraform(struct?: CognitiveAccountNetworkAclsVirtualNetworkRules | cdktf.IResolvable): any {
@@ -274,7 +278,7 @@ export class CognitiveAccountNetworkAclsVirtualNetworkRulesOutputReference exten
     }
   }
 
-  // ignore_missing_vnet_service_endpoint - computed: true, optional: true, required: false
+  // ignore_missing_vnet_service_endpoint - computed: false, optional: true, required: false
   private _ignoreMissingVnetServiceEndpoint?: boolean | cdktf.IResolvable; 
   public get ignoreMissingVnetServiceEndpoint() {
     return this.getBooleanAttribute('ignore_missing_vnet_service_endpoint');
@@ -290,16 +294,13 @@ export class CognitiveAccountNetworkAclsVirtualNetworkRulesOutputReference exten
     return this._ignoreMissingVnetServiceEndpoint;
   }
 
-  // subnet_id - computed: true, optional: true, required: false
+  // subnet_id - computed: false, optional: false, required: true
   private _subnetId?: string; 
   public get subnetId() {
     return this.getStringAttribute('subnet_id');
   }
   public set subnetId(value: string) {
     this._subnetId = value;
-  }
-  public resetSubnetId() {
-    this._subnetId = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get subnetIdInput() {
@@ -336,13 +337,11 @@ export interface CognitiveAccountNetworkAcls {
   */
   readonly ipRules?: string[];
   /**
+  * virtual_network_rules block
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#virtual_network_rules CognitiveAccount#virtual_network_rules}
   */
   readonly virtualNetworkRules?: CognitiveAccountNetworkAclsVirtualNetworkRules[] | cdktf.IResolvable;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#virtual_network_subnet_ids CognitiveAccount#virtual_network_subnet_ids}
-  */
-  readonly virtualNetworkSubnetIds?: string[];
 }
 
 export function cognitiveAccountNetworkAclsToTerraform(struct?: CognitiveAccountNetworkAclsOutputReference | CognitiveAccountNetworkAcls): any {
@@ -354,7 +353,6 @@ export function cognitiveAccountNetworkAclsToTerraform(struct?: CognitiveAccount
     default_action: cdktf.stringToTerraform(struct!.defaultAction),
     ip_rules: cdktf.listMapper(cdktf.stringToTerraform)(struct!.ipRules),
     virtual_network_rules: cdktf.listMapper(cognitiveAccountNetworkAclsVirtualNetworkRulesToTerraform)(struct!.virtualNetworkRules),
-    virtual_network_subnet_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.virtualNetworkSubnetIds),
   }
 }
 
@@ -384,10 +382,6 @@ export class CognitiveAccountNetworkAclsOutputReference extends cdktf.ComplexObj
       hasAnyValues = true;
       internalValueResult.virtualNetworkRules = this._virtualNetworkRules?.internalValue;
     }
-    if (this._virtualNetworkSubnetIds !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.virtualNetworkSubnetIds = this._virtualNetworkSubnetIds;
-    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -397,14 +391,12 @@ export class CognitiveAccountNetworkAclsOutputReference extends cdktf.ComplexObj
       this._defaultAction = undefined;
       this._ipRules = undefined;
       this._virtualNetworkRules.internalValue = undefined;
-      this._virtualNetworkSubnetIds = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._defaultAction = value.defaultAction;
       this._ipRules = value.ipRules;
       this._virtualNetworkRules.internalValue = value.virtualNetworkRules;
-      this._virtualNetworkSubnetIds = value.virtualNetworkSubnetIds;
     }
   }
 
@@ -437,7 +429,7 @@ export class CognitiveAccountNetworkAclsOutputReference extends cdktf.ComplexObj
     return this._ipRules;
   }
 
-  // virtual_network_rules - computed: true, optional: true, required: false
+  // virtual_network_rules - computed: false, optional: true, required: false
   private _virtualNetworkRules = new CognitiveAccountNetworkAclsVirtualNetworkRulesList(this, "virtual_network_rules", true);
   public get virtualNetworkRules() {
     return this._virtualNetworkRules;
@@ -451,22 +443,6 @@ export class CognitiveAccountNetworkAclsOutputReference extends cdktf.ComplexObj
   // Temporarily expose input value. Use with caution.
   public get virtualNetworkRulesInput() {
     return this._virtualNetworkRules.internalValue;
-  }
-
-  // virtual_network_subnet_ids - computed: true, optional: true, required: false
-  private _virtualNetworkSubnetIds?: string[]; 
-  public get virtualNetworkSubnetIds() {
-    return cdktf.Fn.tolist(this.getListAttribute('virtual_network_subnet_ids'));
-  }
-  public set virtualNetworkSubnetIds(value: string[]) {
-    this._virtualNetworkSubnetIds = value;
-  }
-  public resetVirtualNetworkSubnetIds() {
-    this._virtualNetworkSubnetIds = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get virtualNetworkSubnetIdsInput() {
-    return this._virtualNetworkSubnetIds;
   }
 }
 export interface CognitiveAccountStorage {
@@ -773,14 +749,15 @@ export class CognitiveAccount extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_cognitive_account',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._customQuestionAnsweringSearchServiceId = config.customQuestionAnsweringSearchServiceId;
     this._customSubdomainName = config.customSubdomainName;
     this._fqdns = config.fqdns;
     this._id = config.id;
@@ -792,7 +769,7 @@ export class CognitiveAccount extends cdktf.TerraformResource {
     this._metricsAdvisorSuperUserName = config.metricsAdvisorSuperUserName;
     this._metricsAdvisorWebsiteName = config.metricsAdvisorWebsiteName;
     this._name = config.name;
-    this._outboundNetworkAccessRestrited = config.outboundNetworkAccessRestrited;
+    this._outboundNetworkAccessRestricted = config.outboundNetworkAccessRestricted;
     this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
     this._qnaRuntimeEndpoint = config.qnaRuntimeEndpoint;
     this._resourceGroupName = config.resourceGroupName;
@@ -807,6 +784,22 @@ export class CognitiveAccount extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // custom_question_answering_search_service_id - computed: false, optional: true, required: false
+  private _customQuestionAnsweringSearchServiceId?: string; 
+  public get customQuestionAnsweringSearchServiceId() {
+    return this.getStringAttribute('custom_question_answering_search_service_id');
+  }
+  public set customQuestionAnsweringSearchServiceId(value: string) {
+    this._customQuestionAnsweringSearchServiceId = value;
+  }
+  public resetCustomQuestionAnsweringSearchServiceId() {
+    this._customQuestionAnsweringSearchServiceId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customQuestionAnsweringSearchServiceIdInput() {
+    return this._customQuestionAnsweringSearchServiceId;
+  }
 
   // custom_subdomain_name - computed: false, optional: true, required: false
   private _customSubdomainName?: string; 
@@ -980,20 +973,20 @@ export class CognitiveAccount extends cdktf.TerraformResource {
     return this._name;
   }
 
-  // outbound_network_access_restrited - computed: false, optional: true, required: false
-  private _outboundNetworkAccessRestrited?: boolean | cdktf.IResolvable; 
-  public get outboundNetworkAccessRestrited() {
-    return this.getBooleanAttribute('outbound_network_access_restrited');
+  // outbound_network_access_restricted - computed: false, optional: true, required: false
+  private _outboundNetworkAccessRestricted?: boolean | cdktf.IResolvable; 
+  public get outboundNetworkAccessRestricted() {
+    return this.getBooleanAttribute('outbound_network_access_restricted');
   }
-  public set outboundNetworkAccessRestrited(value: boolean | cdktf.IResolvable) {
-    this._outboundNetworkAccessRestrited = value;
+  public set outboundNetworkAccessRestricted(value: boolean | cdktf.IResolvable) {
+    this._outboundNetworkAccessRestricted = value;
   }
-  public resetOutboundNetworkAccessRestrited() {
-    this._outboundNetworkAccessRestrited = undefined;
+  public resetOutboundNetworkAccessRestricted() {
+    this._outboundNetworkAccessRestricted = undefined;
   }
   // Temporarily expose input value. Use with caution.
-  public get outboundNetworkAccessRestritedInput() {
-    return this._outboundNetworkAccessRestrited;
+  public get outboundNetworkAccessRestrictedInput() {
+    return this._outboundNetworkAccessRestricted;
   }
 
   // primary_access_key - computed: true, optional: false, required: false
@@ -1150,6 +1143,7 @@ export class CognitiveAccount extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      custom_question_answering_search_service_id: cdktf.stringToTerraform(this._customQuestionAnsweringSearchServiceId),
       custom_subdomain_name: cdktf.stringToTerraform(this._customSubdomainName),
       fqdns: cdktf.listMapper(cdktf.stringToTerraform)(this._fqdns),
       id: cdktf.stringToTerraform(this._id),
@@ -1161,7 +1155,7 @@ export class CognitiveAccount extends cdktf.TerraformResource {
       metrics_advisor_super_user_name: cdktf.stringToTerraform(this._metricsAdvisorSuperUserName),
       metrics_advisor_website_name: cdktf.stringToTerraform(this._metricsAdvisorWebsiteName),
       name: cdktf.stringToTerraform(this._name),
-      outbound_network_access_restrited: cdktf.booleanToTerraform(this._outboundNetworkAccessRestrited),
+      outbound_network_access_restricted: cdktf.booleanToTerraform(this._outboundNetworkAccessRestricted),
       public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       qna_runtime_endpoint: cdktf.stringToTerraform(this._qnaRuntimeEndpoint),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),

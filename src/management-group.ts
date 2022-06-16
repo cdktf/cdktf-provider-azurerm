@@ -12,10 +12,6 @@ export interface ManagementGroupConfig extends cdktf.TerraformMetaArguments {
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group#group_id ManagementGroup#group_id}
-  */
-  readonly groupId?: string;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group#id ManagementGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
@@ -224,8 +220,8 @@ export class ManagementGroup extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_management_group',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -233,7 +229,6 @@ export class ManagementGroup extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._displayName = config.displayName;
-    this._groupId = config.groupId;
     this._id = config.id;
     this._name = config.name;
     this._parentManagementGroupId = config.parentManagementGroupId;
@@ -259,22 +254,6 @@ export class ManagementGroup extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get displayNameInput() {
     return this._displayName;
-  }
-
-  // group_id - computed: true, optional: true, required: false
-  private _groupId?: string; 
-  public get groupId() {
-    return this.getStringAttribute('group_id');
-  }
-  public set groupId(value: string) {
-    this._groupId = value;
-  }
-  public resetGroupId() {
-    this._groupId = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get groupIdInput() {
-    return this._groupId;
   }
 
   // id - computed: true, optional: true, required: false
@@ -364,7 +343,6 @@ export class ManagementGroup extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       display_name: cdktf.stringToTerraform(this._displayName),
-      group_id: cdktf.stringToTerraform(this._groupId),
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       parent_management_group_id: cdktf.stringToTerraform(this._parentManagementGroupId),

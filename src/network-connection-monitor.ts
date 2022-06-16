@@ -8,20 +8,12 @@ import * as cdktf from 'cdktf';
 
 export interface NetworkConnectionMonitorConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor#auto_start NetworkConnectionMonitor#auto_start}
-  */
-  readonly autoStart?: boolean | cdktf.IResolvable;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor#id NetworkConnectionMonitor#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor#interval_in_seconds NetworkConnectionMonitor#interval_in_seconds}
-  */
-  readonly intervalInSeconds?: number;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor#location NetworkConnectionMonitor#location}
   */
@@ -47,23 +39,11 @@ export interface NetworkConnectionMonitorConfig extends cdktf.TerraformMetaArgum
   */
   readonly tags?: { [key: string]: string };
   /**
-  * destination block
-  * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor#destination NetworkConnectionMonitor#destination}
-  */
-  readonly destination?: NetworkConnectionMonitorDestination;
-  /**
   * endpoint block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor#endpoint NetworkConnectionMonitor#endpoint}
   */
   readonly endpoint: NetworkConnectionMonitorEndpoint[] | cdktf.IResolvable;
-  /**
-  * source block
-  * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor#source NetworkConnectionMonitor#source}
-  */
-  readonly source?: NetworkConnectionMonitorSource;
   /**
   * test_configuration block
   * 
@@ -82,125 +62,6 @@ export interface NetworkConnectionMonitorConfig extends cdktf.TerraformMetaArgum
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor#timeouts NetworkConnectionMonitor#timeouts}
   */
   readonly timeouts?: NetworkConnectionMonitorTimeouts;
-}
-export interface NetworkConnectionMonitorDestination {
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor#address NetworkConnectionMonitor#address}
-  */
-  readonly address?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor#port NetworkConnectionMonitor#port}
-  */
-  readonly port?: number;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor#virtual_machine_id NetworkConnectionMonitor#virtual_machine_id}
-  */
-  readonly virtualMachineId?: string;
-}
-
-export function networkConnectionMonitorDestinationToTerraform(struct?: NetworkConnectionMonitorDestinationOutputReference | NetworkConnectionMonitorDestination): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-    address: cdktf.stringToTerraform(struct!.address),
-    port: cdktf.numberToTerraform(struct!.port),
-    virtual_machine_id: cdktf.stringToTerraform(struct!.virtualMachineId),
-  }
-}
-
-export class NetworkConnectionMonitorDestinationOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
-  }
-
-  public get internalValue(): NetworkConnectionMonitorDestination | undefined {
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    if (this._address !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.address = this._address;
-    }
-    if (this._port !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.port = this._port;
-    }
-    if (this._virtualMachineId !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.virtualMachineId = this._virtualMachineId;
-    }
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: NetworkConnectionMonitorDestination | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-      this._address = undefined;
-      this._port = undefined;
-      this._virtualMachineId = undefined;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-      this._address = value.address;
-      this._port = value.port;
-      this._virtualMachineId = value.virtualMachineId;
-    }
-  }
-
-  // address - computed: true, optional: true, required: false
-  private _address?: string; 
-  public get address() {
-    return this.getStringAttribute('address');
-  }
-  public set address(value: string) {
-    this._address = value;
-  }
-  public resetAddress() {
-    this._address = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get addressInput() {
-    return this._address;
-  }
-
-  // port - computed: true, optional: true, required: false
-  private _port?: number; 
-  public get port() {
-    return this.getNumberAttribute('port');
-  }
-  public set port(value: number) {
-    this._port = value;
-  }
-  public resetPort() {
-    this._port = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get portInput() {
-    return this._port;
-  }
-
-  // virtual_machine_id - computed: true, optional: true, required: false
-  private _virtualMachineId?: string; 
-  public get virtualMachineId() {
-    return this.getStringAttribute('virtual_machine_id');
-  }
-  public set virtualMachineId(value: string) {
-    this._virtualMachineId = value;
-  }
-  public resetVirtualMachineId() {
-    this._virtualMachineId = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get virtualMachineIdInput() {
-    return this._virtualMachineId;
-  }
 }
 export interface NetworkConnectionMonitorEndpointFilterItem {
   /**
@@ -450,10 +311,6 @@ export interface NetworkConnectionMonitorEndpoint {
   */
   readonly targetResourceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor#virtual_machine_id NetworkConnectionMonitor#virtual_machine_id}
-  */
-  readonly virtualMachineId?: string;
-  /**
   * filter block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor#filter NetworkConnectionMonitor#filter}
@@ -474,7 +331,6 @@ export function networkConnectionMonitorEndpointToTerraform(struct?: NetworkConn
     name: cdktf.stringToTerraform(struct!.name),
     target_resource_id: cdktf.stringToTerraform(struct!.targetResourceId),
     target_resource_type: cdktf.stringToTerraform(struct!.targetResourceType),
-    virtual_machine_id: cdktf.stringToTerraform(struct!.virtualMachineId),
     filter: networkConnectionMonitorEndpointFilterToTerraform(struct!.filter),
   }
 }
@@ -527,10 +383,6 @@ export class NetworkConnectionMonitorEndpointOutputReference extends cdktf.Compl
       hasAnyValues = true;
       internalValueResult.targetResourceType = this._targetResourceType;
     }
-    if (this._virtualMachineId !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.virtualMachineId = this._virtualMachineId;
-    }
     if (this._filter?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.filter = this._filter?.internalValue;
@@ -549,7 +401,6 @@ export class NetworkConnectionMonitorEndpointOutputReference extends cdktf.Compl
       this._name = undefined;
       this._targetResourceId = undefined;
       this._targetResourceType = undefined;
-      this._virtualMachineId = undefined;
       this._filter.internalValue = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
@@ -566,7 +417,6 @@ export class NetworkConnectionMonitorEndpointOutputReference extends cdktf.Compl
       this._name = value.name;
       this._targetResourceId = value.targetResourceId;
       this._targetResourceType = value.targetResourceType;
-      this._virtualMachineId = value.virtualMachineId;
       this._filter.internalValue = value.filter;
     }
   }
@@ -680,22 +530,6 @@ export class NetworkConnectionMonitorEndpointOutputReference extends cdktf.Compl
     return this._targetResourceType;
   }
 
-  // virtual_machine_id - computed: false, optional: true, required: false
-  private _virtualMachineId?: string; 
-  public get virtualMachineId() {
-    return this.getStringAttribute('virtual_machine_id');
-  }
-  public set virtualMachineId(value: string) {
-    this._virtualMachineId = value;
-  }
-  public resetVirtualMachineId() {
-    this._virtualMachineId = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get virtualMachineIdInput() {
-    return this._virtualMachineId;
-  }
-
   // filter - computed: false, optional: true, required: false
   private _filter = new NetworkConnectionMonitorEndpointFilterOutputReference(this, "filter");
   public get filter() {
@@ -730,98 +564,6 @@ export class NetworkConnectionMonitorEndpointList extends cdktf.ComplexList {
   */
   public get(index: number): NetworkConnectionMonitorEndpointOutputReference {
     return new NetworkConnectionMonitorEndpointOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-  }
-}
-export interface NetworkConnectionMonitorSource {
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor#port NetworkConnectionMonitor#port}
-  */
-  readonly port?: number;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor#virtual_machine_id NetworkConnectionMonitor#virtual_machine_id}
-  */
-  readonly virtualMachineId?: string;
-}
-
-export function networkConnectionMonitorSourceToTerraform(struct?: NetworkConnectionMonitorSourceOutputReference | NetworkConnectionMonitorSource): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-    port: cdktf.numberToTerraform(struct!.port),
-    virtual_machine_id: cdktf.stringToTerraform(struct!.virtualMachineId),
-  }
-}
-
-export class NetworkConnectionMonitorSourceOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
-  }
-
-  public get internalValue(): NetworkConnectionMonitorSource | undefined {
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    if (this._port !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.port = this._port;
-    }
-    if (this._virtualMachineId !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.virtualMachineId = this._virtualMachineId;
-    }
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: NetworkConnectionMonitorSource | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-      this._port = undefined;
-      this._virtualMachineId = undefined;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-      this._port = value.port;
-      this._virtualMachineId = value.virtualMachineId;
-    }
-  }
-
-  // port - computed: true, optional: true, required: false
-  private _port?: number; 
-  public get port() {
-    return this.getNumberAttribute('port');
-  }
-  public set port(value: number) {
-    this._port = value;
-  }
-  public resetPort() {
-    this._port = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get portInput() {
-    return this._port;
-  }
-
-  // virtual_machine_id - computed: true, optional: true, required: false
-  private _virtualMachineId?: string; 
-  public get virtualMachineId() {
-    return this.getStringAttribute('virtual_machine_id');
-  }
-  public set virtualMachineId(value: string) {
-    this._virtualMachineId = value;
-  }
-  public resetVirtualMachineId() {
-    this._virtualMachineId = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get virtualMachineIdInput() {
-    return this._virtualMachineId;
   }
 }
 export interface NetworkConnectionMonitorTestConfigurationHttpConfigurationRequestHeader {
@@ -2081,26 +1823,22 @@ export class NetworkConnectionMonitor extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_network_connection_monitor',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
       lifecycle: config.lifecycle
     });
-    this._autoStart = config.autoStart;
     this._id = config.id;
-    this._intervalInSeconds = config.intervalInSeconds;
     this._location = config.location;
     this._name = config.name;
     this._networkWatcherId = config.networkWatcherId;
     this._notes = config.notes;
     this._outputWorkspaceResourceIds = config.outputWorkspaceResourceIds;
     this._tags = config.tags;
-    this._destination.internalValue = config.destination;
     this._endpoint.internalValue = config.endpoint;
-    this._source.internalValue = config.source;
     this._testConfiguration.internalValue = config.testConfiguration;
     this._testGroup.internalValue = config.testGroup;
     this._timeouts.internalValue = config.timeouts;
@@ -2109,22 +1847,6 @@ export class NetworkConnectionMonitor extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
-
-  // auto_start - computed: true, optional: true, required: false
-  private _autoStart?: boolean | cdktf.IResolvable; 
-  public get autoStart() {
-    return this.getBooleanAttribute('auto_start');
-  }
-  public set autoStart(value: boolean | cdktf.IResolvable) {
-    this._autoStart = value;
-  }
-  public resetAutoStart() {
-    this._autoStart = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get autoStartInput() {
-    return this._autoStart;
-  }
 
   // id - computed: true, optional: true, required: false
   private _id?: string; 
@@ -2140,22 +1862,6 @@ export class NetworkConnectionMonitor extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get idInput() {
     return this._id;
-  }
-
-  // interval_in_seconds - computed: true, optional: true, required: false
-  private _intervalInSeconds?: number; 
-  public get intervalInSeconds() {
-    return this.getNumberAttribute('interval_in_seconds');
-  }
-  public set intervalInSeconds(value: number) {
-    this._intervalInSeconds = value;
-  }
-  public resetIntervalInSeconds() {
-    this._intervalInSeconds = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get intervalInSecondsInput() {
-    return this._intervalInSeconds;
   }
 
   // location - computed: false, optional: false, required: true
@@ -2245,22 +1951,6 @@ export class NetworkConnectionMonitor extends cdktf.TerraformResource {
     return this._tags;
   }
 
-  // destination - computed: false, optional: true, required: false
-  private _destination = new NetworkConnectionMonitorDestinationOutputReference(this, "destination");
-  public get destination() {
-    return this._destination;
-  }
-  public putDestination(value: NetworkConnectionMonitorDestination) {
-    this._destination.internalValue = value;
-  }
-  public resetDestination() {
-    this._destination.internalValue = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get destinationInput() {
-    return this._destination.internalValue;
-  }
-
   // endpoint - computed: false, optional: false, required: true
   private _endpoint = new NetworkConnectionMonitorEndpointList(this, "endpoint", true);
   public get endpoint() {
@@ -2272,22 +1962,6 @@ export class NetworkConnectionMonitor extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get endpointInput() {
     return this._endpoint.internalValue;
-  }
-
-  // source - computed: false, optional: true, required: false
-  private _source = new NetworkConnectionMonitorSourceOutputReference(this, "source");
-  public get source() {
-    return this._source;
-  }
-  public putSource(value: NetworkConnectionMonitorSource) {
-    this._source.internalValue = value;
-  }
-  public resetSource() {
-    this._source.internalValue = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get sourceInput() {
-    return this._source.internalValue;
   }
 
   // test_configuration - computed: false, optional: false, required: true
@@ -2338,18 +2012,14 @@ export class NetworkConnectionMonitor extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      auto_start: cdktf.booleanToTerraform(this._autoStart),
       id: cdktf.stringToTerraform(this._id),
-      interval_in_seconds: cdktf.numberToTerraform(this._intervalInSeconds),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       network_watcher_id: cdktf.stringToTerraform(this._networkWatcherId),
       notes: cdktf.stringToTerraform(this._notes),
       output_workspace_resource_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._outputWorkspaceResourceIds),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
-      destination: networkConnectionMonitorDestinationToTerraform(this._destination.internalValue),
       endpoint: cdktf.listMapper(networkConnectionMonitorEndpointToTerraform)(this._endpoint.internalValue),
-      source: networkConnectionMonitorSourceToTerraform(this._source.internalValue),
       test_configuration: cdktf.listMapper(networkConnectionMonitorTestConfigurationToTerraform)(this._testConfiguration.internalValue),
       test_group: cdktf.listMapper(networkConnectionMonitorTestGroupToTerraform)(this._testGroup.internalValue),
       timeouts: networkConnectionMonitorTimeoutsToTerraform(this._timeouts.internalValue),

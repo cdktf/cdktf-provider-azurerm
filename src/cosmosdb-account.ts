@@ -810,10 +810,6 @@ export interface CosmosdbAccountGeoLocation {
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account#prefix CosmosdbAccount#prefix}
-  */
-  readonly prefix?: string;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account#zone_redundant CosmosdbAccount#zone_redundant}
   */
   readonly zoneRedundant?: boolean | cdktf.IResolvable;
@@ -827,7 +823,6 @@ export function cosmosdbAccountGeoLocationToTerraform(struct?: CosmosdbAccountGe
   return {
     failover_priority: cdktf.numberToTerraform(struct!.failoverPriority),
     location: cdktf.stringToTerraform(struct!.location),
-    prefix: cdktf.stringToTerraform(struct!.prefix),
     zone_redundant: cdktf.booleanToTerraform(struct!.zoneRedundant),
   }
 }
@@ -860,10 +855,6 @@ export class CosmosdbAccountGeoLocationOutputReference extends cdktf.ComplexObje
       hasAnyValues = true;
       internalValueResult.location = this._location;
     }
-    if (this._prefix !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.prefix = this._prefix;
-    }
     if (this._zoneRedundant !== undefined) {
       hasAnyValues = true;
       internalValueResult.zoneRedundant = this._zoneRedundant;
@@ -877,7 +868,6 @@ export class CosmosdbAccountGeoLocationOutputReference extends cdktf.ComplexObje
       this.resolvableValue = undefined;
       this._failoverPriority = undefined;
       this._location = undefined;
-      this._prefix = undefined;
       this._zoneRedundant = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
@@ -889,7 +879,6 @@ export class CosmosdbAccountGeoLocationOutputReference extends cdktf.ComplexObje
       this.resolvableValue = undefined;
       this._failoverPriority = value.failoverPriority;
       this._location = value.location;
-      this._prefix = value.prefix;
       this._zoneRedundant = value.zoneRedundant;
     }
   }
@@ -923,22 +912,6 @@ export class CosmosdbAccountGeoLocationOutputReference extends cdktf.ComplexObje
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
     return this._location;
-  }
-
-  // prefix - computed: false, optional: true, required: false
-  private _prefix?: string; 
-  public get prefix() {
-    return this.getStringAttribute('prefix');
-  }
-  public set prefix(value: string) {
-    this._prefix = value;
-  }
-  public resetPrefix() {
-    this._prefix = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get prefixInput() {
-    return this._prefix;
   }
 
   // zone_redundant - computed: false, optional: true, required: false
@@ -1592,8 +1565,8 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_cosmosdb_account',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1949,19 +1922,9 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
     return this.getStringAttribute('primary_key');
   }
 
-  // primary_master_key - computed: true, optional: false, required: false
-  public get primaryMasterKey() {
-    return this.getStringAttribute('primary_master_key');
-  }
-
   // primary_readonly_key - computed: true, optional: false, required: false
   public get primaryReadonlyKey() {
     return this.getStringAttribute('primary_readonly_key');
-  }
-
-  // primary_readonly_master_key - computed: true, optional: false, required: false
-  public get primaryReadonlyMasterKey() {
-    return this.getStringAttribute('primary_readonly_master_key');
   }
 
   // public_network_access_enabled - computed: false, optional: true, required: false
@@ -2003,19 +1966,9 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
     return this.getStringAttribute('secondary_key');
   }
 
-  // secondary_master_key - computed: true, optional: false, required: false
-  public get secondaryMasterKey() {
-    return this.getStringAttribute('secondary_master_key');
-  }
-
   // secondary_readonly_key - computed: true, optional: false, required: false
   public get secondaryReadonlyKey() {
     return this.getStringAttribute('secondary_readonly_key');
-  }
-
-  // secondary_readonly_master_key - computed: true, optional: false, required: false
-  public get secondaryReadonlyMasterKey() {
-    return this.getStringAttribute('secondary_readonly_master_key');
   }
 
   // tags - computed: false, optional: true, required: false

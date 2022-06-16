@@ -150,10 +150,6 @@ export interface VpnGatewayConnectionRouting {
   */
   readonly associatedRouteTable: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection#propagated_route_tables VpnGatewayConnection#propagated_route_tables}
-  */
-  readonly propagatedRouteTables?: string[];
-  /**
   * propagated_route_table block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection#propagated_route_table VpnGatewayConnection#propagated_route_table}
@@ -168,7 +164,6 @@ export function vpnGatewayConnectionRoutingToTerraform(struct?: VpnGatewayConnec
   }
   return {
     associated_route_table: cdktf.stringToTerraform(struct!.associatedRouteTable),
-    propagated_route_tables: cdktf.listMapper(cdktf.stringToTerraform)(struct!.propagatedRouteTables),
     propagated_route_table: vpnGatewayConnectionRoutingPropagatedRouteTableToTerraform(struct!.propagatedRouteTable),
   }
 }
@@ -191,10 +186,6 @@ export class VpnGatewayConnectionRoutingOutputReference extends cdktf.ComplexObj
       hasAnyValues = true;
       internalValueResult.associatedRouteTable = this._associatedRouteTable;
     }
-    if (this._propagatedRouteTables !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.propagatedRouteTables = this._propagatedRouteTables;
-    }
     if (this._propagatedRouteTable?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.propagatedRouteTable = this._propagatedRouteTable?.internalValue;
@@ -206,13 +197,11 @@ export class VpnGatewayConnectionRoutingOutputReference extends cdktf.ComplexObj
     if (value === undefined) {
       this.isEmptyObject = false;
       this._associatedRouteTable = undefined;
-      this._propagatedRouteTables = undefined;
       this._propagatedRouteTable.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._associatedRouteTable = value.associatedRouteTable;
-      this._propagatedRouteTables = value.propagatedRouteTables;
       this._propagatedRouteTable.internalValue = value.propagatedRouteTable;
     }
   }
@@ -228,22 +217,6 @@ export class VpnGatewayConnectionRoutingOutputReference extends cdktf.ComplexObj
   // Temporarily expose input value. Use with caution.
   public get associatedRouteTableInput() {
     return this._associatedRouteTable;
-  }
-
-  // propagated_route_tables - computed: true, optional: true, required: false
-  private _propagatedRouteTables?: string[]; 
-  public get propagatedRouteTables() {
-    return this.getListAttribute('propagated_route_tables');
-  }
-  public set propagatedRouteTables(value: string[]) {
-    this._propagatedRouteTables = value;
-  }
-  public resetPropagatedRouteTables() {
-    this._propagatedRouteTables = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get propagatedRouteTablesInput() {
-    return this._propagatedRouteTables;
   }
 
   // propagated_route_table - computed: false, optional: true, required: false
@@ -534,6 +507,124 @@ export class VpnGatewayConnectionTrafficSelectorPolicyList extends cdktf.Complex
   */
   public get(index: number): VpnGatewayConnectionTrafficSelectorPolicyOutputReference {
     return new VpnGatewayConnectionTrafficSelectorPolicyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface VpnGatewayConnectionVpnLinkCustomBgpAddress {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection#ip_address VpnGatewayConnection#ip_address}
+  */
+  readonly ipAddress: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection#ip_configuration_id VpnGatewayConnection#ip_configuration_id}
+  */
+  readonly ipConfigurationId: string;
+}
+
+export function vpnGatewayConnectionVpnLinkCustomBgpAddressToTerraform(struct?: VpnGatewayConnectionVpnLinkCustomBgpAddress | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    ip_address: cdktf.stringToTerraform(struct!.ipAddress),
+    ip_configuration_id: cdktf.stringToTerraform(struct!.ipConfigurationId),
+  }
+}
+
+export class VpnGatewayConnectionVpnLinkCustomBgpAddressOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): VpnGatewayConnectionVpnLinkCustomBgpAddress | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._ipAddress !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ipAddress = this._ipAddress;
+    }
+    if (this._ipConfigurationId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ipConfigurationId = this._ipConfigurationId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: VpnGatewayConnectionVpnLinkCustomBgpAddress | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._ipAddress = undefined;
+      this._ipConfigurationId = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._ipAddress = value.ipAddress;
+      this._ipConfigurationId = value.ipConfigurationId;
+    }
+  }
+
+  // ip_address - computed: false, optional: false, required: true
+  private _ipAddress?: string; 
+  public get ipAddress() {
+    return this.getStringAttribute('ip_address');
+  }
+  public set ipAddress(value: string) {
+    this._ipAddress = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipAddressInput() {
+    return this._ipAddress;
+  }
+
+  // ip_configuration_id - computed: false, optional: false, required: true
+  private _ipConfigurationId?: string; 
+  public get ipConfigurationId() {
+    return this.getStringAttribute('ip_configuration_id');
+  }
+  public set ipConfigurationId(value: string) {
+    this._ipConfigurationId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipConfigurationIdInput() {
+    return this._ipConfigurationId;
+  }
+}
+
+export class VpnGatewayConnectionVpnLinkCustomBgpAddressList extends cdktf.ComplexList {
+  public internalValue? : VpnGatewayConnectionVpnLinkCustomBgpAddress[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): VpnGatewayConnectionVpnLinkCustomBgpAddressOutputReference {
+    return new VpnGatewayConnectionVpnLinkCustomBgpAddressOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface VpnGatewayConnectionVpnLinkIpsecPolicy {
@@ -852,6 +943,12 @@ export interface VpnGatewayConnectionVpnLink {
   */
   readonly vpnSiteLinkId: string;
   /**
+  * custom_bgp_address block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection#custom_bgp_address VpnGatewayConnection#custom_bgp_address}
+  */
+  readonly customBgpAddress?: VpnGatewayConnectionVpnLinkCustomBgpAddress[] | cdktf.IResolvable;
+  /**
   * ipsec_policy block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection#ipsec_policy VpnGatewayConnection#ipsec_policy}
@@ -878,6 +975,7 @@ export function vpnGatewayConnectionVpnLinkToTerraform(struct?: VpnGatewayConnec
     route_weight: cdktf.numberToTerraform(struct!.routeWeight),
     shared_key: cdktf.stringToTerraform(struct!.sharedKey),
     vpn_site_link_id: cdktf.stringToTerraform(struct!.vpnSiteLinkId),
+    custom_bgp_address: cdktf.listMapper(vpnGatewayConnectionVpnLinkCustomBgpAddressToTerraform)(struct!.customBgpAddress),
     ipsec_policy: cdktf.listMapper(vpnGatewayConnectionVpnLinkIpsecPolicyToTerraform)(struct!.ipsecPolicy),
   }
 }
@@ -954,6 +1052,10 @@ export class VpnGatewayConnectionVpnLinkOutputReference extends cdktf.ComplexObj
       hasAnyValues = true;
       internalValueResult.vpnSiteLinkId = this._vpnSiteLinkId;
     }
+    if (this._customBgpAddress?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.customBgpAddress = this._customBgpAddress?.internalValue;
+    }
     if (this._ipsecPolicy?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.ipsecPolicy = this._ipsecPolicy?.internalValue;
@@ -978,6 +1080,7 @@ export class VpnGatewayConnectionVpnLinkOutputReference extends cdktf.ComplexObj
       this._routeWeight = undefined;
       this._sharedKey = undefined;
       this._vpnSiteLinkId = undefined;
+      this._customBgpAddress.internalValue = undefined;
       this._ipsecPolicy.internalValue = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
@@ -1000,6 +1103,7 @@ export class VpnGatewayConnectionVpnLinkOutputReference extends cdktf.ComplexObj
       this._routeWeight = value.routeWeight;
       this._sharedKey = value.sharedKey;
       this._vpnSiteLinkId = value.vpnSiteLinkId;
+      this._customBgpAddress.internalValue = value.customBgpAddress;
       this._ipsecPolicy.internalValue = value.ipsecPolicy;
     }
   }
@@ -1206,6 +1310,22 @@ export class VpnGatewayConnectionVpnLinkOutputReference extends cdktf.ComplexObj
     return this._vpnSiteLinkId;
   }
 
+  // custom_bgp_address - computed: false, optional: true, required: false
+  private _customBgpAddress = new VpnGatewayConnectionVpnLinkCustomBgpAddressList(this, "custom_bgp_address", true);
+  public get customBgpAddress() {
+    return this._customBgpAddress;
+  }
+  public putCustomBgpAddress(value: VpnGatewayConnectionVpnLinkCustomBgpAddress[] | cdktf.IResolvable) {
+    this._customBgpAddress.internalValue = value;
+  }
+  public resetCustomBgpAddress() {
+    this._customBgpAddress.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customBgpAddressInput() {
+    return this._customBgpAddress.internalValue;
+  }
+
   // ipsec_policy - computed: false, optional: true, required: false
   private _ipsecPolicy = new VpnGatewayConnectionVpnLinkIpsecPolicyList(this, "ipsec_policy", false);
   public get ipsecPolicy() {
@@ -1269,8 +1389,8 @@ export class VpnGatewayConnection extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_vpn_gateway_connection',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

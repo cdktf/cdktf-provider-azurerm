@@ -71,6 +71,10 @@ export interface SiteRecoveryReplicatedVmConfig extends cdktf.TerraformMetaArgum
   */
   readonly targetResourceGroupId: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm#target_zone SiteRecoveryReplicatedVm#target_zone}
+  */
+  readonly targetZone?: string;
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm#timeouts SiteRecoveryReplicatedVm#timeouts}
@@ -670,8 +674,8 @@ export class SiteRecoveryReplicatedVm extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_site_recovery_replicated_vm',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -693,6 +697,7 @@ export class SiteRecoveryReplicatedVm extends cdktf.TerraformResource {
     this._targetRecoveryFabricId = config.targetRecoveryFabricId;
     this._targetRecoveryProtectionContainerId = config.targetRecoveryProtectionContainerId;
     this._targetResourceGroupId = config.targetResourceGroupId;
+    this._targetZone = config.targetZone;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -910,6 +915,22 @@ export class SiteRecoveryReplicatedVm extends cdktf.TerraformResource {
     return this._targetResourceGroupId;
   }
 
+  // target_zone - computed: false, optional: true, required: false
+  private _targetZone?: string; 
+  public get targetZone() {
+    return this.getStringAttribute('target_zone');
+  }
+  public set targetZone(value: string) {
+    this._targetZone = value;
+  }
+  public resetTargetZone() {
+    this._targetZone = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetZoneInput() {
+    return this._targetZone;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new SiteRecoveryReplicatedVmTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -947,6 +968,7 @@ export class SiteRecoveryReplicatedVm extends cdktf.TerraformResource {
       target_recovery_fabric_id: cdktf.stringToTerraform(this._targetRecoveryFabricId),
       target_recovery_protection_container_id: cdktf.stringToTerraform(this._targetRecoveryProtectionContainerId),
       target_resource_group_id: cdktf.stringToTerraform(this._targetResourceGroupId),
+      target_zone: cdktf.stringToTerraform(this._targetZone),
       timeouts: siteRecoveryReplicatedVmTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

@@ -19,10 +19,6 @@ export interface DataAzurermPolicyDefinitionConfig extends cdktf.TerraformMetaAr
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/policy_definition#management_group_id DataAzurermPolicyDefinition#management_group_id}
-  */
-  readonly managementGroupId?: string;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/policy_definition#management_group_name DataAzurermPolicyDefinition#management_group_name}
   */
   readonly managementGroupName?: string;
@@ -139,8 +135,8 @@ export class DataAzurermPolicyDefinition extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_policy_definition',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -149,7 +145,6 @@ export class DataAzurermPolicyDefinition extends cdktf.TerraformDataSource {
     });
     this._displayName = config.displayName;
     this._id = config.id;
-    this._managementGroupId = config.managementGroupId;
     this._managementGroupName = config.managementGroupName;
     this._name = config.name;
     this._timeouts.internalValue = config.timeouts;
@@ -194,22 +189,6 @@ export class DataAzurermPolicyDefinition extends cdktf.TerraformDataSource {
   // Temporarily expose input value. Use with caution.
   public get idInput() {
     return this._id;
-  }
-
-  // management_group_id - computed: false, optional: true, required: false
-  private _managementGroupId?: string; 
-  public get managementGroupId() {
-    return this.getStringAttribute('management_group_id');
-  }
-  public set managementGroupId(value: string) {
-    this._managementGroupId = value;
-  }
-  public resetManagementGroupId() {
-    this._managementGroupId = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get managementGroupIdInput() {
-    return this._managementGroupId;
   }
 
   // management_group_name - computed: false, optional: true, required: false
@@ -293,7 +272,6 @@ export class DataAzurermPolicyDefinition extends cdktf.TerraformDataSource {
     return {
       display_name: cdktf.stringToTerraform(this._displayName),
       id: cdktf.stringToTerraform(this._id),
-      management_group_id: cdktf.stringToTerraform(this._managementGroupId),
       management_group_name: cdktf.stringToTerraform(this._managementGroupName),
       name: cdktf.stringToTerraform(this._name),
       timeouts: dataAzurermPolicyDefinitionTimeoutsToTerraform(this._timeouts.internalValue),

@@ -5355,8 +5355,8 @@ export class CdnEndpoint extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_cdn_endpoint',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -5405,9 +5405,9 @@ export class CdnEndpoint extends cdktf.TerraformResource {
     return this._contentTypesToCompress;
   }
 
-  // host_name - computed: true, optional: false, required: false
-  public get hostName() {
-    return this.getStringAttribute('host_name');
+  // fqdn - computed: true, optional: false, required: false
+  public get fqdn() {
+    return this.getStringAttribute('fqdn');
   }
 
   // id - computed: true, optional: true, required: false

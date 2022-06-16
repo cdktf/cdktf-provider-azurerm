@@ -8,6 +8,10 @@ import * as cdktf from 'cdktf';
 
 export interface SpringCloudServiceConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service#build_agent_pool_size SpringCloudService#build_agent_pool_size}
+  */
+  readonly buildAgentPoolSize?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service#id SpringCloudService#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
@@ -27,6 +31,10 @@ export interface SpringCloudServiceConfig extends cdktf.TerraformMetaArguments {
   */
   readonly resourceGroupName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service#service_registry_enabled SpringCloudService#service_registry_enabled}
+  */
+  readonly serviceRegistryEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service#sku_name SpringCloudService#sku_name}
   */
   readonly skuName?: string;
@@ -34,6 +42,10 @@ export interface SpringCloudServiceConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service#tags SpringCloudService#tags}
   */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service#zone_redundant SpringCloudService#zone_redundant}
+  */
+  readonly zoneRedundant?: boolean | cdktf.IResolvable;
   /**
   * config_server_git_setting block
   * 
@@ -1387,10 +1399,6 @@ export interface SpringCloudServiceTrace {
   */
   readonly connectionString?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service#instrumentation_key SpringCloudService#instrumentation_key}
-  */
-  readonly instrumentationKey?: string;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service#sample_rate SpringCloudService#sample_rate}
   */
   readonly sampleRate?: number;
@@ -1403,7 +1411,6 @@ export function springCloudServiceTraceToTerraform(struct?: SpringCloudServiceTr
   }
   return {
     connection_string: cdktf.stringToTerraform(struct!.connectionString),
-    instrumentation_key: cdktf.stringToTerraform(struct!.instrumentationKey),
     sample_rate: cdktf.numberToTerraform(struct!.sampleRate),
   }
 }
@@ -1426,10 +1433,6 @@ export class SpringCloudServiceTraceOutputReference extends cdktf.ComplexObject 
       hasAnyValues = true;
       internalValueResult.connectionString = this._connectionString;
     }
-    if (this._instrumentationKey !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.instrumentationKey = this._instrumentationKey;
-    }
     if (this._sampleRate !== undefined) {
       hasAnyValues = true;
       internalValueResult.sampleRate = this._sampleRate;
@@ -1441,13 +1444,11 @@ export class SpringCloudServiceTraceOutputReference extends cdktf.ComplexObject 
     if (value === undefined) {
       this.isEmptyObject = false;
       this._connectionString = undefined;
-      this._instrumentationKey = undefined;
       this._sampleRate = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._connectionString = value.connectionString;
-      this._instrumentationKey = value.instrumentationKey;
       this._sampleRate = value.sampleRate;
     }
   }
@@ -1466,22 +1467,6 @@ export class SpringCloudServiceTraceOutputReference extends cdktf.ComplexObject 
   // Temporarily expose input value. Use with caution.
   public get connectionStringInput() {
     return this._connectionString;
-  }
-
-  // instrumentation_key - computed: false, optional: true, required: false
-  private _instrumentationKey?: string; 
-  public get instrumentationKey() {
-    return this.getStringAttribute('instrumentation_key');
-  }
-  public set instrumentationKey(value: string) {
-    this._instrumentationKey = value;
-  }
-  public resetInstrumentationKey() {
-    this._instrumentationKey = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get instrumentationKeyInput() {
-    return this._instrumentationKey;
   }
 
   // sample_rate - computed: false, optional: true, required: false
@@ -1527,20 +1512,23 @@ export class SpringCloudService extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_spring_cloud_service',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._buildAgentPoolSize = config.buildAgentPoolSize;
     this._id = config.id;
     this._location = config.location;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
+    this._serviceRegistryEnabled = config.serviceRegistryEnabled;
     this._skuName = config.skuName;
     this._tags = config.tags;
+    this._zoneRedundant = config.zoneRedundant;
     this._configServerGitSetting.internalValue = config.configServerGitSetting;
     this._network.internalValue = config.network;
     this._timeouts.internalValue = config.timeouts;
@@ -1550,6 +1538,22 @@ export class SpringCloudService extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // build_agent_pool_size - computed: false, optional: true, required: false
+  private _buildAgentPoolSize?: string; 
+  public get buildAgentPoolSize() {
+    return this.getStringAttribute('build_agent_pool_size');
+  }
+  public set buildAgentPoolSize(value: string) {
+    this._buildAgentPoolSize = value;
+  }
+  public resetBuildAgentPoolSize() {
+    this._buildAgentPoolSize = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get buildAgentPoolSizeInput() {
+    return this._buildAgentPoolSize;
+  }
 
   // id - computed: true, optional: true, required: false
   private _id?: string; 
@@ -1617,6 +1621,27 @@ export class SpringCloudService extends cdktf.TerraformResource {
     return this._resourceGroupName;
   }
 
+  // service_registry_enabled - computed: false, optional: true, required: false
+  private _serviceRegistryEnabled?: boolean | cdktf.IResolvable; 
+  public get serviceRegistryEnabled() {
+    return this.getBooleanAttribute('service_registry_enabled');
+  }
+  public set serviceRegistryEnabled(value: boolean | cdktf.IResolvable) {
+    this._serviceRegistryEnabled = value;
+  }
+  public resetServiceRegistryEnabled() {
+    this._serviceRegistryEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceRegistryEnabledInput() {
+    return this._serviceRegistryEnabled;
+  }
+
+  // service_registry_id - computed: true, optional: false, required: false
+  public get serviceRegistryId() {
+    return this.getStringAttribute('service_registry_id');
+  }
+
   // sku_name - computed: false, optional: true, required: false
   private _skuName?: string; 
   public get skuName() {
@@ -1647,6 +1672,22 @@ export class SpringCloudService extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
     return this._tags;
+  }
+
+  // zone_redundant - computed: false, optional: true, required: false
+  private _zoneRedundant?: boolean | cdktf.IResolvable; 
+  public get zoneRedundant() {
+    return this.getBooleanAttribute('zone_redundant');
+  }
+  public set zoneRedundant(value: boolean | cdktf.IResolvable) {
+    this._zoneRedundant = value;
+  }
+  public resetZoneRedundant() {
+    this._zoneRedundant = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get zoneRedundantInput() {
+    return this._zoneRedundant;
   }
 
   // config_server_git_setting - computed: false, optional: true, required: false
@@ -1719,12 +1760,15 @@ export class SpringCloudService extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      build_agent_pool_size: cdktf.stringToTerraform(this._buildAgentPoolSize),
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      service_registry_enabled: cdktf.booleanToTerraform(this._serviceRegistryEnabled),
       sku_name: cdktf.stringToTerraform(this._skuName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
+      zone_redundant: cdktf.booleanToTerraform(this._zoneRedundant),
       config_server_git_setting: springCloudServiceConfigServerGitSettingToTerraform(this._configServerGitSetting.internalValue),
       network: springCloudServiceNetworkToTerraform(this._network.internalValue),
       timeouts: springCloudServiceTimeoutsToTerraform(this._timeouts.internalValue),

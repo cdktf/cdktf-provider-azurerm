@@ -12,13 +12,9 @@ export interface SynapseWorkspaceKeyConfig extends cdktf.TerraformMetaArguments 
   */
   readonly active: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_key#cusomter_managed_key_name SynapseWorkspaceKey#cusomter_managed_key_name}
-  */
-  readonly cusomterManagedKeyName?: string;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_key#customer_managed_key_name SynapseWorkspaceKey#customer_managed_key_name}
   */
-  readonly customerManagedKeyName?: string;
+  readonly customerManagedKeyName: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_key#customer_managed_key_versionless_id SynapseWorkspaceKey#customer_managed_key_versionless_id}
   */
@@ -224,8 +220,8 @@ export class SynapseWorkspaceKey extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_synapse_workspace_key',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -233,7 +229,6 @@ export class SynapseWorkspaceKey extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._active = config.active;
-    this._cusomterManagedKeyName = config.cusomterManagedKeyName;
     this._customerManagedKeyName = config.customerManagedKeyName;
     this._customerManagedKeyVersionlessId = config.customerManagedKeyVersionlessId;
     this._id = config.id;
@@ -258,32 +253,13 @@ export class SynapseWorkspaceKey extends cdktf.TerraformResource {
     return this._active;
   }
 
-  // cusomter_managed_key_name - computed: true, optional: true, required: false
-  private _cusomterManagedKeyName?: string; 
-  public get cusomterManagedKeyName() {
-    return this.getStringAttribute('cusomter_managed_key_name');
-  }
-  public set cusomterManagedKeyName(value: string) {
-    this._cusomterManagedKeyName = value;
-  }
-  public resetCusomterManagedKeyName() {
-    this._cusomterManagedKeyName = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get cusomterManagedKeyNameInput() {
-    return this._cusomterManagedKeyName;
-  }
-
-  // customer_managed_key_name - computed: true, optional: true, required: false
+  // customer_managed_key_name - computed: false, optional: false, required: true
   private _customerManagedKeyName?: string; 
   public get customerManagedKeyName() {
     return this.getStringAttribute('customer_managed_key_name');
   }
   public set customerManagedKeyName(value: string) {
     this._customerManagedKeyName = value;
-  }
-  public resetCustomerManagedKeyName() {
-    this._customerManagedKeyName = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get customerManagedKeyNameInput() {
@@ -358,7 +334,6 @@ export class SynapseWorkspaceKey extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       active: cdktf.booleanToTerraform(this._active),
-      cusomter_managed_key_name: cdktf.stringToTerraform(this._cusomterManagedKeyName),
       customer_managed_key_name: cdktf.stringToTerraform(this._customerManagedKeyName),
       customer_managed_key_versionless_id: cdktf.stringToTerraform(this._customerManagedKeyVersionlessId),
       id: cdktf.stringToTerraform(this._id),

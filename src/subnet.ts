@@ -8,13 +8,9 @@ import * as cdktf from 'cdktf';
 
 export interface SubnetConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet#address_prefix Subnet#address_prefix}
-  */
-  readonly addressPrefix?: string;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet#address_prefixes Subnet#address_prefixes}
   */
-  readonly addressPrefixes?: string[];
+  readonly addressPrefixes: string[];
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet#enforce_private_link_endpoint_network_policies Subnet#enforce_private_link_endpoint_network_policies}
   */
@@ -455,15 +451,14 @@ export class Subnet extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_subnet',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
       lifecycle: config.lifecycle
     });
-    this._addressPrefix = config.addressPrefix;
     this._addressPrefixes = config.addressPrefixes;
     this._enforcePrivateLinkEndpointNetworkPolicies = config.enforcePrivateLinkEndpointNetworkPolicies;
     this._enforcePrivateLinkServiceNetworkPolicies = config.enforcePrivateLinkServiceNetworkPolicies;
@@ -481,32 +476,13 @@ export class Subnet extends cdktf.TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // address_prefix - computed: true, optional: true, required: false
-  private _addressPrefix?: string; 
-  public get addressPrefix() {
-    return this.getStringAttribute('address_prefix');
-  }
-  public set addressPrefix(value: string) {
-    this._addressPrefix = value;
-  }
-  public resetAddressPrefix() {
-    this._addressPrefix = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get addressPrefixInput() {
-    return this._addressPrefix;
-  }
-
-  // address_prefixes - computed: true, optional: true, required: false
+  // address_prefixes - computed: false, optional: false, required: true
   private _addressPrefixes?: string[]; 
   public get addressPrefixes() {
     return this.getListAttribute('address_prefixes');
   }
   public set addressPrefixes(value: string[]) {
     this._addressPrefixes = value;
-  }
-  public resetAddressPrefixes() {
-    this._addressPrefixes = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get addressPrefixesInput() {
@@ -606,7 +582,7 @@ export class Subnet extends cdktf.TerraformResource {
   // service_endpoints - computed: false, optional: true, required: false
   private _serviceEndpoints?: string[]; 
   public get serviceEndpoints() {
-    return this.getListAttribute('service_endpoints');
+    return cdktf.Fn.tolist(this.getListAttribute('service_endpoints'));
   }
   public set serviceEndpoints(value: string[]) {
     this._serviceEndpoints = value;
@@ -670,7 +646,6 @@ export class Subnet extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      address_prefix: cdktf.stringToTerraform(this._addressPrefix),
       address_prefixes: cdktf.listMapper(cdktf.stringToTerraform)(this._addressPrefixes),
       enforce_private_link_endpoint_network_policies: cdktf.booleanToTerraform(this._enforcePrivateLinkEndpointNetworkPolicies),
       enforce_private_link_service_network_policies: cdktf.booleanToTerraform(this._enforcePrivateLinkServiceNetworkPolicies),

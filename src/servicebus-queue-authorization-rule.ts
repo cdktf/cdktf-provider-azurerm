@@ -27,21 +27,9 @@ export interface ServicebusQueueAuthorizationRuleConfig extends cdktf.TerraformM
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue_authorization_rule#namespace_name ServicebusQueueAuthorizationRule#namespace_name}
-  */
-  readonly namespaceName?: string;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue_authorization_rule#queue_id ServicebusQueueAuthorizationRule#queue_id}
   */
-  readonly queueId?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue_authorization_rule#queue_name ServicebusQueueAuthorizationRule#queue_name}
-  */
-  readonly queueName?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue_authorization_rule#resource_group_name ServicebusQueueAuthorizationRule#resource_group_name}
-  */
-  readonly resourceGroupName?: string;
+  readonly queueId: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue_authorization_rule#send ServicebusQueueAuthorizationRule#send}
   */
@@ -236,8 +224,8 @@ export class ServicebusQueueAuthorizationRule extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_servicebus_queue_authorization_rule',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -248,10 +236,7 @@ export class ServicebusQueueAuthorizationRule extends cdktf.TerraformResource {
     this._listen = config.listen;
     this._manage = config.manage;
     this._name = config.name;
-    this._namespaceName = config.namespaceName;
     this._queueId = config.queueId;
-    this._queueName = config.queueName;
-    this._resourceGroupName = config.resourceGroupName;
     this._send = config.send;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -321,22 +306,6 @@ export class ServicebusQueueAuthorizationRule extends cdktf.TerraformResource {
     return this._name;
   }
 
-  // namespace_name - computed: true, optional: true, required: false
-  private _namespaceName?: string; 
-  public get namespaceName() {
-    return this.getStringAttribute('namespace_name');
-  }
-  public set namespaceName(value: string) {
-    this._namespaceName = value;
-  }
-  public resetNamespaceName() {
-    this._namespaceName = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get namespaceNameInput() {
-    return this._namespaceName;
-  }
-
   // primary_connection_string - computed: true, optional: false, required: false
   public get primaryConnectionString() {
     return this.getStringAttribute('primary_connection_string');
@@ -352,7 +321,7 @@ export class ServicebusQueueAuthorizationRule extends cdktf.TerraformResource {
     return this.getStringAttribute('primary_key');
   }
 
-  // queue_id - computed: true, optional: true, required: false
+  // queue_id - computed: false, optional: false, required: true
   private _queueId?: string; 
   public get queueId() {
     return this.getStringAttribute('queue_id');
@@ -360,44 +329,9 @@ export class ServicebusQueueAuthorizationRule extends cdktf.TerraformResource {
   public set queueId(value: string) {
     this._queueId = value;
   }
-  public resetQueueId() {
-    this._queueId = undefined;
-  }
   // Temporarily expose input value. Use with caution.
   public get queueIdInput() {
     return this._queueId;
-  }
-
-  // queue_name - computed: true, optional: true, required: false
-  private _queueName?: string; 
-  public get queueName() {
-    return this.getStringAttribute('queue_name');
-  }
-  public set queueName(value: string) {
-    this._queueName = value;
-  }
-  public resetQueueName() {
-    this._queueName = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get queueNameInput() {
-    return this._queueName;
-  }
-
-  // resource_group_name - computed: true, optional: true, required: false
-  private _resourceGroupName?: string; 
-  public get resourceGroupName() {
-    return this.getStringAttribute('resource_group_name');
-  }
-  public set resourceGroupName(value: string) {
-    this._resourceGroupName = value;
-  }
-  public resetResourceGroupName() {
-    this._resourceGroupName = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get resourceGroupNameInput() {
-    return this._resourceGroupName;
   }
 
   // secondary_connection_string - computed: true, optional: false, required: false
@@ -457,10 +391,7 @@ export class ServicebusQueueAuthorizationRule extends cdktf.TerraformResource {
       listen: cdktf.booleanToTerraform(this._listen),
       manage: cdktf.booleanToTerraform(this._manage),
       name: cdktf.stringToTerraform(this._name),
-      namespace_name: cdktf.stringToTerraform(this._namespaceName),
       queue_id: cdktf.stringToTerraform(this._queueId),
-      queue_name: cdktf.stringToTerraform(this._queueName),
-      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       send: cdktf.booleanToTerraform(this._send),
       timeouts: servicebusQueueAuthorizationRuleTimeoutsToTerraform(this._timeouts.internalValue),
     };

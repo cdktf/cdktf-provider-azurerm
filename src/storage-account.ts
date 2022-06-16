@@ -24,9 +24,17 @@ export interface StorageAccountConfig extends cdktf.TerraformMetaArguments {
   */
   readonly accountTier: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account#allow_blob_public_access StorageAccount#allow_blob_public_access}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account#allow_nested_items_to_be_public StorageAccount#allow_nested_items_to_be_public}
   */
-  readonly allowBlobPublicAccess?: boolean | cdktf.IResolvable;
+  readonly allowNestedItemsToBePublic?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account#cross_tenant_replication_enabled StorageAccount#cross_tenant_replication_enabled}
+  */
+  readonly crossTenantReplicationEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account#edge_zone StorageAccount#edge_zone}
+  */
+  readonly edgeZone?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account#enable_https_traffic_only StorageAccount#enable_https_traffic_only}
   */
@@ -3251,8 +3259,8 @@ export class StorageAccount extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_storage_account',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -3263,7 +3271,9 @@ export class StorageAccount extends cdktf.TerraformResource {
     this._accountKind = config.accountKind;
     this._accountReplicationType = config.accountReplicationType;
     this._accountTier = config.accountTier;
-    this._allowBlobPublicAccess = config.allowBlobPublicAccess;
+    this._allowNestedItemsToBePublic = config.allowNestedItemsToBePublic;
+    this._crossTenantReplicationEnabled = config.crossTenantReplicationEnabled;
+    this._edgeZone = config.edgeZone;
     this._enableHttpsTrafficOnly = config.enableHttpsTrafficOnly;
     this._id = config.id;
     this._infrastructureEncryptionEnabled = config.infrastructureEncryptionEnabled;
@@ -3353,20 +3363,52 @@ export class StorageAccount extends cdktf.TerraformResource {
     return this._accountTier;
   }
 
-  // allow_blob_public_access - computed: false, optional: true, required: false
-  private _allowBlobPublicAccess?: boolean | cdktf.IResolvable; 
-  public get allowBlobPublicAccess() {
-    return this.getBooleanAttribute('allow_blob_public_access');
+  // allow_nested_items_to_be_public - computed: false, optional: true, required: false
+  private _allowNestedItemsToBePublic?: boolean | cdktf.IResolvable; 
+  public get allowNestedItemsToBePublic() {
+    return this.getBooleanAttribute('allow_nested_items_to_be_public');
   }
-  public set allowBlobPublicAccess(value: boolean | cdktf.IResolvable) {
-    this._allowBlobPublicAccess = value;
+  public set allowNestedItemsToBePublic(value: boolean | cdktf.IResolvable) {
+    this._allowNestedItemsToBePublic = value;
   }
-  public resetAllowBlobPublicAccess() {
-    this._allowBlobPublicAccess = undefined;
+  public resetAllowNestedItemsToBePublic() {
+    this._allowNestedItemsToBePublic = undefined;
   }
   // Temporarily expose input value. Use with caution.
-  public get allowBlobPublicAccessInput() {
-    return this._allowBlobPublicAccess;
+  public get allowNestedItemsToBePublicInput() {
+    return this._allowNestedItemsToBePublic;
+  }
+
+  // cross_tenant_replication_enabled - computed: false, optional: true, required: false
+  private _crossTenantReplicationEnabled?: boolean | cdktf.IResolvable; 
+  public get crossTenantReplicationEnabled() {
+    return this.getBooleanAttribute('cross_tenant_replication_enabled');
+  }
+  public set crossTenantReplicationEnabled(value: boolean | cdktf.IResolvable) {
+    this._crossTenantReplicationEnabled = value;
+  }
+  public resetCrossTenantReplicationEnabled() {
+    this._crossTenantReplicationEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get crossTenantReplicationEnabledInput() {
+    return this._crossTenantReplicationEnabled;
+  }
+
+  // edge_zone - computed: false, optional: true, required: false
+  private _edgeZone?: string; 
+  public get edgeZone() {
+    return this.getStringAttribute('edge_zone');
+  }
+  public set edgeZone(value: string) {
+    this._edgeZone = value;
+  }
+  public resetEdgeZone() {
+    this._edgeZone = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get edgeZoneInput() {
+    return this._edgeZone;
   }
 
   // enable_https_traffic_only - computed: false, optional: true, required: false
@@ -3930,7 +3972,9 @@ export class StorageAccount extends cdktf.TerraformResource {
       account_kind: cdktf.stringToTerraform(this._accountKind),
       account_replication_type: cdktf.stringToTerraform(this._accountReplicationType),
       account_tier: cdktf.stringToTerraform(this._accountTier),
-      allow_blob_public_access: cdktf.booleanToTerraform(this._allowBlobPublicAccess),
+      allow_nested_items_to_be_public: cdktf.booleanToTerraform(this._allowNestedItemsToBePublic),
+      cross_tenant_replication_enabled: cdktf.booleanToTerraform(this._crossTenantReplicationEnabled),
+      edge_zone: cdktf.stringToTerraform(this._edgeZone),
       enable_https_traffic_only: cdktf.booleanToTerraform(this._enableHttpsTrafficOnly),
       id: cdktf.stringToTerraform(this._id),
       infrastructure_encryption_enabled: cdktf.booleanToTerraform(this._infrastructureEncryptionEnabled),

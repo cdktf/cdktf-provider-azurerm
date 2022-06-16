@@ -22,11 +22,7 @@ export interface DataFactoryIntegrationRuntimeAzureConfig extends cdktf.Terrafor
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure#data_factory_id DataFactoryIntegrationRuntimeAzure#data_factory_id}
   */
-  readonly dataFactoryId?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure#data_factory_name DataFactoryIntegrationRuntimeAzure#data_factory_name}
-  */
-  readonly dataFactoryName?: string;
+  readonly dataFactoryId: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure#description DataFactoryIntegrationRuntimeAzure#description}
   */
@@ -46,10 +42,6 @@ export interface DataFactoryIntegrationRuntimeAzureConfig extends cdktf.Terrafor
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure#name DataFactoryIntegrationRuntimeAzure#name}
   */
   readonly name: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure#resource_group_name DataFactoryIntegrationRuntimeAzure#resource_group_name}
-  */
-  readonly resourceGroupName: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure#time_to_live_min DataFactoryIntegrationRuntimeAzure#time_to_live_min}
   */
@@ -248,8 +240,8 @@ export class DataFactoryIntegrationRuntimeAzure extends cdktf.TerraformResource 
       terraformResourceType: 'azurerm_data_factory_integration_runtime_azure',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -260,12 +252,10 @@ export class DataFactoryIntegrationRuntimeAzure extends cdktf.TerraformResource 
     this._computeType = config.computeType;
     this._coreCount = config.coreCount;
     this._dataFactoryId = config.dataFactoryId;
-    this._dataFactoryName = config.dataFactoryName;
     this._description = config.description;
     this._id = config.id;
     this._location = config.location;
     this._name = config.name;
-    this._resourceGroupName = config.resourceGroupName;
     this._timeToLiveMin = config.timeToLiveMin;
     this._virtualNetworkEnabled = config.virtualNetworkEnabled;
     this._timeouts.internalValue = config.timeouts;
@@ -323,7 +313,7 @@ export class DataFactoryIntegrationRuntimeAzure extends cdktf.TerraformResource 
     return this._coreCount;
   }
 
-  // data_factory_id - computed: true, optional: true, required: false
+  // data_factory_id - computed: false, optional: false, required: true
   private _dataFactoryId?: string; 
   public get dataFactoryId() {
     return this.getStringAttribute('data_factory_id');
@@ -331,28 +321,9 @@ export class DataFactoryIntegrationRuntimeAzure extends cdktf.TerraformResource 
   public set dataFactoryId(value: string) {
     this._dataFactoryId = value;
   }
-  public resetDataFactoryId() {
-    this._dataFactoryId = undefined;
-  }
   // Temporarily expose input value. Use with caution.
   public get dataFactoryIdInput() {
     return this._dataFactoryId;
-  }
-
-  // data_factory_name - computed: true, optional: true, required: false
-  private _dataFactoryName?: string; 
-  public get dataFactoryName() {
-    return this.getStringAttribute('data_factory_name');
-  }
-  public set dataFactoryName(value: string) {
-    this._dataFactoryName = value;
-  }
-  public resetDataFactoryName() {
-    this._dataFactoryName = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get dataFactoryNameInput() {
-    return this._dataFactoryName;
   }
 
   // description - computed: false, optional: true, required: false
@@ -413,19 +384,6 @@ export class DataFactoryIntegrationRuntimeAzure extends cdktf.TerraformResource 
     return this._name;
   }
 
-  // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName?: string; 
-  public get resourceGroupName() {
-    return this.getStringAttribute('resource_group_name');
-  }
-  public set resourceGroupName(value: string) {
-    this._resourceGroupName = value;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get resourceGroupNameInput() {
-    return this._resourceGroupName;
-  }
-
   // time_to_live_min - computed: false, optional: true, required: false
   private _timeToLiveMin?: number; 
   public get timeToLiveMin() {
@@ -484,12 +442,10 @@ export class DataFactoryIntegrationRuntimeAzure extends cdktf.TerraformResource 
       compute_type: cdktf.stringToTerraform(this._computeType),
       core_count: cdktf.numberToTerraform(this._coreCount),
       data_factory_id: cdktf.stringToTerraform(this._dataFactoryId),
-      data_factory_name: cdktf.stringToTerraform(this._dataFactoryName),
       description: cdktf.stringToTerraform(this._description),
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
-      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       time_to_live_min: cdktf.numberToTerraform(this._timeToLiveMin),
       virtual_network_enabled: cdktf.booleanToTerraform(this._virtualNetworkEnabled),
       timeouts: dataFactoryIntegrationRuntimeAzureTimeoutsToTerraform(this._timeouts.internalValue),

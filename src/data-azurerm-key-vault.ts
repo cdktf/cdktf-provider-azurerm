@@ -304,8 +304,8 @@ export class DataAzurermKeyVault extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_key_vault',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -409,11 +409,6 @@ export class DataAzurermKeyVault extends cdktf.TerraformDataSource {
   // sku_name - computed: true, optional: false, required: false
   public get skuName() {
     return this.getStringAttribute('sku_name');
-  }
-
-  // soft_delete_enabled - computed: true, optional: false, required: false
-  public get softDeleteEnabled() {
-    return this.getBooleanAttribute('soft_delete_enabled');
   }
 
   // tags - computed: true, optional: false, required: false

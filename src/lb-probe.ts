@@ -43,10 +43,6 @@ export interface LbProbeConfig extends cdktf.TerraformMetaArguments {
   */
   readonly requestPath?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_probe#resource_group_name LbProbe#resource_group_name}
-  */
-  readonly resourceGroupName: string;
-  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_probe#timeouts LbProbe#timeouts}
@@ -236,8 +232,8 @@ export class LbProbe extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_lb_probe',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -252,7 +248,6 @@ export class LbProbe extends cdktf.TerraformResource {
     this._port = config.port;
     this._protocol = config.protocol;
     this._requestPath = config.requestPath;
-    this._resourceGroupName = config.resourceGroupName;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -384,19 +379,6 @@ export class LbProbe extends cdktf.TerraformResource {
     return this._requestPath;
   }
 
-  // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName?: string; 
-  public get resourceGroupName() {
-    return this.getStringAttribute('resource_group_name');
-  }
-  public set resourceGroupName(value: string) {
-    this._resourceGroupName = value;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get resourceGroupNameInput() {
-    return this._resourceGroupName;
-  }
-
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new LbProbeTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -427,7 +409,6 @@ export class LbProbe extends cdktf.TerraformResource {
       port: cdktf.numberToTerraform(this._port),
       protocol: cdktf.stringToTerraform(this._protocol),
       request_path: cdktf.stringToTerraform(this._requestPath),
-      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       timeouts: lbProbeTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

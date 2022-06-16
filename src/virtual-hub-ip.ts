@@ -29,7 +29,7 @@ export interface VirtualHubIpConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_ip#public_ip_address_id VirtualHubIp#public_ip_address_id}
   */
-  readonly publicIpAddressId?: string;
+  readonly publicIpAddressId: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_ip#subnet_id VirtualHubIp#subnet_id}
   */
@@ -228,8 +228,8 @@ export class VirtualHubIp extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_virtual_hub_ip',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -311,16 +311,13 @@ export class VirtualHubIp extends cdktf.TerraformResource {
     return this._privateIpAllocationMethod;
   }
 
-  // public_ip_address_id - computed: false, optional: true, required: false
+  // public_ip_address_id - computed: false, optional: false, required: true
   private _publicIpAddressId?: string; 
   public get publicIpAddressId() {
     return this.getStringAttribute('public_ip_address_id');
   }
   public set publicIpAddressId(value: string) {
     this._publicIpAddressId = value;
-  }
-  public resetPublicIpAddressId() {
-    this._publicIpAddressId = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get publicIpAddressIdInput() {

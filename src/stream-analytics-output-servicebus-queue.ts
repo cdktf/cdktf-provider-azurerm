@@ -19,6 +19,10 @@ export interface StreamAnalyticsOutputServicebusQueueConfig extends cdktf.Terraf
   */
   readonly name: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_servicebus_queue#property_columns StreamAnalyticsOutputServicebusQueue#property_columns}
+  */
+  readonly propertyColumns?: string[];
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_servicebus_queue#queue_name StreamAnalyticsOutputServicebusQueue#queue_name}
   */
   readonly queueName: string;
@@ -42,6 +46,10 @@ export interface StreamAnalyticsOutputServicebusQueueConfig extends cdktf.Terraf
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_servicebus_queue#stream_analytics_job_name StreamAnalyticsOutputServicebusQueue#stream_analytics_job_name}
   */
   readonly streamAnalyticsJobName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_servicebus_queue#system_property_columns StreamAnalyticsOutputServicebusQueue#system_property_columns}
+  */
+  readonly systemPropertyColumns?: { [key: string]: string };
   /**
   * serialization block
   * 
@@ -381,8 +389,8 @@ export class StreamAnalyticsOutputServicebusQueue extends cdktf.TerraformResourc
       terraformResourceType: 'azurerm_stream_analytics_output_servicebus_queue',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -391,12 +399,14 @@ export class StreamAnalyticsOutputServicebusQueue extends cdktf.TerraformResourc
     });
     this._id = config.id;
     this._name = config.name;
+    this._propertyColumns = config.propertyColumns;
     this._queueName = config.queueName;
     this._resourceGroupName = config.resourceGroupName;
     this._servicebusNamespace = config.servicebusNamespace;
     this._sharedAccessPolicyKey = config.sharedAccessPolicyKey;
     this._sharedAccessPolicyName = config.sharedAccessPolicyName;
     this._streamAnalyticsJobName = config.streamAnalyticsJobName;
+    this._systemPropertyColumns = config.systemPropertyColumns;
     this._serialization.internalValue = config.serialization;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -432,6 +442,22 @@ export class StreamAnalyticsOutputServicebusQueue extends cdktf.TerraformResourc
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name;
+  }
+
+  // property_columns - computed: false, optional: true, required: false
+  private _propertyColumns?: string[]; 
+  public get propertyColumns() {
+    return this.getListAttribute('property_columns');
+  }
+  public set propertyColumns(value: string[]) {
+    this._propertyColumns = value;
+  }
+  public resetPropertyColumns() {
+    this._propertyColumns = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get propertyColumnsInput() {
+    return this._propertyColumns;
   }
 
   // queue_name - computed: false, optional: false, required: true
@@ -512,6 +538,22 @@ export class StreamAnalyticsOutputServicebusQueue extends cdktf.TerraformResourc
     return this._streamAnalyticsJobName;
   }
 
+  // system_property_columns - computed: false, optional: true, required: false
+  private _systemPropertyColumns?: { [key: string]: string }; 
+  public get systemPropertyColumns() {
+    return this.getStringMapAttribute('system_property_columns');
+  }
+  public set systemPropertyColumns(value: { [key: string]: string }) {
+    this._systemPropertyColumns = value;
+  }
+  public resetSystemPropertyColumns() {
+    this._systemPropertyColumns = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get systemPropertyColumnsInput() {
+    return this._systemPropertyColumns;
+  }
+
   // serialization - computed: false, optional: false, required: true
   private _serialization = new StreamAnalyticsOutputServicebusQueueSerializationOutputReference(this, "serialization");
   public get serialization() {
@@ -549,12 +591,14 @@ export class StreamAnalyticsOutputServicebusQueue extends cdktf.TerraformResourc
     return {
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
+      property_columns: cdktf.listMapper(cdktf.stringToTerraform)(this._propertyColumns),
       queue_name: cdktf.stringToTerraform(this._queueName),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       servicebus_namespace: cdktf.stringToTerraform(this._servicebusNamespace),
       shared_access_policy_key: cdktf.stringToTerraform(this._sharedAccessPolicyKey),
       shared_access_policy_name: cdktf.stringToTerraform(this._sharedAccessPolicyName),
       stream_analytics_job_name: cdktf.stringToTerraform(this._streamAnalyticsJobName),
+      system_property_columns: cdktf.hashMapper(cdktf.stringToTerraform)(this._systemPropertyColumns),
       serialization: streamAnalyticsOutputServicebusQueueSerializationToTerraform(this._serialization.internalValue),
       timeouts: streamAnalyticsOutputServicebusQueueTimeoutsToTerraform(this._timeouts.internalValue),
     };

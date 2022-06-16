@@ -207,6 +207,11 @@ export class DataAzurermVirtualNetworkGatewayIpConfigurationOutputReference exte
     }
   }
 
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
   // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
@@ -592,8 +597,8 @@ export class DataAzurermVirtualNetworkGateway extends cdktf.TerraformDataSource 
       terraformResourceType: 'azurerm_virtual_network_gateway',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

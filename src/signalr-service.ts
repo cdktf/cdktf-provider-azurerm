@@ -53,12 +53,6 @@ export interface SignalrServiceConfig extends cdktf.TerraformMetaArguments {
   */
   readonly cors?: SignalrServiceCors[] | cdktf.IResolvable;
   /**
-  * features block
-  * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service#features SignalrService#features}
-  */
-  readonly features?: SignalrServiceFeatures[] | cdktf.IResolvable;
-  /**
   * sku block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service#sku SignalrService#sku}
@@ -169,124 +163,6 @@ export class SignalrServiceCorsList extends cdktf.ComplexList {
   */
   public get(index: number): SignalrServiceCorsOutputReference {
     return new SignalrServiceCorsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
-  }
-}
-export interface SignalrServiceFeatures {
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service#flag SignalrService#flag}
-  */
-  readonly flag: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service#value SignalrService#value}
-  */
-  readonly value: string;
-}
-
-export function signalrServiceFeaturesToTerraform(struct?: SignalrServiceFeatures | cdktf.IResolvable): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-    flag: cdktf.stringToTerraform(struct!.flag),
-    value: cdktf.stringToTerraform(struct!.value),
-  }
-}
-
-export class SignalrServiceFeaturesOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-  private resolvableValue?: cdktf.IResolvable;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
-  }
-
-  public get internalValue(): SignalrServiceFeatures | cdktf.IResolvable | undefined {
-    if (this.resolvableValue) {
-      return this.resolvableValue;
-    }
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    if (this._flag !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.flag = this._flag;
-    }
-    if (this._value !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.value = this._value;
-    }
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: SignalrServiceFeatures | cdktf.IResolvable | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-      this.resolvableValue = undefined;
-      this._flag = undefined;
-      this._value = undefined;
-    }
-    else if (cdktf.Tokenization.isResolvable(value)) {
-      this.isEmptyObject = false;
-      this.resolvableValue = value;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-      this.resolvableValue = undefined;
-      this._flag = value.flag;
-      this._value = value.value;
-    }
-  }
-
-  // flag - computed: false, optional: false, required: true
-  private _flag?: string; 
-  public get flag() {
-    return this.getStringAttribute('flag');
-  }
-  public set flag(value: string) {
-    this._flag = value;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get flagInput() {
-    return this._flag;
-  }
-
-  // value - computed: false, optional: false, required: true
-  private _value?: string; 
-  public get value() {
-    return this.getStringAttribute('value');
-  }
-  public set value(value: string) {
-    this._value = value;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get valueInput() {
-    return this._value;
-  }
-}
-
-export class SignalrServiceFeaturesList extends cdktf.ComplexList {
-  public internalValue? : SignalrServiceFeatures[] | cdktf.IResolvable
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): SignalrServiceFeaturesOutputReference {
-    return new SignalrServiceFeaturesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface SignalrServiceSku {
@@ -724,8 +600,8 @@ export class SignalrService extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_signalr_service',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -742,7 +618,6 @@ export class SignalrService extends cdktf.TerraformResource {
     this._serviceMode = config.serviceMode;
     this._tags = config.tags;
     this._cors.internalValue = config.cors;
-    this._features.internalValue = config.features;
     this._sku.internalValue = config.sku;
     this._timeouts.internalValue = config.timeouts;
     this._upstreamEndpoint.internalValue = config.upstreamEndpoint;
@@ -752,7 +627,7 @@ export class SignalrService extends cdktf.TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // connectivity_logs_enabled - computed: true, optional: true, required: false
+  // connectivity_logs_enabled - computed: false, optional: true, required: false
   private _connectivityLogsEnabled?: boolean | cdktf.IResolvable; 
   public get connectivityLogsEnabled() {
     return this.getBooleanAttribute('connectivity_logs_enabled');
@@ -794,7 +669,7 @@ export class SignalrService extends cdktf.TerraformResource {
     return this.getStringAttribute('ip_address');
   }
 
-  // live_trace_enabled - computed: true, optional: true, required: false
+  // live_trace_enabled - computed: false, optional: true, required: false
   private _liveTraceEnabled?: boolean | cdktf.IResolvable; 
   public get liveTraceEnabled() {
     return this.getBooleanAttribute('live_trace_enabled');
@@ -823,7 +698,7 @@ export class SignalrService extends cdktf.TerraformResource {
     return this._location;
   }
 
-  // messaging_logs_enabled - computed: true, optional: true, required: false
+  // messaging_logs_enabled - computed: false, optional: true, required: false
   private _messagingLogsEnabled?: boolean | cdktf.IResolvable; 
   public get messagingLogsEnabled() {
     return this.getBooleanAttribute('messaging_logs_enabled');
@@ -895,7 +770,7 @@ export class SignalrService extends cdktf.TerraformResource {
     return this.getNumberAttribute('server_port');
   }
 
-  // service_mode - computed: true, optional: true, required: false
+  // service_mode - computed: false, optional: true, required: false
   private _serviceMode?: string; 
   public get serviceMode() {
     return this.getStringAttribute('service_mode');
@@ -941,22 +816,6 @@ export class SignalrService extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get corsInput() {
     return this._cors.internalValue;
-  }
-
-  // features - computed: false, optional: true, required: false
-  private _features = new SignalrServiceFeaturesList(this, "features", true);
-  public get features() {
-    return this._features;
-  }
-  public putFeatures(value: SignalrServiceFeatures[] | cdktf.IResolvable) {
-    this._features.internalValue = value;
-  }
-  public resetFeatures() {
-    this._features.internalValue = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get featuresInput() {
-    return this._features.internalValue;
   }
 
   // sku - computed: false, optional: false, required: true
@@ -1020,7 +879,6 @@ export class SignalrService extends cdktf.TerraformResource {
       service_mode: cdktf.stringToTerraform(this._serviceMode),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       cors: cdktf.listMapper(signalrServiceCorsToTerraform)(this._cors.internalValue),
-      features: cdktf.listMapper(signalrServiceFeaturesToTerraform)(this._features.internalValue),
       sku: signalrServiceSkuToTerraform(this._sku.internalValue),
       timeouts: signalrServiceTimeoutsToTerraform(this._timeouts.internalValue),
       upstream_endpoint: cdktf.listMapper(signalrServiceUpstreamEndpointToTerraform)(this._upstreamEndpoint.internalValue),

@@ -743,7 +743,7 @@ export interface StorageManagementPolicyRuleFilters {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_management_policy#blob_types StorageManagementPolicy#blob_types}
   */
-  readonly blobTypes?: string[];
+  readonly blobTypes: string[];
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_management_policy#prefix_match StorageManagementPolicy#prefix_match}
   */
@@ -812,16 +812,13 @@ export class StorageManagementPolicyRuleFiltersOutputReference extends cdktf.Com
     }
   }
 
-  // blob_types - computed: false, optional: true, required: false
+  // blob_types - computed: false, optional: false, required: true
   private _blobTypes?: string[]; 
   public get blobTypes() {
     return cdktf.Fn.tolist(this.getListAttribute('blob_types'));
   }
   public set blobTypes(value: string[]) {
     this._blobTypes = value;
-  }
-  public resetBlobTypes() {
-    this._blobTypes = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get blobTypesInput() {
@@ -1216,8 +1213,8 @@ export class StorageManagementPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_storage_management_policy',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

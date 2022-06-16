@@ -16,10 +16,6 @@ export interface FunctionAppConfig extends cdktf.TerraformMetaArguments {
   */
   readonly appSettings?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app#client_affinity_enabled FunctionApp#client_affinity_enabled}
-  */
-  readonly clientAffinityEnabled?: boolean | cdktf.IResolvable;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app#client_cert_mode FunctionApp#client_cert_mode}
   */
   readonly clientCertMode?: string;
@@ -69,15 +65,11 @@ export interface FunctionAppConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app#storage_account_access_key FunctionApp#storage_account_access_key}
   */
-  readonly storageAccountAccessKey?: string;
+  readonly storageAccountAccessKey: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app#storage_account_name FunctionApp#storage_account_name}
   */
-  readonly storageAccountName?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app#storage_connection_string FunctionApp#storage_connection_string}
-  */
-  readonly storageConnectionString?: string;
+  readonly storageAccountName: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app#tags FunctionApp#tags}
   */
@@ -1361,7 +1353,7 @@ export class FunctionAppIdentityOutputReference extends cdktf.ComplexObject {
   // identity_ids - computed: false, optional: true, required: false
   private _identityIds?: string[]; 
   public get identityIds() {
-    return this.getListAttribute('identity_ids');
+    return cdktf.Fn.tolist(this.getListAttribute('identity_ids'));
   }
   public set identityIds(value: string[]) {
     this._identityIds = value;
@@ -3323,8 +3315,8 @@ export class FunctionApp extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_function_app',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -3333,7 +3325,6 @@ export class FunctionApp extends cdktf.TerraformResource {
     });
     this._appServicePlanId = config.appServicePlanId;
     this._appSettings = config.appSettings;
-    this._clientAffinityEnabled = config.clientAffinityEnabled;
     this._clientCertMode = config.clientCertMode;
     this._dailyMemoryTimeQuota = config.dailyMemoryTimeQuota;
     this._enableBuiltinLogging = config.enableBuiltinLogging;
@@ -3347,7 +3338,6 @@ export class FunctionApp extends cdktf.TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._storageAccountAccessKey = config.storageAccountAccessKey;
     this._storageAccountName = config.storageAccountName;
-    this._storageConnectionString = config.storageConnectionString;
     this._tags = config.tags;
     this._version = config.version;
     this._authSettings.internalValue = config.authSettings;
@@ -3389,22 +3379,6 @@ export class FunctionApp extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get appSettingsInput() {
     return this._appSettings;
-  }
-
-  // client_affinity_enabled - computed: true, optional: true, required: false
-  private _clientAffinityEnabled?: boolean | cdktf.IResolvable; 
-  public get clientAffinityEnabled() {
-    return this.getBooleanAttribute('client_affinity_enabled');
-  }
-  public set clientAffinityEnabled(value: boolean | cdktf.IResolvable) {
-    this._clientAffinityEnabled = value;
-  }
-  public resetClientAffinityEnabled() {
-    this._clientAffinityEnabled = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get clientAffinityEnabledInput() {
-    return this._clientAffinityEnabled;
   }
 
   // client_cert_mode - computed: false, optional: true, required: false
@@ -3605,7 +3579,7 @@ export class FunctionApp extends cdktf.TerraformResource {
     return this._siteCredential;
   }
 
-  // storage_account_access_key - computed: true, optional: true, required: false
+  // storage_account_access_key - computed: false, optional: false, required: true
   private _storageAccountAccessKey?: string; 
   public get storageAccountAccessKey() {
     return this.getStringAttribute('storage_account_access_key');
@@ -3613,15 +3587,12 @@ export class FunctionApp extends cdktf.TerraformResource {
   public set storageAccountAccessKey(value: string) {
     this._storageAccountAccessKey = value;
   }
-  public resetStorageAccountAccessKey() {
-    this._storageAccountAccessKey = undefined;
-  }
   // Temporarily expose input value. Use with caution.
   public get storageAccountAccessKeyInput() {
     return this._storageAccountAccessKey;
   }
 
-  // storage_account_name - computed: true, optional: true, required: false
+  // storage_account_name - computed: false, optional: false, required: true
   private _storageAccountName?: string; 
   public get storageAccountName() {
     return this.getStringAttribute('storage_account_name');
@@ -3629,28 +3600,9 @@ export class FunctionApp extends cdktf.TerraformResource {
   public set storageAccountName(value: string) {
     this._storageAccountName = value;
   }
-  public resetStorageAccountName() {
-    this._storageAccountName = undefined;
-  }
   // Temporarily expose input value. Use with caution.
   public get storageAccountNameInput() {
     return this._storageAccountName;
-  }
-
-  // storage_connection_string - computed: true, optional: true, required: false
-  private _storageConnectionString?: string; 
-  public get storageConnectionString() {
-    return this.getStringAttribute('storage_connection_string');
-  }
-  public set storageConnectionString(value: string) {
-    this._storageConnectionString = value;
-  }
-  public resetStorageConnectionString() {
-    this._storageConnectionString = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get storageConnectionStringInput() {
-    return this._storageConnectionString;
   }
 
   // tags - computed: false, optional: true, required: false
@@ -3789,7 +3741,6 @@ export class FunctionApp extends cdktf.TerraformResource {
     return {
       app_service_plan_id: cdktf.stringToTerraform(this._appServicePlanId),
       app_settings: cdktf.hashMapper(cdktf.stringToTerraform)(this._appSettings),
-      client_affinity_enabled: cdktf.booleanToTerraform(this._clientAffinityEnabled),
       client_cert_mode: cdktf.stringToTerraform(this._clientCertMode),
       daily_memory_time_quota: cdktf.numberToTerraform(this._dailyMemoryTimeQuota),
       enable_builtin_logging: cdktf.booleanToTerraform(this._enableBuiltinLogging),
@@ -3803,7 +3754,6 @@ export class FunctionApp extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       storage_account_access_key: cdktf.stringToTerraform(this._storageAccountAccessKey),
       storage_account_name: cdktf.stringToTerraform(this._storageAccountName),
-      storage_connection_string: cdktf.stringToTerraform(this._storageConnectionString),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       version: cdktf.stringToTerraform(this._version),
       auth_settings: functionAppAuthSettingsToTerraform(this._authSettings.internalValue),

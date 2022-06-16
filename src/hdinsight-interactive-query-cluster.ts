@@ -171,10 +171,6 @@ export class HdinsightInteractiveQueryClusterComponentVersionOutputReference ext
 }
 export interface HdinsightInteractiveQueryClusterGateway {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster#enabled HdinsightInteractiveQueryCluster#enabled}
-  */
-  readonly enabled?: boolean | cdktf.IResolvable;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster#password HdinsightInteractiveQueryCluster#password}
   */
   readonly password: string;
@@ -190,7 +186,6 @@ export function hdinsightInteractiveQueryClusterGatewayToTerraform(struct?: Hdin
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    enabled: cdktf.booleanToTerraform(struct!.enabled),
     password: cdktf.stringToTerraform(struct!.password),
     username: cdktf.stringToTerraform(struct!.username),
   }
@@ -210,10 +205,6 @@ export class HdinsightInteractiveQueryClusterGatewayOutputReference extends cdkt
   public get internalValue(): HdinsightInteractiveQueryClusterGateway | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enabled !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.enabled = this._enabled;
-    }
     if (this._password !== undefined) {
       hasAnyValues = true;
       internalValueResult.password = this._password;
@@ -228,32 +219,14 @@ export class HdinsightInteractiveQueryClusterGatewayOutputReference extends cdkt
   public set internalValue(value: HdinsightInteractiveQueryClusterGateway | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
-      this._enabled = undefined;
       this._password = undefined;
       this._username = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
-      this._enabled = value.enabled;
       this._password = value.password;
       this._username = value.username;
     }
-  }
-
-  // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean | cdktf.IResolvable; 
-  public get enabled() {
-    return this.getBooleanAttribute('enabled');
-  }
-  public set enabled(value: boolean | cdktf.IResolvable) {
-    this._enabled = value;
-  }
-  public resetEnabled() {
-    this._enabled = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get enabledInput() {
-    return this._enabled;
   }
 
   // password - computed: false, optional: false, required: true
@@ -1595,10 +1568,6 @@ export class HdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleOutputRefer
 }
 export interface HdinsightInteractiveQueryClusterRolesWorkerNode {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster#min_instance_count HdinsightInteractiveQueryCluster#min_instance_count}
-  */
-  readonly minInstanceCount?: number;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster#password HdinsightInteractiveQueryCluster#password}
   */
   readonly password?: string;
@@ -1640,7 +1609,6 @@ export function hdinsightInteractiveQueryClusterRolesWorkerNodeToTerraform(struc
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    min_instance_count: cdktf.numberToTerraform(struct!.minInstanceCount),
     password: cdktf.stringToTerraform(struct!.password),
     ssh_keys: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sshKeys),
     subnet_id: cdktf.stringToTerraform(struct!.subnetId),
@@ -1666,10 +1634,6 @@ export class HdinsightInteractiveQueryClusterRolesWorkerNodeOutputReference exte
   public get internalValue(): HdinsightInteractiveQueryClusterRolesWorkerNode | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._minInstanceCount !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.minInstanceCount = this._minInstanceCount;
-    }
     if (this._password !== undefined) {
       hasAnyValues = true;
       internalValueResult.password = this._password;
@@ -1708,7 +1672,6 @@ export class HdinsightInteractiveQueryClusterRolesWorkerNodeOutputReference exte
   public set internalValue(value: HdinsightInteractiveQueryClusterRolesWorkerNode | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
-      this._minInstanceCount = undefined;
       this._password = undefined;
       this._sshKeys = undefined;
       this._subnetId = undefined;
@@ -1720,7 +1683,6 @@ export class HdinsightInteractiveQueryClusterRolesWorkerNodeOutputReference exte
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
-      this._minInstanceCount = value.minInstanceCount;
       this._password = value.password;
       this._sshKeys = value.sshKeys;
       this._subnetId = value.subnetId;
@@ -1730,22 +1692,6 @@ export class HdinsightInteractiveQueryClusterRolesWorkerNodeOutputReference exte
       this._vmSize = value.vmSize;
       this._autoscale.internalValue = value.autoscale;
     }
-  }
-
-  // min_instance_count - computed: true, optional: true, required: false
-  private _minInstanceCount?: number; 
-  public get minInstanceCount() {
-    return this.getNumberAttribute('min_instance_count');
-  }
-  public set minInstanceCount(value: number) {
-    this._minInstanceCount = value;
-  }
-  public resetMinInstanceCount() {
-    this._minInstanceCount = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get minInstanceCountInput() {
-    return this._minInstanceCount;
   }
 
   // password - computed: false, optional: true, required: false
@@ -2872,8 +2818,8 @@ export class HdinsightInteractiveQueryCluster extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_hdinsight_interactive_query_cluster',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

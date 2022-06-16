@@ -23,10 +23,6 @@ export interface DataAzurermLbRuleConfig extends cdktf.TerraformMetaArguments {
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/lb_rule#resource_group_name DataAzurermLbRule#resource_group_name}
-  */
-  readonly resourceGroupName: string;
-  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/lb_rule#timeouts DataAzurermLbRule#timeouts}
@@ -135,8 +131,8 @@ export class DataAzurermLbRule extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_lb_rule',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -146,7 +142,6 @@ export class DataAzurermLbRule extends cdktf.TerraformDataSource {
     this._id = config.id;
     this._loadbalancerId = config.loadbalancerId;
     this._name = config.name;
-    this._resourceGroupName = config.resourceGroupName;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -251,19 +246,6 @@ export class DataAzurermLbRule extends cdktf.TerraformDataSource {
     return this.getStringAttribute('protocol');
   }
 
-  // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName?: string; 
-  public get resourceGroupName() {
-    return this.getStringAttribute('resource_group_name');
-  }
-  public set resourceGroupName(value: string) {
-    this._resourceGroupName = value;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get resourceGroupNameInput() {
-    return this._resourceGroupName;
-  }
-
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new DataAzurermLbRuleTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -289,7 +271,6 @@ export class DataAzurermLbRule extends cdktf.TerraformDataSource {
       id: cdktf.stringToTerraform(this._id),
       loadbalancer_id: cdktf.stringToTerraform(this._loadbalancerId),
       name: cdktf.stringToTerraform(this._name),
-      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       timeouts: dataAzurermLbRuleTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

@@ -12,10 +12,6 @@ export interface DataAzurermPublicIpsConfig extends cdktf.TerraformMetaArguments
   */
   readonly allocationType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/public_ips#attached DataAzurermPublicIps#attached}
-  */
-  readonly attached?: boolean | cdktf.IResolvable;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/public_ips#attachment_status DataAzurermPublicIps#attachment_status}
   */
   readonly attachmentStatus?: string;
@@ -227,8 +223,8 @@ export class DataAzurermPublicIps extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_public_ips',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -236,7 +232,6 @@ export class DataAzurermPublicIps extends cdktf.TerraformDataSource {
       lifecycle: config.lifecycle
     });
     this._allocationType = config.allocationType;
-    this._attached = config.attached;
     this._attachmentStatus = config.attachmentStatus;
     this._id = config.id;
     this._namePrefix = config.namePrefix;
@@ -262,22 +257,6 @@ export class DataAzurermPublicIps extends cdktf.TerraformDataSource {
   // Temporarily expose input value. Use with caution.
   public get allocationTypeInput() {
     return this._allocationType;
-  }
-
-  // attached - computed: false, optional: true, required: false
-  private _attached?: boolean | cdktf.IResolvable; 
-  public get attached() {
-    return this.getBooleanAttribute('attached');
-  }
-  public set attached(value: boolean | cdktf.IResolvable) {
-    this._attached = value;
-  }
-  public resetAttached() {
-    this._attached = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get attachedInput() {
-    return this._attached;
   }
 
   // attachment_status - computed: false, optional: true, required: false
@@ -370,7 +349,6 @@ export class DataAzurermPublicIps extends cdktf.TerraformDataSource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       allocation_type: cdktf.stringToTerraform(this._allocationType),
-      attached: cdktf.booleanToTerraform(this._attached),
       attachment_status: cdktf.stringToTerraform(this._attachmentStatus),
       id: cdktf.stringToTerraform(this._id),
       name_prefix: cdktf.stringToTerraform(this._namePrefix),

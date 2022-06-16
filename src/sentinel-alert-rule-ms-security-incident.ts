@@ -55,10 +55,6 @@ export interface SentinelAlertRuleMsSecurityIncidentConfig extends cdktf.Terrafo
   */
   readonly severityFilter: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_ms_security_incident#text_whitelist SentinelAlertRuleMsSecurityIncident#text_whitelist}
-  */
-  readonly textWhitelist?: string[];
-  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_ms_security_incident#timeouts SentinelAlertRuleMsSecurityIncident#timeouts}
@@ -248,8 +244,8 @@ export class SentinelAlertRuleMsSecurityIncident extends cdktf.TerraformResource
       terraformResourceType: 'azurerm_sentinel_alert_rule_ms_security_incident',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -267,7 +263,6 @@ export class SentinelAlertRuleMsSecurityIncident extends cdktf.TerraformResource
     this._name = config.name;
     this._productFilter = config.productFilter;
     this._severityFilter = config.severityFilter;
-    this._textWhitelist = config.textWhitelist;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -436,22 +431,6 @@ export class SentinelAlertRuleMsSecurityIncident extends cdktf.TerraformResource
     return this._severityFilter;
   }
 
-  // text_whitelist - computed: true, optional: true, required: false
-  private _textWhitelist?: string[]; 
-  public get textWhitelist() {
-    return cdktf.Fn.tolist(this.getListAttribute('text_whitelist'));
-  }
-  public set textWhitelist(value: string[]) {
-    this._textWhitelist = value;
-  }
-  public resetTextWhitelist() {
-    this._textWhitelist = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get textWhitelistInput() {
-    return this._textWhitelist;
-  }
-
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new SentinelAlertRuleMsSecurityIncidentTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -485,7 +464,6 @@ export class SentinelAlertRuleMsSecurityIncident extends cdktf.TerraformResource
       name: cdktf.stringToTerraform(this._name),
       product_filter: cdktf.stringToTerraform(this._productFilter),
       severity_filter: cdktf.listMapper(cdktf.stringToTerraform)(this._severityFilter),
-      text_whitelist: cdktf.listMapper(cdktf.stringToTerraform)(this._textWhitelist),
       timeouts: sentinelAlertRuleMsSecurityIncidentTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

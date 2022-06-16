@@ -16,6 +16,10 @@ export interface VirtualNetworkGatewayConfig extends cdktf.TerraformMetaArgument
   */
   readonly defaultLocalNetworkGatewayId?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway#edge_zone VirtualNetworkGateway#edge_zone}
+  */
+  readonly edgeZone?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway#enable_bgp VirtualNetworkGateway#enable_bgp}
   */
   readonly enableBgp?: boolean | cdktf.IResolvable;
@@ -237,10 +241,6 @@ export interface VirtualNetworkGatewayBgpSettings {
   */
   readonly peerWeight?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway#peering_address VirtualNetworkGateway#peering_address}
-  */
-  readonly peeringAddress?: string;
-  /**
   * peering_addresses block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway#peering_addresses VirtualNetworkGateway#peering_addresses}
@@ -256,7 +256,6 @@ export function virtualNetworkGatewayBgpSettingsToTerraform(struct?: VirtualNetw
   return {
     asn: cdktf.numberToTerraform(struct!.asn),
     peer_weight: cdktf.numberToTerraform(struct!.peerWeight),
-    peering_address: cdktf.stringToTerraform(struct!.peeringAddress),
     peering_addresses: cdktf.listMapper(virtualNetworkGatewayBgpSettingsPeeringAddressesToTerraform)(struct!.peeringAddresses),
   }
 }
@@ -283,10 +282,6 @@ export class VirtualNetworkGatewayBgpSettingsOutputReference extends cdktf.Compl
       hasAnyValues = true;
       internalValueResult.peerWeight = this._peerWeight;
     }
-    if (this._peeringAddress !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.peeringAddress = this._peeringAddress;
-    }
     if (this._peeringAddresses?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.peeringAddresses = this._peeringAddresses?.internalValue;
@@ -299,14 +294,12 @@ export class VirtualNetworkGatewayBgpSettingsOutputReference extends cdktf.Compl
       this.isEmptyObject = false;
       this._asn = undefined;
       this._peerWeight = undefined;
-      this._peeringAddress = undefined;
       this._peeringAddresses.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._asn = value.asn;
       this._peerWeight = value.peerWeight;
-      this._peeringAddress = value.peeringAddress;
       this._peeringAddresses.internalValue = value.peeringAddresses;
     }
   }
@@ -341,22 +334,6 @@ export class VirtualNetworkGatewayBgpSettingsOutputReference extends cdktf.Compl
   // Temporarily expose input value. Use with caution.
   public get peerWeightInput() {
     return this._peerWeight;
-  }
-
-  // peering_address - computed: true, optional: true, required: false
-  private _peeringAddress?: string; 
-  public get peeringAddress() {
-    return this.getStringAttribute('peering_address');
-  }
-  public set peeringAddress(value: string) {
-    this._peeringAddress = value;
-  }
-  public resetPeeringAddress() {
-    this._peeringAddress = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get peeringAddressInput() {
-    return this._peeringAddress;
   }
 
   // peering_addresses - computed: false, optional: true, required: false
@@ -1340,8 +1317,8 @@ export class VirtualNetworkGateway extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_virtual_network_gateway',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1350,6 +1327,7 @@ export class VirtualNetworkGateway extends cdktf.TerraformResource {
     });
     this._activeActive = config.activeActive;
     this._defaultLocalNetworkGatewayId = config.defaultLocalNetworkGatewayId;
+    this._edgeZone = config.edgeZone;
     this._enableBgp = config.enableBgp;
     this._generation = config.generation;
     this._id = config.id;
@@ -1402,6 +1380,22 @@ export class VirtualNetworkGateway extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get defaultLocalNetworkGatewayIdInput() {
     return this._defaultLocalNetworkGatewayId;
+  }
+
+  // edge_zone - computed: false, optional: true, required: false
+  private _edgeZone?: string; 
+  public get edgeZone() {
+    return this.getStringAttribute('edge_zone');
+  }
+  public set edgeZone(value: string) {
+    this._edgeZone = value;
+  }
+  public resetEdgeZone() {
+    this._edgeZone = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get edgeZoneInput() {
+    return this._edgeZone;
   }
 
   // enable_bgp - computed: true, optional: true, required: false
@@ -1650,6 +1644,7 @@ export class VirtualNetworkGateway extends cdktf.TerraformResource {
     return {
       active_active: cdktf.booleanToTerraform(this._activeActive),
       default_local_network_gateway_id: cdktf.stringToTerraform(this._defaultLocalNetworkGatewayId),
+      edge_zone: cdktf.stringToTerraform(this._edgeZone),
       enable_bgp: cdktf.booleanToTerraform(this._enableBgp),
       generation: cdktf.stringToTerraform(this._generation),
       id: cdktf.stringToTerraform(this._id),

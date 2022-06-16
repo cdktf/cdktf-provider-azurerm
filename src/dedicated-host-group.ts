@@ -39,9 +39,9 @@ export interface DedicatedHostGroupConfig extends cdktf.TerraformMetaArguments {
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dedicated_host_group#zones DedicatedHostGroup#zones}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dedicated_host_group#zone DedicatedHostGroup#zone}
   */
-  readonly zones?: string[];
+  readonly zone?: string;
   /**
   * timeouts block
   * 
@@ -232,8 +232,8 @@ export class DedicatedHostGroup extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_dedicated_host_group',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -247,7 +247,7 @@ export class DedicatedHostGroup extends cdktf.TerraformResource {
     this._platformFaultDomainCount = config.platformFaultDomainCount;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
-    this._zones = config.zones;
+    this._zone = config.zone;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -355,20 +355,20 @@ export class DedicatedHostGroup extends cdktf.TerraformResource {
     return this._tags;
   }
 
-  // zones - computed: false, optional: true, required: false
-  private _zones?: string[]; 
-  public get zones() {
-    return this.getListAttribute('zones');
+  // zone - computed: false, optional: true, required: false
+  private _zone?: string; 
+  public get zone() {
+    return this.getStringAttribute('zone');
   }
-  public set zones(value: string[]) {
-    this._zones = value;
+  public set zone(value: string) {
+    this._zone = value;
   }
-  public resetZones() {
-    this._zones = undefined;
+  public resetZone() {
+    this._zone = undefined;
   }
   // Temporarily expose input value. Use with caution.
-  public get zonesInput() {
-    return this._zones;
+  public get zoneInput() {
+    return this._zone;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -400,7 +400,7 @@ export class DedicatedHostGroup extends cdktf.TerraformResource {
       platform_fault_domain_count: cdktf.numberToTerraform(this._platformFaultDomainCount),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
-      zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),
+      zone: cdktf.stringToTerraform(this._zone),
       timeouts: dedicatedHostGroupTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

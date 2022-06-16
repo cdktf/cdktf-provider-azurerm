@@ -35,10 +35,6 @@ export interface NetappSnapshotConfig extends cdktf.TerraformMetaArguments {
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot#tags NetappSnapshot#tags}
-  */
-  readonly tags?: { [key: string]: string };
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot#volume_name NetappSnapshot#volume_name}
   */
   readonly volumeName: string;
@@ -232,8 +228,8 @@ export class NetappSnapshot extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_netapp_snapshot',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -246,7 +242,6 @@ export class NetappSnapshot extends cdktf.TerraformResource {
     this._name = config.name;
     this._poolName = config.poolName;
     this._resourceGroupName = config.resourceGroupName;
-    this._tags = config.tags;
     this._volumeName = config.volumeName;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -336,22 +331,6 @@ export class NetappSnapshot extends cdktf.TerraformResource {
     return this._resourceGroupName;
   }
 
-  // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string }; 
-  public get tags() {
-    return this.getStringMapAttribute('tags');
-  }
-  public set tags(value: { [key: string]: string }) {
-    this._tags = value;
-  }
-  public resetTags() {
-    this._tags = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get tagsInput() {
-    return this._tags;
-  }
-
   // volume_name - computed: false, optional: false, required: true
   private _volumeName?: string; 
   public get volumeName() {
@@ -393,7 +372,6 @@ export class NetappSnapshot extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       pool_name: cdktf.stringToTerraform(this._poolName),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       volume_name: cdktf.stringToTerraform(this._volumeName),
       timeouts: netappSnapshotTimeoutsToTerraform(this._timeouts.internalValue),
     };

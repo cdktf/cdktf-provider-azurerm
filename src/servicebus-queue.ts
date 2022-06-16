@@ -73,11 +73,7 @@ export interface ServicebusQueueConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue#namespace_id ServicebusQueue#namespace_id}
   */
-  readonly namespaceId?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue#namespace_name ServicebusQueue#namespace_name}
-  */
-  readonly namespaceName?: string;
+  readonly namespaceId: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue#requires_duplicate_detection ServicebusQueue#requires_duplicate_detection}
   */
@@ -86,10 +82,6 @@ export interface ServicebusQueueConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue#requires_session ServicebusQueue#requires_session}
   */
   readonly requiresSession?: boolean | cdktf.IResolvable;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue#resource_group_name ServicebusQueue#resource_group_name}
-  */
-  readonly resourceGroupName?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue#status ServicebusQueue#status}
   */
@@ -284,8 +276,8 @@ export class ServicebusQueue extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_servicebus_queue',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -308,10 +300,8 @@ export class ServicebusQueue extends cdktf.TerraformResource {
     this._maxSizeInMegabytes = config.maxSizeInMegabytes;
     this._name = config.name;
     this._namespaceId = config.namespaceId;
-    this._namespaceName = config.namespaceName;
     this._requiresDuplicateDetection = config.requiresDuplicateDetection;
     this._requiresSession = config.requiresSession;
-    this._resourceGroupName = config.resourceGroupName;
     this._status = config.status;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -557,7 +547,7 @@ export class ServicebusQueue extends cdktf.TerraformResource {
     return this._name;
   }
 
-  // namespace_id - computed: true, optional: true, required: false
+  // namespace_id - computed: false, optional: false, required: true
   private _namespaceId?: string; 
   public get namespaceId() {
     return this.getStringAttribute('namespace_id');
@@ -565,28 +555,9 @@ export class ServicebusQueue extends cdktf.TerraformResource {
   public set namespaceId(value: string) {
     this._namespaceId = value;
   }
-  public resetNamespaceId() {
-    this._namespaceId = undefined;
-  }
   // Temporarily expose input value. Use with caution.
   public get namespaceIdInput() {
     return this._namespaceId;
-  }
-
-  // namespace_name - computed: true, optional: true, required: false
-  private _namespaceName?: string; 
-  public get namespaceName() {
-    return this.getStringAttribute('namespace_name');
-  }
-  public set namespaceName(value: string) {
-    this._namespaceName = value;
-  }
-  public resetNamespaceName() {
-    this._namespaceName = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get namespaceNameInput() {
-    return this._namespaceName;
   }
 
   // requires_duplicate_detection - computed: false, optional: true, required: false
@@ -619,22 +590,6 @@ export class ServicebusQueue extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get requiresSessionInput() {
     return this._requiresSession;
-  }
-
-  // resource_group_name - computed: true, optional: true, required: false
-  private _resourceGroupName?: string; 
-  public get resourceGroupName() {
-    return this.getStringAttribute('resource_group_name');
-  }
-  public set resourceGroupName(value: string) {
-    this._resourceGroupName = value;
-  }
-  public resetResourceGroupName() {
-    this._resourceGroupName = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get resourceGroupNameInput() {
-    return this._resourceGroupName;
   }
 
   // status - computed: false, optional: true, required: false
@@ -691,10 +646,8 @@ export class ServicebusQueue extends cdktf.TerraformResource {
       max_size_in_megabytes: cdktf.numberToTerraform(this._maxSizeInMegabytes),
       name: cdktf.stringToTerraform(this._name),
       namespace_id: cdktf.stringToTerraform(this._namespaceId),
-      namespace_name: cdktf.stringToTerraform(this._namespaceName),
       requires_duplicate_detection: cdktf.booleanToTerraform(this._requiresDuplicateDetection),
       requires_session: cdktf.booleanToTerraform(this._requiresSession),
-      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       status: cdktf.stringToTerraform(this._status),
       timeouts: servicebusQueueTimeoutsToTerraform(this._timeouts.internalValue),
     };

@@ -31,6 +31,14 @@ export interface RedisEnterpriseDatabaseConfig extends cdktf.TerraformMetaArgume
   */
   readonly id?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_enterprise_database#linked_database_group_nickname RedisEnterpriseDatabase#linked_database_group_nickname}
+  */
+  readonly linkedDatabaseGroupNickname?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_enterprise_database#linked_database_id RedisEnterpriseDatabase#linked_database_id}
+  */
+  readonly linkedDatabaseId?: string[];
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_enterprise_database#name RedisEnterpriseDatabase#name}
   */
   readonly name?: string;
@@ -194,6 +202,10 @@ export interface RedisEnterpriseDatabaseTimeouts {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_enterprise_database#read RedisEnterpriseDatabase#read}
   */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_enterprise_database#update RedisEnterpriseDatabase#update}
+  */
+  readonly update?: string;
 }
 
 export function redisEnterpriseDatabaseTimeoutsToTerraform(struct?: RedisEnterpriseDatabaseTimeoutsOutputReference | RedisEnterpriseDatabaseTimeouts | cdktf.IResolvable): any {
@@ -205,6 +217,7 @@ export function redisEnterpriseDatabaseTimeoutsToTerraform(struct?: RedisEnterpr
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
     read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
   }
 }
 
@@ -238,6 +251,10 @@ export class RedisEnterpriseDatabaseTimeoutsOutputReference extends cdktf.Comple
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
+    if (this._update !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -248,6 +265,7 @@ export class RedisEnterpriseDatabaseTimeoutsOutputReference extends cdktf.Comple
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
+      this._update = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
       this.isEmptyObject = false;
@@ -259,6 +277,7 @@ export class RedisEnterpriseDatabaseTimeoutsOutputReference extends cdktf.Comple
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
+      this._update = value.update;
     }
   }
 
@@ -309,6 +328,22 @@ export class RedisEnterpriseDatabaseTimeoutsOutputReference extends cdktf.Comple
   public get readInput() {
     return this._read;
   }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update;
+  }
 }
 
 /**
@@ -337,8 +372,8 @@ export class RedisEnterpriseDatabase extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_redis_enterprise_database',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -350,6 +385,8 @@ export class RedisEnterpriseDatabase extends cdktf.TerraformResource {
     this._clusteringPolicy = config.clusteringPolicy;
     this._evictionPolicy = config.evictionPolicy;
     this._id = config.id;
+    this._linkedDatabaseGroupNickname = config.linkedDatabaseGroupNickname;
+    this._linkedDatabaseId = config.linkedDatabaseId;
     this._name = config.name;
     this._port = config.port;
     this._resourceGroupName = config.resourceGroupName;
@@ -436,6 +473,38 @@ export class RedisEnterpriseDatabase extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get idInput() {
     return this._id;
+  }
+
+  // linked_database_group_nickname - computed: false, optional: true, required: false
+  private _linkedDatabaseGroupNickname?: string; 
+  public get linkedDatabaseGroupNickname() {
+    return this.getStringAttribute('linked_database_group_nickname');
+  }
+  public set linkedDatabaseGroupNickname(value: string) {
+    this._linkedDatabaseGroupNickname = value;
+  }
+  public resetLinkedDatabaseGroupNickname() {
+    this._linkedDatabaseGroupNickname = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get linkedDatabaseGroupNicknameInput() {
+    return this._linkedDatabaseGroupNickname;
+  }
+
+  // linked_database_id - computed: false, optional: true, required: false
+  private _linkedDatabaseId?: string[]; 
+  public get linkedDatabaseId() {
+    return cdktf.Fn.tolist(this.getListAttribute('linked_database_id'));
+  }
+  public set linkedDatabaseId(value: string[]) {
+    this._linkedDatabaseId = value;
+  }
+  public resetLinkedDatabaseId() {
+    this._linkedDatabaseId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get linkedDatabaseIdInput() {
+    return this._linkedDatabaseId;
   }
 
   // name - computed: false, optional: true, required: false
@@ -539,6 +608,8 @@ export class RedisEnterpriseDatabase extends cdktf.TerraformResource {
       clustering_policy: cdktf.stringToTerraform(this._clusteringPolicy),
       eviction_policy: cdktf.stringToTerraform(this._evictionPolicy),
       id: cdktf.stringToTerraform(this._id),
+      linked_database_group_nickname: cdktf.stringToTerraform(this._linkedDatabaseGroupNickname),
+      linked_database_id: cdktf.listMapper(cdktf.stringToTerraform)(this._linkedDatabaseId),
       name: cdktf.stringToTerraform(this._name),
       port: cdktf.numberToTerraform(this._port),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),

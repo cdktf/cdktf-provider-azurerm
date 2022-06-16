@@ -323,14 +323,6 @@ export interface OrchestratedVirtualMachineScaleSetDataDisk {
   */
   readonly diskEncryptionSetId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#disk_iops_read_write OrchestratedVirtualMachineScaleSet#disk_iops_read_write}
-  */
-  readonly diskIopsReadWrite?: number;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#disk_mbps_read_write OrchestratedVirtualMachineScaleSet#disk_mbps_read_write}
-  */
-  readonly diskMbpsReadWrite?: number;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#disk_size_gb OrchestratedVirtualMachineScaleSet#disk_size_gb}
   */
   readonly diskSizeGb: number;
@@ -365,8 +357,6 @@ export function orchestratedVirtualMachineScaleSetDataDiskToTerraform(struct?: O
     caching: cdktf.stringToTerraform(struct!.caching),
     create_option: cdktf.stringToTerraform(struct!.createOption),
     disk_encryption_set_id: cdktf.stringToTerraform(struct!.diskEncryptionSetId),
-    disk_iops_read_write: cdktf.numberToTerraform(struct!.diskIopsReadWrite),
-    disk_mbps_read_write: cdktf.numberToTerraform(struct!.diskMbpsReadWrite),
     disk_size_gb: cdktf.numberToTerraform(struct!.diskSizeGb),
     lun: cdktf.numberToTerraform(struct!.lun),
     storage_account_type: cdktf.stringToTerraform(struct!.storageAccountType),
@@ -408,14 +398,6 @@ export class OrchestratedVirtualMachineScaleSetDataDiskOutputReference extends c
       hasAnyValues = true;
       internalValueResult.diskEncryptionSetId = this._diskEncryptionSetId;
     }
-    if (this._diskIopsReadWrite !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.diskIopsReadWrite = this._diskIopsReadWrite;
-    }
-    if (this._diskMbpsReadWrite !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.diskMbpsReadWrite = this._diskMbpsReadWrite;
-    }
     if (this._diskSizeGb !== undefined) {
       hasAnyValues = true;
       internalValueResult.diskSizeGb = this._diskSizeGb;
@@ -450,8 +432,6 @@ export class OrchestratedVirtualMachineScaleSetDataDiskOutputReference extends c
       this._caching = undefined;
       this._createOption = undefined;
       this._diskEncryptionSetId = undefined;
-      this._diskIopsReadWrite = undefined;
-      this._diskMbpsReadWrite = undefined;
       this._diskSizeGb = undefined;
       this._lun = undefined;
       this._storageAccountType = undefined;
@@ -469,8 +449,6 @@ export class OrchestratedVirtualMachineScaleSetDataDiskOutputReference extends c
       this._caching = value.caching;
       this._createOption = value.createOption;
       this._diskEncryptionSetId = value.diskEncryptionSetId;
-      this._diskIopsReadWrite = value.diskIopsReadWrite;
-      this._diskMbpsReadWrite = value.diskMbpsReadWrite;
       this._diskSizeGb = value.diskSizeGb;
       this._lun = value.lun;
       this._storageAccountType = value.storageAccountType;
@@ -523,38 +501,6 @@ export class OrchestratedVirtualMachineScaleSetDataDiskOutputReference extends c
   // Temporarily expose input value. Use with caution.
   public get diskEncryptionSetIdInput() {
     return this._diskEncryptionSetId;
-  }
-
-  // disk_iops_read_write - computed: true, optional: true, required: false
-  private _diskIopsReadWrite?: number; 
-  public get diskIopsReadWrite() {
-    return this.getNumberAttribute('disk_iops_read_write');
-  }
-  public set diskIopsReadWrite(value: number) {
-    this._diskIopsReadWrite = value;
-  }
-  public resetDiskIopsReadWrite() {
-    this._diskIopsReadWrite = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get diskIopsReadWriteInput() {
-    return this._diskIopsReadWrite;
-  }
-
-  // disk_mbps_read_write - computed: true, optional: true, required: false
-  private _diskMbpsReadWrite?: number; 
-  public get diskMbpsReadWrite() {
-    return this.getNumberAttribute('disk_mbps_read_write');
-  }
-  public set diskMbpsReadWrite(value: number) {
-    this._diskMbpsReadWrite = value;
-  }
-  public resetDiskMbpsReadWrite() {
-    this._diskMbpsReadWrite = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get diskMbpsReadWriteInput() {
-    return this._diskMbpsReadWrite;
   }
 
   // disk_size_gb - computed: false, optional: false, required: true
@@ -4062,8 +4008,8 @@ export class OrchestratedVirtualMachineScaleSet extends cdktf.TerraformResource 
       terraformResourceType: 'azurerm_orchestrated_virtual_machine_scale_set',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -4374,7 +4320,7 @@ export class OrchestratedVirtualMachineScaleSet extends cdktf.TerraformResource 
   // zones - computed: false, optional: true, required: false
   private _zones?: string[]; 
   public get zones() {
-    return this.getListAttribute('zones');
+    return cdktf.Fn.tolist(this.getListAttribute('zones'));
   }
   public set zones(value: string[]) {
     this._zones = value;

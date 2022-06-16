@@ -18,11 +18,7 @@ export interface DataFactoryLinkedServiceDataLakeStorageGen2Config extends cdktf
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_data_lake_storage_gen2#data_factory_id DataFactoryLinkedServiceDataLakeStorageGen2#data_factory_id}
   */
-  readonly dataFactoryId?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_data_lake_storage_gen2#data_factory_name DataFactoryLinkedServiceDataLakeStorageGen2#data_factory_name}
-  */
-  readonly dataFactoryName?: string;
+  readonly dataFactoryId: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_data_lake_storage_gen2#description DataFactoryLinkedServiceDataLakeStorageGen2#description}
   */
@@ -46,10 +42,6 @@ export interface DataFactoryLinkedServiceDataLakeStorageGen2Config extends cdktf
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_data_lake_storage_gen2#parameters DataFactoryLinkedServiceDataLakeStorageGen2#parameters}
   */
   readonly parameters?: { [key: string]: string };
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_data_lake_storage_gen2#resource_group_name DataFactoryLinkedServiceDataLakeStorageGen2#resource_group_name}
-  */
-  readonly resourceGroupName: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_data_lake_storage_gen2#service_principal_id DataFactoryLinkedServiceDataLakeStorageGen2#service_principal_id}
   */
@@ -264,8 +256,8 @@ export class DataFactoryLinkedServiceDataLakeStorageGen2 extends cdktf.Terraform
       terraformResourceType: 'azurerm_data_factory_linked_service_data_lake_storage_gen2',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -275,13 +267,11 @@ export class DataFactoryLinkedServiceDataLakeStorageGen2 extends cdktf.Terraform
     this._additionalProperties = config.additionalProperties;
     this._annotations = config.annotations;
     this._dataFactoryId = config.dataFactoryId;
-    this._dataFactoryName = config.dataFactoryName;
     this._description = config.description;
     this._id = config.id;
     this._integrationRuntimeName = config.integrationRuntimeName;
     this._name = config.name;
     this._parameters = config.parameters;
-    this._resourceGroupName = config.resourceGroupName;
     this._servicePrincipalId = config.servicePrincipalId;
     this._servicePrincipalKey = config.servicePrincipalKey;
     this._storageAccountKey = config.storageAccountKey;
@@ -327,7 +317,7 @@ export class DataFactoryLinkedServiceDataLakeStorageGen2 extends cdktf.Terraform
     return this._annotations;
   }
 
-  // data_factory_id - computed: true, optional: true, required: false
+  // data_factory_id - computed: false, optional: false, required: true
   private _dataFactoryId?: string; 
   public get dataFactoryId() {
     return this.getStringAttribute('data_factory_id');
@@ -335,28 +325,9 @@ export class DataFactoryLinkedServiceDataLakeStorageGen2 extends cdktf.Terraform
   public set dataFactoryId(value: string) {
     this._dataFactoryId = value;
   }
-  public resetDataFactoryId() {
-    this._dataFactoryId = undefined;
-  }
   // Temporarily expose input value. Use with caution.
   public get dataFactoryIdInput() {
     return this._dataFactoryId;
-  }
-
-  // data_factory_name - computed: true, optional: true, required: false
-  private _dataFactoryName?: string; 
-  public get dataFactoryName() {
-    return this.getStringAttribute('data_factory_name');
-  }
-  public set dataFactoryName(value: string) {
-    this._dataFactoryName = value;
-  }
-  public resetDataFactoryName() {
-    this._dataFactoryName = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get dataFactoryNameInput() {
-    return this._dataFactoryName;
   }
 
   // description - computed: false, optional: true, required: false
@@ -434,19 +405,6 @@ export class DataFactoryLinkedServiceDataLakeStorageGen2 extends cdktf.Terraform
   // Temporarily expose input value. Use with caution.
   public get parametersInput() {
     return this._parameters;
-  }
-
-  // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName?: string; 
-  public get resourceGroupName() {
-    return this.getStringAttribute('resource_group_name');
-  }
-  public set resourceGroupName(value: string) {
-    this._resourceGroupName = value;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get resourceGroupNameInput() {
-    return this._resourceGroupName;
   }
 
   // service_principal_id - computed: false, optional: true, required: false
@@ -567,13 +525,11 @@ export class DataFactoryLinkedServiceDataLakeStorageGen2 extends cdktf.Terraform
       additional_properties: cdktf.hashMapper(cdktf.stringToTerraform)(this._additionalProperties),
       annotations: cdktf.listMapper(cdktf.stringToTerraform)(this._annotations),
       data_factory_id: cdktf.stringToTerraform(this._dataFactoryId),
-      data_factory_name: cdktf.stringToTerraform(this._dataFactoryName),
       description: cdktf.stringToTerraform(this._description),
       id: cdktf.stringToTerraform(this._id),
       integration_runtime_name: cdktf.stringToTerraform(this._integrationRuntimeName),
       name: cdktf.stringToTerraform(this._name),
       parameters: cdktf.hashMapper(cdktf.stringToTerraform)(this._parameters),
-      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       service_principal_id: cdktf.stringToTerraform(this._servicePrincipalId),
       service_principal_key: cdktf.stringToTerraform(this._servicePrincipalKey),
       storage_account_key: cdktf.stringToTerraform(this._storageAccountKey),

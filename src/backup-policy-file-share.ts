@@ -27,10 +27,6 @@ export interface BackupPolicyFileShareConfig extends cdktf.TerraformMetaArgument
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_file_share#tags BackupPolicyFileShare#tags}
-  */
-  readonly tags?: { [key: string]: string };
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_file_share#timezone BackupPolicyFileShare#timezone}
   */
   readonly timezone?: string;
@@ -732,8 +728,8 @@ export class BackupPolicyFileShare extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_backup_policy_file_share',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -744,7 +740,6 @@ export class BackupPolicyFileShare extends cdktf.TerraformResource {
     this._name = config.name;
     this._recoveryVaultName = config.recoveryVaultName;
     this._resourceGroupName = config.resourceGroupName;
-    this._tags = config.tags;
     this._timezone = config.timezone;
     this._backup.internalValue = config.backup;
     this._retentionDaily.internalValue = config.retentionDaily;
@@ -811,22 +806,6 @@ export class BackupPolicyFileShare extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
     return this._resourceGroupName;
-  }
-
-  // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string }; 
-  public get tags() {
-    return this.getStringMapAttribute('tags');
-  }
-  public set tags(value: { [key: string]: string }) {
-    this._tags = value;
-  }
-  public resetTags() {
-    this._tags = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get tagsInput() {
-    return this._tags;
   }
 
   // timezone - computed: false, optional: true, required: false
@@ -945,7 +924,6 @@ export class BackupPolicyFileShare extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       recovery_vault_name: cdktf.stringToTerraform(this._recoveryVaultName),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       timezone: cdktf.stringToTerraform(this._timezone),
       backup: backupPolicyFileShareBackupToTerraform(this._backup.internalValue),
       retention_daily: backupPolicyFileShareRetentionDailyToTerraform(this._retentionDaily.internalValue),

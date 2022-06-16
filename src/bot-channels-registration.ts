@@ -63,6 +63,10 @@ export interface BotChannelsRegistrationConfig extends cdktf.TerraformMetaArgume
   */
   readonly name: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration#public_network_access_enabled BotChannelsRegistration#public_network_access_enabled}
+  */
+  readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration#resource_group_name BotChannelsRegistration#resource_group_name}
   */
   readonly resourceGroupName: string;
@@ -264,8 +268,8 @@ export class BotChannelsRegistration extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_bot_channels_registration',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -285,6 +289,7 @@ export class BotChannelsRegistration extends cdktf.TerraformResource {
     this._location = config.location;
     this._microsoftAppId = config.microsoftAppId;
     this._name = config.name;
+    this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
     this._resourceGroupName = config.resourceGroupName;
     this._sku = config.sku;
     this._tags = config.tags;
@@ -439,7 +444,7 @@ export class BotChannelsRegistration extends cdktf.TerraformResource {
     return this._id;
   }
 
-  // isolated_network_enabled - computed: false, optional: true, required: false
+  // isolated_network_enabled - computed: true, optional: true, required: false
   private _isolatedNetworkEnabled?: boolean | cdktf.IResolvable; 
   public get isolatedNetworkEnabled() {
     return this.getBooleanAttribute('isolated_network_enabled');
@@ -492,6 +497,22 @@ export class BotChannelsRegistration extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name;
+  }
+
+  // public_network_access_enabled - computed: true, optional: true, required: false
+  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable; 
+  public get publicNetworkAccessEnabled() {
+    return this.getBooleanAttribute('public_network_access_enabled');
+  }
+  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable) {
+    this._publicNetworkAccessEnabled = value;
+  }
+  public resetPublicNetworkAccessEnabled() {
+    this._publicNetworkAccessEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicNetworkAccessEnabledInput() {
+    return this._publicNetworkAccessEnabled;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -571,6 +592,7 @@ export class BotChannelsRegistration extends cdktf.TerraformResource {
       location: cdktf.stringToTerraform(this._location),
       microsoft_app_id: cdktf.stringToTerraform(this._microsoftAppId),
       name: cdktf.stringToTerraform(this._name),
+      public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku: cdktf.stringToTerraform(this._sku),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),

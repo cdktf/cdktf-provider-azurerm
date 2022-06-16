@@ -10,11 +10,7 @@ export interface DataFactoryIntegrationRuntimeSelfHostedConfig extends cdktf.Ter
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_self_hosted#data_factory_id DataFactoryIntegrationRuntimeSelfHosted#data_factory_id}
   */
-  readonly dataFactoryId?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_self_hosted#data_factory_name DataFactoryIntegrationRuntimeSelfHosted#data_factory_name}
-  */
-  readonly dataFactoryName?: string;
+  readonly dataFactoryId: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_self_hosted#description DataFactoryIntegrationRuntimeSelfHosted#description}
   */
@@ -30,10 +26,6 @@ export interface DataFactoryIntegrationRuntimeSelfHostedConfig extends cdktf.Ter
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_self_hosted#name DataFactoryIntegrationRuntimeSelfHosted#name}
   */
   readonly name: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_self_hosted#resource_group_name DataFactoryIntegrationRuntimeSelfHosted#resource_group_name}
-  */
-  readonly resourceGroupName: string;
   /**
   * rbac_authorization block
   * 
@@ -324,8 +316,8 @@ export class DataFactoryIntegrationRuntimeSelfHosted extends cdktf.TerraformReso
       terraformResourceType: 'azurerm_data_factory_integration_runtime_self_hosted',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -333,11 +325,9 @@ export class DataFactoryIntegrationRuntimeSelfHosted extends cdktf.TerraformReso
       lifecycle: config.lifecycle
     });
     this._dataFactoryId = config.dataFactoryId;
-    this._dataFactoryName = config.dataFactoryName;
     this._description = config.description;
     this._id = config.id;
     this._name = config.name;
-    this._resourceGroupName = config.resourceGroupName;
     this._rbacAuthorization.internalValue = config.rbacAuthorization;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -346,17 +336,7 @@ export class DataFactoryIntegrationRuntimeSelfHosted extends cdktf.TerraformReso
   // ATTRIBUTES
   // ==========
 
-  // auth_key_1 - computed: true, optional: false, required: false
-  public get authKey1() {
-    return this.getStringAttribute('auth_key_1');
-  }
-
-  // auth_key_2 - computed: true, optional: false, required: false
-  public get authKey2() {
-    return this.getStringAttribute('auth_key_2');
-  }
-
-  // data_factory_id - computed: true, optional: true, required: false
+  // data_factory_id - computed: false, optional: false, required: true
   private _dataFactoryId?: string; 
   public get dataFactoryId() {
     return this.getStringAttribute('data_factory_id');
@@ -364,28 +344,9 @@ export class DataFactoryIntegrationRuntimeSelfHosted extends cdktf.TerraformReso
   public set dataFactoryId(value: string) {
     this._dataFactoryId = value;
   }
-  public resetDataFactoryId() {
-    this._dataFactoryId = undefined;
-  }
   // Temporarily expose input value. Use with caution.
   public get dataFactoryIdInput() {
     return this._dataFactoryId;
-  }
-
-  // data_factory_name - computed: true, optional: true, required: false
-  private _dataFactoryName?: string; 
-  public get dataFactoryName() {
-    return this.getStringAttribute('data_factory_name');
-  }
-  public set dataFactoryName(value: string) {
-    this._dataFactoryName = value;
-  }
-  public resetDataFactoryName() {
-    this._dataFactoryName = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get dataFactoryNameInput() {
-    return this._dataFactoryName;
   }
 
   // description - computed: false, optional: true, required: false
@@ -433,17 +394,14 @@ export class DataFactoryIntegrationRuntimeSelfHosted extends cdktf.TerraformReso
     return this._name;
   }
 
-  // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName?: string; 
-  public get resourceGroupName() {
-    return this.getStringAttribute('resource_group_name');
+  // primary_authorization_key - computed: true, optional: false, required: false
+  public get primaryAuthorizationKey() {
+    return this.getStringAttribute('primary_authorization_key');
   }
-  public set resourceGroupName(value: string) {
-    this._resourceGroupName = value;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get resourceGroupNameInput() {
-    return this._resourceGroupName;
+
+  // secondary_authorization_key - computed: true, optional: false, required: false
+  public get secondaryAuthorizationKey() {
+    return this.getStringAttribute('secondary_authorization_key');
   }
 
   // rbac_authorization - computed: false, optional: true, required: false
@@ -485,11 +443,9 @@ export class DataFactoryIntegrationRuntimeSelfHosted extends cdktf.TerraformReso
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       data_factory_id: cdktf.stringToTerraform(this._dataFactoryId),
-      data_factory_name: cdktf.stringToTerraform(this._dataFactoryName),
       description: cdktf.stringToTerraform(this._description),
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
-      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       rbac_authorization: cdktf.listMapper(dataFactoryIntegrationRuntimeSelfHostedRbacAuthorizationToTerraform)(this._rbacAuthorization.internalValue),
       timeouts: dataFactoryIntegrationRuntimeSelfHostedTimeoutsToTerraform(this._timeouts.internalValue),
     };

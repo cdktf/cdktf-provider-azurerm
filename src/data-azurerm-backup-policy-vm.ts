@@ -135,8 +135,8 @@ export class DataAzurermBackupPolicyVm extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_backup_policy_vm',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -207,12 +207,6 @@ export class DataAzurermBackupPolicyVm extends cdktf.TerraformDataSource {
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
     return this._resourceGroupName;
-  }
-
-  // tags - computed: true, optional: false, required: false
-  private _tags = new cdktf.StringMap(this, "tags");
-  public get tags() {
-    return this._tags;
   }
 
   // timeouts - computed: false, optional: true, required: false

@@ -27,6 +27,10 @@ export interface SentinelWatchlistConfig extends cdktf.TerraformMetaArguments {
   */
   readonly id?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_watchlist#item_search_key SentinelWatchlist#item_search_key}
+  */
+  readonly itemSearchKey: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_watchlist#labels SentinelWatchlist#labels}
   */
   readonly labels?: string[];
@@ -201,8 +205,8 @@ export class SentinelWatchlist extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_sentinel_watchlist',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -213,6 +217,7 @@ export class SentinelWatchlist extends cdktf.TerraformResource {
     this._description = config.description;
     this._displayName = config.displayName;
     this._id = config.id;
+    this._itemSearchKey = config.itemSearchKey;
     this._labels = config.labels;
     this._logAnalyticsWorkspaceId = config.logAnalyticsWorkspaceId;
     this._name = config.name;
@@ -284,6 +289,19 @@ export class SentinelWatchlist extends cdktf.TerraformResource {
     return this._id;
   }
 
+  // item_search_key - computed: false, optional: false, required: true
+  private _itemSearchKey?: string; 
+  public get itemSearchKey() {
+    return this.getStringAttribute('item_search_key');
+  }
+  public set itemSearchKey(value: string) {
+    this._itemSearchKey = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get itemSearchKeyInput() {
+    return this._itemSearchKey;
+  }
+
   // labels - computed: false, optional: true, required: false
   private _labels?: string[]; 
   public get labels() {
@@ -352,6 +370,7 @@ export class SentinelWatchlist extends cdktf.TerraformResource {
       description: cdktf.stringToTerraform(this._description),
       display_name: cdktf.stringToTerraform(this._displayName),
       id: cdktf.stringToTerraform(this._id),
+      item_search_key: cdktf.stringToTerraform(this._itemSearchKey),
       labels: cdktf.listMapper(cdktf.stringToTerraform)(this._labels),
       log_analytics_workspace_id: cdktf.stringToTerraform(this._logAnalyticsWorkspaceId),
       name: cdktf.stringToTerraform(this._name),

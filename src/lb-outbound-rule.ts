@@ -43,10 +43,6 @@ export interface LbOutboundRuleConfig extends cdktf.TerraformMetaArguments {
   */
   readonly protocol: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_outbound_rule#resource_group_name LbOutboundRule#resource_group_name}
-  */
-  readonly resourceGroupName: string;
-  /**
   * frontend_ip_configuration block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_outbound_rule#frontend_ip_configuration LbOutboundRule#frontend_ip_configuration}
@@ -341,8 +337,8 @@ export class LbOutboundRule extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_lb_outbound_rule',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -357,7 +353,6 @@ export class LbOutboundRule extends cdktf.TerraformResource {
     this._loadbalancerId = config.loadbalancerId;
     this._name = config.name;
     this._protocol = config.protocol;
-    this._resourceGroupName = config.resourceGroupName;
     this._frontendIpConfiguration.internalValue = config.frontendIpConfiguration;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -482,19 +477,6 @@ export class LbOutboundRule extends cdktf.TerraformResource {
     return this._protocol;
   }
 
-  // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName?: string; 
-  public get resourceGroupName() {
-    return this.getStringAttribute('resource_group_name');
-  }
-  public set resourceGroupName(value: string) {
-    this._resourceGroupName = value;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get resourceGroupNameInput() {
-    return this._resourceGroupName;
-  }
-
   // frontend_ip_configuration - computed: false, optional: true, required: false
   private _frontendIpConfiguration = new LbOutboundRuleFrontendIpConfigurationList(this, "frontend_ip_configuration", false);
   public get frontendIpConfiguration() {
@@ -541,7 +523,6 @@ export class LbOutboundRule extends cdktf.TerraformResource {
       loadbalancer_id: cdktf.stringToTerraform(this._loadbalancerId),
       name: cdktf.stringToTerraform(this._name),
       protocol: cdktf.stringToTerraform(this._protocol),
-      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       frontend_ip_configuration: cdktf.listMapper(lbOutboundRuleFrontendIpConfigurationToTerraform)(this._frontendIpConfiguration.internalValue),
       timeouts: lbOutboundRuleTimeoutsToTerraform(this._timeouts.internalValue),
     };

@@ -361,7 +361,7 @@ export class FirewallPolicyRuleCollectionGroupApplicationRuleCollectionRuleOutpu
   // destination_addresses - computed: false, optional: true, required: false
   private _destinationAddresses?: string[]; 
   public get destinationAddresses() {
-    return cdktf.Fn.tolist(this.getListAttribute('destination_addresses'));
+    return this.getListAttribute('destination_addresses');
   }
   public set destinationAddresses(value: string[]) {
     this._destinationAddresses = value;
@@ -377,7 +377,7 @@ export class FirewallPolicyRuleCollectionGroupApplicationRuleCollectionRuleOutpu
   // destination_fqdn_tags - computed: false, optional: true, required: false
   private _destinationFqdnTags?: string[]; 
   public get destinationFqdnTags() {
-    return cdktf.Fn.tolist(this.getListAttribute('destination_fqdn_tags'));
+    return this.getListAttribute('destination_fqdn_tags');
   }
   public set destinationFqdnTags(value: string[]) {
     this._destinationFqdnTags = value;
@@ -393,7 +393,7 @@ export class FirewallPolicyRuleCollectionGroupApplicationRuleCollectionRuleOutpu
   // destination_fqdns - computed: false, optional: true, required: false
   private _destinationFqdns?: string[]; 
   public get destinationFqdns() {
-    return cdktf.Fn.tolist(this.getListAttribute('destination_fqdns'));
+    return this.getListAttribute('destination_fqdns');
   }
   public set destinationFqdns(value: string[]) {
     this._destinationFqdns = value;
@@ -409,7 +409,7 @@ export class FirewallPolicyRuleCollectionGroupApplicationRuleCollectionRuleOutpu
   // destination_urls - computed: false, optional: true, required: false
   private _destinationUrls?: string[]; 
   public get destinationUrls() {
-    return cdktf.Fn.tolist(this.getListAttribute('destination_urls'));
+    return this.getListAttribute('destination_urls');
   }
   public set destinationUrls(value: string[]) {
     this._destinationUrls = value;
@@ -438,7 +438,7 @@ export class FirewallPolicyRuleCollectionGroupApplicationRuleCollectionRuleOutpu
   // source_addresses - computed: false, optional: true, required: false
   private _sourceAddresses?: string[]; 
   public get sourceAddresses() {
-    return cdktf.Fn.tolist(this.getListAttribute('source_addresses'));
+    return this.getListAttribute('source_addresses');
   }
   public set sourceAddresses(value: string[]) {
     this._sourceAddresses = value;
@@ -454,7 +454,7 @@ export class FirewallPolicyRuleCollectionGroupApplicationRuleCollectionRuleOutpu
   // source_ip_groups - computed: false, optional: true, required: false
   private _sourceIpGroups?: string[]; 
   public get sourceIpGroups() {
-    return cdktf.Fn.tolist(this.getListAttribute('source_ip_groups'));
+    return this.getListAttribute('source_ip_groups');
   }
   public set sourceIpGroups(value: string[]) {
     this._sourceIpGroups = value;
@@ -486,7 +486,7 @@ export class FirewallPolicyRuleCollectionGroupApplicationRuleCollectionRuleOutpu
   // web_categories - computed: false, optional: true, required: false
   private _webCategories?: string[]; 
   public get webCategories() {
-    return cdktf.Fn.tolist(this.getListAttribute('web_categories'));
+    return this.getListAttribute('web_categories');
   }
   public set webCategories(value: string[]) {
     this._webCategories = value;
@@ -500,7 +500,7 @@ export class FirewallPolicyRuleCollectionGroupApplicationRuleCollectionRuleOutpu
   }
 
   // protocols - computed: false, optional: true, required: false
-  private _protocols = new FirewallPolicyRuleCollectionGroupApplicationRuleCollectionRuleProtocolsList(this, "protocols", true);
+  private _protocols = new FirewallPolicyRuleCollectionGroupApplicationRuleCollectionRuleProtocolsList(this, "protocols", false);
   public get protocols() {
     return this._protocols;
   }
@@ -671,7 +671,7 @@ export class FirewallPolicyRuleCollectionGroupApplicationRuleCollectionOutputRef
   }
 
   // rule - computed: false, optional: false, required: true
-  private _rule = new FirewallPolicyRuleCollectionGroupApplicationRuleCollectionRuleList(this, "rule", true);
+  private _rule = new FirewallPolicyRuleCollectionGroupApplicationRuleCollectionRuleList(this, "rule", false);
   public get rule() {
     return this._rule;
   }
@@ -871,7 +871,7 @@ export class FirewallPolicyRuleCollectionGroupNatRuleCollectionRuleOutputReferen
   // destination_ports - computed: false, optional: true, required: false
   private _destinationPorts?: string[]; 
   public get destinationPorts() {
-    return cdktf.Fn.tolist(this.getListAttribute('destination_ports'));
+    return this.getListAttribute('destination_ports');
   }
   public set destinationPorts(value: string[]) {
     this._destinationPorts = value;
@@ -900,7 +900,7 @@ export class FirewallPolicyRuleCollectionGroupNatRuleCollectionRuleOutputReferen
   // protocols - computed: false, optional: false, required: true
   private _protocols?: string[]; 
   public get protocols() {
-    return cdktf.Fn.tolist(this.getListAttribute('protocols'));
+    return this.getListAttribute('protocols');
   }
   public set protocols(value: string[]) {
     this._protocols = value;
@@ -913,7 +913,7 @@ export class FirewallPolicyRuleCollectionGroupNatRuleCollectionRuleOutputReferen
   // source_addresses - computed: false, optional: true, required: false
   private _sourceAddresses?: string[]; 
   public get sourceAddresses() {
-    return cdktf.Fn.tolist(this.getListAttribute('source_addresses'));
+    return this.getListAttribute('source_addresses');
   }
   public set sourceAddresses(value: string[]) {
     this._sourceAddresses = value;
@@ -929,7 +929,7 @@ export class FirewallPolicyRuleCollectionGroupNatRuleCollectionRuleOutputReferen
   // source_ip_groups - computed: false, optional: true, required: false
   private _sourceIpGroups?: string[]; 
   public get sourceIpGroups() {
-    return cdktf.Fn.tolist(this.getListAttribute('source_ip_groups'));
+    return this.getListAttribute('source_ip_groups');
   }
   public set sourceIpGroups(value: string[]) {
     this._sourceIpGroups = value;
@@ -1143,7 +1143,7 @@ export class FirewallPolicyRuleCollectionGroupNatRuleCollectionOutputReference e
   }
 
   // rule - computed: false, optional: false, required: true
-  private _rule = new FirewallPolicyRuleCollectionGroupNatRuleCollectionRuleList(this, "rule", true);
+  private _rule = new FirewallPolicyRuleCollectionGroupNatRuleCollectionRuleList(this, "rule", false);
   public get rule() {
     return this._rule;
   }
@@ -1316,7 +1316,7 @@ export class FirewallPolicyRuleCollectionGroupNetworkRuleCollectionRuleOutputRef
   // destination_addresses - computed: false, optional: true, required: false
   private _destinationAddresses?: string[]; 
   public get destinationAddresses() {
-    return cdktf.Fn.tolist(this.getListAttribute('destination_addresses'));
+    return this.getListAttribute('destination_addresses');
   }
   public set destinationAddresses(value: string[]) {
     this._destinationAddresses = value;
@@ -1332,7 +1332,7 @@ export class FirewallPolicyRuleCollectionGroupNetworkRuleCollectionRuleOutputRef
   // destination_fqdns - computed: false, optional: true, required: false
   private _destinationFqdns?: string[]; 
   public get destinationFqdns() {
-    return cdktf.Fn.tolist(this.getListAttribute('destination_fqdns'));
+    return this.getListAttribute('destination_fqdns');
   }
   public set destinationFqdns(value: string[]) {
     this._destinationFqdns = value;
@@ -1348,7 +1348,7 @@ export class FirewallPolicyRuleCollectionGroupNetworkRuleCollectionRuleOutputRef
   // destination_ip_groups - computed: false, optional: true, required: false
   private _destinationIpGroups?: string[]; 
   public get destinationIpGroups() {
-    return cdktf.Fn.tolist(this.getListAttribute('destination_ip_groups'));
+    return this.getListAttribute('destination_ip_groups');
   }
   public set destinationIpGroups(value: string[]) {
     this._destinationIpGroups = value;
@@ -1364,7 +1364,7 @@ export class FirewallPolicyRuleCollectionGroupNetworkRuleCollectionRuleOutputRef
   // destination_ports - computed: false, optional: false, required: true
   private _destinationPorts?: string[]; 
   public get destinationPorts() {
-    return cdktf.Fn.tolist(this.getListAttribute('destination_ports'));
+    return this.getListAttribute('destination_ports');
   }
   public set destinationPorts(value: string[]) {
     this._destinationPorts = value;
@@ -1390,7 +1390,7 @@ export class FirewallPolicyRuleCollectionGroupNetworkRuleCollectionRuleOutputRef
   // protocols - computed: false, optional: false, required: true
   private _protocols?: string[]; 
   public get protocols() {
-    return cdktf.Fn.tolist(this.getListAttribute('protocols'));
+    return this.getListAttribute('protocols');
   }
   public set protocols(value: string[]) {
     this._protocols = value;
@@ -1403,7 +1403,7 @@ export class FirewallPolicyRuleCollectionGroupNetworkRuleCollectionRuleOutputRef
   // source_addresses - computed: false, optional: true, required: false
   private _sourceAddresses?: string[]; 
   public get sourceAddresses() {
-    return cdktf.Fn.tolist(this.getListAttribute('source_addresses'));
+    return this.getListAttribute('source_addresses');
   }
   public set sourceAddresses(value: string[]) {
     this._sourceAddresses = value;
@@ -1419,7 +1419,7 @@ export class FirewallPolicyRuleCollectionGroupNetworkRuleCollectionRuleOutputRef
   // source_ip_groups - computed: false, optional: true, required: false
   private _sourceIpGroups?: string[]; 
   public get sourceIpGroups() {
-    return cdktf.Fn.tolist(this.getListAttribute('source_ip_groups'));
+    return this.getListAttribute('source_ip_groups');
   }
   public set sourceIpGroups(value: string[]) {
     this._sourceIpGroups = value;
@@ -1588,7 +1588,7 @@ export class FirewallPolicyRuleCollectionGroupNetworkRuleCollectionOutputReferen
   }
 
   // rule - computed: false, optional: false, required: true
-  private _rule = new FirewallPolicyRuleCollectionGroupNetworkRuleCollectionRuleList(this, "rule", true);
+  private _rule = new FirewallPolicyRuleCollectionGroupNetworkRuleCollectionRuleList(this, "rule", false);
   public get rule() {
     return this._rule;
   }
@@ -1803,8 +1803,8 @@ export class FirewallPolicyRuleCollectionGroup extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_firewall_policy_rule_collection_group',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1881,7 +1881,7 @@ export class FirewallPolicyRuleCollectionGroup extends cdktf.TerraformResource {
   }
 
   // application_rule_collection - computed: false, optional: true, required: false
-  private _applicationRuleCollection = new FirewallPolicyRuleCollectionGroupApplicationRuleCollectionList(this, "application_rule_collection", true);
+  private _applicationRuleCollection = new FirewallPolicyRuleCollectionGroupApplicationRuleCollectionList(this, "application_rule_collection", false);
   public get applicationRuleCollection() {
     return this._applicationRuleCollection;
   }
@@ -1897,7 +1897,7 @@ export class FirewallPolicyRuleCollectionGroup extends cdktf.TerraformResource {
   }
 
   // nat_rule_collection - computed: false, optional: true, required: false
-  private _natRuleCollection = new FirewallPolicyRuleCollectionGroupNatRuleCollectionList(this, "nat_rule_collection", true);
+  private _natRuleCollection = new FirewallPolicyRuleCollectionGroupNatRuleCollectionList(this, "nat_rule_collection", false);
   public get natRuleCollection() {
     return this._natRuleCollection;
   }
@@ -1913,7 +1913,7 @@ export class FirewallPolicyRuleCollectionGroup extends cdktf.TerraformResource {
   }
 
   // network_rule_collection - computed: false, optional: true, required: false
-  private _networkRuleCollection = new FirewallPolicyRuleCollectionGroupNetworkRuleCollectionList(this, "network_rule_collection", true);
+  private _networkRuleCollection = new FirewallPolicyRuleCollectionGroupNetworkRuleCollectionList(this, "network_rule_collection", false);
   public get networkRuleCollection() {
     return this._networkRuleCollection;
   }

@@ -12,6 +12,10 @@ export interface NetworkInterfaceConfig extends cdktf.TerraformMetaArguments {
   */
   readonly dnsServers?: string[];
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface#edge_zone NetworkInterface#edge_zone}
+  */
+  readonly edgeZone?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface#enable_accelerated_networking NetworkInterface#enable_accelerated_networking}
   */
   readonly enableAcceleratedNetworking?: boolean | cdktf.IResolvable;
@@ -522,8 +526,8 @@ export class NetworkInterface extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_network_interface',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -531,6 +535,7 @@ export class NetworkInterface extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._dnsServers = config.dnsServers;
+    this._edgeZone = config.edgeZone;
     this._enableAcceleratedNetworking = config.enableAcceleratedNetworking;
     this._enableIpForwarding = config.enableIpForwarding;
     this._id = config.id;
@@ -566,6 +571,22 @@ export class NetworkInterface extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get dnsServersInput() {
     return this._dnsServers;
+  }
+
+  // edge_zone - computed: false, optional: true, required: false
+  private _edgeZone?: string; 
+  public get edgeZone() {
+    return this.getStringAttribute('edge_zone');
+  }
+  public set edgeZone(value: string) {
+    this._edgeZone = value;
+  }
+  public resetEdgeZone() {
+    this._edgeZone = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get edgeZoneInput() {
+    return this._edgeZone;
   }
 
   // enable_accelerated_networking - computed: false, optional: true, required: false
@@ -748,6 +769,7 @@ export class NetworkInterface extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       dns_servers: cdktf.listMapper(cdktf.stringToTerraform)(this._dnsServers),
+      edge_zone: cdktf.stringToTerraform(this._edgeZone),
       enable_accelerated_networking: cdktf.booleanToTerraform(this._enableAcceleratedNetworking),
       enable_ip_forwarding: cdktf.booleanToTerraform(this._enableIpForwarding),
       id: cdktf.stringToTerraform(this._id),

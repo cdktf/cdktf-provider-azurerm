@@ -492,8 +492,8 @@ export class PostgresqlFlexibleServer extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_postgresql_flexible_server',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -573,11 +573,6 @@ export class PostgresqlFlexibleServer extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get backupRetentionDaysInput() {
     return this._backupRetentionDays;
-  }
-
-  // cmk_enabled - computed: true, optional: false, required: false
-  public get cmkEnabled() {
-    return this.getStringAttribute('cmk_enabled');
   }
 
   // create_mode - computed: false, optional: true, required: false

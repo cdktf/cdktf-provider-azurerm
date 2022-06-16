@@ -55,6 +55,10 @@ export interface MachineLearningWorkspaceConfig extends cdktf.TerraformMetaArgum
   */
   readonly primaryUserAssignedIdentity?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_workspace#public_access_behind_virtual_network_enabled MachineLearningWorkspace#public_access_behind_virtual_network_enabled}
+  */
+  readonly publicAccessBehindVirtualNetworkEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_workspace#public_network_access_enabled MachineLearningWorkspace#public_network_access_enabled}
   */
   readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
@@ -488,8 +492,8 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_machine_learning_workspace',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -507,6 +511,7 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
     this._location = config.location;
     this._name = config.name;
     this._primaryUserAssignedIdentity = config.primaryUserAssignedIdentity;
+    this._publicAccessBehindVirtualNetworkEnabled = config.publicAccessBehindVirtualNetworkEnabled;
     this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
     this._resourceGroupName = config.resourceGroupName;
     this._skuName = config.skuName;
@@ -690,7 +695,23 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
     return this._primaryUserAssignedIdentity;
   }
 
-  // public_network_access_enabled - computed: false, optional: true, required: false
+  // public_access_behind_virtual_network_enabled - computed: true, optional: true, required: false
+  private _publicAccessBehindVirtualNetworkEnabled?: boolean | cdktf.IResolvable; 
+  public get publicAccessBehindVirtualNetworkEnabled() {
+    return this.getBooleanAttribute('public_access_behind_virtual_network_enabled');
+  }
+  public set publicAccessBehindVirtualNetworkEnabled(value: boolean | cdktf.IResolvable) {
+    this._publicAccessBehindVirtualNetworkEnabled = value;
+  }
+  public resetPublicAccessBehindVirtualNetworkEnabled() {
+    this._publicAccessBehindVirtualNetworkEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicAccessBehindVirtualNetworkEnabledInput() {
+    return this._publicAccessBehindVirtualNetworkEnabled;
+  }
+
+  // public_network_access_enabled - computed: true, optional: true, required: false
   private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable; 
   public get publicNetworkAccessEnabled() {
     return this.getBooleanAttribute('public_network_access_enabled');
@@ -826,6 +847,7 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       primary_user_assigned_identity: cdktf.stringToTerraform(this._primaryUserAssignedIdentity),
+      public_access_behind_virtual_network_enabled: cdktf.booleanToTerraform(this._publicAccessBehindVirtualNetworkEnabled),
       public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku_name: cdktf.stringToTerraform(this._skuName),

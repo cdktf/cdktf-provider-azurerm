@@ -87,6 +87,12 @@ export interface EventgridSystemTopicEventSubscriptionConfig extends cdktf.Terra
   */
   readonly deliveryIdentity?: EventgridSystemTopicEventSubscriptionDeliveryIdentity;
   /**
+  * delivery_property block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic_event_subscription#delivery_property EventgridSystemTopicEventSubscription#delivery_property}
+  */
+  readonly deliveryProperty?: EventgridSystemTopicEventSubscriptionDeliveryProperty[] | cdktf.IResolvable;
+  /**
   * retry_policy block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic_event_subscription#retry_policy EventgridSystemTopicEventSubscription#retry_policy}
@@ -3200,6 +3206,205 @@ export class EventgridSystemTopicEventSubscriptionDeliveryIdentityOutputReferenc
     return this._userAssignedIdentity;
   }
 }
+export interface EventgridSystemTopicEventSubscriptionDeliveryProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic_event_subscription#header_name EventgridSystemTopicEventSubscription#header_name}
+  */
+  readonly headerName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic_event_subscription#secret EventgridSystemTopicEventSubscription#secret}
+  */
+  readonly secret?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic_event_subscription#source_field EventgridSystemTopicEventSubscription#source_field}
+  */
+  readonly sourceField?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic_event_subscription#type EventgridSystemTopicEventSubscription#type}
+  */
+  readonly type: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic_event_subscription#value EventgridSystemTopicEventSubscription#value}
+  */
+  readonly value?: string;
+}
+
+export function eventgridSystemTopicEventSubscriptionDeliveryPropertyToTerraform(struct?: EventgridSystemTopicEventSubscriptionDeliveryProperty | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    header_name: cdktf.stringToTerraform(struct!.headerName),
+    secret: cdktf.booleanToTerraform(struct!.secret),
+    source_field: cdktf.stringToTerraform(struct!.sourceField),
+    type: cdktf.stringToTerraform(struct!.type),
+    value: cdktf.stringToTerraform(struct!.value),
+  }
+}
+
+export class EventgridSystemTopicEventSubscriptionDeliveryPropertyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): EventgridSystemTopicEventSubscriptionDeliveryProperty | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._headerName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headerName = this._headerName;
+    }
+    if (this._secret !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.secret = this._secret;
+    }
+    if (this._sourceField !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sourceField = this._sourceField;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EventgridSystemTopicEventSubscriptionDeliveryProperty | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._headerName = undefined;
+      this._secret = undefined;
+      this._sourceField = undefined;
+      this._type = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._headerName = value.headerName;
+      this._secret = value.secret;
+      this._sourceField = value.sourceField;
+      this._type = value.type;
+      this._value = value.value;
+    }
+  }
+
+  // header_name - computed: false, optional: false, required: true
+  private _headerName?: string; 
+  public get headerName() {
+    return this.getStringAttribute('header_name');
+  }
+  public set headerName(value: string) {
+    this._headerName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headerNameInput() {
+    return this._headerName;
+  }
+
+  // secret - computed: false, optional: true, required: false
+  private _secret?: boolean | cdktf.IResolvable; 
+  public get secret() {
+    return this.getBooleanAttribute('secret');
+  }
+  public set secret(value: boolean | cdktf.IResolvable) {
+    this._secret = value;
+  }
+  public resetSecret() {
+    this._secret = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secretInput() {
+    return this._secret;
+  }
+
+  // source_field - computed: false, optional: true, required: false
+  private _sourceField?: string; 
+  public get sourceField() {
+    return this.getStringAttribute('source_field');
+  }
+  public set sourceField(value: string) {
+    this._sourceField = value;
+  }
+  public resetSourceField() {
+    this._sourceField = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceFieldInput() {
+    return this._sourceField;
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+
+  // value - computed: false, optional: true, required: false
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  public resetValue() {
+    this._value = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class EventgridSystemTopicEventSubscriptionDeliveryPropertyList extends cdktf.ComplexList {
+  public internalValue? : EventgridSystemTopicEventSubscriptionDeliveryProperty[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): EventgridSystemTopicEventSubscriptionDeliveryPropertyOutputReference {
+    return new EventgridSystemTopicEventSubscriptionDeliveryPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface EventgridSystemTopicEventSubscriptionRetryPolicy {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic_event_subscription#event_time_to_live EventgridSystemTopicEventSubscription#event_time_to_live}
@@ -3962,8 +4167,8 @@ export class EventgridSystemTopicEventSubscription extends cdktf.TerraformResour
       terraformResourceType: 'azurerm_eventgrid_system_topic_event_subscription',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -3987,6 +4192,7 @@ export class EventgridSystemTopicEventSubscription extends cdktf.TerraformResour
     this._azureFunctionEndpoint.internalValue = config.azureFunctionEndpoint;
     this._deadLetterIdentity.internalValue = config.deadLetterIdentity;
     this._deliveryIdentity.internalValue = config.deliveryIdentity;
+    this._deliveryProperty.internalValue = config.deliveryProperty;
     this._retryPolicy.internalValue = config.retryPolicy;
     this._storageBlobDeadLetterDestination.internalValue = config.storageBlobDeadLetterDestination;
     this._storageQueueEndpoint.internalValue = config.storageQueueEndpoint;
@@ -4262,6 +4468,22 @@ export class EventgridSystemTopicEventSubscription extends cdktf.TerraformResour
     return this._deliveryIdentity.internalValue;
   }
 
+  // delivery_property - computed: false, optional: true, required: false
+  private _deliveryProperty = new EventgridSystemTopicEventSubscriptionDeliveryPropertyList(this, "delivery_property", false);
+  public get deliveryProperty() {
+    return this._deliveryProperty;
+  }
+  public putDeliveryProperty(value: EventgridSystemTopicEventSubscriptionDeliveryProperty[] | cdktf.IResolvable) {
+    this._deliveryProperty.internalValue = value;
+  }
+  public resetDeliveryProperty() {
+    this._deliveryProperty.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deliveryPropertyInput() {
+    return this._deliveryProperty.internalValue;
+  }
+
   // retry_policy - computed: false, optional: true, required: false
   private _retryPolicy = new EventgridSystemTopicEventSubscriptionRetryPolicyOutputReference(this, "retry_policy");
   public get retryPolicy() {
@@ -4381,6 +4603,7 @@ export class EventgridSystemTopicEventSubscription extends cdktf.TerraformResour
       azure_function_endpoint: eventgridSystemTopicEventSubscriptionAzureFunctionEndpointToTerraform(this._azureFunctionEndpoint.internalValue),
       dead_letter_identity: eventgridSystemTopicEventSubscriptionDeadLetterIdentityToTerraform(this._deadLetterIdentity.internalValue),
       delivery_identity: eventgridSystemTopicEventSubscriptionDeliveryIdentityToTerraform(this._deliveryIdentity.internalValue),
+      delivery_property: cdktf.listMapper(eventgridSystemTopicEventSubscriptionDeliveryPropertyToTerraform)(this._deliveryProperty.internalValue),
       retry_policy: eventgridSystemTopicEventSubscriptionRetryPolicyToTerraform(this._retryPolicy.internalValue),
       storage_blob_dead_letter_destination: eventgridSystemTopicEventSubscriptionStorageBlobDeadLetterDestinationToTerraform(this._storageBlobDeadLetterDestination.internalValue),
       storage_queue_endpoint: eventgridSystemTopicEventSubscriptionStorageQueueEndpointToTerraform(this._storageQueueEndpoint.internalValue),

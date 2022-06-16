@@ -8,6 +8,10 @@ import * as cdktf from 'cdktf';
 
 export interface ActiveDirectoryDomainServiceConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/active_directory_domain_service#domain_configuration_type ActiveDirectoryDomainService#domain_configuration_type}
+  */
+  readonly domainConfigurationType?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/active_directory_domain_service#domain_name ActiveDirectoryDomainService#domain_name}
   */
   readonly domainName: string;
@@ -787,14 +791,15 @@ export class ActiveDirectoryDomainService extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_active_directory_domain_service',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._domainConfigurationType = config.domainConfigurationType;
     this._domainName = config.domainName;
     this._filteredSyncEnabled = config.filteredSyncEnabled;
     this._id = config.id;
@@ -817,6 +822,22 @@ export class ActiveDirectoryDomainService extends cdktf.TerraformResource {
   // deployment_id - computed: true, optional: false, required: false
   public get deploymentId() {
     return this.getStringAttribute('deployment_id');
+  }
+
+  // domain_configuration_type - computed: false, optional: true, required: false
+  private _domainConfigurationType?: string; 
+  public get domainConfigurationType() {
+    return this.getStringAttribute('domain_configuration_type');
+  }
+  public set domainConfigurationType(value: string) {
+    this._domainConfigurationType = value;
+  }
+  public resetDomainConfigurationType() {
+    this._domainConfigurationType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get domainConfigurationTypeInput() {
+    return this._domainConfigurationType;
   }
 
   // domain_name - computed: false, optional: false, required: true
@@ -1035,6 +1056,7 @@ export class ActiveDirectoryDomainService extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      domain_configuration_type: cdktf.stringToTerraform(this._domainConfigurationType),
       domain_name: cdktf.stringToTerraform(this._domainName),
       filtered_sync_enabled: cdktf.booleanToTerraform(this._filteredSyncEnabled),
       id: cdktf.stringToTerraform(this._id),

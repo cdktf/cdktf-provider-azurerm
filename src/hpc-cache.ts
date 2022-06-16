@@ -8,6 +8,10 @@ import * as cdktf from 'cdktf';
 
 export interface HpcCacheConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache#automatically_rotate_key_to_latest_enabled HpcCache#automatically_rotate_key_to_latest_enabled}
+  */
+  readonly automaticallyRotateKeyToLatestEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache#cache_size_in_gb HpcCache#cache_size_in_gb}
   */
   readonly cacheSizeInGb: number;
@@ -18,6 +22,10 @@ export interface HpcCacheConfig extends cdktf.TerraformMetaArguments {
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache#key_vault_key_id HpcCache#key_vault_key_id}
+  */
+  readonly keyVaultKeyId?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache#location HpcCache#location}
   */
@@ -38,10 +46,6 @@ export interface HpcCacheConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache#resource_group_name HpcCache#resource_group_name}
   */
   readonly resourceGroupName: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache#root_squash_enabled HpcCache#root_squash_enabled}
-  */
-  readonly rootSquashEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache#sku_name HpcCache#sku_name}
   */
@@ -84,6 +88,12 @@ export interface HpcCacheConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache#dns HpcCache#dns}
   */
   readonly dns?: HpcCacheDns;
+  /**
+  * identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache#identity HpcCache#identity}
+  */
+  readonly identity?: HpcCacheIdentity;
   /**
   * timeouts block
   * 
@@ -1101,6 +1111,92 @@ export class HpcCacheDnsOutputReference extends cdktf.ComplexObject {
     return this._servers;
   }
 }
+export interface HpcCacheIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache#identity_ids HpcCache#identity_ids}
+  */
+  readonly identityIds: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache#type HpcCache#type}
+  */
+  readonly type: string;
+}
+
+export function hpcCacheIdentityToTerraform(struct?: HpcCacheIdentityOutputReference | HpcCacheIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
+export class HpcCacheIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): HpcCacheIdentity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._identityIds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.identityIds = this._identityIds;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: HpcCacheIdentity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._identityIds = undefined;
+      this._type = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._identityIds = value.identityIds;
+      this._type = value.type;
+    }
+  }
+
+  // identity_ids - computed: false, optional: false, required: true
+  private _identityIds?: string[]; 
+  public get identityIds() {
+    return cdktf.Fn.tolist(this.getListAttribute('identity_ids'));
+  }
+  public set identityIds(value: string[]) {
+    this._identityIds = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityIdsInput() {
+    return this._identityIds;
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+}
 export interface HpcCacheTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache#create HpcCache#create}
@@ -1284,22 +1380,23 @@ export class HpcCache extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_hpc_cache',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._automaticallyRotateKeyToLatestEnabled = config.automaticallyRotateKeyToLatestEnabled;
     this._cacheSizeInGb = config.cacheSizeInGb;
     this._id = config.id;
+    this._keyVaultKeyId = config.keyVaultKeyId;
     this._location = config.location;
     this._mtu = config.mtu;
     this._name = config.name;
     this._ntpServer = config.ntpServer;
     this._resourceGroupName = config.resourceGroupName;
-    this._rootSquashEnabled = config.rootSquashEnabled;
     this._skuName = config.skuName;
     this._subnetId = config.subnetId;
     this._tags = config.tags;
@@ -1308,12 +1405,29 @@ export class HpcCache extends cdktf.TerraformResource {
     this._directoryFlatFile.internalValue = config.directoryFlatFile;
     this._directoryLdap.internalValue = config.directoryLdap;
     this._dns.internalValue = config.dns;
+    this._identity.internalValue = config.identity;
     this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // automatically_rotate_key_to_latest_enabled - computed: false, optional: true, required: false
+  private _automaticallyRotateKeyToLatestEnabled?: boolean | cdktf.IResolvable; 
+  public get automaticallyRotateKeyToLatestEnabled() {
+    return this.getBooleanAttribute('automatically_rotate_key_to_latest_enabled');
+  }
+  public set automaticallyRotateKeyToLatestEnabled(value: boolean | cdktf.IResolvable) {
+    this._automaticallyRotateKeyToLatestEnabled = value;
+  }
+  public resetAutomaticallyRotateKeyToLatestEnabled() {
+    this._automaticallyRotateKeyToLatestEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get automaticallyRotateKeyToLatestEnabledInput() {
+    return this._automaticallyRotateKeyToLatestEnabled;
+  }
 
   // cache_size_in_gb - computed: false, optional: false, required: true
   private _cacheSizeInGb?: number; 
@@ -1342,6 +1456,22 @@ export class HpcCache extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get idInput() {
     return this._id;
+  }
+
+  // key_vault_key_id - computed: false, optional: true, required: false
+  private _keyVaultKeyId?: string; 
+  public get keyVaultKeyId() {
+    return this.getStringAttribute('key_vault_key_id');
+  }
+  public set keyVaultKeyId(value: string) {
+    this._keyVaultKeyId = value;
+  }
+  public resetKeyVaultKeyId() {
+    this._keyVaultKeyId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultKeyIdInput() {
+    return this._keyVaultKeyId;
   }
 
   // location - computed: false, optional: false, required: true
@@ -1418,22 +1548,6 @@ export class HpcCache extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
     return this._resourceGroupName;
-  }
-
-  // root_squash_enabled - computed: true, optional: true, required: false
-  private _rootSquashEnabled?: boolean | cdktf.IResolvable; 
-  public get rootSquashEnabled() {
-    return this.getBooleanAttribute('root_squash_enabled');
-  }
-  public set rootSquashEnabled(value: boolean | cdktf.IResolvable) {
-    this._rootSquashEnabled = value;
-  }
-  public resetRootSquashEnabled() {
-    this._rootSquashEnabled = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get rootSquashEnabledInput() {
-    return this._rootSquashEnabled;
   }
 
   // sku_name - computed: false, optional: false, required: true
@@ -1558,6 +1672,22 @@ export class HpcCache extends cdktf.TerraformResource {
     return this._dns.internalValue;
   }
 
+  // identity - computed: false, optional: true, required: false
+  private _identity = new HpcCacheIdentityOutputReference(this, "identity");
+  public get identity() {
+    return this._identity;
+  }
+  public putIdentity(value: HpcCacheIdentity) {
+    this._identity.internalValue = value;
+  }
+  public resetIdentity() {
+    this._identity.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityInput() {
+    return this._identity.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new HpcCacheTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -1580,14 +1710,15 @@ export class HpcCache extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      automatically_rotate_key_to_latest_enabled: cdktf.booleanToTerraform(this._automaticallyRotateKeyToLatestEnabled),
       cache_size_in_gb: cdktf.numberToTerraform(this._cacheSizeInGb),
       id: cdktf.stringToTerraform(this._id),
+      key_vault_key_id: cdktf.stringToTerraform(this._keyVaultKeyId),
       location: cdktf.stringToTerraform(this._location),
       mtu: cdktf.numberToTerraform(this._mtu),
       name: cdktf.stringToTerraform(this._name),
       ntp_server: cdktf.stringToTerraform(this._ntpServer),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      root_squash_enabled: cdktf.booleanToTerraform(this._rootSquashEnabled),
       sku_name: cdktf.stringToTerraform(this._skuName),
       subnet_id: cdktf.stringToTerraform(this._subnetId),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
@@ -1596,6 +1727,7 @@ export class HpcCache extends cdktf.TerraformResource {
       directory_flat_file: hpcCacheDirectoryFlatFileToTerraform(this._directoryFlatFile.internalValue),
       directory_ldap: hpcCacheDirectoryLdapToTerraform(this._directoryLdap.internalValue),
       dns: hpcCacheDnsToTerraform(this._dns.internalValue),
+      identity: hpcCacheIdentityToTerraform(this._identity.internalValue),
       timeouts: hpcCacheTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

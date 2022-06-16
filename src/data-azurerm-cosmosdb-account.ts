@@ -407,8 +407,8 @@ export class DataAzurermCosmosdbAccount extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_cosmosdb_account',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -527,19 +527,9 @@ export class DataAzurermCosmosdbAccount extends cdktf.TerraformDataSource {
     return this.getStringAttribute('primary_key');
   }
 
-  // primary_master_key - computed: true, optional: false, required: false
-  public get primaryMasterKey() {
-    return this.getStringAttribute('primary_master_key');
-  }
-
   // primary_readonly_key - computed: true, optional: false, required: false
   public get primaryReadonlyKey() {
     return this.getStringAttribute('primary_readonly_key');
-  }
-
-  // primary_readonly_master_key - computed: true, optional: false, required: false
-  public get primaryReadonlyMasterKey() {
-    return this.getStringAttribute('primary_readonly_master_key');
   }
 
   // read_endpoints - computed: true, optional: false, required: false
@@ -565,19 +555,9 @@ export class DataAzurermCosmosdbAccount extends cdktf.TerraformDataSource {
     return this.getStringAttribute('secondary_key');
   }
 
-  // secondary_master_key - computed: true, optional: false, required: false
-  public get secondaryMasterKey() {
-    return this.getStringAttribute('secondary_master_key');
-  }
-
   // secondary_readonly_key - computed: true, optional: false, required: false
   public get secondaryReadonlyKey() {
     return this.getStringAttribute('secondary_readonly_key');
-  }
-
-  // secondary_readonly_master_key - computed: true, optional: false, required: false
-  public get secondaryReadonlyMasterKey() {
-    return this.getStringAttribute('secondary_readonly_master_key');
   }
 
   // tags - computed: true, optional: false, required: false

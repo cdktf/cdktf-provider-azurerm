@@ -87,6 +87,12 @@ export interface RedisCacheConfig extends cdktf.TerraformMetaArguments {
   */
   readonly zones?: string[];
   /**
+  * identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache#identity RedisCache#identity}
+  */
+  readonly identity?: RedisCacheIdentity;
+  /**
   * patch_schedule block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache#patch_schedule RedisCache#patch_schedule}
@@ -104,6 +110,105 @@ export interface RedisCacheConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache#timeouts RedisCache#timeouts}
   */
   readonly timeouts?: RedisCacheTimeouts;
+}
+export interface RedisCacheIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache#identity_ids RedisCache#identity_ids}
+  */
+  readonly identityIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache#type RedisCache#type}
+  */
+  readonly type: string;
+}
+
+export function redisCacheIdentityToTerraform(struct?: RedisCacheIdentityOutputReference | RedisCacheIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
+export class RedisCacheIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): RedisCacheIdentity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._identityIds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.identityIds = this._identityIds;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: RedisCacheIdentity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._identityIds = undefined;
+      this._type = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._identityIds = value.identityIds;
+      this._type = value.type;
+    }
+  }
+
+  // identity_ids - computed: false, optional: true, required: false
+  private _identityIds?: string[]; 
+  public get identityIds() {
+    return cdktf.Fn.tolist(this.getListAttribute('identity_ids'));
+  }
+  public set identityIds(value: string[]) {
+    this._identityIds = value;
+  }
+  public resetIdentityIds() {
+    this._identityIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityIdsInput() {
+    return this._identityIds;
+  }
+
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
 }
 export interface RedisCachePatchSchedule {
   /**
@@ -830,8 +935,8 @@ export class RedisCache extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_redis_cache',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -857,6 +962,7 @@ export class RedisCache extends cdktf.TerraformResource {
     this._tags = config.tags;
     this._tenantSettings = config.tenantSettings;
     this._zones = config.zones;
+    this._identity.internalValue = config.identity;
     this._patchSchedule.internalValue = config.patchSchedule;
     this._redisConfiguration.internalValue = config.redisConfiguration;
     this._timeouts.internalValue = config.timeouts;
@@ -1174,7 +1280,7 @@ export class RedisCache extends cdktf.TerraformResource {
   // zones - computed: false, optional: true, required: false
   private _zones?: string[]; 
   public get zones() {
-    return this.getListAttribute('zones');
+    return cdktf.Fn.tolist(this.getListAttribute('zones'));
   }
   public set zones(value: string[]) {
     this._zones = value;
@@ -1185,6 +1291,22 @@ export class RedisCache extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get zonesInput() {
     return this._zones;
+  }
+
+  // identity - computed: false, optional: true, required: false
+  private _identity = new RedisCacheIdentityOutputReference(this, "identity");
+  public get identity() {
+    return this._identity;
+  }
+  public putIdentity(value: RedisCacheIdentity) {
+    this._identity.internalValue = value;
+  }
+  public resetIdentity() {
+    this._identity.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityInput() {
+    return this._identity.internalValue;
   }
 
   // patch_schedule - computed: false, optional: true, required: false
@@ -1260,6 +1382,7 @@ export class RedisCache extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       tenant_settings: cdktf.hashMapper(cdktf.stringToTerraform)(this._tenantSettings),
       zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),
+      identity: redisCacheIdentityToTerraform(this._identity.internalValue),
       patch_schedule: cdktf.listMapper(redisCachePatchScheduleToTerraform)(this._patchSchedule.internalValue),
       redis_configuration: redisCacheRedisConfigurationToTerraform(this._redisConfiguration.internalValue),
       timeouts: redisCacheTimeoutsToTerraform(this._timeouts.internalValue),

@@ -8,6 +8,10 @@ import * as cdktf from 'cdktf';
 
 export interface SharedImageConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image#accelerated_network_support_enabled SharedImage#accelerated_network_support_enabled}
+  */
+  readonly acceleratedNetworkSupportEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image#description SharedImage#description}
   */
   readonly description?: string;
@@ -494,14 +498,15 @@ export class SharedImage extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_shared_image',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._acceleratedNetworkSupportEnabled = config.acceleratedNetworkSupportEnabled;
     this._description = config.description;
     this._eula = config.eula;
     this._galleryName = config.galleryName;
@@ -524,6 +529,22 @@ export class SharedImage extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // accelerated_network_support_enabled - computed: false, optional: true, required: false
+  private _acceleratedNetworkSupportEnabled?: boolean | cdktf.IResolvable; 
+  public get acceleratedNetworkSupportEnabled() {
+    return this.getBooleanAttribute('accelerated_network_support_enabled');
+  }
+  public set acceleratedNetworkSupportEnabled(value: boolean | cdktf.IResolvable) {
+    this._acceleratedNetworkSupportEnabled = value;
+  }
+  public resetAcceleratedNetworkSupportEnabled() {
+    this._acceleratedNetworkSupportEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get acceleratedNetworkSupportEnabledInput() {
+    return this._acceleratedNetworkSupportEnabled;
+  }
 
   // description - computed: false, optional: true, required: false
   private _description?: string; 
@@ -785,6 +806,7 @@ export class SharedImage extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      accelerated_network_support_enabled: cdktf.booleanToTerraform(this._acceleratedNetworkSupportEnabled),
       description: cdktf.stringToTerraform(this._description),
       eula: cdktf.stringToTerraform(this._eula),
       gallery_name: cdktf.stringToTerraform(this._galleryName),

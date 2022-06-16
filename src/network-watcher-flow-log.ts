@@ -25,7 +25,7 @@ export interface NetworkWatcherFlowLogConfig extends cdktf.TerraformMetaArgument
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_watcher_flow_log#name NetworkWatcherFlowLog#name}
   */
-  readonly name?: string;
+  readonly name: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_watcher_flow_log#network_security_group_id NetworkWatcherFlowLog#network_security_group_id}
   */
@@ -499,8 +499,8 @@ export class NetworkWatcherFlowLog extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_network_watcher_flow_log',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -555,7 +555,7 @@ export class NetworkWatcherFlowLog extends cdktf.TerraformResource {
     return this._id;
   }
 
-  // location - computed: true, optional: true, required: false
+  // location - computed: false, optional: true, required: false
   private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
@@ -571,16 +571,13 @@ export class NetworkWatcherFlowLog extends cdktf.TerraformResource {
     return this._location;
   }
 
-  // name - computed: true, optional: true, required: false
+  // name - computed: false, optional: false, required: true
   private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
-  }
-  public resetName() {
-    this._name = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {

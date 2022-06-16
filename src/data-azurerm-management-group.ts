@@ -12,10 +12,6 @@ export interface DataAzurermManagementGroupConfig extends cdktf.TerraformMetaArg
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/management_group#group_id DataAzurermManagementGroup#group_id}
-  */
-  readonly groupId?: string;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/management_group#id DataAzurermManagementGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
@@ -135,8 +131,8 @@ export class DataAzurermManagementGroup extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_management_group',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -144,7 +140,6 @@ export class DataAzurermManagementGroup extends cdktf.TerraformDataSource {
       lifecycle: config.lifecycle
     });
     this._displayName = config.displayName;
-    this._groupId = config.groupId;
     this._id = config.id;
     this._name = config.name;
     this._timeouts.internalValue = config.timeouts;
@@ -168,22 +163,6 @@ export class DataAzurermManagementGroup extends cdktf.TerraformDataSource {
   // Temporarily expose input value. Use with caution.
   public get displayNameInput() {
     return this._displayName;
-  }
-
-  // group_id - computed: true, optional: true, required: false
-  private _groupId?: string; 
-  public get groupId() {
-    return this.getStringAttribute('group_id');
-  }
-  public set groupId(value: string) {
-    this._groupId = value;
-  }
-  public resetGroupId() {
-    this._groupId = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get groupIdInput() {
-    return this._groupId;
   }
 
   // id - computed: true, optional: true, required: false
@@ -251,7 +230,6 @@ export class DataAzurermManagementGroup extends cdktf.TerraformDataSource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       display_name: cdktf.stringToTerraform(this._displayName),
-      group_id: cdktf.stringToTerraform(this._groupId),
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       timeouts: dataAzurermManagementGroupTimeoutsToTerraform(this._timeouts.internalValue),

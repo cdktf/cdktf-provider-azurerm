@@ -18,11 +18,7 @@ export interface DataFactoryDatasetAzureBlobConfig extends cdktf.TerraformMetaAr
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_azure_blob#data_factory_id DataFactoryDatasetAzureBlob#data_factory_id}
   */
-  readonly dataFactoryId?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_azure_blob#data_factory_name DataFactoryDatasetAzureBlob#data_factory_name}
-  */
-  readonly dataFactoryName?: string;
+  readonly dataFactoryId: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_azure_blob#description DataFactoryDatasetAzureBlob#description}
   */
@@ -66,10 +62,6 @@ export interface DataFactoryDatasetAzureBlobConfig extends cdktf.TerraformMetaAr
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_azure_blob#path DataFactoryDatasetAzureBlob#path}
   */
   readonly path?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_azure_blob#resource_group_name DataFactoryDatasetAzureBlob#resource_group_name}
-  */
-  readonly resourceGroupName: string;
   /**
   * schema_column block
   * 
@@ -414,8 +406,8 @@ export class DataFactoryDatasetAzureBlob extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_data_factory_dataset_azure_blob',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -425,7 +417,6 @@ export class DataFactoryDatasetAzureBlob extends cdktf.TerraformResource {
     this._additionalProperties = config.additionalProperties;
     this._annotations = config.annotations;
     this._dataFactoryId = config.dataFactoryId;
-    this._dataFactoryName = config.dataFactoryName;
     this._description = config.description;
     this._dynamicFilenameEnabled = config.dynamicFilenameEnabled;
     this._dynamicPathEnabled = config.dynamicPathEnabled;
@@ -436,7 +427,6 @@ export class DataFactoryDatasetAzureBlob extends cdktf.TerraformResource {
     this._name = config.name;
     this._parameters = config.parameters;
     this._path = config.path;
-    this._resourceGroupName = config.resourceGroupName;
     this._schemaColumn.internalValue = config.schemaColumn;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -477,7 +467,7 @@ export class DataFactoryDatasetAzureBlob extends cdktf.TerraformResource {
     return this._annotations;
   }
 
-  // data_factory_id - computed: true, optional: true, required: false
+  // data_factory_id - computed: false, optional: false, required: true
   private _dataFactoryId?: string; 
   public get dataFactoryId() {
     return this.getStringAttribute('data_factory_id');
@@ -485,28 +475,9 @@ export class DataFactoryDatasetAzureBlob extends cdktf.TerraformResource {
   public set dataFactoryId(value: string) {
     this._dataFactoryId = value;
   }
-  public resetDataFactoryId() {
-    this._dataFactoryId = undefined;
-  }
   // Temporarily expose input value. Use with caution.
   public get dataFactoryIdInput() {
     return this._dataFactoryId;
-  }
-
-  // data_factory_name - computed: true, optional: true, required: false
-  private _dataFactoryName?: string; 
-  public get dataFactoryName() {
-    return this.getStringAttribute('data_factory_name');
-  }
-  public set dataFactoryName(value: string) {
-    this._dataFactoryName = value;
-  }
-  public resetDataFactoryName() {
-    this._dataFactoryName = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get dataFactoryNameInput() {
-    return this._dataFactoryName;
   }
 
   // description - computed: false, optional: true, required: false
@@ -663,19 +634,6 @@ export class DataFactoryDatasetAzureBlob extends cdktf.TerraformResource {
     return this._path;
   }
 
-  // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName?: string; 
-  public get resourceGroupName() {
-    return this.getStringAttribute('resource_group_name');
-  }
-  public set resourceGroupName(value: string) {
-    this._resourceGroupName = value;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get resourceGroupNameInput() {
-    return this._resourceGroupName;
-  }
-
   // schema_column - computed: false, optional: true, required: false
   private _schemaColumn = new DataFactoryDatasetAzureBlobSchemaColumnList(this, "schema_column", false);
   public get schemaColumn() {
@@ -717,7 +675,6 @@ export class DataFactoryDatasetAzureBlob extends cdktf.TerraformResource {
       additional_properties: cdktf.hashMapper(cdktf.stringToTerraform)(this._additionalProperties),
       annotations: cdktf.listMapper(cdktf.stringToTerraform)(this._annotations),
       data_factory_id: cdktf.stringToTerraform(this._dataFactoryId),
-      data_factory_name: cdktf.stringToTerraform(this._dataFactoryName),
       description: cdktf.stringToTerraform(this._description),
       dynamic_filename_enabled: cdktf.booleanToTerraform(this._dynamicFilenameEnabled),
       dynamic_path_enabled: cdktf.booleanToTerraform(this._dynamicPathEnabled),
@@ -728,7 +685,6 @@ export class DataFactoryDatasetAzureBlob extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       parameters: cdktf.hashMapper(cdktf.stringToTerraform)(this._parameters),
       path: cdktf.stringToTerraform(this._path),
-      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       schema_column: cdktf.listMapper(dataFactoryDatasetAzureBlobSchemaColumnToTerraform)(this._schemaColumn.internalValue),
       timeouts: dataFactoryDatasetAzureBlobTimeoutsToTerraform(this._timeouts.internalValue),
     };

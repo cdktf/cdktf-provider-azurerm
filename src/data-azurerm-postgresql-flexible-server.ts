@@ -131,8 +131,8 @@ export class DataAzurermPostgresqlFlexibleServer extends cdktf.TerraformDataSour
       terraformResourceType: 'azurerm_postgresql_flexible_server',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -157,11 +157,6 @@ export class DataAzurermPostgresqlFlexibleServer extends cdktf.TerraformDataSour
   // backup_retention_days - computed: true, optional: false, required: false
   public get backupRetentionDays() {
     return this.getNumberAttribute('backup_retention_days');
-  }
-
-  // cmk_enabled - computed: true, optional: false, required: false
-  public get cmkEnabled() {
-    return this.getStringAttribute('cmk_enabled');
   }
 
   // delegated_subnet_id - computed: true, optional: false, required: false

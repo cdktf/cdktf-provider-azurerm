@@ -8,10 +8,6 @@ import * as cdktf from 'cdktf';
 
 export interface LbRuleConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_rule#backend_address_pool_id LbRule#backend_address_pool_id}
-  */
-  readonly backendAddressPoolId?: string;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_rule#backend_address_pool_ids LbRule#backend_address_pool_ids}
   */
   readonly backendAddressPoolIds?: string[];
@@ -70,10 +66,6 @@ export interface LbRuleConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_rule#protocol LbRule#protocol}
   */
   readonly protocol: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_rule#resource_group_name LbRule#resource_group_name}
-  */
-  readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
@@ -264,15 +256,14 @@ export class LbRule extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_lb_rule',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
       lifecycle: config.lifecycle
     });
-    this._backendAddressPoolId = config.backendAddressPoolId;
     this._backendAddressPoolIds = config.backendAddressPoolIds;
     this._backendPort = config.backendPort;
     this._disableOutboundSnat = config.disableOutboundSnat;
@@ -287,7 +278,6 @@ export class LbRule extends cdktf.TerraformResource {
     this._name = config.name;
     this._probeId = config.probeId;
     this._protocol = config.protocol;
-    this._resourceGroupName = config.resourceGroupName;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -295,23 +285,7 @@ export class LbRule extends cdktf.TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // backend_address_pool_id - computed: true, optional: true, required: false
-  private _backendAddressPoolId?: string; 
-  public get backendAddressPoolId() {
-    return this.getStringAttribute('backend_address_pool_id');
-  }
-  public set backendAddressPoolId(value: string) {
-    this._backendAddressPoolId = value;
-  }
-  public resetBackendAddressPoolId() {
-    this._backendAddressPoolId = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get backendAddressPoolIdInput() {
-    return this._backendAddressPoolId;
-  }
-
-  // backend_address_pool_ids - computed: true, optional: true, required: false
+  // backend_address_pool_ids - computed: false, optional: true, required: false
   private _backendAddressPoolIds?: string[]; 
   public get backendAddressPoolIds() {
     return this.getListAttribute('backend_address_pool_ids');
@@ -522,19 +496,6 @@ export class LbRule extends cdktf.TerraformResource {
     return this._protocol;
   }
 
-  // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName?: string; 
-  public get resourceGroupName() {
-    return this.getStringAttribute('resource_group_name');
-  }
-  public set resourceGroupName(value: string) {
-    this._resourceGroupName = value;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get resourceGroupNameInput() {
-    return this._resourceGroupName;
-  }
-
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new LbRuleTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -557,7 +518,6 @@ export class LbRule extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      backend_address_pool_id: cdktf.stringToTerraform(this._backendAddressPoolId),
       backend_address_pool_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._backendAddressPoolIds),
       backend_port: cdktf.numberToTerraform(this._backendPort),
       disable_outbound_snat: cdktf.booleanToTerraform(this._disableOutboundSnat),
@@ -572,7 +532,6 @@ export class LbRule extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       probe_id: cdktf.stringToTerraform(this._probeId),
       protocol: cdktf.stringToTerraform(this._protocol),
-      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       timeouts: lbRuleTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

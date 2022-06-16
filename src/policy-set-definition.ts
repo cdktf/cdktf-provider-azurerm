@@ -27,10 +27,6 @@ export interface PolicySetDefinitionConfig extends cdktf.TerraformMetaArguments 
   */
   readonly managementGroupId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_set_definition#management_group_name PolicySetDefinition#management_group_name}
-  */
-  readonly managementGroupName?: string;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_set_definition#metadata PolicySetDefinition#metadata}
   */
   readonly metadata?: string;
@@ -42,10 +38,6 @@ export interface PolicySetDefinitionConfig extends cdktf.TerraformMetaArguments 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_set_definition#parameters PolicySetDefinition#parameters}
   */
   readonly parameters?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_set_definition#policy_definitions PolicySetDefinition#policy_definitions}
-  */
-  readonly policyDefinitions?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_set_definition#policy_type PolicySetDefinition#policy_type}
   */
@@ -61,7 +53,7 @@ export interface PolicySetDefinitionConfig extends cdktf.TerraformMetaArguments 
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_set_definition#policy_definition_reference PolicySetDefinition#policy_definition_reference}
   */
-  readonly policyDefinitionReference?: PolicySetDefinitionPolicyDefinitionReference[] | cdktf.IResolvable;
+  readonly policyDefinitionReference: PolicySetDefinitionPolicyDefinitionReference[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -277,10 +269,6 @@ export interface PolicySetDefinitionPolicyDefinitionReference {
   */
   readonly parameterValues?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_set_definition#parameters PolicySetDefinition#parameters}
-  */
-  readonly parameters?: { [key: string]: string };
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_set_definition#policy_definition_id PolicySetDefinition#policy_definition_id}
   */
   readonly policyDefinitionId: string;
@@ -301,7 +289,6 @@ export function policySetDefinitionPolicyDefinitionReferenceToTerraform(struct?:
   }
   return {
     parameter_values: cdktf.stringToTerraform(struct!.parameterValues),
-    parameters: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.parameters),
     policy_definition_id: cdktf.stringToTerraform(struct!.policyDefinitionId),
     policy_group_names: cdktf.listMapper(cdktf.stringToTerraform)(struct!.policyGroupNames),
     reference_id: cdktf.stringToTerraform(struct!.referenceId),
@@ -332,10 +319,6 @@ export class PolicySetDefinitionPolicyDefinitionReferenceOutputReference extends
       hasAnyValues = true;
       internalValueResult.parameterValues = this._parameterValues;
     }
-    if (this._parameters !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.parameters = this._parameters;
-    }
     if (this._policyDefinitionId !== undefined) {
       hasAnyValues = true;
       internalValueResult.policyDefinitionId = this._policyDefinitionId;
@@ -356,7 +339,6 @@ export class PolicySetDefinitionPolicyDefinitionReferenceOutputReference extends
       this.isEmptyObject = false;
       this.resolvableValue = undefined;
       this._parameterValues = undefined;
-      this._parameters = undefined;
       this._policyDefinitionId = undefined;
       this._policyGroupNames = undefined;
       this._referenceId = undefined;
@@ -369,14 +351,13 @@ export class PolicySetDefinitionPolicyDefinitionReferenceOutputReference extends
       this.isEmptyObject = Object.keys(value).length === 0;
       this.resolvableValue = undefined;
       this._parameterValues = value.parameterValues;
-      this._parameters = value.parameters;
       this._policyDefinitionId = value.policyDefinitionId;
       this._policyGroupNames = value.policyGroupNames;
       this._referenceId = value.referenceId;
     }
   }
 
-  // parameter_values - computed: true, optional: true, required: false
+  // parameter_values - computed: false, optional: true, required: false
   private _parameterValues?: string; 
   public get parameterValues() {
     return this.getStringAttribute('parameter_values');
@@ -390,22 +371,6 @@ export class PolicySetDefinitionPolicyDefinitionReferenceOutputReference extends
   // Temporarily expose input value. Use with caution.
   public get parameterValuesInput() {
     return this._parameterValues;
-  }
-
-  // parameters - computed: true, optional: true, required: false
-  private _parameters?: { [key: string]: string }; 
-  public get parameters() {
-    return this.getStringMapAttribute('parameters');
-  }
-  public set parameters(value: { [key: string]: string }) {
-    this._parameters = value;
-  }
-  public resetParameters() {
-    this._parameters = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get parametersInput() {
-    return this._parameters;
   }
 
   // policy_definition_id - computed: false, optional: false, required: true
@@ -656,8 +621,8 @@ export class PolicySetDefinition extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_policy_set_definition',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -668,11 +633,9 @@ export class PolicySetDefinition extends cdktf.TerraformResource {
     this._displayName = config.displayName;
     this._id = config.id;
     this._managementGroupId = config.managementGroupId;
-    this._managementGroupName = config.managementGroupName;
     this._metadata = config.metadata;
     this._name = config.name;
     this._parameters = config.parameters;
-    this._policyDefinitions = config.policyDefinitions;
     this._policyType = config.policyType;
     this._policyDefinitionGroup.internalValue = config.policyDefinitionGroup;
     this._policyDefinitionReference.internalValue = config.policyDefinitionReference;
@@ -728,7 +691,7 @@ export class PolicySetDefinition extends cdktf.TerraformResource {
     return this._id;
   }
 
-  // management_group_id - computed: true, optional: true, required: false
+  // management_group_id - computed: false, optional: true, required: false
   private _managementGroupId?: string; 
   public get managementGroupId() {
     return this.getStringAttribute('management_group_id');
@@ -742,22 +705,6 @@ export class PolicySetDefinition extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get managementGroupIdInput() {
     return this._managementGroupId;
-  }
-
-  // management_group_name - computed: true, optional: true, required: false
-  private _managementGroupName?: string; 
-  public get managementGroupName() {
-    return this.getStringAttribute('management_group_name');
-  }
-  public set managementGroupName(value: string) {
-    this._managementGroupName = value;
-  }
-  public resetManagementGroupName() {
-    this._managementGroupName = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get managementGroupNameInput() {
-    return this._managementGroupName;
   }
 
   // metadata - computed: true, optional: true, required: false
@@ -805,22 +752,6 @@ export class PolicySetDefinition extends cdktf.TerraformResource {
     return this._parameters;
   }
 
-  // policy_definitions - computed: true, optional: true, required: false
-  private _policyDefinitions?: string; 
-  public get policyDefinitions() {
-    return this.getStringAttribute('policy_definitions');
-  }
-  public set policyDefinitions(value: string) {
-    this._policyDefinitions = value;
-  }
-  public resetPolicyDefinitions() {
-    this._policyDefinitions = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get policyDefinitionsInput() {
-    return this._policyDefinitions;
-  }
-
   // policy_type - computed: false, optional: false, required: true
   private _policyType?: string; 
   public get policyType() {
@@ -850,16 +781,13 @@ export class PolicySetDefinition extends cdktf.TerraformResource {
     return this._policyDefinitionGroup.internalValue;
   }
 
-  // policy_definition_reference - computed: false, optional: true, required: false
+  // policy_definition_reference - computed: false, optional: false, required: true
   private _policyDefinitionReference = new PolicySetDefinitionPolicyDefinitionReferenceList(this, "policy_definition_reference", false);
   public get policyDefinitionReference() {
     return this._policyDefinitionReference;
   }
   public putPolicyDefinitionReference(value: PolicySetDefinitionPolicyDefinitionReference[] | cdktf.IResolvable) {
     this._policyDefinitionReference.internalValue = value;
-  }
-  public resetPolicyDefinitionReference() {
-    this._policyDefinitionReference.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get policyDefinitionReferenceInput() {
@@ -892,11 +820,9 @@ export class PolicySetDefinition extends cdktf.TerraformResource {
       display_name: cdktf.stringToTerraform(this._displayName),
       id: cdktf.stringToTerraform(this._id),
       management_group_id: cdktf.stringToTerraform(this._managementGroupId),
-      management_group_name: cdktf.stringToTerraform(this._managementGroupName),
       metadata: cdktf.stringToTerraform(this._metadata),
       name: cdktf.stringToTerraform(this._name),
       parameters: cdktf.stringToTerraform(this._parameters),
-      policy_definitions: cdktf.stringToTerraform(this._policyDefinitions),
       policy_type: cdktf.stringToTerraform(this._policyType),
       policy_definition_group: cdktf.listMapper(policySetDefinitionPolicyDefinitionGroupToTerraform)(this._policyDefinitionGroup.internalValue),
       policy_definition_reference: cdktf.listMapper(policySetDefinitionPolicyDefinitionReferenceToTerraform)(this._policyDefinitionReference.internalValue),

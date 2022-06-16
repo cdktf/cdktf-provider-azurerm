@@ -20,10 +20,6 @@ export interface ApiManagementDiagnosticConfig extends cdktf.TerraformMetaArgume
   */
   readonly apiManagementName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_diagnostic#enabled ApiManagementDiagnostic#enabled}
-  */
-  readonly enabled?: boolean | cdktf.IResolvable;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_diagnostic#http_correlation_protocol ApiManagementDiagnostic#http_correlation_protocol}
   */
   readonly httpCorrelationProtocol?: string;
@@ -2084,8 +2080,8 @@ export class ApiManagementDiagnostic extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_api_management_diagnostic',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -2095,7 +2091,6 @@ export class ApiManagementDiagnostic extends cdktf.TerraformResource {
     this._alwaysLogErrors = config.alwaysLogErrors;
     this._apiManagementLoggerId = config.apiManagementLoggerId;
     this._apiManagementName = config.apiManagementName;
-    this._enabled = config.enabled;
     this._httpCorrelationProtocol = config.httpCorrelationProtocol;
     this._id = config.id;
     this._identifier = config.identifier;
@@ -2155,22 +2150,6 @@ export class ApiManagementDiagnostic extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get apiManagementNameInput() {
     return this._apiManagementName;
-  }
-
-  // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean | cdktf.IResolvable; 
-  public get enabled() {
-    return this.getBooleanAttribute('enabled');
-  }
-  public set enabled(value: boolean | cdktf.IResolvable) {
-    this._enabled = value;
-  }
-  public resetEnabled() {
-    this._enabled = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get enabledInput() {
-    return this._enabled;
   }
 
   // http_correlation_protocol - computed: true, optional: true, required: false
@@ -2384,7 +2363,6 @@ export class ApiManagementDiagnostic extends cdktf.TerraformResource {
       always_log_errors: cdktf.booleanToTerraform(this._alwaysLogErrors),
       api_management_logger_id: cdktf.stringToTerraform(this._apiManagementLoggerId),
       api_management_name: cdktf.stringToTerraform(this._apiManagementName),
-      enabled: cdktf.booleanToTerraform(this._enabled),
       http_correlation_protocol: cdktf.stringToTerraform(this._httpCorrelationProtocol),
       id: cdktf.stringToTerraform(this._id),
       identifier: cdktf.stringToTerraform(this._identifier),

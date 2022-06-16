@@ -22,11 +22,7 @@ export interface DataFactoryLinkedServiceAzureBlobStorageConfig extends cdktf.Te
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_blob_storage#data_factory_id DataFactoryLinkedServiceAzureBlobStorage#data_factory_id}
   */
-  readonly dataFactoryId?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_blob_storage#data_factory_name DataFactoryLinkedServiceAzureBlobStorage#data_factory_name}
-  */
-  readonly dataFactoryName?: string;
+  readonly dataFactoryId: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_blob_storage#description DataFactoryLinkedServiceAzureBlobStorage#description}
   */
@@ -51,10 +47,6 @@ export interface DataFactoryLinkedServiceAzureBlobStorageConfig extends cdktf.Te
   */
   readonly parameters?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_blob_storage#resource_group_name DataFactoryLinkedServiceAzureBlobStorage#resource_group_name}
-  */
-  readonly resourceGroupName: string;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_blob_storage#sas_uri DataFactoryLinkedServiceAzureBlobStorage#sas_uri}
   */
   readonly sasUri?: string;
@@ -71,6 +63,10 @@ export interface DataFactoryLinkedServiceAzureBlobStorageConfig extends cdktf.Te
   */
   readonly servicePrincipalKey?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_blob_storage#storage_kind DataFactoryLinkedServiceAzureBlobStorage#storage_kind}
+  */
+  readonly storageKind?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_blob_storage#tenant_id DataFactoryLinkedServiceAzureBlobStorage#tenant_id}
   */
   readonly tenantId?: string;
@@ -84,6 +80,12 @@ export interface DataFactoryLinkedServiceAzureBlobStorageConfig extends cdktf.Te
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_blob_storage#key_vault_sas_token DataFactoryLinkedServiceAzureBlobStorage#key_vault_sas_token}
   */
   readonly keyVaultSasToken?: DataFactoryLinkedServiceAzureBlobStorageKeyVaultSasToken;
+  /**
+  * service_principal_linked_key_vault_key block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_blob_storage#service_principal_linked_key_vault_key DataFactoryLinkedServiceAzureBlobStorage#service_principal_linked_key_vault_key}
+  */
+  readonly servicePrincipalLinkedKeyVaultKey?: DataFactoryLinkedServiceAzureBlobStorageServicePrincipalLinkedKeyVaultKey;
   /**
   * timeouts block
   * 
@@ -139,6 +141,92 @@ export class DataFactoryLinkedServiceAzureBlobStorageKeyVaultSasTokenOutputRefer
   }
 
   public set internalValue(value: DataFactoryLinkedServiceAzureBlobStorageKeyVaultSasToken | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._linkedServiceName = undefined;
+      this._secretName = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._linkedServiceName = value.linkedServiceName;
+      this._secretName = value.secretName;
+    }
+  }
+
+  // linked_service_name - computed: false, optional: false, required: true
+  private _linkedServiceName?: string; 
+  public get linkedServiceName() {
+    return this.getStringAttribute('linked_service_name');
+  }
+  public set linkedServiceName(value: string) {
+    this._linkedServiceName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get linkedServiceNameInput() {
+    return this._linkedServiceName;
+  }
+
+  // secret_name - computed: false, optional: false, required: true
+  private _secretName?: string; 
+  public get secretName() {
+    return this.getStringAttribute('secret_name');
+  }
+  public set secretName(value: string) {
+    this._secretName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secretNameInput() {
+    return this._secretName;
+  }
+}
+export interface DataFactoryLinkedServiceAzureBlobStorageServicePrincipalLinkedKeyVaultKey {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_blob_storage#linked_service_name DataFactoryLinkedServiceAzureBlobStorage#linked_service_name}
+  */
+  readonly linkedServiceName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_blob_storage#secret_name DataFactoryLinkedServiceAzureBlobStorage#secret_name}
+  */
+  readonly secretName: string;
+}
+
+export function dataFactoryLinkedServiceAzureBlobStorageServicePrincipalLinkedKeyVaultKeyToTerraform(struct?: DataFactoryLinkedServiceAzureBlobStorageServicePrincipalLinkedKeyVaultKeyOutputReference | DataFactoryLinkedServiceAzureBlobStorageServicePrincipalLinkedKeyVaultKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    linked_service_name: cdktf.stringToTerraform(struct!.linkedServiceName),
+    secret_name: cdktf.stringToTerraform(struct!.secretName),
+  }
+}
+
+export class DataFactoryLinkedServiceAzureBlobStorageServicePrincipalLinkedKeyVaultKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DataFactoryLinkedServiceAzureBlobStorageServicePrincipalLinkedKeyVaultKey | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._linkedServiceName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.linkedServiceName = this._linkedServiceName;
+    }
+    if (this._secretName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.secretName = this._secretName;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFactoryLinkedServiceAzureBlobStorageServicePrincipalLinkedKeyVaultKey | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
       this._linkedServiceName = undefined;
@@ -360,8 +448,8 @@ export class DataFactoryLinkedServiceAzureBlobStorage extends cdktf.TerraformRes
       terraformResourceType: 'azurerm_data_factory_linked_service_azure_blob_storage',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -372,20 +460,20 @@ export class DataFactoryLinkedServiceAzureBlobStorage extends cdktf.TerraformRes
     this._annotations = config.annotations;
     this._connectionString = config.connectionString;
     this._dataFactoryId = config.dataFactoryId;
-    this._dataFactoryName = config.dataFactoryName;
     this._description = config.description;
     this._id = config.id;
     this._integrationRuntimeName = config.integrationRuntimeName;
     this._name = config.name;
     this._parameters = config.parameters;
-    this._resourceGroupName = config.resourceGroupName;
     this._sasUri = config.sasUri;
     this._serviceEndpoint = config.serviceEndpoint;
     this._servicePrincipalId = config.servicePrincipalId;
     this._servicePrincipalKey = config.servicePrincipalKey;
+    this._storageKind = config.storageKind;
     this._tenantId = config.tenantId;
     this._useManagedIdentity = config.useManagedIdentity;
     this._keyVaultSasToken.internalValue = config.keyVaultSasToken;
+    this._servicePrincipalLinkedKeyVaultKey.internalValue = config.servicePrincipalLinkedKeyVaultKey;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -441,7 +529,7 @@ export class DataFactoryLinkedServiceAzureBlobStorage extends cdktf.TerraformRes
     return this._connectionString;
   }
 
-  // data_factory_id - computed: true, optional: true, required: false
+  // data_factory_id - computed: false, optional: false, required: true
   private _dataFactoryId?: string; 
   public get dataFactoryId() {
     return this.getStringAttribute('data_factory_id');
@@ -449,28 +537,9 @@ export class DataFactoryLinkedServiceAzureBlobStorage extends cdktf.TerraformRes
   public set dataFactoryId(value: string) {
     this._dataFactoryId = value;
   }
-  public resetDataFactoryId() {
-    this._dataFactoryId = undefined;
-  }
   // Temporarily expose input value. Use with caution.
   public get dataFactoryIdInput() {
     return this._dataFactoryId;
-  }
-
-  // data_factory_name - computed: true, optional: true, required: false
-  private _dataFactoryName?: string; 
-  public get dataFactoryName() {
-    return this.getStringAttribute('data_factory_name');
-  }
-  public set dataFactoryName(value: string) {
-    this._dataFactoryName = value;
-  }
-  public resetDataFactoryName() {
-    this._dataFactoryName = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get dataFactoryNameInput() {
-    return this._dataFactoryName;
   }
 
   // description - computed: false, optional: true, required: false
@@ -550,19 +619,6 @@ export class DataFactoryLinkedServiceAzureBlobStorage extends cdktf.TerraformRes
     return this._parameters;
   }
 
-  // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName?: string; 
-  public get resourceGroupName() {
-    return this.getStringAttribute('resource_group_name');
-  }
-  public set resourceGroupName(value: string) {
-    this._resourceGroupName = value;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get resourceGroupNameInput() {
-    return this._resourceGroupName;
-  }
-
   // sas_uri - computed: false, optional: true, required: false
   private _sasUri?: string; 
   public get sasUri() {
@@ -627,6 +683,22 @@ export class DataFactoryLinkedServiceAzureBlobStorage extends cdktf.TerraformRes
     return this._servicePrincipalKey;
   }
 
+  // storage_kind - computed: false, optional: true, required: false
+  private _storageKind?: string; 
+  public get storageKind() {
+    return this.getStringAttribute('storage_kind');
+  }
+  public set storageKind(value: string) {
+    this._storageKind = value;
+  }
+  public resetStorageKind() {
+    this._storageKind = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageKindInput() {
+    return this._storageKind;
+  }
+
   // tenant_id - computed: false, optional: true, required: false
   private _tenantId?: string; 
   public get tenantId() {
@@ -675,6 +747,22 @@ export class DataFactoryLinkedServiceAzureBlobStorage extends cdktf.TerraformRes
     return this._keyVaultSasToken.internalValue;
   }
 
+  // service_principal_linked_key_vault_key - computed: false, optional: true, required: false
+  private _servicePrincipalLinkedKeyVaultKey = new DataFactoryLinkedServiceAzureBlobStorageServicePrincipalLinkedKeyVaultKeyOutputReference(this, "service_principal_linked_key_vault_key");
+  public get servicePrincipalLinkedKeyVaultKey() {
+    return this._servicePrincipalLinkedKeyVaultKey;
+  }
+  public putServicePrincipalLinkedKeyVaultKey(value: DataFactoryLinkedServiceAzureBlobStorageServicePrincipalLinkedKeyVaultKey) {
+    this._servicePrincipalLinkedKeyVaultKey.internalValue = value;
+  }
+  public resetServicePrincipalLinkedKeyVaultKey() {
+    this._servicePrincipalLinkedKeyVaultKey.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get servicePrincipalLinkedKeyVaultKeyInput() {
+    return this._servicePrincipalLinkedKeyVaultKey.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new DataFactoryLinkedServiceAzureBlobStorageTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -701,20 +789,20 @@ export class DataFactoryLinkedServiceAzureBlobStorage extends cdktf.TerraformRes
       annotations: cdktf.listMapper(cdktf.stringToTerraform)(this._annotations),
       connection_string: cdktf.stringToTerraform(this._connectionString),
       data_factory_id: cdktf.stringToTerraform(this._dataFactoryId),
-      data_factory_name: cdktf.stringToTerraform(this._dataFactoryName),
       description: cdktf.stringToTerraform(this._description),
       id: cdktf.stringToTerraform(this._id),
       integration_runtime_name: cdktf.stringToTerraform(this._integrationRuntimeName),
       name: cdktf.stringToTerraform(this._name),
       parameters: cdktf.hashMapper(cdktf.stringToTerraform)(this._parameters),
-      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sas_uri: cdktf.stringToTerraform(this._sasUri),
       service_endpoint: cdktf.stringToTerraform(this._serviceEndpoint),
       service_principal_id: cdktf.stringToTerraform(this._servicePrincipalId),
       service_principal_key: cdktf.stringToTerraform(this._servicePrincipalKey),
+      storage_kind: cdktf.stringToTerraform(this._storageKind),
       tenant_id: cdktf.stringToTerraform(this._tenantId),
       use_managed_identity: cdktf.booleanToTerraform(this._useManagedIdentity),
       key_vault_sas_token: dataFactoryLinkedServiceAzureBlobStorageKeyVaultSasTokenToTerraform(this._keyVaultSasToken.internalValue),
+      service_principal_linked_key_vault_key: dataFactoryLinkedServiceAzureBlobStorageServicePrincipalLinkedKeyVaultKeyToTerraform(this._servicePrincipalLinkedKeyVaultKey.internalValue),
       timeouts: dataFactoryLinkedServiceAzureBlobStorageTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

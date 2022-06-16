@@ -462,7 +462,7 @@ export class EventhubNamespaceNetworkRulesetsOutputReference extends cdktf.Compl
   }
 
   // virtual_network_rule - computed: true, optional: true, required: false
-  private _virtualNetworkRule = new EventhubNamespaceNetworkRulesetsVirtualNetworkRuleList(this, "virtual_network_rule", false);
+  private _virtualNetworkRule = new EventhubNamespaceNetworkRulesetsVirtualNetworkRuleList(this, "virtual_network_rule", true);
   public get virtualNetworkRule() {
     return this._virtualNetworkRule;
   }
@@ -752,8 +752,8 @@ export class EventhubNamespace extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_eventhub_namespace',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

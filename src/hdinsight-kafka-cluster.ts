@@ -171,10 +171,6 @@ export class HdinsightKafkaClusterComponentVersionOutputReference extends cdktf.
 }
 export interface HdinsightKafkaClusterGateway {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster#enabled HdinsightKafkaCluster#enabled}
-  */
-  readonly enabled?: boolean | cdktf.IResolvable;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster#password HdinsightKafkaCluster#password}
   */
   readonly password: string;
@@ -190,7 +186,6 @@ export function hdinsightKafkaClusterGatewayToTerraform(struct?: HdinsightKafkaC
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    enabled: cdktf.booleanToTerraform(struct!.enabled),
     password: cdktf.stringToTerraform(struct!.password),
     username: cdktf.stringToTerraform(struct!.username),
   }
@@ -210,10 +205,6 @@ export class HdinsightKafkaClusterGatewayOutputReference extends cdktf.ComplexOb
   public get internalValue(): HdinsightKafkaClusterGateway | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enabled !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.enabled = this._enabled;
-    }
     if (this._password !== undefined) {
       hasAnyValues = true;
       internalValueResult.password = this._password;
@@ -228,32 +219,14 @@ export class HdinsightKafkaClusterGatewayOutputReference extends cdktf.ComplexOb
   public set internalValue(value: HdinsightKafkaClusterGateway | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
-      this._enabled = undefined;
       this._password = undefined;
       this._username = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
-      this._enabled = value.enabled;
       this._password = value.password;
       this._username = value.username;
     }
-  }
-
-  // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean | cdktf.IResolvable; 
-  public get enabled() {
-    return this.getBooleanAttribute('enabled');
-  }
-  public set enabled(value: boolean | cdktf.IResolvable) {
-    this._enabled = value;
-  }
-  public resetEnabled() {
-    this._enabled = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get enabledInput() {
-    return this._enabled;
   }
 
   // password - computed: false, optional: false, required: true
@@ -903,7 +876,7 @@ export interface HdinsightKafkaClusterRestProxy {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster#security_group_name HdinsightKafkaCluster#security_group_name}
   */
-  readonly securityGroupName?: string;
+  readonly securityGroupName: string;
 }
 
 export function hdinsightKafkaClusterRestProxyToTerraform(struct?: HdinsightKafkaClusterRestProxyOutputReference | HdinsightKafkaClusterRestProxy): any {
@@ -968,16 +941,13 @@ export class HdinsightKafkaClusterRestProxyOutputReference extends cdktf.Complex
     return this._securityGroupId;
   }
 
-  // security_group_name - computed: true, optional: true, required: false
+  // security_group_name - computed: false, optional: false, required: true
   private _securityGroupName?: string; 
   public get securityGroupName() {
     return this.getStringAttribute('security_group_name');
   }
   public set securityGroupName(value: string) {
     this._securityGroupName = value;
-  }
-  public resetSecurityGroupName() {
-    this._securityGroupName = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get securityGroupNameInput() {
@@ -1374,10 +1344,6 @@ export class HdinsightKafkaClusterRolesKafkaManagementNodeOutputReference extend
 }
 export interface HdinsightKafkaClusterRolesWorkerNode {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster#min_instance_count HdinsightKafkaCluster#min_instance_count}
-  */
-  readonly minInstanceCount?: number;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster#number_of_disks_per_node HdinsightKafkaCluster#number_of_disks_per_node}
   */
   readonly numberOfDisksPerNode: number;
@@ -1417,7 +1383,6 @@ export function hdinsightKafkaClusterRolesWorkerNodeToTerraform(struct?: Hdinsig
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    min_instance_count: cdktf.numberToTerraform(struct!.minInstanceCount),
     number_of_disks_per_node: cdktf.numberToTerraform(struct!.numberOfDisksPerNode),
     password: cdktf.stringToTerraform(struct!.password),
     ssh_keys: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sshKeys),
@@ -1443,10 +1408,6 @@ export class HdinsightKafkaClusterRolesWorkerNodeOutputReference extends cdktf.C
   public get internalValue(): HdinsightKafkaClusterRolesWorkerNode | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._minInstanceCount !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.minInstanceCount = this._minInstanceCount;
-    }
     if (this._numberOfDisksPerNode !== undefined) {
       hasAnyValues = true;
       internalValueResult.numberOfDisksPerNode = this._numberOfDisksPerNode;
@@ -1485,7 +1446,6 @@ export class HdinsightKafkaClusterRolesWorkerNodeOutputReference extends cdktf.C
   public set internalValue(value: HdinsightKafkaClusterRolesWorkerNode | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
-      this._minInstanceCount = undefined;
       this._numberOfDisksPerNode = undefined;
       this._password = undefined;
       this._sshKeys = undefined;
@@ -1497,7 +1457,6 @@ export class HdinsightKafkaClusterRolesWorkerNodeOutputReference extends cdktf.C
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
-      this._minInstanceCount = value.minInstanceCount;
       this._numberOfDisksPerNode = value.numberOfDisksPerNode;
       this._password = value.password;
       this._sshKeys = value.sshKeys;
@@ -1507,22 +1466,6 @@ export class HdinsightKafkaClusterRolesWorkerNodeOutputReference extends cdktf.C
       this._virtualNetworkId = value.virtualNetworkId;
       this._vmSize = value.vmSize;
     }
-  }
-
-  // min_instance_count - computed: true, optional: true, required: false
-  private _minInstanceCount?: number; 
-  public get minInstanceCount() {
-    return this.getNumberAttribute('min_instance_count');
-  }
-  public set minInstanceCount(value: number) {
-    this._minInstanceCount = value;
-  }
-  public resetMinInstanceCount() {
-    this._minInstanceCount = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get minInstanceCountInput() {
-    return this._minInstanceCount;
   }
 
   // number_of_disks_per_node - computed: false, optional: false, required: true
@@ -2675,8 +2618,8 @@ export class HdinsightKafkaCluster extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_hdinsight_kafka_cluster',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

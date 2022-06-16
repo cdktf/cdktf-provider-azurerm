@@ -131,8 +131,8 @@ export class DataAzurermLogAnalyticsWorkspace extends cdktf.TerraformDataSource 
       terraformResourceType: 'azurerm_log_analytics_workspace',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -186,11 +186,6 @@ export class DataAzurermLogAnalyticsWorkspace extends cdktf.TerraformDataSource 
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name;
-  }
-
-  // portal_url - computed: true, optional: false, required: false
-  public get portalUrl() {
-    return this.getStringAttribute('portal_url');
   }
 
   // primary_shared_key - computed: true, optional: false, required: false

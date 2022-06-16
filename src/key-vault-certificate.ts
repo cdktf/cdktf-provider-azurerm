@@ -1020,7 +1020,7 @@ export class KeyVaultCertificateCertificatePolicyX509CertificatePropertiesOutput
   // key_usage - computed: false, optional: false, required: true
   private _keyUsage?: string[]; 
   public get keyUsage() {
-    return this.getListAttribute('key_usage');
+    return cdktf.Fn.tolist(this.getListAttribute('key_usage'));
   }
   public set keyUsage(value: string[]) {
     this._keyUsage = value;
@@ -1429,8 +1429,8 @@ export class KeyVaultCertificate extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_key_vault_certificate',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

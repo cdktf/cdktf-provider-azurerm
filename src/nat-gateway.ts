@@ -27,14 +27,6 @@ export interface NatGatewayConfig extends cdktf.TerraformMetaArguments {
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/nat_gateway#public_ip_address_ids NatGateway#public_ip_address_ids}
-  */
-  readonly publicIpAddressIds?: string[];
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/nat_gateway#public_ip_prefix_ids NatGateway#public_ip_prefix_ids}
-  */
-  readonly publicIpPrefixIds?: string[];
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/nat_gateway#resource_group_name NatGateway#resource_group_name}
   */
   readonly resourceGroupName: string;
@@ -240,8 +232,8 @@ export class NatGateway extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_nat_gateway',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -252,8 +244,6 @@ export class NatGateway extends cdktf.TerraformResource {
     this._idleTimeoutInMinutes = config.idleTimeoutInMinutes;
     this._location = config.location;
     this._name = config.name;
-    this._publicIpAddressIds = config.publicIpAddressIds;
-    this._publicIpPrefixIds = config.publicIpPrefixIds;
     this._resourceGroupName = config.resourceGroupName;
     this._skuName = config.skuName;
     this._tags = config.tags;
@@ -323,38 +313,6 @@ export class NatGateway extends cdktf.TerraformResource {
     return this._name;
   }
 
-  // public_ip_address_ids - computed: true, optional: true, required: false
-  private _publicIpAddressIds?: string[]; 
-  public get publicIpAddressIds() {
-    return cdktf.Fn.tolist(this.getListAttribute('public_ip_address_ids'));
-  }
-  public set publicIpAddressIds(value: string[]) {
-    this._publicIpAddressIds = value;
-  }
-  public resetPublicIpAddressIds() {
-    this._publicIpAddressIds = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get publicIpAddressIdsInput() {
-    return this._publicIpAddressIds;
-  }
-
-  // public_ip_prefix_ids - computed: true, optional: true, required: false
-  private _publicIpPrefixIds?: string[]; 
-  public get publicIpPrefixIds() {
-    return cdktf.Fn.tolist(this.getListAttribute('public_ip_prefix_ids'));
-  }
-  public set publicIpPrefixIds(value: string[]) {
-    this._publicIpPrefixIds = value;
-  }
-  public resetPublicIpPrefixIds() {
-    this._publicIpPrefixIds = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get publicIpPrefixIdsInput() {
-    return this._publicIpPrefixIds;
-  }
-
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName?: string; 
   public get resourceGroupName() {
@@ -408,7 +366,7 @@ export class NatGateway extends cdktf.TerraformResource {
   // zones - computed: false, optional: true, required: false
   private _zones?: string[]; 
   public get zones() {
-    return this.getListAttribute('zones');
+    return cdktf.Fn.tolist(this.getListAttribute('zones'));
   }
   public set zones(value: string[]) {
     this._zones = value;
@@ -447,8 +405,6 @@ export class NatGateway extends cdktf.TerraformResource {
       idle_timeout_in_minutes: cdktf.numberToTerraform(this._idleTimeoutInMinutes),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
-      public_ip_address_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._publicIpAddressIds),
-      public_ip_prefix_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._publicIpPrefixIds),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku_name: cdktf.stringToTerraform(this._skuName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),

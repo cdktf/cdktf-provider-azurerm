@@ -32,6 +32,10 @@ export interface LinuxVirtualMachineScaleSetConfig extends cdktf.TerraformMetaAr
   */
   readonly doNotRunExtensionsOnOverprovisionedMachines?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#edge_zone LinuxVirtualMachineScaleSet#edge_zone}
+  */
+  readonly edgeZone?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#encryption_at_host_enabled LinuxVirtualMachineScaleSet#encryption_at_host_enabled}
   */
   readonly encryptionAtHostEnabled?: boolean | cdktf.IResolvable;
@@ -228,6 +232,12 @@ export interface LinuxVirtualMachineScaleSetConfig extends cdktf.TerraformMetaAr
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#terminate_notification LinuxVirtualMachineScaleSet#terminate_notification}
   */
   readonly terminateNotification?: LinuxVirtualMachineScaleSetTerminateNotification;
+  /**
+  * termination_notification block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#termination_notification LinuxVirtualMachineScaleSet#termination_notification}
+  */
+  readonly terminationNotification?: LinuxVirtualMachineScaleSetTerminationNotification;
   /**
   * timeouts block
   * 
@@ -672,14 +682,6 @@ export interface LinuxVirtualMachineScaleSetDataDisk {
   */
   readonly diskEncryptionSetId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#disk_iops_read_write LinuxVirtualMachineScaleSet#disk_iops_read_write}
-  */
-  readonly diskIopsReadWrite?: number;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#disk_mbps_read_write LinuxVirtualMachineScaleSet#disk_mbps_read_write}
-  */
-  readonly diskMbpsReadWrite?: number;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#disk_size_gb LinuxVirtualMachineScaleSet#disk_size_gb}
   */
   readonly diskSizeGb: number;
@@ -714,8 +716,6 @@ export function linuxVirtualMachineScaleSetDataDiskToTerraform(struct?: LinuxVir
     caching: cdktf.stringToTerraform(struct!.caching),
     create_option: cdktf.stringToTerraform(struct!.createOption),
     disk_encryption_set_id: cdktf.stringToTerraform(struct!.diskEncryptionSetId),
-    disk_iops_read_write: cdktf.numberToTerraform(struct!.diskIopsReadWrite),
-    disk_mbps_read_write: cdktf.numberToTerraform(struct!.diskMbpsReadWrite),
     disk_size_gb: cdktf.numberToTerraform(struct!.diskSizeGb),
     lun: cdktf.numberToTerraform(struct!.lun),
     storage_account_type: cdktf.stringToTerraform(struct!.storageAccountType),
@@ -757,14 +757,6 @@ export class LinuxVirtualMachineScaleSetDataDiskOutputReference extends cdktf.Co
       hasAnyValues = true;
       internalValueResult.diskEncryptionSetId = this._diskEncryptionSetId;
     }
-    if (this._diskIopsReadWrite !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.diskIopsReadWrite = this._diskIopsReadWrite;
-    }
-    if (this._diskMbpsReadWrite !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.diskMbpsReadWrite = this._diskMbpsReadWrite;
-    }
     if (this._diskSizeGb !== undefined) {
       hasAnyValues = true;
       internalValueResult.diskSizeGb = this._diskSizeGb;
@@ -799,8 +791,6 @@ export class LinuxVirtualMachineScaleSetDataDiskOutputReference extends cdktf.Co
       this._caching = undefined;
       this._createOption = undefined;
       this._diskEncryptionSetId = undefined;
-      this._diskIopsReadWrite = undefined;
-      this._diskMbpsReadWrite = undefined;
       this._diskSizeGb = undefined;
       this._lun = undefined;
       this._storageAccountType = undefined;
@@ -818,8 +808,6 @@ export class LinuxVirtualMachineScaleSetDataDiskOutputReference extends cdktf.Co
       this._caching = value.caching;
       this._createOption = value.createOption;
       this._diskEncryptionSetId = value.diskEncryptionSetId;
-      this._diskIopsReadWrite = value.diskIopsReadWrite;
-      this._diskMbpsReadWrite = value.diskMbpsReadWrite;
       this._diskSizeGb = value.diskSizeGb;
       this._lun = value.lun;
       this._storageAccountType = value.storageAccountType;
@@ -872,38 +860,6 @@ export class LinuxVirtualMachineScaleSetDataDiskOutputReference extends cdktf.Co
   // Temporarily expose input value. Use with caution.
   public get diskEncryptionSetIdInput() {
     return this._diskEncryptionSetId;
-  }
-
-  // disk_iops_read_write - computed: true, optional: true, required: false
-  private _diskIopsReadWrite?: number; 
-  public get diskIopsReadWrite() {
-    return this.getNumberAttribute('disk_iops_read_write');
-  }
-  public set diskIopsReadWrite(value: number) {
-    this._diskIopsReadWrite = value;
-  }
-  public resetDiskIopsReadWrite() {
-    this._diskIopsReadWrite = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get diskIopsReadWriteInput() {
-    return this._diskIopsReadWrite;
-  }
-
-  // disk_mbps_read_write - computed: true, optional: true, required: false
-  private _diskMbpsReadWrite?: number; 
-  public get diskMbpsReadWrite() {
-    return this.getNumberAttribute('disk_mbps_read_write');
-  }
-  public set diskMbpsReadWrite(value: number) {
-    this._diskMbpsReadWrite = value;
-  }
-  public resetDiskMbpsReadWrite() {
-    this._diskMbpsReadWrite = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get diskMbpsReadWriteInput() {
-    return this._diskMbpsReadWrite;
   }
 
   // disk_size_gb - computed: false, optional: false, required: true
@@ -2405,6 +2361,14 @@ export interface LinuxVirtualMachineScaleSetOsDisk {
   */
   readonly diskSizeGb?: number;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#secure_vm_disk_encryption_set_id LinuxVirtualMachineScaleSet#secure_vm_disk_encryption_set_id}
+  */
+  readonly secureVmDiskEncryptionSetId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#security_encryption_type LinuxVirtualMachineScaleSet#security_encryption_type}
+  */
+  readonly securityEncryptionType?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#storage_account_type LinuxVirtualMachineScaleSet#storage_account_type}
   */
   readonly storageAccountType: string;
@@ -2429,6 +2393,8 @@ export function linuxVirtualMachineScaleSetOsDiskToTerraform(struct?: LinuxVirtu
     caching: cdktf.stringToTerraform(struct!.caching),
     disk_encryption_set_id: cdktf.stringToTerraform(struct!.diskEncryptionSetId),
     disk_size_gb: cdktf.numberToTerraform(struct!.diskSizeGb),
+    secure_vm_disk_encryption_set_id: cdktf.stringToTerraform(struct!.secureVmDiskEncryptionSetId),
+    security_encryption_type: cdktf.stringToTerraform(struct!.securityEncryptionType),
     storage_account_type: cdktf.stringToTerraform(struct!.storageAccountType),
     write_accelerator_enabled: cdktf.booleanToTerraform(struct!.writeAcceleratorEnabled),
     diff_disk_settings: linuxVirtualMachineScaleSetOsDiskDiffDiskSettingsToTerraform(struct!.diffDiskSettings),
@@ -2461,6 +2427,14 @@ export class LinuxVirtualMachineScaleSetOsDiskOutputReference extends cdktf.Comp
       hasAnyValues = true;
       internalValueResult.diskSizeGb = this._diskSizeGb;
     }
+    if (this._secureVmDiskEncryptionSetId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.secureVmDiskEncryptionSetId = this._secureVmDiskEncryptionSetId;
+    }
+    if (this._securityEncryptionType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.securityEncryptionType = this._securityEncryptionType;
+    }
     if (this._storageAccountType !== undefined) {
       hasAnyValues = true;
       internalValueResult.storageAccountType = this._storageAccountType;
@@ -2482,6 +2456,8 @@ export class LinuxVirtualMachineScaleSetOsDiskOutputReference extends cdktf.Comp
       this._caching = undefined;
       this._diskEncryptionSetId = undefined;
       this._diskSizeGb = undefined;
+      this._secureVmDiskEncryptionSetId = undefined;
+      this._securityEncryptionType = undefined;
       this._storageAccountType = undefined;
       this._writeAcceleratorEnabled = undefined;
       this._diffDiskSettings.internalValue = undefined;
@@ -2491,6 +2467,8 @@ export class LinuxVirtualMachineScaleSetOsDiskOutputReference extends cdktf.Comp
       this._caching = value.caching;
       this._diskEncryptionSetId = value.diskEncryptionSetId;
       this._diskSizeGb = value.diskSizeGb;
+      this._secureVmDiskEncryptionSetId = value.secureVmDiskEncryptionSetId;
+      this._securityEncryptionType = value.securityEncryptionType;
       this._storageAccountType = value.storageAccountType;
       this._writeAcceleratorEnabled = value.writeAcceleratorEnabled;
       this._diffDiskSettings.internalValue = value.diffDiskSettings;
@@ -2540,6 +2518,38 @@ export class LinuxVirtualMachineScaleSetOsDiskOutputReference extends cdktf.Comp
   // Temporarily expose input value. Use with caution.
   public get diskSizeGbInput() {
     return this._diskSizeGb;
+  }
+
+  // secure_vm_disk_encryption_set_id - computed: false, optional: true, required: false
+  private _secureVmDiskEncryptionSetId?: string; 
+  public get secureVmDiskEncryptionSetId() {
+    return this.getStringAttribute('secure_vm_disk_encryption_set_id');
+  }
+  public set secureVmDiskEncryptionSetId(value: string) {
+    this._secureVmDiskEncryptionSetId = value;
+  }
+  public resetSecureVmDiskEncryptionSetId() {
+    this._secureVmDiskEncryptionSetId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secureVmDiskEncryptionSetIdInput() {
+    return this._secureVmDiskEncryptionSetId;
+  }
+
+  // security_encryption_type - computed: false, optional: true, required: false
+  private _securityEncryptionType?: string; 
+  public get securityEncryptionType() {
+    return this.getStringAttribute('security_encryption_type');
+  }
+  public set securityEncryptionType(value: string) {
+    this._securityEncryptionType = value;
+  }
+  public resetSecurityEncryptionType() {
+    this._securityEncryptionType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get securityEncryptionTypeInput() {
+    return this._securityEncryptionType;
   }
 
   // storage_account_type - computed: false, optional: false, required: true
@@ -3268,6 +3278,95 @@ export class LinuxVirtualMachineScaleSetTerminateNotificationOutputReference ext
     return this._timeout;
   }
 }
+export interface LinuxVirtualMachineScaleSetTerminationNotification {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#enabled LinuxVirtualMachineScaleSet#enabled}
+  */
+  readonly enabled: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#timeout LinuxVirtualMachineScaleSet#timeout}
+  */
+  readonly timeout?: string;
+}
+
+export function linuxVirtualMachineScaleSetTerminationNotificationToTerraform(struct?: LinuxVirtualMachineScaleSetTerminationNotificationOutputReference | LinuxVirtualMachineScaleSetTerminationNotification): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    timeout: cdktf.stringToTerraform(struct!.timeout),
+  }
+}
+
+export class LinuxVirtualMachineScaleSetTerminationNotificationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): LinuxVirtualMachineScaleSetTerminationNotification | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._enabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._timeout !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.timeout = this._timeout;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LinuxVirtualMachineScaleSetTerminationNotification | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._enabled = undefined;
+      this._timeout = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._enabled = value.enabled;
+      this._timeout = value.timeout;
+    }
+  }
+
+  // enabled - computed: false, optional: false, required: true
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+
+  // timeout - computed: false, optional: true, required: false
+  private _timeout?: string; 
+  public get timeout() {
+    return this.getStringAttribute('timeout');
+  }
+  public set timeout(value: string) {
+    this._timeout = value;
+  }
+  public resetTimeout() {
+    this._timeout = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutInput() {
+    return this._timeout;
+  }
+}
 export interface LinuxVirtualMachineScaleSetTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#create LinuxVirtualMachineScaleSet#create}
@@ -3451,8 +3550,8 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_linux_virtual_machine_scale_set',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -3465,6 +3564,7 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
     this._customData = config.customData;
     this._disablePasswordAuthentication = config.disablePasswordAuthentication;
     this._doNotRunExtensionsOnOverprovisionedMachines = config.doNotRunExtensionsOnOverprovisionedMachines;
+    this._edgeZone = config.edgeZone;
     this._encryptionAtHostEnabled = config.encryptionAtHostEnabled;
     this._evictionPolicy = config.evictionPolicy;
     this._extensionsTimeBudget = config.extensionsTimeBudget;
@@ -3506,6 +3606,7 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
     this._secret.internalValue = config.secret;
     this._sourceImageReference.internalValue = config.sourceImageReference;
     this._terminateNotification.internalValue = config.terminateNotification;
+    this._terminationNotification.internalValue = config.terminationNotification;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -3604,6 +3705,22 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get doNotRunExtensionsOnOverprovisionedMachinesInput() {
     return this._doNotRunExtensionsOnOverprovisionedMachines;
+  }
+
+  // edge_zone - computed: false, optional: true, required: false
+  private _edgeZone?: string; 
+  public get edgeZone() {
+    return this.getStringAttribute('edge_zone');
+  }
+  public set edgeZone(value: string) {
+    this._edgeZone = value;
+  }
+  public resetEdgeZone() {
+    this._edgeZone = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get edgeZoneInput() {
+    return this._edgeZone;
   }
 
   // encryption_at_host_enabled - computed: false, optional: true, required: false
@@ -3999,7 +4116,7 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   // zones - computed: false, optional: true, required: false
   private _zones?: string[]; 
   public get zones() {
-    return this.getListAttribute('zones');
+    return cdktf.Fn.tolist(this.getListAttribute('zones'));
   }
   public set zones(value: string[]) {
     this._zones = value;
@@ -4246,6 +4363,22 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
     return this._terminateNotification.internalValue;
   }
 
+  // termination_notification - computed: false, optional: true, required: false
+  private _terminationNotification = new LinuxVirtualMachineScaleSetTerminationNotificationOutputReference(this, "termination_notification");
+  public get terminationNotification() {
+    return this._terminationNotification;
+  }
+  public putTerminationNotification(value: LinuxVirtualMachineScaleSetTerminationNotification) {
+    this._terminationNotification.internalValue = value;
+  }
+  public resetTerminationNotification() {
+    this._terminationNotification.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get terminationNotificationInput() {
+    return this._terminationNotification.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new LinuxVirtualMachineScaleSetTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -4274,6 +4407,7 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
       custom_data: cdktf.stringToTerraform(this._customData),
       disable_password_authentication: cdktf.booleanToTerraform(this._disablePasswordAuthentication),
       do_not_run_extensions_on_overprovisioned_machines: cdktf.booleanToTerraform(this._doNotRunExtensionsOnOverprovisionedMachines),
+      edge_zone: cdktf.stringToTerraform(this._edgeZone),
       encryption_at_host_enabled: cdktf.booleanToTerraform(this._encryptionAtHostEnabled),
       eviction_policy: cdktf.stringToTerraform(this._evictionPolicy),
       extensions_time_budget: cdktf.stringToTerraform(this._extensionsTimeBudget),
@@ -4315,6 +4449,7 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
       secret: cdktf.listMapper(linuxVirtualMachineScaleSetSecretToTerraform)(this._secret.internalValue),
       source_image_reference: linuxVirtualMachineScaleSetSourceImageReferenceToTerraform(this._sourceImageReference.internalValue),
       terminate_notification: linuxVirtualMachineScaleSetTerminateNotificationToTerraform(this._terminateNotification.internalValue),
+      termination_notification: linuxVirtualMachineScaleSetTerminationNotificationToTerraform(this._terminationNotification.internalValue),
       timeouts: linuxVirtualMachineScaleSetTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

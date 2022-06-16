@@ -8,9 +8,9 @@ import * as cdktf from 'cdktf';
 
 export interface DataFactoryIntegrationRuntimeManagedConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_managed#data_factory_name DataFactoryIntegrationRuntimeManaged#data_factory_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_managed#data_factory_id DataFactoryIntegrationRuntimeManaged#data_factory_id}
   */
-  readonly dataFactoryName: string;
+  readonly dataFactoryId: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_managed#description DataFactoryIntegrationRuntimeManaged#description}
   */
@@ -50,10 +50,6 @@ export interface DataFactoryIntegrationRuntimeManagedConfig extends cdktf.Terraf
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_managed#number_of_nodes DataFactoryIntegrationRuntimeManaged#number_of_nodes}
   */
   readonly numberOfNodes?: number;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_managed#resource_group_name DataFactoryIntegrationRuntimeManaged#resource_group_name}
-  */
-  readonly resourceGroupName: string;
   /**
   * catalog_info block
   * 
@@ -577,15 +573,15 @@ export class DataFactoryIntegrationRuntimeManaged extends cdktf.TerraformResourc
       terraformResourceType: 'azurerm_data_factory_integration_runtime_managed',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
       lifecycle: config.lifecycle
     });
-    this._dataFactoryName = config.dataFactoryName;
+    this._dataFactoryId = config.dataFactoryId;
     this._description = config.description;
     this._edition = config.edition;
     this._id = config.id;
@@ -595,7 +591,6 @@ export class DataFactoryIntegrationRuntimeManaged extends cdktf.TerraformResourc
     this._name = config.name;
     this._nodeSize = config.nodeSize;
     this._numberOfNodes = config.numberOfNodes;
-    this._resourceGroupName = config.resourceGroupName;
     this._catalogInfo.internalValue = config.catalogInfo;
     this._customSetupScript.internalValue = config.customSetupScript;
     this._timeouts.internalValue = config.timeouts;
@@ -606,17 +601,17 @@ export class DataFactoryIntegrationRuntimeManaged extends cdktf.TerraformResourc
   // ATTRIBUTES
   // ==========
 
-  // data_factory_name - computed: false, optional: false, required: true
-  private _dataFactoryName?: string; 
-  public get dataFactoryName() {
-    return this.getStringAttribute('data_factory_name');
+  // data_factory_id - computed: false, optional: false, required: true
+  private _dataFactoryId?: string; 
+  public get dataFactoryId() {
+    return this.getStringAttribute('data_factory_id');
   }
-  public set dataFactoryName(value: string) {
-    this._dataFactoryName = value;
+  public set dataFactoryId(value: string) {
+    this._dataFactoryId = value;
   }
   // Temporarily expose input value. Use with caution.
-  public get dataFactoryNameInput() {
-    return this._dataFactoryName;
+  public get dataFactoryIdInput() {
+    return this._dataFactoryId;
   }
 
   // description - computed: false, optional: true, required: false
@@ -754,19 +749,6 @@ export class DataFactoryIntegrationRuntimeManaged extends cdktf.TerraformResourc
     return this._numberOfNodes;
   }
 
-  // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName?: string; 
-  public get resourceGroupName() {
-    return this.getStringAttribute('resource_group_name');
-  }
-  public set resourceGroupName(value: string) {
-    this._resourceGroupName = value;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get resourceGroupNameInput() {
-    return this._resourceGroupName;
-  }
-
   // catalog_info - computed: false, optional: true, required: false
   private _catalogInfo = new DataFactoryIntegrationRuntimeManagedCatalogInfoOutputReference(this, "catalog_info");
   public get catalogInfo() {
@@ -837,7 +819,7 @@ export class DataFactoryIntegrationRuntimeManaged extends cdktf.TerraformResourc
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      data_factory_name: cdktf.stringToTerraform(this._dataFactoryName),
+      data_factory_id: cdktf.stringToTerraform(this._dataFactoryId),
       description: cdktf.stringToTerraform(this._description),
       edition: cdktf.stringToTerraform(this._edition),
       id: cdktf.stringToTerraform(this._id),
@@ -847,7 +829,6 @@ export class DataFactoryIntegrationRuntimeManaged extends cdktf.TerraformResourc
       name: cdktf.stringToTerraform(this._name),
       node_size: cdktf.stringToTerraform(this._nodeSize),
       number_of_nodes: cdktf.numberToTerraform(this._numberOfNodes),
-      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       catalog_info: dataFactoryIntegrationRuntimeManagedCatalogInfoToTerraform(this._catalogInfo.internalValue),
       custom_setup_script: dataFactoryIntegrationRuntimeManagedCustomSetupScriptToTerraform(this._customSetupScript.internalValue),
       timeouts: dataFactoryIntegrationRuntimeManagedTimeoutsToTerraform(this._timeouts.internalValue),

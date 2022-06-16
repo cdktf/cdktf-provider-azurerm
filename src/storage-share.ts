@@ -8,6 +8,10 @@ import * as cdktf from 'cdktf';
 
 export interface StorageShareConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share#access_tier StorageShare#access_tier}
+  */
+  readonly accessTier?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share#enabled_protocol StorageShare#enabled_protocol}
   */
   readonly enabledProtocol?: string;
@@ -29,7 +33,7 @@ export interface StorageShareConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share#quota StorageShare#quota}
   */
-  readonly quota?: number;
+  readonly quota: number;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share#storage_account_name StorageShare#storage_account_name}
   */
@@ -504,14 +508,15 @@ export class StorageShare extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_storage_share',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._accessTier = config.accessTier;
     this._enabledProtocol = config.enabledProtocol;
     this._id = config.id;
     this._metadata = config.metadata;
@@ -525,6 +530,22 @@ export class StorageShare extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // access_tier - computed: true, optional: true, required: false
+  private _accessTier?: string; 
+  public get accessTier() {
+    return this.getStringAttribute('access_tier');
+  }
+  public set accessTier(value: string) {
+    this._accessTier = value;
+  }
+  public resetAccessTier() {
+    this._accessTier = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get accessTierInput() {
+    return this._accessTier;
+  }
 
   // enabled_protocol - computed: false, optional: true, required: false
   private _enabledProtocol?: string; 
@@ -587,16 +608,13 @@ export class StorageShare extends cdktf.TerraformResource {
     return this._name;
   }
 
-  // quota - computed: false, optional: true, required: false
+  // quota - computed: false, optional: false, required: true
   private _quota?: number; 
   public get quota() {
     return this.getNumberAttribute('quota');
   }
   public set quota(value: number) {
     this._quota = value;
-  }
-  public resetQuota() {
-    this._quota = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get quotaInput() {
@@ -664,6 +682,7 @@ export class StorageShare extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      access_tier: cdktf.stringToTerraform(this._accessTier),
       enabled_protocol: cdktf.stringToTerraform(this._enabledProtocol),
       id: cdktf.stringToTerraform(this._id),
       metadata: cdktf.hashMapper(cdktf.stringToTerraform)(this._metadata),

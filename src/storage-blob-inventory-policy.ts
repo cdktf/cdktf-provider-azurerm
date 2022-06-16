@@ -19,10 +19,6 @@ export interface StorageBlobInventoryPolicyConfig extends cdktf.TerraformMetaArg
   */
   readonly storageAccountId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_blob_inventory_policy#storage_container_name StorageBlobInventoryPolicy#storage_container_name}
-  */
-  readonly storageContainerName?: string;
-  /**
   * rules block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_blob_inventory_policy#rules StorageBlobInventoryPolicy#rules}
@@ -604,8 +600,8 @@ export class StorageBlobInventoryPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_storage_blob_inventory_policy',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -614,7 +610,6 @@ export class StorageBlobInventoryPolicy extends cdktf.TerraformResource {
     });
     this._id = config.id;
     this._storageAccountId = config.storageAccountId;
-    this._storageContainerName = config.storageContainerName;
     this._rules.internalValue = config.rules;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -650,22 +645,6 @@ export class StorageBlobInventoryPolicy extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get storageAccountIdInput() {
     return this._storageAccountId;
-  }
-
-  // storage_container_name - computed: false, optional: true, required: false
-  private _storageContainerName?: string; 
-  public get storageContainerName() {
-    return this.getStringAttribute('storage_container_name');
-  }
-  public set storageContainerName(value: string) {
-    this._storageContainerName = value;
-  }
-  public resetStorageContainerName() {
-    this._storageContainerName = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get storageContainerNameInput() {
-    return this._storageContainerName;
   }
 
   // rules - computed: false, optional: false, required: true
@@ -705,7 +684,6 @@ export class StorageBlobInventoryPolicy extends cdktf.TerraformResource {
     return {
       id: cdktf.stringToTerraform(this._id),
       storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
-      storage_container_name: cdktf.stringToTerraform(this._storageContainerName),
       rules: cdktf.listMapper(storageBlobInventoryPolicyRulesToTerraform)(this._rules.internalValue),
       timeouts: storageBlobInventoryPolicyTimeoutsToTerraform(this._timeouts.internalValue),
     };

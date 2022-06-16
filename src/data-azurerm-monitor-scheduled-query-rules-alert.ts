@@ -359,8 +359,8 @@ export class DataAzurermMonitorScheduledQueryRulesAlert extends cdktf.TerraformD
       terraformResourceType: 'azurerm_monitor_scheduled_query_rules_alert',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

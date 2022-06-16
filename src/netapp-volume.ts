@@ -31,6 +31,10 @@ export interface NetappVolumeConfig extends cdktf.TerraformMetaArguments {
   */
   readonly name: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_volume#network_features NetappVolume#network_features}
+  */
+  readonly networkFeatures?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_volume#pool_name NetappVolume#pool_name}
   */
   readonly poolName: string;
@@ -304,18 +308,6 @@ export interface NetappVolumeExportPolicyRule {
   */
   readonly allowedClients: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_volume#cifs_enabled NetappVolume#cifs_enabled}
-  */
-  readonly cifsEnabled?: boolean | cdktf.IResolvable;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_volume#nfsv3_enabled NetappVolume#nfsv3_enabled}
-  */
-  readonly nfsv3Enabled?: boolean | cdktf.IResolvable;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_volume#nfsv4_enabled NetappVolume#nfsv4_enabled}
-  */
-  readonly nfsv4Enabled?: boolean | cdktf.IResolvable;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_volume#protocols_enabled NetappVolume#protocols_enabled}
   */
   readonly protocolsEnabled?: string[];
@@ -344,9 +336,6 @@ export function netappVolumeExportPolicyRuleToTerraform(struct?: NetappVolumeExp
   }
   return {
     allowed_clients: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedClients),
-    cifs_enabled: cdktf.booleanToTerraform(struct!.cifsEnabled),
-    nfsv3_enabled: cdktf.booleanToTerraform(struct!.nfsv3Enabled),
-    nfsv4_enabled: cdktf.booleanToTerraform(struct!.nfsv4Enabled),
     protocols_enabled: cdktf.listMapper(cdktf.stringToTerraform)(struct!.protocolsEnabled),
     root_access_enabled: cdktf.booleanToTerraform(struct!.rootAccessEnabled),
     rule_index: cdktf.numberToTerraform(struct!.ruleIndex),
@@ -379,18 +368,6 @@ export class NetappVolumeExportPolicyRuleOutputReference extends cdktf.ComplexOb
       hasAnyValues = true;
       internalValueResult.allowedClients = this._allowedClients;
     }
-    if (this._cifsEnabled !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.cifsEnabled = this._cifsEnabled;
-    }
-    if (this._nfsv3Enabled !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.nfsv3Enabled = this._nfsv3Enabled;
-    }
-    if (this._nfsv4Enabled !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.nfsv4Enabled = this._nfsv4Enabled;
-    }
     if (this._protocolsEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.protocolsEnabled = this._protocolsEnabled;
@@ -419,9 +396,6 @@ export class NetappVolumeExportPolicyRuleOutputReference extends cdktf.ComplexOb
       this.isEmptyObject = false;
       this.resolvableValue = undefined;
       this._allowedClients = undefined;
-      this._cifsEnabled = undefined;
-      this._nfsv3Enabled = undefined;
-      this._nfsv4Enabled = undefined;
       this._protocolsEnabled = undefined;
       this._rootAccessEnabled = undefined;
       this._ruleIndex = undefined;
@@ -436,9 +410,6 @@ export class NetappVolumeExportPolicyRuleOutputReference extends cdktf.ComplexOb
       this.isEmptyObject = Object.keys(value).length === 0;
       this.resolvableValue = undefined;
       this._allowedClients = value.allowedClients;
-      this._cifsEnabled = value.cifsEnabled;
-      this._nfsv3Enabled = value.nfsv3Enabled;
-      this._nfsv4Enabled = value.nfsv4Enabled;
       this._protocolsEnabled = value.protocolsEnabled;
       this._rootAccessEnabled = value.rootAccessEnabled;
       this._ruleIndex = value.ruleIndex;
@@ -458,54 +429,6 @@ export class NetappVolumeExportPolicyRuleOutputReference extends cdktf.ComplexOb
   // Temporarily expose input value. Use with caution.
   public get allowedClientsInput() {
     return this._allowedClients;
-  }
-
-  // cifs_enabled - computed: true, optional: true, required: false
-  private _cifsEnabled?: boolean | cdktf.IResolvable; 
-  public get cifsEnabled() {
-    return this.getBooleanAttribute('cifs_enabled');
-  }
-  public set cifsEnabled(value: boolean | cdktf.IResolvable) {
-    this._cifsEnabled = value;
-  }
-  public resetCifsEnabled() {
-    this._cifsEnabled = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get cifsEnabledInput() {
-    return this._cifsEnabled;
-  }
-
-  // nfsv3_enabled - computed: true, optional: true, required: false
-  private _nfsv3Enabled?: boolean | cdktf.IResolvable; 
-  public get nfsv3Enabled() {
-    return this.getBooleanAttribute('nfsv3_enabled');
-  }
-  public set nfsv3Enabled(value: boolean | cdktf.IResolvable) {
-    this._nfsv3Enabled = value;
-  }
-  public resetNfsv3Enabled() {
-    this._nfsv3Enabled = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get nfsv3EnabledInput() {
-    return this._nfsv3Enabled;
-  }
-
-  // nfsv4_enabled - computed: true, optional: true, required: false
-  private _nfsv4Enabled?: boolean | cdktf.IResolvable; 
-  public get nfsv4Enabled() {
-    return this.getBooleanAttribute('nfsv4_enabled');
-  }
-  public set nfsv4Enabled(value: boolean | cdktf.IResolvable) {
-    this._nfsv4Enabled = value;
-  }
-  public resetNfsv4Enabled() {
-    this._nfsv4Enabled = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get nfsv4EnabledInput() {
-    return this._nfsv4Enabled;
   }
 
   // protocols_enabled - computed: true, optional: true, required: false
@@ -788,8 +711,8 @@ export class NetappVolume extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_netapp_volume',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -801,6 +724,7 @@ export class NetappVolume extends cdktf.TerraformResource {
     this._id = config.id;
     this._location = config.location;
     this._name = config.name;
+    this._networkFeatures = config.networkFeatures;
     this._poolName = config.poolName;
     this._protocols = config.protocols;
     this._resourceGroupName = config.resourceGroupName;
@@ -896,6 +820,22 @@ export class NetappVolume extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name;
+  }
+
+  // network_features - computed: true, optional: true, required: false
+  private _networkFeatures?: string; 
+  public get networkFeatures() {
+    return this.getStringAttribute('network_features');
+  }
+  public set networkFeatures(value: string) {
+    this._networkFeatures = value;
+  }
+  public resetNetworkFeatures() {
+    this._networkFeatures = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkFeaturesInput() {
+    return this._networkFeatures;
   }
 
   // pool_name - computed: false, optional: false, required: true
@@ -1131,6 +1071,7 @@ export class NetappVolume extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
+      network_features: cdktf.stringToTerraform(this._networkFeatures),
       pool_name: cdktf.stringToTerraform(this._poolName),
       protocols: cdktf.listMapper(cdktf.stringToTerraform)(this._protocols),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),

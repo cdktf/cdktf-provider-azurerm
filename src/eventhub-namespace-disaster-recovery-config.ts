@@ -8,10 +8,6 @@ import * as cdktf from 'cdktf';
 
 export interface EventhubNamespaceDisasterRecoveryConfigConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace_disaster_recovery_config#alternate_name EventhubNamespaceDisasterRecoveryConfig#alternate_name}
-  */
-  readonly alternateName?: string;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace_disaster_recovery_config#id EventhubNamespaceDisasterRecoveryConfig#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
@@ -224,15 +220,14 @@ export class EventhubNamespaceDisasterRecoveryConfig extends cdktf.TerraformReso
       terraformResourceType: 'azurerm_eventhub_namespace_disaster_recovery_config',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
       lifecycle: config.lifecycle
     });
-    this._alternateName = config.alternateName;
     this._id = config.id;
     this._name = config.name;
     this._namespaceName = config.namespaceName;
@@ -244,22 +239,6 @@ export class EventhubNamespaceDisasterRecoveryConfig extends cdktf.TerraformReso
   // ==========
   // ATTRIBUTES
   // ==========
-
-  // alternate_name - computed: false, optional: true, required: false
-  private _alternateName?: string; 
-  public get alternateName() {
-    return this.getStringAttribute('alternate_name');
-  }
-  public set alternateName(value: string) {
-    this._alternateName = value;
-  }
-  public resetAlternateName() {
-    this._alternateName = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get alternateNameInput() {
-    return this._alternateName;
-  }
 
   // id - computed: true, optional: true, required: false
   private _id?: string; 
@@ -351,7 +330,6 @@ export class EventhubNamespaceDisasterRecoveryConfig extends cdktf.TerraformReso
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      alternate_name: cdktf.stringToTerraform(this._alternateName),
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       namespace_name: cdktf.stringToTerraform(this._namespaceName),

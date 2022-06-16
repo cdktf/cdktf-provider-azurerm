@@ -23,6 +23,10 @@ export interface BackupPolicyVmConfig extends cdktf.TerraformMetaArguments {
   */
   readonly name: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_vm#policy_type BackupPolicyVm#policy_type}
+  */
+  readonly policyType?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_vm#recovery_vault_name BackupPolicyVm#recovery_vault_name}
   */
   readonly recoveryVaultName: string;
@@ -30,10 +34,6 @@ export interface BackupPolicyVmConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_vm#resource_group_name BackupPolicyVm#resource_group_name}
   */
   readonly resourceGroupName: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_vm#tags BackupPolicyVm#tags}
-  */
-  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_vm#timezone BackupPolicyVm#timezone}
   */
@@ -81,6 +81,14 @@ export interface BackupPolicyVmBackup {
   */
   readonly frequency: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_vm#hour_duration BackupPolicyVm#hour_duration}
+  */
+  readonly hourDuration?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_vm#hour_interval BackupPolicyVm#hour_interval}
+  */
+  readonly hourInterval?: number;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_vm#time BackupPolicyVm#time}
   */
   readonly time: string;
@@ -97,6 +105,8 @@ export function backupPolicyVmBackupToTerraform(struct?: BackupPolicyVmBackupOut
   }
   return {
     frequency: cdktf.stringToTerraform(struct!.frequency),
+    hour_duration: cdktf.numberToTerraform(struct!.hourDuration),
+    hour_interval: cdktf.numberToTerraform(struct!.hourInterval),
     time: cdktf.stringToTerraform(struct!.time),
     weekdays: cdktf.listMapper(cdktf.stringToTerraform)(struct!.weekdays),
   }
@@ -120,6 +130,14 @@ export class BackupPolicyVmBackupOutputReference extends cdktf.ComplexObject {
       hasAnyValues = true;
       internalValueResult.frequency = this._frequency;
     }
+    if (this._hourDuration !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.hourDuration = this._hourDuration;
+    }
+    if (this._hourInterval !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.hourInterval = this._hourInterval;
+    }
     if (this._time !== undefined) {
       hasAnyValues = true;
       internalValueResult.time = this._time;
@@ -135,12 +153,16 @@ export class BackupPolicyVmBackupOutputReference extends cdktf.ComplexObject {
     if (value === undefined) {
       this.isEmptyObject = false;
       this._frequency = undefined;
+      this._hourDuration = undefined;
+      this._hourInterval = undefined;
       this._time = undefined;
       this._weekdays = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._frequency = value.frequency;
+      this._hourDuration = value.hourDuration;
+      this._hourInterval = value.hourInterval;
       this._time = value.time;
       this._weekdays = value.weekdays;
     }
@@ -157,6 +179,38 @@ export class BackupPolicyVmBackupOutputReference extends cdktf.ComplexObject {
   // Temporarily expose input value. Use with caution.
   public get frequencyInput() {
     return this._frequency;
+  }
+
+  // hour_duration - computed: false, optional: true, required: false
+  private _hourDuration?: number; 
+  public get hourDuration() {
+    return this.getNumberAttribute('hour_duration');
+  }
+  public set hourDuration(value: number) {
+    this._hourDuration = value;
+  }
+  public resetHourDuration() {
+    this._hourDuration = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hourDurationInput() {
+    return this._hourDuration;
+  }
+
+  // hour_interval - computed: false, optional: true, required: false
+  private _hourInterval?: number; 
+  public get hourInterval() {
+    return this.getNumberAttribute('hour_interval');
+  }
+  public set hourInterval(value: number) {
+    this._hourInterval = value;
+  }
+  public resetHourInterval() {
+    this._hourInterval = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hourIntervalInput() {
+    return this._hourInterval;
   }
 
   // time - computed: false, optional: false, required: true
@@ -763,8 +817,8 @@ export class BackupPolicyVm extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_backup_policy_vm',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -774,9 +828,9 @@ export class BackupPolicyVm extends cdktf.TerraformResource {
     this._id = config.id;
     this._instantRestoreRetentionDays = config.instantRestoreRetentionDays;
     this._name = config.name;
+    this._policyType = config.policyType;
     this._recoveryVaultName = config.recoveryVaultName;
     this._resourceGroupName = config.resourceGroupName;
-    this._tags = config.tags;
     this._timezone = config.timezone;
     this._backup.internalValue = config.backup;
     this._retentionDaily.internalValue = config.retentionDaily;
@@ -835,6 +889,22 @@ export class BackupPolicyVm extends cdktf.TerraformResource {
     return this._name;
   }
 
+  // policy_type - computed: false, optional: true, required: false
+  private _policyType?: string; 
+  public get policyType() {
+    return this.getStringAttribute('policy_type');
+  }
+  public set policyType(value: string) {
+    this._policyType = value;
+  }
+  public resetPolicyType() {
+    this._policyType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get policyTypeInput() {
+    return this._policyType;
+  }
+
   // recovery_vault_name - computed: false, optional: false, required: true
   private _recoveryVaultName?: string; 
   public get recoveryVaultName() {
@@ -859,22 +929,6 @@ export class BackupPolicyVm extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
     return this._resourceGroupName;
-  }
-
-  // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string }; 
-  public get tags() {
-    return this.getStringMapAttribute('tags');
-  }
-  public set tags(value: { [key: string]: string }) {
-    this._tags = value;
-  }
-  public resetTags() {
-    this._tags = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get tagsInput() {
-    return this._tags;
   }
 
   // timezone - computed: false, optional: true, required: false
@@ -995,9 +1049,9 @@ export class BackupPolicyVm extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       instant_restore_retention_days: cdktf.numberToTerraform(this._instantRestoreRetentionDays),
       name: cdktf.stringToTerraform(this._name),
+      policy_type: cdktf.stringToTerraform(this._policyType),
       recovery_vault_name: cdktf.stringToTerraform(this._recoveryVaultName),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       timezone: cdktf.stringToTerraform(this._timezone),
       backup: backupPolicyVmBackupToTerraform(this._backup.internalValue),
       retention_daily: backupPolicyVmRetentionDailyToTerraform(this._retentionDaily.internalValue),

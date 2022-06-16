@@ -12,10 +12,6 @@ export interface VirtualWanConfig extends cdktf.TerraformMetaArguments {
   */
   readonly allowBranchToBranchTraffic?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_wan#allow_vnet_to_vnet_traffic VirtualWan#allow_vnet_to_vnet_traffic}
-  */
-  readonly allowVnetToVnetTraffic?: boolean | cdktf.IResolvable;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_wan#disable_vpn_encryption VirtualWan#disable_vpn_encryption}
   */
   readonly disableVpnEncryption?: boolean | cdktf.IResolvable;
@@ -240,8 +236,8 @@ export class VirtualWan extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_virtual_wan',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -249,7 +245,6 @@ export class VirtualWan extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._allowBranchToBranchTraffic = config.allowBranchToBranchTraffic;
-    this._allowVnetToVnetTraffic = config.allowVnetToVnetTraffic;
     this._disableVpnEncryption = config.disableVpnEncryption;
     this._id = config.id;
     this._location = config.location;
@@ -279,22 +274,6 @@ export class VirtualWan extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get allowBranchToBranchTrafficInput() {
     return this._allowBranchToBranchTraffic;
-  }
-
-  // allow_vnet_to_vnet_traffic - computed: false, optional: true, required: false
-  private _allowVnetToVnetTraffic?: boolean | cdktf.IResolvable; 
-  public get allowVnetToVnetTraffic() {
-    return this.getBooleanAttribute('allow_vnet_to_vnet_traffic');
-  }
-  public set allowVnetToVnetTraffic(value: boolean | cdktf.IResolvable) {
-    this._allowVnetToVnetTraffic = value;
-  }
-  public resetAllowVnetToVnetTraffic() {
-    this._allowVnetToVnetTraffic = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get allowVnetToVnetTrafficInput() {
-    return this._allowVnetToVnetTraffic;
   }
 
   // disable_vpn_encryption - computed: false, optional: true, required: false
@@ -439,7 +418,6 @@ export class VirtualWan extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       allow_branch_to_branch_traffic: cdktf.booleanToTerraform(this._allowBranchToBranchTraffic),
-      allow_vnet_to_vnet_traffic: cdktf.booleanToTerraform(this._allowVnetToVnetTraffic),
       disable_vpn_encryption: cdktf.booleanToTerraform(this._disableVpnEncryption),
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),

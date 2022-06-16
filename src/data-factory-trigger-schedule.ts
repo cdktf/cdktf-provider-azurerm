@@ -18,11 +18,7 @@ export interface DataFactoryTriggerScheduleConfig extends cdktf.TerraformMetaArg
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_schedule#data_factory_id DataFactoryTriggerSchedule#data_factory_id}
   */
-  readonly dataFactoryId?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_schedule#data_factory_name DataFactoryTriggerSchedule#data_factory_name}
-  */
-  readonly dataFactoryName?: string;
+  readonly dataFactoryId: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_schedule#description DataFactoryTriggerSchedule#description}
   */
@@ -53,19 +49,25 @@ export interface DataFactoryTriggerScheduleConfig extends cdktf.TerraformMetaArg
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_schedule#pipeline_name DataFactoryTriggerSchedule#pipeline_name}
   */
-  readonly pipelineName: string;
+  readonly pipelineName?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_schedule#pipeline_parameters DataFactoryTriggerSchedule#pipeline_parameters}
   */
   readonly pipelineParameters?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_schedule#resource_group_name DataFactoryTriggerSchedule#resource_group_name}
-  */
-  readonly resourceGroupName: string;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_schedule#start_time DataFactoryTriggerSchedule#start_time}
   */
   readonly startTime?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_schedule#time_zone DataFactoryTriggerSchedule#time_zone}
+  */
+  readonly timeZone?: string;
+  /**
+  * pipeline block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_schedule#pipeline DataFactoryTriggerSchedule#pipeline}
+  */
+  readonly pipeline?: DataFactoryTriggerSchedulePipeline[] | cdktf.IResolvable;
   /**
   * schedule block
   * 
@@ -78,6 +80,127 @@ export interface DataFactoryTriggerScheduleConfig extends cdktf.TerraformMetaArg
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_schedule#timeouts DataFactoryTriggerSchedule#timeouts}
   */
   readonly timeouts?: DataFactoryTriggerScheduleTimeouts;
+}
+export interface DataFactoryTriggerSchedulePipeline {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_schedule#name DataFactoryTriggerSchedule#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_schedule#parameters DataFactoryTriggerSchedule#parameters}
+  */
+  readonly parameters?: { [key: string]: string };
+}
+
+export function dataFactoryTriggerSchedulePipelineToTerraform(struct?: DataFactoryTriggerSchedulePipeline | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    parameters: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.parameters),
+  }
+}
+
+export class DataFactoryTriggerSchedulePipelineOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataFactoryTriggerSchedulePipeline | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._parameters !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.parameters = this._parameters;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFactoryTriggerSchedulePipeline | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._parameters = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._parameters = value.parameters;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // parameters - computed: false, optional: true, required: false
+  private _parameters?: { [key: string]: string }; 
+  public get parameters() {
+    return this.getStringMapAttribute('parameters');
+  }
+  public set parameters(value: { [key: string]: string }) {
+    this._parameters = value;
+  }
+  public resetParameters() {
+    this._parameters = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parametersInput() {
+    return this._parameters;
+  }
+}
+
+export class DataFactoryTriggerSchedulePipelineList extends cdktf.ComplexList {
+  public internalValue? : DataFactoryTriggerSchedulePipeline[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataFactoryTriggerSchedulePipelineOutputReference {
+    return new DataFactoryTriggerSchedulePipelineOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
 }
 export interface DataFactoryTriggerScheduleScheduleMonthly {
   /**
@@ -558,8 +681,8 @@ export class DataFactoryTriggerSchedule extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_data_factory_trigger_schedule',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -569,7 +692,6 @@ export class DataFactoryTriggerSchedule extends cdktf.TerraformResource {
     this._activated = config.activated;
     this._annotations = config.annotations;
     this._dataFactoryId = config.dataFactoryId;
-    this._dataFactoryName = config.dataFactoryName;
     this._description = config.description;
     this._endTime = config.endTime;
     this._frequency = config.frequency;
@@ -578,8 +700,9 @@ export class DataFactoryTriggerSchedule extends cdktf.TerraformResource {
     this._name = config.name;
     this._pipelineName = config.pipelineName;
     this._pipelineParameters = config.pipelineParameters;
-    this._resourceGroupName = config.resourceGroupName;
     this._startTime = config.startTime;
+    this._timeZone = config.timeZone;
+    this._pipeline.internalValue = config.pipeline;
     this._schedule.internalValue = config.schedule;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -588,7 +711,7 @@ export class DataFactoryTriggerSchedule extends cdktf.TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // activated - computed: true, optional: true, required: false
+  // activated - computed: false, optional: true, required: false
   private _activated?: boolean | cdktf.IResolvable; 
   public get activated() {
     return this.getBooleanAttribute('activated');
@@ -620,7 +743,7 @@ export class DataFactoryTriggerSchedule extends cdktf.TerraformResource {
     return this._annotations;
   }
 
-  // data_factory_id - computed: true, optional: true, required: false
+  // data_factory_id - computed: false, optional: false, required: true
   private _dataFactoryId?: string; 
   public get dataFactoryId() {
     return this.getStringAttribute('data_factory_id');
@@ -628,28 +751,9 @@ export class DataFactoryTriggerSchedule extends cdktf.TerraformResource {
   public set dataFactoryId(value: string) {
     this._dataFactoryId = value;
   }
-  public resetDataFactoryId() {
-    this._dataFactoryId = undefined;
-  }
   // Temporarily expose input value. Use with caution.
   public get dataFactoryIdInput() {
     return this._dataFactoryId;
-  }
-
-  // data_factory_name - computed: true, optional: true, required: false
-  private _dataFactoryName?: string; 
-  public get dataFactoryName() {
-    return this.getStringAttribute('data_factory_name');
-  }
-  public set dataFactoryName(value: string) {
-    this._dataFactoryName = value;
-  }
-  public resetDataFactoryName() {
-    this._dataFactoryName = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get dataFactoryNameInput() {
-    return this._dataFactoryName;
   }
 
   // description - computed: false, optional: true, required: false
@@ -745,7 +849,7 @@ export class DataFactoryTriggerSchedule extends cdktf.TerraformResource {
     return this._name;
   }
 
-  // pipeline_name - computed: false, optional: false, required: true
+  // pipeline_name - computed: true, optional: true, required: false
   private _pipelineName?: string; 
   public get pipelineName() {
     return this.getStringAttribute('pipeline_name');
@@ -753,12 +857,15 @@ export class DataFactoryTriggerSchedule extends cdktf.TerraformResource {
   public set pipelineName(value: string) {
     this._pipelineName = value;
   }
+  public resetPipelineName() {
+    this._pipelineName = undefined;
+  }
   // Temporarily expose input value. Use with caution.
   public get pipelineNameInput() {
     return this._pipelineName;
   }
 
-  // pipeline_parameters - computed: false, optional: true, required: false
+  // pipeline_parameters - computed: true, optional: true, required: false
   private _pipelineParameters?: { [key: string]: string }; 
   public get pipelineParameters() {
     return this.getStringMapAttribute('pipeline_parameters');
@@ -772,19 +879,6 @@ export class DataFactoryTriggerSchedule extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get pipelineParametersInput() {
     return this._pipelineParameters;
-  }
-
-  // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName?: string; 
-  public get resourceGroupName() {
-    return this.getStringAttribute('resource_group_name');
-  }
-  public set resourceGroupName(value: string) {
-    this._resourceGroupName = value;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get resourceGroupNameInput() {
-    return this._resourceGroupName;
   }
 
   // start_time - computed: true, optional: true, required: false
@@ -801,6 +895,38 @@ export class DataFactoryTriggerSchedule extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get startTimeInput() {
     return this._startTime;
+  }
+
+  // time_zone - computed: false, optional: true, required: false
+  private _timeZone?: string; 
+  public get timeZone() {
+    return this.getStringAttribute('time_zone');
+  }
+  public set timeZone(value: string) {
+    this._timeZone = value;
+  }
+  public resetTimeZone() {
+    this._timeZone = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeZoneInput() {
+    return this._timeZone;
+  }
+
+  // pipeline - computed: false, optional: true, required: false
+  private _pipeline = new DataFactoryTriggerSchedulePipelineList(this, "pipeline", false);
+  public get pipeline() {
+    return this._pipeline;
+  }
+  public putPipeline(value: DataFactoryTriggerSchedulePipeline[] | cdktf.IResolvable) {
+    this._pipeline.internalValue = value;
+  }
+  public resetPipeline() {
+    this._pipeline.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pipelineInput() {
+    return this._pipeline.internalValue;
   }
 
   // schedule - computed: false, optional: true, required: false
@@ -844,7 +970,6 @@ export class DataFactoryTriggerSchedule extends cdktf.TerraformResource {
       activated: cdktf.booleanToTerraform(this._activated),
       annotations: cdktf.listMapper(cdktf.stringToTerraform)(this._annotations),
       data_factory_id: cdktf.stringToTerraform(this._dataFactoryId),
-      data_factory_name: cdktf.stringToTerraform(this._dataFactoryName),
       description: cdktf.stringToTerraform(this._description),
       end_time: cdktf.stringToTerraform(this._endTime),
       frequency: cdktf.stringToTerraform(this._frequency),
@@ -853,8 +978,9 @@ export class DataFactoryTriggerSchedule extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       pipeline_name: cdktf.stringToTerraform(this._pipelineName),
       pipeline_parameters: cdktf.hashMapper(cdktf.stringToTerraform)(this._pipelineParameters),
-      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       start_time: cdktf.stringToTerraform(this._startTime),
+      time_zone: cdktf.stringToTerraform(this._timeZone),
+      pipeline: cdktf.listMapper(dataFactoryTriggerSchedulePipelineToTerraform)(this._pipeline.internalValue),
       schedule: dataFactoryTriggerScheduleScheduleToTerraform(this._schedule.internalValue),
       timeouts: dataFactoryTriggerScheduleTimeoutsToTerraform(this._timeouts.internalValue),
     };

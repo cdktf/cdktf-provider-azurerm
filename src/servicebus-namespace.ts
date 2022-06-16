@@ -19,6 +19,10 @@ export interface ServicebusNamespaceConfig extends cdktf.TerraformMetaArguments 
   */
   readonly id?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace#local_auth_enabled ServicebusNamespace#local_auth_enabled}
+  */
+  readonly localAuthEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace#location ServicebusNamespace#location}
   */
   readonly location: string;
@@ -43,6 +47,12 @@ export interface ServicebusNamespaceConfig extends cdktf.TerraformMetaArguments 
   */
   readonly zoneRedundant?: boolean | cdktf.IResolvable;
   /**
+  * customer_managed_key block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace#customer_managed_key ServicebusNamespace#customer_managed_key}
+  */
+  readonly customerManagedKey?: ServicebusNamespaceCustomerManagedKey;
+  /**
   * identity block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace#identity ServicebusNamespace#identity}
@@ -54,6 +64,119 @@ export interface ServicebusNamespaceConfig extends cdktf.TerraformMetaArguments 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace#timeouts ServicebusNamespace#timeouts}
   */
   readonly timeouts?: ServicebusNamespaceTimeouts;
+}
+export interface ServicebusNamespaceCustomerManagedKey {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace#identity_id ServicebusNamespace#identity_id}
+  */
+  readonly identityId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace#infrastructure_encryption_enabled ServicebusNamespace#infrastructure_encryption_enabled}
+  */
+  readonly infrastructureEncryptionEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace#key_vault_key_id ServicebusNamespace#key_vault_key_id}
+  */
+  readonly keyVaultKeyId: string;
+}
+
+export function servicebusNamespaceCustomerManagedKeyToTerraform(struct?: ServicebusNamespaceCustomerManagedKeyOutputReference | ServicebusNamespaceCustomerManagedKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    identity_id: cdktf.stringToTerraform(struct!.identityId),
+    infrastructure_encryption_enabled: cdktf.booleanToTerraform(struct!.infrastructureEncryptionEnabled),
+    key_vault_key_id: cdktf.stringToTerraform(struct!.keyVaultKeyId),
+  }
+}
+
+export class ServicebusNamespaceCustomerManagedKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ServicebusNamespaceCustomerManagedKey | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._identityId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.identityId = this._identityId;
+    }
+    if (this._infrastructureEncryptionEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.infrastructureEncryptionEnabled = this._infrastructureEncryptionEnabled;
+    }
+    if (this._keyVaultKeyId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keyVaultKeyId = this._keyVaultKeyId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ServicebusNamespaceCustomerManagedKey | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._identityId = undefined;
+      this._infrastructureEncryptionEnabled = undefined;
+      this._keyVaultKeyId = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._identityId = value.identityId;
+      this._infrastructureEncryptionEnabled = value.infrastructureEncryptionEnabled;
+      this._keyVaultKeyId = value.keyVaultKeyId;
+    }
+  }
+
+  // identity_id - computed: false, optional: false, required: true
+  private _identityId?: string; 
+  public get identityId() {
+    return this.getStringAttribute('identity_id');
+  }
+  public set identityId(value: string) {
+    this._identityId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityIdInput() {
+    return this._identityId;
+  }
+
+  // infrastructure_encryption_enabled - computed: false, optional: true, required: false
+  private _infrastructureEncryptionEnabled?: boolean | cdktf.IResolvable; 
+  public get infrastructureEncryptionEnabled() {
+    return this.getBooleanAttribute('infrastructure_encryption_enabled');
+  }
+  public set infrastructureEncryptionEnabled(value: boolean | cdktf.IResolvable) {
+    this._infrastructureEncryptionEnabled = value;
+  }
+  public resetInfrastructureEncryptionEnabled() {
+    this._infrastructureEncryptionEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get infrastructureEncryptionEnabledInput() {
+    return this._infrastructureEncryptionEnabled;
+  }
+
+  // key_vault_key_id - computed: false, optional: false, required: true
+  private _keyVaultKeyId?: string; 
+  public get keyVaultKeyId() {
+    return this.getStringAttribute('key_vault_key_id');
+  }
+  public set keyVaultKeyId(value: string) {
+    this._keyVaultKeyId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultKeyIdInput() {
+    return this._keyVaultKeyId;
+  }
 }
 export interface ServicebusNamespaceIdentity {
   /**
@@ -337,8 +460,8 @@ export class ServicebusNamespace extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_servicebus_namespace',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -347,12 +470,14 @@ export class ServicebusNamespace extends cdktf.TerraformResource {
     });
     this._capacity = config.capacity;
     this._id = config.id;
+    this._localAuthEnabled = config.localAuthEnabled;
     this._location = config.location;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._sku = config.sku;
     this._tags = config.tags;
     this._zoneRedundant = config.zoneRedundant;
+    this._customerManagedKey.internalValue = config.customerManagedKey;
     this._identity.internalValue = config.identity;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -411,6 +536,22 @@ export class ServicebusNamespace extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get idInput() {
     return this._id;
+  }
+
+  // local_auth_enabled - computed: false, optional: true, required: false
+  private _localAuthEnabled?: boolean | cdktf.IResolvable; 
+  public get localAuthEnabled() {
+    return this.getBooleanAttribute('local_auth_enabled');
+  }
+  public set localAuthEnabled(value: boolean | cdktf.IResolvable) {
+    this._localAuthEnabled = value;
+  }
+  public resetLocalAuthEnabled() {
+    this._localAuthEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get localAuthEnabledInput() {
+    return this._localAuthEnabled;
   }
 
   // location - computed: false, optional: false, required: true
@@ -497,6 +638,22 @@ export class ServicebusNamespace extends cdktf.TerraformResource {
     return this._zoneRedundant;
   }
 
+  // customer_managed_key - computed: false, optional: true, required: false
+  private _customerManagedKey = new ServicebusNamespaceCustomerManagedKeyOutputReference(this, "customer_managed_key");
+  public get customerManagedKey() {
+    return this._customerManagedKey;
+  }
+  public putCustomerManagedKey(value: ServicebusNamespaceCustomerManagedKey) {
+    this._customerManagedKey.internalValue = value;
+  }
+  public resetCustomerManagedKey() {
+    this._customerManagedKey.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customerManagedKeyInput() {
+    return this._customerManagedKey.internalValue;
+  }
+
   // identity - computed: false, optional: true, required: false
   private _identity = new ServicebusNamespaceIdentityOutputReference(this, "identity");
   public get identity() {
@@ -537,12 +694,14 @@ export class ServicebusNamespace extends cdktf.TerraformResource {
     return {
       capacity: cdktf.numberToTerraform(this._capacity),
       id: cdktf.stringToTerraform(this._id),
+      local_auth_enabled: cdktf.booleanToTerraform(this._localAuthEnabled),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku: cdktf.stringToTerraform(this._sku),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       zone_redundant: cdktf.booleanToTerraform(this._zoneRedundant),
+      customer_managed_key: servicebusNamespaceCustomerManagedKeyToTerraform(this._customerManagedKey.internalValue),
       identity: servicebusNamespaceIdentityToTerraform(this._identity.internalValue),
       timeouts: servicebusNamespaceTimeoutsToTerraform(this._timeouts.internalValue),
     };

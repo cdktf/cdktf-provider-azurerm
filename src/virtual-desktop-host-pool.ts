@@ -73,92 +73,11 @@ export interface VirtualDesktopHostPoolConfig extends cdktf.TerraformMetaArgumen
   */
   readonly validateEnvironment?: boolean | cdktf.IResolvable;
   /**
-  * registration_info block
-  * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool#registration_info VirtualDesktopHostPool#registration_info}
-  */
-  readonly registrationInfo?: VirtualDesktopHostPoolRegistrationInfo;
-  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool#timeouts VirtualDesktopHostPool#timeouts}
   */
   readonly timeouts?: VirtualDesktopHostPoolTimeouts;
-}
-export interface VirtualDesktopHostPoolRegistrationInfo {
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool#expiration_date VirtualDesktopHostPool#expiration_date}
-  */
-  readonly expirationDate?: string;
-}
-
-export function virtualDesktopHostPoolRegistrationInfoToTerraform(struct?: VirtualDesktopHostPoolRegistrationInfoOutputReference | VirtualDesktopHostPoolRegistrationInfo): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-    expiration_date: cdktf.stringToTerraform(struct!.expirationDate),
-  }
-}
-
-export class VirtualDesktopHostPoolRegistrationInfoOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
-  }
-
-  public get internalValue(): VirtualDesktopHostPoolRegistrationInfo | undefined {
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    if (this._expirationDate !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.expirationDate = this._expirationDate;
-    }
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: VirtualDesktopHostPoolRegistrationInfo | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-      this._expirationDate = undefined;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-      this._expirationDate = value.expirationDate;
-    }
-  }
-
-  // expiration_date - computed: false, optional: true, required: false
-  private _expirationDate?: string; 
-  public get expirationDate() {
-    return this.getStringAttribute('expiration_date');
-  }
-  public set expirationDate(value: string) {
-    this._expirationDate = value;
-  }
-  public resetExpirationDate() {
-    this._expirationDate = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get expirationDateInput() {
-    return this._expirationDate;
-  }
-
-  // reset_token - computed: true, optional: false, required: false
-  public get resetToken() {
-    return this.getBooleanAttribute('reset_token');
-  }
-
-  // token - computed: true, optional: false, required: false
-  public get token() {
-    return this.getStringAttribute('token');
-  }
 }
 export interface VirtualDesktopHostPoolTimeouts {
   /**
@@ -343,8 +262,8 @@ export class VirtualDesktopHostPool extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_virtual_desktop_host_pool',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -366,7 +285,6 @@ export class VirtualDesktopHostPool extends cdktf.TerraformResource {
     this._tags = config.tags;
     this._type = config.type;
     this._validateEnvironment = config.validateEnvironment;
-    this._registrationInfo.internalValue = config.registrationInfo;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -599,22 +517,6 @@ export class VirtualDesktopHostPool extends cdktf.TerraformResource {
     return this._validateEnvironment;
   }
 
-  // registration_info - computed: false, optional: true, required: false
-  private _registrationInfo = new VirtualDesktopHostPoolRegistrationInfoOutputReference(this, "registration_info");
-  public get registrationInfo() {
-    return this._registrationInfo;
-  }
-  public putRegistrationInfo(value: VirtualDesktopHostPoolRegistrationInfo) {
-    this._registrationInfo.internalValue = value;
-  }
-  public resetRegistrationInfo() {
-    this._registrationInfo.internalValue = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get registrationInfoInput() {
-    return this._registrationInfo.internalValue;
-  }
-
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new VirtualDesktopHostPoolTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -652,7 +554,6 @@ export class VirtualDesktopHostPool extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       type: cdktf.stringToTerraform(this._type),
       validate_environment: cdktf.booleanToTerraform(this._validateEnvironment),
-      registration_info: virtualDesktopHostPoolRegistrationInfoToTerraform(this._registrationInfo.internalValue),
       timeouts: virtualDesktopHostPoolTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

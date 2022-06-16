@@ -345,8 +345,8 @@ export class DataAzurermSnapshot extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_snapshot',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -444,6 +444,11 @@ export class DataAzurermSnapshot extends cdktf.TerraformDataSource {
   // time_created - computed: true, optional: false, required: false
   public get timeCreated() {
     return this.getStringAttribute('time_created');
+  }
+
+  // trusted_launch_enabled - computed: true, optional: false, required: false
+  public get trustedLaunchEnabled() {
+    return this.getBooleanAttribute('trusted_launch_enabled');
   }
 
   // timeouts - computed: false, optional: true, required: false

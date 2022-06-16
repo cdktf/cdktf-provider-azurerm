@@ -41,11 +41,11 @@ export interface FirewallConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall#sku_name Firewall#sku_name}
   */
-  readonly skuName?: string;
+  readonly skuName: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall#sku_tier Firewall#sku_tier}
   */
-  readonly skuTier?: string;
+  readonly skuTier: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall#tags Firewall#tags}
   */
@@ -630,8 +630,8 @@ export class Firewall extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_firewall',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -763,7 +763,7 @@ export class Firewall extends cdktf.TerraformResource {
     return this._resourceGroupName;
   }
 
-  // sku_name - computed: true, optional: true, required: false
+  // sku_name - computed: false, optional: false, required: true
   private _skuName?: string; 
   public get skuName() {
     return this.getStringAttribute('sku_name');
@@ -771,24 +771,18 @@ export class Firewall extends cdktf.TerraformResource {
   public set skuName(value: string) {
     this._skuName = value;
   }
-  public resetSkuName() {
-    this._skuName = undefined;
-  }
   // Temporarily expose input value. Use with caution.
   public get skuNameInput() {
     return this._skuName;
   }
 
-  // sku_tier - computed: true, optional: true, required: false
+  // sku_tier - computed: false, optional: false, required: true
   private _skuTier?: string; 
   public get skuTier() {
     return this.getStringAttribute('sku_tier');
   }
   public set skuTier(value: string) {
     this._skuTier = value;
-  }
-  public resetSkuTier() {
-    this._skuTier = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get skuTierInput() {
@@ -811,7 +805,7 @@ export class Firewall extends cdktf.TerraformResource {
     return this._tags;
   }
 
-  // threat_intel_mode - computed: false, optional: true, required: false
+  // threat_intel_mode - computed: true, optional: true, required: false
   private _threatIntelMode?: string; 
   public get threatIntelMode() {
     return this.getStringAttribute('threat_intel_mode');
@@ -830,7 +824,7 @@ export class Firewall extends cdktf.TerraformResource {
   // zones - computed: false, optional: true, required: false
   private _zones?: string[]; 
   public get zones() {
-    return this.getListAttribute('zones');
+    return cdktf.Fn.tolist(this.getListAttribute('zones'));
   }
   public set zones(value: string[]) {
     this._zones = value;

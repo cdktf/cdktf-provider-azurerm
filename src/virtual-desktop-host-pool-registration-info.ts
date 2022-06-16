@@ -6,17 +6,17 @@ import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface VirtualDesktopHostPoolRegistrationInfoAConfig extends cdktf.TerraformMetaArguments {
+export interface VirtualDesktopHostPoolRegistrationInfoConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool_registration_info#expiration_date VirtualDesktopHostPoolRegistrationInfoA#expiration_date}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool_registration_info#expiration_date VirtualDesktopHostPoolRegistrationInfo#expiration_date}
   */
   readonly expirationDate: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool_registration_info#hostpool_id VirtualDesktopHostPoolRegistrationInfoA#hostpool_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool_registration_info#hostpool_id VirtualDesktopHostPoolRegistrationInfo#hostpool_id}
   */
   readonly hostpoolId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool_registration_info#id VirtualDesktopHostPoolRegistrationInfoA#id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool_registration_info#id VirtualDesktopHostPoolRegistrationInfo#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -25,25 +25,25 @@ export interface VirtualDesktopHostPoolRegistrationInfoAConfig extends cdktf.Ter
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool_registration_info#timeouts VirtualDesktopHostPoolRegistrationInfoA#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool_registration_info#timeouts VirtualDesktopHostPoolRegistrationInfo#timeouts}
   */
   readonly timeouts?: VirtualDesktopHostPoolRegistrationInfoTimeouts;
 }
 export interface VirtualDesktopHostPoolRegistrationInfoTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool_registration_info#create VirtualDesktopHostPoolRegistrationInfoA#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool_registration_info#create VirtualDesktopHostPoolRegistrationInfo#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool_registration_info#delete VirtualDesktopHostPoolRegistrationInfoA#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool_registration_info#delete VirtualDesktopHostPoolRegistrationInfo#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool_registration_info#read VirtualDesktopHostPoolRegistrationInfoA#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool_registration_info#read VirtualDesktopHostPoolRegistrationInfo#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool_registration_info#update VirtualDesktopHostPoolRegistrationInfoA#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool_registration_info#update VirtualDesktopHostPoolRegistrationInfo#update}
   */
   readonly update?: string;
 }
@@ -189,7 +189,7 @@ export class VirtualDesktopHostPoolRegistrationInfoTimeoutsOutputReference exten
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool_registration_info azurerm_virtual_desktop_host_pool_registration_info}
 */
-export class VirtualDesktopHostPoolRegistrationInfoA extends cdktf.TerraformResource {
+export class VirtualDesktopHostPoolRegistrationInfo extends cdktf.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -205,15 +205,15 @@ export class VirtualDesktopHostPoolRegistrationInfoA extends cdktf.TerraformReso
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options VirtualDesktopHostPoolRegistrationInfoAConfig
+  * @param options VirtualDesktopHostPoolRegistrationInfoConfig
   */
-  public constructor(scope: Construct, id: string, config: VirtualDesktopHostPoolRegistrationInfoAConfig) {
+  public constructor(scope: Construct, id: string, config: VirtualDesktopHostPoolRegistrationInfoConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_virtual_desktop_host_pool_registration_info',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

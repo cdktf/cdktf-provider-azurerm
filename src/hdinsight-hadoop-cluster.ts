@@ -167,10 +167,6 @@ export class HdinsightHadoopClusterComponentVersionOutputReference extends cdktf
 }
 export interface HdinsightHadoopClusterGateway {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster#enabled HdinsightHadoopCluster#enabled}
-  */
-  readonly enabled?: boolean | cdktf.IResolvable;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster#password HdinsightHadoopCluster#password}
   */
   readonly password: string;
@@ -186,7 +182,6 @@ export function hdinsightHadoopClusterGatewayToTerraform(struct?: HdinsightHadoo
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    enabled: cdktf.booleanToTerraform(struct!.enabled),
     password: cdktf.stringToTerraform(struct!.password),
     username: cdktf.stringToTerraform(struct!.username),
   }
@@ -206,10 +201,6 @@ export class HdinsightHadoopClusterGatewayOutputReference extends cdktf.ComplexO
   public get internalValue(): HdinsightHadoopClusterGateway | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enabled !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.enabled = this._enabled;
-    }
     if (this._password !== undefined) {
       hasAnyValues = true;
       internalValueResult.password = this._password;
@@ -224,32 +215,14 @@ export class HdinsightHadoopClusterGatewayOutputReference extends cdktf.ComplexO
   public set internalValue(value: HdinsightHadoopClusterGateway | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
-      this._enabled = undefined;
       this._password = undefined;
       this._username = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
-      this._enabled = value.enabled;
       this._password = value.password;
       this._username = value.username;
     }
-  }
-
-  // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean | cdktf.IResolvable; 
-  public get enabled() {
-    return this.getBooleanAttribute('enabled');
-  }
-  public set enabled(value: boolean | cdktf.IResolvable) {
-    this._enabled = value;
-  }
-  public resetEnabled() {
-    this._enabled = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get enabledInput() {
-    return this._enabled;
   }
 
   // password - computed: false, optional: false, required: true
@@ -1821,10 +1794,6 @@ export class HdinsightHadoopClusterRolesWorkerNodeAutoscaleOutputReference exten
 }
 export interface HdinsightHadoopClusterRolesWorkerNode {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster#min_instance_count HdinsightHadoopCluster#min_instance_count}
-  */
-  readonly minInstanceCount?: number;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster#password HdinsightHadoopCluster#password}
   */
   readonly password?: string;
@@ -1866,7 +1835,6 @@ export function hdinsightHadoopClusterRolesWorkerNodeToTerraform(struct?: Hdinsi
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    min_instance_count: cdktf.numberToTerraform(struct!.minInstanceCount),
     password: cdktf.stringToTerraform(struct!.password),
     ssh_keys: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sshKeys),
     subnet_id: cdktf.stringToTerraform(struct!.subnetId),
@@ -1892,10 +1860,6 @@ export class HdinsightHadoopClusterRolesWorkerNodeOutputReference extends cdktf.
   public get internalValue(): HdinsightHadoopClusterRolesWorkerNode | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._minInstanceCount !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.minInstanceCount = this._minInstanceCount;
-    }
     if (this._password !== undefined) {
       hasAnyValues = true;
       internalValueResult.password = this._password;
@@ -1934,7 +1898,6 @@ export class HdinsightHadoopClusterRolesWorkerNodeOutputReference extends cdktf.
   public set internalValue(value: HdinsightHadoopClusterRolesWorkerNode | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
-      this._minInstanceCount = undefined;
       this._password = undefined;
       this._sshKeys = undefined;
       this._subnetId = undefined;
@@ -1946,7 +1909,6 @@ export class HdinsightHadoopClusterRolesWorkerNodeOutputReference extends cdktf.
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
-      this._minInstanceCount = value.minInstanceCount;
       this._password = value.password;
       this._sshKeys = value.sshKeys;
       this._subnetId = value.subnetId;
@@ -1956,22 +1918,6 @@ export class HdinsightHadoopClusterRolesWorkerNodeOutputReference extends cdktf.
       this._vmSize = value.vmSize;
       this._autoscale.internalValue = value.autoscale;
     }
-  }
-
-  // min_instance_count - computed: true, optional: true, required: false
-  private _minInstanceCount?: number; 
-  public get minInstanceCount() {
-    return this.getNumberAttribute('min_instance_count');
-  }
-  public set minInstanceCount(value: number) {
-    this._minInstanceCount = value;
-  }
-  public resetMinInstanceCount() {
-    this._minInstanceCount = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get minInstanceCountInput() {
-    return this._minInstanceCount;
   }
 
   // password - computed: false, optional: true, required: false
@@ -3127,8 +3073,8 @@ export class HdinsightHadoopCluster extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_hdinsight_hadoop_cluster',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

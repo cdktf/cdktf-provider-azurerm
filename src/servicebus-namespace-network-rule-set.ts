@@ -25,19 +25,11 @@ export interface ServicebusNamespaceNetworkRuleSetConfig extends cdktf.Terraform
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_network_rule_set#namespace_id ServicebusNamespaceNetworkRuleSet#namespace_id}
   */
-  readonly namespaceId?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_network_rule_set#namespace_name ServicebusNamespaceNetworkRuleSet#namespace_name}
-  */
-  readonly namespaceName?: string;
+  readonly namespaceId: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_network_rule_set#public_network_access_enabled ServicebusNamespaceNetworkRuleSet#public_network_access_enabled}
   */
   readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_network_rule_set#resource_group_name ServicebusNamespaceNetworkRuleSet#resource_group_name}
-  */
-  readonly resourceGroupName?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_network_rule_set#trusted_services_allowed ServicebusNamespaceNetworkRuleSet#trusted_services_allowed}
   */
@@ -352,15 +344,15 @@ export class ServicebusNamespaceNetworkRuleSet extends cdktf.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options ServicebusNamespaceNetworkRuleSetConfig = {}
+  * @param options ServicebusNamespaceNetworkRuleSetConfig
   */
-  public constructor(scope: Construct, id: string, config: ServicebusNamespaceNetworkRuleSetConfig = {}) {
+  public constructor(scope: Construct, id: string, config: ServicebusNamespaceNetworkRuleSetConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_servicebus_namespace_network_rule_set',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -371,9 +363,7 @@ export class ServicebusNamespaceNetworkRuleSet extends cdktf.TerraformResource {
     this._id = config.id;
     this._ipRules = config.ipRules;
     this._namespaceId = config.namespaceId;
-    this._namespaceName = config.namespaceName;
     this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
-    this._resourceGroupName = config.resourceGroupName;
     this._trustedServicesAllowed = config.trustedServicesAllowed;
     this._networkRules.internalValue = config.networkRules;
     this._timeouts.internalValue = config.timeouts;
@@ -431,7 +421,7 @@ export class ServicebusNamespaceNetworkRuleSet extends cdktf.TerraformResource {
     return this._ipRules;
   }
 
-  // namespace_id - computed: true, optional: true, required: false
+  // namespace_id - computed: false, optional: false, required: true
   private _namespaceId?: string; 
   public get namespaceId() {
     return this.getStringAttribute('namespace_id');
@@ -439,28 +429,9 @@ export class ServicebusNamespaceNetworkRuleSet extends cdktf.TerraformResource {
   public set namespaceId(value: string) {
     this._namespaceId = value;
   }
-  public resetNamespaceId() {
-    this._namespaceId = undefined;
-  }
   // Temporarily expose input value. Use with caution.
   public get namespaceIdInput() {
     return this._namespaceId;
-  }
-
-  // namespace_name - computed: true, optional: true, required: false
-  private _namespaceName?: string; 
-  public get namespaceName() {
-    return this.getStringAttribute('namespace_name');
-  }
-  public set namespaceName(value: string) {
-    this._namespaceName = value;
-  }
-  public resetNamespaceName() {
-    this._namespaceName = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get namespaceNameInput() {
-    return this._namespaceName;
   }
 
   // public_network_access_enabled - computed: false, optional: true, required: false
@@ -477,22 +448,6 @@ export class ServicebusNamespaceNetworkRuleSet extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get publicNetworkAccessEnabledInput() {
     return this._publicNetworkAccessEnabled;
-  }
-
-  // resource_group_name - computed: true, optional: true, required: false
-  private _resourceGroupName?: string; 
-  public get resourceGroupName() {
-    return this.getStringAttribute('resource_group_name');
-  }
-  public set resourceGroupName(value: string) {
-    this._resourceGroupName = value;
-  }
-  public resetResourceGroupName() {
-    this._resourceGroupName = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get resourceGroupNameInput() {
-    return this._resourceGroupName;
   }
 
   // trusted_services_allowed - computed: false, optional: true, required: false
@@ -553,9 +508,7 @@ export class ServicebusNamespaceNetworkRuleSet extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       ip_rules: cdktf.listMapper(cdktf.stringToTerraform)(this._ipRules),
       namespace_id: cdktf.stringToTerraform(this._namespaceId),
-      namespace_name: cdktf.stringToTerraform(this._namespaceName),
       public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
-      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       trusted_services_allowed: cdktf.booleanToTerraform(this._trustedServicesAllowed),
       network_rules: cdktf.listMapper(servicebusNamespaceNetworkRuleSetNetworkRulesToTerraform)(this._networkRules.internalValue),
       timeouts: servicebusNamespaceNetworkRuleSetTimeoutsToTerraform(this._timeouts.internalValue),

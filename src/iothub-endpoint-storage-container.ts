@@ -49,11 +49,7 @@ export interface IothubEndpointStorageContainerConfig extends cdktf.TerraformMet
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_storage_container#iothub_id IothubEndpointStorageContainer#iothub_id}
   */
-  readonly iothubId?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_storage_container#iothub_name IothubEndpointStorageContainer#iothub_name}
-  */
-  readonly iothubName?: string;
+  readonly iothubId: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_storage_container#max_chunk_size_in_bytes IothubEndpointStorageContainer#max_chunk_size_in_bytes}
   */
@@ -256,8 +252,8 @@ export class IothubEndpointStorageContainer extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_iothub_endpoint_storage_container',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -274,7 +270,6 @@ export class IothubEndpointStorageContainer extends cdktf.TerraformResource {
     this._id = config.id;
     this._identityId = config.identityId;
     this._iothubId = config.iothubId;
-    this._iothubName = config.iothubName;
     this._maxChunkSizeInBytes = config.maxChunkSizeInBytes;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
@@ -426,7 +421,7 @@ export class IothubEndpointStorageContainer extends cdktf.TerraformResource {
     return this._identityId;
   }
 
-  // iothub_id - computed: true, optional: true, required: false
+  // iothub_id - computed: false, optional: false, required: true
   private _iothubId?: string; 
   public get iothubId() {
     return this.getStringAttribute('iothub_id');
@@ -434,28 +429,9 @@ export class IothubEndpointStorageContainer extends cdktf.TerraformResource {
   public set iothubId(value: string) {
     this._iothubId = value;
   }
-  public resetIothubId() {
-    this._iothubId = undefined;
-  }
   // Temporarily expose input value. Use with caution.
   public get iothubIdInput() {
     return this._iothubId;
-  }
-
-  // iothub_name - computed: true, optional: true, required: false
-  private _iothubName?: string; 
-  public get iothubName() {
-    return this.getStringAttribute('iothub_name');
-  }
-  public set iothubName(value: string) {
-    this._iothubName = value;
-  }
-  public resetIothubName() {
-    this._iothubName = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get iothubNameInput() {
-    return this._iothubName;
   }
 
   // max_chunk_size_in_bytes - computed: false, optional: true, required: false
@@ -532,7 +508,6 @@ export class IothubEndpointStorageContainer extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       identity_id: cdktf.stringToTerraform(this._identityId),
       iothub_id: cdktf.stringToTerraform(this._iothubId),
-      iothub_name: cdktf.stringToTerraform(this._iothubName),
       max_chunk_size_in_bytes: cdktf.numberToTerraform(this._maxChunkSizeInBytes),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),

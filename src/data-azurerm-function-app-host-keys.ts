@@ -131,8 +131,8 @@ export class DataAzurermFunctionAppHostKeys extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_function_app_host_keys',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -178,11 +178,6 @@ export class DataAzurermFunctionAppHostKeys extends cdktf.TerraformDataSource {
   // Temporarily expose input value. Use with caution.
   public get idInput() {
     return this._id;
-  }
-
-  // master_key - computed: true, optional: false, required: false
-  public get masterKey() {
-    return this.getStringAttribute('master_key');
   }
 
   // name - computed: false, optional: false, required: true

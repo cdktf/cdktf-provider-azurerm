@@ -60,29 +60,29 @@ export interface AzurermProviderConfig {
   */
   readonly metadataHost?: string;
   /**
-  * Deprecated - replaced by `metadata_host`.
-  * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#metadata_url AzurermProvider#metadata_url}
-  */
-  readonly metadataUrl?: string;
-  /**
   * The path to a custom endpoint for Managed Service Identity - in most circumstances this should be detected automatically. 
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#msi_endpoint AzurermProvider#msi_endpoint}
   */
   readonly msiEndpoint?: string;
   /**
+  * The bearer token for the request to the OIDC provider. For use When authenticating as a Service Principal using OpenID Connect.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#oidc_request_token AzurermProvider#oidc_request_token}
+  */
+  readonly oidcRequestToken?: string;
+  /**
+  * The URL for the OIDC provider from which to request an ID token. For use When authenticating as a Service Principal using OpenID Connect.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#oidc_request_url AzurermProvider#oidc_request_url}
+  */
+  readonly oidcRequestUrl?: string;
+  /**
   * A GUID/UUID that is registered with Microsoft to facilitate partner resource usage attribution.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#partner_id AzurermProvider#partner_id}
   */
   readonly partnerId?: string;
-  /**
-  * [DEPRECATED] This will cause the AzureRM Provider to skip verifying the credentials being used are valid.
-  * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#skip_credentials_validation AzurermProvider#skip_credentials_validation}
-  */
-  readonly skipCredentialsValidation?: boolean | cdktf.IResolvable;
   /**
   * Should the AzureRM Provider skip registering all of the Resource Providers that it supports, if they're not already registered?
   * 
@@ -108,17 +108,17 @@ export interface AzurermProviderConfig {
   */
   readonly tenantId?: string;
   /**
-  * Should Terraform obtain MSAL auth tokens and no longer use Azure Active Directory Graph?
-  * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#use_msal AzurermProvider#use_msal}
-  */
-  readonly useMsal?: boolean | cdktf.IResolvable;
-  /**
   * Allowed Managed Service Identity be used for Authentication.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#use_msi AzurermProvider#use_msi}
   */
   readonly useMsi?: boolean | cdktf.IResolvable;
+  /**
+  * Allow OpenID Connect to be used for authentication
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#use_oidc AzurermProvider#use_oidc}
+  */
+  readonly useOidc?: boolean | cdktf.IResolvable;
   /**
   * Alias name
   * 
@@ -137,6 +137,10 @@ export interface AzurermProviderFeaturesApiManagement {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#purge_soft_delete_on_destroy AzurermProvider#purge_soft_delete_on_destroy}
   */
   readonly purgeSoftDeleteOnDestroy?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#recover_soft_deleted AzurermProvider#recover_soft_deleted}
+  */
+  readonly recoverSoftDeleted?: boolean | cdktf.IResolvable;
 }
 
 export function azurermProviderFeaturesApiManagementToTerraform(struct?: AzurermProviderFeaturesApiManagement): any {
@@ -146,6 +150,24 @@ export function azurermProviderFeaturesApiManagementToTerraform(struct?: Azurerm
   }
   return {
     purge_soft_delete_on_destroy: cdktf.booleanToTerraform(struct!.purgeSoftDeleteOnDestroy),
+    recover_soft_deleted: cdktf.booleanToTerraform(struct!.recoverSoftDeleted),
+  }
+}
+
+export interface AzurermProviderFeaturesApplicationInsights {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#disable_generated_rule AzurermProvider#disable_generated_rule}
+  */
+  readonly disableGeneratedRule?: boolean | cdktf.IResolvable;
+}
+
+export function azurermProviderFeaturesApplicationInsightsToTerraform(struct?: AzurermProviderFeaturesApplicationInsights): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    disable_generated_rule: cdktf.booleanToTerraform(struct!.disableGeneratedRule),
   }
 }
 
@@ -168,13 +190,59 @@ export function azurermProviderFeaturesCognitiveAccountToTerraform(struct?: Azur
 
 export interface AzurermProviderFeaturesKeyVault {
   /**
+  * When enabled soft-deleted `azurerm_key_vault` resources will be permanently deleted (e.g purged), when destroyed
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#purge_soft_delete_on_destroy AzurermProvider#purge_soft_delete_on_destroy}
   */
   readonly purgeSoftDeleteOnDestroy?: boolean | cdktf.IResolvable;
   /**
+  * When enabled soft-deleted `azurerm_key_vault_certificate` resources will be permanently deleted (e.g purged), when destroyed
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#purge_soft_deleted_certificates_on_destroy AzurermProvider#purge_soft_deleted_certificates_on_destroy}
+  */
+  readonly purgeSoftDeletedCertificatesOnDestroy?: boolean | cdktf.IResolvable;
+  /**
+  * When enabled soft-deleted `azurerm_key_vault_managed_hardware_security_module` resources will be permanently deleted (e.g purged), when destroyed
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#purge_soft_deleted_hardware_security_modules_on_destroy AzurermProvider#purge_soft_deleted_hardware_security_modules_on_destroy}
+  */
+  readonly purgeSoftDeletedHardwareSecurityModulesOnDestroy?: boolean | cdktf.IResolvable;
+  /**
+  * When enabled soft-deleted `azurerm_key_vault_key` resources will be permanently deleted (e.g purged), when destroyed
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#purge_soft_deleted_keys_on_destroy AzurermProvider#purge_soft_deleted_keys_on_destroy}
+  */
+  readonly purgeSoftDeletedKeysOnDestroy?: boolean | cdktf.IResolvable;
+  /**
+  * When enabled soft-deleted `azurerm_key_vault_secret` resources will be permanently deleted (e.g purged), when destroyed
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#purge_soft_deleted_secrets_on_destroy AzurermProvider#purge_soft_deleted_secrets_on_destroy}
+  */
+  readonly purgeSoftDeletedSecretsOnDestroy?: boolean | cdktf.IResolvable;
+  /**
+  * When enabled soft-deleted `azurerm_key_vault_certificate` resources will be restored, instead of creating new ones
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#recover_soft_deleted_certificates AzurermProvider#recover_soft_deleted_certificates}
+  */
+  readonly recoverSoftDeletedCertificates?: boolean | cdktf.IResolvable;
+  /**
+  * When enabled soft-deleted `azurerm_key_vault` resources will be restored, instead of creating new ones
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#recover_soft_deleted_key_vaults AzurermProvider#recover_soft_deleted_key_vaults}
   */
   readonly recoverSoftDeletedKeyVaults?: boolean | cdktf.IResolvable;
+  /**
+  * When enabled soft-deleted `azurerm_key_vault_key` resources will be restored, instead of creating new ones
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#recover_soft_deleted_keys AzurermProvider#recover_soft_deleted_keys}
+  */
+  readonly recoverSoftDeletedKeys?: boolean | cdktf.IResolvable;
+  /**
+  * When enabled soft-deleted `azurerm_key_vault_secret` resources will be restored, instead of creating new ones
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#recover_soft_deleted_secrets AzurermProvider#recover_soft_deleted_secrets}
+  */
+  readonly recoverSoftDeletedSecrets?: boolean | cdktf.IResolvable;
 }
 
 export function azurermProviderFeaturesKeyVaultToTerraform(struct?: AzurermProviderFeaturesKeyVault): any {
@@ -184,7 +252,14 @@ export function azurermProviderFeaturesKeyVaultToTerraform(struct?: AzurermProvi
   }
   return {
     purge_soft_delete_on_destroy: cdktf.booleanToTerraform(struct!.purgeSoftDeleteOnDestroy),
+    purge_soft_deleted_certificates_on_destroy: cdktf.booleanToTerraform(struct!.purgeSoftDeletedCertificatesOnDestroy),
+    purge_soft_deleted_hardware_security_modules_on_destroy: cdktf.booleanToTerraform(struct!.purgeSoftDeletedHardwareSecurityModulesOnDestroy),
+    purge_soft_deleted_keys_on_destroy: cdktf.booleanToTerraform(struct!.purgeSoftDeletedKeysOnDestroy),
+    purge_soft_deleted_secrets_on_destroy: cdktf.booleanToTerraform(struct!.purgeSoftDeletedSecretsOnDestroy),
+    recover_soft_deleted_certificates: cdktf.booleanToTerraform(struct!.recoverSoftDeletedCertificates),
     recover_soft_deleted_key_vaults: cdktf.booleanToTerraform(struct!.recoverSoftDeletedKeyVaults),
+    recover_soft_deleted_keys: cdktf.booleanToTerraform(struct!.recoverSoftDeletedKeys),
+    recover_soft_deleted_secrets: cdktf.booleanToTerraform(struct!.recoverSoftDeletedSecrets),
   }
 }
 
@@ -192,7 +267,7 @@ export interface AzurermProviderFeaturesLogAnalyticsWorkspace {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#permanently_delete_on_destroy AzurermProvider#permanently_delete_on_destroy}
   */
-  readonly permanentlyDeleteOnDestroy: boolean | cdktf.IResolvable;
+  readonly permanentlyDeleteOnDestroy?: boolean | cdktf.IResolvable;
 }
 
 export function azurermProviderFeaturesLogAnalyticsWorkspaceToTerraform(struct?: AzurermProviderFeaturesLogAnalyticsWorkspace): any {
@@ -318,6 +393,12 @@ export interface AzurermProviderFeatures {
   */
   readonly apiManagement?: AzurermProviderFeaturesApiManagement;
   /**
+  * application_insights block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#application_insights AzurermProvider#application_insights}
+  */
+  readonly applicationInsights?: AzurermProviderFeaturesApplicationInsights;
+  /**
   * cognitive_account block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#cognitive_account AzurermProvider#cognitive_account}
@@ -374,6 +455,7 @@ export function azurermProviderFeaturesToTerraform(struct?: AzurermProviderFeatu
   }
   return {
     api_management: azurermProviderFeaturesApiManagementToTerraform(struct!.apiManagement),
+    application_insights: azurermProviderFeaturesApplicationInsightsToTerraform(struct!.applicationInsights),
     cognitive_account: azurermProviderFeaturesCognitiveAccountToTerraform(struct!.cognitiveAccount),
     key_vault: azurermProviderFeaturesKeyVaultToTerraform(struct!.keyVault),
     log_analytics_workspace: azurermProviderFeaturesLogAnalyticsWorkspaceToTerraform(struct!.logAnalyticsWorkspace),
@@ -412,8 +494,8 @@ export class AzurermProvider extends cdktf.TerraformProvider {
       terraformResourceType: 'azurerm',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       terraformProviderSource: 'azurerm'
     });
@@ -426,16 +508,16 @@ export class AzurermProvider extends cdktf.TerraformProvider {
     this._disableTerraformPartnerId = config.disableTerraformPartnerId;
     this._environment = config.environment;
     this._metadataHost = config.metadataHost;
-    this._metadataUrl = config.metadataUrl;
     this._msiEndpoint = config.msiEndpoint;
+    this._oidcRequestToken = config.oidcRequestToken;
+    this._oidcRequestUrl = config.oidcRequestUrl;
     this._partnerId = config.partnerId;
-    this._skipCredentialsValidation = config.skipCredentialsValidation;
     this._skipProviderRegistration = config.skipProviderRegistration;
     this._storageUseAzuread = config.storageUseAzuread;
     this._subscriptionId = config.subscriptionId;
     this._tenantId = config.tenantId;
-    this._useMsal = config.useMsal;
     this._useMsi = config.useMsi;
+    this._useOidc = config.useOidc;
     this._alias = config.alias;
     this._features = config.features;
   }
@@ -588,22 +670,6 @@ export class AzurermProvider extends cdktf.TerraformProvider {
     return this._metadataHost;
   }
 
-  // metadata_url - computed: false, optional: true, required: false
-  private _metadataUrl?: string; 
-  public get metadataUrl() {
-    return this._metadataUrl;
-  }
-  public set metadataUrl(value: string | undefined) {
-    this._metadataUrl = value;
-  }
-  public resetMetadataUrl() {
-    this._metadataUrl = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get metadataUrlInput() {
-    return this._metadataUrl;
-  }
-
   // msi_endpoint - computed: false, optional: true, required: false
   private _msiEndpoint?: string; 
   public get msiEndpoint() {
@@ -620,6 +686,38 @@ export class AzurermProvider extends cdktf.TerraformProvider {
     return this._msiEndpoint;
   }
 
+  // oidc_request_token - computed: false, optional: true, required: false
+  private _oidcRequestToken?: string; 
+  public get oidcRequestToken() {
+    return this._oidcRequestToken;
+  }
+  public set oidcRequestToken(value: string | undefined) {
+    this._oidcRequestToken = value;
+  }
+  public resetOidcRequestToken() {
+    this._oidcRequestToken = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get oidcRequestTokenInput() {
+    return this._oidcRequestToken;
+  }
+
+  // oidc_request_url - computed: false, optional: true, required: false
+  private _oidcRequestUrl?: string; 
+  public get oidcRequestUrl() {
+    return this._oidcRequestUrl;
+  }
+  public set oidcRequestUrl(value: string | undefined) {
+    this._oidcRequestUrl = value;
+  }
+  public resetOidcRequestUrl() {
+    this._oidcRequestUrl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get oidcRequestUrlInput() {
+    return this._oidcRequestUrl;
+  }
+
   // partner_id - computed: false, optional: true, required: false
   private _partnerId?: string; 
   public get partnerId() {
@@ -634,22 +732,6 @@ export class AzurermProvider extends cdktf.TerraformProvider {
   // Temporarily expose input value. Use with caution.
   public get partnerIdInput() {
     return this._partnerId;
-  }
-
-  // skip_credentials_validation - computed: false, optional: true, required: false
-  private _skipCredentialsValidation?: boolean | cdktf.IResolvable; 
-  public get skipCredentialsValidation() {
-    return this._skipCredentialsValidation;
-  }
-  public set skipCredentialsValidation(value: boolean | cdktf.IResolvable | undefined) {
-    this._skipCredentialsValidation = value;
-  }
-  public resetSkipCredentialsValidation() {
-    this._skipCredentialsValidation = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get skipCredentialsValidationInput() {
-    return this._skipCredentialsValidation;
   }
 
   // skip_provider_registration - computed: false, optional: true, required: false
@@ -716,22 +798,6 @@ export class AzurermProvider extends cdktf.TerraformProvider {
     return this._tenantId;
   }
 
-  // use_msal - computed: false, optional: true, required: false
-  private _useMsal?: boolean | cdktf.IResolvable; 
-  public get useMsal() {
-    return this._useMsal;
-  }
-  public set useMsal(value: boolean | cdktf.IResolvable | undefined) {
-    this._useMsal = value;
-  }
-  public resetUseMsal() {
-    this._useMsal = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get useMsalInput() {
-    return this._useMsal;
-  }
-
   // use_msi - computed: false, optional: true, required: false
   private _useMsi?: boolean | cdktf.IResolvable; 
   public get useMsi() {
@@ -746,6 +812,22 @@ export class AzurermProvider extends cdktf.TerraformProvider {
   // Temporarily expose input value. Use with caution.
   public get useMsiInput() {
     return this._useMsi;
+  }
+
+  // use_oidc - computed: false, optional: true, required: false
+  private _useOidc?: boolean | cdktf.IResolvable; 
+  public get useOidc() {
+    return this._useOidc;
+  }
+  public set useOidc(value: boolean | cdktf.IResolvable | undefined) {
+    this._useOidc = value;
+  }
+  public resetUseOidc() {
+    this._useOidc = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get useOidcInput() {
+    return this._useOidc;
   }
 
   // alias - computed: false, optional: true, required: false
@@ -792,16 +874,16 @@ export class AzurermProvider extends cdktf.TerraformProvider {
       disable_terraform_partner_id: cdktf.booleanToTerraform(this._disableTerraformPartnerId),
       environment: cdktf.stringToTerraform(this._environment),
       metadata_host: cdktf.stringToTerraform(this._metadataHost),
-      metadata_url: cdktf.stringToTerraform(this._metadataUrl),
       msi_endpoint: cdktf.stringToTerraform(this._msiEndpoint),
+      oidc_request_token: cdktf.stringToTerraform(this._oidcRequestToken),
+      oidc_request_url: cdktf.stringToTerraform(this._oidcRequestUrl),
       partner_id: cdktf.stringToTerraform(this._partnerId),
-      skip_credentials_validation: cdktf.booleanToTerraform(this._skipCredentialsValidation),
       skip_provider_registration: cdktf.booleanToTerraform(this._skipProviderRegistration),
       storage_use_azuread: cdktf.booleanToTerraform(this._storageUseAzuread),
       subscription_id: cdktf.stringToTerraform(this._subscriptionId),
       tenant_id: cdktf.stringToTerraform(this._tenantId),
-      use_msal: cdktf.booleanToTerraform(this._useMsal),
       use_msi: cdktf.booleanToTerraform(this._useMsi),
+      use_oidc: cdktf.booleanToTerraform(this._useOidc),
       alias: cdktf.stringToTerraform(this._alias),
       features: azurermProviderFeaturesToTerraform(this._features),
     };

@@ -69,6 +69,11 @@ export class DataAzurermMssqlServerIdentityOutputReference extends cdktf.Complex
     }
   }
 
+  // identity_ids - computed: true, optional: false, required: false
+  public get identityIds() {
+    return this.getListAttribute('identity_ids');
+  }
+
   // principal_id - computed: true, optional: false, required: false
   public get principalId() {
     return this.getStringAttribute('principal_id');
@@ -82,11 +87,6 @@ export class DataAzurermMssqlServerIdentityOutputReference extends cdktf.Complex
   // type - computed: true, optional: false, required: false
   public get type() {
     return this.getStringAttribute('type');
-  }
-
-  // user_assigned_identity_ids - computed: true, optional: false, required: false
-  public get userAssignedIdentityIds() {
-    return this.getListAttribute('user_assigned_identity_ids');
   }
 }
 
@@ -210,8 +210,8 @@ export class DataAzurermMssqlServer extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_mssql_server',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

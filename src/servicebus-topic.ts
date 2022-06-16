@@ -53,19 +53,11 @@ export interface ServicebusTopicConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic#namespace_id ServicebusTopic#namespace_id}
   */
-  readonly namespaceId?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic#namespace_name ServicebusTopic#namespace_name}
-  */
-  readonly namespaceName?: string;
+  readonly namespaceId: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic#requires_duplicate_detection ServicebusTopic#requires_duplicate_detection}
   */
   readonly requiresDuplicateDetection?: boolean | cdktf.IResolvable;
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic#resource_group_name ServicebusTopic#resource_group_name}
-  */
-  readonly resourceGroupName?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic#status ServicebusTopic#status}
   */
@@ -264,8 +256,8 @@ export class ServicebusTopic extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_servicebus_topic',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -283,9 +275,7 @@ export class ServicebusTopic extends cdktf.TerraformResource {
     this._maxSizeInMegabytes = config.maxSizeInMegabytes;
     this._name = config.name;
     this._namespaceId = config.namespaceId;
-    this._namespaceName = config.namespaceName;
     this._requiresDuplicateDetection = config.requiresDuplicateDetection;
-    this._resourceGroupName = config.resourceGroupName;
     this._status = config.status;
     this._supportOrdering = config.supportOrdering;
     this._timeouts.internalValue = config.timeouts;
@@ -452,7 +442,7 @@ export class ServicebusTopic extends cdktf.TerraformResource {
     return this._name;
   }
 
-  // namespace_id - computed: true, optional: true, required: false
+  // namespace_id - computed: false, optional: false, required: true
   private _namespaceId?: string; 
   public get namespaceId() {
     return this.getStringAttribute('namespace_id');
@@ -460,28 +450,9 @@ export class ServicebusTopic extends cdktf.TerraformResource {
   public set namespaceId(value: string) {
     this._namespaceId = value;
   }
-  public resetNamespaceId() {
-    this._namespaceId = undefined;
-  }
   // Temporarily expose input value. Use with caution.
   public get namespaceIdInput() {
     return this._namespaceId;
-  }
-
-  // namespace_name - computed: true, optional: true, required: false
-  private _namespaceName?: string; 
-  public get namespaceName() {
-    return this.getStringAttribute('namespace_name');
-  }
-  public set namespaceName(value: string) {
-    this._namespaceName = value;
-  }
-  public resetNamespaceName() {
-    this._namespaceName = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get namespaceNameInput() {
-    return this._namespaceName;
   }
 
   // requires_duplicate_detection - computed: false, optional: true, required: false
@@ -498,22 +469,6 @@ export class ServicebusTopic extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get requiresDuplicateDetectionInput() {
     return this._requiresDuplicateDetection;
-  }
-
-  // resource_group_name - computed: true, optional: true, required: false
-  private _resourceGroupName?: string; 
-  public get resourceGroupName() {
-    return this.getStringAttribute('resource_group_name');
-  }
-  public set resourceGroupName(value: string) {
-    this._resourceGroupName = value;
-  }
-  public resetResourceGroupName() {
-    this._resourceGroupName = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get resourceGroupNameInput() {
-    return this._resourceGroupName;
   }
 
   // status - computed: false, optional: true, required: false
@@ -581,9 +536,7 @@ export class ServicebusTopic extends cdktf.TerraformResource {
       max_size_in_megabytes: cdktf.numberToTerraform(this._maxSizeInMegabytes),
       name: cdktf.stringToTerraform(this._name),
       namespace_id: cdktf.stringToTerraform(this._namespaceId),
-      namespace_name: cdktf.stringToTerraform(this._namespaceName),
       requires_duplicate_detection: cdktf.booleanToTerraform(this._requiresDuplicateDetection),
-      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       status: cdktf.stringToTerraform(this._status),
       support_ordering: cdktf.booleanToTerraform(this._supportOrdering),
       timeouts: servicebusTopicTimeoutsToTerraform(this._timeouts.internalValue),

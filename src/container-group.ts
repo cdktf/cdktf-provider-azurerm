@@ -27,6 +27,10 @@ export interface ContainerGroupConfig extends cdktf.TerraformMetaArguments {
   */
   readonly ipAddressType?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#key_vault_key_id ContainerGroup#key_vault_key_id}
+  */
+  readonly keyVaultKeyId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#location ContainerGroup#location}
   */
   readonly location: string;
@@ -84,6 +88,12 @@ export interface ContainerGroupConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#image_registry_credential ContainerGroup#image_registry_credential}
   */
   readonly imageRegistryCredential?: ContainerGroupImageRegistryCredential[] | cdktf.IResolvable;
+  /**
+  * init_container block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#init_container ContainerGroup#init_container}
+  */
+  readonly initContainer?: ContainerGroupInitContainer[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -2569,6 +2579,659 @@ export class ContainerGroupImageRegistryCredentialList extends cdktf.ComplexList
     return new ContainerGroupImageRegistryCredentialOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface ContainerGroupInitContainerVolumeGitRepo {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#directory ContainerGroup#directory}
+  */
+  readonly directory?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#revision ContainerGroup#revision}
+  */
+  readonly revision?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#url ContainerGroup#url}
+  */
+  readonly url: string;
+}
+
+export function containerGroupInitContainerVolumeGitRepoToTerraform(struct?: ContainerGroupInitContainerVolumeGitRepoOutputReference | ContainerGroupInitContainerVolumeGitRepo): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    directory: cdktf.stringToTerraform(struct!.directory),
+    revision: cdktf.stringToTerraform(struct!.revision),
+    url: cdktf.stringToTerraform(struct!.url),
+  }
+}
+
+export class ContainerGroupInitContainerVolumeGitRepoOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ContainerGroupInitContainerVolumeGitRepo | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._directory !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.directory = this._directory;
+    }
+    if (this._revision !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.revision = this._revision;
+    }
+    if (this._url !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.url = this._url;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerGroupInitContainerVolumeGitRepo | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._directory = undefined;
+      this._revision = undefined;
+      this._url = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._directory = value.directory;
+      this._revision = value.revision;
+      this._url = value.url;
+    }
+  }
+
+  // directory - computed: false, optional: true, required: false
+  private _directory?: string; 
+  public get directory() {
+    return this.getStringAttribute('directory');
+  }
+  public set directory(value: string) {
+    this._directory = value;
+  }
+  public resetDirectory() {
+    this._directory = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get directoryInput() {
+    return this._directory;
+  }
+
+  // revision - computed: false, optional: true, required: false
+  private _revision?: string; 
+  public get revision() {
+    return this.getStringAttribute('revision');
+  }
+  public set revision(value: string) {
+    this._revision = value;
+  }
+  public resetRevision() {
+    this._revision = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get revisionInput() {
+    return this._revision;
+  }
+
+  // url - computed: false, optional: false, required: true
+  private _url?: string; 
+  public get url() {
+    return this.getStringAttribute('url');
+  }
+  public set url(value: string) {
+    this._url = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get urlInput() {
+    return this._url;
+  }
+}
+export interface ContainerGroupInitContainerVolume {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#empty_dir ContainerGroup#empty_dir}
+  */
+  readonly emptyDir?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#mount_path ContainerGroup#mount_path}
+  */
+  readonly mountPath: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#name ContainerGroup#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#read_only ContainerGroup#read_only}
+  */
+  readonly readOnly?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#secret ContainerGroup#secret}
+  */
+  readonly secret?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#share_name ContainerGroup#share_name}
+  */
+  readonly shareName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#storage_account_key ContainerGroup#storage_account_key}
+  */
+  readonly storageAccountKey?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#storage_account_name ContainerGroup#storage_account_name}
+  */
+  readonly storageAccountName?: string;
+  /**
+  * git_repo block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#git_repo ContainerGroup#git_repo}
+  */
+  readonly gitRepo?: ContainerGroupInitContainerVolumeGitRepo;
+}
+
+export function containerGroupInitContainerVolumeToTerraform(struct?: ContainerGroupInitContainerVolume | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    empty_dir: cdktf.booleanToTerraform(struct!.emptyDir),
+    mount_path: cdktf.stringToTerraform(struct!.mountPath),
+    name: cdktf.stringToTerraform(struct!.name),
+    read_only: cdktf.booleanToTerraform(struct!.readOnly),
+    secret: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.secret),
+    share_name: cdktf.stringToTerraform(struct!.shareName),
+    storage_account_key: cdktf.stringToTerraform(struct!.storageAccountKey),
+    storage_account_name: cdktf.stringToTerraform(struct!.storageAccountName),
+    git_repo: containerGroupInitContainerVolumeGitRepoToTerraform(struct!.gitRepo),
+  }
+}
+
+export class ContainerGroupInitContainerVolumeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ContainerGroupInitContainerVolume | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._emptyDir !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.emptyDir = this._emptyDir;
+    }
+    if (this._mountPath !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.mountPath = this._mountPath;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._readOnly !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.readOnly = this._readOnly;
+    }
+    if (this._secret !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.secret = this._secret;
+    }
+    if (this._shareName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.shareName = this._shareName;
+    }
+    if (this._storageAccountKey !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.storageAccountKey = this._storageAccountKey;
+    }
+    if (this._storageAccountName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.storageAccountName = this._storageAccountName;
+    }
+    if (this._gitRepo?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.gitRepo = this._gitRepo?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerGroupInitContainerVolume | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._emptyDir = undefined;
+      this._mountPath = undefined;
+      this._name = undefined;
+      this._readOnly = undefined;
+      this._secret = undefined;
+      this._shareName = undefined;
+      this._storageAccountKey = undefined;
+      this._storageAccountName = undefined;
+      this._gitRepo.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._emptyDir = value.emptyDir;
+      this._mountPath = value.mountPath;
+      this._name = value.name;
+      this._readOnly = value.readOnly;
+      this._secret = value.secret;
+      this._shareName = value.shareName;
+      this._storageAccountKey = value.storageAccountKey;
+      this._storageAccountName = value.storageAccountName;
+      this._gitRepo.internalValue = value.gitRepo;
+    }
+  }
+
+  // empty_dir - computed: false, optional: true, required: false
+  private _emptyDir?: boolean | cdktf.IResolvable; 
+  public get emptyDir() {
+    return this.getBooleanAttribute('empty_dir');
+  }
+  public set emptyDir(value: boolean | cdktf.IResolvable) {
+    this._emptyDir = value;
+  }
+  public resetEmptyDir() {
+    this._emptyDir = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get emptyDirInput() {
+    return this._emptyDir;
+  }
+
+  // mount_path - computed: false, optional: false, required: true
+  private _mountPath?: string; 
+  public get mountPath() {
+    return this.getStringAttribute('mount_path');
+  }
+  public set mountPath(value: string) {
+    this._mountPath = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get mountPathInput() {
+    return this._mountPath;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // read_only - computed: false, optional: true, required: false
+  private _readOnly?: boolean | cdktf.IResolvable; 
+  public get readOnly() {
+    return this.getBooleanAttribute('read_only');
+  }
+  public set readOnly(value: boolean | cdktf.IResolvable) {
+    this._readOnly = value;
+  }
+  public resetReadOnly() {
+    this._readOnly = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readOnlyInput() {
+    return this._readOnly;
+  }
+
+  // secret - computed: false, optional: true, required: false
+  private _secret?: { [key: string]: string }; 
+  public get secret() {
+    return this.getStringMapAttribute('secret');
+  }
+  public set secret(value: { [key: string]: string }) {
+    this._secret = value;
+  }
+  public resetSecret() {
+    this._secret = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secretInput() {
+    return this._secret;
+  }
+
+  // share_name - computed: false, optional: true, required: false
+  private _shareName?: string; 
+  public get shareName() {
+    return this.getStringAttribute('share_name');
+  }
+  public set shareName(value: string) {
+    this._shareName = value;
+  }
+  public resetShareName() {
+    this._shareName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get shareNameInput() {
+    return this._shareName;
+  }
+
+  // storage_account_key - computed: false, optional: true, required: false
+  private _storageAccountKey?: string; 
+  public get storageAccountKey() {
+    return this.getStringAttribute('storage_account_key');
+  }
+  public set storageAccountKey(value: string) {
+    this._storageAccountKey = value;
+  }
+  public resetStorageAccountKey() {
+    this._storageAccountKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageAccountKeyInput() {
+    return this._storageAccountKey;
+  }
+
+  // storage_account_name - computed: false, optional: true, required: false
+  private _storageAccountName?: string; 
+  public get storageAccountName() {
+    return this.getStringAttribute('storage_account_name');
+  }
+  public set storageAccountName(value: string) {
+    this._storageAccountName = value;
+  }
+  public resetStorageAccountName() {
+    this._storageAccountName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageAccountNameInput() {
+    return this._storageAccountName;
+  }
+
+  // git_repo - computed: false, optional: true, required: false
+  private _gitRepo = new ContainerGroupInitContainerVolumeGitRepoOutputReference(this, "git_repo");
+  public get gitRepo() {
+    return this._gitRepo;
+  }
+  public putGitRepo(value: ContainerGroupInitContainerVolumeGitRepo) {
+    this._gitRepo.internalValue = value;
+  }
+  public resetGitRepo() {
+    this._gitRepo.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get gitRepoInput() {
+    return this._gitRepo.internalValue;
+  }
+}
+
+export class ContainerGroupInitContainerVolumeList extends cdktf.ComplexList {
+  public internalValue? : ContainerGroupInitContainerVolume[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ContainerGroupInitContainerVolumeOutputReference {
+    return new ContainerGroupInitContainerVolumeOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface ContainerGroupInitContainer {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#commands ContainerGroup#commands}
+  */
+  readonly commands?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#environment_variables ContainerGroup#environment_variables}
+  */
+  readonly environmentVariables?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#image ContainerGroup#image}
+  */
+  readonly image: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#name ContainerGroup#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#secure_environment_variables ContainerGroup#secure_environment_variables}
+  */
+  readonly secureEnvironmentVariables?: { [key: string]: string };
+  /**
+  * volume block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#volume ContainerGroup#volume}
+  */
+  readonly volume?: ContainerGroupInitContainerVolume[] | cdktf.IResolvable;
+}
+
+export function containerGroupInitContainerToTerraform(struct?: ContainerGroupInitContainer | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    commands: cdktf.listMapper(cdktf.stringToTerraform)(struct!.commands),
+    environment_variables: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.environmentVariables),
+    image: cdktf.stringToTerraform(struct!.image),
+    name: cdktf.stringToTerraform(struct!.name),
+    secure_environment_variables: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.secureEnvironmentVariables),
+    volume: cdktf.listMapper(containerGroupInitContainerVolumeToTerraform)(struct!.volume),
+  }
+}
+
+export class ContainerGroupInitContainerOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ContainerGroupInitContainer | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._commands !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.commands = this._commands;
+    }
+    if (this._environmentVariables !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.environmentVariables = this._environmentVariables;
+    }
+    if (this._image !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.image = this._image;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._secureEnvironmentVariables !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.secureEnvironmentVariables = this._secureEnvironmentVariables;
+    }
+    if (this._volume?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.volume = this._volume?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerGroupInitContainer | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._commands = undefined;
+      this._environmentVariables = undefined;
+      this._image = undefined;
+      this._name = undefined;
+      this._secureEnvironmentVariables = undefined;
+      this._volume.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._commands = value.commands;
+      this._environmentVariables = value.environmentVariables;
+      this._image = value.image;
+      this._name = value.name;
+      this._secureEnvironmentVariables = value.secureEnvironmentVariables;
+      this._volume.internalValue = value.volume;
+    }
+  }
+
+  // commands - computed: true, optional: true, required: false
+  private _commands?: string[]; 
+  public get commands() {
+    return this.getListAttribute('commands');
+  }
+  public set commands(value: string[]) {
+    this._commands = value;
+  }
+  public resetCommands() {
+    this._commands = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get commandsInput() {
+    return this._commands;
+  }
+
+  // environment_variables - computed: false, optional: true, required: false
+  private _environmentVariables?: { [key: string]: string }; 
+  public get environmentVariables() {
+    return this.getStringMapAttribute('environment_variables');
+  }
+  public set environmentVariables(value: { [key: string]: string }) {
+    this._environmentVariables = value;
+  }
+  public resetEnvironmentVariables() {
+    this._environmentVariables = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get environmentVariablesInput() {
+    return this._environmentVariables;
+  }
+
+  // image - computed: false, optional: false, required: true
+  private _image?: string; 
+  public get image() {
+    return this.getStringAttribute('image');
+  }
+  public set image(value: string) {
+    this._image = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get imageInput() {
+    return this._image;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // secure_environment_variables - computed: false, optional: true, required: false
+  private _secureEnvironmentVariables?: { [key: string]: string }; 
+  public get secureEnvironmentVariables() {
+    return this.getStringMapAttribute('secure_environment_variables');
+  }
+  public set secureEnvironmentVariables(value: { [key: string]: string }) {
+    this._secureEnvironmentVariables = value;
+  }
+  public resetSecureEnvironmentVariables() {
+    this._secureEnvironmentVariables = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secureEnvironmentVariablesInput() {
+    return this._secureEnvironmentVariables;
+  }
+
+  // volume - computed: false, optional: true, required: false
+  private _volume = new ContainerGroupInitContainerVolumeList(this, "volume", false);
+  public get volume() {
+    return this._volume;
+  }
+  public putVolume(value: ContainerGroupInitContainerVolume[] | cdktf.IResolvable) {
+    this._volume.internalValue = value;
+  }
+  public resetVolume() {
+    this._volume.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get volumeInput() {
+    return this._volume.internalValue;
+  }
+}
+
+export class ContainerGroupInitContainerList extends cdktf.ComplexList {
+  public internalValue? : ContainerGroupInitContainer[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ContainerGroupInitContainerOutputReference {
+    return new ContainerGroupInitContainerOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ContainerGroupTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#create ContainerGroup#create}
@@ -2752,8 +3415,8 @@ export class ContainerGroup extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_container_group',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -2764,6 +3427,7 @@ export class ContainerGroup extends cdktf.TerraformResource {
     this._exposedPort.internalValue = config.exposedPort;
     this._id = config.id;
     this._ipAddressType = config.ipAddressType;
+    this._keyVaultKeyId = config.keyVaultKeyId;
     this._location = config.location;
     this._name = config.name;
     this._networkProfileId = config.networkProfileId;
@@ -2776,6 +3440,7 @@ export class ContainerGroup extends cdktf.TerraformResource {
     this._dnsConfig.internalValue = config.dnsConfig;
     this._identity.internalValue = config.identity;
     this._imageRegistryCredential.internalValue = config.imageRegistryCredential;
+    this._initContainer.internalValue = config.initContainer;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -2855,6 +3520,22 @@ export class ContainerGroup extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get ipAddressTypeInput() {
     return this._ipAddressType;
+  }
+
+  // key_vault_key_id - computed: false, optional: true, required: false
+  private _keyVaultKeyId?: string; 
+  public get keyVaultKeyId() {
+    return this.getStringAttribute('key_vault_key_id');
+  }
+  public set keyVaultKeyId(value: string) {
+    this._keyVaultKeyId = value;
+  }
+  public resetKeyVaultKeyId() {
+    this._keyVaultKeyId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultKeyIdInput() {
+    return this._keyVaultKeyId;
   }
 
   // location - computed: false, optional: false, required: true
@@ -3034,6 +3715,22 @@ export class ContainerGroup extends cdktf.TerraformResource {
     return this._imageRegistryCredential.internalValue;
   }
 
+  // init_container - computed: false, optional: true, required: false
+  private _initContainer = new ContainerGroupInitContainerList(this, "init_container", false);
+  public get initContainer() {
+    return this._initContainer;
+  }
+  public putInitContainer(value: ContainerGroupInitContainer[] | cdktf.IResolvable) {
+    this._initContainer.internalValue = value;
+  }
+  public resetInitContainer() {
+    this._initContainer.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get initContainerInput() {
+    return this._initContainer.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new ContainerGroupTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -3060,6 +3757,7 @@ export class ContainerGroup extends cdktf.TerraformResource {
       exposed_port: cdktf.listMapper(containerGroupExposedPortToTerraform)(this._exposedPort.internalValue),
       id: cdktf.stringToTerraform(this._id),
       ip_address_type: cdktf.stringToTerraform(this._ipAddressType),
+      key_vault_key_id: cdktf.stringToTerraform(this._keyVaultKeyId),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       network_profile_id: cdktf.stringToTerraform(this._networkProfileId),
@@ -3072,6 +3770,7 @@ export class ContainerGroup extends cdktf.TerraformResource {
       dns_config: containerGroupDnsConfigToTerraform(this._dnsConfig.internalValue),
       identity: containerGroupIdentityToTerraform(this._identity.internalValue),
       image_registry_credential: cdktf.listMapper(containerGroupImageRegistryCredentialToTerraform)(this._imageRegistryCredential.internalValue),
+      init_container: cdktf.listMapper(containerGroupInitContainerToTerraform)(this._initContainer.internalValue),
       timeouts: containerGroupTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

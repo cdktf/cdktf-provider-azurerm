@@ -43,6 +43,10 @@ export interface StreamAnalyticsOutputServicebusTopicConfig extends cdktf.Terraf
   */
   readonly streamAnalyticsJobName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_servicebus_topic#system_property_columns StreamAnalyticsOutputServicebusTopic#system_property_columns}
+  */
+  readonly systemPropertyColumns?: { [key: string]: string };
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_servicebus_topic#topic_name StreamAnalyticsOutputServicebusTopic#topic_name}
   */
   readonly topicName: string;
@@ -385,8 +389,8 @@ export class StreamAnalyticsOutputServicebusTopic extends cdktf.TerraformResourc
       terraformResourceType: 'azurerm_stream_analytics_output_servicebus_topic',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '2.99.0',
-        providerVersionConstraint: '~> 2.0'
+        providerVersion: '3.10.0',
+        providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -401,6 +405,7 @@ export class StreamAnalyticsOutputServicebusTopic extends cdktf.TerraformResourc
     this._sharedAccessPolicyKey = config.sharedAccessPolicyKey;
     this._sharedAccessPolicyName = config.sharedAccessPolicyName;
     this._streamAnalyticsJobName = config.streamAnalyticsJobName;
+    this._systemPropertyColumns = config.systemPropertyColumns;
     this._topicName = config.topicName;
     this._serialization.internalValue = config.serialization;
     this._timeouts.internalValue = config.timeouts;
@@ -520,6 +525,22 @@ export class StreamAnalyticsOutputServicebusTopic extends cdktf.TerraformResourc
     return this._streamAnalyticsJobName;
   }
 
+  // system_property_columns - computed: false, optional: true, required: false
+  private _systemPropertyColumns?: { [key: string]: string }; 
+  public get systemPropertyColumns() {
+    return this.getStringMapAttribute('system_property_columns');
+  }
+  public set systemPropertyColumns(value: { [key: string]: string }) {
+    this._systemPropertyColumns = value;
+  }
+  public resetSystemPropertyColumns() {
+    this._systemPropertyColumns = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get systemPropertyColumnsInput() {
+    return this._systemPropertyColumns;
+  }
+
   // topic_name - computed: false, optional: false, required: true
   private _topicName?: string; 
   public get topicName() {
@@ -576,6 +597,7 @@ export class StreamAnalyticsOutputServicebusTopic extends cdktf.TerraformResourc
       shared_access_policy_key: cdktf.stringToTerraform(this._sharedAccessPolicyKey),
       shared_access_policy_name: cdktf.stringToTerraform(this._sharedAccessPolicyName),
       stream_analytics_job_name: cdktf.stringToTerraform(this._streamAnalyticsJobName),
+      system_property_columns: cdktf.hashMapper(cdktf.stringToTerraform)(this._systemPropertyColumns),
       topic_name: cdktf.stringToTerraform(this._topicName),
       serialization: streamAnalyticsOutputServicebusTopicSerializationToTerraform(this._serialization.internalValue),
       timeouts: streamAnalyticsOutputServicebusTopicTimeoutsToTerraform(this._timeouts.internalValue),
