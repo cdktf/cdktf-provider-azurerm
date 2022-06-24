@@ -4008,7 +4008,7 @@ export class OrchestratedVirtualMachineScaleSet extends cdktf.TerraformResource 
       terraformResourceType: 'azurerm_orchestrated_virtual_machine_scale_set',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.10.0',
+        providerVersion: '3.11.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

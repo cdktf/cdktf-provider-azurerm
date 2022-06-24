@@ -498,7 +498,7 @@ export class SharedImage extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_shared_image',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.10.0',
+        providerVersion: '3.11.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

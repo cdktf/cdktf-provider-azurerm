@@ -220,7 +220,7 @@ export class ApiManagementIdentityProviderMicrosoft extends cdktf.TerraformResou
       terraformResourceType: 'azurerm_api_management_identity_provider_microsoft',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.10.0',
+        providerVersion: '3.11.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

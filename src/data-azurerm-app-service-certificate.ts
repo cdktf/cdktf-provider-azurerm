@@ -135,7 +135,7 @@ export class DataAzurermAppServiceCertificate extends cdktf.TerraformDataSource 
       terraformResourceType: 'azurerm_app_service_certificate',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.10.0',
+        providerVersion: '3.11.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
