@@ -459,7 +459,7 @@ export class DataProtectionBackupPolicyDisk extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_data_protection_backup_policy_disk',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.10.0',
+        providerVersion: '3.11.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

@@ -324,7 +324,7 @@ export class IotTimeSeriesInsightsGen2Environment extends cdktf.TerraformResourc
       terraformResourceType: 'azurerm_iot_time_series_insights_gen2_environment',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.10.0',
+        providerVersion: '3.11.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -372,7 +372,7 @@ export class IotTimeSeriesInsightsGen2Environment extends cdktf.TerraformResourc
   // id_properties - computed: false, optional: false, required: true
   private _idProperties?: string[]; 
   public get idProperties() {
-    return cdktf.Fn.tolist(this.getListAttribute('id_properties'));
+    return this.getListAttribute('id_properties');
   }
   public set idProperties(value: string[]) {
     this._idProperties = value;

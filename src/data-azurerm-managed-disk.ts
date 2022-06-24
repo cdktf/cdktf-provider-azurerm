@@ -131,7 +131,7 @@ export class DataAzurermManagedDisk extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_managed_disk',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.10.0',
+        providerVersion: '3.11.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -152,6 +152,11 @@ export class DataAzurermManagedDisk extends cdktf.TerraformDataSource {
   // create_option - computed: true, optional: false, required: false
   public get createOption() {
     return this.getStringAttribute('create_option');
+  }
+
+  // disk_access_id - computed: true, optional: false, required: false
+  public get diskAccessId() {
+    return this.getStringAttribute('disk_access_id');
   }
 
   // disk_encryption_set_id - computed: true, optional: false, required: false
@@ -206,6 +211,11 @@ export class DataAzurermManagedDisk extends cdktf.TerraformDataSource {
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name;
+  }
+
+  // network_access_policy - computed: true, optional: false, required: false
+  public get networkAccessPolicy() {
+    return this.getStringAttribute('network_access_policy');
   }
 
   // os_type - computed: true, optional: false, required: false
