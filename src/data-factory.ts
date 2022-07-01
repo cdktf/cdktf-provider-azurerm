@@ -39,6 +39,10 @@ export interface DataFactoryConfig extends cdktf.TerraformMetaArguments {
   */
   readonly publicNetworkEnabled?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory#purview_id DataFactory#purview_id}
+  */
+  readonly purviewId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory#resource_group_name DataFactory#resource_group_name}
   */
   readonly resourceGroupName: string;
@@ -841,7 +845,7 @@ export class DataFactory extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_data_factory',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.11.0',
+        providerVersion: '3.12.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -856,6 +860,7 @@ export class DataFactory extends cdktf.TerraformResource {
     this._managedVirtualNetworkEnabled = config.managedVirtualNetworkEnabled;
     this._name = config.name;
     this._publicNetworkEnabled = config.publicNetworkEnabled;
+    this._purviewId = config.purviewId;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
     this._githubConfiguration.internalValue = config.githubConfiguration;
@@ -973,6 +978,22 @@ export class DataFactory extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get publicNetworkEnabledInput() {
     return this._publicNetworkEnabled;
+  }
+
+  // purview_id - computed: false, optional: true, required: false
+  private _purviewId?: string; 
+  public get purviewId() {
+    return this.getStringAttribute('purview_id');
+  }
+  public set purviewId(value: string) {
+    this._purviewId = value;
+  }
+  public resetPurviewId() {
+    this._purviewId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get purviewIdInput() {
+    return this._purviewId;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -1097,6 +1118,7 @@ export class DataFactory extends cdktf.TerraformResource {
       managed_virtual_network_enabled: cdktf.booleanToTerraform(this._managedVirtualNetworkEnabled),
       name: cdktf.stringToTerraform(this._name),
       public_network_enabled: cdktf.booleanToTerraform(this._publicNetworkEnabled),
+      purview_id: cdktf.stringToTerraform(this._purviewId),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       github_configuration: dataFactoryGithubConfigurationToTerraform(this._githubConfiguration.internalValue),

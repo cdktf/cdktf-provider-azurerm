@@ -232,7 +232,7 @@ export class BatchCertificate extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_batch_certificate',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.11.0',
+        providerVersion: '3.12.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

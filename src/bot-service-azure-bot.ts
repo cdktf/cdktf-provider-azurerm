@@ -51,6 +51,18 @@ export interface BotServiceAzureBotConfig extends cdktf.TerraformMetaArguments {
   */
   readonly microsoftAppId: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_service_azure_bot#microsoft_app_msi_id BotServiceAzureBot#microsoft_app_msi_id}
+  */
+  readonly microsoftAppMsiId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_service_azure_bot#microsoft_app_tenant_id BotServiceAzureBot#microsoft_app_tenant_id}
+  */
+  readonly microsoftAppTenantId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_service_azure_bot#microsoft_app_type BotServiceAzureBot#microsoft_app_type}
+  */
+  readonly microsoftAppType?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_service_azure_bot#name BotServiceAzureBot#name}
   */
   readonly name: string;
@@ -256,7 +268,7 @@ export class BotServiceAzureBot extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_bot_service_azure_bot',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.11.0',
+        providerVersion: '3.12.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -274,6 +286,9 @@ export class BotServiceAzureBot extends cdktf.TerraformResource {
     this._luisAppIds = config.luisAppIds;
     this._luisKey = config.luisKey;
     this._microsoftAppId = config.microsoftAppId;
+    this._microsoftAppMsiId = config.microsoftAppMsiId;
+    this._microsoftAppTenantId = config.microsoftAppTenantId;
+    this._microsoftAppType = config.microsoftAppType;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._sku = config.sku;
@@ -439,6 +454,54 @@ export class BotServiceAzureBot extends cdktf.TerraformResource {
     return this._microsoftAppId;
   }
 
+  // microsoft_app_msi_id - computed: false, optional: true, required: false
+  private _microsoftAppMsiId?: string; 
+  public get microsoftAppMsiId() {
+    return this.getStringAttribute('microsoft_app_msi_id');
+  }
+  public set microsoftAppMsiId(value: string) {
+    this._microsoftAppMsiId = value;
+  }
+  public resetMicrosoftAppMsiId() {
+    this._microsoftAppMsiId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get microsoftAppMsiIdInput() {
+    return this._microsoftAppMsiId;
+  }
+
+  // microsoft_app_tenant_id - computed: false, optional: true, required: false
+  private _microsoftAppTenantId?: string; 
+  public get microsoftAppTenantId() {
+    return this.getStringAttribute('microsoft_app_tenant_id');
+  }
+  public set microsoftAppTenantId(value: string) {
+    this._microsoftAppTenantId = value;
+  }
+  public resetMicrosoftAppTenantId() {
+    this._microsoftAppTenantId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get microsoftAppTenantIdInput() {
+    return this._microsoftAppTenantId;
+  }
+
+  // microsoft_app_type - computed: false, optional: true, required: false
+  private _microsoftAppType?: string; 
+  public get microsoftAppType() {
+    return this.getStringAttribute('microsoft_app_type');
+  }
+  public set microsoftAppType(value: string) {
+    this._microsoftAppType = value;
+  }
+  public resetMicrosoftAppType() {
+    this._microsoftAppType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get microsoftAppTypeInput() {
+    return this._microsoftAppType;
+  }
+
   // name - computed: false, optional: false, required: true
   private _name?: string; 
   public get name() {
@@ -526,6 +589,9 @@ export class BotServiceAzureBot extends cdktf.TerraformResource {
       luis_app_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._luisAppIds),
       luis_key: cdktf.stringToTerraform(this._luisKey),
       microsoft_app_id: cdktf.stringToTerraform(this._microsoftAppId),
+      microsoft_app_msi_id: cdktf.stringToTerraform(this._microsoftAppMsiId),
+      microsoft_app_tenant_id: cdktf.stringToTerraform(this._microsoftAppTenantId),
+      microsoft_app_type: cdktf.stringToTerraform(this._microsoftAppType),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku: cdktf.stringToTerraform(this._sku),

@@ -4242,7 +4242,7 @@ export interface WindowsWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequest {
   readonly timeTaken: string;
 }
 
-export function windowsWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequestToTerraform(struct?: WindowsWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequest | cdktf.IResolvable): any {
+export function windowsWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequestToTerraform(struct?: WindowsWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequestOutputReference | WindowsWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequest): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -4257,22 +4257,16 @@ export function windowsWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequestToTe
 
 export class WindowsWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequestOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
-  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): WindowsWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequest | cdktf.IResolvable | undefined {
-    if (this.resolvableValue) {
-      return this.resolvableValue;
-    }
+  public get internalValue(): WindowsWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequest | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._count !== undefined) {
@@ -4294,22 +4288,16 @@ export class WindowsWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequestOutputR
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: WindowsWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequest | cdktf.IResolvable | undefined) {
+  public set internalValue(value: WindowsWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequest | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
-      this.resolvableValue = undefined;
       this._count = undefined;
       this._interval = undefined;
       this._path = undefined;
       this._timeTaken = undefined;
     }
-    else if (cdktf.Tokenization.isResolvable(value)) {
-      this.isEmptyObject = false;
-      this.resolvableValue = value;
-    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
-      this.resolvableValue = undefined;
       this._count = value.count;
       this._interval = value.interval;
       this._path = value.path;
@@ -4370,26 +4358,6 @@ export class WindowsWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequestOutputR
   // Temporarily expose input value. Use with caution.
   public get timeTakenInput() {
     return this._timeTaken;
-  }
-}
-
-export class WindowsWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequestList extends cdktf.ComplexList {
-  public internalValue? : WindowsWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequest[] | cdktf.IResolvable
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): WindowsWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequestOutputReference {
-    return new WindowsWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequestOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface WindowsWebAppSlotSiteConfigAutoHealSettingTriggerStatusCode {
@@ -4631,7 +4599,7 @@ export interface WindowsWebAppSlotSiteConfigAutoHealSettingTrigger {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#slow_request WindowsWebAppSlot#slow_request}
   */
-  readonly slowRequest?: WindowsWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequest[] | cdktf.IResolvable;
+  readonly slowRequest?: WindowsWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequest;
   /**
   * status_code block
   * 
@@ -4648,7 +4616,7 @@ export function windowsWebAppSlotSiteConfigAutoHealSettingTriggerToTerraform(str
   return {
     private_memory_kb: cdktf.numberToTerraform(struct!.privateMemoryKb),
     requests: windowsWebAppSlotSiteConfigAutoHealSettingTriggerRequestsToTerraform(struct!.requests),
-    slow_request: cdktf.listMapper(windowsWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequestToTerraform)(struct!.slowRequest),
+    slow_request: windowsWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequestToTerraform(struct!.slowRequest),
     status_code: cdktf.listMapper(windowsWebAppSlotSiteConfigAutoHealSettingTriggerStatusCodeToTerraform)(struct!.statusCode),
   }
 }
@@ -4736,11 +4704,11 @@ export class WindowsWebAppSlotSiteConfigAutoHealSettingTriggerOutputReference ex
   }
 
   // slow_request - computed: false, optional: true, required: false
-  private _slowRequest = new WindowsWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequestList(this, "slow_request", false);
+  private _slowRequest = new WindowsWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequestOutputReference(this, "slow_request");
   public get slowRequest() {
     return this._slowRequest;
   }
-  public putSlowRequest(value: WindowsWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequest[] | cdktf.IResolvable) {
+  public putSlowRequest(value: WindowsWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequest) {
     this._slowRequest.internalValue = value;
   }
   public resetSlowRequest() {
@@ -6547,7 +6515,7 @@ export class WindowsWebAppSlot extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_windows_web_app_slot',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.11.0',
+        providerVersion: '3.12.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

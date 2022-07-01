@@ -8,6 +8,10 @@ import * as cdktf from 'cdktf';
 
 export interface SharedImageVersionConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_version#end_of_life_date SharedImageVersion#end_of_life_date}
+  */
+  readonly endOfLifeDate?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_version#exclude_from_latest SharedImageVersion#exclude_from_latest}
   */
   readonly excludeFromLatest?: boolean | cdktf.IResolvable;
@@ -43,6 +47,10 @@ export interface SharedImageVersionConfig extends cdktf.TerraformMetaArguments {
   */
   readonly osDiskSnapshotId?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_version#replication_mode SharedImageVersion#replication_mode}
+  */
+  readonly replicationMode?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_version#resource_group_name SharedImageVersion#resource_group_name}
   */
   readonly resourceGroupName: string;
@@ -65,6 +73,10 @@ export interface SharedImageVersionConfig extends cdktf.TerraformMetaArguments {
 }
 export interface SharedImageVersionTargetRegion {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_version#disk_encryption_set_id SharedImageVersion#disk_encryption_set_id}
+  */
+  readonly diskEncryptionSetId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_version#name SharedImageVersion#name}
   */
   readonly name: string;
@@ -84,6 +96,7 @@ export function sharedImageVersionTargetRegionToTerraform(struct?: SharedImageVe
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    disk_encryption_set_id: cdktf.stringToTerraform(struct!.diskEncryptionSetId),
     name: cdktf.stringToTerraform(struct!.name),
     regional_replica_count: cdktf.numberToTerraform(struct!.regionalReplicaCount),
     storage_account_type: cdktf.stringToTerraform(struct!.storageAccountType),
@@ -110,6 +123,10 @@ export class SharedImageVersionTargetRegionOutputReference extends cdktf.Complex
     }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._diskEncryptionSetId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.diskEncryptionSetId = this._diskEncryptionSetId;
+    }
     if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
@@ -129,6 +146,7 @@ export class SharedImageVersionTargetRegionOutputReference extends cdktf.Complex
     if (value === undefined) {
       this.isEmptyObject = false;
       this.resolvableValue = undefined;
+      this._diskEncryptionSetId = undefined;
       this._name = undefined;
       this._regionalReplicaCount = undefined;
       this._storageAccountType = undefined;
@@ -140,10 +158,27 @@ export class SharedImageVersionTargetRegionOutputReference extends cdktf.Complex
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this.resolvableValue = undefined;
+      this._diskEncryptionSetId = value.diskEncryptionSetId;
       this._name = value.name;
       this._regionalReplicaCount = value.regionalReplicaCount;
       this._storageAccountType = value.storageAccountType;
     }
+  }
+
+  // disk_encryption_set_id - computed: false, optional: true, required: false
+  private _diskEncryptionSetId?: string; 
+  public get diskEncryptionSetId() {
+    return this.getStringAttribute('disk_encryption_set_id');
+  }
+  public set diskEncryptionSetId(value: string) {
+    this._diskEncryptionSetId = value;
+  }
+  public resetDiskEncryptionSetId() {
+    this._diskEncryptionSetId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get diskEncryptionSetIdInput() {
+    return this._diskEncryptionSetId;
   }
 
   // name - computed: false, optional: false, required: true
@@ -391,7 +426,7 @@ export class SharedImageVersion extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_shared_image_version',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.11.0',
+        providerVersion: '3.12.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -399,6 +434,7 @@ export class SharedImageVersion extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._endOfLifeDate = config.endOfLifeDate;
     this._excludeFromLatest = config.excludeFromLatest;
     this._galleryName = config.galleryName;
     this._id = config.id;
@@ -407,6 +443,7 @@ export class SharedImageVersion extends cdktf.TerraformResource {
     this._managedImageId = config.managedImageId;
     this._name = config.name;
     this._osDiskSnapshotId = config.osDiskSnapshotId;
+    this._replicationMode = config.replicationMode;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
     this._targetRegion.internalValue = config.targetRegion;
@@ -416,6 +453,22 @@ export class SharedImageVersion extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // end_of_life_date - computed: false, optional: true, required: false
+  private _endOfLifeDate?: string; 
+  public get endOfLifeDate() {
+    return this.getStringAttribute('end_of_life_date');
+  }
+  public set endOfLifeDate(value: string) {
+    this._endOfLifeDate = value;
+  }
+  public resetEndOfLifeDate() {
+    this._endOfLifeDate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get endOfLifeDateInput() {
+    return this._endOfLifeDate;
+  }
 
   // exclude_from_latest - computed: false, optional: true, required: false
   private _excludeFromLatest?: boolean | cdktf.IResolvable; 
@@ -533,6 +586,22 @@ export class SharedImageVersion extends cdktf.TerraformResource {
     return this._osDiskSnapshotId;
   }
 
+  // replication_mode - computed: false, optional: true, required: false
+  private _replicationMode?: string; 
+  public get replicationMode() {
+    return this.getStringAttribute('replication_mode');
+  }
+  public set replicationMode(value: string) {
+    this._replicationMode = value;
+  }
+  public resetReplicationMode() {
+    this._replicationMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get replicationModeInput() {
+    return this._replicationMode;
+  }
+
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName?: string; 
   public get resourceGroupName() {
@@ -563,7 +632,7 @@ export class SharedImageVersion extends cdktf.TerraformResource {
   }
 
   // target_region - computed: false, optional: false, required: true
-  private _targetRegion = new SharedImageVersionTargetRegionList(this, "target_region", true);
+  private _targetRegion = new SharedImageVersionTargetRegionList(this, "target_region", false);
   public get targetRegion() {
     return this._targetRegion;
   }
@@ -597,6 +666,7 @@ export class SharedImageVersion extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      end_of_life_date: cdktf.stringToTerraform(this._endOfLifeDate),
       exclude_from_latest: cdktf.booleanToTerraform(this._excludeFromLatest),
       gallery_name: cdktf.stringToTerraform(this._galleryName),
       id: cdktf.stringToTerraform(this._id),
@@ -605,6 +675,7 @@ export class SharedImageVersion extends cdktf.TerraformResource {
       managed_image_id: cdktf.stringToTerraform(this._managedImageId),
       name: cdktf.stringToTerraform(this._name),
       os_disk_snapshot_id: cdktf.stringToTerraform(this._osDiskSnapshotId),
+      replication_mode: cdktf.stringToTerraform(this._replicationMode),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       target_region: cdktf.listMapper(sharedImageVersionTargetRegionToTerraform)(this._targetRegion.internalValue),

@@ -55,6 +55,10 @@ export interface LinuxWebAppSlotConfig extends cdktf.TerraformMetaArguments {
   */
   readonly tags?: { [key: string]: string };
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#virtual_network_subnet_id LinuxWebAppSlot#virtual_network_subnet_id}
+  */
+  readonly virtualNetworkSubnetId?: string;
+  /**
   * The local path and filename of the Zip packaged application to deploy to this Windows Web App. **Note:** Using this value requires `WEBSITE_RUN_FROM_PACKAGE=1` on the App in `app_settings`.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#zip_deploy_file LinuxWebAppSlot#zip_deploy_file}
@@ -4097,7 +4101,7 @@ export interface LinuxWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequest {
   readonly timeTaken: string;
 }
 
-export function linuxWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequestToTerraform(struct?: LinuxWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequest | cdktf.IResolvable): any {
+export function linuxWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequestToTerraform(struct?: LinuxWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequestOutputReference | LinuxWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequest): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -4112,22 +4116,16 @@ export function linuxWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequestToTerr
 
 export class LinuxWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequestOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
-  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param complexObjectIndex the index of this item in the list
-  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
   */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
-    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
   }
 
-  public get internalValue(): LinuxWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequest | cdktf.IResolvable | undefined {
-    if (this.resolvableValue) {
-      return this.resolvableValue;
-    }
+  public get internalValue(): LinuxWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequest | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._count !== undefined) {
@@ -4149,22 +4147,16 @@ export class LinuxWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequestOutputRef
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: LinuxWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequest | cdktf.IResolvable | undefined) {
+  public set internalValue(value: LinuxWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequest | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
-      this.resolvableValue = undefined;
       this._count = undefined;
       this._interval = undefined;
       this._path = undefined;
       this._timeTaken = undefined;
     }
-    else if (cdktf.Tokenization.isResolvable(value)) {
-      this.isEmptyObject = false;
-      this.resolvableValue = value;
-    }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
-      this.resolvableValue = undefined;
       this._count = value.count;
       this._interval = value.interval;
       this._path = value.path;
@@ -4225,26 +4217,6 @@ export class LinuxWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequestOutputRef
   // Temporarily expose input value. Use with caution.
   public get timeTakenInput() {
     return this._timeTaken;
-  }
-}
-
-export class LinuxWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequestList extends cdktf.ComplexList {
-  public internalValue? : LinuxWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequest[] | cdktf.IResolvable
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
-  */
-  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
-    super(terraformResource, terraformAttribute, wrapsSet)
-  }
-
-  /**
-  * @param index the index of the item to return
-  */
-  public get(index: number): LinuxWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequestOutputReference {
-    return new LinuxWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequestOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface LinuxWebAppSlotSiteConfigAutoHealSettingTriggerStatusCode {
@@ -4482,7 +4454,7 @@ export interface LinuxWebAppSlotSiteConfigAutoHealSettingTrigger {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_web_app_slot#slow_request LinuxWebAppSlot#slow_request}
   */
-  readonly slowRequest?: LinuxWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequest[] | cdktf.IResolvable;
+  readonly slowRequest?: LinuxWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequest;
   /**
   * status_code block
   * 
@@ -4498,7 +4470,7 @@ export function linuxWebAppSlotSiteConfigAutoHealSettingTriggerToTerraform(struc
   }
   return {
     requests: linuxWebAppSlotSiteConfigAutoHealSettingTriggerRequestsToTerraform(struct!.requests),
-    slow_request: cdktf.listMapper(linuxWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequestToTerraform)(struct!.slowRequest),
+    slow_request: linuxWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequestToTerraform(struct!.slowRequest),
     status_code: cdktf.listMapper(linuxWebAppSlotSiteConfigAutoHealSettingTriggerStatusCodeToTerraform)(struct!.statusCode),
   }
 }
@@ -4564,11 +4536,11 @@ export class LinuxWebAppSlotSiteConfigAutoHealSettingTriggerOutputReference exte
   }
 
   // slow_request - computed: false, optional: true, required: false
-  private _slowRequest = new LinuxWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequestList(this, "slow_request", false);
+  private _slowRequest = new LinuxWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequestOutputReference(this, "slow_request");
   public get slowRequest() {
     return this._slowRequest;
   }
-  public putSlowRequest(value: LinuxWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequest[] | cdktf.IResolvable) {
+  public putSlowRequest(value: LinuxWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequest) {
     this._slowRequest.internalValue = value;
   }
   public resetSlowRequest() {
@@ -6057,7 +6029,7 @@ export class LinuxWebAppSlot extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_linux_web_app_slot',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.11.0',
+        providerVersion: '3.12.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -6076,6 +6048,7 @@ export class LinuxWebAppSlot extends cdktf.TerraformResource {
     this._keyVaultReferenceIdentityId = config.keyVaultReferenceIdentityId;
     this._name = config.name;
     this._tags = config.tags;
+    this._virtualNetworkSubnetId = config.virtualNetworkSubnetId;
     this._zipDeployFile = config.zipDeployFile;
     this._authSettings.internalValue = config.authSettings;
     this._backup.internalValue = config.backup;
@@ -6308,6 +6281,22 @@ export class LinuxWebAppSlot extends cdktf.TerraformResource {
     return this._tags;
   }
 
+  // virtual_network_subnet_id - computed: false, optional: true, required: false
+  private _virtualNetworkSubnetId?: string; 
+  public get virtualNetworkSubnetId() {
+    return this.getStringAttribute('virtual_network_subnet_id');
+  }
+  public set virtualNetworkSubnetId(value: string) {
+    this._virtualNetworkSubnetId = value;
+  }
+  public resetVirtualNetworkSubnetId() {
+    this._virtualNetworkSubnetId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get virtualNetworkSubnetIdInput() {
+    return this._virtualNetworkSubnetId;
+  }
+
   // zip_deploy_file - computed: true, optional: true, required: false
   private _zipDeployFile?: string; 
   public get zipDeployFile() {
@@ -6466,6 +6455,7 @@ export class LinuxWebAppSlot extends cdktf.TerraformResource {
       key_vault_reference_identity_id: cdktf.stringToTerraform(this._keyVaultReferenceIdentityId),
       name: cdktf.stringToTerraform(this._name),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
+      virtual_network_subnet_id: cdktf.stringToTerraform(this._virtualNetworkSubnetId),
       zip_deploy_file: cdktf.stringToTerraform(this._zipDeployFile),
       auth_settings: linuxWebAppSlotAuthSettingsToTerraform(this._authSettings.internalValue),
       backup: linuxWebAppSlotBackupToTerraform(this._backup.internalValue),

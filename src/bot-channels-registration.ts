@@ -75,6 +75,10 @@ export interface BotChannelsRegistrationConfig extends cdktf.TerraformMetaArgume
   */
   readonly sku: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration#streaming_endpoint_enabled BotChannelsRegistration#streaming_endpoint_enabled}
+  */
+  readonly streamingEndpointEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration#tags BotChannelsRegistration#tags}
   */
   readonly tags?: { [key: string]: string };
@@ -268,7 +272,7 @@ export class BotChannelsRegistration extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_bot_channels_registration',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.11.0',
+        providerVersion: '3.12.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -292,6 +296,7 @@ export class BotChannelsRegistration extends cdktf.TerraformResource {
     this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
     this._resourceGroupName = config.resourceGroupName;
     this._sku = config.sku;
+    this._streamingEndpointEnabled = config.streamingEndpointEnabled;
     this._tags = config.tags;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -541,6 +546,22 @@ export class BotChannelsRegistration extends cdktf.TerraformResource {
     return this._sku;
   }
 
+  // streaming_endpoint_enabled - computed: false, optional: true, required: false
+  private _streamingEndpointEnabled?: boolean | cdktf.IResolvable; 
+  public get streamingEndpointEnabled() {
+    return this.getBooleanAttribute('streaming_endpoint_enabled');
+  }
+  public set streamingEndpointEnabled(value: boolean | cdktf.IResolvable) {
+    this._streamingEndpointEnabled = value;
+  }
+  public resetStreamingEndpointEnabled() {
+    this._streamingEndpointEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get streamingEndpointEnabledInput() {
+    return this._streamingEndpointEnabled;
+  }
+
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string }; 
   public get tags() {
@@ -595,6 +616,7 @@ export class BotChannelsRegistration extends cdktf.TerraformResource {
       public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku: cdktf.stringToTerraform(this._sku),
+      streaming_endpoint_enabled: cdktf.booleanToTerraform(this._streamingEndpointEnabled),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       timeouts: botChannelsRegistrationTimeoutsToTerraform(this._timeouts.internalValue),
     };

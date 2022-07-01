@@ -533,7 +533,7 @@ export class BatchAccount extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_batch_account',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.11.0',
+        providerVersion: '3.12.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -677,7 +677,7 @@ export class BatchAccount extends cdktf.TerraformResource {
     return this.getStringAttribute('secondary_access_key');
   }
 
-  // storage_account_id - computed: true, optional: true, required: false
+  // storage_account_id - computed: false, optional: true, required: false
   private _storageAccountId?: string; 
   public get storageAccountId() {
     return this.getStringAttribute('storage_account_id');

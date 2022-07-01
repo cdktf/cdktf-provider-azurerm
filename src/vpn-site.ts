@@ -53,6 +53,12 @@ export interface VpnSiteConfig extends cdktf.TerraformMetaArguments {
   */
   readonly link?: VpnSiteLink[] | cdktf.IResolvable;
   /**
+  * o365_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_site#o365_policy VpnSite#o365_policy}
+  */
+  readonly o365Policy?: VpnSiteO365Policy;
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_site#timeouts VpnSite#timeouts}
@@ -381,6 +387,192 @@ export class VpnSiteLinkList extends cdktf.ComplexList {
     return new VpnSiteLinkOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface VpnSiteO365PolicyTrafficCategory {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_site#allow_endpoint_enabled VpnSite#allow_endpoint_enabled}
+  */
+  readonly allowEndpointEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_site#default_endpoint_enabled VpnSite#default_endpoint_enabled}
+  */
+  readonly defaultEndpointEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_site#optimize_endpoint_enabled VpnSite#optimize_endpoint_enabled}
+  */
+  readonly optimizeEndpointEnabled?: boolean | cdktf.IResolvable;
+}
+
+export function vpnSiteO365PolicyTrafficCategoryToTerraform(struct?: VpnSiteO365PolicyTrafficCategoryOutputReference | VpnSiteO365PolicyTrafficCategory): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    allow_endpoint_enabled: cdktf.booleanToTerraform(struct!.allowEndpointEnabled),
+    default_endpoint_enabled: cdktf.booleanToTerraform(struct!.defaultEndpointEnabled),
+    optimize_endpoint_enabled: cdktf.booleanToTerraform(struct!.optimizeEndpointEnabled),
+  }
+}
+
+export class VpnSiteO365PolicyTrafficCategoryOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): VpnSiteO365PolicyTrafficCategory | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._allowEndpointEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.allowEndpointEnabled = this._allowEndpointEnabled;
+    }
+    if (this._defaultEndpointEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.defaultEndpointEnabled = this._defaultEndpointEnabled;
+    }
+    if (this._optimizeEndpointEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.optimizeEndpointEnabled = this._optimizeEndpointEnabled;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: VpnSiteO365PolicyTrafficCategory | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._allowEndpointEnabled = undefined;
+      this._defaultEndpointEnabled = undefined;
+      this._optimizeEndpointEnabled = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._allowEndpointEnabled = value.allowEndpointEnabled;
+      this._defaultEndpointEnabled = value.defaultEndpointEnabled;
+      this._optimizeEndpointEnabled = value.optimizeEndpointEnabled;
+    }
+  }
+
+  // allow_endpoint_enabled - computed: false, optional: true, required: false
+  private _allowEndpointEnabled?: boolean | cdktf.IResolvable; 
+  public get allowEndpointEnabled() {
+    return this.getBooleanAttribute('allow_endpoint_enabled');
+  }
+  public set allowEndpointEnabled(value: boolean | cdktf.IResolvable) {
+    this._allowEndpointEnabled = value;
+  }
+  public resetAllowEndpointEnabled() {
+    this._allowEndpointEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowEndpointEnabledInput() {
+    return this._allowEndpointEnabled;
+  }
+
+  // default_endpoint_enabled - computed: false, optional: true, required: false
+  private _defaultEndpointEnabled?: boolean | cdktf.IResolvable; 
+  public get defaultEndpointEnabled() {
+    return this.getBooleanAttribute('default_endpoint_enabled');
+  }
+  public set defaultEndpointEnabled(value: boolean | cdktf.IResolvable) {
+    this._defaultEndpointEnabled = value;
+  }
+  public resetDefaultEndpointEnabled() {
+    this._defaultEndpointEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultEndpointEnabledInput() {
+    return this._defaultEndpointEnabled;
+  }
+
+  // optimize_endpoint_enabled - computed: false, optional: true, required: false
+  private _optimizeEndpointEnabled?: boolean | cdktf.IResolvable; 
+  public get optimizeEndpointEnabled() {
+    return this.getBooleanAttribute('optimize_endpoint_enabled');
+  }
+  public set optimizeEndpointEnabled(value: boolean | cdktf.IResolvable) {
+    this._optimizeEndpointEnabled = value;
+  }
+  public resetOptimizeEndpointEnabled() {
+    this._optimizeEndpointEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get optimizeEndpointEnabledInput() {
+    return this._optimizeEndpointEnabled;
+  }
+}
+export interface VpnSiteO365Policy {
+  /**
+  * traffic_category block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_site#traffic_category VpnSite#traffic_category}
+  */
+  readonly trafficCategory?: VpnSiteO365PolicyTrafficCategory;
+}
+
+export function vpnSiteO365PolicyToTerraform(struct?: VpnSiteO365PolicyOutputReference | VpnSiteO365Policy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    traffic_category: vpnSiteO365PolicyTrafficCategoryToTerraform(struct!.trafficCategory),
+  }
+}
+
+export class VpnSiteO365PolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): VpnSiteO365Policy | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._trafficCategory?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.trafficCategory = this._trafficCategory?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: VpnSiteO365Policy | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._trafficCategory.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._trafficCategory.internalValue = value.trafficCategory;
+    }
+  }
+
+  // traffic_category - computed: false, optional: true, required: false
+  private _trafficCategory = new VpnSiteO365PolicyTrafficCategoryOutputReference(this, "traffic_category");
+  public get trafficCategory() {
+    return this._trafficCategory;
+  }
+  public putTrafficCategory(value: VpnSiteO365PolicyTrafficCategory) {
+    this._trafficCategory.internalValue = value;
+  }
+  public resetTrafficCategory() {
+    this._trafficCategory.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get trafficCategoryInput() {
+    return this._trafficCategory.internalValue;
+  }
+}
 export interface VpnSiteTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_site#create VpnSite#create}
@@ -564,7 +756,7 @@ export class VpnSite extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_vpn_site',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.11.0',
+        providerVersion: '3.12.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -582,6 +774,7 @@ export class VpnSite extends cdktf.TerraformResource {
     this._tags = config.tags;
     this._virtualWanId = config.virtualWanId;
     this._link.internalValue = config.link;
+    this._o365Policy.internalValue = config.o365Policy;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -737,6 +930,22 @@ export class VpnSite extends cdktf.TerraformResource {
     return this._link.internalValue;
   }
 
+  // o365_policy - computed: false, optional: true, required: false
+  private _o365Policy = new VpnSiteO365PolicyOutputReference(this, "o365_policy");
+  public get o365Policy() {
+    return this._o365Policy;
+  }
+  public putO365Policy(value: VpnSiteO365Policy) {
+    this._o365Policy.internalValue = value;
+  }
+  public resetO365Policy() {
+    this._o365Policy.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get o365PolicyInput() {
+    return this._o365Policy.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new VpnSiteTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -769,6 +978,7 @@ export class VpnSite extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       virtual_wan_id: cdktf.stringToTerraform(this._virtualWanId),
       link: cdktf.listMapper(vpnSiteLinkToTerraform)(this._link.internalValue),
+      o365_policy: vpnSiteO365PolicyToTerraform(this._o365Policy.internalValue),
       timeouts: vpnSiteTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
