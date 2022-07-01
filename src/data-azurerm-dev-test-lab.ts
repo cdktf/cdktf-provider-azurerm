@@ -131,7 +131,7 @@ export class DataAzurermDevTestLab extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_dev_test_lab',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.11.0',
+        providerVersion: '3.12.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

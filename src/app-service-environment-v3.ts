@@ -434,7 +434,7 @@ export class AppServiceEnvironmentV3 extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_app_service_environment_v3',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.11.0',
+        providerVersion: '3.12.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

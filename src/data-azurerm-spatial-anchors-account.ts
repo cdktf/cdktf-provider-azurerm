@@ -131,7 +131,7 @@ export class DataAzurermSpatialAnchorsAccount extends cdktf.TerraformDataSource 
       terraformResourceType: 'azurerm_spatial_anchors_account',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.11.0',
+        providerVersion: '3.12.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -204,6 +204,12 @@ export class DataAzurermSpatialAnchorsAccount extends cdktf.TerraformDataSource 
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
     return this._resourceGroupName;
+  }
+
+  // tags - computed: true, optional: false, required: false
+  private _tags = new cdktf.StringMap(this, "tags");
+  public get tags() {
+    return this._tags;
   }
 
   // timeouts - computed: false, optional: true, required: false

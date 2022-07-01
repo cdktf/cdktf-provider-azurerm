@@ -317,6 +317,98 @@ export class ContainerGroupContainerGpuOutputReference extends cdktf.ComplexObje
     return this._sku;
   }
 }
+export interface ContainerGroupContainerGpuLimit {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#count ContainerGroup#count}
+  */
+  readonly count?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#sku ContainerGroup#sku}
+  */
+  readonly sku?: string;
+}
+
+export function containerGroupContainerGpuLimitToTerraform(struct?: ContainerGroupContainerGpuLimitOutputReference | ContainerGroupContainerGpuLimit): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    count: cdktf.numberToTerraform(struct!.count),
+    sku: cdktf.stringToTerraform(struct!.sku),
+  }
+}
+
+export class ContainerGroupContainerGpuLimitOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ContainerGroupContainerGpuLimit | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._count !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.count = this._count;
+    }
+    if (this._sku !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sku = this._sku;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerGroupContainerGpuLimit | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._count = undefined;
+      this._sku = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._count = value.count;
+      this._sku = value.sku;
+    }
+  }
+
+  // count - computed: false, optional: true, required: false
+  private _count?: number; 
+  public get count() {
+    return this.getNumberAttribute('count');
+  }
+  public set count(value: number) {
+    this._count = value;
+  }
+  public resetCount() {
+    this._count = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get countInput() {
+    return this._count;
+  }
+
+  // sku - computed: false, optional: true, required: false
+  private _sku?: string; 
+  public get sku() {
+    return this.getStringAttribute('sku');
+  }
+  public set sku(value: string) {
+    this._sku = value;
+  }
+  public resetSku() {
+    this._sku = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get skuInput() {
+    return this._sku;
+  }
+}
 export interface ContainerGroupContainerLivenessProbeHttpGet {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#path ContainerGroup#path}
@@ -1636,6 +1728,10 @@ export interface ContainerGroupContainer {
   */
   readonly cpu: number;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#cpu_limit ContainerGroup#cpu_limit}
+  */
+  readonly cpuLimit?: number;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#environment_variables ContainerGroup#environment_variables}
   */
   readonly environmentVariables?: { [key: string]: string };
@@ -1647,6 +1743,10 @@ export interface ContainerGroupContainer {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#memory ContainerGroup#memory}
   */
   readonly memory: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#memory_limit ContainerGroup#memory_limit}
+  */
+  readonly memoryLimit?: number;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#name ContainerGroup#name}
   */
@@ -1661,6 +1761,12 @@ export interface ContainerGroupContainer {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#gpu ContainerGroup#gpu}
   */
   readonly gpu?: ContainerGroupContainerGpu;
+  /**
+  * gpu_limit block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#gpu_limit ContainerGroup#gpu_limit}
+  */
+  readonly gpuLimit?: ContainerGroupContainerGpuLimit;
   /**
   * liveness_probe block
   * 
@@ -1695,12 +1801,15 @@ export function containerGroupContainerToTerraform(struct?: ContainerGroupContai
   return {
     commands: cdktf.listMapper(cdktf.stringToTerraform)(struct!.commands),
     cpu: cdktf.numberToTerraform(struct!.cpu),
+    cpu_limit: cdktf.numberToTerraform(struct!.cpuLimit),
     environment_variables: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.environmentVariables),
     image: cdktf.stringToTerraform(struct!.image),
     memory: cdktf.numberToTerraform(struct!.memory),
+    memory_limit: cdktf.numberToTerraform(struct!.memoryLimit),
     name: cdktf.stringToTerraform(struct!.name),
     secure_environment_variables: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.secureEnvironmentVariables),
     gpu: containerGroupContainerGpuToTerraform(struct!.gpu),
+    gpu_limit: containerGroupContainerGpuLimitToTerraform(struct!.gpuLimit),
     liveness_probe: containerGroupContainerLivenessProbeToTerraform(struct!.livenessProbe),
     ports: cdktf.listMapper(containerGroupContainerPortsToTerraform)(struct!.ports),
     readiness_probe: containerGroupContainerReadinessProbeToTerraform(struct!.readinessProbe),
@@ -1736,6 +1845,10 @@ export class ContainerGroupContainerOutputReference extends cdktf.ComplexObject 
       hasAnyValues = true;
       internalValueResult.cpu = this._cpu;
     }
+    if (this._cpuLimit !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.cpuLimit = this._cpuLimit;
+    }
     if (this._environmentVariables !== undefined) {
       hasAnyValues = true;
       internalValueResult.environmentVariables = this._environmentVariables;
@@ -1748,6 +1861,10 @@ export class ContainerGroupContainerOutputReference extends cdktf.ComplexObject 
       hasAnyValues = true;
       internalValueResult.memory = this._memory;
     }
+    if (this._memoryLimit !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.memoryLimit = this._memoryLimit;
+    }
     if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
@@ -1759,6 +1876,10 @@ export class ContainerGroupContainerOutputReference extends cdktf.ComplexObject 
     if (this._gpu?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.gpu = this._gpu?.internalValue;
+    }
+    if (this._gpuLimit?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.gpuLimit = this._gpuLimit?.internalValue;
     }
     if (this._livenessProbe?.internalValue !== undefined) {
       hasAnyValues = true;
@@ -1785,12 +1906,15 @@ export class ContainerGroupContainerOutputReference extends cdktf.ComplexObject 
       this.resolvableValue = undefined;
       this._commands = undefined;
       this._cpu = undefined;
+      this._cpuLimit = undefined;
       this._environmentVariables = undefined;
       this._image = undefined;
       this._memory = undefined;
+      this._memoryLimit = undefined;
       this._name = undefined;
       this._secureEnvironmentVariables = undefined;
       this._gpu.internalValue = undefined;
+      this._gpuLimit.internalValue = undefined;
       this._livenessProbe.internalValue = undefined;
       this._ports.internalValue = undefined;
       this._readinessProbe.internalValue = undefined;
@@ -1805,12 +1929,15 @@ export class ContainerGroupContainerOutputReference extends cdktf.ComplexObject 
       this.resolvableValue = undefined;
       this._commands = value.commands;
       this._cpu = value.cpu;
+      this._cpuLimit = value.cpuLimit;
       this._environmentVariables = value.environmentVariables;
       this._image = value.image;
       this._memory = value.memory;
+      this._memoryLimit = value.memoryLimit;
       this._name = value.name;
       this._secureEnvironmentVariables = value.secureEnvironmentVariables;
       this._gpu.internalValue = value.gpu;
+      this._gpuLimit.internalValue = value.gpuLimit;
       this._livenessProbe.internalValue = value.livenessProbe;
       this._ports.internalValue = value.ports;
       this._readinessProbe.internalValue = value.readinessProbe;
@@ -1845,6 +1972,22 @@ export class ContainerGroupContainerOutputReference extends cdktf.ComplexObject 
   // Temporarily expose input value. Use with caution.
   public get cpuInput() {
     return this._cpu;
+  }
+
+  // cpu_limit - computed: false, optional: true, required: false
+  private _cpuLimit?: number; 
+  public get cpuLimit() {
+    return this.getNumberAttribute('cpu_limit');
+  }
+  public set cpuLimit(value: number) {
+    this._cpuLimit = value;
+  }
+  public resetCpuLimit() {
+    this._cpuLimit = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cpuLimitInput() {
+    return this._cpuLimit;
   }
 
   // environment_variables - computed: false, optional: true, required: false
@@ -1887,6 +2030,22 @@ export class ContainerGroupContainerOutputReference extends cdktf.ComplexObject 
   // Temporarily expose input value. Use with caution.
   public get memoryInput() {
     return this._memory;
+  }
+
+  // memory_limit - computed: false, optional: true, required: false
+  private _memoryLimit?: number; 
+  public get memoryLimit() {
+    return this.getNumberAttribute('memory_limit');
+  }
+  public set memoryLimit(value: number) {
+    this._memoryLimit = value;
+  }
+  public resetMemoryLimit() {
+    this._memoryLimit = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get memoryLimitInput() {
+    return this._memoryLimit;
   }
 
   // name - computed: false, optional: false, required: true
@@ -1932,6 +2091,22 @@ export class ContainerGroupContainerOutputReference extends cdktf.ComplexObject 
   // Temporarily expose input value. Use with caution.
   public get gpuInput() {
     return this._gpu.internalValue;
+  }
+
+  // gpu_limit - computed: false, optional: true, required: false
+  private _gpuLimit = new ContainerGroupContainerGpuLimitOutputReference(this, "gpu_limit");
+  public get gpuLimit() {
+    return this._gpuLimit;
+  }
+  public putGpuLimit(value: ContainerGroupContainerGpuLimit) {
+    this._gpuLimit.internalValue = value;
+  }
+  public resetGpuLimit() {
+    this._gpuLimit.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get gpuLimitInput() {
+    return this._gpuLimit.internalValue;
   }
 
   // liveness_probe - computed: false, optional: true, required: false
@@ -3415,7 +3590,7 @@ export class ContainerGroup extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_container_group',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.11.0',
+        providerVersion: '3.12.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

@@ -16,6 +16,10 @@ export interface PrivateLinkServiceConfig extends cdktf.TerraformMetaArguments {
   */
   readonly enableProxyProtocol?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_link_service#fqdns PrivateLinkService#fqdns}
+  */
+  readonly fqdns?: string[];
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_link_service#id PrivateLinkService#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
@@ -438,7 +442,7 @@ export class PrivateLinkService extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_private_link_service',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.11.0',
+        providerVersion: '3.12.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -448,6 +452,7 @@ export class PrivateLinkService extends cdktf.TerraformResource {
     });
     this._autoApprovalSubscriptionIds = config.autoApprovalSubscriptionIds;
     this._enableProxyProtocol = config.enableProxyProtocol;
+    this._fqdns = config.fqdns;
     this._id = config.id;
     this._loadBalancerFrontendIpConfigurationIds = config.loadBalancerFrontendIpConfigurationIds;
     this._location = config.location;
@@ -498,6 +503,22 @@ export class PrivateLinkService extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get enableProxyProtocolInput() {
     return this._enableProxyProtocol;
+  }
+
+  // fqdns - computed: false, optional: true, required: false
+  private _fqdns?: string[]; 
+  public get fqdns() {
+    return this.getListAttribute('fqdns');
+  }
+  public set fqdns(value: string[]) {
+    this._fqdns = value;
+  }
+  public resetFqdns() {
+    this._fqdns = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fqdnsInput() {
+    return this._fqdns;
   }
 
   // id - computed: true, optional: true, required: false
@@ -637,6 +658,7 @@ export class PrivateLinkService extends cdktf.TerraformResource {
     return {
       auto_approval_subscription_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._autoApprovalSubscriptionIds),
       enable_proxy_protocol: cdktf.booleanToTerraform(this._enableProxyProtocol),
+      fqdns: cdktf.listMapper(cdktf.stringToTerraform)(this._fqdns),
       id: cdktf.stringToTerraform(this._id),
       load_balancer_frontend_ip_configuration_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._loadBalancerFrontendIpConfigurationIds),
       location: cdktf.stringToTerraform(this._location),

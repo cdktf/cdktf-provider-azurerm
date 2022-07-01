@@ -131,7 +131,7 @@ export class DataAzurermKeyVaultKey extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_key_vault_key',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.11.0',
+        providerVersion: '3.12.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -229,6 +229,16 @@ export class DataAzurermKeyVaultKey extends cdktf.TerraformDataSource {
   // public_key_pem - computed: true, optional: false, required: false
   public get publicKeyPem() {
     return this.getStringAttribute('public_key_pem');
+  }
+
+  // resource_id - computed: true, optional: false, required: false
+  public get resourceId() {
+    return this.getStringAttribute('resource_id');
+  }
+
+  // resource_versionless_id - computed: true, optional: false, required: false
+  public get resourceVersionlessId() {
+    return this.getStringAttribute('resource_versionless_id');
   }
 
   // tags - computed: true, optional: false, required: false

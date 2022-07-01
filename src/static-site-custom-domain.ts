@@ -25,7 +25,7 @@ export interface StaticSiteCustomDomainConfig extends cdktf.TerraformMetaArgumen
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/static_site_custom_domain#validation_type StaticSiteCustomDomain#validation_type}
   */
-  readonly validationType: string;
+  readonly validationType?: string;
   /**
   * timeouts block
   * 
@@ -216,7 +216,7 @@ export class StaticSiteCustomDomain extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_static_site_custom_domain',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.11.0',
+        providerVersion: '3.12.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -282,13 +282,16 @@ export class StaticSiteCustomDomain extends cdktf.TerraformResource {
     return this.getStringAttribute('validation_token');
   }
 
-  // validation_type - computed: false, optional: false, required: true
+  // validation_type - computed: false, optional: true, required: false
   private _validationType?: string; 
   public get validationType() {
     return this.getStringAttribute('validation_type');
   }
   public set validationType(value: string) {
     this._validationType = value;
+  }
+  public resetValidationType() {
+    this._validationType = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get validationTypeInput() {
