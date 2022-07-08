@@ -8,6 +8,10 @@ import * as cdktf from 'cdktf';
 
 export interface KubernetesClusterNodePoolConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool#capacity_reservation_group_id KubernetesClusterNodePool#capacity_reservation_group_id}
+  */
+  readonly capacityReservationGroupId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool#enable_auto_scaling KubernetesClusterNodePool#enable_auto_scaling}
   */
   readonly enableAutoScaling?: boolean | cdktf.IResolvable;
@@ -1689,7 +1693,7 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_kubernetes_cluster_node_pool',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.12.0',
+        providerVersion: '3.13.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -1697,6 +1701,7 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._capacityReservationGroupId = config.capacityReservationGroupId;
     this._enableAutoScaling = config.enableAutoScaling;
     this._enableHostEncryption = config.enableHostEncryption;
     this._enableNodePublicIp = config.enableNodePublicIp;
@@ -1739,6 +1744,22 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // capacity_reservation_group_id - computed: false, optional: true, required: false
+  private _capacityReservationGroupId?: string; 
+  public get capacityReservationGroupId() {
+    return this.getStringAttribute('capacity_reservation_group_id');
+  }
+  public set capacityReservationGroupId(value: string) {
+    this._capacityReservationGroupId = value;
+  }
+  public resetCapacityReservationGroupId() {
+    this._capacityReservationGroupId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get capacityReservationGroupIdInput() {
+    return this._capacityReservationGroupId;
+  }
 
   // enable_auto_scaling - computed: false, optional: true, required: false
   private _enableAutoScaling?: boolean | cdktf.IResolvable; 
@@ -2329,6 +2350,7 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      capacity_reservation_group_id: cdktf.stringToTerraform(this._capacityReservationGroupId),
       enable_auto_scaling: cdktf.booleanToTerraform(this._enableAutoScaling),
       enable_host_encryption: cdktf.booleanToTerraform(this._enableHostEncryption),
       enable_node_public_ip: cdktf.booleanToTerraform(this._enableNodePublicIp),

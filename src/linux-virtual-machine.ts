@@ -24,6 +24,10 @@ export interface LinuxVirtualMachineConfig extends cdktf.TerraformMetaArguments 
   */
   readonly availabilitySetId?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine#capacity_reservation_group_id LinuxVirtualMachine#capacity_reservation_group_id}
+  */
+  readonly capacityReservationGroupId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine#computer_name LinuxVirtualMachine#computer_name}
   */
   readonly computerName?: string;
@@ -1646,7 +1650,7 @@ export class LinuxVirtualMachine extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_linux_virtual_machine',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.12.0',
+        providerVersion: '3.13.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -1658,6 +1662,7 @@ export class LinuxVirtualMachine extends cdktf.TerraformResource {
     this._adminUsername = config.adminUsername;
     this._allowExtensionOperations = config.allowExtensionOperations;
     this._availabilitySetId = config.availabilitySetId;
+    this._capacityReservationGroupId = config.capacityReservationGroupId;
     this._computerName = config.computerName;
     this._customData = config.customData;
     this._dedicatedHostGroupId = config.dedicatedHostGroupId;
@@ -1762,6 +1767,22 @@ export class LinuxVirtualMachine extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get availabilitySetIdInput() {
     return this._availabilitySetId;
+  }
+
+  // capacity_reservation_group_id - computed: false, optional: true, required: false
+  private _capacityReservationGroupId?: string; 
+  public get capacityReservationGroupId() {
+    return this.getStringAttribute('capacity_reservation_group_id');
+  }
+  public set capacityReservationGroupId(value: string) {
+    this._capacityReservationGroupId = value;
+  }
+  public resetCapacityReservationGroupId() {
+    this._capacityReservationGroupId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get capacityReservationGroupIdInput() {
+    return this._capacityReservationGroupId;
   }
 
   // computer_name - computed: true, optional: true, required: false
@@ -2405,6 +2426,7 @@ export class LinuxVirtualMachine extends cdktf.TerraformResource {
       admin_username: cdktf.stringToTerraform(this._adminUsername),
       allow_extension_operations: cdktf.booleanToTerraform(this._allowExtensionOperations),
       availability_set_id: cdktf.stringToTerraform(this._availabilitySetId),
+      capacity_reservation_group_id: cdktf.stringToTerraform(this._capacityReservationGroupId),
       computer_name: cdktf.stringToTerraform(this._computerName),
       custom_data: cdktf.stringToTerraform(this._customData),
       dedicated_host_group_id: cdktf.stringToTerraform(this._dedicatedHostGroupId),

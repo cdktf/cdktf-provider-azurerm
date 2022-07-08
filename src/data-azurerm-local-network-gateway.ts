@@ -205,7 +205,7 @@ export class DataAzurermLocalNetworkGateway extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_local_network_gateway',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.12.0',
+        providerVersion: '3.13.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

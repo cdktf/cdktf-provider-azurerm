@@ -228,7 +228,7 @@ export class KustoDatabase extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_kusto_database',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.12.0',
+        providerVersion: '3.13.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

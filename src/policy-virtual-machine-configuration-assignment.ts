@@ -515,7 +515,7 @@ export class PolicyVirtualMachineConfigurationAssignment extends cdktf.Terraform
       terraformResourceType: 'azurerm_policy_virtual_machine_configuration_assignment',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.12.0',
+        providerVersion: '3.13.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

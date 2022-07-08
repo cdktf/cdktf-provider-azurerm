@@ -236,7 +236,7 @@ export class IotTimeSeriesInsightsStandardEnvironment extends cdktf.TerraformRes
       terraformResourceType: 'azurerm_iot_time_series_insights_standard_environment',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.12.0',
+        providerVersion: '3.13.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

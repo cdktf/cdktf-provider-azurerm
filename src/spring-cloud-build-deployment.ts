@@ -8,6 +8,10 @@ import * as cdktf from 'cdktf';
 
 export interface SpringCloudBuildDeploymentConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_build_deployment#addon_json SpringCloudBuildDeployment#addon_json}
+  */
+  readonly addonJson?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_build_deployment#build_result_id SpringCloudBuildDeployment#build_result_id}
   */
   readonly buildResultId: string;
@@ -322,7 +326,7 @@ export class SpringCloudBuildDeployment extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_spring_cloud_build_deployment',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.12.0',
+        providerVersion: '3.13.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -330,6 +334,7 @@ export class SpringCloudBuildDeployment extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._addonJson = config.addonJson;
     this._buildResultId = config.buildResultId;
     this._environmentVariables = config.environmentVariables;
     this._id = config.id;
@@ -343,6 +348,22 @@ export class SpringCloudBuildDeployment extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // addon_json - computed: true, optional: true, required: false
+  private _addonJson?: string; 
+  public get addonJson() {
+    return this.getStringAttribute('addon_json');
+  }
+  public set addonJson(value: string) {
+    this._addonJson = value;
+  }
+  public resetAddonJson() {
+    this._addonJson = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get addonJsonInput() {
+    return this._addonJson;
+  }
 
   // build_result_id - computed: false, optional: false, required: true
   private _buildResultId?: string; 
@@ -469,6 +490,7 @@ export class SpringCloudBuildDeployment extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      addon_json: cdktf.stringToTerraform(this._addonJson),
       build_result_id: cdktf.stringToTerraform(this._buildResultId),
       environment_variables: cdktf.hashMapper(cdktf.stringToTerraform)(this._environmentVariables),
       id: cdktf.stringToTerraform(this._id),

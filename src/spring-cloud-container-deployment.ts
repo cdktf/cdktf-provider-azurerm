@@ -8,6 +8,10 @@ import * as cdktf from 'cdktf';
 
 export interface SpringCloudContainerDeploymentConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_container_deployment#addon_json SpringCloudContainerDeployment#addon_json}
+  */
+  readonly addonJson?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_container_deployment#arguments SpringCloudContainerDeployment#arguments}
   */
   readonly arguments?: string[];
@@ -338,7 +342,7 @@ export class SpringCloudContainerDeployment extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_spring_cloud_container_deployment',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.12.0',
+        providerVersion: '3.13.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -346,6 +350,7 @@ export class SpringCloudContainerDeployment extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._addonJson = config.addonJson;
     this._arguments = config.arguments;
     this._commands = config.commands;
     this._environmentVariables = config.environmentVariables;
@@ -363,6 +368,22 @@ export class SpringCloudContainerDeployment extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // addon_json - computed: true, optional: true, required: false
+  private _addonJson?: string; 
+  public get addonJson() {
+    return this.getStringAttribute('addon_json');
+  }
+  public set addonJson(value: string) {
+    this._addonJson = value;
+  }
+  public resetAddonJson() {
+    this._addonJson = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get addonJsonInput() {
+    return this._addonJson;
+  }
 
   // arguments - computed: false, optional: true, required: false
   private _arguments?: string[]; 
@@ -550,6 +571,7 @@ export class SpringCloudContainerDeployment extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      addon_json: cdktf.stringToTerraform(this._addonJson),
       arguments: cdktf.listMapper(cdktf.stringToTerraform)(this._arguments),
       commands: cdktf.listMapper(cdktf.stringToTerraform)(this._commands),
       environment_variables: cdktf.hashMapper(cdktf.stringToTerraform)(this._environmentVariables),

@@ -216,7 +216,7 @@ export class CognitiveAccountCustomerManagedKey extends cdktf.TerraformResource 
       terraformResourceType: 'azurerm_cognitive_account_customer_managed_key',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.12.0',
+        providerVersion: '3.13.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

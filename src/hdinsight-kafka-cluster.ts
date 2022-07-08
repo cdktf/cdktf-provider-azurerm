@@ -71,6 +71,12 @@ export interface HdinsightKafkaClusterConfig extends cdktf.TerraformMetaArgument
   */
   readonly monitor?: HdinsightKafkaClusterMonitor;
   /**
+  * network block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster#network HdinsightKafkaCluster#network}
+  */
+  readonly network?: HdinsightKafkaClusterNetwork;
+  /**
   * rest_proxy block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster#rest_proxy HdinsightKafkaCluster#rest_proxy}
@@ -866,6 +872,98 @@ export class HdinsightKafkaClusterMonitorOutputReference extends cdktf.ComplexOb
   // Temporarily expose input value. Use with caution.
   public get primaryKeyInput() {
     return this._primaryKey;
+  }
+}
+export interface HdinsightKafkaClusterNetwork {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster#connection_direction HdinsightKafkaCluster#connection_direction}
+  */
+  readonly connectionDirection?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster#private_link_enabled HdinsightKafkaCluster#private_link_enabled}
+  */
+  readonly privateLinkEnabled?: boolean | cdktf.IResolvable;
+}
+
+export function hdinsightKafkaClusterNetworkToTerraform(struct?: HdinsightKafkaClusterNetworkOutputReference | HdinsightKafkaClusterNetwork): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    connection_direction: cdktf.stringToTerraform(struct!.connectionDirection),
+    private_link_enabled: cdktf.booleanToTerraform(struct!.privateLinkEnabled),
+  }
+}
+
+export class HdinsightKafkaClusterNetworkOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): HdinsightKafkaClusterNetwork | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._connectionDirection !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.connectionDirection = this._connectionDirection;
+    }
+    if (this._privateLinkEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.privateLinkEnabled = this._privateLinkEnabled;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: HdinsightKafkaClusterNetwork | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._connectionDirection = undefined;
+      this._privateLinkEnabled = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._connectionDirection = value.connectionDirection;
+      this._privateLinkEnabled = value.privateLinkEnabled;
+    }
+  }
+
+  // connection_direction - computed: false, optional: true, required: false
+  private _connectionDirection?: string; 
+  public get connectionDirection() {
+    return this.getStringAttribute('connection_direction');
+  }
+  public set connectionDirection(value: string) {
+    this._connectionDirection = value;
+  }
+  public resetConnectionDirection() {
+    this._connectionDirection = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get connectionDirectionInput() {
+    return this._connectionDirection;
+  }
+
+  // private_link_enabled - computed: false, optional: true, required: false
+  private _privateLinkEnabled?: boolean | cdktf.IResolvable; 
+  public get privateLinkEnabled() {
+    return this.getBooleanAttribute('private_link_enabled');
+  }
+  public set privateLinkEnabled(value: boolean | cdktf.IResolvable) {
+    this._privateLinkEnabled = value;
+  }
+  public resetPrivateLinkEnabled() {
+    this._privateLinkEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateLinkEnabledInput() {
+    return this._privateLinkEnabled;
   }
 }
 export interface HdinsightKafkaClusterRestProxy {
@@ -2618,7 +2716,7 @@ export class HdinsightKafkaCluster extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_hdinsight_kafka_cluster',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.12.0',
+        providerVersion: '3.13.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -2639,6 +2737,7 @@ export class HdinsightKafkaCluster extends cdktf.TerraformResource {
     this._gateway.internalValue = config.gateway;
     this._metastores.internalValue = config.metastores;
     this._monitor.internalValue = config.monitor;
+    this._network.internalValue = config.network;
     this._restProxy.internalValue = config.restProxy;
     this._roles.internalValue = config.roles;
     this._securityProfile.internalValue = config.securityProfile;
@@ -2853,6 +2952,22 @@ export class HdinsightKafkaCluster extends cdktf.TerraformResource {
     return this._monitor.internalValue;
   }
 
+  // network - computed: false, optional: true, required: false
+  private _network = new HdinsightKafkaClusterNetworkOutputReference(this, "network");
+  public get network() {
+    return this._network;
+  }
+  public putNetwork(value: HdinsightKafkaClusterNetwork) {
+    this._network.internalValue = value;
+  }
+  public resetNetwork() {
+    this._network.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkInput() {
+    return this._network.internalValue;
+  }
+
   // rest_proxy - computed: false, optional: true, required: false
   private _restProxy = new HdinsightKafkaClusterRestProxyOutputReference(this, "rest_proxy");
   public get restProxy() {
@@ -2965,6 +3080,7 @@ export class HdinsightKafkaCluster extends cdktf.TerraformResource {
       gateway: hdinsightKafkaClusterGatewayToTerraform(this._gateway.internalValue),
       metastores: hdinsightKafkaClusterMetastoresToTerraform(this._metastores.internalValue),
       monitor: hdinsightKafkaClusterMonitorToTerraform(this._monitor.internalValue),
+      network: hdinsightKafkaClusterNetworkToTerraform(this._network.internalValue),
       rest_proxy: hdinsightKafkaClusterRestProxyToTerraform(this._restProxy.internalValue),
       roles: hdinsightKafkaClusterRolesToTerraform(this._roles.internalValue),
       security_profile: hdinsightKafkaClusterSecurityProfileToTerraform(this._securityProfile.internalValue),

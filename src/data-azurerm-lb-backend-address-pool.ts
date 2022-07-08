@@ -29,6 +29,80 @@ export interface DataAzurermLbBackendAddressPoolConfig extends cdktf.TerraformMe
   */
   readonly timeouts?: DataAzurermLbBackendAddressPoolTimeouts;
 }
+export interface DataAzurermLbBackendAddressPoolBackendAddressInboundNatRulePortMapping {
+}
+
+export function dataAzurermLbBackendAddressPoolBackendAddressInboundNatRulePortMappingToTerraform(struct?: DataAzurermLbBackendAddressPoolBackendAddressInboundNatRulePortMapping): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermLbBackendAddressPoolBackendAddressInboundNatRulePortMappingOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermLbBackendAddressPoolBackendAddressInboundNatRulePortMapping | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermLbBackendAddressPoolBackendAddressInboundNatRulePortMapping | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // backend_port - computed: true, optional: false, required: false
+  public get backendPort() {
+    return this.getNumberAttribute('backend_port');
+  }
+
+  // frontend_port - computed: true, optional: false, required: false
+  public get frontendPort() {
+    return this.getNumberAttribute('frontend_port');
+  }
+
+  // inbound_nat_rule_name - computed: true, optional: false, required: false
+  public get inboundNatRuleName() {
+    return this.getStringAttribute('inbound_nat_rule_name');
+  }
+}
+
+export class DataAzurermLbBackendAddressPoolBackendAddressInboundNatRulePortMappingList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermLbBackendAddressPoolBackendAddressInboundNatRulePortMappingOutputReference {
+    return new DataAzurermLbBackendAddressPoolBackendAddressInboundNatRulePortMappingOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataAzurermLbBackendAddressPoolBackendAddress {
 }
 
@@ -67,6 +141,12 @@ export class DataAzurermLbBackendAddressPoolBackendAddressOutputReference extend
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
     }
+  }
+
+  // inbound_nat_rule_port_mapping - computed: true, optional: false, required: false
+  private _inboundNatRulePortMapping = new DataAzurermLbBackendAddressPoolBackendAddressInboundNatRulePortMappingList(this, "inbound_nat_rule_port_mapping", false);
+  public get inboundNatRulePortMapping() {
+    return this._inboundNatRulePortMapping;
   }
 
   // ip_address - computed: true, optional: false, required: false
@@ -269,7 +349,7 @@ export class DataAzurermLbBackendAddressPool extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_lb_backend_address_pool',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.12.0',
+        providerVersion: '3.13.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -313,6 +393,11 @@ export class DataAzurermLbBackendAddressPool extends cdktf.TerraformDataSource {
   // Temporarily expose input value. Use with caution.
   public get idInput() {
     return this._id;
+  }
+
+  // inbound_nat_rules - computed: true, optional: false, required: false
+  public get inboundNatRules() {
+    return this.getListAttribute('inbound_nat_rules');
   }
 
   // load_balancing_rules - computed: true, optional: false, required: false

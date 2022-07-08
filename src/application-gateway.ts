@@ -3452,7 +3452,7 @@ export interface ApplicationGatewayRequestRoutingRule {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway#priority ApplicationGateway#priority}
   */
-  readonly priority: number;
+  readonly priority?: number;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway#redirect_configuration_name ApplicationGateway#redirect_configuration_name}
   */
@@ -3659,13 +3659,16 @@ export class ApplicationGatewayRequestRoutingRuleOutputReference extends cdktf.C
     return this._name;
   }
 
-  // priority - computed: false, optional: false, required: true
+  // priority - computed: false, optional: true, required: false
   private _priority?: number; 
   public get priority() {
     return this.getNumberAttribute('priority');
   }
   public set priority(value: number) {
     this._priority = value;
+  }
+  public resetPriority() {
+    this._priority = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get priorityInput() {
@@ -7018,7 +7021,7 @@ export class ApplicationGateway extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_application_gateway',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.12.0',
+        providerVersion: '3.13.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

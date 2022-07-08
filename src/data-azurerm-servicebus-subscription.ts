@@ -143,7 +143,7 @@ export class DataAzurermServicebusSubscription extends cdktf.TerraformDataSource
       terraformResourceType: 'azurerm_servicebus_subscription',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.12.0',
+        providerVersion: '3.13.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

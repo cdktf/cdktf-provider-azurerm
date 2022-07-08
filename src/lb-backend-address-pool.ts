@@ -384,7 +384,7 @@ export class LbBackendAddressPool extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_lb_backend_address_pool',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.12.0',
+        providerVersion: '3.13.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -422,6 +422,11 @@ export class LbBackendAddressPool extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get idInput() {
     return this._id;
+  }
+
+  // inbound_nat_rules - computed: true, optional: false, required: false
+  public get inboundNatRules() {
+    return this.getListAttribute('inbound_nat_rules');
   }
 
   // load_balancing_rules - computed: true, optional: false, required: false
