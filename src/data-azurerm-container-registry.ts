@@ -131,7 +131,7 @@ export class DataAzurermContainerRegistry extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_container_registry',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.12.0',
+        providerVersion: '3.13.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -162,6 +162,11 @@ export class DataAzurermContainerRegistry extends cdktf.TerraformDataSource {
   // admin_username - computed: true, optional: false, required: false
   public get adminUsername() {
     return this.getStringAttribute('admin_username');
+  }
+
+  // data_endpoint_enabled - computed: true, optional: false, required: false
+  public get dataEndpointEnabled() {
+    return this.getBooleanAttribute('data_endpoint_enabled');
   }
 
   // id - computed: true, optional: true, required: false

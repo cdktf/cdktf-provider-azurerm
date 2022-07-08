@@ -232,7 +232,7 @@ export class RelayHybridConnectionAuthorizationRule extends cdktf.TerraformResou
       terraformResourceType: 'azurerm_relay_hybrid_connection_authorization_rule',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.12.0',
+        providerVersion: '3.13.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

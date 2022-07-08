@@ -2518,6 +2518,10 @@ export class KubernetesClusterDefaultNodePoolUpgradeSettingsOutputReference exte
 }
 export interface KubernetesClusterDefaultNodePool {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#capacity_reservation_group_id KubernetesCluster#capacity_reservation_group_id}
+  */
+  readonly capacityReservationGroupId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#enable_auto_scaling KubernetesCluster#enable_auto_scaling}
   */
   readonly enableAutoScaling?: boolean | cdktf.IResolvable;
@@ -2647,6 +2651,7 @@ export function kubernetesClusterDefaultNodePoolToTerraform(struct?: KubernetesC
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    capacity_reservation_group_id: cdktf.stringToTerraform(struct!.capacityReservationGroupId),
     enable_auto_scaling: cdktf.booleanToTerraform(struct!.enableAutoScaling),
     enable_host_encryption: cdktf.booleanToTerraform(struct!.enableHostEncryption),
     enable_node_public_ip: cdktf.booleanToTerraform(struct!.enableNodePublicIp),
@@ -2693,6 +2698,10 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
   public get internalValue(): KubernetesClusterDefaultNodePool | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._capacityReservationGroupId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.capacityReservationGroupId = this._capacityReservationGroupId;
+    }
     if (this._enableAutoScaling !== undefined) {
       hasAnyValues = true;
       internalValueResult.enableAutoScaling = this._enableAutoScaling;
@@ -2815,6 +2824,7 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
   public set internalValue(value: KubernetesClusterDefaultNodePool | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this._capacityReservationGroupId = undefined;
       this._enableAutoScaling = undefined;
       this._enableHostEncryption = undefined;
       this._enableNodePublicIp = undefined;
@@ -2847,6 +2857,7 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this._capacityReservationGroupId = value.capacityReservationGroupId;
       this._enableAutoScaling = value.enableAutoScaling;
       this._enableHostEncryption = value.enableHostEncryption;
       this._enableNodePublicIp = value.enableNodePublicIp;
@@ -2877,6 +2888,22 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
       this._linuxOsConfig.internalValue = value.linuxOsConfig;
       this._upgradeSettings.internalValue = value.upgradeSettings;
     }
+  }
+
+  // capacity_reservation_group_id - computed: false, optional: true, required: false
+  private _capacityReservationGroupId?: string; 
+  public get capacityReservationGroupId() {
+    return this.getStringAttribute('capacity_reservation_group_id');
+  }
+  public set capacityReservationGroupId(value: string) {
+    this._capacityReservationGroupId = value;
+  }
+  public resetCapacityReservationGroupId() {
+    this._capacityReservationGroupId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get capacityReservationGroupIdInput() {
+    return this._capacityReservationGroupId;
   }
 
   // enable_auto_scaling - computed: false, optional: true, required: false
@@ -5813,7 +5840,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_kubernetes_cluster',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.12.0',
+        providerVersion: '3.13.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

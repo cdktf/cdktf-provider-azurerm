@@ -2010,7 +2010,7 @@ export class DataAzurermWindowsFunctionApp extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_windows_function_app',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.12.0',
+        providerVersion: '3.13.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

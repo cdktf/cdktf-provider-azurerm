@@ -8,6 +8,10 @@ import * as cdktf from 'cdktf';
 
 export interface LbNatRuleConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_nat_rule#backend_address_pool_id LbNatRule#backend_address_pool_id}
+  */
+  readonly backendAddressPoolId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_nat_rule#backend_port LbNatRule#backend_port}
   */
   readonly backendPort: number;
@@ -26,7 +30,15 @@ export interface LbNatRuleConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_nat_rule#frontend_port LbNatRule#frontend_port}
   */
-  readonly frontendPort: number;
+  readonly frontendPort?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_nat_rule#frontend_port_end LbNatRule#frontend_port_end}
+  */
+  readonly frontendPortEnd?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_nat_rule#frontend_port_start LbNatRule#frontend_port_start}
+  */
+  readonly frontendPortStart?: number;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_nat_rule#id LbNatRule#id}
   *
@@ -244,7 +256,7 @@ export class LbNatRule extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_lb_nat_rule',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.12.0',
+        providerVersion: '3.13.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -252,11 +264,14 @@ export class LbNatRule extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._backendAddressPoolId = config.backendAddressPoolId;
     this._backendPort = config.backendPort;
     this._enableFloatingIp = config.enableFloatingIp;
     this._enableTcpReset = config.enableTcpReset;
     this._frontendIpConfigurationName = config.frontendIpConfigurationName;
     this._frontendPort = config.frontendPort;
+    this._frontendPortEnd = config.frontendPortEnd;
+    this._frontendPortStart = config.frontendPortStart;
     this._id = config.id;
     this._idleTimeoutInMinutes = config.idleTimeoutInMinutes;
     this._loadbalancerId = config.loadbalancerId;
@@ -269,6 +284,22 @@ export class LbNatRule extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // backend_address_pool_id - computed: false, optional: true, required: false
+  private _backendAddressPoolId?: string; 
+  public get backendAddressPoolId() {
+    return this.getStringAttribute('backend_address_pool_id');
+  }
+  public set backendAddressPoolId(value: string) {
+    this._backendAddressPoolId = value;
+  }
+  public resetBackendAddressPoolId() {
+    this._backendAddressPoolId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get backendAddressPoolIdInput() {
+    return this._backendAddressPoolId;
+  }
 
   // backend_ip_configuration_id - computed: true, optional: false, required: false
   public get backendIpConfigurationId() {
@@ -338,7 +369,7 @@ export class LbNatRule extends cdktf.TerraformResource {
     return this._frontendIpConfigurationName;
   }
 
-  // frontend_port - computed: false, optional: false, required: true
+  // frontend_port - computed: false, optional: true, required: false
   private _frontendPort?: number; 
   public get frontendPort() {
     return this.getNumberAttribute('frontend_port');
@@ -346,9 +377,44 @@ export class LbNatRule extends cdktf.TerraformResource {
   public set frontendPort(value: number) {
     this._frontendPort = value;
   }
+  public resetFrontendPort() {
+    this._frontendPort = undefined;
+  }
   // Temporarily expose input value. Use with caution.
   public get frontendPortInput() {
     return this._frontendPort;
+  }
+
+  // frontend_port_end - computed: false, optional: true, required: false
+  private _frontendPortEnd?: number; 
+  public get frontendPortEnd() {
+    return this.getNumberAttribute('frontend_port_end');
+  }
+  public set frontendPortEnd(value: number) {
+    this._frontendPortEnd = value;
+  }
+  public resetFrontendPortEnd() {
+    this._frontendPortEnd = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get frontendPortEndInput() {
+    return this._frontendPortEnd;
+  }
+
+  // frontend_port_start - computed: false, optional: true, required: false
+  private _frontendPortStart?: number; 
+  public get frontendPortStart() {
+    return this.getNumberAttribute('frontend_port_start');
+  }
+  public set frontendPortStart(value: number) {
+    this._frontendPortStart = value;
+  }
+  public resetFrontendPortStart() {
+    this._frontendPortStart = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get frontendPortStartInput() {
+    return this._frontendPortStart;
   }
 
   // id - computed: true, optional: true, required: false
@@ -457,11 +523,14 @@ export class LbNatRule extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      backend_address_pool_id: cdktf.stringToTerraform(this._backendAddressPoolId),
       backend_port: cdktf.numberToTerraform(this._backendPort),
       enable_floating_ip: cdktf.booleanToTerraform(this._enableFloatingIp),
       enable_tcp_reset: cdktf.booleanToTerraform(this._enableTcpReset),
       frontend_ip_configuration_name: cdktf.stringToTerraform(this._frontendIpConfigurationName),
       frontend_port: cdktf.numberToTerraform(this._frontendPort),
+      frontend_port_end: cdktf.numberToTerraform(this._frontendPortEnd),
+      frontend_port_start: cdktf.numberToTerraform(this._frontendPortStart),
       id: cdktf.stringToTerraform(this._id),
       idle_timeout_in_minutes: cdktf.numberToTerraform(this._idleTimeoutInMinutes),
       loadbalancer_id: cdktf.stringToTerraform(this._loadbalancerId),

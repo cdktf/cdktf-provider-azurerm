@@ -197,7 +197,7 @@ export class DataFactoryManagedPrivateEndpoint extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_data_factory_managed_private_endpoint',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.12.0',
+        providerVersion: '3.13.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -231,7 +231,7 @@ export class DataFactoryManagedPrivateEndpoint extends cdktf.TerraformResource {
     return this._dataFactoryId;
   }
 
-  // fqdns - computed: false, optional: true, required: false
+  // fqdns - computed: true, optional: true, required: false
   private _fqdns?: string[]; 
   public get fqdns() {
     return this.getListAttribute('fqdns');

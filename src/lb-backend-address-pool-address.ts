@@ -37,6 +37,80 @@ export interface LbBackendAddressPoolAddressConfig extends cdktf.TerraformMetaAr
   */
   readonly timeouts?: LbBackendAddressPoolAddressTimeouts;
 }
+export interface LbBackendAddressPoolAddressInboundNatRulePortMapping {
+}
+
+export function lbBackendAddressPoolAddressInboundNatRulePortMappingToTerraform(struct?: LbBackendAddressPoolAddressInboundNatRulePortMapping): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class LbBackendAddressPoolAddressInboundNatRulePortMappingOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): LbBackendAddressPoolAddressInboundNatRulePortMapping | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LbBackendAddressPoolAddressInboundNatRulePortMapping | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // backend_port - computed: true, optional: false, required: false
+  public get backendPort() {
+    return this.getNumberAttribute('backend_port');
+  }
+
+  // frontend_port - computed: true, optional: false, required: false
+  public get frontendPort() {
+    return this.getNumberAttribute('frontend_port');
+  }
+
+  // inbound_nat_rule_name - computed: true, optional: false, required: false
+  public get inboundNatRuleName() {
+    return this.getStringAttribute('inbound_nat_rule_name');
+  }
+}
+
+export class LbBackendAddressPoolAddressInboundNatRulePortMappingList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): LbBackendAddressPoolAddressInboundNatRulePortMappingOutputReference {
+    return new LbBackendAddressPoolAddressInboundNatRulePortMappingOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface LbBackendAddressPoolAddressTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_backend_address_pool_address#create LbBackendAddressPoolAddress#create}
@@ -220,7 +294,7 @@ export class LbBackendAddressPoolAddress extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_lb_backend_address_pool_address',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.12.0',
+        providerVersion: '3.13.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -267,6 +341,12 @@ export class LbBackendAddressPoolAddress extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get idInput() {
     return this._id;
+  }
+
+  // inbound_nat_rule_port_mapping - computed: true, optional: false, required: false
+  private _inboundNatRulePortMapping = new LbBackendAddressPoolAddressInboundNatRulePortMappingList(this, "inbound_nat_rule_port_mapping", false);
+  public get inboundNatRulePortMapping() {
+    return this._inboundNatRulePortMapping;
   }
 
   // ip_address - computed: false, optional: false, required: true

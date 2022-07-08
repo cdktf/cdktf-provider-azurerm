@@ -12,6 +12,14 @@ export interface CosmosdbCassandraDatacenterConfig extends cdktf.TerraformMetaAr
   */
   readonly availabilityZonesEnabled?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_datacenter#backup_storage_customer_key_uri CosmosdbCassandraDatacenter#backup_storage_customer_key_uri}
+  */
+  readonly backupStorageCustomerKeyUri?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_datacenter#base64_encoded_yaml_fragment CosmosdbCassandraDatacenter#base64_encoded_yaml_fragment}
+  */
+  readonly base64EncodedYamlFragment?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_datacenter#cassandra_cluster_id CosmosdbCassandraDatacenter#cassandra_cluster_id}
   */
   readonly cassandraClusterId: string;
@@ -24,6 +32,10 @@ export interface CosmosdbCassandraDatacenterConfig extends cdktf.TerraformMetaAr
   */
   readonly diskCount?: number;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_datacenter#disk_sku CosmosdbCassandraDatacenter#disk_sku}
+  */
+  readonly diskSku?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_datacenter#id CosmosdbCassandraDatacenter#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
@@ -34,6 +46,10 @@ export interface CosmosdbCassandraDatacenterConfig extends cdktf.TerraformMetaAr
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_datacenter#location CosmosdbCassandraDatacenter#location}
   */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_datacenter#managed_disk_customer_key_uri CosmosdbCassandraDatacenter#managed_disk_customer_key_uri}
+  */
+  readonly managedDiskCustomerKeyUri?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_datacenter#name CosmosdbCassandraDatacenter#name}
   */
@@ -236,7 +252,7 @@ export class CosmosdbCassandraDatacenter extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_cosmosdb_cassandra_datacenter',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.12.0',
+        providerVersion: '3.13.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -245,11 +261,15 @@ export class CosmosdbCassandraDatacenter extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._availabilityZonesEnabled = config.availabilityZonesEnabled;
+    this._backupStorageCustomerKeyUri = config.backupStorageCustomerKeyUri;
+    this._base64EncodedYamlFragment = config.base64EncodedYamlFragment;
     this._cassandraClusterId = config.cassandraClusterId;
     this._delegatedManagementSubnetId = config.delegatedManagementSubnetId;
     this._diskCount = config.diskCount;
+    this._diskSku = config.diskSku;
     this._id = config.id;
     this._location = config.location;
+    this._managedDiskCustomerKeyUri = config.managedDiskCustomerKeyUri;
     this._name = config.name;
     this._nodeCount = config.nodeCount;
     this._skuName = config.skuName;
@@ -274,6 +294,38 @@ export class CosmosdbCassandraDatacenter extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get availabilityZonesEnabledInput() {
     return this._availabilityZonesEnabled;
+  }
+
+  // backup_storage_customer_key_uri - computed: false, optional: true, required: false
+  private _backupStorageCustomerKeyUri?: string; 
+  public get backupStorageCustomerKeyUri() {
+    return this.getStringAttribute('backup_storage_customer_key_uri');
+  }
+  public set backupStorageCustomerKeyUri(value: string) {
+    this._backupStorageCustomerKeyUri = value;
+  }
+  public resetBackupStorageCustomerKeyUri() {
+    this._backupStorageCustomerKeyUri = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get backupStorageCustomerKeyUriInput() {
+    return this._backupStorageCustomerKeyUri;
+  }
+
+  // base64_encoded_yaml_fragment - computed: false, optional: true, required: false
+  private _base64EncodedYamlFragment?: string; 
+  public get base64EncodedYamlFragment() {
+    return this.getStringAttribute('base64_encoded_yaml_fragment');
+  }
+  public set base64EncodedYamlFragment(value: string) {
+    this._base64EncodedYamlFragment = value;
+  }
+  public resetBase64EncodedYamlFragment() {
+    this._base64EncodedYamlFragment = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get base64EncodedYamlFragmentInput() {
+    return this._base64EncodedYamlFragment;
   }
 
   // cassandra_cluster_id - computed: false, optional: false, required: true
@@ -318,6 +370,22 @@ export class CosmosdbCassandraDatacenter extends cdktf.TerraformResource {
     return this._diskCount;
   }
 
+  // disk_sku - computed: false, optional: true, required: false
+  private _diskSku?: string; 
+  public get diskSku() {
+    return this.getStringAttribute('disk_sku');
+  }
+  public set diskSku(value: string) {
+    this._diskSku = value;
+  }
+  public resetDiskSku() {
+    this._diskSku = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get diskSkuInput() {
+    return this._diskSku;
+  }
+
   // id - computed: true, optional: true, required: false
   private _id?: string; 
   public get id() {
@@ -345,6 +413,22 @@ export class CosmosdbCassandraDatacenter extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
     return this._location;
+  }
+
+  // managed_disk_customer_key_uri - computed: false, optional: true, required: false
+  private _managedDiskCustomerKeyUri?: string; 
+  public get managedDiskCustomerKeyUri() {
+    return this.getStringAttribute('managed_disk_customer_key_uri');
+  }
+  public set managedDiskCustomerKeyUri(value: string) {
+    this._managedDiskCustomerKeyUri = value;
+  }
+  public resetManagedDiskCustomerKeyUri() {
+    this._managedDiskCustomerKeyUri = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get managedDiskCustomerKeyUriInput() {
+    return this._managedDiskCustomerKeyUri;
   }
 
   // name - computed: false, optional: false, required: true
@@ -415,11 +499,15 @@ export class CosmosdbCassandraDatacenter extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       availability_zones_enabled: cdktf.booleanToTerraform(this._availabilityZonesEnabled),
+      backup_storage_customer_key_uri: cdktf.stringToTerraform(this._backupStorageCustomerKeyUri),
+      base64_encoded_yaml_fragment: cdktf.stringToTerraform(this._base64EncodedYamlFragment),
       cassandra_cluster_id: cdktf.stringToTerraform(this._cassandraClusterId),
       delegated_management_subnet_id: cdktf.stringToTerraform(this._delegatedManagementSubnetId),
       disk_count: cdktf.numberToTerraform(this._diskCount),
+      disk_sku: cdktf.stringToTerraform(this._diskSku),
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
+      managed_disk_customer_key_uri: cdktf.stringToTerraform(this._managedDiskCustomerKeyUri),
       name: cdktf.stringToTerraform(this._name),
       node_count: cdktf.numberToTerraform(this._nodeCount),
       sku_name: cdktf.stringToTerraform(this._skuName),
