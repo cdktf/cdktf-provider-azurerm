@@ -16,6 +16,10 @@ export interface LinuxVirtualMachineScaleSetConfig extends cdktf.TerraformMetaAr
   */
   readonly adminUsername: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#capacity_reservation_group_id LinuxVirtualMachineScaleSet#capacity_reservation_group_id}
+  */
+  readonly capacityReservationGroupId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#computer_name_prefix LinuxVirtualMachineScaleSet#computer_name_prefix}
   */
   readonly computerNamePrefix?: string;
@@ -2290,6 +2294,10 @@ export interface LinuxVirtualMachineScaleSetOsDiskDiffDiskSettings {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#option LinuxVirtualMachineScaleSet#option}
   */
   readonly option: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#placement LinuxVirtualMachineScaleSet#placement}
+  */
+  readonly placement?: string;
 }
 
 export function linuxVirtualMachineScaleSetOsDiskDiffDiskSettingsToTerraform(struct?: LinuxVirtualMachineScaleSetOsDiskDiffDiskSettingsOutputReference | LinuxVirtualMachineScaleSetOsDiskDiffDiskSettings): any {
@@ -2299,6 +2307,7 @@ export function linuxVirtualMachineScaleSetOsDiskDiffDiskSettingsToTerraform(str
   }
   return {
     option: cdktf.stringToTerraform(struct!.option),
+    placement: cdktf.stringToTerraform(struct!.placement),
   }
 }
 
@@ -2320,6 +2329,10 @@ export class LinuxVirtualMachineScaleSetOsDiskDiffDiskSettingsOutputReference ex
       hasAnyValues = true;
       internalValueResult.option = this._option;
     }
+    if (this._placement !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.placement = this._placement;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -2327,10 +2340,12 @@ export class LinuxVirtualMachineScaleSetOsDiskDiffDiskSettingsOutputReference ex
     if (value === undefined) {
       this.isEmptyObject = false;
       this._option = undefined;
+      this._placement = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._option = value.option;
+      this._placement = value.placement;
     }
   }
 
@@ -2345,6 +2360,22 @@ export class LinuxVirtualMachineScaleSetOsDiskDiffDiskSettingsOutputReference ex
   // Temporarily expose input value. Use with caution.
   public get optionInput() {
     return this._option;
+  }
+
+  // placement - computed: false, optional: true, required: false
+  private _placement?: string; 
+  public get placement() {
+    return this.getStringAttribute('placement');
+  }
+  public set placement(value: string) {
+    this._placement = value;
+  }
+  public resetPlacement() {
+    this._placement = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get placementInput() {
+    return this._placement;
   }
 }
 export interface LinuxVirtualMachineScaleSetOsDisk {
@@ -3550,7 +3581,7 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_linux_virtual_machine_scale_set',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.13.0',
+        providerVersion: '3.14.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -3560,6 +3591,7 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
     });
     this._adminPassword = config.adminPassword;
     this._adminUsername = config.adminUsername;
+    this._capacityReservationGroupId = config.capacityReservationGroupId;
     this._computerNamePrefix = config.computerNamePrefix;
     this._customData = config.customData;
     this._disablePasswordAuthentication = config.disablePasswordAuthentication;
@@ -3641,6 +3673,22 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get adminUsernameInput() {
     return this._adminUsername;
+  }
+
+  // capacity_reservation_group_id - computed: false, optional: true, required: false
+  private _capacityReservationGroupId?: string; 
+  public get capacityReservationGroupId() {
+    return this.getStringAttribute('capacity_reservation_group_id');
+  }
+  public set capacityReservationGroupId(value: string) {
+    this._capacityReservationGroupId = value;
+  }
+  public resetCapacityReservationGroupId() {
+    this._capacityReservationGroupId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get capacityReservationGroupIdInput() {
+    return this._capacityReservationGroupId;
   }
 
   // computer_name_prefix - computed: true, optional: true, required: false
@@ -4403,6 +4451,7 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
     return {
       admin_password: cdktf.stringToTerraform(this._adminPassword),
       admin_username: cdktf.stringToTerraform(this._adminUsername),
+      capacity_reservation_group_id: cdktf.stringToTerraform(this._capacityReservationGroupId),
       computer_name_prefix: cdktf.stringToTerraform(this._computerNamePrefix),
       custom_data: cdktf.stringToTerraform(this._customData),
       disable_password_authentication: cdktf.booleanToTerraform(this._disablePasswordAuthentication),

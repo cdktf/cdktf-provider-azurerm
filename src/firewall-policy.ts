@@ -168,7 +168,7 @@ export class FirewallPolicyDnsOutputReference extends cdktf.ComplexObject {
   // servers - computed: false, optional: true, required: false
   private _servers?: string[]; 
   public get servers() {
-    return cdktf.Fn.tolist(this.getListAttribute('servers'));
+    return this.getListAttribute('servers');
   }
   public set servers(value: string[]) {
     this._servers = value;
@@ -1421,7 +1421,7 @@ export class FirewallPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_firewall_policy',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.13.0',
+        providerVersion: '3.14.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

@@ -45,7 +45,7 @@ export interface TrafficManagerExternalEndpointConfig extends cdktf.TerraformMet
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_external_endpoint#weight TrafficManagerExternalEndpoint#weight}
   */
-  readonly weight: number;
+  readonly weight?: number;
   /**
   * custom_header block
   * 
@@ -514,7 +514,7 @@ export class TrafficManagerExternalEndpoint extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_traffic_manager_external_endpoint',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.13.0',
+        providerVersion: '3.14.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -659,13 +659,16 @@ export class TrafficManagerExternalEndpoint extends cdktf.TerraformResource {
     return this._target;
   }
 
-  // weight - computed: false, optional: false, required: true
+  // weight - computed: true, optional: true, required: false
   private _weight?: number; 
   public get weight() {
     return this.getNumberAttribute('weight');
   }
   public set weight(value: number) {
     this._weight = value;
+  }
+  public resetWeight() {
+    this._weight = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get weightInput() {

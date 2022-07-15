@@ -411,6 +411,10 @@ export class ContainerGroupContainerGpuLimitOutputReference extends cdktf.Comple
 }
 export interface ContainerGroupContainerLivenessProbeHttpGet {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#http_headers ContainerGroup#http_headers}
+  */
+  readonly httpHeaders?: { [key: string]: string };
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#path ContainerGroup#path}
   */
   readonly path?: string;
@@ -430,6 +434,7 @@ export function containerGroupContainerLivenessProbeHttpGetToTerraform(struct?: 
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    http_headers: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.httpHeaders),
     path: cdktf.stringToTerraform(struct!.path),
     port: cdktf.numberToTerraform(struct!.port),
     scheme: cdktf.stringToTerraform(struct!.scheme),
@@ -456,6 +461,10 @@ export class ContainerGroupContainerLivenessProbeHttpGetOutputReference extends 
     }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._httpHeaders !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.httpHeaders = this._httpHeaders;
+    }
     if (this._path !== undefined) {
       hasAnyValues = true;
       internalValueResult.path = this._path;
@@ -475,6 +484,7 @@ export class ContainerGroupContainerLivenessProbeHttpGetOutputReference extends 
     if (value === undefined) {
       this.isEmptyObject = false;
       this.resolvableValue = undefined;
+      this._httpHeaders = undefined;
       this._path = undefined;
       this._port = undefined;
       this._scheme = undefined;
@@ -486,10 +496,27 @@ export class ContainerGroupContainerLivenessProbeHttpGetOutputReference extends 
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this.resolvableValue = undefined;
+      this._httpHeaders = value.httpHeaders;
       this._path = value.path;
       this._port = value.port;
       this._scheme = value.scheme;
     }
+  }
+
+  // http_headers - computed: false, optional: true, required: false
+  private _httpHeaders?: { [key: string]: string }; 
+  public get httpHeaders() {
+    return this.getStringMapAttribute('http_headers');
+  }
+  public set httpHeaders(value: { [key: string]: string }) {
+    this._httpHeaders = value;
+  }
+  public resetHttpHeaders() {
+    this._httpHeaders = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get httpHeadersInput() {
+    return this._httpHeaders;
   }
 
   // path - computed: false, optional: true, required: false
@@ -915,6 +942,10 @@ export class ContainerGroupContainerPortsList extends cdktf.ComplexList {
 }
 export interface ContainerGroupContainerReadinessProbeHttpGet {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#http_headers ContainerGroup#http_headers}
+  */
+  readonly httpHeaders?: { [key: string]: string };
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group#path ContainerGroup#path}
   */
   readonly path?: string;
@@ -934,6 +965,7 @@ export function containerGroupContainerReadinessProbeHttpGetToTerraform(struct?:
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    http_headers: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.httpHeaders),
     path: cdktf.stringToTerraform(struct!.path),
     port: cdktf.numberToTerraform(struct!.port),
     scheme: cdktf.stringToTerraform(struct!.scheme),
@@ -960,6 +992,10 @@ export class ContainerGroupContainerReadinessProbeHttpGetOutputReference extends
     }
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._httpHeaders !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.httpHeaders = this._httpHeaders;
+    }
     if (this._path !== undefined) {
       hasAnyValues = true;
       internalValueResult.path = this._path;
@@ -979,6 +1015,7 @@ export class ContainerGroupContainerReadinessProbeHttpGetOutputReference extends
     if (value === undefined) {
       this.isEmptyObject = false;
       this.resolvableValue = undefined;
+      this._httpHeaders = undefined;
       this._path = undefined;
       this._port = undefined;
       this._scheme = undefined;
@@ -990,10 +1027,27 @@ export class ContainerGroupContainerReadinessProbeHttpGetOutputReference extends
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this.resolvableValue = undefined;
+      this._httpHeaders = value.httpHeaders;
       this._path = value.path;
       this._port = value.port;
       this._scheme = value.scheme;
     }
+  }
+
+  // http_headers - computed: false, optional: true, required: false
+  private _httpHeaders?: { [key: string]: string }; 
+  public get httpHeaders() {
+    return this.getStringMapAttribute('http_headers');
+  }
+  public set httpHeaders(value: { [key: string]: string }) {
+    this._httpHeaders = value;
+  }
+  public resetHttpHeaders() {
+    this._httpHeaders = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get httpHeadersInput() {
+    return this._httpHeaders;
   }
 
   // path - computed: false, optional: true, required: false
@@ -3590,7 +3644,7 @@ export class ContainerGroup extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_container_group',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.13.0',
+        providerVersion: '3.14.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

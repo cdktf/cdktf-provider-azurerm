@@ -8,6 +8,10 @@ import * as cdktf from 'cdktf';
 
 export interface StreamAnalyticsOutputBlobConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_blob#authentication_mode StreamAnalyticsOutputBlob#authentication_mode}
+  */
+  readonly authenticationMode?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_blob#batch_max_wait_time StreamAnalyticsOutputBlob#batch_max_wait_time}
   */
   readonly batchMaxWaitTime?: string;
@@ -41,7 +45,7 @@ export interface StreamAnalyticsOutputBlobConfig extends cdktf.TerraformMetaArgu
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_blob#storage_account_key StreamAnalyticsOutputBlob#storage_account_key}
   */
-  readonly storageAccountKey: string;
+  readonly storageAccountKey?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_blob#storage_account_name StreamAnalyticsOutputBlob#storage_account_name}
   */
@@ -397,7 +401,7 @@ export class StreamAnalyticsOutputBlob extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_stream_analytics_output_blob',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.13.0',
+        providerVersion: '3.14.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -405,6 +409,7 @@ export class StreamAnalyticsOutputBlob extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._authenticationMode = config.authenticationMode;
     this._batchMaxWaitTime = config.batchMaxWaitTime;
     this._batchMinRows = config.batchMinRows;
     this._dateFormat = config.dateFormat;
@@ -424,6 +429,22 @@ export class StreamAnalyticsOutputBlob extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // authentication_mode - computed: false, optional: true, required: false
+  private _authenticationMode?: string; 
+  public get authenticationMode() {
+    return this.getStringAttribute('authentication_mode');
+  }
+  public set authenticationMode(value: string) {
+    this._authenticationMode = value;
+  }
+  public resetAuthenticationMode() {
+    this._authenticationMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get authenticationModeInput() {
+    return this._authenticationMode;
+  }
 
   // batch_max_wait_time - computed: false, optional: true, required: false
   private _batchMaxWaitTime?: string; 
@@ -525,13 +546,16 @@ export class StreamAnalyticsOutputBlob extends cdktf.TerraformResource {
     return this._resourceGroupName;
   }
 
-  // storage_account_key - computed: false, optional: false, required: true
+  // storage_account_key - computed: false, optional: true, required: false
   private _storageAccountKey?: string; 
   public get storageAccountKey() {
     return this.getStringAttribute('storage_account_key');
   }
   public set storageAccountKey(value: string) {
     this._storageAccountKey = value;
+  }
+  public resetStorageAccountKey() {
+    this._storageAccountKey = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get storageAccountKeyInput() {
@@ -625,6 +649,7 @@ export class StreamAnalyticsOutputBlob extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      authentication_mode: cdktf.stringToTerraform(this._authenticationMode),
       batch_max_wait_time: cdktf.stringToTerraform(this._batchMaxWaitTime),
       batch_min_rows: cdktf.numberToTerraform(this._batchMinRows),
       date_format: cdktf.stringToTerraform(this._dateFormat),

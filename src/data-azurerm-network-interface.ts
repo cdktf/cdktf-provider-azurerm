@@ -250,7 +250,7 @@ export class DataAzurermNetworkInterface extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_network_interface',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.13.0',
+        providerVersion: '3.14.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

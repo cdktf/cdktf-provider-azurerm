@@ -28,6 +28,10 @@ export interface KustoEventhubDataConnectionConfig extends cdktf.TerraformMetaAr
   */
   readonly databaseName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventhub_data_connection#database_routing_type KustoEventhubDataConnection#database_routing_type}
+  */
+  readonly databaseRoutingType?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventhub_data_connection#event_system_properties KustoEventhubDataConnection#event_system_properties}
   */
   readonly eventSystemProperties?: string[];
@@ -256,7 +260,7 @@ export class KustoEventhubDataConnection extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_kusto_eventhub_data_connection',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.13.0',
+        providerVersion: '3.14.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -269,6 +273,7 @@ export class KustoEventhubDataConnection extends cdktf.TerraformResource {
     this._consumerGroup = config.consumerGroup;
     this._dataFormat = config.dataFormat;
     this._databaseName = config.databaseName;
+    this._databaseRoutingType = config.databaseRoutingType;
     this._eventSystemProperties = config.eventSystemProperties;
     this._eventhubId = config.eventhubId;
     this._id = config.id;
@@ -354,6 +359,22 @@ export class KustoEventhubDataConnection extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get databaseNameInput() {
     return this._databaseName;
+  }
+
+  // database_routing_type - computed: false, optional: true, required: false
+  private _databaseRoutingType?: string; 
+  public get databaseRoutingType() {
+    return this.getStringAttribute('database_routing_type');
+  }
+  public set databaseRoutingType(value: string) {
+    this._databaseRoutingType = value;
+  }
+  public resetDatabaseRoutingType() {
+    this._databaseRoutingType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get databaseRoutingTypeInput() {
+    return this._databaseRoutingType;
   }
 
   // event_system_properties - computed: true, optional: true, required: false
@@ -515,6 +536,7 @@ export class KustoEventhubDataConnection extends cdktf.TerraformResource {
       consumer_group: cdktf.stringToTerraform(this._consumerGroup),
       data_format: cdktf.stringToTerraform(this._dataFormat),
       database_name: cdktf.stringToTerraform(this._databaseName),
+      database_routing_type: cdktf.stringToTerraform(this._databaseRoutingType),
       event_system_properties: cdktf.listMapper(cdktf.stringToTerraform)(this._eventSystemProperties),
       eventhub_id: cdktf.stringToTerraform(this._eventhubId),
       id: cdktf.stringToTerraform(this._id),

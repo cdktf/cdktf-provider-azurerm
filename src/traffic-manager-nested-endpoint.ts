@@ -57,7 +57,7 @@ export interface TrafficManagerNestedEndpointConfig extends cdktf.TerraformMetaA
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_nested_endpoint#weight TrafficManagerNestedEndpoint#weight}
   */
-  readonly weight: number;
+  readonly weight?: number;
   /**
   * custom_header block
   * 
@@ -526,7 +526,7 @@ export class TrafficManagerNestedEndpoint extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_traffic_manager_nested_endpoint',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.13.0',
+        providerVersion: '3.14.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -719,13 +719,16 @@ export class TrafficManagerNestedEndpoint extends cdktf.TerraformResource {
     return this._targetResourceId;
   }
 
-  // weight - computed: false, optional: false, required: true
+  // weight - computed: true, optional: true, required: false
   private _weight?: number; 
   public get weight() {
     return this.getNumberAttribute('weight');
   }
   public set weight(value: number) {
     this._weight = value;
+  }
+  public resetWeight() {
+    this._weight = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get weightInput() {

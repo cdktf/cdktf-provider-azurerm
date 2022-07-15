@@ -32,6 +32,10 @@ export interface KubernetesClusterNodePoolConfig extends cdktf.TerraformMetaArgu
   */
   readonly fipsEnabled?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool#host_group_id KubernetesClusterNodePool#host_group_id}
+  */
+  readonly hostGroupId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool#id KubernetesClusterNodePool#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
@@ -1693,7 +1697,7 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_kubernetes_cluster_node_pool',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.13.0',
+        providerVersion: '3.14.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -1707,6 +1711,7 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
     this._enableNodePublicIp = config.enableNodePublicIp;
     this._evictionPolicy = config.evictionPolicy;
     this._fipsEnabled = config.fipsEnabled;
+    this._hostGroupId = config.hostGroupId;
     this._id = config.id;
     this._kubeletDiskType = config.kubeletDiskType;
     this._kubernetesClusterId = config.kubernetesClusterId;
@@ -1839,6 +1844,22 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get fipsEnabledInput() {
     return this._fipsEnabled;
+  }
+
+  // host_group_id - computed: false, optional: true, required: false
+  private _hostGroupId?: string; 
+  public get hostGroupId() {
+    return this.getStringAttribute('host_group_id');
+  }
+  public set hostGroupId(value: string) {
+    this._hostGroupId = value;
+  }
+  public resetHostGroupId() {
+    this._hostGroupId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hostGroupIdInput() {
+    return this._hostGroupId;
   }
 
   // id - computed: true, optional: true, required: false
@@ -2356,6 +2377,7 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
       enable_node_public_ip: cdktf.booleanToTerraform(this._enableNodePublicIp),
       eviction_policy: cdktf.stringToTerraform(this._evictionPolicy),
       fips_enabled: cdktf.booleanToTerraform(this._fipsEnabled),
+      host_group_id: cdktf.stringToTerraform(this._hostGroupId),
       id: cdktf.stringToTerraform(this._id),
       kubelet_disk_type: cdktf.stringToTerraform(this._kubeletDiskType),
       kubernetes_cluster_id: cdktf.stringToTerraform(this._kubernetesClusterId),

@@ -43,6 +43,10 @@ export interface KustoClusterConfig extends cdktf.TerraformMetaArguments {
   */
   readonly name: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster#public_ip_type KustoCluster#public_ip_type}
+  */
+  readonly publicIpType?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster#public_network_access_enabled KustoCluster#public_network_access_enabled}
   */
   readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
@@ -668,7 +672,7 @@ export class KustoCluster extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_kusto_cluster',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.13.0',
+        providerVersion: '3.14.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -684,6 +688,7 @@ export class KustoCluster extends cdktf.TerraformResource {
     this._languageExtensions = config.languageExtensions;
     this._location = config.location;
     this._name = config.name;
+    this._publicIpType = config.publicIpType;
     this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
     this._purgeEnabled = config.purgeEnabled;
     this._resourceGroupName = config.resourceGroupName;
@@ -827,6 +832,22 @@ export class KustoCluster extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name;
+  }
+
+  // public_ip_type - computed: false, optional: true, required: false
+  private _publicIpType?: string; 
+  public get publicIpType() {
+    return this.getStringAttribute('public_ip_type');
+  }
+  public set publicIpType(value: string) {
+    this._publicIpType = value;
+  }
+  public resetPublicIpType() {
+    this._publicIpType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicIpTypeInput() {
+    return this._publicIpType;
   }
 
   // public_network_access_enabled - computed: false, optional: true, required: false
@@ -1034,6 +1055,7 @@ export class KustoCluster extends cdktf.TerraformResource {
       language_extensions: cdktf.listMapper(cdktf.stringToTerraform)(this._languageExtensions),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
+      public_ip_type: cdktf.stringToTerraform(this._publicIpType),
       public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       purge_enabled: cdktf.booleanToTerraform(this._purgeEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),

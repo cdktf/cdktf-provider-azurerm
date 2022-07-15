@@ -16,6 +16,14 @@ export interface SharedImageConfig extends cdktf.TerraformMetaArguments {
   */
   readonly description?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image#disk_types_not_allowed SharedImage#disk_types_not_allowed}
+  */
+  readonly diskTypesNotAllowed?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image#end_of_life_date SharedImage#end_of_life_date}
+  */
+  readonly endOfLifeDate?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image#eula SharedImage#eula}
   */
   readonly eula?: string;
@@ -38,6 +46,22 @@ export interface SharedImageConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image#location SharedImage#location}
   */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image#max_recommended_memory_in_gb SharedImage#max_recommended_memory_in_gb}
+  */
+  readonly maxRecommendedMemoryInGb?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image#max_recommended_vcpu_count SharedImage#max_recommended_vcpu_count}
+  */
+  readonly maxRecommendedVcpuCount?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image#min_recommended_memory_in_gb SharedImage#min_recommended_memory_in_gb}
+  */
+  readonly minRecommendedMemoryInGb?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image#min_recommended_vcpu_count SharedImage#min_recommended_vcpu_count}
+  */
+  readonly minRecommendedVcpuCount?: number;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image#name SharedImage#name}
   */
@@ -498,7 +522,7 @@ export class SharedImage extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_shared_image',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.13.0',
+        providerVersion: '3.14.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -508,11 +532,17 @@ export class SharedImage extends cdktf.TerraformResource {
     });
     this._acceleratedNetworkSupportEnabled = config.acceleratedNetworkSupportEnabled;
     this._description = config.description;
+    this._diskTypesNotAllowed = config.diskTypesNotAllowed;
+    this._endOfLifeDate = config.endOfLifeDate;
     this._eula = config.eula;
     this._galleryName = config.galleryName;
     this._hyperVGeneration = config.hyperVGeneration;
     this._id = config.id;
     this._location = config.location;
+    this._maxRecommendedMemoryInGb = config.maxRecommendedMemoryInGb;
+    this._maxRecommendedVcpuCount = config.maxRecommendedVcpuCount;
+    this._minRecommendedMemoryInGb = config.minRecommendedMemoryInGb;
+    this._minRecommendedVcpuCount = config.minRecommendedVcpuCount;
     this._name = config.name;
     this._osType = config.osType;
     this._privacyStatementUri = config.privacyStatementUri;
@@ -560,6 +590,38 @@ export class SharedImage extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
     return this._description;
+  }
+
+  // disk_types_not_allowed - computed: false, optional: true, required: false
+  private _diskTypesNotAllowed?: string[]; 
+  public get diskTypesNotAllowed() {
+    return cdktf.Fn.tolist(this.getListAttribute('disk_types_not_allowed'));
+  }
+  public set diskTypesNotAllowed(value: string[]) {
+    this._diskTypesNotAllowed = value;
+  }
+  public resetDiskTypesNotAllowed() {
+    this._diskTypesNotAllowed = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get diskTypesNotAllowedInput() {
+    return this._diskTypesNotAllowed;
+  }
+
+  // end_of_life_date - computed: false, optional: true, required: false
+  private _endOfLifeDate?: string; 
+  public get endOfLifeDate() {
+    return this.getStringAttribute('end_of_life_date');
+  }
+  public set endOfLifeDate(value: string) {
+    this._endOfLifeDate = value;
+  }
+  public resetEndOfLifeDate() {
+    this._endOfLifeDate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get endOfLifeDateInput() {
+    return this._endOfLifeDate;
   }
 
   // eula - computed: false, optional: true, required: false
@@ -634,6 +696,70 @@ export class SharedImage extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
     return this._location;
+  }
+
+  // max_recommended_memory_in_gb - computed: false, optional: true, required: false
+  private _maxRecommendedMemoryInGb?: number; 
+  public get maxRecommendedMemoryInGb() {
+    return this.getNumberAttribute('max_recommended_memory_in_gb');
+  }
+  public set maxRecommendedMemoryInGb(value: number) {
+    this._maxRecommendedMemoryInGb = value;
+  }
+  public resetMaxRecommendedMemoryInGb() {
+    this._maxRecommendedMemoryInGb = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxRecommendedMemoryInGbInput() {
+    return this._maxRecommendedMemoryInGb;
+  }
+
+  // max_recommended_vcpu_count - computed: false, optional: true, required: false
+  private _maxRecommendedVcpuCount?: number; 
+  public get maxRecommendedVcpuCount() {
+    return this.getNumberAttribute('max_recommended_vcpu_count');
+  }
+  public set maxRecommendedVcpuCount(value: number) {
+    this._maxRecommendedVcpuCount = value;
+  }
+  public resetMaxRecommendedVcpuCount() {
+    this._maxRecommendedVcpuCount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxRecommendedVcpuCountInput() {
+    return this._maxRecommendedVcpuCount;
+  }
+
+  // min_recommended_memory_in_gb - computed: false, optional: true, required: false
+  private _minRecommendedMemoryInGb?: number; 
+  public get minRecommendedMemoryInGb() {
+    return this.getNumberAttribute('min_recommended_memory_in_gb');
+  }
+  public set minRecommendedMemoryInGb(value: number) {
+    this._minRecommendedMemoryInGb = value;
+  }
+  public resetMinRecommendedMemoryInGb() {
+    this._minRecommendedMemoryInGb = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minRecommendedMemoryInGbInput() {
+    return this._minRecommendedMemoryInGb;
+  }
+
+  // min_recommended_vcpu_count - computed: false, optional: true, required: false
+  private _minRecommendedVcpuCount?: number; 
+  public get minRecommendedVcpuCount() {
+    return this.getNumberAttribute('min_recommended_vcpu_count');
+  }
+  public set minRecommendedVcpuCount(value: number) {
+    this._minRecommendedVcpuCount = value;
+  }
+  public resetMinRecommendedVcpuCount() {
+    this._minRecommendedVcpuCount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minRecommendedVcpuCountInput() {
+    return this._minRecommendedVcpuCount;
   }
 
   // name - computed: false, optional: false, required: true
@@ -808,11 +934,17 @@ export class SharedImage extends cdktf.TerraformResource {
     return {
       accelerated_network_support_enabled: cdktf.booleanToTerraform(this._acceleratedNetworkSupportEnabled),
       description: cdktf.stringToTerraform(this._description),
+      disk_types_not_allowed: cdktf.listMapper(cdktf.stringToTerraform)(this._diskTypesNotAllowed),
+      end_of_life_date: cdktf.stringToTerraform(this._endOfLifeDate),
       eula: cdktf.stringToTerraform(this._eula),
       gallery_name: cdktf.stringToTerraform(this._galleryName),
       hyper_v_generation: cdktf.stringToTerraform(this._hyperVGeneration),
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
+      max_recommended_memory_in_gb: cdktf.numberToTerraform(this._maxRecommendedMemoryInGb),
+      max_recommended_vcpu_count: cdktf.numberToTerraform(this._maxRecommendedVcpuCount),
+      min_recommended_memory_in_gb: cdktf.numberToTerraform(this._minRecommendedMemoryInGb),
+      min_recommended_vcpu_count: cdktf.numberToTerraform(this._minRecommendedVcpuCount),
       name: cdktf.stringToTerraform(this._name),
       os_type: cdktf.stringToTerraform(this._osType),
       privacy_statement_uri: cdktf.stringToTerraform(this._privacyStatementUri),

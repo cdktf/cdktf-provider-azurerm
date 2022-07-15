@@ -131,7 +131,7 @@ export class DataAzurermAvailabilitySet extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_availability_set',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.13.0',
+        providerVersion: '3.14.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -190,12 +190,12 @@ export class DataAzurermAvailabilitySet extends cdktf.TerraformDataSource {
 
   // platform_fault_domain_count - computed: true, optional: false, required: false
   public get platformFaultDomainCount() {
-    return this.getStringAttribute('platform_fault_domain_count');
+    return this.getNumberAttribute('platform_fault_domain_count');
   }
 
   // platform_update_domain_count - computed: true, optional: false, required: false
   public get platformUpdateDomainCount() {
-    return this.getStringAttribute('platform_update_domain_count');
+    return this.getNumberAttribute('platform_update_domain_count');
   }
 
   // resource_group_name - computed: false, optional: false, required: true
