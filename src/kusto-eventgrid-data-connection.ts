@@ -24,6 +24,14 @@ export interface KustoEventgridDataConnectionConfig extends cdktf.TerraformMetaA
   */
   readonly databaseName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventgrid_data_connection#database_routing_type KustoEventgridDataConnection#database_routing_type}
+  */
+  readonly databaseRoutingType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventgrid_data_connection#eventgrid_resource_id KustoEventgridDataConnection#eventgrid_resource_id}
+  */
+  readonly eventgridResourceId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventgrid_data_connection#eventhub_consumer_group_name KustoEventgridDataConnection#eventhub_consumer_group_name}
   */
   readonly eventhubConsumerGroupName: string;
@@ -42,6 +50,10 @@ export interface KustoEventgridDataConnectionConfig extends cdktf.TerraformMetaA
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventgrid_data_connection#location KustoEventgridDataConnection#location}
   */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventgrid_data_connection#managed_identity_resource_id KustoEventgridDataConnection#managed_identity_resource_id}
+  */
+  readonly managedIdentityResourceId?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventgrid_data_connection#mapping_rule_name KustoEventgridDataConnection#mapping_rule_name}
   */
@@ -256,7 +268,7 @@ export class KustoEventgridDataConnection extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_kusto_eventgrid_data_connection',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.13.0',
+        providerVersion: '3.14.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -268,10 +280,13 @@ export class KustoEventgridDataConnection extends cdktf.TerraformResource {
     this._clusterName = config.clusterName;
     this._dataFormat = config.dataFormat;
     this._databaseName = config.databaseName;
+    this._databaseRoutingType = config.databaseRoutingType;
+    this._eventgridResourceId = config.eventgridResourceId;
     this._eventhubConsumerGroupName = config.eventhubConsumerGroupName;
     this._eventhubId = config.eventhubId;
     this._id = config.id;
     this._location = config.location;
+    this._managedIdentityResourceId = config.managedIdentityResourceId;
     this._mappingRuleName = config.mappingRuleName;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
@@ -343,6 +358,38 @@ export class KustoEventgridDataConnection extends cdktf.TerraformResource {
     return this._databaseName;
   }
 
+  // database_routing_type - computed: false, optional: true, required: false
+  private _databaseRoutingType?: string; 
+  public get databaseRoutingType() {
+    return this.getStringAttribute('database_routing_type');
+  }
+  public set databaseRoutingType(value: string) {
+    this._databaseRoutingType = value;
+  }
+  public resetDatabaseRoutingType() {
+    this._databaseRoutingType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get databaseRoutingTypeInput() {
+    return this._databaseRoutingType;
+  }
+
+  // eventgrid_resource_id - computed: false, optional: true, required: false
+  private _eventgridResourceId?: string; 
+  public get eventgridResourceId() {
+    return this.getStringAttribute('eventgrid_resource_id');
+  }
+  public set eventgridResourceId(value: string) {
+    this._eventgridResourceId = value;
+  }
+  public resetEventgridResourceId() {
+    this._eventgridResourceId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get eventgridResourceIdInput() {
+    return this._eventgridResourceId;
+  }
+
   // eventhub_consumer_group_name - computed: false, optional: false, required: true
   private _eventhubConsumerGroupName?: string; 
   public get eventhubConsumerGroupName() {
@@ -396,6 +443,22 @@ export class KustoEventgridDataConnection extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
     return this._location;
+  }
+
+  // managed_identity_resource_id - computed: false, optional: true, required: false
+  private _managedIdentityResourceId?: string; 
+  public get managedIdentityResourceId() {
+    return this.getStringAttribute('managed_identity_resource_id');
+  }
+  public set managedIdentityResourceId(value: string) {
+    this._managedIdentityResourceId = value;
+  }
+  public resetManagedIdentityResourceId() {
+    this._managedIdentityResourceId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get managedIdentityResourceIdInput() {
+    return this._managedIdentityResourceId;
   }
 
   // mapping_rule_name - computed: false, optional: true, required: false
@@ -511,10 +574,13 @@ export class KustoEventgridDataConnection extends cdktf.TerraformResource {
       cluster_name: cdktf.stringToTerraform(this._clusterName),
       data_format: cdktf.stringToTerraform(this._dataFormat),
       database_name: cdktf.stringToTerraform(this._databaseName),
+      database_routing_type: cdktf.stringToTerraform(this._databaseRoutingType),
+      eventgrid_resource_id: cdktf.stringToTerraform(this._eventgridResourceId),
       eventhub_consumer_group_name: cdktf.stringToTerraform(this._eventhubConsumerGroupName),
       eventhub_id: cdktf.stringToTerraform(this._eventhubId),
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
+      managed_identity_resource_id: cdktf.stringToTerraform(this._managedIdentityResourceId),
       mapping_rule_name: cdktf.stringToTerraform(this._mappingRuleName),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),

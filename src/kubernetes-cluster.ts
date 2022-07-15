@@ -2538,6 +2538,10 @@ export interface KubernetesClusterDefaultNodePool {
   */
   readonly fipsEnabled?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#host_group_id KubernetesCluster#host_group_id}
+  */
+  readonly hostGroupId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#kubelet_disk_type KubernetesCluster#kubelet_disk_type}
   */
   readonly kubeletDiskType?: string;
@@ -2656,6 +2660,7 @@ export function kubernetesClusterDefaultNodePoolToTerraform(struct?: KubernetesC
     enable_host_encryption: cdktf.booleanToTerraform(struct!.enableHostEncryption),
     enable_node_public_ip: cdktf.booleanToTerraform(struct!.enableNodePublicIp),
     fips_enabled: cdktf.booleanToTerraform(struct!.fipsEnabled),
+    host_group_id: cdktf.stringToTerraform(struct!.hostGroupId),
     kubelet_disk_type: cdktf.stringToTerraform(struct!.kubeletDiskType),
     max_count: cdktf.numberToTerraform(struct!.maxCount),
     max_pods: cdktf.numberToTerraform(struct!.maxPods),
@@ -2717,6 +2722,10 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
     if (this._fipsEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.fipsEnabled = this._fipsEnabled;
+    }
+    if (this._hostGroupId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.hostGroupId = this._hostGroupId;
     }
     if (this._kubeletDiskType !== undefined) {
       hasAnyValues = true;
@@ -2829,6 +2838,7 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
       this._enableHostEncryption = undefined;
       this._enableNodePublicIp = undefined;
       this._fipsEnabled = undefined;
+      this._hostGroupId = undefined;
       this._kubeletDiskType = undefined;
       this._maxCount = undefined;
       this._maxPods = undefined;
@@ -2862,6 +2872,7 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
       this._enableHostEncryption = value.enableHostEncryption;
       this._enableNodePublicIp = value.enableNodePublicIp;
       this._fipsEnabled = value.fipsEnabled;
+      this._hostGroupId = value.hostGroupId;
       this._kubeletDiskType = value.kubeletDiskType;
       this._maxCount = value.maxCount;
       this._maxPods = value.maxPods;
@@ -2968,6 +2979,22 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
   // Temporarily expose input value. Use with caution.
   public get fipsEnabledInput() {
     return this._fipsEnabled;
+  }
+
+  // host_group_id - computed: false, optional: true, required: false
+  private _hostGroupId?: string; 
+  public get hostGroupId() {
+    return this.getStringAttribute('host_group_id');
+  }
+  public set hostGroupId(value: string) {
+    this._hostGroupId = value;
+  }
+  public resetHostGroupId() {
+    this._hostGroupId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hostGroupIdInput() {
+    return this._hostGroupId;
   }
 
   // kubelet_disk_type - computed: true, optional: true, required: false
@@ -5840,7 +5867,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_kubernetes_cluster',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.13.0',
+        providerVersion: '3.14.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

@@ -53,6 +53,12 @@ export interface SignalrServiceConfig extends cdktf.TerraformMetaArguments {
   */
   readonly cors?: SignalrServiceCors[] | cdktf.IResolvable;
   /**
+  * live_trace block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service#live_trace SignalrService#live_trace}
+  */
+  readonly liveTrace?: SignalrServiceLiveTrace;
+  /**
   * sku block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service#sku SignalrService#sku}
@@ -163,6 +169,152 @@ export class SignalrServiceCorsList extends cdktf.ComplexList {
   */
   public get(index: number): SignalrServiceCorsOutputReference {
     return new SignalrServiceCorsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface SignalrServiceLiveTrace {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service#connectivity_logs_enabled SignalrService#connectivity_logs_enabled}
+  */
+  readonly connectivityLogsEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service#enabled SignalrService#enabled}
+  */
+  readonly enabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service#http_request_logs_enabled SignalrService#http_request_logs_enabled}
+  */
+  readonly httpRequestLogsEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service#messaging_logs_enabled SignalrService#messaging_logs_enabled}
+  */
+  readonly messagingLogsEnabled?: boolean | cdktf.IResolvable;
+}
+
+export function signalrServiceLiveTraceToTerraform(struct?: SignalrServiceLiveTraceOutputReference | SignalrServiceLiveTrace): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    connectivity_logs_enabled: cdktf.booleanToTerraform(struct!.connectivityLogsEnabled),
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    http_request_logs_enabled: cdktf.booleanToTerraform(struct!.httpRequestLogsEnabled),
+    messaging_logs_enabled: cdktf.booleanToTerraform(struct!.messagingLogsEnabled),
+  }
+}
+
+export class SignalrServiceLiveTraceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): SignalrServiceLiveTrace | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._connectivityLogsEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.connectivityLogsEnabled = this._connectivityLogsEnabled;
+    }
+    if (this._enabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._httpRequestLogsEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.httpRequestLogsEnabled = this._httpRequestLogsEnabled;
+    }
+    if (this._messagingLogsEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.messagingLogsEnabled = this._messagingLogsEnabled;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SignalrServiceLiveTrace | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._connectivityLogsEnabled = undefined;
+      this._enabled = undefined;
+      this._httpRequestLogsEnabled = undefined;
+      this._messagingLogsEnabled = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._connectivityLogsEnabled = value.connectivityLogsEnabled;
+      this._enabled = value.enabled;
+      this._httpRequestLogsEnabled = value.httpRequestLogsEnabled;
+      this._messagingLogsEnabled = value.messagingLogsEnabled;
+    }
+  }
+
+  // connectivity_logs_enabled - computed: false, optional: true, required: false
+  private _connectivityLogsEnabled?: boolean | cdktf.IResolvable; 
+  public get connectivityLogsEnabled() {
+    return this.getBooleanAttribute('connectivity_logs_enabled');
+  }
+  public set connectivityLogsEnabled(value: boolean | cdktf.IResolvable) {
+    this._connectivityLogsEnabled = value;
+  }
+  public resetConnectivityLogsEnabled() {
+    this._connectivityLogsEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get connectivityLogsEnabledInput() {
+    return this._connectivityLogsEnabled;
+  }
+
+  // enabled - computed: false, optional: true, required: false
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+
+  // http_request_logs_enabled - computed: false, optional: true, required: false
+  private _httpRequestLogsEnabled?: boolean | cdktf.IResolvable; 
+  public get httpRequestLogsEnabled() {
+    return this.getBooleanAttribute('http_request_logs_enabled');
+  }
+  public set httpRequestLogsEnabled(value: boolean | cdktf.IResolvable) {
+    this._httpRequestLogsEnabled = value;
+  }
+  public resetHttpRequestLogsEnabled() {
+    this._httpRequestLogsEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get httpRequestLogsEnabledInput() {
+    return this._httpRequestLogsEnabled;
+  }
+
+  // messaging_logs_enabled - computed: false, optional: true, required: false
+  private _messagingLogsEnabled?: boolean | cdktf.IResolvable; 
+  public get messagingLogsEnabled() {
+    return this.getBooleanAttribute('messaging_logs_enabled');
+  }
+  public set messagingLogsEnabled(value: boolean | cdktf.IResolvable) {
+    this._messagingLogsEnabled = value;
+  }
+  public resetMessagingLogsEnabled() {
+    this._messagingLogsEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get messagingLogsEnabledInput() {
+    return this._messagingLogsEnabled;
   }
 }
 export interface SignalrServiceSku {
@@ -600,7 +752,7 @@ export class SignalrService extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_signalr_service',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.13.0',
+        providerVersion: '3.14.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -618,6 +770,7 @@ export class SignalrService extends cdktf.TerraformResource {
     this._serviceMode = config.serviceMode;
     this._tags = config.tags;
     this._cors.internalValue = config.cors;
+    this._liveTrace.internalValue = config.liveTrace;
     this._sku.internalValue = config.sku;
     this._timeouts.internalValue = config.timeouts;
     this._upstreamEndpoint.internalValue = config.upstreamEndpoint;
@@ -818,6 +971,22 @@ export class SignalrService extends cdktf.TerraformResource {
     return this._cors.internalValue;
   }
 
+  // live_trace - computed: false, optional: true, required: false
+  private _liveTrace = new SignalrServiceLiveTraceOutputReference(this, "live_trace");
+  public get liveTrace() {
+    return this._liveTrace;
+  }
+  public putLiveTrace(value: SignalrServiceLiveTrace) {
+    this._liveTrace.internalValue = value;
+  }
+  public resetLiveTrace() {
+    this._liveTrace.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get liveTraceInput() {
+    return this._liveTrace.internalValue;
+  }
+
   // sku - computed: false, optional: false, required: true
   private _sku = new SignalrServiceSkuOutputReference(this, "sku");
   public get sku() {
@@ -879,6 +1048,7 @@ export class SignalrService extends cdktf.TerraformResource {
       service_mode: cdktf.stringToTerraform(this._serviceMode),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       cors: cdktf.listMapper(signalrServiceCorsToTerraform)(this._cors.internalValue),
+      live_trace: signalrServiceLiveTraceToTerraform(this._liveTrace.internalValue),
       sku: signalrServiceSkuToTerraform(this._sku.internalValue),
       timeouts: signalrServiceTimeoutsToTerraform(this._timeouts.internalValue),
       upstream_endpoint: cdktf.listMapper(signalrServiceUpstreamEndpointToTerraform)(this._upstreamEndpoint.internalValue),

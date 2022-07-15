@@ -228,7 +228,7 @@ export class SqlActiveDirectoryAdministrator extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_sql_active_directory_administrator',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.13.0',
+        providerVersion: '3.14.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

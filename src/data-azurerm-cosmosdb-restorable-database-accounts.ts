@@ -295,7 +295,7 @@ export class DataAzurermCosmosdbRestorableDatabaseAccounts extends cdktf.Terrafo
       terraformResourceType: 'azurerm_cosmosdb_restorable_database_accounts',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.13.0',
+        providerVersion: '3.14.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

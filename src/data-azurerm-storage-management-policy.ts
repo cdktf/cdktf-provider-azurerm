@@ -65,14 +65,29 @@ export class DataAzurermStorageManagementPolicyRuleActionsBaseBlobOutputReferenc
     }
   }
 
+  // delete_after_days_since_last_access_time_greater_than - computed: true, optional: false, required: false
+  public get deleteAfterDaysSinceLastAccessTimeGreaterThan() {
+    return this.getNumberAttribute('delete_after_days_since_last_access_time_greater_than');
+  }
+
   // delete_after_days_since_modification_greater_than - computed: true, optional: false, required: false
   public get deleteAfterDaysSinceModificationGreaterThan() {
     return this.getNumberAttribute('delete_after_days_since_modification_greater_than');
   }
 
+  // tier_to_archive_after_days_since_last_access_time_greater_than - computed: true, optional: false, required: false
+  public get tierToArchiveAfterDaysSinceLastAccessTimeGreaterThan() {
+    return this.getNumberAttribute('tier_to_archive_after_days_since_last_access_time_greater_than');
+  }
+
   // tier_to_archive_after_days_since_modification_greater_than - computed: true, optional: false, required: false
   public get tierToArchiveAfterDaysSinceModificationGreaterThan() {
     return this.getNumberAttribute('tier_to_archive_after_days_since_modification_greater_than');
+  }
+
+  // tier_to_cool_after_days_since_last_access_time_greater_than - computed: true, optional: false, required: false
+  public get tierToCoolAfterDaysSinceLastAccessTimeGreaterThan() {
+    return this.getNumberAttribute('tier_to_cool_after_days_since_last_access_time_greater_than');
   }
 
   // tier_to_cool_after_days_since_modification_greater_than - computed: true, optional: false, required: false
@@ -656,7 +671,7 @@ export class DataAzurermStorageManagementPolicy extends cdktf.TerraformDataSourc
       terraformResourceType: 'azurerm_storage_management_policy',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.13.0',
+        providerVersion: '3.14.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

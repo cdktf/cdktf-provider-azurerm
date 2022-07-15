@@ -16,6 +16,10 @@ export interface WindowsVirtualMachineScaleSetConfig extends cdktf.TerraformMeta
   */
   readonly adminUsername: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set#capacity_reservation_group_id WindowsVirtualMachineScaleSet#capacity_reservation_group_id}
+  */
+  readonly capacityReservationGroupId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set#computer_name_prefix WindowsVirtualMachineScaleSet#computer_name_prefix}
   */
   readonly computerNamePrefix?: string;
@@ -2304,6 +2308,10 @@ export interface WindowsVirtualMachineScaleSetOsDiskDiffDiskSettings {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set#option WindowsVirtualMachineScaleSet#option}
   */
   readonly option: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set#placement WindowsVirtualMachineScaleSet#placement}
+  */
+  readonly placement?: string;
 }
 
 export function windowsVirtualMachineScaleSetOsDiskDiffDiskSettingsToTerraform(struct?: WindowsVirtualMachineScaleSetOsDiskDiffDiskSettingsOutputReference | WindowsVirtualMachineScaleSetOsDiskDiffDiskSettings): any {
@@ -2313,6 +2321,7 @@ export function windowsVirtualMachineScaleSetOsDiskDiffDiskSettingsToTerraform(s
   }
   return {
     option: cdktf.stringToTerraform(struct!.option),
+    placement: cdktf.stringToTerraform(struct!.placement),
   }
 }
 
@@ -2334,6 +2343,10 @@ export class WindowsVirtualMachineScaleSetOsDiskDiffDiskSettingsOutputReference 
       hasAnyValues = true;
       internalValueResult.option = this._option;
     }
+    if (this._placement !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.placement = this._placement;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -2341,10 +2354,12 @@ export class WindowsVirtualMachineScaleSetOsDiskDiffDiskSettingsOutputReference 
     if (value === undefined) {
       this.isEmptyObject = false;
       this._option = undefined;
+      this._placement = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._option = value.option;
+      this._placement = value.placement;
     }
   }
 
@@ -2359,6 +2374,22 @@ export class WindowsVirtualMachineScaleSetOsDiskDiffDiskSettingsOutputReference 
   // Temporarily expose input value. Use with caution.
   public get optionInput() {
     return this._option;
+  }
+
+  // placement - computed: false, optional: true, required: false
+  private _placement?: string; 
+  public get placement() {
+    return this.getStringAttribute('placement');
+  }
+  public set placement(value: string) {
+    this._placement = value;
+  }
+  public resetPlacement() {
+    this._placement = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get placementInput() {
+    return this._placement;
   }
 }
 export interface WindowsVirtualMachineScaleSetOsDisk {
@@ -3709,7 +3740,7 @@ export class WindowsVirtualMachineScaleSet extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_windows_virtual_machine_scale_set',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.13.0',
+        providerVersion: '3.14.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -3719,6 +3750,7 @@ export class WindowsVirtualMachineScaleSet extends cdktf.TerraformResource {
     });
     this._adminPassword = config.adminPassword;
     this._adminUsername = config.adminUsername;
+    this._capacityReservationGroupId = config.capacityReservationGroupId;
     this._computerNamePrefix = config.computerNamePrefix;
     this._customData = config.customData;
     this._doNotRunExtensionsOnOverprovisionedMachines = config.doNotRunExtensionsOnOverprovisionedMachines;
@@ -3800,6 +3832,22 @@ export class WindowsVirtualMachineScaleSet extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get adminUsernameInput() {
     return this._adminUsername;
+  }
+
+  // capacity_reservation_group_id - computed: false, optional: true, required: false
+  private _capacityReservationGroupId?: string; 
+  public get capacityReservationGroupId() {
+    return this.getStringAttribute('capacity_reservation_group_id');
+  }
+  public set capacityReservationGroupId(value: string) {
+    this._capacityReservationGroupId = value;
+  }
+  public resetCapacityReservationGroupId() {
+    this._capacityReservationGroupId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get capacityReservationGroupIdInput() {
+    return this._capacityReservationGroupId;
   }
 
   // computer_name_prefix - computed: true, optional: true, required: false
@@ -4610,6 +4658,7 @@ export class WindowsVirtualMachineScaleSet extends cdktf.TerraformResource {
     return {
       admin_password: cdktf.stringToTerraform(this._adminPassword),
       admin_username: cdktf.stringToTerraform(this._adminUsername),
+      capacity_reservation_group_id: cdktf.stringToTerraform(this._capacityReservationGroupId),
       computer_name_prefix: cdktf.stringToTerraform(this._computerNamePrefix),
       custom_data: cdktf.stringToTerraform(this._customData),
       do_not_run_extensions_on_overprovisioned_machines: cdktf.booleanToTerraform(this._doNotRunExtensionsOnOverprovisionedMachines),

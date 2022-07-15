@@ -1864,6 +1864,10 @@ export interface OrchestratedVirtualMachineScaleSetOsDiskDiffDiskSettings {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#option OrchestratedVirtualMachineScaleSet#option}
   */
   readonly option: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#placement OrchestratedVirtualMachineScaleSet#placement}
+  */
+  readonly placement?: string;
 }
 
 export function orchestratedVirtualMachineScaleSetOsDiskDiffDiskSettingsToTerraform(struct?: OrchestratedVirtualMachineScaleSetOsDiskDiffDiskSettingsOutputReference | OrchestratedVirtualMachineScaleSetOsDiskDiffDiskSettings): any {
@@ -1873,6 +1877,7 @@ export function orchestratedVirtualMachineScaleSetOsDiskDiffDiskSettingsToTerraf
   }
   return {
     option: cdktf.stringToTerraform(struct!.option),
+    placement: cdktf.stringToTerraform(struct!.placement),
   }
 }
 
@@ -1894,6 +1899,10 @@ export class OrchestratedVirtualMachineScaleSetOsDiskDiffDiskSettingsOutputRefer
       hasAnyValues = true;
       internalValueResult.option = this._option;
     }
+    if (this._placement !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.placement = this._placement;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -1901,10 +1910,12 @@ export class OrchestratedVirtualMachineScaleSetOsDiskDiffDiskSettingsOutputRefer
     if (value === undefined) {
       this.isEmptyObject = false;
       this._option = undefined;
+      this._placement = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._option = value.option;
+      this._placement = value.placement;
     }
   }
 
@@ -1919,6 +1930,22 @@ export class OrchestratedVirtualMachineScaleSetOsDiskDiffDiskSettingsOutputRefer
   // Temporarily expose input value. Use with caution.
   public get optionInput() {
     return this._option;
+  }
+
+  // placement - computed: false, optional: true, required: false
+  private _placement?: string; 
+  public get placement() {
+    return this.getStringAttribute('placement');
+  }
+  public set placement(value: string) {
+    this._placement = value;
+  }
+  public resetPlacement() {
+    this._placement = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get placementInput() {
+    return this._placement;
   }
 }
 export interface OrchestratedVirtualMachineScaleSetOsDisk {
@@ -4008,7 +4035,7 @@ export class OrchestratedVirtualMachineScaleSet extends cdktf.TerraformResource 
       terraformResourceType: 'azurerm_orchestrated_virtual_machine_scale_set',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.13.0',
+        providerVersion: '3.14.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

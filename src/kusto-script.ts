@@ -33,11 +33,15 @@ export interface KustoScriptConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_script#sas_token KustoScript#sas_token}
   */
-  readonly sasToken: string;
+  readonly sasToken?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_script#script_content KustoScript#script_content}
+  */
+  readonly scriptContent?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_script#url KustoScript#url}
   */
-  readonly url: string;
+  readonly url?: string;
   /**
   * timeouts block
   * 
@@ -228,7 +232,7 @@ export class KustoScript extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_kusto_script',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.13.0',
+        providerVersion: '3.14.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -242,6 +246,7 @@ export class KustoScript extends cdktf.TerraformResource {
     this._id = config.id;
     this._name = config.name;
     this._sasToken = config.sasToken;
+    this._scriptContent = config.scriptContent;
     this._url = config.url;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -324,7 +329,7 @@ export class KustoScript extends cdktf.TerraformResource {
     return this._name;
   }
 
-  // sas_token - computed: false, optional: false, required: true
+  // sas_token - computed: false, optional: true, required: false
   private _sasToken?: string; 
   public get sasToken() {
     return this.getStringAttribute('sas_token');
@@ -332,18 +337,40 @@ export class KustoScript extends cdktf.TerraformResource {
   public set sasToken(value: string) {
     this._sasToken = value;
   }
+  public resetSasToken() {
+    this._sasToken = undefined;
+  }
   // Temporarily expose input value. Use with caution.
   public get sasTokenInput() {
     return this._sasToken;
   }
 
-  // url - computed: false, optional: false, required: true
+  // script_content - computed: false, optional: true, required: false
+  private _scriptContent?: string; 
+  public get scriptContent() {
+    return this.getStringAttribute('script_content');
+  }
+  public set scriptContent(value: string) {
+    this._scriptContent = value;
+  }
+  public resetScriptContent() {
+    this._scriptContent = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scriptContentInput() {
+    return this._scriptContent;
+  }
+
+  // url - computed: false, optional: true, required: false
   private _url?: string; 
   public get url() {
     return this.getStringAttribute('url');
   }
   public set url(value: string) {
     this._url = value;
+  }
+  public resetUrl() {
+    this._url = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get urlInput() {
@@ -378,6 +405,7 @@ export class KustoScript extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       sas_token: cdktf.stringToTerraform(this._sasToken),
+      script_content: cdktf.stringToTerraform(this._scriptContent),
       url: cdktf.stringToTerraform(this._url),
       timeouts: kustoScriptTimeoutsToTerraform(this._timeouts.internalValue),
     };
