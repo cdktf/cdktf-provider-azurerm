@@ -127,7 +127,7 @@ export class DataAzurermMonitorDiagnosticCategories extends cdktf.TerraformDataS
       terraformResourceType: 'azurerm_monitor_diagnostic_categories',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.14.0',
+        providerVersion: '3.15.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

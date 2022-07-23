@@ -232,7 +232,7 @@ export class LogAnalyticsDatasourceWindowsPerformanceCounter extends cdktf.Terra
       terraformResourceType: 'azurerm_log_analytics_datasource_windows_performance_counter',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.14.0',
+        providerVersion: '3.15.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

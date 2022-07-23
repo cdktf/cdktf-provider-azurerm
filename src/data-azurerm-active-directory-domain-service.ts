@@ -23,6 +23,10 @@ export interface DataAzurermActiveDirectoryDomainServiceConfig extends cdktf.Ter
   */
   readonly resourceGroupName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/active_directory_domain_service#tags DataAzurermActiveDirectoryDomainService#tags}
+  */
+  readonly tags?: { [key: string]: string };
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/active_directory_domain_service#timeouts DataAzurermActiveDirectoryDomainService#timeouts}
@@ -462,7 +466,7 @@ export class DataAzurermActiveDirectoryDomainService extends cdktf.TerraformData
       terraformResourceType: 'azurerm_active_directory_domain_service',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.14.0',
+        providerVersion: '3.15.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -473,6 +477,7 @@ export class DataAzurermActiveDirectoryDomainService extends cdktf.TerraformData
     this._id = config.id;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
+    this._tags = config.tags;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -586,9 +591,19 @@ export class DataAzurermActiveDirectoryDomainService extends cdktf.TerraformData
     return this.getStringAttribute('sync_owner');
   }
 
-  // tags - computed: true, optional: false, required: false
-  private _tags = new cdktf.StringMap(this, "tags");
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string }; 
   public get tags() {
+    return this.getStringMapAttribute('tags');
+  }
+  public set tags(value: { [key: string]: string }) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
     return this._tags;
   }
 
@@ -627,6 +642,7 @@ export class DataAzurermActiveDirectoryDomainService extends cdktf.TerraformData
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       timeouts: dataAzurermActiveDirectoryDomainServiceTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

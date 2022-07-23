@@ -630,7 +630,7 @@ export class Firewall extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_firewall',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.14.0',
+        providerVersion: '3.15.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

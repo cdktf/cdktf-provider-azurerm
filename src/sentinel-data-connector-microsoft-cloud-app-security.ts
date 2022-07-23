@@ -224,7 +224,7 @@ export class SentinelDataConnectorMicrosoftCloudAppSecurity extends cdktf.Terraf
       terraformResourceType: 'azurerm_sentinel_data_connector_microsoft_cloud_app_security',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.14.0',
+        providerVersion: '3.15.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
