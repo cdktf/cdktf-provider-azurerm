@@ -244,7 +244,7 @@ export class AppConfigurationKey extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_app_configuration_key',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.14.0',
+        providerVersion: '3.15.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

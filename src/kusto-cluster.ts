@@ -8,6 +8,14 @@ import * as cdktf from 'cdktf';
 
 export interface KustoClusterConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster#allowed_fqdns KustoCluster#allowed_fqdns}
+  */
+  readonly allowedFqdns?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster#allowed_ip_ranges KustoCluster#allowed_ip_ranges}
+  */
+  readonly allowedIpRanges?: string[];
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster#auto_stop_enabled KustoCluster#auto_stop_enabled}
   */
   readonly autoStopEnabled?: boolean | cdktf.IResolvable;
@@ -42,6 +50,10 @@ export interface KustoClusterConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster#name KustoCluster#name}
   */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster#outbound_network_access_restricted KustoCluster#outbound_network_access_restricted}
+  */
+  readonly outboundNetworkAccessRestricted?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster#public_ip_type KustoCluster#public_ip_type}
   */
@@ -672,7 +684,7 @@ export class KustoCluster extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_kusto_cluster',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.14.0',
+        providerVersion: '3.15.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -680,6 +692,8 @@ export class KustoCluster extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._allowedFqdns = config.allowedFqdns;
+    this._allowedIpRanges = config.allowedIpRanges;
     this._autoStopEnabled = config.autoStopEnabled;
     this._diskEncryptionEnabled = config.diskEncryptionEnabled;
     this._doubleEncryptionEnabled = config.doubleEncryptionEnabled;
@@ -688,6 +702,7 @@ export class KustoCluster extends cdktf.TerraformResource {
     this._languageExtensions = config.languageExtensions;
     this._location = config.location;
     this._name = config.name;
+    this._outboundNetworkAccessRestricted = config.outboundNetworkAccessRestricted;
     this._publicIpType = config.publicIpType;
     this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
     this._purgeEnabled = config.purgeEnabled;
@@ -706,6 +721,38 @@ export class KustoCluster extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // allowed_fqdns - computed: false, optional: true, required: false
+  private _allowedFqdns?: string[]; 
+  public get allowedFqdns() {
+    return this.getListAttribute('allowed_fqdns');
+  }
+  public set allowedFqdns(value: string[]) {
+    this._allowedFqdns = value;
+  }
+  public resetAllowedFqdns() {
+    this._allowedFqdns = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowedFqdnsInput() {
+    return this._allowedFqdns;
+  }
+
+  // allowed_ip_ranges - computed: false, optional: true, required: false
+  private _allowedIpRanges?: string[]; 
+  public get allowedIpRanges() {
+    return this.getListAttribute('allowed_ip_ranges');
+  }
+  public set allowedIpRanges(value: string[]) {
+    this._allowedIpRanges = value;
+  }
+  public resetAllowedIpRanges() {
+    this._allowedIpRanges = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowedIpRangesInput() {
+    return this._allowedIpRanges;
+  }
 
   // auto_stop_enabled - computed: false, optional: true, required: false
   private _autoStopEnabled?: boolean | cdktf.IResolvable; 
@@ -832,6 +879,22 @@ export class KustoCluster extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name;
+  }
+
+  // outbound_network_access_restricted - computed: false, optional: true, required: false
+  private _outboundNetworkAccessRestricted?: boolean | cdktf.IResolvable; 
+  public get outboundNetworkAccessRestricted() {
+    return this.getBooleanAttribute('outbound_network_access_restricted');
+  }
+  public set outboundNetworkAccessRestricted(value: boolean | cdktf.IResolvable) {
+    this._outboundNetworkAccessRestricted = value;
+  }
+  public resetOutboundNetworkAccessRestricted() {
+    this._outboundNetworkAccessRestricted = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get outboundNetworkAccessRestrictedInput() {
+    return this._outboundNetworkAccessRestricted;
   }
 
   // public_ip_type - computed: false, optional: true, required: false
@@ -1047,6 +1110,8 @@ export class KustoCluster extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      allowed_fqdns: cdktf.listMapper(cdktf.stringToTerraform)(this._allowedFqdns),
+      allowed_ip_ranges: cdktf.listMapper(cdktf.stringToTerraform)(this._allowedIpRanges),
       auto_stop_enabled: cdktf.booleanToTerraform(this._autoStopEnabled),
       disk_encryption_enabled: cdktf.booleanToTerraform(this._diskEncryptionEnabled),
       double_encryption_enabled: cdktf.booleanToTerraform(this._doubleEncryptionEnabled),
@@ -1055,6 +1120,7 @@ export class KustoCluster extends cdktf.TerraformResource {
       language_extensions: cdktf.listMapper(cdktf.stringToTerraform)(this._languageExtensions),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
+      outbound_network_access_restricted: cdktf.booleanToTerraform(this._outboundNetworkAccessRestricted),
       public_ip_type: cdktf.stringToTerraform(this._publicIpType),
       public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       purge_enabled: cdktf.booleanToTerraform(this._purgeEnabled),

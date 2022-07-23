@@ -760,6 +760,10 @@ export interface StorageAccountBlobProperties {
   */
   readonly changeFeedEnabled?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account#change_feed_retention_in_days StorageAccount#change_feed_retention_in_days}
+  */
+  readonly changeFeedRetentionInDays?: number;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account#default_service_version StorageAccount#default_service_version}
   */
   readonly defaultServiceVersion?: string;
@@ -798,6 +802,7 @@ export function storageAccountBlobPropertiesToTerraform(struct?: StorageAccountB
   }
   return {
     change_feed_enabled: cdktf.booleanToTerraform(struct!.changeFeedEnabled),
+    change_feed_retention_in_days: cdktf.numberToTerraform(struct!.changeFeedRetentionInDays),
     default_service_version: cdktf.stringToTerraform(struct!.defaultServiceVersion),
     last_access_time_enabled: cdktf.booleanToTerraform(struct!.lastAccessTimeEnabled),
     versioning_enabled: cdktf.booleanToTerraform(struct!.versioningEnabled),
@@ -824,6 +829,10 @@ export class StorageAccountBlobPropertiesOutputReference extends cdktf.ComplexOb
     if (this._changeFeedEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.changeFeedEnabled = this._changeFeedEnabled;
+    }
+    if (this._changeFeedRetentionInDays !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.changeFeedRetentionInDays = this._changeFeedRetentionInDays;
     }
     if (this._defaultServiceVersion !== undefined) {
       hasAnyValues = true;
@@ -856,6 +865,7 @@ export class StorageAccountBlobPropertiesOutputReference extends cdktf.ComplexOb
     if (value === undefined) {
       this.isEmptyObject = false;
       this._changeFeedEnabled = undefined;
+      this._changeFeedRetentionInDays = undefined;
       this._defaultServiceVersion = undefined;
       this._lastAccessTimeEnabled = undefined;
       this._versioningEnabled = undefined;
@@ -866,6 +876,7 @@ export class StorageAccountBlobPropertiesOutputReference extends cdktf.ComplexOb
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._changeFeedEnabled = value.changeFeedEnabled;
+      this._changeFeedRetentionInDays = value.changeFeedRetentionInDays;
       this._defaultServiceVersion = value.defaultServiceVersion;
       this._lastAccessTimeEnabled = value.lastAccessTimeEnabled;
       this._versioningEnabled = value.versioningEnabled;
@@ -889,6 +900,22 @@ export class StorageAccountBlobPropertiesOutputReference extends cdktf.ComplexOb
   // Temporarily expose input value. Use with caution.
   public get changeFeedEnabledInput() {
     return this._changeFeedEnabled;
+  }
+
+  // change_feed_retention_in_days - computed: false, optional: true, required: false
+  private _changeFeedRetentionInDays?: number; 
+  public get changeFeedRetentionInDays() {
+    return this.getNumberAttribute('change_feed_retention_in_days');
+  }
+  public set changeFeedRetentionInDays(value: number) {
+    this._changeFeedRetentionInDays = value;
+  }
+  public resetChangeFeedRetentionInDays() {
+    this._changeFeedRetentionInDays = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get changeFeedRetentionInDaysInput() {
+    return this._changeFeedRetentionInDays;
   }
 
   // default_service_version - computed: true, optional: true, required: false
@@ -3259,7 +3286,7 @@ export class StorageAccount extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_storage_account',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.14.0',
+        providerVersion: '3.15.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
