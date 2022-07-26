@@ -93,9 +93,9 @@
     jsii-srcmak "^0.1.627"
 
 "@cdktf/provider-project@^0.2.8":
-  version "0.2.42"
-  resolved "https://registry.yarnpkg.com/@cdktf/provider-project/-/provider-project-0.2.42.tgz#e881c2b191086030f255a861627918f6cd9129f4"
-  integrity sha512-GuE/6Xym8Q8r5HJPKChV2hd8h0K5Y7H2Ih98uPQPkEVnFrwclinrA8cEK/Ak3kzLsPvn0gxQpEuDPBpGEtEPiA==
+  version "0.2.43"
+  resolved "https://registry.yarnpkg.com/@cdktf/provider-project/-/provider-project-0.2.43.tgz#ced3cca656b1a9545978c28a9059ad7ff835d8e3"
+  integrity sha512-+3Ea3pQKC0SG3fel7HnXTTBFTvkNQk8DLDans0Eq22AMmZQ30I3E74tEOXhYOS18I2Id4uE1wjsDRL2E1AWaLw==
   dependencies:
     change-case "^4.1.2"
     fs-extra "^10.1.0"
