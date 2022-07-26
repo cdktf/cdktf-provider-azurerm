@@ -597,7 +597,7 @@ export class DataAzurermVirtualNetworkGateway extends cdktf.TerraformDataSource 
       terraformResourceType: 'azurerm_virtual_network_gateway',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.15.0',
+        providerVersion: '3.15.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

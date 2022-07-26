@@ -236,7 +236,7 @@ export class MssqlServerExtendedAuditingPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_mssql_server_extended_auditing_policy',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.15.0',
+        providerVersion: '3.15.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

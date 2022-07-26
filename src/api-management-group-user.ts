@@ -220,7 +220,7 @@ export class ApiManagementGroupUser extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_api_management_group_user',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.15.0',
+        providerVersion: '3.15.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
