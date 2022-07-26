@@ -402,7 +402,7 @@ export class DataFactoryDatasetHttp extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_data_factory_dataset_http',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.15.0',
+        providerVersion: '3.15.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
