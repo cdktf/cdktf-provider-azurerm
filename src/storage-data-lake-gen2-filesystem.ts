@@ -411,7 +411,10 @@ export class StorageDataLakeGen2Filesystem extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._group = config.group;
     this._id = config.id;
@@ -561,7 +564,7 @@ export class StorageDataLakeGen2Filesystem extends cdktf.TerraformResource {
       owner: cdktf.stringToTerraform(this._owner),
       properties: cdktf.hashMapper(cdktf.stringToTerraform)(this._properties),
       storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
-      ace: cdktf.listMapper(storageDataLakeGen2FilesystemAceToTerraform)(this._ace.internalValue),
+      ace: cdktf.listMapper(storageDataLakeGen2FilesystemAceToTerraform, true)(this._ace.internalValue),
       timeouts: storageDataLakeGen2FilesystemTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

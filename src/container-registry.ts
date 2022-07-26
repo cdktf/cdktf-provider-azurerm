@@ -522,8 +522,8 @@ export function containerRegistryNetworkRuleSetToTerraform(struct?: ContainerReg
   }
   return {
     default_action: struct!.defaultAction === undefined ? null : cdktf.stringToTerraform(struct!.defaultAction),
-    ip_rule: struct!.ipRule === undefined ? null : cdktf.listMapper(containerRegistryNetworkRuleSetIpRuleToTerraform)(struct!.ipRule),
-    virtual_network: struct!.virtualNetwork === undefined ? null : cdktf.listMapper(containerRegistryNetworkRuleSetVirtualNetworkToTerraform)(struct!.virtualNetwork),
+    ip_rule: struct!.ipRule === undefined ? null : cdktf.listMapper(containerRegistryNetworkRuleSetIpRuleToTerraform, false)(struct!.ipRule),
+    virtual_network: struct!.virtualNetwork === undefined ? null : cdktf.listMapper(containerRegistryNetworkRuleSetVirtualNetworkToTerraform, false)(struct!.virtualNetwork),
   }
 }
 
@@ -1064,7 +1064,7 @@ export function containerRegistryIdentityToTerraform(struct?: ContainerRegistryI
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.identityIds),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
@@ -1335,7 +1335,10 @@ export class ContainerRegistry extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._adminEnabled = config.adminEnabled;
     this._anonymousPullEnabled = config.anonymousPullEnabled;
@@ -1712,22 +1715,22 @@ export class ContainerRegistry extends cdktf.TerraformResource {
       admin_enabled: cdktf.booleanToTerraform(this._adminEnabled),
       anonymous_pull_enabled: cdktf.booleanToTerraform(this._anonymousPullEnabled),
       data_endpoint_enabled: cdktf.booleanToTerraform(this._dataEndpointEnabled),
-      encryption: cdktf.listMapper(containerRegistryEncryptionToTerraform)(this._encryption.internalValue),
+      encryption: cdktf.listMapper(containerRegistryEncryptionToTerraform, false)(this._encryption.internalValue),
       export_policy_enabled: cdktf.booleanToTerraform(this._exportPolicyEnabled),
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       network_rule_bypass_option: cdktf.stringToTerraform(this._networkRuleBypassOption),
-      network_rule_set: cdktf.listMapper(containerRegistryNetworkRuleSetToTerraform)(this._networkRuleSet.internalValue),
+      network_rule_set: cdktf.listMapper(containerRegistryNetworkRuleSetToTerraform, false)(this._networkRuleSet.internalValue),
       public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       quarantine_policy_enabled: cdktf.booleanToTerraform(this._quarantinePolicyEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      retention_policy: cdktf.listMapper(containerRegistryRetentionPolicyToTerraform)(this._retentionPolicy.internalValue),
+      retention_policy: cdktf.listMapper(containerRegistryRetentionPolicyToTerraform, false)(this._retentionPolicy.internalValue),
       sku: cdktf.stringToTerraform(this._sku),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
-      trust_policy: cdktf.listMapper(containerRegistryTrustPolicyToTerraform)(this._trustPolicy.internalValue),
+      trust_policy: cdktf.listMapper(containerRegistryTrustPolicyToTerraform, false)(this._trustPolicy.internalValue),
       zone_redundancy_enabled: cdktf.booleanToTerraform(this._zoneRedundancyEnabled),
-      georeplications: cdktf.listMapper(containerRegistryGeoreplicationsToTerraform)(this._georeplications.internalValue),
+      georeplications: cdktf.listMapper(containerRegistryGeoreplicationsToTerraform, true)(this._georeplications.internalValue),
       identity: containerRegistryIdentityToTerraform(this._identity.internalValue),
       timeouts: containerRegistryTimeoutsToTerraform(this._timeouts.internalValue),
     };

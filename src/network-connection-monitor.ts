@@ -207,7 +207,7 @@ export function networkConnectionMonitorEndpointFilterToTerraform(struct?: Netwo
   }
   return {
     type: cdktf.stringToTerraform(struct!.type),
-    item: cdktf.listMapper(networkConnectionMonitorEndpointFilterItemToTerraform)(struct!.item),
+    item: cdktf.listMapper(networkConnectionMonitorEndpointFilterItemToTerraform, true)(struct!.item),
   }
 }
 
@@ -326,8 +326,8 @@ export function networkConnectionMonitorEndpointToTerraform(struct?: NetworkConn
   return {
     address: cdktf.stringToTerraform(struct!.address),
     coverage_level: cdktf.stringToTerraform(struct!.coverageLevel),
-    excluded_ip_addresses: cdktf.listMapper(cdktf.stringToTerraform)(struct!.excludedIpAddresses),
-    included_ip_addresses: cdktf.listMapper(cdktf.stringToTerraform)(struct!.includedIpAddresses),
+    excluded_ip_addresses: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.excludedIpAddresses),
+    included_ip_addresses: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.includedIpAddresses),
     name: cdktf.stringToTerraform(struct!.name),
     target_resource_id: cdktf.stringToTerraform(struct!.targetResourceId),
     target_resource_type: cdktf.stringToTerraform(struct!.targetResourceType),
@@ -723,8 +723,8 @@ export function networkConnectionMonitorTestConfigurationHttpConfigurationToTerr
     path: cdktf.stringToTerraform(struct!.path),
     port: cdktf.numberToTerraform(struct!.port),
     prefer_https: cdktf.booleanToTerraform(struct!.preferHttps),
-    valid_status_code_ranges: cdktf.listMapper(cdktf.stringToTerraform)(struct!.validStatusCodeRanges),
-    request_header: cdktf.listMapper(networkConnectionMonitorTestConfigurationHttpConfigurationRequestHeaderToTerraform)(struct!.requestHeader),
+    valid_status_code_ranges: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.validStatusCodeRanges),
+    request_header: cdktf.listMapper(networkConnectionMonitorTestConfigurationHttpConfigurationRequestHeaderToTerraform, true)(struct!.requestHeader),
   }
 }
 
@@ -1476,11 +1476,11 @@ export function networkConnectionMonitorTestGroupToTerraform(struct?: NetworkCon
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    destination_endpoints: cdktf.listMapper(cdktf.stringToTerraform)(struct!.destinationEndpoints),
+    destination_endpoints: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.destinationEndpoints),
     enabled: cdktf.booleanToTerraform(struct!.enabled),
     name: cdktf.stringToTerraform(struct!.name),
-    source_endpoints: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sourceEndpoints),
-    test_configuration_names: cdktf.listMapper(cdktf.stringToTerraform)(struct!.testConfigurationNames),
+    source_endpoints: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.sourceEndpoints),
+    test_configuration_names: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.testConfigurationNames),
   }
 }
 
@@ -1829,7 +1829,10 @@ export class NetworkConnectionMonitor extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._location = config.location;
@@ -2017,11 +2020,11 @@ export class NetworkConnectionMonitor extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       network_watcher_id: cdktf.stringToTerraform(this._networkWatcherId),
       notes: cdktf.stringToTerraform(this._notes),
-      output_workspace_resource_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._outputWorkspaceResourceIds),
+      output_workspace_resource_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(this._outputWorkspaceResourceIds),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
-      endpoint: cdktf.listMapper(networkConnectionMonitorEndpointToTerraform)(this._endpoint.internalValue),
-      test_configuration: cdktf.listMapper(networkConnectionMonitorTestConfigurationToTerraform)(this._testConfiguration.internalValue),
-      test_group: cdktf.listMapper(networkConnectionMonitorTestGroupToTerraform)(this._testGroup.internalValue),
+      endpoint: cdktf.listMapper(networkConnectionMonitorEndpointToTerraform, true)(this._endpoint.internalValue),
+      test_configuration: cdktf.listMapper(networkConnectionMonitorTestConfigurationToTerraform, true)(this._testConfiguration.internalValue),
+      test_group: cdktf.listMapper(networkConnectionMonitorTestGroupToTerraform, true)(this._testGroup.internalValue),
       timeouts: networkConnectionMonitorTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

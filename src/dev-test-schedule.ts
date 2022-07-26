@@ -494,7 +494,7 @@ export function devTestScheduleWeeklyRecurrenceToTerraform(struct?: DevTestSched
   }
   return {
     time: cdktf.stringToTerraform(struct!.time),
-    week_days: cdktf.listMapper(cdktf.stringToTerraform)(struct!.weekDays),
+    week_days: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.weekDays),
   }
 }
 
@@ -598,7 +598,10 @@ export class DevTestSchedule extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._labName = config.labName;

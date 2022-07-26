@@ -390,7 +390,10 @@ export class LbBackendAddressPool extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._loadbalancerId = config.loadbalancerId;
@@ -507,7 +510,7 @@ export class LbBackendAddressPool extends cdktf.TerraformResource {
       loadbalancer_id: cdktf.stringToTerraform(this._loadbalancerId),
       name: cdktf.stringToTerraform(this._name),
       timeouts: lbBackendAddressPoolTimeoutsToTerraform(this._timeouts.internalValue),
-      tunnel_interface: cdktf.listMapper(lbBackendAddressPoolTunnelInterfaceToTerraform)(this._tunnelInterface.internalValue),
+      tunnel_interface: cdktf.listMapper(lbBackendAddressPoolTunnelInterfaceToTerraform, true)(this._tunnelInterface.internalValue),
     };
   }
 }

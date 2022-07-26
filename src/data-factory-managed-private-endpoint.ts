@@ -203,7 +203,10 @@ export class DataFactoryManagedPrivateEndpoint extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._dataFactoryId = config.dataFactoryId;
     this._fqdns = config.fqdns;
@@ -328,7 +331,7 @@ export class DataFactoryManagedPrivateEndpoint extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       data_factory_id: cdktf.stringToTerraform(this._dataFactoryId),
-      fqdns: cdktf.listMapper(cdktf.stringToTerraform)(this._fqdns),
+      fqdns: cdktf.listMapper(cdktf.stringToTerraform, false)(this._fqdns),
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       subresource_name: cdktf.stringToTerraform(this._subresourceName),

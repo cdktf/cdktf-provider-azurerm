@@ -343,7 +343,10 @@ export class LbOutboundRule extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._allocatedOutboundPorts = config.allocatedOutboundPorts;
     this._backendAddressPoolId = config.backendAddressPoolId;
@@ -523,7 +526,7 @@ export class LbOutboundRule extends cdktf.TerraformResource {
       loadbalancer_id: cdktf.stringToTerraform(this._loadbalancerId),
       name: cdktf.stringToTerraform(this._name),
       protocol: cdktf.stringToTerraform(this._protocol),
-      frontend_ip_configuration: cdktf.listMapper(lbOutboundRuleFrontendIpConfigurationToTerraform)(this._frontendIpConfiguration.internalValue),
+      frontend_ip_configuration: cdktf.listMapper(lbOutboundRuleFrontendIpConfigurationToTerraform, true)(this._frontendIpConfiguration.internalValue),
       timeouts: lbOutboundRuleTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

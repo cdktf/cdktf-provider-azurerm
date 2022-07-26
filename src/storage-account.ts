@@ -528,10 +528,10 @@ export function storageAccountBlobPropertiesCorsRuleToTerraform(struct?: Storage
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    allowed_headers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedHeaders),
-    allowed_methods: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedMethods),
-    allowed_origins: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedOrigins),
-    exposed_headers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.exposedHeaders),
+    allowed_headers: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedHeaders),
+    allowed_methods: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedMethods),
+    allowed_origins: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedOrigins),
+    exposed_headers: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.exposedHeaders),
     max_age_in_seconds: cdktf.numberToTerraform(struct!.maxAgeInSeconds),
   }
 }
@@ -807,7 +807,7 @@ export function storageAccountBlobPropertiesToTerraform(struct?: StorageAccountB
     last_access_time_enabled: cdktf.booleanToTerraform(struct!.lastAccessTimeEnabled),
     versioning_enabled: cdktf.booleanToTerraform(struct!.versioningEnabled),
     container_delete_retention_policy: storageAccountBlobPropertiesContainerDeleteRetentionPolicyToTerraform(struct!.containerDeleteRetentionPolicy),
-    cors_rule: cdktf.listMapper(storageAccountBlobPropertiesCorsRuleToTerraform)(struct!.corsRule),
+    cors_rule: cdktf.listMapper(storageAccountBlobPropertiesCorsRuleToTerraform, true)(struct!.corsRule),
     delete_retention_policy: storageAccountBlobPropertiesDeleteRetentionPolicyToTerraform(struct!.deleteRetentionPolicy),
   }
 }
@@ -1206,7 +1206,7 @@ export function storageAccountIdentityToTerraform(struct?: StorageAccountIdentit
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.identityIds),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
@@ -1440,11 +1440,11 @@ export function storageAccountNetworkRulesToTerraform(struct?: StorageAccountNet
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    bypass: cdktf.listMapper(cdktf.stringToTerraform)(struct!.bypass),
+    bypass: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.bypass),
     default_action: cdktf.stringToTerraform(struct!.defaultAction),
-    ip_rules: cdktf.listMapper(cdktf.stringToTerraform)(struct!.ipRules),
-    virtual_network_subnet_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.virtualNetworkSubnetIds),
-    private_link_access: cdktf.listMapper(storageAccountNetworkRulesPrivateLinkAccessToTerraform)(struct!.privateLinkAccess),
+    ip_rules: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.ipRules),
+    virtual_network_subnet_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.virtualNetworkSubnetIds),
+    private_link_access: cdktf.listMapper(storageAccountNetworkRulesPrivateLinkAccessToTerraform, true)(struct!.privateLinkAccess),
   }
 }
 
@@ -1610,10 +1610,10 @@ export function storageAccountQueuePropertiesCorsRuleToTerraform(struct?: Storag
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    allowed_headers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedHeaders),
-    allowed_methods: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedMethods),
-    allowed_origins: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedOrigins),
-    exposed_headers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.exposedHeaders),
+    allowed_headers: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedHeaders),
+    allowed_methods: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedMethods),
+    allowed_origins: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedOrigins),
+    exposed_headers: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.exposedHeaders),
     max_age_in_seconds: cdktf.numberToTerraform(struct!.maxAgeInSeconds),
   }
 }
@@ -2245,7 +2245,7 @@ export function storageAccountQueuePropertiesToTerraform(struct?: StorageAccount
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    cors_rule: cdktf.listMapper(storageAccountQueuePropertiesCorsRuleToTerraform)(struct!.corsRule),
+    cors_rule: cdktf.listMapper(storageAccountQueuePropertiesCorsRuleToTerraform, true)(struct!.corsRule),
     hour_metrics: storageAccountQueuePropertiesHourMetricsToTerraform(struct!.hourMetrics),
     logging: storageAccountQueuePropertiesLoggingToTerraform(struct!.logging),
     minute_metrics: storageAccountQueuePropertiesMinuteMetricsToTerraform(struct!.minuteMetrics),
@@ -2514,10 +2514,10 @@ export function storageAccountSharePropertiesCorsRuleToTerraform(struct?: Storag
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    allowed_headers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedHeaders),
-    allowed_methods: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedMethods),
-    allowed_origins: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedOrigins),
-    exposed_headers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.exposedHeaders),
+    allowed_headers: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedHeaders),
+    allowed_methods: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedMethods),
+    allowed_origins: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedOrigins),
+    exposed_headers: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.exposedHeaders),
     max_age_in_seconds: cdktf.numberToTerraform(struct!.maxAgeInSeconds),
   }
 }
@@ -2765,10 +2765,10 @@ export function storageAccountSharePropertiesSmbToTerraform(struct?: StorageAcco
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    authentication_types: cdktf.listMapper(cdktf.stringToTerraform)(struct!.authenticationTypes),
-    channel_encryption_type: cdktf.listMapper(cdktf.stringToTerraform)(struct!.channelEncryptionType),
-    kerberos_ticket_encryption_type: cdktf.listMapper(cdktf.stringToTerraform)(struct!.kerberosTicketEncryptionType),
-    versions: cdktf.listMapper(cdktf.stringToTerraform)(struct!.versions),
+    authentication_types: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.authenticationTypes),
+    channel_encryption_type: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.channelEncryptionType),
+    kerberos_ticket_encryption_type: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.kerberosTicketEncryptionType),
+    versions: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.versions),
   }
 }
 
@@ -2913,7 +2913,7 @@ export function storageAccountSharePropertiesToTerraform(struct?: StorageAccount
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    cors_rule: cdktf.listMapper(storageAccountSharePropertiesCorsRuleToTerraform)(struct!.corsRule),
+    cors_rule: cdktf.listMapper(storageAccountSharePropertiesCorsRuleToTerraform, true)(struct!.corsRule),
     retention_policy: storageAccountSharePropertiesRetentionPolicyToTerraform(struct!.retentionPolicy),
     smb: storageAccountSharePropertiesSmbToTerraform(struct!.smb),
   }
@@ -3292,7 +3292,10 @@ export class StorageAccount extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._accessTier = config.accessTier;
     this._accountKind = config.accountKind;

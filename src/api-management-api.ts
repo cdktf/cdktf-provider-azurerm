@@ -416,7 +416,7 @@ export function apiManagementApiOpenidAuthenticationToTerraform(struct?: ApiMana
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    bearer_token_sending_methods: cdktf.listMapper(cdktf.stringToTerraform)(struct!.bearerTokenSendingMethods),
+    bearer_token_sending_methods: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.bearerTokenSendingMethods),
     openid_provider_name: cdktf.stringToTerraform(struct!.openidProviderName),
   }
 }
@@ -763,7 +763,10 @@ export class ApiManagementApi extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._apiManagementName = config.apiManagementName;
     this._description = config.description;
@@ -1155,7 +1158,7 @@ export class ApiManagementApi extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       path: cdktf.stringToTerraform(this._path),
-      protocols: cdktf.listMapper(cdktf.stringToTerraform)(this._protocols),
+      protocols: cdktf.listMapper(cdktf.stringToTerraform, false)(this._protocols),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       revision: cdktf.stringToTerraform(this._revision),
       revision_description: cdktf.stringToTerraform(this._revisionDescription),

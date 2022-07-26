@@ -432,7 +432,10 @@ export class ContainerConnectedRegistry extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._auditLogEnabled = config.auditLogEnabled;
     this._clientTokenIds = config.clientTokenIds;
@@ -676,7 +679,7 @@ export class ContainerConnectedRegistry extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       audit_log_enabled: cdktf.booleanToTerraform(this._auditLogEnabled),
-      client_token_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._clientTokenIds),
+      client_token_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(this._clientTokenIds),
       container_registry_id: cdktf.stringToTerraform(this._containerRegistryId),
       id: cdktf.stringToTerraform(this._id),
       log_level: cdktf.stringToTerraform(this._logLevel),
@@ -687,7 +690,7 @@ export class ContainerConnectedRegistry extends cdktf.TerraformResource {
       sync_schedule: cdktf.stringToTerraform(this._syncSchedule),
       sync_token_id: cdktf.stringToTerraform(this._syncTokenId),
       sync_window: cdktf.stringToTerraform(this._syncWindow),
-      notification: cdktf.listMapper(containerConnectedRegistryNotificationToTerraform)(this._notification.internalValue),
+      notification: cdktf.listMapper(containerConnectedRegistryNotificationToTerraform, true)(this._notification.internalValue),
       timeouts: containerConnectedRegistryTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

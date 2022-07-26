@@ -242,7 +242,10 @@ export class LogAnalyticsSavedSearch extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._category = config.category;
     this._displayName = config.displayName;
@@ -414,7 +417,7 @@ export class LogAnalyticsSavedSearch extends cdktf.TerraformResource {
       category: cdktf.stringToTerraform(this._category),
       display_name: cdktf.stringToTerraform(this._displayName),
       function_alias: cdktf.stringToTerraform(this._functionAlias),
-      function_parameters: cdktf.listMapper(cdktf.stringToTerraform)(this._functionParameters),
+      function_parameters: cdktf.listMapper(cdktf.stringToTerraform, false)(this._functionParameters),
       id: cdktf.stringToTerraform(this._id),
       log_analytics_workspace_id: cdktf.stringToTerraform(this._logAnalyticsWorkspaceId),
       name: cdktf.stringToTerraform(this._name),

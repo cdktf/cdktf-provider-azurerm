@@ -234,7 +234,10 @@ export class VirtualHubRouteTableRouteA extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._destinations = config.destinations;
     this._destinationsType = config.destinationsType;
@@ -369,7 +372,7 @@ export class VirtualHubRouteTableRouteA extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      destinations: cdktf.listMapper(cdktf.stringToTerraform)(this._destinations),
+      destinations: cdktf.listMapper(cdktf.stringToTerraform, false)(this._destinations),
       destinations_type: cdktf.stringToTerraform(this._destinationsType),
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),

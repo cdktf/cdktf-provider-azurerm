@@ -217,9 +217,9 @@ export function healthcareFhirServiceCorsToTerraform(struct?: HealthcareFhirServ
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    allowed_headers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedHeaders),
-    allowed_methods: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedMethods),
-    allowed_origins: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedOrigins),
+    allowed_headers: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedHeaders),
+    allowed_methods: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedMethods),
+    allowed_origins: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedOrigins),
     credentials_allowed: cdktf.booleanToTerraform(struct!.credentialsAllowed),
     max_age_in_seconds: cdktf.numberToTerraform(struct!.maxAgeInSeconds),
   }
@@ -613,7 +613,10 @@ export class HealthcareFhirService extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._accessPolicyObjectIds = config.accessPolicyObjectIds;
     this._configurationExportStorageAccountName = config.configurationExportStorageAccountName;
@@ -850,9 +853,9 @@ export class HealthcareFhirService extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      access_policy_object_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._accessPolicyObjectIds),
+      access_policy_object_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(this._accessPolicyObjectIds),
       configuration_export_storage_account_name: cdktf.stringToTerraform(this._configurationExportStorageAccountName),
-      container_registry_login_server_url: cdktf.listMapper(cdktf.stringToTerraform)(this._containerRegistryLoginServerUrl),
+      container_registry_login_server_url: cdktf.listMapper(cdktf.stringToTerraform, false)(this._containerRegistryLoginServerUrl),
       id: cdktf.stringToTerraform(this._id),
       kind: cdktf.stringToTerraform(this._kind),
       location: cdktf.stringToTerraform(this._location),

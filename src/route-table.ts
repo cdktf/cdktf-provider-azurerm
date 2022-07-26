@@ -412,7 +412,10 @@ export class RouteTable extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._disableBgpRoutePropagation = config.disableBgpRoutePropagation;
     this._id = config.id;
@@ -563,7 +566,7 @@ export class RouteTable extends cdktf.TerraformResource {
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      route: cdktf.listMapper(routeTableRouteToTerraform)(this._route.internalValue),
+      route: cdktf.listMapper(routeTableRouteToTerraform, false)(this._route.internalValue),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       timeouts: routeTableTimeoutsToTerraform(this._timeouts.internalValue),
     };

@@ -377,7 +377,10 @@ export class LogzTagRule extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._logzMonitorId = config.logzMonitorId;
@@ -512,7 +515,7 @@ export class LogzTagRule extends cdktf.TerraformResource {
       send_aad_logs: cdktf.booleanToTerraform(this._sendAadLogs),
       send_activity_logs: cdktf.booleanToTerraform(this._sendActivityLogs),
       send_subscription_logs: cdktf.booleanToTerraform(this._sendSubscriptionLogs),
-      tag_filter: cdktf.listMapper(logzTagRuleTagFilterToTerraform)(this._tagFilter.internalValue),
+      tag_filter: cdktf.listMapper(logzTagRuleTagFilterToTerraform, true)(this._tagFilter.internalValue),
       timeouts: logzTagRuleTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

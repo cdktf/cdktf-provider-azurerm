@@ -250,7 +250,10 @@ export class DataFactoryPipeline extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._activitiesJson = config.activitiesJson;
     this._annotations = config.annotations;
@@ -463,7 +466,7 @@ export class DataFactoryPipeline extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       activities_json: cdktf.stringToTerraform(this._activitiesJson),
-      annotations: cdktf.listMapper(cdktf.stringToTerraform)(this._annotations),
+      annotations: cdktf.listMapper(cdktf.stringToTerraform, false)(this._annotations),
       concurrency: cdktf.numberToTerraform(this._concurrency),
       data_factory_id: cdktf.stringToTerraform(this._dataFactoryId),
       description: cdktf.stringToTerraform(this._description),

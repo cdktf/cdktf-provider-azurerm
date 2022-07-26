@@ -149,7 +149,7 @@ export function mediaServicesAccountKeyDeliveryAccessControlToTerraform(struct?:
   }
   return {
     default_action: cdktf.stringToTerraform(struct!.defaultAction),
-    ip_allow_list: cdktf.listMapper(cdktf.stringToTerraform)(struct!.ipAllowList),
+    ip_allow_list: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.ipAllowList),
   }
 }
 
@@ -536,7 +536,10 @@ export class MediaServicesAccount extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._location = config.location;
@@ -716,7 +719,7 @@ export class MediaServicesAccount extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       identity: mediaServicesAccountIdentityToTerraform(this._identity.internalValue),
       key_delivery_access_control: mediaServicesAccountKeyDeliveryAccessControlToTerraform(this._keyDeliveryAccessControl.internalValue),
-      storage_account: cdktf.listMapper(mediaServicesAccountStorageAccountToTerraform)(this._storageAccount.internalValue),
+      storage_account: cdktf.listMapper(mediaServicesAccountStorageAccountToTerraform, true)(this._storageAccount.internalValue),
       timeouts: mediaServicesAccountTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

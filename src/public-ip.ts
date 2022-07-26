@@ -270,7 +270,10 @@ export class PublicIp extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._allocationMethod = config.allocationMethod;
     this._domainNameLabel = config.domainNameLabel;
@@ -586,7 +589,7 @@ export class PublicIp extends cdktf.TerraformResource {
       sku: cdktf.stringToTerraform(this._sku),
       sku_tier: cdktf.stringToTerraform(this._skuTier),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
-      zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),
+      zones: cdktf.listMapper(cdktf.stringToTerraform, false)(this._zones),
       timeouts: publicIpTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

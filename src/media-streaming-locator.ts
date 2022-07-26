@@ -434,7 +434,10 @@ export class MediaStreamingLocator extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._alternativeMediaId = config.alternativeMediaId;
     this._assetName = config.assetName;
@@ -665,7 +668,7 @@ export class MediaStreamingLocator extends cdktf.TerraformResource {
       start_time: cdktf.stringToTerraform(this._startTime),
       streaming_locator_id: cdktf.stringToTerraform(this._streamingLocatorId),
       streaming_policy_name: cdktf.stringToTerraform(this._streamingPolicyName),
-      content_key: cdktf.listMapper(mediaStreamingLocatorContentKeyToTerraform)(this._contentKey.internalValue),
+      content_key: cdktf.listMapper(mediaStreamingLocatorContentKeyToTerraform, true)(this._contentKey.internalValue),
       timeouts: mediaStreamingLocatorTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

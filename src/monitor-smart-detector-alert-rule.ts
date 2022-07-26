@@ -89,7 +89,7 @@ export function monitorSmartDetectorAlertRuleActionGroupToTerraform(struct?: Mon
   }
   return {
     email_subject: cdktf.stringToTerraform(struct!.emailSubject),
-    ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.ids),
+    ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.ids),
     webhook_payload: cdktf.stringToTerraform(struct!.webhookPayload),
   }
 }
@@ -372,7 +372,10 @@ export class MonitorSmartDetectorAlertRule extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._description = config.description;
     this._detectorType = config.detectorType;
@@ -593,7 +596,7 @@ export class MonitorSmartDetectorAlertRule extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      scope_resource_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._scopeResourceIds),
+      scope_resource_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(this._scopeResourceIds),
       severity: cdktf.stringToTerraform(this._severity),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       throttling_duration: cdktf.stringToTerraform(this._throttlingDuration),

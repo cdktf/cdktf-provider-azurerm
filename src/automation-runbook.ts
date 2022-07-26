@@ -642,7 +642,10 @@ export class AutomationRunbook extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._automationAccountName = config.automationAccountName;
     this._content = config.content;
@@ -877,7 +880,7 @@ export class AutomationRunbook extends cdktf.TerraformResource {
       content: cdktf.stringToTerraform(this._content),
       description: cdktf.stringToTerraform(this._description),
       id: cdktf.stringToTerraform(this._id),
-      job_schedule: cdktf.listMapper(automationRunbookJobScheduleToTerraform)(this._jobSchedule.internalValue),
+      job_schedule: cdktf.listMapper(automationRunbookJobScheduleToTerraform, false)(this._jobSchedule.internalValue),
       location: cdktf.stringToTerraform(this._location),
       log_progress: cdktf.booleanToTerraform(this._logProgress),
       log_verbose: cdktf.booleanToTerraform(this._logVerbose),

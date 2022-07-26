@@ -58,7 +58,7 @@ export function springCloudBuilderBuildPackGroupToTerraform(struct?: SpringCloud
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    build_pack_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.buildPackIds),
+    build_pack_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.buildPackIds),
     name: cdktf.stringToTerraform(struct!.name),
   }
 }
@@ -440,7 +440,10 @@ export class SpringCloudBuilder extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._name = config.name;
@@ -547,7 +550,7 @@ export class SpringCloudBuilder extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       spring_cloud_service_id: cdktf.stringToTerraform(this._springCloudServiceId),
-      build_pack_group: cdktf.listMapper(springCloudBuilderBuildPackGroupToTerraform)(this._buildPackGroup.internalValue),
+      build_pack_group: cdktf.listMapper(springCloudBuilderBuildPackGroupToTerraform, true)(this._buildPackGroup.internalValue),
       stack: springCloudBuilderStackToTerraform(this._stack.internalValue),
       timeouts: springCloudBuilderTimeoutsToTerraform(this._timeouts.internalValue),
     };

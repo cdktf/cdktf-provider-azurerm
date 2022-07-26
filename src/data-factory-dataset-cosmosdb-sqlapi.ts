@@ -400,7 +400,10 @@ export class DataFactoryDatasetCosmosdbSqlapi extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._additionalProperties = config.additionalProperties;
     this._annotations = config.annotations;
@@ -610,7 +613,7 @@ export class DataFactoryDatasetCosmosdbSqlapi extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       additional_properties: cdktf.hashMapper(cdktf.stringToTerraform)(this._additionalProperties),
-      annotations: cdktf.listMapper(cdktf.stringToTerraform)(this._annotations),
+      annotations: cdktf.listMapper(cdktf.stringToTerraform, false)(this._annotations),
       collection_name: cdktf.stringToTerraform(this._collectionName),
       data_factory_id: cdktf.stringToTerraform(this._dataFactoryId),
       description: cdktf.stringToTerraform(this._description),
@@ -619,7 +622,7 @@ export class DataFactoryDatasetCosmosdbSqlapi extends cdktf.TerraformResource {
       linked_service_name: cdktf.stringToTerraform(this._linkedServiceName),
       name: cdktf.stringToTerraform(this._name),
       parameters: cdktf.hashMapper(cdktf.stringToTerraform)(this._parameters),
-      schema_column: cdktf.listMapper(dataFactoryDatasetCosmosdbSqlapiSchemaColumnToTerraform)(this._schemaColumn.internalValue),
+      schema_column: cdktf.listMapper(dataFactoryDatasetCosmosdbSqlapiSchemaColumnToTerraform, true)(this._schemaColumn.internalValue),
       timeouts: dataFactoryDatasetCosmosdbSqlapiTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

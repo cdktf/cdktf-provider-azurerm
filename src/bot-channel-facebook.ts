@@ -357,7 +357,10 @@ export class BotChannelFacebook extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._botName = config.botName;
     this._facebookApplicationId = config.facebookApplicationId;
@@ -495,7 +498,7 @@ export class BotChannelFacebook extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      page: cdktf.listMapper(botChannelFacebookPageToTerraform)(this._page.internalValue),
+      page: cdktf.listMapper(botChannelFacebookPageToTerraform, true)(this._page.internalValue),
       timeouts: botChannelFacebookTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

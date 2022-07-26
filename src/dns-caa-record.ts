@@ -378,7 +378,10 @@ export class DnsCaaRecord extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._name = config.name;
@@ -524,7 +527,7 @@ export class DnsCaaRecord extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       ttl: cdktf.numberToTerraform(this._ttl),
       zone_name: cdktf.stringToTerraform(this._zoneName),
-      record: cdktf.listMapper(dnsCaaRecordRecordToTerraform)(this._record.internalValue),
+      record: cdktf.listMapper(dnsCaaRecordRecordToTerraform, true)(this._record.internalValue),
       timeouts: dnsCaaRecordTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

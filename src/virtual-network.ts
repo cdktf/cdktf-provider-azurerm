@@ -526,7 +526,10 @@ export class VirtualNetwork extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._addressSpace = config.addressSpace;
     this._bgpCommunity = config.bgpCommunity;
@@ -754,16 +757,16 @@ export class VirtualNetwork extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      address_space: cdktf.listMapper(cdktf.stringToTerraform)(this._addressSpace),
+      address_space: cdktf.listMapper(cdktf.stringToTerraform, false)(this._addressSpace),
       bgp_community: cdktf.stringToTerraform(this._bgpCommunity),
-      dns_servers: cdktf.listMapper(cdktf.stringToTerraform)(this._dnsServers),
+      dns_servers: cdktf.listMapper(cdktf.stringToTerraform, false)(this._dnsServers),
       edge_zone: cdktf.stringToTerraform(this._edgeZone),
       flow_timeout_in_minutes: cdktf.numberToTerraform(this._flowTimeoutInMinutes),
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      subnet: cdktf.listMapper(virtualNetworkSubnetToTerraform)(this._subnet.internalValue),
+      subnet: cdktf.listMapper(virtualNetworkSubnetToTerraform, false)(this._subnet.internalValue),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       ddos_protection_plan: virtualNetworkDdosProtectionPlanToTerraform(this._ddosProtectionPlan.internalValue),
       timeouts: virtualNetworkTimeoutsToTerraform(this._timeouts.internalValue),

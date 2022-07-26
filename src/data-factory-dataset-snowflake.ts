@@ -431,7 +431,10 @@ export class DataFactoryDatasetSnowflake extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._additionalProperties = config.additionalProperties;
     this._annotations = config.annotations;
@@ -658,7 +661,7 @@ export class DataFactoryDatasetSnowflake extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       additional_properties: cdktf.hashMapper(cdktf.stringToTerraform)(this._additionalProperties),
-      annotations: cdktf.listMapper(cdktf.stringToTerraform)(this._annotations),
+      annotations: cdktf.listMapper(cdktf.stringToTerraform, false)(this._annotations),
       data_factory_id: cdktf.stringToTerraform(this._dataFactoryId),
       description: cdktf.stringToTerraform(this._description),
       folder: cdktf.stringToTerraform(this._folder),
@@ -668,7 +671,7 @@ export class DataFactoryDatasetSnowflake extends cdktf.TerraformResource {
       parameters: cdktf.hashMapper(cdktf.stringToTerraform)(this._parameters),
       schema_name: cdktf.stringToTerraform(this._schemaName),
       table_name: cdktf.stringToTerraform(this._tableName),
-      schema_column: cdktf.listMapper(dataFactoryDatasetSnowflakeSchemaColumnToTerraform)(this._schemaColumn.internalValue),
+      schema_column: cdktf.listMapper(dataFactoryDatasetSnowflakeSchemaColumnToTerraform, true)(this._schemaColumn.internalValue),
       timeouts: dataFactoryDatasetSnowflakeTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

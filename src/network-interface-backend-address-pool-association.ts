@@ -222,7 +222,10 @@ export class NetworkInterfaceBackendAddressPoolAssociation extends cdktf.Terrafo
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._backendAddressPoolId = config.backendAddressPoolId;
     this._id = config.id;

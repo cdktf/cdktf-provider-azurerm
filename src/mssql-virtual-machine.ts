@@ -693,7 +693,7 @@ export function mssqlVirtualMachineStorageConfigurationDataSettingsToTerraform(s
   }
   return {
     default_file_path: cdktf.stringToTerraform(struct!.defaultFilePath),
-    luns: cdktf.listMapper(cdktf.numberToTerraform)(struct!.luns),
+    luns: cdktf.listMapper(cdktf.numberToTerraform, false)(struct!.luns),
   }
 }
 
@@ -779,7 +779,7 @@ export function mssqlVirtualMachineStorageConfigurationLogSettingsToTerraform(st
   }
   return {
     default_file_path: cdktf.stringToTerraform(struct!.defaultFilePath),
-    luns: cdktf.listMapper(cdktf.numberToTerraform)(struct!.luns),
+    luns: cdktf.listMapper(cdktf.numberToTerraform, false)(struct!.luns),
   }
 }
 
@@ -865,7 +865,7 @@ export function mssqlVirtualMachineStorageConfigurationTempDbSettingsToTerraform
   }
   return {
     default_file_path: cdktf.stringToTerraform(struct!.defaultFilePath),
-    luns: cdktf.listMapper(cdktf.numberToTerraform)(struct!.luns),
+    luns: cdktf.listMapper(cdktf.numberToTerraform, false)(struct!.luns),
   }
 }
 
@@ -1295,7 +1295,10 @@ export class MssqlVirtualMachine extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._rServicesEnabled = config.rServicesEnabled;

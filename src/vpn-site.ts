@@ -762,7 +762,10 @@ export class VpnSite extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._addressCidrs = config.addressCidrs;
     this._deviceModel = config.deviceModel;
@@ -968,7 +971,7 @@ export class VpnSite extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      address_cidrs: cdktf.listMapper(cdktf.stringToTerraform)(this._addressCidrs),
+      address_cidrs: cdktf.listMapper(cdktf.stringToTerraform, false)(this._addressCidrs),
       device_model: cdktf.stringToTerraform(this._deviceModel),
       device_vendor: cdktf.stringToTerraform(this._deviceVendor),
       id: cdktf.stringToTerraform(this._id),
@@ -977,7 +980,7 @@ export class VpnSite extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       virtual_wan_id: cdktf.stringToTerraform(this._virtualWanId),
-      link: cdktf.listMapper(vpnSiteLinkToTerraform)(this._link.internalValue),
+      link: cdktf.listMapper(vpnSiteLinkToTerraform, true)(this._link.internalValue),
       o365_policy: vpnSiteO365PolicyToTerraform(this._o365Policy.internalValue),
       timeouts: vpnSiteTimeoutsToTerraform(this._timeouts.internalValue),
     };

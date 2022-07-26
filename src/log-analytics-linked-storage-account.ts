@@ -226,7 +226,10 @@ export class LogAnalyticsLinkedStorageAccount extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._dataSourceType = config.dataSourceType;
     this._id = config.id;
@@ -333,7 +336,7 @@ export class LogAnalyticsLinkedStorageAccount extends cdktf.TerraformResource {
       data_source_type: cdktf.stringToTerraform(this._dataSourceType),
       id: cdktf.stringToTerraform(this._id),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      storage_account_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._storageAccountIds),
+      storage_account_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(this._storageAccountIds),
       workspace_resource_id: cdktf.stringToTerraform(this._workspaceResourceId),
       timeouts: logAnalyticsLinkedStorageAccountTimeoutsToTerraform(this._timeouts.internalValue),
     };

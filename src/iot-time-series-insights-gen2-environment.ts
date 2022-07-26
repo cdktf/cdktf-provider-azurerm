@@ -330,7 +330,10 @@ export class IotTimeSeriesInsightsGen2Environment extends cdktf.TerraformResourc
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._idProperties = config.idProperties;
@@ -502,7 +505,7 @@ export class IotTimeSeriesInsightsGen2Environment extends cdktf.TerraformResourc
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       id: cdktf.stringToTerraform(this._id),
-      id_properties: cdktf.listMapper(cdktf.stringToTerraform)(this._idProperties),
+      id_properties: cdktf.listMapper(cdktf.stringToTerraform, false)(this._idProperties),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),

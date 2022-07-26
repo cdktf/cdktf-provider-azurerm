@@ -447,7 +447,10 @@ export class ApplicationInsightsWorkbookTemplate extends cdktf.TerraformResource
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._author = config.author;
     this._id = config.id;
@@ -642,7 +645,7 @@ export class ApplicationInsightsWorkbookTemplate extends cdktf.TerraformResource
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       template_data: cdktf.stringToTerraform(this._templateData),
-      galleries: cdktf.listMapper(applicationInsightsWorkbookTemplateGalleriesToTerraform)(this._galleries.internalValue),
+      galleries: cdktf.listMapper(applicationInsightsWorkbookTemplateGalleriesToTerraform, true)(this._galleries.internalValue),
       timeouts: applicationInsightsWorkbookTemplateTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

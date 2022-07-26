@@ -496,7 +496,10 @@ export class VpnGatewayNatRule extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._externalAddressSpaceMappings = config.externalAddressSpaceMappings;
     this._id = config.id;
@@ -705,17 +708,17 @@ export class VpnGatewayNatRule extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      external_address_space_mappings: cdktf.listMapper(cdktf.stringToTerraform)(this._externalAddressSpaceMappings),
+      external_address_space_mappings: cdktf.listMapper(cdktf.stringToTerraform, false)(this._externalAddressSpaceMappings),
       id: cdktf.stringToTerraform(this._id),
-      internal_address_space_mappings: cdktf.listMapper(cdktf.stringToTerraform)(this._internalAddressSpaceMappings),
+      internal_address_space_mappings: cdktf.listMapper(cdktf.stringToTerraform, false)(this._internalAddressSpaceMappings),
       ip_configuration_id: cdktf.stringToTerraform(this._ipConfigurationId),
       mode: cdktf.stringToTerraform(this._mode),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       type: cdktf.stringToTerraform(this._type),
       vpn_gateway_id: cdktf.stringToTerraform(this._vpnGatewayId),
-      external_mapping: cdktf.listMapper(vpnGatewayNatRuleExternalMappingToTerraform)(this._externalMapping.internalValue),
-      internal_mapping: cdktf.listMapper(vpnGatewayNatRuleInternalMappingToTerraform)(this._internalMapping.internalValue),
+      external_mapping: cdktf.listMapper(vpnGatewayNatRuleExternalMappingToTerraform, true)(this._externalMapping.internalValue),
+      internal_mapping: cdktf.listMapper(vpnGatewayNatRuleInternalMappingToTerraform, true)(this._internalMapping.internalValue),
       timeouts: vpnGatewayNatRuleTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

@@ -290,7 +290,7 @@ export function policySetDefinitionPolicyDefinitionReferenceToTerraform(struct?:
   return {
     parameter_values: cdktf.stringToTerraform(struct!.parameterValues),
     policy_definition_id: cdktf.stringToTerraform(struct!.policyDefinitionId),
-    policy_group_names: cdktf.listMapper(cdktf.stringToTerraform)(struct!.policyGroupNames),
+    policy_group_names: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.policyGroupNames),
     reference_id: cdktf.stringToTerraform(struct!.referenceId),
   }
 }
@@ -627,7 +627,10 @@ export class PolicySetDefinition extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._description = config.description;
     this._displayName = config.displayName;
@@ -824,8 +827,8 @@ export class PolicySetDefinition extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       parameters: cdktf.stringToTerraform(this._parameters),
       policy_type: cdktf.stringToTerraform(this._policyType),
-      policy_definition_group: cdktf.listMapper(policySetDefinitionPolicyDefinitionGroupToTerraform)(this._policyDefinitionGroup.internalValue),
-      policy_definition_reference: cdktf.listMapper(policySetDefinitionPolicyDefinitionReferenceToTerraform)(this._policyDefinitionReference.internalValue),
+      policy_definition_group: cdktf.listMapper(policySetDefinitionPolicyDefinitionGroupToTerraform, true)(this._policyDefinitionGroup.internalValue),
+      policy_definition_reference: cdktf.listMapper(policySetDefinitionPolicyDefinitionReferenceToTerraform, true)(this._policyDefinitionReference.internalValue),
       timeouts: policySetDefinitionTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

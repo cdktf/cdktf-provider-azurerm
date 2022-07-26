@@ -345,9 +345,9 @@ export function eventhubNamespaceNetworkRulesetsToTerraform(struct?: EventhubNam
   }
   return {
     default_action: struct!.defaultAction === undefined ? null : cdktf.stringToTerraform(struct!.defaultAction),
-    ip_rule: struct!.ipRule === undefined ? null : cdktf.listMapper(eventhubNamespaceNetworkRulesetsIpRuleToTerraform)(struct!.ipRule),
+    ip_rule: struct!.ipRule === undefined ? null : cdktf.listMapper(eventhubNamespaceNetworkRulesetsIpRuleToTerraform, false)(struct!.ipRule),
     trusted_service_access_enabled: struct!.trustedServiceAccessEnabled === undefined ? null : cdktf.booleanToTerraform(struct!.trustedServiceAccessEnabled),
-    virtual_network_rule: struct!.virtualNetworkRule === undefined ? null : cdktf.listMapper(eventhubNamespaceNetworkRulesetsVirtualNetworkRuleToTerraform)(struct!.virtualNetworkRule),
+    virtual_network_rule: struct!.virtualNetworkRule === undefined ? null : cdktf.listMapper(eventhubNamespaceNetworkRulesetsVirtualNetworkRuleToTerraform, false)(struct!.virtualNetworkRule),
   }
 }
 
@@ -514,7 +514,7 @@ export function eventhubNamespaceIdentityToTerraform(struct?: EventhubNamespaceI
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.identityIds),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
@@ -785,7 +785,10 @@ export class EventhubNamespace extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._autoInflateEnabled = config.autoInflateEnabled;
     this._capacity = config.capacity;
@@ -1062,7 +1065,7 @@ export class EventhubNamespace extends cdktf.TerraformResource {
       location: cdktf.stringToTerraform(this._location),
       maximum_throughput_units: cdktf.numberToTerraform(this._maximumThroughputUnits),
       name: cdktf.stringToTerraform(this._name),
-      network_rulesets: cdktf.listMapper(eventhubNamespaceNetworkRulesetsToTerraform)(this._networkRulesets.internalValue),
+      network_rulesets: cdktf.listMapper(eventhubNamespaceNetworkRulesetsToTerraform, false)(this._networkRulesets.internalValue),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku: cdktf.stringToTerraform(this._sku),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),

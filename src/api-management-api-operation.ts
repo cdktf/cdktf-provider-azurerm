@@ -109,7 +109,7 @@ export function apiManagementApiOperationRequestHeaderToTerraform(struct?: ApiMa
     name: cdktf.stringToTerraform(struct!.name),
     required: cdktf.booleanToTerraform(struct!.required),
     type: cdktf.stringToTerraform(struct!.type),
-    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+    values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
 }
 
@@ -332,7 +332,7 @@ export function apiManagementApiOperationRequestQueryParameterToTerraform(struct
     name: cdktf.stringToTerraform(struct!.name),
     required: cdktf.booleanToTerraform(struct!.required),
     type: cdktf.stringToTerraform(struct!.type),
-    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+    values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
 }
 
@@ -757,7 +757,7 @@ export function apiManagementApiOperationRequestRepresentationFormParameterToTer
     name: cdktf.stringToTerraform(struct!.name),
     required: cdktf.booleanToTerraform(struct!.required),
     type: cdktf.stringToTerraform(struct!.type),
-    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+    values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
 }
 
@@ -978,8 +978,8 @@ export function apiManagementApiOperationRequestRepresentationToTerraform(struct
     content_type: cdktf.stringToTerraform(struct!.contentType),
     schema_id: cdktf.stringToTerraform(struct!.schemaId),
     type_name: cdktf.stringToTerraform(struct!.typeName),
-    example: cdktf.listMapper(apiManagementApiOperationRequestRepresentationExampleToTerraform)(struct!.example),
-    form_parameter: cdktf.listMapper(apiManagementApiOperationRequestRepresentationFormParameterToTerraform)(struct!.formParameter),
+    example: cdktf.listMapper(apiManagementApiOperationRequestRepresentationExampleToTerraform, true)(struct!.example),
+    form_parameter: cdktf.listMapper(apiManagementApiOperationRequestRepresentationFormParameterToTerraform, true)(struct!.formParameter),
   }
 }
 
@@ -1180,9 +1180,9 @@ export function apiManagementApiOperationRequestToTerraform(struct?: ApiManageme
   }
   return {
     description: cdktf.stringToTerraform(struct!.description),
-    header: cdktf.listMapper(apiManagementApiOperationRequestHeaderToTerraform)(struct!.header),
-    query_parameter: cdktf.listMapper(apiManagementApiOperationRequestQueryParameterToTerraform)(struct!.queryParameter),
-    representation: cdktf.listMapper(apiManagementApiOperationRequestRepresentationToTerraform)(struct!.representation),
+    header: cdktf.listMapper(apiManagementApiOperationRequestHeaderToTerraform, true)(struct!.header),
+    query_parameter: cdktf.listMapper(apiManagementApiOperationRequestQueryParameterToTerraform, true)(struct!.queryParameter),
+    representation: cdktf.listMapper(apiManagementApiOperationRequestRepresentationToTerraform, true)(struct!.representation),
   }
 }
 
@@ -1338,7 +1338,7 @@ export function apiManagementApiOperationResponseHeaderToTerraform(struct?: ApiM
     name: cdktf.stringToTerraform(struct!.name),
     required: cdktf.booleanToTerraform(struct!.required),
     type: cdktf.stringToTerraform(struct!.type),
-    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+    values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
 }
 
@@ -1763,7 +1763,7 @@ export function apiManagementApiOperationResponseRepresentationFormParameterToTe
     name: cdktf.stringToTerraform(struct!.name),
     required: cdktf.booleanToTerraform(struct!.required),
     type: cdktf.stringToTerraform(struct!.type),
-    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+    values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
 }
 
@@ -1984,8 +1984,8 @@ export function apiManagementApiOperationResponseRepresentationToTerraform(struc
     content_type: cdktf.stringToTerraform(struct!.contentType),
     schema_id: cdktf.stringToTerraform(struct!.schemaId),
     type_name: cdktf.stringToTerraform(struct!.typeName),
-    example: cdktf.listMapper(apiManagementApiOperationResponseRepresentationExampleToTerraform)(struct!.example),
-    form_parameter: cdktf.listMapper(apiManagementApiOperationResponseRepresentationFormParameterToTerraform)(struct!.formParameter),
+    example: cdktf.listMapper(apiManagementApiOperationResponseRepresentationExampleToTerraform, true)(struct!.example),
+    form_parameter: cdktf.listMapper(apiManagementApiOperationResponseRepresentationFormParameterToTerraform, true)(struct!.formParameter),
   }
 }
 
@@ -2185,8 +2185,8 @@ export function apiManagementApiOperationResponseToTerraform(struct?: ApiManagem
   return {
     description: cdktf.stringToTerraform(struct!.description),
     status_code: cdktf.numberToTerraform(struct!.statusCode),
-    header: cdktf.listMapper(apiManagementApiOperationResponseHeaderToTerraform)(struct!.header),
-    representation: cdktf.listMapper(apiManagementApiOperationResponseRepresentationToTerraform)(struct!.representation),
+    header: cdktf.listMapper(apiManagementApiOperationResponseHeaderToTerraform, true)(struct!.header),
+    representation: cdktf.listMapper(apiManagementApiOperationResponseRepresentationToTerraform, true)(struct!.representation),
   }
 }
 
@@ -2371,7 +2371,7 @@ export function apiManagementApiOperationTemplateParameterToTerraform(struct?: A
     name: cdktf.stringToTerraform(struct!.name),
     required: cdktf.booleanToTerraform(struct!.required),
     type: cdktf.stringToTerraform(struct!.type),
-    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+    values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
 }
 
@@ -2745,7 +2745,10 @@ export class ApiManagementApiOperation extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._apiManagementName = config.apiManagementName;
     this._apiName = config.apiName;
@@ -2969,8 +2972,8 @@ export class ApiManagementApiOperation extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       url_template: cdktf.stringToTerraform(this._urlTemplate),
       request: apiManagementApiOperationRequestToTerraform(this._request.internalValue),
-      response: cdktf.listMapper(apiManagementApiOperationResponseToTerraform)(this._response.internalValue),
-      template_parameter: cdktf.listMapper(apiManagementApiOperationTemplateParameterToTerraform)(this._templateParameter.internalValue),
+      response: cdktf.listMapper(apiManagementApiOperationResponseToTerraform, true)(this._response.internalValue),
+      template_parameter: cdktf.listMapper(apiManagementApiOperationTemplateParameterToTerraform, true)(this._templateParameter.internalValue),
       timeouts: apiManagementApiOperationTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

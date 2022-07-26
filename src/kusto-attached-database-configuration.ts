@@ -88,12 +88,12 @@ export function kustoAttachedDatabaseConfigurationSharingToTerraform(struct?: Ku
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    external_tables_to_exclude: cdktf.listMapper(cdktf.stringToTerraform)(struct!.externalTablesToExclude),
-    external_tables_to_include: cdktf.listMapper(cdktf.stringToTerraform)(struct!.externalTablesToInclude),
-    materialized_views_to_exclude: cdktf.listMapper(cdktf.stringToTerraform)(struct!.materializedViewsToExclude),
-    materialized_views_to_include: cdktf.listMapper(cdktf.stringToTerraform)(struct!.materializedViewsToInclude),
-    tables_to_exclude: cdktf.listMapper(cdktf.stringToTerraform)(struct!.tablesToExclude),
-    tables_to_include: cdktf.listMapper(cdktf.stringToTerraform)(struct!.tablesToInclude),
+    external_tables_to_exclude: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.externalTablesToExclude),
+    external_tables_to_include: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.externalTablesToInclude),
+    materialized_views_to_exclude: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.materializedViewsToExclude),
+    materialized_views_to_include: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.materializedViewsToInclude),
+    tables_to_exclude: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.tablesToExclude),
+    tables_to_include: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.tablesToInclude),
   }
 }
 
@@ -444,7 +444,10 @@ export class KustoAttachedDatabaseConfiguration extends cdktf.TerraformResource 
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._clusterName = config.clusterName;
     this._clusterResourceId = config.clusterResourceId;

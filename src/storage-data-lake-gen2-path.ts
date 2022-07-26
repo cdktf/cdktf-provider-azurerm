@@ -415,7 +415,10 @@ export class StorageDataLakeGen2Path extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._filesystemName = config.filesystemName;
     this._group = config.group;
@@ -577,7 +580,7 @@ export class StorageDataLakeGen2Path extends cdktf.TerraformResource {
       path: cdktf.stringToTerraform(this._path),
       resource: cdktf.stringToTerraform(this._resource),
       storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
-      ace: cdktf.listMapper(storageDataLakeGen2PathAceToTerraform)(this._ace.internalValue),
+      ace: cdktf.listMapper(storageDataLakeGen2PathAceToTerraform, true)(this._ace.internalValue),
       timeouts: storageDataLakeGen2PathTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

@@ -488,7 +488,10 @@ export class VirtualNetworkGatewayNatRule extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._ipConfigurationId = config.ipConfigurationId;
@@ -664,8 +667,8 @@ export class VirtualNetworkGatewayNatRule extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       type: cdktf.stringToTerraform(this._type),
       virtual_network_gateway_id: cdktf.stringToTerraform(this._virtualNetworkGatewayId),
-      external_mapping: cdktf.listMapper(virtualNetworkGatewayNatRuleExternalMappingToTerraform)(this._externalMapping.internalValue),
-      internal_mapping: cdktf.listMapper(virtualNetworkGatewayNatRuleInternalMappingToTerraform)(this._internalMapping.internalValue),
+      external_mapping: cdktf.listMapper(virtualNetworkGatewayNatRuleExternalMappingToTerraform, true)(this._externalMapping.internalValue),
+      internal_mapping: cdktf.listMapper(virtualNetworkGatewayNatRuleInternalMappingToTerraform, true)(this._internalMapping.internalValue),
       timeouts: virtualNetworkGatewayNatRuleTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

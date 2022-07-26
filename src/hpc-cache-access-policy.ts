@@ -504,7 +504,10 @@ export class HpcCacheAccessPolicy extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._hpcCacheId = config.hpcCacheId;
     this._id = config.id;
@@ -597,7 +600,7 @@ export class HpcCacheAccessPolicy extends cdktf.TerraformResource {
       hpc_cache_id: cdktf.stringToTerraform(this._hpcCacheId),
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
-      access_rule: cdktf.listMapper(hpcCacheAccessPolicyAccessRuleToTerraform)(this._accessRule.internalValue),
+      access_rule: cdktf.listMapper(hpcCacheAccessPolicyAccessRuleToTerraform, true)(this._accessRule.internalValue),
       timeouts: hpcCacheAccessPolicyTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

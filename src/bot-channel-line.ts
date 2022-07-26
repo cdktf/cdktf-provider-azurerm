@@ -346,7 +346,10 @@ export class BotChannelLine extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._botName = config.botName;
     this._id = config.id;
@@ -454,7 +457,7 @@ export class BotChannelLine extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      line_channel: cdktf.listMapper(botChannelLineLineChannelToTerraform)(this._lineChannel.internalValue),
+      line_channel: cdktf.listMapper(botChannelLineLineChannelToTerraform, true)(this._lineChannel.internalValue),
       timeouts: botChannelLineTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

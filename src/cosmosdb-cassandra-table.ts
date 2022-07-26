@@ -475,9 +475,9 @@ export function cosmosdbCassandraTableSchemaToTerraform(struct?: CosmosdbCassand
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    cluster_key: cdktf.listMapper(cosmosdbCassandraTableSchemaClusterKeyToTerraform)(struct!.clusterKey),
-    column: cdktf.listMapper(cosmosdbCassandraTableSchemaColumnToTerraform)(struct!.column),
-    partition_key: cdktf.listMapper(cosmosdbCassandraTableSchemaPartitionKeyToTerraform)(struct!.partitionKey),
+    cluster_key: cdktf.listMapper(cosmosdbCassandraTableSchemaClusterKeyToTerraform, true)(struct!.clusterKey),
+    column: cdktf.listMapper(cosmosdbCassandraTableSchemaColumnToTerraform, true)(struct!.column),
+    partition_key: cdktf.listMapper(cosmosdbCassandraTableSchemaPartitionKeyToTerraform, true)(struct!.partitionKey),
   }
 }
 
@@ -756,7 +756,10 @@ export class CosmosdbCassandraTable extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._analyticalStorageTtl = config.analyticalStorageTtl;
     this._cassandraKeyspaceId = config.cassandraKeyspaceId;

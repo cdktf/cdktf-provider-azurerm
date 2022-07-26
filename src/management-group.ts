@@ -226,7 +226,10 @@ export class ManagementGroup extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._displayName = config.displayName;
     this._id = config.id;
@@ -346,7 +349,7 @@ export class ManagementGroup extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       parent_management_group_id: cdktf.stringToTerraform(this._parentManagementGroupId),
-      subscription_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._subscriptionIds),
+      subscription_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(this._subscriptionIds),
       timeouts: managementGroupTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

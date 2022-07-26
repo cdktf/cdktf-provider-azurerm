@@ -472,7 +472,7 @@ export function linuxVirtualMachineIdentityToTerraform(struct?: LinuxVirtualMach
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.identityIds),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
@@ -1144,7 +1144,7 @@ export function linuxVirtualMachineSecretToTerraform(struct?: LinuxVirtualMachin
   }
   return {
     key_vault_id: cdktf.stringToTerraform(struct!.keyVaultId),
-    certificate: cdktf.listMapper(linuxVirtualMachineSecretCertificateToTerraform)(struct!.certificate),
+    certificate: cdktf.listMapper(linuxVirtualMachineSecretCertificateToTerraform, true)(struct!.certificate),
   }
 }
 
@@ -1656,7 +1656,10 @@ export class LinuxVirtualMachine extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._adminPassword = config.adminPassword;
     this._adminUsername = config.adminUsername;
@@ -2441,7 +2444,7 @@ export class LinuxVirtualMachine extends cdktf.TerraformResource {
       location: cdktf.stringToTerraform(this._location),
       max_bid_price: cdktf.numberToTerraform(this._maxBidPrice),
       name: cdktf.stringToTerraform(this._name),
-      network_interface_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._networkInterfaceIds),
+      network_interface_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(this._networkInterfaceIds),
       patch_mode: cdktf.stringToTerraform(this._patchMode),
       platform_fault_domain: cdktf.numberToTerraform(this._platformFaultDomain),
       priority: cdktf.stringToTerraform(this._priority),
@@ -2457,12 +2460,12 @@ export class LinuxVirtualMachine extends cdktf.TerraformResource {
       vtpm_enabled: cdktf.booleanToTerraform(this._vtpmEnabled),
       zone: cdktf.stringToTerraform(this._zone),
       additional_capabilities: linuxVirtualMachineAdditionalCapabilitiesToTerraform(this._additionalCapabilities.internalValue),
-      admin_ssh_key: cdktf.listMapper(linuxVirtualMachineAdminSshKeyToTerraform)(this._adminSshKey.internalValue),
+      admin_ssh_key: cdktf.listMapper(linuxVirtualMachineAdminSshKeyToTerraform, true)(this._adminSshKey.internalValue),
       boot_diagnostics: linuxVirtualMachineBootDiagnosticsToTerraform(this._bootDiagnostics.internalValue),
       identity: linuxVirtualMachineIdentityToTerraform(this._identity.internalValue),
       os_disk: linuxVirtualMachineOsDiskToTerraform(this._osDisk.internalValue),
       plan: linuxVirtualMachinePlanToTerraform(this._plan.internalValue),
-      secret: cdktf.listMapper(linuxVirtualMachineSecretToTerraform)(this._secret.internalValue),
+      secret: cdktf.listMapper(linuxVirtualMachineSecretToTerraform, true)(this._secret.internalValue),
       source_image_reference: linuxVirtualMachineSourceImageReferenceToTerraform(this._sourceImageReference.internalValue),
       termination_notification: linuxVirtualMachineTerminationNotificationToTerraform(this._terminationNotification.internalValue),
       timeouts: linuxVirtualMachineTimeoutsToTerraform(this._timeouts.internalValue),

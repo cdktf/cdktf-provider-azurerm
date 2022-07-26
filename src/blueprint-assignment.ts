@@ -80,7 +80,7 @@ export function blueprintAssignmentIdentityToTerraform(struct?: BlueprintAssignm
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.identityIds),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
@@ -338,7 +338,10 @@ export class BlueprintAssignment extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._location = config.location;
@@ -563,8 +566,8 @@ export class BlueprintAssignment extends cdktf.TerraformResource {
     return {
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
-      lock_exclude_actions: cdktf.listMapper(cdktf.stringToTerraform)(this._lockExcludeActions),
-      lock_exclude_principals: cdktf.listMapper(cdktf.stringToTerraform)(this._lockExcludePrincipals),
+      lock_exclude_actions: cdktf.listMapper(cdktf.stringToTerraform, false)(this._lockExcludeActions),
+      lock_exclude_principals: cdktf.listMapper(cdktf.stringToTerraform, false)(this._lockExcludePrincipals),
       lock_mode: cdktf.stringToTerraform(this._lockMode),
       name: cdktf.stringToTerraform(this._name),
       parameter_values: cdktf.stringToTerraform(this._parameterValues),

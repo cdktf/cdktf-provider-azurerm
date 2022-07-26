@@ -250,7 +250,10 @@ export class ContainerRegistryWebhook extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._actions = config.actions;
     this._customHeaders = config.customHeaders;
@@ -450,7 +453,7 @@ export class ContainerRegistryWebhook extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      actions: cdktf.listMapper(cdktf.stringToTerraform)(this._actions),
+      actions: cdktf.listMapper(cdktf.stringToTerraform, false)(this._actions),
       custom_headers: cdktf.hashMapper(cdktf.stringToTerraform)(this._customHeaders),
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),

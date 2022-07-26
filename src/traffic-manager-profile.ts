@@ -308,14 +308,14 @@ export function trafficManagerProfileMonitorConfigToTerraform(struct?: TrafficMa
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    expected_status_code_ranges: cdktf.listMapper(cdktf.stringToTerraform)(struct!.expectedStatusCodeRanges),
+    expected_status_code_ranges: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.expectedStatusCodeRanges),
     interval_in_seconds: cdktf.numberToTerraform(struct!.intervalInSeconds),
     path: cdktf.stringToTerraform(struct!.path),
     port: cdktf.numberToTerraform(struct!.port),
     protocol: cdktf.stringToTerraform(struct!.protocol),
     timeout_in_seconds: cdktf.numberToTerraform(struct!.timeoutInSeconds),
     tolerated_number_of_failures: cdktf.numberToTerraform(struct!.toleratedNumberOfFailures),
-    custom_header: cdktf.listMapper(trafficManagerProfileMonitorConfigCustomHeaderToTerraform)(struct!.customHeader),
+    custom_header: cdktf.listMapper(trafficManagerProfileMonitorConfigCustomHeaderToTerraform, true)(struct!.customHeader),
   }
 }
 
@@ -704,7 +704,10 @@ export class TrafficManagerProfile extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._maxReturn = config.maxReturn;

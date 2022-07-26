@@ -528,7 +528,10 @@ export class SharedImage extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._acceleratedNetworkSupportEnabled = config.acceleratedNetworkSupportEnabled;
     this._description = config.description;
@@ -934,7 +937,7 @@ export class SharedImage extends cdktf.TerraformResource {
     return {
       accelerated_network_support_enabled: cdktf.booleanToTerraform(this._acceleratedNetworkSupportEnabled),
       description: cdktf.stringToTerraform(this._description),
-      disk_types_not_allowed: cdktf.listMapper(cdktf.stringToTerraform)(this._diskTypesNotAllowed),
+      disk_types_not_allowed: cdktf.listMapper(cdktf.stringToTerraform, false)(this._diskTypesNotAllowed),
       end_of_life_date: cdktf.stringToTerraform(this._endOfLifeDate),
       eula: cdktf.stringToTerraform(this._eula),
       gallery_name: cdktf.stringToTerraform(this._galleryName),

@@ -230,7 +230,10 @@ export class LogAnalyticsDatasourceWindowsEvent extends cdktf.TerraformResource 
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._eventLogName = config.eventLogName;
     this._eventTypes = config.eventTypes;
@@ -349,7 +352,7 @@ export class LogAnalyticsDatasourceWindowsEvent extends cdktf.TerraformResource 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       event_log_name: cdktf.stringToTerraform(this._eventLogName),
-      event_types: cdktf.listMapper(cdktf.stringToTerraform)(this._eventTypes),
+      event_types: cdktf.listMapper(cdktf.stringToTerraform, false)(this._eventTypes),
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),

@@ -90,7 +90,7 @@ export function managementGroupPolicyAssignmentIdentityToTerraform(struct?: Mana
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.identityIds),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
@@ -482,7 +482,10 @@ export class ManagementGroupPolicyAssignment extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._description = config.description;
     this._displayName = config.displayName;
@@ -733,11 +736,11 @@ export class ManagementGroupPolicyAssignment extends cdktf.TerraformResource {
       management_group_id: cdktf.stringToTerraform(this._managementGroupId),
       metadata: cdktf.stringToTerraform(this._metadata),
       name: cdktf.stringToTerraform(this._name),
-      not_scopes: cdktf.listMapper(cdktf.stringToTerraform)(this._notScopes),
+      not_scopes: cdktf.listMapper(cdktf.stringToTerraform, false)(this._notScopes),
       parameters: cdktf.stringToTerraform(this._parameters),
       policy_definition_id: cdktf.stringToTerraform(this._policyDefinitionId),
       identity: managementGroupPolicyAssignmentIdentityToTerraform(this._identity.internalValue),
-      non_compliance_message: cdktf.listMapper(managementGroupPolicyAssignmentNonComplianceMessageToTerraform)(this._nonComplianceMessage.internalValue),
+      non_compliance_message: cdktf.listMapper(managementGroupPolicyAssignmentNonComplianceMessageToTerraform, true)(this._nonComplianceMessage.internalValue),
       timeouts: managementGroupPolicyAssignmentTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

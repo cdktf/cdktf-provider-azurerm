@@ -2243,7 +2243,10 @@ export class MonitorActionGroup extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._enabled = config.enabled;
     this._id = config.id;
@@ -2560,18 +2563,18 @@ export class MonitorActionGroup extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       short_name: cdktf.stringToTerraform(this._shortName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
-      arm_role_receiver: cdktf.listMapper(monitorActionGroupArmRoleReceiverToTerraform)(this._armRoleReceiver.internalValue),
-      automation_runbook_receiver: cdktf.listMapper(monitorActionGroupAutomationRunbookReceiverToTerraform)(this._automationRunbookReceiver.internalValue),
-      azure_app_push_receiver: cdktf.listMapper(monitorActionGroupAzureAppPushReceiverToTerraform)(this._azureAppPushReceiver.internalValue),
-      azure_function_receiver: cdktf.listMapper(monitorActionGroupAzureFunctionReceiverToTerraform)(this._azureFunctionReceiver.internalValue),
-      email_receiver: cdktf.listMapper(monitorActionGroupEmailReceiverToTerraform)(this._emailReceiver.internalValue),
-      event_hub_receiver: cdktf.listMapper(monitorActionGroupEventHubReceiverToTerraform)(this._eventHubReceiver.internalValue),
-      itsm_receiver: cdktf.listMapper(monitorActionGroupItsmReceiverToTerraform)(this._itsmReceiver.internalValue),
-      logic_app_receiver: cdktf.listMapper(monitorActionGroupLogicAppReceiverToTerraform)(this._logicAppReceiver.internalValue),
-      sms_receiver: cdktf.listMapper(monitorActionGroupSmsReceiverToTerraform)(this._smsReceiver.internalValue),
+      arm_role_receiver: cdktf.listMapper(monitorActionGroupArmRoleReceiverToTerraform, true)(this._armRoleReceiver.internalValue),
+      automation_runbook_receiver: cdktf.listMapper(monitorActionGroupAutomationRunbookReceiverToTerraform, true)(this._automationRunbookReceiver.internalValue),
+      azure_app_push_receiver: cdktf.listMapper(monitorActionGroupAzureAppPushReceiverToTerraform, true)(this._azureAppPushReceiver.internalValue),
+      azure_function_receiver: cdktf.listMapper(monitorActionGroupAzureFunctionReceiverToTerraform, true)(this._azureFunctionReceiver.internalValue),
+      email_receiver: cdktf.listMapper(monitorActionGroupEmailReceiverToTerraform, true)(this._emailReceiver.internalValue),
+      event_hub_receiver: cdktf.listMapper(monitorActionGroupEventHubReceiverToTerraform, true)(this._eventHubReceiver.internalValue),
+      itsm_receiver: cdktf.listMapper(monitorActionGroupItsmReceiverToTerraform, true)(this._itsmReceiver.internalValue),
+      logic_app_receiver: cdktf.listMapper(monitorActionGroupLogicAppReceiverToTerraform, true)(this._logicAppReceiver.internalValue),
+      sms_receiver: cdktf.listMapper(monitorActionGroupSmsReceiverToTerraform, true)(this._smsReceiver.internalValue),
       timeouts: monitorActionGroupTimeoutsToTerraform(this._timeouts.internalValue),
-      voice_receiver: cdktf.listMapper(monitorActionGroupVoiceReceiverToTerraform)(this._voiceReceiver.internalValue),
-      webhook_receiver: cdktf.listMapper(monitorActionGroupWebhookReceiverToTerraform)(this._webhookReceiver.internalValue),
+      voice_receiver: cdktf.listMapper(monitorActionGroupVoiceReceiverToTerraform, true)(this._voiceReceiver.internalValue),
+      webhook_receiver: cdktf.listMapper(monitorActionGroupWebhookReceiverToTerraform, true)(this._webhookReceiver.internalValue),
     };
   }
 }

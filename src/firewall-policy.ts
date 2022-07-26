@@ -107,7 +107,7 @@ export function firewallPolicyDnsToTerraform(struct?: FirewallPolicyDnsOutputRef
   }
   return {
     proxy_enabled: cdktf.booleanToTerraform(struct!.proxyEnabled),
-    servers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.servers),
+    servers: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.servers),
   }
 }
 
@@ -198,7 +198,7 @@ export function firewallPolicyIdentityToTerraform(struct?: FirewallPolicyIdentit
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.identityIds),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
@@ -418,7 +418,7 @@ export function firewallPolicyInsightsToTerraform(struct?: FirewallPolicyInsight
     default_log_analytics_workspace_id: cdktf.stringToTerraform(struct!.defaultLogAnalyticsWorkspaceId),
     enabled: cdktf.booleanToTerraform(struct!.enabled),
     retention_in_days: cdktf.numberToTerraform(struct!.retentionInDays),
-    log_analytics_workspace: cdktf.listMapper(firewallPolicyInsightsLogAnalyticsWorkspaceToTerraform)(struct!.logAnalyticsWorkspace),
+    log_analytics_workspace: cdktf.listMapper(firewallPolicyInsightsLogAnalyticsWorkspaceToTerraform, true)(struct!.logAnalyticsWorkspace),
   }
 }
 
@@ -699,13 +699,13 @@ export function firewallPolicyIntrusionDetectionTrafficBypassToTerraform(struct?
   }
   return {
     description: cdktf.stringToTerraform(struct!.description),
-    destination_addresses: cdktf.listMapper(cdktf.stringToTerraform)(struct!.destinationAddresses),
-    destination_ip_groups: cdktf.listMapper(cdktf.stringToTerraform)(struct!.destinationIpGroups),
-    destination_ports: cdktf.listMapper(cdktf.stringToTerraform)(struct!.destinationPorts),
+    destination_addresses: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.destinationAddresses),
+    destination_ip_groups: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.destinationIpGroups),
+    destination_ports: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.destinationPorts),
     name: cdktf.stringToTerraform(struct!.name),
     protocol: cdktf.stringToTerraform(struct!.protocol),
-    source_addresses: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sourceAddresses),
-    source_ip_groups: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sourceIpGroups),
+    source_addresses: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.sourceAddresses),
+    source_ip_groups: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.sourceIpGroups),
   }
 }
 
@@ -963,8 +963,8 @@ export function firewallPolicyIntrusionDetectionToTerraform(struct?: FirewallPol
   }
   return {
     mode: cdktf.stringToTerraform(struct!.mode),
-    signature_overrides: cdktf.listMapper(firewallPolicyIntrusionDetectionSignatureOverridesToTerraform)(struct!.signatureOverrides),
-    traffic_bypass: cdktf.listMapper(firewallPolicyIntrusionDetectionTrafficBypassToTerraform)(struct!.trafficBypass),
+    signature_overrides: cdktf.listMapper(firewallPolicyIntrusionDetectionSignatureOverridesToTerraform, true)(struct!.signatureOverrides),
+    traffic_bypass: cdktf.listMapper(firewallPolicyIntrusionDetectionTrafficBypassToTerraform, true)(struct!.trafficBypass),
   }
 }
 
@@ -1077,8 +1077,8 @@ export function firewallPolicyThreatIntelligenceAllowlistToTerraform(struct?: Fi
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    fqdns: cdktf.listMapper(cdktf.stringToTerraform)(struct!.fqdns),
-    ip_addresses: cdktf.listMapper(cdktf.stringToTerraform)(struct!.ipAddresses),
+    fqdns: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.fqdns),
+    ip_addresses: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.ipAddresses),
   }
 }
 
@@ -1427,7 +1427,10 @@ export class FirewallPolicy extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._basePolicyId = config.basePolicyId;
     this._id = config.id;
@@ -1723,7 +1726,7 @@ export class FirewallPolicy extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
-      private_ip_ranges: cdktf.listMapper(cdktf.stringToTerraform)(this._privateIpRanges),
+      private_ip_ranges: cdktf.listMapper(cdktf.stringToTerraform, false)(this._privateIpRanges),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku: cdktf.stringToTerraform(this._sku),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),

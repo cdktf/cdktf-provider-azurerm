@@ -414,7 +414,7 @@ export function securityCenterAutomationSourceRuleSetToTerraform(struct?: Securi
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    rule: cdktf.listMapper(securityCenterAutomationSourceRuleSetRuleToTerraform)(struct!.rule),
+    rule: cdktf.listMapper(securityCenterAutomationSourceRuleSetRuleToTerraform, true)(struct!.rule),
   }
 }
 
@@ -515,7 +515,7 @@ export function securityCenterAutomationSourceToTerraform(struct?: SecurityCente
   }
   return {
     event_source: cdktf.stringToTerraform(struct!.eventSource),
-    rule_set: cdktf.listMapper(securityCenterAutomationSourceRuleSetToTerraform)(struct!.ruleSet),
+    rule_set: cdktf.listMapper(securityCenterAutomationSourceRuleSetToTerraform, true)(struct!.ruleSet),
   }
 }
 
@@ -807,7 +807,10 @@ export class SecurityCenterAutomation extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._description = config.description;
     this._enabled = config.enabled;
@@ -996,10 +999,10 @@ export class SecurityCenterAutomation extends cdktf.TerraformResource {
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      scopes: cdktf.listMapper(cdktf.stringToTerraform)(this._scopes),
+      scopes: cdktf.listMapper(cdktf.stringToTerraform, false)(this._scopes),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
-      action: cdktf.listMapper(securityCenterAutomationActionToTerraform)(this._action.internalValue),
-      source: cdktf.listMapper(securityCenterAutomationSourceToTerraform)(this._source.internalValue),
+      action: cdktf.listMapper(securityCenterAutomationActionToTerraform, true)(this._action.internalValue),
+      source: cdktf.listMapper(securityCenterAutomationSourceToTerraform, true)(this._source.internalValue),
       timeouts: securityCenterAutomationTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

@@ -984,8 +984,8 @@ export function dataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupToTerraf
   return {
     environment: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.environment),
     powershell_version: cdktf.stringToTerraform(struct!.powershellVersion),
-    command_key: cdktf.listMapper(dataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyToTerraform)(struct!.commandKey),
-    component: cdktf.listMapper(dataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentToTerraform)(struct!.component),
+    command_key: cdktf.listMapper(dataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyToTerraform, true)(struct!.commandKey),
+    component: cdktf.listMapper(dataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentToTerraform, true)(struct!.component),
   }
 }
 
@@ -1515,7 +1515,7 @@ export function dataFactoryIntegrationRuntimeAzureSsisVnetIntegrationToTerraform
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    public_ips: cdktf.listMapper(cdktf.stringToTerraform)(struct!.publicIps),
+    public_ips: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.publicIps),
     subnet_id: cdktf.stringToTerraform(struct!.subnetId),
     subnet_name: cdktf.stringToTerraform(struct!.subnetName),
     vnet_id: cdktf.stringToTerraform(struct!.vnetId),
@@ -1669,7 +1669,10 @@ export class DataFactoryIntegrationRuntimeAzureSsis extends cdktf.TerraformResou
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._dataFactoryId = config.dataFactoryId;
     this._description = config.description;
@@ -1973,7 +1976,7 @@ export class DataFactoryIntegrationRuntimeAzureSsis extends cdktf.TerraformResou
       catalog_info: dataFactoryIntegrationRuntimeAzureSsisCatalogInfoToTerraform(this._catalogInfo.internalValue),
       custom_setup_script: dataFactoryIntegrationRuntimeAzureSsisCustomSetupScriptToTerraform(this._customSetupScript.internalValue),
       express_custom_setup: dataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupToTerraform(this._expressCustomSetup.internalValue),
-      package_store: cdktf.listMapper(dataFactoryIntegrationRuntimeAzureSsisPackageStoreToTerraform)(this._packageStore.internalValue),
+      package_store: cdktf.listMapper(dataFactoryIntegrationRuntimeAzureSsisPackageStoreToTerraform, true)(this._packageStore.internalValue),
       proxy: dataFactoryIntegrationRuntimeAzureSsisProxyToTerraform(this._proxy.internalValue),
       timeouts: dataFactoryIntegrationRuntimeAzureSsisTimeoutsToTerraform(this._timeouts.internalValue),
       vnet_integration: dataFactoryIntegrationRuntimeAzureSsisVnetIntegrationToTerraform(this._vnetIntegration.internalValue),

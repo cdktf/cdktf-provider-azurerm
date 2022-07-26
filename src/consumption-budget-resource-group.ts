@@ -82,7 +82,7 @@ export function consumptionBudgetResourceGroupFilterDimensionToTerraform(struct?
   return {
     name: cdktf.stringToTerraform(struct!.name),
     operator: cdktf.stringToTerraform(struct!.operator),
-    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+    values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
 }
 
@@ -227,7 +227,7 @@ export function consumptionBudgetResourceGroupFilterNotDimensionToTerraform(stru
   return {
     name: cdktf.stringToTerraform(struct!.name),
     operator: cdktf.stringToTerraform(struct!.operator),
-    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+    values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
 }
 
@@ -340,7 +340,7 @@ export function consumptionBudgetResourceGroupFilterNotTagToTerraform(struct?: C
   return {
     name: cdktf.stringToTerraform(struct!.name),
     operator: cdktf.stringToTerraform(struct!.operator),
-    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+    values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
 }
 
@@ -549,7 +549,7 @@ export function consumptionBudgetResourceGroupFilterTagToTerraform(struct?: Cons
   return {
     name: cdktf.stringToTerraform(struct!.name),
     operator: cdktf.stringToTerraform(struct!.operator),
-    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+    values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
 }
 
@@ -698,9 +698,9 @@ export function consumptionBudgetResourceGroupFilterToTerraform(struct?: Consump
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    dimension: cdktf.listMapper(consumptionBudgetResourceGroupFilterDimensionToTerraform)(struct!.dimension),
+    dimension: cdktf.listMapper(consumptionBudgetResourceGroupFilterDimensionToTerraform, true)(struct!.dimension),
     not: consumptionBudgetResourceGroupFilterNotToTerraform(struct!.not),
-    tag: cdktf.listMapper(consumptionBudgetResourceGroupFilterTagToTerraform)(struct!.tag),
+    tag: cdktf.listMapper(consumptionBudgetResourceGroupFilterTagToTerraform, true)(struct!.tag),
   }
 }
 
@@ -833,9 +833,9 @@ export function consumptionBudgetResourceGroupNotificationToTerraform(struct?: C
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    contact_emails: cdktf.listMapper(cdktf.stringToTerraform)(struct!.contactEmails),
-    contact_groups: cdktf.listMapper(cdktf.stringToTerraform)(struct!.contactGroups),
-    contact_roles: cdktf.listMapper(cdktf.stringToTerraform)(struct!.contactRoles),
+    contact_emails: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.contactEmails),
+    contact_groups: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.contactGroups),
+    contact_roles: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.contactRoles),
     enabled: cdktf.booleanToTerraform(struct!.enabled),
     operator: cdktf.stringToTerraform(struct!.operator),
     threshold: cdktf.numberToTerraform(struct!.threshold),
@@ -1327,7 +1327,10 @@ export class ConsumptionBudgetResourceGroup extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._amount = config.amount;
     this._etag = config.etag;
@@ -1503,7 +1506,7 @@ export class ConsumptionBudgetResourceGroup extends cdktf.TerraformResource {
       resource_group_id: cdktf.stringToTerraform(this._resourceGroupId),
       time_grain: cdktf.stringToTerraform(this._timeGrain),
       filter: consumptionBudgetResourceGroupFilterToTerraform(this._filter.internalValue),
-      notification: cdktf.listMapper(consumptionBudgetResourceGroupNotificationToTerraform)(this._notification.internalValue),
+      notification: cdktf.listMapper(consumptionBudgetResourceGroupNotificationToTerraform, true)(this._notification.internalValue),
       time_period: consumptionBudgetResourceGroupTimePeriodToTerraform(this._timePeriod.internalValue),
       timeouts: consumptionBudgetResourceGroupTimeoutsToTerraform(this._timeouts.internalValue),
     };

@@ -290,7 +290,7 @@ export function netappSnapshotPolicyMonthlyScheduleToTerraform(struct?: NetappSn
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    days_of_month: cdktf.listMapper(cdktf.numberToTerraform)(struct!.daysOfMonth),
+    days_of_month: cdktf.listMapper(cdktf.numberToTerraform, false)(struct!.daysOfMonth),
     hour: cdktf.numberToTerraform(struct!.hour),
     minute: cdktf.numberToTerraform(struct!.minute),
     snapshots_to_keep: cdktf.numberToTerraform(struct!.snapshotsToKeep),
@@ -580,7 +580,7 @@ export function netappSnapshotPolicyWeeklyScheduleToTerraform(struct?: NetappSna
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    days_of_week: cdktf.listMapper(cdktf.stringToTerraform)(struct!.daysOfWeek),
+    days_of_week: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.daysOfWeek),
     hour: cdktf.numberToTerraform(struct!.hour),
     minute: cdktf.numberToTerraform(struct!.minute),
     snapshots_to_keep: cdktf.numberToTerraform(struct!.snapshotsToKeep),
@@ -722,7 +722,10 @@ export class NetappSnapshotPolicy extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._accountName = config.accountName;
     this._enabled = config.enabled;

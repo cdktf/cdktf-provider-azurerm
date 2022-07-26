@@ -230,7 +230,10 @@ export class IothubEnrichmentA extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._endpointNames = config.endpointNames;
     this._id = config.id;
@@ -348,7 +351,7 @@ export class IothubEnrichmentA extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      endpoint_names: cdktf.listMapper(cdktf.stringToTerraform)(this._endpointNames),
+      endpoint_names: cdktf.listMapper(cdktf.stringToTerraform, false)(this._endpointNames),
       id: cdktf.stringToTerraform(this._id),
       iothub_name: cdktf.stringToTerraform(this._iothubName),
       key: cdktf.stringToTerraform(this._key),

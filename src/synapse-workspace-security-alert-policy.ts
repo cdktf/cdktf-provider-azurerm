@@ -242,7 +242,10 @@ export class SynapseWorkspaceSecurityAlertPolicy extends cdktf.TerraformResource
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._disabledAlerts = config.disabledAlerts;
     this._emailAccountAdminsEnabled = config.emailAccountAdminsEnabled;
@@ -420,9 +423,9 @@ export class SynapseWorkspaceSecurityAlertPolicy extends cdktf.TerraformResource
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      disabled_alerts: cdktf.listMapper(cdktf.stringToTerraform)(this._disabledAlerts),
+      disabled_alerts: cdktf.listMapper(cdktf.stringToTerraform, false)(this._disabledAlerts),
       email_account_admins_enabled: cdktf.booleanToTerraform(this._emailAccountAdminsEnabled),
-      email_addresses: cdktf.listMapper(cdktf.stringToTerraform)(this._emailAddresses),
+      email_addresses: cdktf.listMapper(cdktf.stringToTerraform, false)(this._emailAddresses),
       id: cdktf.stringToTerraform(this._id),
       policy_state: cdktf.stringToTerraform(this._policyState),
       retention_days: cdktf.numberToTerraform(this._retentionDays),

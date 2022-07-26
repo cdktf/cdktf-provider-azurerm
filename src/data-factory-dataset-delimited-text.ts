@@ -927,7 +927,10 @@ export class DataFactoryDatasetDelimitedText extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._additionalProperties = config.additionalProperties;
     this._annotations = config.annotations;
@@ -1324,7 +1327,7 @@ export class DataFactoryDatasetDelimitedText extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       additional_properties: cdktf.hashMapper(cdktf.stringToTerraform)(this._additionalProperties),
-      annotations: cdktf.listMapper(cdktf.stringToTerraform)(this._annotations),
+      annotations: cdktf.listMapper(cdktf.stringToTerraform, false)(this._annotations),
       column_delimiter: cdktf.stringToTerraform(this._columnDelimiter),
       compression_codec: cdktf.stringToTerraform(this._compressionCodec),
       compression_level: cdktf.stringToTerraform(this._compressionLevel),
@@ -1344,7 +1347,7 @@ export class DataFactoryDatasetDelimitedText extends cdktf.TerraformResource {
       azure_blob_fs_location: dataFactoryDatasetDelimitedTextAzureBlobFsLocationToTerraform(this._azureBlobFsLocation.internalValue),
       azure_blob_storage_location: dataFactoryDatasetDelimitedTextAzureBlobStorageLocationToTerraform(this._azureBlobStorageLocation.internalValue),
       http_server_location: dataFactoryDatasetDelimitedTextHttpServerLocationToTerraform(this._httpServerLocation.internalValue),
-      schema_column: cdktf.listMapper(dataFactoryDatasetDelimitedTextSchemaColumnToTerraform)(this._schemaColumn.internalValue),
+      schema_column: cdktf.listMapper(dataFactoryDatasetDelimitedTextSchemaColumnToTerraform, true)(this._schemaColumn.internalValue),
       timeouts: dataFactoryDatasetDelimitedTextTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

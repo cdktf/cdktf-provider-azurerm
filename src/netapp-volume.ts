@@ -335,8 +335,8 @@ export function netappVolumeExportPolicyRuleToTerraform(struct?: NetappVolumeExp
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    allowed_clients: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedClients),
-    protocols_enabled: cdktf.listMapper(cdktf.stringToTerraform)(struct!.protocolsEnabled),
+    allowed_clients: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedClients),
+    protocols_enabled: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.protocolsEnabled),
     root_access_enabled: cdktf.booleanToTerraform(struct!.rootAccessEnabled),
     rule_index: cdktf.numberToTerraform(struct!.ruleIndex),
     unix_read_only: cdktf.booleanToTerraform(struct!.unixReadOnly),
@@ -717,7 +717,10 @@ export class NetappVolume extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._accountName = config.accountName;
     this._createFromSnapshotResourceId = config.createFromSnapshotResourceId;
@@ -1073,7 +1076,7 @@ export class NetappVolume extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       network_features: cdktf.stringToTerraform(this._networkFeatures),
       pool_name: cdktf.stringToTerraform(this._poolName),
-      protocols: cdktf.listMapper(cdktf.stringToTerraform)(this._protocols),
+      protocols: cdktf.listMapper(cdktf.stringToTerraform, false)(this._protocols),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       security_style: cdktf.stringToTerraform(this._securityStyle),
       service_level: cdktf.stringToTerraform(this._serviceLevel),
@@ -1085,7 +1088,7 @@ export class NetappVolume extends cdktf.TerraformResource {
       volume_path: cdktf.stringToTerraform(this._volumePath),
       data_protection_replication: netappVolumeDataProtectionReplicationToTerraform(this._dataProtectionReplication.internalValue),
       data_protection_snapshot_policy: netappVolumeDataProtectionSnapshotPolicyToTerraform(this._dataProtectionSnapshotPolicy.internalValue),
-      export_policy_rule: cdktf.listMapper(netappVolumeExportPolicyRuleToTerraform)(this._exportPolicyRule.internalValue),
+      export_policy_rule: cdktf.listMapper(netappVolumeExportPolicyRuleToTerraform, true)(this._exportPolicyRule.internalValue),
       timeouts: netappVolumeTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

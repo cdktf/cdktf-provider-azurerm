@@ -378,7 +378,10 @@ export class ManagedApplicationDefinition extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._createUiDefinition = config.createUiDefinition;
     this._description = config.description;
@@ -627,7 +630,7 @@ export class ManagedApplicationDefinition extends cdktf.TerraformResource {
       package_file_uri: cdktf.stringToTerraform(this._packageFileUri),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
-      authorization: cdktf.listMapper(managedApplicationDefinitionAuthorizationToTerraform)(this._authorization.internalValue),
+      authorization: cdktf.listMapper(managedApplicationDefinitionAuthorizationToTerraform, true)(this._authorization.internalValue),
       timeouts: managedApplicationDefinitionTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

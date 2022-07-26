@@ -262,7 +262,10 @@ export class ApplicationInsightsWebTest extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._applicationInsightsId = config.applicationInsightsId;
     this._configuration = config.configuration;
@@ -520,7 +523,7 @@ export class ApplicationInsightsWebTest extends cdktf.TerraformResource {
       description: cdktf.stringToTerraform(this._description),
       enabled: cdktf.booleanToTerraform(this._enabled),
       frequency: cdktf.numberToTerraform(this._frequency),
-      geo_locations: cdktf.listMapper(cdktf.stringToTerraform)(this._geoLocations),
+      geo_locations: cdktf.listMapper(cdktf.stringToTerraform, false)(this._geoLocations),
       id: cdktf.stringToTerraform(this._id),
       kind: cdktf.stringToTerraform(this._kind),
       location: cdktf.stringToTerraform(this._location),

@@ -262,7 +262,10 @@ export class LbRule extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._backendAddressPoolIds = config.backendAddressPoolIds;
     this._backendPort = config.backendPort;
@@ -518,7 +521,7 @@ export class LbRule extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      backend_address_pool_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._backendAddressPoolIds),
+      backend_address_pool_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(this._backendAddressPoolIds),
       backend_port: cdktf.numberToTerraform(this._backendPort),
       disable_outbound_snat: cdktf.booleanToTerraform(this._disableOutboundSnat),
       enable_floating_ip: cdktf.booleanToTerraform(this._enableFloatingIp),

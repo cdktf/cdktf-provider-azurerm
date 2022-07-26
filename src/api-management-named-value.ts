@@ -333,7 +333,10 @@ export class ApiManagementNamedValue extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._apiManagementName = config.apiManagementName;
     this._displayName = config.displayName;
@@ -511,7 +514,7 @@ export class ApiManagementNamedValue extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       secret: cdktf.booleanToTerraform(this._secret),
-      tags: cdktf.listMapper(cdktf.stringToTerraform)(this._tags),
+      tags: cdktf.listMapper(cdktf.stringToTerraform, false)(this._tags),
       value: cdktf.stringToTerraform(this._value),
       timeouts: apiManagementNamedValueTimeoutsToTerraform(this._timeouts.internalValue),
       value_from_key_vault: apiManagementNamedValueValueFromKeyVaultToTerraform(this._valueFromKeyVault.internalValue),

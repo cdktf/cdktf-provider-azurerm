@@ -438,7 +438,7 @@ export function frontdoorBackendPoolToTerraform(struct?: FrontdoorBackendPool | 
     health_probe_name: cdktf.stringToTerraform(struct!.healthProbeName),
     load_balancing_name: cdktf.stringToTerraform(struct!.loadBalancingName),
     name: cdktf.stringToTerraform(struct!.name),
-    backend: cdktf.listMapper(frontdoorBackendPoolBackendToTerraform)(struct!.backend),
+    backend: cdktf.listMapper(frontdoorBackendPoolBackendToTerraform, true)(struct!.backend),
   }
 }
 
@@ -1365,7 +1365,7 @@ export function frontdoorRoutingRuleForwardingConfigurationToTerraform(struct?: 
     cache_duration: cdktf.stringToTerraform(struct!.cacheDuration),
     cache_enabled: cdktf.booleanToTerraform(struct!.cacheEnabled),
     cache_query_parameter_strip_directive: cdktf.stringToTerraform(struct!.cacheQueryParameterStripDirective),
-    cache_query_parameters: cdktf.listMapper(cdktf.stringToTerraform)(struct!.cacheQueryParameters),
+    cache_query_parameters: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.cacheQueryParameters),
     cache_use_dynamic_compression: cdktf.booleanToTerraform(struct!.cacheUseDynamicCompression),
     custom_forwarding_path: cdktf.stringToTerraform(struct!.customForwardingPath),
     forwarding_protocol: cdktf.stringToTerraform(struct!.forwardingProtocol),
@@ -1806,11 +1806,11 @@ export function frontdoorRoutingRuleToTerraform(struct?: FrontdoorRoutingRule | 
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    accepted_protocols: cdktf.listMapper(cdktf.stringToTerraform)(struct!.acceptedProtocols),
+    accepted_protocols: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.acceptedProtocols),
     enabled: cdktf.booleanToTerraform(struct!.enabled),
-    frontend_endpoints: cdktf.listMapper(cdktf.stringToTerraform)(struct!.frontendEndpoints),
+    frontend_endpoints: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.frontendEndpoints),
     name: cdktf.stringToTerraform(struct!.name),
-    patterns_to_match: cdktf.listMapper(cdktf.stringToTerraform)(struct!.patternsToMatch),
+    patterns_to_match: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.patternsToMatch),
     forwarding_configuration: frontdoorRoutingRuleForwardingConfigurationToTerraform(struct!.forwardingConfiguration),
     redirect_configuration: frontdoorRoutingRuleRedirectConfigurationToTerraform(struct!.redirectConfiguration),
   }
@@ -2210,7 +2210,10 @@ export class Frontdoor extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._friendlyName = config.friendlyName;
     this._id = config.id;
@@ -2476,12 +2479,12 @@ export class Frontdoor extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
-      backend_pool: cdktf.listMapper(frontdoorBackendPoolToTerraform)(this._backendPool.internalValue),
-      backend_pool_health_probe: cdktf.listMapper(frontdoorBackendPoolHealthProbeToTerraform)(this._backendPoolHealthProbe.internalValue),
-      backend_pool_load_balancing: cdktf.listMapper(frontdoorBackendPoolLoadBalancingToTerraform)(this._backendPoolLoadBalancing.internalValue),
-      backend_pool_settings: cdktf.listMapper(frontdoorBackendPoolSettingsToTerraform)(this._backendPoolSettings.internalValue),
-      frontend_endpoint: cdktf.listMapper(frontdoorFrontendEndpointToTerraform)(this._frontendEndpoint.internalValue),
-      routing_rule: cdktf.listMapper(frontdoorRoutingRuleToTerraform)(this._routingRule.internalValue),
+      backend_pool: cdktf.listMapper(frontdoorBackendPoolToTerraform, true)(this._backendPool.internalValue),
+      backend_pool_health_probe: cdktf.listMapper(frontdoorBackendPoolHealthProbeToTerraform, true)(this._backendPoolHealthProbe.internalValue),
+      backend_pool_load_balancing: cdktf.listMapper(frontdoorBackendPoolLoadBalancingToTerraform, true)(this._backendPoolLoadBalancing.internalValue),
+      backend_pool_settings: cdktf.listMapper(frontdoorBackendPoolSettingsToTerraform, true)(this._backendPoolSettings.internalValue),
+      frontend_endpoint: cdktf.listMapper(frontdoorFrontendEndpointToTerraform, true)(this._frontendEndpoint.internalValue),
+      routing_rule: cdktf.listMapper(frontdoorRoutingRuleToTerraform, true)(this._routingRule.internalValue),
       timeouts: frontdoorTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

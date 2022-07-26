@@ -357,7 +357,10 @@ export class StorageAccountNetworkRulesA extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._bypass = config.bypass;
     this._defaultAction = config.defaultAction;
@@ -501,13 +504,13 @@ export class StorageAccountNetworkRulesA extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      bypass: cdktf.listMapper(cdktf.stringToTerraform)(this._bypass),
+      bypass: cdktf.listMapper(cdktf.stringToTerraform, false)(this._bypass),
       default_action: cdktf.stringToTerraform(this._defaultAction),
       id: cdktf.stringToTerraform(this._id),
-      ip_rules: cdktf.listMapper(cdktf.stringToTerraform)(this._ipRules),
+      ip_rules: cdktf.listMapper(cdktf.stringToTerraform, false)(this._ipRules),
       storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
-      virtual_network_subnet_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._virtualNetworkSubnetIds),
-      private_link_access: cdktf.listMapper(storageAccountNetworkRulesPrivateLinkAccessAToTerraform)(this._privateLinkAccess.internalValue),
+      virtual_network_subnet_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(this._virtualNetworkSubnetIds),
+      private_link_access: cdktf.listMapper(storageAccountNetworkRulesPrivateLinkAccessAToTerraform, true)(this._privateLinkAccess.internalValue),
       timeouts: storageAccountNetworkRulesTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

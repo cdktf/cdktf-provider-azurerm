@@ -134,7 +134,7 @@ export function kustoClusterIdentityToTerraform(struct?: KustoClusterIdentityOut
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.identityIds),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
@@ -690,7 +690,10 @@ export class KustoCluster extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._allowedFqdns = config.allowedFqdns;
     this._allowedIpRanges = config.allowedIpRanges;
@@ -1110,14 +1113,14 @@ export class KustoCluster extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      allowed_fqdns: cdktf.listMapper(cdktf.stringToTerraform)(this._allowedFqdns),
-      allowed_ip_ranges: cdktf.listMapper(cdktf.stringToTerraform)(this._allowedIpRanges),
+      allowed_fqdns: cdktf.listMapper(cdktf.stringToTerraform, false)(this._allowedFqdns),
+      allowed_ip_ranges: cdktf.listMapper(cdktf.stringToTerraform, false)(this._allowedIpRanges),
       auto_stop_enabled: cdktf.booleanToTerraform(this._autoStopEnabled),
       disk_encryption_enabled: cdktf.booleanToTerraform(this._diskEncryptionEnabled),
       double_encryption_enabled: cdktf.booleanToTerraform(this._doubleEncryptionEnabled),
       engine: cdktf.stringToTerraform(this._engine),
       id: cdktf.stringToTerraform(this._id),
-      language_extensions: cdktf.listMapper(cdktf.stringToTerraform)(this._languageExtensions),
+      language_extensions: cdktf.listMapper(cdktf.stringToTerraform, false)(this._languageExtensions),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       outbound_network_access_restricted: cdktf.booleanToTerraform(this._outboundNetworkAccessRestricted),
@@ -1127,8 +1130,8 @@ export class KustoCluster extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       streaming_ingestion_enabled: cdktf.booleanToTerraform(this._streamingIngestionEnabled),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
-      trusted_external_tenants: cdktf.listMapper(cdktf.stringToTerraform)(this._trustedExternalTenants),
-      zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),
+      trusted_external_tenants: cdktf.listMapper(cdktf.stringToTerraform, false)(this._trustedExternalTenants),
+      zones: cdktf.listMapper(cdktf.stringToTerraform, false)(this._zones),
       identity: kustoClusterIdentityToTerraform(this._identity.internalValue),
       optimized_auto_scale: kustoClusterOptimizedAutoScaleToTerraform(this._optimizedAutoScale.internalValue),
       sku: kustoClusterSkuToTerraform(this._sku.internalValue),

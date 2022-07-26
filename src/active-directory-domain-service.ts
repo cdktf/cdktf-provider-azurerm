@@ -185,7 +185,7 @@ export function activeDirectoryDomainServiceNotificationsToTerraform(struct?: Ac
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    additional_recipients: cdktf.listMapper(cdktf.stringToTerraform)(struct!.additionalRecipients),
+    additional_recipients: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.additionalRecipients),
     notify_dc_admins: cdktf.booleanToTerraform(struct!.notifyDcAdmins),
     notify_global_admins: cdktf.booleanToTerraform(struct!.notifyGlobalAdmins),
   }
@@ -797,7 +797,10 @@ export class ActiveDirectoryDomainService extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._domainConfigurationType = config.domainConfigurationType;
     this._domainName = config.domainName;

@@ -226,7 +226,10 @@ export class BotChannelWebChat extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._botName = config.botName;
     this._id = config.id;
@@ -334,7 +337,7 @@ export class BotChannelWebChat extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      site_names: cdktf.listMapper(cdktf.stringToTerraform)(this._siteNames),
+      site_names: cdktf.listMapper(cdktf.stringToTerraform, false)(this._siteNames),
       timeouts: botChannelWebChatTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

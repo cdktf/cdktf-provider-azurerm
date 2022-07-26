@@ -567,7 +567,7 @@ export function mediaAssetFilterTrackSelectionToTerraform(struct?: MediaAssetFil
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    condition: cdktf.listMapper(mediaAssetFilterTrackSelectionConditionToTerraform)(struct!.condition),
+    condition: cdktf.listMapper(mediaAssetFilterTrackSelectionConditionToTerraform, true)(struct!.condition),
   }
 }
 
@@ -681,7 +681,10 @@ export class MediaAssetFilter extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._assetId = config.assetId;
     this._firstQualityBitrate = config.firstQualityBitrate;
@@ -814,7 +817,7 @@ export class MediaAssetFilter extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       presentation_time_range: mediaAssetFilterPresentationTimeRangeToTerraform(this._presentationTimeRange.internalValue),
       timeouts: mediaAssetFilterTimeoutsToTerraform(this._timeouts.internalValue),
-      track_selection: cdktf.listMapper(mediaAssetFilterTrackSelectionToTerraform)(this._trackSelection.internalValue),
+      track_selection: cdktf.listMapper(mediaAssetFilterTrackSelectionToTerraform, true)(this._trackSelection.internalValue),
     };
   }
 }

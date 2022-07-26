@@ -322,7 +322,10 @@ export class DataFactoryIntegrationRuntimeSelfHosted extends cdktf.TerraformReso
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._dataFactoryId = config.dataFactoryId;
     this._description = config.description;
@@ -446,7 +449,7 @@ export class DataFactoryIntegrationRuntimeSelfHosted extends cdktf.TerraformReso
       description: cdktf.stringToTerraform(this._description),
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
-      rbac_authorization: cdktf.listMapper(dataFactoryIntegrationRuntimeSelfHostedRbacAuthorizationToTerraform)(this._rbacAuthorization.internalValue),
+      rbac_authorization: cdktf.listMapper(dataFactoryIntegrationRuntimeSelfHostedRbacAuthorizationToTerraform, true)(this._rbacAuthorization.internalValue),
       timeouts: dataFactoryIntegrationRuntimeSelfHostedTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

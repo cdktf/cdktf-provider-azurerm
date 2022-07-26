@@ -222,7 +222,7 @@ export function storageShareAclToTerraform(struct?: StorageShareAcl | cdktf.IRes
   }
   return {
     id: cdktf.stringToTerraform(struct!.id),
-    access_policy: cdktf.listMapper(storageShareAclAccessPolicyToTerraform)(struct!.accessPolicy),
+    access_policy: cdktf.listMapper(storageShareAclAccessPolicyToTerraform, true)(struct!.accessPolicy),
   }
 }
 
@@ -514,7 +514,10 @@ export class StorageShare extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._accessTier = config.accessTier;
     this._enabledProtocol = config.enabledProtocol;
@@ -689,7 +692,7 @@ export class StorageShare extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       quota: cdktf.numberToTerraform(this._quota),
       storage_account_name: cdktf.stringToTerraform(this._storageAccountName),
-      acl: cdktf.listMapper(storageShareAclToTerraform)(this._acl.internalValue),
+      acl: cdktf.listMapper(storageShareAclToTerraform, true)(this._acl.internalValue),
       timeouts: storageShareTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

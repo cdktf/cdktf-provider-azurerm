@@ -516,7 +516,10 @@ export class TrafficManagerAzureEndpoint extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._enabled = config.enabled;
     this._geoMappings = config.geoMappings;
@@ -709,15 +712,15 @@ export class TrafficManagerAzureEndpoint extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       enabled: cdktf.booleanToTerraform(this._enabled),
-      geo_mappings: cdktf.listMapper(cdktf.stringToTerraform)(this._geoMappings),
+      geo_mappings: cdktf.listMapper(cdktf.stringToTerraform, false)(this._geoMappings),
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       priority: cdktf.numberToTerraform(this._priority),
       profile_id: cdktf.stringToTerraform(this._profileId),
       target_resource_id: cdktf.stringToTerraform(this._targetResourceId),
       weight: cdktf.numberToTerraform(this._weight),
-      custom_header: cdktf.listMapper(trafficManagerAzureEndpointCustomHeaderToTerraform)(this._customHeader.internalValue),
-      subnet: cdktf.listMapper(trafficManagerAzureEndpointSubnetToTerraform)(this._subnet.internalValue),
+      custom_header: cdktf.listMapper(trafficManagerAzureEndpointCustomHeaderToTerraform, true)(this._customHeader.internalValue),
+      subnet: cdktf.listMapper(trafficManagerAzureEndpointSubnetToTerraform, true)(this._subnet.internalValue),
       timeouts: trafficManagerAzureEndpointTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

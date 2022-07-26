@@ -865,7 +865,7 @@ export class AzurermProvider extends cdktf.TerraformProvider {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      auxiliary_tenant_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._auxiliaryTenantIds),
+      auxiliary_tenant_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(this._auxiliaryTenantIds),
       client_certificate_password: cdktf.stringToTerraform(this._clientCertificatePassword),
       client_certificate_path: cdktf.stringToTerraform(this._clientCertificatePath),
       client_id: cdktf.stringToTerraform(this._clientId),

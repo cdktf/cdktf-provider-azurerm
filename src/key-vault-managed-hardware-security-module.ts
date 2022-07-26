@@ -219,7 +219,10 @@ export class KeyVaultManagedHardwareSecurityModule extends cdktf.TerraformResour
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._adminObjectIds = config.adminObjectIds;
     this._id = config.id;
@@ -407,7 +410,7 @@ export class KeyVaultManagedHardwareSecurityModule extends cdktf.TerraformResour
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      admin_object_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._adminObjectIds),
+      admin_object_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(this._adminObjectIds),
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),

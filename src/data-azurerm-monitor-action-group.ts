@@ -1175,7 +1175,10 @@ export class DataAzurermMonitorActionGroup extends cdktf.TerraformDataSource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._name = config.name;
@@ -1341,7 +1344,7 @@ export class DataAzurermMonitorActionGroup extends cdktf.TerraformDataSource {
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      event_hub_receiver: cdktf.listMapper(dataAzurermMonitorActionGroupEventHubReceiverToTerraform)(this._eventHubReceiver.internalValue),
+      event_hub_receiver: cdktf.listMapper(dataAzurermMonitorActionGroupEventHubReceiverToTerraform, true)(this._eventHubReceiver.internalValue),
       timeouts: dataAzurermMonitorActionGroupTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

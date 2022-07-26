@@ -304,7 +304,7 @@ export function virtualMachineIdentityToTerraform(struct?: VirtualMachineIdentit
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.identityIds),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
@@ -659,7 +659,7 @@ export function virtualMachineOsProfileLinuxConfigToTerraform(struct?: VirtualMa
   }
   return {
     disable_password_authentication: cdktf.booleanToTerraform(struct!.disablePasswordAuthentication),
-    ssh_keys: cdktf.listMapper(virtualMachineOsProfileLinuxConfigSshKeysToTerraform)(struct!.sshKeys),
+    ssh_keys: cdktf.listMapper(virtualMachineOsProfileLinuxConfigSshKeysToTerraform, true)(struct!.sshKeys),
   }
 }
 
@@ -871,7 +871,7 @@ export function virtualMachineOsProfileSecretsToTerraform(struct?: VirtualMachin
   }
   return {
     source_vault_id: cdktf.stringToTerraform(struct!.sourceVaultId),
-    vault_certificates: cdktf.listMapper(virtualMachineOsProfileSecretsVaultCertificatesToTerraform)(struct!.vaultCertificates),
+    vault_certificates: cdktf.listMapper(virtualMachineOsProfileSecretsVaultCertificatesToTerraform, true)(struct!.vaultCertificates),
   }
 }
 
@@ -1297,8 +1297,8 @@ export function virtualMachineOsProfileWindowsConfigToTerraform(struct?: Virtual
     enable_automatic_upgrades: cdktf.booleanToTerraform(struct!.enableAutomaticUpgrades),
     provision_vm_agent: cdktf.booleanToTerraform(struct!.provisionVmAgent),
     timezone: cdktf.stringToTerraform(struct!.timezone),
-    additional_unattend_config: cdktf.listMapper(virtualMachineOsProfileWindowsConfigAdditionalUnattendConfigToTerraform)(struct!.additionalUnattendConfig),
-    winrm: cdktf.listMapper(virtualMachineOsProfileWindowsConfigWinrmToTerraform)(struct!.winrm),
+    additional_unattend_config: cdktf.listMapper(virtualMachineOsProfileWindowsConfigAdditionalUnattendConfigToTerraform, true)(struct!.additionalUnattendConfig),
+    winrm: cdktf.listMapper(virtualMachineOsProfileWindowsConfigWinrmToTerraform, true)(struct!.winrm),
   }
 }
 
@@ -2519,7 +2519,10 @@ export class VirtualMachine extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._availabilitySetId = config.availabilitySetId;
     this._deleteDataDisksOnTermination = config.deleteDataDisksOnTermination;
@@ -2964,22 +2967,22 @@ export class VirtualMachine extends cdktf.TerraformResource {
       license_type: cdktf.stringToTerraform(this._licenseType),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
-      network_interface_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._networkInterfaceIds),
+      network_interface_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(this._networkInterfaceIds),
       primary_network_interface_id: cdktf.stringToTerraform(this._primaryNetworkInterfaceId),
       proximity_placement_group_id: cdktf.stringToTerraform(this._proximityPlacementGroupId),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       vm_size: cdktf.stringToTerraform(this._vmSize),
-      zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),
+      zones: cdktf.listMapper(cdktf.stringToTerraform, false)(this._zones),
       additional_capabilities: virtualMachineAdditionalCapabilitiesToTerraform(this._additionalCapabilities.internalValue),
       boot_diagnostics: virtualMachineBootDiagnosticsToTerraform(this._bootDiagnostics.internalValue),
       identity: virtualMachineIdentityToTerraform(this._identity.internalValue),
       os_profile: virtualMachineOsProfileToTerraform(this._osProfile.internalValue),
       os_profile_linux_config: virtualMachineOsProfileLinuxConfigToTerraform(this._osProfileLinuxConfig.internalValue),
-      os_profile_secrets: cdktf.listMapper(virtualMachineOsProfileSecretsToTerraform)(this._osProfileSecrets.internalValue),
+      os_profile_secrets: cdktf.listMapper(virtualMachineOsProfileSecretsToTerraform, true)(this._osProfileSecrets.internalValue),
       os_profile_windows_config: virtualMachineOsProfileWindowsConfigToTerraform(this._osProfileWindowsConfig.internalValue),
       plan: virtualMachinePlanToTerraform(this._plan.internalValue),
-      storage_data_disk: cdktf.listMapper(virtualMachineStorageDataDiskToTerraform)(this._storageDataDisk.internalValue),
+      storage_data_disk: cdktf.listMapper(virtualMachineStorageDataDiskToTerraform, true)(this._storageDataDisk.internalValue),
       storage_image_reference: virtualMachineStorageImageReferenceToTerraform(this._storageImageReference.internalValue),
       storage_os_disk: virtualMachineStorageOsDiskToTerraform(this._storageOsDisk.internalValue),
       timeouts: virtualMachineTimeoutsToTerraform(this._timeouts.internalValue),

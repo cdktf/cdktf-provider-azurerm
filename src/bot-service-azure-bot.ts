@@ -274,7 +274,10 @@ export class BotServiceAzureBot extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._developerAppInsightsApiKey = config.developerAppInsightsApiKey;
     this._developerAppInsightsApplicationId = config.developerAppInsightsApplicationId;
@@ -586,7 +589,7 @@ export class BotServiceAzureBot extends cdktf.TerraformResource {
       endpoint: cdktf.stringToTerraform(this._endpoint),
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
-      luis_app_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._luisAppIds),
+      luis_app_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(this._luisAppIds),
       luis_key: cdktf.stringToTerraform(this._luisKey),
       microsoft_app_id: cdktf.stringToTerraform(this._microsoftAppId),
       microsoft_app_msi_id: cdktf.stringToTerraform(this._microsoftAppMsiId),

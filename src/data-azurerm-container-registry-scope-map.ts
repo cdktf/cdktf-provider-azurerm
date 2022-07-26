@@ -141,7 +141,10 @@ export class DataAzurermContainerRegistryScopeMap extends cdktf.TerraformDataSou
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._containerRegistryName = config.containerRegistryName;
     this._id = config.id;

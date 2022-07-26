@@ -235,7 +235,10 @@ export class KustoIothubDataConnection extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._clusterName = config.clusterName;
     this._consumerGroup = config.consumerGroup;
@@ -485,7 +488,7 @@ export class KustoIothubDataConnection extends cdktf.TerraformResource {
       data_format: cdktf.stringToTerraform(this._dataFormat),
       database_name: cdktf.stringToTerraform(this._databaseName),
       database_routing_type: cdktf.stringToTerraform(this._databaseRoutingType),
-      event_system_properties: cdktf.listMapper(cdktf.stringToTerraform)(this._eventSystemProperties),
+      event_system_properties: cdktf.listMapper(cdktf.stringToTerraform, false)(this._eventSystemProperties),
       id: cdktf.stringToTerraform(this._id),
       iothub_id: cdktf.stringToTerraform(this._iothubId),
       location: cdktf.stringToTerraform(this._location),

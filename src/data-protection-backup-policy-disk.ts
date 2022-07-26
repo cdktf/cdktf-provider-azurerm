@@ -465,7 +465,10 @@ export class DataProtectionBackupPolicyDisk extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._backupRepeatingTimeIntervals = config.backupRepeatingTimeIntervals;
     this._defaultRetentionDuration = config.defaultRetentionDuration;
@@ -586,12 +589,12 @@ export class DataProtectionBackupPolicyDisk extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      backup_repeating_time_intervals: cdktf.listMapper(cdktf.stringToTerraform)(this._backupRepeatingTimeIntervals),
+      backup_repeating_time_intervals: cdktf.listMapper(cdktf.stringToTerraform, false)(this._backupRepeatingTimeIntervals),
       default_retention_duration: cdktf.stringToTerraform(this._defaultRetentionDuration),
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       vault_id: cdktf.stringToTerraform(this._vaultId),
-      retention_rule: cdktf.listMapper(dataProtectionBackupPolicyDiskRetentionRuleToTerraform)(this._retentionRule.internalValue),
+      retention_rule: cdktf.listMapper(dataProtectionBackupPolicyDiskRetentionRuleToTerraform, true)(this._retentionRule.internalValue),
       timeouts: dataProtectionBackupPolicyDiskTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

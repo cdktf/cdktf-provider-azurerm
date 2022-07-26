@@ -543,7 +543,7 @@ export function iothubEnrichmentToTerraform(struct?: IothubEnrichment | cdktf.IR
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    endpoint_names: struct!.endpointNames === undefined ? null : cdktf.listMapper(cdktf.stringToTerraform)(struct!.endpointNames),
+    endpoint_names: struct!.endpointNames === undefined ? null : cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.endpointNames),
     key: struct!.key === undefined ? null : cdktf.stringToTerraform(struct!.key),
     value: struct!.value === undefined ? null : cdktf.stringToTerraform(struct!.value),
   }
@@ -704,7 +704,7 @@ export function iothubRouteToTerraform(struct?: IothubRoute | cdktf.IResolvable)
   return {
     condition: struct!.condition === undefined ? null : cdktf.stringToTerraform(struct!.condition),
     enabled: struct!.enabled === undefined ? null : cdktf.booleanToTerraform(struct!.enabled),
-    endpoint_names: struct!.endpointNames === undefined ? null : cdktf.listMapper(cdktf.stringToTerraform)(struct!.endpointNames),
+    endpoint_names: struct!.endpointNames === undefined ? null : cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.endpointNames),
     name: struct!.name === undefined ? null : cdktf.stringToTerraform(struct!.name),
     source: struct!.source === undefined ? null : cdktf.stringToTerraform(struct!.source),
   }
@@ -1133,7 +1133,7 @@ export function iothubCloudToDeviceToTerraform(struct?: IothubCloudToDeviceOutpu
   return {
     default_ttl: cdktf.stringToTerraform(struct!.defaultTtl),
     max_delivery_count: cdktf.numberToTerraform(struct!.maxDeliveryCount),
-    feedback: cdktf.listMapper(iothubCloudToDeviceFeedbackToTerraform)(struct!.feedback),
+    feedback: cdktf.listMapper(iothubCloudToDeviceFeedbackToTerraform, true)(struct!.feedback),
   }
 }
 
@@ -1256,7 +1256,7 @@ export function iothubFallbackRouteToTerraform(struct?: IothubFallbackRouteOutpu
   return {
     condition: cdktf.stringToTerraform(struct!.condition),
     enabled: cdktf.booleanToTerraform(struct!.enabled),
-    endpoint_names: cdktf.listMapper(cdktf.stringToTerraform)(struct!.endpointNames),
+    endpoint_names: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.endpointNames),
     source: cdktf.stringToTerraform(struct!.source),
   }
 }
@@ -1667,7 +1667,7 @@ export function iothubIdentityToTerraform(struct?: IothubIdentityOutputReference
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.identityIds),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
@@ -1919,7 +1919,7 @@ export function iothubNetworkRuleSetToTerraform(struct?: IothubNetworkRuleSet | 
   return {
     apply_to_builtin_eventhub_endpoint: cdktf.booleanToTerraform(struct!.applyToBuiltinEventhubEndpoint),
     default_action: cdktf.stringToTerraform(struct!.defaultAction),
-    ip_rule: cdktf.listMapper(iothubNetworkRuleSetIpRuleToTerraform)(struct!.ipRule),
+    ip_rule: cdktf.listMapper(iothubNetworkRuleSetIpRuleToTerraform, true)(struct!.ipRule),
   }
 }
 
@@ -2322,7 +2322,10 @@ export class Iothub extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._endpoint.internalValue = config.endpoint;
     this._enrichment.internalValue = config.enrichment;
@@ -2688,8 +2691,8 @@ export class Iothub extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      endpoint: cdktf.listMapper(iothubEndpointToTerraform)(this._endpoint.internalValue),
-      enrichment: cdktf.listMapper(iothubEnrichmentToTerraform)(this._enrichment.internalValue),
+      endpoint: cdktf.listMapper(iothubEndpointToTerraform, false)(this._endpoint.internalValue),
+      enrichment: cdktf.listMapper(iothubEnrichmentToTerraform, false)(this._enrichment.internalValue),
       event_hub_partition_count: cdktf.numberToTerraform(this._eventHubPartitionCount),
       event_hub_retention_in_days: cdktf.numberToTerraform(this._eventHubRetentionInDays),
       id: cdktf.stringToTerraform(this._id),
@@ -2698,13 +2701,13 @@ export class Iothub extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      route: cdktf.listMapper(iothubRouteToTerraform)(this._route.internalValue),
+      route: cdktf.listMapper(iothubRouteToTerraform, false)(this._route.internalValue),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       cloud_to_device: iothubCloudToDeviceToTerraform(this._cloudToDevice.internalValue),
       fallback_route: iothubFallbackRouteToTerraform(this._fallbackRoute.internalValue),
       file_upload: iothubFileUploadToTerraform(this._fileUpload.internalValue),
       identity: iothubIdentityToTerraform(this._identity.internalValue),
-      network_rule_set: cdktf.listMapper(iothubNetworkRuleSetToTerraform)(this._networkRuleSet.internalValue),
+      network_rule_set: cdktf.listMapper(iothubNetworkRuleSetToTerraform, true)(this._networkRuleSet.internalValue),
       sku: iothubSkuToTerraform(this._sku.internalValue),
       timeouts: iothubTimeoutsToTerraform(this._timeouts.internalValue),
     };

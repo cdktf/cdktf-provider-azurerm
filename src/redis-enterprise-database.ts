@@ -378,7 +378,10 @@ export class RedisEnterpriseDatabase extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._clientProtocol = config.clientProtocol;
     this._clusterId = config.clusterId;
@@ -609,11 +612,11 @@ export class RedisEnterpriseDatabase extends cdktf.TerraformResource {
       eviction_policy: cdktf.stringToTerraform(this._evictionPolicy),
       id: cdktf.stringToTerraform(this._id),
       linked_database_group_nickname: cdktf.stringToTerraform(this._linkedDatabaseGroupNickname),
-      linked_database_id: cdktf.listMapper(cdktf.stringToTerraform)(this._linkedDatabaseId),
+      linked_database_id: cdktf.listMapper(cdktf.stringToTerraform, false)(this._linkedDatabaseId),
       name: cdktf.stringToTerraform(this._name),
       port: cdktf.numberToTerraform(this._port),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      module: cdktf.listMapper(redisEnterpriseDatabaseModuleToTerraform)(this._module.internalValue),
+      module: cdktf.listMapper(redisEnterpriseDatabaseModuleToTerraform, true)(this._module.internalValue),
       timeouts: redisEnterpriseDatabaseTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

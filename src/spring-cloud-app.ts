@@ -96,7 +96,7 @@ export function springCloudAppCustomPersistentDiskToTerraform(struct?: SpringClo
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    mount_options: cdktf.listMapper(cdktf.stringToTerraform)(struct!.mountOptions),
+    mount_options: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.mountOptions),
     mount_path: cdktf.stringToTerraform(struct!.mountPath),
     read_only_enabled: cdktf.booleanToTerraform(struct!.readOnlyEnabled),
     share_name: cdktf.stringToTerraform(struct!.shareName),
@@ -280,7 +280,7 @@ export function springCloudAppIdentityToTerraform(struct?: SpringCloudAppIdentit
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.identityIds),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
@@ -640,7 +640,10 @@ export class SpringCloudApp extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._addonJson = config.addonJson;
     this._httpsOnly = config.httpsOnly;
@@ -867,7 +870,7 @@ export class SpringCloudApp extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       service_name: cdktf.stringToTerraform(this._serviceName),
       tls_enabled: cdktf.booleanToTerraform(this._tlsEnabled),
-      custom_persistent_disk: cdktf.listMapper(springCloudAppCustomPersistentDiskToTerraform)(this._customPersistentDisk.internalValue),
+      custom_persistent_disk: cdktf.listMapper(springCloudAppCustomPersistentDiskToTerraform, true)(this._customPersistentDisk.internalValue),
       identity: springCloudAppIdentityToTerraform(this._identity.internalValue),
       persistent_disk: springCloudAppPersistentDiskToTerraform(this._persistentDisk.internalValue),
       timeouts: springCloudAppTimeoutsToTerraform(this._timeouts.internalValue),

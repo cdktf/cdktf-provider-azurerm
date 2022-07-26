@@ -415,7 +415,10 @@ export class KeyVaultCertificateIssuer extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._accountId = config.accountId;
     this._id = config.id;
@@ -580,7 +583,7 @@ export class KeyVaultCertificateIssuer extends cdktf.TerraformResource {
       org_id: cdktf.stringToTerraform(this._orgId),
       password: cdktf.stringToTerraform(this._password),
       provider_name: cdktf.stringToTerraform(this._providerName),
-      admin: cdktf.listMapper(keyVaultCertificateIssuerAdminToTerraform)(this._admin.internalValue),
+      admin: cdktf.listMapper(keyVaultCertificateIssuerAdminToTerraform, true)(this._admin.internalValue),
       timeouts: keyVaultCertificateIssuerTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

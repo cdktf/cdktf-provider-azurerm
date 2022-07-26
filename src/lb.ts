@@ -108,7 +108,7 @@ export function lbFrontendIpConfigurationToTerraform(struct?: LbFrontendIpConfig
     public_ip_address_id: cdktf.stringToTerraform(struct!.publicIpAddressId),
     public_ip_prefix_id: cdktf.stringToTerraform(struct!.publicIpPrefixId),
     subnet_id: cdktf.stringToTerraform(struct!.subnetId),
-    zones: cdktf.listMapper(cdktf.stringToTerraform)(struct!.zones),
+    zones: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.zones),
   }
 }
 
@@ -574,7 +574,10 @@ export class Lb extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._edgeZone = config.edgeZone;
     this._id = config.id;
@@ -767,7 +770,7 @@ export class Lb extends cdktf.TerraformResource {
       sku: cdktf.stringToTerraform(this._sku),
       sku_tier: cdktf.stringToTerraform(this._skuTier),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
-      frontend_ip_configuration: cdktf.listMapper(lbFrontendIpConfigurationToTerraform)(this._frontendIpConfiguration.internalValue),
+      frontend_ip_configuration: cdktf.listMapper(lbFrontendIpConfigurationToTerraform, true)(this._frontendIpConfiguration.internalValue),
       timeouts: lbTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

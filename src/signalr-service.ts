@@ -90,7 +90,7 @@ export function signalrServiceCorsToTerraform(struct?: SignalrServiceCors | cdkt
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    allowed_origins: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedOrigins),
+    allowed_origins: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedOrigins),
   }
 }
 
@@ -584,9 +584,9 @@ export function signalrServiceUpstreamEndpointToTerraform(struct?: SignalrServic
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    category_pattern: cdktf.listMapper(cdktf.stringToTerraform)(struct!.categoryPattern),
-    event_pattern: cdktf.listMapper(cdktf.stringToTerraform)(struct!.eventPattern),
-    hub_pattern: cdktf.listMapper(cdktf.stringToTerraform)(struct!.hubPattern),
+    category_pattern: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.categoryPattern),
+    event_pattern: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.eventPattern),
+    hub_pattern: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.hubPattern),
     url_template: cdktf.stringToTerraform(struct!.urlTemplate),
   }
 }
@@ -758,7 +758,10 @@ export class SignalrService extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._connectivityLogsEnabled = config.connectivityLogsEnabled;
     this._id = config.id;
@@ -1047,11 +1050,11 @@ export class SignalrService extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       service_mode: cdktf.stringToTerraform(this._serviceMode),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
-      cors: cdktf.listMapper(signalrServiceCorsToTerraform)(this._cors.internalValue),
+      cors: cdktf.listMapper(signalrServiceCorsToTerraform, true)(this._cors.internalValue),
       live_trace: signalrServiceLiveTraceToTerraform(this._liveTrace.internalValue),
       sku: signalrServiceSkuToTerraform(this._sku.internalValue),
       timeouts: signalrServiceTimeoutsToTerraform(this._timeouts.internalValue),
-      upstream_endpoint: cdktf.listMapper(signalrServiceUpstreamEndpointToTerraform)(this._upstreamEndpoint.internalValue),
+      upstream_endpoint: cdktf.listMapper(signalrServiceUpstreamEndpointToTerraform, true)(this._upstreamEndpoint.internalValue),
     };
   }
 }

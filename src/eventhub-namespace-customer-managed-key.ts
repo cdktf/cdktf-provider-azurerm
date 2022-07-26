@@ -218,7 +218,10 @@ export class EventhubNamespaceCustomerManagedKey extends cdktf.TerraformResource
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._eventhubNamespaceId = config.eventhubNamespaceId;
     this._id = config.id;
@@ -296,7 +299,7 @@ export class EventhubNamespaceCustomerManagedKey extends cdktf.TerraformResource
     return {
       eventhub_namespace_id: cdktf.stringToTerraform(this._eventhubNamespaceId),
       id: cdktf.stringToTerraform(this._id),
-      key_vault_key_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._keyVaultKeyIds),
+      key_vault_key_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(this._keyVaultKeyIds),
       timeouts: eventhubNamespaceCustomerManagedKeyTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

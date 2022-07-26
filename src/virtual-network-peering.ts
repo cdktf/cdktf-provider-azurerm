@@ -242,7 +242,10 @@ export class VirtualNetworkPeering extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._allowForwardedTraffic = config.allowForwardedTraffic;
     this._allowGatewayTransit = config.allowGatewayTransit;

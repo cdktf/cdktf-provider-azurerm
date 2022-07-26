@@ -1491,7 +1491,10 @@ export class ApiManagementCustomDomain extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._apiManagementId = config.apiManagementId;
     this._id = config.id;
@@ -1640,11 +1643,11 @@ export class ApiManagementCustomDomain extends cdktf.TerraformResource {
     return {
       api_management_id: cdktf.stringToTerraform(this._apiManagementId),
       id: cdktf.stringToTerraform(this._id),
-      developer_portal: cdktf.listMapper(apiManagementCustomDomainDeveloperPortalToTerraform)(this._developerPortal.internalValue),
-      gateway: cdktf.listMapper(apiManagementCustomDomainGatewayToTerraform)(this._gateway.internalValue),
-      management: cdktf.listMapper(apiManagementCustomDomainManagementToTerraform)(this._management.internalValue),
-      portal: cdktf.listMapper(apiManagementCustomDomainPortalToTerraform)(this._portal.internalValue),
-      scm: cdktf.listMapper(apiManagementCustomDomainScmToTerraform)(this._scm.internalValue),
+      developer_portal: cdktf.listMapper(apiManagementCustomDomainDeveloperPortalToTerraform, true)(this._developerPortal.internalValue),
+      gateway: cdktf.listMapper(apiManagementCustomDomainGatewayToTerraform, true)(this._gateway.internalValue),
+      management: cdktf.listMapper(apiManagementCustomDomainManagementToTerraform, true)(this._management.internalValue),
+      portal: cdktf.listMapper(apiManagementCustomDomainPortalToTerraform, true)(this._portal.internalValue),
+      scm: cdktf.listMapper(apiManagementCustomDomainScmToTerraform, true)(this._scm.internalValue),
       timeouts: apiManagementCustomDomainTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

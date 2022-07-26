@@ -238,7 +238,10 @@ export class IothubRouteA extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._condition = config.condition;
     this._enabled = config.enabled;
@@ -389,7 +392,7 @@ export class IothubRouteA extends cdktf.TerraformResource {
     return {
       condition: cdktf.stringToTerraform(this._condition),
       enabled: cdktf.booleanToTerraform(this._enabled),
-      endpoint_names: cdktf.listMapper(cdktf.stringToTerraform)(this._endpointNames),
+      endpoint_names: cdktf.listMapper(cdktf.stringToTerraform, false)(this._endpointNames),
       id: cdktf.stringToTerraform(this._id),
       iothub_name: cdktf.stringToTerraform(this._iothubName),
       name: cdktf.stringToTerraform(this._name),

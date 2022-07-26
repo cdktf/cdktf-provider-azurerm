@@ -84,11 +84,11 @@ export function springCloudGatewayRouteConfigRouteToTerraform(struct?: SpringClo
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    classification_tags: cdktf.listMapper(cdktf.stringToTerraform)(struct!.classificationTags),
+    classification_tags: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.classificationTags),
     description: cdktf.stringToTerraform(struct!.description),
-    filters: cdktf.listMapper(cdktf.stringToTerraform)(struct!.filters),
+    filters: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.filters),
     order: cdktf.numberToTerraform(struct!.order),
-    predicates: cdktf.listMapper(cdktf.stringToTerraform)(struct!.predicates),
+    predicates: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.predicates),
     sso_validation_enabled: cdktf.booleanToTerraform(struct!.ssoValidationEnabled),
     title: cdktf.stringToTerraform(struct!.title),
     token_relay: cdktf.booleanToTerraform(struct!.tokenRelay),
@@ -541,7 +541,10 @@ export class SpringCloudGatewayRouteConfig extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._name = config.name;
@@ -655,7 +658,7 @@ export class SpringCloudGatewayRouteConfig extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       spring_cloud_app_id: cdktf.stringToTerraform(this._springCloudAppId),
       spring_cloud_gateway_id: cdktf.stringToTerraform(this._springCloudGatewayId),
-      route: cdktf.listMapper(springCloudGatewayRouteConfigRouteToTerraform)(this._route.internalValue),
+      route: cdktf.listMapper(springCloudGatewayRouteConfigRouteToTerraform, true)(this._route.internalValue),
       timeouts: springCloudGatewayRouteConfigTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

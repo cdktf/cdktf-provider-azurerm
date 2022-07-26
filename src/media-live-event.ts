@@ -573,7 +573,7 @@ export function mediaLiveEventInputToTerraform(struct?: MediaLiveEventInputOutpu
     access_token: cdktf.stringToTerraform(struct!.accessToken),
     key_frame_interval_duration: cdktf.stringToTerraform(struct!.keyFrameIntervalDuration),
     streaming_protocol: cdktf.stringToTerraform(struct!.streamingProtocol),
-    ip_access_control_allow: cdktf.listMapper(mediaLiveEventInputIpAccessControlAllowToTerraform)(struct!.ipAccessControlAllow),
+    ip_access_control_allow: cdktf.listMapper(mediaLiveEventInputIpAccessControlAllowToTerraform, true)(struct!.ipAccessControlAllow),
   }
 }
 
@@ -947,7 +947,7 @@ export function mediaLiveEventPreviewToTerraform(struct?: MediaLiveEventPreviewO
     alternative_media_id: cdktf.stringToTerraform(struct!.alternativeMediaId),
     preview_locator: cdktf.stringToTerraform(struct!.previewLocator),
     streaming_policy_name: cdktf.stringToTerraform(struct!.streamingPolicyName),
-    ip_access_control_allow: cdktf.listMapper(mediaLiveEventPreviewIpAccessControlAllowToTerraform)(struct!.ipAccessControlAllow),
+    ip_access_control_allow: cdktf.listMapper(mediaLiveEventPreviewIpAccessControlAllowToTerraform, true)(struct!.ipAccessControlAllow),
   }
 }
 
@@ -1260,7 +1260,10 @@ export class MediaLiveEvent extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._autoStartEnabled = config.autoStartEnabled;
     this._description = config.description;
@@ -1540,7 +1543,7 @@ export class MediaLiveEvent extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
-      transcription_languages: cdktf.listMapper(cdktf.stringToTerraform)(this._transcriptionLanguages),
+      transcription_languages: cdktf.listMapper(cdktf.stringToTerraform, false)(this._transcriptionLanguages),
       use_static_hostname: cdktf.booleanToTerraform(this._useStaticHostname),
       cross_site_access_policy: mediaLiveEventCrossSiteAccessPolicyToTerraform(this._crossSiteAccessPolicy.internalValue),
       encoding: mediaLiveEventEncodingToTerraform(this._encoding.internalValue),

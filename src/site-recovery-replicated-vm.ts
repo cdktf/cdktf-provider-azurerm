@@ -680,7 +680,10 @@ export class SiteRecoveryReplicatedVm extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._managedDisk.internalValue = config.managedDisk;
@@ -954,9 +957,9 @@ export class SiteRecoveryReplicatedVm extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       id: cdktf.stringToTerraform(this._id),
-      managed_disk: cdktf.listMapper(siteRecoveryReplicatedVmManagedDiskToTerraform)(this._managedDisk.internalValue),
+      managed_disk: cdktf.listMapper(siteRecoveryReplicatedVmManagedDiskToTerraform, false)(this._managedDisk.internalValue),
       name: cdktf.stringToTerraform(this._name),
-      network_interface: cdktf.listMapper(siteRecoveryReplicatedVmNetworkInterfaceToTerraform)(this._networkInterface.internalValue),
+      network_interface: cdktf.listMapper(siteRecoveryReplicatedVmNetworkInterfaceToTerraform, false)(this._networkInterface.internalValue),
       recovery_replication_policy_id: cdktf.stringToTerraform(this._recoveryReplicationPolicyId),
       recovery_vault_name: cdktf.stringToTerraform(this._recoveryVaultName),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),

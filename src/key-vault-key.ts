@@ -246,7 +246,10 @@ export class KeyVaultKey extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._curve = config.curve;
     this._expirationDate = config.expirationDate;
@@ -488,7 +491,7 @@ export class KeyVaultKey extends cdktf.TerraformResource {
       curve: cdktf.stringToTerraform(this._curve),
       expiration_date: cdktf.stringToTerraform(this._expirationDate),
       id: cdktf.stringToTerraform(this._id),
-      key_opts: cdktf.listMapper(cdktf.stringToTerraform)(this._keyOpts),
+      key_opts: cdktf.listMapper(cdktf.stringToTerraform, false)(this._keyOpts),
       key_size: cdktf.numberToTerraform(this._keySize),
       key_type: cdktf.stringToTerraform(this._keyType),
       key_vault_id: cdktf.stringToTerraform(this._keyVaultId),

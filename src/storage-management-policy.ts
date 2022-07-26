@@ -762,9 +762,9 @@ export function storageManagementPolicyRuleFiltersToTerraform(struct?: StorageMa
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    blob_types: cdktf.listMapper(cdktf.stringToTerraform)(struct!.blobTypes),
-    prefix_match: cdktf.listMapper(cdktf.stringToTerraform)(struct!.prefixMatch),
-    match_blob_index_tag: cdktf.listMapper(storageManagementPolicyRuleFiltersMatchBlobIndexTagToTerraform)(struct!.matchBlobIndexTag),
+    blob_types: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.blobTypes),
+    prefix_match: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.prefixMatch),
+    match_blob_index_tag: cdktf.listMapper(storageManagementPolicyRuleFiltersMatchBlobIndexTagToTerraform, true)(struct!.matchBlobIndexTag),
   }
 }
 
@@ -1219,7 +1219,10 @@ export class StorageManagementPolicy extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._storageAccountId = config.storageAccountId;
@@ -1300,7 +1303,7 @@ export class StorageManagementPolicy extends cdktf.TerraformResource {
     return {
       id: cdktf.stringToTerraform(this._id),
       storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
-      rule: cdktf.listMapper(storageManagementPolicyRuleToTerraform)(this._rule.internalValue),
+      rule: cdktf.listMapper(storageManagementPolicyRuleToTerraform, true)(this._rule.internalValue),
       timeouts: storageManagementPolicyTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

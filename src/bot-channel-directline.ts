@@ -75,7 +75,7 @@ export function botChannelDirectlineSiteToTerraform(struct?: BotChannelDirectlin
     enabled: cdktf.booleanToTerraform(struct!.enabled),
     enhanced_authentication_enabled: cdktf.booleanToTerraform(struct!.enhancedAuthenticationEnabled),
     name: cdktf.stringToTerraform(struct!.name),
-    trusted_origins: cdktf.listMapper(cdktf.stringToTerraform)(struct!.trustedOrigins),
+    trusted_origins: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.trustedOrigins),
     v1_allowed: cdktf.booleanToTerraform(struct!.v1Allowed),
     v3_allowed: cdktf.booleanToTerraform(struct!.v3Allowed),
   }
@@ -472,7 +472,10 @@ export class BotChannelDirectline extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._botName = config.botName;
     this._id = config.id;
@@ -580,7 +583,7 @@ export class BotChannelDirectline extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      site: cdktf.listMapper(botChannelDirectlineSiteToTerraform)(this._site.internalValue),
+      site: cdktf.listMapper(botChannelDirectlineSiteToTerraform, true)(this._site.internalValue),
       timeouts: botChannelDirectlineTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

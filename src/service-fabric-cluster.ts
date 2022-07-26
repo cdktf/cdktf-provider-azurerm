@@ -499,7 +499,7 @@ export function serviceFabricClusterCertificateCommonNamesToTerraform(struct?: S
   }
   return {
     x509_store_name: cdktf.stringToTerraform(struct!.x509StoreName),
-    common_names: cdktf.listMapper(serviceFabricClusterCertificateCommonNamesCommonNamesToTerraform)(struct!.commonNames),
+    common_names: cdktf.listMapper(serviceFabricClusterCertificateCommonNamesCommonNamesToTerraform, true)(struct!.commonNames),
   }
 }
 
@@ -1945,7 +1945,7 @@ export function serviceFabricClusterReverseProxyCertificateCommonNamesToTerrafor
   }
   return {
     x509_store_name: cdktf.stringToTerraform(struct!.x509StoreName),
-    common_names: cdktf.listMapper(serviceFabricClusterReverseProxyCertificateCommonNamesCommonNamesToTerraform)(struct!.commonNames),
+    common_names: cdktf.listMapper(serviceFabricClusterReverseProxyCertificateCommonNamesCommonNamesToTerraform, true)(struct!.commonNames),
   }
 }
 
@@ -2698,7 +2698,10 @@ export class ServiceFabricCluster extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._addOnFeatures = config.addOnFeatures;
     this._clusterCodeVersion = config.clusterCodeVersion;
@@ -3118,7 +3121,7 @@ export class ServiceFabricCluster extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      add_on_features: cdktf.listMapper(cdktf.stringToTerraform)(this._addOnFeatures),
+      add_on_features: cdktf.listMapper(cdktf.stringToTerraform, false)(this._addOnFeatures),
       cluster_code_version: cdktf.stringToTerraform(this._clusterCodeVersion),
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
@@ -3134,11 +3137,11 @@ export class ServiceFabricCluster extends cdktf.TerraformResource {
       azure_active_directory: serviceFabricClusterAzureActiveDirectoryToTerraform(this._azureActiveDirectory.internalValue),
       certificate: serviceFabricClusterCertificateToTerraform(this._certificate.internalValue),
       certificate_common_names: serviceFabricClusterCertificateCommonNamesToTerraform(this._certificateCommonNames.internalValue),
-      client_certificate_common_name: cdktf.listMapper(serviceFabricClusterClientCertificateCommonNameToTerraform)(this._clientCertificateCommonName.internalValue),
-      client_certificate_thumbprint: cdktf.listMapper(serviceFabricClusterClientCertificateThumbprintToTerraform)(this._clientCertificateThumbprint.internalValue),
+      client_certificate_common_name: cdktf.listMapper(serviceFabricClusterClientCertificateCommonNameToTerraform, true)(this._clientCertificateCommonName.internalValue),
+      client_certificate_thumbprint: cdktf.listMapper(serviceFabricClusterClientCertificateThumbprintToTerraform, true)(this._clientCertificateThumbprint.internalValue),
       diagnostics_config: serviceFabricClusterDiagnosticsConfigToTerraform(this._diagnosticsConfig.internalValue),
-      fabric_settings: cdktf.listMapper(serviceFabricClusterFabricSettingsToTerraform)(this._fabricSettings.internalValue),
-      node_type: cdktf.listMapper(serviceFabricClusterNodeTypeToTerraform)(this._nodeType.internalValue),
+      fabric_settings: cdktf.listMapper(serviceFabricClusterFabricSettingsToTerraform, true)(this._fabricSettings.internalValue),
+      node_type: cdktf.listMapper(serviceFabricClusterNodeTypeToTerraform, true)(this._nodeType.internalValue),
       reverse_proxy_certificate: serviceFabricClusterReverseProxyCertificateToTerraform(this._reverseProxyCertificate.internalValue),
       reverse_proxy_certificate_common_names: serviceFabricClusterReverseProxyCertificateCommonNamesToTerraform(this._reverseProxyCertificateCommonNames.internalValue),
       timeouts: serviceFabricClusterTimeoutsToTerraform(this._timeouts.internalValue),

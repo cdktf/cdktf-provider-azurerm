@@ -366,7 +366,10 @@ export class AppServiceEnvironment extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._allowedUserIpCidrs = config.allowedUserIpCidrs;
     this._frontEndScaleFactor = config.frontEndScaleFactor;
@@ -578,7 +581,7 @@ export class AppServiceEnvironment extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      allowed_user_ip_cidrs: cdktf.listMapper(cdktf.stringToTerraform)(this._allowedUserIpCidrs),
+      allowed_user_ip_cidrs: cdktf.listMapper(cdktf.stringToTerraform, false)(this._allowedUserIpCidrs),
       front_end_scale_factor: cdktf.numberToTerraform(this._frontEndScaleFactor),
       id: cdktf.stringToTerraform(this._id),
       internal_load_balancing_mode: cdktf.stringToTerraform(this._internalLoadBalancingMode),
@@ -587,7 +590,7 @@ export class AppServiceEnvironment extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       subnet_id: cdktf.stringToTerraform(this._subnetId),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
-      cluster_setting: cdktf.listMapper(appServiceEnvironmentClusterSettingToTerraform)(this._clusterSetting.internalValue),
+      cluster_setting: cdktf.listMapper(appServiceEnvironmentClusterSettingToTerraform, true)(this._clusterSetting.internalValue),
       timeouts: appServiceEnvironmentTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

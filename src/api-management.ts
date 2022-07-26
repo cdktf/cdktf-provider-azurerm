@@ -365,7 +365,7 @@ export function apiManagementAdditionalLocationToTerraform(struct?: ApiManagemen
     capacity: cdktf.numberToTerraform(struct!.capacity),
     location: cdktf.stringToTerraform(struct!.location),
     public_ip_address_id: cdktf.stringToTerraform(struct!.publicIpAddressId),
-    zones: cdktf.listMapper(cdktf.stringToTerraform)(struct!.zones),
+    zones: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.zones),
     virtual_network_configuration: apiManagementAdditionalLocationVirtualNetworkConfigurationToTerraform(struct!.virtualNetworkConfiguration),
   }
 }
@@ -1996,11 +1996,11 @@ export function apiManagementHostnameConfigurationToTerraform(struct?: ApiManage
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    developer_portal: cdktf.listMapper(apiManagementHostnameConfigurationDeveloperPortalToTerraform)(struct!.developerPortal),
-    management: cdktf.listMapper(apiManagementHostnameConfigurationManagementToTerraform)(struct!.management),
-    portal: cdktf.listMapper(apiManagementHostnameConfigurationPortalToTerraform)(struct!.portal),
-    proxy: cdktf.listMapper(apiManagementHostnameConfigurationProxyToTerraform)(struct!.proxy),
-    scm: cdktf.listMapper(apiManagementHostnameConfigurationScmToTerraform)(struct!.scm),
+    developer_portal: cdktf.listMapper(apiManagementHostnameConfigurationDeveloperPortalToTerraform, true)(struct!.developerPortal),
+    management: cdktf.listMapper(apiManagementHostnameConfigurationManagementToTerraform, true)(struct!.management),
+    portal: cdktf.listMapper(apiManagementHostnameConfigurationPortalToTerraform, true)(struct!.portal),
+    proxy: cdktf.listMapper(apiManagementHostnameConfigurationProxyToTerraform, true)(struct!.proxy),
+    scm: cdktf.listMapper(apiManagementHostnameConfigurationScmToTerraform, true)(struct!.scm),
   }
 }
 
@@ -2157,7 +2157,7 @@ export function apiManagementIdentityToTerraform(struct?: ApiManagementIdentityO
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.identityIds),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
@@ -3365,7 +3365,10 @@ export class ApiManagement extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._clientCertificateEnabled = config.clientCertificateEnabled;
     this._gatewayDisabled = config.gatewayDisabled;
@@ -3884,7 +3887,7 @@ export class ApiManagement extends cdktf.TerraformResource {
       min_api_version: cdktf.stringToTerraform(this._minApiVersion),
       name: cdktf.stringToTerraform(this._name),
       notification_sender_email: cdktf.stringToTerraform(this._notificationSenderEmail),
-      policy: cdktf.listMapper(apiManagementPolicyToTerraform)(this._policy.internalValue),
+      policy: cdktf.listMapper(apiManagementPolicyToTerraform, false)(this._policy.internalValue),
       public_ip_address_id: cdktf.stringToTerraform(this._publicIpAddressId),
       public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       publisher_email: cdktf.stringToTerraform(this._publisherEmail),
@@ -3893,9 +3896,9 @@ export class ApiManagement extends cdktf.TerraformResource {
       sku_name: cdktf.stringToTerraform(this._skuName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       virtual_network_type: cdktf.stringToTerraform(this._virtualNetworkType),
-      zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),
-      additional_location: cdktf.listMapper(apiManagementAdditionalLocationToTerraform)(this._additionalLocation.internalValue),
-      certificate: cdktf.listMapper(apiManagementCertificateToTerraform)(this._certificate.internalValue),
+      zones: cdktf.listMapper(cdktf.stringToTerraform, false)(this._zones),
+      additional_location: cdktf.listMapper(apiManagementAdditionalLocationToTerraform, true)(this._additionalLocation.internalValue),
+      certificate: cdktf.listMapper(apiManagementCertificateToTerraform, true)(this._certificate.internalValue),
       hostname_configuration: apiManagementHostnameConfigurationToTerraform(this._hostnameConfiguration.internalValue),
       identity: apiManagementIdentityToTerraform(this._identity.internalValue),
       protocols: apiManagementProtocolsToTerraform(this._protocols.internalValue),

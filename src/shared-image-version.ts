@@ -432,7 +432,10 @@ export class SharedImageVersion extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._endOfLifeDate = config.endOfLifeDate;
     this._excludeFromLatest = config.excludeFromLatest;
@@ -678,7 +681,7 @@ export class SharedImageVersion extends cdktf.TerraformResource {
       replication_mode: cdktf.stringToTerraform(this._replicationMode),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
-      target_region: cdktf.listMapper(sharedImageVersionTargetRegionToTerraform)(this._targetRegion.internalValue),
+      target_region: cdktf.listMapper(sharedImageVersionTargetRegionToTerraform, true)(this._targetRegion.internalValue),
       timeouts: sharedImageVersionTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

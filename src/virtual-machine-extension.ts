@@ -250,7 +250,10 @@ export class VirtualMachineExtension extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._autoUpgradeMinorVersion = config.autoUpgradeMinorVersion;
     this._automaticUpgradeEnabled = config.automaticUpgradeEnabled;

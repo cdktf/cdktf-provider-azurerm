@@ -234,7 +234,10 @@ export class LogAnalyticsDataExportRule extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._destinationResourceId = config.destinationResourceId;
     this._enabled = config.enabled;
@@ -379,7 +382,7 @@ export class LogAnalyticsDataExportRule extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      table_names: cdktf.listMapper(cdktf.stringToTerraform)(this._tableNames),
+      table_names: cdktf.listMapper(cdktf.stringToTerraform, false)(this._tableNames),
       workspace_resource_id: cdktf.stringToTerraform(this._workspaceResourceId),
       timeouts: logAnalyticsDataExportRuleTimeoutsToTerraform(this._timeouts.internalValue),
     };

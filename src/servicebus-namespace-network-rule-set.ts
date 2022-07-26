@@ -357,7 +357,10 @@ export class ServicebusNamespaceNetworkRuleSet extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._defaultAction = config.defaultAction;
     this._id = config.id;
@@ -506,11 +509,11 @@ export class ServicebusNamespaceNetworkRuleSet extends cdktf.TerraformResource {
     return {
       default_action: cdktf.stringToTerraform(this._defaultAction),
       id: cdktf.stringToTerraform(this._id),
-      ip_rules: cdktf.listMapper(cdktf.stringToTerraform)(this._ipRules),
+      ip_rules: cdktf.listMapper(cdktf.stringToTerraform, false)(this._ipRules),
       namespace_id: cdktf.stringToTerraform(this._namespaceId),
       public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       trusted_services_allowed: cdktf.booleanToTerraform(this._trustedServicesAllowed),
-      network_rules: cdktf.listMapper(servicebusNamespaceNetworkRuleSetNetworkRulesToTerraform)(this._networkRules.internalValue),
+      network_rules: cdktf.listMapper(servicebusNamespaceNetworkRuleSetNetworkRulesToTerraform, true)(this._networkRules.internalValue),
       timeouts: servicebusNamespaceNetworkRuleSetTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

@@ -114,7 +114,7 @@ export function virtualNetworkGatewayBgpSettingsPeeringAddressesToTerraform(stru
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    apipa_addresses: cdktf.listMapper(cdktf.stringToTerraform)(struct!.apipaAddresses),
+    apipa_addresses: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.apipaAddresses),
     ip_configuration_name: cdktf.stringToTerraform(struct!.ipConfigurationName),
   }
 }
@@ -256,7 +256,7 @@ export function virtualNetworkGatewayBgpSettingsToTerraform(struct?: VirtualNetw
   return {
     asn: cdktf.numberToTerraform(struct!.asn),
     peer_weight: cdktf.numberToTerraform(struct!.peerWeight),
-    peering_addresses: cdktf.listMapper(virtualNetworkGatewayBgpSettingsPeeringAddressesToTerraform)(struct!.peeringAddresses),
+    peering_addresses: cdktf.listMapper(virtualNetworkGatewayBgpSettingsPeeringAddressesToTerraform, true)(struct!.peeringAddresses),
   }
 }
 
@@ -365,7 +365,7 @@ export function virtualNetworkGatewayCustomRouteToTerraform(struct?: VirtualNetw
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    address_prefixes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.addressPrefixes),
+    address_prefixes: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.addressPrefixes),
   }
 }
 
@@ -1037,13 +1037,13 @@ export function virtualNetworkGatewayVpnClientConfigurationToTerraform(struct?: 
     aad_audience: cdktf.stringToTerraform(struct!.aadAudience),
     aad_issuer: cdktf.stringToTerraform(struct!.aadIssuer),
     aad_tenant: cdktf.stringToTerraform(struct!.aadTenant),
-    address_space: cdktf.listMapper(cdktf.stringToTerraform)(struct!.addressSpace),
+    address_space: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.addressSpace),
     radius_server_address: cdktf.stringToTerraform(struct!.radiusServerAddress),
     radius_server_secret: cdktf.stringToTerraform(struct!.radiusServerSecret),
-    vpn_auth_types: cdktf.listMapper(cdktf.stringToTerraform)(struct!.vpnAuthTypes),
-    vpn_client_protocols: cdktf.listMapper(cdktf.stringToTerraform)(struct!.vpnClientProtocols),
-    revoked_certificate: cdktf.listMapper(virtualNetworkGatewayVpnClientConfigurationRevokedCertificateToTerraform)(struct!.revokedCertificate),
-    root_certificate: cdktf.listMapper(virtualNetworkGatewayVpnClientConfigurationRootCertificateToTerraform)(struct!.rootCertificate),
+    vpn_auth_types: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.vpnAuthTypes),
+    vpn_client_protocols: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.vpnClientProtocols),
+    revoked_certificate: cdktf.listMapper(virtualNetworkGatewayVpnClientConfigurationRevokedCertificateToTerraform, true)(struct!.revokedCertificate),
+    root_certificate: cdktf.listMapper(virtualNetworkGatewayVpnClientConfigurationRootCertificateToTerraform, true)(struct!.rootCertificate),
   }
 }
 
@@ -1323,7 +1323,10 @@ export class VirtualNetworkGateway extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._activeActive = config.activeActive;
     this._defaultLocalNetworkGatewayId = config.defaultLocalNetworkGatewayId;
@@ -1658,7 +1661,7 @@ export class VirtualNetworkGateway extends cdktf.TerraformResource {
       vpn_type: cdktf.stringToTerraform(this._vpnType),
       bgp_settings: virtualNetworkGatewayBgpSettingsToTerraform(this._bgpSettings.internalValue),
       custom_route: virtualNetworkGatewayCustomRouteToTerraform(this._customRoute.internalValue),
-      ip_configuration: cdktf.listMapper(virtualNetworkGatewayIpConfigurationToTerraform)(this._ipConfiguration.internalValue),
+      ip_configuration: cdktf.listMapper(virtualNetworkGatewayIpConfigurationToTerraform, true)(this._ipConfiguration.internalValue),
       timeouts: virtualNetworkGatewayTimeoutsToTerraform(this._timeouts.internalValue),
       vpn_client_configuration: virtualNetworkGatewayVpnClientConfigurationToTerraform(this._vpnClientConfiguration.internalValue),
     };

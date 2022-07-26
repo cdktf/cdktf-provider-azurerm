@@ -224,7 +224,7 @@ export function kubernetesClusterNodePoolKubeletConfigToTerraform(struct?: Kuber
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    allowed_unsafe_sysctls: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedUnsafeSysctls),
+    allowed_unsafe_sysctls: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedUnsafeSysctls),
     container_log_max_line: cdktf.numberToTerraform(struct!.containerLogMaxLine),
     container_log_max_size_mb: cdktf.numberToTerraform(struct!.containerLogMaxSizeMb),
     cpu_cfs_quota_enabled: cdktf.booleanToTerraform(struct!.cpuCfsQuotaEnabled),
@@ -1703,7 +1703,10 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._capacityReservationGroupId = config.capacityReservationGroupId;
     this._enableAutoScaling = config.enableAutoScaling;
@@ -2389,7 +2392,7 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
       node_count: cdktf.numberToTerraform(this._nodeCount),
       node_labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._nodeLabels),
       node_public_ip_prefix_id: cdktf.stringToTerraform(this._nodePublicIpPrefixId),
-      node_taints: cdktf.listMapper(cdktf.stringToTerraform)(this._nodeTaints),
+      node_taints: cdktf.listMapper(cdktf.stringToTerraform, false)(this._nodeTaints),
       orchestrator_version: cdktf.stringToTerraform(this._orchestratorVersion),
       os_disk_size_gb: cdktf.numberToTerraform(this._osDiskSizeGb),
       os_disk_type: cdktf.stringToTerraform(this._osDiskType),
@@ -2405,7 +2408,7 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
       vm_size: cdktf.stringToTerraform(this._vmSize),
       vnet_subnet_id: cdktf.stringToTerraform(this._vnetSubnetId),
       workload_runtime: cdktf.stringToTerraform(this._workloadRuntime),
-      zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),
+      zones: cdktf.listMapper(cdktf.stringToTerraform, false)(this._zones),
       kubelet_config: kubernetesClusterNodePoolKubeletConfigToTerraform(this._kubeletConfig.internalValue),
       linux_os_config: kubernetesClusterNodePoolLinuxOsConfigToTerraform(this._linuxOsConfig.internalValue),
       timeouts: kubernetesClusterNodePoolTimeoutsToTerraform(this._timeouts.internalValue),

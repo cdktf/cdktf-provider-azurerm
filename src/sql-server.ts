@@ -174,9 +174,9 @@ export function sqlServerThreatDetectionPolicyToTerraform(struct?: SqlServerThre
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    disabled_alerts: cdktf.listMapper(cdktf.stringToTerraform)(struct!.disabledAlerts),
+    disabled_alerts: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.disabledAlerts),
     email_account_admins: cdktf.booleanToTerraform(struct!.emailAccountAdmins),
-    email_addresses: cdktf.listMapper(cdktf.stringToTerraform)(struct!.emailAddresses),
+    email_addresses: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.emailAddresses),
     retention_days: cdktf.numberToTerraform(struct!.retentionDays),
     state: cdktf.stringToTerraform(struct!.state),
     storage_account_access_key: cdktf.stringToTerraform(struct!.storageAccountAccessKey),
@@ -553,7 +553,10 @@ export class SqlServer extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._administratorLogin = config.administratorLogin;
     this._administratorLoginPassword = config.administratorLoginPassword;

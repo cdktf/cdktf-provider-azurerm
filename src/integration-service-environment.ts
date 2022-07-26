@@ -238,7 +238,10 @@ export class IntegrationServiceEnvironment extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._accessEndpointType = config.accessEndpointType;
     this._id = config.id;
@@ -417,7 +420,7 @@ export class IntegrationServiceEnvironment extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku_name: cdktf.stringToTerraform(this._skuName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
-      virtual_network_subnet_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._virtualNetworkSubnetIds),
+      virtual_network_subnet_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(this._virtualNetworkSubnetIds),
       timeouts: integrationServiceEnvironmentTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

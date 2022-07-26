@@ -93,12 +93,12 @@ export function firewallNatRuleCollectionRuleToTerraform(struct?: FirewallNatRul
   }
   return {
     description: cdktf.stringToTerraform(struct!.description),
-    destination_addresses: cdktf.listMapper(cdktf.stringToTerraform)(struct!.destinationAddresses),
-    destination_ports: cdktf.listMapper(cdktf.stringToTerraform)(struct!.destinationPorts),
+    destination_addresses: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.destinationAddresses),
+    destination_ports: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.destinationPorts),
     name: cdktf.stringToTerraform(struct!.name),
-    protocols: cdktf.listMapper(cdktf.stringToTerraform)(struct!.protocols),
-    source_addresses: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sourceAddresses),
-    source_ip_groups: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sourceIpGroups),
+    protocols: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.protocols),
+    source_addresses: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.sourceAddresses),
+    source_ip_groups: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.sourceIpGroups),
     translated_address: cdktf.stringToTerraform(struct!.translatedAddress),
     translated_port: cdktf.stringToTerraform(struct!.translatedPort),
   }
@@ -531,7 +531,10 @@ export class FirewallNatRuleCollection extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._action = config.action;
     this._azureFirewallName = config.azureFirewallName;
@@ -669,7 +672,7 @@ export class FirewallNatRuleCollection extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       priority: cdktf.numberToTerraform(this._priority),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      rule: cdktf.listMapper(firewallNatRuleCollectionRuleToTerraform)(this._rule.internalValue),
+      rule: cdktf.listMapper(firewallNatRuleCollectionRuleToTerraform, true)(this._rule.internalValue),
       timeouts: firewallNatRuleCollectionTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

@@ -72,10 +72,10 @@ export function roleDefinitionPermissionsToTerraform(struct?: RoleDefinitionPerm
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    actions: cdktf.listMapper(cdktf.stringToTerraform)(struct!.actions),
-    data_actions: cdktf.listMapper(cdktf.stringToTerraform)(struct!.dataActions),
-    not_actions: cdktf.listMapper(cdktf.stringToTerraform)(struct!.notActions),
-    not_data_actions: cdktf.listMapper(cdktf.stringToTerraform)(struct!.notDataActions),
+    actions: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.actions),
+    data_actions: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.dataActions),
+    not_actions: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.notActions),
+    not_data_actions: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.notDataActions),
   }
 }
 
@@ -414,7 +414,10 @@ export class RoleDefinition extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._assignableScopes = config.assignableScopes;
     this._description = config.description;
@@ -563,13 +566,13 @@ export class RoleDefinition extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      assignable_scopes: cdktf.listMapper(cdktf.stringToTerraform)(this._assignableScopes),
+      assignable_scopes: cdktf.listMapper(cdktf.stringToTerraform, false)(this._assignableScopes),
       description: cdktf.stringToTerraform(this._description),
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       role_definition_id: cdktf.stringToTerraform(this._roleDefinitionId),
       scope: cdktf.stringToTerraform(this._scope),
-      permissions: cdktf.listMapper(roleDefinitionPermissionsToTerraform)(this._permissions.internalValue),
+      permissions: cdktf.listMapper(roleDefinitionPermissionsToTerraform, true)(this._permissions.internalValue),
       timeouts: roleDefinitionTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

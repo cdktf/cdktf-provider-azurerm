@@ -215,7 +215,7 @@ export function linuxWebAppSlotAuthSettingsActiveDirectoryToTerraform(struct?: L
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    allowed_audiences: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedAudiences),
+    allowed_audiences: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedAudiences),
     client_id: cdktf.stringToTerraform(struct!.clientId),
     client_secret: cdktf.stringToTerraform(struct!.clientSecret),
     client_secret_setting_name: cdktf.stringToTerraform(struct!.clientSecretSettingName),
@@ -369,7 +369,7 @@ export function linuxWebAppSlotAuthSettingsFacebookToTerraform(struct?: LinuxWeb
     app_id: cdktf.stringToTerraform(struct!.appId),
     app_secret: cdktf.stringToTerraform(struct!.appSecret),
     app_secret_setting_name: cdktf.stringToTerraform(struct!.appSecretSettingName),
-    oauth_scopes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.oauthScopes),
+    oauth_scopes: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.oauthScopes),
   }
 }
 
@@ -520,7 +520,7 @@ export function linuxWebAppSlotAuthSettingsGithubToTerraform(struct?: LinuxWebAp
     client_id: cdktf.stringToTerraform(struct!.clientId),
     client_secret: cdktf.stringToTerraform(struct!.clientSecret),
     client_secret_setting_name: cdktf.stringToTerraform(struct!.clientSecretSettingName),
-    oauth_scopes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.oauthScopes),
+    oauth_scopes: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.oauthScopes),
   }
 }
 
@@ -671,7 +671,7 @@ export function linuxWebAppSlotAuthSettingsGoogleToTerraform(struct?: LinuxWebAp
     client_id: cdktf.stringToTerraform(struct!.clientId),
     client_secret: cdktf.stringToTerraform(struct!.clientSecret),
     client_secret_setting_name: cdktf.stringToTerraform(struct!.clientSecretSettingName),
-    oauth_scopes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.oauthScopes),
+    oauth_scopes: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.oauthScopes),
   }
 }
 
@@ -822,7 +822,7 @@ export function linuxWebAppSlotAuthSettingsMicrosoftToTerraform(struct?: LinuxWe
     client_id: cdktf.stringToTerraform(struct!.clientId),
     client_secret: cdktf.stringToTerraform(struct!.clientSecret),
     client_secret_setting_name: cdktf.stringToTerraform(struct!.clientSecretSettingName),
-    oauth_scopes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.oauthScopes),
+    oauth_scopes: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.oauthScopes),
   }
 }
 
@@ -1159,7 +1159,7 @@ export function linuxWebAppSlotAuthSettingsToTerraform(struct?: LinuxWebAppSlotA
   }
   return {
     additional_login_parameters: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.additionalLoginParameters),
-    allowed_external_redirect_urls: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedExternalRedirectUrls),
+    allowed_external_redirect_urls: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedExternalRedirectUrls),
     default_provider: cdktf.stringToTerraform(struct!.defaultProvider),
     enabled: cdktf.booleanToTerraform(struct!.enabled),
     issuer: cdktf.stringToTerraform(struct!.issuer),
@@ -2021,7 +2021,7 @@ export function linuxWebAppSlotIdentityToTerraform(struct?: LinuxWebAppSlotIdent
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.identityIds),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
@@ -2750,10 +2750,10 @@ export function linuxWebAppSlotSiteConfigIpRestrictionHeadersToTerraform(struct?
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    x_azure_fdid: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xAzureFdid),
-    x_fd_health_probe: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xFdHealthProbe),
-    x_forwarded_for: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xForwardedFor),
-    x_forwarded_host: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xForwardedHost),
+    x_azure_fdid: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xAzureFdid),
+    x_fd_health_probe: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xFdHealthProbe),
+    x_forwarded_for: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xForwardedFor),
+    x_forwarded_host: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xForwardedHost),
   }
 }
 
@@ -2941,7 +2941,7 @@ export function linuxWebAppSlotSiteConfigIpRestrictionToTerraform(struct?: Linux
   }
   return {
     action: cdktf.stringToTerraform(struct!.action),
-    headers: cdktf.listMapper(linuxWebAppSlotSiteConfigIpRestrictionHeadersToTerraform)(struct!.headers),
+    headers: cdktf.listMapper(linuxWebAppSlotSiteConfigIpRestrictionHeadersToTerraform, false)(struct!.headers),
     ip_address: cdktf.stringToTerraform(struct!.ipAddress),
     name: cdktf.stringToTerraform(struct!.name),
     priority: cdktf.numberToTerraform(struct!.priority),
@@ -3187,10 +3187,10 @@ export function linuxWebAppSlotSiteConfigScmIpRestrictionHeadersToTerraform(stru
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    x_azure_fdid: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xAzureFdid),
-    x_fd_health_probe: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xFdHealthProbe),
-    x_forwarded_for: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xForwardedFor),
-    x_forwarded_host: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xForwardedHost),
+    x_azure_fdid: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xAzureFdid),
+    x_fd_health_probe: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xFdHealthProbe),
+    x_forwarded_for: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xForwardedFor),
+    x_forwarded_host: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xForwardedHost),
   }
 }
 
@@ -3378,7 +3378,7 @@ export function linuxWebAppSlotSiteConfigScmIpRestrictionToTerraform(struct?: Li
   }
   return {
     action: cdktf.stringToTerraform(struct!.action),
-    headers: cdktf.listMapper(linuxWebAppSlotSiteConfigScmIpRestrictionHeadersToTerraform)(struct!.headers),
+    headers: cdktf.listMapper(linuxWebAppSlotSiteConfigScmIpRestrictionHeadersToTerraform, false)(struct!.headers),
     ip_address: cdktf.stringToTerraform(struct!.ipAddress),
     name: cdktf.stringToTerraform(struct!.name),
     priority: cdktf.numberToTerraform(struct!.priority),
@@ -4471,7 +4471,7 @@ export function linuxWebAppSlotSiteConfigAutoHealSettingTriggerToTerraform(struc
   return {
     requests: linuxWebAppSlotSiteConfigAutoHealSettingTriggerRequestsToTerraform(struct!.requests),
     slow_request: linuxWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequestToTerraform(struct!.slowRequest),
-    status_code: cdktf.listMapper(linuxWebAppSlotSiteConfigAutoHealSettingTriggerStatusCodeToTerraform)(struct!.statusCode),
+    status_code: cdktf.listMapper(linuxWebAppSlotSiteConfigAutoHealSettingTriggerStatusCodeToTerraform, true)(struct!.statusCode),
   }
 }
 
@@ -4684,7 +4684,7 @@ export function linuxWebAppSlotSiteConfigCorsToTerraform(struct?: LinuxWebAppSlo
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    allowed_origins: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedOrigins),
+    allowed_origins: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedOrigins),
     support_credentials: cdktf.booleanToTerraform(struct!.supportCredentials),
   }
 }
@@ -4903,19 +4903,19 @@ export function linuxWebAppSlotSiteConfigToTerraform(struct?: LinuxWebAppSlotSit
     auto_swap_slot_name: cdktf.stringToTerraform(struct!.autoSwapSlotName),
     container_registry_managed_identity_client_id: cdktf.stringToTerraform(struct!.containerRegistryManagedIdentityClientId),
     container_registry_use_managed_identity: cdktf.booleanToTerraform(struct!.containerRegistryUseManagedIdentity),
-    default_documents: cdktf.listMapper(cdktf.stringToTerraform)(struct!.defaultDocuments),
+    default_documents: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.defaultDocuments),
     ftps_state: cdktf.stringToTerraform(struct!.ftpsState),
     health_check_eviction_time_in_min: cdktf.numberToTerraform(struct!.healthCheckEvictionTimeInMin),
     health_check_path: cdktf.stringToTerraform(struct!.healthCheckPath),
     http2_enabled: cdktf.booleanToTerraform(struct!.http2Enabled),
-    ip_restriction: cdktf.listMapper(linuxWebAppSlotSiteConfigIpRestrictionToTerraform)(struct!.ipRestriction),
+    ip_restriction: cdktf.listMapper(linuxWebAppSlotSiteConfigIpRestrictionToTerraform, false)(struct!.ipRestriction),
     load_balancing_mode: cdktf.stringToTerraform(struct!.loadBalancingMode),
     local_mysql_enabled: cdktf.booleanToTerraform(struct!.localMysqlEnabled),
     managed_pipeline_mode: cdktf.stringToTerraform(struct!.managedPipelineMode),
     minimum_tls_version: cdktf.stringToTerraform(struct!.minimumTlsVersion),
     remote_debugging_enabled: cdktf.booleanToTerraform(struct!.remoteDebuggingEnabled),
     remote_debugging_version: cdktf.stringToTerraform(struct!.remoteDebuggingVersion),
-    scm_ip_restriction: cdktf.listMapper(linuxWebAppSlotSiteConfigScmIpRestrictionToTerraform)(struct!.scmIpRestriction),
+    scm_ip_restriction: cdktf.listMapper(linuxWebAppSlotSiteConfigScmIpRestrictionToTerraform, false)(struct!.scmIpRestriction),
     scm_minimum_tls_version: cdktf.stringToTerraform(struct!.scmMinimumTlsVersion),
     scm_use_main_ip_restriction: cdktf.booleanToTerraform(struct!.scmUseMainIpRestriction),
     use_32_bit_worker: cdktf.booleanToTerraform(struct!.use32BitWorker),
@@ -6035,7 +6035,10 @@ export class LinuxWebAppSlot extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._appServiceId = config.appServiceId;
     this._appSettings = config.appSettings;
@@ -6459,11 +6462,11 @@ export class LinuxWebAppSlot extends cdktf.TerraformResource {
       zip_deploy_file: cdktf.stringToTerraform(this._zipDeployFile),
       auth_settings: linuxWebAppSlotAuthSettingsToTerraform(this._authSettings.internalValue),
       backup: linuxWebAppSlotBackupToTerraform(this._backup.internalValue),
-      connection_string: cdktf.listMapper(linuxWebAppSlotConnectionStringToTerraform)(this._connectionString.internalValue),
+      connection_string: cdktf.listMapper(linuxWebAppSlotConnectionStringToTerraform, true)(this._connectionString.internalValue),
       identity: linuxWebAppSlotIdentityToTerraform(this._identity.internalValue),
       logs: linuxWebAppSlotLogsToTerraform(this._logs.internalValue),
       site_config: linuxWebAppSlotSiteConfigToTerraform(this._siteConfig.internalValue),
-      storage_account: cdktf.listMapper(linuxWebAppSlotStorageAccountToTerraform)(this._storageAccount.internalValue),
+      storage_account: cdktf.listMapper(linuxWebAppSlotStorageAccountToTerraform, true)(this._storageAccount.internalValue),
       timeouts: linuxWebAppSlotTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

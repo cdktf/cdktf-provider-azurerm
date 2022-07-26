@@ -497,8 +497,8 @@ export function applicationGatewayBackendAddressPoolToTerraform(struct?: Applica
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    fqdns: cdktf.listMapper(cdktf.stringToTerraform)(struct!.fqdns),
-    ip_addresses: cdktf.listMapper(cdktf.stringToTerraform)(struct!.ipAddresses),
+    fqdns: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.fqdns),
+    ip_addresses: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.ipAddresses),
     name: cdktf.stringToTerraform(struct!.name),
   }
 }
@@ -889,8 +889,8 @@ export function applicationGatewayBackendHttpSettingsToTerraform(struct?: Applic
     probe_name: cdktf.stringToTerraform(struct!.probeName),
     protocol: cdktf.stringToTerraform(struct!.protocol),
     request_timeout: cdktf.numberToTerraform(struct!.requestTimeout),
-    trusted_root_certificate_names: cdktf.listMapper(cdktf.stringToTerraform)(struct!.trustedRootCertificateNames),
-    authentication_certificate: cdktf.listMapper(applicationGatewayBackendHttpSettingsAuthenticationCertificateToTerraform)(struct!.authenticationCertificate),
+    trusted_root_certificate_names: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.trustedRootCertificateNames),
+    authentication_certificate: cdktf.listMapper(applicationGatewayBackendHttpSettingsAuthenticationCertificateToTerraform, true)(struct!.authenticationCertificate),
     connection_draining: applicationGatewayBackendHttpSettingsConnectionDrainingToTerraform(struct!.connectionDraining),
   }
 }
@@ -2027,13 +2027,13 @@ export function applicationGatewayHttpListenerToTerraform(struct?: ApplicationGa
     frontend_ip_configuration_name: cdktf.stringToTerraform(struct!.frontendIpConfigurationName),
     frontend_port_name: cdktf.stringToTerraform(struct!.frontendPortName),
     host_name: cdktf.stringToTerraform(struct!.hostName),
-    host_names: cdktf.listMapper(cdktf.stringToTerraform)(struct!.hostNames),
+    host_names: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.hostNames),
     name: cdktf.stringToTerraform(struct!.name),
     protocol: cdktf.stringToTerraform(struct!.protocol),
     require_sni: cdktf.booleanToTerraform(struct!.requireSni),
     ssl_certificate_name: cdktf.stringToTerraform(struct!.sslCertificateName),
     ssl_profile_name: cdktf.stringToTerraform(struct!.sslProfileName),
-    custom_error_configuration: cdktf.listMapper(applicationGatewayHttpListenerCustomErrorConfigurationToTerraform)(struct!.customErrorConfiguration),
+    custom_error_configuration: cdktf.listMapper(applicationGatewayHttpListenerCustomErrorConfigurationToTerraform, true)(struct!.customErrorConfiguration),
   }
 }
 
@@ -2367,7 +2367,7 @@ export function applicationGatewayIdentityToTerraform(struct?: ApplicationGatewa
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.identityIds),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
@@ -2649,7 +2649,7 @@ export function applicationGatewayPrivateLinkConfigurationToTerraform(struct?: A
   }
   return {
     name: cdktf.stringToTerraform(struct!.name),
-    ip_configuration: cdktf.listMapper(applicationGatewayPrivateLinkConfigurationIpConfigurationToTerraform)(struct!.ipConfiguration),
+    ip_configuration: cdktf.listMapper(applicationGatewayPrivateLinkConfigurationIpConfigurationToTerraform, true)(struct!.ipConfiguration),
   }
 }
 
@@ -2772,7 +2772,7 @@ export function applicationGatewayProbeMatchToTerraform(struct?: ApplicationGate
   }
   return {
     body: cdktf.stringToTerraform(struct!.body),
-    status_code: cdktf.listMapper(cdktf.stringToTerraform)(struct!.statusCode),
+    status_code: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.statusCode),
   }
 }
 
@@ -4341,9 +4341,9 @@ export function applicationGatewayRewriteRuleSetRewriteRuleToTerraform(struct?: 
   return {
     name: cdktf.stringToTerraform(struct!.name),
     rule_sequence: cdktf.numberToTerraform(struct!.ruleSequence),
-    condition: cdktf.listMapper(applicationGatewayRewriteRuleSetRewriteRuleConditionToTerraform)(struct!.condition),
-    request_header_configuration: cdktf.listMapper(applicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfigurationToTerraform)(struct!.requestHeaderConfiguration),
-    response_header_configuration: cdktf.listMapper(applicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfigurationToTerraform)(struct!.responseHeaderConfiguration),
+    condition: cdktf.listMapper(applicationGatewayRewriteRuleSetRewriteRuleConditionToTerraform, true)(struct!.condition),
+    request_header_configuration: cdktf.listMapper(applicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfigurationToTerraform, true)(struct!.requestHeaderConfiguration),
+    response_header_configuration: cdktf.listMapper(applicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfigurationToTerraform, true)(struct!.responseHeaderConfiguration),
     url: applicationGatewayRewriteRuleSetRewriteRuleUrlToTerraform(struct!.url),
   }
 }
@@ -4552,7 +4552,7 @@ export function applicationGatewayRewriteRuleSetToTerraform(struct?: Application
   }
   return {
     name: cdktf.stringToTerraform(struct!.name),
-    rewrite_rule: cdktf.listMapper(applicationGatewayRewriteRuleSetRewriteRuleToTerraform)(struct!.rewriteRule),
+    rewrite_rule: cdktf.listMapper(applicationGatewayRewriteRuleSetRewriteRuleToTerraform, true)(struct!.rewriteRule),
   }
 }
 
@@ -4987,8 +4987,8 @@ export function applicationGatewaySslPolicyToTerraform(struct?: ApplicationGatew
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    cipher_suites: cdktf.listMapper(cdktf.stringToTerraform)(struct!.cipherSuites),
-    disabled_protocols: cdktf.listMapper(cdktf.stringToTerraform)(struct!.disabledProtocols),
+    cipher_suites: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.cipherSuites),
+    disabled_protocols: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.disabledProtocols),
     min_protocol_version: cdktf.stringToTerraform(struct!.minProtocolVersion),
     policy_name: cdktf.stringToTerraform(struct!.policyName),
     policy_type: cdktf.stringToTerraform(struct!.policyType),
@@ -5160,8 +5160,8 @@ export function applicationGatewaySslProfileSslPolicyToTerraform(struct?: Applic
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    cipher_suites: cdktf.listMapper(cdktf.stringToTerraform)(struct!.cipherSuites),
-    disabled_protocols: cdktf.listMapper(cdktf.stringToTerraform)(struct!.disabledProtocols),
+    cipher_suites: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.cipherSuites),
+    disabled_protocols: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.disabledProtocols),
     min_protocol_version: cdktf.stringToTerraform(struct!.minProtocolVersion),
     policy_name: cdktf.stringToTerraform(struct!.policyName),
     policy_type: cdktf.stringToTerraform(struct!.policyType),
@@ -5332,7 +5332,7 @@ export function applicationGatewaySslProfileToTerraform(struct?: ApplicationGate
   }
   return {
     name: cdktf.stringToTerraform(struct!.name),
-    trusted_client_certificate_names: cdktf.listMapper(cdktf.stringToTerraform)(struct!.trustedClientCertificateNames),
+    trusted_client_certificate_names: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.trustedClientCertificateNames),
     verify_client_cert_issuer_dn: cdktf.booleanToTerraform(struct!.verifyClientCertIssuerDn),
     ssl_policy: applicationGatewaySslProfileSslPolicyToTerraform(struct!.sslPolicy),
   }
@@ -5959,7 +5959,7 @@ export function applicationGatewayUrlPathMapPathRuleToTerraform(struct?: Applica
     backend_http_settings_name: cdktf.stringToTerraform(struct!.backendHttpSettingsName),
     firewall_policy_id: cdktf.stringToTerraform(struct!.firewallPolicyId),
     name: cdktf.stringToTerraform(struct!.name),
-    paths: cdktf.listMapper(cdktf.stringToTerraform)(struct!.paths),
+    paths: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.paths),
     redirect_configuration_name: cdktf.stringToTerraform(struct!.redirectConfigurationName),
     rewrite_rule_set_name: cdktf.stringToTerraform(struct!.rewriteRuleSetName),
   }
@@ -6236,7 +6236,7 @@ export function applicationGatewayUrlPathMapToTerraform(struct?: ApplicationGate
     default_redirect_configuration_name: cdktf.stringToTerraform(struct!.defaultRedirectConfigurationName),
     default_rewrite_rule_set_name: cdktf.stringToTerraform(struct!.defaultRewriteRuleSetName),
     name: cdktf.stringToTerraform(struct!.name),
-    path_rule: cdktf.listMapper(applicationGatewayUrlPathMapPathRuleToTerraform)(struct!.pathRule),
+    path_rule: cdktf.listMapper(applicationGatewayUrlPathMapPathRuleToTerraform, true)(struct!.pathRule),
   }
 }
 
@@ -6467,7 +6467,7 @@ export function applicationGatewayWafConfigurationDisabledRuleGroupToTerraform(s
   }
   return {
     rule_group_name: cdktf.stringToTerraform(struct!.ruleGroupName),
-    rules: cdktf.listMapper(cdktf.numberToTerraform)(struct!.rules),
+    rules: cdktf.listMapper(cdktf.numberToTerraform, false)(struct!.rules),
   }
 }
 
@@ -6774,8 +6774,8 @@ export function applicationGatewayWafConfigurationToTerraform(struct?: Applicati
     request_body_check: cdktf.booleanToTerraform(struct!.requestBodyCheck),
     rule_set_type: cdktf.stringToTerraform(struct!.ruleSetType),
     rule_set_version: cdktf.stringToTerraform(struct!.ruleSetVersion),
-    disabled_rule_group: cdktf.listMapper(applicationGatewayWafConfigurationDisabledRuleGroupToTerraform)(struct!.disabledRuleGroup),
-    exclusion: cdktf.listMapper(applicationGatewayWafConfigurationExclusionToTerraform)(struct!.exclusion),
+    disabled_rule_group: cdktf.listMapper(applicationGatewayWafConfigurationDisabledRuleGroupToTerraform, true)(struct!.disabledRuleGroup),
+    exclusion: cdktf.listMapper(applicationGatewayWafConfigurationExclusionToTerraform, true)(struct!.exclusion),
   }
 }
 
@@ -7027,7 +7027,10 @@ export class ApplicationGateway extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._enableHttp2 = config.enableHttp2;
     this._fipsEnabled = config.fipsEnabled;
@@ -7601,30 +7604,30 @@ export class ApplicationGateway extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
-      zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),
-      authentication_certificate: cdktf.listMapper(applicationGatewayAuthenticationCertificateToTerraform)(this._authenticationCertificate.internalValue),
+      zones: cdktf.listMapper(cdktf.stringToTerraform, false)(this._zones),
+      authentication_certificate: cdktf.listMapper(applicationGatewayAuthenticationCertificateToTerraform, true)(this._authenticationCertificate.internalValue),
       autoscale_configuration: applicationGatewayAutoscaleConfigurationToTerraform(this._autoscaleConfiguration.internalValue),
-      backend_address_pool: cdktf.listMapper(applicationGatewayBackendAddressPoolToTerraform)(this._backendAddressPool.internalValue),
-      backend_http_settings: cdktf.listMapper(applicationGatewayBackendHttpSettingsToTerraform)(this._backendHttpSettings.internalValue),
-      custom_error_configuration: cdktf.listMapper(applicationGatewayCustomErrorConfigurationToTerraform)(this._customErrorConfiguration.internalValue),
-      frontend_ip_configuration: cdktf.listMapper(applicationGatewayFrontendIpConfigurationToTerraform)(this._frontendIpConfiguration.internalValue),
-      frontend_port: cdktf.listMapper(applicationGatewayFrontendPortToTerraform)(this._frontendPort.internalValue),
-      gateway_ip_configuration: cdktf.listMapper(applicationGatewayGatewayIpConfigurationToTerraform)(this._gatewayIpConfiguration.internalValue),
-      http_listener: cdktf.listMapper(applicationGatewayHttpListenerToTerraform)(this._httpListener.internalValue),
+      backend_address_pool: cdktf.listMapper(applicationGatewayBackendAddressPoolToTerraform, true)(this._backendAddressPool.internalValue),
+      backend_http_settings: cdktf.listMapper(applicationGatewayBackendHttpSettingsToTerraform, true)(this._backendHttpSettings.internalValue),
+      custom_error_configuration: cdktf.listMapper(applicationGatewayCustomErrorConfigurationToTerraform, true)(this._customErrorConfiguration.internalValue),
+      frontend_ip_configuration: cdktf.listMapper(applicationGatewayFrontendIpConfigurationToTerraform, true)(this._frontendIpConfiguration.internalValue),
+      frontend_port: cdktf.listMapper(applicationGatewayFrontendPortToTerraform, true)(this._frontendPort.internalValue),
+      gateway_ip_configuration: cdktf.listMapper(applicationGatewayGatewayIpConfigurationToTerraform, true)(this._gatewayIpConfiguration.internalValue),
+      http_listener: cdktf.listMapper(applicationGatewayHttpListenerToTerraform, true)(this._httpListener.internalValue),
       identity: applicationGatewayIdentityToTerraform(this._identity.internalValue),
-      private_link_configuration: cdktf.listMapper(applicationGatewayPrivateLinkConfigurationToTerraform)(this._privateLinkConfiguration.internalValue),
-      probe: cdktf.listMapper(applicationGatewayProbeToTerraform)(this._probe.internalValue),
-      redirect_configuration: cdktf.listMapper(applicationGatewayRedirectConfigurationToTerraform)(this._redirectConfiguration.internalValue),
-      request_routing_rule: cdktf.listMapper(applicationGatewayRequestRoutingRuleToTerraform)(this._requestRoutingRule.internalValue),
-      rewrite_rule_set: cdktf.listMapper(applicationGatewayRewriteRuleSetToTerraform)(this._rewriteRuleSet.internalValue),
+      private_link_configuration: cdktf.listMapper(applicationGatewayPrivateLinkConfigurationToTerraform, true)(this._privateLinkConfiguration.internalValue),
+      probe: cdktf.listMapper(applicationGatewayProbeToTerraform, true)(this._probe.internalValue),
+      redirect_configuration: cdktf.listMapper(applicationGatewayRedirectConfigurationToTerraform, true)(this._redirectConfiguration.internalValue),
+      request_routing_rule: cdktf.listMapper(applicationGatewayRequestRoutingRuleToTerraform, true)(this._requestRoutingRule.internalValue),
+      rewrite_rule_set: cdktf.listMapper(applicationGatewayRewriteRuleSetToTerraform, true)(this._rewriteRuleSet.internalValue),
       sku: applicationGatewaySkuToTerraform(this._sku.internalValue),
-      ssl_certificate: cdktf.listMapper(applicationGatewaySslCertificateToTerraform)(this._sslCertificate.internalValue),
+      ssl_certificate: cdktf.listMapper(applicationGatewaySslCertificateToTerraform, true)(this._sslCertificate.internalValue),
       ssl_policy: applicationGatewaySslPolicyToTerraform(this._sslPolicy.internalValue),
-      ssl_profile: cdktf.listMapper(applicationGatewaySslProfileToTerraform)(this._sslProfile.internalValue),
+      ssl_profile: cdktf.listMapper(applicationGatewaySslProfileToTerraform, true)(this._sslProfile.internalValue),
       timeouts: applicationGatewayTimeoutsToTerraform(this._timeouts.internalValue),
-      trusted_client_certificate: cdktf.listMapper(applicationGatewayTrustedClientCertificateToTerraform)(this._trustedClientCertificate.internalValue),
-      trusted_root_certificate: cdktf.listMapper(applicationGatewayTrustedRootCertificateToTerraform)(this._trustedRootCertificate.internalValue),
-      url_path_map: cdktf.listMapper(applicationGatewayUrlPathMapToTerraform)(this._urlPathMap.internalValue),
+      trusted_client_certificate: cdktf.listMapper(applicationGatewayTrustedClientCertificateToTerraform, true)(this._trustedClientCertificate.internalValue),
+      trusted_root_certificate: cdktf.listMapper(applicationGatewayTrustedRootCertificateToTerraform, true)(this._trustedRootCertificate.internalValue),
+      url_path_map: cdktf.listMapper(applicationGatewayUrlPathMapToTerraform, true)(this._urlPathMap.internalValue),
       waf_configuration: applicationGatewayWafConfigurationToTerraform(this._wafConfiguration.internalValue),
     };
   }

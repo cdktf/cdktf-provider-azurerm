@@ -238,7 +238,10 @@ export class HpcCacheBlobNfsTarget extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._accessPolicyName = config.accessPolicyName;
     this._cacheName = config.cacheName;

@@ -108,7 +108,7 @@ export function backupPolicyVmBackupToTerraform(struct?: BackupPolicyVmBackupOut
     hour_duration: cdktf.numberToTerraform(struct!.hourDuration),
     hour_interval: cdktf.numberToTerraform(struct!.hourInterval),
     time: cdktf.stringToTerraform(struct!.time),
-    weekdays: cdktf.listMapper(cdktf.stringToTerraform)(struct!.weekdays),
+    weekdays: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.weekdays),
   }
 }
 
@@ -326,8 +326,8 @@ export function backupPolicyVmRetentionMonthlyToTerraform(struct?: BackupPolicyV
   }
   return {
     count: cdktf.numberToTerraform(struct!.count),
-    weekdays: cdktf.listMapper(cdktf.stringToTerraform)(struct!.weekdays),
-    weeks: cdktf.listMapper(cdktf.stringToTerraform)(struct!.weeks),
+    weekdays: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.weekdays),
+    weeks: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.weeks),
   }
 }
 
@@ -432,7 +432,7 @@ export function backupPolicyVmRetentionWeeklyToTerraform(struct?: BackupPolicyVm
   }
   return {
     count: cdktf.numberToTerraform(struct!.count),
-    weekdays: cdktf.listMapper(cdktf.stringToTerraform)(struct!.weekdays),
+    weekdays: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.weekdays),
   }
 }
 
@@ -526,9 +526,9 @@ export function backupPolicyVmRetentionYearlyToTerraform(struct?: BackupPolicyVm
   }
   return {
     count: cdktf.numberToTerraform(struct!.count),
-    months: cdktf.listMapper(cdktf.stringToTerraform)(struct!.months),
-    weekdays: cdktf.listMapper(cdktf.stringToTerraform)(struct!.weekdays),
-    weeks: cdktf.listMapper(cdktf.stringToTerraform)(struct!.weeks),
+    months: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.months),
+    weekdays: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.weekdays),
+    weeks: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.weeks),
   }
 }
 
@@ -823,7 +823,10 @@ export class BackupPolicyVm extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._instantRestoreRetentionDays = config.instantRestoreRetentionDays;

@@ -513,8 +513,8 @@ export function springCloudServiceConfigServerGitSettingRepositoryToTerraform(st
   return {
     label: cdktf.stringToTerraform(struct!.label),
     name: cdktf.stringToTerraform(struct!.name),
-    pattern: cdktf.listMapper(cdktf.stringToTerraform)(struct!.pattern),
-    search_paths: cdktf.listMapper(cdktf.stringToTerraform)(struct!.searchPaths),
+    pattern: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.pattern),
+    search_paths: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.searchPaths),
     uri: cdktf.stringToTerraform(struct!.uri),
     http_basic_auth: springCloudServiceConfigServerGitSettingRepositoryHttpBasicAuthToTerraform(struct!.httpBasicAuth),
     ssh_auth: springCloudServiceConfigServerGitSettingRepositorySshAuthToTerraform(struct!.sshAuth),
@@ -910,10 +910,10 @@ export function springCloudServiceConfigServerGitSettingToTerraform(struct?: Spr
   }
   return {
     label: cdktf.stringToTerraform(struct!.label),
-    search_paths: cdktf.listMapper(cdktf.stringToTerraform)(struct!.searchPaths),
+    search_paths: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.searchPaths),
     uri: cdktf.stringToTerraform(struct!.uri),
     http_basic_auth: springCloudServiceConfigServerGitSettingHttpBasicAuthToTerraform(struct!.httpBasicAuth),
-    repository: cdktf.listMapper(springCloudServiceConfigServerGitSettingRepositoryToTerraform)(struct!.repository),
+    repository: cdktf.listMapper(springCloudServiceConfigServerGitSettingRepositoryToTerraform, true)(struct!.repository),
     ssh_auth: springCloudServiceConfigServerGitSettingSshAuthToTerraform(struct!.sshAuth),
   }
 }
@@ -1104,7 +1104,7 @@ export function springCloudServiceNetworkToTerraform(struct?: SpringCloudService
   return {
     app_network_resource_group: cdktf.stringToTerraform(struct!.appNetworkResourceGroup),
     app_subnet_id: cdktf.stringToTerraform(struct!.appSubnetId),
-    cidr_ranges: cdktf.listMapper(cdktf.stringToTerraform)(struct!.cidrRanges),
+    cidr_ranges: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.cidrRanges),
     service_runtime_network_resource_group: cdktf.stringToTerraform(struct!.serviceRuntimeNetworkResourceGroup),
     service_runtime_subnet_id: cdktf.stringToTerraform(struct!.serviceRuntimeSubnetId),
   }
@@ -1518,7 +1518,10 @@ export class SpringCloudService extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._buildAgentPoolSize = config.buildAgentPoolSize;
     this._id = config.id;

@@ -549,7 +549,10 @@ export class NetworkPacketCapture extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._maximumBytesPerPacket = config.maximumBytesPerPacket;
@@ -743,7 +746,7 @@ export class NetworkPacketCapture extends cdktf.TerraformResource {
       network_watcher_name: cdktf.stringToTerraform(this._networkWatcherName),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       target_resource_id: cdktf.stringToTerraform(this._targetResourceId),
-      filter: cdktf.listMapper(networkPacketCaptureFilterToTerraform)(this._filter.internalValue),
+      filter: cdktf.listMapper(networkPacketCaptureFilterToTerraform, true)(this._filter.internalValue),
       storage_location: networkPacketCaptureStorageLocationToTerraform(this._storageLocation.internalValue),
       timeouts: networkPacketCaptureTimeoutsToTerraform(this._timeouts.internalValue),
     };

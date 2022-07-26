@@ -82,7 +82,7 @@ export function consumptionBudgetSubscriptionFilterDimensionToTerraform(struct?:
   return {
     name: cdktf.stringToTerraform(struct!.name),
     operator: cdktf.stringToTerraform(struct!.operator),
-    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+    values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
 }
 
@@ -227,7 +227,7 @@ export function consumptionBudgetSubscriptionFilterNotDimensionToTerraform(struc
   return {
     name: cdktf.stringToTerraform(struct!.name),
     operator: cdktf.stringToTerraform(struct!.operator),
-    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+    values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
 }
 
@@ -340,7 +340,7 @@ export function consumptionBudgetSubscriptionFilterNotTagToTerraform(struct?: Co
   return {
     name: cdktf.stringToTerraform(struct!.name),
     operator: cdktf.stringToTerraform(struct!.operator),
-    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+    values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
 }
 
@@ -549,7 +549,7 @@ export function consumptionBudgetSubscriptionFilterTagToTerraform(struct?: Consu
   return {
     name: cdktf.stringToTerraform(struct!.name),
     operator: cdktf.stringToTerraform(struct!.operator),
-    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+    values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
 }
 
@@ -698,9 +698,9 @@ export function consumptionBudgetSubscriptionFilterToTerraform(struct?: Consumpt
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    dimension: cdktf.listMapper(consumptionBudgetSubscriptionFilterDimensionToTerraform)(struct!.dimension),
+    dimension: cdktf.listMapper(consumptionBudgetSubscriptionFilterDimensionToTerraform, true)(struct!.dimension),
     not: consumptionBudgetSubscriptionFilterNotToTerraform(struct!.not),
-    tag: cdktf.listMapper(consumptionBudgetSubscriptionFilterTagToTerraform)(struct!.tag),
+    tag: cdktf.listMapper(consumptionBudgetSubscriptionFilterTagToTerraform, true)(struct!.tag),
   }
 }
 
@@ -833,9 +833,9 @@ export function consumptionBudgetSubscriptionNotificationToTerraform(struct?: Co
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    contact_emails: cdktf.listMapper(cdktf.stringToTerraform)(struct!.contactEmails),
-    contact_groups: cdktf.listMapper(cdktf.stringToTerraform)(struct!.contactGroups),
-    contact_roles: cdktf.listMapper(cdktf.stringToTerraform)(struct!.contactRoles),
+    contact_emails: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.contactEmails),
+    contact_groups: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.contactGroups),
+    contact_roles: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.contactRoles),
     enabled: cdktf.booleanToTerraform(struct!.enabled),
     operator: cdktf.stringToTerraform(struct!.operator),
     threshold: cdktf.numberToTerraform(struct!.threshold),
@@ -1327,7 +1327,10 @@ export class ConsumptionBudgetSubscription extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._amount = config.amount;
     this._etag = config.etag;
@@ -1503,7 +1506,7 @@ export class ConsumptionBudgetSubscription extends cdktf.TerraformResource {
       subscription_id: cdktf.stringToTerraform(this._subscriptionId),
       time_grain: cdktf.stringToTerraform(this._timeGrain),
       filter: consumptionBudgetSubscriptionFilterToTerraform(this._filter.internalValue),
-      notification: cdktf.listMapper(consumptionBudgetSubscriptionNotificationToTerraform)(this._notification.internalValue),
+      notification: cdktf.listMapper(consumptionBudgetSubscriptionNotificationToTerraform, true)(this._notification.internalValue),
       time_period: consumptionBudgetSubscriptionTimePeriodToTerraform(this._timePeriod.internalValue),
       timeouts: consumptionBudgetSubscriptionTimeoutsToTerraform(this._timeouts.internalValue),
     };

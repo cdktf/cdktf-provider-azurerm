@@ -64,7 +64,7 @@ export function cosmosdbSqlRoleDefinitionPermissionsToTerraform(struct?: Cosmosd
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    data_actions: cdktf.listMapper(cdktf.stringToTerraform)(struct!.dataActions),
+    data_actions: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.dataActions),
   }
 }
 
@@ -334,7 +334,10 @@ export class CosmosdbSqlRoleDefinition extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._accountName = config.accountName;
     this._assignableScopes = config.assignableScopes;
@@ -487,13 +490,13 @@ export class CosmosdbSqlRoleDefinition extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       account_name: cdktf.stringToTerraform(this._accountName),
-      assignable_scopes: cdktf.listMapper(cdktf.stringToTerraform)(this._assignableScopes),
+      assignable_scopes: cdktf.listMapper(cdktf.stringToTerraform, false)(this._assignableScopes),
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       role_definition_id: cdktf.stringToTerraform(this._roleDefinitionId),
       type: cdktf.stringToTerraform(this._type),
-      permissions: cdktf.listMapper(cosmosdbSqlRoleDefinitionPermissionsToTerraform)(this._permissions.internalValue),
+      permissions: cdktf.listMapper(cosmosdbSqlRoleDefinitionPermissionsToTerraform, true)(this._permissions.internalValue),
       timeouts: cosmosdbSqlRoleDefinitionTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

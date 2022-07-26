@@ -520,7 +520,10 @@ export class TrafficManagerExternalEndpoint extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._enabled = config.enabled;
     this._endpointLocation = config.endpointLocation;
@@ -731,15 +734,15 @@ export class TrafficManagerExternalEndpoint extends cdktf.TerraformResource {
     return {
       enabled: cdktf.booleanToTerraform(this._enabled),
       endpoint_location: cdktf.stringToTerraform(this._endpointLocation),
-      geo_mappings: cdktf.listMapper(cdktf.stringToTerraform)(this._geoMappings),
+      geo_mappings: cdktf.listMapper(cdktf.stringToTerraform, false)(this._geoMappings),
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       priority: cdktf.numberToTerraform(this._priority),
       profile_id: cdktf.stringToTerraform(this._profileId),
       target: cdktf.stringToTerraform(this._target),
       weight: cdktf.numberToTerraform(this._weight),
-      custom_header: cdktf.listMapper(trafficManagerExternalEndpointCustomHeaderToTerraform)(this._customHeader.internalValue),
-      subnet: cdktf.listMapper(trafficManagerExternalEndpointSubnetToTerraform)(this._subnet.internalValue),
+      custom_header: cdktf.listMapper(trafficManagerExternalEndpointCustomHeaderToTerraform, true)(this._customHeader.internalValue),
+      subnet: cdktf.listMapper(trafficManagerExternalEndpointSubnetToTerraform, true)(this._subnet.internalValue),
       timeouts: trafficManagerExternalEndpointTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

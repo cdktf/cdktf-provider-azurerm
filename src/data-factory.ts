@@ -398,7 +398,7 @@ export function dataFactoryIdentityToTerraform(struct?: DataFactoryIdentityOutpu
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.identityIds),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
@@ -851,7 +851,10 @@ export class DataFactory extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._customerManagedKeyId = config.customerManagedKeyId;
     this._customerManagedKeyIdentityId = config.customerManagedKeyIdentityId;
@@ -1122,7 +1125,7 @@ export class DataFactory extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       github_configuration: dataFactoryGithubConfigurationToTerraform(this._githubConfiguration.internalValue),
-      global_parameter: cdktf.listMapper(dataFactoryGlobalParameterToTerraform)(this._globalParameter.internalValue),
+      global_parameter: cdktf.listMapper(dataFactoryGlobalParameterToTerraform, true)(this._globalParameter.internalValue),
       identity: dataFactoryIdentityToTerraform(this._identity.internalValue),
       timeouts: dataFactoryTimeoutsToTerraform(this._timeouts.internalValue),
       vsts_configuration: dataFactoryVstsConfigurationToTerraform(this._vstsConfiguration.internalValue),

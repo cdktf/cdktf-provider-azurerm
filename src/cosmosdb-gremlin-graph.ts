@@ -391,7 +391,7 @@ export function cosmosdbGremlinGraphIndexPolicyCompositeIndexToTerraform(struct?
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    index: cdktf.listMapper(cosmosdbGremlinGraphIndexPolicyCompositeIndexIndexToTerraform)(struct!.index),
+    index: cdktf.listMapper(cosmosdbGremlinGraphIndexPolicyCompositeIndexIndexToTerraform, true)(struct!.index),
   }
 }
 
@@ -609,11 +609,11 @@ export function cosmosdbGremlinGraphIndexPolicyToTerraform(struct?: CosmosdbGrem
   }
   return {
     automatic: cdktf.booleanToTerraform(struct!.automatic),
-    excluded_paths: cdktf.listMapper(cdktf.stringToTerraform)(struct!.excludedPaths),
-    included_paths: cdktf.listMapper(cdktf.stringToTerraform)(struct!.includedPaths),
+    excluded_paths: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.excludedPaths),
+    included_paths: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.includedPaths),
     indexing_mode: cdktf.stringToTerraform(struct!.indexingMode),
-    composite_index: cdktf.listMapper(cosmosdbGremlinGraphIndexPolicyCompositeIndexToTerraform)(struct!.compositeIndex),
-    spatial_index: cdktf.listMapper(cosmosdbGremlinGraphIndexPolicySpatialIndexToTerraform)(struct!.spatialIndex),
+    composite_index: cdktf.listMapper(cosmosdbGremlinGraphIndexPolicyCompositeIndexToTerraform, true)(struct!.compositeIndex),
+    spatial_index: cdktf.listMapper(cosmosdbGremlinGraphIndexPolicySpatialIndexToTerraform, true)(struct!.spatialIndex),
   }
 }
 
@@ -941,7 +941,7 @@ export function cosmosdbGremlinGraphUniqueKeyToTerraform(struct?: CosmosdbGremli
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    paths: cdktf.listMapper(cdktf.stringToTerraform)(struct!.paths),
+    paths: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.paths),
   }
 }
 
@@ -1055,7 +1055,10 @@ export class CosmosdbGremlinGraph extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._accountName = config.accountName;
     this._databaseName = config.databaseName;
@@ -1305,7 +1308,7 @@ export class CosmosdbGremlinGraph extends cdktf.TerraformResource {
       conflict_resolution_policy: cosmosdbGremlinGraphConflictResolutionPolicyToTerraform(this._conflictResolutionPolicy.internalValue),
       index_policy: cosmosdbGremlinGraphIndexPolicyToTerraform(this._indexPolicy.internalValue),
       timeouts: cosmosdbGremlinGraphTimeoutsToTerraform(this._timeouts.internalValue),
-      unique_key: cdktf.listMapper(cosmosdbGremlinGraphUniqueKeyToTerraform)(this._uniqueKey.internalValue),
+      unique_key: cdktf.listMapper(cosmosdbGremlinGraphUniqueKeyToTerraform, true)(this._uniqueKey.internalValue),
     };
   }
 }

@@ -90,7 +90,7 @@ export function logicAppWorkflowAccessControlActionToTerraform(struct?: LogicApp
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    allowed_caller_ip_address_range: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedCallerIpAddressRange),
+    allowed_caller_ip_address_range: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedCallerIpAddressRange),
   }
 }
 
@@ -152,7 +152,7 @@ export function logicAppWorkflowAccessControlContentToTerraform(struct?: LogicAp
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    allowed_caller_ip_address_range: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedCallerIpAddressRange),
+    allowed_caller_ip_address_range: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedCallerIpAddressRange),
   }
 }
 
@@ -339,7 +339,7 @@ export function logicAppWorkflowAccessControlTriggerOpenAuthenticationPolicyToTe
   }
   return {
     name: cdktf.stringToTerraform(struct!.name),
-    claim: cdktf.listMapper(logicAppWorkflowAccessControlTriggerOpenAuthenticationPolicyClaimToTerraform)(struct!.claim),
+    claim: cdktf.listMapper(logicAppWorkflowAccessControlTriggerOpenAuthenticationPolicyClaimToTerraform, true)(struct!.claim),
   }
 }
 
@@ -458,8 +458,8 @@ export function logicAppWorkflowAccessControlTriggerToTerraform(struct?: LogicAp
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    allowed_caller_ip_address_range: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedCallerIpAddressRange),
-    open_authentication_policy: cdktf.listMapper(logicAppWorkflowAccessControlTriggerOpenAuthenticationPolicyToTerraform)(struct!.openAuthenticationPolicy),
+    allowed_caller_ip_address_range: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedCallerIpAddressRange),
+    open_authentication_policy: cdktf.listMapper(logicAppWorkflowAccessControlTriggerOpenAuthenticationPolicyToTerraform, true)(struct!.openAuthenticationPolicy),
   }
 }
 
@@ -543,7 +543,7 @@ export function logicAppWorkflowAccessControlWorkflowManagementToTerraform(struc
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    allowed_caller_ip_address_range: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedCallerIpAddressRange),
+    allowed_caller_ip_address_range: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedCallerIpAddressRange),
   }
 }
 
@@ -763,7 +763,7 @@ export function logicAppWorkflowIdentityToTerraform(struct?: LogicAppWorkflowIde
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.identityIds),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
@@ -1034,7 +1034,10 @@ export class LogicAppWorkflow extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._enabled = config.enabled;
     this._id = config.id;

@@ -1165,7 +1165,10 @@ export class SynapseWorkspace extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._aadAdmin.internalValue = config.aadAdmin;
     this._computeSubnetId = config.computeSubnetId;
@@ -1555,11 +1558,11 @@ export class SynapseWorkspace extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      aad_admin: cdktf.listMapper(synapseWorkspaceAadAdminToTerraform)(this._aadAdmin.internalValue),
+      aad_admin: cdktf.listMapper(synapseWorkspaceAadAdminToTerraform, false)(this._aadAdmin.internalValue),
       compute_subnet_id: cdktf.stringToTerraform(this._computeSubnetId),
       data_exfiltration_protection_enabled: cdktf.booleanToTerraform(this._dataExfiltrationProtectionEnabled),
       id: cdktf.stringToTerraform(this._id),
-      linking_allowed_for_aad_tenant_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._linkingAllowedForAadTenantIds),
+      linking_allowed_for_aad_tenant_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(this._linkingAllowedForAadTenantIds),
       location: cdktf.stringToTerraform(this._location),
       managed_resource_group_name: cdktf.stringToTerraform(this._managedResourceGroupName),
       managed_virtual_network_enabled: cdktf.booleanToTerraform(this._managedVirtualNetworkEnabled),
@@ -1567,7 +1570,7 @@ export class SynapseWorkspace extends cdktf.TerraformResource {
       public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       purview_id: cdktf.stringToTerraform(this._purviewId),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      sql_aad_admin: cdktf.listMapper(synapseWorkspaceSqlAadAdminToTerraform)(this._sqlAadAdmin.internalValue),
+      sql_aad_admin: cdktf.listMapper(synapseWorkspaceSqlAadAdminToTerraform, false)(this._sqlAadAdmin.internalValue),
       sql_administrator_login: cdktf.stringToTerraform(this._sqlAdministratorLogin),
       sql_administrator_login_password: cdktf.stringToTerraform(this._sqlAdministratorLoginPassword),
       sql_identity_control_enabled: cdktf.booleanToTerraform(this._sqlIdentityControlEnabled),

@@ -1086,7 +1086,7 @@ export function hdinsightKafkaClusterRolesHeadNodeToTerraform(struct?: Hdinsight
   }
   return {
     password: cdktf.stringToTerraform(struct!.password),
-    ssh_keys: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sshKeys),
+    ssh_keys: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.sshKeys),
     subnet_id: cdktf.stringToTerraform(struct!.subnetId),
     username: cdktf.stringToTerraform(struct!.username),
     virtual_network_id: cdktf.stringToTerraform(struct!.virtualNetworkId),
@@ -1280,7 +1280,7 @@ export function hdinsightKafkaClusterRolesKafkaManagementNodeToTerraform(struct?
   }
   return {
     password: cdktf.stringToTerraform(struct!.password),
-    ssh_keys: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sshKeys),
+    ssh_keys: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.sshKeys),
     subnet_id: cdktf.stringToTerraform(struct!.subnetId),
     username: cdktf.stringToTerraform(struct!.username),
     virtual_network_id: cdktf.stringToTerraform(struct!.virtualNetworkId),
@@ -1483,7 +1483,7 @@ export function hdinsightKafkaClusterRolesWorkerNodeToTerraform(struct?: Hdinsig
   return {
     number_of_disks_per_node: cdktf.numberToTerraform(struct!.numberOfDisksPerNode),
     password: cdktf.stringToTerraform(struct!.password),
-    ssh_keys: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sshKeys),
+    ssh_keys: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.sshKeys),
     subnet_id: cdktf.stringToTerraform(struct!.subnetId),
     target_instance_count: cdktf.numberToTerraform(struct!.targetInstanceCount),
     username: cdktf.stringToTerraform(struct!.username),
@@ -1716,7 +1716,7 @@ export function hdinsightKafkaClusterRolesZookeeperNodeToTerraform(struct?: Hdin
   }
   return {
     password: cdktf.stringToTerraform(struct!.password),
-    ssh_keys: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sshKeys),
+    ssh_keys: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.sshKeys),
     subnet_id: cdktf.stringToTerraform(struct!.subnetId),
     username: cdktf.stringToTerraform(struct!.username),
     virtual_network_id: cdktf.stringToTerraform(struct!.virtualNetworkId),
@@ -2059,11 +2059,11 @@ export function hdinsightKafkaClusterSecurityProfileToTerraform(struct?: Hdinsig
   }
   return {
     aadds_resource_id: cdktf.stringToTerraform(struct!.aaddsResourceId),
-    cluster_users_group_dns: cdktf.listMapper(cdktf.stringToTerraform)(struct!.clusterUsersGroupDns),
+    cluster_users_group_dns: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.clusterUsersGroupDns),
     domain_name: cdktf.stringToTerraform(struct!.domainName),
     domain_user_password: cdktf.stringToTerraform(struct!.domainUserPassword),
     domain_username: cdktf.stringToTerraform(struct!.domainUsername),
-    ldaps_urls: cdktf.listMapper(cdktf.stringToTerraform)(struct!.ldapsUrls),
+    ldaps_urls: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.ldapsUrls),
     msi_resource_id: cdktf.stringToTerraform(struct!.msiResourceId),
   }
 }
@@ -2722,7 +2722,10 @@ export class HdinsightKafkaCluster extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._clusterVersion = config.clusterVersion;
     this._encryptionInTransitEnabled = config.encryptionInTransitEnabled;
@@ -3084,7 +3087,7 @@ export class HdinsightKafkaCluster extends cdktf.TerraformResource {
       rest_proxy: hdinsightKafkaClusterRestProxyToTerraform(this._restProxy.internalValue),
       roles: hdinsightKafkaClusterRolesToTerraform(this._roles.internalValue),
       security_profile: hdinsightKafkaClusterSecurityProfileToTerraform(this._securityProfile.internalValue),
-      storage_account: cdktf.listMapper(hdinsightKafkaClusterStorageAccountToTerraform)(this._storageAccount.internalValue),
+      storage_account: cdktf.listMapper(hdinsightKafkaClusterStorageAccountToTerraform, true)(this._storageAccount.internalValue),
       storage_account_gen2: hdinsightKafkaClusterStorageAccountGen2ToTerraform(this._storageAccountGen2.internalValue),
       timeouts: hdinsightKafkaClusterTimeoutsToTerraform(this._timeouts.internalValue),
     };

@@ -990,7 +990,7 @@ export function hdinsightHbaseClusterRolesHeadNodeToTerraform(struct?: Hdinsight
   }
   return {
     password: cdktf.stringToTerraform(struct!.password),
-    ssh_keys: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sshKeys),
+    ssh_keys: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.sshKeys),
     subnet_id: cdktf.stringToTerraform(struct!.subnetId),
     username: cdktf.stringToTerraform(struct!.username),
     virtual_network_id: cdktf.stringToTerraform(struct!.virtualNetworkId),
@@ -1171,7 +1171,7 @@ export function hdinsightHbaseClusterRolesWorkerNodeAutoscaleRecurrenceScheduleT
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    days: cdktf.listMapper(cdktf.stringToTerraform)(struct!.days),
+    days: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.days),
     target_instance_count: cdktf.numberToTerraform(struct!.targetInstanceCount),
     time: cdktf.stringToTerraform(struct!.time),
   }
@@ -1312,7 +1312,7 @@ export function hdinsightHbaseClusterRolesWorkerNodeAutoscaleRecurrenceToTerrafo
   }
   return {
     timezone: cdktf.stringToTerraform(struct!.timezone),
-    schedule: cdktf.listMapper(hdinsightHbaseClusterRolesWorkerNodeAutoscaleRecurrenceScheduleToTerraform)(struct!.schedule),
+    schedule: cdktf.listMapper(hdinsightHbaseClusterRolesWorkerNodeAutoscaleRecurrenceScheduleToTerraform, true)(struct!.schedule),
   }
 }
 
@@ -1491,7 +1491,7 @@ export function hdinsightHbaseClusterRolesWorkerNodeToTerraform(struct?: Hdinsig
   }
   return {
     password: cdktf.stringToTerraform(struct!.password),
-    ssh_keys: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sshKeys),
+    ssh_keys: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.sshKeys),
     subnet_id: cdktf.stringToTerraform(struct!.subnetId),
     target_instance_count: cdktf.numberToTerraform(struct!.targetInstanceCount),
     username: cdktf.stringToTerraform(struct!.username),
@@ -1728,7 +1728,7 @@ export function hdinsightHbaseClusterRolesZookeeperNodeToTerraform(struct?: Hdin
   }
   return {
     password: cdktf.stringToTerraform(struct!.password),
-    ssh_keys: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sshKeys),
+    ssh_keys: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.sshKeys),
     subnet_id: cdktf.stringToTerraform(struct!.subnetId),
     username: cdktf.stringToTerraform(struct!.username),
     virtual_network_id: cdktf.stringToTerraform(struct!.virtualNetworkId),
@@ -2042,11 +2042,11 @@ export function hdinsightHbaseClusterSecurityProfileToTerraform(struct?: Hdinsig
   }
   return {
     aadds_resource_id: cdktf.stringToTerraform(struct!.aaddsResourceId),
-    cluster_users_group_dns: cdktf.listMapper(cdktf.stringToTerraform)(struct!.clusterUsersGroupDns),
+    cluster_users_group_dns: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.clusterUsersGroupDns),
     domain_name: cdktf.stringToTerraform(struct!.domainName),
     domain_user_password: cdktf.stringToTerraform(struct!.domainUserPassword),
     domain_username: cdktf.stringToTerraform(struct!.domainUsername),
-    ldaps_urls: cdktf.listMapper(cdktf.stringToTerraform)(struct!.ldapsUrls),
+    ldaps_urls: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.ldapsUrls),
     msi_resource_id: cdktf.stringToTerraform(struct!.msiResourceId),
   }
 }
@@ -2705,7 +2705,10 @@ export class HdinsightHbaseCluster extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._clusterVersion = config.clusterVersion;
     this._id = config.id;
@@ -3026,7 +3029,7 @@ export class HdinsightHbaseCluster extends cdktf.TerraformResource {
       network: hdinsightHbaseClusterNetworkToTerraform(this._network.internalValue),
       roles: hdinsightHbaseClusterRolesToTerraform(this._roles.internalValue),
       security_profile: hdinsightHbaseClusterSecurityProfileToTerraform(this._securityProfile.internalValue),
-      storage_account: cdktf.listMapper(hdinsightHbaseClusterStorageAccountToTerraform)(this._storageAccount.internalValue),
+      storage_account: cdktf.listMapper(hdinsightHbaseClusterStorageAccountToTerraform, true)(this._storageAccount.internalValue),
       storage_account_gen2: hdinsightHbaseClusterStorageAccountGen2ToTerraform(this._storageAccountGen2.internalValue),
       timeouts: hdinsightHbaseClusterTimeoutsToTerraform(this._timeouts.internalValue),
     };

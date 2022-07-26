@@ -227,7 +227,7 @@ export function elasticCloudElasticsearchLogsToTerraform(struct?: ElasticCloudEl
     send_activity_logs: cdktf.booleanToTerraform(struct!.sendActivityLogs),
     send_azuread_logs: cdktf.booleanToTerraform(struct!.sendAzureadLogs),
     send_subscription_logs: cdktf.booleanToTerraform(struct!.sendSubscriptionLogs),
-    filtering_tag: cdktf.listMapper(elasticCloudElasticsearchLogsFilteringTagToTerraform)(struct!.filteringTag),
+    filtering_tag: cdktf.listMapper(elasticCloudElasticsearchLogsFilteringTagToTerraform, true)(struct!.filteringTag),
   }
 }
 
@@ -534,7 +534,10 @@ export class ElasticCloudElasticsearch extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._elasticCloudEmailAddress = config.elasticCloudEmailAddress;
     this._id = config.id;

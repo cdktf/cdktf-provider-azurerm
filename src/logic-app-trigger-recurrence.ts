@@ -72,9 +72,9 @@ export function logicAppTriggerRecurrenceScheduleToTerraform(struct?: LogicAppTr
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    at_these_hours: cdktf.listMapper(cdktf.numberToTerraform)(struct!.atTheseHours),
-    at_these_minutes: cdktf.listMapper(cdktf.numberToTerraform)(struct!.atTheseMinutes),
-    on_these_days: cdktf.listMapper(cdktf.stringToTerraform)(struct!.onTheseDays),
+    at_these_hours: cdktf.listMapper(cdktf.numberToTerraform, false)(struct!.atTheseHours),
+    at_these_minutes: cdktf.listMapper(cdktf.numberToTerraform, false)(struct!.atTheseMinutes),
+    on_these_days: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.onTheseDays),
   }
 }
 
@@ -359,7 +359,10 @@ export class LogicAppTriggerRecurrence extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._frequency = config.frequency;
     this._id = config.id;

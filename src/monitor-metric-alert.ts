@@ -351,7 +351,7 @@ export function monitorMetricAlertCriteriaDimensionToTerraform(struct?: MonitorM
   return {
     name: cdktf.stringToTerraform(struct!.name),
     operator: cdktf.stringToTerraform(struct!.operator),
-    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+    values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
 }
 
@@ -515,7 +515,7 @@ export function monitorMetricAlertCriteriaToTerraform(struct?: MonitorMetricAler
     operator: cdktf.stringToTerraform(struct!.operator),
     skip_metric_validation: cdktf.booleanToTerraform(struct!.skipMetricValidation),
     threshold: cdktf.numberToTerraform(struct!.threshold),
-    dimension: cdktf.listMapper(monitorMetricAlertCriteriaDimensionToTerraform)(struct!.dimension),
+    dimension: cdktf.listMapper(monitorMetricAlertCriteriaDimensionToTerraform, true)(struct!.dimension),
   }
 }
 
@@ -739,7 +739,7 @@ export function monitorMetricAlertDynamicCriteriaDimensionToTerraform(struct?: M
   return {
     name: cdktf.stringToTerraform(struct!.name),
     operator: cdktf.stringToTerraform(struct!.operator),
-    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+    values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
 }
 
@@ -918,7 +918,7 @@ export function monitorMetricAlertDynamicCriteriaToTerraform(struct?: MonitorMet
     metric_namespace: cdktf.stringToTerraform(struct!.metricNamespace),
     operator: cdktf.stringToTerraform(struct!.operator),
     skip_metric_validation: cdktf.booleanToTerraform(struct!.skipMetricValidation),
-    dimension: cdktf.listMapper(monitorMetricAlertDynamicCriteriaDimensionToTerraform)(struct!.dimension),
+    dimension: cdktf.listMapper(monitorMetricAlertDynamicCriteriaDimensionToTerraform, true)(struct!.dimension),
   }
 }
 
@@ -1342,7 +1342,10 @@ export class MonitorMetricAlert extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._autoMitigate = config.autoMitigate;
     this._description = config.description;
@@ -1660,15 +1663,15 @@ export class MonitorMetricAlert extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      scopes: cdktf.listMapper(cdktf.stringToTerraform)(this._scopes),
+      scopes: cdktf.listMapper(cdktf.stringToTerraform, false)(this._scopes),
       severity: cdktf.numberToTerraform(this._severity),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       target_resource_location: cdktf.stringToTerraform(this._targetResourceLocation),
       target_resource_type: cdktf.stringToTerraform(this._targetResourceType),
       window_size: cdktf.stringToTerraform(this._windowSize),
-      action: cdktf.listMapper(monitorMetricAlertActionToTerraform)(this._action.internalValue),
+      action: cdktf.listMapper(monitorMetricAlertActionToTerraform, true)(this._action.internalValue),
       application_insights_web_test_location_availability_criteria: monitorMetricAlertApplicationInsightsWebTestLocationAvailabilityCriteriaToTerraform(this._applicationInsightsWebTestLocationAvailabilityCriteria.internalValue),
-      criteria: cdktf.listMapper(monitorMetricAlertCriteriaToTerraform)(this._criteria.internalValue),
+      criteria: cdktf.listMapper(monitorMetricAlertCriteriaToTerraform, true)(this._criteria.internalValue),
       dynamic_criteria: monitorMetricAlertDynamicCriteriaToTerraform(this._dynamicCriteria.internalValue),
       timeouts: monitorMetricAlertTimeoutsToTerraform(this._timeouts.internalValue),
     };

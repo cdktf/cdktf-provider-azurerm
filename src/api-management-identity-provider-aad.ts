@@ -234,7 +234,10 @@ export class ApiManagementIdentityProviderAad extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._allowedTenants = config.allowedTenants;
     this._apiManagementName = config.apiManagementName;
@@ -369,7 +372,7 @@ export class ApiManagementIdentityProviderAad extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      allowed_tenants: cdktf.listMapper(cdktf.stringToTerraform)(this._allowedTenants),
+      allowed_tenants: cdktf.listMapper(cdktf.stringToTerraform, false)(this._allowedTenants),
       api_management_name: cdktf.stringToTerraform(this._apiManagementName),
       client_id: cdktf.stringToTerraform(this._clientId),
       client_secret: cdktf.stringToTerraform(this._clientSecret),
