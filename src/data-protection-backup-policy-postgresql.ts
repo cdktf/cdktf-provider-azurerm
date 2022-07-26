@@ -77,10 +77,10 @@ export function dataProtectionBackupPolicyPostgresqlRetentionRuleCriteriaToTerra
   }
   return {
     absolute_criteria: cdktf.stringToTerraform(struct!.absoluteCriteria),
-    days_of_week: cdktf.listMapper(cdktf.stringToTerraform)(struct!.daysOfWeek),
-    months_of_year: cdktf.listMapper(cdktf.stringToTerraform)(struct!.monthsOfYear),
-    scheduled_backup_times: cdktf.listMapper(cdktf.stringToTerraform)(struct!.scheduledBackupTimes),
-    weeks_of_month: cdktf.listMapper(cdktf.stringToTerraform)(struct!.weeksOfMonth),
+    days_of_week: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.daysOfWeek),
+    months_of_year: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.monthsOfYear),
+    scheduled_backup_times: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.scheduledBackupTimes),
+    weeks_of_month: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.weeksOfMonth),
   }
 }
 
@@ -577,7 +577,10 @@ export class DataProtectionBackupPolicyPostgresql extends cdktf.TerraformResourc
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._backupRepeatingTimeIntervals = config.backupRepeatingTimeIntervals;
     this._defaultRetentionDuration = config.defaultRetentionDuration;
@@ -712,13 +715,13 @@ export class DataProtectionBackupPolicyPostgresql extends cdktf.TerraformResourc
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      backup_repeating_time_intervals: cdktf.listMapper(cdktf.stringToTerraform)(this._backupRepeatingTimeIntervals),
+      backup_repeating_time_intervals: cdktf.listMapper(cdktf.stringToTerraform, false)(this._backupRepeatingTimeIntervals),
       default_retention_duration: cdktf.stringToTerraform(this._defaultRetentionDuration),
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       vault_name: cdktf.stringToTerraform(this._vaultName),
-      retention_rule: cdktf.listMapper(dataProtectionBackupPolicyPostgresqlRetentionRuleToTerraform)(this._retentionRule.internalValue),
+      retention_rule: cdktf.listMapper(dataProtectionBackupPolicyPostgresqlRetentionRuleToTerraform, true)(this._retentionRule.internalValue),
       timeouts: dataProtectionBackupPolicyPostgresqlTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

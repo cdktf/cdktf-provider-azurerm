@@ -373,7 +373,7 @@ export function privateEndpointPrivateDnsZoneGroupToTerraform(struct?: PrivateEn
   }
   return {
     name: cdktf.stringToTerraform(struct!.name),
-    private_dns_zone_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.privateDnsZoneIds),
+    private_dns_zone_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.privateDnsZoneIds),
   }
 }
 
@@ -484,7 +484,7 @@ export function privateEndpointPrivateServiceConnectionToTerraform(struct?: Priv
     private_connection_resource_alias: cdktf.stringToTerraform(struct!.privateConnectionResourceAlias),
     private_connection_resource_id: cdktf.stringToTerraform(struct!.privateConnectionResourceId),
     request_message: cdktf.stringToTerraform(struct!.requestMessage),
-    subresource_names: cdktf.listMapper(cdktf.stringToTerraform)(struct!.subresourceNames),
+    subresource_names: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.subresourceNames),
   }
 }
 
@@ -834,7 +834,10 @@ export class PrivateEndpoint extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._location = config.location;

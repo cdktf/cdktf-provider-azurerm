@@ -636,7 +636,10 @@ export class Firewall extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._dnsServers = config.dnsServers;
     this._firewallPolicyId = config.firewallPolicyId;
@@ -907,19 +910,19 @@ export class Firewall extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      dns_servers: cdktf.listMapper(cdktf.stringToTerraform)(this._dnsServers),
+      dns_servers: cdktf.listMapper(cdktf.stringToTerraform, false)(this._dnsServers),
       firewall_policy_id: cdktf.stringToTerraform(this._firewallPolicyId),
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
-      private_ip_ranges: cdktf.listMapper(cdktf.stringToTerraform)(this._privateIpRanges),
+      private_ip_ranges: cdktf.listMapper(cdktf.stringToTerraform, false)(this._privateIpRanges),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku_name: cdktf.stringToTerraform(this._skuName),
       sku_tier: cdktf.stringToTerraform(this._skuTier),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       threat_intel_mode: cdktf.stringToTerraform(this._threatIntelMode),
-      zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),
-      ip_configuration: cdktf.listMapper(firewallIpConfigurationToTerraform)(this._ipConfiguration.internalValue),
+      zones: cdktf.listMapper(cdktf.stringToTerraform, false)(this._zones),
+      ip_configuration: cdktf.listMapper(firewallIpConfigurationToTerraform, true)(this._ipConfiguration.internalValue),
       management_ip_configuration: firewallManagementIpConfigurationToTerraform(this._managementIpConfiguration.internalValue),
       timeouts: firewallTimeoutsToTerraform(this._timeouts.internalValue),
       virtual_hub: firewallVirtualHubToTerraform(this._virtualHub.internalValue),

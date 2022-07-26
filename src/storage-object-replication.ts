@@ -62,7 +62,7 @@ export function storageObjectReplicationRulesToTerraform(struct?: StorageObjectR
   return {
     copy_blobs_created_after: cdktf.stringToTerraform(struct!.copyBlobsCreatedAfter),
     destination_container_name: cdktf.stringToTerraform(struct!.destinationContainerName),
-    filter_out_blobs_with_prefix: cdktf.listMapper(cdktf.stringToTerraform)(struct!.filterOutBlobsWithPrefix),
+    filter_out_blobs_with_prefix: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.filterOutBlobsWithPrefix),
     source_container_name: cdktf.stringToTerraform(struct!.sourceContainerName),
   }
 }
@@ -401,7 +401,10 @@ export class StorageObjectReplication extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._destinationStorageAccountId = config.destinationStorageAccountId;
     this._id = config.id;
@@ -504,7 +507,7 @@ export class StorageObjectReplication extends cdktf.TerraformResource {
       destination_storage_account_id: cdktf.stringToTerraform(this._destinationStorageAccountId),
       id: cdktf.stringToTerraform(this._id),
       source_storage_account_id: cdktf.stringToTerraform(this._sourceStorageAccountId),
-      rules: cdktf.listMapper(storageObjectReplicationRulesToTerraform)(this._rules.internalValue),
+      rules: cdktf.listMapper(storageObjectReplicationRulesToTerraform, true)(this._rules.internalValue),
       timeouts: storageObjectReplicationTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

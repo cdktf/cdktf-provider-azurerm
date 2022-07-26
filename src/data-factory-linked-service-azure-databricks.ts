@@ -361,7 +361,7 @@ export function dataFactoryLinkedServiceAzureDatabricksNewClusterConfigToTerrafo
     cluster_version: cdktf.stringToTerraform(struct!.clusterVersion),
     custom_tags: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.customTags),
     driver_node_type: cdktf.stringToTerraform(struct!.driverNodeType),
-    init_scripts: cdktf.listMapper(cdktf.stringToTerraform)(struct!.initScripts),
+    init_scripts: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.initScripts),
     log_destination: cdktf.stringToTerraform(struct!.logDestination),
     max_number_of_workers: cdktf.numberToTerraform(struct!.maxNumberOfWorkers),
     min_number_of_workers: cdktf.numberToTerraform(struct!.minNumberOfWorkers),
@@ -800,7 +800,10 @@ export class DataFactoryLinkedServiceAzureDatabricks extends cdktf.TerraformReso
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._accessToken = config.accessToken;
     this._adbDomain = config.adbDomain;
@@ -1080,7 +1083,7 @@ export class DataFactoryLinkedServiceAzureDatabricks extends cdktf.TerraformReso
       access_token: cdktf.stringToTerraform(this._accessToken),
       adb_domain: cdktf.stringToTerraform(this._adbDomain),
       additional_properties: cdktf.hashMapper(cdktf.stringToTerraform)(this._additionalProperties),
-      annotations: cdktf.listMapper(cdktf.stringToTerraform)(this._annotations),
+      annotations: cdktf.listMapper(cdktf.stringToTerraform, false)(this._annotations),
       data_factory_id: cdktf.stringToTerraform(this._dataFactoryId),
       description: cdktf.stringToTerraform(this._description),
       existing_cluster_id: cdktf.stringToTerraform(this._existingClusterId),

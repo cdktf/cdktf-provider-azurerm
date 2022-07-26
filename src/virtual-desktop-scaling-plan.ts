@@ -264,7 +264,7 @@ export function virtualDesktopScalingPlanScheduleToTerraform(struct?: VirtualDes
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    days_of_week: cdktf.listMapper(cdktf.stringToTerraform)(struct!.daysOfWeek),
+    days_of_week: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.daysOfWeek),
     name: cdktf.stringToTerraform(struct!.name),
     off_peak_load_balancing_algorithm: cdktf.stringToTerraform(struct!.offPeakLoadBalancingAlgorithm),
     off_peak_start_time: cdktf.stringToTerraform(struct!.offPeakStartTime),
@@ -880,7 +880,10 @@ export class VirtualDesktopScalingPlan extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._description = config.description;
     this._exclusionTag = config.exclusionTag;
@@ -1092,8 +1095,8 @@ export class VirtualDesktopScalingPlan extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       time_zone: cdktf.stringToTerraform(this._timeZone),
-      host_pool: cdktf.listMapper(virtualDesktopScalingPlanHostPoolToTerraform)(this._hostPool.internalValue),
-      schedule: cdktf.listMapper(virtualDesktopScalingPlanScheduleToTerraform)(this._schedule.internalValue),
+      host_pool: cdktf.listMapper(virtualDesktopScalingPlanHostPoolToTerraform, true)(this._hostPool.internalValue),
+      schedule: cdktf.listMapper(virtualDesktopScalingPlanScheduleToTerraform, true)(this._schedule.internalValue),
       timeouts: virtualDesktopScalingPlanTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

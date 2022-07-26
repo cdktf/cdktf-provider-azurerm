@@ -392,7 +392,7 @@ export function containerRegistryTaskDockerStepToTerraform(struct?: ContainerReg
     context_access_token: cdktf.stringToTerraform(struct!.contextAccessToken),
     context_path: cdktf.stringToTerraform(struct!.contextPath),
     dockerfile_path: cdktf.stringToTerraform(struct!.dockerfilePath),
-    image_names: cdktf.listMapper(cdktf.stringToTerraform)(struct!.imageNames),
+    image_names: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.imageNames),
     push_enabled: cdktf.booleanToTerraform(struct!.pushEnabled),
     secret_arguments: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.secretArguments),
     target: cdktf.stringToTerraform(struct!.target),
@@ -1025,7 +1025,7 @@ export function containerRegistryTaskIdentityToTerraform(struct?: ContainerRegis
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.identityIds),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
@@ -1481,7 +1481,7 @@ export function containerRegistryTaskRegistryCredentialToTerraform(struct?: Cont
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    custom: cdktf.listMapper(containerRegistryTaskRegistryCredentialCustomToTerraform)(struct!.custom),
+    custom: cdktf.listMapper(containerRegistryTaskRegistryCredentialCustomToTerraform, true)(struct!.custom),
     source: containerRegistryTaskRegistryCredentialSourceToTerraform(struct!.source),
   }
 }
@@ -1764,7 +1764,7 @@ export function containerRegistryTaskSourceTriggerToTerraform(struct?: Container
   return {
     branch: cdktf.stringToTerraform(struct!.branch),
     enabled: cdktf.booleanToTerraform(struct!.enabled),
-    events: cdktf.listMapper(cdktf.stringToTerraform)(struct!.events),
+    events: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.events),
     name: cdktf.stringToTerraform(struct!.name),
     repository_url: cdktf.stringToTerraform(struct!.repositoryUrl),
     source_type: cdktf.stringToTerraform(struct!.sourceType),
@@ -2306,7 +2306,10 @@ export class ContainerRegistryTask extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._agentPoolName = config.agentPoolName;
     this._containerRegistryId = config.containerRegistryId;
@@ -2671,9 +2674,9 @@ export class ContainerRegistryTask extends cdktf.TerraformResource {
       identity: containerRegistryTaskIdentityToTerraform(this._identity.internalValue),
       platform: containerRegistryTaskPlatformToTerraform(this._platform.internalValue),
       registry_credential: containerRegistryTaskRegistryCredentialToTerraform(this._registryCredential.internalValue),
-      source_trigger: cdktf.listMapper(containerRegistryTaskSourceTriggerToTerraform)(this._sourceTrigger.internalValue),
+      source_trigger: cdktf.listMapper(containerRegistryTaskSourceTriggerToTerraform, true)(this._sourceTrigger.internalValue),
       timeouts: containerRegistryTaskTimeoutsToTerraform(this._timeouts.internalValue),
-      timer_trigger: cdktf.listMapper(containerRegistryTaskTimerTriggerToTerraform)(this._timerTrigger.internalValue),
+      timer_trigger: cdktf.listMapper(containerRegistryTaskTimerTriggerToTerraform, true)(this._timerTrigger.internalValue),
     };
   }
 }

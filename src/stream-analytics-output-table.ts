@@ -250,7 +250,10 @@ export class StreamAnalyticsOutputTable extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._batchSize = config.batchSize;
     this._columnsToRemove = config.columnsToRemove;
@@ -442,7 +445,7 @@ export class StreamAnalyticsOutputTable extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       batch_size: cdktf.numberToTerraform(this._batchSize),
-      columns_to_remove: cdktf.listMapper(cdktf.stringToTerraform)(this._columnsToRemove),
+      columns_to_remove: cdktf.listMapper(cdktf.stringToTerraform, false)(this._columnsToRemove),
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       partition_key: cdktf.stringToTerraform(this._partitionKey),

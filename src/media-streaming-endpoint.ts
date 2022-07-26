@@ -408,8 +408,8 @@ export function mediaStreamingEndpointAccessControlToTerraform(struct?: MediaStr
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    akamai_signature_header_authentication_key: cdktf.listMapper(mediaStreamingEndpointAccessControlAkamaiSignatureHeaderAuthenticationKeyToTerraform)(struct!.akamaiSignatureHeaderAuthenticationKey),
-    ip_allow: cdktf.listMapper(mediaStreamingEndpointAccessControlIpAllowToTerraform)(struct!.ipAllow),
+    akamai_signature_header_authentication_key: cdktf.listMapper(mediaStreamingEndpointAccessControlAkamaiSignatureHeaderAuthenticationKeyToTerraform, true)(struct!.akamaiSignatureHeaderAuthenticationKey),
+    ip_allow: cdktf.listMapper(mediaStreamingEndpointAccessControlIpAllowToTerraform, true)(struct!.ipAllow),
   }
 }
 
@@ -764,7 +764,10 @@ export class MediaStreamingEndpoint extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._autoStartEnabled = config.autoStartEnabled;
     this._cdnEnabled = config.cdnEnabled;
@@ -1061,7 +1064,7 @@ export class MediaStreamingEndpoint extends cdktf.TerraformResource {
       cdn_enabled: cdktf.booleanToTerraform(this._cdnEnabled),
       cdn_profile: cdktf.stringToTerraform(this._cdnProfile),
       cdn_provider: cdktf.stringToTerraform(this._cdnProvider),
-      custom_host_names: cdktf.listMapper(cdktf.stringToTerraform)(this._customHostNames),
+      custom_host_names: cdktf.listMapper(cdktf.stringToTerraform, false)(this._customHostNames),
       description: cdktf.stringToTerraform(this._description),
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),

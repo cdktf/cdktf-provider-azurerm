@@ -408,7 +408,10 @@ export class DataFactoryDatasetHttp extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._additionalProperties = config.additionalProperties;
     this._annotations = config.annotations;
@@ -652,7 +655,7 @@ export class DataFactoryDatasetHttp extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       additional_properties: cdktf.hashMapper(cdktf.stringToTerraform)(this._additionalProperties),
-      annotations: cdktf.listMapper(cdktf.stringToTerraform)(this._annotations),
+      annotations: cdktf.listMapper(cdktf.stringToTerraform, false)(this._annotations),
       data_factory_id: cdktf.stringToTerraform(this._dataFactoryId),
       description: cdktf.stringToTerraform(this._description),
       folder: cdktf.stringToTerraform(this._folder),
@@ -663,7 +666,7 @@ export class DataFactoryDatasetHttp extends cdktf.TerraformResource {
       relative_url: cdktf.stringToTerraform(this._relativeUrl),
       request_body: cdktf.stringToTerraform(this._requestBody),
       request_method: cdktf.stringToTerraform(this._requestMethod),
-      schema_column: cdktf.listMapper(dataFactoryDatasetHttpSchemaColumnToTerraform)(this._schemaColumn.internalValue),
+      schema_column: cdktf.listMapper(dataFactoryDatasetHttpSchemaColumnToTerraform, true)(this._schemaColumn.internalValue),
       timeouts: dataFactoryDatasetHttpTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

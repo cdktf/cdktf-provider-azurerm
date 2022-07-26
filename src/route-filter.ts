@@ -67,7 +67,7 @@ export function routeFilterRuleToTerraform(struct?: RouteFilterRule | cdktf.IRes
   }
   return {
     access: struct!.access === undefined ? null : cdktf.stringToTerraform(struct!.access),
-    communities: struct!.communities === undefined ? null : cdktf.listMapper(cdktf.stringToTerraform)(struct!.communities),
+    communities: struct!.communities === undefined ? null : cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.communities),
     name: struct!.name === undefined ? null : cdktf.stringToTerraform(struct!.name),
     rule_type: struct!.ruleType === undefined ? null : cdktf.stringToTerraform(struct!.ruleType),
   }
@@ -408,7 +408,10 @@ export class RouteFilter extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._location = config.location;
@@ -536,7 +539,7 @@ export class RouteFilter extends cdktf.TerraformResource {
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      rule: cdktf.listMapper(routeFilterRuleToTerraform)(this._rule.internalValue),
+      rule: cdktf.listMapper(routeFilterRuleToTerraform, false)(this._rule.internalValue),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       timeouts: routeFilterTimeoutsToTerraform(this._timeouts.internalValue),
     };

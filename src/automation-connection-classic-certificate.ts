@@ -238,7 +238,10 @@ export class AutomationConnectionClassicCertificate extends cdktf.TerraformResou
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._automationAccountName = config.automationAccountName;
     this._certificateAssetName = config.certificateAssetName;

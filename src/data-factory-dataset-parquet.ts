@@ -774,7 +774,10 @@ export class DataFactoryDatasetParquet extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._additionalProperties = config.additionalProperties;
     this._annotations = config.annotations;
@@ -1035,7 +1038,7 @@ export class DataFactoryDatasetParquet extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       additional_properties: cdktf.hashMapper(cdktf.stringToTerraform)(this._additionalProperties),
-      annotations: cdktf.listMapper(cdktf.stringToTerraform)(this._annotations),
+      annotations: cdktf.listMapper(cdktf.stringToTerraform, false)(this._annotations),
       compression_codec: cdktf.stringToTerraform(this._compressionCodec),
       compression_level: cdktf.stringToTerraform(this._compressionLevel),
       data_factory_id: cdktf.stringToTerraform(this._dataFactoryId),
@@ -1047,7 +1050,7 @@ export class DataFactoryDatasetParquet extends cdktf.TerraformResource {
       parameters: cdktf.hashMapper(cdktf.stringToTerraform)(this._parameters),
       azure_blob_storage_location: dataFactoryDatasetParquetAzureBlobStorageLocationToTerraform(this._azureBlobStorageLocation.internalValue),
       http_server_location: dataFactoryDatasetParquetHttpServerLocationToTerraform(this._httpServerLocation.internalValue),
-      schema_column: cdktf.listMapper(dataFactoryDatasetParquetSchemaColumnToTerraform)(this._schemaColumn.internalValue),
+      schema_column: cdktf.listMapper(dataFactoryDatasetParquetSchemaColumnToTerraform, true)(this._schemaColumn.internalValue),
       timeouts: dataFactoryDatasetParquetTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

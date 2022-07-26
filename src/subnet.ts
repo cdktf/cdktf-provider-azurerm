@@ -76,7 +76,7 @@ export function subnetDelegationServiceDelegationToTerraform(struct?: SubnetDele
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    actions: cdktf.listMapper(cdktf.stringToTerraform)(struct!.actions),
+    actions: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.actions),
     name: cdktf.stringToTerraform(struct!.name),
   }
 }
@@ -457,7 +457,10 @@ export class Subnet extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._addressPrefixes = config.addressPrefixes;
     this._enforcePrivateLinkEndpointNetworkPolicies = config.enforcePrivateLinkEndpointNetworkPolicies;
@@ -646,16 +649,16 @@ export class Subnet extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      address_prefixes: cdktf.listMapper(cdktf.stringToTerraform)(this._addressPrefixes),
+      address_prefixes: cdktf.listMapper(cdktf.stringToTerraform, false)(this._addressPrefixes),
       enforce_private_link_endpoint_network_policies: cdktf.booleanToTerraform(this._enforcePrivateLinkEndpointNetworkPolicies),
       enforce_private_link_service_network_policies: cdktf.booleanToTerraform(this._enforcePrivateLinkServiceNetworkPolicies),
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      service_endpoint_policy_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._serviceEndpointPolicyIds),
-      service_endpoints: cdktf.listMapper(cdktf.stringToTerraform)(this._serviceEndpoints),
+      service_endpoint_policy_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(this._serviceEndpointPolicyIds),
+      service_endpoints: cdktf.listMapper(cdktf.stringToTerraform, false)(this._serviceEndpoints),
       virtual_network_name: cdktf.stringToTerraform(this._virtualNetworkName),
-      delegation: cdktf.listMapper(subnetDelegationToTerraform)(this._delegation.internalValue),
+      delegation: cdktf.listMapper(subnetDelegationToTerraform, true)(this._delegation.internalValue),
       timeouts: subnetTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

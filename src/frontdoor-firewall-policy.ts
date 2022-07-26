@@ -98,12 +98,12 @@ export function frontdoorFirewallPolicyCustomRuleMatchConditionToTerraform(struc
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    match_values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.matchValues),
+    match_values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.matchValues),
     match_variable: cdktf.stringToTerraform(struct!.matchVariable),
     negation_condition: cdktf.booleanToTerraform(struct!.negationCondition),
     operator: cdktf.stringToTerraform(struct!.operator),
     selector: cdktf.stringToTerraform(struct!.selector),
-    transforms: cdktf.listMapper(cdktf.stringToTerraform)(struct!.transforms),
+    transforms: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.transforms),
   }
 }
 
@@ -338,7 +338,7 @@ export function frontdoorFirewallPolicyCustomRuleToTerraform(struct?: FrontdoorF
     rate_limit_duration_in_minutes: cdktf.numberToTerraform(struct!.rateLimitDurationInMinutes),
     rate_limit_threshold: cdktf.numberToTerraform(struct!.rateLimitThreshold),
     type: cdktf.stringToTerraform(struct!.type),
-    match_condition: cdktf.listMapper(frontdoorFirewallPolicyCustomRuleMatchConditionToTerraform)(struct!.matchCondition),
+    match_condition: cdktf.listMapper(frontdoorFirewallPolicyCustomRuleMatchConditionToTerraform, true)(struct!.matchCondition),
   }
 }
 
@@ -1023,7 +1023,7 @@ export function frontdoorFirewallPolicyManagedRuleOverrideRuleToTerraform(struct
     action: cdktf.stringToTerraform(struct!.action),
     enabled: cdktf.booleanToTerraform(struct!.enabled),
     rule_id: cdktf.stringToTerraform(struct!.ruleId),
-    exclusion: cdktf.listMapper(frontdoorFirewallPolicyManagedRuleOverrideRuleExclusionToTerraform)(struct!.exclusion),
+    exclusion: cdktf.listMapper(frontdoorFirewallPolicyManagedRuleOverrideRuleExclusionToTerraform, true)(struct!.exclusion),
   }
 }
 
@@ -1193,8 +1193,8 @@ export function frontdoorFirewallPolicyManagedRuleOverrideToTerraform(struct?: F
   }
   return {
     rule_group_name: cdktf.stringToTerraform(struct!.ruleGroupName),
-    exclusion: cdktf.listMapper(frontdoorFirewallPolicyManagedRuleOverrideExclusionToTerraform)(struct!.exclusion),
-    rule: cdktf.listMapper(frontdoorFirewallPolicyManagedRuleOverrideRuleToTerraform)(struct!.rule),
+    exclusion: cdktf.listMapper(frontdoorFirewallPolicyManagedRuleOverrideExclusionToTerraform, true)(struct!.exclusion),
+    rule: cdktf.listMapper(frontdoorFirewallPolicyManagedRuleOverrideRuleToTerraform, true)(struct!.rule),
   }
 }
 
@@ -1350,8 +1350,8 @@ export function frontdoorFirewallPolicyManagedRuleToTerraform(struct?: Frontdoor
   return {
     type: cdktf.stringToTerraform(struct!.type),
     version: cdktf.stringToTerraform(struct!.version),
-    exclusion: cdktf.listMapper(frontdoorFirewallPolicyManagedRuleExclusionToTerraform)(struct!.exclusion),
-    override: cdktf.listMapper(frontdoorFirewallPolicyManagedRuleOverrideToTerraform)(struct!.override),
+    exclusion: cdktf.listMapper(frontdoorFirewallPolicyManagedRuleExclusionToTerraform, true)(struct!.exclusion),
+    override: cdktf.listMapper(frontdoorFirewallPolicyManagedRuleOverrideToTerraform, true)(struct!.override),
   }
 }
 
@@ -1684,7 +1684,10 @@ export class FrontdoorFirewallPolicy extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._customBlockResponseBody = config.customBlockResponseBody;
     this._customBlockResponseStatusCode = config.customBlockResponseStatusCode;
@@ -1915,8 +1918,8 @@ export class FrontdoorFirewallPolicy extends cdktf.TerraformResource {
       redirect_url: cdktf.stringToTerraform(this._redirectUrl),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
-      custom_rule: cdktf.listMapper(frontdoorFirewallPolicyCustomRuleToTerraform)(this._customRule.internalValue),
-      managed_rule: cdktf.listMapper(frontdoorFirewallPolicyManagedRuleToTerraform)(this._managedRule.internalValue),
+      custom_rule: cdktf.listMapper(frontdoorFirewallPolicyCustomRuleToTerraform, true)(this._customRule.internalValue),
+      managed_rule: cdktf.listMapper(frontdoorFirewallPolicyManagedRuleToTerraform, true)(this._managedRule.internalValue),
       timeouts: frontdoorFirewallPolicyTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

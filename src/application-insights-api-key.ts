@@ -226,7 +226,10 @@ export class ApplicationInsightsApiKey extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._applicationInsightsId = config.applicationInsightsId;
     this._id = config.id;
@@ -344,8 +347,8 @@ export class ApplicationInsightsApiKey extends cdktf.TerraformResource {
       application_insights_id: cdktf.stringToTerraform(this._applicationInsightsId),
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
-      read_permissions: cdktf.listMapper(cdktf.stringToTerraform)(this._readPermissions),
-      write_permissions: cdktf.listMapper(cdktf.stringToTerraform)(this._writePermissions),
+      read_permissions: cdktf.listMapper(cdktf.stringToTerraform, false)(this._readPermissions),
+      write_permissions: cdktf.listMapper(cdktf.stringToTerraform, false)(this._writePermissions),
       timeouts: applicationInsightsApiKeyTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

@@ -395,7 +395,10 @@ export class StreamAnalyticsOutputServicebusQueue extends cdktf.TerraformResourc
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._name = config.name;
@@ -591,7 +594,7 @@ export class StreamAnalyticsOutputServicebusQueue extends cdktf.TerraformResourc
     return {
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
-      property_columns: cdktf.listMapper(cdktf.stringToTerraform)(this._propertyColumns),
+      property_columns: cdktf.listMapper(cdktf.stringToTerraform, false)(this._propertyColumns),
       queue_name: cdktf.stringToTerraform(this._queueName),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       servicebus_namespace: cdktf.stringToTerraform(this._servicebusNamespace),

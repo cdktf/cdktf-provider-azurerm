@@ -128,7 +128,7 @@ export function webPubsubHubEventHandlerToTerraform(struct?: WebPubsubHubEventHa
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    system_events: cdktf.listMapper(cdktf.stringToTerraform)(struct!.systemEvents),
+    system_events: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.systemEvents),
     url_template: cdktf.stringToTerraform(struct!.urlTemplate),
     user_event_pattern: cdktf.stringToTerraform(struct!.userEventPattern),
     auth: webPubsubHubEventHandlerAuthToTerraform(struct!.auth),
@@ -467,7 +467,10 @@ export class WebPubsubHub extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._anonymousConnectionsEnabled = config.anonymousConnectionsEnabled;
     this._id = config.id;
@@ -581,7 +584,7 @@ export class WebPubsubHub extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       web_pubsub_id: cdktf.stringToTerraform(this._webPubsubId),
-      event_handler: cdktf.listMapper(webPubsubHubEventHandlerToTerraform)(this._eventHandler.internalValue),
+      event_handler: cdktf.listMapper(webPubsubHubEventHandlerToTerraform, true)(this._eventHandler.internalValue),
       timeouts: webPubsubHubTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

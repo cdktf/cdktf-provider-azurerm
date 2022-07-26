@@ -234,7 +234,10 @@ export class ExpressRouteCircuitConnection extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._addressPrefixIpv4 = config.addressPrefixIpv4;
     this._addressPrefixIpv6 = config.addressPrefixIpv6;

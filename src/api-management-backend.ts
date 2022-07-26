@@ -196,7 +196,7 @@ export function apiManagementBackendCredentialsToTerraform(struct?: ApiManagemen
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    certificate: cdktf.listMapper(cdktf.stringToTerraform)(struct!.certificate),
+    certificate: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.certificate),
     header: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.header),
     query: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.query),
     authorization: apiManagementBackendCredentialsAuthorizationToTerraform(struct!.authorization),
@@ -585,10 +585,10 @@ export function apiManagementBackendServiceFabricClusterToTerraform(struct?: Api
   return {
     client_certificate_id: cdktf.stringToTerraform(struct!.clientCertificateId),
     client_certificate_thumbprint: cdktf.stringToTerraform(struct!.clientCertificateThumbprint),
-    management_endpoints: cdktf.listMapper(cdktf.stringToTerraform)(struct!.managementEndpoints),
+    management_endpoints: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.managementEndpoints),
     max_partition_resolution_retries: cdktf.numberToTerraform(struct!.maxPartitionResolutionRetries),
-    server_certificate_thumbprints: cdktf.listMapper(cdktf.stringToTerraform)(struct!.serverCertificateThumbprints),
-    server_x509_name: cdktf.listMapper(apiManagementBackendServiceFabricClusterServerX509NameToTerraform)(struct!.serverX509Name),
+    server_certificate_thumbprints: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.serverCertificateThumbprints),
+    server_x509_name: cdktf.listMapper(apiManagementBackendServiceFabricClusterServerX509NameToTerraform, true)(struct!.serverX509Name),
   }
 }
 
@@ -1025,7 +1025,10 @@ export class ApiManagementBackend extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._apiManagementName = config.apiManagementName;
     this._description = config.description;

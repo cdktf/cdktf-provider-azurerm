@@ -378,7 +378,10 @@ export class AutomationSchedule extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._automationAccountName = config.automationAccountName;
     this._description = config.description;
@@ -624,13 +627,13 @@ export class AutomationSchedule extends cdktf.TerraformResource {
       frequency: cdktf.stringToTerraform(this._frequency),
       id: cdktf.stringToTerraform(this._id),
       interval: cdktf.numberToTerraform(this._interval),
-      month_days: cdktf.listMapper(cdktf.numberToTerraform)(this._monthDays),
+      month_days: cdktf.listMapper(cdktf.numberToTerraform, false)(this._monthDays),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       start_time: cdktf.stringToTerraform(this._startTime),
       timezone: cdktf.stringToTerraform(this._timezone),
-      week_days: cdktf.listMapper(cdktf.stringToTerraform)(this._weekDays),
-      monthly_occurrence: cdktf.listMapper(automationScheduleMonthlyOccurrenceToTerraform)(this._monthlyOccurrence.internalValue),
+      week_days: cdktf.listMapper(cdktf.stringToTerraform, false)(this._weekDays),
+      monthly_occurrence: cdktf.listMapper(automationScheduleMonthlyOccurrenceToTerraform, true)(this._monthlyOccurrence.internalValue),
       timeouts: automationScheduleTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

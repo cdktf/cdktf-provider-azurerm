@@ -808,9 +808,9 @@ export function keyVaultCertificateCertificatePolicyX509CertificatePropertiesSub
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    dns_names: cdktf.listMapper(cdktf.stringToTerraform)(struct!.dnsNames),
-    emails: cdktf.listMapper(cdktf.stringToTerraform)(struct!.emails),
-    upns: cdktf.listMapper(cdktf.stringToTerraform)(struct!.upns),
+    dns_names: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.dnsNames),
+    emails: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.emails),
+    upns: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.upns),
   }
 }
 
@@ -937,8 +937,8 @@ export function keyVaultCertificateCertificatePolicyX509CertificatePropertiesToT
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    extended_key_usage: cdktf.listMapper(cdktf.stringToTerraform)(struct!.extendedKeyUsage),
-    key_usage: cdktf.listMapper(cdktf.stringToTerraform)(struct!.keyUsage),
+    extended_key_usage: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.extendedKeyUsage),
+    key_usage: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.keyUsage),
     subject: cdktf.stringToTerraform(struct!.subject),
     validity_in_months: cdktf.numberToTerraform(struct!.validityInMonths),
     subject_alternative_names: keyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNamesToTerraform(struct!.subjectAlternativeNames),
@@ -1113,7 +1113,7 @@ export function keyVaultCertificateCertificatePolicyToTerraform(struct?: KeyVaul
   return {
     issuer_parameters: keyVaultCertificateCertificatePolicyIssuerParametersToTerraform(struct!.issuerParameters),
     key_properties: keyVaultCertificateCertificatePolicyKeyPropertiesToTerraform(struct!.keyProperties),
-    lifetime_action: cdktf.listMapper(keyVaultCertificateCertificatePolicyLifetimeActionToTerraform)(struct!.lifetimeAction),
+    lifetime_action: cdktf.listMapper(keyVaultCertificateCertificatePolicyLifetimeActionToTerraform, true)(struct!.lifetimeAction),
     secret_properties: keyVaultCertificateCertificatePolicySecretPropertiesToTerraform(struct!.secretProperties),
     x509_certificate_properties: keyVaultCertificateCertificatePolicyX509CertificatePropertiesToTerraform(struct!.x509CertificateProperties),
   }
@@ -1435,7 +1435,10 @@ export class KeyVaultCertificate extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._keyVaultId = config.keyVaultId;

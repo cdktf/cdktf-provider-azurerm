@@ -79,7 +79,7 @@ export function springCloudApiPortalSsoToTerraform(struct?: SpringCloudApiPortal
     client_id: cdktf.stringToTerraform(struct!.clientId),
     client_secret: cdktf.stringToTerraform(struct!.clientSecret),
     issuer_uri: cdktf.stringToTerraform(struct!.issuerUri),
-    scope: cdktf.listMapper(cdktf.stringToTerraform)(struct!.scope),
+    scope: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.scope),
   }
 }
 
@@ -386,7 +386,10 @@ export class SpringCloudApiPortal extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._gatewayIds = config.gatewayIds;
     this._httpsOnlyEnabled = config.httpsOnlyEnabled;
@@ -552,7 +555,7 @@ export class SpringCloudApiPortal extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      gateway_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._gatewayIds),
+      gateway_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(this._gatewayIds),
       https_only_enabled: cdktf.booleanToTerraform(this._httpsOnlyEnabled),
       id: cdktf.stringToTerraform(this._id),
       instance_count: cdktf.numberToTerraform(this._instanceCount),

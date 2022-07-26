@@ -246,7 +246,10 @@ export class ResourceGroupPolicyExemption extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._description = config.description;
     this._displayName = config.displayName;
@@ -443,7 +446,7 @@ export class ResourceGroupPolicyExemption extends cdktf.TerraformResource {
       metadata: cdktf.stringToTerraform(this._metadata),
       name: cdktf.stringToTerraform(this._name),
       policy_assignment_id: cdktf.stringToTerraform(this._policyAssignmentId),
-      policy_definition_reference_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._policyDefinitionReferenceIds),
+      policy_definition_reference_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(this._policyDefinitionReferenceIds),
       resource_group_id: cdktf.stringToTerraform(this._resourceGroupId),
       timeouts: resourceGroupPolicyExemptionTimeoutsToTerraform(this._timeouts.internalValue),
     };

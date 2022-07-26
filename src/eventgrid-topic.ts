@@ -212,7 +212,7 @@ export function eventgridTopicIdentityToTerraform(struct?: EventgridTopicIdentit
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.identityIds),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
@@ -805,7 +805,10 @@ export class EventgridTopic extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._inboundIpRule.internalValue = config.inboundIpRule;
@@ -1047,7 +1050,7 @@ export class EventgridTopic extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       id: cdktf.stringToTerraform(this._id),
-      inbound_ip_rule: cdktf.listMapper(eventgridTopicInboundIpRuleToTerraform)(this._inboundIpRule.internalValue),
+      inbound_ip_rule: cdktf.listMapper(eventgridTopicInboundIpRuleToTerraform, false)(this._inboundIpRule.internalValue),
       input_schema: cdktf.stringToTerraform(this._inputSchema),
       local_auth_enabled: cdktf.booleanToTerraform(this._localAuthEnabled),
       location: cdktf.stringToTerraform(this._location),

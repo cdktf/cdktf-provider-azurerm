@@ -302,7 +302,10 @@ export class DataAzurermStorageShare extends cdktf.TerraformDataSource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._metadata = config.metadata;
@@ -426,7 +429,7 @@ export class DataAzurermStorageShare extends cdktf.TerraformDataSource {
       metadata: cdktf.hashMapper(cdktf.stringToTerraform)(this._metadata),
       name: cdktf.stringToTerraform(this._name),
       storage_account_name: cdktf.stringToTerraform(this._storageAccountName),
-      acl: cdktf.listMapper(dataAzurermStorageShareAclToTerraform)(this._acl.internalValue),
+      acl: cdktf.listMapper(dataAzurermStorageShareAclToTerraform, true)(this._acl.internalValue),
       timeouts: dataAzurermStorageShareTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

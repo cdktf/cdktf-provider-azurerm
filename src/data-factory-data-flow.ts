@@ -1563,7 +1563,10 @@ export class DataFactoryDataFlow extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._annotations = config.annotations;
     this._dataFactoryId = config.dataFactoryId;
@@ -1769,18 +1772,18 @@ export class DataFactoryDataFlow extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      annotations: cdktf.listMapper(cdktf.stringToTerraform)(this._annotations),
+      annotations: cdktf.listMapper(cdktf.stringToTerraform, false)(this._annotations),
       data_factory_id: cdktf.stringToTerraform(this._dataFactoryId),
       description: cdktf.stringToTerraform(this._description),
       folder: cdktf.stringToTerraform(this._folder),
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       script: cdktf.stringToTerraform(this._script),
-      script_lines: cdktf.listMapper(cdktf.stringToTerraform)(this._scriptLines),
-      sink: cdktf.listMapper(dataFactoryDataFlowSinkToTerraform)(this._sink.internalValue),
-      source: cdktf.listMapper(dataFactoryDataFlowSourceToTerraform)(this._source.internalValue),
+      script_lines: cdktf.listMapper(cdktf.stringToTerraform, false)(this._scriptLines),
+      sink: cdktf.listMapper(dataFactoryDataFlowSinkToTerraform, true)(this._sink.internalValue),
+      source: cdktf.listMapper(dataFactoryDataFlowSourceToTerraform, true)(this._source.internalValue),
       timeouts: dataFactoryDataFlowTimeoutsToTerraform(this._timeouts.internalValue),
-      transformation: cdktf.listMapper(dataFactoryDataFlowTransformationToTerraform)(this._transformation.internalValue),
+      transformation: cdktf.listMapper(dataFactoryDataFlowTransformationToTerraform, true)(this._transformation.internalValue),
     };
   }
 }

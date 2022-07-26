@@ -75,7 +75,7 @@ export function monitorActionRuleActionGroupConditionAlertContextToTerraform(str
   }
   return {
     operator: cdktf.stringToTerraform(struct!.operator),
-    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+    values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
 }
 
@@ -161,7 +161,7 @@ export function monitorActionRuleActionGroupConditionAlertRuleIdToTerraform(stru
   }
   return {
     operator: cdktf.stringToTerraform(struct!.operator),
-    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+    values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
 }
 
@@ -247,7 +247,7 @@ export function monitorActionRuleActionGroupConditionDescriptionToTerraform(stru
   }
   return {
     operator: cdktf.stringToTerraform(struct!.operator),
-    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+    values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
 }
 
@@ -333,7 +333,7 @@ export function monitorActionRuleActionGroupConditionMonitorToTerraform(struct?:
   }
   return {
     operator: cdktf.stringToTerraform(struct!.operator),
-    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+    values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
 }
 
@@ -419,7 +419,7 @@ export function monitorActionRuleActionGroupConditionMonitorServiceToTerraform(s
   }
   return {
     operator: cdktf.stringToTerraform(struct!.operator),
-    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+    values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
 }
 
@@ -505,7 +505,7 @@ export function monitorActionRuleActionGroupConditionSeverityToTerraform(struct?
   }
   return {
     operator: cdktf.stringToTerraform(struct!.operator),
-    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+    values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
 }
 
@@ -591,7 +591,7 @@ export function monitorActionRuleActionGroupConditionTargetResourceTypeToTerrafo
   }
   return {
     operator: cdktf.stringToTerraform(struct!.operator),
-    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+    values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
 }
 
@@ -917,7 +917,7 @@ export function monitorActionRuleActionGroupScopeToTerraform(struct?: MonitorAct
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    resource_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.resourceIds),
+    resource_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.resourceIds),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
@@ -1175,7 +1175,10 @@ export class MonitorActionRuleActionGroup extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._actionGroupId = config.actionGroupId;
     this._description = config.description;

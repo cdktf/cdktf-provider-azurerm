@@ -218,7 +218,10 @@ export class VirtualNetworkDnsServers extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._dnsServers = config.dnsServers;
     this._id = config.id;
@@ -297,7 +300,7 @@ export class VirtualNetworkDnsServers extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      dns_servers: cdktf.listMapper(cdktf.stringToTerraform)(this._dnsServers),
+      dns_servers: cdktf.listMapper(cdktf.stringToTerraform, false)(this._dnsServers),
       id: cdktf.stringToTerraform(this._id),
       virtual_network_id: cdktf.stringToTerraform(this._virtualNetworkId),
       timeouts: virtualNetworkDnsServersTimeoutsToTerraform(this._timeouts.internalValue),

@@ -374,7 +374,10 @@ export class FunctionAppFunction extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._configJson = config.configJson;
     this._enabled = config.enabled;
@@ -574,7 +577,7 @@ export class FunctionAppFunction extends cdktf.TerraformResource {
       language: cdktf.stringToTerraform(this._language),
       name: cdktf.stringToTerraform(this._name),
       test_data: cdktf.stringToTerraform(this._testData),
-      file: cdktf.listMapper(functionAppFunctionFileToTerraform)(this._file.internalValue),
+      file: cdktf.listMapper(functionAppFunctionFileToTerraform, true)(this._file.internalValue),
       timeouts: functionAppFunctionTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

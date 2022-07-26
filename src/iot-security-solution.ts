@@ -102,7 +102,7 @@ export function iotSecuritySolutionAdditionalWorkspaceToTerraform(struct?: IotSe
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    data_types: cdktf.listMapper(cdktf.stringToTerraform)(struct!.dataTypes),
+    data_types: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.dataTypes),
     workspace_id: cdktf.stringToTerraform(struct!.workspaceId),
   }
 }
@@ -862,7 +862,10 @@ export class IotSecuritySolution extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._disabledDataSources = config.disabledDataSources;
     this._displayName = config.displayName;
@@ -1150,21 +1153,21 @@ export class IotSecuritySolution extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      disabled_data_sources: cdktf.listMapper(cdktf.stringToTerraform)(this._disabledDataSources),
+      disabled_data_sources: cdktf.listMapper(cdktf.stringToTerraform, false)(this._disabledDataSources),
       display_name: cdktf.stringToTerraform(this._displayName),
       enabled: cdktf.booleanToTerraform(this._enabled),
-      events_to_export: cdktf.listMapper(cdktf.stringToTerraform)(this._eventsToExport),
+      events_to_export: cdktf.listMapper(cdktf.stringToTerraform, false)(this._eventsToExport),
       id: cdktf.stringToTerraform(this._id),
-      iothub_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._iothubIds),
+      iothub_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(this._iothubIds),
       location: cdktf.stringToTerraform(this._location),
       log_analytics_workspace_id: cdktf.stringToTerraform(this._logAnalyticsWorkspaceId),
       log_unmasked_ips_enabled: cdktf.booleanToTerraform(this._logUnmaskedIpsEnabled),
       name: cdktf.stringToTerraform(this._name),
       query_for_resources: cdktf.stringToTerraform(this._queryForResources),
-      query_subscription_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._querySubscriptionIds),
+      query_subscription_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(this._querySubscriptionIds),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
-      additional_workspace: cdktf.listMapper(iotSecuritySolutionAdditionalWorkspaceToTerraform)(this._additionalWorkspace.internalValue),
+      additional_workspace: cdktf.listMapper(iotSecuritySolutionAdditionalWorkspaceToTerraform, true)(this._additionalWorkspace.internalValue),
       recommendations_enabled: iotSecuritySolutionRecommendationsEnabledToTerraform(this._recommendationsEnabled.internalValue),
       timeouts: iotSecuritySolutionTimeoutsToTerraform(this._timeouts.internalValue),
     };

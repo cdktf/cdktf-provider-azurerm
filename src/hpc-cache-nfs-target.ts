@@ -408,7 +408,10 @@ export class HpcCacheNfsTarget extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._cacheName = config.cacheName;
     this._id = config.id;
@@ -546,7 +549,7 @@ export class HpcCacheNfsTarget extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       target_host_name: cdktf.stringToTerraform(this._targetHostName),
       usage_model: cdktf.stringToTerraform(this._usageModel),
-      namespace_junction: cdktf.listMapper(hpcCacheNfsTargetNamespaceJunctionToTerraform)(this._namespaceJunction.internalValue),
+      namespace_junction: cdktf.listMapper(hpcCacheNfsTargetNamespaceJunctionToTerraform, true)(this._namespaceJunction.internalValue),
       timeouts: hpcCacheNfsTargetTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

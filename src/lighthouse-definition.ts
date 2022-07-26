@@ -78,7 +78,7 @@ export function lighthouseDefinitionAuthorizationToTerraform(struct?: Lighthouse
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    delegated_role_definition_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.delegatedRoleDefinitionIds),
+    delegated_role_definition_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.delegatedRoleDefinitionIds),
     principal_display_name: cdktf.stringToTerraform(struct!.principalDisplayName),
     principal_id: cdktf.stringToTerraform(struct!.principalId),
     role_definition_id: cdktf.stringToTerraform(struct!.roleDefinitionId),
@@ -548,7 +548,10 @@ export class LighthouseDefinition extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._description = config.description;
     this._id = config.id;
@@ -709,7 +712,7 @@ export class LighthouseDefinition extends cdktf.TerraformResource {
       managing_tenant_id: cdktf.stringToTerraform(this._managingTenantId),
       name: cdktf.stringToTerraform(this._name),
       scope: cdktf.stringToTerraform(this._scope),
-      authorization: cdktf.listMapper(lighthouseDefinitionAuthorizationToTerraform)(this._authorization.internalValue),
+      authorization: cdktf.listMapper(lighthouseDefinitionAuthorizationToTerraform, true)(this._authorization.internalValue),
       plan: lighthouseDefinitionPlanToTerraform(this._plan.internalValue),
       timeouts: lighthouseDefinitionTimeoutsToTerraform(this._timeouts.internalValue),
     };

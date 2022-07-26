@@ -211,7 +211,10 @@ export class SentinelWatchlist extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._defaultDuration = config.defaultDuration;
     this._description = config.description;
@@ -371,7 +374,7 @@ export class SentinelWatchlist extends cdktf.TerraformResource {
       display_name: cdktf.stringToTerraform(this._displayName),
       id: cdktf.stringToTerraform(this._id),
       item_search_key: cdktf.stringToTerraform(this._itemSearchKey),
-      labels: cdktf.listMapper(cdktf.stringToTerraform)(this._labels),
+      labels: cdktf.listMapper(cdktf.stringToTerraform, false)(this._labels),
       log_analytics_workspace_id: cdktf.stringToTerraform(this._logAnalyticsWorkspaceId),
       name: cdktf.stringToTerraform(this._name),
       timeouts: sentinelWatchlistTimeoutsToTerraform(this._timeouts.internalValue),

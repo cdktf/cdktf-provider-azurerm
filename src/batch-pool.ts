@@ -225,7 +225,7 @@ export function batchPoolCertificateToTerraform(struct?: BatchPoolCertificate | 
     id: cdktf.stringToTerraform(struct!.id),
     store_location: cdktf.stringToTerraform(struct!.storeLocation),
     store_name: cdktf.stringToTerraform(struct!.storeName),
-    visibility: cdktf.listMapper(cdktf.stringToTerraform)(struct!.visibility),
+    visibility: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.visibility),
   }
 }
 
@@ -541,8 +541,8 @@ export function batchPoolContainerConfigurationToTerraform(struct?: BatchPoolCon
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    container_image_names: cdktf.listMapper(cdktf.stringToTerraform)(struct!.containerImageNames),
-    container_registries: cdktf.listMapper(batchPoolContainerConfigurationContainerRegistriesToTerraform)(struct!.containerRegistries),
+    container_image_names: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.containerImageNames),
+    container_registries: cdktf.listMapper(batchPoolContainerConfigurationContainerRegistriesToTerraform, false)(struct!.containerRegistries),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
@@ -775,7 +775,7 @@ export function batchPoolIdentityToTerraform(struct?: BatchPoolIdentityOutputRef
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.identityIds),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
@@ -1021,7 +1021,7 @@ export function batchPoolNetworkConfigurationEndpointConfigurationToTerraform(st
     frontend_port_range: cdktf.stringToTerraform(struct!.frontendPortRange),
     name: cdktf.stringToTerraform(struct!.name),
     protocol: cdktf.stringToTerraform(struct!.protocol),
-    network_security_group_rules: cdktf.listMapper(batchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRulesToTerraform)(struct!.networkSecurityGroupRules),
+    network_security_group_rules: cdktf.listMapper(batchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRulesToTerraform, true)(struct!.networkSecurityGroupRules),
   }
 }
 
@@ -1209,9 +1209,9 @@ export function batchPoolNetworkConfigurationToTerraform(struct?: BatchPoolNetwo
   }
   return {
     public_address_provisioning_type: cdktf.stringToTerraform(struct!.publicAddressProvisioningType),
-    public_ips: cdktf.listMapper(cdktf.stringToTerraform)(struct!.publicIps),
+    public_ips: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.publicIps),
     subnet_id: cdktf.stringToTerraform(struct!.subnetId),
-    endpoint_configuration: cdktf.listMapper(batchPoolNetworkConfigurationEndpointConfigurationToTerraform)(struct!.endpointConfiguration),
+    endpoint_configuration: cdktf.listMapper(batchPoolNetworkConfigurationEndpointConfigurationToTerraform, true)(struct!.endpointConfiguration),
   }
 }
 
@@ -1785,7 +1785,7 @@ export function batchPoolStartTaskToTerraform(struct?: BatchPoolStartTaskOutputR
     common_environment_properties: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.commonEnvironmentProperties),
     task_retry_maximum: cdktf.numberToTerraform(struct!.taskRetryMaximum),
     wait_for_success: cdktf.booleanToTerraform(struct!.waitForSuccess),
-    resource_file: cdktf.listMapper(batchPoolStartTaskResourceFileToTerraform)(struct!.resourceFile),
+    resource_file: cdktf.listMapper(batchPoolStartTaskResourceFileToTerraform, true)(struct!.resourceFile),
     user_identity: batchPoolStartTaskUserIdentityToTerraform(struct!.userIdentity),
   }
 }
@@ -2307,7 +2307,10 @@ export class BatchPool extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._accountName = config.accountName;
     this._displayName = config.displayName;
@@ -2637,7 +2640,7 @@ export class BatchPool extends cdktf.TerraformResource {
       stop_pending_resize_operation: cdktf.booleanToTerraform(this._stopPendingResizeOperation),
       vm_size: cdktf.stringToTerraform(this._vmSize),
       auto_scale: batchPoolAutoScaleToTerraform(this._autoScale.internalValue),
-      certificate: cdktf.listMapper(batchPoolCertificateToTerraform)(this._certificate.internalValue),
+      certificate: cdktf.listMapper(batchPoolCertificateToTerraform, true)(this._certificate.internalValue),
       container_configuration: batchPoolContainerConfigurationToTerraform(this._containerConfiguration.internalValue),
       fixed_scale: batchPoolFixedScaleToTerraform(this._fixedScale.internalValue),
       identity: batchPoolIdentityToTerraform(this._identity.internalValue),

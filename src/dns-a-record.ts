@@ -238,7 +238,10 @@ export class DnsARecord extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._name = config.name;
@@ -400,7 +403,7 @@ export class DnsARecord extends cdktf.TerraformResource {
     return {
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
-      records: cdktf.listMapper(cdktf.stringToTerraform)(this._records),
+      records: cdktf.listMapper(cdktf.stringToTerraform, false)(this._records),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       target_resource_id: cdktf.stringToTerraform(this._targetResourceId),

@@ -238,7 +238,10 @@ export class PowerbiEmbedded extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._administrators = config.administrators;
     this._id = config.id;
@@ -390,7 +393,7 @@ export class PowerbiEmbedded extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      administrators: cdktf.listMapper(cdktf.stringToTerraform)(this._administrators),
+      administrators: cdktf.listMapper(cdktf.stringToTerraform, false)(this._administrators),
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       mode: cdktf.stringToTerraform(this._mode),

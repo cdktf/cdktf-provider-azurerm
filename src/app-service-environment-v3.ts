@@ -440,7 +440,10 @@ export class AppServiceEnvironmentV3 extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._allowNewPrivateEndpointConnections = config.allowNewPrivateEndpointConnections;
     this._dedicatedHostCount = config.dedicatedHostCount;
@@ -687,7 +690,7 @@ export class AppServiceEnvironmentV3 extends cdktf.TerraformResource {
       subnet_id: cdktf.stringToTerraform(this._subnetId),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       zone_redundant: cdktf.booleanToTerraform(this._zoneRedundant),
-      cluster_setting: cdktf.listMapper(appServiceEnvironmentV3ClusterSettingToTerraform)(this._clusterSetting.internalValue),
+      cluster_setting: cdktf.listMapper(appServiceEnvironmentV3ClusterSettingToTerraform, true)(this._clusterSetting.internalValue),
       timeouts: appServiceEnvironmentV3TimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

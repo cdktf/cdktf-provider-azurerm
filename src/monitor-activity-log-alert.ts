@@ -199,9 +199,9 @@ export function monitorActivityLogAlertCriteriaResourceHealthToTerraform(struct?
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    current: cdktf.listMapper(cdktf.stringToTerraform)(struct!.current),
-    previous: cdktf.listMapper(cdktf.stringToTerraform)(struct!.previous),
-    reason: cdktf.listMapper(cdktf.stringToTerraform)(struct!.reason),
+    current: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.current),
+    previous: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.previous),
+    reason: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.reason),
   }
 }
 
@@ -350,9 +350,9 @@ export function monitorActivityLogAlertCriteriaServiceHealthToTerraform(struct?:
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    events: cdktf.listMapper(cdktf.stringToTerraform)(struct!.events),
-    locations: cdktf.listMapper(cdktf.stringToTerraform)(struct!.locations),
-    services: cdktf.listMapper(cdktf.stringToTerraform)(struct!.services),
+    events: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.events),
+    locations: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.locations),
+    services: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.services),
   }
 }
 
@@ -566,8 +566,8 @@ export function monitorActivityLogAlertCriteriaToTerraform(struct?: MonitorActiv
     resource_type: cdktf.stringToTerraform(struct!.resourceType),
     status: cdktf.stringToTerraform(struct!.status),
     sub_status: cdktf.stringToTerraform(struct!.subStatus),
-    resource_health: cdktf.listMapper(monitorActivityLogAlertCriteriaResourceHealthToTerraform)(struct!.resourceHealth),
-    service_health: cdktf.listMapper(monitorActivityLogAlertCriteriaServiceHealthToTerraform)(struct!.serviceHealth),
+    resource_health: cdktf.listMapper(monitorActivityLogAlertCriteriaResourceHealthToTerraform, true)(struct!.resourceHealth),
+    service_health: cdktf.listMapper(monitorActivityLogAlertCriteriaServiceHealthToTerraform, true)(struct!.serviceHealth),
   }
 }
 
@@ -1113,7 +1113,10 @@ export class MonitorActivityLogAlert extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._description = config.description;
     this._enabled = config.enabled;
@@ -1290,9 +1293,9 @@ export class MonitorActivityLogAlert extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      scopes: cdktf.listMapper(cdktf.stringToTerraform)(this._scopes),
+      scopes: cdktf.listMapper(cdktf.stringToTerraform, false)(this._scopes),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
-      action: cdktf.listMapper(monitorActivityLogAlertActionToTerraform)(this._action.internalValue),
+      action: cdktf.listMapper(monitorActivityLogAlertActionToTerraform, true)(this._action.internalValue),
       criteria: monitorActivityLogAlertCriteriaToTerraform(this._criteria.internalValue),
       timeouts: monitorActivityLogAlertTimeoutsToTerraform(this._timeouts.internalValue),
     };

@@ -307,7 +307,10 @@ export class DataAzurermBatchAccount extends cdktf.TerraformDataSource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._encryption.internalValue = config.encryption;
     this._id = config.id;
@@ -442,7 +445,7 @@ export class DataAzurermBatchAccount extends cdktf.TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      encryption: cdktf.listMapper(dataAzurermBatchAccountEncryptionToTerraform)(this._encryption.internalValue),
+      encryption: cdktf.listMapper(dataAzurermBatchAccountEncryptionToTerraform, false)(this._encryption.internalValue),
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),

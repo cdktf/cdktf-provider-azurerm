@@ -994,7 +994,7 @@ export function hdinsightInteractiveQueryClusterRolesHeadNodeToTerraform(struct?
   }
   return {
     password: cdktf.stringToTerraform(struct!.password),
-    ssh_keys: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sshKeys),
+    ssh_keys: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.sshKeys),
     subnet_id: cdktf.stringToTerraform(struct!.subnetId),
     username: cdktf.stringToTerraform(struct!.username),
     virtual_network_id: cdktf.stringToTerraform(struct!.virtualNetworkId),
@@ -1261,7 +1261,7 @@ export function hdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleRecurren
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    days: cdktf.listMapper(cdktf.stringToTerraform)(struct!.days),
+    days: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.days),
     target_instance_count: cdktf.numberToTerraform(struct!.targetInstanceCount),
     time: cdktf.stringToTerraform(struct!.time),
   }
@@ -1402,7 +1402,7 @@ export function hdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleRecurren
   }
   return {
     timezone: cdktf.stringToTerraform(struct!.timezone),
-    schedule: cdktf.listMapper(hdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleRecurrenceScheduleToTerraform)(struct!.schedule),
+    schedule: cdktf.listMapper(hdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleRecurrenceScheduleToTerraform, true)(struct!.schedule),
   }
 }
 
@@ -1610,7 +1610,7 @@ export function hdinsightInteractiveQueryClusterRolesWorkerNodeToTerraform(struc
   }
   return {
     password: cdktf.stringToTerraform(struct!.password),
-    ssh_keys: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sshKeys),
+    ssh_keys: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.sshKeys),
     subnet_id: cdktf.stringToTerraform(struct!.subnetId),
     target_instance_count: cdktf.numberToTerraform(struct!.targetInstanceCount),
     username: cdktf.stringToTerraform(struct!.username),
@@ -1847,7 +1847,7 @@ export function hdinsightInteractiveQueryClusterRolesZookeeperNodeToTerraform(st
   }
   return {
     password: cdktf.stringToTerraform(struct!.password),
-    ssh_keys: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sshKeys),
+    ssh_keys: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.sshKeys),
     subnet_id: cdktf.stringToTerraform(struct!.subnetId),
     username: cdktf.stringToTerraform(struct!.username),
     virtual_network_id: cdktf.stringToTerraform(struct!.virtualNetworkId),
@@ -2161,11 +2161,11 @@ export function hdinsightInteractiveQueryClusterSecurityProfileToTerraform(struc
   }
   return {
     aadds_resource_id: cdktf.stringToTerraform(struct!.aaddsResourceId),
-    cluster_users_group_dns: cdktf.listMapper(cdktf.stringToTerraform)(struct!.clusterUsersGroupDns),
+    cluster_users_group_dns: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.clusterUsersGroupDns),
     domain_name: cdktf.stringToTerraform(struct!.domainName),
     domain_user_password: cdktf.stringToTerraform(struct!.domainUserPassword),
     domain_username: cdktf.stringToTerraform(struct!.domainUsername),
-    ldaps_urls: cdktf.listMapper(cdktf.stringToTerraform)(struct!.ldapsUrls),
+    ldaps_urls: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.ldapsUrls),
     msi_resource_id: cdktf.stringToTerraform(struct!.msiResourceId),
   }
 }
@@ -2824,7 +2824,10 @@ export class HdinsightInteractiveQueryCluster extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._clusterVersion = config.clusterVersion;
     this._encryptionInTransitEnabled = config.encryptionInTransitEnabled;
@@ -3163,7 +3166,7 @@ export class HdinsightInteractiveQueryCluster extends cdktf.TerraformResource {
       network: hdinsightInteractiveQueryClusterNetworkToTerraform(this._network.internalValue),
       roles: hdinsightInteractiveQueryClusterRolesToTerraform(this._roles.internalValue),
       security_profile: hdinsightInteractiveQueryClusterSecurityProfileToTerraform(this._securityProfile.internalValue),
-      storage_account: cdktf.listMapper(hdinsightInteractiveQueryClusterStorageAccountToTerraform)(this._storageAccount.internalValue),
+      storage_account: cdktf.listMapper(hdinsightInteractiveQueryClusterStorageAccountToTerraform, true)(this._storageAccount.internalValue),
       storage_account_gen2: hdinsightInteractiveQueryClusterStorageAccountGen2ToTerraform(this._storageAccountGen2.internalValue),
       timeouts: hdinsightInteractiveQueryClusterTimeoutsToTerraform(this._timeouts.internalValue),
     };

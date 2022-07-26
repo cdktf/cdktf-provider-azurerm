@@ -82,7 +82,7 @@ export function monitorScheduledQueryRulesLogCriteriaDimensionToTerraform(struct
   return {
     name: cdktf.stringToTerraform(struct!.name),
     operator: cdktf.stringToTerraform(struct!.operator),
-    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+    values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
 }
 
@@ -224,7 +224,7 @@ export function monitorScheduledQueryRulesLogCriteriaToTerraform(struct?: Monito
   }
   return {
     metric_name: cdktf.stringToTerraform(struct!.metricName),
-    dimension: cdktf.listMapper(monitorScheduledQueryRulesLogCriteriaDimensionToTerraform)(struct!.dimension),
+    dimension: cdktf.listMapper(monitorScheduledQueryRulesLogCriteriaDimensionToTerraform, true)(struct!.dimension),
   }
 }
 
@@ -481,7 +481,10 @@ export class MonitorScheduledQueryRulesLog extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._authorizedResourceIds = config.authorizedResourceIds;
     this._dataSourceId = config.dataSourceId;
@@ -667,7 +670,7 @@ export class MonitorScheduledQueryRulesLog extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      authorized_resource_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._authorizedResourceIds),
+      authorized_resource_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(this._authorizedResourceIds),
       data_source_id: cdktf.stringToTerraform(this._dataSourceId),
       description: cdktf.stringToTerraform(this._description),
       enabled: cdktf.booleanToTerraform(this._enabled),

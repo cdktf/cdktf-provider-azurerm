@@ -381,7 +381,10 @@ export class DataFactoryTriggerBlobEvent extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._activated = config.activated;
     this._additionalProperties = config.additionalProperties;
@@ -620,17 +623,17 @@ export class DataFactoryTriggerBlobEvent extends cdktf.TerraformResource {
     return {
       activated: cdktf.booleanToTerraform(this._activated),
       additional_properties: cdktf.hashMapper(cdktf.stringToTerraform)(this._additionalProperties),
-      annotations: cdktf.listMapper(cdktf.stringToTerraform)(this._annotations),
+      annotations: cdktf.listMapper(cdktf.stringToTerraform, false)(this._annotations),
       blob_path_begins_with: cdktf.stringToTerraform(this._blobPathBeginsWith),
       blob_path_ends_with: cdktf.stringToTerraform(this._blobPathEndsWith),
       data_factory_id: cdktf.stringToTerraform(this._dataFactoryId),
       description: cdktf.stringToTerraform(this._description),
-      events: cdktf.listMapper(cdktf.stringToTerraform)(this._events),
+      events: cdktf.listMapper(cdktf.stringToTerraform, false)(this._events),
       id: cdktf.stringToTerraform(this._id),
       ignore_empty_blobs: cdktf.booleanToTerraform(this._ignoreEmptyBlobs),
       name: cdktf.stringToTerraform(this._name),
       storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
-      pipeline: cdktf.listMapper(dataFactoryTriggerBlobEventPipelineToTerraform)(this._pipeline.internalValue),
+      pipeline: cdktf.listMapper(dataFactoryTriggerBlobEventPipelineToTerraform, true)(this._pipeline.internalValue),
       timeouts: dataFactoryTriggerBlobEventTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

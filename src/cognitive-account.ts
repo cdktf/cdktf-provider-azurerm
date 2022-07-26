@@ -124,7 +124,7 @@ export function cognitiveAccountIdentityToTerraform(struct?: CognitiveAccountIde
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.identityIds),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
@@ -351,8 +351,8 @@ export function cognitiveAccountNetworkAclsToTerraform(struct?: CognitiveAccount
   }
   return {
     default_action: cdktf.stringToTerraform(struct!.defaultAction),
-    ip_rules: cdktf.listMapper(cdktf.stringToTerraform)(struct!.ipRules),
-    virtual_network_rules: cdktf.listMapper(cognitiveAccountNetworkAclsVirtualNetworkRulesToTerraform)(struct!.virtualNetworkRules),
+    ip_rules: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.ipRules),
+    virtual_network_rules: cdktf.listMapper(cognitiveAccountNetworkAclsVirtualNetworkRulesToTerraform, true)(struct!.virtualNetworkRules),
   }
 }
 
@@ -755,7 +755,10 @@ export class CognitiveAccount extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._customQuestionAnsweringSearchServiceId = config.customQuestionAnsweringSearchServiceId;
     this._customSubdomainName = config.customSubdomainName;
@@ -1145,7 +1148,7 @@ export class CognitiveAccount extends cdktf.TerraformResource {
     return {
       custom_question_answering_search_service_id: cdktf.stringToTerraform(this._customQuestionAnsweringSearchServiceId),
       custom_subdomain_name: cdktf.stringToTerraform(this._customSubdomainName),
-      fqdns: cdktf.listMapper(cdktf.stringToTerraform)(this._fqdns),
+      fqdns: cdktf.listMapper(cdktf.stringToTerraform, false)(this._fqdns),
       id: cdktf.stringToTerraform(this._id),
       kind: cdktf.stringToTerraform(this._kind),
       local_auth_enabled: cdktf.booleanToTerraform(this._localAuthEnabled),
@@ -1163,7 +1166,7 @@ export class CognitiveAccount extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       identity: cognitiveAccountIdentityToTerraform(this._identity.internalValue),
       network_acls: cognitiveAccountNetworkAclsToTerraform(this._networkAcls.internalValue),
-      storage: cdktf.listMapper(cognitiveAccountStorageToTerraform)(this._storage.internalValue),
+      storage: cdktf.listMapper(cognitiveAccountStorageToTerraform, true)(this._storage.internalValue),
       timeouts: cognitiveAccountTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

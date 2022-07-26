@@ -76,8 +76,8 @@ export function pointToSiteVpnGatewayConnectionConfigurationRoutePropagatedRoute
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.ids),
-    labels: cdktf.listMapper(cdktf.stringToTerraform)(struct!.labels),
+    ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.ids),
+    labels: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.labels),
   }
 }
 
@@ -252,7 +252,7 @@ export function pointToSiteVpnGatewayConnectionConfigurationVpnClientAddressPool
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    address_prefixes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.addressPrefixes),
+    address_prefixes: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.addressPrefixes),
   }
 }
 
@@ -634,7 +634,10 @@ export class PointToSiteVpnGateway extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._dnsServers = config.dnsServers;
     this._id = config.id;
@@ -814,7 +817,7 @@ export class PointToSiteVpnGateway extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      dns_servers: cdktf.listMapper(cdktf.stringToTerraform)(this._dnsServers),
+      dns_servers: cdktf.listMapper(cdktf.stringToTerraform, false)(this._dnsServers),
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),

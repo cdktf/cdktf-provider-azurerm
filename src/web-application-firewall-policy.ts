@@ -207,11 +207,11 @@ export function webApplicationFirewallPolicyCustomRulesMatchConditionsToTerrafor
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    match_values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.matchValues),
+    match_values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.matchValues),
     negation_condition: cdktf.booleanToTerraform(struct!.negationCondition),
     operator: cdktf.stringToTerraform(struct!.operator),
-    transforms: cdktf.listMapper(cdktf.stringToTerraform)(struct!.transforms),
-    match_variables: cdktf.listMapper(webApplicationFirewallPolicyCustomRulesMatchConditionsMatchVariablesToTerraform)(struct!.matchVariables),
+    transforms: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.transforms),
+    match_variables: cdktf.listMapper(webApplicationFirewallPolicyCustomRulesMatchConditionsMatchVariablesToTerraform, true)(struct!.matchVariables),
   }
 }
 
@@ -409,7 +409,7 @@ export function webApplicationFirewallPolicyCustomRulesToTerraform(struct?: WebA
     name: cdktf.stringToTerraform(struct!.name),
     priority: cdktf.numberToTerraform(struct!.priority),
     rule_type: cdktf.stringToTerraform(struct!.ruleType),
-    match_conditions: cdktf.listMapper(webApplicationFirewallPolicyCustomRulesMatchConditionsToTerraform)(struct!.matchConditions),
+    match_conditions: cdktf.listMapper(webApplicationFirewallPolicyCustomRulesMatchConditionsToTerraform, true)(struct!.matchConditions),
   }
 }
 
@@ -728,7 +728,7 @@ export function webApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroupO
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    disabled_rules: cdktf.listMapper(cdktf.stringToTerraform)(struct!.disabledRules),
+    disabled_rules: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.disabledRules),
     rule_group_name: cdktf.stringToTerraform(struct!.ruleGroupName),
   }
 }
@@ -857,7 +857,7 @@ export function webApplicationFirewallPolicyManagedRulesManagedRuleSetToTerrafor
   return {
     type: cdktf.stringToTerraform(struct!.type),
     version: cdktf.stringToTerraform(struct!.version),
-    rule_group_override: cdktf.listMapper(webApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroupOverrideToTerraform)(struct!.ruleGroupOverride),
+    rule_group_override: cdktf.listMapper(webApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroupOverrideToTerraform, true)(struct!.ruleGroupOverride),
   }
 }
 
@@ -1003,8 +1003,8 @@ export function webApplicationFirewallPolicyManagedRulesToTerraform(struct?: Web
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    exclusion: cdktf.listMapper(webApplicationFirewallPolicyManagedRulesExclusionToTerraform)(struct!.exclusion),
-    managed_rule_set: cdktf.listMapper(webApplicationFirewallPolicyManagedRulesManagedRuleSetToTerraform)(struct!.managedRuleSet),
+    exclusion: cdktf.listMapper(webApplicationFirewallPolicyManagedRulesExclusionToTerraform, true)(struct!.exclusion),
+    managed_rule_set: cdktf.listMapper(webApplicationFirewallPolicyManagedRulesManagedRuleSetToTerraform, true)(struct!.managedRuleSet),
   }
 }
 
@@ -1437,7 +1437,10 @@ export class WebApplicationFirewallPolicy extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._location = config.location;
@@ -1607,7 +1610,7 @@ export class WebApplicationFirewallPolicy extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
-      custom_rules: cdktf.listMapper(webApplicationFirewallPolicyCustomRulesToTerraform)(this._customRules.internalValue),
+      custom_rules: cdktf.listMapper(webApplicationFirewallPolicyCustomRulesToTerraform, true)(this._customRules.internalValue),
       managed_rules: webApplicationFirewallPolicyManagedRulesToTerraform(this._managedRules.internalValue),
       policy_settings: webApplicationFirewallPolicyPolicySettingsToTerraform(this._policySettings.internalValue),
       timeouts: webApplicationFirewallPolicyTimeoutsToTerraform(this._timeouts.internalValue),

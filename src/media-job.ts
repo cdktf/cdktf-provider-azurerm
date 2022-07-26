@@ -456,7 +456,10 @@ export class MediaJob extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._description = config.description;
     this._id = config.id;
@@ -630,7 +633,7 @@ export class MediaJob extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       transform_name: cdktf.stringToTerraform(this._transformName),
       input_asset: mediaJobInputAssetToTerraform(this._inputAsset.internalValue),
-      output_asset: cdktf.listMapper(mediaJobOutputAssetToTerraform)(this._outputAsset.internalValue),
+      output_asset: cdktf.listMapper(mediaJobOutputAssetToTerraform, true)(this._outputAsset.internalValue),
       timeouts: mediaJobTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

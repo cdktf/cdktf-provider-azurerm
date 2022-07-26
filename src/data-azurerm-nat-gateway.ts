@@ -145,7 +145,10 @@ export class DataAzurermNatGateway extends cdktf.TerraformDataSource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._name = config.name;
@@ -288,8 +291,8 @@ export class DataAzurermNatGateway extends cdktf.TerraformDataSource {
     return {
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
-      public_ip_address_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._publicIpAddressIds),
-      public_ip_prefix_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._publicIpPrefixIds),
+      public_ip_address_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(this._publicIpAddressIds),
+      public_ip_prefix_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(this._publicIpPrefixIds),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       timeouts: dataAzurermNatGatewayTimeoutsToTerraform(this._timeouts.internalValue),
     };

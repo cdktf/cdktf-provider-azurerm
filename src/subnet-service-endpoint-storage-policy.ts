@@ -66,7 +66,7 @@ export function subnetServiceEndpointStoragePolicyDefinitionToTerraform(struct?:
   return {
     description: cdktf.stringToTerraform(struct!.description),
     name: cdktf.stringToTerraform(struct!.name),
-    service_resources: cdktf.listMapper(cdktf.stringToTerraform)(struct!.serviceResources),
+    service_resources: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.serviceResources),
   }
 }
 
@@ -345,7 +345,10 @@ export class SubnetServiceEndpointStoragePolicy extends cdktf.TerraformResource 
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._location = config.location;

@@ -618,8 +618,8 @@ export function virtualNetworkGatewayConnectionTrafficSelectorPolicyToTerraform(
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    local_address_cidrs: cdktf.listMapper(cdktf.stringToTerraform)(struct!.localAddressCidrs),
-    remote_address_cidrs: cdktf.listMapper(cdktf.stringToTerraform)(struct!.remoteAddressCidrs),
+    local_address_cidrs: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.localAddressCidrs),
+    remote_address_cidrs: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.remoteAddressCidrs),
   }
 }
 
@@ -752,7 +752,10 @@ export class VirtualNetworkGatewayConnection extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._authorizationKey = config.authorizationKey;
     this._connectionMode = config.connectionMode;
@@ -1197,12 +1200,12 @@ export class VirtualNetworkGatewayConnection extends cdktf.TerraformResource {
       connection_mode: cdktf.stringToTerraform(this._connectionMode),
       connection_protocol: cdktf.stringToTerraform(this._connectionProtocol),
       dpd_timeout_seconds: cdktf.numberToTerraform(this._dpdTimeoutSeconds),
-      egress_nat_rule_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._egressNatRuleIds),
+      egress_nat_rule_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(this._egressNatRuleIds),
       enable_bgp: cdktf.booleanToTerraform(this._enableBgp),
       express_route_circuit_id: cdktf.stringToTerraform(this._expressRouteCircuitId),
       express_route_gateway_bypass: cdktf.booleanToTerraform(this._expressRouteGatewayBypass),
       id: cdktf.stringToTerraform(this._id),
-      ingress_nat_rule_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._ingressNatRuleIds),
+      ingress_nat_rule_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(this._ingressNatRuleIds),
       local_azure_ip_address_enabled: cdktf.booleanToTerraform(this._localAzureIpAddressEnabled),
       local_network_gateway_id: cdktf.stringToTerraform(this._localNetworkGatewayId),
       location: cdktf.stringToTerraform(this._location),
@@ -1218,7 +1221,7 @@ export class VirtualNetworkGatewayConnection extends cdktf.TerraformResource {
       custom_bgp_addresses: virtualNetworkGatewayConnectionCustomBgpAddressesToTerraform(this._customBgpAddresses.internalValue),
       ipsec_policy: virtualNetworkGatewayConnectionIpsecPolicyToTerraform(this._ipsecPolicy.internalValue),
       timeouts: virtualNetworkGatewayConnectionTimeoutsToTerraform(this._timeouts.internalValue),
-      traffic_selector_policy: cdktf.listMapper(virtualNetworkGatewayConnectionTrafficSelectorPolicyToTerraform)(this._trafficSelectorPolicy.internalValue),
+      traffic_selector_policy: cdktf.listMapper(virtualNetworkGatewayConnectionTrafficSelectorPolicyToTerraform, true)(this._trafficSelectorPolicy.internalValue),
     };
   }
 }

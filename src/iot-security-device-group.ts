@@ -66,10 +66,10 @@ export function iotSecurityDeviceGroupAllowRuleToTerraform(struct?: IotSecurityD
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    connection_from_ips_not_allowed: cdktf.listMapper(cdktf.stringToTerraform)(struct!.connectionFromIpsNotAllowed),
-    connection_to_ips_not_allowed: cdktf.listMapper(cdktf.stringToTerraform)(struct!.connectionToIpsNotAllowed),
-    local_users_not_allowed: cdktf.listMapper(cdktf.stringToTerraform)(struct!.localUsersNotAllowed),
-    processes_not_allowed: cdktf.listMapper(cdktf.stringToTerraform)(struct!.processesNotAllowed),
+    connection_from_ips_not_allowed: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.connectionFromIpsNotAllowed),
+    connection_to_ips_not_allowed: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.connectionToIpsNotAllowed),
+    local_users_not_allowed: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.localUsersNotAllowed),
+    processes_not_allowed: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.processesNotAllowed),
   }
 }
 
@@ -542,7 +542,10 @@ export class IotSecurityDeviceGroup extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._iothubId = config.iothubId;
@@ -656,7 +659,7 @@ export class IotSecurityDeviceGroup extends cdktf.TerraformResource {
       iothub_id: cdktf.stringToTerraform(this._iothubId),
       name: cdktf.stringToTerraform(this._name),
       allow_rule: iotSecurityDeviceGroupAllowRuleToTerraform(this._allowRule.internalValue),
-      range_rule: cdktf.listMapper(iotSecurityDeviceGroupRangeRuleToTerraform)(this._rangeRule.internalValue),
+      range_rule: cdktf.listMapper(iotSecurityDeviceGroupRangeRuleToTerraform, true)(this._rangeRule.internalValue),
       timeouts: iotSecurityDeviceGroupTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

@@ -234,7 +234,10 @@ export class SubscriptionPolicyRemediation extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._locationFilters = config.locationFilters;
@@ -376,7 +379,7 @@ export class SubscriptionPolicyRemediation extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       id: cdktf.stringToTerraform(this._id),
-      location_filters: cdktf.listMapper(cdktf.stringToTerraform)(this._locationFilters),
+      location_filters: cdktf.listMapper(cdktf.stringToTerraform, false)(this._locationFilters),
       name: cdktf.stringToTerraform(this._name),
       policy_assignment_id: cdktf.stringToTerraform(this._policyAssignmentId),
       policy_definition_id: cdktf.stringToTerraform(this._policyDefinitionId),

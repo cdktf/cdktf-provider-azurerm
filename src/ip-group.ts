@@ -230,7 +230,10 @@ export class IpGroup extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._cidrs = config.cidrs;
     this._id = config.id;
@@ -354,7 +357,7 @@ export class IpGroup extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      cidrs: cdktf.listMapper(cdktf.stringToTerraform)(this._cidrs),
+      cidrs: cdktf.listMapper(cdktf.stringToTerraform, false)(this._cidrs),
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),

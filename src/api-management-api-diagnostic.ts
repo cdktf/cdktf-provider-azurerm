@@ -346,8 +346,8 @@ export function apiManagementApiDiagnosticBackendRequestDataMaskingToTerraform(s
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    headers: cdktf.listMapper(apiManagementApiDiagnosticBackendRequestDataMaskingHeadersToTerraform)(struct!.headers),
-    query_params: cdktf.listMapper(apiManagementApiDiagnosticBackendRequestDataMaskingQueryParamsToTerraform)(struct!.queryParams),
+    headers: cdktf.listMapper(apiManagementApiDiagnosticBackendRequestDataMaskingHeadersToTerraform, true)(struct!.headers),
+    query_params: cdktf.listMapper(apiManagementApiDiagnosticBackendRequestDataMaskingQueryParamsToTerraform, true)(struct!.queryParams),
   }
 }
 
@@ -445,7 +445,7 @@ export function apiManagementApiDiagnosticBackendRequestToTerraform(struct?: Api
   }
   return {
     body_bytes: cdktf.numberToTerraform(struct!.bodyBytes),
-    headers_to_log: cdktf.listMapper(cdktf.stringToTerraform)(struct!.headersToLog),
+    headers_to_log: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.headersToLog),
     data_masking: apiManagementApiDiagnosticBackendRequestDataMaskingToTerraform(struct!.dataMasking),
   }
 }
@@ -799,8 +799,8 @@ export function apiManagementApiDiagnosticBackendResponseDataMaskingToTerraform(
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    headers: cdktf.listMapper(apiManagementApiDiagnosticBackendResponseDataMaskingHeadersToTerraform)(struct!.headers),
-    query_params: cdktf.listMapper(apiManagementApiDiagnosticBackendResponseDataMaskingQueryParamsToTerraform)(struct!.queryParams),
+    headers: cdktf.listMapper(apiManagementApiDiagnosticBackendResponseDataMaskingHeadersToTerraform, true)(struct!.headers),
+    query_params: cdktf.listMapper(apiManagementApiDiagnosticBackendResponseDataMaskingQueryParamsToTerraform, true)(struct!.queryParams),
   }
 }
 
@@ -898,7 +898,7 @@ export function apiManagementApiDiagnosticBackendResponseToTerraform(struct?: Ap
   }
   return {
     body_bytes: cdktf.numberToTerraform(struct!.bodyBytes),
-    headers_to_log: cdktf.listMapper(cdktf.stringToTerraform)(struct!.headersToLog),
+    headers_to_log: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.headersToLog),
     data_masking: apiManagementApiDiagnosticBackendResponseDataMaskingToTerraform(struct!.dataMasking),
   }
 }
@@ -1252,8 +1252,8 @@ export function apiManagementApiDiagnosticFrontendRequestDataMaskingToTerraform(
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    headers: cdktf.listMapper(apiManagementApiDiagnosticFrontendRequestDataMaskingHeadersToTerraform)(struct!.headers),
-    query_params: cdktf.listMapper(apiManagementApiDiagnosticFrontendRequestDataMaskingQueryParamsToTerraform)(struct!.queryParams),
+    headers: cdktf.listMapper(apiManagementApiDiagnosticFrontendRequestDataMaskingHeadersToTerraform, true)(struct!.headers),
+    query_params: cdktf.listMapper(apiManagementApiDiagnosticFrontendRequestDataMaskingQueryParamsToTerraform, true)(struct!.queryParams),
   }
 }
 
@@ -1351,7 +1351,7 @@ export function apiManagementApiDiagnosticFrontendRequestToTerraform(struct?: Ap
   }
   return {
     body_bytes: cdktf.numberToTerraform(struct!.bodyBytes),
-    headers_to_log: cdktf.listMapper(cdktf.stringToTerraform)(struct!.headersToLog),
+    headers_to_log: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.headersToLog),
     data_masking: apiManagementApiDiagnosticFrontendRequestDataMaskingToTerraform(struct!.dataMasking),
   }
 }
@@ -1705,8 +1705,8 @@ export function apiManagementApiDiagnosticFrontendResponseDataMaskingToTerraform
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    headers: cdktf.listMapper(apiManagementApiDiagnosticFrontendResponseDataMaskingHeadersToTerraform)(struct!.headers),
-    query_params: cdktf.listMapper(apiManagementApiDiagnosticFrontendResponseDataMaskingQueryParamsToTerraform)(struct!.queryParams),
+    headers: cdktf.listMapper(apiManagementApiDiagnosticFrontendResponseDataMaskingHeadersToTerraform, true)(struct!.headers),
+    query_params: cdktf.listMapper(apiManagementApiDiagnosticFrontendResponseDataMaskingQueryParamsToTerraform, true)(struct!.queryParams),
   }
 }
 
@@ -1804,7 +1804,7 @@ export function apiManagementApiDiagnosticFrontendResponseToTerraform(struct?: A
   }
   return {
     body_bytes: cdktf.numberToTerraform(struct!.bodyBytes),
-    headers_to_log: cdktf.listMapper(cdktf.stringToTerraform)(struct!.headersToLog),
+    headers_to_log: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.headersToLog),
     data_masking: apiManagementApiDiagnosticFrontendResponseDataMaskingToTerraform(struct!.dataMasking),
   }
 }
@@ -2090,7 +2090,10 @@ export class ApiManagementApiDiagnostic extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._alwaysLogErrors = config.alwaysLogErrors;
     this._apiManagementLoggerId = config.apiManagementLoggerId;

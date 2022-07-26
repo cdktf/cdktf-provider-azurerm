@@ -354,7 +354,10 @@ export class IotTimeSeriesInsightsReferenceDataSet extends cdktf.TerraformResour
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._dataStringComparisonBehavior = config.dataStringComparisonBehavior;
     this._id = config.id;
@@ -498,7 +501,7 @@ export class IotTimeSeriesInsightsReferenceDataSet extends cdktf.TerraformResour
       name: cdktf.stringToTerraform(this._name),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       time_series_insights_environment_id: cdktf.stringToTerraform(this._timeSeriesInsightsEnvironmentId),
-      key_property: cdktf.listMapper(iotTimeSeriesInsightsReferenceDataSetKeyPropertyToTerraform)(this._keyProperty.internalValue),
+      key_property: cdktf.listMapper(iotTimeSeriesInsightsReferenceDataSetKeyPropertyToTerraform, true)(this._keyProperty.internalValue),
       timeouts: iotTimeSeriesInsightsReferenceDataSetTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

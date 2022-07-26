@@ -102,7 +102,7 @@ export function sentinelAutomationRuleActionIncidentToTerraform(struct?: Sentine
   return {
     classification: cdktf.stringToTerraform(struct!.classification),
     classification_comment: cdktf.stringToTerraform(struct!.classificationComment),
-    labels: cdktf.listMapper(cdktf.stringToTerraform)(struct!.labels),
+    labels: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.labels),
     order: cdktf.numberToTerraform(struct!.order),
     owner_id: cdktf.stringToTerraform(struct!.ownerId),
     severity: cdktf.stringToTerraform(struct!.severity),
@@ -487,7 +487,7 @@ export function sentinelAutomationRuleConditionToTerraform(struct?: SentinelAuto
   return {
     operator: cdktf.stringToTerraform(struct!.operator),
     property: cdktf.stringToTerraform(struct!.property),
-    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+    values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
 }
 
@@ -795,7 +795,10 @@ export class SentinelAutomationRule extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._displayName = config.displayName;
     this._enabled = config.enabled;
@@ -991,9 +994,9 @@ export class SentinelAutomationRule extends cdktf.TerraformResource {
       log_analytics_workspace_id: cdktf.stringToTerraform(this._logAnalyticsWorkspaceId),
       name: cdktf.stringToTerraform(this._name),
       order: cdktf.numberToTerraform(this._order),
-      action_incident: cdktf.listMapper(sentinelAutomationRuleActionIncidentToTerraform)(this._actionIncident.internalValue),
-      action_playbook: cdktf.listMapper(sentinelAutomationRuleActionPlaybookToTerraform)(this._actionPlaybook.internalValue),
-      condition: cdktf.listMapper(sentinelAutomationRuleConditionToTerraform)(this._condition.internalValue),
+      action_incident: cdktf.listMapper(sentinelAutomationRuleActionIncidentToTerraform, true)(this._actionIncident.internalValue),
+      action_playbook: cdktf.listMapper(sentinelAutomationRuleActionPlaybookToTerraform, true)(this._actionPlaybook.internalValue),
+      condition: cdktf.listMapper(sentinelAutomationRuleConditionToTerraform, true)(this._condition.internalValue),
       timeouts: sentinelAutomationRuleTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

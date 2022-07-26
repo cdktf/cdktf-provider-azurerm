@@ -421,7 +421,10 @@ export class StreamAnalyticsFunctionJavascriptUdf extends cdktf.TerraformResourc
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._name = config.name;
@@ -558,7 +561,7 @@ export class StreamAnalyticsFunctionJavascriptUdf extends cdktf.TerraformResourc
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       script: cdktf.stringToTerraform(this._script),
       stream_analytics_job_name: cdktf.stringToTerraform(this._streamAnalyticsJobName),
-      input: cdktf.listMapper(streamAnalyticsFunctionJavascriptUdfInputToTerraform)(this._input.internalValue),
+      input: cdktf.listMapper(streamAnalyticsFunctionJavascriptUdfInputToTerraform, true)(this._input.internalValue),
       output: streamAnalyticsFunctionJavascriptUdfOutputToTerraform(this._output.internalValue),
       timeouts: streamAnalyticsFunctionJavascriptUdfTimeoutsToTerraform(this._timeouts.internalValue),
     };

@@ -72,7 +72,7 @@ export function virtualHubRouteToTerraform(struct?: VirtualHubRoute | cdktf.IRes
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    address_prefixes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.addressPrefixes),
+    address_prefixes: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.addressPrefixes),
     next_hop_ip_address: cdktf.stringToTerraform(struct!.nextHopIpAddress),
   }
 }
@@ -362,7 +362,10 @@ export class VirtualHub extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._addressPrefix = config.addressPrefix;
     this._id = config.id;
@@ -560,7 +563,7 @@ export class VirtualHub extends cdktf.TerraformResource {
       sku: cdktf.stringToTerraform(this._sku),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       virtual_wan_id: cdktf.stringToTerraform(this._virtualWanId),
-      route: cdktf.listMapper(virtualHubRouteToTerraform)(this._route.internalValue),
+      route: cdktf.listMapper(virtualHubRouteToTerraform, true)(this._route.internalValue),
       timeouts: virtualHubTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

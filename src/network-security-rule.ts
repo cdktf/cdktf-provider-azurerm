@@ -282,7 +282,10 @@ export class NetworkSecurityRule extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._access = config.access;
     this._description = config.description;
@@ -618,10 +621,10 @@ export class NetworkSecurityRule extends cdktf.TerraformResource {
       access: cdktf.stringToTerraform(this._access),
       description: cdktf.stringToTerraform(this._description),
       destination_address_prefix: cdktf.stringToTerraform(this._destinationAddressPrefix),
-      destination_address_prefixes: cdktf.listMapper(cdktf.stringToTerraform)(this._destinationAddressPrefixes),
-      destination_application_security_group_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._destinationApplicationSecurityGroupIds),
+      destination_address_prefixes: cdktf.listMapper(cdktf.stringToTerraform, false)(this._destinationAddressPrefixes),
+      destination_application_security_group_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(this._destinationApplicationSecurityGroupIds),
       destination_port_range: cdktf.stringToTerraform(this._destinationPortRange),
-      destination_port_ranges: cdktf.listMapper(cdktf.stringToTerraform)(this._destinationPortRanges),
+      destination_port_ranges: cdktf.listMapper(cdktf.stringToTerraform, false)(this._destinationPortRanges),
       direction: cdktf.stringToTerraform(this._direction),
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
@@ -630,10 +633,10 @@ export class NetworkSecurityRule extends cdktf.TerraformResource {
       protocol: cdktf.stringToTerraform(this._protocol),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       source_address_prefix: cdktf.stringToTerraform(this._sourceAddressPrefix),
-      source_address_prefixes: cdktf.listMapper(cdktf.stringToTerraform)(this._sourceAddressPrefixes),
-      source_application_security_group_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._sourceApplicationSecurityGroupIds),
+      source_address_prefixes: cdktf.listMapper(cdktf.stringToTerraform, false)(this._sourceAddressPrefixes),
+      source_application_security_group_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(this._sourceApplicationSecurityGroupIds),
       source_port_range: cdktf.stringToTerraform(this._sourcePortRange),
-      source_port_ranges: cdktf.listMapper(cdktf.stringToTerraform)(this._sourcePortRanges),
+      source_port_ranges: cdktf.listMapper(cdktf.stringToTerraform, false)(this._sourcePortRanges),
       timeouts: networkSecurityRuleTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

@@ -78,7 +78,7 @@ export function monitorAutoscaleSettingNotificationEmailToTerraform(struct?: Mon
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    custom_emails: cdktf.listMapper(cdktf.stringToTerraform)(struct!.customEmails),
+    custom_emails: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.customEmails),
     send_to_subscription_administrator: cdktf.booleanToTerraform(struct!.sendToSubscriptionAdministrator),
     send_to_subscription_co_administrator: cdktf.booleanToTerraform(struct!.sendToSubscriptionCoAdministrator),
   }
@@ -319,7 +319,7 @@ export function monitorAutoscaleSettingNotificationToTerraform(struct?: MonitorA
   }
   return {
     email: monitorAutoscaleSettingNotificationEmailToTerraform(struct!.email),
-    webhook: cdktf.listMapper(monitorAutoscaleSettingNotificationWebhookToTerraform)(struct!.webhook),
+    webhook: cdktf.listMapper(monitorAutoscaleSettingNotificationWebhookToTerraform, true)(struct!.webhook),
   }
 }
 
@@ -641,9 +641,9 @@ export function monitorAutoscaleSettingProfileRecurrenceToTerraform(struct?: Mon
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    days: cdktf.listMapper(cdktf.stringToTerraform)(struct!.days),
-    hours: cdktf.listMapper(cdktf.numberToTerraform)(struct!.hours),
-    minutes: cdktf.listMapper(cdktf.numberToTerraform)(struct!.minutes),
+    days: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.days),
+    hours: cdktf.listMapper(cdktf.numberToTerraform, false)(struct!.hours),
+    minutes: cdktf.listMapper(cdktf.numberToTerraform, false)(struct!.minutes),
     timezone: cdktf.stringToTerraform(struct!.timezone),
   }
 }
@@ -776,7 +776,7 @@ export function monitorAutoscaleSettingProfileRuleMetricTriggerDimensionsToTerra
   return {
     name: cdktf.stringToTerraform(struct!.name),
     operator: cdktf.stringToTerraform(struct!.operator),
-    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+    values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
 }
 
@@ -960,7 +960,7 @@ export function monitorAutoscaleSettingProfileRuleMetricTriggerToTerraform(struc
     time_aggregation: cdktf.stringToTerraform(struct!.timeAggregation),
     time_grain: cdktf.stringToTerraform(struct!.timeGrain),
     time_window: cdktf.stringToTerraform(struct!.timeWindow),
-    dimensions: cdktf.listMapper(monitorAutoscaleSettingProfileRuleMetricTriggerDimensionsToTerraform)(struct!.dimensions),
+    dimensions: cdktf.listMapper(monitorAutoscaleSettingProfileRuleMetricTriggerDimensionsToTerraform, true)(struct!.dimensions),
   }
 }
 
@@ -1505,7 +1505,7 @@ export function monitorAutoscaleSettingProfileToTerraform(struct?: MonitorAutosc
     capacity: monitorAutoscaleSettingProfileCapacityToTerraform(struct!.capacity),
     fixed_date: monitorAutoscaleSettingProfileFixedDateToTerraform(struct!.fixedDate),
     recurrence: monitorAutoscaleSettingProfileRecurrenceToTerraform(struct!.recurrence),
-    rule: cdktf.listMapper(monitorAutoscaleSettingProfileRuleToTerraform)(struct!.rule),
+    rule: cdktf.listMapper(monitorAutoscaleSettingProfileRuleToTerraform, true)(struct!.rule),
   }
 }
 
@@ -1860,7 +1860,10 @@ export class MonitorAutoscaleSetting extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._enabled = config.enabled;
     this._id = config.id;
@@ -2037,7 +2040,7 @@ export class MonitorAutoscaleSetting extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       target_resource_id: cdktf.stringToTerraform(this._targetResourceId),
       notification: monitorAutoscaleSettingNotificationToTerraform(this._notification.internalValue),
-      profile: cdktf.listMapper(monitorAutoscaleSettingProfileToTerraform)(this._profile.internalValue),
+      profile: cdktf.listMapper(monitorAutoscaleSettingProfileToTerraform, true)(this._profile.internalValue),
       timeouts: monitorAutoscaleSettingTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

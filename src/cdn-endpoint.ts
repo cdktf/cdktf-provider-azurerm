@@ -308,11 +308,11 @@ export function cdnEndpointDeliveryRuleCookiesConditionToTerraform(struct?: CdnE
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    match_values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.matchValues),
+    match_values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.matchValues),
     negate_condition: cdktf.booleanToTerraform(struct!.negateCondition),
     operator: cdktf.stringToTerraform(struct!.operator),
     selector: cdktf.stringToTerraform(struct!.selector),
-    transforms: cdktf.listMapper(cdktf.stringToTerraform)(struct!.transforms),
+    transforms: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.transforms),
   }
 }
 
@@ -499,7 +499,7 @@ export function cdnEndpointDeliveryRuleDeviceConditionToTerraform(struct?: CdnEn
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    match_values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.matchValues),
+    match_values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.matchValues),
     negate_condition: cdktf.booleanToTerraform(struct!.negateCondition),
     operator: cdktf.stringToTerraform(struct!.operator),
   }
@@ -615,7 +615,7 @@ export function cdnEndpointDeliveryRuleHttpVersionConditionToTerraform(struct?: 
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    match_values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.matchValues),
+    match_values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.matchValues),
     negate_condition: cdktf.booleanToTerraform(struct!.negateCondition),
     operator: cdktf.stringToTerraform(struct!.operator),
   }
@@ -1061,11 +1061,11 @@ export function cdnEndpointDeliveryRulePostArgConditionToTerraform(struct?: CdnE
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    match_values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.matchValues),
+    match_values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.matchValues),
     negate_condition: cdktf.booleanToTerraform(struct!.negateCondition),
     operator: cdktf.stringToTerraform(struct!.operator),
     selector: cdktf.stringToTerraform(struct!.selector),
-    transforms: cdktf.listMapper(cdktf.stringToTerraform)(struct!.transforms),
+    transforms: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.transforms),
   }
 }
 
@@ -1256,10 +1256,10 @@ export function cdnEndpointDeliveryRuleQueryStringConditionToTerraform(struct?: 
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    match_values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.matchValues),
+    match_values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.matchValues),
     negate_condition: cdktf.booleanToTerraform(struct!.negateCondition),
     operator: cdktf.stringToTerraform(struct!.operator),
-    transforms: cdktf.listMapper(cdktf.stringToTerraform)(struct!.transforms),
+    transforms: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.transforms),
   }
 }
 
@@ -1427,7 +1427,7 @@ export function cdnEndpointDeliveryRuleRemoteAddressConditionToTerraform(struct?
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    match_values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.matchValues),
+    match_values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.matchValues),
     negate_condition: cdktf.booleanToTerraform(struct!.negateCondition),
     operator: cdktf.stringToTerraform(struct!.operator),
   }
@@ -1579,10 +1579,10 @@ export function cdnEndpointDeliveryRuleRequestBodyConditionToTerraform(struct?: 
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    match_values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.matchValues),
+    match_values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.matchValues),
     negate_condition: cdktf.booleanToTerraform(struct!.negateCondition),
     operator: cdktf.stringToTerraform(struct!.operator),
-    transforms: cdktf.listMapper(cdktf.stringToTerraform)(struct!.transforms),
+    transforms: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.transforms),
   }
 }
 
@@ -1758,11 +1758,11 @@ export function cdnEndpointDeliveryRuleRequestHeaderConditionToTerraform(struct?
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    match_values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.matchValues),
+    match_values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.matchValues),
     negate_condition: cdktf.booleanToTerraform(struct!.negateCondition),
     operator: cdktf.stringToTerraform(struct!.operator),
     selector: cdktf.stringToTerraform(struct!.selector),
-    transforms: cdktf.listMapper(cdktf.stringToTerraform)(struct!.transforms),
+    transforms: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.transforms),
   }
 }
 
@@ -1949,7 +1949,7 @@ export function cdnEndpointDeliveryRuleRequestMethodConditionToTerraform(struct?
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    match_values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.matchValues),
+    match_values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.matchValues),
     negate_condition: cdktf.booleanToTerraform(struct!.negateCondition),
     operator: cdktf.stringToTerraform(struct!.operator),
   }
@@ -2065,7 +2065,7 @@ export function cdnEndpointDeliveryRuleRequestSchemeConditionToTerraform(struct?
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    match_values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.matchValues),
+    match_values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.matchValues),
     negate_condition: cdktf.booleanToTerraform(struct!.negateCondition),
     operator: cdktf.stringToTerraform(struct!.operator),
   }
@@ -2185,10 +2185,10 @@ export function cdnEndpointDeliveryRuleRequestUriConditionToTerraform(struct?: C
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    match_values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.matchValues),
+    match_values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.matchValues),
     negate_condition: cdktf.booleanToTerraform(struct!.negateCondition),
     operator: cdktf.stringToTerraform(struct!.operator),
-    transforms: cdktf.listMapper(cdktf.stringToTerraform)(struct!.transforms),
+    transforms: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.transforms),
   }
 }
 
@@ -2360,10 +2360,10 @@ export function cdnEndpointDeliveryRuleUrlFileExtensionConditionToTerraform(stru
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    match_values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.matchValues),
+    match_values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.matchValues),
     negate_condition: cdktf.booleanToTerraform(struct!.negateCondition),
     operator: cdktf.stringToTerraform(struct!.operator),
-    transforms: cdktf.listMapper(cdktf.stringToTerraform)(struct!.transforms),
+    transforms: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.transforms),
   }
 }
 
@@ -2535,10 +2535,10 @@ export function cdnEndpointDeliveryRuleUrlFileNameConditionToTerraform(struct?: 
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    match_values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.matchValues),
+    match_values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.matchValues),
     negate_condition: cdktf.booleanToTerraform(struct!.negateCondition),
     operator: cdktf.stringToTerraform(struct!.operator),
-    transforms: cdktf.listMapper(cdktf.stringToTerraform)(struct!.transforms),
+    transforms: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.transforms),
   }
 }
 
@@ -2710,10 +2710,10 @@ export function cdnEndpointDeliveryRuleUrlPathConditionToTerraform(struct?: CdnE
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    match_values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.matchValues),
+    match_values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.matchValues),
     negate_condition: cdktf.booleanToTerraform(struct!.negateCondition),
     operator: cdktf.stringToTerraform(struct!.operator),
-    transforms: cdktf.listMapper(cdktf.stringToTerraform)(struct!.transforms),
+    transforms: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.transforms),
   }
 }
 
@@ -3311,22 +3311,22 @@ export function cdnEndpointDeliveryRuleToTerraform(struct?: CdnEndpointDeliveryR
     order: cdktf.numberToTerraform(struct!.order),
     cache_expiration_action: cdnEndpointDeliveryRuleCacheExpirationActionToTerraform(struct!.cacheExpirationAction),
     cache_key_query_string_action: cdnEndpointDeliveryRuleCacheKeyQueryStringActionToTerraform(struct!.cacheKeyQueryStringAction),
-    cookies_condition: cdktf.listMapper(cdnEndpointDeliveryRuleCookiesConditionToTerraform)(struct!.cookiesCondition),
+    cookies_condition: cdktf.listMapper(cdnEndpointDeliveryRuleCookiesConditionToTerraform, true)(struct!.cookiesCondition),
     device_condition: cdnEndpointDeliveryRuleDeviceConditionToTerraform(struct!.deviceCondition),
-    http_version_condition: cdktf.listMapper(cdnEndpointDeliveryRuleHttpVersionConditionToTerraform)(struct!.httpVersionCondition),
-    modify_request_header_action: cdktf.listMapper(cdnEndpointDeliveryRuleModifyRequestHeaderActionToTerraform)(struct!.modifyRequestHeaderAction),
-    modify_response_header_action: cdktf.listMapper(cdnEndpointDeliveryRuleModifyResponseHeaderActionToTerraform)(struct!.modifyResponseHeaderAction),
-    post_arg_condition: cdktf.listMapper(cdnEndpointDeliveryRulePostArgConditionToTerraform)(struct!.postArgCondition),
-    query_string_condition: cdktf.listMapper(cdnEndpointDeliveryRuleQueryStringConditionToTerraform)(struct!.queryStringCondition),
-    remote_address_condition: cdktf.listMapper(cdnEndpointDeliveryRuleRemoteAddressConditionToTerraform)(struct!.remoteAddressCondition),
-    request_body_condition: cdktf.listMapper(cdnEndpointDeliveryRuleRequestBodyConditionToTerraform)(struct!.requestBodyCondition),
-    request_header_condition: cdktf.listMapper(cdnEndpointDeliveryRuleRequestHeaderConditionToTerraform)(struct!.requestHeaderCondition),
+    http_version_condition: cdktf.listMapper(cdnEndpointDeliveryRuleHttpVersionConditionToTerraform, true)(struct!.httpVersionCondition),
+    modify_request_header_action: cdktf.listMapper(cdnEndpointDeliveryRuleModifyRequestHeaderActionToTerraform, true)(struct!.modifyRequestHeaderAction),
+    modify_response_header_action: cdktf.listMapper(cdnEndpointDeliveryRuleModifyResponseHeaderActionToTerraform, true)(struct!.modifyResponseHeaderAction),
+    post_arg_condition: cdktf.listMapper(cdnEndpointDeliveryRulePostArgConditionToTerraform, true)(struct!.postArgCondition),
+    query_string_condition: cdktf.listMapper(cdnEndpointDeliveryRuleQueryStringConditionToTerraform, true)(struct!.queryStringCondition),
+    remote_address_condition: cdktf.listMapper(cdnEndpointDeliveryRuleRemoteAddressConditionToTerraform, true)(struct!.remoteAddressCondition),
+    request_body_condition: cdktf.listMapper(cdnEndpointDeliveryRuleRequestBodyConditionToTerraform, true)(struct!.requestBodyCondition),
+    request_header_condition: cdktf.listMapper(cdnEndpointDeliveryRuleRequestHeaderConditionToTerraform, true)(struct!.requestHeaderCondition),
     request_method_condition: cdnEndpointDeliveryRuleRequestMethodConditionToTerraform(struct!.requestMethodCondition),
     request_scheme_condition: cdnEndpointDeliveryRuleRequestSchemeConditionToTerraform(struct!.requestSchemeCondition),
-    request_uri_condition: cdktf.listMapper(cdnEndpointDeliveryRuleRequestUriConditionToTerraform)(struct!.requestUriCondition),
-    url_file_extension_condition: cdktf.listMapper(cdnEndpointDeliveryRuleUrlFileExtensionConditionToTerraform)(struct!.urlFileExtensionCondition),
-    url_file_name_condition: cdktf.listMapper(cdnEndpointDeliveryRuleUrlFileNameConditionToTerraform)(struct!.urlFileNameCondition),
-    url_path_condition: cdktf.listMapper(cdnEndpointDeliveryRuleUrlPathConditionToTerraform)(struct!.urlPathCondition),
+    request_uri_condition: cdktf.listMapper(cdnEndpointDeliveryRuleRequestUriConditionToTerraform, true)(struct!.requestUriCondition),
+    url_file_extension_condition: cdktf.listMapper(cdnEndpointDeliveryRuleUrlFileExtensionConditionToTerraform, true)(struct!.urlFileExtensionCondition),
+    url_file_name_condition: cdktf.listMapper(cdnEndpointDeliveryRuleUrlFileNameConditionToTerraform, true)(struct!.urlFileNameCondition),
+    url_path_condition: cdktf.listMapper(cdnEndpointDeliveryRuleUrlPathConditionToTerraform, true)(struct!.urlPathCondition),
     url_redirect_action: cdnEndpointDeliveryRuleUrlRedirectActionToTerraform(struct!.urlRedirectAction),
     url_rewrite_action: cdnEndpointDeliveryRuleUrlRewriteActionToTerraform(struct!.urlRewriteAction),
   }
@@ -3890,7 +3890,7 @@ export function cdnEndpointGeoFilterToTerraform(struct?: CdnEndpointGeoFilter | 
   }
   return {
     action: cdktf.stringToTerraform(struct!.action),
-    country_codes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.countryCodes),
+    country_codes: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.countryCodes),
     relative_path: cdktf.stringToTerraform(struct!.relativePath),
   }
 }
@@ -4835,8 +4835,8 @@ export function cdnEndpointGlobalDeliveryRuleToTerraform(struct?: CdnEndpointGlo
   return {
     cache_expiration_action: cdnEndpointGlobalDeliveryRuleCacheExpirationActionToTerraform(struct!.cacheExpirationAction),
     cache_key_query_string_action: cdnEndpointGlobalDeliveryRuleCacheKeyQueryStringActionToTerraform(struct!.cacheKeyQueryStringAction),
-    modify_request_header_action: cdktf.listMapper(cdnEndpointGlobalDeliveryRuleModifyRequestHeaderActionToTerraform)(struct!.modifyRequestHeaderAction),
-    modify_response_header_action: cdktf.listMapper(cdnEndpointGlobalDeliveryRuleModifyResponseHeaderActionToTerraform)(struct!.modifyResponseHeaderAction),
+    modify_request_header_action: cdktf.listMapper(cdnEndpointGlobalDeliveryRuleModifyRequestHeaderActionToTerraform, true)(struct!.modifyRequestHeaderAction),
+    modify_response_header_action: cdktf.listMapper(cdnEndpointGlobalDeliveryRuleModifyResponseHeaderActionToTerraform, true)(struct!.modifyResponseHeaderAction),
     url_redirect_action: cdnEndpointGlobalDeliveryRuleUrlRedirectActionToTerraform(struct!.urlRedirectAction),
     url_rewrite_action: cdnEndpointGlobalDeliveryRuleUrlRewriteActionToTerraform(struct!.urlRewriteAction),
   }
@@ -5361,7 +5361,10 @@ export class CdnEndpoint extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._contentTypesToCompress = config.contentTypesToCompress;
     this._id = config.id;
@@ -5705,7 +5708,7 @@ export class CdnEndpoint extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      content_types_to_compress: cdktf.listMapper(cdktf.stringToTerraform)(this._contentTypesToCompress),
+      content_types_to_compress: cdktf.listMapper(cdktf.stringToTerraform, false)(this._contentTypesToCompress),
       id: cdktf.stringToTerraform(this._id),
       is_compression_enabled: cdktf.booleanToTerraform(this._isCompressionEnabled),
       is_http_allowed: cdktf.booleanToTerraform(this._isHttpAllowed),
@@ -5720,10 +5723,10 @@ export class CdnEndpoint extends cdktf.TerraformResource {
       querystring_caching_behaviour: cdktf.stringToTerraform(this._querystringCachingBehaviour),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
-      delivery_rule: cdktf.listMapper(cdnEndpointDeliveryRuleToTerraform)(this._deliveryRule.internalValue),
-      geo_filter: cdktf.listMapper(cdnEndpointGeoFilterToTerraform)(this._geoFilter.internalValue),
+      delivery_rule: cdktf.listMapper(cdnEndpointDeliveryRuleToTerraform, true)(this._deliveryRule.internalValue),
+      geo_filter: cdktf.listMapper(cdnEndpointGeoFilterToTerraform, true)(this._geoFilter.internalValue),
       global_delivery_rule: cdnEndpointGlobalDeliveryRuleToTerraform(this._globalDeliveryRule.internalValue),
-      origin: cdktf.listMapper(cdnEndpointOriginToTerraform)(this._origin.internalValue),
+      origin: cdktf.listMapper(cdnEndpointOriginToTerraform, true)(this._origin.internalValue),
       timeouts: cdnEndpointTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

@@ -350,7 +350,10 @@ export class LogicAppIntegrationAccountPartner extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._integrationAccountName = config.integrationAccountName;
@@ -476,7 +479,7 @@ export class LogicAppIntegrationAccountPartner extends cdktf.TerraformResource {
       metadata: cdktf.stringToTerraform(this._metadata),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      business_identity: cdktf.listMapper(logicAppIntegrationAccountPartnerBusinessIdentityToTerraform)(this._businessIdentity.internalValue),
+      business_identity: cdktf.listMapper(logicAppIntegrationAccountPartnerBusinessIdentityToTerraform, true)(this._businessIdentity.internalValue),
       timeouts: logicAppIntegrationAccountPartnerTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

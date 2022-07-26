@@ -230,7 +230,10 @@ export class ContainerRegistryScopeMap extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._actions = config.actions;
     this._containerRegistryName = config.containerRegistryName;
@@ -351,7 +354,7 @@ export class ContainerRegistryScopeMap extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      actions: cdktf.listMapper(cdktf.stringToTerraform)(this._actions),
+      actions: cdktf.listMapper(cdktf.stringToTerraform, false)(this._actions),
       container_registry_name: cdktf.stringToTerraform(this._containerRegistryName),
       description: cdktf.stringToTerraform(this._description),
       id: cdktf.stringToTerraform(this._id),

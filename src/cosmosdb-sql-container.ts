@@ -395,7 +395,7 @@ export function cosmosdbSqlContainerIndexingPolicyCompositeIndexToTerraform(stru
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    index: cdktf.listMapper(cosmosdbSqlContainerIndexingPolicyCompositeIndexIndexToTerraform)(struct!.index),
+    index: cdktf.listMapper(cosmosdbSqlContainerIndexingPolicyCompositeIndexIndexToTerraform, true)(struct!.index),
   }
 }
 
@@ -801,10 +801,10 @@ export function cosmosdbSqlContainerIndexingPolicyToTerraform(struct?: CosmosdbS
   }
   return {
     indexing_mode: cdktf.stringToTerraform(struct!.indexingMode),
-    composite_index: cdktf.listMapper(cosmosdbSqlContainerIndexingPolicyCompositeIndexToTerraform)(struct!.compositeIndex),
-    excluded_path: cdktf.listMapper(cosmosdbSqlContainerIndexingPolicyExcludedPathToTerraform)(struct!.excludedPath),
-    included_path: cdktf.listMapper(cosmosdbSqlContainerIndexingPolicyIncludedPathToTerraform)(struct!.includedPath),
-    spatial_index: cdktf.listMapper(cosmosdbSqlContainerIndexingPolicySpatialIndexToTerraform)(struct!.spatialIndex),
+    composite_index: cdktf.listMapper(cosmosdbSqlContainerIndexingPolicyCompositeIndexToTerraform, true)(struct!.compositeIndex),
+    excluded_path: cdktf.listMapper(cosmosdbSqlContainerIndexingPolicyExcludedPathToTerraform, true)(struct!.excludedPath),
+    included_path: cdktf.listMapper(cosmosdbSqlContainerIndexingPolicyIncludedPathToTerraform, true)(struct!.includedPath),
+    spatial_index: cdktf.listMapper(cosmosdbSqlContainerIndexingPolicySpatialIndexToTerraform, true)(struct!.spatialIndex),
   }
 }
 
@@ -1113,7 +1113,7 @@ export function cosmosdbSqlContainerUniqueKeyToTerraform(struct?: CosmosdbSqlCon
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    paths: cdktf.listMapper(cdktf.stringToTerraform)(struct!.paths),
+    paths: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.paths),
   }
 }
 
@@ -1227,7 +1227,10 @@ export class CosmosdbSqlContainer extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._accountName = config.accountName;
     this._analyticalStorageTtl = config.analyticalStorageTtl;
@@ -1495,7 +1498,7 @@ export class CosmosdbSqlContainer extends cdktf.TerraformResource {
       conflict_resolution_policy: cosmosdbSqlContainerConflictResolutionPolicyToTerraform(this._conflictResolutionPolicy.internalValue),
       indexing_policy: cosmosdbSqlContainerIndexingPolicyToTerraform(this._indexingPolicy.internalValue),
       timeouts: cosmosdbSqlContainerTimeoutsToTerraform(this._timeouts.internalValue),
-      unique_key: cdktf.listMapper(cosmosdbSqlContainerUniqueKeyToTerraform)(this._uniqueKey.internalValue),
+      unique_key: cdktf.listMapper(cosmosdbSqlContainerUniqueKeyToTerraform, true)(this._uniqueKey.internalValue),
     };
   }
 }

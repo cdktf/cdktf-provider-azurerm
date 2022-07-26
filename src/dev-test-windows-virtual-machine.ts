@@ -535,7 +535,10 @@ export class DevTestWindowsVirtualMachine extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._allowClaim = config.allowClaim;
     this._disallowPublicIpAddress = config.disallowPublicIpAddress;
@@ -848,7 +851,7 @@ export class DevTestWindowsVirtualMachine extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       username: cdktf.stringToTerraform(this._username),
       gallery_image_reference: devTestWindowsVirtualMachineGalleryImageReferenceToTerraform(this._galleryImageReference.internalValue),
-      inbound_nat_rule: cdktf.listMapper(devTestWindowsVirtualMachineInboundNatRuleToTerraform)(this._inboundNatRule.internalValue),
+      inbound_nat_rule: cdktf.listMapper(devTestWindowsVirtualMachineInboundNatRuleToTerraform, true)(this._inboundNatRule.internalValue),
       timeouts: devTestWindowsVirtualMachineTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

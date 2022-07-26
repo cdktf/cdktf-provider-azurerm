@@ -80,8 +80,8 @@ export function monitorDataCollectionRuleDataFlowToTerraform(struct?: MonitorDat
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    destinations: cdktf.listMapper(cdktf.stringToTerraform)(struct!.destinations),
-    streams: cdktf.listMapper(cdktf.stringToTerraform)(struct!.streams),
+    destinations: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.destinations),
+    streams: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.streams),
   }
 }
 
@@ -212,9 +212,9 @@ export function monitorDataCollectionRuleDataSourcesExtensionToTerraform(struct?
   return {
     extension_json: cdktf.stringToTerraform(struct!.extensionJson),
     extension_name: cdktf.stringToTerraform(struct!.extensionName),
-    input_data_sources: cdktf.listMapper(cdktf.stringToTerraform)(struct!.inputDataSources),
+    input_data_sources: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.inputDataSources),
     name: cdktf.stringToTerraform(struct!.name),
-    streams: cdktf.listMapper(cdktf.stringToTerraform)(struct!.streams),
+    streams: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.streams),
   }
 }
 
@@ -402,10 +402,10 @@ export function monitorDataCollectionRuleDataSourcesPerformanceCounterToTerrafor
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    counter_specifiers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.counterSpecifiers),
+    counter_specifiers: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.counterSpecifiers),
     name: cdktf.stringToTerraform(struct!.name),
     sampling_frequency_in_seconds: cdktf.numberToTerraform(struct!.samplingFrequencyInSeconds),
-    streams: cdktf.listMapper(cdktf.stringToTerraform)(struct!.streams),
+    streams: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.streams),
   }
 }
 
@@ -564,8 +564,8 @@ export function monitorDataCollectionRuleDataSourcesSyslogToTerraform(struct?: M
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    facility_names: cdktf.listMapper(cdktf.stringToTerraform)(struct!.facilityNames),
-    log_levels: cdktf.listMapper(cdktf.stringToTerraform)(struct!.logLevels),
+    facility_names: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.facilityNames),
+    log_levels: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.logLevels),
     name: cdktf.stringToTerraform(struct!.name),
   }
 }
@@ -707,8 +707,8 @@ export function monitorDataCollectionRuleDataSourcesWindowsEventLogToTerraform(s
   }
   return {
     name: cdktf.stringToTerraform(struct!.name),
-    streams: cdktf.listMapper(cdktf.stringToTerraform)(struct!.streams),
-    x_path_queries: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xPathQueries),
+    streams: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.streams),
+    x_path_queries: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xPathQueries),
   }
 }
 
@@ -860,10 +860,10 @@ export function monitorDataCollectionRuleDataSourcesToTerraform(struct?: Monitor
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    extension: cdktf.listMapper(monitorDataCollectionRuleDataSourcesExtensionToTerraform)(struct!.extension),
-    performance_counter: cdktf.listMapper(monitorDataCollectionRuleDataSourcesPerformanceCounterToTerraform)(struct!.performanceCounter),
-    syslog: cdktf.listMapper(monitorDataCollectionRuleDataSourcesSyslogToTerraform)(struct!.syslog),
-    windows_event_log: cdktf.listMapper(monitorDataCollectionRuleDataSourcesWindowsEventLogToTerraform)(struct!.windowsEventLog),
+    extension: cdktf.listMapper(monitorDataCollectionRuleDataSourcesExtensionToTerraform, true)(struct!.extension),
+    performance_counter: cdktf.listMapper(monitorDataCollectionRuleDataSourcesPerformanceCounterToTerraform, true)(struct!.performanceCounter),
+    syslog: cdktf.listMapper(monitorDataCollectionRuleDataSourcesSyslogToTerraform, true)(struct!.syslog),
+    windows_event_log: cdktf.listMapper(monitorDataCollectionRuleDataSourcesWindowsEventLogToTerraform, true)(struct!.windowsEventLog),
   }
 }
 
@@ -1183,7 +1183,7 @@ export function monitorDataCollectionRuleDestinationsToTerraform(struct?: Monito
   }
   return {
     azure_monitor_metrics: monitorDataCollectionRuleDestinationsAzureMonitorMetricsToTerraform(struct!.azureMonitorMetrics),
-    log_analytics: cdktf.listMapper(monitorDataCollectionRuleDestinationsLogAnalyticsToTerraform)(struct!.logAnalytics),
+    log_analytics: cdktf.listMapper(monitorDataCollectionRuleDestinationsLogAnalyticsToTerraform, true)(struct!.logAnalytics),
   }
 }
 
@@ -1446,7 +1446,10 @@ export class MonitorDataCollectionRule extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._description = config.description;
     this._id = config.id;
@@ -1639,7 +1642,7 @@ export class MonitorDataCollectionRule extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
-      data_flow: cdktf.listMapper(monitorDataCollectionRuleDataFlowToTerraform)(this._dataFlow.internalValue),
+      data_flow: cdktf.listMapper(monitorDataCollectionRuleDataFlowToTerraform, true)(this._dataFlow.internalValue),
       data_sources: monitorDataCollectionRuleDataSourcesToTerraform(this._dataSources.internalValue),
       destinations: monitorDataCollectionRuleDestinationsToTerraform(this._destinations.internalValue),
       timeouts: monitorDataCollectionRuleTimeoutsToTerraform(this._timeouts.internalValue),

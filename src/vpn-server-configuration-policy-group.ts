@@ -374,7 +374,10 @@ export class VpnServerConfigurationPolicyGroup extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._isDefault = config.isDefault;
@@ -503,7 +506,7 @@ export class VpnServerConfigurationPolicyGroup extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       priority: cdktf.numberToTerraform(this._priority),
       vpn_server_configuration_id: cdktf.stringToTerraform(this._vpnServerConfigurationId),
-      policy: cdktf.listMapper(vpnServerConfigurationPolicyGroupPolicyToTerraform)(this._policy.internalValue),
+      policy: cdktf.listMapper(vpnServerConfigurationPolicyGroupPolicyToTerraform, true)(this._policy.internalValue),
       timeouts: vpnServerConfigurationPolicyGroupTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

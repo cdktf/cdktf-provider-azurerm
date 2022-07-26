@@ -394,7 +394,10 @@ export class AnalysisServicesServer extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._adminUsers = config.adminUsers;
     this._backupBlobContainerUri = config.backupBlobContainerUri;
@@ -605,7 +608,7 @@ export class AnalysisServicesServer extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      admin_users: cdktf.listMapper(cdktf.stringToTerraform)(this._adminUsers),
+      admin_users: cdktf.listMapper(cdktf.stringToTerraform, false)(this._adminUsers),
       backup_blob_container_uri: cdktf.stringToTerraform(this._backupBlobContainerUri),
       enable_power_bi_service: cdktf.booleanToTerraform(this._enablePowerBiService),
       id: cdktf.stringToTerraform(this._id),
@@ -615,7 +618,7 @@ export class AnalysisServicesServer extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku: cdktf.stringToTerraform(this._sku),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
-      ipv4_firewall_rule: cdktf.listMapper(analysisServicesServerIpv4FirewallRuleToTerraform)(this._ipv4FirewallRule.internalValue),
+      ipv4_firewall_rule: cdktf.listMapper(analysisServicesServerIpv4FirewallRuleToTerraform, true)(this._ipv4FirewallRule.internalValue),
       timeouts: analysisServicesServerTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

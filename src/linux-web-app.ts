@@ -229,7 +229,7 @@ export function linuxWebAppAuthSettingsActiveDirectoryToTerraform(struct?: Linux
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    allowed_audiences: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedAudiences),
+    allowed_audiences: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedAudiences),
     client_id: cdktf.stringToTerraform(struct!.clientId),
     client_secret: cdktf.stringToTerraform(struct!.clientSecret),
     client_secret_setting_name: cdktf.stringToTerraform(struct!.clientSecretSettingName),
@@ -383,7 +383,7 @@ export function linuxWebAppAuthSettingsFacebookToTerraform(struct?: LinuxWebAppA
     app_id: cdktf.stringToTerraform(struct!.appId),
     app_secret: cdktf.stringToTerraform(struct!.appSecret),
     app_secret_setting_name: cdktf.stringToTerraform(struct!.appSecretSettingName),
-    oauth_scopes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.oauthScopes),
+    oauth_scopes: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.oauthScopes),
   }
 }
 
@@ -534,7 +534,7 @@ export function linuxWebAppAuthSettingsGithubToTerraform(struct?: LinuxWebAppAut
     client_id: cdktf.stringToTerraform(struct!.clientId),
     client_secret: cdktf.stringToTerraform(struct!.clientSecret),
     client_secret_setting_name: cdktf.stringToTerraform(struct!.clientSecretSettingName),
-    oauth_scopes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.oauthScopes),
+    oauth_scopes: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.oauthScopes),
   }
 }
 
@@ -685,7 +685,7 @@ export function linuxWebAppAuthSettingsGoogleToTerraform(struct?: LinuxWebAppAut
     client_id: cdktf.stringToTerraform(struct!.clientId),
     client_secret: cdktf.stringToTerraform(struct!.clientSecret),
     client_secret_setting_name: cdktf.stringToTerraform(struct!.clientSecretSettingName),
-    oauth_scopes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.oauthScopes),
+    oauth_scopes: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.oauthScopes),
   }
 }
 
@@ -836,7 +836,7 @@ export function linuxWebAppAuthSettingsMicrosoftToTerraform(struct?: LinuxWebApp
     client_id: cdktf.stringToTerraform(struct!.clientId),
     client_secret: cdktf.stringToTerraform(struct!.clientSecret),
     client_secret_setting_name: cdktf.stringToTerraform(struct!.clientSecretSettingName),
-    oauth_scopes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.oauthScopes),
+    oauth_scopes: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.oauthScopes),
   }
 }
 
@@ -1173,7 +1173,7 @@ export function linuxWebAppAuthSettingsToTerraform(struct?: LinuxWebAppAuthSetti
   }
   return {
     additional_login_parameters: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.additionalLoginParameters),
-    allowed_external_redirect_urls: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedExternalRedirectUrls),
+    allowed_external_redirect_urls: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedExternalRedirectUrls),
     default_provider: cdktf.stringToTerraform(struct!.defaultProvider),
     enabled: cdktf.booleanToTerraform(struct!.enabled),
     issuer: cdktf.stringToTerraform(struct!.issuer),
@@ -2035,7 +2035,7 @@ export function linuxWebAppIdentityToTerraform(struct?: LinuxWebAppIdentityOutpu
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.identityIds),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
@@ -2764,10 +2764,10 @@ export function linuxWebAppSiteConfigIpRestrictionHeadersToTerraform(struct?: Li
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    x_azure_fdid: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xAzureFdid),
-    x_fd_health_probe: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xFdHealthProbe),
-    x_forwarded_for: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xForwardedFor),
-    x_forwarded_host: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xForwardedHost),
+    x_azure_fdid: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xAzureFdid),
+    x_fd_health_probe: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xFdHealthProbe),
+    x_forwarded_for: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xForwardedFor),
+    x_forwarded_host: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xForwardedHost),
   }
 }
 
@@ -2955,7 +2955,7 @@ export function linuxWebAppSiteConfigIpRestrictionToTerraform(struct?: LinuxWebA
   }
   return {
     action: cdktf.stringToTerraform(struct!.action),
-    headers: cdktf.listMapper(linuxWebAppSiteConfigIpRestrictionHeadersToTerraform)(struct!.headers),
+    headers: cdktf.listMapper(linuxWebAppSiteConfigIpRestrictionHeadersToTerraform, false)(struct!.headers),
     ip_address: cdktf.stringToTerraform(struct!.ipAddress),
     name: cdktf.stringToTerraform(struct!.name),
     priority: cdktf.numberToTerraform(struct!.priority),
@@ -3201,10 +3201,10 @@ export function linuxWebAppSiteConfigScmIpRestrictionHeadersToTerraform(struct?:
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    x_azure_fdid: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xAzureFdid),
-    x_fd_health_probe: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xFdHealthProbe),
-    x_forwarded_for: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xForwardedFor),
-    x_forwarded_host: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xForwardedHost),
+    x_azure_fdid: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xAzureFdid),
+    x_fd_health_probe: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xFdHealthProbe),
+    x_forwarded_for: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xForwardedFor),
+    x_forwarded_host: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xForwardedHost),
   }
 }
 
@@ -3392,7 +3392,7 @@ export function linuxWebAppSiteConfigScmIpRestrictionToTerraform(struct?: LinuxW
   }
   return {
     action: cdktf.stringToTerraform(struct!.action),
-    headers: cdktf.listMapper(linuxWebAppSiteConfigScmIpRestrictionHeadersToTerraform)(struct!.headers),
+    headers: cdktf.listMapper(linuxWebAppSiteConfigScmIpRestrictionHeadersToTerraform, false)(struct!.headers),
     ip_address: cdktf.stringToTerraform(struct!.ipAddress),
     name: cdktf.stringToTerraform(struct!.name),
     priority: cdktf.numberToTerraform(struct!.priority),
@@ -4485,7 +4485,7 @@ export function linuxWebAppSiteConfigAutoHealSettingTriggerToTerraform(struct?: 
   return {
     requests: linuxWebAppSiteConfigAutoHealSettingTriggerRequestsToTerraform(struct!.requests),
     slow_request: linuxWebAppSiteConfigAutoHealSettingTriggerSlowRequestToTerraform(struct!.slowRequest),
-    status_code: cdktf.listMapper(linuxWebAppSiteConfigAutoHealSettingTriggerStatusCodeToTerraform)(struct!.statusCode),
+    status_code: cdktf.listMapper(linuxWebAppSiteConfigAutoHealSettingTriggerStatusCodeToTerraform, true)(struct!.statusCode),
   }
 }
 
@@ -4698,7 +4698,7 @@ export function linuxWebAppSiteConfigCorsToTerraform(struct?: LinuxWebAppSiteCon
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    allowed_origins: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedOrigins),
+    allowed_origins: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedOrigins),
     support_credentials: cdktf.booleanToTerraform(struct!.supportCredentials),
   }
 }
@@ -4912,19 +4912,19 @@ export function linuxWebAppSiteConfigToTerraform(struct?: LinuxWebAppSiteConfigO
     auto_heal_enabled: cdktf.booleanToTerraform(struct!.autoHealEnabled),
     container_registry_managed_identity_client_id: cdktf.stringToTerraform(struct!.containerRegistryManagedIdentityClientId),
     container_registry_use_managed_identity: cdktf.booleanToTerraform(struct!.containerRegistryUseManagedIdentity),
-    default_documents: cdktf.listMapper(cdktf.stringToTerraform)(struct!.defaultDocuments),
+    default_documents: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.defaultDocuments),
     ftps_state: cdktf.stringToTerraform(struct!.ftpsState),
     health_check_eviction_time_in_min: cdktf.numberToTerraform(struct!.healthCheckEvictionTimeInMin),
     health_check_path: cdktf.stringToTerraform(struct!.healthCheckPath),
     http2_enabled: cdktf.booleanToTerraform(struct!.http2Enabled),
-    ip_restriction: cdktf.listMapper(linuxWebAppSiteConfigIpRestrictionToTerraform)(struct!.ipRestriction),
+    ip_restriction: cdktf.listMapper(linuxWebAppSiteConfigIpRestrictionToTerraform, false)(struct!.ipRestriction),
     load_balancing_mode: cdktf.stringToTerraform(struct!.loadBalancingMode),
     local_mysql_enabled: cdktf.booleanToTerraform(struct!.localMysqlEnabled),
     managed_pipeline_mode: cdktf.stringToTerraform(struct!.managedPipelineMode),
     minimum_tls_version: cdktf.stringToTerraform(struct!.minimumTlsVersion),
     remote_debugging_enabled: cdktf.booleanToTerraform(struct!.remoteDebuggingEnabled),
     remote_debugging_version: cdktf.stringToTerraform(struct!.remoteDebuggingVersion),
-    scm_ip_restriction: cdktf.listMapper(linuxWebAppSiteConfigScmIpRestrictionToTerraform)(struct!.scmIpRestriction),
+    scm_ip_restriction: cdktf.listMapper(linuxWebAppSiteConfigScmIpRestrictionToTerraform, false)(struct!.scmIpRestriction),
     scm_minimum_tls_version: cdktf.stringToTerraform(struct!.scmMinimumTlsVersion),
     scm_use_main_ip_restriction: cdktf.booleanToTerraform(struct!.scmUseMainIpRestriction),
     use_32_bit_worker: cdktf.booleanToTerraform(struct!.use32BitWorker),
@@ -5633,8 +5633,8 @@ export function linuxWebAppStickySettingsToTerraform(struct?: LinuxWebAppStickyS
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    app_setting_names: cdktf.listMapper(cdktf.stringToTerraform)(struct!.appSettingNames),
-    connection_string_names: cdktf.listMapper(cdktf.stringToTerraform)(struct!.connectionStringNames),
+    app_setting_names: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.appSettingNames),
+    connection_string_names: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.connectionStringNames),
   }
 }
 
@@ -6114,7 +6114,10 @@ export class LinuxWebApp extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._appSettings = config.appSettings;
     this._clientAffinityEnabled = config.clientAffinityEnabled;
@@ -6579,12 +6582,12 @@ export class LinuxWebApp extends cdktf.TerraformResource {
       zip_deploy_file: cdktf.stringToTerraform(this._zipDeployFile),
       auth_settings: linuxWebAppAuthSettingsToTerraform(this._authSettings.internalValue),
       backup: linuxWebAppBackupToTerraform(this._backup.internalValue),
-      connection_string: cdktf.listMapper(linuxWebAppConnectionStringToTerraform)(this._connectionString.internalValue),
+      connection_string: cdktf.listMapper(linuxWebAppConnectionStringToTerraform, true)(this._connectionString.internalValue),
       identity: linuxWebAppIdentityToTerraform(this._identity.internalValue),
       logs: linuxWebAppLogsToTerraform(this._logs.internalValue),
       site_config: linuxWebAppSiteConfigToTerraform(this._siteConfig.internalValue),
       sticky_settings: linuxWebAppStickySettingsToTerraform(this._stickySettings.internalValue),
-      storage_account: cdktf.listMapper(linuxWebAppStorageAccountToTerraform)(this._storageAccount.internalValue),
+      storage_account: cdktf.listMapper(linuxWebAppStorageAccountToTerraform, true)(this._storageAccount.internalValue),
       timeouts: linuxWebAppTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

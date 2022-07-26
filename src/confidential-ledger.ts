@@ -502,7 +502,10 @@ export class ConfidentialLedger extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._ledgerType = config.ledgerType;
@@ -670,8 +673,8 @@ export class ConfidentialLedger extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
-      azuread_based_service_principal: cdktf.listMapper(confidentialLedgerAzureadBasedServicePrincipalToTerraform)(this._azureadBasedServicePrincipal.internalValue),
-      certificate_based_security_principal: cdktf.listMapper(confidentialLedgerCertificateBasedSecurityPrincipalToTerraform)(this._certificateBasedSecurityPrincipal.internalValue),
+      azuread_based_service_principal: cdktf.listMapper(confidentialLedgerAzureadBasedServicePrincipalToTerraform, true)(this._azureadBasedServicePrincipal.internalValue),
+      certificate_based_security_principal: cdktf.listMapper(confidentialLedgerCertificateBasedSecurityPrincipalToTerraform, true)(this._certificateBasedSecurityPrincipal.internalValue),
       timeouts: confidentialLedgerTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

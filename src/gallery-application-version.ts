@@ -603,7 +603,10 @@ export class GalleryApplicationVersion extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._enableHealthCheck = config.enableHealthCheck;
     this._endOfLifeDate = config.endOfLifeDate;
@@ -813,7 +816,7 @@ export class GalleryApplicationVersion extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       manage_action: galleryApplicationVersionManageActionToTerraform(this._manageAction.internalValue),
       source: galleryApplicationVersionSourceToTerraform(this._source.internalValue),
-      target_region: cdktf.listMapper(galleryApplicationVersionTargetRegionToTerraform)(this._targetRegion.internalValue),
+      target_region: cdktf.listMapper(galleryApplicationVersionTargetRegionToTerraform, true)(this._targetRegion.internalValue),
       timeouts: galleryApplicationVersionTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

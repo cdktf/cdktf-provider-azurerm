@@ -374,7 +374,7 @@ export function serviceFabricManagedClusterAuthenticationToTerraform(struct?: Se
   }
   return {
     active_directory: serviceFabricManagedClusterAuthenticationActiveDirectoryToTerraform(struct!.activeDirectory),
-    certificate: cdktf.listMapper(serviceFabricManagedClusterAuthenticationCertificateToTerraform)(struct!.certificate),
+    certificate: cdktf.listMapper(serviceFabricManagedClusterAuthenticationCertificateToTerraform, true)(struct!.certificate),
   }
 }
 
@@ -921,7 +921,7 @@ export function serviceFabricManagedClusterNodeTypeVmSecretsToTerraform(struct?:
   }
   return {
     vault_id: cdktf.stringToTerraform(struct!.vaultId),
-    certificates: cdktf.listMapper(serviceFabricManagedClusterNodeTypeVmSecretsCertificatesToTerraform)(struct!.certificates),
+    certificates: cdktf.listMapper(serviceFabricManagedClusterNodeTypeVmSecretsCertificatesToTerraform, true)(struct!.certificates),
   }
 }
 
@@ -1116,7 +1116,7 @@ export function serviceFabricManagedClusterNodeTypeToTerraform(struct?: ServiceF
     vm_image_version: cdktf.stringToTerraform(struct!.vmImageVersion),
     vm_instance_count: cdktf.numberToTerraform(struct!.vmInstanceCount),
     vm_size: cdktf.stringToTerraform(struct!.vmSize),
-    vm_secrets: cdktf.listMapper(serviceFabricManagedClusterNodeTypeVmSecretsToTerraform)(struct!.vmSecrets),
+    vm_secrets: cdktf.listMapper(serviceFabricManagedClusterNodeTypeVmSecretsToTerraform, true)(struct!.vmSecrets),
   }
 }
 
@@ -1716,7 +1716,10 @@ export class ServiceFabricManagedCluster extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._backupServiceEnabled = config.backupServiceEnabled;
     this._clientConnectionPort = config.clientConnectionPort;
@@ -2050,9 +2053,9 @@ export class ServiceFabricManagedCluster extends cdktf.TerraformResource {
       upgrade_wave: cdktf.stringToTerraform(this._upgradeWave),
       username: cdktf.stringToTerraform(this._username),
       authentication: serviceFabricManagedClusterAuthenticationToTerraform(this._authentication.internalValue),
-      custom_fabric_setting: cdktf.listMapper(serviceFabricManagedClusterCustomFabricSettingToTerraform)(this._customFabricSetting.internalValue),
-      lb_rule: cdktf.listMapper(serviceFabricManagedClusterLbRuleToTerraform)(this._lbRule.internalValue),
-      node_type: cdktf.listMapper(serviceFabricManagedClusterNodeTypeToTerraform)(this._nodeType.internalValue),
+      custom_fabric_setting: cdktf.listMapper(serviceFabricManagedClusterCustomFabricSettingToTerraform, true)(this._customFabricSetting.internalValue),
+      lb_rule: cdktf.listMapper(serviceFabricManagedClusterLbRuleToTerraform, true)(this._lbRule.internalValue),
+      node_type: cdktf.listMapper(serviceFabricManagedClusterNodeTypeToTerraform, true)(this._nodeType.internalValue),
       timeouts: serviceFabricManagedClusterTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

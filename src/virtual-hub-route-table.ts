@@ -68,7 +68,7 @@ export function virtualHubRouteTableRouteToTerraform(struct?: VirtualHubRouteTab
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    destinations: cdktf.listMapper(cdktf.stringToTerraform)(struct!.destinations),
+    destinations: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.destinations),
     destinations_type: cdktf.stringToTerraform(struct!.destinationsType),
     name: cdktf.stringToTerraform(struct!.name),
     next_hop: cdktf.stringToTerraform(struct!.nextHop),
@@ -421,7 +421,10 @@ export class VirtualHubRouteTable extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._labels = config.labels;
@@ -532,10 +535,10 @@ export class VirtualHubRouteTable extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       id: cdktf.stringToTerraform(this._id),
-      labels: cdktf.listMapper(cdktf.stringToTerraform)(this._labels),
+      labels: cdktf.listMapper(cdktf.stringToTerraform, false)(this._labels),
       name: cdktf.stringToTerraform(this._name),
       virtual_hub_id: cdktf.stringToTerraform(this._virtualHubId),
-      route: cdktf.listMapper(virtualHubRouteTableRouteToTerraform)(this._route.internalValue),
+      route: cdktf.listMapper(virtualHubRouteTableRouteToTerraform, true)(this._route.internalValue),
       timeouts: virtualHubRouteTableTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

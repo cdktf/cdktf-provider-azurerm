@@ -242,7 +242,10 @@ export class SecurityCenterAssessmentPolicy extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._categories = config.categories;
     this._description = config.description;
@@ -425,14 +428,14 @@ export class SecurityCenterAssessmentPolicy extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      categories: cdktf.listMapper(cdktf.stringToTerraform)(this._categories),
+      categories: cdktf.listMapper(cdktf.stringToTerraform, false)(this._categories),
       description: cdktf.stringToTerraform(this._description),
       display_name: cdktf.stringToTerraform(this._displayName),
       id: cdktf.stringToTerraform(this._id),
       implementation_effort: cdktf.stringToTerraform(this._implementationEffort),
       remediation_description: cdktf.stringToTerraform(this._remediationDescription),
       severity: cdktf.stringToTerraform(this._severity),
-      threats: cdktf.listMapper(cdktf.stringToTerraform)(this._threats),
+      threats: cdktf.listMapper(cdktf.stringToTerraform, false)(this._threats),
       user_impact: cdktf.stringToTerraform(this._userImpact),
       timeouts: securityCenterAssessmentPolicyTimeoutsToTerraform(this._timeouts.internalValue),
     };

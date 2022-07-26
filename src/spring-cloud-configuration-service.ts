@@ -93,9 +93,9 @@ export function springCloudConfigurationServiceRepositoryToTerraform(struct?: Sp
     label: cdktf.stringToTerraform(struct!.label),
     name: cdktf.stringToTerraform(struct!.name),
     password: cdktf.stringToTerraform(struct!.password),
-    patterns: cdktf.listMapper(cdktf.stringToTerraform)(struct!.patterns),
+    patterns: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.patterns),
     private_key: cdktf.stringToTerraform(struct!.privateKey),
-    search_paths: cdktf.listMapper(cdktf.stringToTerraform)(struct!.searchPaths),
+    search_paths: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.searchPaths),
     strict_host_key_checking: cdktf.booleanToTerraform(struct!.strictHostKeyChecking),
     uri: cdktf.stringToTerraform(struct!.uri),
     username: cdktf.stringToTerraform(struct!.username),
@@ -579,7 +579,10 @@ export class SpringCloudConfigurationService extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._name = config.name;
@@ -675,7 +678,7 @@ export class SpringCloudConfigurationService extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       spring_cloud_service_id: cdktf.stringToTerraform(this._springCloudServiceId),
-      repository: cdktf.listMapper(springCloudConfigurationServiceRepositoryToTerraform)(this._repository.internalValue),
+      repository: cdktf.listMapper(springCloudConfigurationServiceRepositoryToTerraform, true)(this._repository.internalValue),
       timeouts: springCloudConfigurationServiceTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

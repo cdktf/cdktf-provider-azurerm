@@ -987,7 +987,7 @@ export function kubernetesClusterAzureActiveDirectoryRoleBasedAccessControlToTer
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    admin_group_object_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.adminGroupObjectIds),
+    admin_group_object_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.adminGroupObjectIds),
     azure_rbac_enabled: cdktf.booleanToTerraform(struct!.azureRbacEnabled),
     client_app_id: cdktf.stringToTerraform(struct!.clientAppId),
     managed: cdktf.booleanToTerraform(struct!.managed),
@@ -1226,7 +1226,7 @@ export function kubernetesClusterDefaultNodePoolKubeletConfigToTerraform(struct?
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    allowed_unsafe_sysctls: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedUnsafeSysctls),
+    allowed_unsafe_sysctls: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedUnsafeSysctls),
     container_log_max_line: cdktf.numberToTerraform(struct!.containerLogMaxLine),
     container_log_max_size_mb: cdktf.numberToTerraform(struct!.containerLogMaxSizeMb),
     cpu_cfs_quota_enabled: cdktf.booleanToTerraform(struct!.cpuCfsQuotaEnabled),
@@ -2669,7 +2669,7 @@ export function kubernetesClusterDefaultNodePoolToTerraform(struct?: KubernetesC
     node_count: cdktf.numberToTerraform(struct!.nodeCount),
     node_labels: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.nodeLabels),
     node_public_ip_prefix_id: cdktf.stringToTerraform(struct!.nodePublicIpPrefixId),
-    node_taints: cdktf.listMapper(cdktf.stringToTerraform)(struct!.nodeTaints),
+    node_taints: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.nodeTaints),
     only_critical_addons_enabled: cdktf.booleanToTerraform(struct!.onlyCriticalAddonsEnabled),
     orchestrator_version: cdktf.stringToTerraform(struct!.orchestratorVersion),
     os_disk_size_gb: cdktf.numberToTerraform(struct!.osDiskSizeGb),
@@ -2682,7 +2682,7 @@ export function kubernetesClusterDefaultNodePoolToTerraform(struct?: KubernetesC
     ultra_ssd_enabled: cdktf.booleanToTerraform(struct!.ultraSsdEnabled),
     vm_size: cdktf.stringToTerraform(struct!.vmSize),
     vnet_subnet_id: cdktf.stringToTerraform(struct!.vnetSubnetId),
-    zones: cdktf.listMapper(cdktf.stringToTerraform)(struct!.zones),
+    zones: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.zones),
     kubelet_config: kubernetesClusterDefaultNodePoolKubeletConfigToTerraform(struct!.kubeletConfig),
     linux_os_config: kubernetesClusterDefaultNodePoolLinuxOsConfigToTerraform(struct!.linuxOsConfig),
     upgrade_settings: kubernetesClusterDefaultNodePoolUpgradeSettingsToTerraform(struct!.upgradeSettings),
@@ -3418,7 +3418,7 @@ export function kubernetesClusterHttpProxyConfigToTerraform(struct?: KubernetesC
   return {
     http_proxy: cdktf.stringToTerraform(struct!.httpProxy),
     https_proxy: cdktf.stringToTerraform(struct!.httpsProxy),
-    no_proxy: cdktf.listMapper(cdktf.stringToTerraform)(struct!.noProxy),
+    no_proxy: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.noProxy),
     trusted_ca: cdktf.stringToTerraform(struct!.trustedCa),
   }
 }
@@ -3554,7 +3554,7 @@ export function kubernetesClusterIdentityToTerraform(struct?: KubernetesClusterI
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.identityIds),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
@@ -4326,7 +4326,7 @@ export function kubernetesClusterMaintenanceWindowAllowedToTerraform(struct?: Ku
   }
   return {
     day: cdktf.stringToTerraform(struct!.day),
-    hours: cdktf.listMapper(cdktf.numberToTerraform)(struct!.hours),
+    hours: cdktf.listMapper(cdktf.numberToTerraform, false)(struct!.hours),
   }
 }
 
@@ -4565,8 +4565,8 @@ export function kubernetesClusterMaintenanceWindowToTerraform(struct?: Kubernete
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    allowed: cdktf.listMapper(kubernetesClusterMaintenanceWindowAllowedToTerraform)(struct!.allowed),
-    not_allowed: cdktf.listMapper(kubernetesClusterMaintenanceWindowNotAllowedToTerraform)(struct!.notAllowed),
+    allowed: cdktf.listMapper(kubernetesClusterMaintenanceWindowAllowedToTerraform, true)(struct!.allowed),
+    not_allowed: cdktf.listMapper(kubernetesClusterMaintenanceWindowNotAllowedToTerraform, true)(struct!.notAllowed),
   }
 }
 
@@ -4733,8 +4733,8 @@ export function kubernetesClusterNetworkProfileLoadBalancerProfileToTerraform(st
   return {
     idle_timeout_in_minutes: cdktf.numberToTerraform(struct!.idleTimeoutInMinutes),
     managed_outbound_ip_count: cdktf.numberToTerraform(struct!.managedOutboundIpCount),
-    outbound_ip_address_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.outboundIpAddressIds),
-    outbound_ip_prefix_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.outboundIpPrefixIds),
+    outbound_ip_address_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.outboundIpAddressIds),
+    outbound_ip_prefix_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.outboundIpPrefixIds),
     outbound_ports_allocated: cdktf.numberToTerraform(struct!.outboundPortsAllocated),
   }
 }
@@ -5040,7 +5040,7 @@ export function kubernetesClusterNetworkProfileToTerraform(struct?: KubernetesCl
   return {
     dns_service_ip: cdktf.stringToTerraform(struct!.dnsServiceIp),
     docker_bridge_cidr: cdktf.stringToTerraform(struct!.dockerBridgeCidr),
-    ip_versions: cdktf.listMapper(cdktf.stringToTerraform)(struct!.ipVersions),
+    ip_versions: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.ipVersions),
     load_balancer_sku: cdktf.stringToTerraform(struct!.loadBalancerSku),
     network_mode: cdktf.stringToTerraform(struct!.networkMode),
     network_plugin: cdktf.stringToTerraform(struct!.networkPlugin),
@@ -5873,7 +5873,10 @@ export class KubernetesCluster extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._apiServerAuthorizedIpRanges = config.apiServerAuthorizedIpRanges;
     this._automaticChannelUpgrade = config.automaticChannelUpgrade;
@@ -6636,7 +6639,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      api_server_authorized_ip_ranges: cdktf.listMapper(cdktf.stringToTerraform)(this._apiServerAuthorizedIpRanges),
+      api_server_authorized_ip_ranges: cdktf.listMapper(cdktf.stringToTerraform, false)(this._apiServerAuthorizedIpRanges),
       automatic_channel_upgrade: cdktf.stringToTerraform(this._automaticChannelUpgrade),
       azure_policy_enabled: cdktf.booleanToTerraform(this._azurePolicyEnabled),
       disk_encryption_set_id: cdktf.stringToTerraform(this._diskEncryptionSetId),

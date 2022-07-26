@@ -242,7 +242,10 @@ export class KeyVaultAccessPolicyA extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._applicationId = config.applicationId;
     this._certificatePermissions = config.certificatePermissions;
@@ -418,13 +421,13 @@ export class KeyVaultAccessPolicyA extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       application_id: cdktf.stringToTerraform(this._applicationId),
-      certificate_permissions: cdktf.listMapper(cdktf.stringToTerraform)(this._certificatePermissions),
+      certificate_permissions: cdktf.listMapper(cdktf.stringToTerraform, false)(this._certificatePermissions),
       id: cdktf.stringToTerraform(this._id),
-      key_permissions: cdktf.listMapper(cdktf.stringToTerraform)(this._keyPermissions),
+      key_permissions: cdktf.listMapper(cdktf.stringToTerraform, false)(this._keyPermissions),
       key_vault_id: cdktf.stringToTerraform(this._keyVaultId),
       object_id: cdktf.stringToTerraform(this._objectId),
-      secret_permissions: cdktf.listMapper(cdktf.stringToTerraform)(this._secretPermissions),
-      storage_permissions: cdktf.listMapper(cdktf.stringToTerraform)(this._storagePermissions),
+      secret_permissions: cdktf.listMapper(cdktf.stringToTerraform, false)(this._secretPermissions),
+      storage_permissions: cdktf.listMapper(cdktf.stringToTerraform, false)(this._storagePermissions),
       tenant_id: cdktf.stringToTerraform(this._tenantId),
       timeouts: keyVaultAccessPolicyTimeoutsToTerraform(this._timeouts.internalValue),
     };

@@ -361,7 +361,10 @@ export class DataAzurermStorageAccountBlobContainerSas extends cdktf.TerraformDa
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._cacheControl = config.cacheControl;
     this._connectionString = config.connectionString;

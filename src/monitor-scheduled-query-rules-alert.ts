@@ -114,7 +114,7 @@ export function monitorScheduledQueryRulesAlertActionToTerraform(struct?: Monito
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    action_group: cdktf.listMapper(cdktf.stringToTerraform)(struct!.actionGroup),
+    action_group: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.actionGroup),
     custom_webhook_payload: cdktf.stringToTerraform(struct!.customWebhookPayload),
     email_subject: cdktf.stringToTerraform(struct!.emailSubject),
   }
@@ -647,7 +647,10 @@ export class MonitorScheduledQueryRulesAlert extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._authorizedResourceIds = config.authorizedResourceIds;
     this._autoMitigationEnabled = config.autoMitigationEnabled;
@@ -957,7 +960,7 @@ export class MonitorScheduledQueryRulesAlert extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      authorized_resource_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._authorizedResourceIds),
+      authorized_resource_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(this._authorizedResourceIds),
       auto_mitigation_enabled: cdktf.booleanToTerraform(this._autoMitigationEnabled),
       data_source_id: cdktf.stringToTerraform(this._dataSourceId),
       description: cdktf.stringToTerraform(this._description),

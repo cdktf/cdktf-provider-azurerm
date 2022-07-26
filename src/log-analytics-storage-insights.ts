@@ -238,7 +238,10 @@ export class LogAnalyticsStorageInsights extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._blobContainerNames = config.blobContainerNames;
     this._id = config.id;
@@ -390,13 +393,13 @@ export class LogAnalyticsStorageInsights extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      blob_container_names: cdktf.listMapper(cdktf.stringToTerraform)(this._blobContainerNames),
+      blob_container_names: cdktf.listMapper(cdktf.stringToTerraform, false)(this._blobContainerNames),
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
       storage_account_key: cdktf.stringToTerraform(this._storageAccountKey),
-      table_names: cdktf.listMapper(cdktf.stringToTerraform)(this._tableNames),
+      table_names: cdktf.listMapper(cdktf.stringToTerraform, false)(this._tableNames),
       workspace_id: cdktf.stringToTerraform(this._workspaceId),
       timeouts: logAnalyticsStorageInsightsTimeoutsToTerraform(this._timeouts.internalValue),
     };

@@ -1027,7 +1027,7 @@ export function linuxVirtualMachineScaleSetExtensionToTerraform(struct?: LinuxVi
     force_update_tag: cdktf.stringToTerraform(struct!.forceUpdateTag),
     name: cdktf.stringToTerraform(struct!.name),
     protected_settings: cdktf.stringToTerraform(struct!.protectedSettings),
-    provision_after_extensions: cdktf.listMapper(cdktf.stringToTerraform)(struct!.provisionAfterExtensions),
+    provision_after_extensions: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.provisionAfterExtensions),
     publisher: cdktf.stringToTerraform(struct!.publisher),
     settings: cdktf.stringToTerraform(struct!.settings),
     type: cdktf.stringToTerraform(struct!.type),
@@ -1318,7 +1318,7 @@ export function linuxVirtualMachineScaleSetIdentityToTerraform(struct?: LinuxVir
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.identityIds),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
@@ -1553,7 +1553,7 @@ export function linuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublic
     idle_timeout_in_minutes: cdktf.numberToTerraform(struct!.idleTimeoutInMinutes),
     name: cdktf.stringToTerraform(struct!.name),
     public_ip_prefix_id: cdktf.stringToTerraform(struct!.publicIpPrefixId),
-    ip_tag: cdktf.listMapper(linuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTagToTerraform)(struct!.ipTag),
+    ip_tag: cdktf.listMapper(linuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTagToTerraform, true)(struct!.ipTag),
   }
 }
 
@@ -1769,15 +1769,15 @@ export function linuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationToTerr
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    application_gateway_backend_address_pool_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.applicationGatewayBackendAddressPoolIds),
-    application_security_group_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.applicationSecurityGroupIds),
-    load_balancer_backend_address_pool_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.loadBalancerBackendAddressPoolIds),
-    load_balancer_inbound_nat_rules_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.loadBalancerInboundNatRulesIds),
+    application_gateway_backend_address_pool_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.applicationGatewayBackendAddressPoolIds),
+    application_security_group_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.applicationSecurityGroupIds),
+    load_balancer_backend_address_pool_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.loadBalancerBackendAddressPoolIds),
+    load_balancer_inbound_nat_rules_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.loadBalancerInboundNatRulesIds),
     name: cdktf.stringToTerraform(struct!.name),
     primary: cdktf.booleanToTerraform(struct!.primary),
     subnet_id: cdktf.stringToTerraform(struct!.subnetId),
     version: cdktf.stringToTerraform(struct!.version),
-    public_ip_address: cdktf.listMapper(linuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressToTerraform)(struct!.publicIpAddress),
+    public_ip_address: cdktf.listMapper(linuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressToTerraform, true)(struct!.publicIpAddress),
   }
 }
 
@@ -2073,13 +2073,13 @@ export function linuxVirtualMachineScaleSetNetworkInterfaceToTerraform(struct?: 
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    dns_servers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.dnsServers),
+    dns_servers: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.dnsServers),
     enable_accelerated_networking: cdktf.booleanToTerraform(struct!.enableAcceleratedNetworking),
     enable_ip_forwarding: cdktf.booleanToTerraform(struct!.enableIpForwarding),
     name: cdktf.stringToTerraform(struct!.name),
     network_security_group_id: cdktf.stringToTerraform(struct!.networkSecurityGroupId),
     primary: cdktf.booleanToTerraform(struct!.primary),
-    ip_configuration: cdktf.listMapper(linuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationToTerraform)(struct!.ipConfiguration),
+    ip_configuration: cdktf.listMapper(linuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationToTerraform, true)(struct!.ipConfiguration),
   }
 }
 
@@ -2986,7 +2986,7 @@ export function linuxVirtualMachineScaleSetSecretToTerraform(struct?: LinuxVirtu
   }
   return {
     key_vault_id: cdktf.stringToTerraform(struct!.keyVaultId),
-    certificate: cdktf.listMapper(linuxVirtualMachineScaleSetSecretCertificateToTerraform)(struct!.certificate),
+    certificate: cdktf.listMapper(linuxVirtualMachineScaleSetSecretCertificateToTerraform, true)(struct!.certificate),
   }
 }
 
@@ -3587,7 +3587,10 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._adminPassword = config.adminPassword;
     this._adminUsername = config.adminUsername;
@@ -4482,20 +4485,20 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
       user_data: cdktf.stringToTerraform(this._userData),
       vtpm_enabled: cdktf.booleanToTerraform(this._vtpmEnabled),
       zone_balance: cdktf.booleanToTerraform(this._zoneBalance),
-      zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),
+      zones: cdktf.listMapper(cdktf.stringToTerraform, false)(this._zones),
       additional_capabilities: linuxVirtualMachineScaleSetAdditionalCapabilitiesToTerraform(this._additionalCapabilities.internalValue),
-      admin_ssh_key: cdktf.listMapper(linuxVirtualMachineScaleSetAdminSshKeyToTerraform)(this._adminSshKey.internalValue),
+      admin_ssh_key: cdktf.listMapper(linuxVirtualMachineScaleSetAdminSshKeyToTerraform, true)(this._adminSshKey.internalValue),
       automatic_instance_repair: linuxVirtualMachineScaleSetAutomaticInstanceRepairToTerraform(this._automaticInstanceRepair.internalValue),
       automatic_os_upgrade_policy: linuxVirtualMachineScaleSetAutomaticOsUpgradePolicyToTerraform(this._automaticOsUpgradePolicy.internalValue),
       boot_diagnostics: linuxVirtualMachineScaleSetBootDiagnosticsToTerraform(this._bootDiagnostics.internalValue),
-      data_disk: cdktf.listMapper(linuxVirtualMachineScaleSetDataDiskToTerraform)(this._dataDisk.internalValue),
-      extension: cdktf.listMapper(linuxVirtualMachineScaleSetExtensionToTerraform)(this._extension.internalValue),
+      data_disk: cdktf.listMapper(linuxVirtualMachineScaleSetDataDiskToTerraform, true)(this._dataDisk.internalValue),
+      extension: cdktf.listMapper(linuxVirtualMachineScaleSetExtensionToTerraform, true)(this._extension.internalValue),
       identity: linuxVirtualMachineScaleSetIdentityToTerraform(this._identity.internalValue),
-      network_interface: cdktf.listMapper(linuxVirtualMachineScaleSetNetworkInterfaceToTerraform)(this._networkInterface.internalValue),
+      network_interface: cdktf.listMapper(linuxVirtualMachineScaleSetNetworkInterfaceToTerraform, true)(this._networkInterface.internalValue),
       os_disk: linuxVirtualMachineScaleSetOsDiskToTerraform(this._osDisk.internalValue),
       plan: linuxVirtualMachineScaleSetPlanToTerraform(this._plan.internalValue),
       rolling_upgrade_policy: linuxVirtualMachineScaleSetRollingUpgradePolicyToTerraform(this._rollingUpgradePolicy.internalValue),
-      secret: cdktf.listMapper(linuxVirtualMachineScaleSetSecretToTerraform)(this._secret.internalValue),
+      secret: cdktf.listMapper(linuxVirtualMachineScaleSetSecretToTerraform, true)(this._secret.internalValue),
       source_image_reference: linuxVirtualMachineScaleSetSourceImageReferenceToTerraform(this._sourceImageReference.internalValue),
       terminate_notification: linuxVirtualMachineScaleSetTerminateNotificationToTerraform(this._terminateNotification.internalValue),
       termination_notification: linuxVirtualMachineScaleSetTerminationNotificationToTerraform(this._terminationNotification.internalValue),

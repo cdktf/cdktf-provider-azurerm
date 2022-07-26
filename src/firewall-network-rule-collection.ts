@@ -93,14 +93,14 @@ export function firewallNetworkRuleCollectionRuleToTerraform(struct?: FirewallNe
   }
   return {
     description: cdktf.stringToTerraform(struct!.description),
-    destination_addresses: cdktf.listMapper(cdktf.stringToTerraform)(struct!.destinationAddresses),
-    destination_fqdns: cdktf.listMapper(cdktf.stringToTerraform)(struct!.destinationFqdns),
-    destination_ip_groups: cdktf.listMapper(cdktf.stringToTerraform)(struct!.destinationIpGroups),
-    destination_ports: cdktf.listMapper(cdktf.stringToTerraform)(struct!.destinationPorts),
+    destination_addresses: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.destinationAddresses),
+    destination_fqdns: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.destinationFqdns),
+    destination_ip_groups: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.destinationIpGroups),
+    destination_ports: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.destinationPorts),
     name: cdktf.stringToTerraform(struct!.name),
-    protocols: cdktf.listMapper(cdktf.stringToTerraform)(struct!.protocols),
-    source_addresses: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sourceAddresses),
-    source_ip_groups: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sourceIpGroups),
+    protocols: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.protocols),
+    source_addresses: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.sourceAddresses),
+    source_ip_groups: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.sourceIpGroups),
   }
 }
 
@@ -540,7 +540,10 @@ export class FirewallNetworkRuleCollection extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._action = config.action;
     this._azureFirewallName = config.azureFirewallName;
@@ -678,7 +681,7 @@ export class FirewallNetworkRuleCollection extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       priority: cdktf.numberToTerraform(this._priority),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      rule: cdktf.listMapper(firewallNetworkRuleCollectionRuleToTerraform)(this._rule.internalValue),
+      rule: cdktf.listMapper(firewallNetworkRuleCollectionRuleToTerraform, true)(this._rule.internalValue),
       timeouts: firewallNetworkRuleCollectionTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

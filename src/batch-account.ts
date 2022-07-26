@@ -179,7 +179,7 @@ export function batchAccountIdentityToTerraform(struct?: BatchAccountIdentityOut
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.identityIds),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
@@ -539,7 +539,10 @@ export class BatchAccount extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._encryption.internalValue = config.encryption;
     this._id = config.id;
@@ -763,7 +766,7 @@ export class BatchAccount extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      encryption: cdktf.listMapper(batchAccountEncryptionToTerraform)(this._encryption.internalValue),
+      encryption: cdktf.listMapper(batchAccountEncryptionToTerraform, false)(this._encryption.internalValue),
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),

@@ -220,7 +220,7 @@ export function eventgridDomainIdentityToTerraform(struct?: EventgridDomainIdent
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.identityIds),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
@@ -813,7 +813,10 @@ export class EventgridDomain extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._autoCreateTopicWithFirstSubscription = config.autoCreateTopicWithFirstSubscription;
     this._autoDeleteTopicWithLastSubscription = config.autoDeleteTopicWithLastSubscription;
@@ -1091,7 +1094,7 @@ export class EventgridDomain extends cdktf.TerraformResource {
       auto_create_topic_with_first_subscription: cdktf.booleanToTerraform(this._autoCreateTopicWithFirstSubscription),
       auto_delete_topic_with_last_subscription: cdktf.booleanToTerraform(this._autoDeleteTopicWithLastSubscription),
       id: cdktf.stringToTerraform(this._id),
-      inbound_ip_rule: cdktf.listMapper(eventgridDomainInboundIpRuleToTerraform)(this._inboundIpRule.internalValue),
+      inbound_ip_rule: cdktf.listMapper(eventgridDomainInboundIpRuleToTerraform, false)(this._inboundIpRule.internalValue),
       input_schema: cdktf.stringToTerraform(this._inputSchema),
       local_auth_enabled: cdktf.booleanToTerraform(this._localAuthEnabled),
       location: cdktf.stringToTerraform(this._location),

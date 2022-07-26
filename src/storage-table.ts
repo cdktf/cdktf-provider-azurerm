@@ -200,7 +200,7 @@ export function storageTableAclToTerraform(struct?: StorageTableAcl | cdktf.IRes
   }
   return {
     id: cdktf.stringToTerraform(struct!.id),
-    access_policy: cdktf.listMapper(storageTableAclAccessPolicyToTerraform)(struct!.accessPolicy),
+    access_policy: cdktf.listMapper(storageTableAclAccessPolicyToTerraform, true)(struct!.accessPolicy),
   }
 }
 
@@ -492,7 +492,10 @@ export class StorageTable extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._name = config.name;
@@ -588,7 +591,7 @@ export class StorageTable extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       storage_account_name: cdktf.stringToTerraform(this._storageAccountName),
-      acl: cdktf.listMapper(storageTableAclToTerraform)(this._acl.internalValue),
+      acl: cdktf.listMapper(storageTableAclToTerraform, true)(this._acl.internalValue),
       timeouts: storageTableTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

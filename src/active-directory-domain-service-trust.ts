@@ -230,7 +230,10 @@ export class ActiveDirectoryDomainServiceTrust extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._domainServiceId = config.domainServiceId;
     this._id = config.id;
@@ -352,7 +355,7 @@ export class ActiveDirectoryDomainServiceTrust extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       password: cdktf.stringToTerraform(this._password),
-      trusted_domain_dns_ips: cdktf.listMapper(cdktf.stringToTerraform)(this._trustedDomainDnsIps),
+      trusted_domain_dns_ips: cdktf.listMapper(cdktf.stringToTerraform, false)(this._trustedDomainDnsIps),
       trusted_domain_fqdn: cdktf.stringToTerraform(this._trustedDomainFqdn),
       timeouts: activeDirectoryDomainServiceTrustTimeoutsToTerraform(this._timeouts.internalValue),
     };

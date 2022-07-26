@@ -429,7 +429,7 @@ export function sentinelAlertRuleScheduledEntityMappingToTerraform(struct?: Sent
   }
   return {
     entity_type: cdktf.stringToTerraform(struct!.entityType),
-    field_mapping: cdktf.listMapper(sentinelAlertRuleScheduledEntityMappingFieldMappingToTerraform)(struct!.fieldMapping),
+    field_mapping: cdktf.listMapper(sentinelAlertRuleScheduledEntityMappingFieldMappingToTerraform, true)(struct!.fieldMapping),
   }
 }
 
@@ -630,9 +630,9 @@ export function sentinelAlertRuleScheduledIncidentConfigurationGroupingToTerrafo
   return {
     enabled: cdktf.booleanToTerraform(struct!.enabled),
     entity_matching_method: cdktf.stringToTerraform(struct!.entityMatchingMethod),
-    group_by_alert_details: cdktf.listMapper(cdktf.stringToTerraform)(struct!.groupByAlertDetails),
-    group_by_custom_details: cdktf.listMapper(cdktf.stringToTerraform)(struct!.groupByCustomDetails),
-    group_by_entities: cdktf.listMapper(cdktf.stringToTerraform)(struct!.groupByEntities),
+    group_by_alert_details: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.groupByAlertDetails),
+    group_by_custom_details: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.groupByCustomDetails),
+    group_by_entities: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.groupByEntities),
     lookback_duration: cdktf.stringToTerraform(struct!.lookbackDuration),
     reopen_closed_incidents: cdktf.booleanToTerraform(struct!.reopenClosedIncidents),
   }
@@ -1095,7 +1095,10 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._alertRuleTemplateGuid = config.alertRuleTemplateGuid;
     this._alertRuleTemplateVersion = config.alertRuleTemplateVersion;
@@ -1500,11 +1503,11 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
       severity: cdktf.stringToTerraform(this._severity),
       suppression_duration: cdktf.stringToTerraform(this._suppressionDuration),
       suppression_enabled: cdktf.booleanToTerraform(this._suppressionEnabled),
-      tactics: cdktf.listMapper(cdktf.stringToTerraform)(this._tactics),
+      tactics: cdktf.listMapper(cdktf.stringToTerraform, false)(this._tactics),
       trigger_operator: cdktf.stringToTerraform(this._triggerOperator),
       trigger_threshold: cdktf.numberToTerraform(this._triggerThreshold),
-      alert_details_override: cdktf.listMapper(sentinelAlertRuleScheduledAlertDetailsOverrideToTerraform)(this._alertDetailsOverride.internalValue),
-      entity_mapping: cdktf.listMapper(sentinelAlertRuleScheduledEntityMappingToTerraform)(this._entityMapping.internalValue),
+      alert_details_override: cdktf.listMapper(sentinelAlertRuleScheduledAlertDetailsOverrideToTerraform, true)(this._alertDetailsOverride.internalValue),
+      entity_mapping: cdktf.listMapper(sentinelAlertRuleScheduledEntityMappingToTerraform, true)(this._entityMapping.internalValue),
       event_grouping: sentinelAlertRuleScheduledEventGroupingToTerraform(this._eventGrouping.internalValue),
       incident_configuration: sentinelAlertRuleScheduledIncidentConfigurationToTerraform(this._incidentConfiguration.internalValue),
       timeouts: sentinelAlertRuleScheduledTimeoutsToTerraform(this._timeouts.internalValue),

@@ -605,7 +605,10 @@ export class DataFactoryTriggerTumblingWindow extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._activated = config.activated;
     this._additionalProperties = config.additionalProperties;
@@ -892,7 +895,7 @@ export class DataFactoryTriggerTumblingWindow extends cdktf.TerraformResource {
     return {
       activated: cdktf.booleanToTerraform(this._activated),
       additional_properties: cdktf.hashMapper(cdktf.stringToTerraform)(this._additionalProperties),
-      annotations: cdktf.listMapper(cdktf.stringToTerraform)(this._annotations),
+      annotations: cdktf.listMapper(cdktf.stringToTerraform, false)(this._annotations),
       data_factory_id: cdktf.stringToTerraform(this._dataFactoryId),
       delay: cdktf.stringToTerraform(this._delay),
       description: cdktf.stringToTerraform(this._description),
@@ -906,7 +909,7 @@ export class DataFactoryTriggerTumblingWindow extends cdktf.TerraformResource {
       pipeline: dataFactoryTriggerTumblingWindowPipelineToTerraform(this._pipeline.internalValue),
       retry: dataFactoryTriggerTumblingWindowRetryToTerraform(this._retry.internalValue),
       timeouts: dataFactoryTriggerTumblingWindowTimeoutsToTerraform(this._timeouts.internalValue),
-      trigger_dependency: cdktf.listMapper(dataFactoryTriggerTumblingWindowTriggerDependencyToTerraform)(this._triggerDependency.internalValue),
+      trigger_dependency: cdktf.listMapper(dataFactoryTriggerTumblingWindowTriggerDependencyToTerraform, true)(this._triggerDependency.internalValue),
     };
   }
 }

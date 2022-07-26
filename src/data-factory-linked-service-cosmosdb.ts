@@ -254,7 +254,10 @@ export class DataFactoryLinkedServiceCosmosdb extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._accountEndpoint = config.accountEndpoint;
     this._accountKey = config.accountKey;
@@ -486,7 +489,7 @@ export class DataFactoryLinkedServiceCosmosdb extends cdktf.TerraformResource {
       account_endpoint: cdktf.stringToTerraform(this._accountEndpoint),
       account_key: cdktf.stringToTerraform(this._accountKey),
       additional_properties: cdktf.hashMapper(cdktf.stringToTerraform)(this._additionalProperties),
-      annotations: cdktf.listMapper(cdktf.stringToTerraform)(this._annotations),
+      annotations: cdktf.listMapper(cdktf.stringToTerraform, false)(this._annotations),
       connection_string: cdktf.stringToTerraform(this._connectionString),
       data_factory_id: cdktf.stringToTerraform(this._dataFactoryId),
       database: cdktf.stringToTerraform(this._database),

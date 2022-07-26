@@ -813,7 +813,10 @@ export class MediaTransform extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._description = config.description;
     this._id = config.id;
@@ -942,7 +945,7 @@ export class MediaTransform extends cdktf.TerraformResource {
       media_services_account_name: cdktf.stringToTerraform(this._mediaServicesAccountName),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      output: cdktf.listMapper(mediaTransformOutputToTerraform)(this._output.internalValue),
+      output: cdktf.listMapper(mediaTransformOutputToTerraform, true)(this._output.internalValue),
       timeouts: mediaTransformTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

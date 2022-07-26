@@ -234,7 +234,10 @@ export class BackupProtectedVm extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._backupPolicyId = config.backupPolicyId;
     this._excludeDiskLuns = config.excludeDiskLuns;
@@ -376,9 +379,9 @@ export class BackupProtectedVm extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       backup_policy_id: cdktf.stringToTerraform(this._backupPolicyId),
-      exclude_disk_luns: cdktf.listMapper(cdktf.numberToTerraform)(this._excludeDiskLuns),
+      exclude_disk_luns: cdktf.listMapper(cdktf.numberToTerraform, false)(this._excludeDiskLuns),
       id: cdktf.stringToTerraform(this._id),
-      include_disk_luns: cdktf.listMapper(cdktf.numberToTerraform)(this._includeDiskLuns),
+      include_disk_luns: cdktf.listMapper(cdktf.numberToTerraform, false)(this._includeDiskLuns),
       recovery_vault_name: cdktf.stringToTerraform(this._recoveryVaultName),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       source_vm_id: cdktf.stringToTerraform(this._sourceVmId),

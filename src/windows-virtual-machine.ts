@@ -486,7 +486,7 @@ export function windowsVirtualMachineIdentityToTerraform(struct?: WindowsVirtual
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.identityIds),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
@@ -1182,7 +1182,7 @@ export function windowsVirtualMachineSecretToTerraform(struct?: WindowsVirtualMa
   }
   return {
     key_vault_id: cdktf.stringToTerraform(struct!.keyVaultId),
-    certificate: cdktf.listMapper(windowsVirtualMachineSecretCertificateToTerraform)(struct!.certificate),
+    certificate: cdktf.listMapper(windowsVirtualMachineSecretCertificateToTerraform, true)(struct!.certificate),
   }
 }
 
@@ -1815,7 +1815,10 @@ export class WindowsVirtualMachine extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._adminPassword = config.adminPassword;
     this._adminUsername = config.adminUsername;
@@ -2649,7 +2652,7 @@ export class WindowsVirtualMachine extends cdktf.TerraformResource {
       location: cdktf.stringToTerraform(this._location),
       max_bid_price: cdktf.numberToTerraform(this._maxBidPrice),
       name: cdktf.stringToTerraform(this._name),
-      network_interface_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._networkInterfaceIds),
+      network_interface_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(this._networkInterfaceIds),
       patch_mode: cdktf.stringToTerraform(this._patchMode),
       platform_fault_domain: cdktf.numberToTerraform(this._platformFaultDomain),
       priority: cdktf.stringToTerraform(this._priority),
@@ -2666,16 +2669,16 @@ export class WindowsVirtualMachine extends cdktf.TerraformResource {
       vtpm_enabled: cdktf.booleanToTerraform(this._vtpmEnabled),
       zone: cdktf.stringToTerraform(this._zone),
       additional_capabilities: windowsVirtualMachineAdditionalCapabilitiesToTerraform(this._additionalCapabilities.internalValue),
-      additional_unattend_content: cdktf.listMapper(windowsVirtualMachineAdditionalUnattendContentToTerraform)(this._additionalUnattendContent.internalValue),
+      additional_unattend_content: cdktf.listMapper(windowsVirtualMachineAdditionalUnattendContentToTerraform, true)(this._additionalUnattendContent.internalValue),
       boot_diagnostics: windowsVirtualMachineBootDiagnosticsToTerraform(this._bootDiagnostics.internalValue),
       identity: windowsVirtualMachineIdentityToTerraform(this._identity.internalValue),
       os_disk: windowsVirtualMachineOsDiskToTerraform(this._osDisk.internalValue),
       plan: windowsVirtualMachinePlanToTerraform(this._plan.internalValue),
-      secret: cdktf.listMapper(windowsVirtualMachineSecretToTerraform)(this._secret.internalValue),
+      secret: cdktf.listMapper(windowsVirtualMachineSecretToTerraform, true)(this._secret.internalValue),
       source_image_reference: windowsVirtualMachineSourceImageReferenceToTerraform(this._sourceImageReference.internalValue),
       termination_notification: windowsVirtualMachineTerminationNotificationToTerraform(this._terminationNotification.internalValue),
       timeouts: windowsVirtualMachineTimeoutsToTerraform(this._timeouts.internalValue),
-      winrm_listener: cdktf.listMapper(windowsVirtualMachineWinrmListenerToTerraform)(this._winrmListener.internalValue),
+      winrm_listener: cdktf.listMapper(windowsVirtualMachineWinrmListenerToTerraform, true)(this._winrmListener.internalValue),
     };
   }
 }

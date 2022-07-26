@@ -348,7 +348,10 @@ export class SpringCloudContainerDeployment extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._addonJson = config.addonJson;
     this._arguments = config.arguments;
@@ -572,8 +575,8 @@ export class SpringCloudContainerDeployment extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       addon_json: cdktf.stringToTerraform(this._addonJson),
-      arguments: cdktf.listMapper(cdktf.stringToTerraform)(this._arguments),
-      commands: cdktf.listMapper(cdktf.stringToTerraform)(this._commands),
+      arguments: cdktf.listMapper(cdktf.stringToTerraform, false)(this._arguments),
+      commands: cdktf.listMapper(cdktf.stringToTerraform, false)(this._commands),
       environment_variables: cdktf.hashMapper(cdktf.stringToTerraform)(this._environmentVariables),
       id: cdktf.stringToTerraform(this._id),
       image: cdktf.stringToTerraform(this._image),

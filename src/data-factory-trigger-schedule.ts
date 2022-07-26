@@ -354,11 +354,11 @@ export function dataFactoryTriggerScheduleScheduleToTerraform(struct?: DataFacto
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    days_of_month: cdktf.listMapper(cdktf.numberToTerraform)(struct!.daysOfMonth),
-    days_of_week: cdktf.listMapper(cdktf.stringToTerraform)(struct!.daysOfWeek),
-    hours: cdktf.listMapper(cdktf.numberToTerraform)(struct!.hours),
-    minutes: cdktf.listMapper(cdktf.numberToTerraform)(struct!.minutes),
-    monthly: cdktf.listMapper(dataFactoryTriggerScheduleScheduleMonthlyToTerraform)(struct!.monthly),
+    days_of_month: cdktf.listMapper(cdktf.numberToTerraform, false)(struct!.daysOfMonth),
+    days_of_week: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.daysOfWeek),
+    hours: cdktf.listMapper(cdktf.numberToTerraform, false)(struct!.hours),
+    minutes: cdktf.listMapper(cdktf.numberToTerraform, false)(struct!.minutes),
+    monthly: cdktf.listMapper(dataFactoryTriggerScheduleScheduleMonthlyToTerraform, true)(struct!.monthly),
   }
 }
 
@@ -687,7 +687,10 @@ export class DataFactoryTriggerSchedule extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._activated = config.activated;
     this._annotations = config.annotations;
@@ -968,7 +971,7 @@ export class DataFactoryTriggerSchedule extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       activated: cdktf.booleanToTerraform(this._activated),
-      annotations: cdktf.listMapper(cdktf.stringToTerraform)(this._annotations),
+      annotations: cdktf.listMapper(cdktf.stringToTerraform, false)(this._annotations),
       data_factory_id: cdktf.stringToTerraform(this._dataFactoryId),
       description: cdktf.stringToTerraform(this._description),
       end_time: cdktf.stringToTerraform(this._endTime),
@@ -980,7 +983,7 @@ export class DataFactoryTriggerSchedule extends cdktf.TerraformResource {
       pipeline_parameters: cdktf.hashMapper(cdktf.stringToTerraform)(this._pipelineParameters),
       start_time: cdktf.stringToTerraform(this._startTime),
       time_zone: cdktf.stringToTerraform(this._timeZone),
-      pipeline: cdktf.listMapper(dataFactoryTriggerSchedulePipelineToTerraform)(this._pipeline.internalValue),
+      pipeline: cdktf.listMapper(dataFactoryTriggerSchedulePipelineToTerraform, true)(this._pipeline.internalValue),
       schedule: dataFactoryTriggerScheduleScheduleToTerraform(this._schedule.internalValue),
       timeouts: dataFactoryTriggerScheduleTimeoutsToTerraform(this._timeouts.internalValue),
     };

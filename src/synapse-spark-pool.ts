@@ -606,7 +606,10 @@ export class SynapseSparkPool extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._cacheSize = config.cacheSize;
     this._computeIsolationEnabled = config.computeIsolationEnabled;

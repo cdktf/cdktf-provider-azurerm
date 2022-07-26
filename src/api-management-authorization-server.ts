@@ -406,7 +406,10 @@ export class ApiManagementAuthorizationServer extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._apiManagementName = config.apiManagementName;
     this._authorizationEndpoint = config.authorizationEndpoint;
@@ -752,16 +755,16 @@ export class ApiManagementAuthorizationServer extends cdktf.TerraformResource {
     return {
       api_management_name: cdktf.stringToTerraform(this._apiManagementName),
       authorization_endpoint: cdktf.stringToTerraform(this._authorizationEndpoint),
-      authorization_methods: cdktf.listMapper(cdktf.stringToTerraform)(this._authorizationMethods),
-      bearer_token_sending_methods: cdktf.listMapper(cdktf.stringToTerraform)(this._bearerTokenSendingMethods),
-      client_authentication_method: cdktf.listMapper(cdktf.stringToTerraform)(this._clientAuthenticationMethod),
+      authorization_methods: cdktf.listMapper(cdktf.stringToTerraform, false)(this._authorizationMethods),
+      bearer_token_sending_methods: cdktf.listMapper(cdktf.stringToTerraform, false)(this._bearerTokenSendingMethods),
+      client_authentication_method: cdktf.listMapper(cdktf.stringToTerraform, false)(this._clientAuthenticationMethod),
       client_id: cdktf.stringToTerraform(this._clientId),
       client_registration_endpoint: cdktf.stringToTerraform(this._clientRegistrationEndpoint),
       client_secret: cdktf.stringToTerraform(this._clientSecret),
       default_scope: cdktf.stringToTerraform(this._defaultScope),
       description: cdktf.stringToTerraform(this._description),
       display_name: cdktf.stringToTerraform(this._displayName),
-      grant_types: cdktf.listMapper(cdktf.stringToTerraform)(this._grantTypes),
+      grant_types: cdktf.listMapper(cdktf.stringToTerraform, false)(this._grantTypes),
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
@@ -770,7 +773,7 @@ export class ApiManagementAuthorizationServer extends cdktf.TerraformResource {
       support_state: cdktf.booleanToTerraform(this._supportState),
       token_endpoint: cdktf.stringToTerraform(this._tokenEndpoint),
       timeouts: apiManagementAuthorizationServerTimeoutsToTerraform(this._timeouts.internalValue),
-      token_body_parameter: cdktf.listMapper(apiManagementAuthorizationServerTokenBodyParameterToTerraform)(this._tokenBodyParameter.internalValue),
+      token_body_parameter: cdktf.listMapper(apiManagementAuthorizationServerTokenBodyParameterToTerraform, true)(this._tokenBodyParameter.internalValue),
     };
   }
 }

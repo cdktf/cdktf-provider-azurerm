@@ -230,7 +230,10 @@ export class IotTimeSeriesInsightsAccessPolicy extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._description = config.description;
     this._id = config.id;
@@ -355,7 +358,7 @@ export class IotTimeSeriesInsightsAccessPolicy extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       principal_object_id: cdktf.stringToTerraform(this._principalObjectId),
-      roles: cdktf.listMapper(cdktf.stringToTerraform)(this._roles),
+      roles: cdktf.listMapper(cdktf.stringToTerraform, false)(this._roles),
       time_series_insights_environment_id: cdktf.stringToTerraform(this._timeSeriesInsightsEnvironmentId),
       timeouts: iotTimeSeriesInsightsAccessPolicyTimeoutsToTerraform(this._timeouts.internalValue),
     };

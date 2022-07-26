@@ -271,11 +271,11 @@ export function springCloudGatewayCorsToTerraform(struct?: SpringCloudGatewayCor
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    allowed_headers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedHeaders),
-    allowed_methods: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedMethods),
-    allowed_origins: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedOrigins),
+    allowed_headers: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedHeaders),
+    allowed_methods: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedMethods),
+    allowed_origins: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedOrigins),
     credentials_allowed: cdktf.booleanToTerraform(struct!.credentialsAllowed),
-    exposed_headers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.exposedHeaders),
+    exposed_headers: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.exposedHeaders),
     max_age_seconds: cdktf.numberToTerraform(struct!.maxAgeSeconds),
   }
 }
@@ -558,7 +558,7 @@ export function springCloudGatewaySsoToTerraform(struct?: SpringCloudGatewaySsoO
     client_id: cdktf.stringToTerraform(struct!.clientId),
     client_secret: cdktf.stringToTerraform(struct!.clientSecret),
     issuer_uri: cdktf.stringToTerraform(struct!.issuerUri),
-    scope: cdktf.listMapper(cdktf.stringToTerraform)(struct!.scope),
+    scope: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.scope),
   }
 }
 
@@ -865,7 +865,10 @@ export class SpringCloudGateway extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._httpsOnly = config.httpsOnly;
     this._id = config.id;

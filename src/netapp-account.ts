@@ -76,7 +76,7 @@ export function netappAccountActiveDirectoryToTerraform(struct?: NetappAccountAc
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    dns_servers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.dnsServers),
+    dns_servers: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.dnsServers),
     domain: cdktf.stringToTerraform(struct!.domain),
     organizational_unit: cdktf.stringToTerraform(struct!.organizationalUnit),
     password: cdktf.stringToTerraform(struct!.password),
@@ -417,7 +417,10 @@ export class NetappAccount extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._location = config.location;

@@ -439,7 +439,10 @@ export class RecoveryServicesVault extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._crossRegionRestoreEnabled = config.crossRegionRestoreEnabled;
     this._id = config.id;

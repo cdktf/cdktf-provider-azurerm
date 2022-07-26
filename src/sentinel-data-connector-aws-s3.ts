@@ -230,7 +230,10 @@ export class SentinelDataConnectorAwsS3 extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._awsRoleArn = config.awsRoleArn;
     this._destinationTable = config.destinationTable;
@@ -353,7 +356,7 @@ export class SentinelDataConnectorAwsS3 extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       log_analytics_workspace_id: cdktf.stringToTerraform(this._logAnalyticsWorkspaceId),
       name: cdktf.stringToTerraform(this._name),
-      sqs_urls: cdktf.listMapper(cdktf.stringToTerraform)(this._sqsUrls),
+      sqs_urls: cdktf.listMapper(cdktf.stringToTerraform, false)(this._sqsUrls),
       timeouts: sentinelDataConnectorAwsS3TimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

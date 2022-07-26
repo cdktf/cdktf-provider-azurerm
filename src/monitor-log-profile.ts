@@ -325,7 +325,10 @@ export class MonitorLogProfile extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._categories = config.categories;
     this._id = config.id;
@@ -463,9 +466,9 @@ export class MonitorLogProfile extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      categories: cdktf.listMapper(cdktf.stringToTerraform)(this._categories),
+      categories: cdktf.listMapper(cdktf.stringToTerraform, false)(this._categories),
       id: cdktf.stringToTerraform(this._id),
-      locations: cdktf.listMapper(cdktf.stringToTerraform)(this._locations),
+      locations: cdktf.listMapper(cdktf.stringToTerraform, false)(this._locations),
       name: cdktf.stringToTerraform(this._name),
       servicebus_rule_id: cdktf.stringToTerraform(this._servicebusRuleId),
       storage_account_id: cdktf.stringToTerraform(this._storageAccountId),

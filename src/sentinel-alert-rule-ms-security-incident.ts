@@ -250,7 +250,10 @@ export class SentinelAlertRuleMsSecurityIncident extends cdktf.TerraformResource
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._alertRuleTemplateGuid = config.alertRuleTemplateGuid;
     this._description = config.description;
@@ -456,14 +459,14 @@ export class SentinelAlertRuleMsSecurityIncident extends cdktf.TerraformResource
       alert_rule_template_guid: cdktf.stringToTerraform(this._alertRuleTemplateGuid),
       description: cdktf.stringToTerraform(this._description),
       display_name: cdktf.stringToTerraform(this._displayName),
-      display_name_exclude_filter: cdktf.listMapper(cdktf.stringToTerraform)(this._displayNameExcludeFilter),
-      display_name_filter: cdktf.listMapper(cdktf.stringToTerraform)(this._displayNameFilter),
+      display_name_exclude_filter: cdktf.listMapper(cdktf.stringToTerraform, false)(this._displayNameExcludeFilter),
+      display_name_filter: cdktf.listMapper(cdktf.stringToTerraform, false)(this._displayNameFilter),
       enabled: cdktf.booleanToTerraform(this._enabled),
       id: cdktf.stringToTerraform(this._id),
       log_analytics_workspace_id: cdktf.stringToTerraform(this._logAnalyticsWorkspaceId),
       name: cdktf.stringToTerraform(this._name),
       product_filter: cdktf.stringToTerraform(this._productFilter),
-      severity_filter: cdktf.listMapper(cdktf.stringToTerraform)(this._severityFilter),
+      severity_filter: cdktf.listMapper(cdktf.stringToTerraform, false)(this._severityFilter),
       timeouts: sentinelAlertRuleMsSecurityIncidentTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

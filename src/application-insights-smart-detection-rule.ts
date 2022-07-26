@@ -230,7 +230,10 @@ export class ApplicationInsightsSmartDetectionRule extends cdktf.TerraformResour
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._additionalEmailRecipients = config.additionalEmailRecipients;
     this._applicationInsightsId = config.applicationInsightsId;
@@ -357,7 +360,7 @@ export class ApplicationInsightsSmartDetectionRule extends cdktf.TerraformResour
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      additional_email_recipients: cdktf.listMapper(cdktf.stringToTerraform)(this._additionalEmailRecipients),
+      additional_email_recipients: cdktf.listMapper(cdktf.stringToTerraform, false)(this._additionalEmailRecipients),
       application_insights_id: cdktf.stringToTerraform(this._applicationInsightsId),
       enabled: cdktf.booleanToTerraform(this._enabled),
       id: cdktf.stringToTerraform(this._id),

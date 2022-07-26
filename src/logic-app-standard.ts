@@ -411,10 +411,10 @@ export function logicAppStandardSiteConfigIpRestrictionHeadersToTerraform(struct
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    x_azure_fdid: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xAzureFdid),
-    x_fd_health_probe: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xFdHealthProbe),
-    x_forwarded_for: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xForwardedFor),
-    x_forwarded_host: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xForwardedHost),
+    x_azure_fdid: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xAzureFdid),
+    x_fd_health_probe: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xFdHealthProbe),
+    x_forwarded_for: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xForwardedFor),
+    x_forwarded_host: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xForwardedHost),
   }
 }
 
@@ -602,7 +602,7 @@ export function logicAppStandardSiteConfigIpRestrictionToTerraform(struct?: Logi
   }
   return {
     action: cdktf.stringToTerraform(struct!.action),
-    headers: cdktf.listMapper(logicAppStandardSiteConfigIpRestrictionHeadersToTerraform)(struct!.headers),
+    headers: cdktf.listMapper(logicAppStandardSiteConfigIpRestrictionHeadersToTerraform, false)(struct!.headers),
     ip_address: cdktf.stringToTerraform(struct!.ipAddress),
     name: cdktf.stringToTerraform(struct!.name),
     priority: cdktf.numberToTerraform(struct!.priority),
@@ -840,7 +840,7 @@ export function logicAppStandardSiteConfigCorsToTerraform(struct?: LogicAppStand
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    allowed_origins: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedOrigins),
+    allowed_origins: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedOrigins),
     support_credentials: cdktf.booleanToTerraform(struct!.supportCredentials),
   }
 }
@@ -994,7 +994,7 @@ export function logicAppStandardSiteConfigToTerraform(struct?: LogicAppStandardS
     ftps_state: cdktf.stringToTerraform(struct!.ftpsState),
     health_check_path: cdktf.stringToTerraform(struct!.healthCheckPath),
     http2_enabled: cdktf.booleanToTerraform(struct!.http2Enabled),
-    ip_restriction: cdktf.listMapper(logicAppStandardSiteConfigIpRestrictionToTerraform)(struct!.ipRestriction),
+    ip_restriction: cdktf.listMapper(logicAppStandardSiteConfigIpRestrictionToTerraform, false)(struct!.ipRestriction),
     linux_fx_version: cdktf.stringToTerraform(struct!.linuxFxVersion),
     min_tls_version: cdktf.stringToTerraform(struct!.minTlsVersion),
     pre_warmed_instance_count: cdktf.numberToTerraform(struct!.preWarmedInstanceCount),
@@ -1573,7 +1573,10 @@ export class LogicAppStandard extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._appServicePlanId = config.appServicePlanId;
     this._appSettings = config.appSettings;
@@ -1974,7 +1977,7 @@ export class LogicAppStandard extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       use_extension_bundle: cdktf.booleanToTerraform(this._useExtensionBundle),
       version: cdktf.stringToTerraform(this._version),
-      connection_string: cdktf.listMapper(logicAppStandardConnectionStringToTerraform)(this._connectionString.internalValue),
+      connection_string: cdktf.listMapper(logicAppStandardConnectionStringToTerraform, true)(this._connectionString.internalValue),
       identity: logicAppStandardIdentityToTerraform(this._identity.internalValue),
       site_config: logicAppStandardSiteConfigToTerraform(this._siteConfig.internalValue),
       timeouts: logicAppStandardTimeoutsToTerraform(this._timeouts.internalValue),

@@ -532,7 +532,10 @@ export class TrafficManagerNestedEndpoint extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._enabled = config.enabled;
     this._endpointLocation = config.endpointLocation;
@@ -791,7 +794,7 @@ export class TrafficManagerNestedEndpoint extends cdktf.TerraformResource {
     return {
       enabled: cdktf.booleanToTerraform(this._enabled),
       endpoint_location: cdktf.stringToTerraform(this._endpointLocation),
-      geo_mappings: cdktf.listMapper(cdktf.stringToTerraform)(this._geoMappings),
+      geo_mappings: cdktf.listMapper(cdktf.stringToTerraform, false)(this._geoMappings),
       id: cdktf.stringToTerraform(this._id),
       minimum_child_endpoints: cdktf.numberToTerraform(this._minimumChildEndpoints),
       minimum_required_child_endpoints_ipv4: cdktf.numberToTerraform(this._minimumRequiredChildEndpointsIpv4),
@@ -801,8 +804,8 @@ export class TrafficManagerNestedEndpoint extends cdktf.TerraformResource {
       profile_id: cdktf.stringToTerraform(this._profileId),
       target_resource_id: cdktf.stringToTerraform(this._targetResourceId),
       weight: cdktf.numberToTerraform(this._weight),
-      custom_header: cdktf.listMapper(trafficManagerNestedEndpointCustomHeaderToTerraform)(this._customHeader.internalValue),
-      subnet: cdktf.listMapper(trafficManagerNestedEndpointSubnetToTerraform)(this._subnet.internalValue),
+      custom_header: cdktf.listMapper(trafficManagerNestedEndpointCustomHeaderToTerraform, true)(this._customHeader.internalValue),
+      subnet: cdktf.listMapper(trafficManagerNestedEndpointSubnetToTerraform, true)(this._subnet.internalValue),
       timeouts: trafficManagerNestedEndpointTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

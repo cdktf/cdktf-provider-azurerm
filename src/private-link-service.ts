@@ -448,7 +448,10 @@ export class PrivateLinkService extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._autoApprovalSubscriptionIds = config.autoApprovalSubscriptionIds;
     this._enableProxyProtocol = config.enableProxyProtocol;
@@ -656,17 +659,17 @@ export class PrivateLinkService extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      auto_approval_subscription_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._autoApprovalSubscriptionIds),
+      auto_approval_subscription_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(this._autoApprovalSubscriptionIds),
       enable_proxy_protocol: cdktf.booleanToTerraform(this._enableProxyProtocol),
-      fqdns: cdktf.listMapper(cdktf.stringToTerraform)(this._fqdns),
+      fqdns: cdktf.listMapper(cdktf.stringToTerraform, false)(this._fqdns),
       id: cdktf.stringToTerraform(this._id),
-      load_balancer_frontend_ip_configuration_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._loadBalancerFrontendIpConfigurationIds),
+      load_balancer_frontend_ip_configuration_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(this._loadBalancerFrontendIpConfigurationIds),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
-      visibility_subscription_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._visibilitySubscriptionIds),
-      nat_ip_configuration: cdktf.listMapper(privateLinkServiceNatIpConfigurationToTerraform)(this._natIpConfiguration.internalValue),
+      visibility_subscription_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(this._visibilitySubscriptionIds),
+      nat_ip_configuration: cdktf.listMapper(privateLinkServiceNatIpConfigurationToTerraform, true)(this._natIpConfiguration.internalValue),
       timeouts: privateLinkServiceTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

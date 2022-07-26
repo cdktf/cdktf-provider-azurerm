@@ -377,7 +377,10 @@ export class DataFactoryTriggerCustomEvent extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._activated = config.activated;
     this._additionalProperties = config.additionalProperties;
@@ -599,16 +602,16 @@ export class DataFactoryTriggerCustomEvent extends cdktf.TerraformResource {
     return {
       activated: cdktf.booleanToTerraform(this._activated),
       additional_properties: cdktf.hashMapper(cdktf.stringToTerraform)(this._additionalProperties),
-      annotations: cdktf.listMapper(cdktf.stringToTerraform)(this._annotations),
+      annotations: cdktf.listMapper(cdktf.stringToTerraform, false)(this._annotations),
       data_factory_id: cdktf.stringToTerraform(this._dataFactoryId),
       description: cdktf.stringToTerraform(this._description),
       eventgrid_topic_id: cdktf.stringToTerraform(this._eventgridTopicId),
-      events: cdktf.listMapper(cdktf.stringToTerraform)(this._events),
+      events: cdktf.listMapper(cdktf.stringToTerraform, false)(this._events),
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       subject_begins_with: cdktf.stringToTerraform(this._subjectBeginsWith),
       subject_ends_with: cdktf.stringToTerraform(this._subjectEndsWith),
-      pipeline: cdktf.listMapper(dataFactoryTriggerCustomEventPipelineToTerraform)(this._pipeline.internalValue),
+      pipeline: cdktf.listMapper(dataFactoryTriggerCustomEventPipelineToTerraform, true)(this._pipeline.internalValue),
       timeouts: dataFactoryTriggerCustomEventTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

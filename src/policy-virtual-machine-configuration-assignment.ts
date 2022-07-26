@@ -192,7 +192,7 @@ export function policyVirtualMachineConfigurationAssignmentConfigurationToTerraf
     content_hash: cdktf.stringToTerraform(struct!.contentHash),
     content_uri: cdktf.stringToTerraform(struct!.contentUri),
     version: cdktf.stringToTerraform(struct!.version),
-    parameter: cdktf.listMapper(policyVirtualMachineConfigurationAssignmentConfigurationParameterToTerraform)(struct!.parameter),
+    parameter: cdktf.listMapper(policyVirtualMachineConfigurationAssignmentConfigurationParameterToTerraform, true)(struct!.parameter),
   }
 }
 
@@ -521,7 +521,10 @@ export class PolicyVirtualMachineConfigurationAssignment extends cdktf.Terraform
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._location = config.location;

@@ -1220,7 +1220,7 @@ export function mediaContentKeyPolicyPolicyOptionTokenRestrictionToTerraform(str
     primary_symmetric_token_key: cdktf.stringToTerraform(struct!.primarySymmetricTokenKey),
     primary_x509_token_key_raw: cdktf.stringToTerraform(struct!.primaryX509TokenKeyRaw),
     token_type: cdktf.stringToTerraform(struct!.tokenType),
-    required_claim: cdktf.listMapper(mediaContentKeyPolicyPolicyOptionTokenRestrictionRequiredClaimToTerraform)(struct!.requiredClaim),
+    required_claim: cdktf.listMapper(mediaContentKeyPolicyPolicyOptionTokenRestrictionRequiredClaimToTerraform, true)(struct!.requiredClaim),
   }
 }
 
@@ -1496,7 +1496,7 @@ export function mediaContentKeyPolicyPolicyOptionToTerraform(struct?: MediaConte
     open_restriction_enabled: cdktf.booleanToTerraform(struct!.openRestrictionEnabled),
     widevine_configuration_template: cdktf.stringToTerraform(struct!.widevineConfigurationTemplate),
     fairplay_configuration: mediaContentKeyPolicyPolicyOptionFairplayConfigurationToTerraform(struct!.fairplayConfiguration),
-    playready_configuration_license: cdktf.listMapper(mediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicenseToTerraform)(struct!.playreadyConfigurationLicense),
+    playready_configuration_license: cdktf.listMapper(mediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicenseToTerraform, true)(struct!.playreadyConfigurationLicense),
     token_restriction: mediaContentKeyPolicyPolicyOptionTokenRestrictionToTerraform(struct!.tokenRestriction),
   }
 }
@@ -1899,7 +1899,10 @@ export class MediaContentKeyPolicy extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._description = config.description;
     this._id = config.id;
@@ -2025,7 +2028,7 @@ export class MediaContentKeyPolicy extends cdktf.TerraformResource {
       media_services_account_name: cdktf.stringToTerraform(this._mediaServicesAccountName),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      policy_option: cdktf.listMapper(mediaContentKeyPolicyPolicyOptionToTerraform)(this._policyOption.internalValue),
+      policy_option: cdktf.listMapper(mediaContentKeyPolicyPolicyOptionToTerraform, true)(this._policyOption.internalValue),
       timeouts: mediaContentKeyPolicyTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

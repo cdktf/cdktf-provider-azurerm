@@ -689,7 +689,7 @@ export function eventgridSystemTopicEventSubscriptionAdvancedFilterNumberInToTer
   }
   return {
     key: cdktf.stringToTerraform(struct!.key),
-    values: cdktf.listMapper(cdktf.numberToTerraform)(struct!.values),
+    values: cdktf.listMapper(cdktf.numberToTerraform, false)(struct!.values),
   }
 }
 
@@ -807,7 +807,7 @@ export function eventgridSystemTopicEventSubscriptionAdvancedFilterNumberInRange
   }
   return {
     key: cdktf.stringToTerraform(struct!.key),
-    values: cdktf.listMapper(cdktf.numberToTerraform)(struct!.values),
+    values: cdktf.listMapper(cdktf.numberToTerraform, false)(struct!.values),
   }
 }
 
@@ -1161,7 +1161,7 @@ export function eventgridSystemTopicEventSubscriptionAdvancedFilterNumberNotInTo
   }
   return {
     key: cdktf.stringToTerraform(struct!.key),
-    values: cdktf.listMapper(cdktf.numberToTerraform)(struct!.values),
+    values: cdktf.listMapper(cdktf.numberToTerraform, false)(struct!.values),
   }
 }
 
@@ -1279,7 +1279,7 @@ export function eventgridSystemTopicEventSubscriptionAdvancedFilterNumberNotInRa
   }
   return {
     key: cdktf.stringToTerraform(struct!.key),
-    values: cdktf.listMapper(cdktf.numberToTerraform)(struct!.values),
+    values: cdktf.listMapper(cdktf.numberToTerraform, false)(struct!.values),
   }
 }
 
@@ -1397,7 +1397,7 @@ export function eventgridSystemTopicEventSubscriptionAdvancedFilterStringBeginsW
   }
   return {
     key: cdktf.stringToTerraform(struct!.key),
-    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+    values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
 }
 
@@ -1515,7 +1515,7 @@ export function eventgridSystemTopicEventSubscriptionAdvancedFilterStringContain
   }
   return {
     key: cdktf.stringToTerraform(struct!.key),
-    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+    values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
 }
 
@@ -1633,7 +1633,7 @@ export function eventgridSystemTopicEventSubscriptionAdvancedFilterStringEndsWit
   }
   return {
     key: cdktf.stringToTerraform(struct!.key),
-    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+    values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
 }
 
@@ -1751,7 +1751,7 @@ export function eventgridSystemTopicEventSubscriptionAdvancedFilterStringInToTer
   }
   return {
     key: cdktf.stringToTerraform(struct!.key),
-    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+    values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
 }
 
@@ -1869,7 +1869,7 @@ export function eventgridSystemTopicEventSubscriptionAdvancedFilterStringNotBegi
   }
   return {
     key: cdktf.stringToTerraform(struct!.key),
-    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+    values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
 }
 
@@ -1987,7 +1987,7 @@ export function eventgridSystemTopicEventSubscriptionAdvancedFilterStringNotCont
   }
   return {
     key: cdktf.stringToTerraform(struct!.key),
-    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+    values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
 }
 
@@ -2105,7 +2105,7 @@ export function eventgridSystemTopicEventSubscriptionAdvancedFilterStringNotEnds
   }
   return {
     key: cdktf.stringToTerraform(struct!.key),
-    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+    values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
 }
 
@@ -2223,7 +2223,7 @@ export function eventgridSystemTopicEventSubscriptionAdvancedFilterStringNotInTo
   }
   return {
     key: cdktf.stringToTerraform(struct!.key),
-    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+    values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
 }
 
@@ -2446,25 +2446,25 @@ export function eventgridSystemTopicEventSubscriptionAdvancedFilterToTerraform(s
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    bool_equals: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterBoolEqualsToTerraform)(struct!.boolEquals),
-    is_not_null: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterIsNotNullToTerraform)(struct!.isNotNull),
-    is_null_or_undefined: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterIsNullOrUndefinedToTerraform)(struct!.isNullOrUndefined),
-    number_greater_than: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterNumberGreaterThanToTerraform)(struct!.numberGreaterThan),
-    number_greater_than_or_equals: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterNumberGreaterThanOrEqualsToTerraform)(struct!.numberGreaterThanOrEquals),
-    number_in: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterNumberInToTerraform)(struct!.numberIn),
-    number_in_range: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterNumberInRangeToTerraform)(struct!.numberInRange),
-    number_less_than: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterNumberLessThanToTerraform)(struct!.numberLessThan),
-    number_less_than_or_equals: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterNumberLessThanOrEqualsToTerraform)(struct!.numberLessThanOrEquals),
-    number_not_in: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterNumberNotInToTerraform)(struct!.numberNotIn),
-    number_not_in_range: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterNumberNotInRangeToTerraform)(struct!.numberNotInRange),
-    string_begins_with: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterStringBeginsWithToTerraform)(struct!.stringBeginsWith),
-    string_contains: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterStringContainsToTerraform)(struct!.stringContains),
-    string_ends_with: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterStringEndsWithToTerraform)(struct!.stringEndsWith),
-    string_in: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterStringInToTerraform)(struct!.stringIn),
-    string_not_begins_with: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterStringNotBeginsWithToTerraform)(struct!.stringNotBeginsWith),
-    string_not_contains: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterStringNotContainsToTerraform)(struct!.stringNotContains),
-    string_not_ends_with: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterStringNotEndsWithToTerraform)(struct!.stringNotEndsWith),
-    string_not_in: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterStringNotInToTerraform)(struct!.stringNotIn),
+    bool_equals: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterBoolEqualsToTerraform, true)(struct!.boolEquals),
+    is_not_null: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterIsNotNullToTerraform, true)(struct!.isNotNull),
+    is_null_or_undefined: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterIsNullOrUndefinedToTerraform, true)(struct!.isNullOrUndefined),
+    number_greater_than: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterNumberGreaterThanToTerraform, true)(struct!.numberGreaterThan),
+    number_greater_than_or_equals: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterNumberGreaterThanOrEqualsToTerraform, true)(struct!.numberGreaterThanOrEquals),
+    number_in: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterNumberInToTerraform, true)(struct!.numberIn),
+    number_in_range: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterNumberInRangeToTerraform, true)(struct!.numberInRange),
+    number_less_than: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterNumberLessThanToTerraform, true)(struct!.numberLessThan),
+    number_less_than_or_equals: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterNumberLessThanOrEqualsToTerraform, true)(struct!.numberLessThanOrEquals),
+    number_not_in: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterNumberNotInToTerraform, true)(struct!.numberNotIn),
+    number_not_in_range: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterNumberNotInRangeToTerraform, true)(struct!.numberNotInRange),
+    string_begins_with: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterStringBeginsWithToTerraform, true)(struct!.stringBeginsWith),
+    string_contains: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterStringContainsToTerraform, true)(struct!.stringContains),
+    string_ends_with: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterStringEndsWithToTerraform, true)(struct!.stringEndsWith),
+    string_in: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterStringInToTerraform, true)(struct!.stringIn),
+    string_not_begins_with: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterStringNotBeginsWithToTerraform, true)(struct!.stringNotBeginsWith),
+    string_not_contains: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterStringNotContainsToTerraform, true)(struct!.stringNotContains),
+    string_not_ends_with: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterStringNotEndsWithToTerraform, true)(struct!.stringNotEndsWith),
+    string_not_in: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterStringNotInToTerraform, true)(struct!.stringNotIn),
   }
 }
 
@@ -4173,7 +4173,10 @@ export class EventgridSystemTopicEventSubscription extends cdktf.TerraformResour
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._advancedFilteringOnArraysEnabled = config.advancedFilteringOnArraysEnabled;
     this._eventDeliverySchema = config.eventDeliverySchema;
@@ -4592,8 +4595,8 @@ export class EventgridSystemTopicEventSubscription extends cdktf.TerraformResour
       expiration_time_utc: cdktf.stringToTerraform(this._expirationTimeUtc),
       hybrid_connection_endpoint_id: cdktf.stringToTerraform(this._hybridConnectionEndpointId),
       id: cdktf.stringToTerraform(this._id),
-      included_event_types: cdktf.listMapper(cdktf.stringToTerraform)(this._includedEventTypes),
-      labels: cdktf.listMapper(cdktf.stringToTerraform)(this._labels),
+      included_event_types: cdktf.listMapper(cdktf.stringToTerraform, false)(this._includedEventTypes),
+      labels: cdktf.listMapper(cdktf.stringToTerraform, false)(this._labels),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       service_bus_queue_endpoint_id: cdktf.stringToTerraform(this._serviceBusQueueEndpointId),
@@ -4603,7 +4606,7 @@ export class EventgridSystemTopicEventSubscription extends cdktf.TerraformResour
       azure_function_endpoint: eventgridSystemTopicEventSubscriptionAzureFunctionEndpointToTerraform(this._azureFunctionEndpoint.internalValue),
       dead_letter_identity: eventgridSystemTopicEventSubscriptionDeadLetterIdentityToTerraform(this._deadLetterIdentity.internalValue),
       delivery_identity: eventgridSystemTopicEventSubscriptionDeliveryIdentityToTerraform(this._deliveryIdentity.internalValue),
-      delivery_property: cdktf.listMapper(eventgridSystemTopicEventSubscriptionDeliveryPropertyToTerraform)(this._deliveryProperty.internalValue),
+      delivery_property: cdktf.listMapper(eventgridSystemTopicEventSubscriptionDeliveryPropertyToTerraform, true)(this._deliveryProperty.internalValue),
       retry_policy: eventgridSystemTopicEventSubscriptionRetryPolicyToTerraform(this._retryPolicy.internalValue),
       storage_blob_dead_letter_destination: eventgridSystemTopicEventSubscriptionStorageBlobDeadLetterDestinationToTerraform(this._storageBlobDeadLetterDestination.internalValue),
       storage_queue_endpoint: eventgridSystemTopicEventSubscriptionStorageQueueEndpointToTerraform(this._storageQueueEndpoint.internalValue),

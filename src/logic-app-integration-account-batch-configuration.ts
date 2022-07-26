@@ -196,11 +196,11 @@ export function logicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecur
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    hours: cdktf.listMapper(cdktf.numberToTerraform)(struct!.hours),
-    minutes: cdktf.listMapper(cdktf.numberToTerraform)(struct!.minutes),
-    month_days: cdktf.listMapper(cdktf.numberToTerraform)(struct!.monthDays),
-    week_days: cdktf.listMapper(cdktf.stringToTerraform)(struct!.weekDays),
-    monthly: cdktf.listMapper(logicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleMonthlyToTerraform)(struct!.monthly),
+    hours: cdktf.listMapper(cdktf.numberToTerraform, false)(struct!.hours),
+    minutes: cdktf.listMapper(cdktf.numberToTerraform, false)(struct!.minutes),
+    month_days: cdktf.listMapper(cdktf.numberToTerraform, false)(struct!.monthDays),
+    week_days: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.weekDays),
+    monthly: cdktf.listMapper(logicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleMonthlyToTerraform, true)(struct!.monthly),
   }
 }
 
@@ -846,7 +846,10 @@ export class LogicAppIntegrationAccountBatchConfiguration extends cdktf.Terrafor
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._batchGroupName = config.batchGroupName;
     this._id = config.id;

@@ -207,7 +207,7 @@ export function appServiceAuthSettingsActiveDirectoryToTerraform(struct?: AppSer
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    allowed_audiences: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedAudiences),
+    allowed_audiences: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedAudiences),
     client_id: cdktf.stringToTerraform(struct!.clientId),
     client_secret: cdktf.stringToTerraform(struct!.clientSecret),
   }
@@ -325,7 +325,7 @@ export function appServiceAuthSettingsFacebookToTerraform(struct?: AppServiceAut
   return {
     app_id: cdktf.stringToTerraform(struct!.appId),
     app_secret: cdktf.stringToTerraform(struct!.appSecret),
-    oauth_scopes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.oauthScopes),
+    oauth_scopes: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.oauthScopes),
   }
 }
 
@@ -438,7 +438,7 @@ export function appServiceAuthSettingsGoogleToTerraform(struct?: AppServiceAuthS
   return {
     client_id: cdktf.stringToTerraform(struct!.clientId),
     client_secret: cdktf.stringToTerraform(struct!.clientSecret),
-    oauth_scopes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.oauthScopes),
+    oauth_scopes: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.oauthScopes),
   }
 }
 
@@ -551,7 +551,7 @@ export function appServiceAuthSettingsMicrosoftToTerraform(struct?: AppServiceAu
   return {
     client_id: cdktf.stringToTerraform(struct!.clientId),
     client_secret: cdktf.stringToTerraform(struct!.clientSecret),
-    oauth_scopes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.oauthScopes),
+    oauth_scopes: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.oauthScopes),
   }
 }
 
@@ -803,7 +803,7 @@ export function appServiceAuthSettingsToTerraform(struct?: AppServiceAuthSetting
   }
   return {
     additional_login_params: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.additionalLoginParams),
-    allowed_external_redirect_urls: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedExternalRedirectUrls),
+    allowed_external_redirect_urls: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedExternalRedirectUrls),
     default_provider: cdktf.stringToTerraform(struct!.defaultProvider),
     enabled: cdktf.booleanToTerraform(struct!.enabled),
     issuer: cdktf.stringToTerraform(struct!.issuer),
@@ -1615,7 +1615,7 @@ export function appServiceIdentityToTerraform(struct?: AppServiceIdentityOutputR
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.identityIds),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
@@ -2344,10 +2344,10 @@ export function appServiceSiteConfigIpRestrictionHeadersToTerraform(struct?: App
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    x_azure_fdid: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xAzureFdid),
-    x_fd_health_probe: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xFdHealthProbe),
-    x_forwarded_for: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xForwardedFor),
-    x_forwarded_host: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xForwardedHost),
+    x_azure_fdid: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xAzureFdid),
+    x_fd_health_probe: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xFdHealthProbe),
+    x_forwarded_for: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xForwardedFor),
+    x_forwarded_host: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xForwardedHost),
   }
 }
 
@@ -2535,7 +2535,7 @@ export function appServiceSiteConfigIpRestrictionToTerraform(struct?: AppService
   }
   return {
     action: cdktf.stringToTerraform(struct!.action),
-    headers: cdktf.listMapper(appServiceSiteConfigIpRestrictionHeadersToTerraform)(struct!.headers),
+    headers: cdktf.listMapper(appServiceSiteConfigIpRestrictionHeadersToTerraform, false)(struct!.headers),
     ip_address: cdktf.stringToTerraform(struct!.ipAddress),
     name: cdktf.stringToTerraform(struct!.name),
     priority: cdktf.numberToTerraform(struct!.priority),
@@ -2781,10 +2781,10 @@ export function appServiceSiteConfigScmIpRestrictionHeadersToTerraform(struct?: 
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    x_azure_fdid: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xAzureFdid),
-    x_fd_health_probe: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xFdHealthProbe),
-    x_forwarded_for: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xForwardedFor),
-    x_forwarded_host: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xForwardedHost),
+    x_azure_fdid: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xAzureFdid),
+    x_fd_health_probe: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xFdHealthProbe),
+    x_forwarded_for: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xForwardedFor),
+    x_forwarded_host: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xForwardedHost),
   }
 }
 
@@ -2972,7 +2972,7 @@ export function appServiceSiteConfigScmIpRestrictionToTerraform(struct?: AppServ
   }
   return {
     action: cdktf.stringToTerraform(struct!.action),
-    headers: cdktf.listMapper(appServiceSiteConfigScmIpRestrictionHeadersToTerraform)(struct!.headers),
+    headers: cdktf.listMapper(appServiceSiteConfigScmIpRestrictionHeadersToTerraform, false)(struct!.headers),
     ip_address: cdktf.stringToTerraform(struct!.ipAddress),
     name: cdktf.stringToTerraform(struct!.name),
     priority: cdktf.numberToTerraform(struct!.priority),
@@ -3210,7 +3210,7 @@ export function appServiceSiteConfigCorsToTerraform(struct?: AppServiceSiteConfi
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    allowed_origins: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedOrigins),
+    allowed_origins: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedOrigins),
     support_credentials: cdktf.booleanToTerraform(struct!.supportCredentials),
   }
 }
@@ -3422,12 +3422,12 @@ export function appServiceSiteConfigToTerraform(struct?: AppServiceSiteConfigOut
     always_on: cdktf.booleanToTerraform(struct!.alwaysOn),
     app_command_line: cdktf.stringToTerraform(struct!.appCommandLine),
     auto_swap_slot_name: cdktf.stringToTerraform(struct!.autoSwapSlotName),
-    default_documents: cdktf.listMapper(cdktf.stringToTerraform)(struct!.defaultDocuments),
+    default_documents: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.defaultDocuments),
     dotnet_framework_version: cdktf.stringToTerraform(struct!.dotnetFrameworkVersion),
     ftps_state: cdktf.stringToTerraform(struct!.ftpsState),
     health_check_path: cdktf.stringToTerraform(struct!.healthCheckPath),
     http2_enabled: cdktf.booleanToTerraform(struct!.http2Enabled),
-    ip_restriction: cdktf.listMapper(appServiceSiteConfigIpRestrictionToTerraform)(struct!.ipRestriction),
+    ip_restriction: cdktf.listMapper(appServiceSiteConfigIpRestrictionToTerraform, false)(struct!.ipRestriction),
     java_container: cdktf.stringToTerraform(struct!.javaContainer),
     java_container_version: cdktf.stringToTerraform(struct!.javaContainerVersion),
     java_version: cdktf.stringToTerraform(struct!.javaVersion),
@@ -3440,7 +3440,7 @@ export function appServiceSiteConfigToTerraform(struct?: AppServiceSiteConfigOut
     python_version: cdktf.stringToTerraform(struct!.pythonVersion),
     remote_debugging_enabled: cdktf.booleanToTerraform(struct!.remoteDebuggingEnabled),
     remote_debugging_version: cdktf.stringToTerraform(struct!.remoteDebuggingVersion),
-    scm_ip_restriction: cdktf.listMapper(appServiceSiteConfigScmIpRestrictionToTerraform)(struct!.scmIpRestriction),
+    scm_ip_restriction: cdktf.listMapper(appServiceSiteConfigScmIpRestrictionToTerraform, false)(struct!.scmIpRestriction),
     scm_type: cdktf.stringToTerraform(struct!.scmType),
     scm_use_main_ip_restriction: cdktf.booleanToTerraform(struct!.scmUseMainIpRestriction),
     use_32_bit_worker_process: cdktf.booleanToTerraform(struct!.use32BitWorkerProcess),
@@ -4738,7 +4738,10 @@ export class AppService extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._appServicePlanId = config.appServicePlanId;
     this._appSettings = config.appSettings;
@@ -5165,12 +5168,12 @@ export class AppService extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       auth_settings: appServiceAuthSettingsToTerraform(this._authSettings.internalValue),
       backup: appServiceBackupToTerraform(this._backup.internalValue),
-      connection_string: cdktf.listMapper(appServiceConnectionStringToTerraform)(this._connectionString.internalValue),
+      connection_string: cdktf.listMapper(appServiceConnectionStringToTerraform, true)(this._connectionString.internalValue),
       identity: appServiceIdentityToTerraform(this._identity.internalValue),
       logs: appServiceLogsToTerraform(this._logs.internalValue),
       site_config: appServiceSiteConfigToTerraform(this._siteConfig.internalValue),
       source_control: appServiceSourceControlToTerraform(this._sourceControl.internalValue),
-      storage_account: cdktf.listMapper(appServiceStorageAccountToTerraform)(this._storageAccount.internalValue),
+      storage_account: cdktf.listMapper(appServiceStorageAccountToTerraform, true)(this._storageAccount.internalValue),
       timeouts: appServiceTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

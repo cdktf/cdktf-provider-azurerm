@@ -123,11 +123,11 @@ export function keyVaultAccessPolicyToTerraform(struct?: KeyVaultAccessPolicy | 
   }
   return {
     application_id: struct!.applicationId === undefined ? null : cdktf.stringToTerraform(struct!.applicationId),
-    certificate_permissions: struct!.certificatePermissions === undefined ? null : cdktf.listMapper(cdktf.stringToTerraform)(struct!.certificatePermissions),
-    key_permissions: struct!.keyPermissions === undefined ? null : cdktf.listMapper(cdktf.stringToTerraform)(struct!.keyPermissions),
+    certificate_permissions: struct!.certificatePermissions === undefined ? null : cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.certificatePermissions),
+    key_permissions: struct!.keyPermissions === undefined ? null : cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.keyPermissions),
     object_id: struct!.objectId === undefined ? null : cdktf.stringToTerraform(struct!.objectId),
-    secret_permissions: struct!.secretPermissions === undefined ? null : cdktf.listMapper(cdktf.stringToTerraform)(struct!.secretPermissions),
-    storage_permissions: struct!.storagePermissions === undefined ? null : cdktf.listMapper(cdktf.stringToTerraform)(struct!.storagePermissions),
+    secret_permissions: struct!.secretPermissions === undefined ? null : cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.secretPermissions),
+    storage_permissions: struct!.storagePermissions === undefined ? null : cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.storagePermissions),
     tenant_id: struct!.tenantId === undefined ? null : cdktf.stringToTerraform(struct!.tenantId),
   }
 }
@@ -519,8 +519,8 @@ export function keyVaultNetworkAclsToTerraform(struct?: KeyVaultNetworkAclsOutpu
   return {
     bypass: cdktf.stringToTerraform(struct!.bypass),
     default_action: cdktf.stringToTerraform(struct!.defaultAction),
-    ip_rules: cdktf.listMapper(cdktf.stringToTerraform)(struct!.ipRules),
-    virtual_network_subnet_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.virtualNetworkSubnetIds),
+    ip_rules: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.ipRules),
+    virtual_network_subnet_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.virtualNetworkSubnetIds),
   }
 }
 
@@ -821,7 +821,10 @@ export class KeyVault extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._accessPolicy.internalValue = config.accessPolicy;
     this._enableRbacAuthorization = config.enableRbacAuthorization;
@@ -1114,7 +1117,7 @@ export class KeyVault extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      access_policy: cdktf.listMapper(keyVaultAccessPolicyToTerraform)(this._accessPolicy.internalValue),
+      access_policy: cdktf.listMapper(keyVaultAccessPolicyToTerraform, false)(this._accessPolicy.internalValue),
       enable_rbac_authorization: cdktf.booleanToTerraform(this._enableRbacAuthorization),
       enabled_for_deployment: cdktf.booleanToTerraform(this._enabledForDeployment),
       enabled_for_disk_encryption: cdktf.booleanToTerraform(this._enabledForDiskEncryption),
@@ -1128,7 +1131,7 @@ export class KeyVault extends cdktf.TerraformResource {
       soft_delete_retention_days: cdktf.numberToTerraform(this._softDeleteRetentionDays),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       tenant_id: cdktf.stringToTerraform(this._tenantId),
-      contact: cdktf.listMapper(keyVaultContactToTerraform)(this._contact.internalValue),
+      contact: cdktf.listMapper(keyVaultContactToTerraform, true)(this._contact.internalValue),
       network_acls: keyVaultNetworkAclsToTerraform(this._networkAcls.internalValue),
       timeouts: keyVaultTimeoutsToTerraform(this._timeouts.internalValue),
     };

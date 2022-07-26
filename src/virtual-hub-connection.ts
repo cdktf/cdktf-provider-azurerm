@@ -60,8 +60,8 @@ export function virtualHubConnectionRoutingPropagatedRouteTableToTerraform(struc
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    labels: cdktf.listMapper(cdktf.stringToTerraform)(struct!.labels),
-    route_table_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.routeTableIds),
+    labels: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.labels),
+    route_table_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.routeTableIds),
   }
 }
 
@@ -156,7 +156,7 @@ export function virtualHubConnectionRoutingStaticVnetRouteToTerraform(struct?: V
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    address_prefixes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.addressPrefixes),
+    address_prefixes: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.addressPrefixes),
     name: cdktf.stringToTerraform(struct!.name),
     next_hop_ip_address: cdktf.stringToTerraform(struct!.nextHopIpAddress),
   }
@@ -313,7 +313,7 @@ export function virtualHubConnectionRoutingToTerraform(struct?: VirtualHubConnec
   return {
     associated_route_table_id: cdktf.stringToTerraform(struct!.associatedRouteTableId),
     propagated_route_table: virtualHubConnectionRoutingPropagatedRouteTableToTerraform(struct!.propagatedRouteTable),
-    static_vnet_route: cdktf.listMapper(virtualHubConnectionRoutingStaticVnetRouteToTerraform)(struct!.staticVnetRoute),
+    static_vnet_route: cdktf.listMapper(virtualHubConnectionRoutingStaticVnetRouteToTerraform, true)(struct!.staticVnetRoute),
   }
 }
 
@@ -598,7 +598,10 @@ export class VirtualHubConnection extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._internetSecurityEnabled = config.internetSecurityEnabled;

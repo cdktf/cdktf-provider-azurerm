@@ -216,7 +216,7 @@ export function cosmosdbMongoCollectionIndexToTerraform(struct?: CosmosdbMongoCo
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    keys: cdktf.listMapper(cdktf.stringToTerraform)(struct!.keys),
+    keys: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.keys),
     unique: cdktf.booleanToTerraform(struct!.unique),
   }
 }
@@ -509,7 +509,10 @@ export class CosmosdbMongoCollection extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._accountName = config.accountName;
     this._analyticalStorageTtl = config.analyticalStorageTtl;
@@ -731,7 +734,7 @@ export class CosmosdbMongoCollection extends cdktf.TerraformResource {
       shard_key: cdktf.stringToTerraform(this._shardKey),
       throughput: cdktf.numberToTerraform(this._throughput),
       autoscale_settings: cosmosdbMongoCollectionAutoscaleSettingsToTerraform(this._autoscaleSettings.internalValue),
-      index: cdktf.listMapper(cosmosdbMongoCollectionIndexToTerraform)(this._index.internalValue),
+      index: cdktf.listMapper(cosmosdbMongoCollectionIndexToTerraform, true)(this._index.internalValue),
       timeouts: cosmosdbMongoCollectionTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

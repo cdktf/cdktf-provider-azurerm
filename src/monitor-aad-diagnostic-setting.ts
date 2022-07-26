@@ -475,7 +475,10 @@ export class MonitorAadDiagnosticSetting extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._eventhubAuthorizationRuleId = config.eventhubAuthorizationRuleId;
     this._eventhubName = config.eventhubName;
@@ -625,7 +628,7 @@ export class MonitorAadDiagnosticSetting extends cdktf.TerraformResource {
       log_analytics_workspace_id: cdktf.stringToTerraform(this._logAnalyticsWorkspaceId),
       name: cdktf.stringToTerraform(this._name),
       storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
-      log: cdktf.listMapper(monitorAadDiagnosticSettingLogToTerraform)(this._log.internalValue),
+      log: cdktf.listMapper(monitorAadDiagnosticSettingLogToTerraform, true)(this._log.internalValue),
       timeouts: monitorAadDiagnosticSettingTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

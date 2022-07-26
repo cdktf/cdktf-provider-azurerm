@@ -532,7 +532,10 @@ export class NetworkInterface extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._dnsServers = config.dnsServers;
     this._edgeZone = config.edgeZone;
@@ -768,7 +771,7 @@ export class NetworkInterface extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      dns_servers: cdktf.listMapper(cdktf.stringToTerraform)(this._dnsServers),
+      dns_servers: cdktf.listMapper(cdktf.stringToTerraform, false)(this._dnsServers),
       edge_zone: cdktf.stringToTerraform(this._edgeZone),
       enable_accelerated_networking: cdktf.booleanToTerraform(this._enableAcceleratedNetworking),
       enable_ip_forwarding: cdktf.booleanToTerraform(this._enableIpForwarding),
@@ -778,7 +781,7 @@ export class NetworkInterface extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
-      ip_configuration: cdktf.listMapper(networkInterfaceIpConfigurationToTerraform)(this._ipConfiguration.internalValue),
+      ip_configuration: cdktf.listMapper(networkInterfaceIpConfigurationToTerraform, true)(this._ipConfiguration.internalValue),
       timeouts: networkInterfaceTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

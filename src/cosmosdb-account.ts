@@ -671,10 +671,10 @@ export function cosmosdbAccountCorsRuleToTerraform(struct?: CosmosdbAccountCorsR
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    allowed_headers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedHeaders),
-    allowed_methods: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedMethods),
-    allowed_origins: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedOrigins),
-    exposed_headers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.exposedHeaders),
+    allowed_headers: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedHeaders),
+    allowed_methods: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedMethods),
+    allowed_origins: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedOrigins),
+    exposed_headers: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.exposedHeaders),
     max_age_in_seconds: cdktf.numberToTerraform(struct!.maxAgeInSeconds),
   }
 }
@@ -1039,7 +1039,7 @@ export function cosmosdbAccountRestoreDatabaseToTerraform(struct?: CosmosdbAccou
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    collection_names: cdktf.listMapper(cdktf.stringToTerraform)(struct!.collectionNames),
+    collection_names: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.collectionNames),
     name: cdktf.stringToTerraform(struct!.name),
   }
 }
@@ -1168,7 +1168,7 @@ export function cosmosdbAccountRestoreToTerraform(struct?: CosmosdbAccountRestor
   return {
     restore_timestamp_in_utc: cdktf.stringToTerraform(struct!.restoreTimestampInUtc),
     source_cosmosdb_account_id: cdktf.stringToTerraform(struct!.sourceCosmosdbAccountId),
-    database: cdktf.listMapper(cosmosdbAccountRestoreDatabaseToTerraform)(struct!.database),
+    database: cdktf.listMapper(cosmosdbAccountRestoreDatabaseToTerraform, true)(struct!.database),
   }
 }
 
@@ -1571,7 +1571,10 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._accessKeyMetadataWritesEnabled = config.accessKeyMetadataWritesEnabled;
     this._analyticalStorageEnabled = config.analyticalStorageEnabled;
@@ -2185,22 +2188,22 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
       mongo_server_version: cdktf.stringToTerraform(this._mongoServerVersion),
       name: cdktf.stringToTerraform(this._name),
       network_acl_bypass_for_azure_services: cdktf.booleanToTerraform(this._networkAclBypassForAzureServices),
-      network_acl_bypass_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._networkAclBypassIds),
+      network_acl_bypass_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(this._networkAclBypassIds),
       offer_type: cdktf.stringToTerraform(this._offerType),
       public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       analytical_storage: cosmosdbAccountAnalyticalStorageToTerraform(this._analyticalStorage.internalValue),
       backup: cosmosdbAccountBackupToTerraform(this._backup.internalValue),
-      capabilities: cdktf.listMapper(cosmosdbAccountCapabilitiesToTerraform)(this._capabilities.internalValue),
+      capabilities: cdktf.listMapper(cosmosdbAccountCapabilitiesToTerraform, true)(this._capabilities.internalValue),
       capacity: cosmosdbAccountCapacityToTerraform(this._capacity.internalValue),
       consistency_policy: cosmosdbAccountConsistencyPolicyToTerraform(this._consistencyPolicy.internalValue),
       cors_rule: cosmosdbAccountCorsRuleToTerraform(this._corsRule.internalValue),
-      geo_location: cdktf.listMapper(cosmosdbAccountGeoLocationToTerraform)(this._geoLocation.internalValue),
+      geo_location: cdktf.listMapper(cosmosdbAccountGeoLocationToTerraform, true)(this._geoLocation.internalValue),
       identity: cosmosdbAccountIdentityToTerraform(this._identity.internalValue),
       restore: cosmosdbAccountRestoreToTerraform(this._restore.internalValue),
       timeouts: cosmosdbAccountTimeoutsToTerraform(this._timeouts.internalValue),
-      virtual_network_rule: cdktf.listMapper(cosmosdbAccountVirtualNetworkRuleToTerraform)(this._virtualNetworkRule.internalValue),
+      virtual_network_rule: cdktf.listMapper(cosmosdbAccountVirtualNetworkRuleToTerraform, true)(this._virtualNetworkRule.internalValue),
     };
   }
 }

@@ -438,7 +438,10 @@ export class MssqlFailoverGroup extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._databases = config.databases;
     this._id = config.id;
@@ -593,13 +596,13 @@ export class MssqlFailoverGroup extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      databases: cdktf.listMapper(cdktf.stringToTerraform)(this._databases),
+      databases: cdktf.listMapper(cdktf.stringToTerraform, false)(this._databases),
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       readonly_endpoint_failover_policy_enabled: cdktf.booleanToTerraform(this._readonlyEndpointFailoverPolicyEnabled),
       server_id: cdktf.stringToTerraform(this._serverId),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
-      partner_server: cdktf.listMapper(mssqlFailoverGroupPartnerServerToTerraform)(this._partnerServer.internalValue),
+      partner_server: cdktf.listMapper(mssqlFailoverGroupPartnerServerToTerraform, true)(this._partnerServer.internalValue),
       read_write_endpoint_failover_policy: mssqlFailoverGroupReadWriteEndpointFailoverPolicyToTerraform(this._readWriteEndpointFailoverPolicy.internalValue),
       timeouts: mssqlFailoverGroupTimeoutsToTerraform(this._timeouts.internalValue),
     };

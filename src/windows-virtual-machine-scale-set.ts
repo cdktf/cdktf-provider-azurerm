@@ -1041,7 +1041,7 @@ export function windowsVirtualMachineScaleSetExtensionToTerraform(struct?: Windo
     force_update_tag: cdktf.stringToTerraform(struct!.forceUpdateTag),
     name: cdktf.stringToTerraform(struct!.name),
     protected_settings: cdktf.stringToTerraform(struct!.protectedSettings),
-    provision_after_extensions: cdktf.listMapper(cdktf.stringToTerraform)(struct!.provisionAfterExtensions),
+    provision_after_extensions: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.provisionAfterExtensions),
     publisher: cdktf.stringToTerraform(struct!.publisher),
     settings: cdktf.stringToTerraform(struct!.settings),
     type: cdktf.stringToTerraform(struct!.type),
@@ -1332,7 +1332,7 @@ export function windowsVirtualMachineScaleSetIdentityToTerraform(struct?: Window
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.identityIds),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
@@ -1567,7 +1567,7 @@ export function windowsVirtualMachineScaleSetNetworkInterfaceIpConfigurationPubl
     idle_timeout_in_minutes: cdktf.numberToTerraform(struct!.idleTimeoutInMinutes),
     name: cdktf.stringToTerraform(struct!.name),
     public_ip_prefix_id: cdktf.stringToTerraform(struct!.publicIpPrefixId),
-    ip_tag: cdktf.listMapper(windowsVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTagToTerraform)(struct!.ipTag),
+    ip_tag: cdktf.listMapper(windowsVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTagToTerraform, true)(struct!.ipTag),
   }
 }
 
@@ -1783,15 +1783,15 @@ export function windowsVirtualMachineScaleSetNetworkInterfaceIpConfigurationToTe
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    application_gateway_backend_address_pool_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.applicationGatewayBackendAddressPoolIds),
-    application_security_group_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.applicationSecurityGroupIds),
-    load_balancer_backend_address_pool_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.loadBalancerBackendAddressPoolIds),
-    load_balancer_inbound_nat_rules_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.loadBalancerInboundNatRulesIds),
+    application_gateway_backend_address_pool_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.applicationGatewayBackendAddressPoolIds),
+    application_security_group_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.applicationSecurityGroupIds),
+    load_balancer_backend_address_pool_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.loadBalancerBackendAddressPoolIds),
+    load_balancer_inbound_nat_rules_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.loadBalancerInboundNatRulesIds),
     name: cdktf.stringToTerraform(struct!.name),
     primary: cdktf.booleanToTerraform(struct!.primary),
     subnet_id: cdktf.stringToTerraform(struct!.subnetId),
     version: cdktf.stringToTerraform(struct!.version),
-    public_ip_address: cdktf.listMapper(windowsVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressToTerraform)(struct!.publicIpAddress),
+    public_ip_address: cdktf.listMapper(windowsVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressToTerraform, true)(struct!.publicIpAddress),
   }
 }
 
@@ -2087,13 +2087,13 @@ export function windowsVirtualMachineScaleSetNetworkInterfaceToTerraform(struct?
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    dns_servers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.dnsServers),
+    dns_servers: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.dnsServers),
     enable_accelerated_networking: cdktf.booleanToTerraform(struct!.enableAcceleratedNetworking),
     enable_ip_forwarding: cdktf.booleanToTerraform(struct!.enableIpForwarding),
     name: cdktf.stringToTerraform(struct!.name),
     network_security_group_id: cdktf.stringToTerraform(struct!.networkSecurityGroupId),
     primary: cdktf.booleanToTerraform(struct!.primary),
-    ip_configuration: cdktf.listMapper(windowsVirtualMachineScaleSetNetworkInterfaceIpConfigurationToTerraform)(struct!.ipConfiguration),
+    ip_configuration: cdktf.listMapper(windowsVirtualMachineScaleSetNetworkInterfaceIpConfigurationToTerraform, true)(struct!.ipConfiguration),
   }
 }
 
@@ -3024,7 +3024,7 @@ export function windowsVirtualMachineScaleSetSecretToTerraform(struct?: WindowsV
   }
   return {
     key_vault_id: cdktf.stringToTerraform(struct!.keyVaultId),
-    certificate: cdktf.listMapper(windowsVirtualMachineScaleSetSecretCertificateToTerraform)(struct!.certificate),
+    certificate: cdktf.listMapper(windowsVirtualMachineScaleSetSecretCertificateToTerraform, true)(struct!.certificate),
   }
 }
 
@@ -3746,7 +3746,10 @@ export class WindowsVirtualMachineScaleSet extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._adminPassword = config.adminPassword;
     this._adminUsername = config.adminUsername;
@@ -4691,25 +4694,25 @@ export class WindowsVirtualMachineScaleSet extends cdktf.TerraformResource {
       user_data: cdktf.stringToTerraform(this._userData),
       vtpm_enabled: cdktf.booleanToTerraform(this._vtpmEnabled),
       zone_balance: cdktf.booleanToTerraform(this._zoneBalance),
-      zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),
+      zones: cdktf.listMapper(cdktf.stringToTerraform, false)(this._zones),
       additional_capabilities: windowsVirtualMachineScaleSetAdditionalCapabilitiesToTerraform(this._additionalCapabilities.internalValue),
-      additional_unattend_content: cdktf.listMapper(windowsVirtualMachineScaleSetAdditionalUnattendContentToTerraform)(this._additionalUnattendContent.internalValue),
+      additional_unattend_content: cdktf.listMapper(windowsVirtualMachineScaleSetAdditionalUnattendContentToTerraform, true)(this._additionalUnattendContent.internalValue),
       automatic_instance_repair: windowsVirtualMachineScaleSetAutomaticInstanceRepairToTerraform(this._automaticInstanceRepair.internalValue),
       automatic_os_upgrade_policy: windowsVirtualMachineScaleSetAutomaticOsUpgradePolicyToTerraform(this._automaticOsUpgradePolicy.internalValue),
       boot_diagnostics: windowsVirtualMachineScaleSetBootDiagnosticsToTerraform(this._bootDiagnostics.internalValue),
-      data_disk: cdktf.listMapper(windowsVirtualMachineScaleSetDataDiskToTerraform)(this._dataDisk.internalValue),
-      extension: cdktf.listMapper(windowsVirtualMachineScaleSetExtensionToTerraform)(this._extension.internalValue),
+      data_disk: cdktf.listMapper(windowsVirtualMachineScaleSetDataDiskToTerraform, true)(this._dataDisk.internalValue),
+      extension: cdktf.listMapper(windowsVirtualMachineScaleSetExtensionToTerraform, true)(this._extension.internalValue),
       identity: windowsVirtualMachineScaleSetIdentityToTerraform(this._identity.internalValue),
-      network_interface: cdktf.listMapper(windowsVirtualMachineScaleSetNetworkInterfaceToTerraform)(this._networkInterface.internalValue),
+      network_interface: cdktf.listMapper(windowsVirtualMachineScaleSetNetworkInterfaceToTerraform, true)(this._networkInterface.internalValue),
       os_disk: windowsVirtualMachineScaleSetOsDiskToTerraform(this._osDisk.internalValue),
       plan: windowsVirtualMachineScaleSetPlanToTerraform(this._plan.internalValue),
       rolling_upgrade_policy: windowsVirtualMachineScaleSetRollingUpgradePolicyToTerraform(this._rollingUpgradePolicy.internalValue),
-      secret: cdktf.listMapper(windowsVirtualMachineScaleSetSecretToTerraform)(this._secret.internalValue),
+      secret: cdktf.listMapper(windowsVirtualMachineScaleSetSecretToTerraform, true)(this._secret.internalValue),
       source_image_reference: windowsVirtualMachineScaleSetSourceImageReferenceToTerraform(this._sourceImageReference.internalValue),
       terminate_notification: windowsVirtualMachineScaleSetTerminateNotificationToTerraform(this._terminateNotification.internalValue),
       termination_notification: windowsVirtualMachineScaleSetTerminationNotificationToTerraform(this._terminationNotification.internalValue),
       timeouts: windowsVirtualMachineScaleSetTimeoutsToTerraform(this._timeouts.internalValue),
-      winrm_listener: cdktf.listMapper(windowsVirtualMachineScaleSetWinrmListenerToTerraform)(this._winrmListener.internalValue),
+      winrm_listener: cdktf.listMapper(windowsVirtualMachineScaleSetWinrmListenerToTerraform, true)(this._winrmListener.internalValue),
     };
   }
 }

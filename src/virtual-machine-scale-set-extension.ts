@@ -254,7 +254,10 @@ export class VirtualMachineScaleSetExtensionA extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._autoUpgradeMinorVersion = config.autoUpgradeMinorVersion;
     this._automaticUpgradeEnabled = config.automaticUpgradeEnabled;
@@ -480,7 +483,7 @@ export class VirtualMachineScaleSetExtensionA extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       protected_settings: cdktf.stringToTerraform(this._protectedSettings),
-      provision_after_extensions: cdktf.listMapper(cdktf.stringToTerraform)(this._provisionAfterExtensions),
+      provision_after_extensions: cdktf.listMapper(cdktf.stringToTerraform, false)(this._provisionAfterExtensions),
       publisher: cdktf.stringToTerraform(this._publisher),
       settings: cdktf.stringToTerraform(this._settings),
       type: cdktf.stringToTerraform(this._type),

@@ -684,7 +684,10 @@ export class IothubDps extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._allocationPolicy = config.allocationPolicy;
     this._id = config.id;
@@ -895,8 +898,8 @@ export class IothubDps extends cdktf.TerraformResource {
       public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
-      ip_filter_rule: cdktf.listMapper(iothubDpsIpFilterRuleToTerraform)(this._ipFilterRule.internalValue),
-      linked_hub: cdktf.listMapper(iothubDpsLinkedHubToTerraform)(this._linkedHub.internalValue),
+      ip_filter_rule: cdktf.listMapper(iothubDpsIpFilterRuleToTerraform, true)(this._ipFilterRule.internalValue),
+      linked_hub: cdktf.listMapper(iothubDpsLinkedHubToTerraform, true)(this._linkedHub.internalValue),
       sku: iothubDpsSkuToTerraform(this._sku.internalValue),
       timeouts: iothubDpsTimeoutsToTerraform(this._timeouts.internalValue),
     };

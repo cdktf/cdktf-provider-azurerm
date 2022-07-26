@@ -601,7 +601,10 @@ export class CustomProvider extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._location = config.location;
@@ -764,10 +767,10 @@ export class CustomProvider extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
-      action: cdktf.listMapper(customProviderActionToTerraform)(this._action.internalValue),
-      resource_type: cdktf.listMapper(customProviderResourceTypeToTerraform)(this._resourceType.internalValue),
+      action: cdktf.listMapper(customProviderActionToTerraform, true)(this._action.internalValue),
+      resource_type: cdktf.listMapper(customProviderResourceTypeToTerraform, true)(this._resourceType.internalValue),
       timeouts: customProviderTimeoutsToTerraform(this._timeouts.internalValue),
-      validation: cdktf.listMapper(customProviderValidationToTerraform)(this._validation.internalValue),
+      validation: cdktf.listMapper(customProviderValidationToTerraform, true)(this._validation.internalValue),
     };
   }
 }

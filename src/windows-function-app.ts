@@ -267,7 +267,7 @@ export function windowsFunctionAppAuthSettingsActiveDirectoryToTerraform(struct?
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    allowed_audiences: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedAudiences),
+    allowed_audiences: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedAudiences),
     client_id: cdktf.stringToTerraform(struct!.clientId),
     client_secret: cdktf.stringToTerraform(struct!.clientSecret),
     client_secret_setting_name: cdktf.stringToTerraform(struct!.clientSecretSettingName),
@@ -421,7 +421,7 @@ export function windowsFunctionAppAuthSettingsFacebookToTerraform(struct?: Windo
     app_id: cdktf.stringToTerraform(struct!.appId),
     app_secret: cdktf.stringToTerraform(struct!.appSecret),
     app_secret_setting_name: cdktf.stringToTerraform(struct!.appSecretSettingName),
-    oauth_scopes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.oauthScopes),
+    oauth_scopes: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.oauthScopes),
   }
 }
 
@@ -572,7 +572,7 @@ export function windowsFunctionAppAuthSettingsGithubToTerraform(struct?: Windows
     client_id: cdktf.stringToTerraform(struct!.clientId),
     client_secret: cdktf.stringToTerraform(struct!.clientSecret),
     client_secret_setting_name: cdktf.stringToTerraform(struct!.clientSecretSettingName),
-    oauth_scopes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.oauthScopes),
+    oauth_scopes: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.oauthScopes),
   }
 }
 
@@ -723,7 +723,7 @@ export function windowsFunctionAppAuthSettingsGoogleToTerraform(struct?: Windows
     client_id: cdktf.stringToTerraform(struct!.clientId),
     client_secret: cdktf.stringToTerraform(struct!.clientSecret),
     client_secret_setting_name: cdktf.stringToTerraform(struct!.clientSecretSettingName),
-    oauth_scopes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.oauthScopes),
+    oauth_scopes: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.oauthScopes),
   }
 }
 
@@ -874,7 +874,7 @@ export function windowsFunctionAppAuthSettingsMicrosoftToTerraform(struct?: Wind
     client_id: cdktf.stringToTerraform(struct!.clientId),
     client_secret: cdktf.stringToTerraform(struct!.clientSecret),
     client_secret_setting_name: cdktf.stringToTerraform(struct!.clientSecretSettingName),
-    oauth_scopes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.oauthScopes),
+    oauth_scopes: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.oauthScopes),
   }
 }
 
@@ -1211,7 +1211,7 @@ export function windowsFunctionAppAuthSettingsToTerraform(struct?: WindowsFuncti
   }
   return {
     additional_login_parameters: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.additionalLoginParameters),
-    allowed_external_redirect_urls: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedExternalRedirectUrls),
+    allowed_external_redirect_urls: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedExternalRedirectUrls),
     default_provider: cdktf.stringToTerraform(struct!.defaultProvider),
     enabled: cdktf.booleanToTerraform(struct!.enabled),
     issuer: cdktf.stringToTerraform(struct!.issuer),
@@ -2073,7 +2073,7 @@ export function windowsFunctionAppIdentityToTerraform(struct?: WindowsFunctionAp
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.identityIds),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
@@ -2180,10 +2180,10 @@ export function windowsFunctionAppSiteConfigIpRestrictionHeadersToTerraform(stru
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    x_azure_fdid: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xAzureFdid),
-    x_fd_health_probe: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xFdHealthProbe),
-    x_forwarded_for: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xForwardedFor),
-    x_forwarded_host: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xForwardedHost),
+    x_azure_fdid: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xAzureFdid),
+    x_fd_health_probe: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xFdHealthProbe),
+    x_forwarded_for: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xForwardedFor),
+    x_forwarded_host: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xForwardedHost),
   }
 }
 
@@ -2371,7 +2371,7 @@ export function windowsFunctionAppSiteConfigIpRestrictionToTerraform(struct?: Wi
   }
   return {
     action: cdktf.stringToTerraform(struct!.action),
-    headers: cdktf.listMapper(windowsFunctionAppSiteConfigIpRestrictionHeadersToTerraform)(struct!.headers),
+    headers: cdktf.listMapper(windowsFunctionAppSiteConfigIpRestrictionHeadersToTerraform, false)(struct!.headers),
     ip_address: cdktf.stringToTerraform(struct!.ipAddress),
     name: cdktf.stringToTerraform(struct!.name),
     priority: cdktf.numberToTerraform(struct!.priority),
@@ -2617,10 +2617,10 @@ export function windowsFunctionAppSiteConfigScmIpRestrictionHeadersToTerraform(s
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    x_azure_fdid: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xAzureFdid),
-    x_fd_health_probe: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xFdHealthProbe),
-    x_forwarded_for: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xForwardedFor),
-    x_forwarded_host: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xForwardedHost),
+    x_azure_fdid: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xAzureFdid),
+    x_fd_health_probe: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xFdHealthProbe),
+    x_forwarded_for: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xForwardedFor),
+    x_forwarded_host: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xForwardedHost),
   }
 }
 
@@ -2808,7 +2808,7 @@ export function windowsFunctionAppSiteConfigScmIpRestrictionToTerraform(struct?:
   }
   return {
     action: cdktf.stringToTerraform(struct!.action),
-    headers: cdktf.listMapper(windowsFunctionAppSiteConfigScmIpRestrictionHeadersToTerraform)(struct!.headers),
+    headers: cdktf.listMapper(windowsFunctionAppSiteConfigScmIpRestrictionHeadersToTerraform, false)(struct!.headers),
     ip_address: cdktf.stringToTerraform(struct!.ipAddress),
     name: cdktf.stringToTerraform(struct!.name),
     priority: cdktf.numberToTerraform(struct!.priority),
@@ -3358,7 +3358,7 @@ export function windowsFunctionAppSiteConfigCorsToTerraform(struct?: WindowsFunc
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    allowed_origins: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedOrigins),
+    allowed_origins: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedOrigins),
     support_credentials: cdktf.booleanToTerraform(struct!.supportCredentials),
   }
 }
@@ -3628,13 +3628,13 @@ export function windowsFunctionAppSiteConfigToTerraform(struct?: WindowsFunction
     app_scale_limit: cdktf.numberToTerraform(struct!.appScaleLimit),
     application_insights_connection_string: cdktf.stringToTerraform(struct!.applicationInsightsConnectionString),
     application_insights_key: cdktf.stringToTerraform(struct!.applicationInsightsKey),
-    default_documents: cdktf.listMapper(cdktf.stringToTerraform)(struct!.defaultDocuments),
+    default_documents: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.defaultDocuments),
     elastic_instance_minimum: cdktf.numberToTerraform(struct!.elasticInstanceMinimum),
     ftps_state: cdktf.stringToTerraform(struct!.ftpsState),
     health_check_eviction_time_in_min: cdktf.numberToTerraform(struct!.healthCheckEvictionTimeInMin),
     health_check_path: cdktf.stringToTerraform(struct!.healthCheckPath),
     http2_enabled: cdktf.booleanToTerraform(struct!.http2Enabled),
-    ip_restriction: cdktf.listMapper(windowsFunctionAppSiteConfigIpRestrictionToTerraform)(struct!.ipRestriction),
+    ip_restriction: cdktf.listMapper(windowsFunctionAppSiteConfigIpRestrictionToTerraform, false)(struct!.ipRestriction),
     load_balancing_mode: cdktf.stringToTerraform(struct!.loadBalancingMode),
     managed_pipeline_mode: cdktf.stringToTerraform(struct!.managedPipelineMode),
     minimum_tls_version: cdktf.stringToTerraform(struct!.minimumTlsVersion),
@@ -3642,7 +3642,7 @@ export function windowsFunctionAppSiteConfigToTerraform(struct?: WindowsFunction
     remote_debugging_enabled: cdktf.booleanToTerraform(struct!.remoteDebuggingEnabled),
     remote_debugging_version: cdktf.stringToTerraform(struct!.remoteDebuggingVersion),
     runtime_scale_monitoring_enabled: cdktf.booleanToTerraform(struct!.runtimeScaleMonitoringEnabled),
-    scm_ip_restriction: cdktf.listMapper(windowsFunctionAppSiteConfigScmIpRestrictionToTerraform)(struct!.scmIpRestriction),
+    scm_ip_restriction: cdktf.listMapper(windowsFunctionAppSiteConfigScmIpRestrictionToTerraform, false)(struct!.scmIpRestriction),
     scm_minimum_tls_version: cdktf.stringToTerraform(struct!.scmMinimumTlsVersion),
     scm_use_main_ip_restriction: cdktf.booleanToTerraform(struct!.scmUseMainIpRestriction),
     use_32_bit_worker: cdktf.booleanToTerraform(struct!.use32BitWorker),
@@ -4395,8 +4395,8 @@ export function windowsFunctionAppStickySettingsToTerraform(struct?: WindowsFunc
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    app_setting_names: cdktf.listMapper(cdktf.stringToTerraform)(struct!.appSettingNames),
-    connection_string_names: cdktf.listMapper(cdktf.stringToTerraform)(struct!.connectionStringNames),
+    app_setting_names: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.appSettingNames),
+    connection_string_names: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.connectionStringNames),
   }
 }
 
@@ -4659,7 +4659,10 @@ export class WindowsFunctionApp extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._appSettings = config.appSettings;
     this._builtinLoggingEnabled = config.builtinLoggingEnabled;
@@ -5180,7 +5183,7 @@ export class WindowsFunctionApp extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       auth_settings: windowsFunctionAppAuthSettingsToTerraform(this._authSettings.internalValue),
       backup: windowsFunctionAppBackupToTerraform(this._backup.internalValue),
-      connection_string: cdktf.listMapper(windowsFunctionAppConnectionStringToTerraform)(this._connectionString.internalValue),
+      connection_string: cdktf.listMapper(windowsFunctionAppConnectionStringToTerraform, true)(this._connectionString.internalValue),
       identity: windowsFunctionAppIdentityToTerraform(this._identity.internalValue),
       site_config: windowsFunctionAppSiteConfigToTerraform(this._siteConfig.internalValue),
       sticky_settings: windowsFunctionAppStickySettingsToTerraform(this._stickySettings.internalValue),

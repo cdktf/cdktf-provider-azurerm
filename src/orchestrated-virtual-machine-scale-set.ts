@@ -656,7 +656,7 @@ export function orchestratedVirtualMachineScaleSetExtensionToTerraform(struct?: 
   }
   return {
     auto_upgrade_minor_version_enabled: cdktf.booleanToTerraform(struct!.autoUpgradeMinorVersionEnabled),
-    extensions_to_provision_after_vm_creation: cdktf.listMapper(cdktf.stringToTerraform)(struct!.extensionsToProvisionAfterVmCreation),
+    extensions_to_provision_after_vm_creation: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.extensionsToProvisionAfterVmCreation),
     force_extension_execution_on_change: cdktf.stringToTerraform(struct!.forceExtensionExecutionOnChange),
     name: cdktf.stringToTerraform(struct!.name),
     protected_settings: cdktf.stringToTerraform(struct!.protectedSettings),
@@ -928,7 +928,7 @@ export function orchestratedVirtualMachineScaleSetIdentityToTerraform(struct?: O
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.identityIds),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
@@ -1150,7 +1150,7 @@ export function orchestratedVirtualMachineScaleSetNetworkInterfaceIpConfiguratio
     idle_timeout_in_minutes: cdktf.numberToTerraform(struct!.idleTimeoutInMinutes),
     name: cdktf.stringToTerraform(struct!.name),
     public_ip_prefix_id: cdktf.stringToTerraform(struct!.publicIpPrefixId),
-    ip_tag: cdktf.listMapper(orchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTagToTerraform)(struct!.ipTag),
+    ip_tag: cdktf.listMapper(orchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTagToTerraform, true)(struct!.ipTag),
   }
 }
 
@@ -1362,14 +1362,14 @@ export function orchestratedVirtualMachineScaleSetNetworkInterfaceIpConfiguratio
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    application_gateway_backend_address_pool_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.applicationGatewayBackendAddressPoolIds),
-    application_security_group_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.applicationSecurityGroupIds),
-    load_balancer_backend_address_pool_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.loadBalancerBackendAddressPoolIds),
+    application_gateway_backend_address_pool_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.applicationGatewayBackendAddressPoolIds),
+    application_security_group_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.applicationSecurityGroupIds),
+    load_balancer_backend_address_pool_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.loadBalancerBackendAddressPoolIds),
     name: cdktf.stringToTerraform(struct!.name),
     primary: cdktf.booleanToTerraform(struct!.primary),
     subnet_id: cdktf.stringToTerraform(struct!.subnetId),
     version: cdktf.stringToTerraform(struct!.version),
-    public_ip_address: cdktf.listMapper(orchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressToTerraform)(struct!.publicIpAddress),
+    public_ip_address: cdktf.listMapper(orchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressToTerraform, true)(struct!.publicIpAddress),
   }
 }
 
@@ -1643,13 +1643,13 @@ export function orchestratedVirtualMachineScaleSetNetworkInterfaceToTerraform(st
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    dns_servers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.dnsServers),
+    dns_servers: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.dnsServers),
     enable_accelerated_networking: cdktf.booleanToTerraform(struct!.enableAcceleratedNetworking),
     enable_ip_forwarding: cdktf.booleanToTerraform(struct!.enableIpForwarding),
     name: cdktf.stringToTerraform(struct!.name),
     network_security_group_id: cdktf.stringToTerraform(struct!.networkSecurityGroupId),
     primary: cdktf.booleanToTerraform(struct!.primary),
-    ip_configuration: cdktf.listMapper(orchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationToTerraform)(struct!.ipConfiguration),
+    ip_configuration: cdktf.listMapper(orchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationToTerraform, true)(struct!.ipConfiguration),
   }
 }
 
@@ -2376,7 +2376,7 @@ export function orchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationSec
   }
   return {
     key_vault_id: cdktf.stringToTerraform(struct!.keyVaultId),
-    certificate: cdktf.listMapper(orchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationSecretCertificateToTerraform)(struct!.certificate),
+    certificate: cdktf.listMapper(orchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationSecretCertificateToTerraform, true)(struct!.certificate),
   }
 }
 
@@ -2527,8 +2527,8 @@ export function orchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationToT
     disable_password_authentication: cdktf.booleanToTerraform(struct!.disablePasswordAuthentication),
     patch_mode: cdktf.stringToTerraform(struct!.patchMode),
     provision_vm_agent: cdktf.booleanToTerraform(struct!.provisionVmAgent),
-    admin_ssh_key: cdktf.listMapper(orchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationAdminSshKeyToTerraform)(struct!.adminSshKey),
-    secret: cdktf.listMapper(orchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationSecretToTerraform)(struct!.secret),
+    admin_ssh_key: cdktf.listMapper(orchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationAdminSshKeyToTerraform, true)(struct!.adminSshKey),
+    secret: cdktf.listMapper(orchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationSecretToTerraform, true)(struct!.secret),
   }
 }
 
@@ -2869,7 +2869,7 @@ export function orchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationS
   }
   return {
     key_vault_id: cdktf.stringToTerraform(struct!.keyVaultId),
-    certificate: cdktf.listMapper(orchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationSecretCertificateToTerraform)(struct!.certificate),
+    certificate: cdktf.listMapper(orchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationSecretCertificateToTerraform, true)(struct!.certificate),
   }
 }
 
@@ -3151,8 +3151,8 @@ export function orchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationT
     patch_mode: cdktf.stringToTerraform(struct!.patchMode),
     provision_vm_agent: cdktf.booleanToTerraform(struct!.provisionVmAgent),
     timezone: cdktf.stringToTerraform(struct!.timezone),
-    secret: cdktf.listMapper(orchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationSecretToTerraform)(struct!.secret),
-    winrm_listener: cdktf.listMapper(orchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationWinrmListenerToTerraform)(struct!.winrmListener),
+    secret: cdktf.listMapper(orchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationSecretToTerraform, true)(struct!.secret),
+    winrm_listener: cdktf.listMapper(orchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationWinrmListenerToTerraform, true)(struct!.winrmListener),
   }
 }
 
@@ -4041,7 +4041,10 @@ export class OrchestratedVirtualMachineScaleSet extends cdktf.TerraformResource 
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._encryptionAtHostEnabled = config.encryptionAtHostEnabled;
     this._evictionPolicy = config.evictionPolicy;
@@ -4575,13 +4578,13 @@ export class OrchestratedVirtualMachineScaleSet extends cdktf.TerraformResource 
       source_image_id: cdktf.stringToTerraform(this._sourceImageId),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       zone_balance: cdktf.booleanToTerraform(this._zoneBalance),
-      zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),
+      zones: cdktf.listMapper(cdktf.stringToTerraform, false)(this._zones),
       automatic_instance_repair: orchestratedVirtualMachineScaleSetAutomaticInstanceRepairToTerraform(this._automaticInstanceRepair.internalValue),
       boot_diagnostics: orchestratedVirtualMachineScaleSetBootDiagnosticsToTerraform(this._bootDiagnostics.internalValue),
-      data_disk: cdktf.listMapper(orchestratedVirtualMachineScaleSetDataDiskToTerraform)(this._dataDisk.internalValue),
-      extension: cdktf.listMapper(orchestratedVirtualMachineScaleSetExtensionToTerraform)(this._extension.internalValue),
+      data_disk: cdktf.listMapper(orchestratedVirtualMachineScaleSetDataDiskToTerraform, true)(this._dataDisk.internalValue),
+      extension: cdktf.listMapper(orchestratedVirtualMachineScaleSetExtensionToTerraform, true)(this._extension.internalValue),
       identity: orchestratedVirtualMachineScaleSetIdentityToTerraform(this._identity.internalValue),
-      network_interface: cdktf.listMapper(orchestratedVirtualMachineScaleSetNetworkInterfaceToTerraform)(this._networkInterface.internalValue),
+      network_interface: cdktf.listMapper(orchestratedVirtualMachineScaleSetNetworkInterfaceToTerraform, true)(this._networkInterface.internalValue),
       os_disk: orchestratedVirtualMachineScaleSetOsDiskToTerraform(this._osDisk.internalValue),
       os_profile: orchestratedVirtualMachineScaleSetOsProfileToTerraform(this._osProfile.internalValue),
       plan: orchestratedVirtualMachineScaleSetPlanToTerraform(this._plan.internalValue),

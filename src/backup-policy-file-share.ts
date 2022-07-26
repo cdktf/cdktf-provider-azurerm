@@ -237,8 +237,8 @@ export function backupPolicyFileShareRetentionMonthlyToTerraform(struct?: Backup
   }
   return {
     count: cdktf.numberToTerraform(struct!.count),
-    weekdays: cdktf.listMapper(cdktf.stringToTerraform)(struct!.weekdays),
-    weeks: cdktf.listMapper(cdktf.stringToTerraform)(struct!.weeks),
+    weekdays: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.weekdays),
+    weeks: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.weeks),
   }
 }
 
@@ -343,7 +343,7 @@ export function backupPolicyFileShareRetentionWeeklyToTerraform(struct?: BackupP
   }
   return {
     count: cdktf.numberToTerraform(struct!.count),
-    weekdays: cdktf.listMapper(cdktf.stringToTerraform)(struct!.weekdays),
+    weekdays: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.weekdays),
   }
 }
 
@@ -437,9 +437,9 @@ export function backupPolicyFileShareRetentionYearlyToTerraform(struct?: BackupP
   }
   return {
     count: cdktf.numberToTerraform(struct!.count),
-    months: cdktf.listMapper(cdktf.stringToTerraform)(struct!.months),
-    weekdays: cdktf.listMapper(cdktf.stringToTerraform)(struct!.weekdays),
-    weeks: cdktf.listMapper(cdktf.stringToTerraform)(struct!.weeks),
+    months: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.months),
+    weekdays: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.weekdays),
+    weeks: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.weeks),
   }
 }
 
@@ -734,7 +734,10 @@ export class BackupPolicyFileShare extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._name = config.name;

@@ -77,7 +77,7 @@ export function monitorActionRuleSuppressionConditionAlertContextToTerraform(str
   }
   return {
     operator: cdktf.stringToTerraform(struct!.operator),
-    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+    values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
 }
 
@@ -163,7 +163,7 @@ export function monitorActionRuleSuppressionConditionAlertRuleIdToTerraform(stru
   }
   return {
     operator: cdktf.stringToTerraform(struct!.operator),
-    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+    values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
 }
 
@@ -249,7 +249,7 @@ export function monitorActionRuleSuppressionConditionDescriptionToTerraform(stru
   }
   return {
     operator: cdktf.stringToTerraform(struct!.operator),
-    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+    values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
 }
 
@@ -335,7 +335,7 @@ export function monitorActionRuleSuppressionConditionMonitorToTerraform(struct?:
   }
   return {
     operator: cdktf.stringToTerraform(struct!.operator),
-    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+    values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
 }
 
@@ -421,7 +421,7 @@ export function monitorActionRuleSuppressionConditionMonitorServiceToTerraform(s
   }
   return {
     operator: cdktf.stringToTerraform(struct!.operator),
-    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+    values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
 }
 
@@ -507,7 +507,7 @@ export function monitorActionRuleSuppressionConditionSeverityToTerraform(struct?
   }
   return {
     operator: cdktf.stringToTerraform(struct!.operator),
-    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+    values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
 }
 
@@ -593,7 +593,7 @@ export function monitorActionRuleSuppressionConditionTargetResourceTypeToTerrafo
   }
   return {
     operator: cdktf.stringToTerraform(struct!.operator),
-    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+    values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
 }
 
@@ -919,7 +919,7 @@ export function monitorActionRuleSuppressionScopeToTerraform(struct?: MonitorAct
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    resource_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.resourceIds),
+    resource_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.resourceIds),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
@@ -1014,8 +1014,8 @@ export function monitorActionRuleSuppressionSuppressionScheduleToTerraform(struc
   }
   return {
     end_date_utc: cdktf.stringToTerraform(struct!.endDateUtc),
-    recurrence_monthly: cdktf.listMapper(cdktf.numberToTerraform)(struct!.recurrenceMonthly),
-    recurrence_weekly: cdktf.listMapper(cdktf.stringToTerraform)(struct!.recurrenceWeekly),
+    recurrence_monthly: cdktf.listMapper(cdktf.numberToTerraform, false)(struct!.recurrenceMonthly),
+    recurrence_weekly: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.recurrenceWeekly),
     start_date_utc: cdktf.stringToTerraform(struct!.startDateUtc),
   }
 }
@@ -1408,7 +1408,10 @@ export class MonitorActionRuleSuppression extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._description = config.description;
     this._enabled = config.enabled;

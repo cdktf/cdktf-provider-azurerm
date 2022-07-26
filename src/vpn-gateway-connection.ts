@@ -72,8 +72,8 @@ export function vpnGatewayConnectionRoutingPropagatedRouteTableToTerraform(struc
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    labels: cdktf.listMapper(cdktf.stringToTerraform)(struct!.labels),
-    route_table_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.routeTableIds),
+    labels: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.labels),
+    route_table_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.routeTableIds),
   }
 }
 
@@ -408,8 +408,8 @@ export function vpnGatewayConnectionTrafficSelectorPolicyToTerraform(struct?: Vp
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    local_address_ranges: cdktf.listMapper(cdktf.stringToTerraform)(struct!.localAddressRanges),
-    remote_address_ranges: cdktf.listMapper(cdktf.stringToTerraform)(struct!.remoteAddressRanges),
+    local_address_ranges: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.localAddressRanges),
+    remote_address_ranges: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.remoteAddressRanges),
   }
 }
 
@@ -965,8 +965,8 @@ export function vpnGatewayConnectionVpnLinkToTerraform(struct?: VpnGatewayConnec
     bandwidth_mbps: cdktf.numberToTerraform(struct!.bandwidthMbps),
     bgp_enabled: cdktf.booleanToTerraform(struct!.bgpEnabled),
     connection_mode: cdktf.stringToTerraform(struct!.connectionMode),
-    egress_nat_rule_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.egressNatRuleIds),
-    ingress_nat_rule_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.ingressNatRuleIds),
+    egress_nat_rule_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.egressNatRuleIds),
+    ingress_nat_rule_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.ingressNatRuleIds),
     local_azure_ip_address_enabled: cdktf.booleanToTerraform(struct!.localAzureIpAddressEnabled),
     name: cdktf.stringToTerraform(struct!.name),
     policy_based_traffic_selector_enabled: cdktf.booleanToTerraform(struct!.policyBasedTrafficSelectorEnabled),
@@ -975,8 +975,8 @@ export function vpnGatewayConnectionVpnLinkToTerraform(struct?: VpnGatewayConnec
     route_weight: cdktf.numberToTerraform(struct!.routeWeight),
     shared_key: cdktf.stringToTerraform(struct!.sharedKey),
     vpn_site_link_id: cdktf.stringToTerraform(struct!.vpnSiteLinkId),
-    custom_bgp_address: cdktf.listMapper(vpnGatewayConnectionVpnLinkCustomBgpAddressToTerraform)(struct!.customBgpAddress),
-    ipsec_policy: cdktf.listMapper(vpnGatewayConnectionVpnLinkIpsecPolicyToTerraform)(struct!.ipsecPolicy),
+    custom_bgp_address: cdktf.listMapper(vpnGatewayConnectionVpnLinkCustomBgpAddressToTerraform, true)(struct!.customBgpAddress),
+    ipsec_policy: cdktf.listMapper(vpnGatewayConnectionVpnLinkIpsecPolicyToTerraform, true)(struct!.ipsecPolicy),
   }
 }
 
@@ -1395,7 +1395,10 @@ export class VpnGatewayConnection extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._internetSecurityEnabled = config.internetSecurityEnabled;
@@ -1557,8 +1560,8 @@ export class VpnGatewayConnection extends cdktf.TerraformResource {
       vpn_gateway_id: cdktf.stringToTerraform(this._vpnGatewayId),
       routing: vpnGatewayConnectionRoutingToTerraform(this._routing.internalValue),
       timeouts: vpnGatewayConnectionTimeoutsToTerraform(this._timeouts.internalValue),
-      traffic_selector_policy: cdktf.listMapper(vpnGatewayConnectionTrafficSelectorPolicyToTerraform)(this._trafficSelectorPolicy.internalValue),
-      vpn_link: cdktf.listMapper(vpnGatewayConnectionVpnLinkToTerraform)(this._vpnLink.internalValue),
+      traffic_selector_policy: cdktf.listMapper(vpnGatewayConnectionTrafficSelectorPolicyToTerraform, true)(this._trafficSelectorPolicy.internalValue),
+      vpn_link: cdktf.listMapper(vpnGatewayConnectionVpnLinkToTerraform, true)(this._vpnLink.internalValue),
     };
   }
 }

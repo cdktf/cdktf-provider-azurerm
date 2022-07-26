@@ -366,8 +366,8 @@ export function frontdoorRulesEngineRuleActionToTerraform(struct?: FrontdoorRule
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    request_header: cdktf.listMapper(frontdoorRulesEngineRuleActionRequestHeaderToTerraform)(struct!.requestHeader),
-    response_header: cdktf.listMapper(frontdoorRulesEngineRuleActionResponseHeaderToTerraform)(struct!.responseHeader),
+    request_header: cdktf.listMapper(frontdoorRulesEngineRuleActionRequestHeaderToTerraform, true)(struct!.requestHeader),
+    response_header: cdktf.listMapper(frontdoorRulesEngineRuleActionResponseHeaderToTerraform, true)(struct!.responseHeader),
   }
 }
 
@@ -477,8 +477,8 @@ export function frontdoorRulesEngineRuleMatchConditionToTerraform(struct?: Front
     negate_condition: cdktf.booleanToTerraform(struct!.negateCondition),
     operator: cdktf.stringToTerraform(struct!.operator),
     selector: cdktf.stringToTerraform(struct!.selector),
-    transform: cdktf.listMapper(cdktf.stringToTerraform)(struct!.transform),
-    value: cdktf.listMapper(cdktf.stringToTerraform)(struct!.value),
+    transform: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.transform),
+    value: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.value),
     variable: cdktf.stringToTerraform(struct!.variable),
   }
 }
@@ -702,7 +702,7 @@ export function frontdoorRulesEngineRuleToTerraform(struct?: FrontdoorRulesEngin
     name: cdktf.stringToTerraform(struct!.name),
     priority: cdktf.numberToTerraform(struct!.priority),
     action: frontdoorRulesEngineRuleActionToTerraform(struct!.action),
-    match_condition: cdktf.listMapper(frontdoorRulesEngineRuleMatchConditionToTerraform)(struct!.matchCondition),
+    match_condition: cdktf.listMapper(frontdoorRulesEngineRuleMatchConditionToTerraform, true)(struct!.matchCondition),
   }
 }
 
@@ -1035,7 +1035,10 @@ export class FrontdoorRulesEngine extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._enabled = config.enabled;
     this._frontdoorName = config.frontdoorName;
@@ -1169,7 +1172,7 @@ export class FrontdoorRulesEngine extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      rule: cdktf.listMapper(frontdoorRulesEngineRuleToTerraform)(this._rule.internalValue),
+      rule: cdktf.listMapper(frontdoorRulesEngineRuleToTerraform, true)(this._rule.internalValue),
       timeouts: frontdoorRulesEngineTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

@@ -336,7 +336,10 @@ export class CosmosdbCassandraCluster extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._authenticationMethod = config.authenticationMethod;
     this._clientCertificatePems = config.clientCertificatePems;
@@ -591,11 +594,11 @@ export class CosmosdbCassandraCluster extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       authentication_method: cdktf.stringToTerraform(this._authenticationMethod),
-      client_certificate_pems: cdktf.listMapper(cdktf.stringToTerraform)(this._clientCertificatePems),
+      client_certificate_pems: cdktf.listMapper(cdktf.stringToTerraform, false)(this._clientCertificatePems),
       default_admin_password: cdktf.stringToTerraform(this._defaultAdminPassword),
       delegated_management_subnet_id: cdktf.stringToTerraform(this._delegatedManagementSubnetId),
-      external_gossip_certificate_pems: cdktf.listMapper(cdktf.stringToTerraform)(this._externalGossipCertificatePems),
-      external_seed_node_ip_addresses: cdktf.listMapper(cdktf.stringToTerraform)(this._externalSeedNodeIpAddresses),
+      external_gossip_certificate_pems: cdktf.listMapper(cdktf.stringToTerraform, false)(this._externalGossipCertificatePems),
+      external_seed_node_ip_addresses: cdktf.listMapper(cdktf.stringToTerraform, false)(this._externalSeedNodeIpAddresses),
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),

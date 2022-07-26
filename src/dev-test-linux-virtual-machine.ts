@@ -539,7 +539,10 @@ export class DevTestLinuxVirtualMachine extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._allowClaim = config.allowClaim;
     this._disallowPublicIpAddress = config.disallowPublicIpAddress;
@@ -873,7 +876,7 @@ export class DevTestLinuxVirtualMachine extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       username: cdktf.stringToTerraform(this._username),
       gallery_image_reference: devTestLinuxVirtualMachineGalleryImageReferenceToTerraform(this._galleryImageReference.internalValue),
-      inbound_nat_rule: cdktf.listMapper(devTestLinuxVirtualMachineInboundNatRuleToTerraform)(this._inboundNatRule.internalValue),
+      inbound_nat_rule: cdktf.listMapper(devTestLinuxVirtualMachineInboundNatRuleToTerraform, true)(this._inboundNatRule.internalValue),
       timeouts: devTestLinuxVirtualMachineTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

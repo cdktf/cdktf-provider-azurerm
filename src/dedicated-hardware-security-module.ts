@@ -72,7 +72,7 @@ export function dedicatedHardwareSecurityModuleNetworkProfileToTerraform(struct?
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    network_interface_private_ip_addresses: cdktf.listMapper(cdktf.stringToTerraform)(struct!.networkInterfacePrivateIpAddresses),
+    network_interface_private_ip_addresses: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.networkInterfacePrivateIpAddresses),
     subnet_id: cdktf.stringToTerraform(struct!.subnetId),
   }
 }
@@ -330,7 +330,10 @@ export class DedicatedHardwareSecurityModule extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._location = config.location;
@@ -506,7 +509,7 @@ export class DedicatedHardwareSecurityModule extends cdktf.TerraformResource {
       sku_name: cdktf.stringToTerraform(this._skuName),
       stamp_id: cdktf.stringToTerraform(this._stampId),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
-      zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),
+      zones: cdktf.listMapper(cdktf.stringToTerraform, false)(this._zones),
       network_profile: dedicatedHardwareSecurityModuleNetworkProfileToTerraform(this._networkProfile.internalValue),
       timeouts: dedicatedHardwareSecurityModuleTimeoutsToTerraform(this._timeouts.internalValue),
     };

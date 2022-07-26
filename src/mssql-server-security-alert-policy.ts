@@ -246,7 +246,10 @@ export class MssqlServerSecurityAlertPolicy extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._disabledAlerts = config.disabledAlerts;
     this._emailAccountAdmins = config.emailAccountAdmins;
@@ -438,9 +441,9 @@ export class MssqlServerSecurityAlertPolicy extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      disabled_alerts: cdktf.listMapper(cdktf.stringToTerraform)(this._disabledAlerts),
+      disabled_alerts: cdktf.listMapper(cdktf.stringToTerraform, false)(this._disabledAlerts),
       email_account_admins: cdktf.booleanToTerraform(this._emailAccountAdmins),
-      email_addresses: cdktf.listMapper(cdktf.stringToTerraform)(this._emailAddresses),
+      email_addresses: cdktf.listMapper(cdktf.stringToTerraform, false)(this._emailAddresses),
       id: cdktf.stringToTerraform(this._id),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       retention_days: cdktf.numberToTerraform(this._retentionDays),

@@ -211,8 +211,8 @@ export function appConfigurationFeatureTargetingFilterToTerraform(struct?: AppCo
   }
   return {
     default_rollout_percentage: cdktf.numberToTerraform(struct!.defaultRolloutPercentage),
-    users: cdktf.listMapper(cdktf.stringToTerraform)(struct!.users),
-    groups: cdktf.listMapper(appConfigurationFeatureTargetingFilterGroupsToTerraform)(struct!.groups),
+    users: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.users),
+    groups: cdktf.listMapper(appConfigurationFeatureTargetingFilterGroupsToTerraform, true)(struct!.groups),
   }
 }
 
@@ -650,7 +650,10 @@ export class AppConfigurationFeature extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._configurationStoreId = config.configurationStoreId;
     this._description = config.description;
@@ -889,9 +892,9 @@ export class AppConfigurationFeature extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       percentage_filter_value: cdktf.numberToTerraform(this._percentageFilterValue),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
-      targeting_filter: cdktf.listMapper(appConfigurationFeatureTargetingFilterToTerraform)(this._targetingFilter.internalValue),
+      targeting_filter: cdktf.listMapper(appConfigurationFeatureTargetingFilterToTerraform, true)(this._targetingFilter.internalValue),
       timeouts: appConfigurationFeatureTimeoutsToTerraform(this._timeouts.internalValue),
-      timewindow_filter: cdktf.listMapper(appConfigurationFeatureTimewindowFilterToTerraform)(this._timewindowFilter.internalValue),
+      timewindow_filter: cdktf.listMapper(appConfigurationFeatureTimewindowFilterToTerraform, true)(this._timewindowFilter.internalValue),
     };
   }
 }

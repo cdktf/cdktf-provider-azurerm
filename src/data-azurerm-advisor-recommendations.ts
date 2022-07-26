@@ -241,7 +241,10 @@ export class DataAzurermAdvisorRecommendations extends cdktf.TerraformDataSource
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._filterByCategory = config.filterByCategory;
     this._filterByResourceGroups = config.filterByResourceGroups;
@@ -329,8 +332,8 @@ export class DataAzurermAdvisorRecommendations extends cdktf.TerraformDataSource
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      filter_by_category: cdktf.listMapper(cdktf.stringToTerraform)(this._filterByCategory),
-      filter_by_resource_groups: cdktf.listMapper(cdktf.stringToTerraform)(this._filterByResourceGroups),
+      filter_by_category: cdktf.listMapper(cdktf.stringToTerraform, false)(this._filterByCategory),
+      filter_by_resource_groups: cdktf.listMapper(cdktf.stringToTerraform, false)(this._filterByResourceGroups),
       id: cdktf.stringToTerraform(this._id),
       timeouts: dataAzurermAdvisorRecommendationsTimeoutsToTerraform(this._timeouts.internalValue),
     };

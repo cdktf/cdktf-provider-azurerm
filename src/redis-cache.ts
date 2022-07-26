@@ -128,7 +128,7 @@ export function redisCacheIdentityToTerraform(struct?: RedisCacheIdentityOutputR
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.identityIds),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
@@ -941,7 +941,10 @@ export class RedisCache extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._capacity = config.capacity;
     this._enableNonSslPort = config.enableNonSslPort;
@@ -1381,9 +1384,9 @@ export class RedisCache extends cdktf.TerraformResource {
       subnet_id: cdktf.stringToTerraform(this._subnetId),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       tenant_settings: cdktf.hashMapper(cdktf.stringToTerraform)(this._tenantSettings),
-      zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),
+      zones: cdktf.listMapper(cdktf.stringToTerraform, false)(this._zones),
       identity: redisCacheIdentityToTerraform(this._identity.internalValue),
-      patch_schedule: cdktf.listMapper(redisCachePatchScheduleToTerraform)(this._patchSchedule.internalValue),
+      patch_schedule: cdktf.listMapper(redisCachePatchScheduleToTerraform, true)(this._patchSchedule.internalValue),
       redis_configuration: redisCacheRedisConfigurationToTerraform(this._redisConfiguration.internalValue),
       timeouts: redisCacheTimeoutsToTerraform(this._timeouts.internalValue),
     };

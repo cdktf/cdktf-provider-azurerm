@@ -380,7 +380,7 @@ export function databoxEdgeOrderContactToTerraform(struct?: DataboxEdgeOrderCont
   }
   return {
     company_name: cdktf.stringToTerraform(struct!.companyName),
-    emails: cdktf.listMapper(cdktf.stringToTerraform)(struct!.emails),
+    emails: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.emails),
     name: cdktf.stringToTerraform(struct!.name),
     phone_number: cdktf.stringToTerraform(struct!.phoneNumber),
   }
@@ -517,7 +517,7 @@ export function databoxEdgeOrderShipmentAddressToTerraform(struct?: DataboxEdgeO
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    address: cdktf.listMapper(cdktf.stringToTerraform)(struct!.address),
+    address: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.address),
     city: cdktf.stringToTerraform(struct!.city),
     country: cdktf.stringToTerraform(struct!.country),
     postal_code: cdktf.stringToTerraform(struct!.postalCode),
@@ -835,7 +835,10 @@ export class DataboxEdgeOrder extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._deviceName = config.deviceName;
     this._id = config.id;

@@ -65,8 +65,8 @@ export function webPubsubNetworkAclPrivateEndpointToTerraform(struct?: WebPubsub
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    allowed_request_types: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedRequestTypes),
-    denied_request_types: cdktf.listMapper(cdktf.stringToTerraform)(struct!.deniedRequestTypes),
+    allowed_request_types: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedRequestTypes),
+    denied_request_types: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.deniedRequestTypes),
     id: cdktf.stringToTerraform(struct!.id),
   }
 }
@@ -209,8 +209,8 @@ export function webPubsubNetworkAclPublicNetworkToTerraform(struct?: WebPubsubNe
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    allowed_request_types: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedRequestTypes),
-    denied_request_types: cdktf.listMapper(cdktf.stringToTerraform)(struct!.deniedRequestTypes),
+    allowed_request_types: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedRequestTypes),
+    denied_request_types: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.deniedRequestTypes),
   }
 }
 
@@ -473,7 +473,10 @@ export class WebPubsubNetworkAcl extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._defaultAction = config.defaultAction;
     this._id = config.id;
@@ -586,7 +589,7 @@ export class WebPubsubNetworkAcl extends cdktf.TerraformResource {
       default_action: cdktf.stringToTerraform(this._defaultAction),
       id: cdktf.stringToTerraform(this._id),
       web_pubsub_id: cdktf.stringToTerraform(this._webPubsubId),
-      private_endpoint: cdktf.listMapper(webPubsubNetworkAclPrivateEndpointToTerraform)(this._privateEndpoint.internalValue),
+      private_endpoint: cdktf.listMapper(webPubsubNetworkAclPrivateEndpointToTerraform, true)(this._privateEndpoint.internalValue),
       public_network: webPubsubNetworkAclPublicNetworkToTerraform(this._publicNetwork.internalValue),
       timeouts: webPubsubNetworkAclTimeoutsToTerraform(this._timeouts.internalValue),
     };

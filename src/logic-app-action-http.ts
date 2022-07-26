@@ -358,7 +358,10 @@ export class LogicAppActionHttp extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._body = config.body;
     this._headers = config.headers;
@@ -520,7 +523,7 @@ export class LogicAppActionHttp extends cdktf.TerraformResource {
       method: cdktf.stringToTerraform(this._method),
       name: cdktf.stringToTerraform(this._name),
       uri: cdktf.stringToTerraform(this._uri),
-      run_after: cdktf.listMapper(logicAppActionHttpRunAfterToTerraform)(this._runAfter.internalValue),
+      run_after: cdktf.listMapper(logicAppActionHttpRunAfterToTerraform, true)(this._runAfter.internalValue),
       timeouts: logicAppActionHttpTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

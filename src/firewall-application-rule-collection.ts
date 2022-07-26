@@ -205,12 +205,12 @@ export function firewallApplicationRuleCollectionRuleToTerraform(struct?: Firewa
   }
   return {
     description: cdktf.stringToTerraform(struct!.description),
-    fqdn_tags: cdktf.listMapper(cdktf.stringToTerraform)(struct!.fqdnTags),
+    fqdn_tags: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.fqdnTags),
     name: cdktf.stringToTerraform(struct!.name),
-    source_addresses: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sourceAddresses),
-    source_ip_groups: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sourceIpGroups),
-    target_fqdns: cdktf.listMapper(cdktf.stringToTerraform)(struct!.targetFqdns),
-    protocol: cdktf.listMapper(firewallApplicationRuleCollectionRuleProtocolToTerraform)(struct!.protocol),
+    source_addresses: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.sourceAddresses),
+    source_ip_groups: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.sourceIpGroups),
+    target_fqdns: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.targetFqdns),
+    protocol: cdktf.listMapper(firewallApplicationRuleCollectionRuleProtocolToTerraform, true)(struct!.protocol),
   }
 }
 
@@ -612,7 +612,10 @@ export class FirewallApplicationRuleCollection extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._action = config.action;
     this._azureFirewallName = config.azureFirewallName;
@@ -750,7 +753,7 @@ export class FirewallApplicationRuleCollection extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       priority: cdktf.numberToTerraform(this._priority),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      rule: cdktf.listMapper(firewallApplicationRuleCollectionRuleToTerraform)(this._rule.internalValue),
+      rule: cdktf.listMapper(firewallApplicationRuleCollectionRuleToTerraform, true)(this._rule.internalValue),
       timeouts: firewallApplicationRuleCollectionTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

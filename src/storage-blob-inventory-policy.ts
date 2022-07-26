@@ -56,10 +56,10 @@ export function storageBlobInventoryPolicyRulesFilterToTerraform(struct?: Storag
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    blob_types: cdktf.listMapper(cdktf.stringToTerraform)(struct!.blobTypes),
+    blob_types: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.blobTypes),
     include_blob_versions: cdktf.booleanToTerraform(struct!.includeBlobVersions),
     include_snapshots: cdktf.booleanToTerraform(struct!.includeSnapshots),
-    prefix_match: cdktf.listMapper(cdktf.stringToTerraform)(struct!.prefixMatch),
+    prefix_match: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.prefixMatch),
   }
 }
 
@@ -216,7 +216,7 @@ export function storageBlobInventoryPolicyRulesToTerraform(struct?: StorageBlobI
     format: cdktf.stringToTerraform(struct!.format),
     name: cdktf.stringToTerraform(struct!.name),
     schedule: cdktf.stringToTerraform(struct!.schedule),
-    schema_fields: cdktf.listMapper(cdktf.stringToTerraform)(struct!.schemaFields),
+    schema_fields: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.schemaFields),
     scope: cdktf.stringToTerraform(struct!.scope),
     storage_container_name: cdktf.stringToTerraform(struct!.storageContainerName),
     filter: storageBlobInventoryPolicyRulesFilterToTerraform(struct!.filter),
@@ -606,7 +606,10 @@ export class StorageBlobInventoryPolicy extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._storageAccountId = config.storageAccountId;
@@ -684,7 +687,7 @@ export class StorageBlobInventoryPolicy extends cdktf.TerraformResource {
     return {
       id: cdktf.stringToTerraform(this._id),
       storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
-      rules: cdktf.listMapper(storageBlobInventoryPolicyRulesToTerraform)(this._rules.internalValue),
+      rules: cdktf.listMapper(storageBlobInventoryPolicyRulesToTerraform, true)(this._rules.internalValue),
       timeouts: storageBlobInventoryPolicyTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

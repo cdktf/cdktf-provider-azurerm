@@ -357,7 +357,10 @@ export class LocalNetworkGateway extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._addressSpace = config.addressSpace;
     this._gatewayAddress = config.gatewayAddress;
@@ -532,7 +535,7 @@ export class LocalNetworkGateway extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      address_space: cdktf.listMapper(cdktf.stringToTerraform)(this._addressSpace),
+      address_space: cdktf.listMapper(cdktf.stringToTerraform, false)(this._addressSpace),
       gateway_address: cdktf.stringToTerraform(this._gatewayAddress),
       gateway_fqdn: cdktf.stringToTerraform(this._gatewayFqdn),
       id: cdktf.stringToTerraform(this._id),

@@ -626,13 +626,13 @@ export function containerGroupContainerLivenessProbeToTerraform(struct?: Contain
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    exec: cdktf.listMapper(cdktf.stringToTerraform)(struct!.exec),
+    exec: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.exec),
     failure_threshold: cdktf.numberToTerraform(struct!.failureThreshold),
     initial_delay_seconds: cdktf.numberToTerraform(struct!.initialDelaySeconds),
     period_seconds: cdktf.numberToTerraform(struct!.periodSeconds),
     success_threshold: cdktf.numberToTerraform(struct!.successThreshold),
     timeout_seconds: cdktf.numberToTerraform(struct!.timeoutSeconds),
-    http_get: cdktf.listMapper(containerGroupContainerLivenessProbeHttpGetToTerraform)(struct!.httpGet),
+    http_get: cdktf.listMapper(containerGroupContainerLivenessProbeHttpGetToTerraform, true)(struct!.httpGet),
   }
 }
 
@@ -1157,13 +1157,13 @@ export function containerGroupContainerReadinessProbeToTerraform(struct?: Contai
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    exec: cdktf.listMapper(cdktf.stringToTerraform)(struct!.exec),
+    exec: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.exec),
     failure_threshold: cdktf.numberToTerraform(struct!.failureThreshold),
     initial_delay_seconds: cdktf.numberToTerraform(struct!.initialDelaySeconds),
     period_seconds: cdktf.numberToTerraform(struct!.periodSeconds),
     success_threshold: cdktf.numberToTerraform(struct!.successThreshold),
     timeout_seconds: cdktf.numberToTerraform(struct!.timeoutSeconds),
-    http_get: cdktf.listMapper(containerGroupContainerReadinessProbeHttpGetToTerraform)(struct!.httpGet),
+    http_get: cdktf.listMapper(containerGroupContainerReadinessProbeHttpGetToTerraform, true)(struct!.httpGet),
   }
 }
 
@@ -1853,7 +1853,7 @@ export function containerGroupContainerToTerraform(struct?: ContainerGroupContai
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    commands: cdktf.listMapper(cdktf.stringToTerraform)(struct!.commands),
+    commands: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.commands),
     cpu: cdktf.numberToTerraform(struct!.cpu),
     cpu_limit: cdktf.numberToTerraform(struct!.cpuLimit),
     environment_variables: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.environmentVariables),
@@ -1865,9 +1865,9 @@ export function containerGroupContainerToTerraform(struct?: ContainerGroupContai
     gpu: containerGroupContainerGpuToTerraform(struct!.gpu),
     gpu_limit: containerGroupContainerGpuLimitToTerraform(struct!.gpuLimit),
     liveness_probe: containerGroupContainerLivenessProbeToTerraform(struct!.livenessProbe),
-    ports: cdktf.listMapper(containerGroupContainerPortsToTerraform)(struct!.ports),
+    ports: cdktf.listMapper(containerGroupContainerPortsToTerraform, true)(struct!.ports),
     readiness_probe: containerGroupContainerReadinessProbeToTerraform(struct!.readinessProbe),
-    volume: cdktf.listMapper(containerGroupContainerVolumeToTerraform)(struct!.volume),
+    volume: cdktf.listMapper(containerGroupContainerVolumeToTerraform, true)(struct!.volume),
   }
 }
 
@@ -2472,9 +2472,9 @@ export function containerGroupDnsConfigToTerraform(struct?: ContainerGroupDnsCon
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    nameservers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.nameservers),
-    options: cdktf.listMapper(cdktf.stringToTerraform)(struct!.options),
-    search_domains: cdktf.listMapper(cdktf.stringToTerraform)(struct!.searchDomains),
+    nameservers: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.nameservers),
+    options: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.options),
+    search_domains: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.searchDomains),
   }
 }
 
@@ -2584,7 +2584,7 @@ export function containerGroupIdentityToTerraform(struct?: ContainerGroupIdentit
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.identityIds),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
@@ -3268,12 +3268,12 @@ export function containerGroupInitContainerToTerraform(struct?: ContainerGroupIn
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    commands: cdktf.listMapper(cdktf.stringToTerraform)(struct!.commands),
+    commands: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.commands),
     environment_variables: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.environmentVariables),
     image: cdktf.stringToTerraform(struct!.image),
     name: cdktf.stringToTerraform(struct!.name),
     secure_environment_variables: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.secureEnvironmentVariables),
-    volume: cdktf.listMapper(containerGroupInitContainerVolumeToTerraform)(struct!.volume),
+    volume: cdktf.listMapper(containerGroupInitContainerVolumeToTerraform, true)(struct!.volume),
   }
 }
 
@@ -3650,7 +3650,10 @@ export class ContainerGroup extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._dnsNameLabel = config.dnsNameLabel;
     this._exposedPort.internalValue = config.exposedPort;
@@ -3983,7 +3986,7 @@ export class ContainerGroup extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       dns_name_label: cdktf.stringToTerraform(this._dnsNameLabel),
-      exposed_port: cdktf.listMapper(containerGroupExposedPortToTerraform)(this._exposedPort.internalValue),
+      exposed_port: cdktf.listMapper(containerGroupExposedPortToTerraform, false)(this._exposedPort.internalValue),
       id: cdktf.stringToTerraform(this._id),
       ip_address_type: cdktf.stringToTerraform(this._ipAddressType),
       key_vault_key_id: cdktf.stringToTerraform(this._keyVaultKeyId),
@@ -3994,12 +3997,12 @@ export class ContainerGroup extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       restart_policy: cdktf.stringToTerraform(this._restartPolicy),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
-      container: cdktf.listMapper(containerGroupContainerToTerraform)(this._container.internalValue),
+      container: cdktf.listMapper(containerGroupContainerToTerraform, true)(this._container.internalValue),
       diagnostics: containerGroupDiagnosticsToTerraform(this._diagnostics.internalValue),
       dns_config: containerGroupDnsConfigToTerraform(this._dnsConfig.internalValue),
       identity: containerGroupIdentityToTerraform(this._identity.internalValue),
-      image_registry_credential: cdktf.listMapper(containerGroupImageRegistryCredentialToTerraform)(this._imageRegistryCredential.internalValue),
-      init_container: cdktf.listMapper(containerGroupInitContainerToTerraform)(this._initContainer.internalValue),
+      image_registry_credential: cdktf.listMapper(containerGroupImageRegistryCredentialToTerraform, true)(this._imageRegistryCredential.internalValue),
+      init_container: cdktf.listMapper(containerGroupInitContainerToTerraform, true)(this._initContainer.internalValue),
       timeouts: containerGroupTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

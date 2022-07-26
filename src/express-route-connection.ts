@@ -68,8 +68,8 @@ export function expressRouteConnectionRoutingPropagatedRouteTableToTerraform(str
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    labels: cdktf.listMapper(cdktf.stringToTerraform)(struct!.labels),
-    route_table_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.routeTableIds),
+    labels: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.labels),
+    route_table_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.routeTableIds),
   }
 }
 
@@ -426,7 +426,10 @@ export class ExpressRouteConnection extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._authorizationKey = config.authorizationKey;
     this._enableInternetSecurity = config.enableInternetSecurity;

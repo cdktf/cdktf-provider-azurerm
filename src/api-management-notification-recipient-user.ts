@@ -195,7 +195,10 @@ export class ApiManagementNotificationRecipientUser extends cdktf.TerraformResou
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._apiManagementId = config.apiManagementId;
     this._id = config.id;

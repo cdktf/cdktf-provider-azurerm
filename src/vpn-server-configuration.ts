@@ -1088,9 +1088,9 @@ export function vpnServerConfigurationRadiusToTerraform(struct?: VpnServerConfig
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    client_root_certificate: cdktf.listMapper(vpnServerConfigurationRadiusClientRootCertificateToTerraform)(struct!.clientRootCertificate),
-    server: cdktf.listMapper(vpnServerConfigurationRadiusServerToTerraform)(struct!.server),
-    server_root_certificate: cdktf.listMapper(vpnServerConfigurationRadiusServerRootCertificateToTerraform)(struct!.serverRootCertificate),
+    client_root_certificate: cdktf.listMapper(vpnServerConfigurationRadiusClientRootCertificateToTerraform, true)(struct!.clientRootCertificate),
+    server: cdktf.listMapper(vpnServerConfigurationRadiusServerToTerraform, true)(struct!.server),
+    server_root_certificate: cdktf.listMapper(vpnServerConfigurationRadiusServerRootCertificateToTerraform, true)(struct!.serverRootCertificate),
   }
 }
 
@@ -1375,7 +1375,10 @@ export class VpnServerConfiguration extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._location = config.location;
@@ -1603,11 +1606,11 @@ export class VpnServerConfiguration extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
-      vpn_authentication_types: cdktf.listMapper(cdktf.stringToTerraform)(this._vpnAuthenticationTypes),
-      vpn_protocols: cdktf.listMapper(cdktf.stringToTerraform)(this._vpnProtocols),
-      azure_active_directory_authentication: cdktf.listMapper(vpnServerConfigurationAzureActiveDirectoryAuthenticationToTerraform)(this._azureActiveDirectoryAuthentication.internalValue),
-      client_revoked_certificate: cdktf.listMapper(vpnServerConfigurationClientRevokedCertificateToTerraform)(this._clientRevokedCertificate.internalValue),
-      client_root_certificate: cdktf.listMapper(vpnServerConfigurationClientRootCertificateToTerraform)(this._clientRootCertificate.internalValue),
+      vpn_authentication_types: cdktf.listMapper(cdktf.stringToTerraform, false)(this._vpnAuthenticationTypes),
+      vpn_protocols: cdktf.listMapper(cdktf.stringToTerraform, false)(this._vpnProtocols),
+      azure_active_directory_authentication: cdktf.listMapper(vpnServerConfigurationAzureActiveDirectoryAuthenticationToTerraform, true)(this._azureActiveDirectoryAuthentication.internalValue),
+      client_revoked_certificate: cdktf.listMapper(vpnServerConfigurationClientRevokedCertificateToTerraform, true)(this._clientRevokedCertificate.internalValue),
+      client_root_certificate: cdktf.listMapper(vpnServerConfigurationClientRootCertificateToTerraform, true)(this._clientRootCertificate.internalValue),
       ipsec_policy: vpnServerConfigurationIpsecPolicyToTerraform(this._ipsecPolicy.internalValue),
       radius: vpnServerConfigurationRadiusToTerraform(this._radius.internalValue),
       timeouts: vpnServerConfigurationTimeoutsToTerraform(this._timeouts.internalValue),
