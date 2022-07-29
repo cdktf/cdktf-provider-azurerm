@@ -115,6 +115,10 @@ export interface LinuxFunctionAppSlotConfig extends cdktf.TerraformMetaArguments
   */
   readonly tags?: { [key: string]: string };
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app_slot#virtual_network_subnet_id LinuxFunctionAppSlot#virtual_network_subnet_id}
+  */
+  readonly virtualNetworkSubnetId?: string;
+  /**
   * auth_settings block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_function_app_slot#auth_settings LinuxFunctionAppSlot#auth_settings}
@@ -4894,7 +4898,7 @@ export class LinuxFunctionAppSlot extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_linux_function_app_slot',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.15.1',
+        providerVersion: '3.16.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -4923,6 +4927,7 @@ export class LinuxFunctionAppSlot extends cdktf.TerraformResource {
     this._storageKeyVaultSecretId = config.storageKeyVaultSecretId;
     this._storageUsesManagedIdentity = config.storageUsesManagedIdentity;
     this._tags = config.tags;
+    this._virtualNetworkSubnetId = config.virtualNetworkSubnetId;
     this._authSettings.internalValue = config.authSettings;
     this._backup.internalValue = config.backup;
     this._connectionString.internalValue = config.connectionString;
@@ -5258,6 +5263,22 @@ export class LinuxFunctionAppSlot extends cdktf.TerraformResource {
     return this._tags;
   }
 
+  // virtual_network_subnet_id - computed: false, optional: true, required: false
+  private _virtualNetworkSubnetId?: string; 
+  public get virtualNetworkSubnetId() {
+    return this.getStringAttribute('virtual_network_subnet_id');
+  }
+  public set virtualNetworkSubnetId(value: string) {
+    this._virtualNetworkSubnetId = value;
+  }
+  public resetVirtualNetworkSubnetId() {
+    this._virtualNetworkSubnetId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get virtualNetworkSubnetIdInput() {
+    return this._virtualNetworkSubnetId;
+  }
+
   // auth_settings - computed: false, optional: true, required: false
   private _authSettings = new LinuxFunctionAppSlotAuthSettingsOutputReference(this, "auth_settings");
   public get authSettings() {
@@ -5375,6 +5396,7 @@ export class LinuxFunctionAppSlot extends cdktf.TerraformResource {
       storage_key_vault_secret_id: cdktf.stringToTerraform(this._storageKeyVaultSecretId),
       storage_uses_managed_identity: cdktf.booleanToTerraform(this._storageUsesManagedIdentity),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
+      virtual_network_subnet_id: cdktf.stringToTerraform(this._virtualNetworkSubnetId),
       auth_settings: linuxFunctionAppSlotAuthSettingsToTerraform(this._authSettings.internalValue),
       backup: linuxFunctionAppSlotBackupToTerraform(this._backup.internalValue),
       connection_string: cdktf.listMapper(linuxFunctionAppSlotConnectionStringToTerraform, true)(this._connectionString.internalValue),

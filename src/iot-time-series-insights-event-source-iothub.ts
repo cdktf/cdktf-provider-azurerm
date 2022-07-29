@@ -244,7 +244,7 @@ export class IotTimeSeriesInsightsEventSourceIothub extends cdktf.TerraformResou
       terraformResourceType: 'azurerm_iot_time_series_insights_event_source_iothub',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.15.1',
+        providerVersion: '3.16.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

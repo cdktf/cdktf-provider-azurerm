@@ -1149,7 +1149,7 @@ export class DataAzurermBatchPool extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_batch_pool',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.15.1',
+        providerVersion: '3.16.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

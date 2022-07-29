@@ -75,6 +75,10 @@ export interface BotServiceAzureBotConfig extends cdktf.TerraformMetaArguments {
   */
   readonly sku: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_service_azure_bot#streaming_endpoint_enabled BotServiceAzureBot#streaming_endpoint_enabled}
+  */
+  readonly streamingEndpointEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_service_azure_bot#tags BotServiceAzureBot#tags}
   */
   readonly tags?: { [key: string]: string };
@@ -268,7 +272,7 @@ export class BotServiceAzureBot extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_bot_service_azure_bot',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.15.1',
+        providerVersion: '3.16.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -295,6 +299,7 @@ export class BotServiceAzureBot extends cdktf.TerraformResource {
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._sku = config.sku;
+    this._streamingEndpointEnabled = config.streamingEndpointEnabled;
     this._tags = config.tags;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -544,6 +549,22 @@ export class BotServiceAzureBot extends cdktf.TerraformResource {
     return this._sku;
   }
 
+  // streaming_endpoint_enabled - computed: false, optional: true, required: false
+  private _streamingEndpointEnabled?: boolean | cdktf.IResolvable; 
+  public get streamingEndpointEnabled() {
+    return this.getBooleanAttribute('streaming_endpoint_enabled');
+  }
+  public set streamingEndpointEnabled(value: boolean | cdktf.IResolvable) {
+    this._streamingEndpointEnabled = value;
+  }
+  public resetStreamingEndpointEnabled() {
+    this._streamingEndpointEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get streamingEndpointEnabledInput() {
+    return this._streamingEndpointEnabled;
+  }
+
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string }; 
   public get tags() {
@@ -598,6 +619,7 @@ export class BotServiceAzureBot extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku: cdktf.stringToTerraform(this._sku),
+      streaming_endpoint_enabled: cdktf.booleanToTerraform(this._streamingEndpointEnabled),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       timeouts: botServiceAzureBotTimeoutsToTerraform(this._timeouts.internalValue),
     };

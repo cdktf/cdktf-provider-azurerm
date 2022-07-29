@@ -29,6 +29,220 @@ export interface DataAzurermManagedDiskConfig extends cdktf.TerraformMetaArgumen
   */
   readonly timeouts?: DataAzurermManagedDiskTimeouts;
 }
+export interface DataAzurermManagedDiskEncryptionSettingsDiskEncryptionKey {
+}
+
+export function dataAzurermManagedDiskEncryptionSettingsDiskEncryptionKeyToTerraform(struct?: DataAzurermManagedDiskEncryptionSettingsDiskEncryptionKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermManagedDiskEncryptionSettingsDiskEncryptionKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermManagedDiskEncryptionSettingsDiskEncryptionKey | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermManagedDiskEncryptionSettingsDiskEncryptionKey | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // secret_url - computed: true, optional: false, required: false
+  public get secretUrl() {
+    return this.getStringAttribute('secret_url');
+  }
+
+  // source_vault_id - computed: true, optional: false, required: false
+  public get sourceVaultId() {
+    return this.getStringAttribute('source_vault_id');
+  }
+}
+
+export class DataAzurermManagedDiskEncryptionSettingsDiskEncryptionKeyList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermManagedDiskEncryptionSettingsDiskEncryptionKeyOutputReference {
+    return new DataAzurermManagedDiskEncryptionSettingsDiskEncryptionKeyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermManagedDiskEncryptionSettingsKeyEncryptionKey {
+}
+
+export function dataAzurermManagedDiskEncryptionSettingsKeyEncryptionKeyToTerraform(struct?: DataAzurermManagedDiskEncryptionSettingsKeyEncryptionKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermManagedDiskEncryptionSettingsKeyEncryptionKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermManagedDiskEncryptionSettingsKeyEncryptionKey | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermManagedDiskEncryptionSettingsKeyEncryptionKey | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // key_url - computed: true, optional: false, required: false
+  public get keyUrl() {
+    return this.getStringAttribute('key_url');
+  }
+
+  // source_vault_id - computed: true, optional: false, required: false
+  public get sourceVaultId() {
+    return this.getStringAttribute('source_vault_id');
+  }
+}
+
+export class DataAzurermManagedDiskEncryptionSettingsKeyEncryptionKeyList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermManagedDiskEncryptionSettingsKeyEncryptionKeyOutputReference {
+    return new DataAzurermManagedDiskEncryptionSettingsKeyEncryptionKeyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermManagedDiskEncryptionSettings {
+}
+
+export function dataAzurermManagedDiskEncryptionSettingsToTerraform(struct?: DataAzurermManagedDiskEncryptionSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermManagedDiskEncryptionSettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermManagedDiskEncryptionSettings | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermManagedDiskEncryptionSettings | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // disk_encryption_key - computed: true, optional: false, required: false
+  private _diskEncryptionKey = new DataAzurermManagedDiskEncryptionSettingsDiskEncryptionKeyList(this, "disk_encryption_key", false);
+  public get diskEncryptionKey() {
+    return this._diskEncryptionKey;
+  }
+
+  // enabled - computed: true, optional: false, required: false
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+
+  // key_encryption_key - computed: true, optional: false, required: false
+  private _keyEncryptionKey = new DataAzurermManagedDiskEncryptionSettingsKeyEncryptionKeyList(this, "key_encryption_key", false);
+  public get keyEncryptionKey() {
+    return this._keyEncryptionKey;
+  }
+}
+
+export class DataAzurermManagedDiskEncryptionSettingsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermManagedDiskEncryptionSettingsOutputReference {
+    return new DataAzurermManagedDiskEncryptionSettingsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataAzurermManagedDiskTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/managed_disk#read DataAzurermManagedDisk#read}
@@ -131,7 +345,7 @@ export class DataAzurermManagedDisk extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_managed_disk',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.15.1',
+        providerVersion: '3.16.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -180,6 +394,12 @@ export class DataAzurermManagedDisk extends cdktf.TerraformDataSource {
   // disk_size_gb - computed: true, optional: false, required: false
   public get diskSizeGb() {
     return this.getNumberAttribute('disk_size_gb');
+  }
+
+  // encryption_settings - computed: true, optional: false, required: false
+  private _encryptionSettings = new DataAzurermManagedDiskEncryptionSettingsList(this, "encryption_settings", false);
+  public get encryptionSettings() {
+    return this._encryptionSettings;
   }
 
   // id - computed: true, optional: true, required: false

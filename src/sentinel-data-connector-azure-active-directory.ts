@@ -189,7 +189,7 @@ export class SentinelDataConnectorAzureActiveDirectory extends cdktf.TerraformRe
       terraformResourceType: 'azurerm_sentinel_data_connector_azure_active_directory',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.15.1',
+        providerVersion: '3.16.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
