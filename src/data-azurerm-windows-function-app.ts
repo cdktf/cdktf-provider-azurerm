@@ -2010,7 +2010,7 @@ export class DataAzurermWindowsFunctionApp extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_windows_function_app',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.15.1',
+        providerVersion: '3.16.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -2230,6 +2230,11 @@ export class DataAzurermWindowsFunctionApp extends cdktf.TerraformDataSource {
   private _tags = new cdktf.StringMap(this, "tags");
   public get tags() {
     return this._tags;
+  }
+
+  // virtual_network_subnet_id - computed: true, optional: false, required: false
+  public get virtualNetworkSubnetId() {
+    return this.getStringAttribute('virtual_network_subnet_id');
   }
 
   // timeouts - computed: false, optional: true, required: false

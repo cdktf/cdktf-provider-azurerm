@@ -6029,7 +6029,7 @@ export class LinuxWebAppSlot extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_linux_web_app_slot',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.15.1',
+        providerVersion: '3.16.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

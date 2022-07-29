@@ -208,7 +208,7 @@ export class SecurityCenterAutoProvisioning extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_security_center_auto_provisioning',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.15.1',
+        providerVersion: '3.16.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

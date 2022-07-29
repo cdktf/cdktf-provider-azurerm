@@ -55,6 +55,10 @@ export interface WindowsWebAppSlotConfig extends cdktf.TerraformMetaArguments {
   */
   readonly tags?: { [key: string]: string };
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#virtual_network_subnet_id WindowsWebAppSlot#virtual_network_subnet_id}
+  */
+  readonly virtualNetworkSubnetId?: string;
+  /**
   * The local path and filename of the Zip packaged application to deploy to this Windows Web App. **Note:** Using this value requires `WEBSITE_RUN_FROM_PACKAGE=1` on the App in `app_settings`.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app_slot#zip_deploy_file WindowsWebAppSlot#zip_deploy_file}
@@ -6515,7 +6519,7 @@ export class WindowsWebAppSlot extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_windows_web_app_slot',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.15.1',
+        providerVersion: '3.16.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -6537,6 +6541,7 @@ export class WindowsWebAppSlot extends cdktf.TerraformResource {
     this._keyVaultReferenceIdentityId = config.keyVaultReferenceIdentityId;
     this._name = config.name;
     this._tags = config.tags;
+    this._virtualNetworkSubnetId = config.virtualNetworkSubnetId;
     this._zipDeployFile = config.zipDeployFile;
     this._authSettings.internalValue = config.authSettings;
     this._backup.internalValue = config.backup;
@@ -6763,6 +6768,22 @@ export class WindowsWebAppSlot extends cdktf.TerraformResource {
     return this._tags;
   }
 
+  // virtual_network_subnet_id - computed: false, optional: true, required: false
+  private _virtualNetworkSubnetId?: string; 
+  public get virtualNetworkSubnetId() {
+    return this.getStringAttribute('virtual_network_subnet_id');
+  }
+  public set virtualNetworkSubnetId(value: string) {
+    this._virtualNetworkSubnetId = value;
+  }
+  public resetVirtualNetworkSubnetId() {
+    this._virtualNetworkSubnetId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get virtualNetworkSubnetIdInput() {
+    return this._virtualNetworkSubnetId;
+  }
+
   // zip_deploy_file - computed: true, optional: true, required: false
   private _zipDeployFile?: string; 
   public get zipDeployFile() {
@@ -6921,6 +6942,7 @@ export class WindowsWebAppSlot extends cdktf.TerraformResource {
       key_vault_reference_identity_id: cdktf.stringToTerraform(this._keyVaultReferenceIdentityId),
       name: cdktf.stringToTerraform(this._name),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
+      virtual_network_subnet_id: cdktf.stringToTerraform(this._virtualNetworkSubnetId),
       zip_deploy_file: cdktf.stringToTerraform(this._zipDeployFile),
       auth_settings: windowsWebAppSlotAuthSettingsToTerraform(this._authSettings.internalValue),
       backup: windowsWebAppSlotBackupToTerraform(this._backup.internalValue),

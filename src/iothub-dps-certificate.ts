@@ -23,6 +23,10 @@ export interface IothubDpsCertificateConfig extends cdktf.TerraformMetaArguments
   */
   readonly iotDpsName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps_certificate#is_verified IothubDpsCertificate#is_verified}
+  */
+  readonly isVerified?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps_certificate#name IothubDpsCertificate#name}
   */
   readonly name: string;
@@ -220,7 +224,7 @@ export class IothubDpsCertificate extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_iothub_dps_certificate',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.15.1',
+        providerVersion: '3.16.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -234,6 +238,7 @@ export class IothubDpsCertificate extends cdktf.TerraformResource {
     this._certificateContent = config.certificateContent;
     this._id = config.id;
     this._iotDpsName = config.iotDpsName;
+    this._isVerified = config.isVerified;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._timeouts.internalValue = config.timeouts;
@@ -283,6 +288,22 @@ export class IothubDpsCertificate extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get iotDpsNameInput() {
     return this._iotDpsName;
+  }
+
+  // is_verified - computed: false, optional: true, required: false
+  private _isVerified?: boolean | cdktf.IResolvable; 
+  public get isVerified() {
+    return this.getBooleanAttribute('is_verified');
+  }
+  public set isVerified(value: boolean | cdktf.IResolvable) {
+    this._isVerified = value;
+  }
+  public resetIsVerified() {
+    this._isVerified = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get isVerifiedInput() {
+    return this._isVerified;
   }
 
   // name - computed: false, optional: false, required: true
@@ -336,6 +357,7 @@ export class IothubDpsCertificate extends cdktf.TerraformResource {
       certificate_content: cdktf.stringToTerraform(this._certificateContent),
       id: cdktf.stringToTerraform(this._id),
       iot_dps_name: cdktf.stringToTerraform(this._iotDpsName),
+      is_verified: cdktf.booleanToTerraform(this._isVerified),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       timeouts: iothubDpsCertificateTimeoutsToTerraform(this._timeouts.internalValue),

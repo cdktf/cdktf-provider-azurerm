@@ -956,11 +956,220 @@ export class HdinsightHadoopClusterNetworkOutputReference extends cdktf.ComplexO
     return this._privateLinkEnabled;
   }
 }
+export interface HdinsightHadoopClusterRolesEdgeNodeHttpsEndpoints {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster#access_modes HdinsightHadoopCluster#access_modes}
+  */
+  readonly accessModes?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster#destination_port HdinsightHadoopCluster#destination_port}
+  */
+  readonly destinationPort?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster#disable_gateway_auth HdinsightHadoopCluster#disable_gateway_auth}
+  */
+  readonly disableGatewayAuth?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster#private_ip_address HdinsightHadoopCluster#private_ip_address}
+  */
+  readonly privateIpAddress?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster#sub_domain_suffix HdinsightHadoopCluster#sub_domain_suffix}
+  */
+  readonly subDomainSuffix?: string;
+}
+
+export function hdinsightHadoopClusterRolesEdgeNodeHttpsEndpointsToTerraform(struct?: HdinsightHadoopClusterRolesEdgeNodeHttpsEndpoints | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    access_modes: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.accessModes),
+    destination_port: cdktf.numberToTerraform(struct!.destinationPort),
+    disable_gateway_auth: cdktf.booleanToTerraform(struct!.disableGatewayAuth),
+    private_ip_address: cdktf.stringToTerraform(struct!.privateIpAddress),
+    sub_domain_suffix: cdktf.stringToTerraform(struct!.subDomainSuffix),
+  }
+}
+
+export class HdinsightHadoopClusterRolesEdgeNodeHttpsEndpointsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): HdinsightHadoopClusterRolesEdgeNodeHttpsEndpoints | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._accessModes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.accessModes = this._accessModes;
+    }
+    if (this._destinationPort !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.destinationPort = this._destinationPort;
+    }
+    if (this._disableGatewayAuth !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.disableGatewayAuth = this._disableGatewayAuth;
+    }
+    if (this._privateIpAddress !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.privateIpAddress = this._privateIpAddress;
+    }
+    if (this._subDomainSuffix !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.subDomainSuffix = this._subDomainSuffix;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: HdinsightHadoopClusterRolesEdgeNodeHttpsEndpoints | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._accessModes = undefined;
+      this._destinationPort = undefined;
+      this._disableGatewayAuth = undefined;
+      this._privateIpAddress = undefined;
+      this._subDomainSuffix = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._accessModes = value.accessModes;
+      this._destinationPort = value.destinationPort;
+      this._disableGatewayAuth = value.disableGatewayAuth;
+      this._privateIpAddress = value.privateIpAddress;
+      this._subDomainSuffix = value.subDomainSuffix;
+    }
+  }
+
+  // access_modes - computed: false, optional: true, required: false
+  private _accessModes?: string[]; 
+  public get accessModes() {
+    return this.getListAttribute('access_modes');
+  }
+  public set accessModes(value: string[]) {
+    this._accessModes = value;
+  }
+  public resetAccessModes() {
+    this._accessModes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get accessModesInput() {
+    return this._accessModes;
+  }
+
+  // destination_port - computed: false, optional: true, required: false
+  private _destinationPort?: number; 
+  public get destinationPort() {
+    return this.getNumberAttribute('destination_port');
+  }
+  public set destinationPort(value: number) {
+    this._destinationPort = value;
+  }
+  public resetDestinationPort() {
+    this._destinationPort = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get destinationPortInput() {
+    return this._destinationPort;
+  }
+
+  // disable_gateway_auth - computed: false, optional: true, required: false
+  private _disableGatewayAuth?: boolean | cdktf.IResolvable; 
+  public get disableGatewayAuth() {
+    return this.getBooleanAttribute('disable_gateway_auth');
+  }
+  public set disableGatewayAuth(value: boolean | cdktf.IResolvable) {
+    this._disableGatewayAuth = value;
+  }
+  public resetDisableGatewayAuth() {
+    this._disableGatewayAuth = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get disableGatewayAuthInput() {
+    return this._disableGatewayAuth;
+  }
+
+  // private_ip_address - computed: false, optional: true, required: false
+  private _privateIpAddress?: string; 
+  public get privateIpAddress() {
+    return this.getStringAttribute('private_ip_address');
+  }
+  public set privateIpAddress(value: string) {
+    this._privateIpAddress = value;
+  }
+  public resetPrivateIpAddress() {
+    this._privateIpAddress = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateIpAddressInput() {
+    return this._privateIpAddress;
+  }
+
+  // sub_domain_suffix - computed: false, optional: true, required: false
+  private _subDomainSuffix?: string; 
+  public get subDomainSuffix() {
+    return this.getStringAttribute('sub_domain_suffix');
+  }
+  public set subDomainSuffix(value: string) {
+    this._subDomainSuffix = value;
+  }
+  public resetSubDomainSuffix() {
+    this._subDomainSuffix = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subDomainSuffixInput() {
+    return this._subDomainSuffix;
+  }
+}
+
+export class HdinsightHadoopClusterRolesEdgeNodeHttpsEndpointsList extends cdktf.ComplexList {
+  public internalValue? : HdinsightHadoopClusterRolesEdgeNodeHttpsEndpoints[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): HdinsightHadoopClusterRolesEdgeNodeHttpsEndpointsOutputReference {
+    return new HdinsightHadoopClusterRolesEdgeNodeHttpsEndpointsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface HdinsightHadoopClusterRolesEdgeNodeInstallScriptAction {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster#name HdinsightHadoopCluster#name}
   */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster#parameters HdinsightHadoopCluster#parameters}
+  */
+  readonly parameters?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster#uri HdinsightHadoopCluster#uri}
   */
@@ -974,6 +1183,7 @@ export function hdinsightHadoopClusterRolesEdgeNodeInstallScriptActionToTerrafor
   }
   return {
     name: cdktf.stringToTerraform(struct!.name),
+    parameters: cdktf.stringToTerraform(struct!.parameters),
     uri: cdktf.stringToTerraform(struct!.uri),
   }
 }
@@ -1002,6 +1212,10 @@ export class HdinsightHadoopClusterRolesEdgeNodeInstallScriptActionOutputReferen
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
+    if (this._parameters !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.parameters = this._parameters;
+    }
     if (this._uri !== undefined) {
       hasAnyValues = true;
       internalValueResult.uri = this._uri;
@@ -1014,6 +1228,7 @@ export class HdinsightHadoopClusterRolesEdgeNodeInstallScriptActionOutputReferen
       this.isEmptyObject = false;
       this.resolvableValue = undefined;
       this._name = undefined;
+      this._parameters = undefined;
       this._uri = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
@@ -1024,6 +1239,7 @@ export class HdinsightHadoopClusterRolesEdgeNodeInstallScriptActionOutputReferen
       this.isEmptyObject = Object.keys(value).length === 0;
       this.resolvableValue = undefined;
       this._name = value.name;
+      this._parameters = value.parameters;
       this._uri = value.uri;
     }
   }
@@ -1039,6 +1255,22 @@ export class HdinsightHadoopClusterRolesEdgeNodeInstallScriptActionOutputReferen
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name;
+  }
+
+  // parameters - computed: false, optional: true, required: false
+  private _parameters?: string; 
+  public get parameters() {
+    return this.getStringAttribute('parameters');
+  }
+  public set parameters(value: string) {
+    this._parameters = value;
+  }
+  public resetParameters() {
+    this._parameters = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parametersInput() {
+    return this._parameters;
   }
 
   // uri - computed: false, optional: false, required: true
@@ -1074,6 +1306,151 @@ export class HdinsightHadoopClusterRolesEdgeNodeInstallScriptActionList extends 
     return new HdinsightHadoopClusterRolesEdgeNodeInstallScriptActionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface HdinsightHadoopClusterRolesEdgeNodeUninstallScriptActions {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster#name HdinsightHadoopCluster#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster#parameters HdinsightHadoopCluster#parameters}
+  */
+  readonly parameters?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster#uri HdinsightHadoopCluster#uri}
+  */
+  readonly uri: string;
+}
+
+export function hdinsightHadoopClusterRolesEdgeNodeUninstallScriptActionsToTerraform(struct?: HdinsightHadoopClusterRolesEdgeNodeUninstallScriptActions | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    parameters: cdktf.stringToTerraform(struct!.parameters),
+    uri: cdktf.stringToTerraform(struct!.uri),
+  }
+}
+
+export class HdinsightHadoopClusterRolesEdgeNodeUninstallScriptActionsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): HdinsightHadoopClusterRolesEdgeNodeUninstallScriptActions | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._parameters !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.parameters = this._parameters;
+    }
+    if (this._uri !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.uri = this._uri;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: HdinsightHadoopClusterRolesEdgeNodeUninstallScriptActions | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._parameters = undefined;
+      this._uri = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._parameters = value.parameters;
+      this._uri = value.uri;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // parameters - computed: false, optional: true, required: false
+  private _parameters?: string; 
+  public get parameters() {
+    return this.getStringAttribute('parameters');
+  }
+  public set parameters(value: string) {
+    this._parameters = value;
+  }
+  public resetParameters() {
+    this._parameters = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parametersInput() {
+    return this._parameters;
+  }
+
+  // uri - computed: false, optional: false, required: true
+  private _uri?: string; 
+  public get uri() {
+    return this.getStringAttribute('uri');
+  }
+  public set uri(value: string) {
+    this._uri = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get uriInput() {
+    return this._uri;
+  }
+}
+
+export class HdinsightHadoopClusterRolesEdgeNodeUninstallScriptActionsList extends cdktf.ComplexList {
+  public internalValue? : HdinsightHadoopClusterRolesEdgeNodeUninstallScriptActions[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): HdinsightHadoopClusterRolesEdgeNodeUninstallScriptActionsOutputReference {
+    return new HdinsightHadoopClusterRolesEdgeNodeUninstallScriptActionsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface HdinsightHadoopClusterRolesEdgeNode {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster#target_instance_count HdinsightHadoopCluster#target_instance_count}
@@ -1084,11 +1461,23 @@ export interface HdinsightHadoopClusterRolesEdgeNode {
   */
   readonly vmSize: string;
   /**
+  * https_endpoints block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster#https_endpoints HdinsightHadoopCluster#https_endpoints}
+  */
+  readonly httpsEndpoints?: HdinsightHadoopClusterRolesEdgeNodeHttpsEndpoints[] | cdktf.IResolvable;
+  /**
   * install_script_action block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster#install_script_action HdinsightHadoopCluster#install_script_action}
   */
   readonly installScriptAction: HdinsightHadoopClusterRolesEdgeNodeInstallScriptAction[] | cdktf.IResolvable;
+  /**
+  * uninstall_script_actions block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster#uninstall_script_actions HdinsightHadoopCluster#uninstall_script_actions}
+  */
+  readonly uninstallScriptActions?: HdinsightHadoopClusterRolesEdgeNodeUninstallScriptActions[] | cdktf.IResolvable;
 }
 
 export function hdinsightHadoopClusterRolesEdgeNodeToTerraform(struct?: HdinsightHadoopClusterRolesEdgeNodeOutputReference | HdinsightHadoopClusterRolesEdgeNode): any {
@@ -1099,7 +1488,9 @@ export function hdinsightHadoopClusterRolesEdgeNodeToTerraform(struct?: Hdinsigh
   return {
     target_instance_count: cdktf.numberToTerraform(struct!.targetInstanceCount),
     vm_size: cdktf.stringToTerraform(struct!.vmSize),
+    https_endpoints: cdktf.listMapper(hdinsightHadoopClusterRolesEdgeNodeHttpsEndpointsToTerraform, true)(struct!.httpsEndpoints),
     install_script_action: cdktf.listMapper(hdinsightHadoopClusterRolesEdgeNodeInstallScriptActionToTerraform, true)(struct!.installScriptAction),
+    uninstall_script_actions: cdktf.listMapper(hdinsightHadoopClusterRolesEdgeNodeUninstallScriptActionsToTerraform, true)(struct!.uninstallScriptActions),
   }
 }
 
@@ -1125,9 +1516,17 @@ export class HdinsightHadoopClusterRolesEdgeNodeOutputReference extends cdktf.Co
       hasAnyValues = true;
       internalValueResult.vmSize = this._vmSize;
     }
+    if (this._httpsEndpoints?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.httpsEndpoints = this._httpsEndpoints?.internalValue;
+    }
     if (this._installScriptAction?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.installScriptAction = this._installScriptAction?.internalValue;
+    }
+    if (this._uninstallScriptActions?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.uninstallScriptActions = this._uninstallScriptActions?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -1137,13 +1536,17 @@ export class HdinsightHadoopClusterRolesEdgeNodeOutputReference extends cdktf.Co
       this.isEmptyObject = false;
       this._targetInstanceCount = undefined;
       this._vmSize = undefined;
+      this._httpsEndpoints.internalValue = undefined;
       this._installScriptAction.internalValue = undefined;
+      this._uninstallScriptActions.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._targetInstanceCount = value.targetInstanceCount;
       this._vmSize = value.vmSize;
+      this._httpsEndpoints.internalValue = value.httpsEndpoints;
       this._installScriptAction.internalValue = value.installScriptAction;
+      this._uninstallScriptActions.internalValue = value.uninstallScriptActions;
     }
   }
 
@@ -1173,6 +1576,22 @@ export class HdinsightHadoopClusterRolesEdgeNodeOutputReference extends cdktf.Co
     return this._vmSize;
   }
 
+  // https_endpoints - computed: false, optional: true, required: false
+  private _httpsEndpoints = new HdinsightHadoopClusterRolesEdgeNodeHttpsEndpointsList(this, "https_endpoints", false);
+  public get httpsEndpoints() {
+    return this._httpsEndpoints;
+  }
+  public putHttpsEndpoints(value: HdinsightHadoopClusterRolesEdgeNodeHttpsEndpoints[] | cdktf.IResolvable) {
+    this._httpsEndpoints.internalValue = value;
+  }
+  public resetHttpsEndpoints() {
+    this._httpsEndpoints.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get httpsEndpointsInput() {
+    return this._httpsEndpoints.internalValue;
+  }
+
   // install_script_action - computed: false, optional: false, required: true
   private _installScriptAction = new HdinsightHadoopClusterRolesEdgeNodeInstallScriptActionList(this, "install_script_action", false);
   public get installScriptAction() {
@@ -1184,6 +1603,22 @@ export class HdinsightHadoopClusterRolesEdgeNodeOutputReference extends cdktf.Co
   // Temporarily expose input value. Use with caution.
   public get installScriptActionInput() {
     return this._installScriptAction.internalValue;
+  }
+
+  // uninstall_script_actions - computed: false, optional: true, required: false
+  private _uninstallScriptActions = new HdinsightHadoopClusterRolesEdgeNodeUninstallScriptActionsList(this, "uninstall_script_actions", false);
+  public get uninstallScriptActions() {
+    return this._uninstallScriptActions;
+  }
+  public putUninstallScriptActions(value: HdinsightHadoopClusterRolesEdgeNodeUninstallScriptActions[] | cdktf.IResolvable) {
+    this._uninstallScriptActions.internalValue = value;
+  }
+  public resetUninstallScriptActions() {
+    this._uninstallScriptActions.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get uninstallScriptActionsInput() {
+    return this._uninstallScriptActions.internalValue;
   }
 }
 export interface HdinsightHadoopClusterRolesHeadNode {
@@ -3073,7 +3508,7 @@ export class HdinsightHadoopCluster extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_hdinsight_hadoop_cluster',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.15.1',
+        providerVersion: '3.16.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

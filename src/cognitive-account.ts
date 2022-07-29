@@ -12,6 +12,10 @@ export interface CognitiveAccountConfig extends cdktf.TerraformMetaArguments {
   */
   readonly customQuestionAnsweringSearchServiceId?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#custom_question_answering_search_service_key CognitiveAccount#custom_question_answering_search_service_key}
+  */
+  readonly customQuestionAnsweringSearchServiceKey?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#custom_subdomain_name CognitiveAccount#custom_subdomain_name}
   */
   readonly customSubdomainName?: string;
@@ -749,7 +753,7 @@ export class CognitiveAccount extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_cognitive_account',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.15.1',
+        providerVersion: '3.16.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -761,6 +765,7 @@ export class CognitiveAccount extends cdktf.TerraformResource {
       forEach: config.forEach
     });
     this._customQuestionAnsweringSearchServiceId = config.customQuestionAnsweringSearchServiceId;
+    this._customQuestionAnsweringSearchServiceKey = config.customQuestionAnsweringSearchServiceKey;
     this._customSubdomainName = config.customSubdomainName;
     this._fqdns = config.fqdns;
     this._id = config.id;
@@ -802,6 +807,22 @@ export class CognitiveAccount extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get customQuestionAnsweringSearchServiceIdInput() {
     return this._customQuestionAnsweringSearchServiceId;
+  }
+
+  // custom_question_answering_search_service_key - computed: false, optional: true, required: false
+  private _customQuestionAnsweringSearchServiceKey?: string; 
+  public get customQuestionAnsweringSearchServiceKey() {
+    return this.getStringAttribute('custom_question_answering_search_service_key');
+  }
+  public set customQuestionAnsweringSearchServiceKey(value: string) {
+    this._customQuestionAnsweringSearchServiceKey = value;
+  }
+  public resetCustomQuestionAnsweringSearchServiceKey() {
+    this._customQuestionAnsweringSearchServiceKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customQuestionAnsweringSearchServiceKeyInput() {
+    return this._customQuestionAnsweringSearchServiceKey;
   }
 
   // custom_subdomain_name - computed: false, optional: true, required: false
@@ -1147,6 +1168,7 @@ export class CognitiveAccount extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       custom_question_answering_search_service_id: cdktf.stringToTerraform(this._customQuestionAnsweringSearchServiceId),
+      custom_question_answering_search_service_key: cdktf.stringToTerraform(this._customQuestionAnsweringSearchServiceKey),
       custom_subdomain_name: cdktf.stringToTerraform(this._customSubdomainName),
       fqdns: cdktf.listMapper(cdktf.stringToTerraform, false)(this._fqdns),
       id: cdktf.stringToTerraform(this._id),

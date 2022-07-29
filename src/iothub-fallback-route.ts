@@ -228,7 +228,7 @@ export class IothubFallbackRouteA extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_iothub_fallback_route',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.15.1',
+        providerVersion: '3.16.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

@@ -63,6 +63,10 @@ export interface WindowsWebAppConfig extends cdktf.TerraformMetaArguments {
   */
   readonly tags?: { [key: string]: string };
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#virtual_network_subnet_id WindowsWebApp#virtual_network_subnet_id}
+  */
+  readonly virtualNetworkSubnetId?: string;
+  /**
   * The local path and filename of the Zip packaged application to deploy to this Windows Web App. **Note:** Using this value requires `WEBSITE_RUN_FROM_PACKAGE=1` on the App in `app_settings`.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_web_app#zip_deploy_file WindowsWebApp#zip_deploy_file}
@@ -6599,7 +6603,7 @@ export class WindowsWebApp extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_windows_web_app',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.15.1',
+        providerVersion: '3.16.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -6623,6 +6627,7 @@ export class WindowsWebApp extends cdktf.TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._servicePlanId = config.servicePlanId;
     this._tags = config.tags;
+    this._virtualNetworkSubnetId = config.virtualNetworkSubnetId;
     this._zipDeployFile = config.zipDeployFile;
     this._authSettings.internalValue = config.authSettings;
     this._backup.internalValue = config.backup;
@@ -6876,6 +6881,22 @@ export class WindowsWebApp extends cdktf.TerraformResource {
     return this._tags;
   }
 
+  // virtual_network_subnet_id - computed: false, optional: true, required: false
+  private _virtualNetworkSubnetId?: string; 
+  public get virtualNetworkSubnetId() {
+    return this.getStringAttribute('virtual_network_subnet_id');
+  }
+  public set virtualNetworkSubnetId(value: string) {
+    this._virtualNetworkSubnetId = value;
+  }
+  public resetVirtualNetworkSubnetId() {
+    this._virtualNetworkSubnetId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get virtualNetworkSubnetIdInput() {
+    return this._virtualNetworkSubnetId;
+  }
+
   // zip_deploy_file - computed: true, optional: true, required: false
   private _zipDeployFile?: string; 
   public get zipDeployFile() {
@@ -7052,6 +7073,7 @@ export class WindowsWebApp extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       service_plan_id: cdktf.stringToTerraform(this._servicePlanId),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
+      virtual_network_subnet_id: cdktf.stringToTerraform(this._virtualNetworkSubnetId),
       zip_deploy_file: cdktf.stringToTerraform(this._zipDeployFile),
       auth_settings: windowsWebAppAuthSettingsToTerraform(this._authSettings.internalValue),
       backup: windowsWebAppBackupToTerraform(this._backup.internalValue),

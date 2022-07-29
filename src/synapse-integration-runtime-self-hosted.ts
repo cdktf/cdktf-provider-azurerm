@@ -216,7 +216,7 @@ export class SynapseIntegrationRuntimeSelfHosted extends cdktf.TerraformResource
       terraformResourceType: 'azurerm_synapse_integration_runtime_self_hosted',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.15.1',
+        providerVersion: '3.16.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

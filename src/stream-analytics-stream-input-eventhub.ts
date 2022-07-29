@@ -8,6 +8,10 @@ import * as cdktf from 'cdktf';
 
 export interface StreamAnalyticsStreamInputEventhubConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_eventhub#authentication_mode StreamAnalyticsStreamInputEventhub#authentication_mode}
+  */
+  readonly authenticationMode?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_eventhub#eventhub_consumer_group_name StreamAnalyticsStreamInputEventhub#eventhub_consumer_group_name}
   */
   readonly eventhubConsumerGroupName?: string;
@@ -362,7 +366,7 @@ export class StreamAnalyticsStreamInputEventhub extends cdktf.TerraformResource 
       terraformResourceType: 'azurerm_stream_analytics_stream_input_eventhub',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.15.1',
+        providerVersion: '3.16.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -373,6 +377,7 @@ export class StreamAnalyticsStreamInputEventhub extends cdktf.TerraformResource 
       connection: config.connection,
       forEach: config.forEach
     });
+    this._authenticationMode = config.authenticationMode;
     this._eventhubConsumerGroupName = config.eventhubConsumerGroupName;
     this._eventhubName = config.eventhubName;
     this._id = config.id;
@@ -390,6 +395,22 @@ export class StreamAnalyticsStreamInputEventhub extends cdktf.TerraformResource 
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // authentication_mode - computed: false, optional: true, required: false
+  private _authenticationMode?: string; 
+  public get authenticationMode() {
+    return this.getStringAttribute('authentication_mode');
+  }
+  public set authenticationMode(value: string) {
+    this._authenticationMode = value;
+  }
+  public resetAuthenticationMode() {
+    this._authenticationMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get authenticationModeInput() {
+    return this._authenticationMode;
+  }
 
   // eventhub_consumer_group_name - computed: false, optional: true, required: false
   private _eventhubConsumerGroupName?: string; 
@@ -565,6 +586,7 @@ export class StreamAnalyticsStreamInputEventhub extends cdktf.TerraformResource 
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      authentication_mode: cdktf.stringToTerraform(this._authenticationMode),
       eventhub_consumer_group_name: cdktf.stringToTerraform(this._eventhubConsumerGroupName),
       eventhub_name: cdktf.stringToTerraform(this._eventhubName),
       id: cdktf.stringToTerraform(this._id),
