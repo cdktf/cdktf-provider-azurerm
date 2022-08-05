@@ -216,7 +216,7 @@ export class NetworkInterfaceNatRuleAssociation extends cdktf.TerraformResource 
       terraformResourceType: 'azurerm_network_interface_nat_rule_association',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.16.0',
+        providerVersion: '3.17.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
