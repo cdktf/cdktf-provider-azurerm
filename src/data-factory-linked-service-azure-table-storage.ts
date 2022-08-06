@@ -236,7 +236,7 @@ export class DataFactoryLinkedServiceAzureTableStorage extends cdktf.TerraformRe
       terraformResourceType: 'azurerm_data_factory_linked_service_azure_table_storage',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.16.0',
+        providerVersion: '3.17.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
