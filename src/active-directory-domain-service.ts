@@ -791,7 +791,7 @@ export class ActiveDirectoryDomainService extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_active_directory_domain_service',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.16.0',
+        providerVersion: '3.17.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

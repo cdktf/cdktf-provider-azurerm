@@ -224,7 +224,7 @@ export class KustoClusterCustomerManagedKey extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_kusto_cluster_customer_managed_key',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.16.0',
+        providerVersion: '3.17.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
