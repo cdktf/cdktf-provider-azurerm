@@ -1485,7 +1485,7 @@ export class ApiManagementCustomDomain extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_api_management_custom_domain',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.16.0',
+        providerVersion: '3.17.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
