@@ -27,6 +27,10 @@ export interface EventhubNamespaceConfig extends cdktf.TerraformMetaArguments {
   */
   readonly id?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace#local_authentication_enabled EventhubNamespace#local_authentication_enabled}
+  */
+  readonly localAuthenticationEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace#location EventhubNamespace#location}
   */
   readonly location: string;
@@ -35,6 +39,10 @@ export interface EventhubNamespaceConfig extends cdktf.TerraformMetaArguments {
   */
   readonly maximumThroughputUnits?: number;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace#minimum_tls_version EventhubNamespace#minimum_tls_version}
+  */
+  readonly minimumTlsVersion?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace#name EventhubNamespace#name}
   */
   readonly name: string;
@@ -42,6 +50,10 @@ export interface EventhubNamespaceConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace#network_rulesets EventhubNamespace#network_rulesets}
   */
   readonly networkRulesets?: EventhubNamespaceNetworkRulesets[] | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace#public_network_access_enabled EventhubNamespace#public_network_access_enabled}
+  */
+  readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace#resource_group_name EventhubNamespace#resource_group_name}
   */
@@ -779,7 +791,7 @@ export class EventhubNamespace extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_eventhub_namespace',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.16.0',
+        providerVersion: '3.17.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -794,10 +806,13 @@ export class EventhubNamespace extends cdktf.TerraformResource {
     this._capacity = config.capacity;
     this._dedicatedClusterId = config.dedicatedClusterId;
     this._id = config.id;
+    this._localAuthenticationEnabled = config.localAuthenticationEnabled;
     this._location = config.location;
     this._maximumThroughputUnits = config.maximumThroughputUnits;
+    this._minimumTlsVersion = config.minimumTlsVersion;
     this._name = config.name;
     this._networkRulesets.internalValue = config.networkRulesets;
+    this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
     this._resourceGroupName = config.resourceGroupName;
     this._sku = config.sku;
     this._tags = config.tags;
@@ -904,6 +919,22 @@ export class EventhubNamespace extends cdktf.TerraformResource {
     return this._id;
   }
 
+  // local_authentication_enabled - computed: false, optional: true, required: false
+  private _localAuthenticationEnabled?: boolean | cdktf.IResolvable; 
+  public get localAuthenticationEnabled() {
+    return this.getBooleanAttribute('local_authentication_enabled');
+  }
+  public set localAuthenticationEnabled(value: boolean | cdktf.IResolvable) {
+    this._localAuthenticationEnabled = value;
+  }
+  public resetLocalAuthenticationEnabled() {
+    this._localAuthenticationEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get localAuthenticationEnabledInput() {
+    return this._localAuthenticationEnabled;
+  }
+
   // location - computed: false, optional: false, required: true
   private _location?: string; 
   public get location() {
@@ -933,6 +964,22 @@ export class EventhubNamespace extends cdktf.TerraformResource {
     return this._maximumThroughputUnits;
   }
 
+  // minimum_tls_version - computed: true, optional: true, required: false
+  private _minimumTlsVersion?: string; 
+  public get minimumTlsVersion() {
+    return this.getStringAttribute('minimum_tls_version');
+  }
+  public set minimumTlsVersion(value: string) {
+    this._minimumTlsVersion = value;
+  }
+  public resetMinimumTlsVersion() {
+    this._minimumTlsVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minimumTlsVersionInput() {
+    return this._minimumTlsVersion;
+  }
+
   // name - computed: false, optional: false, required: true
   private _name?: string; 
   public get name() {
@@ -960,6 +1007,22 @@ export class EventhubNamespace extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get networkRulesetsInput() {
     return this._networkRulesets.internalValue;
+  }
+
+  // public_network_access_enabled - computed: false, optional: true, required: false
+  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable; 
+  public get publicNetworkAccessEnabled() {
+    return this.getBooleanAttribute('public_network_access_enabled');
+  }
+  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable) {
+    this._publicNetworkAccessEnabled = value;
+  }
+  public resetPublicNetworkAccessEnabled() {
+    this._publicNetworkAccessEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicNetworkAccessEnabledInput() {
+    return this._publicNetworkAccessEnabled;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -1062,10 +1125,13 @@ export class EventhubNamespace extends cdktf.TerraformResource {
       capacity: cdktf.numberToTerraform(this._capacity),
       dedicated_cluster_id: cdktf.stringToTerraform(this._dedicatedClusterId),
       id: cdktf.stringToTerraform(this._id),
+      local_authentication_enabled: cdktf.booleanToTerraform(this._localAuthenticationEnabled),
       location: cdktf.stringToTerraform(this._location),
       maximum_throughput_units: cdktf.numberToTerraform(this._maximumThroughputUnits),
+      minimum_tls_version: cdktf.stringToTerraform(this._minimumTlsVersion),
       name: cdktf.stringToTerraform(this._name),
       network_rulesets: cdktf.listMapper(eventhubNamespaceNetworkRulesetsToTerraform, false)(this._networkRulesets.internalValue),
+      public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku: cdktf.stringToTerraform(this._sku),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),

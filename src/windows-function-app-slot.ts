@@ -4578,7 +4578,7 @@ export class WindowsFunctionAppSlot extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_windows_function_app_slot',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.16.0',
+        providerVersion: '3.17.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
