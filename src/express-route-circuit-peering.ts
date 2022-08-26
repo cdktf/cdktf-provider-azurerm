@@ -19,6 +19,10 @@ export interface ExpressRouteCircuitPeeringConfig extends cdktf.TerraformMetaArg
   */
   readonly id?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#ipv4_enabled ExpressRouteCircuitPeering#ipv4_enabled}
+  */
+  readonly ipv4Enabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#peer_asn ExpressRouteCircuitPeering#peer_asn}
   */
   readonly peerAsn?: number;
@@ -29,7 +33,7 @@ export interface ExpressRouteCircuitPeeringConfig extends cdktf.TerraformMetaArg
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#primary_peer_address_prefix ExpressRouteCircuitPeering#primary_peer_address_prefix}
   */
-  readonly primaryPeerAddressPrefix: string;
+  readonly primaryPeerAddressPrefix?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#resource_group_name ExpressRouteCircuitPeering#resource_group_name}
   */
@@ -41,7 +45,7 @@ export interface ExpressRouteCircuitPeeringConfig extends cdktf.TerraformMetaArg
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#secondary_peer_address_prefix ExpressRouteCircuitPeering#secondary_peer_address_prefix}
   */
-  readonly secondaryPeerAddressPrefix: string;
+  readonly secondaryPeerAddressPrefix?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#shared_key ExpressRouteCircuitPeering#shared_key}
   */
@@ -190,6 +194,10 @@ export class ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference exten
 }
 export interface ExpressRouteCircuitPeeringIpv6 {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#enabled ExpressRouteCircuitPeering#enabled}
+  */
+  readonly enabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#primary_peer_address_prefix ExpressRouteCircuitPeering#primary_peer_address_prefix}
   */
   readonly primaryPeerAddressPrefix: string;
@@ -206,7 +214,7 @@ export interface ExpressRouteCircuitPeeringIpv6 {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#microsoft_peering ExpressRouteCircuitPeering#microsoft_peering}
   */
-  readonly microsoftPeering: ExpressRouteCircuitPeeringIpv6MicrosoftPeering;
+  readonly microsoftPeering?: ExpressRouteCircuitPeeringIpv6MicrosoftPeering;
 }
 
 export function expressRouteCircuitPeeringIpv6ToTerraform(struct?: ExpressRouteCircuitPeeringIpv6OutputReference | ExpressRouteCircuitPeeringIpv6): any {
@@ -215,6 +223,7 @@ export function expressRouteCircuitPeeringIpv6ToTerraform(struct?: ExpressRouteC
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
     primary_peer_address_prefix: cdktf.stringToTerraform(struct!.primaryPeerAddressPrefix),
     route_filter_id: cdktf.stringToTerraform(struct!.routeFilterId),
     secondary_peer_address_prefix: cdktf.stringToTerraform(struct!.secondaryPeerAddressPrefix),
@@ -236,6 +245,10 @@ export class ExpressRouteCircuitPeeringIpv6OutputReference extends cdktf.Complex
   public get internalValue(): ExpressRouteCircuitPeeringIpv6 | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._enabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
     if (this._primaryPeerAddressPrefix !== undefined) {
       hasAnyValues = true;
       internalValueResult.primaryPeerAddressPrefix = this._primaryPeerAddressPrefix;
@@ -258,6 +271,7 @@ export class ExpressRouteCircuitPeeringIpv6OutputReference extends cdktf.Complex
   public set internalValue(value: ExpressRouteCircuitPeeringIpv6 | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this._enabled = undefined;
       this._primaryPeerAddressPrefix = undefined;
       this._routeFilterId = undefined;
       this._secondaryPeerAddressPrefix = undefined;
@@ -265,11 +279,28 @@ export class ExpressRouteCircuitPeeringIpv6OutputReference extends cdktf.Complex
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this._enabled = value.enabled;
       this._primaryPeerAddressPrefix = value.primaryPeerAddressPrefix;
       this._routeFilterId = value.routeFilterId;
       this._secondaryPeerAddressPrefix = value.secondaryPeerAddressPrefix;
       this._microsoftPeering.internalValue = value.microsoftPeering;
     }
+  }
+
+  // enabled - computed: false, optional: true, required: false
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
   }
 
   // primary_peer_address_prefix - computed: false, optional: false, required: true
@@ -314,13 +345,16 @@ export class ExpressRouteCircuitPeeringIpv6OutputReference extends cdktf.Complex
     return this._secondaryPeerAddressPrefix;
   }
 
-  // microsoft_peering - computed: false, optional: false, required: true
+  // microsoft_peering - computed: false, optional: true, required: false
   private _microsoftPeering = new ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference(this, "microsoft_peering");
   public get microsoftPeering() {
     return this._microsoftPeering;
   }
   public putMicrosoftPeering(value: ExpressRouteCircuitPeeringIpv6MicrosoftPeering) {
     this._microsoftPeering.internalValue = value;
+  }
+  public resetMicrosoftPeering() {
+    this._microsoftPeering.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get microsoftPeeringInput() {
@@ -626,7 +660,7 @@ export class ExpressRouteCircuitPeering extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_express_route_circuit_peering',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.16.0',
+        providerVersion: '3.20.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -639,6 +673,7 @@ export class ExpressRouteCircuitPeering extends cdktf.TerraformResource {
     });
     this._expressRouteCircuitName = config.expressRouteCircuitName;
     this._id = config.id;
+    this._ipv4Enabled = config.ipv4Enabled;
     this._peerAsn = config.peerAsn;
     this._peeringType = config.peeringType;
     this._primaryPeerAddressPrefix = config.primaryPeerAddressPrefix;
@@ -674,6 +709,11 @@ export class ExpressRouteCircuitPeering extends cdktf.TerraformResource {
     return this._expressRouteCircuitName;
   }
 
+  // gateway_manager_etag - computed: true, optional: false, required: false
+  public get gatewayManagerEtag() {
+    return this.getStringAttribute('gateway_manager_etag');
+  }
+
   // id - computed: true, optional: true, required: false
   private _id?: string; 
   public get id() {
@@ -688,6 +728,22 @@ export class ExpressRouteCircuitPeering extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get idInput() {
     return this._id;
+  }
+
+  // ipv4_enabled - computed: false, optional: true, required: false
+  private _ipv4Enabled?: boolean | cdktf.IResolvable; 
+  public get ipv4Enabled() {
+    return this.getBooleanAttribute('ipv4_enabled');
+  }
+  public set ipv4Enabled(value: boolean | cdktf.IResolvable) {
+    this._ipv4Enabled = value;
+  }
+  public resetIpv4Enabled() {
+    this._ipv4Enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipv4EnabledInput() {
+    return this._ipv4Enabled;
   }
 
   // peer_asn - computed: true, optional: true, required: false
@@ -724,13 +780,16 @@ export class ExpressRouteCircuitPeering extends cdktf.TerraformResource {
     return this.getStringAttribute('primary_azure_port');
   }
 
-  // primary_peer_address_prefix - computed: false, optional: false, required: true
+  // primary_peer_address_prefix - computed: false, optional: true, required: false
   private _primaryPeerAddressPrefix?: string; 
   public get primaryPeerAddressPrefix() {
     return this.getStringAttribute('primary_peer_address_prefix');
   }
   public set primaryPeerAddressPrefix(value: string) {
     this._primaryPeerAddressPrefix = value;
+  }
+  public resetPrimaryPeerAddressPrefix() {
+    this._primaryPeerAddressPrefix = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get primaryPeerAddressPrefixInput() {
@@ -771,13 +830,16 @@ export class ExpressRouteCircuitPeering extends cdktf.TerraformResource {
     return this.getStringAttribute('secondary_azure_port');
   }
 
-  // secondary_peer_address_prefix - computed: false, optional: false, required: true
+  // secondary_peer_address_prefix - computed: false, optional: true, required: false
   private _secondaryPeerAddressPrefix?: string; 
   public get secondaryPeerAddressPrefix() {
     return this.getStringAttribute('secondary_peer_address_prefix');
   }
   public set secondaryPeerAddressPrefix(value: string) {
     this._secondaryPeerAddressPrefix = value;
+  }
+  public resetSecondaryPeerAddressPrefix() {
+    this._secondaryPeerAddressPrefix = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get secondaryPeerAddressPrefixInput() {
@@ -869,6 +931,7 @@ export class ExpressRouteCircuitPeering extends cdktf.TerraformResource {
     return {
       express_route_circuit_name: cdktf.stringToTerraform(this._expressRouteCircuitName),
       id: cdktf.stringToTerraform(this._id),
+      ipv4_enabled: cdktf.booleanToTerraform(this._ipv4Enabled),
       peer_asn: cdktf.numberToTerraform(this._peerAsn),
       peering_type: cdktf.stringToTerraform(this._peeringType),
       primary_peer_address_prefix: cdktf.stringToTerraform(this._primaryPeerAddressPrefix),

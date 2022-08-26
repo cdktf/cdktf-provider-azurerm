@@ -33,7 +33,7 @@ export interface MaintenanceConfigurationConfig extends cdktf.TerraformMetaArgum
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/maintenance_configuration#scope MaintenanceConfiguration#scope}
   */
-  readonly scope?: string;
+  readonly scope: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/maintenance_configuration#tags MaintenanceConfiguration#tags}
   */
@@ -405,7 +405,7 @@ export class MaintenanceConfiguration extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_maintenance_configuration',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.16.0',
+        providerVersion: '3.20.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -503,16 +503,13 @@ export class MaintenanceConfiguration extends cdktf.TerraformResource {
     return this._resourceGroupName;
   }
 
-  // scope - computed: false, optional: true, required: false
+  // scope - computed: false, optional: false, required: true
   private _scope?: string; 
   public get scope() {
     return this.getStringAttribute('scope');
   }
   public set scope(value: string) {
     this._scope = value;
-  }
-  public resetScope() {
-    this._scope = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get scopeInput() {

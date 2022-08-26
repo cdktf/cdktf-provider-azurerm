@@ -304,7 +304,7 @@ export class DataAzurermKeyVault extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_key_vault',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.16.0',
+        providerVersion: '3.20.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -389,6 +389,11 @@ export class DataAzurermKeyVault extends cdktf.TerraformDataSource {
   private _networkAcls = new DataAzurermKeyVaultNetworkAclsList(this, "network_acls", false);
   public get networkAcls() {
     return this._networkAcls;
+  }
+
+  // public_network_access_enabled - computed: true, optional: false, required: false
+  public get publicNetworkAccessEnabled() {
+    return this.getBooleanAttribute('public_network_access_enabled');
   }
 
   // purge_protection_enabled - computed: true, optional: false, required: false

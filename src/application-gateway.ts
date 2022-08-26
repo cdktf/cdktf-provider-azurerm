@@ -99,6 +99,12 @@ export interface ApplicationGatewayConfig extends cdktf.TerraformMetaArguments {
   */
   readonly gatewayIpConfiguration: ApplicationGatewayGatewayIpConfiguration[] | cdktf.IResolvable;
   /**
+  * global block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway#global ApplicationGateway#global}
+  */
+  readonly global?: ApplicationGatewayGlobal;
+  /**
   * http_listener block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway#http_listener ApplicationGateway#http_listener}
@@ -1494,7 +1500,7 @@ export class ApplicationGatewayFrontendIpConfigurationOutputReference extends cd
     return this._name;
   }
 
-  // private_ip_address - computed: false, optional: true, required: false
+  // private_ip_address - computed: true, optional: true, required: false
   private _privateIpAddress?: string; 
   public get privateIpAddress() {
     return this.getStringAttribute('private_ip_address');
@@ -1843,6 +1849,92 @@ export class ApplicationGatewayGatewayIpConfigurationList extends cdktf.ComplexL
   */
   public get(index: number): ApplicationGatewayGatewayIpConfigurationOutputReference {
     return new ApplicationGatewayGatewayIpConfigurationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface ApplicationGatewayGlobal {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway#request_buffering_enabled ApplicationGateway#request_buffering_enabled}
+  */
+  readonly requestBufferingEnabled: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway#response_buffering_enabled ApplicationGateway#response_buffering_enabled}
+  */
+  readonly responseBufferingEnabled: boolean | cdktf.IResolvable;
+}
+
+export function applicationGatewayGlobalToTerraform(struct?: ApplicationGatewayGlobalOutputReference | ApplicationGatewayGlobal): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    request_buffering_enabled: cdktf.booleanToTerraform(struct!.requestBufferingEnabled),
+    response_buffering_enabled: cdktf.booleanToTerraform(struct!.responseBufferingEnabled),
+  }
+}
+
+export class ApplicationGatewayGlobalOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ApplicationGatewayGlobal | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._requestBufferingEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.requestBufferingEnabled = this._requestBufferingEnabled;
+    }
+    if (this._responseBufferingEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.responseBufferingEnabled = this._responseBufferingEnabled;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApplicationGatewayGlobal | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._requestBufferingEnabled = undefined;
+      this._responseBufferingEnabled = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._requestBufferingEnabled = value.requestBufferingEnabled;
+      this._responseBufferingEnabled = value.responseBufferingEnabled;
+    }
+  }
+
+  // request_buffering_enabled - computed: false, optional: false, required: true
+  private _requestBufferingEnabled?: boolean | cdktf.IResolvable; 
+  public get requestBufferingEnabled() {
+    return this.getBooleanAttribute('request_buffering_enabled');
+  }
+  public set requestBufferingEnabled(value: boolean | cdktf.IResolvable) {
+    this._requestBufferingEnabled = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requestBufferingEnabledInput() {
+    return this._requestBufferingEnabled;
+  }
+
+  // response_buffering_enabled - computed: false, optional: false, required: true
+  private _responseBufferingEnabled?: boolean | cdktf.IResolvable; 
+  public get responseBufferingEnabled() {
+    return this.getBooleanAttribute('response_buffering_enabled');
+  }
+  public set responseBufferingEnabled(value: boolean | cdktf.IResolvable) {
+    this._responseBufferingEnabled = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get responseBufferingEnabledInput() {
+    return this._responseBufferingEnabled;
   }
 }
 export interface ApplicationGatewayHttpListenerCustomErrorConfiguration {
@@ -2758,7 +2850,7 @@ export interface ApplicationGatewayProbeMatch {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway#body ApplicationGateway#body}
   */
-  readonly body: string;
+  readonly body?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway#status_code ApplicationGateway#status_code}
   */
@@ -2814,13 +2906,16 @@ export class ApplicationGatewayProbeMatchOutputReference extends cdktf.ComplexOb
     }
   }
 
-  // body - computed: false, optional: false, required: true
+  // body - computed: false, optional: true, required: false
   private _body?: string; 
   public get body() {
     return this.getStringAttribute('body');
   }
   public set body(value: string) {
     this._body = value;
+  }
+  public resetBody() {
+    this._body = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get bodyInput() {
@@ -4181,6 +4276,10 @@ export class ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfigurat
 }
 export interface ApplicationGatewayRewriteRuleSetRewriteRuleUrl {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway#components ApplicationGateway#components}
+  */
+  readonly components?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway#path ApplicationGateway#path}
   */
   readonly path?: string;
@@ -4200,6 +4299,7 @@ export function applicationGatewayRewriteRuleSetRewriteRuleUrlToTerraform(struct
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    components: cdktf.stringToTerraform(struct!.components),
     path: cdktf.stringToTerraform(struct!.path),
     query_string: cdktf.stringToTerraform(struct!.queryString),
     reroute: cdktf.booleanToTerraform(struct!.reroute),
@@ -4220,6 +4320,10 @@ export class ApplicationGatewayRewriteRuleSetRewriteRuleUrlOutputReference exten
   public get internalValue(): ApplicationGatewayRewriteRuleSetRewriteRuleUrl | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._components !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.components = this._components;
+    }
     if (this._path !== undefined) {
       hasAnyValues = true;
       internalValueResult.path = this._path;
@@ -4238,16 +4342,34 @@ export class ApplicationGatewayRewriteRuleSetRewriteRuleUrlOutputReference exten
   public set internalValue(value: ApplicationGatewayRewriteRuleSetRewriteRuleUrl | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this._components = undefined;
       this._path = undefined;
       this._queryString = undefined;
       this._reroute = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this._components = value.components;
       this._path = value.path;
       this._queryString = value.queryString;
       this._reroute = value.reroute;
     }
+  }
+
+  // components - computed: true, optional: true, required: false
+  private _components?: string; 
+  public get components() {
+    return this.getStringAttribute('components');
+  }
+  public set components(value: string) {
+    this._components = value;
+  }
+  public resetComponents() {
+    this._components = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get componentsInput() {
+    return this._components;
   }
 
   // path - computed: false, optional: true, required: false
@@ -7021,7 +7143,7 @@ export class ApplicationGateway extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_application_gateway',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.16.0',
+        providerVersion: '3.20.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -7050,6 +7172,7 @@ export class ApplicationGateway extends cdktf.TerraformResource {
     this._frontendIpConfiguration.internalValue = config.frontendIpConfiguration;
     this._frontendPort.internalValue = config.frontendPort;
     this._gatewayIpConfiguration.internalValue = config.gatewayIpConfiguration;
+    this._global.internalValue = config.global;
     this._httpListener.internalValue = config.httpListener;
     this._identity.internalValue = config.identity;
     this._privateLinkConfiguration.internalValue = config.privateLinkConfiguration;
@@ -7342,6 +7465,22 @@ export class ApplicationGateway extends cdktf.TerraformResource {
     return this._gatewayIpConfiguration.internalValue;
   }
 
+  // global - computed: false, optional: true, required: false
+  private _global = new ApplicationGatewayGlobalOutputReference(this, "global");
+  public get global() {
+    return this._global;
+  }
+  public putGlobal(value: ApplicationGatewayGlobal) {
+    this._global.internalValue = value;
+  }
+  public resetGlobal() {
+    this._global.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get globalInput() {
+    return this._global.internalValue;
+  }
+
   // http_listener - computed: false, optional: false, required: true
   private _httpListener = new ApplicationGatewayHttpListenerList(this, "http_listener", true);
   public get httpListener() {
@@ -7613,6 +7752,7 @@ export class ApplicationGateway extends cdktf.TerraformResource {
       frontend_ip_configuration: cdktf.listMapper(applicationGatewayFrontendIpConfigurationToTerraform, true)(this._frontendIpConfiguration.internalValue),
       frontend_port: cdktf.listMapper(applicationGatewayFrontendPortToTerraform, true)(this._frontendPort.internalValue),
       gateway_ip_configuration: cdktf.listMapper(applicationGatewayGatewayIpConfigurationToTerraform, true)(this._gatewayIpConfiguration.internalValue),
+      global: applicationGatewayGlobalToTerraform(this._global.internalValue),
       http_listener: cdktf.listMapper(applicationGatewayHttpListenerToTerraform, true)(this._httpListener.internalValue),
       identity: applicationGatewayIdentityToTerraform(this._identity.internalValue),
       private_link_configuration: cdktf.listMapper(applicationGatewayPrivateLinkConfigurationToTerraform, true)(this._privateLinkConfiguration.internalValue),

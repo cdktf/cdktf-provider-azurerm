@@ -209,7 +209,7 @@ export class DataAzurermSharedImage extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_shared_image',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.16.0',
+        providerVersion: '3.20.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -230,6 +230,11 @@ export class DataAzurermSharedImage extends cdktf.TerraformDataSource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // architecture - computed: true, optional: false, required: false
+  public get architecture() {
+    return this.getStringAttribute('architecture');
+  }
 
   // description - computed: true, optional: false, required: false
   public get description() {

@@ -131,7 +131,7 @@ export class DataAzurermManagementGroup extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_management_group',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.16.0',
+        providerVersion: '3.20.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -151,6 +151,16 @@ export class DataAzurermManagementGroup extends cdktf.TerraformDataSource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // all_management_group_ids - computed: true, optional: false, required: false
+  public get allManagementGroupIds() {
+    return this.getListAttribute('all_management_group_ids');
+  }
+
+  // all_subscription_ids - computed: true, optional: false, required: false
+  public get allSubscriptionIds() {
+    return this.getListAttribute('all_subscription_ids');
+  }
 
   // display_name - computed: true, optional: true, required: false
   private _displayName?: string; 
@@ -184,6 +194,11 @@ export class DataAzurermManagementGroup extends cdktf.TerraformDataSource {
     return this._id;
   }
 
+  // management_group_ids - computed: true, optional: false, required: false
+  public get managementGroupIds() {
+    return this.getListAttribute('management_group_ids');
+  }
+
   // name - computed: true, optional: true, required: false
   private _name?: string; 
   public get name() {
@@ -207,7 +222,7 @@ export class DataAzurermManagementGroup extends cdktf.TerraformDataSource {
 
   // subscription_ids - computed: true, optional: false, required: false
   public get subscriptionIds() {
-    return cdktf.Fn.tolist(this.getListAttribute('subscription_ids'));
+    return this.getListAttribute('subscription_ids');
   }
 
   // timeouts - computed: false, optional: true, required: false

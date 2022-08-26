@@ -32,6 +32,10 @@ export interface StorageAccountConfig extends cdktf.TerraformMetaArguments {
   */
   readonly crossTenantReplicationEnabled?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account#default_to_oauth_authentication StorageAccount#default_to_oauth_authentication}
+  */
+  readonly defaultToOauthAuthentication?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account#edge_zone StorageAccount#edge_zone}
   */
   readonly edgeZone?: string;
@@ -3286,7 +3290,7 @@ export class StorageAccount extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_storage_account',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.16.0',
+        providerVersion: '3.20.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -3303,6 +3307,7 @@ export class StorageAccount extends cdktf.TerraformResource {
     this._accountTier = config.accountTier;
     this._allowNestedItemsToBePublic = config.allowNestedItemsToBePublic;
     this._crossTenantReplicationEnabled = config.crossTenantReplicationEnabled;
+    this._defaultToOauthAuthentication = config.defaultToOauthAuthentication;
     this._edgeZone = config.edgeZone;
     this._enableHttpsTrafficOnly = config.enableHttpsTrafficOnly;
     this._id = config.id;
@@ -3423,6 +3428,22 @@ export class StorageAccount extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get crossTenantReplicationEnabledInput() {
     return this._crossTenantReplicationEnabled;
+  }
+
+  // default_to_oauth_authentication - computed: false, optional: true, required: false
+  private _defaultToOauthAuthentication?: boolean | cdktf.IResolvable; 
+  public get defaultToOauthAuthentication() {
+    return this.getBooleanAttribute('default_to_oauth_authentication');
+  }
+  public set defaultToOauthAuthentication(value: boolean | cdktf.IResolvable) {
+    this._defaultToOauthAuthentication = value;
+  }
+  public resetDefaultToOauthAuthentication() {
+    this._defaultToOauthAuthentication = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultToOauthAuthenticationInput() {
+    return this._defaultToOauthAuthentication;
   }
 
   // edge_zone - computed: false, optional: true, required: false
@@ -4004,6 +4025,7 @@ export class StorageAccount extends cdktf.TerraformResource {
       account_tier: cdktf.stringToTerraform(this._accountTier),
       allow_nested_items_to_be_public: cdktf.booleanToTerraform(this._allowNestedItemsToBePublic),
       cross_tenant_replication_enabled: cdktf.booleanToTerraform(this._crossTenantReplicationEnabled),
+      default_to_oauth_authentication: cdktf.booleanToTerraform(this._defaultToOauthAuthentication),
       edge_zone: cdktf.stringToTerraform(this._edgeZone),
       enable_https_traffic_only: cdktf.booleanToTerraform(this._enableHttpsTrafficOnly),
       id: cdktf.stringToTerraform(this._id),

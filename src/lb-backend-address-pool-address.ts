@@ -8,6 +8,12 @@ import * as cdktf from 'cdktf';
 
 export interface LbBackendAddressPoolAddressConfig extends cdktf.TerraformMetaArguments {
   /**
+  * For global load balancer, user needs to specify the `backend_address_ip_configuration_id` of the added regional load balancers
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_backend_address_pool_address#backend_address_ip_configuration_id LbBackendAddressPoolAddress#backend_address_ip_configuration_id}
+  */
+  readonly backendAddressIpConfigurationId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_backend_address_pool_address#backend_address_pool_id LbBackendAddressPoolAddress#backend_address_pool_id}
   */
   readonly backendAddressPoolId: string;
@@ -21,15 +27,17 @@ export interface LbBackendAddressPoolAddressConfig extends cdktf.TerraformMetaAr
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_backend_address_pool_address#ip_address LbBackendAddressPoolAddress#ip_address}
   */
-  readonly ipAddress: string;
+  readonly ipAddress?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_backend_address_pool_address#name LbBackendAddressPoolAddress#name}
   */
   readonly name: string;
   /**
+  * For regional load balancer, user needs to specify `virtual_network_id` and `ip_address`
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_backend_address_pool_address#virtual_network_id LbBackendAddressPoolAddress#virtual_network_id}
   */
-  readonly virtualNetworkId: string;
+  readonly virtualNetworkId?: string;
   /**
   * timeouts block
   * 
@@ -294,7 +302,7 @@ export class LbBackendAddressPoolAddress extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_lb_backend_address_pool_address',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.16.0',
+        providerVersion: '3.20.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -305,6 +313,7 @@ export class LbBackendAddressPoolAddress extends cdktf.TerraformResource {
       connection: config.connection,
       forEach: config.forEach
     });
+    this._backendAddressIpConfigurationId = config.backendAddressIpConfigurationId;
     this._backendAddressPoolId = config.backendAddressPoolId;
     this._id = config.id;
     this._ipAddress = config.ipAddress;
@@ -316,6 +325,22 @@ export class LbBackendAddressPoolAddress extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // backend_address_ip_configuration_id - computed: false, optional: true, required: false
+  private _backendAddressIpConfigurationId?: string; 
+  public get backendAddressIpConfigurationId() {
+    return this.getStringAttribute('backend_address_ip_configuration_id');
+  }
+  public set backendAddressIpConfigurationId(value: string) {
+    this._backendAddressIpConfigurationId = value;
+  }
+  public resetBackendAddressIpConfigurationId() {
+    this._backendAddressIpConfigurationId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get backendAddressIpConfigurationIdInput() {
+    return this._backendAddressIpConfigurationId;
+  }
 
   // backend_address_pool_id - computed: false, optional: false, required: true
   private _backendAddressPoolId?: string; 
@@ -352,13 +377,16 @@ export class LbBackendAddressPoolAddress extends cdktf.TerraformResource {
     return this._inboundNatRulePortMapping;
   }
 
-  // ip_address - computed: false, optional: false, required: true
+  // ip_address - computed: false, optional: true, required: false
   private _ipAddress?: string; 
   public get ipAddress() {
     return this.getStringAttribute('ip_address');
   }
   public set ipAddress(value: string) {
     this._ipAddress = value;
+  }
+  public resetIpAddress() {
+    this._ipAddress = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get ipAddressInput() {
@@ -378,13 +406,16 @@ export class LbBackendAddressPoolAddress extends cdktf.TerraformResource {
     return this._name;
   }
 
-  // virtual_network_id - computed: false, optional: false, required: true
+  // virtual_network_id - computed: false, optional: true, required: false
   private _virtualNetworkId?: string; 
   public get virtualNetworkId() {
     return this.getStringAttribute('virtual_network_id');
   }
   public set virtualNetworkId(value: string) {
     this._virtualNetworkId = value;
+  }
+  public resetVirtualNetworkId() {
+    this._virtualNetworkId = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get virtualNetworkIdInput() {
@@ -413,6 +444,7 @@ export class LbBackendAddressPoolAddress extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      backend_address_ip_configuration_id: cdktf.stringToTerraform(this._backendAddressIpConfigurationId),
       backend_address_pool_id: cdktf.stringToTerraform(this._backendAddressPoolId),
       id: cdktf.stringToTerraform(this._id),
       ip_address: cdktf.stringToTerraform(this._ipAddress),
