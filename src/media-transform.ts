@@ -807,7 +807,7 @@ export class MediaTransform extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_media_transform',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.16.0',
+        providerVersion: '3.20.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

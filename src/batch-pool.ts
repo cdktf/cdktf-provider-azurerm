@@ -379,6 +379,10 @@ export interface BatchPoolContainerConfigurationContainerRegistries {
   */
   readonly registryServer?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#user_assigned_identity_id BatchPool#user_assigned_identity_id}
+  */
+  readonly userAssignedIdentityId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#user_name BatchPool#user_name}
   */
   readonly userName?: string;
@@ -392,6 +396,7 @@ export function batchPoolContainerConfigurationContainerRegistriesToTerraform(st
   return {
     password: cdktf.stringToTerraform(struct!.password),
     registry_server: cdktf.stringToTerraform(struct!.registryServer),
+    user_assigned_identity_id: cdktf.stringToTerraform(struct!.userAssignedIdentityId),
     user_name: cdktf.stringToTerraform(struct!.userName),
   }
 }
@@ -424,6 +429,10 @@ export class BatchPoolContainerConfigurationContainerRegistriesOutputReference e
       hasAnyValues = true;
       internalValueResult.registryServer = this._registryServer;
     }
+    if (this._userAssignedIdentityId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.userAssignedIdentityId = this._userAssignedIdentityId;
+    }
     if (this._userName !== undefined) {
       hasAnyValues = true;
       internalValueResult.userName = this._userName;
@@ -437,6 +446,7 @@ export class BatchPoolContainerConfigurationContainerRegistriesOutputReference e
       this.resolvableValue = undefined;
       this._password = undefined;
       this._registryServer = undefined;
+      this._userAssignedIdentityId = undefined;
       this._userName = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
@@ -448,6 +458,7 @@ export class BatchPoolContainerConfigurationContainerRegistriesOutputReference e
       this.resolvableValue = undefined;
       this._password = value.password;
       this._registryServer = value.registryServer;
+      this._userAssignedIdentityId = value.userAssignedIdentityId;
       this._userName = value.userName;
     }
   }
@@ -482,6 +493,22 @@ export class BatchPoolContainerConfigurationContainerRegistriesOutputReference e
   // Temporarily expose input value. Use with caution.
   public get registryServerInput() {
     return this._registryServer;
+  }
+
+  // user_assigned_identity_id - computed: false, optional: true, required: false
+  private _userAssignedIdentityId?: string; 
+  public get userAssignedIdentityId() {
+    return this.getStringAttribute('user_assigned_identity_id');
+  }
+  public set userAssignedIdentityId(value: string) {
+    this._userAssignedIdentityId = value;
+  }
+  public resetUserAssignedIdentityId() {
+    this._userAssignedIdentityId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userAssignedIdentityIdInput() {
+    return this._userAssignedIdentityId;
   }
 
   // user_name - computed: false, optional: true, required: false
@@ -2301,7 +2328,7 @@ export class BatchPool extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_batch_pool',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.16.0',
+        providerVersion: '3.20.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

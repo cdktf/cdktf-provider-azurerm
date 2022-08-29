@@ -66,17 +66,23 @@ export interface AzurermProviderConfig {
   */
   readonly msiEndpoint?: string;
   /**
-  * The bearer token for the request to the OIDC provider. For use When authenticating as a Service Principal using OpenID Connect.
+  * The bearer token for the request to the OIDC provider. For use when authenticating as a Service Principal using OpenID Connect.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#oidc_request_token AzurermProvider#oidc_request_token}
   */
   readonly oidcRequestToken?: string;
   /**
-  * The URL for the OIDC provider from which to request an ID token. For use When authenticating as a Service Principal using OpenID Connect.
+  * The URL for the OIDC provider from which to request an ID token. For use when authenticating as a Service Principal using OpenID Connect.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#oidc_request_url AzurermProvider#oidc_request_url}
   */
   readonly oidcRequestUrl?: string;
+  /**
+  * The OIDC ID token for use when authenticating as a Service Principal using OpenID Connect.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#oidc_token AzurermProvider#oidc_token}
+  */
+  readonly oidcToken?: string;
   /**
   * A GUID/UUID that is registered with Microsoft to facilitate partner resource usage attribution.
   * 
@@ -494,7 +500,7 @@ export class AzurermProvider extends cdktf.TerraformProvider {
       terraformResourceType: 'azurerm',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.16.0',
+        providerVersion: '3.20.0',
         providerVersionConstraint: '~> 3.10'
       },
       terraformProviderSource: 'azurerm'
@@ -511,6 +517,7 @@ export class AzurermProvider extends cdktf.TerraformProvider {
     this._msiEndpoint = config.msiEndpoint;
     this._oidcRequestToken = config.oidcRequestToken;
     this._oidcRequestUrl = config.oidcRequestUrl;
+    this._oidcToken = config.oidcToken;
     this._partnerId = config.partnerId;
     this._skipProviderRegistration = config.skipProviderRegistration;
     this._storageUseAzuread = config.storageUseAzuread;
@@ -718,6 +725,22 @@ export class AzurermProvider extends cdktf.TerraformProvider {
     return this._oidcRequestUrl;
   }
 
+  // oidc_token - computed: false, optional: true, required: false
+  private _oidcToken?: string; 
+  public get oidcToken() {
+    return this._oidcToken;
+  }
+  public set oidcToken(value: string | undefined) {
+    this._oidcToken = value;
+  }
+  public resetOidcToken() {
+    this._oidcToken = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get oidcTokenInput() {
+    return this._oidcToken;
+  }
+
   // partner_id - computed: false, optional: true, required: false
   private _partnerId?: string; 
   public get partnerId() {
@@ -877,6 +900,7 @@ export class AzurermProvider extends cdktf.TerraformProvider {
       msi_endpoint: cdktf.stringToTerraform(this._msiEndpoint),
       oidc_request_token: cdktf.stringToTerraform(this._oidcRequestToken),
       oidc_request_url: cdktf.stringToTerraform(this._oidcRequestUrl),
+      oidc_token: cdktf.stringToTerraform(this._oidcToken),
       partner_id: cdktf.stringToTerraform(this._partnerId),
       skip_provider_registration: cdktf.booleanToTerraform(this._skipProviderRegistration),
       storage_use_azuread: cdktf.booleanToTerraform(this._storageUseAzuread),

@@ -69,6 +69,12 @@ export interface DataFactoryIntegrationRuntimeAzureSsisConfig extends cdktf.Terr
   */
   readonly expressCustomSetup?: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetup;
   /**
+  * express_vnet_integration block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis#express_vnet_integration DataFactoryIntegrationRuntimeAzureSsis#express_vnet_integration}
+  */
+  readonly expressVnetIntegration?: DataFactoryIntegrationRuntimeAzureSsisExpressVnetIntegration;
+  /**
   * package_store block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis#package_store DataFactoryIntegrationRuntimeAzureSsis#package_store}
@@ -1103,6 +1109,68 @@ export class DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupOutputRefer
     return this._component.internalValue;
   }
 }
+export interface DataFactoryIntegrationRuntimeAzureSsisExpressVnetIntegration {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis#subnet_id DataFactoryIntegrationRuntimeAzureSsis#subnet_id}
+  */
+  readonly subnetId: string;
+}
+
+export function dataFactoryIntegrationRuntimeAzureSsisExpressVnetIntegrationToTerraform(struct?: DataFactoryIntegrationRuntimeAzureSsisExpressVnetIntegrationOutputReference | DataFactoryIntegrationRuntimeAzureSsisExpressVnetIntegration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    subnet_id: cdktf.stringToTerraform(struct!.subnetId),
+  }
+}
+
+export class DataFactoryIntegrationRuntimeAzureSsisExpressVnetIntegrationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DataFactoryIntegrationRuntimeAzureSsisExpressVnetIntegration | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._subnetId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.subnetId = this._subnetId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFactoryIntegrationRuntimeAzureSsisExpressVnetIntegration | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._subnetId = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._subnetId = value.subnetId;
+    }
+  }
+
+  // subnet_id - computed: false, optional: false, required: true
+  private _subnetId?: string; 
+  public get subnetId() {
+    return this.getStringAttribute('subnet_id');
+  }
+  public set subnetId(value: string) {
+    this._subnetId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetIdInput() {
+    return this._subnetId;
+  }
+}
 export interface DataFactoryIntegrationRuntimeAzureSsisPackageStore {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis#linked_service_name DataFactoryIntegrationRuntimeAzureSsis#linked_service_name}
@@ -1663,7 +1731,7 @@ export class DataFactoryIntegrationRuntimeAzureSsis extends cdktf.TerraformResou
       terraformResourceType: 'azurerm_data_factory_integration_runtime_azure_ssis',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.16.0',
+        providerVersion: '3.20.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -1687,6 +1755,7 @@ export class DataFactoryIntegrationRuntimeAzureSsis extends cdktf.TerraformResou
     this._catalogInfo.internalValue = config.catalogInfo;
     this._customSetupScript.internalValue = config.customSetupScript;
     this._expressCustomSetup.internalValue = config.expressCustomSetup;
+    this._expressVnetIntegration.internalValue = config.expressVnetIntegration;
     this._packageStore.internalValue = config.packageStore;
     this._proxy.internalValue = config.proxy;
     this._timeouts.internalValue = config.timeouts;
@@ -1893,6 +1962,22 @@ export class DataFactoryIntegrationRuntimeAzureSsis extends cdktf.TerraformResou
     return this._expressCustomSetup.internalValue;
   }
 
+  // express_vnet_integration - computed: false, optional: true, required: false
+  private _expressVnetIntegration = new DataFactoryIntegrationRuntimeAzureSsisExpressVnetIntegrationOutputReference(this, "express_vnet_integration");
+  public get expressVnetIntegration() {
+    return this._expressVnetIntegration;
+  }
+  public putExpressVnetIntegration(value: DataFactoryIntegrationRuntimeAzureSsisExpressVnetIntegration) {
+    this._expressVnetIntegration.internalValue = value;
+  }
+  public resetExpressVnetIntegration() {
+    this._expressVnetIntegration.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get expressVnetIntegrationInput() {
+    return this._expressVnetIntegration.internalValue;
+  }
+
   // package_store - computed: false, optional: true, required: false
   private _packageStore = new DataFactoryIntegrationRuntimeAzureSsisPackageStoreList(this, "package_store", false);
   public get packageStore() {
@@ -1976,6 +2061,7 @@ export class DataFactoryIntegrationRuntimeAzureSsis extends cdktf.TerraformResou
       catalog_info: dataFactoryIntegrationRuntimeAzureSsisCatalogInfoToTerraform(this._catalogInfo.internalValue),
       custom_setup_script: dataFactoryIntegrationRuntimeAzureSsisCustomSetupScriptToTerraform(this._customSetupScript.internalValue),
       express_custom_setup: dataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupToTerraform(this._expressCustomSetup.internalValue),
+      express_vnet_integration: dataFactoryIntegrationRuntimeAzureSsisExpressVnetIntegrationToTerraform(this._expressVnetIntegration.internalValue),
       package_store: cdktf.listMapper(dataFactoryIntegrationRuntimeAzureSsisPackageStoreToTerraform, true)(this._packageStore.internalValue),
       proxy: dataFactoryIntegrationRuntimeAzureSsisProxyToTerraform(this._proxy.internalValue),
       timeouts: dataFactoryIntegrationRuntimeAzureSsisTimeoutsToTerraform(this._timeouts.internalValue),

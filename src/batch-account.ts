@@ -8,6 +8,10 @@ import * as cdktf from 'cdktf';
 
 export interface BatchAccountConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_account#allowed_authentication_modes BatchAccount#allowed_authentication_modes}
+  */
+  readonly allowedAuthenticationModes?: string[];
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_account#encryption BatchAccount#encryption}
   */
   readonly encryption?: BatchAccountEncryption[] | cdktf.IResolvable;
@@ -39,9 +43,17 @@ export interface BatchAccountConfig extends cdktf.TerraformMetaArguments {
   */
   readonly resourceGroupName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_account#storage_account_authentication_mode BatchAccount#storage_account_authentication_mode}
+  */
+  readonly storageAccountAuthenticationMode?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_account#storage_account_id BatchAccount#storage_account_id}
   */
   readonly storageAccountId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_account#storage_account_node_identity BatchAccount#storage_account_node_identity}
+  */
+  readonly storageAccountNodeIdentity?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_account#tags BatchAccount#tags}
   */
@@ -533,7 +545,7 @@ export class BatchAccount extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_batch_account',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.16.0',
+        providerVersion: '3.20.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -544,6 +556,7 @@ export class BatchAccount extends cdktf.TerraformResource {
       connection: config.connection,
       forEach: config.forEach
     });
+    this._allowedAuthenticationModes = config.allowedAuthenticationModes;
     this._encryption.internalValue = config.encryption;
     this._id = config.id;
     this._location = config.location;
@@ -551,7 +564,9 @@ export class BatchAccount extends cdktf.TerraformResource {
     this._poolAllocationMode = config.poolAllocationMode;
     this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
     this._resourceGroupName = config.resourceGroupName;
+    this._storageAccountAuthenticationMode = config.storageAccountAuthenticationMode;
     this._storageAccountId = config.storageAccountId;
+    this._storageAccountNodeIdentity = config.storageAccountNodeIdentity;
     this._tags = config.tags;
     this._identity.internalValue = config.identity;
     this._keyVaultReference.internalValue = config.keyVaultReference;
@@ -565,6 +580,22 @@ export class BatchAccount extends cdktf.TerraformResource {
   // account_endpoint - computed: true, optional: false, required: false
   public get accountEndpoint() {
     return this.getStringAttribute('account_endpoint');
+  }
+
+  // allowed_authentication_modes - computed: true, optional: true, required: false
+  private _allowedAuthenticationModes?: string[]; 
+  public get allowedAuthenticationModes() {
+    return cdktf.Fn.tolist(this.getListAttribute('allowed_authentication_modes'));
+  }
+  public set allowedAuthenticationModes(value: string[]) {
+    this._allowedAuthenticationModes = value;
+  }
+  public resetAllowedAuthenticationModes() {
+    this._allowedAuthenticationModes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowedAuthenticationModesInput() {
+    return this._allowedAuthenticationModes;
   }
 
   // encryption - computed: false, optional: true, required: false
@@ -680,6 +711,22 @@ export class BatchAccount extends cdktf.TerraformResource {
     return this.getStringAttribute('secondary_access_key');
   }
 
+  // storage_account_authentication_mode - computed: false, optional: true, required: false
+  private _storageAccountAuthenticationMode?: string; 
+  public get storageAccountAuthenticationMode() {
+    return this.getStringAttribute('storage_account_authentication_mode');
+  }
+  public set storageAccountAuthenticationMode(value: string) {
+    this._storageAccountAuthenticationMode = value;
+  }
+  public resetStorageAccountAuthenticationMode() {
+    this._storageAccountAuthenticationMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageAccountAuthenticationModeInput() {
+    return this._storageAccountAuthenticationMode;
+  }
+
   // storage_account_id - computed: false, optional: true, required: false
   private _storageAccountId?: string; 
   public get storageAccountId() {
@@ -694,6 +741,22 @@ export class BatchAccount extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get storageAccountIdInput() {
     return this._storageAccountId;
+  }
+
+  // storage_account_node_identity - computed: false, optional: true, required: false
+  private _storageAccountNodeIdentity?: string; 
+  public get storageAccountNodeIdentity() {
+    return this.getStringAttribute('storage_account_node_identity');
+  }
+  public set storageAccountNodeIdentity(value: string) {
+    this._storageAccountNodeIdentity = value;
+  }
+  public resetStorageAccountNodeIdentity() {
+    this._storageAccountNodeIdentity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageAccountNodeIdentityInput() {
+    return this._storageAccountNodeIdentity;
   }
 
   // tags - computed: false, optional: true, required: false
@@ -766,6 +829,7 @@ export class BatchAccount extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      allowed_authentication_modes: cdktf.listMapper(cdktf.stringToTerraform, false)(this._allowedAuthenticationModes),
       encryption: cdktf.listMapper(batchAccountEncryptionToTerraform, false)(this._encryption.internalValue),
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
@@ -773,7 +837,9 @@ export class BatchAccount extends cdktf.TerraformResource {
       pool_allocation_mode: cdktf.stringToTerraform(this._poolAllocationMode),
       public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      storage_account_authentication_mode: cdktf.stringToTerraform(this._storageAccountAuthenticationMode),
       storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
+      storage_account_node_identity: cdktf.stringToTerraform(this._storageAccountNodeIdentity),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       identity: batchAccountIdentityToTerraform(this._identity.internalValue),
       key_vault_reference: batchAccountKeyVaultReferenceToTerraform(this._keyVaultReference.internalValue),
