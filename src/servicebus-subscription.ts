@@ -12,6 +12,10 @@ export interface ServicebusSubscriptionConfig extends cdktf.TerraformMetaArgumen
   */
   readonly autoDeleteOnIdle?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription#client_scoped_subscription_enabled ServicebusSubscription#client_scoped_subscription_enabled}
+  */
+  readonly clientScopedSubscriptionEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription#dead_lettering_on_filter_evaluation_error ServicebusSubscription#dead_lettering_on_filter_evaluation_error}
   */
   readonly deadLetteringOnFilterEvaluationError?: boolean | cdktf.IResolvable;
@@ -67,11 +71,114 @@ export interface ServicebusSubscriptionConfig extends cdktf.TerraformMetaArgumen
   */
   readonly topicId: string;
   /**
+  * client_scoped_subscription block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription#client_scoped_subscription ServicebusSubscription#client_scoped_subscription}
+  */
+  readonly clientScopedSubscription?: ServicebusSubscriptionClientScopedSubscription;
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription#timeouts ServicebusSubscription#timeouts}
   */
   readonly timeouts?: ServicebusSubscriptionTimeouts;
+}
+export interface ServicebusSubscriptionClientScopedSubscription {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription#client_id ServicebusSubscription#client_id}
+  */
+  readonly clientId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription#is_client_scoped_subscription_shareable ServicebusSubscription#is_client_scoped_subscription_shareable}
+  */
+  readonly isClientScopedSubscriptionShareable?: boolean | cdktf.IResolvable;
+}
+
+export function servicebusSubscriptionClientScopedSubscriptionToTerraform(struct?: ServicebusSubscriptionClientScopedSubscriptionOutputReference | ServicebusSubscriptionClientScopedSubscription): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    client_id: cdktf.stringToTerraform(struct!.clientId),
+    is_client_scoped_subscription_shareable: cdktf.booleanToTerraform(struct!.isClientScopedSubscriptionShareable),
+  }
+}
+
+export class ServicebusSubscriptionClientScopedSubscriptionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ServicebusSubscriptionClientScopedSubscription | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._clientId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.clientId = this._clientId;
+    }
+    if (this._isClientScopedSubscriptionShareable !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.isClientScopedSubscriptionShareable = this._isClientScopedSubscriptionShareable;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ServicebusSubscriptionClientScopedSubscription | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._clientId = undefined;
+      this._isClientScopedSubscriptionShareable = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._clientId = value.clientId;
+      this._isClientScopedSubscriptionShareable = value.isClientScopedSubscriptionShareable;
+    }
+  }
+
+  // client_id - computed: false, optional: true, required: false
+  private _clientId?: string; 
+  public get clientId() {
+    return this.getStringAttribute('client_id');
+  }
+  public set clientId(value: string) {
+    this._clientId = value;
+  }
+  public resetClientId() {
+    this._clientId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientIdInput() {
+    return this._clientId;
+  }
+
+  // is_client_scoped_subscription_durable - computed: true, optional: false, required: false
+  public get isClientScopedSubscriptionDurable() {
+    return this.getBooleanAttribute('is_client_scoped_subscription_durable');
+  }
+
+  // is_client_scoped_subscription_shareable - computed: false, optional: true, required: false
+  private _isClientScopedSubscriptionShareable?: boolean | cdktf.IResolvable; 
+  public get isClientScopedSubscriptionShareable() {
+    return this.getBooleanAttribute('is_client_scoped_subscription_shareable');
+  }
+  public set isClientScopedSubscriptionShareable(value: boolean | cdktf.IResolvable) {
+    this._isClientScopedSubscriptionShareable = value;
+  }
+  public resetIsClientScopedSubscriptionShareable() {
+    this._isClientScopedSubscriptionShareable = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get isClientScopedSubscriptionShareableInput() {
+    return this._isClientScopedSubscriptionShareable;
+  }
 }
 export interface ServicebusSubscriptionTimeouts {
   /**
@@ -256,7 +363,7 @@ export class ServicebusSubscription extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_servicebus_subscription',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.16.0',
+        providerVersion: '3.20.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -268,6 +375,7 @@ export class ServicebusSubscription extends cdktf.TerraformResource {
       forEach: config.forEach
     });
     this._autoDeleteOnIdle = config.autoDeleteOnIdle;
+    this._clientScopedSubscriptionEnabled = config.clientScopedSubscriptionEnabled;
     this._deadLetteringOnFilterEvaluationError = config.deadLetteringOnFilterEvaluationError;
     this._deadLetteringOnMessageExpiration = config.deadLetteringOnMessageExpiration;
     this._defaultMessageTtl = config.defaultMessageTtl;
@@ -281,6 +389,7 @@ export class ServicebusSubscription extends cdktf.TerraformResource {
     this._requiresSession = config.requiresSession;
     this._status = config.status;
     this._topicId = config.topicId;
+    this._clientScopedSubscription.internalValue = config.clientScopedSubscription;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -302,6 +411,22 @@ export class ServicebusSubscription extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get autoDeleteOnIdleInput() {
     return this._autoDeleteOnIdle;
+  }
+
+  // client_scoped_subscription_enabled - computed: false, optional: true, required: false
+  private _clientScopedSubscriptionEnabled?: boolean | cdktf.IResolvable; 
+  public get clientScopedSubscriptionEnabled() {
+    return this.getBooleanAttribute('client_scoped_subscription_enabled');
+  }
+  public set clientScopedSubscriptionEnabled(value: boolean | cdktf.IResolvable) {
+    this._clientScopedSubscriptionEnabled = value;
+  }
+  public resetClientScopedSubscriptionEnabled() {
+    this._clientScopedSubscriptionEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientScopedSubscriptionEnabledInput() {
+    return this._clientScopedSubscriptionEnabled;
   }
 
   // dead_lettering_on_filter_evaluation_error - computed: false, optional: true, required: false
@@ -503,6 +628,22 @@ export class ServicebusSubscription extends cdktf.TerraformResource {
     return this._topicId;
   }
 
+  // client_scoped_subscription - computed: false, optional: true, required: false
+  private _clientScopedSubscription = new ServicebusSubscriptionClientScopedSubscriptionOutputReference(this, "client_scoped_subscription");
+  public get clientScopedSubscription() {
+    return this._clientScopedSubscription;
+  }
+  public putClientScopedSubscription(value: ServicebusSubscriptionClientScopedSubscription) {
+    this._clientScopedSubscription.internalValue = value;
+  }
+  public resetClientScopedSubscription() {
+    this._clientScopedSubscription.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientScopedSubscriptionInput() {
+    return this._clientScopedSubscription.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new ServicebusSubscriptionTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -526,6 +667,7 @@ export class ServicebusSubscription extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       auto_delete_on_idle: cdktf.stringToTerraform(this._autoDeleteOnIdle),
+      client_scoped_subscription_enabled: cdktf.booleanToTerraform(this._clientScopedSubscriptionEnabled),
       dead_lettering_on_filter_evaluation_error: cdktf.booleanToTerraform(this._deadLetteringOnFilterEvaluationError),
       dead_lettering_on_message_expiration: cdktf.booleanToTerraform(this._deadLetteringOnMessageExpiration),
       default_message_ttl: cdktf.stringToTerraform(this._defaultMessageTtl),
@@ -539,6 +681,7 @@ export class ServicebusSubscription extends cdktf.TerraformResource {
       requires_session: cdktf.booleanToTerraform(this._requiresSession),
       status: cdktf.stringToTerraform(this._status),
       topic_id: cdktf.stringToTerraform(this._topicId),
+      client_scoped_subscription: servicebusSubscriptionClientScopedSubscriptionToTerraform(this._clientScopedSubscription.internalValue),
       timeouts: servicebusSubscriptionTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

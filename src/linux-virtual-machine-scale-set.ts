@@ -65,7 +65,7 @@ export interface LinuxVirtualMachineScaleSetConfig extends cdktf.TerraformMetaAr
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#instances LinuxVirtualMachineScaleSet#instances}
   */
-  readonly instances: number;
+  readonly instances?: number;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#location LinuxVirtualMachineScaleSet#location}
   */
@@ -3581,7 +3581,7 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_linux_virtual_machine_scale_set',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.16.0',
+        providerVersion: '3.20.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -3854,13 +3854,16 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
     return this._id;
   }
 
-  // instances - computed: false, optional: false, required: true
+  // instances - computed: false, optional: true, required: false
   private _instances?: number; 
   public get instances() {
     return this.getNumberAttribute('instances');
   }
   public set instances(value: number) {
     this._instances = value;
+  }
+  public resetInstances() {
+    this._instances = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get instancesInput() {

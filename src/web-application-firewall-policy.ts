@@ -569,6 +569,248 @@ export class WebApplicationFirewallPolicyCustomRulesList extends cdktf.ComplexLi
     return new WebApplicationFirewallPolicyCustomRulesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface WebApplicationFirewallPolicyManagedRulesExclusionExcludedRuleSetRuleGroup {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy#excluded_rules WebApplicationFirewallPolicy#excluded_rules}
+  */
+  readonly excludedRules?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy#rule_group_name WebApplicationFirewallPolicy#rule_group_name}
+  */
+  readonly ruleGroupName: string;
+}
+
+export function webApplicationFirewallPolicyManagedRulesExclusionExcludedRuleSetRuleGroupToTerraform(struct?: WebApplicationFirewallPolicyManagedRulesExclusionExcludedRuleSetRuleGroup | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    excluded_rules: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.excludedRules),
+    rule_group_name: cdktf.stringToTerraform(struct!.ruleGroupName),
+  }
+}
+
+export class WebApplicationFirewallPolicyManagedRulesExclusionExcludedRuleSetRuleGroupOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): WebApplicationFirewallPolicyManagedRulesExclusionExcludedRuleSetRuleGroup | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._excludedRules !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.excludedRules = this._excludedRules;
+    }
+    if (this._ruleGroupName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ruleGroupName = this._ruleGroupName;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: WebApplicationFirewallPolicyManagedRulesExclusionExcludedRuleSetRuleGroup | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._excludedRules = undefined;
+      this._ruleGroupName = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._excludedRules = value.excludedRules;
+      this._ruleGroupName = value.ruleGroupName;
+    }
+  }
+
+  // excluded_rules - computed: false, optional: true, required: false
+  private _excludedRules?: string[]; 
+  public get excludedRules() {
+    return this.getListAttribute('excluded_rules');
+  }
+  public set excludedRules(value: string[]) {
+    this._excludedRules = value;
+  }
+  public resetExcludedRules() {
+    this._excludedRules = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get excludedRulesInput() {
+    return this._excludedRules;
+  }
+
+  // rule_group_name - computed: false, optional: false, required: true
+  private _ruleGroupName?: string; 
+  public get ruleGroupName() {
+    return this.getStringAttribute('rule_group_name');
+  }
+  public set ruleGroupName(value: string) {
+    this._ruleGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ruleGroupNameInput() {
+    return this._ruleGroupName;
+  }
+}
+
+export class WebApplicationFirewallPolicyManagedRulesExclusionExcludedRuleSetRuleGroupList extends cdktf.ComplexList {
+  public internalValue? : WebApplicationFirewallPolicyManagedRulesExclusionExcludedRuleSetRuleGroup[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): WebApplicationFirewallPolicyManagedRulesExclusionExcludedRuleSetRuleGroupOutputReference {
+    return new WebApplicationFirewallPolicyManagedRulesExclusionExcludedRuleSetRuleGroupOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface WebApplicationFirewallPolicyManagedRulesExclusionExcludedRuleSet {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy#type WebApplicationFirewallPolicy#type}
+  */
+  readonly type?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy#version WebApplicationFirewallPolicy#version}
+  */
+  readonly version?: string;
+  /**
+  * rule_group block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy#rule_group WebApplicationFirewallPolicy#rule_group}
+  */
+  readonly ruleGroup?: WebApplicationFirewallPolicyManagedRulesExclusionExcludedRuleSetRuleGroup[] | cdktf.IResolvable;
+}
+
+export function webApplicationFirewallPolicyManagedRulesExclusionExcludedRuleSetToTerraform(struct?: WebApplicationFirewallPolicyManagedRulesExclusionExcludedRuleSetOutputReference | WebApplicationFirewallPolicyManagedRulesExclusionExcludedRuleSet): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    type: cdktf.stringToTerraform(struct!.type),
+    version: cdktf.stringToTerraform(struct!.version),
+    rule_group: cdktf.listMapper(webApplicationFirewallPolicyManagedRulesExclusionExcludedRuleSetRuleGroupToTerraform, true)(struct!.ruleGroup),
+  }
+}
+
+export class WebApplicationFirewallPolicyManagedRulesExclusionExcludedRuleSetOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): WebApplicationFirewallPolicyManagedRulesExclusionExcludedRuleSet | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    if (this._version !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.version = this._version;
+    }
+    if (this._ruleGroup?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ruleGroup = this._ruleGroup?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: WebApplicationFirewallPolicyManagedRulesExclusionExcludedRuleSet | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._type = undefined;
+      this._version = undefined;
+      this._ruleGroup.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._type = value.type;
+      this._version = value.version;
+      this._ruleGroup.internalValue = value.ruleGroup;
+    }
+  }
+
+  // type - computed: false, optional: true, required: false
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  public resetType() {
+    this._type = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+
+  // version - computed: false, optional: true, required: false
+  private _version?: string; 
+  public get version() {
+    return this.getStringAttribute('version');
+  }
+  public set version(value: string) {
+    this._version = value;
+  }
+  public resetVersion() {
+    this._version = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get versionInput() {
+    return this._version;
+  }
+
+  // rule_group - computed: false, optional: true, required: false
+  private _ruleGroup = new WebApplicationFirewallPolicyManagedRulesExclusionExcludedRuleSetRuleGroupList(this, "rule_group", false);
+  public get ruleGroup() {
+    return this._ruleGroup;
+  }
+  public putRuleGroup(value: WebApplicationFirewallPolicyManagedRulesExclusionExcludedRuleSetRuleGroup[] | cdktf.IResolvable) {
+    this._ruleGroup.internalValue = value;
+  }
+  public resetRuleGroup() {
+    this._ruleGroup.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ruleGroupInput() {
+    return this._ruleGroup.internalValue;
+  }
+}
 export interface WebApplicationFirewallPolicyManagedRulesExclusion {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy#match_variable WebApplicationFirewallPolicy#match_variable}
@@ -582,6 +824,12 @@ export interface WebApplicationFirewallPolicyManagedRulesExclusion {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy#selector_match_operator WebApplicationFirewallPolicy#selector_match_operator}
   */
   readonly selectorMatchOperator: string;
+  /**
+  * excluded_rule_set block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy#excluded_rule_set WebApplicationFirewallPolicy#excluded_rule_set}
+  */
+  readonly excludedRuleSet?: WebApplicationFirewallPolicyManagedRulesExclusionExcludedRuleSet;
 }
 
 export function webApplicationFirewallPolicyManagedRulesExclusionToTerraform(struct?: WebApplicationFirewallPolicyManagedRulesExclusion | cdktf.IResolvable): any {
@@ -593,6 +841,7 @@ export function webApplicationFirewallPolicyManagedRulesExclusionToTerraform(str
     match_variable: cdktf.stringToTerraform(struct!.matchVariable),
     selector: cdktf.stringToTerraform(struct!.selector),
     selector_match_operator: cdktf.stringToTerraform(struct!.selectorMatchOperator),
+    excluded_rule_set: webApplicationFirewallPolicyManagedRulesExclusionExcludedRuleSetToTerraform(struct!.excludedRuleSet),
   }
 }
 
@@ -628,6 +877,10 @@ export class WebApplicationFirewallPolicyManagedRulesExclusionOutputReference ex
       hasAnyValues = true;
       internalValueResult.selectorMatchOperator = this._selectorMatchOperator;
     }
+    if (this._excludedRuleSet?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.excludedRuleSet = this._excludedRuleSet?.internalValue;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -638,6 +891,7 @@ export class WebApplicationFirewallPolicyManagedRulesExclusionOutputReference ex
       this._matchVariable = undefined;
       this._selector = undefined;
       this._selectorMatchOperator = undefined;
+      this._excludedRuleSet.internalValue = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
       this.isEmptyObject = false;
@@ -649,6 +903,7 @@ export class WebApplicationFirewallPolicyManagedRulesExclusionOutputReference ex
       this._matchVariable = value.matchVariable;
       this._selector = value.selector;
       this._selectorMatchOperator = value.selectorMatchOperator;
+      this._excludedRuleSet.internalValue = value.excludedRuleSet;
     }
   }
 
@@ -689,6 +944,22 @@ export class WebApplicationFirewallPolicyManagedRulesExclusionOutputReference ex
   // Temporarily expose input value. Use with caution.
   public get selectorMatchOperatorInput() {
     return this._selectorMatchOperator;
+  }
+
+  // excluded_rule_set - computed: false, optional: true, required: false
+  private _excludedRuleSet = new WebApplicationFirewallPolicyManagedRulesExclusionExcludedRuleSetOutputReference(this, "excluded_rule_set");
+  public get excludedRuleSet() {
+    return this._excludedRuleSet;
+  }
+  public putExcludedRuleSet(value: WebApplicationFirewallPolicyManagedRulesExclusionExcludedRuleSet) {
+    this._excludedRuleSet.internalValue = value;
+  }
+  public resetExcludedRuleSet() {
+    this._excludedRuleSet.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get excludedRuleSetInput() {
+    return this._excludedRuleSet.internalValue;
   }
 }
 
@@ -1431,7 +1702,7 @@ export class WebApplicationFirewallPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_web_application_firewall_policy',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.16.0',
+        providerVersion: '3.20.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

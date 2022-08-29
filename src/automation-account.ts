@@ -15,6 +15,10 @@ export interface AutomationAccountConfig extends cdktf.TerraformMetaArguments {
   */
   readonly id?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_account#local_authentication_enabled AutomationAccount#local_authentication_enabled}
+  */
+  readonly localAuthenticationEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_account#location AutomationAccount#location}
   */
   readonly location: string;
@@ -39,6 +43,12 @@ export interface AutomationAccountConfig extends cdktf.TerraformMetaArguments {
   */
   readonly tags?: { [key: string]: string };
   /**
+  * encryption block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_account#encryption AutomationAccount#encryption}
+  */
+  readonly encryption?: AutomationAccountEncryption[] | cdktf.IResolvable;
+  /**
   * identity block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_account#identity AutomationAccount#identity}
@@ -50,6 +60,223 @@ export interface AutomationAccountConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_account#timeouts AutomationAccount#timeouts}
   */
   readonly timeouts?: AutomationAccountTimeouts;
+}
+export interface AutomationAccountPrivateEndpointConnection {
+}
+
+export function automationAccountPrivateEndpointConnectionToTerraform(struct?: AutomationAccountPrivateEndpointConnection): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class AutomationAccountPrivateEndpointConnectionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AutomationAccountPrivateEndpointConnection | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AutomationAccountPrivateEndpointConnection | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // name - computed: true, optional: false, required: false
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+}
+
+export class AutomationAccountPrivateEndpointConnectionList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AutomationAccountPrivateEndpointConnectionOutputReference {
+    return new AutomationAccountPrivateEndpointConnectionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface AutomationAccountEncryption {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_account#key_source AutomationAccount#key_source}
+  */
+  readonly keySource?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_account#key_vault_key_id AutomationAccount#key_vault_key_id}
+  */
+  readonly keyVaultKeyId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_account#user_assigned_identity_id AutomationAccount#user_assigned_identity_id}
+  */
+  readonly userAssignedIdentityId?: string;
+}
+
+export function automationAccountEncryptionToTerraform(struct?: AutomationAccountEncryption | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    key_source: cdktf.stringToTerraform(struct!.keySource),
+    key_vault_key_id: cdktf.stringToTerraform(struct!.keyVaultKeyId),
+    user_assigned_identity_id: cdktf.stringToTerraform(struct!.userAssignedIdentityId),
+  }
+}
+
+export class AutomationAccountEncryptionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AutomationAccountEncryption | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._keySource !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keySource = this._keySource;
+    }
+    if (this._keyVaultKeyId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keyVaultKeyId = this._keyVaultKeyId;
+    }
+    if (this._userAssignedIdentityId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.userAssignedIdentityId = this._userAssignedIdentityId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AutomationAccountEncryption | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._keySource = undefined;
+      this._keyVaultKeyId = undefined;
+      this._userAssignedIdentityId = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._keySource = value.keySource;
+      this._keyVaultKeyId = value.keyVaultKeyId;
+      this._userAssignedIdentityId = value.userAssignedIdentityId;
+    }
+  }
+
+  // key_source - computed: true, optional: true, required: false
+  private _keySource?: string; 
+  public get keySource() {
+    return this.getStringAttribute('key_source');
+  }
+  public set keySource(value: string) {
+    this._keySource = value;
+  }
+  public resetKeySource() {
+    this._keySource = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keySourceInput() {
+    return this._keySource;
+  }
+
+  // key_vault_key_id - computed: false, optional: false, required: true
+  private _keyVaultKeyId?: string; 
+  public get keyVaultKeyId() {
+    return this.getStringAttribute('key_vault_key_id');
+  }
+  public set keyVaultKeyId(value: string) {
+    this._keyVaultKeyId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultKeyIdInput() {
+    return this._keyVaultKeyId;
+  }
+
+  // user_assigned_identity_id - computed: false, optional: true, required: false
+  private _userAssignedIdentityId?: string; 
+  public get userAssignedIdentityId() {
+    return this.getStringAttribute('user_assigned_identity_id');
+  }
+  public set userAssignedIdentityId(value: string) {
+    this._userAssignedIdentityId = value;
+  }
+  public resetUserAssignedIdentityId() {
+    this._userAssignedIdentityId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userAssignedIdentityIdInput() {
+    return this._userAssignedIdentityId;
+  }
+}
+
+export class AutomationAccountEncryptionList extends cdktf.ComplexList {
+  public internalValue? : AutomationAccountEncryption[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AutomationAccountEncryptionOutputReference {
+    return new AutomationAccountEncryptionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
 }
 export interface AutomationAccountIdentity {
   /**
@@ -333,7 +560,7 @@ export class AutomationAccount extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_automation_account',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.16.0',
+        providerVersion: '3.20.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -345,12 +572,14 @@ export class AutomationAccount extends cdktf.TerraformResource {
       forEach: config.forEach
     });
     this._id = config.id;
+    this._localAuthenticationEnabled = config.localAuthenticationEnabled;
     this._location = config.location;
     this._name = config.name;
     this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
     this._resourceGroupName = config.resourceGroupName;
     this._skuName = config.skuName;
     this._tags = config.tags;
+    this._encryption.internalValue = config.encryption;
     this._identity.internalValue = config.identity;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -390,6 +619,22 @@ export class AutomationAccount extends cdktf.TerraformResource {
     return this._id;
   }
 
+  // local_authentication_enabled - computed: false, optional: true, required: false
+  private _localAuthenticationEnabled?: boolean | cdktf.IResolvable; 
+  public get localAuthenticationEnabled() {
+    return this.getBooleanAttribute('local_authentication_enabled');
+  }
+  public set localAuthenticationEnabled(value: boolean | cdktf.IResolvable) {
+    this._localAuthenticationEnabled = value;
+  }
+  public resetLocalAuthenticationEnabled() {
+    this._localAuthenticationEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get localAuthenticationEnabledInput() {
+    return this._localAuthenticationEnabled;
+  }
+
   // location - computed: false, optional: false, required: true
   private _location?: string; 
   public get location() {
@@ -414,6 +659,12 @@ export class AutomationAccount extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name;
+  }
+
+  // private_endpoint_connection - computed: true, optional: false, required: false
+  private _privateEndpointConnection = new AutomationAccountPrivateEndpointConnectionList(this, "private_endpoint_connection", false);
+  public get privateEndpointConnection() {
+    return this._privateEndpointConnection;
   }
 
   // public_network_access_enabled - computed: false, optional: true, required: false
@@ -474,6 +725,22 @@ export class AutomationAccount extends cdktf.TerraformResource {
     return this._tags;
   }
 
+  // encryption - computed: false, optional: true, required: false
+  private _encryption = new AutomationAccountEncryptionList(this, "encryption", false);
+  public get encryption() {
+    return this._encryption;
+  }
+  public putEncryption(value: AutomationAccountEncryption[] | cdktf.IResolvable) {
+    this._encryption.internalValue = value;
+  }
+  public resetEncryption() {
+    this._encryption.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get encryptionInput() {
+    return this._encryption.internalValue;
+  }
+
   // identity - computed: false, optional: true, required: false
   private _identity = new AutomationAccountIdentityOutputReference(this, "identity");
   public get identity() {
@@ -513,12 +780,14 @@ export class AutomationAccount extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       id: cdktf.stringToTerraform(this._id),
+      local_authentication_enabled: cdktf.booleanToTerraform(this._localAuthenticationEnabled),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku_name: cdktf.stringToTerraform(this._skuName),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
+      encryption: cdktf.listMapper(automationAccountEncryptionToTerraform, true)(this._encryption.internalValue),
       identity: automationAccountIdentityToTerraform(this._identity.internalValue),
       timeouts: automationAccountTimeoutsToTerraform(this._timeouts.internalValue),
     };
