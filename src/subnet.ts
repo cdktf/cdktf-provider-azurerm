@@ -31,6 +31,14 @@ export interface SubnetConfig extends cdktf.TerraformMetaArguments {
   */
   readonly name: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet#private_endpoint_network_policies_enabled Subnet#private_endpoint_network_policies_enabled}
+  */
+  readonly privateEndpointNetworkPoliciesEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet#private_link_service_network_policies_enabled Subnet#private_link_service_network_policies_enabled}
+  */
+  readonly privateLinkServiceNetworkPoliciesEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet#resource_group_name Subnet#resource_group_name}
   */
   readonly resourceGroupName: string;
@@ -451,7 +459,7 @@ export class Subnet extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_subnet',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.16.0',
+        providerVersion: '3.20.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -467,6 +475,8 @@ export class Subnet extends cdktf.TerraformResource {
     this._enforcePrivateLinkServiceNetworkPolicies = config.enforcePrivateLinkServiceNetworkPolicies;
     this._id = config.id;
     this._name = config.name;
+    this._privateEndpointNetworkPoliciesEnabled = config.privateEndpointNetworkPoliciesEnabled;
+    this._privateLinkServiceNetworkPoliciesEnabled = config.privateLinkServiceNetworkPoliciesEnabled;
     this._resourceGroupName = config.resourceGroupName;
     this._serviceEndpointPolicyIds = config.serviceEndpointPolicyIds;
     this._serviceEndpoints = config.serviceEndpoints;
@@ -492,7 +502,7 @@ export class Subnet extends cdktf.TerraformResource {
     return this._addressPrefixes;
   }
 
-  // enforce_private_link_endpoint_network_policies - computed: false, optional: true, required: false
+  // enforce_private_link_endpoint_network_policies - computed: true, optional: true, required: false
   private _enforcePrivateLinkEndpointNetworkPolicies?: boolean | cdktf.IResolvable; 
   public get enforcePrivateLinkEndpointNetworkPolicies() {
     return this.getBooleanAttribute('enforce_private_link_endpoint_network_policies');
@@ -508,7 +518,7 @@ export class Subnet extends cdktf.TerraformResource {
     return this._enforcePrivateLinkEndpointNetworkPolicies;
   }
 
-  // enforce_private_link_service_network_policies - computed: false, optional: true, required: false
+  // enforce_private_link_service_network_policies - computed: true, optional: true, required: false
   private _enforcePrivateLinkServiceNetworkPolicies?: boolean | cdktf.IResolvable; 
   public get enforcePrivateLinkServiceNetworkPolicies() {
     return this.getBooleanAttribute('enforce_private_link_service_network_policies');
@@ -551,6 +561,38 @@ export class Subnet extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name;
+  }
+
+  // private_endpoint_network_policies_enabled - computed: true, optional: true, required: false
+  private _privateEndpointNetworkPoliciesEnabled?: boolean | cdktf.IResolvable; 
+  public get privateEndpointNetworkPoliciesEnabled() {
+    return this.getBooleanAttribute('private_endpoint_network_policies_enabled');
+  }
+  public set privateEndpointNetworkPoliciesEnabled(value: boolean | cdktf.IResolvable) {
+    this._privateEndpointNetworkPoliciesEnabled = value;
+  }
+  public resetPrivateEndpointNetworkPoliciesEnabled() {
+    this._privateEndpointNetworkPoliciesEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateEndpointNetworkPoliciesEnabledInput() {
+    return this._privateEndpointNetworkPoliciesEnabled;
+  }
+
+  // private_link_service_network_policies_enabled - computed: true, optional: true, required: false
+  private _privateLinkServiceNetworkPoliciesEnabled?: boolean | cdktf.IResolvable; 
+  public get privateLinkServiceNetworkPoliciesEnabled() {
+    return this.getBooleanAttribute('private_link_service_network_policies_enabled');
+  }
+  public set privateLinkServiceNetworkPoliciesEnabled(value: boolean | cdktf.IResolvable) {
+    this._privateLinkServiceNetworkPoliciesEnabled = value;
+  }
+  public resetPrivateLinkServiceNetworkPoliciesEnabled() {
+    this._privateLinkServiceNetworkPoliciesEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateLinkServiceNetworkPoliciesEnabledInput() {
+    return this._privateLinkServiceNetworkPoliciesEnabled;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -654,6 +696,8 @@ export class Subnet extends cdktf.TerraformResource {
       enforce_private_link_service_network_policies: cdktf.booleanToTerraform(this._enforcePrivateLinkServiceNetworkPolicies),
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
+      private_endpoint_network_policies_enabled: cdktf.booleanToTerraform(this._privateEndpointNetworkPoliciesEnabled),
+      private_link_service_network_policies_enabled: cdktf.booleanToTerraform(this._privateLinkServiceNetworkPoliciesEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       service_endpoint_policy_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(this._serviceEndpointPolicyIds),
       service_endpoints: cdktf.listMapper(cdktf.stringToTerraform, false)(this._serviceEndpoints),

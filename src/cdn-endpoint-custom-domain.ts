@@ -318,7 +318,11 @@ export interface CdnEndpointCustomDomainUserManagedHttps {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint_custom_domain#key_vault_certificate_id CdnEndpointCustomDomain#key_vault_certificate_id}
   */
-  readonly keyVaultCertificateId: string;
+  readonly keyVaultCertificateId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint_custom_domain#key_vault_secret_id CdnEndpointCustomDomain#key_vault_secret_id}
+  */
+  readonly keyVaultSecretId?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint_custom_domain#tls_version CdnEndpointCustomDomain#tls_version}
   */
@@ -332,6 +336,7 @@ export function cdnEndpointCustomDomainUserManagedHttpsToTerraform(struct?: CdnE
   }
   return {
     key_vault_certificate_id: cdktf.stringToTerraform(struct!.keyVaultCertificateId),
+    key_vault_secret_id: cdktf.stringToTerraform(struct!.keyVaultSecretId),
     tls_version: cdktf.stringToTerraform(struct!.tlsVersion),
   }
 }
@@ -354,6 +359,10 @@ export class CdnEndpointCustomDomainUserManagedHttpsOutputReference extends cdkt
       hasAnyValues = true;
       internalValueResult.keyVaultCertificateId = this._keyVaultCertificateId;
     }
+    if (this._keyVaultSecretId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keyVaultSecretId = this._keyVaultSecretId;
+    }
     if (this._tlsVersion !== undefined) {
       hasAnyValues = true;
       internalValueResult.tlsVersion = this._tlsVersion;
@@ -365,16 +374,18 @@ export class CdnEndpointCustomDomainUserManagedHttpsOutputReference extends cdkt
     if (value === undefined) {
       this.isEmptyObject = false;
       this._keyVaultCertificateId = undefined;
+      this._keyVaultSecretId = undefined;
       this._tlsVersion = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._keyVaultCertificateId = value.keyVaultCertificateId;
+      this._keyVaultSecretId = value.keyVaultSecretId;
       this._tlsVersion = value.tlsVersion;
     }
   }
 
-  // key_vault_certificate_id - computed: false, optional: false, required: true
+  // key_vault_certificate_id - computed: true, optional: true, required: false
   private _keyVaultCertificateId?: string; 
   public get keyVaultCertificateId() {
     return this.getStringAttribute('key_vault_certificate_id');
@@ -382,9 +393,28 @@ export class CdnEndpointCustomDomainUserManagedHttpsOutputReference extends cdkt
   public set keyVaultCertificateId(value: string) {
     this._keyVaultCertificateId = value;
   }
+  public resetKeyVaultCertificateId() {
+    this._keyVaultCertificateId = undefined;
+  }
   // Temporarily expose input value. Use with caution.
   public get keyVaultCertificateIdInput() {
     return this._keyVaultCertificateId;
+  }
+
+  // key_vault_secret_id - computed: true, optional: true, required: false
+  private _keyVaultSecretId?: string; 
+  public get keyVaultSecretId() {
+    return this.getStringAttribute('key_vault_secret_id');
+  }
+  public set keyVaultSecretId(value: string) {
+    this._keyVaultSecretId = value;
+  }
+  public resetKeyVaultSecretId() {
+    this._keyVaultSecretId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultSecretIdInput() {
+    return this._keyVaultSecretId;
   }
 
   // tls_version - computed: false, optional: true, required: false
@@ -430,7 +460,7 @@ export class CdnEndpointCustomDomain extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_cdn_endpoint_custom_domain',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.16.0',
+        providerVersion: '3.20.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

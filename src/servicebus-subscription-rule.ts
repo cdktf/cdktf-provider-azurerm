@@ -511,7 +511,7 @@ export class ServicebusSubscriptionRule extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_servicebus_subscription_rule',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.16.0',
+        providerVersion: '3.20.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -608,6 +608,11 @@ export class ServicebusSubscriptionRule extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get sqlFilterInput() {
     return this._sqlFilter;
+  }
+
+  // sql_filter_compatibility_level - computed: true, optional: false, required: false
+  public get sqlFilterCompatibilityLevel() {
+    return this.getNumberAttribute('sql_filter_compatibility_level');
   }
 
   // subscription_id - computed: false, optional: false, required: true

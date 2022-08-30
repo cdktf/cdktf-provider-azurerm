@@ -39,6 +39,10 @@ export interface FirewallPolicyConfig extends cdktf.TerraformMetaArguments {
   */
   readonly sku?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy#sql_redirect_allowed FirewallPolicy#sql_redirect_allowed}
+  */
+  readonly sqlRedirectAllowed?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy#tags FirewallPolicy#tags}
   */
   readonly tags?: { [key: string]: string };
@@ -943,6 +947,10 @@ export interface FirewallPolicyIntrusionDetection {
   */
   readonly mode?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy#private_ranges FirewallPolicy#private_ranges}
+  */
+  readonly privateRanges?: string[];
+  /**
   * signature_overrides block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy#signature_overrides FirewallPolicy#signature_overrides}
@@ -963,6 +971,7 @@ export function firewallPolicyIntrusionDetectionToTerraform(struct?: FirewallPol
   }
   return {
     mode: cdktf.stringToTerraform(struct!.mode),
+    private_ranges: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.privateRanges),
     signature_overrides: cdktf.listMapper(firewallPolicyIntrusionDetectionSignatureOverridesToTerraform, true)(struct!.signatureOverrides),
     traffic_bypass: cdktf.listMapper(firewallPolicyIntrusionDetectionTrafficBypassToTerraform, true)(struct!.trafficBypass),
   }
@@ -986,6 +995,10 @@ export class FirewallPolicyIntrusionDetectionOutputReference extends cdktf.Compl
       hasAnyValues = true;
       internalValueResult.mode = this._mode;
     }
+    if (this._privateRanges !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.privateRanges = this._privateRanges;
+    }
     if (this._signatureOverrides?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.signatureOverrides = this._signatureOverrides?.internalValue;
@@ -1001,12 +1014,14 @@ export class FirewallPolicyIntrusionDetectionOutputReference extends cdktf.Compl
     if (value === undefined) {
       this.isEmptyObject = false;
       this._mode = undefined;
+      this._privateRanges = undefined;
       this._signatureOverrides.internalValue = undefined;
       this._trafficBypass.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._mode = value.mode;
+      this._privateRanges = value.privateRanges;
       this._signatureOverrides.internalValue = value.signatureOverrides;
       this._trafficBypass.internalValue = value.trafficBypass;
     }
@@ -1026,6 +1041,22 @@ export class FirewallPolicyIntrusionDetectionOutputReference extends cdktf.Compl
   // Temporarily expose input value. Use with caution.
   public get modeInput() {
     return this._mode;
+  }
+
+  // private_ranges - computed: false, optional: true, required: false
+  private _privateRanges?: string[]; 
+  public get privateRanges() {
+    return this.getListAttribute('private_ranges');
+  }
+  public set privateRanges(value: string[]) {
+    this._privateRanges = value;
+  }
+  public resetPrivateRanges() {
+    this._privateRanges = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateRangesInput() {
+    return this._privateRanges;
   }
 
   // signature_overrides - computed: false, optional: true, required: false
@@ -1421,7 +1452,7 @@ export class FirewallPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_firewall_policy',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.16.0',
+        providerVersion: '3.20.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -1439,6 +1470,7 @@ export class FirewallPolicy extends cdktf.TerraformResource {
     this._privateIpRanges = config.privateIpRanges;
     this._resourceGroupName = config.resourceGroupName;
     this._sku = config.sku;
+    this._sqlRedirectAllowed = config.sqlRedirectAllowed;
     this._tags = config.tags;
     this._threatIntelligenceMode = config.threatIntelligenceMode;
     this._dns.internalValue = config.dns;
@@ -1570,6 +1602,22 @@ export class FirewallPolicy extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get skuInput() {
     return this._sku;
+  }
+
+  // sql_redirect_allowed - computed: false, optional: true, required: false
+  private _sqlRedirectAllowed?: boolean | cdktf.IResolvable; 
+  public get sqlRedirectAllowed() {
+    return this.getBooleanAttribute('sql_redirect_allowed');
+  }
+  public set sqlRedirectAllowed(value: boolean | cdktf.IResolvable) {
+    this._sqlRedirectAllowed = value;
+  }
+  public resetSqlRedirectAllowed() {
+    this._sqlRedirectAllowed = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sqlRedirectAllowedInput() {
+    return this._sqlRedirectAllowed;
   }
 
   // tags - computed: false, optional: true, required: false
@@ -1729,6 +1777,7 @@ export class FirewallPolicy extends cdktf.TerraformResource {
       private_ip_ranges: cdktf.listMapper(cdktf.stringToTerraform, false)(this._privateIpRanges),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku: cdktf.stringToTerraform(this._sku),
+      sql_redirect_allowed: cdktf.booleanToTerraform(this._sqlRedirectAllowed),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       threat_intelligence_mode: cdktf.stringToTerraform(this._threatIntelligenceMode),
       dns: firewallPolicyDnsToTerraform(this._dns.internalValue),
