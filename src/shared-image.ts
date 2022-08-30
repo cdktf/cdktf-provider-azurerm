@@ -12,6 +12,10 @@ export interface SharedImageConfig extends cdktf.TerraformMetaArguments {
   */
   readonly acceleratedNetworkSupportEnabled?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image#architecture SharedImage#architecture}
+  */
+  readonly architecture?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image#description SharedImage#description}
   */
   readonly description?: string;
@@ -522,7 +526,7 @@ export class SharedImage extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_shared_image',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.16.0',
+        providerVersion: '3.20.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -534,6 +538,7 @@ export class SharedImage extends cdktf.TerraformResource {
       forEach: config.forEach
     });
     this._acceleratedNetworkSupportEnabled = config.acceleratedNetworkSupportEnabled;
+    this._architecture = config.architecture;
     this._description = config.description;
     this._diskTypesNotAllowed = config.diskTypesNotAllowed;
     this._endOfLifeDate = config.endOfLifeDate;
@@ -577,6 +582,22 @@ export class SharedImage extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get acceleratedNetworkSupportEnabledInput() {
     return this._acceleratedNetworkSupportEnabled;
+  }
+
+  // architecture - computed: false, optional: true, required: false
+  private _architecture?: string; 
+  public get architecture() {
+    return this.getStringAttribute('architecture');
+  }
+  public set architecture(value: string) {
+    this._architecture = value;
+  }
+  public resetArchitecture() {
+    this._architecture = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get architectureInput() {
+    return this._architecture;
   }
 
   // description - computed: false, optional: true, required: false
@@ -936,6 +957,7 @@ export class SharedImage extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       accelerated_network_support_enabled: cdktf.booleanToTerraform(this._acceleratedNetworkSupportEnabled),
+      architecture: cdktf.stringToTerraform(this._architecture),
       description: cdktf.stringToTerraform(this._description),
       disk_types_not_allowed: cdktf.listMapper(cdktf.stringToTerraform, false)(this._diskTypesNotAllowed),
       end_of_life_date: cdktf.stringToTerraform(this._endOfLifeDate),

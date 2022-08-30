@@ -135,7 +135,7 @@ export class DataAzurermSubnet extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_subnet',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.16.0',
+        providerVersion: '3.20.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -209,6 +209,16 @@ export class DataAzurermSubnet extends cdktf.TerraformDataSource {
   // network_security_group_id - computed: true, optional: false, required: false
   public get networkSecurityGroupId() {
     return this.getStringAttribute('network_security_group_id');
+  }
+
+  // private_endpoint_network_policies_enabled - computed: true, optional: false, required: false
+  public get privateEndpointNetworkPoliciesEnabled() {
+    return this.getBooleanAttribute('private_endpoint_network_policies_enabled');
+  }
+
+  // private_link_service_network_policies_enabled - computed: true, optional: false, required: false
+  public get privateLinkServiceNetworkPoliciesEnabled() {
+    return this.getBooleanAttribute('private_link_service_network_policies_enabled');
   }
 
   // resource_group_name - computed: false, optional: false, required: true

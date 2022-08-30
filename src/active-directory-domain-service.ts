@@ -437,6 +437,14 @@ export class ActiveDirectoryDomainServiceSecureLdapOutputReference extends cdktf
 }
 export interface ActiveDirectoryDomainServiceSecurity {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/active_directory_domain_service#kerberos_armoring_enabled ActiveDirectoryDomainService#kerberos_armoring_enabled}
+  */
+  readonly kerberosArmoringEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/active_directory_domain_service#kerberos_rc4_encryption_enabled ActiveDirectoryDomainService#kerberos_rc4_encryption_enabled}
+  */
+  readonly kerberosRc4EncryptionEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/active_directory_domain_service#ntlm_v1_enabled ActiveDirectoryDomainService#ntlm_v1_enabled}
   */
   readonly ntlmV1Enabled?: boolean | cdktf.IResolvable;
@@ -464,6 +472,8 @@ export function activeDirectoryDomainServiceSecurityToTerraform(struct?: ActiveD
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    kerberos_armoring_enabled: cdktf.booleanToTerraform(struct!.kerberosArmoringEnabled),
+    kerberos_rc4_encryption_enabled: cdktf.booleanToTerraform(struct!.kerberosRc4EncryptionEnabled),
     ntlm_v1_enabled: cdktf.booleanToTerraform(struct!.ntlmV1Enabled),
     sync_kerberos_passwords: cdktf.booleanToTerraform(struct!.syncKerberosPasswords),
     sync_ntlm_passwords: cdktf.booleanToTerraform(struct!.syncNtlmPasswords),
@@ -486,6 +496,14 @@ export class ActiveDirectoryDomainServiceSecurityOutputReference extends cdktf.C
   public get internalValue(): ActiveDirectoryDomainServiceSecurity | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._kerberosArmoringEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.kerberosArmoringEnabled = this._kerberosArmoringEnabled;
+    }
+    if (this._kerberosRc4EncryptionEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.kerberosRc4EncryptionEnabled = this._kerberosRc4EncryptionEnabled;
+    }
     if (this._ntlmV1Enabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.ntlmV1Enabled = this._ntlmV1Enabled;
@@ -512,6 +530,8 @@ export class ActiveDirectoryDomainServiceSecurityOutputReference extends cdktf.C
   public set internalValue(value: ActiveDirectoryDomainServiceSecurity | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this._kerberosArmoringEnabled = undefined;
+      this._kerberosRc4EncryptionEnabled = undefined;
       this._ntlmV1Enabled = undefined;
       this._syncKerberosPasswords = undefined;
       this._syncNtlmPasswords = undefined;
@@ -520,12 +540,46 @@ export class ActiveDirectoryDomainServiceSecurityOutputReference extends cdktf.C
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this._kerberosArmoringEnabled = value.kerberosArmoringEnabled;
+      this._kerberosRc4EncryptionEnabled = value.kerberosRc4EncryptionEnabled;
       this._ntlmV1Enabled = value.ntlmV1Enabled;
       this._syncKerberosPasswords = value.syncKerberosPasswords;
       this._syncNtlmPasswords = value.syncNtlmPasswords;
       this._syncOnPremPasswords = value.syncOnPremPasswords;
       this._tlsV1Enabled = value.tlsV1Enabled;
     }
+  }
+
+  // kerberos_armoring_enabled - computed: false, optional: true, required: false
+  private _kerberosArmoringEnabled?: boolean | cdktf.IResolvable; 
+  public get kerberosArmoringEnabled() {
+    return this.getBooleanAttribute('kerberos_armoring_enabled');
+  }
+  public set kerberosArmoringEnabled(value: boolean | cdktf.IResolvable) {
+    this._kerberosArmoringEnabled = value;
+  }
+  public resetKerberosArmoringEnabled() {
+    this._kerberosArmoringEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kerberosArmoringEnabledInput() {
+    return this._kerberosArmoringEnabled;
+  }
+
+  // kerberos_rc4_encryption_enabled - computed: false, optional: true, required: false
+  private _kerberosRc4EncryptionEnabled?: boolean | cdktf.IResolvable; 
+  public get kerberosRc4EncryptionEnabled() {
+    return this.getBooleanAttribute('kerberos_rc4_encryption_enabled');
+  }
+  public set kerberosRc4EncryptionEnabled(value: boolean | cdktf.IResolvable) {
+    this._kerberosRc4EncryptionEnabled = value;
+  }
+  public resetKerberosRc4EncryptionEnabled() {
+    this._kerberosRc4EncryptionEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kerberosRc4EncryptionEnabledInput() {
+    return this._kerberosRc4EncryptionEnabled;
   }
 
   // ntlm_v1_enabled - computed: false, optional: true, required: false
@@ -791,7 +845,7 @@ export class ActiveDirectoryDomainService extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_active_directory_domain_service',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.16.0',
+        providerVersion: '3.20.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

@@ -8,6 +8,10 @@ import * as cdktf from 'cdktf';
 
 export interface SharedImageVersionConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_version#blob_uri SharedImageVersion#blob_uri}
+  */
+  readonly blobUri?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_version#end_of_life_date SharedImageVersion#end_of_life_date}
   */
   readonly endOfLifeDate?: string;
@@ -54,6 +58,10 @@ export interface SharedImageVersionConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_version#resource_group_name SharedImageVersion#resource_group_name}
   */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_version#storage_account_id SharedImageVersion#storage_account_id}
+  */
+  readonly storageAccountId?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_version#tags SharedImageVersion#tags}
   */
@@ -426,7 +434,7 @@ export class SharedImageVersion extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_shared_image_version',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.16.0',
+        providerVersion: '3.20.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -437,6 +445,7 @@ export class SharedImageVersion extends cdktf.TerraformResource {
       connection: config.connection,
       forEach: config.forEach
     });
+    this._blobUri = config.blobUri;
     this._endOfLifeDate = config.endOfLifeDate;
     this._excludeFromLatest = config.excludeFromLatest;
     this._galleryName = config.galleryName;
@@ -448,6 +457,7 @@ export class SharedImageVersion extends cdktf.TerraformResource {
     this._osDiskSnapshotId = config.osDiskSnapshotId;
     this._replicationMode = config.replicationMode;
     this._resourceGroupName = config.resourceGroupName;
+    this._storageAccountId = config.storageAccountId;
     this._tags = config.tags;
     this._targetRegion.internalValue = config.targetRegion;
     this._timeouts.internalValue = config.timeouts;
@@ -456,6 +466,22 @@ export class SharedImageVersion extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // blob_uri - computed: false, optional: true, required: false
+  private _blobUri?: string; 
+  public get blobUri() {
+    return this.getStringAttribute('blob_uri');
+  }
+  public set blobUri(value: string) {
+    this._blobUri = value;
+  }
+  public resetBlobUri() {
+    this._blobUri = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get blobUriInput() {
+    return this._blobUri;
+  }
 
   // end_of_life_date - computed: false, optional: true, required: false
   private _endOfLifeDate?: string; 
@@ -618,6 +644,22 @@ export class SharedImageVersion extends cdktf.TerraformResource {
     return this._resourceGroupName;
   }
 
+  // storage_account_id - computed: false, optional: true, required: false
+  private _storageAccountId?: string; 
+  public get storageAccountId() {
+    return this.getStringAttribute('storage_account_id');
+  }
+  public set storageAccountId(value: string) {
+    this._storageAccountId = value;
+  }
+  public resetStorageAccountId() {
+    this._storageAccountId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageAccountIdInput() {
+    return this._storageAccountId;
+  }
+
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string }; 
   public get tags() {
@@ -669,6 +711,7 @@ export class SharedImageVersion extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      blob_uri: cdktf.stringToTerraform(this._blobUri),
       end_of_life_date: cdktf.stringToTerraform(this._endOfLifeDate),
       exclude_from_latest: cdktf.booleanToTerraform(this._excludeFromLatest),
       gallery_name: cdktf.stringToTerraform(this._galleryName),
@@ -680,6 +723,7 @@ export class SharedImageVersion extends cdktf.TerraformResource {
       os_disk_snapshot_id: cdktf.stringToTerraform(this._osDiskSnapshotId),
       replication_mode: cdktf.stringToTerraform(this._replicationMode),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       target_region: cdktf.listMapper(sharedImageVersionTargetRegionToTerraform, true)(this._targetRegion.internalValue),
       timeouts: sharedImageVersionTimeoutsToTerraform(this._timeouts.internalValue),
