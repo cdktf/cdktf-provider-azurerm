@@ -31,6 +31,10 @@ export interface SpringCloudAppConfig extends cdktf.TerraformMetaArguments {
   */
   readonly name: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app#public_endpoint_enabled SpringCloudApp#public_endpoint_enabled}
+  */
+  readonly publicEndpointEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app#resource_group_name SpringCloudApp#resource_group_name}
   */
   readonly resourceGroupName: string;
@@ -634,7 +638,7 @@ export class SpringCloudApp extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_spring_cloud_app',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.16.0',
+        providerVersion: '3.20.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -650,6 +654,7 @@ export class SpringCloudApp extends cdktf.TerraformResource {
     this._id = config.id;
     this._isPublic = config.isPublic;
     this._name = config.name;
+    this._publicEndpointEnabled = config.publicEndpointEnabled;
     this._resourceGroupName = config.resourceGroupName;
     this._serviceName = config.serviceName;
     this._tlsEnabled = config.tlsEnabled;
@@ -743,6 +748,22 @@ export class SpringCloudApp extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name;
+  }
+
+  // public_endpoint_enabled - computed: false, optional: true, required: false
+  private _publicEndpointEnabled?: boolean | cdktf.IResolvable; 
+  public get publicEndpointEnabled() {
+    return this.getBooleanAttribute('public_endpoint_enabled');
+  }
+  public set publicEndpointEnabled(value: boolean | cdktf.IResolvable) {
+    this._publicEndpointEnabled = value;
+  }
+  public resetPublicEndpointEnabled() {
+    this._publicEndpointEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicEndpointEnabledInput() {
+    return this._publicEndpointEnabled;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -867,6 +888,7 @@ export class SpringCloudApp extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       is_public: cdktf.booleanToTerraform(this._isPublic),
       name: cdktf.stringToTerraform(this._name),
+      public_endpoint_enabled: cdktf.booleanToTerraform(this._publicEndpointEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       service_name: cdktf.stringToTerraform(this._serviceName),
       tls_enabled: cdktf.booleanToTerraform(this._tlsEnabled),

@@ -23,6 +23,10 @@ export interface SpringCloudServiceConfig extends cdktf.TerraformMetaArguments {
   */
   readonly location: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service#log_stream_public_endpoint_enabled SpringCloudService#log_stream_public_endpoint_enabled}
+  */
+  readonly logStreamPublicEndpointEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service#name SpringCloudService#name}
   */
   readonly name: string;
@@ -1087,6 +1091,10 @@ export interface SpringCloudServiceNetwork {
   */
   readonly cidrRanges: string[];
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service#read_timeout_seconds SpringCloudService#read_timeout_seconds}
+  */
+  readonly readTimeoutSeconds?: number;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service#service_runtime_network_resource_group SpringCloudService#service_runtime_network_resource_group}
   */
   readonly serviceRuntimeNetworkResourceGroup?: string;
@@ -1105,6 +1113,7 @@ export function springCloudServiceNetworkToTerraform(struct?: SpringCloudService
     app_network_resource_group: cdktf.stringToTerraform(struct!.appNetworkResourceGroup),
     app_subnet_id: cdktf.stringToTerraform(struct!.appSubnetId),
     cidr_ranges: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.cidrRanges),
+    read_timeout_seconds: cdktf.numberToTerraform(struct!.readTimeoutSeconds),
     service_runtime_network_resource_group: cdktf.stringToTerraform(struct!.serviceRuntimeNetworkResourceGroup),
     service_runtime_subnet_id: cdktf.stringToTerraform(struct!.serviceRuntimeSubnetId),
   }
@@ -1136,6 +1145,10 @@ export class SpringCloudServiceNetworkOutputReference extends cdktf.ComplexObjec
       hasAnyValues = true;
       internalValueResult.cidrRanges = this._cidrRanges;
     }
+    if (this._readTimeoutSeconds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.readTimeoutSeconds = this._readTimeoutSeconds;
+    }
     if (this._serviceRuntimeNetworkResourceGroup !== undefined) {
       hasAnyValues = true;
       internalValueResult.serviceRuntimeNetworkResourceGroup = this._serviceRuntimeNetworkResourceGroup;
@@ -1153,6 +1166,7 @@ export class SpringCloudServiceNetworkOutputReference extends cdktf.ComplexObjec
       this._appNetworkResourceGroup = undefined;
       this._appSubnetId = undefined;
       this._cidrRanges = undefined;
+      this._readTimeoutSeconds = undefined;
       this._serviceRuntimeNetworkResourceGroup = undefined;
       this._serviceRuntimeSubnetId = undefined;
     }
@@ -1161,6 +1175,7 @@ export class SpringCloudServiceNetworkOutputReference extends cdktf.ComplexObjec
       this._appNetworkResourceGroup = value.appNetworkResourceGroup;
       this._appSubnetId = value.appSubnetId;
       this._cidrRanges = value.cidrRanges;
+      this._readTimeoutSeconds = value.readTimeoutSeconds;
       this._serviceRuntimeNetworkResourceGroup = value.serviceRuntimeNetworkResourceGroup;
       this._serviceRuntimeSubnetId = value.serviceRuntimeSubnetId;
     }
@@ -1206,6 +1221,22 @@ export class SpringCloudServiceNetworkOutputReference extends cdktf.ComplexObjec
   // Temporarily expose input value. Use with caution.
   public get cidrRangesInput() {
     return this._cidrRanges;
+  }
+
+  // read_timeout_seconds - computed: false, optional: true, required: false
+  private _readTimeoutSeconds?: number; 
+  public get readTimeoutSeconds() {
+    return this.getNumberAttribute('read_timeout_seconds');
+  }
+  public set readTimeoutSeconds(value: number) {
+    this._readTimeoutSeconds = value;
+  }
+  public resetReadTimeoutSeconds() {
+    this._readTimeoutSeconds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readTimeoutSecondsInput() {
+    return this._readTimeoutSeconds;
   }
 
   // service_runtime_network_resource_group - computed: true, optional: true, required: false
@@ -1512,7 +1543,7 @@ export class SpringCloudService extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_spring_cloud_service',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.16.0',
+        providerVersion: '3.20.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -1526,6 +1557,7 @@ export class SpringCloudService extends cdktf.TerraformResource {
     this._buildAgentPoolSize = config.buildAgentPoolSize;
     this._id = config.id;
     this._location = config.location;
+    this._logStreamPublicEndpointEnabled = config.logStreamPublicEndpointEnabled;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._serviceRegistryEnabled = config.serviceRegistryEnabled;
@@ -1585,6 +1617,22 @@ export class SpringCloudService extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
     return this._location;
+  }
+
+  // log_stream_public_endpoint_enabled - computed: false, optional: true, required: false
+  private _logStreamPublicEndpointEnabled?: boolean | cdktf.IResolvable; 
+  public get logStreamPublicEndpointEnabled() {
+    return this.getBooleanAttribute('log_stream_public_endpoint_enabled');
+  }
+  public set logStreamPublicEndpointEnabled(value: boolean | cdktf.IResolvable) {
+    this._logStreamPublicEndpointEnabled = value;
+  }
+  public resetLogStreamPublicEndpointEnabled() {
+    this._logStreamPublicEndpointEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get logStreamPublicEndpointEnabledInput() {
+    return this._logStreamPublicEndpointEnabled;
   }
 
   // name - computed: false, optional: false, required: true
@@ -1766,6 +1814,7 @@ export class SpringCloudService extends cdktf.TerraformResource {
       build_agent_pool_size: cdktf.stringToTerraform(this._buildAgentPoolSize),
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
+      log_stream_public_endpoint_enabled: cdktf.booleanToTerraform(this._logStreamPublicEndpointEnabled),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       service_registry_enabled: cdktf.booleanToTerraform(this._serviceRegistryEnabled),

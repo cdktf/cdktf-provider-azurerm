@@ -27,6 +27,12 @@ export interface SpringCloudGatewayRouteConfigConfig extends cdktf.TerraformMeta
   */
   readonly springCloudGatewayId: string;
   /**
+  * open_api block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_gateway_route_config#open_api SpringCloudGatewayRouteConfig#open_api}
+  */
+  readonly openApi?: SpringCloudGatewayRouteConfigOpenApi;
+  /**
   * route block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_gateway_route_config#route SpringCloudGatewayRouteConfig#route}
@@ -38,6 +44,71 @@ export interface SpringCloudGatewayRouteConfigConfig extends cdktf.TerraformMeta
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_gateway_route_config#timeouts SpringCloudGatewayRouteConfig#timeouts}
   */
   readonly timeouts?: SpringCloudGatewayRouteConfigTimeouts;
+}
+export interface SpringCloudGatewayRouteConfigOpenApi {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_gateway_route_config#uri SpringCloudGatewayRouteConfig#uri}
+  */
+  readonly uri?: string;
+}
+
+export function springCloudGatewayRouteConfigOpenApiToTerraform(struct?: SpringCloudGatewayRouteConfigOpenApiOutputReference | SpringCloudGatewayRouteConfigOpenApi): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    uri: cdktf.stringToTerraform(struct!.uri),
+  }
+}
+
+export class SpringCloudGatewayRouteConfigOpenApiOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): SpringCloudGatewayRouteConfigOpenApi | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._uri !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.uri = this._uri;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SpringCloudGatewayRouteConfigOpenApi | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._uri = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._uri = value.uri;
+    }
+  }
+
+  // uri - computed: false, optional: true, required: false
+  private _uri?: string; 
+  public get uri() {
+    return this.getStringAttribute('uri');
+  }
+  public set uri(value: string) {
+    this._uri = value;
+  }
+  public resetUri() {
+    this._uri = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get uriInput() {
+    return this._uri;
+  }
 }
 export interface SpringCloudGatewayRouteConfigRoute {
   /**
@@ -535,7 +606,7 @@ export class SpringCloudGatewayRouteConfig extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_spring_cloud_gateway_route_config',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.16.0',
+        providerVersion: '3.20.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -550,6 +621,7 @@ export class SpringCloudGatewayRouteConfig extends cdktf.TerraformResource {
     this._name = config.name;
     this._springCloudAppId = config.springCloudAppId;
     this._springCloudGatewayId = config.springCloudGatewayId;
+    this._openApi.internalValue = config.openApi;
     this._route.internalValue = config.route;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -616,6 +688,22 @@ export class SpringCloudGatewayRouteConfig extends cdktf.TerraformResource {
     return this._springCloudGatewayId;
   }
 
+  // open_api - computed: false, optional: true, required: false
+  private _openApi = new SpringCloudGatewayRouteConfigOpenApiOutputReference(this, "open_api");
+  public get openApi() {
+    return this._openApi;
+  }
+  public putOpenApi(value: SpringCloudGatewayRouteConfigOpenApi) {
+    this._openApi.internalValue = value;
+  }
+  public resetOpenApi() {
+    this._openApi.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get openApiInput() {
+    return this._openApi.internalValue;
+  }
+
   // route - computed: false, optional: true, required: false
   private _route = new SpringCloudGatewayRouteConfigRouteList(this, "route", true);
   public get route() {
@@ -658,6 +746,7 @@ export class SpringCloudGatewayRouteConfig extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       spring_cloud_app_id: cdktf.stringToTerraform(this._springCloudAppId),
       spring_cloud_gateway_id: cdktf.stringToTerraform(this._springCloudGatewayId),
+      open_api: springCloudGatewayRouteConfigOpenApiToTerraform(this._openApi.internalValue),
       route: cdktf.listMapper(springCloudGatewayRouteConfigRouteToTerraform, true)(this._route.internalValue),
       timeouts: springCloudGatewayRouteConfigTimeoutsToTerraform(this._timeouts.internalValue),
     };

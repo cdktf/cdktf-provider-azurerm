@@ -231,6 +231,11 @@ export class DataAzurermBatchPoolContainerConfigurationContainerRegistriesOutput
     return this.getStringAttribute('registry_server');
   }
 
+  // user_assigned_identity_id - computed: true, optional: false, required: false
+  public get userAssignedIdentityId() {
+    return this.getStringAttribute('user_assigned_identity_id');
+  }
+
   // user_name - computed: true, optional: false, required: false
   public get userName() {
     return this.getStringAttribute('user_name');
@@ -1149,7 +1154,7 @@ export class DataAzurermBatchPool extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_batch_pool',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.16.0',
+        providerVersion: '3.20.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

@@ -320,6 +320,16 @@ export class DataAzurermActiveDirectoryDomainServiceSecurityOutputReference exte
     }
   }
 
+  // kerberos_armoring_enabled - computed: true, optional: false, required: false
+  public get kerberosArmoringEnabled() {
+    return this.getBooleanAttribute('kerberos_armoring_enabled');
+  }
+
+  // kerberos_rc4_encryption_enabled - computed: true, optional: false, required: false
+  public get kerberosRc4EncryptionEnabled() {
+    return this.getBooleanAttribute('kerberos_rc4_encryption_enabled');
+  }
+
   // ntlm_v1_enabled - computed: true, optional: false, required: false
   public get ntlmV1Enabled() {
     return this.getBooleanAttribute('ntlm_v1_enabled');
@@ -466,7 +476,7 @@ export class DataAzurermActiveDirectoryDomainService extends cdktf.TerraformData
       terraformResourceType: 'azurerm_active_directory_domain_service',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.16.0',
+        providerVersion: '3.20.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

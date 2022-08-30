@@ -81,6 +81,378 @@ export interface SiteRecoveryReplicatedVmConfig extends cdktf.TerraformMetaArgum
   */
   readonly timeouts?: SiteRecoveryReplicatedVmTimeouts;
 }
+export interface SiteRecoveryReplicatedVmManagedDiskTargetDiskEncryptionDiskEncryptionKey {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm#secret_url SiteRecoveryReplicatedVm#secret_url}
+  */
+  readonly secretUrl?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm#vault_id SiteRecoveryReplicatedVm#vault_id}
+  */
+  readonly vaultId?: string;
+}
+
+export function siteRecoveryReplicatedVmManagedDiskTargetDiskEncryptionDiskEncryptionKeyToTerraform(struct?: SiteRecoveryReplicatedVmManagedDiskTargetDiskEncryptionDiskEncryptionKey | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    secret_url: cdktf.stringToTerraform(struct!.secretUrl),
+    vault_id: cdktf.stringToTerraform(struct!.vaultId),
+  }
+}
+
+export class SiteRecoveryReplicatedVmManagedDiskTargetDiskEncryptionDiskEncryptionKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): SiteRecoveryReplicatedVmManagedDiskTargetDiskEncryptionDiskEncryptionKey | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._secretUrl !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.secretUrl = this._secretUrl;
+    }
+    if (this._vaultId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.vaultId = this._vaultId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SiteRecoveryReplicatedVmManagedDiskTargetDiskEncryptionDiskEncryptionKey | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._secretUrl = undefined;
+      this._vaultId = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._secretUrl = value.secretUrl;
+      this._vaultId = value.vaultId;
+    }
+  }
+
+  // secret_url - computed: false, optional: true, required: false
+  private _secretUrl?: string; 
+  public get secretUrl() {
+    return this.getStringAttribute('secret_url');
+  }
+  public set secretUrl(value: string) {
+    this._secretUrl = value;
+  }
+  public resetSecretUrl() {
+    this._secretUrl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secretUrlInput() {
+    return this._secretUrl;
+  }
+
+  // vault_id - computed: false, optional: true, required: false
+  private _vaultId?: string; 
+  public get vaultId() {
+    return this.getStringAttribute('vault_id');
+  }
+  public set vaultId(value: string) {
+    this._vaultId = value;
+  }
+  public resetVaultId() {
+    this._vaultId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get vaultIdInput() {
+    return this._vaultId;
+  }
+}
+
+export class SiteRecoveryReplicatedVmManagedDiskTargetDiskEncryptionDiskEncryptionKeyList extends cdktf.ComplexList {
+  public internalValue? : SiteRecoveryReplicatedVmManagedDiskTargetDiskEncryptionDiskEncryptionKey[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): SiteRecoveryReplicatedVmManagedDiskTargetDiskEncryptionDiskEncryptionKeyOutputReference {
+    return new SiteRecoveryReplicatedVmManagedDiskTargetDiskEncryptionDiskEncryptionKeyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface SiteRecoveryReplicatedVmManagedDiskTargetDiskEncryptionKeyEncryptionKey {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm#key_url SiteRecoveryReplicatedVm#key_url}
+  */
+  readonly keyUrl?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm#vault_id SiteRecoveryReplicatedVm#vault_id}
+  */
+  readonly vaultId?: string;
+}
+
+export function siteRecoveryReplicatedVmManagedDiskTargetDiskEncryptionKeyEncryptionKeyToTerraform(struct?: SiteRecoveryReplicatedVmManagedDiskTargetDiskEncryptionKeyEncryptionKey | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    key_url: cdktf.stringToTerraform(struct!.keyUrl),
+    vault_id: cdktf.stringToTerraform(struct!.vaultId),
+  }
+}
+
+export class SiteRecoveryReplicatedVmManagedDiskTargetDiskEncryptionKeyEncryptionKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): SiteRecoveryReplicatedVmManagedDiskTargetDiskEncryptionKeyEncryptionKey | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._keyUrl !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keyUrl = this._keyUrl;
+    }
+    if (this._vaultId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.vaultId = this._vaultId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SiteRecoveryReplicatedVmManagedDiskTargetDiskEncryptionKeyEncryptionKey | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._keyUrl = undefined;
+      this._vaultId = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._keyUrl = value.keyUrl;
+      this._vaultId = value.vaultId;
+    }
+  }
+
+  // key_url - computed: false, optional: true, required: false
+  private _keyUrl?: string; 
+  public get keyUrl() {
+    return this.getStringAttribute('key_url');
+  }
+  public set keyUrl(value: string) {
+    this._keyUrl = value;
+  }
+  public resetKeyUrl() {
+    this._keyUrl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyUrlInput() {
+    return this._keyUrl;
+  }
+
+  // vault_id - computed: false, optional: true, required: false
+  private _vaultId?: string; 
+  public get vaultId() {
+    return this.getStringAttribute('vault_id');
+  }
+  public set vaultId(value: string) {
+    this._vaultId = value;
+  }
+  public resetVaultId() {
+    this._vaultId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get vaultIdInput() {
+    return this._vaultId;
+  }
+}
+
+export class SiteRecoveryReplicatedVmManagedDiskTargetDiskEncryptionKeyEncryptionKeyList extends cdktf.ComplexList {
+  public internalValue? : SiteRecoveryReplicatedVmManagedDiskTargetDiskEncryptionKeyEncryptionKey[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): SiteRecoveryReplicatedVmManagedDiskTargetDiskEncryptionKeyEncryptionKeyOutputReference {
+    return new SiteRecoveryReplicatedVmManagedDiskTargetDiskEncryptionKeyEncryptionKeyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface SiteRecoveryReplicatedVmManagedDiskTargetDiskEncryption {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm#disk_encryption_key SiteRecoveryReplicatedVm#disk_encryption_key}
+  */
+  readonly diskEncryptionKey?: SiteRecoveryReplicatedVmManagedDiskTargetDiskEncryptionDiskEncryptionKey[] | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm#key_encryption_key SiteRecoveryReplicatedVm#key_encryption_key}
+  */
+  readonly keyEncryptionKey?: SiteRecoveryReplicatedVmManagedDiskTargetDiskEncryptionKeyEncryptionKey[] | cdktf.IResolvable;
+}
+
+export function siteRecoveryReplicatedVmManagedDiskTargetDiskEncryptionToTerraform(struct?: SiteRecoveryReplicatedVmManagedDiskTargetDiskEncryption | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    disk_encryption_key: cdktf.listMapper(siteRecoveryReplicatedVmManagedDiskTargetDiskEncryptionDiskEncryptionKeyToTerraform, false)(struct!.diskEncryptionKey),
+    key_encryption_key: cdktf.listMapper(siteRecoveryReplicatedVmManagedDiskTargetDiskEncryptionKeyEncryptionKeyToTerraform, false)(struct!.keyEncryptionKey),
+  }
+}
+
+export class SiteRecoveryReplicatedVmManagedDiskTargetDiskEncryptionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): SiteRecoveryReplicatedVmManagedDiskTargetDiskEncryption | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._diskEncryptionKey?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.diskEncryptionKey = this._diskEncryptionKey?.internalValue;
+    }
+    if (this._keyEncryptionKey?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keyEncryptionKey = this._keyEncryptionKey?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SiteRecoveryReplicatedVmManagedDiskTargetDiskEncryption | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._diskEncryptionKey.internalValue = undefined;
+      this._keyEncryptionKey.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._diskEncryptionKey.internalValue = value.diskEncryptionKey;
+      this._keyEncryptionKey.internalValue = value.keyEncryptionKey;
+    }
+  }
+
+  // disk_encryption_key - computed: false, optional: true, required: false
+  private _diskEncryptionKey = new SiteRecoveryReplicatedVmManagedDiskTargetDiskEncryptionDiskEncryptionKeyList(this, "disk_encryption_key", false);
+  public get diskEncryptionKey() {
+    return this._diskEncryptionKey;
+  }
+  public putDiskEncryptionKey(value: SiteRecoveryReplicatedVmManagedDiskTargetDiskEncryptionDiskEncryptionKey[] | cdktf.IResolvable) {
+    this._diskEncryptionKey.internalValue = value;
+  }
+  public resetDiskEncryptionKey() {
+    this._diskEncryptionKey.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get diskEncryptionKeyInput() {
+    return this._diskEncryptionKey.internalValue;
+  }
+
+  // key_encryption_key - computed: false, optional: true, required: false
+  private _keyEncryptionKey = new SiteRecoveryReplicatedVmManagedDiskTargetDiskEncryptionKeyEncryptionKeyList(this, "key_encryption_key", false);
+  public get keyEncryptionKey() {
+    return this._keyEncryptionKey;
+  }
+  public putKeyEncryptionKey(value: SiteRecoveryReplicatedVmManagedDiskTargetDiskEncryptionKeyEncryptionKey[] | cdktf.IResolvable) {
+    this._keyEncryptionKey.internalValue = value;
+  }
+  public resetKeyEncryptionKey() {
+    this._keyEncryptionKey.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyEncryptionKeyInput() {
+    return this._keyEncryptionKey.internalValue;
+  }
+}
+
+export class SiteRecoveryReplicatedVmManagedDiskTargetDiskEncryptionList extends cdktf.ComplexList {
+  public internalValue? : SiteRecoveryReplicatedVmManagedDiskTargetDiskEncryption[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): SiteRecoveryReplicatedVmManagedDiskTargetDiskEncryptionOutputReference {
+    return new SiteRecoveryReplicatedVmManagedDiskTargetDiskEncryptionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface SiteRecoveryReplicatedVmManagedDisk {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm#disk_id SiteRecoveryReplicatedVm#disk_id}
@@ -90,6 +462,10 @@ export interface SiteRecoveryReplicatedVmManagedDisk {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm#staging_storage_account_id SiteRecoveryReplicatedVm#staging_storage_account_id}
   */
   readonly stagingStorageAccountId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm#target_disk_encryption SiteRecoveryReplicatedVm#target_disk_encryption}
+  */
+  readonly targetDiskEncryption?: SiteRecoveryReplicatedVmManagedDiskTargetDiskEncryption[] | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm#target_disk_encryption_set_id SiteRecoveryReplicatedVm#target_disk_encryption_set_id}
   */
@@ -116,6 +492,7 @@ export function siteRecoveryReplicatedVmManagedDiskToTerraform(struct?: SiteReco
   return {
     disk_id: struct!.diskId === undefined ? null : cdktf.stringToTerraform(struct!.diskId),
     staging_storage_account_id: struct!.stagingStorageAccountId === undefined ? null : cdktf.stringToTerraform(struct!.stagingStorageAccountId),
+    target_disk_encryption: cdktf.listMapper(siteRecoveryReplicatedVmManagedDiskTargetDiskEncryptionToTerraform, false)(struct!.targetDiskEncryption),
     target_disk_encryption_set_id: cdktf.stringToTerraform(struct!.targetDiskEncryptionSetId),
     target_disk_type: struct!.targetDiskType === undefined ? null : cdktf.stringToTerraform(struct!.targetDiskType),
     target_replica_disk_type: struct!.targetReplicaDiskType === undefined ? null : cdktf.stringToTerraform(struct!.targetReplicaDiskType),
@@ -151,6 +528,10 @@ export class SiteRecoveryReplicatedVmManagedDiskOutputReference extends cdktf.Co
       hasAnyValues = true;
       internalValueResult.stagingStorageAccountId = this._stagingStorageAccountId;
     }
+    if (this._targetDiskEncryption?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.targetDiskEncryption = this._targetDiskEncryption?.internalValue;
+    }
     if (this._targetDiskEncryptionSetId !== undefined) {
       hasAnyValues = true;
       internalValueResult.targetDiskEncryptionSetId = this._targetDiskEncryptionSetId;
@@ -176,6 +557,7 @@ export class SiteRecoveryReplicatedVmManagedDiskOutputReference extends cdktf.Co
       this.resolvableValue = undefined;
       this._diskId = undefined;
       this._stagingStorageAccountId = undefined;
+      this._targetDiskEncryption.internalValue = undefined;
       this._targetDiskEncryptionSetId = undefined;
       this._targetDiskType = undefined;
       this._targetReplicaDiskType = undefined;
@@ -190,6 +572,7 @@ export class SiteRecoveryReplicatedVmManagedDiskOutputReference extends cdktf.Co
       this.resolvableValue = undefined;
       this._diskId = value.diskId;
       this._stagingStorageAccountId = value.stagingStorageAccountId;
+      this._targetDiskEncryption.internalValue = value.targetDiskEncryption;
       this._targetDiskEncryptionSetId = value.targetDiskEncryptionSetId;
       this._targetDiskType = value.targetDiskType;
       this._targetReplicaDiskType = value.targetReplicaDiskType;
@@ -227,6 +610,22 @@ export class SiteRecoveryReplicatedVmManagedDiskOutputReference extends cdktf.Co
   // Temporarily expose input value. Use with caution.
   public get stagingStorageAccountIdInput() {
     return this._stagingStorageAccountId;
+  }
+
+  // target_disk_encryption - computed: false, optional: true, required: false
+  private _targetDiskEncryption = new SiteRecoveryReplicatedVmManagedDiskTargetDiskEncryptionList(this, "target_disk_encryption", false);
+  public get targetDiskEncryption() {
+    return this._targetDiskEncryption;
+  }
+  public putTargetDiskEncryption(value: SiteRecoveryReplicatedVmManagedDiskTargetDiskEncryption[] | cdktf.IResolvable) {
+    this._targetDiskEncryption.internalValue = value;
+  }
+  public resetTargetDiskEncryption() {
+    this._targetDiskEncryption.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetDiskEncryptionInput() {
+    return this._targetDiskEncryption.internalValue;
   }
 
   // target_disk_encryption_set_id - computed: false, optional: true, required: false
@@ -674,7 +1073,7 @@ export class SiteRecoveryReplicatedVm extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_site_recovery_replicated_vm',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.16.0',
+        providerVersion: '3.20.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

@@ -8,6 +8,10 @@ import * as cdktf from 'cdktf';
 
 export interface LogAnalyticsWorkspaceConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_workspace#cmk_for_query_forced LogAnalyticsWorkspace#cmk_for_query_forced}
+  */
+  readonly cmkForQueryForced?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_workspace#daily_quota_gb LogAnalyticsWorkspace#daily_quota_gb}
   */
   readonly dailyQuotaGb?: number;
@@ -244,7 +248,7 @@ export class LogAnalyticsWorkspace extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_log_analytics_workspace',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.16.0',
+        providerVersion: '3.20.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -255,6 +259,7 @@ export class LogAnalyticsWorkspace extends cdktf.TerraformResource {
       connection: config.connection,
       forEach: config.forEach
     });
+    this._cmkForQueryForced = config.cmkForQueryForced;
     this._dailyQuotaGb = config.dailyQuotaGb;
     this._id = config.id;
     this._internetIngestionEnabled = config.internetIngestionEnabled;
@@ -272,6 +277,22 @@ export class LogAnalyticsWorkspace extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // cmk_for_query_forced - computed: false, optional: true, required: false
+  private _cmkForQueryForced?: boolean | cdktf.IResolvable; 
+  public get cmkForQueryForced() {
+    return this.getBooleanAttribute('cmk_for_query_forced');
+  }
+  public set cmkForQueryForced(value: boolean | cdktf.IResolvable) {
+    this._cmkForQueryForced = value;
+  }
+  public resetCmkForQueryForced() {
+    this._cmkForQueryForced = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cmkForQueryForcedInput() {
+    return this._cmkForQueryForced;
+  }
 
   // daily_quota_gb - computed: false, optional: true, required: false
   private _dailyQuotaGb?: number; 
@@ -477,6 +498,7 @@ export class LogAnalyticsWorkspace extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      cmk_for_query_forced: cdktf.booleanToTerraform(this._cmkForQueryForced),
       daily_quota_gb: cdktf.numberToTerraform(this._dailyQuotaGb),
       id: cdktf.stringToTerraform(this._id),
       internet_ingestion_enabled: cdktf.booleanToTerraform(this._internetIngestionEnabled),

@@ -23,6 +23,10 @@ export interface MssqlElasticpoolConfig extends cdktf.TerraformMetaArguments {
   */
   readonly location: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_elasticpool#maintenance_configuration_name MssqlElasticpool#maintenance_configuration_name}
+  */
+  readonly maintenanceConfigurationName?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_elasticpool#max_size_bytes MssqlElasticpool#max_size_bytes}
   */
   readonly maxSizeBytes?: number;
@@ -475,7 +479,7 @@ export class MssqlElasticpool extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_mssql_elasticpool',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.16.0',
+        providerVersion: '3.20.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -489,6 +493,7 @@ export class MssqlElasticpool extends cdktf.TerraformResource {
     this._id = config.id;
     this._licenseType = config.licenseType;
     this._location = config.location;
+    this._maintenanceConfigurationName = config.maintenanceConfigurationName;
     this._maxSizeBytes = config.maxSizeBytes;
     this._maxSizeGb = config.maxSizeGb;
     this._name = config.name;
@@ -548,6 +553,22 @@ export class MssqlElasticpool extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
     return this._location;
+  }
+
+  // maintenance_configuration_name - computed: false, optional: true, required: false
+  private _maintenanceConfigurationName?: string; 
+  public get maintenanceConfigurationName() {
+    return this.getStringAttribute('maintenance_configuration_name');
+  }
+  public set maintenanceConfigurationName(value: string) {
+    this._maintenanceConfigurationName = value;
+  }
+  public resetMaintenanceConfigurationName() {
+    this._maintenanceConfigurationName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maintenanceConfigurationNameInput() {
+    return this._maintenanceConfigurationName;
   }
 
   // max_size_bytes - computed: true, optional: true, required: false
@@ -704,6 +725,7 @@ export class MssqlElasticpool extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       license_type: cdktf.stringToTerraform(this._licenseType),
       location: cdktf.stringToTerraform(this._location),
+      maintenance_configuration_name: cdktf.stringToTerraform(this._maintenanceConfigurationName),
       max_size_bytes: cdktf.numberToTerraform(this._maxSizeBytes),
       max_size_gb: cdktf.numberToTerraform(this._maxSizeGb),
       name: cdktf.stringToTerraform(this._name),
