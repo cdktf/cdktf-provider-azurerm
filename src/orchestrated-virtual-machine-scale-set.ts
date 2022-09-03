@@ -8,6 +8,10 @@ import * as cdktf from 'cdktf';
 
 export interface OrchestratedVirtualMachineScaleSetConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#capacity_reservation_group_id OrchestratedVirtualMachineScaleSet#capacity_reservation_group_id}
+  */
+  readonly capacityReservationGroupId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#encryption_at_host_enabled OrchestratedVirtualMachineScaleSet#encryption_at_host_enabled}
   */
   readonly encryptionAtHostEnabled?: boolean | cdktf.IResolvable;
@@ -15,6 +19,10 @@ export interface OrchestratedVirtualMachineScaleSetConfig extends cdktf.Terrafor
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#eviction_policy OrchestratedVirtualMachineScaleSet#eviction_policy}
   */
   readonly evictionPolicy?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#extension_operations_enabled OrchestratedVirtualMachineScaleSet#extension_operations_enabled}
+  */
+  readonly extensionOperationsEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#extensions_time_budget OrchestratedVirtualMachineScaleSet#extensions_time_budget}
   */
@@ -63,6 +71,10 @@ export interface OrchestratedVirtualMachineScaleSetConfig extends cdktf.Terrafor
   */
   readonly resourceGroupName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#single_placement_group OrchestratedVirtualMachineScaleSet#single_placement_group}
+  */
+  readonly singlePlacementGroup?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#sku_name OrchestratedVirtualMachineScaleSet#sku_name}
   */
   readonly skuName?: string;
@@ -82,6 +94,12 @@ export interface OrchestratedVirtualMachineScaleSetConfig extends cdktf.Terrafor
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#zones OrchestratedVirtualMachineScaleSet#zones}
   */
   readonly zones?: string[];
+  /**
+  * additional_capabilities block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#additional_capabilities OrchestratedVirtualMachineScaleSet#additional_capabilities}
+  */
+  readonly additionalCapabilities?: OrchestratedVirtualMachineScaleSetAdditionalCapabilities;
   /**
   * automatic_instance_repair block
   * 
@@ -154,6 +172,71 @@ export interface OrchestratedVirtualMachineScaleSetConfig extends cdktf.Terrafor
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#timeouts OrchestratedVirtualMachineScaleSet#timeouts}
   */
   readonly timeouts?: OrchestratedVirtualMachineScaleSetTimeouts;
+}
+export interface OrchestratedVirtualMachineScaleSetAdditionalCapabilities {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#ultra_ssd_enabled OrchestratedVirtualMachineScaleSet#ultra_ssd_enabled}
+  */
+  readonly ultraSsdEnabled?: boolean | cdktf.IResolvable;
+}
+
+export function orchestratedVirtualMachineScaleSetAdditionalCapabilitiesToTerraform(struct?: OrchestratedVirtualMachineScaleSetAdditionalCapabilitiesOutputReference | OrchestratedVirtualMachineScaleSetAdditionalCapabilities): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    ultra_ssd_enabled: cdktf.booleanToTerraform(struct!.ultraSsdEnabled),
+  }
+}
+
+export class OrchestratedVirtualMachineScaleSetAdditionalCapabilitiesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): OrchestratedVirtualMachineScaleSetAdditionalCapabilities | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._ultraSsdEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ultraSsdEnabled = this._ultraSsdEnabled;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: OrchestratedVirtualMachineScaleSetAdditionalCapabilities | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._ultraSsdEnabled = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._ultraSsdEnabled = value.ultraSsdEnabled;
+    }
+  }
+
+  // ultra_ssd_enabled - computed: false, optional: true, required: false
+  private _ultraSsdEnabled?: boolean | cdktf.IResolvable; 
+  public get ultraSsdEnabled() {
+    return this.getBooleanAttribute('ultra_ssd_enabled');
+  }
+  public set ultraSsdEnabled(value: boolean | cdktf.IResolvable) {
+    this._ultraSsdEnabled = value;
+  }
+  public resetUltraSsdEnabled() {
+    this._ultraSsdEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ultraSsdEnabledInput() {
+    return this._ultraSsdEnabled;
+  }
 }
 export interface OrchestratedVirtualMachineScaleSetAutomaticInstanceRepair {
   /**
@@ -620,6 +703,10 @@ export interface OrchestratedVirtualMachineScaleSetExtension {
   */
   readonly extensionsToProvisionAfterVmCreation?: string[];
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#failure_suppression_enabled OrchestratedVirtualMachineScaleSet#failure_suppression_enabled}
+  */
+  readonly failureSuppressionEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#force_extension_execution_on_change OrchestratedVirtualMachineScaleSet#force_extension_execution_on_change}
   */
   readonly forceExtensionExecutionOnChange?: string;
@@ -657,6 +744,7 @@ export function orchestratedVirtualMachineScaleSetExtensionToTerraform(struct?: 
   return {
     auto_upgrade_minor_version_enabled: cdktf.booleanToTerraform(struct!.autoUpgradeMinorVersionEnabled),
     extensions_to_provision_after_vm_creation: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.extensionsToProvisionAfterVmCreation),
+    failure_suppression_enabled: cdktf.booleanToTerraform(struct!.failureSuppressionEnabled),
     force_extension_execution_on_change: cdktf.stringToTerraform(struct!.forceExtensionExecutionOnChange),
     name: cdktf.stringToTerraform(struct!.name),
     protected_settings: cdktf.stringToTerraform(struct!.protectedSettings),
@@ -695,6 +783,10 @@ export class OrchestratedVirtualMachineScaleSetExtensionOutputReference extends 
       hasAnyValues = true;
       internalValueResult.extensionsToProvisionAfterVmCreation = this._extensionsToProvisionAfterVmCreation;
     }
+    if (this._failureSuppressionEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.failureSuppressionEnabled = this._failureSuppressionEnabled;
+    }
     if (this._forceExtensionExecutionOnChange !== undefined) {
       hasAnyValues = true;
       internalValueResult.forceExtensionExecutionOnChange = this._forceExtensionExecutionOnChange;
@@ -732,6 +824,7 @@ export class OrchestratedVirtualMachineScaleSetExtensionOutputReference extends 
       this.resolvableValue = undefined;
       this._autoUpgradeMinorVersionEnabled = undefined;
       this._extensionsToProvisionAfterVmCreation = undefined;
+      this._failureSuppressionEnabled = undefined;
       this._forceExtensionExecutionOnChange = undefined;
       this._name = undefined;
       this._protectedSettings = undefined;
@@ -749,6 +842,7 @@ export class OrchestratedVirtualMachineScaleSetExtensionOutputReference extends 
       this.resolvableValue = undefined;
       this._autoUpgradeMinorVersionEnabled = value.autoUpgradeMinorVersionEnabled;
       this._extensionsToProvisionAfterVmCreation = value.extensionsToProvisionAfterVmCreation;
+      this._failureSuppressionEnabled = value.failureSuppressionEnabled;
       this._forceExtensionExecutionOnChange = value.forceExtensionExecutionOnChange;
       this._name = value.name;
       this._protectedSettings = value.protectedSettings;
@@ -789,6 +883,22 @@ export class OrchestratedVirtualMachineScaleSetExtensionOutputReference extends 
   // Temporarily expose input value. Use with caution.
   public get extensionsToProvisionAfterVmCreationInput() {
     return this._extensionsToProvisionAfterVmCreation;
+  }
+
+  // failure_suppression_enabled - computed: false, optional: true, required: false
+  private _failureSuppressionEnabled?: boolean | cdktf.IResolvable; 
+  public get failureSuppressionEnabled() {
+    return this.getBooleanAttribute('failure_suppression_enabled');
+  }
+  public set failureSuppressionEnabled(value: boolean | cdktf.IResolvable) {
+    this._failureSuppressionEnabled = value;
+  }
+  public resetFailureSuppressionEnabled() {
+    this._failureSuppressionEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get failureSuppressionEnabledInput() {
+    return this._failureSuppressionEnabled;
   }
 
   // force_extension_execution_on_change - computed: false, optional: true, required: false
@@ -1133,6 +1243,14 @@ export interface OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurati
   */
   readonly publicIpPrefixId?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#sku_name OrchestratedVirtualMachineScaleSet#sku_name}
+  */
+  readonly skuName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#version OrchestratedVirtualMachineScaleSet#version}
+  */
+  readonly version?: string;
+  /**
   * ip_tag block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#ip_tag OrchestratedVirtualMachineScaleSet#ip_tag}
@@ -1150,6 +1268,8 @@ export function orchestratedVirtualMachineScaleSetNetworkInterfaceIpConfiguratio
     idle_timeout_in_minutes: cdktf.numberToTerraform(struct!.idleTimeoutInMinutes),
     name: cdktf.stringToTerraform(struct!.name),
     public_ip_prefix_id: cdktf.stringToTerraform(struct!.publicIpPrefixId),
+    sku_name: cdktf.stringToTerraform(struct!.skuName),
+    version: cdktf.stringToTerraform(struct!.version),
     ip_tag: cdktf.listMapper(orchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTagToTerraform, true)(struct!.ipTag),
   }
 }
@@ -1190,6 +1310,14 @@ export class OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationPu
       hasAnyValues = true;
       internalValueResult.publicIpPrefixId = this._publicIpPrefixId;
     }
+    if (this._skuName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.skuName = this._skuName;
+    }
+    if (this._version !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.version = this._version;
+    }
     if (this._ipTag?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.ipTag = this._ipTag?.internalValue;
@@ -1205,6 +1333,8 @@ export class OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationPu
       this._idleTimeoutInMinutes = undefined;
       this._name = undefined;
       this._publicIpPrefixId = undefined;
+      this._skuName = undefined;
+      this._version = undefined;
       this._ipTag.internalValue = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
@@ -1218,6 +1348,8 @@ export class OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationPu
       this._idleTimeoutInMinutes = value.idleTimeoutInMinutes;
       this._name = value.name;
       this._publicIpPrefixId = value.publicIpPrefixId;
+      this._skuName = value.skuName;
+      this._version = value.version;
       this._ipTag.internalValue = value.ipTag;
     }
   }
@@ -1281,6 +1413,38 @@ export class OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationPu
   // Temporarily expose input value. Use with caution.
   public get publicIpPrefixIdInput() {
     return this._publicIpPrefixId;
+  }
+
+  // sku_name - computed: false, optional: true, required: false
+  private _skuName?: string; 
+  public get skuName() {
+    return this.getStringAttribute('sku_name');
+  }
+  public set skuName(value: string) {
+    this._skuName = value;
+  }
+  public resetSkuName() {
+    this._skuName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get skuNameInput() {
+    return this._skuName;
+  }
+
+  // version - computed: false, optional: true, required: false
+  private _version?: string; 
+  public get version() {
+    return this.getStringAttribute('version');
+  }
+  public set version(value: string) {
+    this._version = value;
+  }
+  public resetVersion() {
+    this._version = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get versionInput() {
+    return this._version;
   }
 
   // ip_tag - computed: false, optional: true, required: false
@@ -2494,6 +2658,10 @@ export interface OrchestratedVirtualMachineScaleSetOsProfileLinuxConfiguration {
   */
   readonly disablePasswordAuthentication?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#patch_assessment_mode OrchestratedVirtualMachineScaleSet#patch_assessment_mode}
+  */
+  readonly patchAssessmentMode?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#patch_mode OrchestratedVirtualMachineScaleSet#patch_mode}
   */
   readonly patchMode?: string;
@@ -2525,6 +2693,7 @@ export function orchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationToT
     admin_username: cdktf.stringToTerraform(struct!.adminUsername),
     computer_name_prefix: cdktf.stringToTerraform(struct!.computerNamePrefix),
     disable_password_authentication: cdktf.booleanToTerraform(struct!.disablePasswordAuthentication),
+    patch_assessment_mode: cdktf.stringToTerraform(struct!.patchAssessmentMode),
     patch_mode: cdktf.stringToTerraform(struct!.patchMode),
     provision_vm_agent: cdktf.booleanToTerraform(struct!.provisionVmAgent),
     admin_ssh_key: cdktf.listMapper(orchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationAdminSshKeyToTerraform, true)(struct!.adminSshKey),
@@ -2562,6 +2731,10 @@ export class OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationOutput
       hasAnyValues = true;
       internalValueResult.disablePasswordAuthentication = this._disablePasswordAuthentication;
     }
+    if (this._patchAssessmentMode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.patchAssessmentMode = this._patchAssessmentMode;
+    }
     if (this._patchMode !== undefined) {
       hasAnyValues = true;
       internalValueResult.patchMode = this._patchMode;
@@ -2588,6 +2761,7 @@ export class OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationOutput
       this._adminUsername = undefined;
       this._computerNamePrefix = undefined;
       this._disablePasswordAuthentication = undefined;
+      this._patchAssessmentMode = undefined;
       this._patchMode = undefined;
       this._provisionVmAgent = undefined;
       this._adminSshKey.internalValue = undefined;
@@ -2599,6 +2773,7 @@ export class OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationOutput
       this._adminUsername = value.adminUsername;
       this._computerNamePrefix = value.computerNamePrefix;
       this._disablePasswordAuthentication = value.disablePasswordAuthentication;
+      this._patchAssessmentMode = value.patchAssessmentMode;
       this._patchMode = value.patchMode;
       this._provisionVmAgent = value.provisionVmAgent;
       this._adminSshKey.internalValue = value.adminSshKey;
@@ -2665,6 +2840,22 @@ export class OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationOutput
   // Temporarily expose input value. Use with caution.
   public get disablePasswordAuthenticationInput() {
     return this._disablePasswordAuthentication;
+  }
+
+  // patch_assessment_mode - computed: false, optional: true, required: false
+  private _patchAssessmentMode?: string; 
+  public get patchAssessmentMode() {
+    return this.getStringAttribute('patch_assessment_mode');
+  }
+  public set patchAssessmentMode(value: string) {
+    this._patchAssessmentMode = value;
+  }
+  public resetPatchAssessmentMode() {
+    this._patchAssessmentMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get patchAssessmentModeInput() {
+    return this._patchAssessmentMode;
   }
 
   // patch_mode - computed: false, optional: true, required: false
@@ -3112,6 +3303,10 @@ export interface OrchestratedVirtualMachineScaleSetOsProfileWindowsConfiguration
   */
   readonly hotpatchingEnabled?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#patch_assessment_mode OrchestratedVirtualMachineScaleSet#patch_assessment_mode}
+  */
+  readonly patchAssessmentMode?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set#patch_mode OrchestratedVirtualMachineScaleSet#patch_mode}
   */
   readonly patchMode?: string;
@@ -3148,6 +3343,7 @@ export function orchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationT
     computer_name_prefix: cdktf.stringToTerraform(struct!.computerNamePrefix),
     enable_automatic_updates: cdktf.booleanToTerraform(struct!.enableAutomaticUpdates),
     hotpatching_enabled: cdktf.booleanToTerraform(struct!.hotpatchingEnabled),
+    patch_assessment_mode: cdktf.stringToTerraform(struct!.patchAssessmentMode),
     patch_mode: cdktf.stringToTerraform(struct!.patchMode),
     provision_vm_agent: cdktf.booleanToTerraform(struct!.provisionVmAgent),
     timezone: cdktf.stringToTerraform(struct!.timezone),
@@ -3190,6 +3386,10 @@ export class OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationOutp
       hasAnyValues = true;
       internalValueResult.hotpatchingEnabled = this._hotpatchingEnabled;
     }
+    if (this._patchAssessmentMode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.patchAssessmentMode = this._patchAssessmentMode;
+    }
     if (this._patchMode !== undefined) {
       hasAnyValues = true;
       internalValueResult.patchMode = this._patchMode;
@@ -3221,6 +3421,7 @@ export class OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationOutp
       this._computerNamePrefix = undefined;
       this._enableAutomaticUpdates = undefined;
       this._hotpatchingEnabled = undefined;
+      this._patchAssessmentMode = undefined;
       this._patchMode = undefined;
       this._provisionVmAgent = undefined;
       this._timezone = undefined;
@@ -3234,6 +3435,7 @@ export class OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationOutp
       this._computerNamePrefix = value.computerNamePrefix;
       this._enableAutomaticUpdates = value.enableAutomaticUpdates;
       this._hotpatchingEnabled = value.hotpatchingEnabled;
+      this._patchAssessmentMode = value.patchAssessmentMode;
       this._patchMode = value.patchMode;
       this._provisionVmAgent = value.provisionVmAgent;
       this._timezone = value.timezone;
@@ -3314,6 +3516,22 @@ export class OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationOutp
   // Temporarily expose input value. Use with caution.
   public get hotpatchingEnabledInput() {
     return this._hotpatchingEnabled;
+  }
+
+  // patch_assessment_mode - computed: false, optional: true, required: false
+  private _patchAssessmentMode?: string; 
+  public get patchAssessmentMode() {
+    return this.getStringAttribute('patch_assessment_mode');
+  }
+  public set patchAssessmentMode(value: string) {
+    this._patchAssessmentMode = value;
+  }
+  public resetPatchAssessmentMode() {
+    this._patchAssessmentMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get patchAssessmentModeInput() {
+    return this._patchAssessmentMode;
   }
 
   // patch_mode - computed: false, optional: true, required: false
@@ -4035,7 +4253,7 @@ export class OrchestratedVirtualMachineScaleSet extends cdktf.TerraformResource 
       terraformResourceType: 'azurerm_orchestrated_virtual_machine_scale_set',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.20.0',
+        providerVersion: '3.21.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -4046,8 +4264,10 @@ export class OrchestratedVirtualMachineScaleSet extends cdktf.TerraformResource 
       connection: config.connection,
       forEach: config.forEach
     });
+    this._capacityReservationGroupId = config.capacityReservationGroupId;
     this._encryptionAtHostEnabled = config.encryptionAtHostEnabled;
     this._evictionPolicy = config.evictionPolicy;
+    this._extensionOperationsEnabled = config.extensionOperationsEnabled;
     this._extensionsTimeBudget = config.extensionsTimeBudget;
     this._id = config.id;
     this._instances = config.instances;
@@ -4059,11 +4279,13 @@ export class OrchestratedVirtualMachineScaleSet extends cdktf.TerraformResource 
     this._priority = config.priority;
     this._proximityPlacementGroupId = config.proximityPlacementGroupId;
     this._resourceGroupName = config.resourceGroupName;
+    this._singlePlacementGroup = config.singlePlacementGroup;
     this._skuName = config.skuName;
     this._sourceImageId = config.sourceImageId;
     this._tags = config.tags;
     this._zoneBalance = config.zoneBalance;
     this._zones = config.zones;
+    this._additionalCapabilities.internalValue = config.additionalCapabilities;
     this._automaticInstanceRepair.internalValue = config.automaticInstanceRepair;
     this._bootDiagnostics.internalValue = config.bootDiagnostics;
     this._dataDisk.internalValue = config.dataDisk;
@@ -4081,6 +4303,22 @@ export class OrchestratedVirtualMachineScaleSet extends cdktf.TerraformResource 
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // capacity_reservation_group_id - computed: false, optional: true, required: false
+  private _capacityReservationGroupId?: string; 
+  public get capacityReservationGroupId() {
+    return this.getStringAttribute('capacity_reservation_group_id');
+  }
+  public set capacityReservationGroupId(value: string) {
+    this._capacityReservationGroupId = value;
+  }
+  public resetCapacityReservationGroupId() {
+    this._capacityReservationGroupId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get capacityReservationGroupIdInput() {
+    return this._capacityReservationGroupId;
+  }
 
   // encryption_at_host_enabled - computed: false, optional: true, required: false
   private _encryptionAtHostEnabled?: boolean | cdktf.IResolvable; 
@@ -4112,6 +4350,22 @@ export class OrchestratedVirtualMachineScaleSet extends cdktf.TerraformResource 
   // Temporarily expose input value. Use with caution.
   public get evictionPolicyInput() {
     return this._evictionPolicy;
+  }
+
+  // extension_operations_enabled - computed: true, optional: true, required: false
+  private _extensionOperationsEnabled?: boolean | cdktf.IResolvable; 
+  public get extensionOperationsEnabled() {
+    return this.getBooleanAttribute('extension_operations_enabled');
+  }
+  public set extensionOperationsEnabled(value: boolean | cdktf.IResolvable) {
+    this._extensionOperationsEnabled = value;
+  }
+  public resetExtensionOperationsEnabled() {
+    this._extensionOperationsEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get extensionOperationsEnabledInput() {
+    return this._extensionOperationsEnabled;
   }
 
   // extensions_time_budget - computed: false, optional: true, required: false
@@ -4278,6 +4532,22 @@ export class OrchestratedVirtualMachineScaleSet extends cdktf.TerraformResource 
     return this._resourceGroupName;
   }
 
+  // single_placement_group - computed: true, optional: true, required: false
+  private _singlePlacementGroup?: boolean | cdktf.IResolvable; 
+  public get singlePlacementGroup() {
+    return this.getBooleanAttribute('single_placement_group');
+  }
+  public set singlePlacementGroup(value: boolean | cdktf.IResolvable) {
+    this._singlePlacementGroup = value;
+  }
+  public resetSinglePlacementGroup() {
+    this._singlePlacementGroup = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get singlePlacementGroupInput() {
+    return this._singlePlacementGroup;
+  }
+
   // sku_name - computed: false, optional: true, required: false
   private _skuName?: string; 
   public get skuName() {
@@ -4361,6 +4631,22 @@ export class OrchestratedVirtualMachineScaleSet extends cdktf.TerraformResource 
   // Temporarily expose input value. Use with caution.
   public get zonesInput() {
     return this._zones;
+  }
+
+  // additional_capabilities - computed: false, optional: true, required: false
+  private _additionalCapabilities = new OrchestratedVirtualMachineScaleSetAdditionalCapabilitiesOutputReference(this, "additional_capabilities");
+  public get additionalCapabilities() {
+    return this._additionalCapabilities;
+  }
+  public putAdditionalCapabilities(value: OrchestratedVirtualMachineScaleSetAdditionalCapabilities) {
+    this._additionalCapabilities.internalValue = value;
+  }
+  public resetAdditionalCapabilities() {
+    this._additionalCapabilities.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get additionalCapabilitiesInput() {
+    return this._additionalCapabilities.internalValue;
   }
 
   // automatic_instance_repair - computed: false, optional: true, required: false
@@ -4561,8 +4847,10 @@ export class OrchestratedVirtualMachineScaleSet extends cdktf.TerraformResource 
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      capacity_reservation_group_id: cdktf.stringToTerraform(this._capacityReservationGroupId),
       encryption_at_host_enabled: cdktf.booleanToTerraform(this._encryptionAtHostEnabled),
       eviction_policy: cdktf.stringToTerraform(this._evictionPolicy),
+      extension_operations_enabled: cdktf.booleanToTerraform(this._extensionOperationsEnabled),
       extensions_time_budget: cdktf.stringToTerraform(this._extensionsTimeBudget),
       id: cdktf.stringToTerraform(this._id),
       instances: cdktf.numberToTerraform(this._instances),
@@ -4574,11 +4862,13 @@ export class OrchestratedVirtualMachineScaleSet extends cdktf.TerraformResource 
       priority: cdktf.stringToTerraform(this._priority),
       proximity_placement_group_id: cdktf.stringToTerraform(this._proximityPlacementGroupId),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      single_placement_group: cdktf.booleanToTerraform(this._singlePlacementGroup),
       sku_name: cdktf.stringToTerraform(this._skuName),
       source_image_id: cdktf.stringToTerraform(this._sourceImageId),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       zone_balance: cdktf.booleanToTerraform(this._zoneBalance),
       zones: cdktf.listMapper(cdktf.stringToTerraform, false)(this._zones),
+      additional_capabilities: orchestratedVirtualMachineScaleSetAdditionalCapabilitiesToTerraform(this._additionalCapabilities.internalValue),
       automatic_instance_repair: orchestratedVirtualMachineScaleSetAutomaticInstanceRepairToTerraform(this._automaticInstanceRepair.internalValue),
       boot_diagnostics: orchestratedVirtualMachineScaleSetBootDiagnosticsToTerraform(this._bootDiagnostics.internalValue),
       data_disk: cdktf.listMapper(orchestratedVirtualMachineScaleSetDataDiskToTerraform, true)(this._dataDisk.internalValue),

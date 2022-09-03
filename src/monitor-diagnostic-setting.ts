@@ -154,7 +154,11 @@ export interface MonitorDiagnosticSettingLog {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_diagnostic_setting#category MonitorDiagnosticSetting#category}
   */
-  readonly category: string;
+  readonly category?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_diagnostic_setting#category_group MonitorDiagnosticSetting#category_group}
+  */
+  readonly categoryGroup?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_diagnostic_setting#enabled MonitorDiagnosticSetting#enabled}
   */
@@ -174,6 +178,7 @@ export function monitorDiagnosticSettingLogToTerraform(struct?: MonitorDiagnosti
   }
   return {
     category: cdktf.stringToTerraform(struct!.category),
+    category_group: cdktf.stringToTerraform(struct!.categoryGroup),
     enabled: cdktf.booleanToTerraform(struct!.enabled),
     retention_policy: monitorDiagnosticSettingLogRetentionPolicyToTerraform(struct!.retentionPolicy),
   }
@@ -203,6 +208,10 @@ export class MonitorDiagnosticSettingLogOutputReference extends cdktf.ComplexObj
       hasAnyValues = true;
       internalValueResult.category = this._category;
     }
+    if (this._categoryGroup !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.categoryGroup = this._categoryGroup;
+    }
     if (this._enabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.enabled = this._enabled;
@@ -219,6 +228,7 @@ export class MonitorDiagnosticSettingLogOutputReference extends cdktf.ComplexObj
       this.isEmptyObject = false;
       this.resolvableValue = undefined;
       this._category = undefined;
+      this._categoryGroup = undefined;
       this._enabled = undefined;
       this._retentionPolicy.internalValue = undefined;
     }
@@ -230,12 +240,13 @@ export class MonitorDiagnosticSettingLogOutputReference extends cdktf.ComplexObj
       this.isEmptyObject = Object.keys(value).length === 0;
       this.resolvableValue = undefined;
       this._category = value.category;
+      this._categoryGroup = value.categoryGroup;
       this._enabled = value.enabled;
       this._retentionPolicy.internalValue = value.retentionPolicy;
     }
   }
 
-  // category - computed: false, optional: false, required: true
+  // category - computed: false, optional: true, required: false
   private _category?: string; 
   public get category() {
     return this.getStringAttribute('category');
@@ -243,9 +254,28 @@ export class MonitorDiagnosticSettingLogOutputReference extends cdktf.ComplexObj
   public set category(value: string) {
     this._category = value;
   }
+  public resetCategory() {
+    this._category = undefined;
+  }
   // Temporarily expose input value. Use with caution.
   public get categoryInput() {
     return this._category;
+  }
+
+  // category_group - computed: false, optional: true, required: false
+  private _categoryGroup?: string; 
+  public get categoryGroup() {
+    return this.getStringAttribute('category_group');
+  }
+  public set categoryGroup(value: string) {
+    this._categoryGroup = value;
+  }
+  public resetCategoryGroup() {
+    this._categoryGroup = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get categoryGroupInput() {
+    return this._categoryGroup;
   }
 
   // enabled - computed: false, optional: true, required: false
@@ -722,7 +752,7 @@ export class MonitorDiagnosticSetting extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_monitor_diagnostic_setting',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.20.0',
+        providerVersion: '3.21.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

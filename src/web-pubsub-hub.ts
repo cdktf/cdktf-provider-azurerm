@@ -461,7 +461,7 @@ export class WebPubsubHub extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_web_pubsub_hub',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.20.0',
+        providerVersion: '3.21.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

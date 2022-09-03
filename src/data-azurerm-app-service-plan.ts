@@ -205,7 +205,7 @@ export class DataAzurermAppServicePlan extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_app_service_plan',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.20.0',
+        providerVersion: '3.21.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

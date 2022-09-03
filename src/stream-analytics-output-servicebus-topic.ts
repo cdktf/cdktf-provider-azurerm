@@ -8,6 +8,10 @@ import * as cdktf from 'cdktf';
 
 export interface StreamAnalyticsOutputServicebusTopicConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_servicebus_topic#authentication_mode StreamAnalyticsOutputServicebusTopic#authentication_mode}
+  */
+  readonly authenticationMode?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_servicebus_topic#id StreamAnalyticsOutputServicebusTopic#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
@@ -389,7 +393,7 @@ export class StreamAnalyticsOutputServicebusTopic extends cdktf.TerraformResourc
       terraformResourceType: 'azurerm_stream_analytics_output_servicebus_topic',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.20.0',
+        providerVersion: '3.21.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -400,6 +404,7 @@ export class StreamAnalyticsOutputServicebusTopic extends cdktf.TerraformResourc
       connection: config.connection,
       forEach: config.forEach
     });
+    this._authenticationMode = config.authenticationMode;
     this._id = config.id;
     this._name = config.name;
     this._propertyColumns = config.propertyColumns;
@@ -417,6 +422,22 @@ export class StreamAnalyticsOutputServicebusTopic extends cdktf.TerraformResourc
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // authentication_mode - computed: false, optional: true, required: false
+  private _authenticationMode?: string; 
+  public get authenticationMode() {
+    return this.getStringAttribute('authentication_mode');
+  }
+  public set authenticationMode(value: string) {
+    this._authenticationMode = value;
+  }
+  public resetAuthenticationMode() {
+    this._authenticationMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get authenticationModeInput() {
+    return this._authenticationMode;
+  }
 
   // id - computed: true, optional: true, required: false
   private _id?: string; 
@@ -592,6 +613,7 @@ export class StreamAnalyticsOutputServicebusTopic extends cdktf.TerraformResourc
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      authentication_mode: cdktf.stringToTerraform(this._authenticationMode),
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       property_columns: cdktf.listMapper(cdktf.stringToTerraform, false)(this._propertyColumns),

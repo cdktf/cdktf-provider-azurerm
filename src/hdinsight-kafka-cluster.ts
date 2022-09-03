@@ -53,6 +53,12 @@ export interface HdinsightKafkaClusterConfig extends cdktf.TerraformMetaArgument
   */
   readonly componentVersion: HdinsightKafkaClusterComponentVersion;
   /**
+  * disk_encryption block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster#disk_encryption HdinsightKafkaCluster#disk_encryption}
+  */
+  readonly diskEncryption?: HdinsightKafkaClusterDiskEncryption[] | cdktf.IResolvable;
+  /**
   * gateway block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster#gateway HdinsightKafkaCluster#gateway}
@@ -173,6 +179,184 @@ export class HdinsightKafkaClusterComponentVersionOutputReference extends cdktf.
   // Temporarily expose input value. Use with caution.
   public get kafkaInput() {
     return this._kafka;
+  }
+}
+export interface HdinsightKafkaClusterDiskEncryption {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster#encryption_algorithm HdinsightKafkaCluster#encryption_algorithm}
+  */
+  readonly encryptionAlgorithm?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster#encryption_at_host_enabled HdinsightKafkaCluster#encryption_at_host_enabled}
+  */
+  readonly encryptionAtHostEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster#key_vault_key_id HdinsightKafkaCluster#key_vault_key_id}
+  */
+  readonly keyVaultKeyId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster#key_vault_managed_identity_id HdinsightKafkaCluster#key_vault_managed_identity_id}
+  */
+  readonly keyVaultManagedIdentityId?: string;
+}
+
+export function hdinsightKafkaClusterDiskEncryptionToTerraform(struct?: HdinsightKafkaClusterDiskEncryption | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    encryption_algorithm: cdktf.stringToTerraform(struct!.encryptionAlgorithm),
+    encryption_at_host_enabled: cdktf.booleanToTerraform(struct!.encryptionAtHostEnabled),
+    key_vault_key_id: cdktf.stringToTerraform(struct!.keyVaultKeyId),
+    key_vault_managed_identity_id: cdktf.stringToTerraform(struct!.keyVaultManagedIdentityId),
+  }
+}
+
+export class HdinsightKafkaClusterDiskEncryptionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): HdinsightKafkaClusterDiskEncryption | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._encryptionAlgorithm !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.encryptionAlgorithm = this._encryptionAlgorithm;
+    }
+    if (this._encryptionAtHostEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.encryptionAtHostEnabled = this._encryptionAtHostEnabled;
+    }
+    if (this._keyVaultKeyId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keyVaultKeyId = this._keyVaultKeyId;
+    }
+    if (this._keyVaultManagedIdentityId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keyVaultManagedIdentityId = this._keyVaultManagedIdentityId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: HdinsightKafkaClusterDiskEncryption | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._encryptionAlgorithm = undefined;
+      this._encryptionAtHostEnabled = undefined;
+      this._keyVaultKeyId = undefined;
+      this._keyVaultManagedIdentityId = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._encryptionAlgorithm = value.encryptionAlgorithm;
+      this._encryptionAtHostEnabled = value.encryptionAtHostEnabled;
+      this._keyVaultKeyId = value.keyVaultKeyId;
+      this._keyVaultManagedIdentityId = value.keyVaultManagedIdentityId;
+    }
+  }
+
+  // encryption_algorithm - computed: false, optional: true, required: false
+  private _encryptionAlgorithm?: string; 
+  public get encryptionAlgorithm() {
+    return this.getStringAttribute('encryption_algorithm');
+  }
+  public set encryptionAlgorithm(value: string) {
+    this._encryptionAlgorithm = value;
+  }
+  public resetEncryptionAlgorithm() {
+    this._encryptionAlgorithm = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get encryptionAlgorithmInput() {
+    return this._encryptionAlgorithm;
+  }
+
+  // encryption_at_host_enabled - computed: false, optional: true, required: false
+  private _encryptionAtHostEnabled?: boolean | cdktf.IResolvable; 
+  public get encryptionAtHostEnabled() {
+    return this.getBooleanAttribute('encryption_at_host_enabled');
+  }
+  public set encryptionAtHostEnabled(value: boolean | cdktf.IResolvable) {
+    this._encryptionAtHostEnabled = value;
+  }
+  public resetEncryptionAtHostEnabled() {
+    this._encryptionAtHostEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get encryptionAtHostEnabledInput() {
+    return this._encryptionAtHostEnabled;
+  }
+
+  // key_vault_key_id - computed: false, optional: true, required: false
+  private _keyVaultKeyId?: string; 
+  public get keyVaultKeyId() {
+    return this.getStringAttribute('key_vault_key_id');
+  }
+  public set keyVaultKeyId(value: string) {
+    this._keyVaultKeyId = value;
+  }
+  public resetKeyVaultKeyId() {
+    this._keyVaultKeyId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultKeyIdInput() {
+    return this._keyVaultKeyId;
+  }
+
+  // key_vault_managed_identity_id - computed: false, optional: true, required: false
+  private _keyVaultManagedIdentityId?: string; 
+  public get keyVaultManagedIdentityId() {
+    return this.getStringAttribute('key_vault_managed_identity_id');
+  }
+  public set keyVaultManagedIdentityId(value: string) {
+    this._keyVaultManagedIdentityId = value;
+  }
+  public resetKeyVaultManagedIdentityId() {
+    this._keyVaultManagedIdentityId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultManagedIdentityIdInput() {
+    return this._keyVaultManagedIdentityId;
+  }
+}
+
+export class HdinsightKafkaClusterDiskEncryptionList extends cdktf.ComplexList {
+  public internalValue? : HdinsightKafkaClusterDiskEncryption[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): HdinsightKafkaClusterDiskEncryptionOutputReference {
+    return new HdinsightKafkaClusterDiskEncryptionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface HdinsightKafkaClusterGateway {
@@ -2716,7 +2900,7 @@ export class HdinsightKafkaCluster extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_hdinsight_kafka_cluster',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.20.0',
+        providerVersion: '3.21.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -2737,6 +2921,7 @@ export class HdinsightKafkaCluster extends cdktf.TerraformResource {
     this._tier = config.tier;
     this._tlsMinVersion = config.tlsMinVersion;
     this._componentVersion.internalValue = config.componentVersion;
+    this._diskEncryption.internalValue = config.diskEncryption;
     this._gateway.internalValue = config.gateway;
     this._metastores.internalValue = config.metastores;
     this._monitor.internalValue = config.monitor;
@@ -2910,6 +3095,22 @@ export class HdinsightKafkaCluster extends cdktf.TerraformResource {
     return this._componentVersion.internalValue;
   }
 
+  // disk_encryption - computed: false, optional: true, required: false
+  private _diskEncryption = new HdinsightKafkaClusterDiskEncryptionList(this, "disk_encryption", false);
+  public get diskEncryption() {
+    return this._diskEncryption;
+  }
+  public putDiskEncryption(value: HdinsightKafkaClusterDiskEncryption[] | cdktf.IResolvable) {
+    this._diskEncryption.internalValue = value;
+  }
+  public resetDiskEncryption() {
+    this._diskEncryption.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get diskEncryptionInput() {
+    return this._diskEncryption.internalValue;
+  }
+
   // gateway - computed: false, optional: false, required: true
   private _gateway = new HdinsightKafkaClusterGatewayOutputReference(this, "gateway");
   public get gateway() {
@@ -3080,6 +3281,7 @@ export class HdinsightKafkaCluster extends cdktf.TerraformResource {
       tier: cdktf.stringToTerraform(this._tier),
       tls_min_version: cdktf.stringToTerraform(this._tlsMinVersion),
       component_version: hdinsightKafkaClusterComponentVersionToTerraform(this._componentVersion.internalValue),
+      disk_encryption: cdktf.listMapper(hdinsightKafkaClusterDiskEncryptionToTerraform, true)(this._diskEncryption.internalValue),
       gateway: hdinsightKafkaClusterGatewayToTerraform(this._gateway.internalValue),
       metastores: hdinsightKafkaClusterMetastoresToTerraform(this._metastores.internalValue),
       monitor: hdinsightKafkaClusterMonitorToTerraform(this._monitor.internalValue),

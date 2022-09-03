@@ -27,9 +27,17 @@ export interface ServicebusNamespaceConfig extends cdktf.TerraformMetaArguments 
   */
   readonly location: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace#minimum_tls_version ServicebusNamespace#minimum_tls_version}
+  */
+  readonly minimumTlsVersion?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace#name ServicebusNamespace#name}
   */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace#public_network_access_enabled ServicebusNamespace#public_network_access_enabled}
+  */
+  readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace#resource_group_name ServicebusNamespace#resource_group_name}
   */
@@ -460,7 +468,7 @@ export class ServicebusNamespace extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_servicebus_namespace',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.20.0',
+        providerVersion: '3.21.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -475,7 +483,9 @@ export class ServicebusNamespace extends cdktf.TerraformResource {
     this._id = config.id;
     this._localAuthEnabled = config.localAuthEnabled;
     this._location = config.location;
+    this._minimumTlsVersion = config.minimumTlsVersion;
     this._name = config.name;
+    this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
     this._resourceGroupName = config.resourceGroupName;
     this._sku = config.sku;
     this._tags = config.tags;
@@ -570,6 +580,22 @@ export class ServicebusNamespace extends cdktf.TerraformResource {
     return this._location;
   }
 
+  // minimum_tls_version - computed: true, optional: true, required: false
+  private _minimumTlsVersion?: string; 
+  public get minimumTlsVersion() {
+    return this.getStringAttribute('minimum_tls_version');
+  }
+  public set minimumTlsVersion(value: string) {
+    this._minimumTlsVersion = value;
+  }
+  public resetMinimumTlsVersion() {
+    this._minimumTlsVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minimumTlsVersionInput() {
+    return this._minimumTlsVersion;
+  }
+
   // name - computed: false, optional: false, required: true
   private _name?: string; 
   public get name() {
@@ -581,6 +607,22 @@ export class ServicebusNamespace extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name;
+  }
+
+  // public_network_access_enabled - computed: false, optional: true, required: false
+  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable; 
+  public get publicNetworkAccessEnabled() {
+    return this.getBooleanAttribute('public_network_access_enabled');
+  }
+  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable) {
+    this._publicNetworkAccessEnabled = value;
+  }
+  public resetPublicNetworkAccessEnabled() {
+    this._publicNetworkAccessEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicNetworkAccessEnabledInput() {
+    return this._publicNetworkAccessEnabled;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -699,7 +741,9 @@ export class ServicebusNamespace extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       local_auth_enabled: cdktf.booleanToTerraform(this._localAuthEnabled),
       location: cdktf.stringToTerraform(this._location),
+      minimum_tls_version: cdktf.stringToTerraform(this._minimumTlsVersion),
       name: cdktf.stringToTerraform(this._name),
+      public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku: cdktf.stringToTerraform(this._sku),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),

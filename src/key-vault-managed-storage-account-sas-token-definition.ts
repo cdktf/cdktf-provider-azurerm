@@ -228,7 +228,7 @@ export class KeyVaultManagedStorageAccountSasTokenDefinition extends cdktf.Terra
       terraformResourceType: 'azurerm_key_vault_managed_storage_account_sas_token_definition',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.20.0',
+        providerVersion: '3.21.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

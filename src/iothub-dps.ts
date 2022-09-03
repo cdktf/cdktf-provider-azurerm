@@ -12,6 +12,10 @@ export interface IothubDpsConfig extends cdktf.TerraformMetaArguments {
   */
   readonly allocationPolicy?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps#data_residency_enabled IothubDps#data_residency_enabled}
+  */
+  readonly dataResidencyEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps#id IothubDps#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
@@ -678,7 +682,7 @@ export class IothubDps extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_iothub_dps',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.20.0',
+        providerVersion: '3.21.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -690,6 +694,7 @@ export class IothubDps extends cdktf.TerraformResource {
       forEach: config.forEach
     });
     this._allocationPolicy = config.allocationPolicy;
+    this._dataResidencyEnabled = config.dataResidencyEnabled;
     this._id = config.id;
     this._location = config.location;
     this._name = config.name;
@@ -720,6 +725,22 @@ export class IothubDps extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get allocationPolicyInput() {
     return this._allocationPolicy;
+  }
+
+  // data_residency_enabled - computed: false, optional: true, required: false
+  private _dataResidencyEnabled?: boolean | cdktf.IResolvable; 
+  public get dataResidencyEnabled() {
+    return this.getBooleanAttribute('data_residency_enabled');
+  }
+  public set dataResidencyEnabled(value: boolean | cdktf.IResolvable) {
+    this._dataResidencyEnabled = value;
+  }
+  public resetDataResidencyEnabled() {
+    this._dataResidencyEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataResidencyEnabledInput() {
+    return this._dataResidencyEnabled;
   }
 
   // device_provisioning_host_name - computed: true, optional: false, required: false
@@ -892,6 +913,7 @@ export class IothubDps extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       allocation_policy: cdktf.stringToTerraform(this._allocationPolicy),
+      data_residency_enabled: cdktf.booleanToTerraform(this._dataResidencyEnabled),
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),

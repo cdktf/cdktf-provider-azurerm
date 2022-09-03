@@ -8,6 +8,10 @@ import * as cdktf from 'cdktf';
 
 export interface StreamAnalyticsOutputMssqlConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_mssql#authentication_mode StreamAnalyticsOutputMssql#authentication_mode}
+  */
+  readonly authenticationMode?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_mssql#database StreamAnalyticsOutputMssql#database}
   */
   readonly database: string;
@@ -244,7 +248,7 @@ export class StreamAnalyticsOutputMssql extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_stream_analytics_output_mssql',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.20.0',
+        providerVersion: '3.21.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -255,6 +259,7 @@ export class StreamAnalyticsOutputMssql extends cdktf.TerraformResource {
       connection: config.connection,
       forEach: config.forEach
     });
+    this._authenticationMode = config.authenticationMode;
     this._database = config.database;
     this._id = config.id;
     this._maxBatchCount = config.maxBatchCount;
@@ -272,6 +277,22 @@ export class StreamAnalyticsOutputMssql extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // authentication_mode - computed: false, optional: true, required: false
+  private _authenticationMode?: string; 
+  public get authenticationMode() {
+    return this.getStringAttribute('authentication_mode');
+  }
+  public set authenticationMode(value: string) {
+    this._authenticationMode = value;
+  }
+  public resetAuthenticationMode() {
+    this._authenticationMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get authenticationModeInput() {
+    return this._authenticationMode;
+  }
 
   // database - computed: false, optional: false, required: true
   private _database?: string; 
@@ -447,6 +468,7 @@ export class StreamAnalyticsOutputMssql extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      authentication_mode: cdktf.stringToTerraform(this._authenticationMode),
       database: cdktf.stringToTerraform(this._database),
       id: cdktf.stringToTerraform(this._id),
       max_batch_count: cdktf.numberToTerraform(this._maxBatchCount),

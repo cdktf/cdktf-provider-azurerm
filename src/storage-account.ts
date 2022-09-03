@@ -79,6 +79,10 @@ export interface StorageAccountConfig extends cdktf.TerraformMetaArguments {
   */
   readonly nfsv3Enabled?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account#public_network_access_enabled StorageAccount#public_network_access_enabled}
+  */
+  readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account#queue_encryption_key_type StorageAccount#queue_encryption_key_type}
   */
   readonly queueEncryptionKeyType?: string;
@@ -3290,7 +3294,7 @@ export class StorageAccount extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_storage_account',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.20.0',
+        providerVersion: '3.21.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -3318,6 +3322,7 @@ export class StorageAccount extends cdktf.TerraformResource {
     this._minTlsVersion = config.minTlsVersion;
     this._name = config.name;
     this._nfsv3Enabled = config.nfsv3Enabled;
+    this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
     this._queueEncryptionKeyType = config.queueEncryptionKeyType;
     this._resourceGroupName = config.resourceGroupName;
     this._sharedAccessKeyEnabled = config.sharedAccessKeyEnabled;
@@ -3680,6 +3685,22 @@ export class StorageAccount extends cdktf.TerraformResource {
     return this.getStringAttribute('primary_web_host');
   }
 
+  // public_network_access_enabled - computed: false, optional: true, required: false
+  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable; 
+  public get publicNetworkAccessEnabled() {
+    return this.getBooleanAttribute('public_network_access_enabled');
+  }
+  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable) {
+    this._publicNetworkAccessEnabled = value;
+  }
+  public resetPublicNetworkAccessEnabled() {
+    this._publicNetworkAccessEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicNetworkAccessEnabledInput() {
+    return this._publicNetworkAccessEnabled;
+  }
+
   // queue_encryption_key_type - computed: false, optional: true, required: false
   private _queueEncryptionKeyType?: string; 
   public get queueEncryptionKeyType() {
@@ -4036,6 +4057,7 @@ export class StorageAccount extends cdktf.TerraformResource {
       min_tls_version: cdktf.stringToTerraform(this._minTlsVersion),
       name: cdktf.stringToTerraform(this._name),
       nfsv3_enabled: cdktf.booleanToTerraform(this._nfsv3Enabled),
+      public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       queue_encryption_key_type: cdktf.stringToTerraform(this._queueEncryptionKeyType),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       shared_access_key_enabled: cdktf.booleanToTerraform(this._sharedAccessKeyEnabled),

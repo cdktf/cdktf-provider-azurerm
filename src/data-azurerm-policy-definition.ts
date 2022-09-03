@@ -135,7 +135,7 @@ export class DataAzurermPolicyDefinition extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_policy_definition',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.20.0',
+        providerVersion: '3.21.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -244,6 +244,11 @@ export class DataAzurermPolicyDefinition extends cdktf.TerraformDataSource {
   // policy_type - computed: true, optional: false, required: false
   public get policyType() {
     return this.getStringAttribute('policy_type');
+  }
+
+  // role_definition_ids - computed: true, optional: false, required: false
+  public get roleDefinitionIds() {
+    return this.getListAttribute('role_definition_ids');
   }
 
   // type - computed: true, optional: false, required: false

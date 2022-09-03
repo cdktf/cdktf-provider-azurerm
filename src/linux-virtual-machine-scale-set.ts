@@ -48,6 +48,10 @@ export interface LinuxVirtualMachineScaleSetConfig extends cdktf.TerraformMetaAr
   */
   readonly evictionPolicy?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#extension_operations_enabled LinuxVirtualMachineScaleSet#extension_operations_enabled}
+  */
+  readonly extensionOperationsEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#extensions_time_budget LinuxVirtualMachineScaleSet#extensions_time_budget}
   */
   readonly extensionsTimeBudget?: string;
@@ -55,6 +59,10 @@ export interface LinuxVirtualMachineScaleSetConfig extends cdktf.TerraformMetaAr
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#health_probe_id LinuxVirtualMachineScaleSet#health_probe_id}
   */
   readonly healthProbeId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#host_group_id LinuxVirtualMachineScaleSet#host_group_id}
+  */
+  readonly hostGroupId?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#id LinuxVirtualMachineScaleSet#id}
   *
@@ -189,6 +197,12 @@ export interface LinuxVirtualMachineScaleSetConfig extends cdktf.TerraformMetaAr
   */
   readonly extension?: LinuxVirtualMachineScaleSetExtension[] | cdktf.IResolvable;
   /**
+  * gallery_applications block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#gallery_applications LinuxVirtualMachineScaleSet#gallery_applications}
+  */
+  readonly galleryApplications?: LinuxVirtualMachineScaleSetGalleryApplications[] | cdktf.IResolvable;
+  /**
   * identity block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#identity LinuxVirtualMachineScaleSet#identity}
@@ -219,6 +233,12 @@ export interface LinuxVirtualMachineScaleSetConfig extends cdktf.TerraformMetaAr
   */
   readonly rollingUpgradePolicy?: LinuxVirtualMachineScaleSetRollingUpgradePolicy;
   /**
+  * scale_in block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#scale_in LinuxVirtualMachineScaleSet#scale_in}
+  */
+  readonly scaleIn?: LinuxVirtualMachineScaleSetScaleIn;
+  /**
   * secret block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#secret LinuxVirtualMachineScaleSet#secret}
@@ -230,6 +250,12 @@ export interface LinuxVirtualMachineScaleSetConfig extends cdktf.TerraformMetaAr
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#source_image_reference LinuxVirtualMachineScaleSet#source_image_reference}
   */
   readonly sourceImageReference?: LinuxVirtualMachineScaleSetSourceImageReference;
+  /**
+  * spot_restore block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#spot_restore LinuxVirtualMachineScaleSet#spot_restore}
+  */
+  readonly spotRestore?: LinuxVirtualMachineScaleSetSpotRestore;
   /**
   * terminate_notification block
   * 
@@ -694,6 +720,10 @@ export interface LinuxVirtualMachineScaleSetDataDisk {
   */
   readonly lun: number;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#name LinuxVirtualMachineScaleSet#name}
+  */
+  readonly name?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#storage_account_type LinuxVirtualMachineScaleSet#storage_account_type}
   */
   readonly storageAccountType: string;
@@ -722,6 +752,7 @@ export function linuxVirtualMachineScaleSetDataDiskToTerraform(struct?: LinuxVir
     disk_encryption_set_id: cdktf.stringToTerraform(struct!.diskEncryptionSetId),
     disk_size_gb: cdktf.numberToTerraform(struct!.diskSizeGb),
     lun: cdktf.numberToTerraform(struct!.lun),
+    name: cdktf.stringToTerraform(struct!.name),
     storage_account_type: cdktf.stringToTerraform(struct!.storageAccountType),
     ultra_ssd_disk_iops_read_write: cdktf.numberToTerraform(struct!.ultraSsdDiskIopsReadWrite),
     ultra_ssd_disk_mbps_read_write: cdktf.numberToTerraform(struct!.ultraSsdDiskMbpsReadWrite),
@@ -769,6 +800,10 @@ export class LinuxVirtualMachineScaleSetDataDiskOutputReference extends cdktf.Co
       hasAnyValues = true;
       internalValueResult.lun = this._lun;
     }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
     if (this._storageAccountType !== undefined) {
       hasAnyValues = true;
       internalValueResult.storageAccountType = this._storageAccountType;
@@ -797,6 +832,7 @@ export class LinuxVirtualMachineScaleSetDataDiskOutputReference extends cdktf.Co
       this._diskEncryptionSetId = undefined;
       this._diskSizeGb = undefined;
       this._lun = undefined;
+      this._name = undefined;
       this._storageAccountType = undefined;
       this._ultraSsdDiskIopsReadWrite = undefined;
       this._ultraSsdDiskMbpsReadWrite = undefined;
@@ -814,6 +850,7 @@ export class LinuxVirtualMachineScaleSetDataDiskOutputReference extends cdktf.Co
       this._diskEncryptionSetId = value.diskEncryptionSetId;
       this._diskSizeGb = value.diskSizeGb;
       this._lun = value.lun;
+      this._name = value.name;
       this._storageAccountType = value.storageAccountType;
       this._ultraSsdDiskIopsReadWrite = value.ultraSsdDiskIopsReadWrite;
       this._ultraSsdDiskMbpsReadWrite = value.ultraSsdDiskMbpsReadWrite;
@@ -890,6 +927,22 @@ export class LinuxVirtualMachineScaleSetDataDiskOutputReference extends cdktf.Co
   // Temporarily expose input value. Use with caution.
   public get lunInput() {
     return this._lun;
+  }
+
+  // name - computed: false, optional: true, required: false
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
   }
 
   // storage_account_type - computed: false, optional: false, required: true
@@ -1301,6 +1354,181 @@ export class LinuxVirtualMachineScaleSetExtensionList extends cdktf.ComplexList 
     return new LinuxVirtualMachineScaleSetExtensionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface LinuxVirtualMachineScaleSetGalleryApplications {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#configuration_reference_blob_uri LinuxVirtualMachineScaleSet#configuration_reference_blob_uri}
+  */
+  readonly configurationReferenceBlobUri?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#order LinuxVirtualMachineScaleSet#order}
+  */
+  readonly order?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#package_reference_id LinuxVirtualMachineScaleSet#package_reference_id}
+  */
+  readonly packageReferenceId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#tag LinuxVirtualMachineScaleSet#tag}
+  */
+  readonly tag?: string;
+}
+
+export function linuxVirtualMachineScaleSetGalleryApplicationsToTerraform(struct?: LinuxVirtualMachineScaleSetGalleryApplications | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    configuration_reference_blob_uri: cdktf.stringToTerraform(struct!.configurationReferenceBlobUri),
+    order: cdktf.numberToTerraform(struct!.order),
+    package_reference_id: cdktf.stringToTerraform(struct!.packageReferenceId),
+    tag: cdktf.stringToTerraform(struct!.tag),
+  }
+}
+
+export class LinuxVirtualMachineScaleSetGalleryApplicationsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): LinuxVirtualMachineScaleSetGalleryApplications | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._configurationReferenceBlobUri !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.configurationReferenceBlobUri = this._configurationReferenceBlobUri;
+    }
+    if (this._order !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.order = this._order;
+    }
+    if (this._packageReferenceId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.packageReferenceId = this._packageReferenceId;
+    }
+    if (this._tag !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.tag = this._tag;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LinuxVirtualMachineScaleSetGalleryApplications | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._configurationReferenceBlobUri = undefined;
+      this._order = undefined;
+      this._packageReferenceId = undefined;
+      this._tag = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._configurationReferenceBlobUri = value.configurationReferenceBlobUri;
+      this._order = value.order;
+      this._packageReferenceId = value.packageReferenceId;
+      this._tag = value.tag;
+    }
+  }
+
+  // configuration_reference_blob_uri - computed: false, optional: true, required: false
+  private _configurationReferenceBlobUri?: string; 
+  public get configurationReferenceBlobUri() {
+    return this.getStringAttribute('configuration_reference_blob_uri');
+  }
+  public set configurationReferenceBlobUri(value: string) {
+    this._configurationReferenceBlobUri = value;
+  }
+  public resetConfigurationReferenceBlobUri() {
+    this._configurationReferenceBlobUri = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get configurationReferenceBlobUriInput() {
+    return this._configurationReferenceBlobUri;
+  }
+
+  // order - computed: false, optional: true, required: false
+  private _order?: number; 
+  public get order() {
+    return this.getNumberAttribute('order');
+  }
+  public set order(value: number) {
+    this._order = value;
+  }
+  public resetOrder() {
+    this._order = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get orderInput() {
+    return this._order;
+  }
+
+  // package_reference_id - computed: false, optional: false, required: true
+  private _packageReferenceId?: string; 
+  public get packageReferenceId() {
+    return this.getStringAttribute('package_reference_id');
+  }
+  public set packageReferenceId(value: string) {
+    this._packageReferenceId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get packageReferenceIdInput() {
+    return this._packageReferenceId;
+  }
+
+  // tag - computed: false, optional: true, required: false
+  private _tag?: string; 
+  public get tag() {
+    return this.getStringAttribute('tag');
+  }
+  public set tag(value: string) {
+    this._tag = value;
+  }
+  public resetTag() {
+    this._tag = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagInput() {
+    return this._tag;
+  }
+}
+
+export class LinuxVirtualMachineScaleSetGalleryApplicationsList extends cdktf.ComplexList {
+  public internalValue? : LinuxVirtualMachineScaleSetGalleryApplications[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): LinuxVirtualMachineScaleSetGalleryApplicationsOutputReference {
+    return new LinuxVirtualMachineScaleSetGalleryApplicationsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface LinuxVirtualMachineScaleSetIdentity {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#identity_ids LinuxVirtualMachineScaleSet#identity_ids}
@@ -1536,6 +1764,10 @@ export interface LinuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPubli
   */
   readonly publicIpPrefixId?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#version LinuxVirtualMachineScaleSet#version}
+  */
+  readonly version?: string;
+  /**
   * ip_tag block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#ip_tag LinuxVirtualMachineScaleSet#ip_tag}
@@ -1553,6 +1785,7 @@ export function linuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublic
     idle_timeout_in_minutes: cdktf.numberToTerraform(struct!.idleTimeoutInMinutes),
     name: cdktf.stringToTerraform(struct!.name),
     public_ip_prefix_id: cdktf.stringToTerraform(struct!.publicIpPrefixId),
+    version: cdktf.stringToTerraform(struct!.version),
     ip_tag: cdktf.listMapper(linuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTagToTerraform, true)(struct!.ipTag),
   }
 }
@@ -1593,6 +1826,10 @@ export class LinuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpA
       hasAnyValues = true;
       internalValueResult.publicIpPrefixId = this._publicIpPrefixId;
     }
+    if (this._version !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.version = this._version;
+    }
     if (this._ipTag?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.ipTag = this._ipTag?.internalValue;
@@ -1608,6 +1845,7 @@ export class LinuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpA
       this._idleTimeoutInMinutes = undefined;
       this._name = undefined;
       this._publicIpPrefixId = undefined;
+      this._version = undefined;
       this._ipTag.internalValue = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
@@ -1621,6 +1859,7 @@ export class LinuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpA
       this._idleTimeoutInMinutes = value.idleTimeoutInMinutes;
       this._name = value.name;
       this._publicIpPrefixId = value.publicIpPrefixId;
+      this._version = value.version;
       this._ipTag.internalValue = value.ipTag;
     }
   }
@@ -1684,6 +1923,22 @@ export class LinuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpA
   // Temporarily expose input value. Use with caution.
   public get publicIpPrefixIdInput() {
     return this._publicIpPrefixId;
+  }
+
+  // version - computed: false, optional: true, required: false
+  private _version?: string; 
+  public get version() {
+    return this.getStringAttribute('version');
+  }
+  public set version(value: string) {
+    this._version = value;
+  }
+  public resetVersion() {
+    this._version = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get versionInput() {
+    return this._version;
   }
 
   // ip_tag - computed: false, optional: true, required: false
@@ -2740,6 +2995,10 @@ export class LinuxVirtualMachineScaleSetPlanOutputReference extends cdktf.Comple
 }
 export interface LinuxVirtualMachineScaleSetRollingUpgradePolicy {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#cross_zone_upgrades_enabled LinuxVirtualMachineScaleSet#cross_zone_upgrades_enabled}
+  */
+  readonly crossZoneUpgradesEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#max_batch_instance_percent LinuxVirtualMachineScaleSet#max_batch_instance_percent}
   */
   readonly maxBatchInstancePercent: number;
@@ -2755,6 +3014,10 @@ export interface LinuxVirtualMachineScaleSetRollingUpgradePolicy {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#pause_time_between_batches LinuxVirtualMachineScaleSet#pause_time_between_batches}
   */
   readonly pauseTimeBetweenBatches: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#prioritize_unhealthy_instances_enabled LinuxVirtualMachineScaleSet#prioritize_unhealthy_instances_enabled}
+  */
+  readonly prioritizeUnhealthyInstancesEnabled?: boolean | cdktf.IResolvable;
 }
 
 export function linuxVirtualMachineScaleSetRollingUpgradePolicyToTerraform(struct?: LinuxVirtualMachineScaleSetRollingUpgradePolicyOutputReference | LinuxVirtualMachineScaleSetRollingUpgradePolicy): any {
@@ -2763,10 +3026,12 @@ export function linuxVirtualMachineScaleSetRollingUpgradePolicyToTerraform(struc
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    cross_zone_upgrades_enabled: cdktf.booleanToTerraform(struct!.crossZoneUpgradesEnabled),
     max_batch_instance_percent: cdktf.numberToTerraform(struct!.maxBatchInstancePercent),
     max_unhealthy_instance_percent: cdktf.numberToTerraform(struct!.maxUnhealthyInstancePercent),
     max_unhealthy_upgraded_instance_percent: cdktf.numberToTerraform(struct!.maxUnhealthyUpgradedInstancePercent),
     pause_time_between_batches: cdktf.stringToTerraform(struct!.pauseTimeBetweenBatches),
+    prioritize_unhealthy_instances_enabled: cdktf.booleanToTerraform(struct!.prioritizeUnhealthyInstancesEnabled),
   }
 }
 
@@ -2784,6 +3049,10 @@ export class LinuxVirtualMachineScaleSetRollingUpgradePolicyOutputReference exte
   public get internalValue(): LinuxVirtualMachineScaleSetRollingUpgradePolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._crossZoneUpgradesEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.crossZoneUpgradesEnabled = this._crossZoneUpgradesEnabled;
+    }
     if (this._maxBatchInstancePercent !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxBatchInstancePercent = this._maxBatchInstancePercent;
@@ -2800,24 +3069,48 @@ export class LinuxVirtualMachineScaleSetRollingUpgradePolicyOutputReference exte
       hasAnyValues = true;
       internalValueResult.pauseTimeBetweenBatches = this._pauseTimeBetweenBatches;
     }
+    if (this._prioritizeUnhealthyInstancesEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.prioritizeUnhealthyInstancesEnabled = this._prioritizeUnhealthyInstancesEnabled;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
   public set internalValue(value: LinuxVirtualMachineScaleSetRollingUpgradePolicy | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this._crossZoneUpgradesEnabled = undefined;
       this._maxBatchInstancePercent = undefined;
       this._maxUnhealthyInstancePercent = undefined;
       this._maxUnhealthyUpgradedInstancePercent = undefined;
       this._pauseTimeBetweenBatches = undefined;
+      this._prioritizeUnhealthyInstancesEnabled = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this._crossZoneUpgradesEnabled = value.crossZoneUpgradesEnabled;
       this._maxBatchInstancePercent = value.maxBatchInstancePercent;
       this._maxUnhealthyInstancePercent = value.maxUnhealthyInstancePercent;
       this._maxUnhealthyUpgradedInstancePercent = value.maxUnhealthyUpgradedInstancePercent;
       this._pauseTimeBetweenBatches = value.pauseTimeBetweenBatches;
+      this._prioritizeUnhealthyInstancesEnabled = value.prioritizeUnhealthyInstancesEnabled;
     }
+  }
+
+  // cross_zone_upgrades_enabled - computed: false, optional: true, required: false
+  private _crossZoneUpgradesEnabled?: boolean | cdktf.IResolvable; 
+  public get crossZoneUpgradesEnabled() {
+    return this.getBooleanAttribute('cross_zone_upgrades_enabled');
+  }
+  public set crossZoneUpgradesEnabled(value: boolean | cdktf.IResolvable) {
+    this._crossZoneUpgradesEnabled = value;
+  }
+  public resetCrossZoneUpgradesEnabled() {
+    this._crossZoneUpgradesEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get crossZoneUpgradesEnabledInput() {
+    return this._crossZoneUpgradesEnabled;
   }
 
   // max_batch_instance_percent - computed: false, optional: false, required: true
@@ -2870,6 +3163,114 @@ export class LinuxVirtualMachineScaleSetRollingUpgradePolicyOutputReference exte
   // Temporarily expose input value. Use with caution.
   public get pauseTimeBetweenBatchesInput() {
     return this._pauseTimeBetweenBatches;
+  }
+
+  // prioritize_unhealthy_instances_enabled - computed: false, optional: true, required: false
+  private _prioritizeUnhealthyInstancesEnabled?: boolean | cdktf.IResolvable; 
+  public get prioritizeUnhealthyInstancesEnabled() {
+    return this.getBooleanAttribute('prioritize_unhealthy_instances_enabled');
+  }
+  public set prioritizeUnhealthyInstancesEnabled(value: boolean | cdktf.IResolvable) {
+    this._prioritizeUnhealthyInstancesEnabled = value;
+  }
+  public resetPrioritizeUnhealthyInstancesEnabled() {
+    this._prioritizeUnhealthyInstancesEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get prioritizeUnhealthyInstancesEnabledInput() {
+    return this._prioritizeUnhealthyInstancesEnabled;
+  }
+}
+export interface LinuxVirtualMachineScaleSetScaleIn {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#force_deletion_enabled LinuxVirtualMachineScaleSet#force_deletion_enabled}
+  */
+  readonly forceDeletionEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#rule LinuxVirtualMachineScaleSet#rule}
+  */
+  readonly rule?: string;
+}
+
+export function linuxVirtualMachineScaleSetScaleInToTerraform(struct?: LinuxVirtualMachineScaleSetScaleInOutputReference | LinuxVirtualMachineScaleSetScaleIn): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    force_deletion_enabled: cdktf.booleanToTerraform(struct!.forceDeletionEnabled),
+    rule: cdktf.stringToTerraform(struct!.rule),
+  }
+}
+
+export class LinuxVirtualMachineScaleSetScaleInOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): LinuxVirtualMachineScaleSetScaleIn | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._forceDeletionEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.forceDeletionEnabled = this._forceDeletionEnabled;
+    }
+    if (this._rule !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rule = this._rule;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LinuxVirtualMachineScaleSetScaleIn | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._forceDeletionEnabled = undefined;
+      this._rule = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._forceDeletionEnabled = value.forceDeletionEnabled;
+      this._rule = value.rule;
+    }
+  }
+
+  // force_deletion_enabled - computed: false, optional: true, required: false
+  private _forceDeletionEnabled?: boolean | cdktf.IResolvable; 
+  public get forceDeletionEnabled() {
+    return this.getBooleanAttribute('force_deletion_enabled');
+  }
+  public set forceDeletionEnabled(value: boolean | cdktf.IResolvable) {
+    this._forceDeletionEnabled = value;
+  }
+  public resetForceDeletionEnabled() {
+    this._forceDeletionEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get forceDeletionEnabledInput() {
+    return this._forceDeletionEnabled;
+  }
+
+  // rule - computed: false, optional: true, required: false
+  private _rule?: string; 
+  public get rule() {
+    return this.getStringAttribute('rule');
+  }
+  public set rule(value: string) {
+    this._rule = value;
+  }
+  public resetRule() {
+    this._rule = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ruleInput() {
+    return this._rule;
   }
 }
 export interface LinuxVirtualMachineScaleSetSecretCertificate {
@@ -3218,6 +3619,98 @@ export class LinuxVirtualMachineScaleSetSourceImageReferenceOutputReference exte
   // Temporarily expose input value. Use with caution.
   public get versionInput() {
     return this._version;
+  }
+}
+export interface LinuxVirtualMachineScaleSetSpotRestore {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#enabled LinuxVirtualMachineScaleSet#enabled}
+  */
+  readonly enabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set#timeout LinuxVirtualMachineScaleSet#timeout}
+  */
+  readonly timeout?: string;
+}
+
+export function linuxVirtualMachineScaleSetSpotRestoreToTerraform(struct?: LinuxVirtualMachineScaleSetSpotRestoreOutputReference | LinuxVirtualMachineScaleSetSpotRestore): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    timeout: cdktf.stringToTerraform(struct!.timeout),
+  }
+}
+
+export class LinuxVirtualMachineScaleSetSpotRestoreOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): LinuxVirtualMachineScaleSetSpotRestore | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._enabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._timeout !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.timeout = this._timeout;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LinuxVirtualMachineScaleSetSpotRestore | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._enabled = undefined;
+      this._timeout = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._enabled = value.enabled;
+      this._timeout = value.timeout;
+    }
+  }
+
+  // enabled - computed: false, optional: true, required: false
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+
+  // timeout - computed: false, optional: true, required: false
+  private _timeout?: string; 
+  public get timeout() {
+    return this.getStringAttribute('timeout');
+  }
+  public set timeout(value: string) {
+    this._timeout = value;
+  }
+  public resetTimeout() {
+    this._timeout = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutInput() {
+    return this._timeout;
   }
 }
 export interface LinuxVirtualMachineScaleSetTerminateNotification {
@@ -3581,7 +4074,7 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_linux_virtual_machine_scale_set',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.20.0',
+        providerVersion: '3.21.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -3602,8 +4095,10 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
     this._edgeZone = config.edgeZone;
     this._encryptionAtHostEnabled = config.encryptionAtHostEnabled;
     this._evictionPolicy = config.evictionPolicy;
+    this._extensionOperationsEnabled = config.extensionOperationsEnabled;
     this._extensionsTimeBudget = config.extensionsTimeBudget;
     this._healthProbeId = config.healthProbeId;
+    this._hostGroupId = config.hostGroupId;
     this._id = config.id;
     this._instances = config.instances;
     this._location = config.location;
@@ -3633,13 +4128,16 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
     this._bootDiagnostics.internalValue = config.bootDiagnostics;
     this._dataDisk.internalValue = config.dataDisk;
     this._extension.internalValue = config.extension;
+    this._galleryApplications.internalValue = config.galleryApplications;
     this._identity.internalValue = config.identity;
     this._networkInterface.internalValue = config.networkInterface;
     this._osDisk.internalValue = config.osDisk;
     this._plan.internalValue = config.plan;
     this._rollingUpgradePolicy.internalValue = config.rollingUpgradePolicy;
+    this._scaleIn.internalValue = config.scaleIn;
     this._secret.internalValue = config.secret;
     this._sourceImageReference.internalValue = config.sourceImageReference;
+    this._spotRestore.internalValue = config.spotRestore;
     this._terminateNotification.internalValue = config.terminateNotification;
     this._terminationNotification.internalValue = config.terminationNotification;
     this._timeouts.internalValue = config.timeouts;
@@ -3806,6 +4304,22 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
     return this._evictionPolicy;
   }
 
+  // extension_operations_enabled - computed: true, optional: true, required: false
+  private _extensionOperationsEnabled?: boolean | cdktf.IResolvable; 
+  public get extensionOperationsEnabled() {
+    return this.getBooleanAttribute('extension_operations_enabled');
+  }
+  public set extensionOperationsEnabled(value: boolean | cdktf.IResolvable) {
+    this._extensionOperationsEnabled = value;
+  }
+  public resetExtensionOperationsEnabled() {
+    this._extensionOperationsEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get extensionOperationsEnabledInput() {
+    return this._extensionOperationsEnabled;
+  }
+
   // extensions_time_budget - computed: false, optional: true, required: false
   private _extensionsTimeBudget?: string; 
   public get extensionsTimeBudget() {
@@ -3836,6 +4350,22 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get healthProbeIdInput() {
     return this._healthProbeId;
+  }
+
+  // host_group_id - computed: false, optional: true, required: false
+  private _hostGroupId?: string; 
+  public get hostGroupId() {
+    return this.getStringAttribute('host_group_id');
+  }
+  public set hostGroupId(value: string) {
+    this._hostGroupId = value;
+  }
+  public resetHostGroupId() {
+    this._hostGroupId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hostGroupIdInput() {
+    return this._hostGroupId;
   }
 
   // id - computed: true, optional: true, required: false
@@ -4005,7 +4535,7 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
     return this._resourceGroupName;
   }
 
-  // scale_in_policy - computed: false, optional: true, required: false
+  // scale_in_policy - computed: true, optional: true, required: false
   private _scaleInPolicy?: string; 
   public get scaleInPolicy() {
     return this.getStringAttribute('scale_in_policy');
@@ -4295,6 +4825,22 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
     return this._extension.internalValue;
   }
 
+  // gallery_applications - computed: false, optional: true, required: false
+  private _galleryApplications = new LinuxVirtualMachineScaleSetGalleryApplicationsList(this, "gallery_applications", false);
+  public get galleryApplications() {
+    return this._galleryApplications;
+  }
+  public putGalleryApplications(value: LinuxVirtualMachineScaleSetGalleryApplications[] | cdktf.IResolvable) {
+    this._galleryApplications.internalValue = value;
+  }
+  public resetGalleryApplications() {
+    this._galleryApplications.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get galleryApplicationsInput() {
+    return this._galleryApplications.internalValue;
+  }
+
   // identity - computed: false, optional: true, required: false
   private _identity = new LinuxVirtualMachineScaleSetIdentityOutputReference(this, "identity");
   public get identity() {
@@ -4369,6 +4915,22 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
     return this._rollingUpgradePolicy.internalValue;
   }
 
+  // scale_in - computed: false, optional: true, required: false
+  private _scaleIn = new LinuxVirtualMachineScaleSetScaleInOutputReference(this, "scale_in");
+  public get scaleIn() {
+    return this._scaleIn;
+  }
+  public putScaleIn(value: LinuxVirtualMachineScaleSetScaleIn) {
+    this._scaleIn.internalValue = value;
+  }
+  public resetScaleIn() {
+    this._scaleIn.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scaleInInput() {
+    return this._scaleIn.internalValue;
+  }
+
   // secret - computed: false, optional: true, required: false
   private _secret = new LinuxVirtualMachineScaleSetSecretList(this, "secret", false);
   public get secret() {
@@ -4399,6 +4961,22 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get sourceImageReferenceInput() {
     return this._sourceImageReference.internalValue;
+  }
+
+  // spot_restore - computed: false, optional: true, required: false
+  private _spotRestore = new LinuxVirtualMachineScaleSetSpotRestoreOutputReference(this, "spot_restore");
+  public get spotRestore() {
+    return this._spotRestore;
+  }
+  public putSpotRestore(value: LinuxVirtualMachineScaleSetSpotRestore) {
+    this._spotRestore.internalValue = value;
+  }
+  public resetSpotRestore() {
+    this._spotRestore.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get spotRestoreInput() {
+    return this._spotRestore.internalValue;
   }
 
   // terminate_notification - computed: false, optional: true, required: false
@@ -4465,8 +5043,10 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
       edge_zone: cdktf.stringToTerraform(this._edgeZone),
       encryption_at_host_enabled: cdktf.booleanToTerraform(this._encryptionAtHostEnabled),
       eviction_policy: cdktf.stringToTerraform(this._evictionPolicy),
+      extension_operations_enabled: cdktf.booleanToTerraform(this._extensionOperationsEnabled),
       extensions_time_budget: cdktf.stringToTerraform(this._extensionsTimeBudget),
       health_probe_id: cdktf.stringToTerraform(this._healthProbeId),
+      host_group_id: cdktf.stringToTerraform(this._hostGroupId),
       id: cdktf.stringToTerraform(this._id),
       instances: cdktf.numberToTerraform(this._instances),
       location: cdktf.stringToTerraform(this._location),
@@ -4496,13 +5076,16 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
       boot_diagnostics: linuxVirtualMachineScaleSetBootDiagnosticsToTerraform(this._bootDiagnostics.internalValue),
       data_disk: cdktf.listMapper(linuxVirtualMachineScaleSetDataDiskToTerraform, true)(this._dataDisk.internalValue),
       extension: cdktf.listMapper(linuxVirtualMachineScaleSetExtensionToTerraform, true)(this._extension.internalValue),
+      gallery_applications: cdktf.listMapper(linuxVirtualMachineScaleSetGalleryApplicationsToTerraform, true)(this._galleryApplications.internalValue),
       identity: linuxVirtualMachineScaleSetIdentityToTerraform(this._identity.internalValue),
       network_interface: cdktf.listMapper(linuxVirtualMachineScaleSetNetworkInterfaceToTerraform, true)(this._networkInterface.internalValue),
       os_disk: linuxVirtualMachineScaleSetOsDiskToTerraform(this._osDisk.internalValue),
       plan: linuxVirtualMachineScaleSetPlanToTerraform(this._plan.internalValue),
       rolling_upgrade_policy: linuxVirtualMachineScaleSetRollingUpgradePolicyToTerraform(this._rollingUpgradePolicy.internalValue),
+      scale_in: linuxVirtualMachineScaleSetScaleInToTerraform(this._scaleIn.internalValue),
       secret: cdktf.listMapper(linuxVirtualMachineScaleSetSecretToTerraform, true)(this._secret.internalValue),
       source_image_reference: linuxVirtualMachineScaleSetSourceImageReferenceToTerraform(this._sourceImageReference.internalValue),
+      spot_restore: linuxVirtualMachineScaleSetSpotRestoreToTerraform(this._spotRestore.internalValue),
       terminate_notification: linuxVirtualMachineScaleSetTerminateNotificationToTerraform(this._terminateNotification.internalValue),
       termination_notification: linuxVirtualMachineScaleSetTerminationNotificationToTerraform(this._terminationNotification.internalValue),
       timeouts: linuxVirtualMachineScaleSetTimeoutsToTerraform(this._timeouts.internalValue),
