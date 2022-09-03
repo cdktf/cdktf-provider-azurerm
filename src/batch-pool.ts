@@ -81,6 +81,12 @@ export interface BatchPoolConfig extends cdktf.TerraformMetaArguments {
   */
   readonly identity?: BatchPoolIdentity;
   /**
+  * mount block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#mount BatchPool#mount}
+  */
+  readonly mount?: BatchPoolMount[] | cdktf.IResolvable;
+  /**
   * network_configuration block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#network_configuration BatchPool#network_configuration}
@@ -869,6 +875,941 @@ export class BatchPoolIdentityOutputReference extends cdktf.ComplexObject {
   // Temporarily expose input value. Use with caution.
   public get typeInput() {
     return this._type;
+  }
+}
+export interface BatchPoolMountAzureBlobFileSystem {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#account_key BatchPool#account_key}
+  */
+  readonly accountKey?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#account_name BatchPool#account_name}
+  */
+  readonly accountName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#blobfuse_options BatchPool#blobfuse_options}
+  */
+  readonly blobfuseOptions?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#container_name BatchPool#container_name}
+  */
+  readonly containerName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#identity_id BatchPool#identity_id}
+  */
+  readonly identityId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#relative_mount_path BatchPool#relative_mount_path}
+  */
+  readonly relativeMountPath: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#sas_key BatchPool#sas_key}
+  */
+  readonly sasKey?: string;
+}
+
+export function batchPoolMountAzureBlobFileSystemToTerraform(struct?: BatchPoolMountAzureBlobFileSystemOutputReference | BatchPoolMountAzureBlobFileSystem): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    account_key: cdktf.stringToTerraform(struct!.accountKey),
+    account_name: cdktf.stringToTerraform(struct!.accountName),
+    blobfuse_options: cdktf.stringToTerraform(struct!.blobfuseOptions),
+    container_name: cdktf.stringToTerraform(struct!.containerName),
+    identity_id: cdktf.stringToTerraform(struct!.identityId),
+    relative_mount_path: cdktf.stringToTerraform(struct!.relativeMountPath),
+    sas_key: cdktf.stringToTerraform(struct!.sasKey),
+  }
+}
+
+export class BatchPoolMountAzureBlobFileSystemOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): BatchPoolMountAzureBlobFileSystem | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._accountKey !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.accountKey = this._accountKey;
+    }
+    if (this._accountName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.accountName = this._accountName;
+    }
+    if (this._blobfuseOptions !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.blobfuseOptions = this._blobfuseOptions;
+    }
+    if (this._containerName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.containerName = this._containerName;
+    }
+    if (this._identityId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.identityId = this._identityId;
+    }
+    if (this._relativeMountPath !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.relativeMountPath = this._relativeMountPath;
+    }
+    if (this._sasKey !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sasKey = this._sasKey;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BatchPoolMountAzureBlobFileSystem | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._accountKey = undefined;
+      this._accountName = undefined;
+      this._blobfuseOptions = undefined;
+      this._containerName = undefined;
+      this._identityId = undefined;
+      this._relativeMountPath = undefined;
+      this._sasKey = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._accountKey = value.accountKey;
+      this._accountName = value.accountName;
+      this._blobfuseOptions = value.blobfuseOptions;
+      this._containerName = value.containerName;
+      this._identityId = value.identityId;
+      this._relativeMountPath = value.relativeMountPath;
+      this._sasKey = value.sasKey;
+    }
+  }
+
+  // account_key - computed: false, optional: true, required: false
+  private _accountKey?: string; 
+  public get accountKey() {
+    return this.getStringAttribute('account_key');
+  }
+  public set accountKey(value: string) {
+    this._accountKey = value;
+  }
+  public resetAccountKey() {
+    this._accountKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get accountKeyInput() {
+    return this._accountKey;
+  }
+
+  // account_name - computed: false, optional: false, required: true
+  private _accountName?: string; 
+  public get accountName() {
+    return this.getStringAttribute('account_name');
+  }
+  public set accountName(value: string) {
+    this._accountName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get accountNameInput() {
+    return this._accountName;
+  }
+
+  // blobfuse_options - computed: false, optional: true, required: false
+  private _blobfuseOptions?: string; 
+  public get blobfuseOptions() {
+    return this.getStringAttribute('blobfuse_options');
+  }
+  public set blobfuseOptions(value: string) {
+    this._blobfuseOptions = value;
+  }
+  public resetBlobfuseOptions() {
+    this._blobfuseOptions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get blobfuseOptionsInput() {
+    return this._blobfuseOptions;
+  }
+
+  // container_name - computed: false, optional: false, required: true
+  private _containerName?: string; 
+  public get containerName() {
+    return this.getStringAttribute('container_name');
+  }
+  public set containerName(value: string) {
+    this._containerName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get containerNameInput() {
+    return this._containerName;
+  }
+
+  // identity_id - computed: false, optional: true, required: false
+  private _identityId?: string; 
+  public get identityId() {
+    return this.getStringAttribute('identity_id');
+  }
+  public set identityId(value: string) {
+    this._identityId = value;
+  }
+  public resetIdentityId() {
+    this._identityId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityIdInput() {
+    return this._identityId;
+  }
+
+  // relative_mount_path - computed: false, optional: false, required: true
+  private _relativeMountPath?: string; 
+  public get relativeMountPath() {
+    return this.getStringAttribute('relative_mount_path');
+  }
+  public set relativeMountPath(value: string) {
+    this._relativeMountPath = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get relativeMountPathInput() {
+    return this._relativeMountPath;
+  }
+
+  // sas_key - computed: false, optional: true, required: false
+  private _sasKey?: string; 
+  public get sasKey() {
+    return this.getStringAttribute('sas_key');
+  }
+  public set sasKey(value: string) {
+    this._sasKey = value;
+  }
+  public resetSasKey() {
+    this._sasKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sasKeyInput() {
+    return this._sasKey;
+  }
+}
+export interface BatchPoolMountAzureFileShare {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#account_key BatchPool#account_key}
+  */
+  readonly accountKey: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#account_name BatchPool#account_name}
+  */
+  readonly accountName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#azure_file_url BatchPool#azure_file_url}
+  */
+  readonly azureFileUrl: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#mount_options BatchPool#mount_options}
+  */
+  readonly mountOptions?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#relative_mount_path BatchPool#relative_mount_path}
+  */
+  readonly relativeMountPath: string;
+}
+
+export function batchPoolMountAzureFileShareToTerraform(struct?: BatchPoolMountAzureFileShare | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    account_key: cdktf.stringToTerraform(struct!.accountKey),
+    account_name: cdktf.stringToTerraform(struct!.accountName),
+    azure_file_url: cdktf.stringToTerraform(struct!.azureFileUrl),
+    mount_options: cdktf.stringToTerraform(struct!.mountOptions),
+    relative_mount_path: cdktf.stringToTerraform(struct!.relativeMountPath),
+  }
+}
+
+export class BatchPoolMountAzureFileShareOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): BatchPoolMountAzureFileShare | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._accountKey !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.accountKey = this._accountKey;
+    }
+    if (this._accountName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.accountName = this._accountName;
+    }
+    if (this._azureFileUrl !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.azureFileUrl = this._azureFileUrl;
+    }
+    if (this._mountOptions !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.mountOptions = this._mountOptions;
+    }
+    if (this._relativeMountPath !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.relativeMountPath = this._relativeMountPath;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BatchPoolMountAzureFileShare | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._accountKey = undefined;
+      this._accountName = undefined;
+      this._azureFileUrl = undefined;
+      this._mountOptions = undefined;
+      this._relativeMountPath = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._accountKey = value.accountKey;
+      this._accountName = value.accountName;
+      this._azureFileUrl = value.azureFileUrl;
+      this._mountOptions = value.mountOptions;
+      this._relativeMountPath = value.relativeMountPath;
+    }
+  }
+
+  // account_key - computed: false, optional: false, required: true
+  private _accountKey?: string; 
+  public get accountKey() {
+    return this.getStringAttribute('account_key');
+  }
+  public set accountKey(value: string) {
+    this._accountKey = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get accountKeyInput() {
+    return this._accountKey;
+  }
+
+  // account_name - computed: false, optional: false, required: true
+  private _accountName?: string; 
+  public get accountName() {
+    return this.getStringAttribute('account_name');
+  }
+  public set accountName(value: string) {
+    this._accountName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get accountNameInput() {
+    return this._accountName;
+  }
+
+  // azure_file_url - computed: false, optional: false, required: true
+  private _azureFileUrl?: string; 
+  public get azureFileUrl() {
+    return this.getStringAttribute('azure_file_url');
+  }
+  public set azureFileUrl(value: string) {
+    this._azureFileUrl = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get azureFileUrlInput() {
+    return this._azureFileUrl;
+  }
+
+  // mount_options - computed: false, optional: true, required: false
+  private _mountOptions?: string; 
+  public get mountOptions() {
+    return this.getStringAttribute('mount_options');
+  }
+  public set mountOptions(value: string) {
+    this._mountOptions = value;
+  }
+  public resetMountOptions() {
+    this._mountOptions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get mountOptionsInput() {
+    return this._mountOptions;
+  }
+
+  // relative_mount_path - computed: false, optional: false, required: true
+  private _relativeMountPath?: string; 
+  public get relativeMountPath() {
+    return this.getStringAttribute('relative_mount_path');
+  }
+  public set relativeMountPath(value: string) {
+    this._relativeMountPath = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get relativeMountPathInput() {
+    return this._relativeMountPath;
+  }
+}
+
+export class BatchPoolMountAzureFileShareList extends cdktf.ComplexList {
+  public internalValue? : BatchPoolMountAzureFileShare[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): BatchPoolMountAzureFileShareOutputReference {
+    return new BatchPoolMountAzureFileShareOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface BatchPoolMountCifsMount {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#mount_options BatchPool#mount_options}
+  */
+  readonly mountOptions?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#password BatchPool#password}
+  */
+  readonly password: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#relative_mount_path BatchPool#relative_mount_path}
+  */
+  readonly relativeMountPath: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#source BatchPool#source}
+  */
+  readonly source: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#user_name BatchPool#user_name}
+  */
+  readonly userName: string;
+}
+
+export function batchPoolMountCifsMountToTerraform(struct?: BatchPoolMountCifsMount | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    mount_options: cdktf.stringToTerraform(struct!.mountOptions),
+    password: cdktf.stringToTerraform(struct!.password),
+    relative_mount_path: cdktf.stringToTerraform(struct!.relativeMountPath),
+    source: cdktf.stringToTerraform(struct!.source),
+    user_name: cdktf.stringToTerraform(struct!.userName),
+  }
+}
+
+export class BatchPoolMountCifsMountOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): BatchPoolMountCifsMount | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._mountOptions !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.mountOptions = this._mountOptions;
+    }
+    if (this._password !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.password = this._password;
+    }
+    if (this._relativeMountPath !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.relativeMountPath = this._relativeMountPath;
+    }
+    if (this._source !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.source = this._source;
+    }
+    if (this._userName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.userName = this._userName;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BatchPoolMountCifsMount | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._mountOptions = undefined;
+      this._password = undefined;
+      this._relativeMountPath = undefined;
+      this._source = undefined;
+      this._userName = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._mountOptions = value.mountOptions;
+      this._password = value.password;
+      this._relativeMountPath = value.relativeMountPath;
+      this._source = value.source;
+      this._userName = value.userName;
+    }
+  }
+
+  // mount_options - computed: false, optional: true, required: false
+  private _mountOptions?: string; 
+  public get mountOptions() {
+    return this.getStringAttribute('mount_options');
+  }
+  public set mountOptions(value: string) {
+    this._mountOptions = value;
+  }
+  public resetMountOptions() {
+    this._mountOptions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get mountOptionsInput() {
+    return this._mountOptions;
+  }
+
+  // password - computed: false, optional: false, required: true
+  private _password?: string; 
+  public get password() {
+    return this.getStringAttribute('password');
+  }
+  public set password(value: string) {
+    this._password = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get passwordInput() {
+    return this._password;
+  }
+
+  // relative_mount_path - computed: false, optional: false, required: true
+  private _relativeMountPath?: string; 
+  public get relativeMountPath() {
+    return this.getStringAttribute('relative_mount_path');
+  }
+  public set relativeMountPath(value: string) {
+    this._relativeMountPath = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get relativeMountPathInput() {
+    return this._relativeMountPath;
+  }
+
+  // source - computed: false, optional: false, required: true
+  private _source?: string; 
+  public get source() {
+    return this.getStringAttribute('source');
+  }
+  public set source(value: string) {
+    this._source = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceInput() {
+    return this._source;
+  }
+
+  // user_name - computed: false, optional: false, required: true
+  private _userName?: string; 
+  public get userName() {
+    return this.getStringAttribute('user_name');
+  }
+  public set userName(value: string) {
+    this._userName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userNameInput() {
+    return this._userName;
+  }
+}
+
+export class BatchPoolMountCifsMountList extends cdktf.ComplexList {
+  public internalValue? : BatchPoolMountCifsMount[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): BatchPoolMountCifsMountOutputReference {
+    return new BatchPoolMountCifsMountOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface BatchPoolMountNfsMount {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#mount_options BatchPool#mount_options}
+  */
+  readonly mountOptions?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#relative_mount_path BatchPool#relative_mount_path}
+  */
+  readonly relativeMountPath: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#source BatchPool#source}
+  */
+  readonly source: string;
+}
+
+export function batchPoolMountNfsMountToTerraform(struct?: BatchPoolMountNfsMount | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    mount_options: cdktf.stringToTerraform(struct!.mountOptions),
+    relative_mount_path: cdktf.stringToTerraform(struct!.relativeMountPath),
+    source: cdktf.stringToTerraform(struct!.source),
+  }
+}
+
+export class BatchPoolMountNfsMountOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): BatchPoolMountNfsMount | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._mountOptions !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.mountOptions = this._mountOptions;
+    }
+    if (this._relativeMountPath !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.relativeMountPath = this._relativeMountPath;
+    }
+    if (this._source !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.source = this._source;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BatchPoolMountNfsMount | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._mountOptions = undefined;
+      this._relativeMountPath = undefined;
+      this._source = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._mountOptions = value.mountOptions;
+      this._relativeMountPath = value.relativeMountPath;
+      this._source = value.source;
+    }
+  }
+
+  // mount_options - computed: false, optional: true, required: false
+  private _mountOptions?: string; 
+  public get mountOptions() {
+    return this.getStringAttribute('mount_options');
+  }
+  public set mountOptions(value: string) {
+    this._mountOptions = value;
+  }
+  public resetMountOptions() {
+    this._mountOptions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get mountOptionsInput() {
+    return this._mountOptions;
+  }
+
+  // relative_mount_path - computed: false, optional: false, required: true
+  private _relativeMountPath?: string; 
+  public get relativeMountPath() {
+    return this.getStringAttribute('relative_mount_path');
+  }
+  public set relativeMountPath(value: string) {
+    this._relativeMountPath = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get relativeMountPathInput() {
+    return this._relativeMountPath;
+  }
+
+  // source - computed: false, optional: false, required: true
+  private _source?: string; 
+  public get source() {
+    return this.getStringAttribute('source');
+  }
+  public set source(value: string) {
+    this._source = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceInput() {
+    return this._source;
+  }
+}
+
+export class BatchPoolMountNfsMountList extends cdktf.ComplexList {
+  public internalValue? : BatchPoolMountNfsMount[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): BatchPoolMountNfsMountOutputReference {
+    return new BatchPoolMountNfsMountOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface BatchPoolMount {
+  /**
+  * azure_blob_file_system block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#azure_blob_file_system BatchPool#azure_blob_file_system}
+  */
+  readonly azureBlobFileSystem?: BatchPoolMountAzureBlobFileSystem;
+  /**
+  * azure_file_share block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#azure_file_share BatchPool#azure_file_share}
+  */
+  readonly azureFileShare?: BatchPoolMountAzureFileShare[] | cdktf.IResolvable;
+  /**
+  * cifs_mount block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#cifs_mount BatchPool#cifs_mount}
+  */
+  readonly cifsMount?: BatchPoolMountCifsMount[] | cdktf.IResolvable;
+  /**
+  * nfs_mount block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool#nfs_mount BatchPool#nfs_mount}
+  */
+  readonly nfsMount?: BatchPoolMountNfsMount[] | cdktf.IResolvable;
+}
+
+export function batchPoolMountToTerraform(struct?: BatchPoolMount | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    azure_blob_file_system: batchPoolMountAzureBlobFileSystemToTerraform(struct!.azureBlobFileSystem),
+    azure_file_share: cdktf.listMapper(batchPoolMountAzureFileShareToTerraform, true)(struct!.azureFileShare),
+    cifs_mount: cdktf.listMapper(batchPoolMountCifsMountToTerraform, true)(struct!.cifsMount),
+    nfs_mount: cdktf.listMapper(batchPoolMountNfsMountToTerraform, true)(struct!.nfsMount),
+  }
+}
+
+export class BatchPoolMountOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): BatchPoolMount | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._azureBlobFileSystem?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.azureBlobFileSystem = this._azureBlobFileSystem?.internalValue;
+    }
+    if (this._azureFileShare?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.azureFileShare = this._azureFileShare?.internalValue;
+    }
+    if (this._cifsMount?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.cifsMount = this._cifsMount?.internalValue;
+    }
+    if (this._nfsMount?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.nfsMount = this._nfsMount?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BatchPoolMount | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._azureBlobFileSystem.internalValue = undefined;
+      this._azureFileShare.internalValue = undefined;
+      this._cifsMount.internalValue = undefined;
+      this._nfsMount.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._azureBlobFileSystem.internalValue = value.azureBlobFileSystem;
+      this._azureFileShare.internalValue = value.azureFileShare;
+      this._cifsMount.internalValue = value.cifsMount;
+      this._nfsMount.internalValue = value.nfsMount;
+    }
+  }
+
+  // azure_blob_file_system - computed: false, optional: true, required: false
+  private _azureBlobFileSystem = new BatchPoolMountAzureBlobFileSystemOutputReference(this, "azure_blob_file_system");
+  public get azureBlobFileSystem() {
+    return this._azureBlobFileSystem;
+  }
+  public putAzureBlobFileSystem(value: BatchPoolMountAzureBlobFileSystem) {
+    this._azureBlobFileSystem.internalValue = value;
+  }
+  public resetAzureBlobFileSystem() {
+    this._azureBlobFileSystem.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get azureBlobFileSystemInput() {
+    return this._azureBlobFileSystem.internalValue;
+  }
+
+  // azure_file_share - computed: false, optional: true, required: false
+  private _azureFileShare = new BatchPoolMountAzureFileShareList(this, "azure_file_share", false);
+  public get azureFileShare() {
+    return this._azureFileShare;
+  }
+  public putAzureFileShare(value: BatchPoolMountAzureFileShare[] | cdktf.IResolvable) {
+    this._azureFileShare.internalValue = value;
+  }
+  public resetAzureFileShare() {
+    this._azureFileShare.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get azureFileShareInput() {
+    return this._azureFileShare.internalValue;
+  }
+
+  // cifs_mount - computed: false, optional: true, required: false
+  private _cifsMount = new BatchPoolMountCifsMountList(this, "cifs_mount", false);
+  public get cifsMount() {
+    return this._cifsMount;
+  }
+  public putCifsMount(value: BatchPoolMountCifsMount[] | cdktf.IResolvable) {
+    this._cifsMount.internalValue = value;
+  }
+  public resetCifsMount() {
+    this._cifsMount.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cifsMountInput() {
+    return this._cifsMount.internalValue;
+  }
+
+  // nfs_mount - computed: false, optional: true, required: false
+  private _nfsMount = new BatchPoolMountNfsMountList(this, "nfs_mount", false);
+  public get nfsMount() {
+    return this._nfsMount;
+  }
+  public putNfsMount(value: BatchPoolMountNfsMount[] | cdktf.IResolvable) {
+    this._nfsMount.internalValue = value;
+  }
+  public resetNfsMount() {
+    this._nfsMount.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nfsMountInput() {
+    return this._nfsMount.internalValue;
+  }
+}
+
+export class BatchPoolMountList extends cdktf.ComplexList {
+  public internalValue? : BatchPoolMount[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): BatchPoolMountOutputReference {
+    return new BatchPoolMountOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules {
@@ -2328,7 +3269,7 @@ export class BatchPool extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_batch_pool',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.20.0',
+        providerVersion: '3.21.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -2354,6 +3295,7 @@ export class BatchPool extends cdktf.TerraformResource {
     this._containerConfiguration.internalValue = config.containerConfiguration;
     this._fixedScale.internalValue = config.fixedScale;
     this._identity.internalValue = config.identity;
+    this._mount.internalValue = config.mount;
     this._networkConfiguration.internalValue = config.networkConfiguration;
     this._startTask.internalValue = config.startTask;
     this._storageImageReference.internalValue = config.storageImageReference;
@@ -2589,6 +3531,22 @@ export class BatchPool extends cdktf.TerraformResource {
     return this._identity.internalValue;
   }
 
+  // mount - computed: false, optional: true, required: false
+  private _mount = new BatchPoolMountList(this, "mount", false);
+  public get mount() {
+    return this._mount;
+  }
+  public putMount(value: BatchPoolMount[] | cdktf.IResolvable) {
+    this._mount.internalValue = value;
+  }
+  public resetMount() {
+    this._mount.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get mountInput() {
+    return this._mount.internalValue;
+  }
+
   // network_configuration - computed: false, optional: true, required: false
   private _networkConfiguration = new BatchPoolNetworkConfigurationOutputReference(this, "network_configuration");
   public get networkConfiguration() {
@@ -2671,6 +3629,7 @@ export class BatchPool extends cdktf.TerraformResource {
       container_configuration: batchPoolContainerConfigurationToTerraform(this._containerConfiguration.internalValue),
       fixed_scale: batchPoolFixedScaleToTerraform(this._fixedScale.internalValue),
       identity: batchPoolIdentityToTerraform(this._identity.internalValue),
+      mount: cdktf.listMapper(batchPoolMountToTerraform, true)(this._mount.internalValue),
       network_configuration: batchPoolNetworkConfigurationToTerraform(this._networkConfiguration.internalValue),
       start_task: batchPoolStartTaskToTerraform(this._startTask.internalValue),
       storage_image_reference: batchPoolStorageImageReferenceToTerraform(this._storageImageReference.internalValue),

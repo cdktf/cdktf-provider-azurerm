@@ -35,6 +35,10 @@ export interface StreamAnalyticsOutputCosmosdbConfig extends cdktf.TerraformMeta
   */
   readonly name: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_cosmosdb#partition_key StreamAnalyticsOutputCosmosdb#partition_key}
+  */
+  readonly partitionKey?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_cosmosdb#stream_analytics_job_id StreamAnalyticsOutputCosmosdb#stream_analytics_job_id}
   */
   readonly streamAnalyticsJobId: string;
@@ -228,7 +232,7 @@ export class StreamAnalyticsOutputCosmosdb extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_stream_analytics_output_cosmosdb',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.20.0',
+        providerVersion: '3.21.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -245,6 +249,7 @@ export class StreamAnalyticsOutputCosmosdb extends cdktf.TerraformResource {
     this._documentId = config.documentId;
     this._id = config.id;
     this._name = config.name;
+    this._partitionKey = config.partitionKey;
     this._streamAnalyticsJobId = config.streamAnalyticsJobId;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -337,6 +342,22 @@ export class StreamAnalyticsOutputCosmosdb extends cdktf.TerraformResource {
     return this._name;
   }
 
+  // partition_key - computed: false, optional: true, required: false
+  private _partitionKey?: string; 
+  public get partitionKey() {
+    return this.getStringAttribute('partition_key');
+  }
+  public set partitionKey(value: string) {
+    this._partitionKey = value;
+  }
+  public resetPartitionKey() {
+    this._partitionKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get partitionKeyInput() {
+    return this._partitionKey;
+  }
+
   // stream_analytics_job_id - computed: false, optional: false, required: true
   private _streamAnalyticsJobId?: string; 
   public get streamAnalyticsJobId() {
@@ -378,6 +399,7 @@ export class StreamAnalyticsOutputCosmosdb extends cdktf.TerraformResource {
       document_id: cdktf.stringToTerraform(this._documentId),
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
+      partition_key: cdktf.stringToTerraform(this._partitionKey),
       stream_analytics_job_id: cdktf.stringToTerraform(this._streamAnalyticsJobId),
       timeouts: streamAnalyticsOutputCosmosdbTimeoutsToTerraform(this._timeouts.internalValue),
     };

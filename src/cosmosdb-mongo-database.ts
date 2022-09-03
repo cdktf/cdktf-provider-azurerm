@@ -291,7 +291,7 @@ export class CosmosdbMongoDatabase extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_cosmosdb_mongo_database',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.20.0',
+        providerVersion: '3.21.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

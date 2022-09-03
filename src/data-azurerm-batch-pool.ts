@@ -409,6 +409,425 @@ export class DataAzurermBatchPoolFixedScaleList extends cdktf.ComplexList {
     return new DataAzurermBatchPoolFixedScaleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface DataAzurermBatchPoolMountAzureBlobFileSystem {
+}
+
+export function dataAzurermBatchPoolMountAzureBlobFileSystemToTerraform(struct?: DataAzurermBatchPoolMountAzureBlobFileSystem): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermBatchPoolMountAzureBlobFileSystemOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermBatchPoolMountAzureBlobFileSystem | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermBatchPoolMountAzureBlobFileSystem | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // account_key - computed: true, optional: false, required: false
+  public get accountKey() {
+    return this.getStringAttribute('account_key');
+  }
+
+  // account_name - computed: true, optional: false, required: false
+  public get accountName() {
+    return this.getStringAttribute('account_name');
+  }
+
+  // blobfuse_options - computed: true, optional: false, required: false
+  public get blobfuseOptions() {
+    return this.getStringAttribute('blobfuse_options');
+  }
+
+  // container_name - computed: true, optional: false, required: false
+  public get containerName() {
+    return this.getStringAttribute('container_name');
+  }
+
+  // identity_id - computed: true, optional: false, required: false
+  public get identityId() {
+    return this.getStringAttribute('identity_id');
+  }
+
+  // relative_mount_path - computed: true, optional: false, required: false
+  public get relativeMountPath() {
+    return this.getStringAttribute('relative_mount_path');
+  }
+
+  // sas_key - computed: true, optional: false, required: false
+  public get sasKey() {
+    return this.getStringAttribute('sas_key');
+  }
+}
+
+export class DataAzurermBatchPoolMountAzureBlobFileSystemList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermBatchPoolMountAzureBlobFileSystemOutputReference {
+    return new DataAzurermBatchPoolMountAzureBlobFileSystemOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermBatchPoolMountAzureFileShare {
+}
+
+export function dataAzurermBatchPoolMountAzureFileShareToTerraform(struct?: DataAzurermBatchPoolMountAzureFileShare): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermBatchPoolMountAzureFileShareOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermBatchPoolMountAzureFileShare | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermBatchPoolMountAzureFileShare | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // account_key - computed: true, optional: false, required: false
+  public get accountKey() {
+    return this.getStringAttribute('account_key');
+  }
+
+  // account_name - computed: true, optional: false, required: false
+  public get accountName() {
+    return this.getStringAttribute('account_name');
+  }
+
+  // azure_file_url - computed: true, optional: false, required: false
+  public get azureFileUrl() {
+    return this.getStringAttribute('azure_file_url');
+  }
+
+  // mount_options - computed: true, optional: false, required: false
+  public get mountOptions() {
+    return this.getStringAttribute('mount_options');
+  }
+
+  // relative_mount_path - computed: true, optional: false, required: false
+  public get relativeMountPath() {
+    return this.getStringAttribute('relative_mount_path');
+  }
+}
+
+export class DataAzurermBatchPoolMountAzureFileShareList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermBatchPoolMountAzureFileShareOutputReference {
+    return new DataAzurermBatchPoolMountAzureFileShareOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermBatchPoolMountCifsMount {
+}
+
+export function dataAzurermBatchPoolMountCifsMountToTerraform(struct?: DataAzurermBatchPoolMountCifsMount): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermBatchPoolMountCifsMountOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermBatchPoolMountCifsMount | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermBatchPoolMountCifsMount | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // mount_options - computed: true, optional: false, required: false
+  public get mountOptions() {
+    return this.getStringAttribute('mount_options');
+  }
+
+  // password - computed: true, optional: false, required: false
+  public get password() {
+    return this.getStringAttribute('password');
+  }
+
+  // relative_mount_path - computed: true, optional: false, required: false
+  public get relativeMountPath() {
+    return this.getStringAttribute('relative_mount_path');
+  }
+
+  // source - computed: true, optional: false, required: false
+  public get source() {
+    return this.getStringAttribute('source');
+  }
+
+  // user_name - computed: true, optional: false, required: false
+  public get userName() {
+    return this.getStringAttribute('user_name');
+  }
+}
+
+export class DataAzurermBatchPoolMountCifsMountList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermBatchPoolMountCifsMountOutputReference {
+    return new DataAzurermBatchPoolMountCifsMountOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermBatchPoolMountNfsMount {
+}
+
+export function dataAzurermBatchPoolMountNfsMountToTerraform(struct?: DataAzurermBatchPoolMountNfsMount): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermBatchPoolMountNfsMountOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermBatchPoolMountNfsMount | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermBatchPoolMountNfsMount | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // mount_options - computed: true, optional: false, required: false
+  public get mountOptions() {
+    return this.getStringAttribute('mount_options');
+  }
+
+  // relative_mount_path - computed: true, optional: false, required: false
+  public get relativeMountPath() {
+    return this.getStringAttribute('relative_mount_path');
+  }
+
+  // source - computed: true, optional: false, required: false
+  public get source() {
+    return this.getStringAttribute('source');
+  }
+}
+
+export class DataAzurermBatchPoolMountNfsMountList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermBatchPoolMountNfsMountOutputReference {
+    return new DataAzurermBatchPoolMountNfsMountOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermBatchPoolMount {
+}
+
+export function dataAzurermBatchPoolMountToTerraform(struct?: DataAzurermBatchPoolMount): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermBatchPoolMountOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermBatchPoolMount | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermBatchPoolMount | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // azure_blob_file_system - computed: true, optional: false, required: false
+  private _azureBlobFileSystem = new DataAzurermBatchPoolMountAzureBlobFileSystemList(this, "azure_blob_file_system", false);
+  public get azureBlobFileSystem() {
+    return this._azureBlobFileSystem;
+  }
+
+  // azure_file_share - computed: true, optional: false, required: false
+  private _azureFileShare = new DataAzurermBatchPoolMountAzureFileShareList(this, "azure_file_share", false);
+  public get azureFileShare() {
+    return this._azureFileShare;
+  }
+
+  // cifs_mount - computed: true, optional: false, required: false
+  private _cifsMount = new DataAzurermBatchPoolMountCifsMountList(this, "cifs_mount", false);
+  public get cifsMount() {
+    return this._cifsMount;
+  }
+
+  // nfs_mount - computed: true, optional: false, required: false
+  private _nfsMount = new DataAzurermBatchPoolMountNfsMountList(this, "nfs_mount", false);
+  public get nfsMount() {
+    return this._nfsMount;
+  }
+}
+
+export class DataAzurermBatchPoolMountList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermBatchPoolMountOutputReference {
+    return new DataAzurermBatchPoolMountOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataAzurermBatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules {
 }
 
@@ -1154,7 +1573,7 @@ export class DataAzurermBatchPool extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_batch_pool',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.20.0',
+        providerVersion: '3.21.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -1243,6 +1662,12 @@ export class DataAzurermBatchPool extends cdktf.TerraformDataSource {
   private _metadata = new cdktf.StringMap(this, "metadata");
   public get metadata() {
     return this._metadata;
+  }
+
+  // mount - computed: true, optional: false, required: false
+  private _mount = new DataAzurermBatchPoolMountList(this, "mount", false);
+  public get mount() {
+    return this._mount;
   }
 
   // name - computed: false, optional: false, required: true

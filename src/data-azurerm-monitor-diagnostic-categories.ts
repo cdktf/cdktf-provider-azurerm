@@ -127,7 +127,7 @@ export class DataAzurermMonitorDiagnosticCategories extends cdktf.TerraformDataS
       terraformResourceType: 'azurerm_monitor_diagnostic_categories',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.20.0',
+        providerVersion: '3.21.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -161,6 +161,16 @@ export class DataAzurermMonitorDiagnosticCategories extends cdktf.TerraformDataS
   // Temporarily expose input value. Use with caution.
   public get idInput() {
     return this._id;
+  }
+
+  // log_category_groups - computed: true, optional: false, required: false
+  public get logCategoryGroups() {
+    return cdktf.Fn.tolist(this.getListAttribute('log_category_groups'));
+  }
+
+  // log_category_types - computed: true, optional: false, required: false
+  public get logCategoryTypes() {
+    return cdktf.Fn.tolist(this.getListAttribute('log_category_types'));
   }
 
   // logs - computed: true, optional: false, required: false

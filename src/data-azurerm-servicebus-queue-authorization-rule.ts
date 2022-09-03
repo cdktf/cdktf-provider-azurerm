@@ -143,7 +143,7 @@ export class DataAzurermServicebusQueueAuthorizationRule extends cdktf.Terraform
       terraformResourceType: 'azurerm_servicebus_queue_authorization_rule',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.20.0',
+        providerVersion: '3.21.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

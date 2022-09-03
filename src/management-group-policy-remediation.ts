@@ -8,6 +8,10 @@ import * as cdktf from 'cdktf';
 
 export interface ManagementGroupPolicyRemediationConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_remediation#failure_percentage ManagementGroupPolicyRemediation#failure_percentage}
+  */
+  readonly failurePercentage?: number;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_remediation#id ManagementGroupPolicyRemediation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
@@ -27,6 +31,10 @@ export interface ManagementGroupPolicyRemediationConfig extends cdktf.TerraformM
   */
   readonly name: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_remediation#parallel_deployments ManagementGroupPolicyRemediation#parallel_deployments}
+  */
+  readonly parallelDeployments?: number;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_remediation#policy_assignment_id ManagementGroupPolicyRemediation#policy_assignment_id}
   */
   readonly policyAssignmentId: string;
@@ -34,6 +42,10 @@ export interface ManagementGroupPolicyRemediationConfig extends cdktf.TerraformM
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_remediation#policy_definition_id ManagementGroupPolicyRemediation#policy_definition_id}
   */
   readonly policyDefinitionId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_remediation#resource_count ManagementGroupPolicyRemediation#resource_count}
+  */
+  readonly resourceCount?: number;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_remediation#resource_discovery_mode ManagementGroupPolicyRemediation#resource_discovery_mode}
   */
@@ -228,7 +240,7 @@ export class ManagementGroupPolicyRemediation extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_management_group_policy_remediation',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.20.0',
+        providerVersion: '3.21.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -239,12 +251,15 @@ export class ManagementGroupPolicyRemediation extends cdktf.TerraformResource {
       connection: config.connection,
       forEach: config.forEach
     });
+    this._failurePercentage = config.failurePercentage;
     this._id = config.id;
     this._locationFilters = config.locationFilters;
     this._managementGroupId = config.managementGroupId;
     this._name = config.name;
+    this._parallelDeployments = config.parallelDeployments;
     this._policyAssignmentId = config.policyAssignmentId;
     this._policyDefinitionId = config.policyDefinitionId;
+    this._resourceCount = config.resourceCount;
     this._resourceDiscoveryMode = config.resourceDiscoveryMode;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -252,6 +267,22 @@ export class ManagementGroupPolicyRemediation extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // failure_percentage - computed: false, optional: true, required: false
+  private _failurePercentage?: number; 
+  public get failurePercentage() {
+    return this.getNumberAttribute('failure_percentage');
+  }
+  public set failurePercentage(value: number) {
+    this._failurePercentage = value;
+  }
+  public resetFailurePercentage() {
+    this._failurePercentage = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get failurePercentageInput() {
+    return this._failurePercentage;
+  }
 
   // id - computed: true, optional: true, required: false
   private _id?: string; 
@@ -311,6 +342,22 @@ export class ManagementGroupPolicyRemediation extends cdktf.TerraformResource {
     return this._name;
   }
 
+  // parallel_deployments - computed: false, optional: true, required: false
+  private _parallelDeployments?: number; 
+  public get parallelDeployments() {
+    return this.getNumberAttribute('parallel_deployments');
+  }
+  public set parallelDeployments(value: number) {
+    this._parallelDeployments = value;
+  }
+  public resetParallelDeployments() {
+    this._parallelDeployments = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parallelDeploymentsInput() {
+    return this._parallelDeployments;
+  }
+
   // policy_assignment_id - computed: false, optional: false, required: true
   private _policyAssignmentId?: string; 
   public get policyAssignmentId() {
@@ -338,6 +385,22 @@ export class ManagementGroupPolicyRemediation extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get policyDefinitionIdInput() {
     return this._policyDefinitionId;
+  }
+
+  // resource_count - computed: false, optional: true, required: false
+  private _resourceCount?: number; 
+  public get resourceCount() {
+    return this.getNumberAttribute('resource_count');
+  }
+  public set resourceCount(value: number) {
+    this._resourceCount = value;
+  }
+  public resetResourceCount() {
+    this._resourceCount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceCountInput() {
+    return this._resourceCount;
   }
 
   // resource_discovery_mode - computed: false, optional: true, required: false
@@ -378,12 +441,15 @@ export class ManagementGroupPolicyRemediation extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      failure_percentage: cdktf.numberToTerraform(this._failurePercentage),
       id: cdktf.stringToTerraform(this._id),
       location_filters: cdktf.listMapper(cdktf.stringToTerraform, false)(this._locationFilters),
       management_group_id: cdktf.stringToTerraform(this._managementGroupId),
       name: cdktf.stringToTerraform(this._name),
+      parallel_deployments: cdktf.numberToTerraform(this._parallelDeployments),
       policy_assignment_id: cdktf.stringToTerraform(this._policyAssignmentId),
       policy_definition_id: cdktf.stringToTerraform(this._policyDefinitionId),
+      resource_count: cdktf.numberToTerraform(this._resourceCount),
       resource_discovery_mode: cdktf.stringToTerraform(this._resourceDiscoveryMode),
       timeouts: managementGroupPolicyRemediationTimeoutsToTerraform(this._timeouts.internalValue),
     };

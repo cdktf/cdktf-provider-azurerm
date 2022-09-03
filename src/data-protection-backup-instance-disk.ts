@@ -228,7 +228,7 @@ export class DataProtectionBackupInstanceDisk extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_data_protection_backup_instance_disk',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.20.0',
+        providerVersion: '3.21.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

@@ -23,6 +23,10 @@ export interface AppConfigurationConfig extends cdktf.TerraformMetaArguments {
   */
   readonly name: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration#public_network_access AppConfiguration#public_network_access}
+  */
+  readonly publicNetworkAccess?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration#resource_group_name AppConfiguration#resource_group_name}
   */
   readonly resourceGroupName: string;
@@ -625,7 +629,7 @@ export class AppConfiguration extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_app_configuration',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.20.0',
+        providerVersion: '3.21.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -639,6 +643,7 @@ export class AppConfiguration extends cdktf.TerraformResource {
     this._id = config.id;
     this._location = config.location;
     this._name = config.name;
+    this._publicNetworkAccess = config.publicNetworkAccess;
     this._resourceGroupName = config.resourceGroupName;
     this._sku = config.sku;
     this._tags = config.tags;
@@ -707,6 +712,22 @@ export class AppConfiguration extends cdktf.TerraformResource {
   private _primaryWriteKey = new AppConfigurationPrimaryWriteKeyList(this, "primary_write_key", false);
   public get primaryWriteKey() {
     return this._primaryWriteKey;
+  }
+
+  // public_network_access - computed: false, optional: true, required: false
+  private _publicNetworkAccess?: string; 
+  public get publicNetworkAccess() {
+    return this.getStringAttribute('public_network_access');
+  }
+  public set publicNetworkAccess(value: string) {
+    this._publicNetworkAccess = value;
+  }
+  public resetPublicNetworkAccess() {
+    this._publicNetworkAccess = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicNetworkAccessInput() {
+    return this._publicNetworkAccess;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -807,6 +828,7 @@ export class AppConfiguration extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
+      public_network_access: cdktf.stringToTerraform(this._publicNetworkAccess),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku: cdktf.stringToTerraform(this._sku),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),

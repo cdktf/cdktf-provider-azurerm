@@ -232,7 +232,7 @@ export class MonitorDataCollectionEndpoint extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_monitor_data_collection_endpoint',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.20.0',
+        providerVersion: '3.21.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -257,6 +257,11 @@ export class MonitorDataCollectionEndpoint extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // configuration_access_endpoint - computed: true, optional: false, required: false
+  public get configurationAccessEndpoint() {
+    return this.getStringAttribute('configuration_access_endpoint');
+  }
 
   // description - computed: false, optional: true, required: false
   private _description?: string; 
@@ -317,6 +322,11 @@ export class MonitorDataCollectionEndpoint extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
     return this._location;
+  }
+
+  // logs_ingestion_endpoint - computed: true, optional: false, required: false
+  public get logsIngestionEndpoint() {
+    return this.getStringAttribute('logs_ingestion_endpoint');
   }
 
   // name - computed: false, optional: false, required: true

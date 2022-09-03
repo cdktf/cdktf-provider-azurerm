@@ -240,7 +240,7 @@ export class PolicyDefinition extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_policy_definition',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.20.0',
+        providerVersion: '3.21.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -414,6 +414,11 @@ export class PolicyDefinition extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get policyTypeInput() {
     return this._policyType;
+  }
+
+  // role_definition_ids - computed: true, optional: false, required: false
+  public get roleDefinitionIds() {
+    return this.getListAttribute('role_definition_ids');
   }
 
   // timeouts - computed: false, optional: true, required: false

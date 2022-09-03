@@ -55,6 +55,10 @@ export interface StreamAnalyticsReferenceInputMssqlConfig extends cdktf.Terrafor
   */
   readonly streamAnalyticsJobName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_reference_input_mssql#table StreamAnalyticsReferenceInputMssql#table}
+  */
+  readonly table?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_reference_input_mssql#username StreamAnalyticsReferenceInputMssql#username}
   */
   readonly username: string;
@@ -248,7 +252,7 @@ export class StreamAnalyticsReferenceInputMssql extends cdktf.TerraformResource 
       terraformResourceType: 'azurerm_stream_analytics_reference_input_mssql',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.20.0',
+        providerVersion: '3.21.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -270,6 +274,7 @@ export class StreamAnalyticsReferenceInputMssql extends cdktf.TerraformResource 
     this._resourceGroupName = config.resourceGroupName;
     this._server = config.server;
     this._streamAnalyticsJobName = config.streamAnalyticsJobName;
+    this._table = config.table;
     this._username = config.username;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -430,6 +435,22 @@ export class StreamAnalyticsReferenceInputMssql extends cdktf.TerraformResource 
     return this._streamAnalyticsJobName;
   }
 
+  // table - computed: false, optional: true, required: false
+  private _table?: string; 
+  public get table() {
+    return this.getStringAttribute('table');
+  }
+  public set table(value: string) {
+    this._table = value;
+  }
+  public resetTable() {
+    this._table = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tableInput() {
+    return this._table;
+  }
+
   // username - computed: false, optional: false, required: true
   private _username?: string; 
   public get username() {
@@ -476,6 +497,7 @@ export class StreamAnalyticsReferenceInputMssql extends cdktf.TerraformResource 
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       server: cdktf.stringToTerraform(this._server),
       stream_analytics_job_name: cdktf.stringToTerraform(this._streamAnalyticsJobName),
+      table: cdktf.stringToTerraform(this._table),
       username: cdktf.stringToTerraform(this._username),
       timeouts: streamAnalyticsReferenceInputMssqlTimeoutsToTerraform(this._timeouts.internalValue),
     };

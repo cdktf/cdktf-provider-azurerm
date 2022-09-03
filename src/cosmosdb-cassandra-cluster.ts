@@ -32,6 +32,10 @@ export interface CosmosdbCassandraClusterConfig extends cdktf.TerraformMetaArgum
   */
   readonly externalSeedNodeIpAddresses?: string[];
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_cluster#hours_between_backups CosmosdbCassandraCluster#hours_between_backups}
+  */
+  readonly hoursBetweenBackups?: number;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_cluster#id CosmosdbCassandraCluster#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
@@ -330,7 +334,7 @@ export class CosmosdbCassandraCluster extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_cosmosdb_cassandra_cluster',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.20.0',
+        providerVersion: '3.21.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -347,6 +351,7 @@ export class CosmosdbCassandraCluster extends cdktf.TerraformResource {
     this._delegatedManagementSubnetId = config.delegatedManagementSubnetId;
     this._externalGossipCertificatePems = config.externalGossipCertificatePems;
     this._externalSeedNodeIpAddresses = config.externalSeedNodeIpAddresses;
+    this._hoursBetweenBackups = config.hoursBetweenBackups;
     this._id = config.id;
     this._location = config.location;
     this._name = config.name;
@@ -450,6 +455,22 @@ export class CosmosdbCassandraCluster extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get externalSeedNodeIpAddressesInput() {
     return this._externalSeedNodeIpAddresses;
+  }
+
+  // hours_between_backups - computed: false, optional: true, required: false
+  private _hoursBetweenBackups?: number; 
+  public get hoursBetweenBackups() {
+    return this.getNumberAttribute('hours_between_backups');
+  }
+  public set hoursBetweenBackups(value: number) {
+    this._hoursBetweenBackups = value;
+  }
+  public resetHoursBetweenBackups() {
+    this._hoursBetweenBackups = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hoursBetweenBackupsInput() {
+    return this._hoursBetweenBackups;
   }
 
   // id - computed: true, optional: true, required: false
@@ -599,6 +620,7 @@ export class CosmosdbCassandraCluster extends cdktf.TerraformResource {
       delegated_management_subnet_id: cdktf.stringToTerraform(this._delegatedManagementSubnetId),
       external_gossip_certificate_pems: cdktf.listMapper(cdktf.stringToTerraform, false)(this._externalGossipCertificatePems),
       external_seed_node_ip_addresses: cdktf.listMapper(cdktf.stringToTerraform, false)(this._externalSeedNodeIpAddresses),
+      hours_between_backups: cdktf.numberToTerraform(this._hoursBetweenBackups),
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),

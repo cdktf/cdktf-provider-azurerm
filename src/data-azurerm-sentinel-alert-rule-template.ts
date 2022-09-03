@@ -33,6 +33,85 @@ export interface DataAzurermSentinelAlertRuleTemplateConfig extends cdktf.Terraf
   */
   readonly timeouts?: DataAzurermSentinelAlertRuleTemplateTimeouts;
 }
+export interface DataAzurermSentinelAlertRuleTemplateNrtTemplate {
+}
+
+export function dataAzurermSentinelAlertRuleTemplateNrtTemplateToTerraform(struct?: DataAzurermSentinelAlertRuleTemplateNrtTemplate): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermSentinelAlertRuleTemplateNrtTemplateOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermSentinelAlertRuleTemplateNrtTemplate | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermSentinelAlertRuleTemplateNrtTemplate | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // description - computed: true, optional: false, required: false
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+
+  // query - computed: true, optional: false, required: false
+  public get query() {
+    return this.getStringAttribute('query');
+  }
+
+  // severity - computed: true, optional: false, required: false
+  public get severity() {
+    return this.getStringAttribute('severity');
+  }
+
+  // tactics - computed: true, optional: false, required: false
+  public get tactics() {
+    return this.getListAttribute('tactics');
+  }
+}
+
+export class DataAzurermSentinelAlertRuleTemplateNrtTemplateList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermSentinelAlertRuleTemplateNrtTemplateOutputReference {
+    return new DataAzurermSentinelAlertRuleTemplateNrtTemplateOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataAzurermSentinelAlertRuleTemplateScheduledTemplate {
 }
 
@@ -303,7 +382,7 @@ export class DataAzurermSentinelAlertRuleTemplate extends cdktf.TerraformDataSou
       terraformResourceType: 'azurerm_sentinel_alert_rule_template',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.20.0',
+        providerVersion: '3.21.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -384,6 +463,12 @@ export class DataAzurermSentinelAlertRuleTemplate extends cdktf.TerraformDataSou
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name;
+  }
+
+  // nrt_template - computed: true, optional: false, required: false
+  private _nrtTemplate = new DataAzurermSentinelAlertRuleTemplateNrtTemplateList(this, "nrt_template", false);
+  public get nrtTemplate() {
+    return this._nrtTemplate;
   }
 
   // scheduled_template - computed: true, optional: false, required: false

@@ -39,6 +39,14 @@ export interface StreamAnalyticsOutputPowerbiConfig extends cdktf.TerraformMetaA
   */
   readonly table: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_powerbi#token_user_display_name StreamAnalyticsOutputPowerbi#token_user_display_name}
+  */
+  readonly tokenUserDisplayName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_powerbi#token_user_principal_name StreamAnalyticsOutputPowerbi#token_user_principal_name}
+  */
+  readonly tokenUserPrincipalName?: string;
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_powerbi#timeouts StreamAnalyticsOutputPowerbi#timeouts}
@@ -228,7 +236,7 @@ export class StreamAnalyticsOutputPowerbi extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_stream_analytics_output_powerbi',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.20.0',
+        providerVersion: '3.21.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -246,6 +254,8 @@ export class StreamAnalyticsOutputPowerbi extends cdktf.TerraformResource {
     this._name = config.name;
     this._streamAnalyticsJobId = config.streamAnalyticsJobId;
     this._table = config.table;
+    this._tokenUserDisplayName = config.tokenUserDisplayName;
+    this._tokenUserPrincipalName = config.tokenUserPrincipalName;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -347,6 +357,38 @@ export class StreamAnalyticsOutputPowerbi extends cdktf.TerraformResource {
     return this._table;
   }
 
+  // token_user_display_name - computed: false, optional: true, required: false
+  private _tokenUserDisplayName?: string; 
+  public get tokenUserDisplayName() {
+    return this.getStringAttribute('token_user_display_name');
+  }
+  public set tokenUserDisplayName(value: string) {
+    this._tokenUserDisplayName = value;
+  }
+  public resetTokenUserDisplayName() {
+    this._tokenUserDisplayName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tokenUserDisplayNameInput() {
+    return this._tokenUserDisplayName;
+  }
+
+  // token_user_principal_name - computed: false, optional: true, required: false
+  private _tokenUserPrincipalName?: string; 
+  public get tokenUserPrincipalName() {
+    return this.getStringAttribute('token_user_principal_name');
+  }
+  public set tokenUserPrincipalName(value: string) {
+    this._tokenUserPrincipalName = value;
+  }
+  public resetTokenUserPrincipalName() {
+    this._tokenUserPrincipalName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tokenUserPrincipalNameInput() {
+    return this._tokenUserPrincipalName;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new StreamAnalyticsOutputPowerbiTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -376,6 +418,8 @@ export class StreamAnalyticsOutputPowerbi extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       stream_analytics_job_id: cdktf.stringToTerraform(this._streamAnalyticsJobId),
       table: cdktf.stringToTerraform(this._table),
+      token_user_display_name: cdktf.stringToTerraform(this._tokenUserDisplayName),
+      token_user_principal_name: cdktf.stringToTerraform(this._tokenUserPrincipalName),
       timeouts: streamAnalyticsOutputPowerbiTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

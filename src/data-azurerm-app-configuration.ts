@@ -427,7 +427,7 @@ export class DataAzurermAppConfiguration extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_app_configuration',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.20.0',
+        providerVersion: '3.21.1',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -497,6 +497,11 @@ export class DataAzurermAppConfiguration extends cdktf.TerraformDataSource {
   private _primaryWriteKey = new DataAzurermAppConfigurationPrimaryWriteKeyList(this, "primary_write_key", false);
   public get primaryWriteKey() {
     return this._primaryWriteKey;
+  }
+
+  // public_network_access - computed: true, optional: false, required: false
+  public get publicNetworkAccess() {
+    return this.getStringAttribute('public_network_access');
   }
 
   // resource_group_name - computed: false, optional: false, required: true
