@@ -224,7 +224,7 @@ export class CosmosdbSqlTrigger extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_cosmosdb_sql_trigger',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.21.1',
+        providerVersion: '3.22.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

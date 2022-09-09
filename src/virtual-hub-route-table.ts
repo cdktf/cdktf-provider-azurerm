@@ -415,7 +415,7 @@ export class VirtualHubRouteTable extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_virtual_hub_route_table',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.21.1',
+        providerVersion: '3.22.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

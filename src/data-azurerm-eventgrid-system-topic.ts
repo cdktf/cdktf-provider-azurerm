@@ -210,7 +210,7 @@ export class DataAzurermEventgridSystemTopic extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_eventgrid_system_topic',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.21.1',
+        providerVersion: '3.22.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

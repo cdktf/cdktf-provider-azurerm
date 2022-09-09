@@ -55,6 +55,12 @@ export interface HdinsightHadoopClusterConfig extends cdktf.TerraformMetaArgumen
   */
   readonly diskEncryption?: HdinsightHadoopClusterDiskEncryption[] | cdktf.IResolvable;
   /**
+  * extension block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster#extension HdinsightHadoopCluster#extension}
+  */
+  readonly extension?: HdinsightHadoopClusterExtension;
+  /**
   * gateway block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster#gateway HdinsightHadoopCluster#gateway}
@@ -347,6 +353,92 @@ export class HdinsightHadoopClusterDiskEncryptionList extends cdktf.ComplexList 
   */
   public get(index: number): HdinsightHadoopClusterDiskEncryptionOutputReference {
     return new HdinsightHadoopClusterDiskEncryptionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface HdinsightHadoopClusterExtension {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster#log_analytics_workspace_id HdinsightHadoopCluster#log_analytics_workspace_id}
+  */
+  readonly logAnalyticsWorkspaceId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster#primary_key HdinsightHadoopCluster#primary_key}
+  */
+  readonly primaryKey: string;
+}
+
+export function hdinsightHadoopClusterExtensionToTerraform(struct?: HdinsightHadoopClusterExtensionOutputReference | HdinsightHadoopClusterExtension): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    log_analytics_workspace_id: cdktf.stringToTerraform(struct!.logAnalyticsWorkspaceId),
+    primary_key: cdktf.stringToTerraform(struct!.primaryKey),
+  }
+}
+
+export class HdinsightHadoopClusterExtensionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): HdinsightHadoopClusterExtension | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._logAnalyticsWorkspaceId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.logAnalyticsWorkspaceId = this._logAnalyticsWorkspaceId;
+    }
+    if (this._primaryKey !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.primaryKey = this._primaryKey;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: HdinsightHadoopClusterExtension | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._logAnalyticsWorkspaceId = undefined;
+      this._primaryKey = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._logAnalyticsWorkspaceId = value.logAnalyticsWorkspaceId;
+      this._primaryKey = value.primaryKey;
+    }
+  }
+
+  // log_analytics_workspace_id - computed: false, optional: false, required: true
+  private _logAnalyticsWorkspaceId?: string; 
+  public get logAnalyticsWorkspaceId() {
+    return this.getStringAttribute('log_analytics_workspace_id');
+  }
+  public set logAnalyticsWorkspaceId(value: string) {
+    this._logAnalyticsWorkspaceId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get logAnalyticsWorkspaceIdInput() {
+    return this._logAnalyticsWorkspaceId;
+  }
+
+  // primary_key - computed: false, optional: false, required: true
+  private _primaryKey?: string; 
+  public get primaryKey() {
+    return this.getStringAttribute('primary_key');
+  }
+  public set primaryKey(value: string) {
+    this._primaryKey = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get primaryKeyInput() {
+    return this._primaryKey;
   }
 }
 export interface HdinsightHadoopClusterGateway {
@@ -3692,7 +3784,7 @@ export class HdinsightHadoopCluster extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_hdinsight_hadoop_cluster',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.21.1',
+        providerVersion: '3.22.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -3713,6 +3805,7 @@ export class HdinsightHadoopCluster extends cdktf.TerraformResource {
     this._tlsMinVersion = config.tlsMinVersion;
     this._componentVersion.internalValue = config.componentVersion;
     this._diskEncryption.internalValue = config.diskEncryption;
+    this._extension.internalValue = config.extension;
     this._gateway.internalValue = config.gateway;
     this._metastores.internalValue = config.metastores;
     this._monitor.internalValue = config.monitor;
@@ -3880,6 +3973,22 @@ export class HdinsightHadoopCluster extends cdktf.TerraformResource {
     return this._diskEncryption.internalValue;
   }
 
+  // extension - computed: false, optional: true, required: false
+  private _extension = new HdinsightHadoopClusterExtensionOutputReference(this, "extension");
+  public get extension() {
+    return this._extension;
+  }
+  public putExtension(value: HdinsightHadoopClusterExtension) {
+    this._extension.internalValue = value;
+  }
+  public resetExtension() {
+    this._extension.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get extensionInput() {
+    return this._extension.internalValue;
+  }
+
   // gateway - computed: false, optional: false, required: true
   private _gateway = new HdinsightHadoopClusterGatewayOutputReference(this, "gateway");
   public get gateway() {
@@ -4034,6 +4143,7 @@ export class HdinsightHadoopCluster extends cdktf.TerraformResource {
       tls_min_version: cdktf.stringToTerraform(this._tlsMinVersion),
       component_version: hdinsightHadoopClusterComponentVersionToTerraform(this._componentVersion.internalValue),
       disk_encryption: cdktf.listMapper(hdinsightHadoopClusterDiskEncryptionToTerraform, true)(this._diskEncryption.internalValue),
+      extension: hdinsightHadoopClusterExtensionToTerraform(this._extension.internalValue),
       gateway: hdinsightHadoopClusterGatewayToTerraform(this._gateway.internalValue),
       metastores: hdinsightHadoopClusterMetastoresToTerraform(this._metastores.internalValue),
       monitor: hdinsightHadoopClusterMonitorToTerraform(this._monitor.internalValue),

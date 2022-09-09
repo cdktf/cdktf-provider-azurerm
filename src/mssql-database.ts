@@ -47,6 +47,10 @@ export interface MssqlDatabaseConfig extends cdktf.TerraformMetaArguments {
   */
   readonly licenseType?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database#maintenance_configuration_name MssqlDatabase#maintenance_configuration_name}
+  */
+  readonly maintenanceConfigurationName?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database#max_size_gb MssqlDatabase#max_size_gb}
   */
   readonly maxSizeGb?: number;
@@ -776,7 +780,7 @@ export class MssqlDatabase extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_mssql_database',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.21.1',
+        providerVersion: '3.22.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -796,6 +800,7 @@ export class MssqlDatabase extends cdktf.TerraformResource {
     this._id = config.id;
     this._ledgerEnabled = config.ledgerEnabled;
     this._licenseType = config.licenseType;
+    this._maintenanceConfigurationName = config.maintenanceConfigurationName;
     this._maxSizeGb = config.maxSizeGb;
     this._minCapacity = config.minCapacity;
     this._name = config.name;
@@ -949,7 +954,7 @@ export class MssqlDatabase extends cdktf.TerraformResource {
     return this._ledgerEnabled;
   }
 
-  // license_type - computed: false, optional: true, required: false
+  // license_type - computed: true, optional: true, required: false
   private _licenseType?: string; 
   public get licenseType() {
     return this.getStringAttribute('license_type');
@@ -963,6 +968,22 @@ export class MssqlDatabase extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get licenseTypeInput() {
     return this._licenseType;
+  }
+
+  // maintenance_configuration_name - computed: false, optional: true, required: false
+  private _maintenanceConfigurationName?: string; 
+  public get maintenanceConfigurationName() {
+    return this.getStringAttribute('maintenance_configuration_name');
+  }
+  public set maintenanceConfigurationName(value: string) {
+    this._maintenanceConfigurationName = value;
+  }
+  public resetMaintenanceConfigurationName() {
+    this._maintenanceConfigurationName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maintenanceConfigurationNameInput() {
+    return this._maintenanceConfigurationName;
   }
 
   // max_size_gb - computed: true, optional: true, required: false
@@ -1278,6 +1299,7 @@ export class MssqlDatabase extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       ledger_enabled: cdktf.booleanToTerraform(this._ledgerEnabled),
       license_type: cdktf.stringToTerraform(this._licenseType),
+      maintenance_configuration_name: cdktf.stringToTerraform(this._maintenanceConfigurationName),
       max_size_gb: cdktf.numberToTerraform(this._maxSizeGb),
       min_capacity: cdktf.numberToTerraform(this._minCapacity),
       name: cdktf.stringToTerraform(this._name),

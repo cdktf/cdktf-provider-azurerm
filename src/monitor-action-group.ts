@@ -953,11 +953,23 @@ export interface MonitorActionGroupEventHubReceiver {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group#event_hub_id MonitorActionGroup#event_hub_id}
   */
-  readonly eventHubId: string;
+  readonly eventHubId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group#event_hub_name MonitorActionGroup#event_hub_name}
+  */
+  readonly eventHubName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group#event_hub_namespace MonitorActionGroup#event_hub_namespace}
+  */
+  readonly eventHubNamespace?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group#name MonitorActionGroup#name}
   */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group#subscription_id MonitorActionGroup#subscription_id}
+  */
+  readonly subscriptionId?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group#tenant_id MonitorActionGroup#tenant_id}
   */
@@ -975,7 +987,10 @@ export function monitorActionGroupEventHubReceiverToTerraform(struct?: MonitorAc
   }
   return {
     event_hub_id: cdktf.stringToTerraform(struct!.eventHubId),
+    event_hub_name: cdktf.stringToTerraform(struct!.eventHubName),
+    event_hub_namespace: cdktf.stringToTerraform(struct!.eventHubNamespace),
     name: cdktf.stringToTerraform(struct!.name),
+    subscription_id: cdktf.stringToTerraform(struct!.subscriptionId),
     tenant_id: cdktf.stringToTerraform(struct!.tenantId),
     use_common_alert_schema: cdktf.booleanToTerraform(struct!.useCommonAlertSchema),
   }
@@ -1005,9 +1020,21 @@ export class MonitorActionGroupEventHubReceiverOutputReference extends cdktf.Com
       hasAnyValues = true;
       internalValueResult.eventHubId = this._eventHubId;
     }
+    if (this._eventHubName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.eventHubName = this._eventHubName;
+    }
+    if (this._eventHubNamespace !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.eventHubNamespace = this._eventHubNamespace;
+    }
     if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
+    }
+    if (this._subscriptionId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.subscriptionId = this._subscriptionId;
     }
     if (this._tenantId !== undefined) {
       hasAnyValues = true;
@@ -1025,7 +1052,10 @@ export class MonitorActionGroupEventHubReceiverOutputReference extends cdktf.Com
       this.isEmptyObject = false;
       this.resolvableValue = undefined;
       this._eventHubId = undefined;
+      this._eventHubName = undefined;
+      this._eventHubNamespace = undefined;
       this._name = undefined;
+      this._subscriptionId = undefined;
       this._tenantId = undefined;
       this._useCommonAlertSchema = undefined;
     }
@@ -1037,13 +1067,16 @@ export class MonitorActionGroupEventHubReceiverOutputReference extends cdktf.Com
       this.isEmptyObject = Object.keys(value).length === 0;
       this.resolvableValue = undefined;
       this._eventHubId = value.eventHubId;
+      this._eventHubName = value.eventHubName;
+      this._eventHubNamespace = value.eventHubNamespace;
       this._name = value.name;
+      this._subscriptionId = value.subscriptionId;
       this._tenantId = value.tenantId;
       this._useCommonAlertSchema = value.useCommonAlertSchema;
     }
   }
 
-  // event_hub_id - computed: false, optional: false, required: true
+  // event_hub_id - computed: true, optional: true, required: false
   private _eventHubId?: string; 
   public get eventHubId() {
     return this.getStringAttribute('event_hub_id');
@@ -1051,9 +1084,44 @@ export class MonitorActionGroupEventHubReceiverOutputReference extends cdktf.Com
   public set eventHubId(value: string) {
     this._eventHubId = value;
   }
+  public resetEventHubId() {
+    this._eventHubId = undefined;
+  }
   // Temporarily expose input value. Use with caution.
   public get eventHubIdInput() {
     return this._eventHubId;
+  }
+
+  // event_hub_name - computed: true, optional: true, required: false
+  private _eventHubName?: string; 
+  public get eventHubName() {
+    return this.getStringAttribute('event_hub_name');
+  }
+  public set eventHubName(value: string) {
+    this._eventHubName = value;
+  }
+  public resetEventHubName() {
+    this._eventHubName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get eventHubNameInput() {
+    return this._eventHubName;
+  }
+
+  // event_hub_namespace - computed: true, optional: true, required: false
+  private _eventHubNamespace?: string; 
+  public get eventHubNamespace() {
+    return this.getStringAttribute('event_hub_namespace');
+  }
+  public set eventHubNamespace(value: string) {
+    this._eventHubNamespace = value;
+  }
+  public resetEventHubNamespace() {
+    this._eventHubNamespace = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get eventHubNamespaceInput() {
+    return this._eventHubNamespace;
   }
 
   // name - computed: false, optional: false, required: true
@@ -1067,6 +1135,22 @@ export class MonitorActionGroupEventHubReceiverOutputReference extends cdktf.Com
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name;
+  }
+
+  // subscription_id - computed: true, optional: true, required: false
+  private _subscriptionId?: string; 
+  public get subscriptionId() {
+    return this.getStringAttribute('subscription_id');
+  }
+  public set subscriptionId(value: string) {
+    this._subscriptionId = value;
+  }
+  public resetSubscriptionId() {
+    this._subscriptionId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subscriptionIdInput() {
+    return this._subscriptionId;
   }
 
   // tenant_id - computed: true, optional: true, required: false
@@ -2237,7 +2321,7 @@ export class MonitorActionGroup extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_monitor_action_group',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.21.1',
+        providerVersion: '3.22.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

@@ -240,7 +240,7 @@ export class SubscriptionPolicyRemediation extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_subscription_policy_remediation',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.21.1',
+        providerVersion: '3.22.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

@@ -228,7 +228,7 @@ export class BatchApplication extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_batch_application',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.21.1',
+        providerVersion: '3.22.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

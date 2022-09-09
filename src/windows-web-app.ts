@@ -6603,7 +6603,7 @@ export class WindowsWebApp extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_windows_web_app',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.21.1',
+        providerVersion: '3.22.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

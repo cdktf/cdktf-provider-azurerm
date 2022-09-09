@@ -1706,7 +1706,7 @@ export class CdnFrontdoorFirewallPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_cdn_frontdoor_firewall_policy',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.21.1',
+        providerVersion: '3.22.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

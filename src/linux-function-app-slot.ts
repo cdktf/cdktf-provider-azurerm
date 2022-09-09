@@ -4898,7 +4898,7 @@ export class LinuxFunctionAppSlot extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_linux_function_app_slot',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.21.1',
+        providerVersion: '3.22.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

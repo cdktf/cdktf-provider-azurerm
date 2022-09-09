@@ -212,7 +212,7 @@ export class AdvancedThreatProtection extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_advanced_threat_protection',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.21.1',
+        providerVersion: '3.22.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

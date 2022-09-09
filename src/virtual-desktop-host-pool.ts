@@ -73,11 +73,283 @@ export interface VirtualDesktopHostPoolConfig extends cdktf.TerraformMetaArgumen
   */
   readonly validateEnvironment?: boolean | cdktf.IResolvable;
   /**
+  * scheduled_agent_updates block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool#scheduled_agent_updates VirtualDesktopHostPool#scheduled_agent_updates}
+  */
+  readonly scheduledAgentUpdates?: VirtualDesktopHostPoolScheduledAgentUpdates;
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool#timeouts VirtualDesktopHostPool#timeouts}
   */
   readonly timeouts?: VirtualDesktopHostPoolTimeouts;
+}
+export interface VirtualDesktopHostPoolScheduledAgentUpdatesSchedule {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool#day_of_week VirtualDesktopHostPool#day_of_week}
+  */
+  readonly dayOfWeek: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool#hour_of_day VirtualDesktopHostPool#hour_of_day}
+  */
+  readonly hourOfDay: number;
+}
+
+export function virtualDesktopHostPoolScheduledAgentUpdatesScheduleToTerraform(struct?: VirtualDesktopHostPoolScheduledAgentUpdatesSchedule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    day_of_week: cdktf.stringToTerraform(struct!.dayOfWeek),
+    hour_of_day: cdktf.numberToTerraform(struct!.hourOfDay),
+  }
+}
+
+export class VirtualDesktopHostPoolScheduledAgentUpdatesScheduleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): VirtualDesktopHostPoolScheduledAgentUpdatesSchedule | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._dayOfWeek !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dayOfWeek = this._dayOfWeek;
+    }
+    if (this._hourOfDay !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.hourOfDay = this._hourOfDay;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: VirtualDesktopHostPoolScheduledAgentUpdatesSchedule | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._dayOfWeek = undefined;
+      this._hourOfDay = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._dayOfWeek = value.dayOfWeek;
+      this._hourOfDay = value.hourOfDay;
+    }
+  }
+
+  // day_of_week - computed: false, optional: false, required: true
+  private _dayOfWeek?: string; 
+  public get dayOfWeek() {
+    return this.getStringAttribute('day_of_week');
+  }
+  public set dayOfWeek(value: string) {
+    this._dayOfWeek = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dayOfWeekInput() {
+    return this._dayOfWeek;
+  }
+
+  // hour_of_day - computed: false, optional: false, required: true
+  private _hourOfDay?: number; 
+  public get hourOfDay() {
+    return this.getNumberAttribute('hour_of_day');
+  }
+  public set hourOfDay(value: number) {
+    this._hourOfDay = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hourOfDayInput() {
+    return this._hourOfDay;
+  }
+}
+
+export class VirtualDesktopHostPoolScheduledAgentUpdatesScheduleList extends cdktf.ComplexList {
+  public internalValue? : VirtualDesktopHostPoolScheduledAgentUpdatesSchedule[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): VirtualDesktopHostPoolScheduledAgentUpdatesScheduleOutputReference {
+    return new VirtualDesktopHostPoolScheduledAgentUpdatesScheduleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface VirtualDesktopHostPoolScheduledAgentUpdates {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool#enabled VirtualDesktopHostPool#enabled}
+  */
+  readonly enabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool#timezone VirtualDesktopHostPool#timezone}
+  */
+  readonly timezone?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool#use_session_host_timezone VirtualDesktopHostPool#use_session_host_timezone}
+  */
+  readonly useSessionHostTimezone?: boolean | cdktf.IResolvable;
+  /**
+  * schedule block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool#schedule VirtualDesktopHostPool#schedule}
+  */
+  readonly schedule?: VirtualDesktopHostPoolScheduledAgentUpdatesSchedule[] | cdktf.IResolvable;
+}
+
+export function virtualDesktopHostPoolScheduledAgentUpdatesToTerraform(struct?: VirtualDesktopHostPoolScheduledAgentUpdatesOutputReference | VirtualDesktopHostPoolScheduledAgentUpdates): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    timezone: cdktf.stringToTerraform(struct!.timezone),
+    use_session_host_timezone: cdktf.booleanToTerraform(struct!.useSessionHostTimezone),
+    schedule: cdktf.listMapper(virtualDesktopHostPoolScheduledAgentUpdatesScheduleToTerraform, true)(struct!.schedule),
+  }
+}
+
+export class VirtualDesktopHostPoolScheduledAgentUpdatesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): VirtualDesktopHostPoolScheduledAgentUpdates | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._enabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._timezone !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.timezone = this._timezone;
+    }
+    if (this._useSessionHostTimezone !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.useSessionHostTimezone = this._useSessionHostTimezone;
+    }
+    if (this._schedule?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.schedule = this._schedule?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: VirtualDesktopHostPoolScheduledAgentUpdates | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._enabled = undefined;
+      this._timezone = undefined;
+      this._useSessionHostTimezone = undefined;
+      this._schedule.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._enabled = value.enabled;
+      this._timezone = value.timezone;
+      this._useSessionHostTimezone = value.useSessionHostTimezone;
+      this._schedule.internalValue = value.schedule;
+    }
+  }
+
+  // enabled - computed: false, optional: true, required: false
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+
+  // timezone - computed: false, optional: true, required: false
+  private _timezone?: string; 
+  public get timezone() {
+    return this.getStringAttribute('timezone');
+  }
+  public set timezone(value: string) {
+    this._timezone = value;
+  }
+  public resetTimezone() {
+    this._timezone = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timezoneInput() {
+    return this._timezone;
+  }
+
+  // use_session_host_timezone - computed: false, optional: true, required: false
+  private _useSessionHostTimezone?: boolean | cdktf.IResolvable; 
+  public get useSessionHostTimezone() {
+    return this.getBooleanAttribute('use_session_host_timezone');
+  }
+  public set useSessionHostTimezone(value: boolean | cdktf.IResolvable) {
+    this._useSessionHostTimezone = value;
+  }
+  public resetUseSessionHostTimezone() {
+    this._useSessionHostTimezone = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get useSessionHostTimezoneInput() {
+    return this._useSessionHostTimezone;
+  }
+
+  // schedule - computed: false, optional: true, required: false
+  private _schedule = new VirtualDesktopHostPoolScheduledAgentUpdatesScheduleList(this, "schedule", false);
+  public get schedule() {
+    return this._schedule;
+  }
+  public putSchedule(value: VirtualDesktopHostPoolScheduledAgentUpdatesSchedule[] | cdktf.IResolvable) {
+    this._schedule.internalValue = value;
+  }
+  public resetSchedule() {
+    this._schedule.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scheduleInput() {
+    return this._schedule.internalValue;
+  }
 }
 export interface VirtualDesktopHostPoolTimeouts {
   /**
@@ -262,7 +534,7 @@ export class VirtualDesktopHostPool extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_virtual_desktop_host_pool',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.21.1',
+        providerVersion: '3.22.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -288,6 +560,7 @@ export class VirtualDesktopHostPool extends cdktf.TerraformResource {
     this._tags = config.tags;
     this._type = config.type;
     this._validateEnvironment = config.validateEnvironment;
+    this._scheduledAgentUpdates.internalValue = config.scheduledAgentUpdates;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -520,6 +793,22 @@ export class VirtualDesktopHostPool extends cdktf.TerraformResource {
     return this._validateEnvironment;
   }
 
+  // scheduled_agent_updates - computed: false, optional: true, required: false
+  private _scheduledAgentUpdates = new VirtualDesktopHostPoolScheduledAgentUpdatesOutputReference(this, "scheduled_agent_updates");
+  public get scheduledAgentUpdates() {
+    return this._scheduledAgentUpdates;
+  }
+  public putScheduledAgentUpdates(value: VirtualDesktopHostPoolScheduledAgentUpdates) {
+    this._scheduledAgentUpdates.internalValue = value;
+  }
+  public resetScheduledAgentUpdates() {
+    this._scheduledAgentUpdates.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scheduledAgentUpdatesInput() {
+    return this._scheduledAgentUpdates.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new VirtualDesktopHostPoolTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -557,6 +846,7 @@ export class VirtualDesktopHostPool extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       type: cdktf.stringToTerraform(this._type),
       validate_environment: cdktf.booleanToTerraform(this._validateEnvironment),
+      scheduled_agent_updates: virtualDesktopHostPoolScheduledAgentUpdatesToTerraform(this._scheduledAgentUpdates.internalValue),
       timeouts: virtualDesktopHostPoolTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

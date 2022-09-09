@@ -252,7 +252,7 @@ export class StreamAnalyticsReferenceInputMssql extends cdktf.TerraformResource 
       terraformResourceType: 'azurerm_stream_analytics_reference_input_mssql',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.21.1',
+        providerVersion: '3.22.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

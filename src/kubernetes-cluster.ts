@@ -32,6 +32,10 @@ export interface KubernetesClusterConfig extends cdktf.TerraformMetaArguments {
   */
   readonly dnsPrefixPrivateCluster?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#edge_zone KubernetesCluster#edge_zone}
+  */
+  readonly edgeZone?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#enable_pod_security_policy KubernetesCluster#enable_pod_security_policy}
   */
   readonly enablePodSecurityPolicy?: boolean | cdktf.IResolvable;
@@ -5724,6 +5728,92 @@ export class KubernetesClusterTimeoutsOutputReference extends cdktf.ComplexObjec
     return this._update;
   }
 }
+export interface KubernetesClusterWindowsProfileGmsa {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#dns_server KubernetesCluster#dns_server}
+  */
+  readonly dnsServer: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#root_domain KubernetesCluster#root_domain}
+  */
+  readonly rootDomain: string;
+}
+
+export function kubernetesClusterWindowsProfileGmsaToTerraform(struct?: KubernetesClusterWindowsProfileGmsaOutputReference | KubernetesClusterWindowsProfileGmsa): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    dns_server: cdktf.stringToTerraform(struct!.dnsServer),
+    root_domain: cdktf.stringToTerraform(struct!.rootDomain),
+  }
+}
+
+export class KubernetesClusterWindowsProfileGmsaOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): KubernetesClusterWindowsProfileGmsa | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._dnsServer !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dnsServer = this._dnsServer;
+    }
+    if (this._rootDomain !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rootDomain = this._rootDomain;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesClusterWindowsProfileGmsa | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._dnsServer = undefined;
+      this._rootDomain = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._dnsServer = value.dnsServer;
+      this._rootDomain = value.rootDomain;
+    }
+  }
+
+  // dns_server - computed: false, optional: false, required: true
+  private _dnsServer?: string; 
+  public get dnsServer() {
+    return this.getStringAttribute('dns_server');
+  }
+  public set dnsServer(value: string) {
+    this._dnsServer = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dnsServerInput() {
+    return this._dnsServer;
+  }
+
+  // root_domain - computed: false, optional: false, required: true
+  private _rootDomain?: string; 
+  public get rootDomain() {
+    return this.getStringAttribute('root_domain');
+  }
+  public set rootDomain(value: string) {
+    this._rootDomain = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rootDomainInput() {
+    return this._rootDomain;
+  }
+}
 export interface KubernetesClusterWindowsProfile {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#admin_password KubernetesCluster#admin_password}
@@ -5737,6 +5827,12 @@ export interface KubernetesClusterWindowsProfile {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#license KubernetesCluster#license}
   */
   readonly license?: string;
+  /**
+  * gmsa block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster#gmsa KubernetesCluster#gmsa}
+  */
+  readonly gmsa?: KubernetesClusterWindowsProfileGmsa;
 }
 
 export function kubernetesClusterWindowsProfileToTerraform(struct?: KubernetesClusterWindowsProfileOutputReference | KubernetesClusterWindowsProfile): any {
@@ -5748,6 +5844,7 @@ export function kubernetesClusterWindowsProfileToTerraform(struct?: KubernetesCl
     admin_password: cdktf.stringToTerraform(struct!.adminPassword),
     admin_username: cdktf.stringToTerraform(struct!.adminUsername),
     license: cdktf.stringToTerraform(struct!.license),
+    gmsa: kubernetesClusterWindowsProfileGmsaToTerraform(struct!.gmsa),
   }
 }
 
@@ -5777,6 +5874,10 @@ export class KubernetesClusterWindowsProfileOutputReference extends cdktf.Comple
       hasAnyValues = true;
       internalValueResult.license = this._license;
     }
+    if (this._gmsa?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.gmsa = this._gmsa?.internalValue;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -5786,12 +5887,14 @@ export class KubernetesClusterWindowsProfileOutputReference extends cdktf.Comple
       this._adminPassword = undefined;
       this._adminUsername = undefined;
       this._license = undefined;
+      this._gmsa.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._adminPassword = value.adminPassword;
       this._adminUsername = value.adminUsername;
       this._license = value.license;
+      this._gmsa.internalValue = value.gmsa;
     }
   }
 
@@ -5839,6 +5942,22 @@ export class KubernetesClusterWindowsProfileOutputReference extends cdktf.Comple
   public get licenseInput() {
     return this._license;
   }
+
+  // gmsa - computed: false, optional: true, required: false
+  private _gmsa = new KubernetesClusterWindowsProfileGmsaOutputReference(this, "gmsa");
+  public get gmsa() {
+    return this._gmsa;
+  }
+  public putGmsa(value: KubernetesClusterWindowsProfileGmsa) {
+    this._gmsa.internalValue = value;
+  }
+  public resetGmsa() {
+    this._gmsa.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get gmsaInput() {
+    return this._gmsa.internalValue;
+  }
 }
 
 /**
@@ -5867,7 +5986,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_kubernetes_cluster',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.21.1',
+        providerVersion: '3.22.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -5884,6 +6003,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
     this._diskEncryptionSetId = config.diskEncryptionSetId;
     this._dnsPrefix = config.dnsPrefix;
     this._dnsPrefixPrivateCluster = config.dnsPrefixPrivateCluster;
+    this._edgeZone = config.edgeZone;
     this._enablePodSecurityPolicy = config.enablePodSecurityPolicy;
     this._httpApplicationRoutingEnabled = config.httpApplicationRoutingEnabled;
     this._id = config.id;
@@ -6020,6 +6140,22 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get dnsPrefixPrivateClusterInput() {
     return this._dnsPrefixPrivateCluster;
+  }
+
+  // edge_zone - computed: false, optional: true, required: false
+  private _edgeZone?: string; 
+  public get edgeZone() {
+    return this.getStringAttribute('edge_zone');
+  }
+  public set edgeZone(value: string) {
+    this._edgeZone = value;
+  }
+  public resetEdgeZone() {
+    this._edgeZone = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get edgeZoneInput() {
+    return this._edgeZone;
   }
 
   // enable_pod_security_policy - computed: false, optional: true, required: false
@@ -6645,6 +6781,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
       disk_encryption_set_id: cdktf.stringToTerraform(this._diskEncryptionSetId),
       dns_prefix: cdktf.stringToTerraform(this._dnsPrefix),
       dns_prefix_private_cluster: cdktf.stringToTerraform(this._dnsPrefixPrivateCluster),
+      edge_zone: cdktf.stringToTerraform(this._edgeZone),
       enable_pod_security_policy: cdktf.booleanToTerraform(this._enablePodSecurityPolicy),
       http_application_routing_enabled: cdktf.booleanToTerraform(this._httpApplicationRoutingEnabled),
       id: cdktf.stringToTerraform(this._id),

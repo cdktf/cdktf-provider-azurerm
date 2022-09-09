@@ -59,6 +59,12 @@ export interface HdinsightKafkaClusterConfig extends cdktf.TerraformMetaArgument
   */
   readonly diskEncryption?: HdinsightKafkaClusterDiskEncryption[] | cdktf.IResolvable;
   /**
+  * extension block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster#extension HdinsightKafkaCluster#extension}
+  */
+  readonly extension?: HdinsightKafkaClusterExtension;
+  /**
   * gateway block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster#gateway HdinsightKafkaCluster#gateway}
@@ -357,6 +363,92 @@ export class HdinsightKafkaClusterDiskEncryptionList extends cdktf.ComplexList {
   */
   public get(index: number): HdinsightKafkaClusterDiskEncryptionOutputReference {
     return new HdinsightKafkaClusterDiskEncryptionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface HdinsightKafkaClusterExtension {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster#log_analytics_workspace_id HdinsightKafkaCluster#log_analytics_workspace_id}
+  */
+  readonly logAnalyticsWorkspaceId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster#primary_key HdinsightKafkaCluster#primary_key}
+  */
+  readonly primaryKey: string;
+}
+
+export function hdinsightKafkaClusterExtensionToTerraform(struct?: HdinsightKafkaClusterExtensionOutputReference | HdinsightKafkaClusterExtension): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    log_analytics_workspace_id: cdktf.stringToTerraform(struct!.logAnalyticsWorkspaceId),
+    primary_key: cdktf.stringToTerraform(struct!.primaryKey),
+  }
+}
+
+export class HdinsightKafkaClusterExtensionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): HdinsightKafkaClusterExtension | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._logAnalyticsWorkspaceId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.logAnalyticsWorkspaceId = this._logAnalyticsWorkspaceId;
+    }
+    if (this._primaryKey !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.primaryKey = this._primaryKey;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: HdinsightKafkaClusterExtension | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._logAnalyticsWorkspaceId = undefined;
+      this._primaryKey = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._logAnalyticsWorkspaceId = value.logAnalyticsWorkspaceId;
+      this._primaryKey = value.primaryKey;
+    }
+  }
+
+  // log_analytics_workspace_id - computed: false, optional: false, required: true
+  private _logAnalyticsWorkspaceId?: string; 
+  public get logAnalyticsWorkspaceId() {
+    return this.getStringAttribute('log_analytics_workspace_id');
+  }
+  public set logAnalyticsWorkspaceId(value: string) {
+    this._logAnalyticsWorkspaceId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get logAnalyticsWorkspaceIdInput() {
+    return this._logAnalyticsWorkspaceId;
+  }
+
+  // primary_key - computed: false, optional: false, required: true
+  private _primaryKey?: string; 
+  public get primaryKey() {
+    return this.getStringAttribute('primary_key');
+  }
+  public set primaryKey(value: string) {
+    this._primaryKey = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get primaryKeyInput() {
+    return this._primaryKey;
   }
 }
 export interface HdinsightKafkaClusterGateway {
@@ -2900,7 +2992,7 @@ export class HdinsightKafkaCluster extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_hdinsight_kafka_cluster',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.21.1',
+        providerVersion: '3.22.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -2922,6 +3014,7 @@ export class HdinsightKafkaCluster extends cdktf.TerraformResource {
     this._tlsMinVersion = config.tlsMinVersion;
     this._componentVersion.internalValue = config.componentVersion;
     this._diskEncryption.internalValue = config.diskEncryption;
+    this._extension.internalValue = config.extension;
     this._gateway.internalValue = config.gateway;
     this._metastores.internalValue = config.metastores;
     this._monitor.internalValue = config.monitor;
@@ -3111,6 +3204,22 @@ export class HdinsightKafkaCluster extends cdktf.TerraformResource {
     return this._diskEncryption.internalValue;
   }
 
+  // extension - computed: false, optional: true, required: false
+  private _extension = new HdinsightKafkaClusterExtensionOutputReference(this, "extension");
+  public get extension() {
+    return this._extension;
+  }
+  public putExtension(value: HdinsightKafkaClusterExtension) {
+    this._extension.internalValue = value;
+  }
+  public resetExtension() {
+    this._extension.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get extensionInput() {
+    return this._extension.internalValue;
+  }
+
   // gateway - computed: false, optional: false, required: true
   private _gateway = new HdinsightKafkaClusterGatewayOutputReference(this, "gateway");
   public get gateway() {
@@ -3282,6 +3391,7 @@ export class HdinsightKafkaCluster extends cdktf.TerraformResource {
       tls_min_version: cdktf.stringToTerraform(this._tlsMinVersion),
       component_version: hdinsightKafkaClusterComponentVersionToTerraform(this._componentVersion.internalValue),
       disk_encryption: cdktf.listMapper(hdinsightKafkaClusterDiskEncryptionToTerraform, true)(this._diskEncryption.internalValue),
+      extension: hdinsightKafkaClusterExtensionToTerraform(this._extension.internalValue),
       gateway: hdinsightKafkaClusterGatewayToTerraform(this._gateway.internalValue),
       metastores: hdinsightKafkaClusterMetastoresToTerraform(this._metastores.internalValue),
       monitor: hdinsightKafkaClusterMonitorToTerraform(this._monitor.internalValue),
